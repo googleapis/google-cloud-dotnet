@@ -101,11 +101,17 @@ multiple times, potentially returning different results each time.</p>
                   <h4><a class="xref" href="Google.Cloud.Datastore.V1.CommitRequest.html">CommitRequest</a></h4>
                   <section><p>The request for [Datastore.Commit][google.datastore.v1.Datastore.Commit].</p>
 </section>
+                  <h4><a class="xref" href="Google.Cloud.Datastore.V1.CommitRequest.Types.html">CommitRequest.Types</a></h4>
+                  <section><p>Container for nested types declared in the CommitRequest message type.</p>
+</section>
                   <h4><a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html">CommitResponse</a></h4>
                   <section><p>The response for [Datastore.Commit][google.datastore.v1.Datastore.Commit].</p>
 </section>
                   <h4><a class="xref" href="Google.Cloud.Datastore.V1.CompositeFilter.html">CompositeFilter</a></h4>
                   <section><p>A filter that merges multiple other filters using the given operator.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Datastore.V1.CompositeFilter.Types.html">CompositeFilter.Types</a></h4>
+                  <section><p>Container for nested types declared in the CompositeFilter message type.</p>
 </section>
                   <h4><a class="xref" href="Google.Cloud.Datastore.V1.Datastore.html">Datastore</a></h4>
                   <section><p>Each RPC normalizes the partition IDs of the keys in its input entities,
@@ -183,6 +189,9 @@ message.</p>
                   <h4><a class="xref" href="Google.Cloud.Datastore.V1.EntityResult.html">EntityResult</a></h4>
                   <section><p>The result of fetching an entity from Datastore.</p>
 </section>
+                  <h4><a class="xref" href="Google.Cloud.Datastore.V1.EntityResult.Types.html">EntityResult.Types</a></h4>
+                  <section><p>Container for nested types declared in the EntityResult message type.</p>
+</section>
                   <h4><a class="xref" href="Google.Cloud.Datastore.V1.Filter.html">Filter</a></h4>
                   <section><p>A holder for any type of filter.</p>
 </section>
@@ -197,6 +206,14 @@ message.</p>
 If a key&#39;s partition ID or any of its path kinds or names are
 reserved/read-only, the key is reserved/read-only.
 A reserved/read-only key is forbidden in certain documented contexts.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Datastore.V1.Key.Types.html">Key.Types</a></h4>
+                  <section><p>Container for nested types declared in the Key message type.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Datastore.V1.Key.Types.PathElement.html">Key.Types.PathElement</a></h4>
+                  <section><p>A (kind, ID/name) pair used to construct a key path.</p>
+<p>If either name or ID is set, the element is complete.
+If neither is set, the element is incomplete.</p>
 </section>
                   <h4><a class="xref" href="Google.Cloud.Datastore.V1.KeyFactory.html">KeyFactory</a></h4>
                   <section><p>Provides a convenient way of producing keys of a specific kind, from a specified parent entity or key,
@@ -249,8 +266,14 @@ Reads and writes of foreign partition IDs may fail if the project is not in an a
                   <h4><a class="xref" href="Google.Cloud.Datastore.V1.PropertyFilter.html">PropertyFilter</a></h4>
                   <section><p>A filter on a specific property.</p>
 </section>
+                  <h4><a class="xref" href="Google.Cloud.Datastore.V1.PropertyFilter.Types.html">PropertyFilter.Types</a></h4>
+                  <section><p>Container for nested types declared in the PropertyFilter message type.</p>
+</section>
                   <h4><a class="xref" href="Google.Cloud.Datastore.V1.PropertyOrder.html">PropertyOrder</a></h4>
                   <section><p>The desired order for a specific property.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Datastore.V1.PropertyOrder.Types.html">PropertyOrder.Types</a></h4>
+                  <section><p>Container for nested types declared in the PropertyOrder message type.</p>
 </section>
                   <h4><a class="xref" href="Google.Cloud.Datastore.V1.PropertyReference.html">PropertyReference</a></h4>
                   <section><p>A reference to a property relative to the kind expressions.</p>
@@ -264,8 +287,14 @@ Reads and writes of foreign partition IDs may fail if the project is not in an a
                   <h4><a class="xref" href="Google.Cloud.Datastore.V1.QueryResultBatch.html">QueryResultBatch</a></h4>
                   <section><p>A batch of results produced by a query.</p>
 </section>
+                  <h4><a class="xref" href="Google.Cloud.Datastore.V1.QueryResultBatch.Types.html">QueryResultBatch.Types</a></h4>
+                  <section><p>Container for nested types declared in the QueryResultBatch message type.</p>
+</section>
                   <h4><a class="xref" href="Google.Cloud.Datastore.V1.ReadOptions.html">ReadOptions</a></h4>
                   <section><p>The options shared by read requests.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Datastore.V1.ReadOptions.Types.html">ReadOptions.Types</a></h4>
+                  <section><p>Container for nested types declared in the ReadOptions message type.</p>
 </section>
                   <h4><a class="xref" href="Google.Cloud.Datastore.V1.RollbackRequest.html">RollbackRequest</a></h4>
                   <section><p>The request for [Datastore.Rollback][google.datastore.v1.Datastore.Rollback].</p>
@@ -292,11 +321,27 @@ metadata.</p>
                   <h4><a class="xref" href="Google.Cloud.Datastore.V1.CommitRequest.TransactionSelectorOneofCase.html">CommitRequest.TransactionSelectorOneofCase</a></h4>
                   <section><p>Enum of possible cases for the &quot;transaction_selector&quot; oneof.</p>
 </section>
+                  <h4><a class="xref" href="Google.Cloud.Datastore.V1.CommitRequest.Types.Mode.html">CommitRequest.Types.Mode</a></h4>
+                  <section><p>The modes available for commits.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Datastore.V1.CompositeFilter.Types.Operator.html">CompositeFilter.Types.Operator</a></h4>
+                  <section><p>A composite filter operator.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Datastore.V1.EntityResult.Types.ResultType.html">EntityResult.Types.ResultType</a></h4>
+                  <section><p>Specifies what data the &#39;entity&#39; field contains.
+A <code>ResultType</code> is either implied (for example, in <code>LookupResponse.missing</code>
+from <code>datastore.proto</code>, it is always <code>KEY_ONLY</code>) or specified by context
+(for example, in message <code>QueryResultBatch</code>, field <code>entity_result_type</code>
+specifies a <code>ResultType</code> for all the values in field <code>entity_results</code>).</p>
+</section>
                   <h4><a class="xref" href="Google.Cloud.Datastore.V1.Filter.FilterTypeOneofCase.html">Filter.FilterTypeOneofCase</a></h4>
                   <section><p>Enum of possible cases for the &quot;filter_type&quot; oneof.</p>
 </section>
                   <h4><a class="xref" href="Google.Cloud.Datastore.V1.GqlQueryParameter.ParameterTypeOneofCase.html">GqlQueryParameter.ParameterTypeOneofCase</a></h4>
                   <section><p>Enum of possible cases for the &quot;parameter_type&quot; oneof.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Datastore.V1.Key.Types.PathElement.IdTypeOneofCase.html">Key.Types.PathElement.IdTypeOneofCase</a></h4>
+                  <section><p>Enum of possible cases for the &quot;id_type&quot; oneof.</p>
 </section>
                   <h4><a class="xref" href="Google.Cloud.Datastore.V1.Mutation.ConflictDetectionStrategyOneofCase.html">Mutation.ConflictDetectionStrategyOneofCase</a></h4>
                   <section><p>Enum of possible cases for the &quot;conflict_detection_strategy&quot; oneof.</p>
@@ -304,8 +349,20 @@ metadata.</p>
                   <h4><a class="xref" href="Google.Cloud.Datastore.V1.Mutation.OperationOneofCase.html">Mutation.OperationOneofCase</a></h4>
                   <section><p>Enum of possible cases for the &quot;operation&quot; oneof.</p>
 </section>
+                  <h4><a class="xref" href="Google.Cloud.Datastore.V1.PropertyFilter.Types.Operator.html">PropertyFilter.Types.Operator</a></h4>
+                  <section><p>A property filter operator.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Datastore.V1.PropertyOrder.Types.Direction.html">PropertyOrder.Types.Direction</a></h4>
+                  <section><p>The sort direction.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Datastore.V1.QueryResultBatch.Types.MoreResultsType.html">QueryResultBatch.Types.MoreResultsType</a></h4>
+                  <section><p>The possible values for the <code>more_results</code> field.</p>
+</section>
                   <h4><a class="xref" href="Google.Cloud.Datastore.V1.ReadOptions.ConsistencyTypeOneofCase.html">ReadOptions.ConsistencyTypeOneofCase</a></h4>
                   <section><p>Enum of possible cases for the &quot;consistency_type&quot; oneof.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency.html">ReadOptions.Types.ReadConsistency</a></h4>
+                  <section><p>The possible values for read consistencies.</p>
 </section>
                   <h4><a class="xref" href="Google.Cloud.Datastore.V1.RunQueryRequest.QueryTypeOneofCase.html">RunQueryRequest.QueryTypeOneofCase</a></h4>
                   <section><p>Enum of possible cases for the &quot;query_type&quot; oneof.</p>

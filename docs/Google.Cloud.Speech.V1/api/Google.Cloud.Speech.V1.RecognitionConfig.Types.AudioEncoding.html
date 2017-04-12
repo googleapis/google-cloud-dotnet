@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Enum RecognitionConfig.Types.AudioEncoding
+   | Google.Cloud.Speech.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Enum RecognitionConfig.Types.AudioEncoding
+   | Google.Cloud.Speech.V1 ">
+    <meta name="generator" content="docfx 2.14.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding" data-uid="Google.Cloud.Speech.V1.RecognitionConfig.Types.AudioEncoding">Enum RecognitionConfig.Types.AudioEncoding
+              </h1>
+              <div class="markdown level0 summary"><p>Audio encoding of the data sent in the audio message. All encodings support
+only 1 channel (mono) audio. Only <code>FLAC</code> includes a header that describes
+the bytes of audio that follow the header. The other encodings are raw
+audio bytes with no header.</p>
+<p>For best results, the audio source should be captured and transmitted using
+a lossless encoding (<code>FLAC</code> or <code>LINEAR16</code>). Recognition accuracy may be
+reduced if lossy codecs, which include the other codecs listed in
+this section, are used to capture or transmit the audio, particularly if
+background noise is present.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <h6><strong>Namespace</strong>:Google.Cloud.Speech.V1</h6>
+              <h6><strong>Assembly</strong>:Google.Cloud.Speech.V1.dll</h6>
+              <h5 id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public enum AudioEncoding</code></pre>
+              </div>
+              <h3 id="fields">Fields
+              </h3>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                <thead>
+                <tbody>
+                  <tr>
+                    <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_Amr">Amr</td>
+                    <td><p>Adaptive Multi-Rate Narrowband codec. <code>sample_rate_hertz</code> must be 8000.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_AmrWb">AmrWb</td>
+                    <td><p>Adaptive Multi-Rate Wideband codec. <code>sample_rate_hertz</code> must be 16000.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_EncodingUnspecified">EncodingUnspecified</td>
+                    <td><p>Not specified. Will return result [google.rpc.Code.INVALID_ARGUMENT][].</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_Flac">Flac</td>
+                    <td><p><a href="https://xiph.org/flac/documentation.html"><code>FLAC</code></a> (Free Lossless Audio
+Codec) is the recommended encoding because it is
+lossless--therefore recognition is not compromised--and
+requires only about half the bandwidth of <code>LINEAR16</code>. <code>FLAC</code> stream
+encoding supports 16-bit and 24-bit samples, however, not all fields in
+<code>STREAMINFO</code> are supported.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_Linear16">Linear16</td>
+                    <td><p>Uncompressed 16-bit signed little-endian samples (Linear PCM).</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_Mulaw">Mulaw</td>
+                    <td><p>8-bit samples that compand 14-bit audio samples using G.711 PCMU/mu-law.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_OggOpus">OggOpus</td>
+                    <td><p>Opus encoded audio frames in Ogg container
+(<a href="https://wiki.xiph.org/OggOpus">OggOpus</a>).
+<code>sample_rate_hertz</code> must be 16000.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_SpeexWithHeaderByte">SpeexWithHeaderByte</td>
+                    <td><p>Although the use of lossy encodings is not recommended, if a very low
+bitrate encoding is required, <code>OGG_OPUS</code> is highly preferred over
+Speex encoding. The <a href="https://speex.org/">Speex</a>  encoding supported by
+Cloud Speech API has a header byte in each block, as in MIME type
+<code>audio/x-speex-with-header-byte</code>.
+It is a variant of the RTP Speex encoding defined in
+<a href="https://tools.ietf.org/html/rfc5574">RFC 5574</a>.
+The stream is a sequence of blocks, one block per RTP packet. Each block
+starts with a byte containing the length of the block, in bytes, followed
+by one or more frames of Speex data, padded to an integral number of
+bytes (octets) as specified in RFC 5574. In other words, each RTP header
+is replaced with a single byte containing the block length. Only Speex
+wideband is supported. <code>sample_rate_hertz</code> must be 16000.</p>
+</td>
+                  </tr>
+                </tbody>
+              </thead></thead></table>
+                        </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

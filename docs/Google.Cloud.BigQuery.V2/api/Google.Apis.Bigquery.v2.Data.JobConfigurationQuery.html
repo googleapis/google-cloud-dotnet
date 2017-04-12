@@ -104,8 +104,9 @@
               </h3>
               <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_AllowLargeResults_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.AllowLargeResults*"></a>
               <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_AllowLargeResults" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.AllowLargeResults">AllowLargeResults</h4>
-              <div class="markdown level1 summary"><p>If true, allows the query to produce arbitrarily large result tables at a slight cost in
-performance. Requires destinationTable to be set.</p>
+              <div class="markdown level1 summary"><p>[Optional] If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large
+result tables at a slight cost in performance. Requires destinationTable to be set. For standard SQL
+queries, this flag is ignored and large results are always allowed.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -236,8 +237,9 @@ public virtual TableReference DestinationTable { get; set; }</code></pre>
                   <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
               <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_FlattenResults_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.FlattenResults*"></a>
               <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_FlattenResults" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.FlattenResults">FlattenResults</h4>
-              <div class="markdown level1 summary"><p>[Optional] Flattens all nested and repeated fields in the query results. The default value is true.
-allowLargeResults must be true if this is set to false.</p>
+              <div class="markdown level1 summary"><p>[Optional] If true and query uses legacy SQL dialect, flattens all nested and repeated fields in
+the query results. allowLargeResults must be true if this is set to false. For standard SQL queries, this
+flag is ignored and results are never flattened.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

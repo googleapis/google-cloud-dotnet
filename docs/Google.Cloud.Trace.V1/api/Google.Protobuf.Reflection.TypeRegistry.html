@@ -1,0 +1,399 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TypeRegistry
+   | Google.Cloud.Trace.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TypeRegistry
+   | Google.Cloud.Trace.V1 ">
+    <meta name="generator" content="docfx 2.14.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Protobuf_Reflection_TypeRegistry" data-uid="Google.Protobuf.Reflection.TypeRegistry">Class TypeRegistry
+              </h1>
+              <div class="markdown level0 summary"><p>An immutable registry of types which can be looked up by their full name.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">TypeRegistry</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Protobuf.Reflection</h6>
+              <h6><strong>Assembly</strong>:Google.Protobuf.dll</h6>
+              <h5 id="Google_Protobuf_Reflection_TypeRegistry_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class TypeRegistry</code></pre>
+              </div>
+              <h3 id="properties">Properties
+              </h3>
+              <a id="Google_Protobuf_Reflection_TypeRegistry_Empty_" data-uid="Google.Protobuf.Reflection.TypeRegistry.Empty*"></a>
+              <h4 id="Google_Protobuf_Reflection_TypeRegistry_Empty" data-uid="Google.Protobuf.Reflection.TypeRegistry.Empty">Empty</h4>
+              <div class="markdown level1 summary"><p>An empty type registry, containing no types.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static TypeRegistry Empty { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Reflection.TypeRegistry.html">TypeRegistry</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              <a id="Google_Protobuf_Reflection_TypeRegistry_Find_" data-uid="Google.Protobuf.Reflection.TypeRegistry.Find*"></a>
+              <h4 id="Google_Protobuf_Reflection_TypeRegistry_Find_System_String_" data-uid="Google.Protobuf.Reflection.TypeRegistry.Find(System.String)">Find(String)</h4>
+              <div class="markdown level1 summary"><p>Attempts to find a message descriptor by its full name.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public MessageDescriptor Find(string fullName)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">fullName</span></td>
+                    <td><p>The full name of the message, which is the dot-separated
+combination of package, containing messages and message name</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html">MessageDescriptor</a></td>
+                    <td><p>The message descriptor corresponding to <span class="paramref">fullName</span> or null
+if there is no such message descriptor.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_Reflection_TypeRegistry_FromFiles_" data-uid="Google.Protobuf.Reflection.TypeRegistry.FromFiles*"></a>
+              <h4 id="Google_Protobuf_Reflection_TypeRegistry_FromFiles_Google_Protobuf_Reflection_FileDescriptor___" data-uid="Google.Protobuf.Reflection.TypeRegistry.FromFiles(Google.Protobuf.Reflection.FileDescriptor[])">FromFiles(FileDescriptor[])</h4>
+              <div class="markdown level1 summary"><p>Creates a type registry from the specified set of file descriptors.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static TypeRegistry FromFiles(params FileDescriptor[] fileDescriptors)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Reflection.FileDescriptor.html">FileDescriptor</a>[]</td>
+                    <td><span class="parametername">fileDescriptors</span></td>
+                    <td><p>The set of files to include in the registry. Must not contain null values.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Reflection.TypeRegistry.html">TypeRegistry</a></td>
+                    <td><p>A type registry for the given files.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Protobuf_Reflection_TypeRegistry_FromFiles_Google_Protobuf_Reflection_FileDescriptor____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This is a convenience overload for <a class="xref" href="Google.Protobuf.Reflection.TypeRegistry.html#Google_Protobuf_Reflection_TypeRegistry_FromFiles_System_Collections_Generic_IEnumerable_Google_Protobuf_Reflection_FileDescriptor__">FromFiles(IEnumerable&lt;FileDescriptor&gt;)</a>
+to allow calls such as <code>TypeRegistry.FromFiles(descriptor1, descriptor2)</code>.</p>
+</div>
+              <a id="Google_Protobuf_Reflection_TypeRegistry_FromFiles_" data-uid="Google.Protobuf.Reflection.TypeRegistry.FromFiles*"></a>
+              <h4 id="Google_Protobuf_Reflection_TypeRegistry_FromFiles_System_Collections_Generic_IEnumerable_Google_Protobuf_Reflection_FileDescriptor__" data-uid="Google.Protobuf.Reflection.TypeRegistry.FromFiles(System.Collections.Generic.IEnumerable{Google.Protobuf.Reflection.FileDescriptor})">FromFiles(IEnumerable&lt;FileDescriptor&gt;)</h4>
+              <div class="markdown level1 summary"><p>Creates a type registry from the specified set of file descriptors.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static TypeRegistry FromFiles(IEnumerable&lt;FileDescriptor&gt; fileDescriptors)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Protobuf.Reflection.FileDescriptor.html">FileDescriptor</a>&gt;</td>
+                    <td><span class="parametername">fileDescriptors</span></td>
+                    <td><p>The set of files to include in the registry. Must not contain null values.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Reflection.TypeRegistry.html">TypeRegistry</a></td>
+                    <td><p>A type registry for the given files.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Protobuf_Reflection_TypeRegistry_FromFiles_System_Collections_Generic_IEnumerable_Google_Protobuf_Reflection_FileDescriptor___remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>All message types within all the specified files are added to the registry, and
+the dependencies of the specified files are also added, recursively.</p>
+</div>
+              <a id="Google_Protobuf_Reflection_TypeRegistry_FromMessages_" data-uid="Google.Protobuf.Reflection.TypeRegistry.FromMessages*"></a>
+              <h4 id="Google_Protobuf_Reflection_TypeRegistry_FromMessages_Google_Protobuf_Reflection_MessageDescriptor___" data-uid="Google.Protobuf.Reflection.TypeRegistry.FromMessages(Google.Protobuf.Reflection.MessageDescriptor[])">FromMessages(MessageDescriptor[])</h4>
+              <div class="markdown level1 summary"><p>Creates a type registry from the file descriptor parents of the specified set of message descriptors.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static TypeRegistry FromMessages(params MessageDescriptor[] messageDescriptors)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html">MessageDescriptor</a>[]</td>
+                    <td><span class="parametername">messageDescriptors</span></td>
+                    <td><p>The set of message descriptors to use to identify file descriptors to include in the registry.
+Must not contain null values.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Reflection.TypeRegistry.html">TypeRegistry</a></td>
+                    <td><p>A type registry for the given files.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Protobuf_Reflection_TypeRegistry_FromMessages_Google_Protobuf_Reflection_MessageDescriptor____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This is a convenience overload for <a class="xref" href="Google.Protobuf.Reflection.TypeRegistry.html#Google_Protobuf_Reflection_TypeRegistry_FromMessages_System_Collections_Generic_IEnumerable_Google_Protobuf_Reflection_MessageDescriptor__">FromMessages(IEnumerable&lt;MessageDescriptor&gt;)</a>
+to allow calls such as <code>TypeRegistry.FromFiles(descriptor1, descriptor2)</code>.</p>
+</div>
+              <a id="Google_Protobuf_Reflection_TypeRegistry_FromMessages_" data-uid="Google.Protobuf.Reflection.TypeRegistry.FromMessages*"></a>
+              <h4 id="Google_Protobuf_Reflection_TypeRegistry_FromMessages_System_Collections_Generic_IEnumerable_Google_Protobuf_Reflection_MessageDescriptor__" data-uid="Google.Protobuf.Reflection.TypeRegistry.FromMessages(System.Collections.Generic.IEnumerable{Google.Protobuf.Reflection.MessageDescriptor})">FromMessages(IEnumerable&lt;MessageDescriptor&gt;)</h4>
+              <div class="markdown level1 summary"><p>Creates a type registry from the file descriptor parents of the specified set of message descriptors.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static TypeRegistry FromMessages(IEnumerable&lt;MessageDescriptor&gt; messageDescriptors)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html">MessageDescriptor</a>&gt;</td>
+                    <td><span class="parametername">messageDescriptors</span></td>
+                    <td><p>The set of message descriptors to use to identify file descriptors to include in the registry.
+Must not contain null values.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Reflection.TypeRegistry.html">TypeRegistry</a></td>
+                    <td><p>A type registry for the given files.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Protobuf_Reflection_TypeRegistry_FromMessages_System_Collections_Generic_IEnumerable_Google_Protobuf_Reflection_MessageDescriptor___remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The specified message descriptors are only used to identify their file descriptors; the returned registry
+contains all the types within the file descriptors which contain the specified message descriptors (and
+the dependencies of those files), not just the specified messages.</p>
+</div>
+                        </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

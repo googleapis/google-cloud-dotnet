@@ -14251,6 +14251,18 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DestinationTable
   fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DestinationTable
   nameWithType: CreateQueryJobOptions.DestinationTable
+- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DryRun
+  name: DryRun
+  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_DryRun
+  commentId: P:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DryRun
+  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DryRun
+  nameWithType: CreateQueryJobOptions.DryRun
+- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DryRun*
+  name: DryRun
+  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_DryRun_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DryRun
+  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DryRun
+  nameWithType: CreateQueryJobOptions.DryRun
 - uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.FlattenResults
   name: FlattenResults
   href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_FlattenResults

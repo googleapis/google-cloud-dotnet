@@ -1,0 +1,434 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Any
+   | Google.Cloud.Monitoring.V3 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Any
+   | Google.Cloud.Monitoring.V3 ">
+    <meta name="generator" content="docfx 2.14.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Protobuf_WellKnownTypes_Any" data-uid="Google.Protobuf.WellKnownTypes.Any">Class Any
+              </h1>
+              <div class="markdown level0 summary"><p><code>Any</code> contains an arbitrary serialized protocol buffer message along with a
+URL that describes the type of the serialized message.</p>
+<p>Protobuf library provides support to pack/unpack Any values in the form
+of utility functions or additional generated methods of the Any type.</p>
+<p>Example 1: Pack and unpack a message in C++.</p>
+<p>Foo foo = ...;
+Any any;
+any.PackFrom(foo);
+...
+if (any.UnpackTo(&amp;foo)) {
+ ...
+}</p>
+<p>Example 2: Pack and unpack a message in Java.</p>
+<p>Foo foo = ...;
+Any any = Any.pack(foo);
+...
+if (any.is(Foo.class)) {
+ foo = any.unpack(Foo.class);
+}</p>
+<p>Example 3: Pack and unpack a message in Python.</p>
+<p>foo = Foo(...)
+any = Any()
+any.Pack(foo)
+...
+if any.Is(Foo.DESCRIPTOR):
+ any.Unpack(foo)
+ ...</p>
+<p>The pack methods provided by protobuf library will by default use
+&#39;type.googleapis.com/full.type.name&#39; as the type URL and the unpack
+methods only use the fully qualified type name after the last &#39;/&#39;
+in the type URL, for example &quot;foo.bar.com/x/y.z&quot; will yield type
+name &quot;y.z&quot;.</p>
+<h1 id="json">JSON</h1>
+<p>The JSON representation of an <code>Any</code> value uses the regular
+representation of the deserialized, embedded message, with an
+additional field <code>@type</code> which contains the type URL. Example:</p>
+<p>package google.profile;
+message Person {
+ string first_name = 1;
+ string last_name = 2;
+}</p>
+<p>{
+ &quot;@type&quot;: &quot;type.googleapis.com/google.profile.Person&quot;,
+ &quot;firstName&quot;: &lt;string&gt;,
+ &quot;lastName&quot;: &lt;string&gt;
+}</p>
+<p>If the embedded message type is well-known and has a custom JSON
+representation, that representation will be embedded adding a field
+<code>value</code> which holds the custom JSON in addition to the <code>@type</code>
+field. Example (for message [google.protobuf.Duration][]):</p>
+<p>{
+ &quot;@type&quot;: &quot;type.googleapis.com/google.protobuf.Duration&quot;,
+ &quot;value&quot;: &quot;1.212s&quot;
+}</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">Any</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Protobuf.WellKnownTypes</h6>
+              <h6><strong>Assembly</strong>:Google.Protobuf.dll</h6>
+              <h5 id="Google_Protobuf_WellKnownTypes_Any_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class Any : IMessage&lt;Any&gt;, IMessage, IEquatable&lt;Any&gt;, IDeepCloneable&lt;Any&gt;</code></pre>
+              </div>
+              <h3 id="properties">Properties
+              </h3>
+              <a id="Google_Protobuf_WellKnownTypes_Any_TypeUrl_" data-uid="Google.Protobuf.WellKnownTypes.Any.TypeUrl*"></a>
+              <h4 id="Google_Protobuf_WellKnownTypes_Any_TypeUrl" data-uid="Google.Protobuf.WellKnownTypes.Any.TypeUrl">TypeUrl</h4>
+              <div class="markdown level1 summary"><p>A URL/resource name whose content describes the type of the
+serialized protocol buffer message.</p>
+<p>For URLs which use the scheme <code>http</code>, <code>https</code>, or no scheme, the
+following restrictions and interpretations apply:</p>
+<ul>
+<li>If no scheme is provided, <code>https</code> is assumed.</li>
+<li>The last segment of the URL&#39;s path must represent the fully
+qualified name of the type (as in <code>path/google.protobuf.Duration</code>).
+The name should be in a canonical form (e.g., leading &quot;.&quot; is
+not accepted).</li>
+<li>An HTTP GET on the URL must yield a [google.protobuf.Type][]
+value in binary format, or produce an error.</li>
+<li>Applications are allowed to cache lookup results based on the
+URL, or have them precompiled into a binary to avoid any
+lookup. Therefore, binary compatibility needs to be preserved
+on changes to types. (Use versioned type names to manage
+breaking changes.)</li>
+</ul>
+<p>Schemes other than <code>http</code>, <code>https</code> (or the empty scheme) might be
+used with implementation specific semantics.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string TypeUrl { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_WellKnownTypes_Any_Value_" data-uid="Google.Protobuf.WellKnownTypes.Any.Value*"></a>
+              <h4 id="Google_Protobuf_WellKnownTypes_Any_Value" data-uid="Google.Protobuf.WellKnownTypes.Any.Value">Value</h4>
+              <div class="markdown level1 summary"><p>Must be a valid serialized protocol buffer of the above specified type.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ByteString Value { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              <a id="Google_Protobuf_WellKnownTypes_Any_Pack_" data-uid="Google.Protobuf.WellKnownTypes.Any.Pack*"></a>
+              <h4 id="Google_Protobuf_WellKnownTypes_Any_Pack_Google_Protobuf_IMessage_" data-uid="Google.Protobuf.WellKnownTypes.Any.Pack(Google.Protobuf.IMessage)">Pack(IMessage)</h4>
+              <div class="markdown level1 summary"><p>Packs the specified message into an Any message using a type URL prefix of &quot;type.googleapis.com&quot;.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Any Pack(IMessage message)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.IMessage.html">IMessage</a></td>
+                    <td><span class="parametername">message</span></td>
+                    <td><p>The message to pack.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Any.html">Any</a></td>
+                    <td><p>An Any message with the content and type URL of <span class="paramref">message</span>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_WellKnownTypes_Any_Pack_" data-uid="Google.Protobuf.WellKnownTypes.Any.Pack*"></a>
+              <h4 id="Google_Protobuf_WellKnownTypes_Any_Pack_Google_Protobuf_IMessage_System_String_" data-uid="Google.Protobuf.WellKnownTypes.Any.Pack(Google.Protobuf.IMessage,System.String)">Pack(IMessage, String)</h4>
+              <div class="markdown level1 summary"><p>Packs the specified message into an Any message using the specified type URL prefix.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Any Pack(IMessage message, string typeUrlPrefix)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.IMessage.html">IMessage</a></td>
+                    <td><span class="parametername">message</span></td>
+                    <td><p>The message to pack.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">typeUrlPrefix</span></td>
+                    <td><p>The prefix for the type URL.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Any.html">Any</a></td>
+                    <td><p>An Any message with the content and type URL of <span class="paramref">message</span>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_WellKnownTypes_Any_Unpack_" data-uid="Google.Protobuf.WellKnownTypes.Any.Unpack*"></a>
+              <h4 id="Google_Protobuf_WellKnownTypes_Any_Unpack__1" data-uid="Google.Protobuf.WellKnownTypes.Any.Unpack``1">Unpack&lt;T&gt;()</h4>
+              <div class="markdown level1 summary"><p>Unpacks the content of this Any message into the target message type,
+which must match the type URL within this Any message.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public T Unpack&lt;T&gt;()where T : IMessage, new ()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">T</span></td>
+                    <td><p>The unpacked message.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">T</span></td>
+                    <td><p>The type of message to unpack the content into.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.InvalidProtocolBufferException.html">InvalidProtocolBufferException</a></td>
+                    <td><p>The target message type doesn&#39;t match the type URL in this message</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="extensionmethods">Extension Methods</h3>
+              <div>
+                  <a class="xref" href="Google.Protobuf.MessageExtensions.html#Google_Protobuf_MessageExtensions_MergeFrom_Google_Protobuf_IMessage_System_Byte___">MessageExtensions.MergeFrom(IMessage, Byte[])</a>
+              </div>
+              <div>
+                  <a class="xref" href="Google.Protobuf.MessageExtensions.html#Google_Protobuf_MessageExtensions_MergeFrom_Google_Protobuf_IMessage_Google_Protobuf_ByteString_">MessageExtensions.MergeFrom(IMessage, ByteString)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Google.Protobuf.MessageExtensions.html#Google_Protobuf_MessageExtensions_MergeFrom_Google_Protobuf_IMessage_System_IO_Stream_">MessageExtensions.MergeFrom(IMessage, Stream)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Google.Protobuf.MessageExtensions.html#Google_Protobuf_MessageExtensions_MergeDelimitedFrom_Google_Protobuf_IMessage_System_IO_Stream_">MessageExtensions.MergeDelimitedFrom(IMessage, Stream)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Google.Protobuf.MessageExtensions.html#Google_Protobuf_MessageExtensions_ToByteArray_Google_Protobuf_IMessage_">MessageExtensions.ToByteArray(IMessage)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Google.Protobuf.MessageExtensions.html#Google_Protobuf_MessageExtensions_WriteTo_Google_Protobuf_IMessage_System_IO_Stream_">MessageExtensions.WriteTo(IMessage, Stream)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Google.Protobuf.MessageExtensions.html#Google_Protobuf_MessageExtensions_WriteDelimitedTo_Google_Protobuf_IMessage_System_IO_Stream_">MessageExtensions.WriteDelimitedTo(IMessage, Stream)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Google.Protobuf.MessageExtensions.html#Google_Protobuf_MessageExtensions_ToByteString_Google_Protobuf_IMessage_">MessageExtensions.ToByteString(IMessage)</a>
+              </div>
+                        </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

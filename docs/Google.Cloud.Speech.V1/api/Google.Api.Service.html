@@ -1,0 +1,791 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Service
+   | Google.Cloud.Speech.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Service
+   | Google.Cloud.Speech.V1 ">
+    <meta name="generator" content="docfx 2.14.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Api_Service" data-uid="Google.Api.Service">Class Service
+              </h1>
+              <div class="markdown level0 summary"><p><code>Service</code> is the root object of Google service configuration schema. It
+describes basic information about a service, such as the name and the
+title, and delegates other aspects to sub-sections. Each sub-section is
+either a proto message or a repeated proto message that configures a
+specific aspect, such as auth. See each proto message definition for details.</p>
+<p>Example:</p>
+<p>type: google.api.Service
+config_version: 3
+name: calendar.googleapis.com
+title: Google Calendar API
+apis:</p>
+<ul>
+<li>name: google.calendar.v3.Calendar
+authentication:
+providers:<ul>
+<li>id: google_calendar_auth
+jwks_uri: <a href="https://www.googleapis.com/oauth2/v1/certs">https://www.googleapis.com/oauth2/v1/certs</a>
+issuer: <a href="https://securetoken.google.com">https://securetoken.google.com</a>
+rules:</li>
+<li>selector: &quot;*&quot;
+requirements:
+ provider_id: google_calendar_auth</li>
+</ul>
+</li>
+</ul>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">Service</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Api</h6>
+              <h6><strong>Assembly</strong>:Google.Api.CommonProtos.dll</h6>
+              <h5 id="Google_Api_Service_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class Service : IMessage&lt;Service&gt;, IMessage, IEquatable&lt;Service&gt;, IDeepCloneable&lt;Service&gt;</code></pre>
+              </div>
+              <h3 id="properties">Properties
+              </h3>
+              <a id="Google_Api_Service_Apis_" data-uid="Google.Api.Service.Apis*"></a>
+              <h4 id="Google_Api_Service_Apis" data-uid="Google.Api.Service.Apis">Apis</h4>
+              <div class="markdown level1 summary"><p>A list of API interfaces exported by this service. Only the <code>name</code> field
+of the [google.protobuf.Api][google.protobuf.Api] needs to be provided by the configuration
+author, as the remaining fields will be derived from the IDL during the
+normalization process. It is an error to specify an API interface here
+which cannot be resolved against the associated IDL files.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public RepeatedField&lt;Api&gt; Apis { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Api.html">Api</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_Authentication_" data-uid="Google.Api.Service.Authentication*"></a>
+              <h4 id="Google_Api_Service_Authentication" data-uid="Google.Api.Service.Authentication">Authentication</h4>
+              <div class="markdown level1 summary"><p>Auth configuration.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Authentication Authentication { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Authentication.html">Authentication</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_Backend_" data-uid="Google.Api.Service.Backend*"></a>
+              <h4 id="Google_Api_Service_Backend" data-uid="Google.Api.Service.Backend">Backend</h4>
+              <div class="markdown level1 summary"><p>API backend configuration.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Backend Backend { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Backend.html">Backend</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_ConfigVersion_" data-uid="Google.Api.Service.ConfigVersion*"></a>
+              <h4 id="Google_Api_Service_ConfigVersion" data-uid="Google.Api.Service.ConfigVersion">ConfigVersion</h4>
+              <div class="markdown level1 summary"><p>The version of the service configuration. The config version may
+influence interpretation of the configuration, for example, to
+determine defaults. This is documented together with applicable
+options. The current default for the config version itself is <code>3</code>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public uint ? ConfigVersion { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt32</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_Context_" data-uid="Google.Api.Service.Context*"></a>
+              <h4 id="Google_Api_Service_Context" data-uid="Google.Api.Service.Context">Context</h4>
+              <div class="markdown level1 summary"><p>Context configuration.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Context Context { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Context.html">Context</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_Control_" data-uid="Google.Api.Service.Control*"></a>
+              <h4 id="Google_Api_Service_Control" data-uid="Google.Api.Service.Control">Control</h4>
+              <div class="markdown level1 summary"><p>Configuration for the service control plane.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Control Control { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Control.html">Control</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_Documentation_" data-uid="Google.Api.Service.Documentation*"></a>
+              <h4 id="Google_Api_Service_Documentation" data-uid="Google.Api.Service.Documentation">Documentation</h4>
+              <div class="markdown level1 summary"><p>Additional API documentation.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Documentation Documentation { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Documentation.html">Documentation</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_Endpoints_" data-uid="Google.Api.Service.Endpoints*"></a>
+              <h4 id="Google_Api_Service_Endpoints" data-uid="Google.Api.Service.Endpoints">Endpoints</h4>
+              <div class="markdown level1 summary"><p>Configuration for network endpoints.  If this is empty, then an endpoint
+with the same name as the service is automatically generated to service all
+defined APIs.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public RepeatedField&lt;Endpoint&gt; Endpoints { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Api.Endpoint.html">Endpoint</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_Enums_" data-uid="Google.Api.Service.Enums*"></a>
+              <h4 id="Google_Api_Service_Enums" data-uid="Google.Api.Service.Enums">Enums</h4>
+              <div class="markdown level1 summary"><p>A list of all enum types included in this API service.  Enums
+referenced directly or indirectly by the <code>apis</code> are automatically
+included.  Enums which are not referenced but shall be included
+should be listed here by name. Example:</p>
+<p>enums:</p>
+<ul>
+<li>name: google.someapi.v1.SomeEnum</li>
+</ul>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public RepeatedField&lt;Enum&gt; Enums { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Enum.html">Enum</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_Experimental_" data-uid="Google.Api.Service.Experimental*"></a>
+              <h4 id="Google_Api_Service_Experimental" data-uid="Google.Api.Service.Experimental">Experimental</h4>
+              <div class="markdown level1 summary"><p>Experimental configuration.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Experimental Experimental { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Experimental.html">Experimental</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_Http_" data-uid="Google.Api.Service.Http*"></a>
+              <h4 id="Google_Api_Service_Http" data-uid="Google.Api.Service.Http">Http</h4>
+              <div class="markdown level1 summary"><p>HTTP configuration.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Http Http { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Http.html">Http</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_Id_" data-uid="Google.Api.Service.Id*"></a>
+              <h4 id="Google_Api_Service_Id" data-uid="Google.Api.Service.Id">Id</h4>
+              <div class="markdown level1 summary"><p>A unique ID for a specific instance of this message, typically assigned
+by the client for tracking purpose. If empty, the server may choose to
+generate one instead.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string Id { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_Logging_" data-uid="Google.Api.Service.Logging*"></a>
+              <h4 id="Google_Api_Service_Logging" data-uid="Google.Api.Service.Logging">Logging</h4>
+              <div class="markdown level1 summary"><p>Logging configuration.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Logging Logging { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Logging.html">Logging</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_Logs_" data-uid="Google.Api.Service.Logs*"></a>
+              <h4 id="Google_Api_Service_Logs" data-uid="Google.Api.Service.Logs">Logs</h4>
+              <div class="markdown level1 summary"><p>Defines the logs used by this service.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public RepeatedField&lt;LogDescriptor&gt; Logs { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Api.LogDescriptor.html">LogDescriptor</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_Metrics_" data-uid="Google.Api.Service.Metrics*"></a>
+              <h4 id="Google_Api_Service_Metrics" data-uid="Google.Api.Service.Metrics">Metrics</h4>
+              <div class="markdown level1 summary"><p>Defines the metrics used by this service.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public RepeatedField&lt;MetricDescriptor&gt; Metrics { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Api.MetricDescriptor.html">MetricDescriptor</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_MonitoredResources_" data-uid="Google.Api.Service.MonitoredResources*"></a>
+              <h4 id="Google_Api_Service_MonitoredResources" data-uid="Google.Api.Service.MonitoredResources">MonitoredResources</h4>
+              <div class="markdown level1 summary"><p>Defines the monitored resources used by this service. This is required
+by the [Service.monitoring][google.api.Service.monitoring] and [Service.logging][google.api.Service.logging] configurations.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public RepeatedField&lt;MonitoredResourceDescriptor&gt; MonitoredResources { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Api.MonitoredResourceDescriptor.html">MonitoredResourceDescriptor</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_Monitoring_" data-uid="Google.Api.Service.Monitoring*"></a>
+              <h4 id="Google_Api_Service_Monitoring" data-uid="Google.Api.Service.Monitoring">Monitoring</h4>
+              <div class="markdown level1 summary"><p>Monitoring configuration.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Monitoring Monitoring { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Monitoring.html">Monitoring</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_Name_" data-uid="Google.Api.Service.Name*"></a>
+              <h4 id="Google_Api_Service_Name" data-uid="Google.Api.Service.Name">Name</h4>
+              <div class="markdown level1 summary"><p>The DNS address at which this service is available,
+e.g. <code>calendar.googleapis.com</code>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_ProducerProjectId_" data-uid="Google.Api.Service.ProducerProjectId*"></a>
+              <h4 id="Google_Api_Service_ProducerProjectId" data-uid="Google.Api.Service.ProducerProjectId">ProducerProjectId</h4>
+              <div class="markdown level1 summary"><p>The id of the Google developer project that owns the service.
+Members of this project can manage the service configuration,
+manage consumption of the service, etc.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string ProducerProjectId { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_Quota_" data-uid="Google.Api.Service.Quota*"></a>
+              <h4 id="Google_Api_Service_Quota" data-uid="Google.Api.Service.Quota">Quota</h4>
+              <div class="markdown level1 summary"><p>Quota configuration.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Quota Quota { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Quota.html">Quota</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_SourceInfo_" data-uid="Google.Api.Service.SourceInfo*"></a>
+              <h4 id="Google_Api_Service_SourceInfo" data-uid="Google.Api.Service.SourceInfo">SourceInfo</h4>
+              <div class="markdown level1 summary"><p>Output only. The source information for this configuration if available.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public SourceInfo SourceInfo { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.SourceInfo.html">SourceInfo</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_SystemParameters_" data-uid="Google.Api.Service.SystemParameters*"></a>
+              <h4 id="Google_Api_Service_SystemParameters" data-uid="Google.Api.Service.SystemParameters">SystemParameters</h4>
+              <div class="markdown level1 summary"><p>System parameter configuration.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public SystemParameters SystemParameters { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.SystemParameters.html">SystemParameters</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_Title_" data-uid="Google.Api.Service.Title*"></a>
+              <h4 id="Google_Api_Service_Title" data-uid="Google.Api.Service.Title">Title</h4>
+              <div class="markdown level1 summary"><p>The product title associated with this service.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string Title { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_Types__" data-uid="Google.Api.Service.Types_*"></a>
+              <h4 id="Google_Api_Service_Types_" data-uid="Google.Api.Service.Types_">Types_</h4>
+              <div class="markdown level1 summary"><p>A list of all proto message types included in this API service.
+Types referenced directly or indirectly by the <code>apis</code> are
+automatically included.  Messages which are not referenced but
+shall be included, such as types used by the <code>google.protobuf.Any</code> type,
+should be listed here by name. Example:</p>
+<p>types:</p>
+<ul>
+<li>name: google.protobuf.Int32</li>
+</ul>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public RepeatedField&lt;Type&gt; Types_ { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Type.html">Type</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_Usage_" data-uid="Google.Api.Service.Usage*"></a>
+              <h4 id="Google_Api_Service_Usage" data-uid="Google.Api.Service.Usage">Usage</h4>
+              <div class="markdown level1 summary"><p>Configuration controlling usage of this service.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Usage Usage { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Usage.html">Usage</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+                        </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

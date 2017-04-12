@@ -77,13 +77,34 @@ installed, run the following command in a Google Cloud SDK Shell:</p>
 <pre><code class="lang-sh">&gt; gcloud auth application-default login
 </code></pre><h1 id="getting-started">Getting started</h1>
 <h2 id="registering-error-reporting">Registering Error Reporting</h2>
-<pre><code class="lang-cs">public void Configure(IApplicationBuilder app)
+<pre><code class="lang-cs">public void ConfigureServices(IServiceCollection services)
 {
-    // Use before handling any requests to ensure all unhandled exceptions are reported.
     string projectId = &quot;[Google Cloud Platform project ID]&quot;;
     string serviceName = &quot;[Name of service]&quot;;
     string version = &quot;[Version of service]&quot;;
-    app.UseGoogleExceptionLogging(projectId, serviceName, version);
+    services.AddGoogleExceptionLogging(projectId, serviceName, version);
+}
+
+public void Configure(IApplicationBuilder app)
+{
+    // Use before handling any requests to ensure all unhandled exceptions are reported.
+    app.UseGoogleExceptionLogging();
+}
+</code></pre><h2 id="log-exceptions">Log Exceptions</h2>
+<pre><code class="lang-cs">/// &lt;summary&gt;
+/// The &lt;see cref=&quot;IExceptionLogger&quot;/&gt; is populated by dependency injection.
+/// &lt;/summary&gt;
+public void ReadFile(IExceptionLogger exceptionLogger)
+{
+    try
+    {
+        string scores = File.ReadAllText(@&quot;C:\Scores.txt&quot;);
+        Console.WriteLine(scores);
+    }
+    catch (IOException e)
+    {
+        exceptionLogger.Log(e);
+    }
 }
 </code></pre><h2 id="initializing-logging">Initializing Logging</h2>
 <pre><code class="lang-cs">public void Configure(ILoggerFactory loggerFactory)
@@ -109,6 +130,40 @@ public void Configure(IApplicationBuilder app)
     // Use at the start of the request pipeline to ensure the entire
     // request is traced.
     app.UseGoogleTrace();
+}
+</code></pre><h2 id="tracing-in-mvc-controllers">Tracing in MVC Controllers</h2>
+<p>To use the <code>IManagedTracer</code> in MVC controllers you can either inject the singleton instance of 
+<code>IManagedTracer</code> into the controller&#39;s constructor (see <code>SampleConstructorController</code>) or you
+can in inject the <code>IManagedTracer</code> into the action method using the <code>[FromServices]</code> attribute
+(see <code>SampleMethodController</code>).</p>
+<pre><code class="lang-cs">public class SampleConstructorController : Controller
+{
+    private readonly IManagedTracer _tracer;
+
+    public SampleConstructorController(IManagedTracer tracer)
+    {
+        _tracer = tracer;
+    }
+
+    public ActionResult Hello()
+    {
+        using (_tracer.StartSpan(nameof(Hello)))
+        {
+            ViewData[&quot;text&quot;] = &quot;Hello, World!&quot;;
+            return View();
+        }
+    }
+}
+</code></pre><pre><code class="lang-cs">public class SampleMethodController : Controller
+{
+    public ActionResult Hello([FromServices] IManagedTracer tracer)
+    {
+        using (tracer.StartSpan(nameof(Hello)))
+        {
+            ViewData[&quot;text&quot;] = &quot;Hello, World!&quot;;
+            return View();
+        }
+    }
 }
 </code></pre><h2 id="manual-tracing">Manual Tracing</h2>
 <pre><code class="lang-cs">/// &lt;summary&gt;

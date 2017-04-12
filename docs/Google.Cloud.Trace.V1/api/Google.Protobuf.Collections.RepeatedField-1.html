@@ -1,0 +1,1176 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RepeatedField&lt;T&gt;
+   | Google.Cloud.Trace.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RepeatedField&lt;T&gt;
+   | Google.Cloud.Trace.V1 ">
+    <meta name="generator" content="docfx 2.14.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Protobuf_Collections_RepeatedField_1" data-uid="Google.Protobuf.Collections.RepeatedField`1">Class RepeatedField&lt;T&gt;
+              </h1>
+              <div class="markdown level0 summary"><p>The contents of a repeated field: essentially, a collection with some extra
+restrictions (no null values) and capabilities (deep cloning).</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">RepeatedField&lt;T&gt;</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Protobuf.Collections</h6>
+              <h6><strong>Assembly</strong>:Google.Protobuf.dll</h6>
+              <h5 id="Google_Protobuf_Collections_RepeatedField_1_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class RepeatedField&lt;T&gt; : IList&lt;T&gt;, ICollection&lt;T&gt;, IEnumerable&lt;T&gt;, IList, ICollection, IEnumerable, IDeepCloneable&lt;RepeatedField&lt;T&gt;&gt;, IEquatable&lt;RepeatedField&lt;T&gt;&gt;</code></pre>
+              </div>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">T</span></td>
+                    <td><p>The element type of the repeated field.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Protobuf_Collections_RepeatedField_1_remarks"><strong>Remarks</strong></h5>
+              <div class="markdown level0 remarks"><p>This implementation does not generally prohibit the use of types which are not
+supported by Protocol Buffers but nor does it guarantee that all operations will work in such cases.</p>
+</div>
+              <h3 id="properties">Properties
+              </h3>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_Count_" data-uid="Google.Protobuf.Collections.RepeatedField`1.Count*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_Count" data-uid="Google.Protobuf.Collections.RepeatedField`1.Count">Count</h4>
+              <div class="markdown level1 summary"><p>Gets the number of elements contained in the collection.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.Count</span></div>
+                  <div><span class="xref">System.Collections.ICollection.Count</span></div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_IsReadOnly_" data-uid="Google.Protobuf.Collections.RepeatedField`1.IsReadOnly*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_IsReadOnly" data-uid="Google.Protobuf.Collections.RepeatedField`1.IsReadOnly">IsReadOnly</h4>
+              <div class="markdown level1 summary"><p>Gets a value indicating whether the collection is read-only.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool IsReadOnly { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.IsReadOnly</span></div>
+                  <div><span class="xref">System.Collections.IList.IsReadOnly</span></div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_Item_" data-uid="Google.Protobuf.Collections.RepeatedField`1.Item*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_Item_System_Int32_" data-uid="Google.Protobuf.Collections.RepeatedField`1.Item(System.Int32)">Item[Int32]</h4>
+              <div class="markdown level1 summary"><p>Gets or sets the item at the specified index.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public T this[int index] { get; set; }</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><span class="parametername">index</span></td>
+                    <td><p>The zero-based index of the element to get or set.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">T</span></td>
+                    <td><p>The element at the specified index.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.IList&lt;T&gt;.Item[System.Int32]</span></div>
+              <h3 id="methods">Methods
+              </h3>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_Add_" data-uid="Google.Protobuf.Collections.RepeatedField`1.Add*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_Add__0_" data-uid="Google.Protobuf.Collections.RepeatedField`1.Add(`0)">Add(T)</h4>
+              <div class="markdown level1 summary"><p>Adds the specified item to the collection.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Add(T item)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">T</span></td>
+                    <td><span class="parametername">item</span></td>
+                    <td><p>The item to add.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.Add(T)</span></div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_Add_" data-uid="Google.Protobuf.Collections.RepeatedField`1.Add*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_Add_System_Collections_Generic_IEnumerable__0__" data-uid="Google.Protobuf.Collections.RepeatedField`1.Add(System.Collections.Generic.IEnumerable{`0})">Add(IEnumerable&lt;T&gt;)</h4>
+              <div class="markdown level1 summary"><p>Adds all of the specified values into this collection. This method is present to
+allow repeated fields to be constructed from queries within collection initializers.
+Within non-collection-initializer code, consider using the equivalent <a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1_AddRange_System_Collections_Generic_IEnumerable__0__">AddRange(IEnumerable&lt;T&gt;)</a>
+method instead for clarity.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Add(IEnumerable&lt;T&gt; values)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+                    <td><span class="parametername">values</span></td>
+                    <td><p>The values to add to this collection.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_AddEntriesFrom_" data-uid="Google.Protobuf.Collections.RepeatedField`1.AddEntriesFrom*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_AddEntriesFrom_Google_Protobuf_CodedInputStream_Google_Protobuf_FieldCodec__0__" data-uid="Google.Protobuf.Collections.RepeatedField`1.AddEntriesFrom(Google.Protobuf.CodedInputStream,Google.Protobuf.FieldCodec{`0})">AddEntriesFrom(CodedInputStream, FieldCodec&lt;T&gt;)</h4>
+              <div class="markdown level1 summary"><p>Adds the entries from the given input stream, decoding them with the specified codec.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void AddEntriesFrom(CodedInputStream input, FieldCodec&lt;T&gt; codec)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html">CodedInputStream</a></td>
+                    <td><span class="parametername">input</span></td>
+                    <td><p>The input stream to read from.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.FieldCodec-1.html">FieldCodec</a>&lt;T&gt;</td>
+                    <td><span class="parametername">codec</span></td>
+                    <td><p>The codec to use in order to read each entry.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_AddRange_" data-uid="Google.Protobuf.Collections.RepeatedField`1.AddRange*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_AddRange_System_Collections_Generic_IEnumerable__0__" data-uid="Google.Protobuf.Collections.RepeatedField`1.AddRange(System.Collections.Generic.IEnumerable{`0})">AddRange(IEnumerable&lt;T&gt;)</h4>
+              <div class="markdown level1 summary"><p>Adds all of the specified values into this collection.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void AddRange(IEnumerable&lt;T&gt; values)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+                    <td><span class="parametername">values</span></td>
+                    <td><p>The values to add to this collection.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_CalculateSize_" data-uid="Google.Protobuf.Collections.RepeatedField`1.CalculateSize*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_CalculateSize_Google_Protobuf_FieldCodec__0__" data-uid="Google.Protobuf.Collections.RepeatedField`1.CalculateSize(Google.Protobuf.FieldCodec{`0})">CalculateSize(FieldCodec&lt;T&gt;)</h4>
+              <div class="markdown level1 summary"><p>Calculates the size of this collection based on the given codec.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int CalculateSize(FieldCodec&lt;T&gt; codec)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.FieldCodec-1.html">FieldCodec</a>&lt;T&gt;</td>
+                    <td><span class="parametername">codec</span></td>
+                    <td><p>The codec to use when encoding each field.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><p>The number of bytes that would be written to a <a class="xref" href="Google.Protobuf.CodedOutputStream.html">CodedOutputStream</a> by <a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1_WriteTo_Google_Protobuf_CodedOutputStream_Google_Protobuf_FieldCodec__0__">WriteTo(CodedOutputStream, FieldCodec&lt;T&gt;)</a>,
+using the same codec.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_Clear_" data-uid="Google.Protobuf.Collections.RepeatedField`1.Clear*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_Clear" data-uid="Google.Protobuf.Collections.RepeatedField`1.Clear">Clear()</h4>
+              <div class="markdown level1 summary"><p>Removes all items from the collection.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+              </div>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.Clear()</span></div>
+                  <div><span class="xref">System.Collections.IList.Clear()</span></div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_Clone_" data-uid="Google.Protobuf.Collections.RepeatedField`1.Clone*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_Clone" data-uid="Google.Protobuf.Collections.RepeatedField`1.Clone">Clone()</h4>
+              <div class="markdown level1 summary"><p>Creates a deep clone of this repeated field.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public RepeatedField&lt;T&gt; Clone()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;T&gt;</td>
+                    <td><p>A deep clone of this repeated field.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;T&gt;.Clone()</a></div>
+              <h5 id="Google_Protobuf_Collections_RepeatedField_1_Clone_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>If the field type is
+a message type, each element is also cloned; otherwise, it is
+assumed that the field type is primitive (including string and
+bytes, both of which are immutable) and so a simple copy is
+equivalent to a deep clone.</p>
+</div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_Contains_" data-uid="Google.Protobuf.Collections.RepeatedField`1.Contains*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_Contains__0_" data-uid="Google.Protobuf.Collections.RepeatedField`1.Contains(`0)">Contains(T)</h4>
+              <div class="markdown level1 summary"><p>Determines whether this collection contains the given item.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Contains(T item)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">T</span></td>
+                    <td><span class="parametername">item</span></td>
+                    <td><p>The item to find.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p><code>true</code> if this collection contains the given item; <code>false</code> otherwise.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.Contains(T)</span></div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_CopyTo_" data-uid="Google.Protobuf.Collections.RepeatedField`1.CopyTo*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_CopyTo__0___System_Int32_" data-uid="Google.Protobuf.Collections.RepeatedField`1.CopyTo(`0[],System.Int32)">CopyTo(T[], Int32)</h4>
+              <div class="markdown level1 summary"><p>Copies this collection to the given array.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void CopyTo(T[] array, int arrayIndex)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>T[]</td>
+                    <td><span class="parametername">array</span></td>
+                    <td><p>The array to copy to.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><span class="parametername">arrayIndex</span></td>
+                    <td><p>The first index of the array to copy to.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.CopyTo(T[], System.Int32)</span></div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_GetEnumerator_" data-uid="Google.Protobuf.Collections.RepeatedField`1.GetEnumerator*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_GetEnumerator" data-uid="Google.Protobuf.Collections.RepeatedField`1.GetEnumerator">GetEnumerator()</h4>
+              <div class="markdown level1 summary"><p>Returns an enumerator that iterates through the collection.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IEnumerator&lt;T&gt; GetEnumerator()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;T&gt;</td>
+                    <td><p>An enumerator that can be used to iterate through the collection.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()</span></div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_GetHashCode_" data-uid="Google.Protobuf.Collections.RepeatedField`1.GetHashCode*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_GetHashCode" data-uid="Google.Protobuf.Collections.RepeatedField`1.GetHashCode">GetHashCode()</h4>
+              <div class="markdown level1 summary"><p>Returns a hash code for this instance.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><p>A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. </p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.GetHashCode()</span></div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_IndexOf_" data-uid="Google.Protobuf.Collections.RepeatedField`1.IndexOf*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_IndexOf__0_" data-uid="Google.Protobuf.Collections.RepeatedField`1.IndexOf(`0)">IndexOf(T)</h4>
+              <div class="markdown level1 summary"><p>Returns the index of the given item within the collection, or -1 if the item is not
+present.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int IndexOf(T item)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">T</span></td>
+                    <td><span class="parametername">item</span></td>
+                    <td><p>The item to find in the collection.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><p>The zero-based index of the item, or -1 if it is not found.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.IList&lt;T&gt;.IndexOf(T)</span></div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_Insert_" data-uid="Google.Protobuf.Collections.RepeatedField`1.Insert*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_Insert_System_Int32__0_" data-uid="Google.Protobuf.Collections.RepeatedField`1.Insert(System.Int32,`0)">Insert(Int32, T)</h4>
+              <div class="markdown level1 summary"><p>Inserts the given item at the specified index.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Insert(int index, T item)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><span class="parametername">index</span></td>
+                    <td><p>The index at which to insert the item.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">T</span></td>
+                    <td><span class="parametername">item</span></td>
+                    <td><p>The item to insert.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.IList&lt;T&gt;.Insert(System.Int32, T)</span></div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_Remove_" data-uid="Google.Protobuf.Collections.RepeatedField`1.Remove*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_Remove__0_" data-uid="Google.Protobuf.Collections.RepeatedField`1.Remove(`0)">Remove(T)</h4>
+              <div class="markdown level1 summary"><p>Removes the specified item from the collection</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Remove(T item)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">T</span></td>
+                    <td><span class="parametername">item</span></td>
+                    <td><p>The item to remove.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p><code>true</code> if the item was found and removed; <code>false</code> otherwise.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.Remove(T)</span></div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_RemoveAt_" data-uid="Google.Protobuf.Collections.RepeatedField`1.RemoveAt*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_RemoveAt_System_Int32_" data-uid="Google.Protobuf.Collections.RepeatedField`1.RemoveAt(System.Int32)">RemoveAt(Int32)</h4>
+              <div class="markdown level1 summary"><p>Removes the item at the given index.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void RemoveAt(int index)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><span class="parametername">index</span></td>
+                    <td><p>The zero-based index of the item to remove.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.IList&lt;T&gt;.RemoveAt(System.Int32)</span></div>
+                  <div><span class="xref">System.Collections.IList.RemoveAt(System.Int32)</span></div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_ToString_" data-uid="Google.Protobuf.Collections.RepeatedField`1.ToString*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_ToString" data-uid="Google.Protobuf.Collections.RepeatedField`1.ToString">ToString()</h4>
+              <div class="markdown level1 summary"><p>Returns a string representation of this repeated field, in the same
+way as it would be represented by the default JSON formatter.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.ToString()</span></div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_WriteTo_" data-uid="Google.Protobuf.Collections.RepeatedField`1.WriteTo*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_WriteTo_Google_Protobuf_CodedOutputStream_Google_Protobuf_FieldCodec__0__" data-uid="Google.Protobuf.Collections.RepeatedField`1.WriteTo(Google.Protobuf.CodedOutputStream,Google.Protobuf.FieldCodec{`0})">WriteTo(CodedOutputStream, FieldCodec&lt;T&gt;)</h4>
+              <div class="markdown level1 summary"><p>Writes the contents of this collection to the given <a class="xref" href="Google.Protobuf.CodedOutputStream.html">CodedOutputStream</a>,
+encoding each value using the specified codec.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void WriteTo(CodedOutputStream output, FieldCodec&lt;T&gt; codec)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html">CodedOutputStream</a></td>
+                    <td><span class="parametername">output</span></td>
+                    <td><p>The output stream to write to.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.FieldCodec-1.html">FieldCodec</a>&lt;T&gt;</td>
+                    <td><span class="parametername">codec</span></td>
+                    <td><p>The codec to use when encoding each value.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="eii">Explicit Interface Implementations
+              </h3>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_System_Collections_ICollection_CopyTo_" data-uid="Google.Protobuf.Collections.RepeatedField`1.System#Collections#ICollection#CopyTo*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_System_Collections_ICollection_CopyTo_System_Array_System_Int32_" data-uid="Google.Protobuf.Collections.RepeatedField`1.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">ICollection.CopyTo(Array, Int32)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void ICollection.CopyTo(Array array, int index)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Array</span></td>
+                    <td><span class="parametername">array</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><span class="parametername">index</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.ICollection.CopyTo(System.Array, System.Int32)</span></div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_System_Collections_ICollection_IsSynchronized_" data-uid="Google.Protobuf.Collections.RepeatedField`1.System#Collections#ICollection#IsSynchronized*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_System_Collections_ICollection_IsSynchronized" data-uid="Google.Protobuf.Collections.RepeatedField`1.System#Collections#ICollection#IsSynchronized">ICollection.IsSynchronized</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">bool ICollection.IsSynchronized { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.ICollection.IsSynchronized</span></div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_System_Collections_ICollection_SyncRoot_" data-uid="Google.Protobuf.Collections.RepeatedField`1.System#Collections#ICollection#SyncRoot*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_System_Collections_ICollection_SyncRoot" data-uid="Google.Protobuf.Collections.RepeatedField`1.System#Collections#ICollection#SyncRoot">ICollection.SyncRoot</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">object ICollection.SyncRoot { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.ICollection.SyncRoot</span></div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_System_Collections_IEnumerable_GetEnumerator_" data-uid="Google.Protobuf.Collections.RepeatedField`1.System#Collections#IEnumerable#GetEnumerator*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_System_Collections_IEnumerable_GetEnumerator" data-uid="Google.Protobuf.Collections.RepeatedField`1.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+              <div class="markdown level1 summary"><p>Returns an enumerator that iterates through a collection.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.IEnumerator</span></td>
+                    <td><p>An <span class="xref">System.Collections.IEnumerator</span> object that can be used to iterate through the collection.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IEnumerable.GetEnumerator()</span></div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_System_Collections_IList_Add_" data-uid="Google.Protobuf.Collections.RepeatedField`1.System#Collections#IList#Add*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_System_Collections_IList_Add_System_Object_" data-uid="Google.Protobuf.Collections.RepeatedField`1.System#Collections#IList#Add(System.Object)">IList.Add(Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">int IList.Add(object value)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">value</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IList.Add(System.Object)</span></div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_System_Collections_IList_Contains_" data-uid="Google.Protobuf.Collections.RepeatedField`1.System#Collections#IList#Contains*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_System_Collections_IList_Contains_System_Object_" data-uid="Google.Protobuf.Collections.RepeatedField`1.System#Collections#IList#Contains(System.Object)">IList.Contains(Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">bool IList.Contains(object value)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">value</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IList.Contains(System.Object)</span></div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_System_Collections_IList_IndexOf_" data-uid="Google.Protobuf.Collections.RepeatedField`1.System#Collections#IList#IndexOf*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_System_Collections_IList_IndexOf_System_Object_" data-uid="Google.Protobuf.Collections.RepeatedField`1.System#Collections#IList#IndexOf(System.Object)">IList.IndexOf(Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">int IList.IndexOf(object value)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">value</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IList.IndexOf(System.Object)</span></div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_System_Collections_IList_Insert_" data-uid="Google.Protobuf.Collections.RepeatedField`1.System#Collections#IList#Insert*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_System_Collections_IList_Insert_System_Int32_System_Object_" data-uid="Google.Protobuf.Collections.RepeatedField`1.System#Collections#IList#Insert(System.Int32,System.Object)">IList.Insert(Int32, Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void IList.Insert(int index, object value)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><span class="parametername">index</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">value</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IList.Insert(System.Int32, System.Object)</span></div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_System_Collections_IList_IsFixedSize_" data-uid="Google.Protobuf.Collections.RepeatedField`1.System#Collections#IList#IsFixedSize*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_System_Collections_IList_IsFixedSize" data-uid="Google.Protobuf.Collections.RepeatedField`1.System#Collections#IList#IsFixedSize">IList.IsFixedSize</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">bool IList.IsFixedSize { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IList.IsFixedSize</span></div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_System_Collections_IList_Item_" data-uid="Google.Protobuf.Collections.RepeatedField`1.System#Collections#IList#Item*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_System_Collections_IList_Item_System_Int32_" data-uid="Google.Protobuf.Collections.RepeatedField`1.System#Collections#IList#Item(System.Int32)">IList.Item[Int32]</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">object IList.this[int index] { get; set; }</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><span class="parametername">index</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IList.Item[System.Int32]</span></div>
+              <a id="Google_Protobuf_Collections_RepeatedField_1_System_Collections_IList_Remove_" data-uid="Google.Protobuf.Collections.RepeatedField`1.System#Collections#IList#Remove*"></a>
+              <h4 id="Google_Protobuf_Collections_RepeatedField_1_System_Collections_IList_Remove_System_Object_" data-uid="Google.Protobuf.Collections.RepeatedField`1.System#Collections#IList#Remove(System.Object)">IList.Remove(Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void IList.Remove(object value)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">value</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IList.Remove(System.Object)</span></div>
+                        </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

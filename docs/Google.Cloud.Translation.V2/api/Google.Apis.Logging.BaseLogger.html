@@ -1,0 +1,699 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BaseLogger
+   | Google.Cloud.Translation.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BaseLogger
+   | Google.Cloud.Translation.V2 ">
+    <meta name="generator" content="docfx 2.14.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Apis_Logging_BaseLogger" data-uid="Google.Apis.Logging.BaseLogger">Class BaseLogger
+              </h1>
+              <div class="markdown level0 summary"><p>An abstract base logger, upon which real loggers may be built.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">BaseLogger</span></div>
+                  <div class="level2"><a class="xref" href="Google.Apis.Logging.ConsoleLogger.html">ConsoleLogger</a></div>
+                  <div class="level2"><a class="xref" href="Google.Apis.Logging.MemoryLogger.html">MemoryLogger</a></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Apis.Logging</h6>
+              <h6><strong>Assembly</strong>:Google.Apis.Core.dll</h6>
+              <h5 id="Google_Apis_Logging_BaseLogger_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public abstract class BaseLogger : ILogger</code></pre>
+              </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <a id="Google_Apis_Logging_BaseLogger__ctor_" data-uid="Google.Apis.Logging.BaseLogger.#ctor*"></a>
+              <h4 id="Google_Apis_Logging_BaseLogger__ctor_Google_Apis_Logging_LogLevel_Google_Apis_Util_IClock_System_Type_" data-uid="Google.Apis.Logging.BaseLogger.#ctor(Google.Apis.Logging.LogLevel,Google.Apis.Util.IClock,System.Type)">BaseLogger(LogLevel, IClock, Type)</h4>
+              <div class="markdown level1 summary"><p>Construct a <a class="xref" href="Google.Apis.Logging.BaseLogger.html">BaseLogger</a>. </p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected BaseLogger(LogLevel minimumLogLevel, IClock clock, Type forType)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Logging.LogLevel.html">LogLevel</a></td>
+                    <td><span class="parametername">minimumLogLevel</span></td>
+                    <td><p>Logging will be enabled at this level and all higher levels.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Util.IClock.html">IClock</a></td>
+                    <td><span class="parametername">clock</span></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Util.IClock.html">IClock</a> to use to timestamp log entries.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">forType</span></td>
+                    <td><p>The type from which entries are being logged. May be <code>null</code>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              <a id="Google_Apis_Logging_BaseLogger_Clock_" data-uid="Google.Apis.Logging.BaseLogger.Clock*"></a>
+              <h4 id="Google_Apis_Logging_BaseLogger_Clock" data-uid="Google.Apis.Logging.BaseLogger.Clock">Clock</h4>
+              <div class="markdown level1 summary"><p>The <a class="xref" href="Google.Apis.Util.IClock.html">IClock</a> being used to timestamp log entries. </p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IClock Clock { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Util.IClock.html">IClock</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Logging_BaseLogger_IsDebugEnabled_" data-uid="Google.Apis.Logging.BaseLogger.IsDebugEnabled*"></a>
+              <h4 id="Google_Apis_Logging_BaseLogger_IsDebugEnabled" data-uid="Google.Apis.Logging.BaseLogger.IsDebugEnabled">IsDebugEnabled</h4>
+              <div class="markdown level1 summary"><p>Is Debug level logging enabled?</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool IsDebugEnabled { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Apis.Logging.ILogger.html#Google_Apis_Logging_ILogger_IsDebugEnabled">ILogger.IsDebugEnabled</a></div>
+              <a id="Google_Apis_Logging_BaseLogger_IsErrorEnabled_" data-uid="Google.Apis.Logging.BaseLogger.IsErrorEnabled*"></a>
+              <h4 id="Google_Apis_Logging_BaseLogger_IsErrorEnabled" data-uid="Google.Apis.Logging.BaseLogger.IsErrorEnabled">IsErrorEnabled</h4>
+              <div class="markdown level1 summary"><p>Is error level logging enabled?</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool IsErrorEnabled { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Logging_BaseLogger_IsInfoEnabled_" data-uid="Google.Apis.Logging.BaseLogger.IsInfoEnabled*"></a>
+              <h4 id="Google_Apis_Logging_BaseLogger_IsInfoEnabled" data-uid="Google.Apis.Logging.BaseLogger.IsInfoEnabled">IsInfoEnabled</h4>
+              <div class="markdown level1 summary"><p>Is info level logging enabled?</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool IsInfoEnabled { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Logging_BaseLogger_IsWarningEnabled_" data-uid="Google.Apis.Logging.BaseLogger.IsWarningEnabled*"></a>
+              <h4 id="Google_Apis_Logging_BaseLogger_IsWarningEnabled" data-uid="Google.Apis.Logging.BaseLogger.IsWarningEnabled">IsWarningEnabled</h4>
+              <div class="markdown level1 summary"><p>Is warning level logging enabled?</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool IsWarningEnabled { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Logging_BaseLogger_LoggerForType_" data-uid="Google.Apis.Logging.BaseLogger.LoggerForType*"></a>
+              <h4 id="Google_Apis_Logging_BaseLogger_LoggerForType" data-uid="Google.Apis.Logging.BaseLogger.LoggerForType">LoggerForType</h4>
+              <div class="markdown level1 summary"><p>The type from which entries are being logged. May be <code>null</code>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Type LoggerForType { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Logging_BaseLogger_MinimumLogLevel_" data-uid="Google.Apis.Logging.BaseLogger.MinimumLogLevel*"></a>
+              <h4 id="Google_Apis_Logging_BaseLogger_MinimumLogLevel" data-uid="Google.Apis.Logging.BaseLogger.MinimumLogLevel">MinimumLogLevel</h4>
+              <div class="markdown level1 summary"><p>Logging is enabled at this level and all higher levels.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public LogLevel MinimumLogLevel { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Logging.LogLevel.html">LogLevel</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              <a id="Google_Apis_Logging_BaseLogger_BuildNewLogger_" data-uid="Google.Apis.Logging.BaseLogger.BuildNewLogger*"></a>
+              <h4 id="Google_Apis_Logging_BaseLogger_BuildNewLogger_System_Type_" data-uid="Google.Apis.Logging.BaseLogger.BuildNewLogger(System.Type)">BuildNewLogger(Type)</h4>
+              <div class="markdown level1 summary"><p>Build a new logger of the derived concrete type, for use to log from the specified type.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected abstract ILogger BuildNewLogger(Type type)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">type</span></td>
+                    <td><p>The type from which entries are being logged.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Logging.ILogger.html">ILogger</a></td>
+                    <td><p>A new <a class="xref" href="Google.Apis.Logging.ILogger.html">ILogger</a> instance, logging from the specified type.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Logging_BaseLogger_Debug_" data-uid="Google.Apis.Logging.BaseLogger.Debug*"></a>
+              <h4 id="Google_Apis_Logging_BaseLogger_Debug_System_String_System_Object___" data-uid="Google.Apis.Logging.BaseLogger.Debug(System.String,System.Object[])">Debug(String, Object[])</h4>
+              <div class="markdown level1 summary"><p>Logs a debug message.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Debug(string message, params object[] formatArgs)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">message</span></td>
+                    <td><p>The message to log.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Object</span>[]</td>
+                    <td><span class="parametername">formatArgs</span></td>
+                    <td><p>String.Format arguments (if applicable).</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Apis.Logging.ILogger.html#Google_Apis_Logging_ILogger_Debug_System_String_System_Object___">ILogger.Debug(String, Object[])</a></div>
+              <a id="Google_Apis_Logging_BaseLogger_Error_" data-uid="Google.Apis.Logging.BaseLogger.Error*"></a>
+              <h4 id="Google_Apis_Logging_BaseLogger_Error_System_Exception_System_String_System_Object___" data-uid="Google.Apis.Logging.BaseLogger.Error(System.Exception,System.String,System.Object[])">Error(Exception, String, Object[])</h4>
+              <div class="markdown level1 summary"><p>Logs an error message resulting from an exception.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Error(Exception exception, string message, params object[] formatArgs)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Exception</span></td>
+                    <td><span class="parametername">exception</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">message</span></td>
+                    <td><p>The message to log.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Object</span>[]</td>
+                    <td><span class="parametername">formatArgs</span></td>
+                    <td><p>String.Format arguments (if applicable).</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Apis.Logging.ILogger.html#Google_Apis_Logging_ILogger_Error_System_Exception_System_String_System_Object___">ILogger.Error(Exception, String, Object[])</a></div>
+              <a id="Google_Apis_Logging_BaseLogger_Error_" data-uid="Google.Apis.Logging.BaseLogger.Error*"></a>
+              <h4 id="Google_Apis_Logging_BaseLogger_Error_System_String_System_Object___" data-uid="Google.Apis.Logging.BaseLogger.Error(System.String,System.Object[])">Error(String, Object[])</h4>
+              <div class="markdown level1 summary"><p>Logs an error message.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Error(string message, params object[] formatArgs)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">message</span></td>
+                    <td><p>The message to log.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Object</span>[]</td>
+                    <td><span class="parametername">formatArgs</span></td>
+                    <td><p>String.Format arguments (if applicable).</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Apis.Logging.ILogger.html#Google_Apis_Logging_ILogger_Error_System_String_System_Object___">ILogger.Error(String, Object[])</a></div>
+              <a id="Google_Apis_Logging_BaseLogger_ForType_" data-uid="Google.Apis.Logging.BaseLogger.ForType*"></a>
+              <h4 id="Google_Apis_Logging_BaseLogger_ForType_System_Type_" data-uid="Google.Apis.Logging.BaseLogger.ForType(System.Type)">ForType(Type)</h4>
+              <div class="markdown level1 summary"><p>Returns a logger which will be associated with the specified type.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ILogger ForType(Type type)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">type</span></td>
+                    <td><p>Type to which this logger belongs.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Logging.ILogger.html">ILogger</a></td>
+                    <td><p>A type-associated logger.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Apis.Logging.ILogger.html#Google_Apis_Logging_ILogger_ForType_System_Type_">ILogger.ForType(Type)</a></div>
+              <a id="Google_Apis_Logging_BaseLogger_ForType_" data-uid="Google.Apis.Logging.BaseLogger.ForType*"></a>
+              <h4 id="Google_Apis_Logging_BaseLogger_ForType__1" data-uid="Google.Apis.Logging.BaseLogger.ForType``1">ForType&lt;T&gt;()</h4>
+              <div class="markdown level1 summary"><p>Returns a logger which will be associated with the specified type.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ILogger ForType&lt;T&gt;()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Logging.ILogger.html">ILogger</a></td>
+                    <td><p>A type-associated logger.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">T</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Apis.Logging.ILogger.html#Google_Apis_Logging_ILogger_ForType__1">ILogger.ForType&lt;T&gt;()</a></div>
+              <a id="Google_Apis_Logging_BaseLogger_Info_" data-uid="Google.Apis.Logging.BaseLogger.Info*"></a>
+              <h4 id="Google_Apis_Logging_BaseLogger_Info_System_String_System_Object___" data-uid="Google.Apis.Logging.BaseLogger.Info(System.String,System.Object[])">Info(String, Object[])</h4>
+              <div class="markdown level1 summary"><p>Logs an info message.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Info(string message, params object[] formatArgs)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">message</span></td>
+                    <td><p>The message to log.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Object</span>[]</td>
+                    <td><span class="parametername">formatArgs</span></td>
+                    <td><p>String.Format arguments (if applicable).</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Apis.Logging.ILogger.html#Google_Apis_Logging_ILogger_Info_System_String_System_Object___">ILogger.Info(String, Object[])</a></div>
+              <a id="Google_Apis_Logging_BaseLogger_Log_" data-uid="Google.Apis.Logging.BaseLogger.Log*"></a>
+              <h4 id="Google_Apis_Logging_BaseLogger_Log_Google_Apis_Logging_LogLevel_System_String_" data-uid="Google.Apis.Logging.BaseLogger.Log(Google.Apis.Logging.LogLevel,System.String)">Log(LogLevel, String)</h4>
+              <div class="markdown level1 summary"><p>Perform the actual logging.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected abstract void Log(LogLevel logLevel, string formattedMessage)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Logging.LogLevel.html">LogLevel</a></td>
+                    <td><span class="parametername">logLevel</span></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Logging.LogLevel.html">LogLevel</a> of this log entry.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">formattedMessage</span></td>
+                    <td><p>The fully formatted log message, ready for logging.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Logging_BaseLogger_Warning_" data-uid="Google.Apis.Logging.BaseLogger.Warning*"></a>
+              <h4 id="Google_Apis_Logging_BaseLogger_Warning_System_String_System_Object___" data-uid="Google.Apis.Logging.BaseLogger.Warning(System.String,System.Object[])">Warning(String, Object[])</h4>
+              <div class="markdown level1 summary"><p>Logs a warning.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Warning(string message, params object[] formatArgs)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">message</span></td>
+                    <td><p>The message to log.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Object</span>[]</td>
+                    <td><span class="parametername">formatArgs</span></td>
+                    <td><p>String.Format arguments (if applicable).</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Apis.Logging.ILogger.html#Google_Apis_Logging_ILogger_Warning_System_String_System_Object___">ILogger.Warning(String, Object[])</a></div>
+              <h3 id="extensionmethods">Extension Methods</h3>
+              <div>
+                  <a class="xref" href="Google.Apis.Util.Utilities.html#Google_Apis_Util_Utilities_ThrowIfNull__1___0_System_String_">Utilities.ThrowIfNull&lt;T&gt;(T, String)</a>
+              </div>
+                        </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

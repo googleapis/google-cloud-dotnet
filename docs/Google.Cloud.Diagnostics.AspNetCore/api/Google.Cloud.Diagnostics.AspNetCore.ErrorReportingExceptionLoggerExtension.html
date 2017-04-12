@@ -108,22 +108,28 @@ the first piece of middleware used.</p>
 Docs: <a href="https://cloud.google.com/error-reporting/docs/">https://cloud.google.com/error-reporting/docs/</a></p>
 </div>
               <h5 id="Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension_examples"><strong>Examples</strong></h5>
-              <pre><code>public void Configure(IApplicationBuilder app)
+              <pre><code>public void ConfigureServices(IServiceCollection services)
 {
-    // Use before handling any requests to ensure all unhandled exceptions are reported.
     string projectId = "[Google Cloud Platform project ID]";
     string serviceName = "[Name of service]";
     string version = "[Version of service]";
-    app.UseGoogleExceptionLogging(projectId, serviceName, version);
+    services.AddGoogleExceptionLogging(projectId, serviceName, version);
+    ...
+}</code></pre>
+
+              <pre><code>public void Configure(IApplicationBuilder app)
+{
+    // Use before handling any requests to ensure all unhandled exceptions are reported.
+    app.UseGoogleExceptionLogging();
     ...
 }</code></pre>
 
               <h3 id="methods">Methods
               </h3>
-              <a id="Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension_UseGoogleExceptionLogging_" data-uid="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.UseGoogleExceptionLogging*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension_UseGoogleExceptionLogging_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_String_System_String_Google_Cloud_Diagnostics_Common_ErrorReportingOptions_" data-uid="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.UseGoogleExceptionLogging(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)">UseGoogleExceptionLogging(IApplicationBuilder, String, String, ErrorReportingOptions)</h4>
-              <div class="markdown level1 summary"><p>Uses middleware that will report all uncaught exceptions to the Stackdriver
-Error Reporting API.</p>
+              <a id="Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension_AddGoogleExceptionLogging_" data-uid="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging*"></a>
+              <h4 id="Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension_AddGoogleExceptionLogging_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_System_String_Google_Cloud_Diagnostics_Common_ErrorReportingOptions_" data-uid="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)">AddGoogleExceptionLogging(IServiceCollection, String, String, ErrorReportingOptions)</h4>
+              <div class="markdown level1 summary"><p>Adds services for middleware that will report all uncaught exceptions to the
+Stackdriver Error Reporting API.</p>
 <p>
 Can be used when running on Google App Engine or Google Compute Engine.
 The Google Cloud Platform project to report errors to will detected from the
@@ -133,7 +139,7 @@ current platform.
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static void UseGoogleExceptionLogging(this IApplicationBuilder app, string serviceName, string version, ErrorReportingOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public static void AddGoogleExceptionLogging(this IServiceCollection services, string serviceName, string version, ErrorReportingOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -146,9 +152,9 @@ current platform.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Microsoft.AspNetCore.Builder.IApplicationBuilder</span></td>
-                    <td><span class="parametername">app</span></td>
-                    <td><p>The application builder. Cannot be null.</p>
+                    <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
+                    <td><span class="parametername">services</span></td>
+                    <td><p>The service collection. Cannot be null.</p>
 </td>
                   </tr>
                   <tr>
@@ -173,15 +179,15 @@ current platform.
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension_UseGoogleExceptionLogging_" data-uid="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.UseGoogleExceptionLogging*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension_UseGoogleExceptionLogging_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_String_System_String_System_String_Google_Cloud_Diagnostics_Common_ErrorReportingOptions_" data-uid="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.UseGoogleExceptionLogging(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String,System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)">UseGoogleExceptionLogging(IApplicationBuilder, String, String, String, ErrorReportingOptions)</h4>
-              <div class="markdown level1 summary"><p>Uses middleware that will report all uncaught exceptions to the Stackdriver
-Error Reporting API.</p>
+              <a id="Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension_AddGoogleExceptionLogging_" data-uid="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging*"></a>
+              <h4 id="Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension_AddGoogleExceptionLogging_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_System_String_System_String_Google_Cloud_Diagnostics_Common_ErrorReportingOptions_" data-uid="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)">AddGoogleExceptionLogging(IServiceCollection, String, String, String, ErrorReportingOptions)</h4>
+              <div class="markdown level1 summary"><p>Adds services for middleware that will report all uncaught exceptions to the
+Stackdriver Error Reporting API.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static void UseGoogleExceptionLogging(this IApplicationBuilder app, string projectId, string serviceName, string version, ErrorReportingOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public static void AddGoogleExceptionLogging(this IServiceCollection services, string projectId, string serviceName, string version, ErrorReportingOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -194,9 +200,9 @@ Error Reporting API.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Microsoft.AspNetCore.Builder.IApplicationBuilder</span></td>
-                    <td><span class="parametername">app</span></td>
-                    <td><p>The application builder. Cannot be null.</p>
+                    <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
+                    <td><span class="parametername">services</span></td>
+                    <td><p>The service collection. Cannot be null.</p>
 </td>
                   </tr>
                   <tr>
@@ -223,6 +229,34 @@ Error Reporting API.</p>
                     <td><a class="xref" href="Google.Cloud.Diagnostics.Common.ErrorReportingOptions.html">ErrorReportingOptions</a></td>
                     <td><span class="parametername">options</span></td>
                     <td><p>Error reporting options for exception logging.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension_UseGoogleExceptionLogging_" data-uid="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.UseGoogleExceptionLogging*"></a>
+              <h4 id="Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension_UseGoogleExceptionLogging_Microsoft_AspNetCore_Builder_IApplicationBuilder_" data-uid="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.UseGoogleExceptionLogging(Microsoft.AspNetCore.Builder.IApplicationBuilder)">UseGoogleExceptionLogging(IApplicationBuilder)</h4>
+              <div class="markdown level1 summary"><p>Uses middleware that will report all uncaught exceptions to the Stackdriver
+Error Reporting API.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static void UseGoogleExceptionLogging(this IApplicationBuilder app)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Microsoft.AspNetCore.Builder.IApplicationBuilder</span></td>
+                    <td><span class="parametername">app</span></td>
+                    <td><p>The application builder. Cannot be null.</p>
 </td>
                   </tr>
                 </tbody>

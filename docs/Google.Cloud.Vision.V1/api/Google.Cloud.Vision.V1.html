@@ -95,6 +95,9 @@ image, with user-requested features.</p>
                   <h4><a class="xref" href="Google.Cloud.Vision.V1.Block.html">Block</a></h4>
                   <section><p>Logical element on the page.</p>
 </section>
+                  <h4><a class="xref" href="Google.Cloud.Vision.V1.Block.Types.html">Block.Types</a></h4>
+                  <section><p>Container for nested types declared in the Block message type.</p>
+</section>
                   <h4><a class="xref" href="Google.Cloud.Vision.V1.BoundingPoly.html">BoundingPoly</a></h4>
                   <section><p>A bounding polygon for the detected image annotation.</p>
 </section>
@@ -120,11 +123,27 @@ the image that the color occupies in the image.</p>
                   <h4><a class="xref" href="Google.Cloud.Vision.V1.FaceAnnotation.html">FaceAnnotation</a></h4>
                   <section><p>A face annotation object contains the results of face detection.</p>
 </section>
+                  <h4><a class="xref" href="Google.Cloud.Vision.V1.FaceAnnotation.Types.html">FaceAnnotation.Types</a></h4>
+                  <section><p>Container for nested types declared in the FaceAnnotation message type.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.html">FaceAnnotation.Types.Landmark</a></h4>
+                  <section><p>A face-specific landmark (for example, a face feature).
+Landmark positions may fall outside the bounds of the image
+if the face is near one or more edges of the image.
+Therefore it is NOT guaranteed that <code>0 &amp;lt;= x &amp;lt; width</code> or
+<code>0 &amp;lt;= y &amp;lt; height</code>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.Types.html">FaceAnnotation.Types.Landmark.Types</a></h4>
+                  <section><p>Container for nested types declared in the Landmark message type.</p>
+</section>
                   <h4><a class="xref" href="Google.Cloud.Vision.V1.Feature.html">Feature</a></h4>
                   <section><p>Users describe the type of Google Cloud Vision API tasks to perform over
 images by using <em>Feature</em>s. Each Feature indicates a type of image
 detection task to perform. Features encode the Cloud Vision API
 vertical to operate on and the number of top-scoring results to return.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Vision.V1.Feature.Types.html">Feature.Types</a></h4>
+                  <section><p>Container for nested types declared in the Feature message type.</p>
 </section>
                   <h4><a class="xref" href="Google.Cloud.Vision.V1.Image.html">Image</a></h4>
                   <section><p>Client image to perform Google Cloud Vision API tasks over.</p>
@@ -195,6 +214,21 @@ properties. Properties describe detected languages, breaks etc.. Please
 refer to the [google.cloud.vision.v1.TextAnnotation.TextProperty][google.cloud.vision.v1.TextAnnotation.TextProperty] message
 definition below for more detail.</p>
 </section>
+                  <h4><a class="xref" href="Google.Cloud.Vision.V1.TextAnnotation.Types.html">TextAnnotation.Types</a></h4>
+                  <section><p>Container for nested types declared in the TextAnnotation message type.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak.html">TextAnnotation.Types.DetectedBreak</a></h4>
+                  <section><p>Detected start or end of a structural component.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak.Types.html">TextAnnotation.Types.DetectedBreak.Types</a></h4>
+                  <section><p>Container for nested types declared in the DetectedBreak message type.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedLanguage.html">TextAnnotation.Types.DetectedLanguage</a></h4>
+                  <section><p>Detected language for a structural component.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty.html">TextAnnotation.Types.TextProperty</a></h4>
+                  <section><p>Additional information detected on the structural component.</p>
+</section>
                   <h4><a class="xref" href="Google.Cloud.Vision.V1.Vertex.html">Vertex</a></h4>
                   <section><p>A vertex represents a 2D point in the image.
 NOTE: the vertex coordinates are in the same scale as the original image.</p>
@@ -202,14 +236,41 @@ NOTE: the vertex coordinates are in the same scale as the original image.</p>
                   <h4><a class="xref" href="Google.Cloud.Vision.V1.WebDetection.html">WebDetection</a></h4>
                   <section><p>Relevant information for the image from the Internet.</p>
 </section>
+                  <h4><a class="xref" href="Google.Cloud.Vision.V1.WebDetection.Types.html">WebDetection.Types</a></h4>
+                  <section><p>Container for nested types declared in the WebDetection message type.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Vision.V1.WebDetection.Types.WebEntity.html">WebDetection.Types.WebEntity</a></h4>
+                  <section><p>Entity deduced from similar images on the Internet.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Vision.V1.WebDetection.Types.WebImage.html">WebDetection.Types.WebImage</a></h4>
+                  <section><p>Metadata for online images.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Vision.V1.WebDetection.Types.WebPage.html">WebDetection.Types.WebPage</a></h4>
+                  <section><p>Metadata for web pages.</p>
+</section>
                   <h4><a class="xref" href="Google.Cloud.Vision.V1.Word.html">Word</a></h4>
                   <section><p>A word representation.</p>
 </section>
                 <h3 id="enums">Enums
               </h3>
+                  <h4><a class="xref" href="Google.Cloud.Vision.V1.Block.Types.BlockType.html">Block.Types.BlockType</a></h4>
+                  <section><p>Type of a block (text, image etc) as identified by OCR.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.Types.Type.html">FaceAnnotation.Types.Landmark.Types.Type</a></h4>
+                  <section><p>Face landmark (feature) type.
+Left and right are defined from the vantage of the viewer of the image
+without considering mirror projections typical of photos. So, <code>LEFT_EYE</code>,
+typically, is the person&#39;s right eye.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Vision.V1.Feature.Types.Type.html">Feature.Types.Type</a></h4>
+                  <section><p>Type of image feature.</p>
+</section>
                   <h4><a class="xref" href="Google.Cloud.Vision.V1.Likelihood.html">Likelihood</a></h4>
                   <section><p>A bucketized representation of likelihood, which is intended to give clients
 highly stable results across model upgrades.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak.Types.BreakType.html">TextAnnotation.Types.DetectedBreak.Types.BreakType</a></h4>
+                  <section><p>Enum to denote the type of break found. New line, space etc.</p>
 </section>
                         </article>
           </div>

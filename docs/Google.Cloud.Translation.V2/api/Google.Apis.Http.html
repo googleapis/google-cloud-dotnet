@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Google.Apis.Http
+   | Google.Cloud.Translation.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Google.Apis.Http
+   | Google.Cloud.Translation.V2 ">
+    <meta name="generator" content="docfx 2.14.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              <h1 id="Google_Apis_Http" data-uid="Google.Apis.Http">Namespace Google.Apis.Http
+              </h1>
+              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="markdown level0 remarks"></div>
+                <h3 id="classes">Classes
+              </h3>
+                  <h4><a class="xref" href="Google.Apis.Http.BackOffHandler.html">BackOffHandler</a></h4>
+                  <section><p>A thread-safe back-off handler which handles an abnormal HTTP response or an exception with 
+<a class="xref" href="Google.Apis.Util.IBackOff.html">IBackOff</a>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.BackOffHandler.Initializer.html">BackOffHandler.Initializer</a></h4>
+                  <section><p>An initializer class to initialize a back-off handler.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.ConfigurableHttpClient.html">ConfigurableHttpClient</a></h4>
+                  <section><p>Configurable HTTP client inherits from <span class="xref">System.Net.Http.HttpClient</span> and contains a reference to 
+<a class="xref" href="Google.Apis.Http.ConfigurableMessageHandler.html">ConfigurableMessageHandler</a>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.ConfigurableMessageHandler.html">ConfigurableMessageHandler</a></h4>
+                  <section><p>A message handler which contains the main logic of our HTTP requests. It contains a list of 
+<a class="xref" href="Google.Apis.Http.IHttpUnsuccessfulResponseHandler.html">IHttpUnsuccessfulResponseHandler</a>s for handling abnormal responses, a list of 
+<a class="xref" href="Google.Apis.Http.IHttpExceptionHandler.html">IHttpExceptionHandler</a>s for handling exception in a request and a list of 
+<a class="xref" href="Google.Apis.Http.IHttpExecuteInterceptor.html">IHttpExecuteInterceptor</a>s for intercepting a request before it has been sent to the server.
+It also contains important properties like number of tries, follow redirect, etc.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.CreateHttpClientArgs.html">CreateHttpClientArgs</a></h4>
+                  <section><p>Arguments for creating a HTTP client.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.ExponentialBackOffInitializer.html">ExponentialBackOffInitializer</a></h4>
+                  <section><p>An initializer which adds exponential back-off as exception handler and \ or unsuccessful response handler by
+the given <a class="xref" href="Google.Apis.Http.ExponentialBackOffPolicy.html">ExponentialBackOffPolicy</a>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.HandleExceptionArgs.html">HandleExceptionArgs</a></h4>
+                  <section><p>Argument class to <a class="xref" href="Google.Apis.Http.IHttpExceptionHandler.html#Google_Apis_Http_IHttpExceptionHandler_HandleExceptionAsync_Google_Apis_Http_HandleExceptionArgs_">HandleExceptionAsync(HandleExceptionArgs)</a>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.HandleUnsuccessfulResponseArgs.html">HandleUnsuccessfulResponseArgs</a></h4>
+                  <section><p>Argument class to <a class="xref" href="Google.Apis.Http.IHttpUnsuccessfulResponseHandler.html#Google_Apis_Http_IHttpUnsuccessfulResponseHandler_HandleResponseAsync_Google_Apis_Http_HandleUnsuccessfulResponseArgs_">HandleResponseAsync(HandleUnsuccessfulResponseArgs)</a>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.HttpClientFactory.html">HttpClientFactory</a></h4>
+                  <section><p>The default implementation of the HTTP client factory.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.HttpConsts.html">HttpConsts</a></h4>
+                  <section><p>HTTP constants.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.HttpExtenstions.html">HttpExtenstions</a></h4>
+                  <section><p>Extension methods to <span class="xref">System.Net.Http.HttpRequestMessage</span> and 
+<span class="xref">System.Net.Http.HttpResponseMessage</span>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.MaxUrlLengthInterceptor.html">MaxUrlLengthInterceptor</a></h4>
+                  <section><p>Intercepts HTTP GET requests with a URLs longer than a specified maximum number of characters.
+The interceptor will change such requests as follows:</p>
+<ul><li></li><li></li><li></li><li></li></ul>
+</section>
+                <h3 id="interfaces">Interfaces
+              </h3>
+                  <h4><a class="xref" href="Google.Apis.Http.IConfigurableHttpClientInitializer.html">IConfigurableHttpClientInitializer</a></h4>
+                  <section><p>HTTP client initializer for changing the default behavior of HTTP client. 
+Use this initializer to change default values like timeout and number of tries. 
+You can also set different handlers and interceptors like <a class="xref" href="Google.Apis.Http.IHttpUnsuccessfulResponseHandler.html">IHttpUnsuccessfulResponseHandler</a>s, 
+<a class="xref" href="Google.Apis.Http.IHttpExceptionHandler.html">IHttpExceptionHandler</a>s and <a class="xref" href="Google.Apis.Http.IHttpExecuteInterceptor.html">IHttpExecuteInterceptor</a>s.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.IHttpClientFactory.html">IHttpClientFactory</a></h4>
+                  <section><p>HTTP client factory creates configurable HTTP clients. A unique HTTP client should be created for each service.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.IHttpExceptionHandler.html">IHttpExceptionHandler</a></h4>
+                  <section><p>Exception handler is invoked when an exception is thrown during a HTTP request.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.IHttpExecuteInterceptor.html">IHttpExecuteInterceptor</a></h4>
+                  <section><p>HTTP request execute interceptor to intercept a <span class="xref">System.Net.Http.HttpRequestMessage</span> before it has
+been sent. Sample usage is attaching &quot;Authorization&quot; header to a request.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.IHttpUnsuccessfulResponseHandler.html">IHttpUnsuccessfulResponseHandler</a></h4>
+                  <section><p>Unsuccessful response handler which is invoked when an abnormal HTTP response is returned when sending a HTTP
+request.</p>
+</section>
+                <h3 id="enums">Enums
+              </h3>
+                  <h4><a class="xref" href="Google.Apis.Http.ConfigurableMessageHandler.LogEventType.html">ConfigurableMessageHandler.LogEventType</a></h4>
+                  <section><p>Specifies the type(s) of request/response events to log.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.ExponentialBackOffPolicy.html">ExponentialBackOffPolicy</a></h4>
+                  <section><p>Indicates if exponential back-off is used automatically on exceptions in a service requests and \ or when 503 
+responses is returned form the server.</p>
+</section>
+                        </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -82,7 +82,7 @@ installed, run the following command in a Google Cloud SDK Shell:</p>
     string serviceName = &quot;[Name of service]&quot;;
     string version = &quot;[Version of service]&quot;;
     // Add a catch all for the uncaught exceptions.
-    config.Services.Add(typeof(IExceptionLogger),
+    config.Services.Add(typeof(System.Web.Http.ExceptionHandling.IExceptionLogger),
         ErrorReportingExceptionLogger.Create(projectId, serviceName, version));
 }
 </code></pre><h2 id="registering-error-reporting-mvc">Registering Error Reporting (MVC)</h2>
@@ -93,6 +93,21 @@ installed, run the following command in a Google Cloud SDK Shell:</p>
     string version = &quot;[Version of service]&quot;;
     // Add a catch all for the uncaught exceptions.
     filters.Add(ErrorReportingExceptionFilter.Create(projectId, serviceName, version));
+}
+</code></pre><h2 id="log-exceptions">Log Exceptions</h2>
+<pre><code class="lang-cs">string projectId = &quot;[Google Cloud Platform project ID]&quot;;
+string serviceName = &quot;[Name of service]&quot;;
+string version = &quot;[Version of service]&quot;;
+var exceptionLogger = GoogleExceptionLogger.Create(projectId, serviceName, version);
+
+try
+{
+    string scores = File.ReadAllText(@&quot;C:\Scores.txt&quot;);
+    Console.WriteLine(scores);
+}
+catch (IOException e)
+{
+    exceptionLogger.Log(e);
 }
 </code></pre><h2 id="initializing-tracing">Initializing Tracing</h2>
 <pre><code class="lang-cs">public class Global : HttpApplication

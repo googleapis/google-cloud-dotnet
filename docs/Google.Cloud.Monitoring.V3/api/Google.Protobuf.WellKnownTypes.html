@@ -1,0 +1,590 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Google.Protobuf.WellKnownTypes
+   | Google.Cloud.Monitoring.V3 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Google.Protobuf.WellKnownTypes
+   | Google.Cloud.Monitoring.V3 ">
+    <meta name="generator" content="docfx 2.14.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              <h1 id="Google_Protobuf_WellKnownTypes" data-uid="Google.Protobuf.WellKnownTypes">Namespace Google.Protobuf.WellKnownTypes
+              </h1>
+              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="markdown level0 remarks"></div>
+                <h3 id="classes">Classes
+              </h3>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Any.html">Any</a></h4>
+                  <section><p><code>Any</code> contains an arbitrary serialized protocol buffer message along with a
+URL that describes the type of the serialized message.</p>
+<p>Protobuf library provides support to pack/unpack Any values in the form
+of utility functions or additional generated methods of the Any type.</p>
+<p>Example 1: Pack and unpack a message in C++.</p>
+<p>Foo foo = ...;
+Any any;
+any.PackFrom(foo);
+...
+if (any.UnpackTo(&amp;foo)) {
+ ...
+}</p>
+<p>Example 2: Pack and unpack a message in Java.</p>
+<p>Foo foo = ...;
+Any any = Any.pack(foo);
+...
+if (any.is(Foo.class)) {
+ foo = any.unpack(Foo.class);
+}</p>
+<p>Example 3: Pack and unpack a message in Python.</p>
+<p>foo = Foo(...)
+any = Any()
+any.Pack(foo)
+...
+if any.Is(Foo.DESCRIPTOR):
+ any.Unpack(foo)
+ ...</p>
+<p>The pack methods provided by protobuf library will by default use
+&#39;type.googleapis.com/full.type.name&#39; as the type URL and the unpack
+methods only use the fully qualified type name after the last &#39;/&#39;
+in the type URL, for example &quot;foo.bar.com/x/y.z&quot; will yield type
+name &quot;y.z&quot;.</p>
+<h1 id="json">JSON</h1>
+<p>The JSON representation of an <code>Any</code> value uses the regular
+representation of the deserialized, embedded message, with an
+additional field <code>@type</code> which contains the type URL. Example:</p>
+<p>package google.profile;
+message Person {
+ string first_name = 1;
+ string last_name = 2;
+}</p>
+<p>{
+ &quot;@type&quot;: &quot;type.googleapis.com/google.profile.Person&quot;,
+ &quot;firstName&quot;: &lt;string&gt;,
+ &quot;lastName&quot;: &lt;string&gt;
+}</p>
+<p>If the embedded message type is well-known and has a custom JSON
+representation, that representation will be embedded adding a field
+<code>value</code> which holds the custom JSON in addition to the <code>@type</code>
+field. Example (for message [google.protobuf.Duration][]):</p>
+<p>{
+ &quot;@type&quot;: &quot;type.googleapis.com/google.protobuf.Duration&quot;,
+ &quot;value&quot;: &quot;1.212s&quot;
+}</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Api.html">Api</a></h4>
+                  <section><p>Api is a light-weight descriptor for a protocol buffer service.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.BoolValue.html">BoolValue</a></h4>
+                  <section><p>Wrapper message for <code>bool</code>.</p>
+<p>The JSON representation for <code>BoolValue</code> is JSON <code>true</code> and <code>false</code>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.BytesValue.html">BytesValue</a></h4>
+                  <section><p>Wrapper message for <code>bytes</code>.</p>
+<p>The JSON representation for <code>BytesValue</code> is JSON string.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.DoubleValue.html">DoubleValue</a></h4>
+                  <section><p>Wrapper message for <code>double</code>.</p>
+<p>The JSON representation for <code>DoubleValue</code> is JSON number.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html">Duration</a></h4>
+                  <section><p>A Duration represents a signed, fixed-length span of time represented
+as a count of seconds and fractions of seconds at nanosecond
+resolution. It is independent of any calendar and concepts like &quot;day&quot;
+or &quot;month&quot;. It is related to Timestamp in that the difference between
+two Timestamp values is a Duration and it can be added or subtracted
+from a Timestamp. Range is approximately +-10,000 years.</p>
+<p>Example 1: Compute Duration from two Timestamps in pseudo code.</p>
+<p>Timestamp start = ...;
+Timestamp end = ...;
+Duration duration = ...;</p>
+<p>duration.seconds = end.seconds - start.seconds;
+duration.nanos = end.nanos - start.nanos;</p>
+<p>if (duration.seconds &lt; 0 &amp;&amp; duration.nanos &gt; 0) {
+ duration.seconds += 1;
+ duration.nanos -= 1000000000;
+} else if (durations.seconds &gt; 0 &amp;&amp; duration.nanos &lt; 0) {
+ duration.seconds -= 1;
+ duration.nanos += 1000000000;
+}</p>
+<p>Example 2: Compute Timestamp from Timestamp + Duration in pseudo code.</p>
+<p>Timestamp start = ...;
+Duration duration = ...;
+Timestamp end = ...;</p>
+<p>end.seconds = start.seconds + duration.seconds;
+end.nanos = start.nanos + duration.nanos;</p>
+<p>if (end.nanos &lt; 0) {
+ end.seconds -= 1;
+ end.nanos += 1000000000;
+} else if (end.nanos &gt;= 1000000000) {
+ end.seconds += 1;
+ end.nanos -= 1000000000;
+}</p>
+<p>Example 3: Compute Duration from datetime.timedelta in Python.</p>
+<p>td = datetime.timedelta(days=3, minutes=10)
+duration = Duration()
+duration.FromTimedelta(td)</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a></h4>
+                  <section><p>A generic empty message that you can re-use to avoid defining duplicated
+empty messages in your APIs. A typical example is to use it as the request
+or the response type of an API method. For instance:</p>
+<p>service Foo {
+ rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);
+}</p>
+<p>The JSON representation for <code>Empty</code> is empty JSON object <code>{}</code>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Enum.html">Enum</a></h4>
+                  <section><p>Enum type definition.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.EnumValue.html">EnumValue</a></h4>
+                  <section><p>Enum value definition.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Field.html">Field</a></h4>
+                  <section><p>A single field of a message type.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Field.Types.html">Field.Types</a></h4>
+                  <section><p>Container for nested types declared in the Field message type.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.FieldMask.html">FieldMask</a></h4>
+                  <section><p><code>FieldMask</code> represents a set of symbolic field paths, for example:</p>
+<p>paths: &quot;f.a&quot;
+paths: &quot;f.b.d&quot;</p>
+<p>Here <code>f</code> represents a field in some root message, <code>a</code> and <code>b</code>
+fields in the message found in <code>f</code>, and <code>d</code> a field found in the
+message in <code>f.b</code>.</p>
+<p>Field masks are used to specify a subset of fields that should be
+returned by a get operation or modified by an update operation.
+Field masks also have a custom JSON encoding (see below).</p>
+<h1 id="field-masks-in-projections">Field Masks in Projections</h1>
+<p>When used in the context of a projection, a response message or
+sub-message is filtered by the API to only contain those fields as
+specified in the mask. For example, if the mask in the previous
+example is applied to a response message as follows:</p>
+<p>f {
+ a : 22
+ b {
+   d : 1
+   x : 2
+ }
+ y : 13
+}
+z: 8</p>
+<p>The result will not contain specific values for fields x,y and z
+(their value will be set to the default, and omitted in proto text
+output):</p>
+<p>f {
+ a : 22
+ b {
+   d : 1
+ }
+}</p>
+<p>A repeated field is not allowed except at the last position of a
+paths string.</p>
+<p>If a FieldMask object is not present in a get operation, the
+operation applies to all fields (as if a FieldMask of all fields
+had been specified).</p>
+<p>Note that a field mask does not necessarily apply to the
+top-level response message. In case of a REST get operation, the
+field mask applies directly to the response, but in case of a REST
+list operation, the mask instead applies to each individual message
+in the returned resource list. In case of a REST custom method,
+other definitions may be used. Where the mask applies will be
+clearly documented together with its declaration in the API.  In
+any case, the effect on the returned resource/resources is required
+behavior for APIs.</p>
+<h1 id="field-masks-in-update-operations">Field Masks in Update Operations</h1>
+<p>A field mask in update operations specifies which fields of the
+targeted resource are going to be updated. The API is required
+to only change the values of the fields as specified in the mask
+and leave the others untouched. If a resource is passed in to
+describe the updated values, the API ignores the values of all
+fields not covered by the mask.</p>
+<p>If a repeated field is specified for an update operation, the existing
+repeated values in the target resource will be overwritten by the new values.
+Note that a repeated field is only allowed in the last position of a <code>paths</code>
+string.</p>
+<p>If a sub-message is specified in the last position of the field mask for an
+update operation, then the existing sub-message in the target resource is
+overwritten. Given the target message:</p>
+<p>f {
+ b {
+   d : 1
+   x : 2
+ }
+ c : 1
+}</p>
+<p>And an update message:</p>
+<p>f {
+ b {
+   d : 10
+ }
+}</p>
+<p>then if the field mask is:</p>
+<p>paths: &quot;f.b&quot;</p>
+<p>then the result will be:</p>
+<p>f {
+ b {
+   d : 10
+ }
+ c : 1
+}</p>
+<p>However, if the update mask was:</p>
+<p>paths: &quot;f.b.d&quot;</p>
+<p>then the result would be:</p>
+<p>f {
+ b {
+   d : 10
+   x : 2
+ }
+ c : 1
+}</p>
+<p>In order to reset a field&#39;s value to the default, the field must
+be in the mask and set to the default value in the provided resource.
+Hence, in order to reset all fields of a resource, provide a default
+instance of the resource and set all fields in the mask, or do
+not provide a mask as described below.</p>
+<p>If a field mask is not present on update, the operation applies to
+all fields (as if a field mask of all fields has been specified).
+Note that in the presence of schema evolution, this may mean that
+fields the client does not know and has therefore not filled into
+the request will be reset to their default. If this is unwanted
+behavior, a specific service may require a client to always specify
+a field mask, producing an error if not.</p>
+<p>As with get operations, the location of the resource which
+describes the updated values in the request message depends on the
+operation kind. In any case, the effect of the field mask is
+required to be honored by the API.</p>
+<h2 id="considerations-for-http-rest">Considerations for HTTP REST</h2>
+<p>The HTTP kind of an update operation which uses a field mask must
+be set to PATCH instead of PUT in order to satisfy HTTP semantics
+(PUT must only be used for full updates).</p>
+<h1 id="json-encoding-of-field-masks">JSON Encoding of Field Masks</h1>
+<p>In JSON, a field mask is encoded as a single string where paths are
+separated by a comma. Fields name in each path are converted
+to/from lower-camel naming conventions.</p>
+<p>As an example, consider the following message declarations:</p>
+<p>message Profile {
+ User user = 1;
+ Photo photo = 2;
+}
+message User {
+ string display_name = 1;
+ string address = 2;
+}</p>
+<p>In proto a field mask for <code>Profile</code> may look as such:</p>
+<p>mask {
+ paths: &quot;user.display_name&quot;
+ paths: &quot;photo&quot;
+}</p>
+<p>In JSON, the same mask is represented as below:</p>
+<p>{
+ mask: &quot;user.displayName,photo&quot;
+}</p>
+<h1 id="field-masks-and-oneof-fields">Field Masks and Oneof Fields</h1>
+<p>Field masks treat fields in oneofs just as regular fields. Consider the
+following message:</p>
+<p>message SampleMessage {
+ oneof test_oneof {
+   string name = 4;
+   SubMessage sub_message = 9;
+ }
+}</p>
+<p>The field mask can be:</p>
+<p>mask {
+ paths: &quot;name&quot;
+}</p>
+<p>Or:</p>
+<p>mask {
+ paths: &quot;sub_message&quot;
+}</p>
+<p>Note that oneof type names (&quot;test_oneof&quot; in this case) cannot be used in
+paths.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.FloatValue.html">FloatValue</a></h4>
+                  <section><p>Wrapper message for <code>float</code>.</p>
+<p>The JSON representation for <code>FloatValue</code> is JSON number.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Int32Value.html">Int32Value</a></h4>
+                  <section><p>Wrapper message for <code>int32</code>.</p>
+<p>The JSON representation for <code>Int32Value</code> is JSON number.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Int64Value.html">Int64Value</a></h4>
+                  <section><p>Wrapper message for <code>int64</code>.</p>
+<p>The JSON representation for <code>Int64Value</code> is JSON string.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.ListValue.html">ListValue</a></h4>
+                  <section><p><code>ListValue</code> is a wrapper around a repeated field of values.</p>
+<p>The JSON representation for <code>ListValue</code> is JSON array.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Method.html">Method</a></h4>
+                  <section><p>Method represents a method of an api.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Mixin.html">Mixin</a></h4>
+                  <section><p>Declares an API to be included in this API. The including API must
+redeclare all the methods from the included API, but documentation
+and options are inherited as follows:</p>
+<ul>
+<li><p>If after comment and whitespace stripping, the documentation
+string of the redeclared method is empty, it will be inherited
+from the original method.</p>
+</li>
+<li><p>Each annotation belonging to the service config (http,
+visibility) which is not set in the redeclared method will be
+inherited.</p>
+</li>
+<li><p>If an http annotation is inherited, the path pattern will be
+modified as follows. Any version prefix will be replaced by the
+version of the including API plus the [root][] path if specified.</p>
+</li>
+</ul>
+<p>Example of a simple mixin:</p>
+<p>package google.acl.v1;
+service AccessControl {
+ // Get the underlying ACL object.
+ rpc GetAcl(GetAclRequest) returns (Acl) {
+   option (google.api.http).get = &quot;/v1/{resource=**}:getAcl&quot;;
+ }
+}</p>
+<p>package google.storage.v2;
+service Storage {
+ rpc GetAcl(GetAclRequest) returns (Acl);</p>
+<p> // Get a data record.
+ rpc GetData(GetDataRequest) returns (Data) {
+   option (google.api.http).get = &quot;/v2/{resource=**}&quot;;
+ }
+}</p>
+<p>Example of a mixin configuration:</p>
+<p>apis:</p>
+<ul>
+<li>name: google.storage.v2.Storage
+mixins:<ul>
+<li>name: google.acl.v1.AccessControl</li>
+</ul>
+</li>
+</ul>
+<p>The mixin construct implies that all methods in <code>AccessControl</code> are
+also declared with same name and request/response types in
+<code>Storage</code>. A documentation generator or annotation processor will
+see the effective <code>Storage.GetAcl</code> method after inherting
+documentation and annotations as follows:</p>
+<p>service Storage {
+ // Get the underlying ACL object.
+ rpc GetAcl(GetAclRequest) returns (Acl) {
+   option (google.api.http).get = &quot;/v2/{resource=**}:getAcl&quot;;
+ }
+ ...
+}</p>
+<p>Note how the version in the path pattern changed from <code>v1</code> to <code>v2</code>.</p>
+<p>If the <code>root</code> field in the mixin is specified, it should be a
+relative path under which inherited HTTP paths are placed. Example:</p>
+<p>apis:</p>
+<ul>
+<li>name: google.storage.v2.Storage
+mixins:<ul>
+<li>name: google.acl.v1.AccessControl
+root: acls</li>
+</ul>
+</li>
+</ul>
+<p>This implies the following inherited HTTP annotation:</p>
+<p>service Storage {
+ // Get the underlying ACL object.
+ rpc GetAcl(GetAclRequest) returns (Acl) {
+   option (google.api.http).get = &quot;/v2/acls/{resource=**}:getAcl&quot;;
+ }
+ ...
+}</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Option.html">Option</a></h4>
+                  <section><p>A protocol buffer option, which can be attached to a message, field,
+enumeration, etc.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.SourceContext.html">SourceContext</a></h4>
+                  <section><p><code>SourceContext</code> represents information about the source of a
+protobuf element, like the file in which it is defined.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.StringValue.html">StringValue</a></h4>
+                  <section><p>Wrapper message for <code>string</code>.</p>
+<p>The JSON representation for <code>StringValue</code> is JSON string.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Struct.html">Struct</a></h4>
+                  <section><p><code>Struct</code> represents a structured data value, consisting of fields
+which map to dynamically typed values. In some languages, <code>Struct</code>
+might be supported by a native representation. For example, in
+scripting languages like JS a struct is represented as an
+object. The details of that representation are described together
+with the proto support for the language.</p>
+<p>The JSON representation for <code>Struct</code> is JSON object.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.TimeExtensions.html">TimeExtensions</a></h4>
+                  <section><p>Extension methods on BCL time-related types, converting to protobuf types.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html">Timestamp</a></h4>
+                  <section><p>A Timestamp represents a point in time independent of any time zone
+or calendar, represented as seconds and fractions of seconds at
+nanosecond resolution in UTC Epoch time. It is encoded using the
+Proleptic Gregorian Calendar which extends the Gregorian calendar
+backwards to year one. It is encoded assuming all minutes are 60
+seconds long, i.e. leap seconds are &quot;smeared&quot; so that no leap second
+table is needed for interpretation. Range is from
+0001-01-01T00:00:00Z to 9999-12-31T23:59:59.999999999Z.
+By restricting to that range, we ensure that we can convert to
+and from  RFC 3339 date strings.
+See <a href="https://www.ietf.org/rfc/rfc3339.txt">https://www.ietf.org/rfc/rfc3339.txt</a>.</p>
+<p>Example 1: Compute Timestamp from POSIX <code>time()</code>.</p>
+<p>Timestamp timestamp;
+timestamp.set_seconds(time(NULL));
+timestamp.set_nanos(0);</p>
+<p>Example 2: Compute Timestamp from POSIX <code>gettimeofday()</code>.</p>
+<p>struct timeval tv;
+gettimeofday(&amp;tv, NULL);</p>
+<p>Timestamp timestamp;
+timestamp.set_seconds(tv.tv_sec);
+timestamp.set_nanos(tv.tv_usec * 1000);</p>
+<p>Example 3: Compute Timestamp from Win32 <code>GetSystemTimeAsFileTime()</code>.</p>
+<p>FILETIME ft;
+GetSystemTimeAsFileTime(&amp;ft);
+UINT64 ticks = (((UINT64)ft.dwHighDateTime) &lt;&lt; 32) | ft.dwLowDateTime;</p>
+<p>// A Windows tick is 100 nanoseconds. Windows epoch 1601-01-01T00:00:00Z
+// is 11644473600 seconds before Unix epoch 1970-01-01T00:00:00Z.
+Timestamp timestamp;
+timestamp.set_seconds((INT64) ((ticks / 10000000) - 11644473600LL));
+timestamp.set_nanos((INT32) ((ticks % 10000000) * 100));</p>
+<p>Example 4: Compute Timestamp from Java <code>System.currentTimeMillis()</code>.</p>
+<p>long millis = System.currentTimeMillis();</p>
+<p>Timestamp timestamp = Timestamp.newBuilder().setSeconds(millis / 1000)
+   .setNanos((int) ((millis % 1000) * 1000000)).build();</p>
+<p>Example 5: Compute Timestamp from current time in Python.</p>
+<p>timestamp = Timestamp()
+timestamp.GetCurrentTime()</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Type.html">Type</a></h4>
+                  <section><p>A protocol buffer message type.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.UInt32Value.html">UInt32Value</a></h4>
+                  <section><p>Wrapper message for <code>uint32</code>.</p>
+<p>The JSON representation for <code>UInt32Value</code> is JSON number.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.UInt64Value.html">UInt64Value</a></h4>
+                  <section><p>Wrapper message for <code>uint64</code>.</p>
+<p>The JSON representation for <code>UInt64Value</code> is JSON string.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Value.html">Value</a></h4>
+                  <section><p><code>Value</code> represents a dynamically typed value which can be either
+null, a number, a string, a boolean, a recursive struct value, or a
+list of values. A producer of value is expected to set one of that
+variants, absence of any variant indicates an error.</p>
+<p>The JSON representation for <code>Value</code> is JSON value.</p>
+</section>
+                <h3 id="enums">Enums
+              </h3>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Field.Types.Cardinality.html">Field.Types.Cardinality</a></h4>
+                  <section><p>Whether a field is optional, required, or repeated.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Field.Types.Kind.html">Field.Types.Kind</a></h4>
+                  <section><p>Basic field types.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.NullValue.html">NullValue</a></h4>
+                  <section><p><code>NullValue</code> is a singleton enumeration to represent the null value for the
+<code>Value</code> type union.</p>
+<p>The JSON representation for <code>NullValue</code> is JSON <code>null</code>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Syntax.html">Syntax</a></h4>
+                  <section><p>The syntax in which a protocol buffer element is defined.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Value.KindOneofCase.html">Value.KindOneofCase</a></h4>
+                  <section><p>Enum of possible cases for the &quot;kind&quot; oneof.</p>
+</section>
+                        </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -237,6 +237,64 @@ explicitly or by specifying parameters for a method of computing them
 non-finite values (infinities or NaNs) in the population of values, as this
 will render the <code>mean</code> and <code>sum_of_squared_deviation</code> fields meaningless.</p>
 </section>
+                  <h4><a class="xref" href="Google.Api.Distribution.Types.html">Distribution.Types</a></h4>
+                  <section><p>Container for nested types declared in the Distribution message type.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Distribution.Types.BucketOptions.html">Distribution.Types.BucketOptions</a></h4>
+                  <section><p>A Distribution may optionally contain a histogram of the values in the
+population.  The histogram is given in <code>bucket_counts</code> as counts of values
+that fall into one of a sequence of non-overlapping buckets.  The sequence
+of buckets is described by <code>bucket_options</code>.</p>
+<p>A bucket specifies an inclusive lower bound and exclusive upper bound for
+the values that are counted for that bucket.  The upper bound of a bucket
+is strictly greater than the lower bound.</p>
+<p>The sequence of N buckets for a Distribution consists of an underflow
+bucket (number 0), zero or more finite buckets (number 1 through N - 2) and
+an overflow bucket (number N - 1).  The buckets are contiguous:  the lower
+bound of bucket i (i &gt; 0) is the same as the upper bound of bucket i - 1.
+The buckets span the whole range of finite values: lower bound of the
+underflow bucket is -infinity and the upper bound of the overflow bucket is
++infinity.  The finite buckets are so-called because both bounds are
+finite.</p>
+<p><code>BucketOptions</code> describes bucket boundaries in one of three ways.  Two
+describe the boundaries by giving parameters for a formula to generate
+boundaries and one gives the bucket boundaries explicitly.</p>
+<p>If <code>bucket_boundaries</code> is not given, then no <code>bucket_counts</code> may be given.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Distribution.Types.BucketOptions.Types.html">Distribution.Types.BucketOptions.Types</a></h4>
+                  <section><p>Container for nested types declared in the BucketOptions message type.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Distribution.Types.BucketOptions.Types.Explicit.html">Distribution.Types.BucketOptions.Types.Explicit</a></h4>
+                  <section><p>A set of buckets with arbitrary widths.</p>
+<p>Defines <code>size(bounds) + 1</code> (= N) buckets with these boundaries for
+bucket i:</p>
+<p>Upper bound (0 &lt;= i &lt; N-1):     bounds[i]
+Lower bound (1 &lt;= i &lt; N);       bounds[i - 1]</p>
+<p>There must be at least one element in <code>bounds</code>.  If <code>bounds</code> has only one
+element, there are no finite buckets, and that single element is the
+common boundary of the overflow and underflow buckets.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Distribution.Types.BucketOptions.Types.Exponential.html">Distribution.Types.BucketOptions.Types.Exponential</a></h4>
+                  <section><p>Specify a sequence of buckets that have a width that is proportional to
+the value of the lower bound.  Each bucket represents a constant relative
+uncertainty on a specific value in the bucket.</p>
+<p>Defines <code>num_finite_buckets + 2</code> (= N) buckets with these boundaries for
+bucket i:</p>
+<p>Upper bound (0 &lt;= i &lt; N-1):     scale * (growth_factor ^ i).
+Lower bound (1 &lt;= i &lt; N):       scale * (growth_factor ^ (i - 1)).</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Distribution.Types.BucketOptions.Types.Linear.html">Distribution.Types.BucketOptions.Types.Linear</a></h4>
+                  <section><p>Specify a sequence of buckets that all have the same width (except
+overflow and underflow).  Each bucket represents a constant absolute
+uncertainty on the specific value in the bucket.</p>
+<p>Defines <code>num_finite_buckets + 2</code> (= N) buckets with these boundaries for
+bucket <code>i</code>:</p>
+<p>Upper bound (0 &lt;= i &lt; N-1):     offset + (width * i).
+Lower bound (1 &lt;= i &lt; N):       offset + (width * (i - 1)).</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Distribution.Types.Range.html">Distribution.Types.Range</a></h4>
+                  <section><p>The range of the population values.</p>
+</section>
                   <h4><a class="xref" href="Google.Api.Documentation.html">Documentation</a></h4>
                   <section><p><code>Documentation</code> provides the information for describing a service.</p>
 <p>Example:
@@ -584,6 +642,9 @@ content to Web (HTML) clients.</p>
                   <h4><a class="xref" href="Google.Api.LabelDescriptor.html">LabelDescriptor</a></h4>
                   <section><p>A description of a label.</p>
 </section>
+                  <h4><a class="xref" href="Google.Api.LabelDescriptor.Types.html">LabelDescriptor.Types</a></h4>
+                  <section><p>Container for nested types declared in the LabelDescriptor message type.</p>
+</section>
                   <h4><a class="xref" href="Google.Api.LogDescriptor.html">LogDescriptor</a></h4>
                   <section><p>A description of a log type. Example in YAML format:</p>
 <ul>
@@ -638,6 +699,13 @@ logs:<ul>
 </li>
 </ul>
 </section>
+                  <h4><a class="xref" href="Google.Api.Logging.Types.html">Logging.Types</a></h4>
+                  <section><p>Container for nested types declared in the Logging message type.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Logging.Types.LoggingDestination.html">Logging.Types.LoggingDestination</a></h4>
+                  <section><p>Configuration of a specific logging destination (the producer project
+or the consumer project).</p>
+</section>
                   <h4><a class="xref" href="Google.Api.Metric.html">Metric</a></h4>
                   <section><p>A specific metric, identified by specifying values for all of the
 labels of a [<code>MetricDescriptor</code>][google.api.MetricDescriptor].</p>
@@ -646,6 +714,9 @@ labels of a [<code>MetricDescriptor</code>][google.api.MetricDescriptor].</p>
                   <section><p>Defines a metric type and its schema. Once a metric descriptor is created,
 deleting or altering it stops data collection and makes the metric type&#39;s
 existing data unusable.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.MetricDescriptor.Types.html">MetricDescriptor.Types</a></h4>
+                  <section><p>Container for nested types declared in the MetricDescriptor message type.</p>
 </section>
                   <h4><a class="xref" href="Google.Api.MetricRule.html">MetricRule</a></h4>
                   <section><p>Bind API methods to metrics. Binding a method to a metric causes that
@@ -726,6 +797,13 @@ metrics:<ul>
 </li>
 </ul>
 </section>
+                  <h4><a class="xref" href="Google.Api.Monitoring.Types.html">Monitoring.Types</a></h4>
+                  <section><p>Container for nested types declared in the Monitoring message type.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Monitoring.Types.MonitoringDestination.html">Monitoring.Types.MonitoringDestination</a></h4>
+                  <section><p>Configuration of a specific monitoring destination (the producer project
+or the consumer project).</p>
+</section>
                   <h4><a class="xref" href="Google.Api.OAuthRequirements.html">OAuthRequirements</a></h4>
                   <section><p>OAuth scopes are a way to define data and permissions on data. For example,
 there are scopes defined for &quot;Read-only access to Google Calendar&quot; and
@@ -773,6 +851,9 @@ defines properties that controls map tile cache period, or whether to embed a
 watermark in a result.</p>
 <p>These values can be set via API producer console. Only API providers can
 define and set these properties.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Property.Types.html">Property.Types</a></h4>
+                  <section><p>Container for nested types declared in the Property message type.</p>
 </section>
                   <h4><a class="xref" href="Google.Api.Quota.html">Quota</a></h4>
                   <section><p>Quota configuration helps to achieve fairness and budgeting in service
@@ -910,8 +991,23 @@ allow_unregistered_calls: true</li>
                   <section><p>Classifies set of possible modifications to an object in the service
 configuration.</p>
 </section>
+                  <h4><a class="xref" href="Google.Api.Distribution.Types.BucketOptions.OptionsOneofCase.html">Distribution.Types.BucketOptions.OptionsOneofCase</a></h4>
+                  <section><p>Enum of possible cases for the &quot;options&quot; oneof.</p>
+</section>
                   <h4><a class="xref" href="Google.Api.HttpRule.PatternOneofCase.html">HttpRule.PatternOneofCase</a></h4>
                   <section><p>Enum of possible cases for the &quot;pattern&quot; oneof.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.LabelDescriptor.Types.ValueType.html">LabelDescriptor.Types.ValueType</a></h4>
+                  <section><p>Value types that can be used as label values.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.MetricDescriptor.Types.MetricKind.html">MetricDescriptor.Types.MetricKind</a></h4>
+                  <section><p>The kind of measurement. It describes how the data is reported.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.MetricDescriptor.Types.ValueType.html">MetricDescriptor.Types.ValueType</a></h4>
+                  <section><p>The value type of a metric.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Property.Types.PropertyType.html">Property.Types.PropertyType</a></h4>
+                  <section><p>Supported data type of the property values</p>
 </section>
                         </article>
           </div>

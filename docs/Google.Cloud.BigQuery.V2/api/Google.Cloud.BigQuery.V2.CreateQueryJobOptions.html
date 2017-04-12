@@ -203,6 +203,34 @@ If this is not specified, the results will be stored in a temporary table.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_DryRun_" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DryRun*"></a>
+              <h4 id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_DryRun" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DryRun">DryRun</h4>
+              <div class="markdown level1 summary"><p>If set to true, don&#39;t actually run this job. A valid query will return a mostly empty response
+with some processing statistics, while an invalid query will return the same error it would if it wasn&#39;t a dry run.
+This option can be used to determine the schema of the query without running it. The resulting
+<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html">BigQueryJob</a> has no job ID, so cannot be polled for completion, but the <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html#Google_Cloud_BigQuery_V2_BigQueryJob_Resource">Resource</a>
+contains all the information returned by the server.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool ? DryRun { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <a id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_FlattenResults_" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.FlattenResults*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_FlattenResults" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.FlattenResults">FlattenResults</h4>
               <div class="markdown level1 summary"><p>Flattens all nested and repeated fields in the query results.

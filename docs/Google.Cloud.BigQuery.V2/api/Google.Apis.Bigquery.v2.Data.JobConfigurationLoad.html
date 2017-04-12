@@ -378,9 +378,9 @@ public virtual int ? MaxBadRecords { get; set; }</code></pre>
               <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad_NullMarker" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.NullMarker">NullMarker</h4>
               <div class="markdown level1 summary"><p>[Optional] Specifies a string that represents a null value in a CSV file. For example, if you
 specify &quot;\N&quot;, BigQuery interprets &quot;\N&quot; as a null value when loading a CSV file. The default value is the
-empty string. If you set this property to a custom value, BigQuery still interprets the empty string as a
-null value for all data types except for STRING and BYTE. For STRING and BYTE columns, BigQuery interprets
-the empty string as an empty value.</p>
+empty string. If you set this property to a custom value, BigQuery throws an error if an empty string is
+present for all data types except for STRING and BYTE. For STRING and BYTE columns, BigQuery interprets the
+empty string as an empty value.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

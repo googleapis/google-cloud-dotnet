@@ -1,0 +1,1039 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CodedInputStream
+   | Google.Cloud.ErrorReporting.V1Beta1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CodedInputStream
+   | Google.Cloud.ErrorReporting.V1Beta1 ">
+    <meta name="generator" content="docfx 2.14.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Protobuf_CodedInputStream" data-uid="Google.Protobuf.CodedInputStream">Class CodedInputStream
+              </h1>
+              <div class="markdown level0 summary"><p>Reads and decodes protocol message fields.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">CodedInputStream</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Protobuf</h6>
+              <h6><strong>Assembly</strong>:Google.Protobuf.dll</h6>
+              <h5 id="Google_Protobuf_CodedInputStream_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class CodedInputStream : IDisposable</code></pre>
+              </div>
+              <h5 id="Google_Protobuf_CodedInputStream_remarks"><strong>Remarks</strong></h5>
+              <div class="markdown level0 remarks"><p>
+This class is generally used by generated code to read appropriate
+primitives from the stream. It effectively encapsulates the lowest
+levels of protocol buffer format.
+</p>
+<p>
+Repeated fields and map fields are not handled by this class; use <a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField&lt;T&gt;</a>
+and <a class="xref" href="Google.Protobuf.Collections.MapField-2.html">MapField&lt;TKey, TValue&gt;</a> to serialize such fields.
+</p>
+</div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <a id="Google_Protobuf_CodedInputStream__ctor_" data-uid="Google.Protobuf.CodedInputStream.#ctor*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream__ctor_System_Byte___" data-uid="Google.Protobuf.CodedInputStream.#ctor(System.Byte[])">CodedInputStream(Byte[])</h4>
+              <div class="markdown level1 summary"><p>Creates a new CodedInputStream reading data from the given byte array.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public CodedInputStream(byte[] buffer)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Byte</span>[]</td>
+                    <td><span class="parametername">buffer</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream__ctor_" data-uid="Google.Protobuf.CodedInputStream.#ctor*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream__ctor_System_Byte___System_Int32_System_Int32_" data-uid="Google.Protobuf.CodedInputStream.#ctor(System.Byte[],System.Int32,System.Int32)">CodedInputStream(Byte[], Int32, Int32)</h4>
+              <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Protobuf.CodedInputStream.html">CodedInputStream</a> that reads from the given byte array slice.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public CodedInputStream(byte[] buffer, int offset, int length)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Byte</span>[]</td>
+                    <td><span class="parametername">buffer</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><span class="parametername">offset</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><span class="parametername">length</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream__ctor_" data-uid="Google.Protobuf.CodedInputStream.#ctor*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream__ctor_System_IO_Stream_" data-uid="Google.Protobuf.CodedInputStream.#ctor(System.IO.Stream)">CodedInputStream(Stream)</h4>
+              <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Protobuf.CodedInputStream.html">CodedInputStream</a> reading data from the given stream, which will be disposed
+when the returned object is disposed.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public CodedInputStream(Stream input)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><span class="parametername">input</span></td>
+                    <td><p>The stream to read from.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream__ctor_" data-uid="Google.Protobuf.CodedInputStream.#ctor*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream__ctor_System_IO_Stream_System_Boolean_" data-uid="Google.Protobuf.CodedInputStream.#ctor(System.IO.Stream,System.Boolean)">CodedInputStream(Stream, Boolean)</h4>
+              <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Protobuf.CodedInputStream.html">CodedInputStream</a> reading data from the given stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public CodedInputStream(Stream input, bool leaveOpen)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><span class="parametername">input</span></td>
+                    <td><p>The stream to read from.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><span class="parametername">leaveOpen</span></td>
+                    <td><p><code>true</code> to leave <span class="paramref">input</span> open when the returned
+<code></code> is disposed; <code>false</code> to dispose of the given stream when the
+returned object is disposed.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              <a id="Google_Protobuf_CodedInputStream_IsAtEnd_" data-uid="Google.Protobuf.CodedInputStream.IsAtEnd*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_IsAtEnd" data-uid="Google.Protobuf.CodedInputStream.IsAtEnd">IsAtEnd</h4>
+              <div class="markdown level1 summary"><p>Returns true if the stream has reached the end of the input. This is the
+case if either the end of the underlying input source has been reached or
+the stream has reached a limit created using PushLimit.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool IsAtEnd { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream_Position_" data-uid="Google.Protobuf.CodedInputStream.Position*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_Position" data-uid="Google.Protobuf.CodedInputStream.Position">Position</h4>
+              <div class="markdown level1 summary"><p>Returns the current position in the input stream, or the position in the input buffer</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public long Position { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int64</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream_RecursionLimit_" data-uid="Google.Protobuf.CodedInputStream.RecursionLimit*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_RecursionLimit" data-uid="Google.Protobuf.CodedInputStream.RecursionLimit">RecursionLimit</h4>
+              <div class="markdown level1 summary"><p>Returns the recursion limit for this stream. This limit is applied whilst reading messages,
+to avoid maliciously-recursive data.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int RecursionLimit { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><p>The recursion limit for this stream.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Protobuf_CodedInputStream_RecursionLimit_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The default limit is 64.</p>
+</div>
+              <a id="Google_Protobuf_CodedInputStream_SizeLimit_" data-uid="Google.Protobuf.CodedInputStream.SizeLimit*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_SizeLimit" data-uid="Google.Protobuf.CodedInputStream.SizeLimit">SizeLimit</h4>
+              <div class="markdown level1 summary"><p>Returns the size limit for this stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int SizeLimit { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><p>The size limit.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Protobuf_CodedInputStream_SizeLimit_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This limit is applied when reading from the underlying stream, as a sanity check. It is
+not applied when reading from a byte array data source without an underlying stream.
+The default value is 64MB.</p>
+</div>
+              <h3 id="methods">Methods
+              </h3>
+              <a id="Google_Protobuf_CodedInputStream_CreateWithLimits_" data-uid="Google.Protobuf.CodedInputStream.CreateWithLimits*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_CreateWithLimits_System_IO_Stream_System_Int32_System_Int32_" data-uid="Google.Protobuf.CodedInputStream.CreateWithLimits(System.IO.Stream,System.Int32,System.Int32)">CreateWithLimits(Stream, Int32, Int32)</h4>
+              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Protobuf.CodedInputStream.html">CodedInputStream</a> with the specified size and recursion limits, reading
+from an input stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static CodedInputStream CreateWithLimits(Stream input, int sizeLimit, int recursionLimit)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><span class="parametername">input</span></td>
+                    <td><p>The input stream to read from</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><span class="parametername">sizeLimit</span></td>
+                    <td><p>The total limit of data to read from the stream.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><span class="parametername">recursionLimit</span></td>
+                    <td><p>The maximum recursion depth to allow while reading.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html">CodedInputStream</a></td>
+                    <td><p>A <code>CodedInputStream</code> reading from <span class="paramref">input</span> with the specified size
+and recursion limits.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Protobuf_CodedInputStream_CreateWithLimits_System_IO_Stream_System_Int32_System_Int32__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method exists separately from the constructor to reduce the number of constructor overloads.
+It is likely to be used considerably less frequently than the constructors, as the default limits
+are suitable for most use cases.</p>
+</div>
+              <a id="Google_Protobuf_CodedInputStream_Dispose_" data-uid="Google.Protobuf.CodedInputStream.Dispose*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_Dispose" data-uid="Google.Protobuf.CodedInputStream.Dispose">Dispose()</h4>
+              <div class="markdown level1 summary"><p>Disposes of this instance, potentially closing any underlying stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+              </div>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.IDisposable.Dispose()</span></div>
+              <h5 id="Google_Protobuf_CodedInputStream_Dispose_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>As there is no flushing to perform here, disposing of a <a class="xref" href="Google.Protobuf.CodedInputStream.html">CodedInputStream</a> which
+was constructed with the <code>leaveOpen</code> option parameter set to <code>true</code> (or one which
+was constructed to read from a byte array) has no effect.</p>
+</div>
+              <a id="Google_Protobuf_CodedInputStream_MaybeConsumeTag_" data-uid="Google.Protobuf.CodedInputStream.MaybeConsumeTag*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_MaybeConsumeTag_System_UInt32_" data-uid="Google.Protobuf.CodedInputStream.MaybeConsumeTag(System.UInt32)">MaybeConsumeTag(UInt32)</h4>
+              <div class="markdown level1 summary"><p>Peeks at the next tag in the stream. If it matches <span class="paramref">tag</span>,
+the tag is consumed and the method returns <code>true</code>; otherwise, the
+stream is left in the original position and the method returns <code>false</code>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool MaybeConsumeTag(uint tag)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.UInt32</span></td>
+                    <td><span class="parametername">tag</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream_PeekTag_" data-uid="Google.Protobuf.CodedInputStream.PeekTag*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_PeekTag" data-uid="Google.Protobuf.CodedInputStream.PeekTag">PeekTag()</h4>
+              <div class="markdown level1 summary"><p>Peeks at the next field tag. This is like calling <a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream_ReadTag">ReadTag()</a>, but the
+tag is not consumed. (So a subsequent call to <a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream_ReadTag">ReadTag()</a> will return the
+same value.)</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public uint PeekTag()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.UInt32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream_ReadBool_" data-uid="Google.Protobuf.CodedInputStream.ReadBool*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_ReadBool" data-uid="Google.Protobuf.CodedInputStream.ReadBool">ReadBool()</h4>
+              <div class="markdown level1 summary"><p>Reads a bool field from the stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool ReadBool()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream_ReadBytes_" data-uid="Google.Protobuf.CodedInputStream.ReadBytes*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_ReadBytes" data-uid="Google.Protobuf.CodedInputStream.ReadBytes">ReadBytes()</h4>
+              <div class="markdown level1 summary"><p>Reads a bytes field value from the stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ByteString ReadBytes()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream_ReadDouble_" data-uid="Google.Protobuf.CodedInputStream.ReadDouble*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_ReadDouble" data-uid="Google.Protobuf.CodedInputStream.ReadDouble">ReadDouble()</h4>
+              <div class="markdown level1 summary"><p>Reads a double field from the stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public double ReadDouble()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream_ReadEnum_" data-uid="Google.Protobuf.CodedInputStream.ReadEnum*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_ReadEnum" data-uid="Google.Protobuf.CodedInputStream.ReadEnum">ReadEnum()</h4>
+              <div class="markdown level1 summary"><p>Reads an enum field value from the stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int ReadEnum()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream_ReadFixed32_" data-uid="Google.Protobuf.CodedInputStream.ReadFixed32*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_ReadFixed32" data-uid="Google.Protobuf.CodedInputStream.ReadFixed32">ReadFixed32()</h4>
+              <div class="markdown level1 summary"><p>Reads a fixed32 field from the stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public uint ReadFixed32()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.UInt32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream_ReadFixed64_" data-uid="Google.Protobuf.CodedInputStream.ReadFixed64*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_ReadFixed64" data-uid="Google.Protobuf.CodedInputStream.ReadFixed64">ReadFixed64()</h4>
+              <div class="markdown level1 summary"><p>Reads a fixed64 field from the stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ulong ReadFixed64()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.UInt64</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream_ReadFloat_" data-uid="Google.Protobuf.CodedInputStream.ReadFloat*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_ReadFloat" data-uid="Google.Protobuf.CodedInputStream.ReadFloat">ReadFloat()</h4>
+              <div class="markdown level1 summary"><p>Reads a float field from the stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public float ReadFloat()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Single</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream_ReadInt32_" data-uid="Google.Protobuf.CodedInputStream.ReadInt32*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_ReadInt32" data-uid="Google.Protobuf.CodedInputStream.ReadInt32">ReadInt32()</h4>
+              <div class="markdown level1 summary"><p>Reads an int32 field from the stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int ReadInt32()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream_ReadInt64_" data-uid="Google.Protobuf.CodedInputStream.ReadInt64*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_ReadInt64" data-uid="Google.Protobuf.CodedInputStream.ReadInt64">ReadInt64()</h4>
+              <div class="markdown level1 summary"><p>Reads an int64 field from the stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public long ReadInt64()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int64</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream_ReadLength_" data-uid="Google.Protobuf.CodedInputStream.ReadLength*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_ReadLength" data-uid="Google.Protobuf.CodedInputStream.ReadLength">ReadLength()</h4>
+              <div class="markdown level1 summary"><p>Reads a length for length-delimited data.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int ReadLength()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Protobuf_CodedInputStream_ReadLength_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This is internally just reading a varint, but this method exists
+to make the calling code clearer.</p>
+</div>
+              <a id="Google_Protobuf_CodedInputStream_ReadMessage_" data-uid="Google.Protobuf.CodedInputStream.ReadMessage*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_ReadMessage_Google_Protobuf_IMessage_" data-uid="Google.Protobuf.CodedInputStream.ReadMessage(Google.Protobuf.IMessage)">ReadMessage(IMessage)</h4>
+              <div class="markdown level1 summary"><p>Reads an embedded message field value from the stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void ReadMessage(IMessage builder)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.IMessage.html">IMessage</a></td>
+                    <td><span class="parametername">builder</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream_ReadSFixed32_" data-uid="Google.Protobuf.CodedInputStream.ReadSFixed32*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_ReadSFixed32" data-uid="Google.Protobuf.CodedInputStream.ReadSFixed32">ReadSFixed32()</h4>
+              <div class="markdown level1 summary"><p>Reads an sfixed32 field value from the stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int ReadSFixed32()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream_ReadSFixed64_" data-uid="Google.Protobuf.CodedInputStream.ReadSFixed64*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_ReadSFixed64" data-uid="Google.Protobuf.CodedInputStream.ReadSFixed64">ReadSFixed64()</h4>
+              <div class="markdown level1 summary"><p>Reads an sfixed64 field value from the stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public long ReadSFixed64()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int64</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream_ReadSInt32_" data-uid="Google.Protobuf.CodedInputStream.ReadSInt32*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_ReadSInt32" data-uid="Google.Protobuf.CodedInputStream.ReadSInt32">ReadSInt32()</h4>
+              <div class="markdown level1 summary"><p>Reads an sint32 field value from the stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int ReadSInt32()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream_ReadSInt64_" data-uid="Google.Protobuf.CodedInputStream.ReadSInt64*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_ReadSInt64" data-uid="Google.Protobuf.CodedInputStream.ReadSInt64">ReadSInt64()</h4>
+              <div class="markdown level1 summary"><p>Reads an sint64 field value from the stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public long ReadSInt64()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int64</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream_ReadString_" data-uid="Google.Protobuf.CodedInputStream.ReadString*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_ReadString" data-uid="Google.Protobuf.CodedInputStream.ReadString">ReadString()</h4>
+              <div class="markdown level1 summary"><p>Reads a string field from the stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string ReadString()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream_ReadTag_" data-uid="Google.Protobuf.CodedInputStream.ReadTag*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_ReadTag" data-uid="Google.Protobuf.CodedInputStream.ReadTag">ReadTag()</h4>
+              <div class="markdown level1 summary"><p>Reads a field tag, returning the tag of 0 for &quot;end of stream&quot;.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public uint ReadTag()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.UInt32</span></td>
+                    <td><p>The next field tag, or 0 for end of stream. (0 is never a valid tag.)</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Protobuf_CodedInputStream_ReadTag_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>If this method returns 0, it doesn&#39;t necessarily mean the end of all
+the data in this CodedInputStream; it may be the end of the logical stream
+for an embedded message, for example.</p>
+</div>
+              <a id="Google_Protobuf_CodedInputStream_ReadUInt32_" data-uid="Google.Protobuf.CodedInputStream.ReadUInt32*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_ReadUInt32" data-uid="Google.Protobuf.CodedInputStream.ReadUInt32">ReadUInt32()</h4>
+              <div class="markdown level1 summary"><p>Reads a uint32 field value from the stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public uint ReadUInt32()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.UInt32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream_ReadUInt64_" data-uid="Google.Protobuf.CodedInputStream.ReadUInt64*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_ReadUInt64" data-uid="Google.Protobuf.CodedInputStream.ReadUInt64">ReadUInt64()</h4>
+              <div class="markdown level1 summary"><p>Reads a uint64 field from the stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ulong ReadUInt64()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.UInt64</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_CodedInputStream_SkipLastField_" data-uid="Google.Protobuf.CodedInputStream.SkipLastField*"></a>
+              <h4 id="Google_Protobuf_CodedInputStream_SkipLastField" data-uid="Google.Protobuf.CodedInputStream.SkipLastField">SkipLastField()</h4>
+              <div class="markdown level1 summary"><p>Skips the data for the field with the tag we&#39;ve just read.
+This should be called directly after <a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream_ReadTag">ReadTag()</a>, when
+the caller wishes to skip an unknown field.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void SkipLastField()</code></pre>
+              </div>
+              <h5 id="Google_Protobuf_CodedInputStream_SkipLastField_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method throws <a class="xref" href="Google.Protobuf.InvalidProtocolBufferException.html">InvalidProtocolBufferException</a> if the last-read tag was an end-group tag.
+If a caller wishes to skip a group, they should skip the whole group, by calling this method after reading the
+start-group tag. This behavior allows callers to call this method on any field they don&#39;t understand, correctly
+resulting in an error if an end-group tag has not been paired with an earlier start-group tag.</p>
+</div>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.InvalidProtocolBufferException.html">InvalidProtocolBufferException</a></td>
+                    <td><p>The last tag was an end-group tag</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.InvalidOperationException</span></td>
+                    <td><p>The last read operation read to the end of the logical stream</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+                        </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

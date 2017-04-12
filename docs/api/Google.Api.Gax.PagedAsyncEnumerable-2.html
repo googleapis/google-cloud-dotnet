@@ -191,7 +191,7 @@ resources to this sequence.</p>
                   <div><span class="xref">System.Collections.Generic.IAsyncEnumerable&lt;T&gt;.GetEnumerator()</span></div>
               <a id="Google_Api_Gax_PagedAsyncEnumerable_2_ReadPageAsync_" data-uid="Google.Api.Gax.PagedAsyncEnumerable`2.ReadPageAsync*"></a>
               <h4 id="Google_Api_Gax_PagedAsyncEnumerable_2_ReadPageAsync_System_Int32_System_Threading_CancellationToken_" data-uid="Google.Api.Gax.PagedAsyncEnumerable`2.ReadPageAsync(System.Int32,System.Threading.CancellationToken)">ReadPageAsync(Int32, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Asynchronously reads a single page of results with a fixed maximum size. The returned page is guaranteed
+              <div class="markdown level1 summary"><p>Eagerly (but asynchronously) reads a single page of results with a fixed maximum size. The returned page is guaranteed
 to have that many results, unless there is no more data available.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -244,7 +244,9 @@ to have that many results, unless there is no more data available.</p>
 For example, a request for a page with 100 resources may return a page with 80 resources but
 a next page token for more to be retrieved. This is suitable for batch-processing, but not
 for user-visible paging such as in a web application, where fixed-size pages are expected.
-This method may make more than one API call in order to fill the page.</p>
+This method may make more than one API call in order to fill the page, but after the page has been
+returned, all the data will have been loaded. (In particular, iterating over the items in the page
+multiple times will not make any further requests.)</p>
 </div>
                         </article>
           </div>

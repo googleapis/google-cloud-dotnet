@@ -108,19 +108,24 @@ uncaught exceptions in ASP.NET applications can be automatically reported to the
     string serviceName = &quot;[Name of service]&quot;;
     string version = &quot;[Version of service]&quot;;
     // Add a catch all for the uncaught exceptions.
-    config.Services.Add(typeof(IExceptionLogger),
+    config.Services.Add(typeof(System.Web.Http.ExceptionHandling.IExceptionLogger),
         ErrorReportingExceptionLogger.Create(projectId, serviceName, version));
 }
 </code></pre><h2 id="automatic-error-reporting-for-aspnet-core">Automatic Error Reporting for ASP.NET Core</h2>
 <p>Using <a href="Google.Cloud.Diagnostics.AspNetCore/index.html"><code>Google.Cloud.Diagnostics.AspNetCore</code>&#39;s Exception Logger Middleware</a>
 uncaught exceptions in ASP.NET Core applications can be automatically reported to the Stackdriver Error Reporting API.</p>
-<pre><code class="lang-cs">public void Configure(IApplicationBuilder app)
+<pre><code class="lang-cs">public void ConfigureServices(IServiceCollection services)
 {
-    // Use before handling any requests to ensure all unhandled exceptions are reported.
     string projectId = &quot;[Google Cloud Platform project ID]&quot;;
     string serviceName = &quot;[Name of service]&quot;;
     string version = &quot;[Version of service]&quot;;
-    app.UseGoogleExceptionLogging(projectId, serviceName, version);
+    services.AddGoogleExceptionLogging(projectId, serviceName, version);
+}
+
+public void Configure(IApplicationBuilder app)
+{
+    // Use before handling any requests to ensure all unhandled exceptions are reported.
+    app.UseGoogleExceptionLogging();
 }
 </code></pre><h2 id="report-an-error">Report an error</h2>
 <pre><code class="lang-cs">ReportErrorsServiceClient client = ReportErrorsServiceClient.Create();
