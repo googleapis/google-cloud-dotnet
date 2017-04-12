@@ -47,6 +47,14 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                 {
                     dependencies.Add("Google.Api.Gax");
                 }
+                // Likewise add protobuf and GRPC whenever we depend on Gax.Rrpc...
+                // (It would be quite nice to do all this automatically...)
+                if (dependencies.Contains("Google.Api.Gax.Grpc"))
+                {
+                    dependencies.Add("Google.Protobuf");
+                    dependencies.Add("Google.Api.CommonProtos");
+                    dependencies.Add("Grpc.Core");
+                }
                 return dependencies;
             }
         }
