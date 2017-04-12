@@ -50,7 +50,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <remarks>
         /// Ignoring of health checks (<paramref name="ignoreHealthChecks"/>) takes precedence over the
         /// predicate (<paramref name="traceDecisionPredicate"/>).  If <paramref name="ignoreHealthChecks"/>
-        /// is true and the request is a health check (<paramref name="traceDecisionPredicate"/>) will not
+        /// is true and the request is a health check <paramref name="traceDecisionPredicate"/> will not
         /// be called.
         /// </remarks>
         /// <param name="traceDecisionPredicate">Optional. Used to determine if a request should be traced.
