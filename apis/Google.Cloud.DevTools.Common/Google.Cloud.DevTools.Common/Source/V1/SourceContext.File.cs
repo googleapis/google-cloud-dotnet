@@ -42,6 +42,13 @@ namespace Google.Cloud.DevTools.Source.V1
         /// <summary>
         /// Gets the <seealso cref="SourceContext"/> for the application.
         /// </summary>
+        /// <exception cref="InvalidProtocolBufferException">
+        /// Thrown when the source context file is invalid in some way, 
+        /// e.g. it contains a malformed varint or a negative byte length.
+        /// </exception>
+        /// <exception cref="InvalidJsonException">
+        /// Thrown when the source context file is not in valid json format.
+        /// </exception>
         public static SourceContext AppSourceContext => s_sourceContext.Value;
 
         /// <summary>
@@ -58,15 +65,7 @@ namespace Google.Cloud.DevTools.Source.V1
             {
                 return null;
             }
-
-            try
-            {
-                return JsonParser.Default.Parse<SourceContext>(sourceContext);
-            }
-            catch (Exception ex) when (IsProtobufParserException(ex))
-            {
-                return null;
-            }
+            return JsonParser.Default.Parse<SourceContext>(sourceContext);
         }
 
         /// <summary>
@@ -104,9 +103,5 @@ namespace Google.Cloud.DevTools.Source.V1
             || ex is NotSupportedException
             || ex is SecurityException
             || ex is UnauthorizedAccessException;
-
-        private static bool IsProtobufParserException(Exception ex) =>
-            ex is InvalidProtocolBufferException
-            || ex is InvalidJsonException;
     }
 }
