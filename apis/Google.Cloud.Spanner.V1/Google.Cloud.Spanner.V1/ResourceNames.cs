@@ -337,7 +337,7 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public SessionName SessionName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Spanner.V1.SessionName.Parse(Name); }
+            get { return String.IsNullOrEmpty(Name) ? null : SessionName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
