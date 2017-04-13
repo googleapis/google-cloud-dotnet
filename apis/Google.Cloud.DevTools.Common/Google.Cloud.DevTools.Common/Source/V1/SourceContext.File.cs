@@ -49,6 +49,12 @@ namespace Google.Cloud.DevTools.Source.V1
         /// <exception cref="InvalidJsonException">
         /// Thrown when the source context file is not in valid json format.
         /// </exception>
+        /// <exception cref="SecurityException">
+        /// Thrown when the application does not have permission to read the file.
+        /// </exception>
+        /// <exception cref="UnauthorizedAccessException">
+        /// Theown when the application is not authorized to access the file.
+        /// </exception>
         public static SourceContext AppSourceContext => s_sourceContext.Value;
 
         /// <summary>
@@ -81,7 +87,7 @@ namespace Google.Cloud.DevTools.Source.V1
             {
                 return File.ReadAllText(s_filePath.Value);
             }
-            catch (Exception ex) when (IsReadFailureException(ex))
+            catch (Exception ex) when (ex is IOException)
             {
                 return null;
             }
@@ -97,11 +103,5 @@ namespace Google.Cloud.DevTools.Source.V1
             var fullPath = Path.Combine(root, SourceContextFileName);
             return File.Exists(fullPath) ? fullPath : null;
         }
-
-        private static bool IsReadFailureException(Exception ex) =>
-            ex is IOException
-            || ex is NotSupportedException
-            || ex is SecurityException
-            || ex is UnauthorizedAccessException;
     }
 }
