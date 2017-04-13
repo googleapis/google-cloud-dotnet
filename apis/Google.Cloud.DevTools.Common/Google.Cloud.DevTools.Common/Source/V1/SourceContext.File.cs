@@ -30,7 +30,12 @@ namespace Google.Cloud.DevTools.Source.V1
         private static Lazy<SourceContext> s_sourceContext = new Lazy<SourceContext>(OpenParseFile);
 
         /// <summary>
-        /// Gets the custom log label of Stackdriver Logging entry for Git commit id.
+        /// Gets the custom log label of Stackdriver Logging entry to set Git revision id.
+        /// When writing Stackdriver Logging entry, 
+        /// user should add this custom label, set the value to the git revision id.
+        /// This enables Google Cloud Tools for Visual Studio to locate source file revision
+        /// of the log entry. 
+        /// The design is still evolving, the usage of the label is subject to change.
         /// </summary>
         public const string GitRevisionIdLogLabel = "git_revision_id";
 
@@ -69,6 +74,9 @@ namespace Google.Cloud.DevTools.Source.V1
         /// </summary>
         private static string Read()
         {
+            {
+                return null;
+            }
             try
             {
                 return File.ReadAllText(s_filePath.Value);
@@ -92,7 +100,6 @@ namespace Google.Cloud.DevTools.Source.V1
 
         private static bool IsReadFailureException(Exception ex) =>
             ex is IOException
-            || ex is ArgumentNullException
             || ex is NotSupportedException
             || ex is SecurityException
             || ex is UnauthorizedAccessException;
