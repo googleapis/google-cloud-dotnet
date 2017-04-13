@@ -74,6 +74,7 @@ namespace Google.Cloud.DevTools.Source.V1
         /// </summary>
         private static string Read()
         {
+            if (s_filePath.Value == null)
             {
                 return null;
             }
