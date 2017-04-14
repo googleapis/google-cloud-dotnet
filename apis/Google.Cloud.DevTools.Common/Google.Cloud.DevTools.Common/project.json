@@ -27,6 +27,11 @@
   },
   "frameworks": {
     "net45": {},
-    "netstandard1.3": {}
+    "netstandard1.3": {
+      "dependencies": {
+        "System.IO.FileSystem": "4.3.0",
+        "System.AppContext": "4.3.0"
+      }
+    }
   }
 }
