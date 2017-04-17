@@ -90,19 +90,16 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public static bool WaitOnResourcesExhausted { get; set; } = true;
 
-        internal static async Task<Session> CreateAsync(SpannerClient client, string datasource)
+        internal static async Task<Session> CreateAsync(SpannerClient client, string project, 
+            string instance, string database, CancellationToken cancellationToken)
         {
-            string[] parts = datasource.Split('/');
-            if (parts == null || parts.Length != 3)
-            {
-                throw new InvalidOperationException("invalid datasource format " + datasource);
-            }
             bool allocated = false;
 
             while (!allocated)
             {
                 while (!Monitor.TryEnter(CreateSync))
                 {
+                    cancellationToken.ThrowIfCancellationRequested();
                     await Task.Yield();
                 }
                 try
@@ -125,7 +122,8 @@ namespace Google.Cloud.Spanner.V1
             Session result = null;
             try
             {
-                result = await client.CreateSessionAsync(new DatabaseName(parts[0], parts[1], parts[2]));
+                result = await client.CreateSessionAsync(new DatabaseName(project, instance, database),
+                    cancellationToken);
             }
             finally
             {

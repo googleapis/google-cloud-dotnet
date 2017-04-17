@@ -15,39 +15,78 @@
 using System;
 using System.Data;
 using System.Data.Common;
+using System.Diagnostics;
+using System.Threading;
+using System.Threading.Tasks;
 using Google.Apis.Auth.OAuth2;
+using Google.Cloud.Spanner.V1;
 
 // ReSharper disable UnusedParameter.Local
-
 namespace Google.Cloud.Spanner
 {
     /// <summary>
+    /// A SpannerConnection represents a connection to a single Spanner database.
     /// </summary>
     public class SpannerConnection : DbConnection
     {
+        private SpannerBatchOperation _activeBatchOperation;
+        private SpannerConnectionStringBuilder _connectionStringBuilder;
+        private ConnectionState _state = ConnectionState.Closed;
+        private SpannerClient _client;
+        private Session _session;
+
         /// <summary>
+        /// Creates a SpannerConnection with no datasource or credential specified.
         /// </summary>
         public SpannerConnection()
         {
-            throw new NotImplementedException();
         }
 
         /// <summary>
+        /// Creates a SpannerConnection with a datasource contained in connectionString
+        /// and optional credential information supplied in connectionString or the credential
+        /// argument.
         /// </summary>
-        /// <param name="connectionString"></param>
-        /// <param name="credential"></param>
+        /// <param name="connectionString">A Spanner formatted connection string.</param>
+        /// <param name="credential">An optional credential.</param>
         public SpannerConnection(string connectionString, ITokenAccess credential = null)
+            :this(new SpannerConnectionStringBuilder(connectionString, credential))
         {
-            throw new NotImplementedException();
         }
 
         /// <summary>
+        /// Creates a SpannerConnection with a datasource contained in connectionString
+        /// and optional credential information supplied in connectionString or the credential
+        /// argument.
         /// </summary>
-        /// <param name="connectionStringBuilder"></param>
-        /// <param name="credential"></param>
-        public SpannerConnection(SpannerConnectionStringBuilder connectionStringBuilder, ITokenAccess credential = null)
+        /// <param name="connectionStringBuilder">A SpannerConnectionStringBuilder containing
+        ///  a formatted connection string.</param>
+        public SpannerConnection(SpannerConnectionStringBuilder connectionStringBuilder)
         {
-            throw new NotImplementedException();
+            TrySetNewConnectionInfo(connectionStringBuilder);
+        }
+
+        private bool IsOpen => (State & ConnectionState.Open) == ConnectionState.Open;
+        private bool IsClosed => (State & ConnectionState.Open) == 0;
+
+        private void AssertOpen(string message) {
+            if (!IsOpen)
+            {
+                throw new InvalidOperationException("The connection must be open.  Failed to " + message);
+            }
+
+        }
+
+        private void AssertClosed(string message) {
+            if (!IsClosed)
+            {
+                throw new InvalidOperationException("The connection must be closed.  Failed to " + message);
+            }
+
+        }
+        private void TrySetNewConnectionInfo(SpannerConnectionStringBuilder newBuilder) {
+            AssertClosed("change connection information.");
+            _connectionStringBuilder = newBuilder;
         }
 
         /// <summary>
@@ -55,7 +94,13 @@ namespace Google.Cloud.Spanner
         /// <returns></returns>
         public SpannerBatchOperation BeginBatchOperation()
         {
-            throw new NotImplementedException();
+            //This may be called while the connection is closed.
+            SpannerBatchOperation newBatchOperation = new SpannerBatchOperation(this);
+            if (Interlocked.CompareExchange(ref _activeBatchOperation, newBatchOperation, null)
+                != null) {
+                throw new InvalidOperationException("You may only create a single Batch operation at a time.");
+            }
+            return _activeBatchOperation;
         }
 
 #if NET451
@@ -68,48 +113,68 @@ namespace Google.Cloud.Spanner
         /// <inheritdoc />
         protected override DbProviderFactory DbProviderFactory
         {
-            get { throw new NotImplementedException(); }
+            get { return SpannerProviderFactory.Instance; }
         }
 #endif
 
         /// <summary>
+        /// Provides options to customize how connections to Spanner are created
+        /// and maintained.
         /// </summary>
         public static ConnectionPoolOptions ConnectionPoolOptions
         {
-            get { throw new NotImplementedException(); }
+            get { return ConnectionPoolOptions.Instance; }
         }
 
         /// <summary>
+        /// Returns the credential used for the connection, if set.
         /// </summary>
         public ITokenAccess Credential
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return _connectionStringBuilder.Credential; }
         }
 
         /// <inheritdoc />
         public override string ConnectionString
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return _connectionStringBuilder.ToString(); }
+            set { TrySetNewConnectionInfo(new SpannerConnectionStringBuilder(value, _connectionStringBuilder.Credential)); }
         }
 
         /// <inheritdoc />
         public override string Database
         {
-            get { throw new NotImplementedException(); }
+            get { return _connectionStringBuilder.SpannerDatabase; }
         }
 
         /// <inheritdoc />
         public override ConnectionState State
         {
-            get { throw new NotImplementedException(); }
+            get { return _state; }
         }
 
         /// <inheritdoc />
-        public override void Open()
-        {
-            throw new NotImplementedException();
+        public override void Open() {
+            if (IsOpen)
+            {
+                return;
+            }
+            OpenAsync(CancellationToken.None).Wait();
+        }
+
+        /// <inheritdoc />
+        public override async Task OpenAsync(CancellationToken cancellationToken) {
+            if (IsOpen) {
+                return;
+            }
+            _client = await ClientPool.AcquireClientAsync(_connectionStringBuilder.Credential);
+            _session =
+                await
+                    SessionPool.AcquireSessionAsync(_connectionStringBuilder.Credential,
+                        _connectionStringBuilder.Project,
+                        _connectionStringBuilder.SpannerInstance,
+                        _connectionStringBuilder.SpannerDatabase, cancellationToken);
+            _state = ConnectionState.Open;
         }
 
         /// <summary>
@@ -117,9 +182,8 @@ namespace Google.Cloud.Spanner
         /// <param name="databaseTable"></param>
         /// <param name="insertParameters"></param>
         /// <returns></returns>
-        public SpannerCommand CreateInsertCommand(string databaseTable, SpannerParameterCollection insertParameters = null)
-        {
-            throw new NotImplementedException();
+        public SpannerCommand CreateInsertCommand(string databaseTable, SpannerParameterCollection insertParameters = null) {
+            return new SpannerCommand(SpannerCommandTextBuilder.CreateInsertTextBuilder(databaseTable), this, null, insertParameters);
         }
 
         /// <summary>
@@ -129,7 +193,7 @@ namespace Google.Cloud.Spanner
         /// <returns></returns>
         public SpannerCommand CreateUpdateCommand(string databaseTable, SpannerParameterCollection updateParameters = null)
         {
-            throw new NotImplementedException();
+            return new SpannerCommand(SpannerCommandTextBuilder.CreateUpdateTextBuilder(databaseTable), this, null, updateParameters);
         }
 
         /// <summary>
@@ -140,7 +204,7 @@ namespace Google.Cloud.Spanner
         public SpannerCommand CreateInsertOrUpdateCommand(string databaseTable,
             SpannerParameterCollection insertUpdateParameters = null)
         {
-            throw new NotImplementedException();
+            return new SpannerCommand(SpannerCommandTextBuilder.CreateInsertOrUpdateTextBuilder(databaseTable), this, null, insertUpdateParameters);
         }
 
         /// <summary>
@@ -151,7 +215,7 @@ namespace Google.Cloud.Spanner
         public SpannerCommand CreateDeleteCommand(string databaseTable,
             SpannerParameterCollection deleteFilterParameters = null)
         {
-            throw new NotImplementedException();
+            return new SpannerCommand(SpannerCommandTextBuilder.CreateDeleteTextBuilder(databaseTable), this, null, deleteFilterParameters);
         }
 
         /// <summary>
@@ -162,19 +226,36 @@ namespace Google.Cloud.Spanner
         public SpannerCommand CreateSelectCommand(string sqlQueryStatement,
             SpannerParameterCollection selectParameters = null)
         {
-            throw new NotImplementedException();
+            return new SpannerCommand(SpannerCommandTextBuilder.CreateSelectTextBuilder(sqlQueryStatement), this, null, selectParameters);
         }
 
         /// <inheritdoc />
         public override void Close()
         {
-            throw new NotImplementedException();
+            if (IsClosed) {
+                return;
+            }
+            _state = ConnectionState.Closed;
+            //we do not await the actual session close, we let that happen async.
+            var task = SessionPool.ReleaseSessionAsync(_session,
+                _connectionStringBuilder.Credential,
+                _connectionStringBuilder.Project,
+                _connectionStringBuilder.SpannerInstance,
+                _connectionStringBuilder.SpannerDatabase);
+            task.ContinueWith(t => {
+                if (t.IsFaulted && t.Exception != null) {
+                    //TODO(benwu): logging methodology?
+                    Trace.TraceWarning($"Error releasing session: {t.Exception}");
+                }
+            });
         }
 
         /// <inheritdoc />
         protected override void Dispose(bool disposing)
         {
-            throw new NotImplementedException();
+            if (IsOpen) {
+                Close();
+            }
         }
 
         /// <inheritdoc />
@@ -206,39 +287,27 @@ namespace Google.Cloud.Spanner
         /// <inheritdoc />
         public override void ChangeDatabase(string newDataSource)
         {
-            throw new NotImplementedException();
+            TrySetNewConnectionInfo(_connectionStringBuilder.CloneWithNewDataSource(newDataSource));
         }
 
         /// <inheritdoc />
         protected override DbCommand CreateDbCommand()
         {
-            throw new NotImplementedException();
+            return new SpannerCommand();
         }
 
         /// <inheritdoc />
-        public override string DataSource
-        {
-            get { throw new NotImplementedException(); }
-        }
+        public override string DataSource => _connectionStringBuilder.DataSource;
 
         /// <inheritdoc />
-        public override string ServerVersion
-        {
-            get { throw new NotImplementedException(); }
-        }
+        public override string ServerVersion => "0.0";
 
         /// <summary>
         /// </summary>
-        public string Project
-        {
-            get { throw new NotImplementedException(); }
-        }
+        public string Project => _connectionStringBuilder.Project;
 
         /// <summary>
         /// </summary>
-        public string SpannerInstance
-        {
-            get { throw new NotImplementedException(); }
-        }
+        public string SpannerInstance => _connectionStringBuilder.SpannerInstance;
     }
 }

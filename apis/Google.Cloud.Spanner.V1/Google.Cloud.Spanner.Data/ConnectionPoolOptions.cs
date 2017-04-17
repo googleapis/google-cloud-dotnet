@@ -22,6 +22,14 @@ namespace Google.Cloud.Spanner
     public class ConnectionPoolOptions
     {
         /// <summary>
+        /// The default instance of connection pool options.
+        /// </summary>
+        public static readonly ConnectionPoolOptions Instance = new ConnectionPoolOptions();
+        private ConnectionPoolOptions() {
+            
+        }
+
+        /// <summary>
         /// 
         /// </summary>
         public static int GrpcChannelCount

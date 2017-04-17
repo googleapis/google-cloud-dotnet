@@ -20,8 +20,17 @@ namespace Google.Cloud.Spanner
     /// <summary>
     /// 
     /// </summary>
-    public class SpannerProviderFactory : DbProviderFactory
+    public sealed class SpannerProviderFactory : DbProviderFactory
     {
+        /// <summary>
+        /// The default SpannerProviderFactory instance.
+        /// </summary>
+        public static readonly SpannerProviderFactory Instance = new SpannerProviderFactory();
+
+        private SpannerProviderFactory() {
+            
+        }
+
         /// <inheritdoc />
         public override DbCommand CreateCommand()
         {

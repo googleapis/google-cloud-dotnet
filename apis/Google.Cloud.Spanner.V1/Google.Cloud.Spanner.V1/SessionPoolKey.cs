@@ -8,6 +8,8 @@ namespace Google.Cloud.Spanner.V1
     internal struct SessionPoolKey
     {
         public ITokenAccess Credential { get; set; }
-        public string DataSource { get; set; }
+        public string Project { get; set; }
+        public string Instance { get; set; }
+        public string Database { get; set; }
     }
 }

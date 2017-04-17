@@ -14,21 +14,56 @@
 
 using System;
 using System.Data.Common;
+using System.Threading;
+using System.Threading.Tasks;
+using Google.Apis.Auth.OAuth2;
+using Google.Cloud.Spanner.V1;
+
+// ReSharper disable UnusedParameter.Local
 
 namespace Google.Cloud.Spanner
 {
     /// <summary>
-    /// 
+    /// A connection string builder for Spanner connection strings.
     /// </summary>
     public class SpannerConnectionStringBuilder : DbConnectionStringBuilder
     {
+        private ITokenAccess _credential;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="connectionString"></param>
+        /// <param name="credential"></param>
+        public SpannerConnectionStringBuilder(string connectionString, ITokenAccess credential) {
+            Credential = credential;
+            base.ConnectionString = connectionString;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public SpannerConnectionStringBuilder() {
+            
+        }
+
+        internal SpannerConnectionStringBuilder CloneWithNewDataSource(string dataSource) {
+            SpannerConnectionStringBuilder newInstance = new SpannerConnectionStringBuilder();
+            newInstance.Credential = Credential;
+            newInstance.ClientId = ClientId;
+            newInstance.ClientSecret = ClientSecret;
+            newInstance.UserName = UserName;
+            newInstance.DataSource = dataSource;
+            return newInstance;
+        }
+
         /// <summary>
         /// 
         /// </summary>
         public string ClientId
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return (string)this[nameof(ClientId)]; }
+            private set { this[nameof(ClientId)] = value; }
         }
 
         /// <summary>
@@ -36,8 +71,8 @@ namespace Google.Cloud.Spanner
         /// </summary>
         public string ClientSecret
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return (string)this[nameof(ClientSecret)]; }
+            private set { this[nameof(ClientSecret)] = value; }
         }
 
         /// <summary>
@@ -45,8 +80,8 @@ namespace Google.Cloud.Spanner
         /// </summary>
         public string DataSource
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return (string)this["Data Source"]; }
+            private set { this["Data Source"] = value; }
         }
 
         /// <summary>
@@ -54,8 +89,73 @@ namespace Google.Cloud.Spanner
         /// </summary>
         public string UserName
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return (string)this[nameof(UserName)]; }
+            private set { this[nameof(UserName)] = value; }
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public async Task<UserCredential> QueryForCredentials() {
+            if (_credential == null)
+            {
+                var clientId = ClientId;
+                var clientSecret = ClientSecret;
+                if (!string.IsNullOrEmpty(clientId)
+                    && !string.IsNullOrEmpty(clientSecret)) {
+                    return
+                        await
+                            GoogleWebAuthorizationBroker.AuthorizeAsync(
+                                new ClientSecrets() {
+                                    ClientId = clientId,
+                                    ClientSecret = clientSecret
+                                },
+                                SpannerClient.DefaultScopes,
+                                "user",
+                                CancellationToken.None);
+                }
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public ITokenAccess Credential {
+            get {
+                return _credential;
+            }
+            private set { _credential = value; }
+        }
+
+        private string ParsedDataSourcePart(int index) {
+            var dataSource = DataSource;
+            if (string.IsNullOrEmpty(dataSource))
+            {
+                return string.Empty;
+            }
+            string[] parts = dataSource.Split('/');
+            if (parts.Length != 3) {
+                return string.Empty;
+            }
+            return parts[index];
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Project => ParsedDataSourcePart(0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string SpannerInstance => ParsedDataSourcePart(1);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string SpannerDatabase => ParsedDataSourcePart(2);
+
     }
 }

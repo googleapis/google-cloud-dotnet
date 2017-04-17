@@ -21,6 +21,13 @@ namespace Google.Cloud.Spanner
     /// </summary>
     public class SpannerBatchOperation : IDisposable
     {
+        private SpannerConnection spannerConnection;
+
+        public SpannerBatchOperation(SpannerConnection spannerConnection)
+        {
+            this.spannerConnection = spannerConnection;
+        }
+
         /// <inheritdoc />
         public void Dispose()
         {

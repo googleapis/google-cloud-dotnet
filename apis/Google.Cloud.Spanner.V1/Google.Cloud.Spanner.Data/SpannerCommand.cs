@@ -28,12 +28,16 @@ namespace Google.Cloud.Spanner
         , ICloneable
 #endif
     {
+        private SpannerCommandTextBuilder _commandTextBuilder;
+        private SpannerConnection _connection;
+        private readonly SpannerTransaction _transaction;
+        private readonly SpannerParameterCollection _parameters;
+
         /// <summary>
         /// 
         /// </summary>
         public SpannerCommand()
         {
-            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -44,9 +48,11 @@ namespace Google.Cloud.Spanner
         /// <param name="transaction"></param>
         /// <param name="parameters"></param>
         public SpannerCommand(SpannerCommandTextBuilder commandTextBuilder, SpannerConnection connection,
-            SpannerTransaction transaction = null, SpannerParameterCollection parameters = null)
-        {
-            throw new NotImplementedException();
+            SpannerTransaction transaction = null, SpannerParameterCollection parameters = null) {
+            _commandTextBuilder = commandTextBuilder;
+            _connection = connection;
+            _transaction = transaction;
+            _parameters = parameters;
         }
 
         /// <summary>
@@ -60,7 +66,6 @@ namespace Google.Cloud.Spanner
             SpannerParameterCollection parameters = null)
             : this(SpannerCommandTextBuilder.FromCommandText(commandText), connection, transaction, parameters)
         {
-            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -68,15 +73,16 @@ namespace Google.Cloud.Spanner
         /// </summary>
         public SpannerCommandTextBuilder SpannerCommandTextBuilder
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return _commandTextBuilder; }
+            set {
+                _commandTextBuilder = value; }
         }
 
         /// <inheritdoc />
         public override string CommandText
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return _commandTextBuilder.ToString(); }
+            set { _commandTextBuilder = SpannerCommandTextBuilder.FromCommandText(value); }
         }
 
         /// <inheritdoc />
@@ -89,8 +95,8 @@ namespace Google.Cloud.Spanner
         /// <inheritdoc />
         public override CommandType CommandType
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return CommandType.Text; }
+            set { throw new NotSupportedException(); }
         }
 
         /// <summary>
@@ -98,8 +104,8 @@ namespace Google.Cloud.Spanner
         /// </summary>
         public SpannerConnection SpannerConnection
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return _connection; }
+            set { _connection = value; }
         }
 
         /// <inheritdoc />

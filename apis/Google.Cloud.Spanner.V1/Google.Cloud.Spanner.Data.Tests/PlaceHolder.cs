@@ -19,8 +19,8 @@ namespace Google.Cloud.Spanner.Data.Tests
     public class PlaceHolder
     {
         [Fact]
-        public void PlaceHolderTest()
-        {
+        public void PlaceHolderTest() {
+            Assert.True(true);
         }
     }
 }

@@ -34,15 +34,19 @@ namespace Google.Cloud.Spanner.V1
         /// Creates a new session or acquired a warm session from the session pool.
         /// </summary>
         /// <param name="credential"></param>
-        /// <param name="dataSource"></param>
+        /// <param name="project"></param>
+        /// <param name="spannerInstance"></param>
+        /// <param name="spannerDatabase"></param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Session> AcquireSessionAsync(ITokenAccess credential, string dataSource)
+        public static async Task<Session> AcquireSessionAsync(ITokenAccess credential, 
+            string project, string spannerInstance, string spannerDatabase, CancellationToken cancellationToken)
         {
             SessionPool targetPool = GlobalPool.GetOrAdd(
-                new SessionPoolKey {Credential = credential, DataSource = dataSource},
+                new SessionPoolKey {Credential = credential, Project = project, Instance = spannerInstance, Database = spannerDatabase},
                 key => new SessionPool(key));
 
-            var session = await targetPool.AcquireSessionAsync();
+            var session = await targetPool.AcquireSessionAsync(cancellationToken);
             //refresh the mru list which tells us what sessions need to be trimmed from the pool when we want
             // to add another entry.
             lock (PriorityListSync)
@@ -58,11 +62,15 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         /// <param name="session"></param>
         /// <param name="credential"></param>
-        /// <param name="dataSource"></param>
-        public static async Task ReleaseSessionAsync(Session session, ITokenAccess credential, string dataSource)
+        /// <param name="project"></param>
+        /// <param name="instance"></param>
+        /// <param name="database"></param>
+        /// <param name="cancellationToken"></param>
+        public static async Task ReleaseSessionAsync(Session session, ITokenAccess credential, 
+            string project, string instance, string database)
         {
             SessionPool targetPool = GlobalPool.GetOrAdd(
-                new SessionPoolKey {Credential = credential, DataSource = dataSource},
+                new SessionPoolKey {Credential = credential, Project = project, Instance = instance, Database = database},
                 key => new SessionPool(key));
 
             Session sessionToClose = null;
@@ -86,7 +94,7 @@ namespace Google.Cloud.Spanner.V1
                 }
                 else if (PriorityList.First().Value != targetPool)
                 {
-                    sessionToClose = PriorityList.First().Value.AcquireSessionAsync(false).Result;
+                    sessionToClose = PriorityList.First().Value.AcquireSessionAsync(CancellationToken.None, false).Result;
                     Debug.Assert(sessionToClose != null);
                     targetPool.ReleaseSessionToPool(session);
 
@@ -112,7 +120,7 @@ namespace Google.Cloud.Spanner.V1
 
         public static int MaxIdleSessionPoolSize { get; set; } = 0; //TODO, should 0 be default?
 
-        public async Task<Session> AcquireSessionAsync(bool forceAllocate = true)
+        public async Task<Session> AcquireSessionAsync(CancellationToken cancellationToken, bool forceAllocate = true)
         {
             Session session;
             if (!_sessionMruStack.TryPop(out session))
@@ -124,7 +132,7 @@ namespace Google.Cloud.Spanner.V1
                 var client = await ClientPool.AcquireClientAsync(_key.Credential);
 
                 //create a new session, blocking or throwing if at the limit.
-                session = await Session.CreateAsync(client, _key.DataSource);
+                session = await Session.CreateAsync(client, _key.Project, _key.Instance, _key.Database, cancellationToken);
             }
             else
             {
