@@ -15,7 +15,6 @@
 namespace Google.Cloud.Spanner
 {
     /// <summary>
-    /// 
     /// </summary>
     public enum SpannerDbType
     {

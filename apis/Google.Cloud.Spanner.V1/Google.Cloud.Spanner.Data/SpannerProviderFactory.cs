@@ -18,17 +18,16 @@ using System.Data.Common;
 namespace Google.Cloud.Spanner
 {
     /// <summary>
-    /// 
     /// </summary>
     public sealed class SpannerProviderFactory : DbProviderFactory
     {
         /// <summary>
-        /// The default SpannerProviderFactory instance.
+        ///     The default SpannerProviderFactory instance.
         /// </summary>
         public static readonly SpannerProviderFactory Instance = new SpannerProviderFactory();
 
-        private SpannerProviderFactory() {
-            
+        private SpannerProviderFactory()
+        {
         }
 
         /// <inheritdoc />
@@ -49,6 +48,12 @@ namespace Google.Cloud.Spanner
             throw new NotImplementedException();
         }
 
+        /// <inheritdoc />
+        public override DbParameter CreateParameter()
+        {
+            throw new NotImplementedException();
+        }
+
 #if NET451
 
         /// <inheritdoc />
@@ -58,19 +63,13 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <returns></returns>
         public SpannerCommandBuilder CreateSpannerCommandBuilder()
         {
             throw new NotImplementedException();
         }
-#endif
 
-        /// <inheritdoc />
-        public override DbParameter CreateParameter()
-        {
-            throw new NotImplementedException();
-        }
+#endif
     }
 }

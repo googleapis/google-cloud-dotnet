@@ -16,9 +16,9 @@ using System;
 using System.Collections;
 using System.Data.Common;
 using Google.Cloud.Spanner.V1;
-
 #if NET451
 using System.Data;
+
 #endif
 
 // ReSharper disable UnusedParameter.Local
@@ -39,45 +39,6 @@ namespace Google.Cloud.Spanner
             get { throw new NotImplementedException(); }
         }
 
-        /// <inheritdoc />
-        public override bool IsClosed
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        /// <inheritdoc />
-        public override int RecordsAffected
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-#if NET451
-
-        /// <inheritdoc />
-        public override void Close()
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <inheritdoc />
-        public override DataTable GetSchemaTable()
-        {
-            throw new NotImplementedException();
-        }
-#endif
-
-        /// <inheritdoc />
-        public override bool NextResult()
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <inheritdoc />
-        public override bool Read()
-        {
-            throw new NotImplementedException();
-        }
-
 
         /// <inheritdoc />
         public override int FieldCount
@@ -86,39 +47,15 @@ namespace Google.Cloud.Spanner
         }
 
         /// <inheritdoc />
-        public override string GetName(int i)
+        public override bool HasRows
         {
-            throw new NotImplementedException();
+            get { throw new NotImplementedException(); }
         }
 
         /// <inheritdoc />
-        public override string GetDataTypeName(int i)
+        public override bool IsClosed
         {
-            throw new NotImplementedException();
-        }
-
-        /// <inheritdoc />
-        public override System.Type GetFieldType(int i)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <inheritdoc />
-        public override object GetValue(int i)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <inheritdoc />
-        public override int GetValues(object[] values)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <inheritdoc />
-        public override int GetOrdinal(string name)
-        {
-            throw new NotImplementedException();
+            get { throw new NotImplementedException(); }
         }
 
         /// <inheritdoc />
@@ -129,6 +66,12 @@ namespace Google.Cloud.Spanner
 
         /// <inheritdoc />
         public override object this[string name]
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        /// <inheritdoc />
+        public override int RecordsAffected
         {
             get { throw new NotImplementedException(); }
         }
@@ -164,6 +107,48 @@ namespace Google.Cloud.Spanner
         }
 
         /// <inheritdoc />
+        public override string GetDataTypeName(int i)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <inheritdoc />
+        public override DateTime GetDateTime(int i)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <inheritdoc />
+        public override decimal GetDecimal(int i)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <inheritdoc />
+        public override double GetDouble(int i)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <inheritdoc />
+        public override IEnumerator GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <inheritdoc />
+        public override System.Type GetFieldType(int i)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <inheritdoc />
+        public override float GetFloat(int i)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <inheritdoc />
         public override Guid GetGuid(int i)
         {
             throw new NotImplementedException();
@@ -188,13 +173,13 @@ namespace Google.Cloud.Spanner
         }
 
         /// <inheritdoc />
-        public override float GetFloat(int i)
+        public override string GetName(int i)
         {
             throw new NotImplementedException();
         }
 
         /// <inheritdoc />
-        public override double GetDouble(int i)
+        public override int GetOrdinal(string name)
         {
             throw new NotImplementedException();
         }
@@ -206,13 +191,13 @@ namespace Google.Cloud.Spanner
         }
 
         /// <inheritdoc />
-        public override decimal GetDecimal(int i)
+        public override object GetValue(int i)
         {
             throw new NotImplementedException();
         }
 
         /// <inheritdoc />
-        public override DateTime GetDateTime(int i)
+        public override int GetValues(object[] values)
         {
             throw new NotImplementedException();
         }
@@ -224,6 +209,18 @@ namespace Google.Cloud.Spanner
             throw new NotImplementedException();
         }
 
+        /// <inheritdoc />
+        public override bool NextResult()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <inheritdoc />
+        public override bool Read()
+        {
+            throw new NotImplementedException();
+        }
+
 
         /// <inheritdoc />
         protected override void Dispose(bool disposing)
@@ -231,16 +228,20 @@ namespace Google.Cloud.Spanner
             throw new NotImplementedException();
         }
 
+#if NET451
+
         /// <inheritdoc />
-        public override IEnumerator GetEnumerator()
+        public override void Close()
         {
             throw new NotImplementedException();
         }
 
         /// <inheritdoc />
-        public override bool HasRows
+        public override DataTable GetSchemaTable()
         {
-            get { throw new NotImplementedException(); }
+            throw new NotImplementedException();
         }
+
+#endif
     }
 }

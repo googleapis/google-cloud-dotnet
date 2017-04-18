@@ -13,17 +13,16 @@
 // limitations under the License.
 
 using System;
+
 // ReSharper disable UnusedParameter.Local
 
 namespace Google.Cloud.Spanner
 {
     /// <summary>
-    /// 
     /// </summary>
     public class SpannerCommandTextBuilder
     {
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="type"></param>
         /// <param name="databaseTable"></param>
@@ -32,7 +31,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         public OperationType OperationType
         {
@@ -40,7 +38,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="databaseTable"></param>
         /// <returns></returns>
@@ -50,7 +47,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="databaseTable"></param>
         /// <returns></returns>
@@ -60,7 +56,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="databaseTable"></param>
         /// <returns></returns>
@@ -70,7 +65,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="sqlQuery"></param>
         /// <returns></returns>
@@ -80,7 +74,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="databaseTable"></param>
         /// <returns></returns>
@@ -90,7 +83,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="commandText"></param>
         /// <returns></returns>

@@ -20,7 +20,6 @@ using System.Data.Common;
 namespace Google.Cloud.Spanner
 {
     /// <summary>
-    /// 
     /// </summary>
     public class SpannerParameterCollection : DbParameterCollection
     {
@@ -37,7 +36,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="parameterName"></param>
         /// <param name="type"></param>
@@ -47,7 +45,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="parameterName"></param>
         /// <param name="value"></param>
@@ -58,7 +55,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="parameterName"></param>
         /// <param name="dbType"></param>
@@ -69,7 +65,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="parameterName"></param>
         /// <param name="dbType"></param>

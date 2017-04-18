@@ -15,28 +15,26 @@
 namespace Google.Cloud.Spanner
 {
     /// <summary>
-    /// 
     /// </summary>
     public enum TimestampBoundMode
     {
         /// <summary>
-        /// 
         /// </summary>
         Strong,
+
         /// <summary>
-        /// 
         /// </summary>
         ReadTimestamp,
+
         /// <summary>
-        /// 
         /// </summary>
         MinReadTimestamp,
+
         /// <summary>
-        /// 
         /// </summary>
         ExactStaleness,
+
         /// <summary>
-        /// 
         /// </summary>
         MaxStaleness
     }

@@ -17,12 +17,10 @@ using System;
 namespace Google.Cloud.Spanner
 {
     /// <summary>
-    /// 
     /// </summary>
     public class SpannerException : Exception
     {
         /// <summary>
-        /// 
         /// </summary>
         public ErrorCode? ErrorCode
         {
@@ -30,7 +28,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         public bool IsRetryable
         {

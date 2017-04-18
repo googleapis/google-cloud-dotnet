@@ -17,12 +17,10 @@ using System;
 namespace Google.Cloud.Spanner
 {
     /// <summary>
-    /// 
     /// </summary>
     public class TimestampBound
     {
         /// <summary>
-        /// 
         /// </summary>
         public TimestampBoundMode Mode
         {
@@ -31,7 +29,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         public TimeSpan Staleness
         {
@@ -39,7 +36,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         public static TimestampBound Strong
         {
@@ -47,7 +43,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         public DateTime TimeStamp
         {
@@ -55,7 +50,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="duration"></param>
         /// <returns></returns>
@@ -65,7 +59,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="duration"></param>
         /// <returns></returns>
@@ -75,7 +68,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="timestamp"></param>
         /// <returns></returns>
@@ -85,7 +77,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="timestamp"></param>
         /// <returns></returns>

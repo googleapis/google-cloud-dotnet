@@ -15,72 +15,70 @@
 namespace Google.Cloud.Spanner
 {
     /// <summary>
-    /// 
     /// </summary>
     public enum ErrorCode
     {
         /// <summary>
-        /// 
         /// </summary>
         Cancelled,
+
         /// <summary>
-        /// 
         /// </summary>
         Unknown,
+
         /// <summary>
-        /// 
         /// </summary>
         InvalidArgument,
+
         /// <summary>
-        /// 
         /// </summary>
         DeadlineExceeded,
+
         /// <summary>
-        /// 
         /// </summary>
         NotFound,
+
         /// <summary>
-        /// 
         /// </summary>
         AlreadyExists,
+
         /// <summary>
-        /// 
         /// </summary>
         PermissionDenied,
+
         /// <summary>
-        /// 
         /// </summary>
         Unauthenticated,
+
         /// <summary>
-        /// 
         /// </summary>
         ResourceExhausted,
+
         /// <summary>
-        /// 
         /// </summary>
         FailedPrecondition,
+
         /// <summary>
-        /// 
         /// </summary>
         Aborted,
+
         /// <summary>
-        /// 
         /// </summary>
         OutOfRange,
+
         /// <summary>
-        /// 
         /// </summary>
         Unimplemented,
+
         /// <summary>
-        /// 
         /// </summary>
         Internal,
+
         /// <summary>
-        /// 
         /// </summary>
         Unavailable,
+
         /// <summary>
-        /// 
         /// </summary>
         DataLoss
     }

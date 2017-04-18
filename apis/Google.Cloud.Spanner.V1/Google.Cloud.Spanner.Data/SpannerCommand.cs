@@ -21,42 +21,37 @@ using System.Data.Common;
 namespace Google.Cloud.Spanner
 {
     /// <summary>
-    /// 
     /// </summary>
     public class SpannerCommand : DbCommand
 #if NET451
         , ICloneable
 #endif
     {
-        private SpannerCommandTextBuilder _commandTextBuilder;
-        private SpannerConnection _connection;
-        private readonly SpannerTransaction _transaction;
         private readonly SpannerParameterCollection _parameters;
+        private readonly SpannerTransaction _transaction;
 
         /// <summary>
-        /// 
         /// </summary>
         public SpannerCommand()
         {
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="commandTextBuilder"></param>
         /// <param name="connection"></param>
         /// <param name="transaction"></param>
         /// <param name="parameters"></param>
         public SpannerCommand(SpannerCommandTextBuilder commandTextBuilder, SpannerConnection connection,
-            SpannerTransaction transaction = null, SpannerParameterCollection parameters = null) {
-            _commandTextBuilder = commandTextBuilder;
-            _connection = connection;
+            SpannerTransaction transaction = null, SpannerParameterCollection parameters = null)
+        {
+            SpannerCommandTextBuilder = commandTextBuilder;
+            SpannerConnection = connection;
             _transaction = transaction;
             _parameters = parameters;
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="commandText"></param>
         /// <param name="connection"></param>
@@ -68,21 +63,11 @@ namespace Google.Cloud.Spanner
         {
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public SpannerCommandTextBuilder SpannerCommandTextBuilder
-        {
-            get { return _commandTextBuilder; }
-            set {
-                _commandTextBuilder = value; }
-        }
-
         /// <inheritdoc />
         public override string CommandText
         {
-            get { return _commandTextBuilder.ToString(); }
-            set { _commandTextBuilder = SpannerCommandTextBuilder.FromCommandText(value); }
+            get { return SpannerCommandTextBuilder.ToString(); }
+            set { SpannerCommandTextBuilder = SpannerCommandTextBuilder.FromCommandText(value); }
         }
 
         /// <inheritdoc />
@@ -99,20 +84,62 @@ namespace Google.Cloud.Spanner
             set { throw new NotSupportedException(); }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public SpannerConnection SpannerConnection
+        /// <inheritdoc />
+        public override bool DesignTimeVisible
         {
-            get { return _connection; }
-            set { _connection = value; }
+            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
         }
+
+        /// <summary>
+        /// </summary>
+        public new SpannerParameterCollection Parameters
+        {
+            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// </summary>
+        public SpannerCommandTextBuilder SpannerCommandTextBuilder { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public SpannerConnection SpannerConnection { get; set; }
 
         /// <inheritdoc />
         public override UpdateRowSource UpdatedRowSource
         {
             get { throw new NotImplementedException(); }
             set { throw new NotImplementedException(); }
+        }
+
+        /// <inheritdoc />
+        protected override DbConnection DbConnection
+        {
+            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
+        }
+
+        /// <inheritdoc />
+        protected override DbParameterCollection DbParameterCollection
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        /// <inheritdoc />
+        protected override DbTransaction DbTransaction
+        {
+            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// </summary>
+        /// <returns></returns>
+        public object Clone()
+        {
+            throw new NotImplementedException();
         }
 
         /// <inheritdoc />
@@ -129,7 +156,6 @@ namespace Google.Cloud.Spanner
 
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="behavior"></param>
         /// <returns></returns>
@@ -151,64 +177,19 @@ namespace Google.Cloud.Spanner
         }
 
         /// <inheritdoc />
-        protected override void Dispose(bool disposing)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <inheritdoc />
         protected override DbParameter CreateDbParameter()
         {
             throw new NotImplementedException();
         }
 
         /// <inheritdoc />
-        protected override DbDataReader ExecuteDbDataReader(CommandBehavior behavior)
+        protected override void Dispose(bool disposing)
         {
             throw new NotImplementedException();
         }
 
         /// <inheritdoc />
-        protected override DbConnection DbConnection
-        {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public new SpannerParameterCollection Parameters
-        {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
-        }
-
-        /// <inheritdoc />
-        protected override DbParameterCollection DbParameterCollection
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        /// <inheritdoc />
-        protected override DbTransaction DbTransaction
-        {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
-        }
-
-        /// <inheritdoc />
-        public override bool DesignTimeVisible
-        {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public object Clone()
+        protected override DbDataReader ExecuteDbDataReader(CommandBehavior behavior)
         {
             throw new NotImplementedException();
         }

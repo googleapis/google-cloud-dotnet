@@ -17,7 +17,6 @@ using System;
 namespace Google.Cloud.Spanner
 {
     /// <summary>
-    /// 
     /// </summary>
     public class SpannerBatchOperation : IDisposable
     {
@@ -35,7 +34,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         public void Abort()
         {
@@ -43,7 +41,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         public void Complete()
         {

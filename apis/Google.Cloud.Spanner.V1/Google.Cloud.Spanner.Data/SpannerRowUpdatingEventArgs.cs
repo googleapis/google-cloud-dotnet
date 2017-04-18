@@ -14,46 +14,38 @@
 
 // ReSharper disable EmptyNamespace
 
-namespace Google.Cloud.Spanner
-{
-#if NET451
-    using System;
+using System;
 using System.Data;
 using System.Data.Common;
 
+namespace Google.Cloud.Spanner
+{
+#if NET451
     /// <summary>
-    /// 
     /// </summary>
     public class SpannerRowUpdatingEventArgs : RowUpdatingEventArgs
     {
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="row"></param>
         /// <param name="command"></param>
         /// <param name="statementType"></param>
         /// <param name="tableMapping"></param>
-        public SpannerRowUpdatingEventArgs(DataRow row, IDbCommand command, StatementType statementType, DataTableMapping tableMapping)
+        public SpannerRowUpdatingEventArgs(DataRow row, IDbCommand command, StatementType statementType,
+            DataTableMapping tableMapping)
             : base(row, command, statementType, tableMapping)
         {
             throw new NotImplementedException();
-
         }
 
         /// <summary>
-        /// 
         /// </summary>
         public new SpannerCommand Command
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
         }
     }
+
 #endif
 }

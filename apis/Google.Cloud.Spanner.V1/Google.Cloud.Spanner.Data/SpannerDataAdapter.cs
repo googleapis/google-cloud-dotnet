@@ -15,27 +15,24 @@
 // ReSharper disable UnusedParameter.Local
 // ReSharper disable EmptyNamespace
 
+using System;
+using System.Data;
+using System.Data.Common;
+
 namespace Google.Cloud.Spanner
 {
 #if NET451
-    using System;
-    using System.Data;
-    using System.Data.Common;
-
     /// <summary>
-    /// 
     /// </summary>
     public class SpannerDataAdapter : DbDataAdapter, IDbDataAdapter
     {
         /// <summary>
-        /// 
         /// </summary>
         public SpannerDataAdapter()
         {
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="sqlQuery"></param>
         /// <param name="connection"></param>
@@ -45,7 +42,22 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
+        /// </summary>
+        public new SpannerCommand DeleteCommand
+        {
+            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// </summary>
+        public new SpannerCommand InsertCommand
+        {
+            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
+        }
+
+        /// <summary>
         /// </summary>
         public new SpannerCommand SelectCommand
         {
@@ -53,16 +65,15 @@ namespace Google.Cloud.Spanner
             set { throw new NotImplementedException(); }
         }
 
-        IDbCommand IDbDataAdapter.SelectCommand
+        /// <summary>
+        /// </summary>
+        public new SpannerCommand UpdateCommand
         {
             get { throw new NotImplementedException(); }
             set { throw new NotImplementedException(); }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public new SpannerCommand InsertCommand
+        IDbCommand IDbDataAdapter.DeleteCommand
         {
             get { throw new NotImplementedException(); }
             set { throw new NotImplementedException(); }
@@ -74,10 +85,7 @@ namespace Google.Cloud.Spanner
             set { throw new NotImplementedException(); }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public new SpannerCommand UpdateCommand
+        IDbCommand IDbDataAdapter.SelectCommand
         {
             get { throw new NotImplementedException(); }
             set { throw new NotImplementedException(); }
@@ -90,39 +98,34 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
-        public new SpannerCommand DeleteCommand
+        public event EventHandler<SpannerRowUpdatedEventArgs> RowUpdated
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            add { throw new NotImplementedException(); }
+            remove { throw new NotImplementedException(); }
         }
 
-        IDbCommand IDbDataAdapter.DeleteCommand
+        /// <summary>
+        /// </summary>
+        public event EventHandler<SpannerRowUpdatingEventArgs> RowUpdating
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            add { throw new NotImplementedException(); }
+            remove { throw new NotImplementedException(); }
         }
 
         /*
          * Implement abstract methods inherited from DbDataAdapter.
          */
         /// <inheritdoc />
-        protected override RowUpdatedEventArgs CreateRowUpdatedEvent(DataRow dataRow, IDbCommand command, 
+        protected override RowUpdatedEventArgs CreateRowUpdatedEvent(DataRow dataRow, IDbCommand command,
             StatementType statementType, DataTableMapping tableMapping)
         {
             throw new NotImplementedException();
         }
 
         /// <inheritdoc />
-        protected override RowUpdatingEventArgs CreateRowUpdatingEvent(DataRow dataRow, IDbCommand command, 
+        protected override RowUpdatingEventArgs CreateRowUpdatingEvent(DataRow dataRow, IDbCommand command,
             StatementType statementType, DataTableMapping tableMapping)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <inheritdoc />
-        protected override void OnRowUpdating(RowUpdatingEventArgs value)
         {
             throw new NotImplementedException();
         }
@@ -133,23 +136,12 @@ namespace Google.Cloud.Spanner
             throw new NotImplementedException();
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public event EventHandler<SpannerRowUpdatingEventArgs> RowUpdating
+        /// <inheritdoc />
+        protected override void OnRowUpdating(RowUpdatingEventArgs value)
         {
-            add { throw new NotImplementedException(); }
-            remove { throw new NotImplementedException(); }
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public event EventHandler<SpannerRowUpdatedEventArgs> RowUpdated
-        {
-            add { throw new NotImplementedException(); }
-            remove { throw new NotImplementedException(); }
+            throw new NotImplementedException();
         }
     }
+
 #endif
 }

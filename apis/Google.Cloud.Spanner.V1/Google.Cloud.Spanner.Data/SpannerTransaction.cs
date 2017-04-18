@@ -21,12 +21,10 @@ using System.Data.Common;
 namespace Google.Cloud.Spanner
 {
     /// <summary>
-    /// 
     /// </summary>
     public class SpannerTransaction : DbTransaction
     {
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="dbConnection"></param>
         public SpannerTransaction(DbConnection dbConnection)

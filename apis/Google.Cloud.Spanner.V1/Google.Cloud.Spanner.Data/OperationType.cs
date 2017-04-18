@@ -15,28 +15,26 @@
 namespace Google.Cloud.Spanner
 {
     /// <summary>
-    /// 
     /// </summary>
     public enum OperationType
     {
         /// <summary>
-        /// 
         /// </summary>
         Select = 0,
+
         /// <summary>
-        /// 
         /// </summary>
         Update = 1,
+
         /// <summary>
-        /// 
         /// </summary>
         Delete = 2,
+
         /// <summary>
-        /// 
         /// </summary>
         Insert = 3,
+
         /// <summary>
-        /// 
         /// </summary>
         InsertOrUpdate = 4
     }

@@ -17,20 +17,19 @@ using System;
 namespace Google.Cloud.Spanner
 {
     /// <summary>
-    /// 
     /// </summary>
     public class ConnectionPoolOptions
     {
         /// <summary>
-        /// The default instance of connection pool options.
+        ///     The default instance of connection pool options.
         /// </summary>
         public static readonly ConnectionPoolOptions Instance = new ConnectionPoolOptions();
-        private ConnectionPoolOptions() {
-            
+
+        private ConnectionPoolOptions()
+        {
         }
 
         /// <summary>
-        /// 
         /// </summary>
         public static int GrpcChannelCount
         {
@@ -39,7 +38,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         public int KeepAliveIntervalMinutes
         {
@@ -48,7 +46,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         public int MaxIdleSessionPoolSize
         {
@@ -57,7 +54,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         public int MaxSessionPoolSize
         {
@@ -66,7 +62,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         public int MinSessionPoolSize
         {
@@ -75,7 +70,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         public ResourcesExhaustedBehavior ResourcesExhaustedBehavior
         {
@@ -84,7 +78,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         public static int Timeout
         {
@@ -93,7 +86,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         public float WriteSessionFraction
         {

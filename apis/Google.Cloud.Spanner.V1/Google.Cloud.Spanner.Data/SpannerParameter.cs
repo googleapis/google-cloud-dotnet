@@ -21,7 +21,6 @@ using System.Data.Common;
 namespace Google.Cloud.Spanner
 {
     /// <summary>
-    /// 
     /// </summary>
     public class SpannerParameter : DbParameter
 #if NET451
@@ -29,7 +28,6 @@ namespace Google.Cloud.Spanner
 #endif
     {
         /// <summary>
-        /// 
         /// </summary>
         public SpannerParameter()
         {
@@ -37,7 +35,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="spannerColumnName"></param>
         public SpannerParameter(string spannerColumnName)
@@ -46,7 +43,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="spannerColumnName"></param>
         /// <param name="sourceDataTableName"></param>
@@ -56,7 +52,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="spannerColumnName"></param>
         /// <param name="type"></param>
@@ -66,7 +61,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="spannerColumnName"></param>
         /// <param name="type"></param>
@@ -76,7 +70,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="spannerColumnName"></param>
         /// <param name="value"></param>
@@ -86,7 +79,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="spannerColumnName"></param>
         /// <param name="type"></param>
@@ -99,15 +91,6 @@ namespace Google.Cloud.Spanner
 
         /// <inheritdoc />
         public override DbType DbType
-        {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public SpannerDbType SpannerDbType
         {
             get { throw new NotImplementedException(); }
             set { throw new NotImplementedException(); }
@@ -135,30 +118,6 @@ namespace Google.Cloud.Spanner
         }
 
         /// <inheritdoc />
-        public override string SourceColumn
-        {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
-        }
-
-#if NET451
-
-        /// <inheritdoc />
-        public override DataRowVersion SourceVersion
-        {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
-        }
-#endif
-
-        /// <inheritdoc />
-        public override object Value
-        {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
-        }
-
-        /// <inheritdoc />
         public override byte Precision
         {
             get { throw new NotImplementedException(); }
@@ -180,9 +139,10 @@ namespace Google.Cloud.Spanner
         }
 
         /// <inheritdoc />
-        public override void ResetDbType()
+        public override string SourceColumn
         {
-            throw new NotImplementedException();
+            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
         }
 
         /// <inheritdoc />
@@ -192,8 +152,40 @@ namespace Google.Cloud.Spanner
             set { throw new NotImplementedException(); }
         }
 
+#if NET451
+
+        /// <inheritdoc />
+        public override DataRowVersion SourceVersion
+        {
+            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
+        }
+
+#endif
+
+        /// <summary>
+        /// </summary>
+        public SpannerDbType SpannerDbType
+        {
+            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
+        }
+
+        /// <inheritdoc />
+        public override object Value
+        {
+            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
+        }
+
         /// <inheritdoc />
         public object Clone()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <inheritdoc />
+        public override void ResetDbType()
         {
             throw new NotImplementedException();
         }

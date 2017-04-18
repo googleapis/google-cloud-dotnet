@@ -15,16 +15,14 @@
 namespace Google.Cloud.Spanner
 {
     /// <summary>
-    /// 
     /// </summary>
     public enum ResourcesExhaustedBehavior
     {
         /// <summary>
-        /// 
         /// </summary>
         BlockOnFull = 0,
+
         /// <summary>
-        /// 
         /// </summary>
         FailOnFull = 1
     }

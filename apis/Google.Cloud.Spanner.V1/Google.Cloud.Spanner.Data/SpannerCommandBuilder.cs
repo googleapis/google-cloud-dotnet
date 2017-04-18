@@ -15,19 +15,17 @@
 // ReSharper disable UnusedParameter.Local
 // ReSharper disable EmptyNamespace
 
+using System;
+using System.Data.Common;
+
 namespace Google.Cloud.Spanner
 {
 #if NET451
-    using System;
-    using System.Data.Common;
-
     /// <summary>
-    /// 
     /// </summary>
-    public class SpannerCommandBuilder 
+    public class SpannerCommandBuilder
     {
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="adapter"></param>
         /// <param name="databaseTable"></param>
@@ -36,5 +34,6 @@ namespace Google.Cloud.Spanner
             throw new NotImplementedException();
         }
     }
+
 #endif
 }
