@@ -35,8 +35,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         /// a <see cref="ShouldTraceRequest"/> with the passed in should trace function and a
         /// <see cref="TraceIdFactory"/>.
         /// </summary>
-        private IServiceProvider CreateProviderForTraceHeaderContext(
-            string traceHeader, Func<HttpRequest, bool?> shouldTraceFunc = null)
+        private IServiceProvider CreateProviderForTraceHeaderContext(string traceHeader)
         {
             var context = new DefaultHttpContext();
             var request = new DefaultHttpRequest(context);
@@ -50,7 +49,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             Mock<IServiceProvider> mockProvider = new Mock<IServiceProvider>();
             mockProvider.Setup(p => p.GetService(typeof(IHttpContextAccessor))).Returns(accessor);
             mockProvider.Setup(p => p.GetService(typeof(TraceDecisionPredicate))).Returns(
-                TraceDecisionPredicate.Create(shouldTraceFunc));
+                TraceDecisionPredicate.Default);
             mockProvider.Setup(p => p.GetService(typeof(TraceIdFactory))).Returns(traceIdFactory);
             return mockProvider.Object;
         }

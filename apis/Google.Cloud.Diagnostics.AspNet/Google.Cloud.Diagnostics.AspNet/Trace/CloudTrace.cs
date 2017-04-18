@@ -114,7 +114,7 @@ namespace Google.Cloud.Diagnostics.AspNet
             // Create the default values if not set.
             client = client ?? TraceServiceClient.Create();
             config = config ?? TraceConfiguration.Create(); 
-            _traceFallbackPredicate = traceFallbackPredicate ?? TraceDecisionPredicate.Create();
+            _traceFallbackPredicate = traceFallbackPredicate ?? TraceDecisionPredicate.Default;
 
             _consumer = ConsumerFactory<TraceProto>.GetConsumer(
                 new GrpcTraceConsumer(client), MessageSizer<TraceProto>.GetSize, config.BufferOptions);

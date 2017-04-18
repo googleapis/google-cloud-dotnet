@@ -105,7 +105,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             client = client ?? TraceServiceClient.Create();
             config = config ?? TraceConfiguration.Create();
-            traceFallbackPredicate = traceFallbackPredicate ?? TraceDecisionPredicate.Create();
+            traceFallbackPredicate = traceFallbackPredicate ?? TraceDecisionPredicate.Default;
 
             projectId = CommonUtils.GetAndCheckProjectId(projectId);
 
