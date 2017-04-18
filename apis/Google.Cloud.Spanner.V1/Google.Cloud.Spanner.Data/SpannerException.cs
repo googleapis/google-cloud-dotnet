@@ -18,7 +18,7 @@ namespace Google.Cloud.Spanner
 {
     /// <summary>
     /// </summary>
-    public class SpannerException : Exception
+    public sealed class SpannerException : Exception
     {
         /// <summary>
         /// </summary>

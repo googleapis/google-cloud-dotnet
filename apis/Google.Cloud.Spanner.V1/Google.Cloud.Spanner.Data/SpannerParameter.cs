@@ -22,7 +22,7 @@ namespace Google.Cloud.Spanner
 {
     /// <summary>
     /// </summary>
-    public class SpannerParameter : DbParameter
+    public sealed class SpannerParameter : DbParameter
 #if NET451
         , ICloneable
 #endif

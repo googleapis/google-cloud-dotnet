@@ -15,6 +15,7 @@
 namespace Google.Cloud.Spanner
 {
     /// <summary>
+    ///     These types come from Google.Cloud.Spanner.V1.TypeCode
     /// </summary>
     public enum SpannerDbType
     {

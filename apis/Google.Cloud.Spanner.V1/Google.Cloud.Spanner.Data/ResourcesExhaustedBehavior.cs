@@ -20,10 +20,10 @@ namespace Google.Cloud.Spanner
     {
         /// <summary>
         /// </summary>
-        BlockOnFull = 0,
+        Block = 0,
 
         /// <summary>
         /// </summary>
-        FailOnFull = 1
+        Fail = 1
     }
 }

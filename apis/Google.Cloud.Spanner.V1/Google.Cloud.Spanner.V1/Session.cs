@@ -1,7 +1,9 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
+using Google.Apis.Util;
 
 namespace Google.Cloud.Spanner.V1
 {
@@ -11,49 +13,109 @@ namespace Google.Cloud.Spanner.V1
         private Task _keepAlive;
         private int _lastAccessTime = Environment.TickCount;
         private ITokenAccess _credential;
+        private ServiceEndpoint _endpoint;
         private static int _activeSessions;
-        private static readonly object CreateSync = new object();
+        private static readonly object s_createSync = new object();
 
-        internal void InitializePoolManagedSession(ITokenAccess credential)
+        internal void InitializePoolManagedSession(ITokenAccess credential, ServiceEndpoint endpoint)
         {
+            _endpoint = endpoint;
             _credential = credential;
-            _keepAlive = Task.Run(KeepAlive, _cancellation.Token);
+            _keepAlive = Task.Run(() => KeepAlive(new WeakReference<Session>(this), SessionName), _cancellation.Token);
         }
 
         internal ITokenAccess AssociatedCredential => _credential;
+        internal ServiceEndpoint AssociatedEndPoint => _endpoint;
 
-        private async Task KeepAlive()
+        private static bool TryGetCancellationToken(WeakReference<Session> thisReference, out CancellationTokenSource result)
         {
+            Session strongRef;
+            if (!thisReference.TryGetTarget(out strongRef))
+            {
+                result = null;
+                return false;
+            }
+            result = strongRef._cancellation;
+            return true;
+        }
+        private static bool TryGetLastAccesstime(WeakReference<Session> thisReference, out int result)
+        {
+            Session strongRef;
+            if (!thisReference.TryGetTarget(out strongRef))
+            {
+                result = 0;
+                return false;
+            }
+            result = strongRef._lastAccessTime;
+            return true;
+        }
+        private static bool TryGetCredential(WeakReference<Session> thisReference, out ITokenAccess result)
+        {
+            Session strongRef;
+            if (!thisReference.TryGetTarget(out strongRef))
+            {
+                result = null;
+                return false;
+            }
+            result = strongRef._credential;
+            return true;
+        }
+        private static bool TryGetEndPoint(WeakReference<Session> thisReference, out ServiceEndpoint result)
+        {
+            Session strongRef;
+            if (!thisReference.TryGetTarget(out strongRef))
+            {
+                result = null;
+                return false;
+            }
+            result = strongRef._endpoint;
+            return true;
+        }
+        private static async Task KeepAlive(WeakReference<Session> thisSession, SessionName sessionName)
+        {
+            thisSession.ThrowIfNull(nameof(thisSession));
             ExecuteSqlRequest request = new ExecuteSqlRequest
             {
-                SessionAsSessionName = SessionName,
+                SessionAsSessionName = sessionName,
                 Sql = "SELECT 1",
             };
 
             while (true)
             {
-                await Task.Delay(Math.Min(KeepAliveIntervalMinutes * 60000, 60000),
-                    _cancellation.Token);
-                if (_cancellation.IsCancellationRequested)
+                CancellationTokenSource cancellationTokenSource;
+                if (!TryGetCancellationToken(thisSession, out cancellationTokenSource))
                 {
                     return;
                 }
-                int additionalWaitTime = _lastAccessTime + KeepAliveIntervalMinutes * 60000 -
-                                         Environment.TickCount;
-                // If the session was used for any reason, waste not and wait again until idle time kicks in.
-                while (additionalWaitTime > 0)
+
+                int waitTime = Math.Min((int) KeepAliveIntervalMinutes.TotalMilliseconds, 60000);
+                await Task.Delay(waitTime, cancellationTokenSource.Token);
+
+                int lastAccessTime;
+                if (!TryGetLastAccesstime(thisSession, out lastAccessTime))
                 {
-                    await Task.Delay(additionalWaitTime, _cancellation.Token);
-                    if (_cancellation.IsCancellationRequested)
+                    return;
+                }
+                int additionalWaitTime = unchecked (lastAccessTime + waitTime - Environment.TickCount);
+                // If the session was used for any reason, waste not and wait again until idle time kicks in.
+                while (additionalWaitTime > 0 && additionalWaitTime < waitTime)
+                {
+                    await Task.Delay(additionalWaitTime, cancellationTokenSource.Token);
+                    if (!TryGetLastAccesstime(thisSession, out lastAccessTime))
                     {
                         return;
                     }
-                    additionalWaitTime = _lastAccessTime + KeepAliveIntervalMinutes * 60000 -
-                                         Environment.TickCount;
+                    additionalWaitTime = unchecked(lastAccessTime + waitTime - Environment.TickCount);
                 }
 
                 // Send Idle Request here...
-                var client = await ClientPool.AcquireClientAsync(_credential);
+                ITokenAccess credential;
+                ServiceEndpoint endpoint;
+                if (!TryGetCredential(thisSession, out credential) || !TryGetEndPoint(thisSession, out endpoint))
+                {
+                    return;
+                }
+                var client = await ClientPool.AcquireClientAsync(credential, endpoint);
                 try
                 {
                     await client.ExecuteSqlAsync(request);
@@ -62,7 +124,7 @@ namespace Google.Cloud.Spanner.V1
                 {
                     //log it?
                     //check for transient errors?
-                    return; //might need to recreate
+                    return; //might need to recreate, but for now, we'll let the upper level recovery handle this issue.
                 }
             }
         }
@@ -83,7 +145,7 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// 
         /// </summary>
-        public static int KeepAliveIntervalMinutes { get; set; } = 30;
+        public static TimeSpan KeepAliveIntervalMinutes { get; set; } = TimeSpan.FromMinutes(30);
 
         /// <summary>
         /// 
@@ -97,9 +159,10 @@ namespace Google.Cloud.Spanner.V1
 
             while (!allocated)
             {
-                while (!Monitor.TryEnter(CreateSync))
+                while (!Monitor.TryEnter(s_createSync))
                 {
                     cancellationToken.ThrowIfCancellationRequested();
+                    //consider adding a small task delay here to avoid a spin locking too long.
                     await Task.Yield();
                 }
                 try
@@ -116,14 +179,15 @@ namespace Google.Cloud.Spanner.V1
                 }
                 finally
                 {
-                    Monitor.Exit(CreateSync);
+                    Monitor.Exit(s_createSync);
                 }
             }
             Session result = null;
             try
             {
-                result = await client.CreateSessionAsync(new DatabaseName(project, instance, database),
-                    cancellationToken);
+                var databaseName = new DatabaseName(project, instance, database);
+                result = await client.CreateSessionAsync(databaseName, cancellationToken);
+                result.DatabaseName = databaseName;
             }
             finally
             {
@@ -134,6 +198,8 @@ namespace Google.Cloud.Spanner.V1
             }
             return result;
         }
+
+        internal DatabaseName DatabaseName { get; private set; }
 
         /// <summary>
         /// 

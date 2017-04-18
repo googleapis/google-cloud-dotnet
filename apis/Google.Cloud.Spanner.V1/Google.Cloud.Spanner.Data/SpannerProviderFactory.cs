@@ -24,7 +24,7 @@ namespace Google.Cloud.Spanner
         /// <summary>
         ///     The default SpannerProviderFactory instance.
         /// </summary>
-        public static readonly SpannerProviderFactory Instance = new SpannerProviderFactory();
+        public static readonly SpannerProviderFactory s_instance = new SpannerProviderFactory();
 
         private SpannerProviderFactory()
         {

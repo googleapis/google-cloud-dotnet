@@ -22,18 +22,20 @@ namespace Google.Cloud.Spanner
 {
     /// <summary>
     /// </summary>
-    public class SpannerCommand : DbCommand
+    public sealed class SpannerCommand : DbCommand
 #if NET451
         , ICloneable
 #endif
     {
-        private readonly SpannerParameterCollection _parameters;
         private readonly SpannerTransaction _transaction;
+        private int _commandTimeout;
 
         /// <summary>
         /// </summary>
         public SpannerCommand()
         {
+            DesignTimeVisible = true;
+            _commandTimeout = ConnectionPoolOptions.Instance.TimeoutMilliseconds;
         }
 
         /// <summary>
@@ -48,7 +50,7 @@ namespace Google.Cloud.Spanner
             SpannerCommandTextBuilder = commandTextBuilder;
             SpannerConnection = connection;
             _transaction = transaction;
-            _parameters = parameters;
+            Parameters = parameters;
         }
 
         /// <summary>
@@ -66,42 +68,30 @@ namespace Google.Cloud.Spanner
         /// <inheritdoc />
         public override string CommandText
         {
-            get { return SpannerCommandTextBuilder.ToString(); }
+            get { return SpannerCommandTextBuilder?.ToString() ?? string.Empty; }
             set { SpannerCommandTextBuilder = SpannerCommandTextBuilder.FromCommandText(value); }
         }
 
         /// <inheritdoc />
         public override int CommandTimeout
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return _commandTimeout; }
+            set { _commandTimeout = value; }
         }
 
         /// <inheritdoc />
         public override CommandType CommandType
         {
             get { return CommandType.Text; }
-            set { throw new NotSupportedException(); }
+            set { throw new NotSupportedException("Cloud Spanner only supports CommandType.Text."); }
         }
 
         /// <inheritdoc />
-        public override bool DesignTimeVisible
-        {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
-        }
+        public override bool DesignTimeVisible { get; set; }
 
         /// <summary>
         /// </summary>
-        public new SpannerParameterCollection Parameters
-        {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
-        }
-
-        /// <summary>
-        /// </summary>
-        public SpannerCommandTextBuilder SpannerCommandTextBuilder { get; set; }
+        public new SpannerParameterCollection Parameters { get; }
 
         /// <summary>
         /// </summary>
@@ -117,15 +107,13 @@ namespace Google.Cloud.Spanner
         /// <inheritdoc />
         protected override DbConnection DbConnection
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return SpannerConnection; }
+            set { SpannerConnection = (SpannerConnection) value; }
         }
 
         /// <inheritdoc />
-        protected override DbParameterCollection DbParameterCollection
-        {
-            get { throw new NotImplementedException(); }
-        }
+        protected override DbParameterCollection DbParameterCollection => Parameters;
+
 
         /// <inheritdoc />
         protected override DbTransaction DbTransaction
@@ -133,6 +121,10 @@ namespace Google.Cloud.Spanner
             get { throw new NotImplementedException(); }
             set { throw new NotImplementedException(); }
         }
+
+        /// <summary>
+        /// </summary>
+        internal SpannerCommandTextBuilder SpannerCommandTextBuilder { get; set; }
 
         /// <summary>
         /// </summary>

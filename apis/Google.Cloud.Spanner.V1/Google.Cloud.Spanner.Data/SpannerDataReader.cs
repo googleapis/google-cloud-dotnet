@@ -27,7 +27,7 @@ namespace Google.Cloud.Spanner
 {
     /// <summary>
     /// </summary>
-    public class SpannerDataReader : DbDataReader
+    public sealed class SpannerDataReader : DbDataReader
     {
         internal SpannerDataReader(ResultSet resultset)
         {

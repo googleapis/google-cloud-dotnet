@@ -22,9 +22,10 @@ using System.Data.Common;
 namespace Google.Cloud.Spanner
 {
 #if NET451
+
     /// <summary>
     /// </summary>
-    public class SpannerDataAdapter : DbDataAdapter, IDbDataAdapter
+    public sealed class SpannerDataAdapter : DbDataAdapter, IDbDataAdapter
     {
         /// <summary>
         /// </summary>

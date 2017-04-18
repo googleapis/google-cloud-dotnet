@@ -18,16 +18,20 @@ namespace Google.Cloud.Spanner
 {
     /// <summary>
     /// </summary>
-    public class SpannerBatchOperation : IDisposable
+    public sealed class SpannerBatchOperation : IDisposable
     {
-        private SpannerConnection spannerConnection;
+        private readonly SpannerConnection _spannerConnection;
 
+        /// <summary>
+        /// </summary>
+        /// <param name="spannerConnection"></param>
         public SpannerBatchOperation(SpannerConnection spannerConnection)
         {
-            this.spannerConnection = spannerConnection;
+            _spannerConnection = spannerConnection;
         }
 
-        /// <inheritdoc />
+        /// <summary>
+        /// </summary>
         public void Dispose()
         {
             throw new NotImplementedException();

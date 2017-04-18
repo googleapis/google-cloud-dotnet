@@ -21,9 +21,10 @@ using System.Data.Common;
 namespace Google.Cloud.Spanner
 {
 #if NET451
+
     /// <summary>
     /// </summary>
-    public class SpannerRowUpdatedEventArgs : RowUpdatedEventArgs
+    public sealed class SpannerRowUpdatedEventArgs : RowUpdatedEventArgs
     {
         /// <summary>
         /// </summary>

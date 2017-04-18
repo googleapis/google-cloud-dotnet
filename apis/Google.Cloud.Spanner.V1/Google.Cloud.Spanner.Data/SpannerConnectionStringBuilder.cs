@@ -15,17 +15,18 @@
 using System.Data.Common;
 using System.Threading;
 using System.Threading.Tasks;
+using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
+using Google.Apis.Util;
 using Google.Cloud.Spanner.V1;
 
 // ReSharper disable UnusedParameter.Local
-
 namespace Google.Cloud.Spanner
 {
     /// <summary>
     ///     A connection string builder for Spanner connection strings.
     /// </summary>
-    public class SpannerConnectionStringBuilder : DbConnectionStringBuilder
+    public sealed class SpannerConnectionStringBuilder : DbConnectionStringBuilder
     {
         /// <summary>
         /// </summary>
@@ -33,6 +34,7 @@ namespace Google.Cloud.Spanner
         /// <param name="credential"></param>
         public SpannerConnectionStringBuilder(string connectionString, ITokenAccess credential)
         {
+            connectionString.ThrowIfNullOrEmpty(nameof(connectionString));
             Credential = credential;
             ConnectionString = connectionString;
         }
@@ -69,6 +71,34 @@ namespace Google.Cloud.Spanner
         {
             get { return (string) this["Data Source"]; }
             private set { this["Data Source"] = value; }
+        }
+
+        /// <summary>
+        /// </summary>
+        public ServiceEndpoint EndPoint => new ServiceEndpoint(Host, Port);
+
+        /// <summary>
+        /// </summary>
+        public string Host
+        {
+            get { return (string) this["Host"] ?? SpannerClient.DefaultEndpoint.Host; }
+            private set { this["Host"] = value; }
+        }
+
+        /// <summary>
+        /// </summary>
+        public int Port
+        {
+            get
+            {
+                var result = SpannerClient.DefaultEndpoint.Port;
+                var value = (string) this["Port"];
+                if (value != null)
+                    if (!int.TryParse(value, out result))
+                        result = SpannerClient.DefaultEndpoint.Port;
+                return result;
+            }
+            private set { this["Port"] = value.ToString(); }
         }
 
         /// <summary>
@@ -118,13 +148,15 @@ namespace Google.Cloud.Spanner
 
         internal SpannerConnectionStringBuilder CloneWithNewDataSource(string dataSource)
         {
-            var newInstance = new SpannerConnectionStringBuilder();
-            newInstance.Credential = Credential;
-            newInstance.ClientId = ClientId;
-            newInstance.ClientSecret = ClientSecret;
-            newInstance.UserName = UserName;
-            newInstance.DataSource = dataSource;
-            return newInstance;
+            return new SpannerConnectionStringBuilder {
+                Credential = Credential,
+                ClientId = ClientId,
+                ClientSecret = ClientSecret,
+                UserName = UserName,
+                Host = Host,
+                Port = Port,
+                DataSource = dataSource
+            };
         }
 
         private string ParsedDataSourcePart(int index)

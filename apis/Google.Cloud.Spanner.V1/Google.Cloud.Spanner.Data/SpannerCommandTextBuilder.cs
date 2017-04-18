@@ -13,6 +13,8 @@
 // limitations under the License.
 
 using System;
+using System.Linq;
+using Google.Apis.Util;
 
 // ReSharper disable UnusedParameter.Local
 
@@ -20,21 +22,64 @@ namespace Google.Cloud.Spanner
 {
     /// <summary>
     /// </summary>
-    public class SpannerCommandTextBuilder
+    public sealed class SpannerCommandTextBuilder
     {
+        private static readonly string s_insertCommand = "INSERT";
+        private static readonly string s_insertUpdateCommand = "INSERTUPDATE";
+        private static readonly string s_updateCommand = "UPDATE";
+        private static readonly string s_deleteCommand = "DELETE";
+        private static readonly string s_selectCommand = "SELECT";
+
+        private string _targetTable;
+
         /// <summary>
         /// </summary>
-        /// <param name="type"></param>
-        /// <param name="databaseTable"></param>
-        private SpannerCommandTextBuilder(OperationType type, string databaseTable)
+        /// <param name="commandText"></param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="InvalidOperationException"></exception>
+        public SpannerCommandTextBuilder(string commandText)
+        {
+            commandText.ThrowIfNullOrEmpty(nameof(commandText));
+            var commandSections = commandText.Split(' ');
+            if (commandSections.Length < 2)
+                throw new InvalidOperationException($"{commandText} is not a recognized Spanner command.");
+            var newBuilder = new SpannerCommandTextBuilder();
+            if (!TryParseCommand(this, s_deleteCommand, SpannerCommandType.Delete, commandSections)
+                && !TryParseCommand(this, s_updateCommand, SpannerCommandType.Update, commandSections)
+                && !TryParseCommand(this, s_insertCommand, SpannerCommandType.Insert, commandSections)
+                && !TryParseCommand(this, s_insertUpdateCommand, SpannerCommandType.InsertOrUpdate, commandSections))
+            {
+                if (!commandSections[0].ToUpper().StartsWith(s_selectCommand))
+                    throw new InvalidOperationException($"{commandText} is not a recognized Spanner command.");
+                newBuilder.CommandText = commandText;
+                newBuilder.SpannerCommandType = SpannerCommandType.Select;
+            }
+        }
+
+        /// <summary>
+        /// </summary>
+        private SpannerCommandTextBuilder()
         {
         }
 
         /// <summary>
         /// </summary>
-        public OperationType OperationType
+        public string CommandText { get; private set; }
+
+        /// <summary>
+        /// </summary>
+        public SpannerCommandType SpannerCommandType { get; private set; }
+
+        /// <summary>
+        /// </summary>
+        public string TargetTable
         {
-            get { throw new NotImplementedException(); }
+            get { return _targetTable; }
+            private set
+            {
+                ValidateTable(value);
+                _targetTable = value;
+            }
         }
 
         /// <summary>
@@ -43,7 +88,12 @@ namespace Google.Cloud.Spanner
         /// <returns></returns>
         public static SpannerCommandTextBuilder CreateDeleteTextBuilder(string databaseTable)
         {
-            throw new NotImplementedException();
+            ValidateTable(databaseTable);
+            return new SpannerCommandTextBuilder {
+                SpannerCommandType = SpannerCommandType.Delete,
+                TargetTable = databaseTable,
+                CommandText = $"{s_deleteCommand} {databaseTable}"
+            };
         }
 
         /// <summary>
@@ -52,7 +102,12 @@ namespace Google.Cloud.Spanner
         /// <returns></returns>
         public static SpannerCommandTextBuilder CreateInsertOrUpdateTextBuilder(string databaseTable)
         {
-            throw new NotImplementedException();
+            ValidateTable(databaseTable);
+            return new SpannerCommandTextBuilder {
+                SpannerCommandType = SpannerCommandType.InsertOrUpdate,
+                TargetTable = databaseTable,
+                CommandText = $"{s_insertUpdateCommand} {databaseTable}"
+            };
         }
 
         /// <summary>
@@ -61,7 +116,12 @@ namespace Google.Cloud.Spanner
         /// <returns></returns>
         public static SpannerCommandTextBuilder CreateInsertTextBuilder(string databaseTable)
         {
-            throw new NotImplementedException();
+            ValidateTable(databaseTable);
+            return new SpannerCommandTextBuilder {
+                SpannerCommandType = SpannerCommandType.Insert,
+                TargetTable = databaseTable,
+                CommandText = $"{s_insertCommand} {databaseTable}"
+            };
         }
 
         /// <summary>
@@ -70,7 +130,10 @@ namespace Google.Cloud.Spanner
         /// <returns></returns>
         public static SpannerCommandTextBuilder CreateSelectTextBuilder(string sqlQuery)
         {
-            throw new NotImplementedException();
+            return new SpannerCommandTextBuilder {
+                SpannerCommandType = SpannerCommandType.Select,
+                CommandText = sqlQuery
+            };
         }
 
         /// <summary>
@@ -79,7 +142,12 @@ namespace Google.Cloud.Spanner
         /// <returns></returns>
         public static SpannerCommandTextBuilder CreateUpdateTextBuilder(string databaseTable)
         {
-            throw new NotImplementedException();
+            ValidateTable(databaseTable);
+            return new SpannerCommandTextBuilder {
+                SpannerCommandType = SpannerCommandType.Insert,
+                TargetTable = databaseTable,
+                CommandText = $"{s_updateCommand} {databaseTable}"
+            };
         }
 
         /// <summary>
@@ -88,13 +156,39 @@ namespace Google.Cloud.Spanner
         /// <returns></returns>
         public static SpannerCommandTextBuilder FromCommandText(string commandText)
         {
-            throw new NotImplementedException();
+            return new SpannerCommandTextBuilder(commandText);
         }
 
         /// <inheritdoc />
         public override string ToString()
         {
-            throw new NotImplementedException();
+            return CommandText;
+        }
+
+        private static bool TryParseCommand(SpannerCommandTextBuilder newbuilder,
+            string commandToParseFor, SpannerCommandType commandType,
+            string[] commandSections)
+        {
+            var operationName = commandSections[0].ToUpper();
+            if (Equals(operationName, commandToParseFor))
+            {
+                if (commandSections.Length != 2)
+                    throw new InvalidOperationException(
+                        $"Spanner {commandToParseFor} commands are specified as '{commandToParseFor} <table>' with " +
+                        "parameters added to customize the command with filtering or updated values.");
+                newbuilder.CommandText = $"{commandToParseFor} {commandSections[1]}";
+                newbuilder.SpannerCommandType = commandType;
+                newbuilder.TargetTable = commandSections[1];
+                return true;
+            }
+            return false;
+        }
+
+        private static void ValidateTable(string databaseTableName)
+        {
+            databaseTableName.ThrowIfNullOrEmpty(nameof(databaseTableName));
+            if (!databaseTableName.All(c => char.IsLetterOrDigit(c) || c == '_'))
+                throw new ArgumentException($"{nameof(databaseTableName)} only allows letters, numbers or underscore");
         }
     }
 }

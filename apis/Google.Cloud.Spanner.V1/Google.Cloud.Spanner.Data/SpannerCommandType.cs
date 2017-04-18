@@ -16,7 +16,7 @@ namespace Google.Cloud.Spanner
 {
     /// <summary>
     /// </summary>
-    public enum OperationType
+    public enum SpannerCommandType
     {
         /// <summary>
         /// </summary>

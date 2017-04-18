@@ -18,14 +18,13 @@ namespace Google.Cloud.Spanner
 {
     /// <summary>
     /// </summary>
-    public class TimestampBound
+    public sealed class TimestampBound
     {
         /// <summary>
         /// </summary>
         public TimestampBoundMode Mode
         {
             get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
         }
 
         /// <summary>

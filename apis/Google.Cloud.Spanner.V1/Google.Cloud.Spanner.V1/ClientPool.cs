@@ -10,13 +10,22 @@ namespace Google.Cloud.Spanner.V1
 {
     internal static class ClientPool
     {
-        static readonly ConcurrentDictionary<ITokenAccess, ClientEntry> ClientEntryPool =
-                new ConcurrentDictionary<ITokenAccess, ClientEntry>();
+        static readonly ConcurrentDictionary<ClientPoolKey, ClientPoolEntry> s_clientEntryPool =
+            new ConcurrentDictionary<ClientPoolKey, ClientPoolEntry>();
 
-        public static async Task<SpannerClient> AcquireClientAsync(ITokenAccess credentials)
+        public static Task<SpannerClient> AcquireClientAsync()
         {
-            ClientEntry entry = ClientEntryPool.GetOrAdd(credentials ?? ApplicationDefault.Instance, key => new ClientEntry(key));
-            return await entry.AcquireClientFromEntryAsync();
+            return AcquireClientAsync(null, null);
+        }
+
+        public static async Task<SpannerClient> AcquireClientAsync(ITokenAccess credentials, ServiceEndpoint endpoint)
+        {
+            ClientPoolKey key = new ClientPoolKey {
+                Credential = credentials ?? ApplicationDefault.Instance,
+                Endpoint = endpoint ?? SpannerClient.DefaultEndpoint
+            };
+            ClientPoolEntry poolEntry = s_clientEntryPool.GetOrAdd(key, k => new ClientPoolEntry(key));
+            return await poolEntry.AcquireClientFromEntryAsync();
         }
 
         public static int Timeout { get; set; }
@@ -29,34 +38,41 @@ namespace Google.Cloud.Spanner.V1
         public static async Task CloseAllAsync()
         {
             await SpannerClient.ShutdownDefaultChannelsAsync();
-            ClientEntryPool.Clear();
+            s_clientEntryPool.Clear();
         }
 
-        public class ClientEntry
+        struct ClientPoolKey
         {
-            private readonly ITokenAccess _credential;
+            public ITokenAccess Credential;
+            public ServiceEndpoint Endpoint;
+        }
+
+        class ClientPoolEntry
+        {
+            private readonly ClientPoolKey _key;
             private SpannerClient _client;
 
-            public ClientEntry(ITokenAccess credential)
+            public ClientPoolEntry(ClientPoolKey key)
             {
-                _credential = credential;
+                _key = key;
             }
 
             public async Task<SpannerClient> AcquireClientFromEntryAsync()
             {
                 if (_client == null)
                 {
-                    if (_credential != null && _credential != ApplicationDefault.Instance)
+                    if (_key.Credential != null && _key.Credential != ApplicationDefault.Instance)
                     {
-                        _client = await SpannerClient.CreateAsync(SpannerClient.DefaultEndpoint,
+                        //TODO use a custom channel with specified credentials instead of the pool.
+                        _client = await SpannerClient.CreateAsync(_key.Endpoint ?? SpannerClient.DefaultEndpoint,
                             new SpannerSettings
                             {
-                                CallSettings = CallSettings.FromCallCredentials(_credential.ToCallCredentials())
+                                CallSettings = CallSettings.FromCallCredentials(_key.Credential.ToCallCredentials())
                             });
                     }
                     else
                     {
-                        _client = await SpannerClient.CreateAsync(SpannerClient.DefaultEndpoint);
+                        _client = await SpannerClient.CreateAsync(_key.Endpoint ?? SpannerClient.DefaultEndpoint);
                     }
                 }
 
@@ -66,10 +82,11 @@ namespace Google.Cloud.Spanner.V1
 
         private class ApplicationDefault : ITokenAccess
         {
-            public static readonly ApplicationDefault Instance = new ApplicationDefault();
             private ApplicationDefault()
             {
             }
+
+            public static ApplicationDefault Instance { get; } = new ApplicationDefault();
 
             public Task<string> GetAccessTokenForRequestAsync(string authUri = null, CancellationToken cancellationToken = default(CancellationToken))
             {

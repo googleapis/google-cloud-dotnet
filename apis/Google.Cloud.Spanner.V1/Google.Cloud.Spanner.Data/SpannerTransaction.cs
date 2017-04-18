@@ -22,7 +22,7 @@ namespace Google.Cloud.Spanner
 {
     /// <summary>
     /// </summary>
-    public class SpannerTransaction : DbTransaction
+    public sealed class SpannerTransaction : DbTransaction
     {
         /// <summary>
         /// </summary>

@@ -21,7 +21,7 @@ namespace Google.Cloud.Spanner
 {
     /// <summary>
     /// </summary>
-    public class SpannerParameterCollection : DbParameterCollection
+    public sealed class SpannerParameterCollection : DbParameterCollection
     {
         /// <inheritdoc />
         public override int Count

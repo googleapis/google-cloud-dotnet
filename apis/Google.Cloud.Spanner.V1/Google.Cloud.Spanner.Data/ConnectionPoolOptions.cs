@@ -13,84 +13,67 @@
 // limitations under the License.
 
 using System;
+using Google.Cloud.Spanner.V1;
 
 namespace Google.Cloud.Spanner
 {
     /// <summary>
     /// </summary>
-    public class ConnectionPoolOptions
+    public sealed class ConnectionPoolOptions
     {
         /// <summary>
         ///     The default instance of connection pool options.
         /// </summary>
-        public static readonly ConnectionPoolOptions Instance = new ConnectionPoolOptions();
+        public static readonly ConnectionPoolOptions s_instance = new ConnectionPoolOptions();
 
         private ConnectionPoolOptions()
         {
         }
 
         /// <summary>
+        ///     The default instance of connection pool options.
         /// </summary>
-        public static int GrpcChannelCount
-        {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
-        }
+        public static ConnectionPoolOptions Instance => s_instance;
 
         /// <summary>
         /// </summary>
-        public int KeepAliveIntervalMinutes
+        public TimeSpan KeepAliveIntervalMinutes
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return Session.KeepAliveIntervalMinutes; }
+            set { Session.KeepAliveIntervalMinutes = value; }
         }
 
         /// <summary>
         /// </summary>
         public int MaxIdleSessionPoolSize
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return SessionPool.MaxIdleSessionPoolSize; }
+            set { SessionPool.MaxIdleSessionPoolSize = value; }
         }
 
         /// <summary>
         /// </summary>
-        public int MaxSessionPoolSize
+        public int MaxSessionCount
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
-        }
-
-        /// <summary>
-        /// </summary>
-        public int MinSessionPoolSize
-        {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return Session.MaximumActiveSessions; }
+            set { Session.MaximumActiveSessions = value; }
         }
 
         /// <summary>
         /// </summary>
         public ResourcesExhaustedBehavior ResourcesExhaustedBehavior
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get
+            {
+                return Session.WaitOnResourcesExhausted
+                    ? ResourcesExhaustedBehavior.Block
+                    : ResourcesExhaustedBehavior.Fail;
+            }
+            set { Session.WaitOnResourcesExhausted = value == ResourcesExhaustedBehavior.Block; }
         }
 
         /// <summary>
         /// </summary>
-        public static int Timeout
-        {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
-        }
-
-        /// <summary>
-        /// </summary>
-        public float WriteSessionFraction
-        {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
-        }
+        public int TimeoutMilliseconds { get; set; } = 600000;
     }
 }

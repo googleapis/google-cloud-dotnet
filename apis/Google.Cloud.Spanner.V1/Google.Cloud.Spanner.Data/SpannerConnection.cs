@@ -15,12 +15,15 @@
 using System;
 using System.Data;
 using System.Data.Common;
-using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Apis.Auth.OAuth2;
+using Google.Apis.Util;
 using Google.Cloud.Spanner.V1;
+#if NET451
 using Transaction = System.Transactions.Transaction;
+
+#endif
 
 // ReSharper disable UnusedParameter.Local
 namespace Google.Cloud.Spanner
@@ -28,13 +31,14 @@ namespace Google.Cloud.Spanner
     /// <summary>
     ///     A SpannerConnection represents a connection to a single Spanner database.
     /// </summary>
-    public class SpannerConnection : DbConnection
+    public sealed class SpannerConnection : DbConnection
     {
         private SpannerBatchOperation _activeBatchOperation;
         private SpannerClient _client;
         private SpannerConnectionStringBuilder _connectionStringBuilder;
         private Session _session;
         private ConnectionState _state = ConnectionState.Closed;
+        private readonly object _sync = new object();
 
         /// <summary>
         ///     Creates a SpannerConnection with no datasource or credential specified.
@@ -56,9 +60,7 @@ namespace Google.Cloud.Spanner
         }
 
         /// <summary>
-        ///     Creates a SpannerConnection with a datasource contained in connectionString
-        ///     and optional credential information supplied in connectionString or the credential
-        ///     argument.
+        ///     Creates a SpannerConnection with a datasource contained in connectionString.
         /// </summary>
         /// <param name="connectionStringBuilder">
         ///     A SpannerConnectionStringBuilder containing
@@ -66,6 +68,7 @@ namespace Google.Cloud.Spanner
         /// </param>
         public SpannerConnection(SpannerConnectionStringBuilder connectionStringBuilder)
         {
+            connectionStringBuilder.ThrowIfNull(nameof(connectionStringBuilder));
             TrySetNewConnectionInfo(connectionStringBuilder);
         }
 
@@ -100,6 +103,7 @@ namespace Google.Cloud.Spanner
         /// </summary>
         public string Project => _connectionStringBuilder.Project;
 
+        //TODO review server version support.
         /// <inheritdoc />
         public override string ServerVersion => "0.0";
 
@@ -158,14 +162,11 @@ namespace Google.Cloud.Spanner
             if (IsClosed) return;
             _state = ConnectionState.Closed;
             //we do not await the actual session close, we let that happen async.
-            var task = SessionPool.ReleaseSessionAsync(_session,
-                _connectionStringBuilder.Credential,
-                _connectionStringBuilder.Project,
-                _connectionStringBuilder.SpannerInstance,
-                _connectionStringBuilder.SpannerDatabase);
+            var task = SessionPool.ReleaseSessionAsync(_session);
             task.ContinueWith(t =>
             {
-                if (t.IsFaulted && t.Exception != null) Trace.TraceWarning($"Error releasing session: {t.Exception}");
+                //TODO, proper logging.
+                //if (t.IsFaulted && t.Exception != null) Trace.TraceWarning($"Error releasing session: {t.Exception}");
             });
         }
 
@@ -241,14 +242,30 @@ namespace Google.Cloud.Spanner
         public override async Task OpenAsync(CancellationToken cancellationToken)
         {
             if (IsOpen) return;
-            _client = await ClientPool.AcquireClientAsync(_connectionStringBuilder.Credential);
-            _session =
-                await
-                    SessionPool.AcquireSessionAsync(_connectionStringBuilder.Credential,
-                        _connectionStringBuilder.Project,
-                        _connectionStringBuilder.SpannerInstance,
-                        _connectionStringBuilder.SpannerDatabase, cancellationToken);
-            _state = ConnectionState.Open;
+            lock (_sync)
+            {
+                if (IsOpen) return;
+                if (_state == ConnectionState.Connecting)
+                    throw new InvalidOperationException("The SpannerConnection is already being opened.");
+                _state = ConnectionState.Connecting;
+            }
+            try
+            {
+
+                _client = await ClientPool.AcquireClientAsync(_connectionStringBuilder.Credential,
+                    _connectionStringBuilder.EndPoint);
+                _session =
+                    await
+                        SessionPool.AcquireSessionAsync(_connectionStringBuilder.Credential,
+                            _connectionStringBuilder.EndPoint,
+                            _connectionStringBuilder.Project,
+                            _connectionStringBuilder.SpannerInstance,
+                            _connectionStringBuilder.SpannerDatabase, cancellationToken);
+            }
+            finally
+            {
+                _state = _session != null ? ConnectionState.Open : ConnectionState.Broken;
+            }
         }
 
         /// <inheritdoc />
@@ -296,7 +313,7 @@ namespace Google.Cloud.Spanner
         }
 
         /// <inheritdoc />
-        protected override DbProviderFactory DbProviderFactory => SpannerProviderFactory.Instance;
+        protected override DbProviderFactory DbProviderFactory => SpannerProviderFactory.s_instance;
 
 #endif
     }
