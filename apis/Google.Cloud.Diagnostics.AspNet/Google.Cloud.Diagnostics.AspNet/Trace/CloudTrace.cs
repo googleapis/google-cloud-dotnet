@@ -77,7 +77,7 @@ namespace Google.Cloud.Diagnostics.AspNet
 
         private readonly IConsumer<TraceProto> _consumer;
 
-        private readonly Func<HttpRequest, bool?> _traceFallbackPredicate;
+        private readonly TraceDecisionPredicate _traceFallbackPredicate;
 
         /// <summary>
         /// Gets the <see cref="IManagedTracer"/> for tracing. It can be used
@@ -107,15 +107,14 @@ namespace Google.Cloud.Diagnostics.AspNet
             new TraceHeaderPropagatingHandler(() => Tracer);
 
         private CloudTrace(string projectId, TraceConfiguration config = null, TraceServiceClient client = null,
-            Func<HttpRequest, bool?> traceFallbackPredicate = null)
+            TraceDecisionPredicate traceFallbackPredicate = null)
         {
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
 
             // Create the default values if not set.
             client = client ?? TraceServiceClient.Create();
-            config = config ?? TraceConfiguration.Create();
-
-            _traceFallbackPredicate = traceFallbackPredicate;
+            config = config ?? TraceConfiguration.Create(); 
+            _traceFallbackPredicate = traceFallbackPredicate ?? TraceDecisionPredicate.Default;
 
             _consumer = ConsumerFactory<TraceProto>.GetConsumer(
                 new GrpcTraceConsumer(client), MessageSizer<TraceProto>.GetSize, config.BufferOptions);
@@ -135,12 +134,10 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <param name="client">Optional trace client, if unset the default will be used.</param>
         /// <param name="traceFallbackPredicate">Optional function to trace requests. If the trace header is not set
         ///     then this function will be called to determine if a given request should be traced.  This will
-        ///     not override trace headers. If the function returns true the request will be traced, if false
-        ///     is returned the trace will not be traced and if null is returned it will not affect the
-        ///     trace decision.</param>
+        ///     not override trace headers.</param>
         public static void Initialize(HttpApplication application, string projectId = null,
             TraceConfiguration config = null, TraceServiceClient client = null,
-            Func<HttpRequest, bool?> traceFallbackPredicate = null)
+            TraceDecisionPredicate traceFallbackPredicate = null)
         {
             GaxPreconditions.CheckNotNull(application, nameof(application));
 
@@ -161,7 +158,7 @@ namespace Google.Cloud.Diagnostics.AspNet
             var request = HttpContext.Current.Request;
             string header = request.Headers.Get(TraceHeaderContext.TraceHeader);
             var headerContext = TraceHeaderContext.FromHeader(
-                header, () => _traceFallbackPredicate?.Invoke(request));
+                header, () => _traceFallbackPredicate?.ShouldTrace(request));
 
             var tracer = _tracerFactory.CreateTracer(headerContext);
             if (tracer.GetCurrentTraceId() == null)

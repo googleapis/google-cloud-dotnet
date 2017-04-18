@@ -74,21 +74,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     public static class CloudTraceExtension
     {
         /// <summary>
-        /// A class to wrap the "shouldTraceFunc" param in <see cref="AddGoogleTrace"/>.
-        /// This is used instead of injecting the value of "shouldTraceFunc" directly 
-        /// to ensure we do not override a service the user setup.
-        /// </summary>
-        internal sealed class ShouldTraceRequest
-        {
-            internal Func<HttpRequest, bool?> ShouldTrace { get; }
-
-            internal ShouldTraceRequest(Func<HttpRequest, bool?> shouldTrace)
-            {
-                ShouldTrace = shouldTrace;
-            }
-        }
-
-        /// <summary>
         /// Uses middleware that will trace time taken for all subsequent delegates to run.
         /// The time taken and metadata will be sent to the Stackdriver Trace API. To be
         /// used with <see cref="AddGoogleTrace"/>,
@@ -110,18 +95,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="client">Optional Trace client, if unset the default will be used.</param>
         /// <param name="traceFallbackPredicate">Optional function to trace requests. If the trace header is not set
         ///     then this function will be called to determine if a given request should be traced.  This will
-        ///     not override trace headers. If the function returns true the request will be traced, if false
-        ///     is returned the trace will not be traced and if null is returned it will not affect the
-        ///     trace decision.</param>
+        ///     not override trace headers.</param>
         public static void AddGoogleTrace(
             this IServiceCollection services, string projectId = null,
             TraceConfiguration config = null, TraceServiceClient client = null,
-            Func<HttpRequest, bool?> traceFallbackPredicate = null)
+            TraceDecisionPredicate traceFallbackPredicate = null)
         {
             GaxPreconditions.CheckNotNull(services, nameof(services));
 
             client = client ?? TraceServiceClient.Create();
             config = config ?? TraceConfiguration.Create();
+            traceFallbackPredicate = traceFallbackPredicate ?? TraceDecisionPredicate.Default;
 
             projectId = CommonUtils.GetAndCheckProjectId(projectId);
 
@@ -138,7 +122,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             services.AddSingleton(CreateManagedTracer);
             services.AddSingleton(CreateTraceHeaderPropagatingHandler);
-            services.AddSingleton(new ShouldTraceRequest(traceFallbackPredicate));
+            services.AddSingleton(traceFallbackPredicate);
         }
 
         /// <summary>
@@ -152,16 +136,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
         /// <summary>
         /// Creates an <see cref="TraceHeaderContext"/> based on the current <see cref="HttpContext"/>
-        /// and a <see cref="ShouldTraceRequest"/>.
+        /// and a <see cref="TraceDecisionPredicate"/>.
         /// </summary>
         internal static TraceHeaderContext CreateTraceHeaderContext(IServiceProvider provider)
         {
             var accessor = provider.GetServiceCheckNotNull<IHttpContextAccessor>();
-            var shouldTraceRequest = provider.GetServiceCheckNotNull<ShouldTraceRequest>();
+            var traceDecisionPredicate = provider.GetServiceCheckNotNull<TraceDecisionPredicate>();
 
             string header = accessor.HttpContext?.Request?.Headers[TraceHeaderContext.TraceHeader];
-            Func<bool?> shouldTraceFunc = () => 
-                shouldTraceRequest?.ShouldTrace?.Invoke(accessor.HttpContext?.Request);
+            Func<bool?> shouldTraceFunc = () =>
+                traceDecisionPredicate.ShouldTrace(accessor.HttpContext?.Request);
             return TraceHeaderContext.FromHeader(header, shouldTraceFunc);
         }
 
