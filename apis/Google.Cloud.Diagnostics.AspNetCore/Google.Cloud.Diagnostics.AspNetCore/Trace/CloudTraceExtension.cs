@@ -145,7 +145,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             string header = accessor.HttpContext?.Request?.Headers[TraceHeaderContext.TraceHeader];
             Func<bool?> shouldTraceFunc = () =>
-                traceDecisionPredicate?.ShouldTrace(accessor.HttpContext?.Request);
+                traceDecisionPredicate.ShouldTrace(accessor.HttpContext?.Request);
             return TraceHeaderContext.FromHeader(header, shouldTraceFunc);
         }
 
