@@ -1,5 +1,9 @@
 ﻿{
-  "projects": [ ".", "../apis/Google.Cloud.PubSub.V1" ],
+  "projects": [
+    ".",
+    "../apis/Google.Cloud.PubSub.V1",
+    "../apis/Google.Cloud.Translation.V2"
+  ],
   "sdk": {
     "version": "1.0.0-preview2-003131"
   }

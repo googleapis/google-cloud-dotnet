@@ -106,6 +106,24 @@ it yourself to integrate with other systems - see the
 [Grpc.Core.Logging](https://github.com/grpc/grpc/tree/master/src/csharp/Grpc.Core/Logging)
 namespace for details.
 
+## How can I trace requests and responses in REST-based APIs?
+
+For libraries that use HTTP1.1 and REST, it can be useful to perfom request and response
+logging. There are two aspects to this:
+
+- Registering a global logger
+- Configuring the events to log in a specific service
+
+The underlying service is available via the `Service` property in each `XyzClient` class. Within
+that service, you need to configure the `HttpClient`'s message handler. As a complete example,
+here's a call to the Translation API, listing all the available languages, and logging the request
+headers and the response body:
+
+[!code-cs[](obj/snippets/Google.Cloud.Docs.Faq.txt#RestLogging)]
+
+To log *all* events from the message handler, you can set the `LogEvents` property to
+`~LogEventType.None`.
+
 ## How can I use emulators?
 
 Some APIs (such as Datastore and PubSub) provide emulators in the
