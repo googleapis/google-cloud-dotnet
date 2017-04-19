@@ -130,6 +130,18 @@ namespace Google.LongRunning
         }
 
         /// <summary>
+        /// Executes the given callback with the metadata in the RPC message
+        /// if both the callback and the metadata are non-null.
+        /// </summary>
+        private void MaybeFireCallback(Action<TMetadata> metadataCallback)
+        {
+            if (metadataCallback != null && RpcMessage.Metadata != null)
+            {
+                metadataCallback(Metadata);
+            }
+        }
+
+        /// <summary>
         /// Polls the operation until it is complete, returning the completed operation.
         /// </summary>
         /// <remarks>
@@ -157,11 +169,7 @@ namespace Google.LongRunning
                 deadline =>
                 {
                     var result = PollOnce(callSettings.WithEarlierDeadline(deadline, Client.Clock));
-                    TMetadata metadata;
-                    if (metadataCallback != null && (metadata = result.Metadata) != null)
-                    {
-                        metadataCallback.Invoke(metadata);
-                    }
+                    result.MaybeFireCallback(metadataCallback);
                     return result;
                 };
 
@@ -198,11 +206,7 @@ namespace Google.LongRunning
                 async deadline =>
                 {
                     var result = await PollOnceAsync(callSettings.WithEarlierDeadline(deadline, Client.Clock)).ConfigureAwait(false);
-                    TMetadata metadata;
-                    if (metadataCallback != null && (metadata = result.Metadata) != null)
-                    {
-                        metadataCallback.Invoke(metadata);
-                    }
+                    result.MaybeFireCallback(metadataCallback);
                     return result;
                 };
             return Polling.PollRepeatedlyAsync(
