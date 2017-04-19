@@ -16,6 +16,8 @@ using System;
 using System.Collections;
 using System.Data.Common;
 using Google.Cloud.Spanner.V1;
+using Grpc.Core;
+
 #if NET451
 using System.Data;
 
@@ -29,8 +31,18 @@ namespace Google.Cloud.Spanner
     /// </summary>
     public sealed class SpannerDataReader : DbDataReader
     {
-        internal SpannerDataReader(ResultSet resultset)
+        private readonly ReliableStreamReader _resultset;
+        private readonly SpannerConnection _connectionToClose;
+
+        internal SpannerDataReader(ReliableStreamReader resultset)
         {
+            _resultset = resultset;
+        }
+
+        internal SpannerDataReader(ReliableStreamReader resultset, SpannerConnection connectionToClose)
+        {
+            _resultset = resultset;
+            _connectionToClose = connectionToClose;
         }
 
         /// <inheritdoc />
@@ -225,7 +237,7 @@ namespace Google.Cloud.Spanner
         /// <inheritdoc />
         protected override void Dispose(bool disposing)
         {
-            throw new NotImplementedException();
+            _connectionToClose?.Close();
         }
 
 #if NET451

@@ -20,6 +20,7 @@ using System.Threading.Tasks;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Util;
 using Google.Cloud.Spanner.V1;
+
 #if NET451
 using Transaction = System.Transactions.Transaction;
 
@@ -37,6 +38,8 @@ namespace Google.Cloud.Spanner
         private SpannerClient _client;
         private SpannerConnectionStringBuilder _connectionStringBuilder;
         private Session _session;
+        private int _sessionInUse;
+        private int _executingCount;
         private ConnectionState _state = ConnectionState.Closed;
         private readonly object _sync = new object();
 
@@ -112,11 +115,13 @@ namespace Google.Cloud.Spanner
         public string SpannerInstance => _connectionStringBuilder.SpannerInstance;
 
         /// <inheritdoc />
-        public override ConnectionState State => _state;
+        public override ConnectionState State => (
+            _state | (_executingCount > 0 ? ConnectionState.Executing : 0));
 
-        private bool IsClosed => (State & ConnectionState.Open) == 0;
 
-        private bool IsOpen => (State & ConnectionState.Open) == ConnectionState.Open;
+        internal bool IsClosed => (State & ConnectionState.Open) == 0;
+
+        internal bool IsOpen => (State & ConnectionState.Open) == ConnectionState.Open;
 
         /// <summary>
         /// </summary>
@@ -159,15 +164,28 @@ namespace Google.Cloud.Spanner
         /// <inheritdoc />
         public override void Close()
         {
-            if (IsClosed) return;
-            _state = ConnectionState.Closed;
-            //we do not await the actual session close, we let that happen async.
-            var task = SessionPool.ReleaseSessionAsync(_session);
-            task.ContinueWith(t =>
+            Session session;
+            bool primarySessionInUse;
+            lock (_sync)
             {
-                //TODO, proper logging.
-                //if (t.IsFaulted && t.Exception != null) Trace.TraceWarning($"Error releasing session: {t.Exception}");
-            });
+                if (IsClosed) return;
+                primarySessionInUse = _sessionInUse == 1;
+                _state = ConnectionState.Closed;
+                //we do not await the actual session close, we let that happen async.
+                session = _session;
+                _session = null;
+            }
+            if (!primarySessionInUse)
+            {
+                //release the session if its not used.
+                //if it's used, we'll detect a closed state after the operation and release it then.
+                var task = SessionPool.ReleaseSessionAsync(session);
+                task.ContinueWith(t =>
+                {
+                    //TODO, proper logging.
+                    //if (t.IsFaulted && t.Exception != null) Trace.TraceWarning($"Error releasing session: {t.Exception}");
+                });
+            }
         }
 
         /// <summary>
@@ -251,7 +269,6 @@ namespace Google.Cloud.Spanner
             }
             try
             {
-
                 _client = await ClientPool.AcquireClientAsync(_connectionStringBuilder.Credential,
                     _connectionStringBuilder.EndPoint);
                 _session =
@@ -261,6 +278,7 @@ namespace Google.Cloud.Spanner
                             _connectionStringBuilder.Project,
                             _connectionStringBuilder.SpannerInstance,
                             _connectionStringBuilder.SpannerDatabase, cancellationToken);
+                _sessionInUse = 0;
             }
             finally
             {
@@ -302,6 +320,45 @@ namespace Google.Cloud.Spanner
         {
             AssertClosed("change connection information.");
             _connectionStringBuilder = newBuilder;
+        }
+
+        internal async Task<ReliableStreamReader> ExecuteSqlAsync(
+            ExecuteSqlRequest executeSqlRequest, CancellationToken cancellationToken)
+        {
+            var sessionToUse = await AllocateSession(cancellationToken);
+            var streamReader = _client.GetSqlStreamReader(executeSqlRequest, sessionToUse);
+
+            Interlocked.Increment(ref _executingCount);
+            streamReader.StreamClosed += async (o, e) =>
+            {
+                Interlocked.Decrement(ref _executingCount);
+                if (ReferenceEquals(sessionToUse, _session))
+                {
+                    Interlocked.Exchange(ref _sessionInUse, 0);
+                }
+                else
+                {
+                    await SessionPool.ReleaseSessionAsync(sessionToUse);
+                }
+            };
+            return streamReader;
+        }
+
+        private async Task<Session> AllocateSession(CancellationToken cancellationToken)
+        {
+            AssertOpen("execute command");
+            Session sessionToUse = null;
+
+            if (Interlocked.CompareExchange(ref _sessionInUse, 1, 0) == 0)
+            {
+                sessionToUse = _session;
+            }
+
+            return sessionToUse ?? await SessionPool.AcquireSessionAsync(
+                       _connectionStringBuilder.Credential,
+                       _connectionStringBuilder.EndPoint,
+                       _connectionStringBuilder.Project, _connectionStringBuilder.SpannerInstance,
+                       _connectionStringBuilder.SpannerDatabase, cancellationToken);
         }
 
 #if NET451

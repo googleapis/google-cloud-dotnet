@@ -15,6 +15,9 @@
 using System;
 using System.Data;
 using System.Data.Common;
+using System.Threading;
+using System.Threading.Tasks;
+using Google.Cloud.Spanner.V1;
 
 // ReSharper disable UnusedParameter.Local
 
@@ -28,6 +31,7 @@ namespace Google.Cloud.Spanner
 #endif
     {
         private readonly SpannerTransaction _transaction;
+        private readonly CancellationTokenSource _synchronousCancellationTokenSource = new CancellationTokenSource();
         private int _commandTimeout;
 
         /// <summary>
@@ -91,7 +95,7 @@ namespace Google.Cloud.Spanner
 
         /// <summary>
         /// </summary>
-        public new SpannerParameterCollection Parameters { get; }
+        public new SpannerParameterCollection Parameters { get; private set; }
 
         /// <summary>
         /// </summary>
@@ -114,7 +118,6 @@ namespace Google.Cloud.Spanner
         /// <inheritdoc />
         protected override DbParameterCollection DbParameterCollection => Parameters;
 
-
         /// <inheritdoc />
         protected override DbTransaction DbTransaction
         {
@@ -131,57 +134,110 @@ namespace Google.Cloud.Spanner
         /// <returns></returns>
         public object Clone()
         {
-            throw new NotImplementedException();
+            return new SpannerCommand {
+                DesignTimeVisible = DesignTimeVisible,
+                Parameters = Parameters,
+                SpannerConnection = SpannerConnection,
+                SpannerCommandTextBuilder = SpannerCommandTextBuilder,
+                CommandTimeout = CommandTimeout
+            };
         }
 
         /// <inheritdoc />
         public override void Cancel()
         {
-            throw new NotImplementedException();
-        }
-
-        /// <inheritdoc />
-        public override int ExecuteNonQuery()
-        {
-            throw new NotImplementedException();
-        }
-
-
-        /// <summary>
-        /// </summary>
-        /// <param name="behavior"></param>
-        /// <returns></returns>
-        public DbDataReader ExecuteReaderImpl(CommandBehavior behavior)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <inheritdoc />
-        public override object ExecuteScalar()
-        {
-            throw new NotImplementedException();
+            _synchronousCancellationTokenSource.Cancel();
         }
 
         /// <inheritdoc />
         public override void Prepare()
         {
-            throw new NotImplementedException();
+            //Spanner does not support preoptimized queries.
         }
 
         /// <inheritdoc />
         protected override DbParameter CreateDbParameter()
         {
-            throw new NotImplementedException();
+            return new SpannerParameter();
         }
 
         /// <inheritdoc />
         protected override void Dispose(bool disposing)
         {
-            throw new NotImplementedException();
+        }
+
+        /// <inheritdoc />
+        public override int ExecuteNonQuery()
+        {
+            return ExecuteNonQueryAsync(_synchronousCancellationTokenSource.Token).Result;
+        }
+
+        /// <inheritdoc />
+        public override object ExecuteScalar()
+        {
+            return ExecuteScalarAsync(_synchronousCancellationTokenSource.Token).Result;
+        }
+
+        private void ValidateCommandBehavior(CommandBehavior behavior)
+        {
+            switch (behavior)
+            {
+                case CommandBehavior.KeyInfo:
+                case CommandBehavior.SchemaOnly:
+                case CommandBehavior.SequentialAccess:
+                    throw new InvalidOperationException($"CommandBehavior {behavior} is not supported by Cloud Spanner.");
+            }
         }
 
         /// <inheritdoc />
         protected override DbDataReader ExecuteDbDataReader(CommandBehavior behavior)
+        {
+            ValidateCommandBehavior(behavior);
+            return ExecuteDbDataReaderAsync(behavior, _synchronousCancellationTokenSource.Token).Result;
+        }
+
+        /// <inheritdoc />
+        protected override async Task<DbDataReader> ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+        {
+            // There must be a valid and open connection.
+            if (SpannerConnection == null)
+            {
+                throw new InvalidOperationException(
+                    "You must assign a SpannerConnection to this command to execute it.");
+            }
+            if (SpannerCommandTextBuilder.SpannerCommandType != SpannerCommandType.Select)
+            {
+                throw new InvalidOperationException("You can only call ExecuteNonQuery on a Select Command");
+            }
+            if (!SpannerConnection.IsOpen)
+            {
+                //implicit open
+                await SpannerConnection.OpenAsync(cancellationToken);
+            }
+            if (!SpannerConnection.IsOpen)
+            {
+                throw new InvalidOperationException("Unable to open the Spanner connection to the database.");
+            }
+
+            // Execute the command.
+            var resultset = await SpannerConnection.ExecuteSqlAsync(new ExecuteSqlRequest
+            {
+                Sql = CommandText,
+            }, cancellationToken);
+
+            if ((behavior & CommandBehavior.CloseConnection) == CommandBehavior.CloseConnection)
+                return new SpannerDataReader(resultset, SpannerConnection);
+            return new SpannerDataReader(resultset);
+        }
+
+        /// <inheritdoc />
+        public override Task<int> ExecuteNonQueryAsync(CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <inheritdoc />
+        public override Task<object> ExecuteScalarAsync(CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
