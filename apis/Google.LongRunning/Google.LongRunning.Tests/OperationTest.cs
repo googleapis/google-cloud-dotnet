@@ -20,6 +20,7 @@ using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -86,7 +87,7 @@ namespace Google.LongRunning.Tests
         {
             var client = new FakeOperationsClient();
             client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(3), new StringValue { Value = "result" });
-            var initial = Operation<StringValue>.PollOnceFromName("op", client);
+            var initial = Operation<StringValue, Timestamp>.PollOnceFromName("op", client);
             Assert.False(initial.IsCompleted);
             client.FakeClock.Advance(TimeSpan.FromSeconds(2));
             var polled = initial.PollOnce();
@@ -103,7 +104,7 @@ namespace Google.LongRunning.Tests
         {
             var client = new FakeOperationsClient();
             client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(3), new StringValue { Value = "result" });
-            var initial = await Operation<StringValue>.PollOnceFromNameAsync("op", client);
+            var initial = await Operation<StringValue, Timestamp>.PollOnceFromNameAsync("op", client);
             Assert.False(initial.IsCompleted);
             client.FakeClock.Advance(TimeSpan.FromSeconds(2));
             var polled = await initial.PollOnceAsync();
@@ -119,48 +120,56 @@ namespace Google.LongRunning.Tests
         public void PollUntilCompleted_Success()
         {
             var client = new FakeOperationsClient();
+            var expectedMetadata = GenerateExpectedMetadata(client.Clock, 0, 2, 3);
+            List<Timestamp> actualMetadata = new List<Timestamp>();
             client.FakeScheduler.Run(() =>
             {
                 client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(3), new StringValue { Value = "result" });
-                var initial = Operation<StringValue>.PollOnceFromName("op", client);
+                var initial = Operation<StringValue, Timestamp>.PollOnceFromName("op", client);
                 var settings = new PollSettings(Expiration.FromTimeout(TimeSpan.FromSeconds(5)), TimeSpan.FromSeconds(2));
                 // Second request at t=2, then another at t=4
-                var final = initial.PollUntilCompleted(settings);
+                var final = initial.PollUntilCompleted(settings, metadataCallback: actualMetadata.Add);
                 Assert.Equal("result", final.Result.Value);
                 Assert.Equal(4, client.RequestCount);
-                return 0; // TODO: Remove the need for this, by improving FakeScheduler.
             });
+            Assert.Equal(expectedMetadata, actualMetadata);
         }
 
         [Fact]
         public void PollUntilCompleted_Timeout()
         {
             var client = new FakeOperationsClient();
+            var expectedMetadata = GenerateExpectedMetadata(client.Clock, 0, 2, 4);
+            List<Timestamp> actualMetadata = new List<Timestamp>();
             client.FakeScheduler.Run(() =>
             {
                 client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(10), new StringValue { Value = "result" });
-                var initial = Operation<StringValue>.PollOnceFromName("op", client);
+                var initial = Operation<StringValue, Timestamp>.PollOnceFromName("op", client);
                 // Second request at t=0, then at t=2, then at t=4, then we give up.
                 var settings = new PollSettings(Expiration.FromTimeout(TimeSpan.FromSeconds(5)), TimeSpan.FromSeconds(2));
-                Assert.Throws<TimeoutException>(() => initial.PollUntilCompleted(settings));
+                Assert.Throws<TimeoutException>(() => initial.PollUntilCompleted(settings, metadataCallback: actualMetadata.Add));
                 Assert.Equal(4, client.RequestCount);
             });
+            Assert.Equal(expectedMetadata, actualMetadata);
         }
 
         [Fact]
         public async Task PollUntilCompletedAsync_Success()
         {
             var client = new FakeOperationsClient();
+            var expectedMetadata = GenerateExpectedMetadata(client.Clock, 0, 2, 3);
+            List<Timestamp> actualMetadata = new List<Timestamp>();
             await client.FakeScheduler.RunAsync(async () =>
             {
                 client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(3), new StringValue { Value = "result" });
-                var initial = Operation<StringValue>.PollOnceFromNameAsync("op", client).Result;
+                var initial = Operation<StringValue, Timestamp>.PollOnceFromNameAsync("op", client).Result;
                 var settings = new PollSettings(Expiration.FromTimeout(TimeSpan.FromSeconds(5)), TimeSpan.FromSeconds(2));
-                // Second request at t=2, then another at t=4
-                var completedOperation = await initial.PollUntilCompletedAsync(settings);
+                // Second request at t=0, then at t=2, then another at t=4
+                var completedOperation = await initial.PollUntilCompletedAsync(settings, metadataCallback: actualMetadata.Add);
                 Assert.Equal("result", completedOperation.Result.Value);
             });
             Assert.Equal(4, client.RequestCount);
+            Assert.Equal(expectedMetadata, actualMetadata);
         }
 
         [Fact]
@@ -188,18 +197,36 @@ namespace Google.LongRunning.Tests
         public async Task PollUntilCompletedAsync_Timeout()
         {
             var client = new FakeOperationsClient();
+            var expectedMetadata = GenerateExpectedMetadata(client.Clock, 0, 2, 4);
+            List<Timestamp> actualMetadata = new List<Timestamp>();
             await client.FakeScheduler.RunAsync(async () =>
             {
                 client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(10), new StringValue { Value = "result" });
-                var initial = Operation<StringValue>.PollOnceFromNameAsync("op", client).Result;
+                var initial = Operation<StringValue, Timestamp>.PollOnceFromNameAsync("op", client).Result;
                 // Second request at t=0, then at t=2, then at t=4, then we give up.
                 var settings = new PollSettings(Expiration.FromTimeout(TimeSpan.FromSeconds(5)), TimeSpan.FromSeconds(2));
-                await Assert.ThrowsAsync<TimeoutException>(() => initial.PollUntilCompletedAsync(settings));
+                await Assert.ThrowsAsync<TimeoutException>(() => initial.PollUntilCompletedAsync(settings, metadataCallback: actualMetadata.Add));
             });
             Assert.Equal(4, client.RequestCount);
+            Assert.Equal(expectedMetadata, actualMetadata);
         }
 
-        private static Operation<StringValue> ForResult(string name, string value, OperationsClient client)
+        [Theory]
+        [InlineData("metadata")]
+        [InlineData(null)]
+        public static void Metadata(string metadata)
+        {
+            var message = new Operation
+            {
+                Done = false,                
+                Name = "name",
+                Metadata = metadata == null ? null : Any.Pack(new StringValue { Value = metadata })
+            };
+            var operation = new Operation<Timestamp, StringValue>(message, new FakeOperationsClient());
+            Assert.Equal(metadata, operation.Metadata?.Value);
+        }
+
+        private static Operation<StringValue, Timestamp> ForResult(string name, string value, OperationsClient client)
         {
             var operation = new Operation
             {
@@ -207,20 +234,20 @@ namespace Google.LongRunning.Tests
                 Name = name,
                 Response = Any.Pack(new StringValue { Value = value })
             };
-            return new Operation<StringValue>(operation, client);
+            return new Operation<StringValue, Timestamp>(operation, client);
         }
 
-        private static Operation<StringValue> ForIncomplete(string name, OperationsClient client)
+        private static Operation<StringValue, Timestamp> ForIncomplete(string name, OperationsClient client)
         {
             var operation = new Operation
             {
                 Done = false,
                 Name = name
             };
-            return new Operation<StringValue>(operation, client);
+            return new Operation<StringValue, Timestamp>(operation, client);
         }
 
-        private static Operation<StringValue> ForError(string name, ProtoStatus error, OperationsClient client)
+        private static Operation<StringValue, Timestamp> ForError(string name, ProtoStatus error, OperationsClient client)
         {
             var operation = new Operation
             {
@@ -228,8 +255,14 @@ namespace Google.LongRunning.Tests
                 Name = name,
                 Error = error
             };
-            return new Operation<StringValue>(operation, client);
+            return new Operation<StringValue, Timestamp>(operation, client);
         }
+
+        private static List<Timestamp> GenerateExpectedMetadata(IClock clock, params int[] timesInSecondsFromNow) =>
+            timesInSecondsFromNow
+                .Select(t => clock.GetCurrentDateTimeUtc().AddSeconds(t))
+                .Select(Timestamp.FromDateTime)
+                .ToList();
 
         // We may want to make this public in a testing package at some point... and possibly the helper methods above.
         class FakeOperationsClient : OperationsClient
@@ -260,6 +293,7 @@ namespace Google.LongRunning.Tests
                 {
                     Done = true,
                     Name = name,
+                    Metadata = Any.Pack(Timestamp.FromDateTime(completionTime)),
                     Response = Any.Pack(result)
                 };
                 operations.Add(name, Tuple.Create(completionTime, operation));
@@ -271,6 +305,7 @@ namespace Google.LongRunning.Tests
                 {
                     Done = true,
                     Name = name,
+                    Metadata = Any.Pack(Timestamp.FromDateTime(completionTime)),
                     Error = error
                 };
                 operations.Add(name, Tuple.Create(completionTime, operation));
@@ -286,7 +321,9 @@ namespace Google.LongRunning.Tests
                     throw new RpcException(new GrpcStatus(StatusCode.NotFound, "Operation not found"));
                 }
                 // Return the completed operation, or an incomplete version.
-                return Clock.GetCurrentDateTimeUtc() >= tuple.Item1 ? tuple.Item2 : new Operation { Name = name };
+                return Clock.GetCurrentDateTimeUtc() >= tuple.Item1
+                    ? tuple.Item2
+                    : new Operation { Name = name, Metadata = Any.Pack(Timestamp.FromDateTime(Clock.GetCurrentDateTimeUtc())) };
             }
 
             public override void CancelOperation(string name, CallSettings callSettings = null)
