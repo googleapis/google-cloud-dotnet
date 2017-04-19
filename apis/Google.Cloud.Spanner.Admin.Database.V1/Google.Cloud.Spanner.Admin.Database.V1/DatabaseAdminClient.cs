@@ -644,7 +644,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Database>> CreateDatabaseAsync(
+        public virtual Task<Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(
             InstanceName parent,
             string createStatement,
             CallSettings callSettings = null) => CreateDatabaseAsync(
@@ -680,7 +680,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Database>> CreateDatabaseAsync(
+        public virtual Task<Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(
             InstanceName parent,
             string createStatement,
             CancellationToken cancellationToken) => CreateDatabaseAsync(
@@ -713,7 +713,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<Database> CreateDatabase(
+        public virtual Operation<Database, CreateDatabaseMetadata> CreateDatabase(
             InstanceName parent,
             string createStatement,
             CallSettings callSettings = null) => CreateDatabase(
@@ -743,7 +743,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Database>> CreateDatabaseAsync(
+        public virtual Task<Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(
             CreateDatabaseRequest request,
             CallSettings callSettings = null)
         {
@@ -756,9 +756,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual Task<Operation<Database>> PollOnceCreateDatabaseAsync(
+        public virtual Task<Operation<Database, CreateDatabaseMetadata>> PollOnceCreateDatabaseAsync(
             string operationName,
-            CallSettings callSettings = null) => Operation<Database>.PollOnceFromNameAsync(
+            CallSettings callSettings = null) => Operation<Database, CreateDatabaseMetadata>.PollOnceFromNameAsync(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 LongRunningOperationsClient,
                 callSettings);
@@ -782,7 +782,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<Database> CreateDatabase(
+        public virtual Operation<Database, CreateDatabaseMetadata> CreateDatabase(
             CreateDatabaseRequest request,
             CallSettings callSettings = null)
         {
@@ -795,9 +795,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual Operation<Database> PollOnceCreateDatabase(
+        public virtual Operation<Database, CreateDatabaseMetadata> PollOnceCreateDatabase(
             string operationName,
-            CallSettings callSettings = null) => Operation<Database>.PollOnceFromName(
+            CallSettings callSettings = null) => Operation<Database, CreateDatabaseMetadata>.PollOnceFromName(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 LongRunningOperationsClient,
                 callSettings);
@@ -924,7 +924,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Empty>> UpdateDatabaseDdlAsync(
+        public virtual Task<Operation<Empty, UpdateDatabaseDdlMetadata>> UpdateDatabaseDdlAsync(
             DatabaseName database,
             IEnumerable<string> statements,
             CallSettings callSettings = null) => UpdateDatabaseDdlAsync(
@@ -956,7 +956,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Empty>> UpdateDatabaseDdlAsync(
+        public virtual Task<Operation<Empty, UpdateDatabaseDdlMetadata>> UpdateDatabaseDdlAsync(
             DatabaseName database,
             IEnumerable<string> statements,
             CancellationToken cancellationToken) => UpdateDatabaseDdlAsync(
@@ -985,7 +985,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<Empty> UpdateDatabaseDdl(
+        public virtual Operation<Empty, UpdateDatabaseDdlMetadata> UpdateDatabaseDdl(
             DatabaseName database,
             IEnumerable<string> statements,
             CallSettings callSettings = null) => UpdateDatabaseDdl(
@@ -1014,7 +1014,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Empty>> UpdateDatabaseDdlAsync(
+        public virtual Task<Operation<Empty, UpdateDatabaseDdlMetadata>> UpdateDatabaseDdlAsync(
             UpdateDatabaseDdlRequest request,
             CallSettings callSettings = null)
         {
@@ -1027,9 +1027,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual Task<Operation<Empty>> PollOnceUpdateDatabaseDdlAsync(
+        public virtual Task<Operation<Empty, UpdateDatabaseDdlMetadata>> PollOnceUpdateDatabaseDdlAsync(
             string operationName,
-            CallSettings callSettings = null) => Operation<Empty>.PollOnceFromNameAsync(
+            CallSettings callSettings = null) => Operation<Empty, UpdateDatabaseDdlMetadata>.PollOnceFromNameAsync(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 LongRunningOperationsClient,
                 callSettings);
@@ -1052,7 +1052,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<Empty> UpdateDatabaseDdl(
+        public virtual Operation<Empty, UpdateDatabaseDdlMetadata> UpdateDatabaseDdl(
             UpdateDatabaseDdlRequest request,
             CallSettings callSettings = null)
         {
@@ -1065,9 +1065,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual Operation<Empty> PollOnceUpdateDatabaseDdl(
+        public virtual Operation<Empty, UpdateDatabaseDdlMetadata> PollOnceUpdateDatabaseDdl(
             string operationName,
-            CallSettings callSettings = null) => Operation<Empty>.PollOnceFromName(
+            CallSettings callSettings = null) => Operation<Empty, UpdateDatabaseDdlMetadata>.PollOnceFromName(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 LongRunningOperationsClient,
                 callSettings);
@@ -1835,12 +1835,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override async Task<Operation<Database>> CreateDatabaseAsync(
+        public override async Task<Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(
             CreateDatabaseRequest request,
             CallSettings callSettings = null)
         {
             Modify_CreateDatabaseRequest(ref request, ref callSettings);
-            return new Operation<Database>(
+            return new Operation<Database, CreateDatabaseMetadata>(
                 await _callCreateDatabase.Async(request, callSettings), LongRunningOperationsClient);
         }
 
@@ -1863,12 +1863,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override Operation<Database> CreateDatabase(
+        public override Operation<Database, CreateDatabaseMetadata> CreateDatabase(
             CreateDatabaseRequest request,
             CallSettings callSettings = null)
         {
             Modify_CreateDatabaseRequest(ref request, ref callSettings);
-            return new Operation<Database>(
+            return new Operation<Database, CreateDatabaseMetadata>(
                 _callCreateDatabase.Sync(request, callSettings), LongRunningOperationsClient);
         }
 
@@ -1930,12 +1930,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override async Task<Operation<Empty>> UpdateDatabaseDdlAsync(
+        public override async Task<Operation<Empty, UpdateDatabaseDdlMetadata>> UpdateDatabaseDdlAsync(
             UpdateDatabaseDdlRequest request,
             CallSettings callSettings = null)
         {
             Modify_UpdateDatabaseDdlRequest(ref request, ref callSettings);
-            return new Operation<Empty>(
+            return new Operation<Empty, UpdateDatabaseDdlMetadata>(
                 await _callUpdateDatabaseDdl.Async(request, callSettings), LongRunningOperationsClient);
         }
 
@@ -1957,12 +1957,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override Operation<Empty> UpdateDatabaseDdl(
+        public override Operation<Empty, UpdateDatabaseDdlMetadata> UpdateDatabaseDdl(
             UpdateDatabaseDdlRequest request,
             CallSettings callSettings = null)
         {
             Modify_UpdateDatabaseDdlRequest(ref request, ref callSettings);
-            return new Operation<Empty>(
+            return new Operation<Empty, UpdateDatabaseDdlMetadata>(
                 _callUpdateDatabaseDdl.Sync(request, callSettings), LongRunningOperationsClient);
         }
 
