@@ -1,7 +1,8 @@
 ﻿using System;
 using Google.Api.Gax.Grpc;
 using Grpc.Core;
-
+// ReSharper disable PrivateFieldCanBeConvertedToLocalVariable
+// ReSharper disable NotAccessedField.Local
 // ReSharper disable EmptyDestructor
 
 namespace Google.Cloud.Spanner.V1
@@ -15,10 +16,10 @@ namespace Google.Cloud.Spanner.V1
         //WIP: add actual stream reads, retries, etc.
         private readonly AsyncServerStreamingCall<PartialResultSet> _currentCall;
         private readonly object _sync = new object();
-        private SpannerClient _spannerClient;
-        private ExecuteSqlRequest _request;
+        private readonly SpannerClient _spannerClient;
+        private readonly ExecuteSqlRequest _request;
         private readonly Session _session;
-        private CallSettings _callSettings;
+        private readonly CallSettings _callSettings;
 
         internal ReliableStreamReader(SpannerClient spannerClientImpl, ExecuteSqlRequest request, Session session)
         {
@@ -67,7 +68,7 @@ namespace Google.Cloud.Spanner.V1
         /// <inheritdoc />
         ~ReliableStreamReader()
         {
-            //Log Warning about leaked session.
+            //Log Warning about leaked session.  This won't happen if the developer uses our ADO.Net layer.
         }
     }
 
