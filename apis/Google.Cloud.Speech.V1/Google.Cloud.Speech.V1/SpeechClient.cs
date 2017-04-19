@@ -456,7 +456,7 @@ namespace Google.Cloud.Speech.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<LongRunningRecognizeResponse>> LongRunningRecognizeAsync(
+        public virtual Task<Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>> LongRunningRecognizeAsync(
             RecognitionConfig config,
             RecognitionAudio audio,
             CallSettings callSettings = null) => LongRunningRecognizeAsync(
@@ -486,7 +486,7 @@ namespace Google.Cloud.Speech.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<LongRunningRecognizeResponse>> LongRunningRecognizeAsync(
+        public virtual Task<Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>> LongRunningRecognizeAsync(
             RecognitionConfig config,
             RecognitionAudio audio,
             CancellationToken cancellationToken) => LongRunningRecognizeAsync(
@@ -513,7 +513,7 @@ namespace Google.Cloud.Speech.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<LongRunningRecognizeResponse> LongRunningRecognize(
+        public virtual Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> LongRunningRecognize(
             RecognitionConfig config,
             RecognitionAudio audio,
             CallSettings callSettings = null) => LongRunningRecognize(
@@ -539,7 +539,7 @@ namespace Google.Cloud.Speech.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<LongRunningRecognizeResponse>> LongRunningRecognizeAsync(
+        public virtual Task<Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>> LongRunningRecognizeAsync(
             LongRunningRecognizeRequest request,
             CallSettings callSettings = null)
         {
@@ -552,9 +552,9 @@ namespace Google.Cloud.Speech.V1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual Task<Operation<LongRunningRecognizeResponse>> PollOnceLongRunningRecognizeAsync(
+        public virtual Task<Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>> PollOnceLongRunningRecognizeAsync(
             string operationName,
-            CallSettings callSettings = null) => Operation<LongRunningRecognizeResponse>.PollOnceFromNameAsync(
+            CallSettings callSettings = null) => Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>.PollOnceFromNameAsync(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 LongRunningOperationsClient,
                 callSettings);
@@ -574,7 +574,7 @@ namespace Google.Cloud.Speech.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<LongRunningRecognizeResponse> LongRunningRecognize(
+        public virtual Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> LongRunningRecognize(
             LongRunningRecognizeRequest request,
             CallSettings callSettings = null)
         {
@@ -587,9 +587,9 @@ namespace Google.Cloud.Speech.V1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual Operation<LongRunningRecognizeResponse> PollOnceLongRunningRecognize(
+        public virtual Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> PollOnceLongRunningRecognize(
             string operationName,
-            CallSettings callSettings = null) => Operation<LongRunningRecognizeResponse>.PollOnceFromName(
+            CallSettings callSettings = null) => Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>.PollOnceFromName(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 LongRunningOperationsClient,
                 callSettings);
@@ -728,12 +728,12 @@ namespace Google.Cloud.Speech.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override async Task<Operation<LongRunningRecognizeResponse>> LongRunningRecognizeAsync(
+        public override async Task<Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>> LongRunningRecognizeAsync(
             LongRunningRecognizeRequest request,
             CallSettings callSettings = null)
         {
             Modify_LongRunningRecognizeRequest(ref request, ref callSettings);
-            return new Operation<LongRunningRecognizeResponse>(
+            return new Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>(
                 await _callLongRunningRecognize.Async(request, callSettings), LongRunningOperationsClient);
         }
 
@@ -752,12 +752,12 @@ namespace Google.Cloud.Speech.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override Operation<LongRunningRecognizeResponse> LongRunningRecognize(
+        public override Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> LongRunningRecognize(
             LongRunningRecognizeRequest request,
             CallSettings callSettings = null)
         {
             Modify_LongRunningRecognizeRequest(ref request, ref callSettings);
-            return new Operation<LongRunningRecognizeResponse>(
+            return new Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>(
                 _callLongRunningRecognize.Sync(request, callSettings), LongRunningOperationsClient);
         }
 
