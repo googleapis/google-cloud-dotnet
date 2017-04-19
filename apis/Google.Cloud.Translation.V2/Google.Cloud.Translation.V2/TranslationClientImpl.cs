@@ -132,12 +132,19 @@ namespace Google.Cloud.Translation.V2
         }
 
         /// <inheritdoc />
-        public override IList<Detection> DetectLanguage(string text)
+        public override Detection DetectLanguage(string text) =>
+            DetectLanguages(new[] { GaxPreconditions.CheckNotNull(text, nameof(text)) })[0];
+
+        /// <inheritdoc />
+        public override IList<Detection> DetectLanguages(IEnumerable<string> textItems)
         {
-            var request = Service.Detections.List(new Repeatable<string>(new[] { text }));
+            GaxPreconditions.CheckNotNull(textItems, nameof(textItems));
+            List<string> items = textItems.ToList();
+            var request = Service.Detections.List(new Repeatable<string>(items));
             request.ModifyRequest += _versionHeaderAction;
-            var result = request.Execute().Detections[0];
-            return result.Select(Detection.FromResource).ToList();
+            return request.Execute().Detections
+                .Zip(items, (resourceList, item) => new Detection(item, resourceList[0]))
+                .ToList(); 
         }
 
         /// <inheritdoc />
@@ -196,12 +203,26 @@ namespace Google.Cloud.Translation.V2
         }
 
         /// <inheritdoc />
-        public override async Task<IList<Detection>> DetectLanguageAsync(string text, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<Detection> DetectLanguageAsync(string text, CancellationToken cancellationToken = default(CancellationToken))
         {
-            var request = Service.Detections.List(new Repeatable<string>(new[] { text }));
+            GaxPreconditions.CheckNotNull(text, nameof(text));
+            var listTask = DetectLanguagesAsync(new[] { text }, cancellationToken);
+            var list = await listTask.ConfigureAwait(false);
+            return list[0];
+        }
+
+        /// <inheritdoc />
+        public override async Task<IList<Detection>> DetectLanguagesAsync(IEnumerable<string> textItems, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            GaxPreconditions.CheckNotNull(textItems, nameof(textItems));
+            // Evaluate once so we can zip suitably.
+            List<string> items = textItems.ToList();
+            var request = Service.Detections.List(new Repeatable<string>(items));
             request.ModifyRequest += _versionHeaderAction;
-            var result = (await request.ExecuteAsync(cancellationToken).ConfigureAwait(false)).Detections[0];
-            return result.Select(Detection.FromResource).ToList();
+            var response = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            return request.Execute().Detections
+                .Zip(items, (resourceList, item) => new Detection(item, resourceList[0]))
+                .ToList();
         }
 
         /// <inheritdoc />

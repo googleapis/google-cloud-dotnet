@@ -135,8 +135,18 @@ namespace Google.Cloud.Translation.V2
         /// Detects the language of the specified text synchronously.
         /// </summary>
         /// <param name="text">The text to detect the language of. Must not be null.</param>
-        /// <returns>A list of detected language possibilities.</returns>
-        public virtual IList<Detection> DetectLanguage(string text)
+        /// <returns>The most likely detected language.</returns>
+        public virtual Detection DetectLanguage(string text)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Detects the languages of the specified text items synchronously.
+        /// </summary>
+        /// <param name="textItems">The text items to detect the language of. Must not be null or contain null elements.</param>
+        /// <returns>A list of detected languages. This will be the same size as <paramref name="textItems"/>, in the same order.</returns>
+        public virtual IList<Detection> DetectLanguages(IEnumerable<string> textItems)
         {
             throw new NotImplementedException();
         }
@@ -233,8 +243,18 @@ namespace Google.Cloud.Translation.V2
         /// </summary>
         /// <param name="text">The text to detect the language of. Must not be null.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A list of detected language possibilities.</returns>
-        public virtual Task<IList<Detection>> DetectLanguageAsync(string text, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>The most likely detected language.</returns>
+        public virtual Task<Detection> DetectLanguageAsync(string text, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Detects the languages of the specified text items asynchronously.
+        /// </summary>
+        /// <param name="textItems">The text items to detect the language of. Must not be null or contain null elements.</param>
+        /// <returns>A list of detected languages. This will be the same size as <paramref name="textItems"/>, in the same order.</returns>
+        public virtual Task<IList<Detection>> DetectLanguagesAsync(IEnumerable<string> textItems, CancellationToken cancellationToken = default(CancellationToken))
         {
             throw new NotImplementedException();
         }
