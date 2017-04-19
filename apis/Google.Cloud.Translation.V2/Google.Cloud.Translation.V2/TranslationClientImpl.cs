@@ -132,10 +132,6 @@ namespace Google.Cloud.Translation.V2
         }
 
         /// <inheritdoc />
-        public override Detection DetectLanguage(string text) =>
-            DetectLanguages(new[] { GaxPreconditions.CheckNotNull(text, nameof(text)) })[0];
-
-        /// <inheritdoc />
         public override IList<Detection> DetectLanguages(IEnumerable<string> textItems)
         {
             GaxPreconditions.CheckNotNull(textItems, nameof(textItems));
@@ -200,15 +196,6 @@ namespace Google.Cloud.Translation.V2
             return (await request.ExecuteAsync(cancellationToken).ConfigureAwait(false)).Translations
                 .Zip(items, (result, item) => new TranslationResult(result, item, sourceLanguage, targetLanguage))
                 .ToList();
-        }
-
-        /// <inheritdoc />
-        public override async Task<Detection> DetectLanguageAsync(string text, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            GaxPreconditions.CheckNotNull(text, nameof(text));
-            var listTask = DetectLanguagesAsync(new[] { text }, cancellationToken);
-            var list = await listTask.ConfigureAwait(false);
-            return list[0];
         }
 
         /// <inheritdoc />

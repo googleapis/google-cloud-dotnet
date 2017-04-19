@@ -134,12 +134,11 @@ namespace Google.Cloud.Translation.V2
         /// <summary>
         /// Detects the language of the specified text synchronously.
         /// </summary>
+        /// <remarks>This implementation simply delegates to <see cref="DetectLanguages(IEnumerable{string})"/>.</remarks>
         /// <param name="text">The text to detect the language of. Must not be null.</param>
         /// <returns>The most likely detected language.</returns>
-        public virtual Detection DetectLanguage(string text)
-        {
-            throw new NotImplementedException();
-        }
+        public virtual Detection DetectLanguage(string text) =>
+            DetectLanguages(new[] { GaxPreconditions.CheckNotNull(text, nameof(text)) })[0];
 
         /// <summary>
         /// Detects the languages of the specified text items synchronously.
@@ -241,18 +240,22 @@ namespace Google.Cloud.Translation.V2
         /// <summary>
         /// Detects the language of the specified text asynchronously.
         /// </summary>
+        /// <remarks>This implementation simply delegates to <see cref="DetectLanguagesAsync(IEnumerable{string}, CancellationToken)"/>.</remarks>
         /// <param name="text">The text to detect the language of. Must not be null.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>The most likely detected language.</returns>
-        public virtual Task<Detection> DetectLanguageAsync(string text, CancellationToken cancellationToken = default(CancellationToken))
+        public virtual async Task<Detection> DetectLanguageAsync(string text, CancellationToken cancellationToken = default(CancellationToken))
         {
-            throw new NotImplementedException();
+            GaxPreconditions.CheckNotNull(text, nameof(text));
+            var list = await DetectLanguagesAsync(new[] { text }, cancellationToken).ConfigureAwait(false);
+            return list[0];
         }
 
         /// <summary>
         /// Detects the languages of the specified text items asynchronously.
         /// </summary>
         /// <param name="textItems">The text items to detect the language of. Must not be null or contain null elements.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A list of detected languages. This will be the same size as <paramref name="textItems"/>, in the same order.</returns>
         public virtual Task<IList<Detection>> DetectLanguagesAsync(IEnumerable<string> textItems, CancellationToken cancellationToken = default(CancellationToken))
         {
