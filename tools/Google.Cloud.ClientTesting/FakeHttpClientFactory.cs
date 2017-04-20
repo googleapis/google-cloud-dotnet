@@ -13,6 +13,8 @@
 // limitations under the License.
 
 using Google.Apis.Http;
+using System;
+using System.Net.Http;
 
 namespace Google.Cloud.ClientTesting
 {
@@ -29,6 +31,23 @@ namespace Google.Cloud.ClientTesting
             _handler = handler;
         }
 
+        /// <summary>
+        /// Shorthand for creating a <see cref="MockableMessageHandler"/> which uses the given function
+        /// to handle requests.
+        /// </summary>
+        /// <param name="handler"></param>
+        public FakeHttpClientFactory(Func<HttpRequestMessage, HttpResponseMessage> handler)
+            : this(new ConfigurableMessageHandler(new MockableMessageHandler(handler)))
+        {
+        }
+
         public ConfigurableHttpClient CreateHttpClient(CreateHttpClientArgs args) => new ConfigurableHttpClient(_handler);
+
+        /// <summary>
+        /// Returns a client factory which produces an HttpClient that throws an exception on
+        /// all requests. This is useful for testing code that should never reach the HttpClient.
+        /// </summary>
+        public static FakeHttpClientFactory Throwing { get; } =
+            new FakeHttpClientFactory(request => { throw new Exception("Throwing HttpClient never succeeds"); });
     }
 }
