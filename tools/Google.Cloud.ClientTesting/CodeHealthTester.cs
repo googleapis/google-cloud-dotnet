@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -26,9 +27,10 @@ namespace Google.Cloud.ClientTesting
         /// Asserts that all the fields in the assembly containing the given type are private,
         /// other than for constants.
         /// </summary>
-        public static void AssertAllFieldsPrivate(Type sampleType)
+        public static void AssertAllFieldsPrivate(Type sampleType, IEnumerable<Type> exemptedTypes = null)
         {
-            var badFields = from type in sampleType.GetTypeInfo().Assembly.DefinedTypes
+            exemptedTypes = exemptedTypes ?? Enumerable.Empty<Type>();
+            var badFields = from type in sampleType.GetTypeInfo().Assembly.DefinedTypes.Except(exemptedTypes.Select(t => t.GetTypeInfo()))
                             // Exempt enums and compiler-generated types
                             where !type.IsEnum && !type.IsDefined(typeof(CompilerGeneratedAttribute))
                             from field in type.DeclaredFields
@@ -44,9 +46,10 @@ namespace Google.Cloud.ClientTesting
         /// Asserts that all the classes in the assembly containing the given type are either abstract
         /// or sealed.
         /// </summary>
-        public static void AssertClassesAreSealedOrAbstract(Type sampleType)
+        public static void AssertClassesAreSealedOrAbstract(Type sampleType, IEnumerable<Type> exemptedTypes = null)
         {
-            var badTypes = from type in sampleType.GetTypeInfo().Assembly.DefinedTypes
+            exemptedTypes = exemptedTypes ?? Enumerable.Empty<Type>();
+            var badTypes = from type in sampleType.GetTypeInfo().Assembly.DefinedTypes.Except(exemptedTypes.Select(t => t.GetTypeInfo()))
                            where type.IsClass && !type.IsAbstract && !type.IsSealed
                            select type.Name;
             // Force output to show the bad types
