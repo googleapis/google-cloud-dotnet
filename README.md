@@ -25,6 +25,7 @@ The following libraries are available at a [late beta](#versioning) quality leve
 The following libraries are available at a [beta](#versioning) quality level:
 
 * Google Cloud Diagnostics for ASP.NET - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Diagnostics.AspNet/) (beta)
+* Google Cloud Diagnostics for ASP.NET Core - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Diagnostics.AspNetCore/) (beta)
 * [Stackdriver Error Reporting](https://cloud.google.com/error-reporting/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.ErrorReporting.V1Beta1/) (beta)
 * [Stackdriver Monitoring](https://cloud.google.com/monitoring/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Monitoring.V3/) (beta)
 * [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.PubSub.V1/) (beta)
@@ -34,7 +35,6 @@ The following libraries are available at a [beta](#versioning) quality level:
 
 The following libraries are available at an [alpha](#versioning) quality level:
 
-* Google Cloud Diagnostics for ASP.NET Core - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Diagnostics.AspNetCore/) (alpha)
 * Google Cloud Metadata - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Metadata.V1) (alpha)
 * [Google Cloud Translation](https://cloud.google.com/translate/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Translation.V2/) (alpha)
 
