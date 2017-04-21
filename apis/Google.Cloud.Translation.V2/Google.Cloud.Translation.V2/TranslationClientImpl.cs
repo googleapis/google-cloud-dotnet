@@ -82,8 +82,8 @@ namespace Google.Cloud.Translation.V2
         /// Constructs a new client wrapping the given <see cref="TranslateService"/>.
         /// </summary>
         /// <param name="service">The service to wrap. Must not be null.</param>
-        /// <param name="model">The default translation model to use. Defaults to <see cref="TranslationModel.Base"/>.</param>
-        public TranslationClientImpl(TranslateService service, TranslationModel model = TranslationModel.Base)
+        /// <param name="model">The default translation model to use. Defaults to <see cref="TranslationModel.ServiceDefault"/>.</param>
+        public TranslationClientImpl(TranslateService service, TranslationModel model = TranslationModel.ServiceDefault)
         {
             Service = GaxPreconditions.CheckNotNull(service, nameof(service));
             TranslationModels.ValidateModel(model);
@@ -214,8 +214,7 @@ namespace Google.Cloud.Translation.V2
             request.Format = format;
             var effectiveModel = model ?? DefaultModel;
             TranslationModels.ValidateModel(effectiveModel);
-            // Never explicitly request the base model.
-            request.Model = effectiveModel == TranslationModel.Base ? null : effectiveModel.ToApiName();
+            request.Model = effectiveModel.ToApiName();
         }      
     }
 }

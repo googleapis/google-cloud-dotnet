@@ -51,13 +51,25 @@ Common operations are exposed via the
 
 [!code-cs[](obj/snippets/Google.Cloud.Translation.V2.TranslationClient.txt#TranslateHtmlMultiple)]
 
-## Using Neural Machine Translation
+## Specifying a translation model
 
-[Premium Edition](https://cloud.google.com/translate/docs/premium) customers may request
-translations using the Neural Machine Translation model. This can either be set as the default model for a client:
+The Translation API is implemented by multiple underlying models. At the time of writing, the two models available are:
 
-[!code-cs[](obj/snippets/Google.Cloud.Translation.V2.TranslationClient.txt#TranslateTextNmtDefaultModel)]
+- Neural Machine Translation (NMT)
+- Phrase-Based Machine Translation (PBMT, also known as "base")
+
+The current default is to use NMT where it is available for the requested language translation pair, but this is
+more computationally-intensive than the PBMT model; if you have low latency requirements, you may wish to explicitly
+required PBMT. Explicitly requesting NMT is valid, but currently has no effect, as this is the current default. If
+no model is specified, the service will pick a model, which means if a new model is introduced as the default, you won't need
+to change your code or even update this client library package in order to use it.
+
+See the [API release notes](https://cloud.google.com/translate/release-notes) for on-going changes and new models.
+
+When specifying a model, it can either be selected as the model to use for all requests for that `TranslationClient` instance:
+
+[!code-cs[](obj/snippets/Google.Cloud.Translation.V2.TranslationClient.txt#TranslateTextPbmtDefaultModel)]
 
 ... or it can be specified on a per-request basis:
 
-[!code-cs[](obj/snippets/Google.Cloud.Translation.V2.TranslationClient.txt#TranslateTextNmtOverrideModel)]
+[!code-cs[](obj/snippets/Google.Cloud.Translation.V2.TranslationClient.txt#TranslateTextPbmtOverrideModel)]

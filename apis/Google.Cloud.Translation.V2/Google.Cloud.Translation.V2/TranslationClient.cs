@@ -307,9 +307,9 @@ namespace Google.Cloud.Translation.V2
         /// The credentials are scoped as necessary.
         /// </remarks>
         /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
-        /// <param name="model">The default translation model to use. Defaults to <see cref="TranslationModel.Base"/>.</param>
+        /// <param name="model">The default translation model to use. Defaults to <see cref="TranslationModel.ServiceDefault"/>.</param>
         /// <returns>The task representing the created <see cref="TranslationClient"/>.</returns>
-        public static async Task<TranslationClient> CreateAsync(GoogleCredential credential = null, TranslationModel model = TranslationModel.Base)
+        public static async Task<TranslationClient> CreateAsync(GoogleCredential credential = null, TranslationModel model = TranslationModel.ServiceDefault)
         {
             var scopedCredentials = await _credentialProvider.GetCredentialsAsync(credential).ConfigureAwait(false);
             return CreateImpl(scopedCredentials, null, model);
@@ -323,9 +323,9 @@ namespace Google.Cloud.Translation.V2
         /// from using API keys to OAuth2 credentials straightforward.
         /// </remarks>
         /// <param name="apiKey">API key to use. Must not be null.</param>
-        /// <param name="model">The default translation model to use. Defaults to <see cref="TranslationModel.Base"/>.</param>
+        /// <param name="model">The default translation model to use. Defaults to <see cref="TranslationModel.ServiceDefault"/>.</param>
         /// <returns>The created <see cref="TranslationClient"/>.</returns>
-        public static TranslationClient CreateFromApiKey(string apiKey, TranslationModel model = TranslationModel.Base)
+        public static TranslationClient CreateFromApiKey(string apiKey, TranslationModel model = TranslationModel.ServiceDefault)
         {
             GaxPreconditions.CheckNotNull(apiKey, nameof(apiKey));
             return CreateImpl(null, apiKey, model);
@@ -339,9 +339,9 @@ namespace Google.Cloud.Translation.V2
         /// The credentials are scoped as necessary.
         /// </remarks>
         /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
-        /// <param name="model">The default translation model to use. Defaults to <see cref="TranslationModel.Base"/>.</param>
+        /// <param name="model">The default translation model to use. Defaults to <see cref="TranslationModel.ServiceDefault"/>.</param>
         /// <returns>The created <see cref="TranslationClient"/>.</returns>
-        public static TranslationClient Create(GoogleCredential credential = null, TranslationModel model = TranslationModel.Base)
+        public static TranslationClient Create(GoogleCredential credential = null, TranslationModel model = TranslationModel.ServiceDefault)
         {
             var scopedCredentials = _credentialProvider.GetCredentials(credential);
             return CreateImpl(scopedCredentials, null, model);
