@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha00-*",
+  "version": "1.0.0-alpha01-*",
   "description": "Common Protocol Buffer messages for Google Cloud Developer Tools APIs.",
 
   "packOptions": {
