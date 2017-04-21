@@ -2122,11 +2122,11 @@ references:
   fullName: Google.Apis.Storage.v1.BucketAccessControlsResource
   nameWithType: BucketAccessControlsResource
 - uid: Google.Apis.Storage.v1.BucketAccessControlsResource.#ctor(Google.Apis.Services.IClientService)
-  name: BucketAccessControlsResource(IClientService)
+  name: BucketAccessControlsResource(Services.IClientService)
   href: api/Google.Apis.Storage.v1.BucketAccessControlsResource.html#Google_Apis_Storage_v1_BucketAccessControlsResource__ctor_Google_Apis_Services_IClientService_
   commentId: M:Google.Apis.Storage.v1.BucketAccessControlsResource.#ctor(Google.Apis.Services.IClientService)
   fullName: Google.Apis.Storage.v1.BucketAccessControlsResource.BucketAccessControlsResource(Google.Apis.Services.IClientService)
-  nameWithType: BucketAccessControlsResource.BucketAccessControlsResource(IClientService)
+  nameWithType: BucketAccessControlsResource.BucketAccessControlsResource(Services.IClientService)
 - uid: Google.Apis.Storage.v1.BucketAccessControlsResource.#ctor*
   name: BucketAccessControlsResource
   href: api/Google.Apis.Storage.v1.BucketAccessControlsResource.html#Google_Apis_Storage_v1_BucketAccessControlsResource__ctor_
@@ -2152,11 +2152,11 @@ references:
   fullName: Google.Apis.Storage.v1.BucketAccessControlsResource.DeleteRequest
   nameWithType: BucketAccessControlsResource.DeleteRequest
 - uid: Google.Apis.Storage.v1.BucketAccessControlsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
-  name: DeleteRequest(IClientService, String, String)
+  name: DeleteRequest(Services.IClientService, String, String)
   href: api/Google.Apis.Storage.v1.BucketAccessControlsResource.DeleteRequest.html#Google_Apis_Storage_v1_BucketAccessControlsResource_DeleteRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.BucketAccessControlsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
   fullName: Google.Apis.Storage.v1.BucketAccessControlsResource.DeleteRequest.DeleteRequest(Google.Apis.Services.IClientService, System.String, System.String)
-  nameWithType: BucketAccessControlsResource.DeleteRequest.DeleteRequest(IClientService, String, String)
+  nameWithType: BucketAccessControlsResource.DeleteRequest.DeleteRequest(Services.IClientService, String, String)
 - uid: Google.Apis.Storage.v1.BucketAccessControlsResource.DeleteRequest.#ctor*
   name: DeleteRequest
   href: api/Google.Apis.Storage.v1.BucketAccessControlsResource.DeleteRequest.html#Google_Apis_Storage_v1_BucketAccessControlsResource_DeleteRequest__ctor_
@@ -2254,11 +2254,11 @@ references:
   fullName: Google.Apis.Storage.v1.BucketAccessControlsResource.GetRequest
   nameWithType: BucketAccessControlsResource.GetRequest
 - uid: Google.Apis.Storage.v1.BucketAccessControlsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
-  name: GetRequest(IClientService, String, String)
+  name: GetRequest(Services.IClientService, String, String)
   href: api/Google.Apis.Storage.v1.BucketAccessControlsResource.GetRequest.html#Google_Apis_Storage_v1_BucketAccessControlsResource_GetRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.BucketAccessControlsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
   fullName: Google.Apis.Storage.v1.BucketAccessControlsResource.GetRequest.GetRequest(Google.Apis.Services.IClientService, System.String, System.String)
-  nameWithType: BucketAccessControlsResource.GetRequest.GetRequest(IClientService, String, String)
+  nameWithType: BucketAccessControlsResource.GetRequest.GetRequest(Services.IClientService, String, String)
 - uid: Google.Apis.Storage.v1.BucketAccessControlsResource.GetRequest.#ctor*
   name: GetRequest
   href: api/Google.Apis.Storage.v1.BucketAccessControlsResource.GetRequest.html#Google_Apis_Storage_v1_BucketAccessControlsResource_GetRequest__ctor_
@@ -2356,11 +2356,11 @@ references:
   fullName: Google.Apis.Storage.v1.BucketAccessControlsResource.InsertRequest
   nameWithType: BucketAccessControlsResource.InsertRequest
 - uid: Google.Apis.Storage.v1.BucketAccessControlsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.BucketAccessControl,System.String)
-  name: InsertRequest(IClientService, BucketAccessControl, String)
+  name: InsertRequest(Services.IClientService, BucketAccessControl, String)
   href: api/Google.Apis.Storage.v1.BucketAccessControlsResource.InsertRequest.html#Google_Apis_Storage_v1_BucketAccessControlsResource_InsertRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_BucketAccessControl_System_String_
   commentId: M:Google.Apis.Storage.v1.BucketAccessControlsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.BucketAccessControl,System.String)
   fullName: Google.Apis.Storage.v1.BucketAccessControlsResource.InsertRequest.InsertRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.BucketAccessControl, System.String)
-  nameWithType: BucketAccessControlsResource.InsertRequest.InsertRequest(IClientService, BucketAccessControl, String)
+  nameWithType: BucketAccessControlsResource.InsertRequest.InsertRequest(Services.IClientService, BucketAccessControl, String)
 - uid: Google.Apis.Storage.v1.BucketAccessControlsResource.InsertRequest.#ctor*
   name: InsertRequest
   href: api/Google.Apis.Storage.v1.BucketAccessControlsResource.InsertRequest.html#Google_Apis_Storage_v1_BucketAccessControlsResource_InsertRequest__ctor_
@@ -2458,11 +2458,11 @@ references:
   fullName: Google.Apis.Storage.v1.BucketAccessControlsResource.ListRequest
   nameWithType: BucketAccessControlsResource.ListRequest
 - uid: Google.Apis.Storage.v1.BucketAccessControlsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)
-  name: ListRequest(IClientService, String)
+  name: ListRequest(Services.IClientService, String)
   href: api/Google.Apis.Storage.v1.BucketAccessControlsResource.ListRequest.html#Google_Apis_Storage_v1_BucketAccessControlsResource_ListRequest__ctor_Google_Apis_Services_IClientService_System_String_
   commentId: M:Google.Apis.Storage.v1.BucketAccessControlsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)
   fullName: Google.Apis.Storage.v1.BucketAccessControlsResource.ListRequest.ListRequest(Google.Apis.Services.IClientService, System.String)
-  nameWithType: BucketAccessControlsResource.ListRequest.ListRequest(IClientService, String)
+  nameWithType: BucketAccessControlsResource.ListRequest.ListRequest(Services.IClientService, String)
 - uid: Google.Apis.Storage.v1.BucketAccessControlsResource.ListRequest.#ctor*
   name: ListRequest
   href: api/Google.Apis.Storage.v1.BucketAccessControlsResource.ListRequest.html#Google_Apis_Storage_v1_BucketAccessControlsResource_ListRequest__ctor_
@@ -2548,11 +2548,11 @@ references:
   fullName: Google.Apis.Storage.v1.BucketAccessControlsResource.PatchRequest
   nameWithType: BucketAccessControlsResource.PatchRequest
 - uid: Google.Apis.Storage.v1.BucketAccessControlsResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.BucketAccessControl,System.String,System.String)
-  name: PatchRequest(IClientService, BucketAccessControl, String, String)
+  name: PatchRequest(Services.IClientService, BucketAccessControl, String, String)
   href: api/Google.Apis.Storage.v1.BucketAccessControlsResource.PatchRequest.html#Google_Apis_Storage_v1_BucketAccessControlsResource_PatchRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_BucketAccessControl_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.BucketAccessControlsResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.BucketAccessControl,System.String,System.String)
   fullName: Google.Apis.Storage.v1.BucketAccessControlsResource.PatchRequest.PatchRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.BucketAccessControl, System.String, System.String)
-  nameWithType: BucketAccessControlsResource.PatchRequest.PatchRequest(IClientService, BucketAccessControl, String, String)
+  nameWithType: BucketAccessControlsResource.PatchRequest.PatchRequest(Services.IClientService, BucketAccessControl, String, String)
 - uid: Google.Apis.Storage.v1.BucketAccessControlsResource.PatchRequest.#ctor*
   name: PatchRequest
   href: api/Google.Apis.Storage.v1.BucketAccessControlsResource.PatchRequest.html#Google_Apis_Storage_v1_BucketAccessControlsResource_PatchRequest__ctor_
@@ -2662,11 +2662,11 @@ references:
   fullName: Google.Apis.Storage.v1.BucketAccessControlsResource.UpdateRequest
   nameWithType: BucketAccessControlsResource.UpdateRequest
 - uid: Google.Apis.Storage.v1.BucketAccessControlsResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.BucketAccessControl,System.String,System.String)
-  name: UpdateRequest(IClientService, BucketAccessControl, String, String)
+  name: UpdateRequest(Services.IClientService, BucketAccessControl, String, String)
   href: api/Google.Apis.Storage.v1.BucketAccessControlsResource.UpdateRequest.html#Google_Apis_Storage_v1_BucketAccessControlsResource_UpdateRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_BucketAccessControl_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.BucketAccessControlsResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.BucketAccessControl,System.String,System.String)
   fullName: Google.Apis.Storage.v1.BucketAccessControlsResource.UpdateRequest.UpdateRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.BucketAccessControl, System.String, System.String)
-  nameWithType: BucketAccessControlsResource.UpdateRequest.UpdateRequest(IClientService, BucketAccessControl, String, String)
+  nameWithType: BucketAccessControlsResource.UpdateRequest.UpdateRequest(Services.IClientService, BucketAccessControl, String, String)
 - uid: Google.Apis.Storage.v1.BucketAccessControlsResource.UpdateRequest.#ctor*
   name: UpdateRequest
   href: api/Google.Apis.Storage.v1.BucketAccessControlsResource.UpdateRequest.html#Google_Apis_Storage_v1_BucketAccessControlsResource_UpdateRequest__ctor_
@@ -2764,11 +2764,11 @@ references:
   fullName: Google.Apis.Storage.v1.BucketsResource
   nameWithType: BucketsResource
 - uid: Google.Apis.Storage.v1.BucketsResource.#ctor(Google.Apis.Services.IClientService)
-  name: BucketsResource(IClientService)
+  name: BucketsResource(Services.IClientService)
   href: api/Google.Apis.Storage.v1.BucketsResource.html#Google_Apis_Storage_v1_BucketsResource__ctor_Google_Apis_Services_IClientService_
   commentId: M:Google.Apis.Storage.v1.BucketsResource.#ctor(Google.Apis.Services.IClientService)
   fullName: Google.Apis.Storage.v1.BucketsResource.BucketsResource(Google.Apis.Services.IClientService)
-  nameWithType: BucketsResource.BucketsResource(IClientService)
+  nameWithType: BucketsResource.BucketsResource(Services.IClientService)
 - uid: Google.Apis.Storage.v1.BucketsResource.#ctor*
   name: BucketsResource
   href: api/Google.Apis.Storage.v1.BucketsResource.html#Google_Apis_Storage_v1_BucketsResource__ctor_
@@ -2794,11 +2794,11 @@ references:
   fullName: Google.Apis.Storage.v1.BucketsResource.DeleteRequest
   nameWithType: BucketsResource.DeleteRequest
 - uid: Google.Apis.Storage.v1.BucketsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String)
-  name: DeleteRequest(IClientService, String)
+  name: DeleteRequest(Services.IClientService, String)
   href: api/Google.Apis.Storage.v1.BucketsResource.DeleteRequest.html#Google_Apis_Storage_v1_BucketsResource_DeleteRequest__ctor_Google_Apis_Services_IClientService_System_String_
   commentId: M:Google.Apis.Storage.v1.BucketsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String)
   fullName: Google.Apis.Storage.v1.BucketsResource.DeleteRequest.DeleteRequest(Google.Apis.Services.IClientService, System.String)
-  nameWithType: BucketsResource.DeleteRequest.DeleteRequest(IClientService, String)
+  nameWithType: BucketsResource.DeleteRequest.DeleteRequest(Services.IClientService, String)
 - uid: Google.Apis.Storage.v1.BucketsResource.DeleteRequest.#ctor*
   name: DeleteRequest
   href: api/Google.Apis.Storage.v1.BucketsResource.DeleteRequest.html#Google_Apis_Storage_v1_BucketsResource_DeleteRequest__ctor_
@@ -2920,11 +2920,11 @@ references:
   fullName: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest
   nameWithType: BucketsResource.GetIamPolicyRequest
 - uid: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,System.String)
-  name: GetIamPolicyRequest(IClientService, String)
+  name: GetIamPolicyRequest(Services.IClientService, String)
   href: api/Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_GetIamPolicyRequest__ctor_Google_Apis_Services_IClientService_System_String_
   commentId: M:Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,System.String)
   fullName: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.GetIamPolicyRequest(Google.Apis.Services.IClientService, System.String)
-  nameWithType: BucketsResource.GetIamPolicyRequest.GetIamPolicyRequest(IClientService, String)
+  nameWithType: BucketsResource.GetIamPolicyRequest.GetIamPolicyRequest(Services.IClientService, String)
 - uid: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.#ctor*
   name: GetIamPolicyRequest
   href: api/Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_GetIamPolicyRequest__ctor_
@@ -2998,11 +2998,11 @@ references:
   fullName: Google.Apis.Storage.v1.BucketsResource.GetRequest
   nameWithType: BucketsResource.GetRequest
 - uid: Google.Apis.Storage.v1.BucketsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String)
-  name: GetRequest(IClientService, String)
+  name: GetRequest(Services.IClientService, String)
   href: api/Google.Apis.Storage.v1.BucketsResource.GetRequest.html#Google_Apis_Storage_v1_BucketsResource_GetRequest__ctor_Google_Apis_Services_IClientService_System_String_
   commentId: M:Google.Apis.Storage.v1.BucketsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String)
   fullName: Google.Apis.Storage.v1.BucketsResource.GetRequest.GetRequest(Google.Apis.Services.IClientService, System.String)
-  nameWithType: BucketsResource.GetRequest.GetRequest(IClientService, String)
+  nameWithType: BucketsResource.GetRequest.GetRequest(Services.IClientService, String)
 - uid: Google.Apis.Storage.v1.BucketsResource.GetRequest.#ctor*
   name: GetRequest
   href: api/Google.Apis.Storage.v1.BucketsResource.GetRequest.html#Google_Apis_Storage_v1_BucketsResource_GetRequest__ctor_
@@ -3142,11 +3142,11 @@ references:
   fullName: Google.Apis.Storage.v1.BucketsResource.InsertRequest
   nameWithType: BucketsResource.InsertRequest
 - uid: Google.Apis.Storage.v1.BucketsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Bucket,System.String)
-  name: InsertRequest(IClientService, Bucket, String)
+  name: InsertRequest(Services.IClientService, Bucket, String)
   href: api/Google.Apis.Storage.v1.BucketsResource.InsertRequest.html#Google_Apis_Storage_v1_BucketsResource_InsertRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Bucket_System_String_
   commentId: M:Google.Apis.Storage.v1.BucketsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Bucket,System.String)
   fullName: Google.Apis.Storage.v1.BucketsResource.InsertRequest.InsertRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.Bucket, System.String)
-  nameWithType: BucketsResource.InsertRequest.InsertRequest(IClientService, Bucket, String)
+  nameWithType: BucketsResource.InsertRequest.InsertRequest(Services.IClientService, Bucket, String)
 - uid: Google.Apis.Storage.v1.BucketsResource.InsertRequest.#ctor*
   name: InsertRequest
   href: api/Google.Apis.Storage.v1.BucketsResource.InsertRequest.html#Google_Apis_Storage_v1_BucketsResource_InsertRequest__ctor_
@@ -3376,11 +3376,11 @@ references:
   fullName: Google.Apis.Storage.v1.BucketsResource.ListRequest
   nameWithType: BucketsResource.ListRequest
 - uid: Google.Apis.Storage.v1.BucketsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)
-  name: ListRequest(IClientService, String)
+  name: ListRequest(Services.IClientService, String)
   href: api/Google.Apis.Storage.v1.BucketsResource.ListRequest.html#Google_Apis_Storage_v1_BucketsResource_ListRequest__ctor_Google_Apis_Services_IClientService_System_String_
   commentId: M:Google.Apis.Storage.v1.BucketsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)
   fullName: Google.Apis.Storage.v1.BucketsResource.ListRequest.ListRequest(Google.Apis.Services.IClientService, System.String)
-  nameWithType: BucketsResource.ListRequest.ListRequest(IClientService, String)
+  nameWithType: BucketsResource.ListRequest.ListRequest(Services.IClientService, String)
 - uid: Google.Apis.Storage.v1.BucketsResource.ListRequest.#ctor*
   name: ListRequest
   href: api/Google.Apis.Storage.v1.BucketsResource.ListRequest.html#Google_Apis_Storage_v1_BucketsResource_ListRequest__ctor_
@@ -3532,11 +3532,11 @@ references:
   fullName: Google.Apis.Storage.v1.BucketsResource.PatchRequest
   nameWithType: BucketsResource.PatchRequest
 - uid: Google.Apis.Storage.v1.BucketsResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Bucket,System.String)
-  name: PatchRequest(IClientService, Bucket, String)
+  name: PatchRequest(Services.IClientService, Bucket, String)
   href: api/Google.Apis.Storage.v1.BucketsResource.PatchRequest.html#Google_Apis_Storage_v1_BucketsResource_PatchRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Bucket_System_String_
   commentId: M:Google.Apis.Storage.v1.BucketsResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Bucket,System.String)
   fullName: Google.Apis.Storage.v1.BucketsResource.PatchRequest.PatchRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.Bucket, System.String)
-  nameWithType: BucketsResource.PatchRequest.PatchRequest(IClientService, Bucket, String)
+  nameWithType: BucketsResource.PatchRequest.PatchRequest(Services.IClientService, Bucket, String)
 - uid: Google.Apis.Storage.v1.BucketsResource.PatchRequest.#ctor*
   name: PatchRequest
   href: api/Google.Apis.Storage.v1.BucketsResource.PatchRequest.html#Google_Apis_Storage_v1_BucketsResource_PatchRequest__ctor_
@@ -3790,11 +3790,11 @@ references:
   fullName: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest
   nameWithType: BucketsResource.SetIamPolicyRequest
 - uid: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Policy,System.String)
-  name: SetIamPolicyRequest(IClientService, Policy, String)
+  name: SetIamPolicyRequest(Services.IClientService, Policy, String)
   href: api/Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_SetIamPolicyRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Policy_System_String_
   commentId: M:Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Policy,System.String)
   fullName: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.SetIamPolicyRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.Policy, System.String)
-  nameWithType: BucketsResource.SetIamPolicyRequest.SetIamPolicyRequest(IClientService, Policy, String)
+  nameWithType: BucketsResource.SetIamPolicyRequest.SetIamPolicyRequest(Services.IClientService, Policy, String)
 - uid: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.#ctor*
   name: SetIamPolicyRequest
   href: api/Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_SetIamPolicyRequest__ctor_
@@ -3874,14 +3874,14 @@ references:
   fullName: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.RestPath
   nameWithType: BucketsResource.SetIamPolicyRequest.RestPath
 - uid: Google.Apis.Storage.v1.BucketsResource.TestIamPermissions(System.String,Google.Apis.Util.Repeatable{System.String})
-  name: TestIamPermissions(String, Repeatable<String>)
+  name: TestIamPermissions(String, Util.Repeatable<String>)
   href: api/Google.Apis.Storage.v1.BucketsResource.html#Google_Apis_Storage_v1_BucketsResource_TestIamPermissions_System_String_Google_Apis_Util_Repeatable_System_String__
   commentId: M:Google.Apis.Storage.v1.BucketsResource.TestIamPermissions(System.String,Google.Apis.Util.Repeatable{System.String})
-  name.vb: TestIamPermissions(String, Repeatable(Of String))
+  name.vb: TestIamPermissions(String, Util.Repeatable(Of String))
   fullName: Google.Apis.Storage.v1.BucketsResource.TestIamPermissions(System.String, Google.Apis.Util.Repeatable<System.String>)
   fullName.vb: Google.Apis.Storage.v1.BucketsResource.TestIamPermissions(System.String, Google.Apis.Util.Repeatable(Of System.String))
-  nameWithType: BucketsResource.TestIamPermissions(String, Repeatable<String>)
-  nameWithType.vb: BucketsResource.TestIamPermissions(String, Repeatable(Of String))
+  nameWithType: BucketsResource.TestIamPermissions(String, Util.Repeatable<String>)
+  nameWithType.vb: BucketsResource.TestIamPermissions(String, Util.Repeatable(Of String))
 - uid: Google.Apis.Storage.v1.BucketsResource.TestIamPermissions*
   name: TestIamPermissions
   href: api/Google.Apis.Storage.v1.BucketsResource.html#Google_Apis_Storage_v1_BucketsResource_TestIamPermissions_
@@ -3895,14 +3895,14 @@ references:
   fullName: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest
   nameWithType: BucketsResource.TestIamPermissionsRequest
 - uid: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.#ctor(Google.Apis.Services.IClientService,System.String,Google.Apis.Util.Repeatable{System.String})
-  name: TestIamPermissionsRequest(IClientService, String, Repeatable<String>)
+  name: TestIamPermissionsRequest(Services.IClientService, String, Util.Repeatable<String>)
   href: api/Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_BucketsResource_TestIamPermissionsRequest__ctor_Google_Apis_Services_IClientService_System_String_Google_Apis_Util_Repeatable_System_String__
   commentId: M:Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.#ctor(Google.Apis.Services.IClientService,System.String,Google.Apis.Util.Repeatable{System.String})
-  name.vb: TestIamPermissionsRequest(IClientService, String, Repeatable(Of String))
+  name.vb: TestIamPermissionsRequest(Services.IClientService, String, Util.Repeatable(Of String))
   fullName: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.TestIamPermissionsRequest(Google.Apis.Services.IClientService, System.String, Google.Apis.Util.Repeatable<System.String>)
   fullName.vb: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.TestIamPermissionsRequest(Google.Apis.Services.IClientService, System.String, Google.Apis.Util.Repeatable(Of System.String))
-  nameWithType: BucketsResource.TestIamPermissionsRequest.TestIamPermissionsRequest(IClientService, String, Repeatable<String>)
-  nameWithType.vb: BucketsResource.TestIamPermissionsRequest.TestIamPermissionsRequest(IClientService, String, Repeatable(Of String))
+  nameWithType: BucketsResource.TestIamPermissionsRequest.TestIamPermissionsRequest(Services.IClientService, String, Util.Repeatable<String>)
+  nameWithType.vb: BucketsResource.TestIamPermissionsRequest.TestIamPermissionsRequest(Services.IClientService, String, Util.Repeatable(Of String))
 - uid: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.#ctor*
   name: TestIamPermissionsRequest
   href: api/Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_BucketsResource_TestIamPermissionsRequest__ctor_
@@ -4000,11 +4000,11 @@ references:
   fullName: Google.Apis.Storage.v1.BucketsResource.UpdateRequest
   nameWithType: BucketsResource.UpdateRequest
 - uid: Google.Apis.Storage.v1.BucketsResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Bucket,System.String)
-  name: UpdateRequest(IClientService, Bucket, String)
+  name: UpdateRequest(Services.IClientService, Bucket, String)
   href: api/Google.Apis.Storage.v1.BucketsResource.UpdateRequest.html#Google_Apis_Storage_v1_BucketsResource_UpdateRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Bucket_System_String_
   commentId: M:Google.Apis.Storage.v1.BucketsResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Bucket,System.String)
   fullName: Google.Apis.Storage.v1.BucketsResource.UpdateRequest.UpdateRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.Bucket, System.String)
-  nameWithType: BucketsResource.UpdateRequest.UpdateRequest(IClientService, Bucket, String)
+  nameWithType: BucketsResource.UpdateRequest.UpdateRequest(Services.IClientService, Bucket, String)
 - uid: Google.Apis.Storage.v1.BucketsResource.UpdateRequest.#ctor*
   name: UpdateRequest
   href: api/Google.Apis.Storage.v1.BucketsResource.UpdateRequest.html#Google_Apis_Storage_v1_BucketsResource_UpdateRequest__ctor_
@@ -4246,11 +4246,11 @@ references:
   fullName: Google.Apis.Storage.v1.ChannelsResource
   nameWithType: ChannelsResource
 - uid: Google.Apis.Storage.v1.ChannelsResource.#ctor(Google.Apis.Services.IClientService)
-  name: ChannelsResource(IClientService)
+  name: ChannelsResource(Services.IClientService)
   href: api/Google.Apis.Storage.v1.ChannelsResource.html#Google_Apis_Storage_v1_ChannelsResource__ctor_Google_Apis_Services_IClientService_
   commentId: M:Google.Apis.Storage.v1.ChannelsResource.#ctor(Google.Apis.Services.IClientService)
   fullName: Google.Apis.Storage.v1.ChannelsResource.ChannelsResource(Google.Apis.Services.IClientService)
-  nameWithType: ChannelsResource.ChannelsResource(IClientService)
+  nameWithType: ChannelsResource.ChannelsResource(Services.IClientService)
 - uid: Google.Apis.Storage.v1.ChannelsResource.#ctor*
   name: ChannelsResource
   href: api/Google.Apis.Storage.v1.ChannelsResource.html#Google_Apis_Storage_v1_ChannelsResource__ctor_
@@ -4276,11 +4276,11 @@ references:
   fullName: Google.Apis.Storage.v1.ChannelsResource.StopRequest
   nameWithType: ChannelsResource.StopRequest
 - uid: Google.Apis.Storage.v1.ChannelsResource.StopRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Channel)
-  name: StopRequest(IClientService, Channel)
+  name: StopRequest(Services.IClientService, Channel)
   href: api/Google.Apis.Storage.v1.ChannelsResource.StopRequest.html#Google_Apis_Storage_v1_ChannelsResource_StopRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Channel_
   commentId: M:Google.Apis.Storage.v1.ChannelsResource.StopRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Channel)
   fullName: Google.Apis.Storage.v1.ChannelsResource.StopRequest.StopRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.Channel)
-  nameWithType: ChannelsResource.StopRequest.StopRequest(IClientService, Channel)
+  nameWithType: ChannelsResource.StopRequest.StopRequest(Services.IClientService, Channel)
 - uid: Google.Apis.Storage.v1.ChannelsResource.StopRequest.#ctor*
   name: StopRequest
   href: api/Google.Apis.Storage.v1.ChannelsResource.StopRequest.html#Google_Apis_Storage_v1_ChannelsResource_StopRequest__ctor_
@@ -6604,11 +6604,11 @@ references:
   fullName: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource
   nameWithType: DefaultObjectAccessControlsResource
 - uid: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.#ctor(Google.Apis.Services.IClientService)
-  name: DefaultObjectAccessControlsResource(IClientService)
+  name: DefaultObjectAccessControlsResource(Services.IClientService)
   href: api/Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.html#Google_Apis_Storage_v1_DefaultObjectAccessControlsResource__ctor_Google_Apis_Services_IClientService_
   commentId: M:Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.#ctor(Google.Apis.Services.IClientService)
   fullName: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.DefaultObjectAccessControlsResource(Google.Apis.Services.IClientService)
-  nameWithType: DefaultObjectAccessControlsResource.DefaultObjectAccessControlsResource(IClientService)
+  nameWithType: DefaultObjectAccessControlsResource.DefaultObjectAccessControlsResource(Services.IClientService)
 - uid: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.#ctor*
   name: DefaultObjectAccessControlsResource
   href: api/Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.html#Google_Apis_Storage_v1_DefaultObjectAccessControlsResource__ctor_
@@ -6634,11 +6634,11 @@ references:
   fullName: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.DeleteRequest
   nameWithType: DefaultObjectAccessControlsResource.DeleteRequest
 - uid: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
-  name: DeleteRequest(IClientService, String, String)
+  name: DeleteRequest(Services.IClientService, String, String)
   href: api/Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.DeleteRequest.html#Google_Apis_Storage_v1_DefaultObjectAccessControlsResource_DeleteRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
   fullName: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.DeleteRequest.DeleteRequest(Google.Apis.Services.IClientService, System.String, System.String)
-  nameWithType: DefaultObjectAccessControlsResource.DeleteRequest.DeleteRequest(IClientService, String, String)
+  nameWithType: DefaultObjectAccessControlsResource.DeleteRequest.DeleteRequest(Services.IClientService, String, String)
 - uid: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.DeleteRequest.#ctor*
   name: DeleteRequest
   href: api/Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.DeleteRequest.html#Google_Apis_Storage_v1_DefaultObjectAccessControlsResource_DeleteRequest__ctor_
@@ -6736,11 +6736,11 @@ references:
   fullName: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.GetRequest
   nameWithType: DefaultObjectAccessControlsResource.GetRequest
 - uid: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
-  name: GetRequest(IClientService, String, String)
+  name: GetRequest(Services.IClientService, String, String)
   href: api/Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.GetRequest.html#Google_Apis_Storage_v1_DefaultObjectAccessControlsResource_GetRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
   fullName: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.GetRequest.GetRequest(Google.Apis.Services.IClientService, System.String, System.String)
-  nameWithType: DefaultObjectAccessControlsResource.GetRequest.GetRequest(IClientService, String, String)
+  nameWithType: DefaultObjectAccessControlsResource.GetRequest.GetRequest(Services.IClientService, String, String)
 - uid: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.GetRequest.#ctor*
   name: GetRequest
   href: api/Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.GetRequest.html#Google_Apis_Storage_v1_DefaultObjectAccessControlsResource_GetRequest__ctor_
@@ -6838,11 +6838,11 @@ references:
   fullName: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.InsertRequest
   nameWithType: DefaultObjectAccessControlsResource.InsertRequest
 - uid: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.ObjectAccessControl,System.String)
-  name: InsertRequest(IClientService, ObjectAccessControl, String)
+  name: InsertRequest(Services.IClientService, ObjectAccessControl, String)
   href: api/Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.InsertRequest.html#Google_Apis_Storage_v1_DefaultObjectAccessControlsResource_InsertRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_ObjectAccessControl_System_String_
   commentId: M:Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.ObjectAccessControl,System.String)
   fullName: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.InsertRequest.InsertRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.ObjectAccessControl, System.String)
-  nameWithType: DefaultObjectAccessControlsResource.InsertRequest.InsertRequest(IClientService, ObjectAccessControl, String)
+  nameWithType: DefaultObjectAccessControlsResource.InsertRequest.InsertRequest(Services.IClientService, ObjectAccessControl, String)
 - uid: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.InsertRequest.#ctor*
   name: InsertRequest
   href: api/Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.InsertRequest.html#Google_Apis_Storage_v1_DefaultObjectAccessControlsResource_InsertRequest__ctor_
@@ -6940,11 +6940,11 @@ references:
   fullName: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.ListRequest
   nameWithType: DefaultObjectAccessControlsResource.ListRequest
 - uid: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)
-  name: ListRequest(IClientService, String)
+  name: ListRequest(Services.IClientService, String)
   href: api/Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.ListRequest.html#Google_Apis_Storage_v1_DefaultObjectAccessControlsResource_ListRequest__ctor_Google_Apis_Services_IClientService_System_String_
   commentId: M:Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)
   fullName: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.ListRequest.ListRequest(Google.Apis.Services.IClientService, System.String)
-  nameWithType: DefaultObjectAccessControlsResource.ListRequest.ListRequest(IClientService, String)
+  nameWithType: DefaultObjectAccessControlsResource.ListRequest.ListRequest(Services.IClientService, String)
 - uid: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.ListRequest.#ctor*
   name: ListRequest
   href: api/Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.ListRequest.html#Google_Apis_Storage_v1_DefaultObjectAccessControlsResource_ListRequest__ctor_
@@ -7054,11 +7054,11 @@ references:
   fullName: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.PatchRequest
   nameWithType: DefaultObjectAccessControlsResource.PatchRequest
 - uid: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.ObjectAccessControl,System.String,System.String)
-  name: PatchRequest(IClientService, ObjectAccessControl, String, String)
+  name: PatchRequest(Services.IClientService, ObjectAccessControl, String, String)
   href: api/Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.PatchRequest.html#Google_Apis_Storage_v1_DefaultObjectAccessControlsResource_PatchRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_ObjectAccessControl_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.ObjectAccessControl,System.String,System.String)
   fullName: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.PatchRequest.PatchRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.ObjectAccessControl, System.String, System.String)
-  nameWithType: DefaultObjectAccessControlsResource.PatchRequest.PatchRequest(IClientService, ObjectAccessControl, String, String)
+  nameWithType: DefaultObjectAccessControlsResource.PatchRequest.PatchRequest(Services.IClientService, ObjectAccessControl, String, String)
 - uid: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.PatchRequest.#ctor*
   name: PatchRequest
   href: api/Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.PatchRequest.html#Google_Apis_Storage_v1_DefaultObjectAccessControlsResource_PatchRequest__ctor_
@@ -7168,11 +7168,11 @@ references:
   fullName: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.UpdateRequest
   nameWithType: DefaultObjectAccessControlsResource.UpdateRequest
 - uid: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.ObjectAccessControl,System.String,System.String)
-  name: UpdateRequest(IClientService, ObjectAccessControl, String, String)
+  name: UpdateRequest(Services.IClientService, ObjectAccessControl, String, String)
   href: api/Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.UpdateRequest.html#Google_Apis_Storage_v1_DefaultObjectAccessControlsResource_UpdateRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_ObjectAccessControl_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.ObjectAccessControl,System.String,System.String)
   fullName: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.UpdateRequest.UpdateRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.ObjectAccessControl, System.String, System.String)
-  nameWithType: DefaultObjectAccessControlsResource.UpdateRequest.UpdateRequest(IClientService, ObjectAccessControl, String, String)
+  nameWithType: DefaultObjectAccessControlsResource.UpdateRequest.UpdateRequest(Services.IClientService, ObjectAccessControl, String, String)
 - uid: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.UpdateRequest.#ctor*
   name: UpdateRequest
   href: api/Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.UpdateRequest.html#Google_Apis_Storage_v1_DefaultObjectAccessControlsResource_UpdateRequest__ctor_
@@ -7270,11 +7270,11 @@ references:
   fullName: Google.Apis.Storage.v1.NotificationsResource
   nameWithType: NotificationsResource
 - uid: Google.Apis.Storage.v1.NotificationsResource.#ctor(Google.Apis.Services.IClientService)
-  name: NotificationsResource(IClientService)
+  name: NotificationsResource(Services.IClientService)
   href: api/Google.Apis.Storage.v1.NotificationsResource.html#Google_Apis_Storage_v1_NotificationsResource__ctor_Google_Apis_Services_IClientService_
   commentId: M:Google.Apis.Storage.v1.NotificationsResource.#ctor(Google.Apis.Services.IClientService)
   fullName: Google.Apis.Storage.v1.NotificationsResource.NotificationsResource(Google.Apis.Services.IClientService)
-  nameWithType: NotificationsResource.NotificationsResource(IClientService)
+  nameWithType: NotificationsResource.NotificationsResource(Services.IClientService)
 - uid: Google.Apis.Storage.v1.NotificationsResource.#ctor*
   name: NotificationsResource
   href: api/Google.Apis.Storage.v1.NotificationsResource.html#Google_Apis_Storage_v1_NotificationsResource__ctor_
@@ -7300,11 +7300,11 @@ references:
   fullName: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest
   nameWithType: NotificationsResource.DeleteRequest
 - uid: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
-  name: DeleteRequest(IClientService, String, String)
+  name: DeleteRequest(Services.IClientService, String, String)
   href: api/Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.html#Google_Apis_Storage_v1_NotificationsResource_DeleteRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
   fullName: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.DeleteRequest(Google.Apis.Services.IClientService, System.String, System.String)
-  nameWithType: NotificationsResource.DeleteRequest.DeleteRequest(IClientService, String, String)
+  nameWithType: NotificationsResource.DeleteRequest.DeleteRequest(Services.IClientService, String, String)
 - uid: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.#ctor*
   name: DeleteRequest
   href: api/Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.html#Google_Apis_Storage_v1_NotificationsResource_DeleteRequest__ctor_
@@ -7402,11 +7402,11 @@ references:
   fullName: Google.Apis.Storage.v1.NotificationsResource.GetRequest
   nameWithType: NotificationsResource.GetRequest
 - uid: Google.Apis.Storage.v1.NotificationsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
-  name: GetRequest(IClientService, String, String)
+  name: GetRequest(Services.IClientService, String, String)
   href: api/Google.Apis.Storage.v1.NotificationsResource.GetRequest.html#Google_Apis_Storage_v1_NotificationsResource_GetRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.NotificationsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
   fullName: Google.Apis.Storage.v1.NotificationsResource.GetRequest.GetRequest(Google.Apis.Services.IClientService, System.String, System.String)
-  nameWithType: NotificationsResource.GetRequest.GetRequest(IClientService, String, String)
+  nameWithType: NotificationsResource.GetRequest.GetRequest(Services.IClientService, String, String)
 - uid: Google.Apis.Storage.v1.NotificationsResource.GetRequest.#ctor*
   name: GetRequest
   href: api/Google.Apis.Storage.v1.NotificationsResource.GetRequest.html#Google_Apis_Storage_v1_NotificationsResource_GetRequest__ctor_
@@ -7504,11 +7504,11 @@ references:
   fullName: Google.Apis.Storage.v1.NotificationsResource.InsertRequest
   nameWithType: NotificationsResource.InsertRequest
 - uid: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Notification,System.String)
-  name: InsertRequest(IClientService, Notification, String)
+  name: InsertRequest(Services.IClientService, Notification, String)
   href: api/Google.Apis.Storage.v1.NotificationsResource.InsertRequest.html#Google_Apis_Storage_v1_NotificationsResource_InsertRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Notification_System_String_
   commentId: M:Google.Apis.Storage.v1.NotificationsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Notification,System.String)
   fullName: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.InsertRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.Notification, System.String)
-  nameWithType: NotificationsResource.InsertRequest.InsertRequest(IClientService, Notification, String)
+  nameWithType: NotificationsResource.InsertRequest.InsertRequest(Services.IClientService, Notification, String)
 - uid: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.#ctor*
   name: InsertRequest
   href: api/Google.Apis.Storage.v1.NotificationsResource.InsertRequest.html#Google_Apis_Storage_v1_NotificationsResource_InsertRequest__ctor_
@@ -7606,11 +7606,11 @@ references:
   fullName: Google.Apis.Storage.v1.NotificationsResource.ListRequest
   nameWithType: NotificationsResource.ListRequest
 - uid: Google.Apis.Storage.v1.NotificationsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)
-  name: ListRequest(IClientService, String)
+  name: ListRequest(Services.IClientService, String)
   href: api/Google.Apis.Storage.v1.NotificationsResource.ListRequest.html#Google_Apis_Storage_v1_NotificationsResource_ListRequest__ctor_Google_Apis_Services_IClientService_System_String_
   commentId: M:Google.Apis.Storage.v1.NotificationsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)
   fullName: Google.Apis.Storage.v1.NotificationsResource.ListRequest.ListRequest(Google.Apis.Services.IClientService, System.String)
-  nameWithType: NotificationsResource.ListRequest.ListRequest(IClientService, String)
+  nameWithType: NotificationsResource.ListRequest.ListRequest(Services.IClientService, String)
 - uid: Google.Apis.Storage.v1.NotificationsResource.ListRequest.#ctor*
   name: ListRequest
   href: api/Google.Apis.Storage.v1.NotificationsResource.ListRequest.html#Google_Apis_Storage_v1_NotificationsResource_ListRequest__ctor_
@@ -7684,11 +7684,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectAccessControlsResource
   nameWithType: ObjectAccessControlsResource
 - uid: Google.Apis.Storage.v1.ObjectAccessControlsResource.#ctor(Google.Apis.Services.IClientService)
-  name: ObjectAccessControlsResource(IClientService)
+  name: ObjectAccessControlsResource(Services.IClientService)
   href: api/Google.Apis.Storage.v1.ObjectAccessControlsResource.html#Google_Apis_Storage_v1_ObjectAccessControlsResource__ctor_Google_Apis_Services_IClientService_
   commentId: M:Google.Apis.Storage.v1.ObjectAccessControlsResource.#ctor(Google.Apis.Services.IClientService)
   fullName: Google.Apis.Storage.v1.ObjectAccessControlsResource.ObjectAccessControlsResource(Google.Apis.Services.IClientService)
-  nameWithType: ObjectAccessControlsResource.ObjectAccessControlsResource(IClientService)
+  nameWithType: ObjectAccessControlsResource.ObjectAccessControlsResource(Services.IClientService)
 - uid: Google.Apis.Storage.v1.ObjectAccessControlsResource.#ctor*
   name: ObjectAccessControlsResource
   href: api/Google.Apis.Storage.v1.ObjectAccessControlsResource.html#Google_Apis_Storage_v1_ObjectAccessControlsResource__ctor_
@@ -7714,11 +7714,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectAccessControlsResource.DeleteRequest
   nameWithType: ObjectAccessControlsResource.DeleteRequest
 - uid: Google.Apis.Storage.v1.ObjectAccessControlsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String)
-  name: DeleteRequest(IClientService, String, String, String)
+  name: DeleteRequest(Services.IClientService, String, String, String)
   href: api/Google.Apis.Storage.v1.ObjectAccessControlsResource.DeleteRequest.html#Google_Apis_Storage_v1_ObjectAccessControlsResource_DeleteRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.ObjectAccessControlsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String)
   fullName: Google.Apis.Storage.v1.ObjectAccessControlsResource.DeleteRequest.DeleteRequest(Google.Apis.Services.IClientService, System.String, System.String, System.String)
-  nameWithType: ObjectAccessControlsResource.DeleteRequest.DeleteRequest(IClientService, String, String, String)
+  nameWithType: ObjectAccessControlsResource.DeleteRequest.DeleteRequest(Services.IClientService, String, String, String)
 - uid: Google.Apis.Storage.v1.ObjectAccessControlsResource.DeleteRequest.#ctor*
   name: DeleteRequest
   href: api/Google.Apis.Storage.v1.ObjectAccessControlsResource.DeleteRequest.html#Google_Apis_Storage_v1_ObjectAccessControlsResource_DeleteRequest__ctor_
@@ -7840,11 +7840,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectAccessControlsResource.GetRequest
   nameWithType: ObjectAccessControlsResource.GetRequest
 - uid: Google.Apis.Storage.v1.ObjectAccessControlsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String)
-  name: GetRequest(IClientService, String, String, String)
+  name: GetRequest(Services.IClientService, String, String, String)
   href: api/Google.Apis.Storage.v1.ObjectAccessControlsResource.GetRequest.html#Google_Apis_Storage_v1_ObjectAccessControlsResource_GetRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.ObjectAccessControlsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String)
   fullName: Google.Apis.Storage.v1.ObjectAccessControlsResource.GetRequest.GetRequest(Google.Apis.Services.IClientService, System.String, System.String, System.String)
-  nameWithType: ObjectAccessControlsResource.GetRequest.GetRequest(IClientService, String, String, String)
+  nameWithType: ObjectAccessControlsResource.GetRequest.GetRequest(Services.IClientService, String, String, String)
 - uid: Google.Apis.Storage.v1.ObjectAccessControlsResource.GetRequest.#ctor*
   name: GetRequest
   href: api/Google.Apis.Storage.v1.ObjectAccessControlsResource.GetRequest.html#Google_Apis_Storage_v1_ObjectAccessControlsResource_GetRequest__ctor_
@@ -7966,11 +7966,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectAccessControlsResource.InsertRequest
   nameWithType: ObjectAccessControlsResource.InsertRequest
 - uid: Google.Apis.Storage.v1.ObjectAccessControlsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.ObjectAccessControl,System.String,System.String)
-  name: InsertRequest(IClientService, ObjectAccessControl, String, String)
+  name: InsertRequest(Services.IClientService, ObjectAccessControl, String, String)
   href: api/Google.Apis.Storage.v1.ObjectAccessControlsResource.InsertRequest.html#Google_Apis_Storage_v1_ObjectAccessControlsResource_InsertRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_ObjectAccessControl_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.ObjectAccessControlsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.ObjectAccessControl,System.String,System.String)
   fullName: Google.Apis.Storage.v1.ObjectAccessControlsResource.InsertRequest.InsertRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.ObjectAccessControl, System.String, System.String)
-  nameWithType: ObjectAccessControlsResource.InsertRequest.InsertRequest(IClientService, ObjectAccessControl, String, String)
+  nameWithType: ObjectAccessControlsResource.InsertRequest.InsertRequest(Services.IClientService, ObjectAccessControl, String, String)
 - uid: Google.Apis.Storage.v1.ObjectAccessControlsResource.InsertRequest.#ctor*
   name: InsertRequest
   href: api/Google.Apis.Storage.v1.ObjectAccessControlsResource.InsertRequest.html#Google_Apis_Storage_v1_ObjectAccessControlsResource_InsertRequest__ctor_
@@ -8092,11 +8092,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectAccessControlsResource.ListRequest
   nameWithType: ObjectAccessControlsResource.ListRequest
 - uid: Google.Apis.Storage.v1.ObjectAccessControlsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
-  name: ListRequest(IClientService, String, String)
+  name: ListRequest(Services.IClientService, String, String)
   href: api/Google.Apis.Storage.v1.ObjectAccessControlsResource.ListRequest.html#Google_Apis_Storage_v1_ObjectAccessControlsResource_ListRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.ObjectAccessControlsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
   fullName: Google.Apis.Storage.v1.ObjectAccessControlsResource.ListRequest.ListRequest(Google.Apis.Services.IClientService, System.String, System.String)
-  nameWithType: ObjectAccessControlsResource.ListRequest.ListRequest(IClientService, String, String)
+  nameWithType: ObjectAccessControlsResource.ListRequest.ListRequest(Services.IClientService, String, String)
 - uid: Google.Apis.Storage.v1.ObjectAccessControlsResource.ListRequest.#ctor*
   name: ListRequest
   href: api/Google.Apis.Storage.v1.ObjectAccessControlsResource.ListRequest.html#Google_Apis_Storage_v1_ObjectAccessControlsResource_ListRequest__ctor_
@@ -8206,11 +8206,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectAccessControlsResource.PatchRequest
   nameWithType: ObjectAccessControlsResource.PatchRequest
 - uid: Google.Apis.Storage.v1.ObjectAccessControlsResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.ObjectAccessControl,System.String,System.String,System.String)
-  name: PatchRequest(IClientService, ObjectAccessControl, String, String, String)
+  name: PatchRequest(Services.IClientService, ObjectAccessControl, String, String, String)
   href: api/Google.Apis.Storage.v1.ObjectAccessControlsResource.PatchRequest.html#Google_Apis_Storage_v1_ObjectAccessControlsResource_PatchRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_ObjectAccessControl_System_String_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.ObjectAccessControlsResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.ObjectAccessControl,System.String,System.String,System.String)
   fullName: Google.Apis.Storage.v1.ObjectAccessControlsResource.PatchRequest.PatchRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.ObjectAccessControl, System.String, System.String, System.String)
-  nameWithType: ObjectAccessControlsResource.PatchRequest.PatchRequest(IClientService, ObjectAccessControl, String, String, String)
+  nameWithType: ObjectAccessControlsResource.PatchRequest.PatchRequest(Services.IClientService, ObjectAccessControl, String, String, String)
 - uid: Google.Apis.Storage.v1.ObjectAccessControlsResource.PatchRequest.#ctor*
   name: PatchRequest
   href: api/Google.Apis.Storage.v1.ObjectAccessControlsResource.PatchRequest.html#Google_Apis_Storage_v1_ObjectAccessControlsResource_PatchRequest__ctor_
@@ -8344,11 +8344,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectAccessControlsResource.UpdateRequest
   nameWithType: ObjectAccessControlsResource.UpdateRequest
 - uid: Google.Apis.Storage.v1.ObjectAccessControlsResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.ObjectAccessControl,System.String,System.String,System.String)
-  name: UpdateRequest(IClientService, ObjectAccessControl, String, String, String)
+  name: UpdateRequest(Services.IClientService, ObjectAccessControl, String, String, String)
   href: api/Google.Apis.Storage.v1.ObjectAccessControlsResource.UpdateRequest.html#Google_Apis_Storage_v1_ObjectAccessControlsResource_UpdateRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_ObjectAccessControl_System_String_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.ObjectAccessControlsResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.ObjectAccessControl,System.String,System.String,System.String)
   fullName: Google.Apis.Storage.v1.ObjectAccessControlsResource.UpdateRequest.UpdateRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.ObjectAccessControl, System.String, System.String, System.String)
-  nameWithType: ObjectAccessControlsResource.UpdateRequest.UpdateRequest(IClientService, ObjectAccessControl, String, String, String)
+  nameWithType: ObjectAccessControlsResource.UpdateRequest.UpdateRequest(Services.IClientService, ObjectAccessControl, String, String, String)
 - uid: Google.Apis.Storage.v1.ObjectAccessControlsResource.UpdateRequest.#ctor*
   name: UpdateRequest
   href: api/Google.Apis.Storage.v1.ObjectAccessControlsResource.UpdateRequest.html#Google_Apis_Storage_v1_ObjectAccessControlsResource_UpdateRequest__ctor_
@@ -8470,11 +8470,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource
   nameWithType: ObjectsResource
 - uid: Google.Apis.Storage.v1.ObjectsResource.#ctor(Google.Apis.Services.IClientService)
-  name: ObjectsResource(IClientService)
+  name: ObjectsResource(Services.IClientService)
   href: api/Google.Apis.Storage.v1.ObjectsResource.html#Google_Apis_Storage_v1_ObjectsResource__ctor_Google_Apis_Services_IClientService_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.#ctor(Google.Apis.Services.IClientService)
   fullName: Google.Apis.Storage.v1.ObjectsResource.ObjectsResource(Google.Apis.Services.IClientService)
-  nameWithType: ObjectsResource.ObjectsResource(IClientService)
+  nameWithType: ObjectsResource.ObjectsResource(Services.IClientService)
 - uid: Google.Apis.Storage.v1.ObjectsResource.#ctor*
   name: ObjectsResource
   href: api/Google.Apis.Storage.v1.ObjectsResource.html#Google_Apis_Storage_v1_ObjectsResource__ctor_
@@ -8500,11 +8500,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest
   nameWithType: ObjectsResource.ComposeRequest
 - uid: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.ComposeRequest,System.String,System.String)
-  name: ComposeRequest(IClientService, ComposeRequest, String, String)
+  name: ComposeRequest(Services.IClientService, ComposeRequest, String, String)
   href: api/Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.html#Google_Apis_Storage_v1_ObjectsResource_ComposeRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_ComposeRequest_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.ComposeRequest,System.String,System.String)
   fullName: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.ComposeRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.ComposeRequest, System.String, System.String)
-  nameWithType: ObjectsResource.ComposeRequest.ComposeRequest(IClientService, ComposeRequest, String, String)
+  nameWithType: ObjectsResource.ComposeRequest.ComposeRequest(Services.IClientService, ComposeRequest, String, String)
 - uid: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.#ctor*
   name: ComposeRequest
   href: api/Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.html#Google_Apis_Storage_v1_ObjectsResource_ComposeRequest__ctor_
@@ -8590,11 +8590,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DestinationPredefinedAclEnum.PublicRead
   nameWithType: ObjectsResource.ComposeRequest.DestinationPredefinedAclEnum.PublicRead
 - uid: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.Download(System.IO.Stream)
-  name: Download(Stream)
+  name: Download(System.IO.Stream)
   href: api/Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.html#Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_Download_System_IO_Stream_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.Download(System.IO.Stream)
   fullName: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.Download(System.IO.Stream)
-  nameWithType: ObjectsResource.ComposeRequest.Download(Stream)
+  nameWithType: ObjectsResource.ComposeRequest.Download(System.IO.Stream)
 - uid: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.Download*
   name: Download
   href: api/Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.html#Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_Download_
@@ -8602,17 +8602,17 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.Download
   nameWithType: ObjectsResource.ComposeRequest.Download
 - uid: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadAsync(System.IO.Stream)
-  name: DownloadAsync(Stream)
+  name: DownloadAsync(System.IO.Stream)
   href: api/Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.html#Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadAsync_System_IO_Stream_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadAsync(System.IO.Stream)
   fullName: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadAsync(System.IO.Stream)
-  nameWithType: ObjectsResource.ComposeRequest.DownloadAsync(Stream)
+  nameWithType: ObjectsResource.ComposeRequest.DownloadAsync(System.IO.Stream)
 - uid: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadAsync(System.IO.Stream,System.Threading.CancellationToken)
-  name: DownloadAsync(Stream, CancellationToken)
+  name: DownloadAsync(System.IO.Stream, System.Threading.CancellationToken)
   href: api/Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.html#Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadAsync_System_IO_Stream_System_Threading_CancellationToken_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadAsync(System.IO.Stream,System.Threading.CancellationToken)
   fullName: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadAsync(System.IO.Stream, System.Threading.CancellationToken)
-  nameWithType: ObjectsResource.ComposeRequest.DownloadAsync(Stream, CancellationToken)
+  nameWithType: ObjectsResource.ComposeRequest.DownloadAsync(System.IO.Stream, System.Threading.CancellationToken)
 - uid: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadAsync*
   name: DownloadAsync
   href: api/Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.html#Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadAsync_
@@ -8734,11 +8734,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.CopyRequest
   nameWithType: ObjectsResource.CopyRequest
 - uid: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Object,System.String,System.String,System.String,System.String)
-  name: CopyRequest(IClientService, Object, String, String, String, String)
+  name: CopyRequest(Services.IClientService, Object, String, String, String, String)
   href: api/Google.Apis.Storage.v1.ObjectsResource.CopyRequest.html#Google_Apis_Storage_v1_ObjectsResource_CopyRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Object_System_String_System_String_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.CopyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Object,System.String,System.String,System.String,System.String)
   fullName: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.CopyRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.Object, System.String, System.String, System.String, System.String)
-  nameWithType: ObjectsResource.CopyRequest.CopyRequest(IClientService, Object, String, String, String, String)
+  nameWithType: ObjectsResource.CopyRequest.CopyRequest(Services.IClientService, Object, String, String, String, String)
 - uid: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.#ctor*
   name: CopyRequest
   href: api/Google.Apis.Storage.v1.ObjectsResource.CopyRequest.html#Google_Apis_Storage_v1_ObjectsResource_CopyRequest__ctor_
@@ -8824,11 +8824,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DestinationPredefinedAclEnum.PublicRead
   nameWithType: ObjectsResource.CopyRequest.DestinationPredefinedAclEnum.PublicRead
 - uid: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.Download(System.IO.Stream)
-  name: Download(Stream)
+  name: Download(System.IO.Stream)
   href: api/Google.Apis.Storage.v1.ObjectsResource.CopyRequest.html#Google_Apis_Storage_v1_ObjectsResource_CopyRequest_Download_System_IO_Stream_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.CopyRequest.Download(System.IO.Stream)
   fullName: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.Download(System.IO.Stream)
-  nameWithType: ObjectsResource.CopyRequest.Download(Stream)
+  nameWithType: ObjectsResource.CopyRequest.Download(System.IO.Stream)
 - uid: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.Download*
   name: Download
   href: api/Google.Apis.Storage.v1.ObjectsResource.CopyRequest.html#Google_Apis_Storage_v1_ObjectsResource_CopyRequest_Download_
@@ -8836,17 +8836,17 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.Download
   nameWithType: ObjectsResource.CopyRequest.Download
 - uid: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadAsync(System.IO.Stream)
-  name: DownloadAsync(Stream)
+  name: DownloadAsync(System.IO.Stream)
   href: api/Google.Apis.Storage.v1.ObjectsResource.CopyRequest.html#Google_Apis_Storage_v1_ObjectsResource_CopyRequest_DownloadAsync_System_IO_Stream_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadAsync(System.IO.Stream)
   fullName: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadAsync(System.IO.Stream)
-  nameWithType: ObjectsResource.CopyRequest.DownloadAsync(Stream)
+  nameWithType: ObjectsResource.CopyRequest.DownloadAsync(System.IO.Stream)
 - uid: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadAsync(System.IO.Stream,System.Threading.CancellationToken)
-  name: DownloadAsync(Stream, CancellationToken)
+  name: DownloadAsync(System.IO.Stream, System.Threading.CancellationToken)
   href: api/Google.Apis.Storage.v1.ObjectsResource.CopyRequest.html#Google_Apis_Storage_v1_ObjectsResource_CopyRequest_DownloadAsync_System_IO_Stream_System_Threading_CancellationToken_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadAsync(System.IO.Stream,System.Threading.CancellationToken)
   fullName: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadAsync(System.IO.Stream, System.Threading.CancellationToken)
-  nameWithType: ObjectsResource.CopyRequest.DownloadAsync(Stream, CancellationToken)
+  nameWithType: ObjectsResource.CopyRequest.DownloadAsync(System.IO.Stream, System.Threading.CancellationToken)
 - uid: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadAsync*
   name: DownloadAsync
   href: api/Google.Apis.Storage.v1.ObjectsResource.CopyRequest.html#Google_Apis_Storage_v1_ObjectsResource_CopyRequest_DownloadAsync_
@@ -9106,11 +9106,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.DeleteRequest
   nameWithType: ObjectsResource.DeleteRequest
 - uid: Google.Apis.Storage.v1.ObjectsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
-  name: DeleteRequest(IClientService, String, String)
+  name: DeleteRequest(Services.IClientService, String, String)
   href: api/Google.Apis.Storage.v1.ObjectsResource.DeleteRequest.html#Google_Apis_Storage_v1_ObjectsResource_DeleteRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
   fullName: Google.Apis.Storage.v1.ObjectsResource.DeleteRequest.DeleteRequest(Google.Apis.Services.IClientService, System.String, System.String)
-  nameWithType: ObjectsResource.DeleteRequest.DeleteRequest(IClientService, String, String)
+  nameWithType: ObjectsResource.DeleteRequest.DeleteRequest(Services.IClientService, String, String)
 - uid: Google.Apis.Storage.v1.ObjectsResource.DeleteRequest.#ctor*
   name: DeleteRequest
   href: api/Google.Apis.Storage.v1.ObjectsResource.DeleteRequest.html#Google_Apis_Storage_v1_ObjectsResource_DeleteRequest__ctor_
@@ -9280,11 +9280,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest
   nameWithType: ObjectsResource.GetIamPolicyRequest
 - uid: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
-  name: GetIamPolicyRequest(IClientService, String, String)
+  name: GetIamPolicyRequest(Services.IClientService, String, String)
   href: api/Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetIamPolicyRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
   fullName: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.GetIamPolicyRequest(Google.Apis.Services.IClientService, System.String, System.String)
-  nameWithType: ObjectsResource.GetIamPolicyRequest.GetIamPolicyRequest(IClientService, String, String)
+  nameWithType: ObjectsResource.GetIamPolicyRequest.GetIamPolicyRequest(Services.IClientService, String, String)
 - uid: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.#ctor*
   name: GetIamPolicyRequest
   href: api/Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetIamPolicyRequest__ctor_
@@ -9382,11 +9382,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.GetRequest
   nameWithType: ObjectsResource.GetRequest
 - uid: Google.Apis.Storage.v1.ObjectsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
-  name: GetRequest(IClientService, String, String)
+  name: GetRequest(Services.IClientService, String, String)
   href: api/Google.Apis.Storage.v1.ObjectsResource.GetRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
   fullName: Google.Apis.Storage.v1.ObjectsResource.GetRequest.GetRequest(Google.Apis.Services.IClientService, System.String, System.String)
-  nameWithType: ObjectsResource.GetRequest.GetRequest(IClientService, String, String)
+  nameWithType: ObjectsResource.GetRequest.GetRequest(Services.IClientService, String, String)
 - uid: Google.Apis.Storage.v1.ObjectsResource.GetRequest.#ctor*
   name: GetRequest
   href: api/Google.Apis.Storage.v1.ObjectsResource.GetRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetRequest__ctor_
@@ -9406,11 +9406,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.GetRequest.Bucket
   nameWithType: ObjectsResource.GetRequest.Bucket
 - uid: Google.Apis.Storage.v1.ObjectsResource.GetRequest.Download(System.IO.Stream)
-  name: Download(Stream)
+  name: Download(System.IO.Stream)
   href: api/Google.Apis.Storage.v1.ObjectsResource.GetRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetRequest_Download_System_IO_Stream_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.GetRequest.Download(System.IO.Stream)
   fullName: Google.Apis.Storage.v1.ObjectsResource.GetRequest.Download(System.IO.Stream)
-  nameWithType: ObjectsResource.GetRequest.Download(Stream)
+  nameWithType: ObjectsResource.GetRequest.Download(System.IO.Stream)
 - uid: Google.Apis.Storage.v1.ObjectsResource.GetRequest.Download*
   name: Download
   href: api/Google.Apis.Storage.v1.ObjectsResource.GetRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetRequest_Download_
@@ -9418,17 +9418,17 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.GetRequest.Download
   nameWithType: ObjectsResource.GetRequest.Download
 - uid: Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadAsync(System.IO.Stream)
-  name: DownloadAsync(Stream)
+  name: DownloadAsync(System.IO.Stream)
   href: api/Google.Apis.Storage.v1.ObjectsResource.GetRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetRequest_DownloadAsync_System_IO_Stream_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadAsync(System.IO.Stream)
   fullName: Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadAsync(System.IO.Stream)
-  nameWithType: ObjectsResource.GetRequest.DownloadAsync(Stream)
+  nameWithType: ObjectsResource.GetRequest.DownloadAsync(System.IO.Stream)
 - uid: Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadAsync(System.IO.Stream,System.Threading.CancellationToken)
-  name: DownloadAsync(Stream, CancellationToken)
+  name: DownloadAsync(System.IO.Stream, System.Threading.CancellationToken)
   href: api/Google.Apis.Storage.v1.ObjectsResource.GetRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetRequest_DownloadAsync_System_IO_Stream_System_Threading_CancellationToken_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadAsync(System.IO.Stream,System.Threading.CancellationToken)
   fullName: Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadAsync(System.IO.Stream, System.Threading.CancellationToken)
-  nameWithType: ObjectsResource.GetRequest.DownloadAsync(Stream, CancellationToken)
+  nameWithType: ObjectsResource.GetRequest.DownloadAsync(System.IO.Stream, System.Threading.CancellationToken)
 - uid: Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadAsync*
   name: DownloadAsync
   href: api/Google.Apis.Storage.v1.ObjectsResource.GetRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetRequest_DownloadAsync_
@@ -9604,11 +9604,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.Insert(Google.Apis.Storage.v1.Data.Object, System.String)
   nameWithType: ObjectsResource.Insert(Object, String)
 - uid: Google.Apis.Storage.v1.ObjectsResource.Insert(Google.Apis.Storage.v1.Data.Object,System.String,System.IO.Stream,System.String)
-  name: Insert(Object, String, Stream, String)
+  name: Insert(Object, String, System.IO.Stream, String)
   href: api/Google.Apis.Storage.v1.ObjectsResource.html#Google_Apis_Storage_v1_ObjectsResource_Insert_Google_Apis_Storage_v1_Data_Object_System_String_System_IO_Stream_System_String_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.Insert(Google.Apis.Storage.v1.Data.Object,System.String,System.IO.Stream,System.String)
   fullName: Google.Apis.Storage.v1.ObjectsResource.Insert(Google.Apis.Storage.v1.Data.Object, System.String, System.IO.Stream, System.String)
-  nameWithType: ObjectsResource.Insert(Object, String, Stream, String)
+  nameWithType: ObjectsResource.Insert(Object, String, System.IO.Stream, String)
 - uid: Google.Apis.Storage.v1.ObjectsResource.Insert*
   name: Insert
   href: api/Google.Apis.Storage.v1.ObjectsResource.html#Google_Apis_Storage_v1_ObjectsResource_Insert_
@@ -9622,11 +9622,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload
   nameWithType: ObjectsResource.InsertMediaUpload
 - uid: Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Object,System.String,System.IO.Stream,System.String)
-  name: InsertMediaUpload(IClientService, Object, String, Stream, String)
+  name: InsertMediaUpload(Services.IClientService, Object, String, System.IO.Stream, String)
   href: api/Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.html#Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Object_System_String_System_IO_Stream_System_String_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Object,System.String,System.IO.Stream,System.String)
   fullName: Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.InsertMediaUpload(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.Object, System.String, System.IO.Stream, System.String)
-  nameWithType: ObjectsResource.InsertMediaUpload.InsertMediaUpload(IClientService, Object, String, Stream, String)
+  nameWithType: ObjectsResource.InsertMediaUpload.InsertMediaUpload(Services.IClientService, Object, String, System.IO.Stream, String)
 - uid: Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.#ctor*
   name: InsertMediaUpload
   href: api/Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.html#Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload__ctor_
@@ -9904,11 +9904,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.InsertRequest
   nameWithType: ObjectsResource.InsertRequest
 - uid: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Object,System.String)
-  name: InsertRequest(IClientService, Object, String)
+  name: InsertRequest(Services.IClientService, Object, String)
   href: api/Google.Apis.Storage.v1.ObjectsResource.InsertRequest.html#Google_Apis_Storage_v1_ObjectsResource_InsertRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Object_System_String_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Object,System.String)
   fullName: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.InsertRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.Object, System.String)
-  nameWithType: ObjectsResource.InsertRequest.InsertRequest(IClientService, Object, String)
+  nameWithType: ObjectsResource.InsertRequest.InsertRequest(Services.IClientService, Object, String)
 - uid: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.#ctor*
   name: InsertRequest
   href: api/Google.Apis.Storage.v1.ObjectsResource.InsertRequest.html#Google_Apis_Storage_v1_ObjectsResource_InsertRequest__ctor_
@@ -9940,11 +9940,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.ContentEncoding
   nameWithType: ObjectsResource.InsertRequest.ContentEncoding
 - uid: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.Download(System.IO.Stream)
-  name: Download(Stream)
+  name: Download(System.IO.Stream)
   href: api/Google.Apis.Storage.v1.ObjectsResource.InsertRequest.html#Google_Apis_Storage_v1_ObjectsResource_InsertRequest_Download_System_IO_Stream_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.InsertRequest.Download(System.IO.Stream)
   fullName: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.Download(System.IO.Stream)
-  nameWithType: ObjectsResource.InsertRequest.Download(Stream)
+  nameWithType: ObjectsResource.InsertRequest.Download(System.IO.Stream)
 - uid: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.Download*
   name: Download
   href: api/Google.Apis.Storage.v1.ObjectsResource.InsertRequest.html#Google_Apis_Storage_v1_ObjectsResource_InsertRequest_Download_
@@ -9952,17 +9952,17 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.Download
   nameWithType: ObjectsResource.InsertRequest.Download
 - uid: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadAsync(System.IO.Stream)
-  name: DownloadAsync(Stream)
+  name: DownloadAsync(System.IO.Stream)
   href: api/Google.Apis.Storage.v1.ObjectsResource.InsertRequest.html#Google_Apis_Storage_v1_ObjectsResource_InsertRequest_DownloadAsync_System_IO_Stream_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadAsync(System.IO.Stream)
   fullName: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadAsync(System.IO.Stream)
-  nameWithType: ObjectsResource.InsertRequest.DownloadAsync(Stream)
+  nameWithType: ObjectsResource.InsertRequest.DownloadAsync(System.IO.Stream)
 - uid: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadAsync(System.IO.Stream,System.Threading.CancellationToken)
-  name: DownloadAsync(Stream, CancellationToken)
+  name: DownloadAsync(System.IO.Stream, System.Threading.CancellationToken)
   href: api/Google.Apis.Storage.v1.ObjectsResource.InsertRequest.html#Google_Apis_Storage_v1_ObjectsResource_InsertRequest_DownloadAsync_System_IO_Stream_System_Threading_CancellationToken_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadAsync(System.IO.Stream,System.Threading.CancellationToken)
   fullName: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadAsync(System.IO.Stream, System.Threading.CancellationToken)
-  nameWithType: ObjectsResource.InsertRequest.DownloadAsync(Stream, CancellationToken)
+  nameWithType: ObjectsResource.InsertRequest.DownloadAsync(System.IO.Stream, System.Threading.CancellationToken)
 - uid: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadAsync*
   name: DownloadAsync
   href: api/Google.Apis.Storage.v1.ObjectsResource.InsertRequest.html#Google_Apis_Storage_v1_ObjectsResource_InsertRequest_DownloadAsync_
@@ -10204,11 +10204,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.ListRequest
   nameWithType: ObjectsResource.ListRequest
 - uid: Google.Apis.Storage.v1.ObjectsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)
-  name: ListRequest(IClientService, String)
+  name: ListRequest(Services.IClientService, String)
   href: api/Google.Apis.Storage.v1.ObjectsResource.ListRequest.html#Google_Apis_Storage_v1_ObjectsResource_ListRequest__ctor_Google_Apis_Services_IClientService_System_String_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)
   fullName: Google.Apis.Storage.v1.ObjectsResource.ListRequest.ListRequest(Google.Apis.Services.IClientService, System.String)
-  nameWithType: ObjectsResource.ListRequest.ListRequest(IClientService, String)
+  nameWithType: ObjectsResource.ListRequest.ListRequest(Services.IClientService, String)
 - uid: Google.Apis.Storage.v1.ObjectsResource.ListRequest.#ctor*
   name: ListRequest
   href: api/Google.Apis.Storage.v1.ObjectsResource.ListRequest.html#Google_Apis_Storage_v1_ObjectsResource_ListRequest__ctor_
@@ -10384,11 +10384,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.PatchRequest
   nameWithType: ObjectsResource.PatchRequest
 - uid: Google.Apis.Storage.v1.ObjectsResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Object,System.String,System.String)
-  name: PatchRequest(IClientService, Object, String, String)
+  name: PatchRequest(Services.IClientService, Object, String, String)
   href: api/Google.Apis.Storage.v1.ObjectsResource.PatchRequest.html#Google_Apis_Storage_v1_ObjectsResource_PatchRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Object_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Object,System.String,System.String)
   fullName: Google.Apis.Storage.v1.ObjectsResource.PatchRequest.PatchRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.Object, System.String, System.String)
-  nameWithType: ObjectsResource.PatchRequest.PatchRequest(IClientService, Object, String, String)
+  nameWithType: ObjectsResource.PatchRequest.PatchRequest(Services.IClientService, Object, String, String)
 - uid: Google.Apis.Storage.v1.ObjectsResource.PatchRequest.#ctor*
   name: PatchRequest
   href: api/Google.Apis.Storage.v1.ObjectsResource.PatchRequest.html#Google_Apis_Storage_v1_ObjectsResource_PatchRequest__ctor_
@@ -10642,11 +10642,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.RewriteRequest
   nameWithType: ObjectsResource.RewriteRequest
 - uid: Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Object,System.String,System.String,System.String,System.String)
-  name: RewriteRequest(IClientService, Object, String, String, String, String)
+  name: RewriteRequest(Services.IClientService, Object, String, String, String, String)
   href: api/Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.html#Google_Apis_Storage_v1_ObjectsResource_RewriteRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Object_System_String_System_String_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Object,System.String,System.String,System.String,System.String)
   fullName: Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.RewriteRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.Object, System.String, System.String, System.String, System.String)
-  nameWithType: ObjectsResource.RewriteRequest.RewriteRequest(IClientService, Object, String, String, String, String)
+  nameWithType: ObjectsResource.RewriteRequest.RewriteRequest(Services.IClientService, Object, String, String, String, String)
 - uid: Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.#ctor*
   name: RewriteRequest
   href: api/Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.html#Google_Apis_Storage_v1_ObjectsResource_RewriteRequest__ctor_
@@ -10996,11 +10996,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest
   nameWithType: ObjectsResource.SetIamPolicyRequest
 - uid: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Policy,System.String,System.String)
-  name: SetIamPolicyRequest(IClientService, Policy, String, String)
+  name: SetIamPolicyRequest(Services.IClientService, Policy, String, String)
   href: api/Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_SetIamPolicyRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Policy_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Policy,System.String,System.String)
   fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.SetIamPolicyRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.Policy, System.String, System.String)
-  nameWithType: ObjectsResource.SetIamPolicyRequest.SetIamPolicyRequest(IClientService, Policy, String, String)
+  nameWithType: ObjectsResource.SetIamPolicyRequest.SetIamPolicyRequest(Services.IClientService, Policy, String, String)
 - uid: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.#ctor*
   name: SetIamPolicyRequest
   href: api/Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_SetIamPolicyRequest__ctor_
@@ -11104,14 +11104,14 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.RestPath
   nameWithType: ObjectsResource.SetIamPolicyRequest.RestPath
 - uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissions(System.String,System.String,Google.Apis.Util.Repeatable{System.String})
-  name: TestIamPermissions(String, String, Repeatable<String>)
+  name: TestIamPermissions(String, String, Util.Repeatable<String>)
   href: api/Google.Apis.Storage.v1.ObjectsResource.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissions_System_String_System_String_Google_Apis_Util_Repeatable_System_String__
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.TestIamPermissions(System.String,System.String,Google.Apis.Util.Repeatable{System.String})
-  name.vb: TestIamPermissions(String, String, Repeatable(Of String))
+  name.vb: TestIamPermissions(String, String, Util.Repeatable(Of String))
   fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissions(System.String, System.String, Google.Apis.Util.Repeatable<System.String>)
   fullName.vb: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissions(System.String, System.String, Google.Apis.Util.Repeatable(Of System.String))
-  nameWithType: ObjectsResource.TestIamPermissions(String, String, Repeatable<String>)
-  nameWithType.vb: ObjectsResource.TestIamPermissions(String, String, Repeatable(Of String))
+  nameWithType: ObjectsResource.TestIamPermissions(String, String, Util.Repeatable<String>)
+  nameWithType.vb: ObjectsResource.TestIamPermissions(String, String, Util.Repeatable(Of String))
 - uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissions*
   name: TestIamPermissions
   href: api/Google.Apis.Storage.v1.ObjectsResource.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissions_
@@ -11125,14 +11125,14 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest
   nameWithType: ObjectsResource.TestIamPermissionsRequest
 - uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,Google.Apis.Util.Repeatable{System.String})
-  name: TestIamPermissionsRequest(IClientService, String, String, Repeatable<String>)
+  name: TestIamPermissionsRequest(Services.IClientService, String, String, Util.Repeatable<String>)
   href: api/Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissionsRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_Google_Apis_Util_Repeatable_System_String__
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,Google.Apis.Util.Repeatable{System.String})
-  name.vb: TestIamPermissionsRequest(IClientService, String, String, Repeatable(Of String))
+  name.vb: TestIamPermissionsRequest(Services.IClientService, String, String, Util.Repeatable(Of String))
   fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.TestIamPermissionsRequest(Google.Apis.Services.IClientService, System.String, System.String, Google.Apis.Util.Repeatable<System.String>)
   fullName.vb: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.TestIamPermissionsRequest(Google.Apis.Services.IClientService, System.String, System.String, Google.Apis.Util.Repeatable(Of System.String))
-  nameWithType: ObjectsResource.TestIamPermissionsRequest.TestIamPermissionsRequest(IClientService, String, String, Repeatable<String>)
-  nameWithType.vb: ObjectsResource.TestIamPermissionsRequest.TestIamPermissionsRequest(IClientService, String, String, Repeatable(Of String))
+  nameWithType: ObjectsResource.TestIamPermissionsRequest.TestIamPermissionsRequest(Services.IClientService, String, String, Util.Repeatable<String>)
+  nameWithType.vb: ObjectsResource.TestIamPermissionsRequest.TestIamPermissionsRequest(Services.IClientService, String, String, Util.Repeatable(Of String))
 - uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.#ctor*
   name: TestIamPermissionsRequest
   href: api/Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissionsRequest__ctor_
@@ -11254,11 +11254,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest
   nameWithType: ObjectsResource.UpdateRequest
 - uid: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Object,System.String,System.String)
-  name: UpdateRequest(IClientService, Object, String, String)
+  name: UpdateRequest(Services.IClientService, Object, String, String)
   href: api/Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.html#Google_Apis_Storage_v1_ObjectsResource_UpdateRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Object_System_String_System_String_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Object,System.String,System.String)
   fullName: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.UpdateRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.Object, System.String, System.String)
-  nameWithType: ObjectsResource.UpdateRequest.UpdateRequest(IClientService, Object, String, String)
+  nameWithType: ObjectsResource.UpdateRequest.UpdateRequest(Services.IClientService, Object, String, String)
 - uid: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.#ctor*
   name: UpdateRequest
   href: api/Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.html#Google_Apis_Storage_v1_ObjectsResource_UpdateRequest__ctor_
@@ -11278,11 +11278,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.Bucket
   nameWithType: ObjectsResource.UpdateRequest.Bucket
 - uid: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.Download(System.IO.Stream)
-  name: Download(Stream)
+  name: Download(System.IO.Stream)
   href: api/Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.html#Google_Apis_Storage_v1_ObjectsResource_UpdateRequest_Download_System_IO_Stream_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.Download(System.IO.Stream)
   fullName: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.Download(System.IO.Stream)
-  nameWithType: ObjectsResource.UpdateRequest.Download(Stream)
+  nameWithType: ObjectsResource.UpdateRequest.Download(System.IO.Stream)
 - uid: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.Download*
   name: Download
   href: api/Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.html#Google_Apis_Storage_v1_ObjectsResource_UpdateRequest_Download_
@@ -11290,17 +11290,17 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.Download
   nameWithType: ObjectsResource.UpdateRequest.Download
 - uid: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadAsync(System.IO.Stream)
-  name: DownloadAsync(Stream)
+  name: DownloadAsync(System.IO.Stream)
   href: api/Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.html#Google_Apis_Storage_v1_ObjectsResource_UpdateRequest_DownloadAsync_System_IO_Stream_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadAsync(System.IO.Stream)
   fullName: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadAsync(System.IO.Stream)
-  nameWithType: ObjectsResource.UpdateRequest.DownloadAsync(Stream)
+  nameWithType: ObjectsResource.UpdateRequest.DownloadAsync(System.IO.Stream)
 - uid: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadAsync(System.IO.Stream,System.Threading.CancellationToken)
-  name: DownloadAsync(Stream, CancellationToken)
+  name: DownloadAsync(System.IO.Stream, System.Threading.CancellationToken)
   href: api/Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.html#Google_Apis_Storage_v1_ObjectsResource_UpdateRequest_DownloadAsync_System_IO_Stream_System_Threading_CancellationToken_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadAsync(System.IO.Stream,System.Threading.CancellationToken)
   fullName: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadAsync(System.IO.Stream, System.Threading.CancellationToken)
-  nameWithType: ObjectsResource.UpdateRequest.DownloadAsync(Stream, CancellationToken)
+  nameWithType: ObjectsResource.UpdateRequest.DownloadAsync(System.IO.Stream, System.Threading.CancellationToken)
 - uid: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadAsync*
   name: DownloadAsync
   href: api/Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.html#Google_Apis_Storage_v1_ObjectsResource_UpdateRequest_DownloadAsync_
@@ -11554,11 +11554,11 @@ references:
   fullName: Google.Apis.Storage.v1.ObjectsResource.WatchAllRequest
   nameWithType: ObjectsResource.WatchAllRequest
 - uid: Google.Apis.Storage.v1.ObjectsResource.WatchAllRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Channel,System.String)
-  name: WatchAllRequest(IClientService, Channel, String)
+  name: WatchAllRequest(Services.IClientService, Channel, String)
   href: api/Google.Apis.Storage.v1.ObjectsResource.WatchAllRequest.html#Google_Apis_Storage_v1_ObjectsResource_WatchAllRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Channel_System_String_
   commentId: M:Google.Apis.Storage.v1.ObjectsResource.WatchAllRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Channel,System.String)
   fullName: Google.Apis.Storage.v1.ObjectsResource.WatchAllRequest.WatchAllRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.Channel, System.String)
-  nameWithType: ObjectsResource.WatchAllRequest.WatchAllRequest(IClientService, Channel, String)
+  nameWithType: ObjectsResource.WatchAllRequest.WatchAllRequest(Services.IClientService, Channel, String)
 - uid: Google.Apis.Storage.v1.ObjectsResource.WatchAllRequest.#ctor*
   name: WatchAllRequest
   href: api/Google.Apis.Storage.v1.ObjectsResource.WatchAllRequest.html#Google_Apis_Storage_v1_ObjectsResource_WatchAllRequest__ctor_
@@ -11734,11 +11734,11 @@ references:
   fullName: Google.Apis.Storage.v1.ProjectsResource
   nameWithType: ProjectsResource
 - uid: Google.Apis.Storage.v1.ProjectsResource.#ctor(Google.Apis.Services.IClientService)
-  name: ProjectsResource(IClientService)
+  name: ProjectsResource(Services.IClientService)
   href: api/Google.Apis.Storage.v1.ProjectsResource.html#Google_Apis_Storage_v1_ProjectsResource__ctor_Google_Apis_Services_IClientService_
   commentId: M:Google.Apis.Storage.v1.ProjectsResource.#ctor(Google.Apis.Services.IClientService)
   fullName: Google.Apis.Storage.v1.ProjectsResource.ProjectsResource(Google.Apis.Services.IClientService)
-  nameWithType: ProjectsResource.ProjectsResource(IClientService)
+  nameWithType: ProjectsResource.ProjectsResource(Services.IClientService)
 - uid: Google.Apis.Storage.v1.ProjectsResource.#ctor*
   name: ProjectsResource
   href: api/Google.Apis.Storage.v1.ProjectsResource.html#Google_Apis_Storage_v1_ProjectsResource__ctor_
@@ -11764,11 +11764,11 @@ references:
   fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource
   nameWithType: ProjectsResource.ServiceAccountResource
 - uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.#ctor(Google.Apis.Services.IClientService)
-  name: ServiceAccountResource(IClientService)
+  name: ServiceAccountResource(Services.IClientService)
   href: api/Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.html#Google_Apis_Storage_v1_ProjectsResource_ServiceAccountResource__ctor_Google_Apis_Services_IClientService_
   commentId: M:Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.#ctor(Google.Apis.Services.IClientService)
   fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.ServiceAccountResource(Google.Apis.Services.IClientService)
-  nameWithType: ProjectsResource.ServiceAccountResource.ServiceAccountResource(IClientService)
+  nameWithType: ProjectsResource.ServiceAccountResource.ServiceAccountResource(Services.IClientService)
 - uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.#ctor*
   name: ServiceAccountResource
   href: api/Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.html#Google_Apis_Storage_v1_ProjectsResource_ServiceAccountResource__ctor_
@@ -11794,11 +11794,11 @@ references:
   fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest
   nameWithType: ProjectsResource.ServiceAccountResource.GetRequest
 - uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String)
-  name: GetRequest(IClientService, String)
+  name: GetRequest(Services.IClientService, String)
   href: api/Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.html#Google_Apis_Storage_v1_ProjectsResource_ServiceAccountResource_GetRequest__ctor_Google_Apis_Services_IClientService_System_String_
   commentId: M:Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String)
   fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.GetRequest(Google.Apis.Services.IClientService, System.String)
-  nameWithType: ProjectsResource.ServiceAccountResource.GetRequest.GetRequest(IClientService, String)
+  nameWithType: ProjectsResource.ServiceAccountResource.GetRequest.GetRequest(Services.IClientService, String)
 - uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.#ctor*
   name: GetRequest
   href: api/Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.html#Google_Apis_Storage_v1_ProjectsResource_ServiceAccountResource_GetRequest__ctor_
@@ -11875,13 +11875,13 @@ references:
   nameWithType: StorageBaseServiceRequest<TResponse>
   nameWithType.vb: StorageBaseServiceRequest(Of TResponse)
 - uid: Google.Apis.Storage.v1.StorageBaseServiceRequest`1.#ctor(Google.Apis.Services.IClientService)
-  name: StorageBaseServiceRequest(IClientService)
+  name: StorageBaseServiceRequest(Services.IClientService)
   href: api/Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html#Google_Apis_Storage_v1_StorageBaseServiceRequest_1__ctor_Google_Apis_Services_IClientService_
   commentId: M:Google.Apis.Storage.v1.StorageBaseServiceRequest`1.#ctor(Google.Apis.Services.IClientService)
   fullName: Google.Apis.Storage.v1.StorageBaseServiceRequest<TResponse>.StorageBaseServiceRequest(Google.Apis.Services.IClientService)
   fullName.vb: Google.Apis.Storage.v1.StorageBaseServiceRequest(Of TResponse).StorageBaseServiceRequest(Google.Apis.Services.IClientService)
-  nameWithType: StorageBaseServiceRequest<TResponse>.StorageBaseServiceRequest(IClientService)
-  nameWithType.vb: StorageBaseServiceRequest(Of TResponse).StorageBaseServiceRequest(IClientService)
+  nameWithType: StorageBaseServiceRequest<TResponse>.StorageBaseServiceRequest(Services.IClientService)
+  nameWithType.vb: StorageBaseServiceRequest(Of TResponse).StorageBaseServiceRequest(Services.IClientService)
 - uid: Google.Apis.Storage.v1.StorageBaseServiceRequest`1.#ctor*
   name: StorageBaseServiceRequest
   href: api/Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html#Google_Apis_Storage_v1_StorageBaseServiceRequest_1__ctor_
@@ -12048,11 +12048,11 @@ references:
   fullName: Google.Apis.Storage.v1.StorageService.StorageService()
   nameWithType: StorageService.StorageService()
 - uid: Google.Apis.Storage.v1.StorageService.#ctor(Google.Apis.Services.BaseClientService.Initializer)
-  name: StorageService(BaseClientService.Initializer)
+  name: StorageService(Services.BaseClientService.Initializer)
   href: api/Google.Apis.Storage.v1.StorageService.html#Google_Apis_Storage_v1_StorageService__ctor_Google_Apis_Services_BaseClientService_Initializer_
   commentId: M:Google.Apis.Storage.v1.StorageService.#ctor(Google.Apis.Services.BaseClientService.Initializer)
   fullName: Google.Apis.Storage.v1.StorageService.StorageService(Google.Apis.Services.BaseClientService.Initializer)
-  nameWithType: StorageService.StorageService(BaseClientService.Initializer)
+  nameWithType: StorageService.StorageService(Services.BaseClientService.Initializer)
 - uid: Google.Apis.Storage.v1.StorageService.#ctor*
   name: StorageService
   href: api/Google.Apis.Storage.v1.StorageService.html#Google_Apis_Storage_v1_StorageService__ctor_
@@ -12788,6 +12788,12 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.EncryptionKey.None
   fullName: Google.Cloud.Storage.V1.EncryptionKey.None
   nameWithType: EncryptionKey.None
+- uid: Google.Cloud.Storage.V1.GetBucketIamPolicyOptions
+  name: GetBucketIamPolicyOptions
+  href: api/Google.Cloud.Storage.V1.GetBucketIamPolicyOptions.html
+  commentId: T:Google.Cloud.Storage.V1.GetBucketIamPolicyOptions
+  fullName: Google.Cloud.Storage.V1.GetBucketIamPolicyOptions
+  nameWithType: GetBucketIamPolicyOptions
 - uid: Google.Cloud.Storage.V1.GetBucketOptions
   name: GetBucketOptions
   href: api/Google.Cloud.Storage.V1.GetBucketOptions.html
@@ -13280,6 +13286,12 @@ references:
   commentId: F:Google.Cloud.Storage.V1.Projection.NoAcl
   fullName: Google.Cloud.Storage.V1.Projection.NoAcl
   nameWithType: Projection.NoAcl
+- uid: Google.Cloud.Storage.V1.SetBucketIamPolicyOptions
+  name: SetBucketIamPolicyOptions
+  href: api/Google.Cloud.Storage.V1.SetBucketIamPolicyOptions.html
+  commentId: T:Google.Cloud.Storage.V1.SetBucketIamPolicyOptions
+  fullName: Google.Cloud.Storage.V1.SetBucketIamPolicyOptions
+  nameWithType: SetBucketIamPolicyOptions
 - uid: Google.Cloud.Storage.V1.SignedUrlResumableUpload
   name: SignedUrlResumableUpload
   href: api/Google.Cloud.Storage.V1.SignedUrlResumableUpload.html
@@ -13634,6 +13646,30 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClient.GetBucketAsync
   fullName: Google.Cloud.Storage.V1.StorageClient.GetBucketAsync
   nameWithType: StorageClient.GetBucketAsync
+- uid: Google.Cloud.Storage.V1.StorageClient.GetBucketIamPolicy(System.String,Google.Cloud.Storage.V1.GetBucketIamPolicyOptions)
+  name: GetBucketIamPolicy(String, GetBucketIamPolicyOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetBucketIamPolicy_System_String_Google_Cloud_Storage_V1_GetBucketIamPolicyOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.GetBucketIamPolicy(System.String,Google.Cloud.Storage.V1.GetBucketIamPolicyOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClient.GetBucketIamPolicy(System.String, Google.Cloud.Storage.V1.GetBucketIamPolicyOptions)
+  nameWithType: StorageClient.GetBucketIamPolicy(String, GetBucketIamPolicyOptions)
+- uid: Google.Cloud.Storage.V1.StorageClient.GetBucketIamPolicy*
+  name: GetBucketIamPolicy
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetBucketIamPolicy_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.GetBucketIamPolicy
+  fullName: Google.Cloud.Storage.V1.StorageClient.GetBucketIamPolicy
+  nameWithType: StorageClient.GetBucketIamPolicy
+- uid: Google.Cloud.Storage.V1.StorageClient.GetBucketIamPolicyAsync(System.String,Google.Cloud.Storage.V1.GetBucketIamPolicyOptions,System.Threading.CancellationToken)
+  name: GetBucketIamPolicyAsync(String, GetBucketIamPolicyOptions, CancellationToken)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetBucketIamPolicyAsync_System_String_Google_Cloud_Storage_V1_GetBucketIamPolicyOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.GetBucketIamPolicyAsync(System.String,Google.Cloud.Storage.V1.GetBucketIamPolicyOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Storage.V1.StorageClient.GetBucketIamPolicyAsync(System.String, Google.Cloud.Storage.V1.GetBucketIamPolicyOptions, System.Threading.CancellationToken)
+  nameWithType: StorageClient.GetBucketIamPolicyAsync(String, GetBucketIamPolicyOptions, CancellationToken)
+- uid: Google.Cloud.Storage.V1.StorageClient.GetBucketIamPolicyAsync*
+  name: GetBucketIamPolicyAsync
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetBucketIamPolicyAsync_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.GetBucketIamPolicyAsync
+  fullName: Google.Cloud.Storage.V1.StorageClient.GetBucketIamPolicyAsync
+  nameWithType: StorageClient.GetBucketIamPolicyAsync
 - uid: Google.Cloud.Storage.V1.StorageClient.GetObject(System.String,System.String,Google.Cloud.Storage.V1.GetObjectOptions)
   name: GetObject(String, String, GetObjectOptions)
   href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetObject_System_String_System_String_Google_Cloud_Storage_V1_GetObjectOptions_
@@ -13766,6 +13802,60 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClient.Service
   fullName: Google.Cloud.Storage.V1.StorageClient.Service
   nameWithType: StorageClient.Service
+- uid: Google.Cloud.Storage.V1.StorageClient.SetBucketIamPolicy(System.String,Google.Apis.Storage.v1.Data.Policy,Google.Cloud.Storage.V1.SetBucketIamPolicyOptions)
+  name: SetBucketIamPolicy(String, Policy, SetBucketIamPolicyOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_SetBucketIamPolicy_System_String_Google_Apis_Storage_v1_Data_Policy_Google_Cloud_Storage_V1_SetBucketIamPolicyOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.SetBucketIamPolicy(System.String,Google.Apis.Storage.v1.Data.Policy,Google.Cloud.Storage.V1.SetBucketIamPolicyOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClient.SetBucketIamPolicy(System.String, Google.Apis.Storage.v1.Data.Policy, Google.Cloud.Storage.V1.SetBucketIamPolicyOptions)
+  nameWithType: StorageClient.SetBucketIamPolicy(String, Policy, SetBucketIamPolicyOptions)
+- uid: Google.Cloud.Storage.V1.StorageClient.SetBucketIamPolicy*
+  name: SetBucketIamPolicy
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_SetBucketIamPolicy_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.SetBucketIamPolicy
+  fullName: Google.Cloud.Storage.V1.StorageClient.SetBucketIamPolicy
+  nameWithType: StorageClient.SetBucketIamPolicy
+- uid: Google.Cloud.Storage.V1.StorageClient.SetBucketIamPolicyAsync(System.String,Google.Apis.Storage.v1.Data.Policy,Google.Cloud.Storage.V1.SetBucketIamPolicyOptions,System.Threading.CancellationToken)
+  name: SetBucketIamPolicyAsync(String, Policy, SetBucketIamPolicyOptions, CancellationToken)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_SetBucketIamPolicyAsync_System_String_Google_Apis_Storage_v1_Data_Policy_Google_Cloud_Storage_V1_SetBucketIamPolicyOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.SetBucketIamPolicyAsync(System.String,Google.Apis.Storage.v1.Data.Policy,Google.Cloud.Storage.V1.SetBucketIamPolicyOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Storage.V1.StorageClient.SetBucketIamPolicyAsync(System.String, Google.Apis.Storage.v1.Data.Policy, Google.Cloud.Storage.V1.SetBucketIamPolicyOptions, System.Threading.CancellationToken)
+  nameWithType: StorageClient.SetBucketIamPolicyAsync(String, Policy, SetBucketIamPolicyOptions, CancellationToken)
+- uid: Google.Cloud.Storage.V1.StorageClient.SetBucketIamPolicyAsync*
+  name: SetBucketIamPolicyAsync
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_SetBucketIamPolicyAsync_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.SetBucketIamPolicyAsync
+  fullName: Google.Cloud.Storage.V1.StorageClient.SetBucketIamPolicyAsync
+  nameWithType: StorageClient.SetBucketIamPolicyAsync
+- uid: Google.Cloud.Storage.V1.StorageClient.TestBucketIamPermissions(System.String,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions)
+  name: TestBucketIamPermissions(String, IEnumerable<String>, TestBucketIamPermissionsOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_TestBucketIamPermissions_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_Storage_V1_TestBucketIamPermissionsOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.TestBucketIamPermissions(System.String,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions)
+  name.vb: TestBucketIamPermissions(String, IEnumerable(Of String), TestBucketIamPermissionsOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClient.TestBucketIamPermissions(System.String, System.Collections.Generic.IEnumerable<System.String>, Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions)
+  fullName.vb: Google.Cloud.Storage.V1.StorageClient.TestBucketIamPermissions(System.String, System.Collections.Generic.IEnumerable(Of System.String), Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions)
+  nameWithType: StorageClient.TestBucketIamPermissions(String, IEnumerable<String>, TestBucketIamPermissionsOptions)
+  nameWithType.vb: StorageClient.TestBucketIamPermissions(String, IEnumerable(Of String), TestBucketIamPermissionsOptions)
+- uid: Google.Cloud.Storage.V1.StorageClient.TestBucketIamPermissions*
+  name: TestBucketIamPermissions
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_TestBucketIamPermissions_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.TestBucketIamPermissions
+  fullName: Google.Cloud.Storage.V1.StorageClient.TestBucketIamPermissions
+  nameWithType: StorageClient.TestBucketIamPermissions
+- uid: Google.Cloud.Storage.V1.StorageClient.TestBucketIamPermissionsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions,System.Threading.CancellationToken)
+  name: TestBucketIamPermissionsAsync(String, IEnumerable<String>, TestBucketIamPermissionsOptions, CancellationToken)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_TestBucketIamPermissionsAsync_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_Storage_V1_TestBucketIamPermissionsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.TestBucketIamPermissionsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions,System.Threading.CancellationToken)
+  name.vb: TestBucketIamPermissionsAsync(String, IEnumerable(Of String), TestBucketIamPermissionsOptions, CancellationToken)
+  fullName: Google.Cloud.Storage.V1.StorageClient.TestBucketIamPermissionsAsync(System.String, System.Collections.Generic.IEnumerable<System.String>, Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Storage.V1.StorageClient.TestBucketIamPermissionsAsync(System.String, System.Collections.Generic.IEnumerable(Of System.String), Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions, System.Threading.CancellationToken)
+  nameWithType: StorageClient.TestBucketIamPermissionsAsync(String, IEnumerable<String>, TestBucketIamPermissionsOptions, CancellationToken)
+  nameWithType.vb: StorageClient.TestBucketIamPermissionsAsync(String, IEnumerable(Of String), TestBucketIamPermissionsOptions, CancellationToken)
+- uid: Google.Cloud.Storage.V1.StorageClient.TestBucketIamPermissionsAsync*
+  name: TestBucketIamPermissionsAsync
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_TestBucketIamPermissionsAsync_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.TestBucketIamPermissionsAsync
+  fullName: Google.Cloud.Storage.V1.StorageClient.TestBucketIamPermissionsAsync
+  nameWithType: StorageClient.TestBucketIamPermissionsAsync
 - uid: Google.Cloud.Storage.V1.StorageClient.UpdateBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.UpdateBucketOptions)
   name: UpdateBucket(Bucket, UpdateBucketOptions)
   href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_UpdateBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_UpdateBucketOptions_
@@ -14126,6 +14216,30 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.GetBucketAsync
   fullName: Google.Cloud.Storage.V1.StorageClientImpl.GetBucketAsync
   nameWithType: StorageClientImpl.GetBucketAsync
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.GetBucketIamPolicy(System.String,Google.Cloud.Storage.V1.GetBucketIamPolicyOptions)
+  name: GetBucketIamPolicy(String, GetBucketIamPolicyOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_GetBucketIamPolicy_System_String_Google_Cloud_Storage_V1_GetBucketIamPolicyOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClientImpl.GetBucketIamPolicy(System.String,Google.Cloud.Storage.V1.GetBucketIamPolicyOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.GetBucketIamPolicy(System.String, Google.Cloud.Storage.V1.GetBucketIamPolicyOptions)
+  nameWithType: StorageClientImpl.GetBucketIamPolicy(String, GetBucketIamPolicyOptions)
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.GetBucketIamPolicy*
+  name: GetBucketIamPolicy
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_GetBucketIamPolicy_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.GetBucketIamPolicy
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.GetBucketIamPolicy
+  nameWithType: StorageClientImpl.GetBucketIamPolicy
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.GetBucketIamPolicyAsync(System.String,Google.Cloud.Storage.V1.GetBucketIamPolicyOptions,System.Threading.CancellationToken)
+  name: GetBucketIamPolicyAsync(String, GetBucketIamPolicyOptions, CancellationToken)
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_GetBucketIamPolicyAsync_System_String_Google_Cloud_Storage_V1_GetBucketIamPolicyOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Storage.V1.StorageClientImpl.GetBucketIamPolicyAsync(System.String,Google.Cloud.Storage.V1.GetBucketIamPolicyOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.GetBucketIamPolicyAsync(System.String, Google.Cloud.Storage.V1.GetBucketIamPolicyOptions, System.Threading.CancellationToken)
+  nameWithType: StorageClientImpl.GetBucketIamPolicyAsync(String, GetBucketIamPolicyOptions, CancellationToken)
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.GetBucketIamPolicyAsync*
+  name: GetBucketIamPolicyAsync
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_GetBucketIamPolicyAsync_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.GetBucketIamPolicyAsync
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.GetBucketIamPolicyAsync
+  nameWithType: StorageClientImpl.GetBucketIamPolicyAsync
 - uid: Google.Cloud.Storage.V1.StorageClientImpl.GetObject(System.String,System.String,Google.Cloud.Storage.V1.GetObjectOptions)
   name: GetObject(String, String, GetObjectOptions)
   href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_GetObject_System_String_System_String_Google_Cloud_Storage_V1_GetObjectOptions_
@@ -14258,6 +14372,60 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.Service
   fullName: Google.Cloud.Storage.V1.StorageClientImpl.Service
   nameWithType: StorageClientImpl.Service
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.SetBucketIamPolicy(System.String,Google.Apis.Storage.v1.Data.Policy,Google.Cloud.Storage.V1.SetBucketIamPolicyOptions)
+  name: SetBucketIamPolicy(String, Policy, SetBucketIamPolicyOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_SetBucketIamPolicy_System_String_Google_Apis_Storage_v1_Data_Policy_Google_Cloud_Storage_V1_SetBucketIamPolicyOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClientImpl.SetBucketIamPolicy(System.String,Google.Apis.Storage.v1.Data.Policy,Google.Cloud.Storage.V1.SetBucketIamPolicyOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.SetBucketIamPolicy(System.String, Google.Apis.Storage.v1.Data.Policy, Google.Cloud.Storage.V1.SetBucketIamPolicyOptions)
+  nameWithType: StorageClientImpl.SetBucketIamPolicy(String, Policy, SetBucketIamPolicyOptions)
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.SetBucketIamPolicy*
+  name: SetBucketIamPolicy
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_SetBucketIamPolicy_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.SetBucketIamPolicy
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.SetBucketIamPolicy
+  nameWithType: StorageClientImpl.SetBucketIamPolicy
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.SetBucketIamPolicyAsync(System.String,Google.Apis.Storage.v1.Data.Policy,Google.Cloud.Storage.V1.SetBucketIamPolicyOptions,System.Threading.CancellationToken)
+  name: SetBucketIamPolicyAsync(String, Policy, SetBucketIamPolicyOptions, CancellationToken)
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_SetBucketIamPolicyAsync_System_String_Google_Apis_Storage_v1_Data_Policy_Google_Cloud_Storage_V1_SetBucketIamPolicyOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Storage.V1.StorageClientImpl.SetBucketIamPolicyAsync(System.String,Google.Apis.Storage.v1.Data.Policy,Google.Cloud.Storage.V1.SetBucketIamPolicyOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.SetBucketIamPolicyAsync(System.String, Google.Apis.Storage.v1.Data.Policy, Google.Cloud.Storage.V1.SetBucketIamPolicyOptions, System.Threading.CancellationToken)
+  nameWithType: StorageClientImpl.SetBucketIamPolicyAsync(String, Policy, SetBucketIamPolicyOptions, CancellationToken)
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.SetBucketIamPolicyAsync*
+  name: SetBucketIamPolicyAsync
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_SetBucketIamPolicyAsync_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.SetBucketIamPolicyAsync
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.SetBucketIamPolicyAsync
+  nameWithType: StorageClientImpl.SetBucketIamPolicyAsync
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.TestBucketIamPermissions(System.String,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions)
+  name: TestBucketIamPermissions(String, IEnumerable<String>, TestBucketIamPermissionsOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_TestBucketIamPermissions_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_Storage_V1_TestBucketIamPermissionsOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClientImpl.TestBucketIamPermissions(System.String,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions)
+  name.vb: TestBucketIamPermissions(String, IEnumerable(Of String), TestBucketIamPermissionsOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.TestBucketIamPermissions(System.String, System.Collections.Generic.IEnumerable<System.String>, Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions)
+  fullName.vb: Google.Cloud.Storage.V1.StorageClientImpl.TestBucketIamPermissions(System.String, System.Collections.Generic.IEnumerable(Of System.String), Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions)
+  nameWithType: StorageClientImpl.TestBucketIamPermissions(String, IEnumerable<String>, TestBucketIamPermissionsOptions)
+  nameWithType.vb: StorageClientImpl.TestBucketIamPermissions(String, IEnumerable(Of String), TestBucketIamPermissionsOptions)
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.TestBucketIamPermissions*
+  name: TestBucketIamPermissions
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_TestBucketIamPermissions_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.TestBucketIamPermissions
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.TestBucketIamPermissions
+  nameWithType: StorageClientImpl.TestBucketIamPermissions
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.TestBucketIamPermissionsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions,System.Threading.CancellationToken)
+  name: TestBucketIamPermissionsAsync(String, IEnumerable<String>, TestBucketIamPermissionsOptions, CancellationToken)
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_TestBucketIamPermissionsAsync_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_Storage_V1_TestBucketIamPermissionsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Storage.V1.StorageClientImpl.TestBucketIamPermissionsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions,System.Threading.CancellationToken)
+  name.vb: TestBucketIamPermissionsAsync(String, IEnumerable(Of String), TestBucketIamPermissionsOptions, CancellationToken)
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.TestBucketIamPermissionsAsync(System.String, System.Collections.Generic.IEnumerable<System.String>, Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Storage.V1.StorageClientImpl.TestBucketIamPermissionsAsync(System.String, System.Collections.Generic.IEnumerable(Of System.String), Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions, System.Threading.CancellationToken)
+  nameWithType: StorageClientImpl.TestBucketIamPermissionsAsync(String, IEnumerable<String>, TestBucketIamPermissionsOptions, CancellationToken)
+  nameWithType.vb: StorageClientImpl.TestBucketIamPermissionsAsync(String, IEnumerable(Of String), TestBucketIamPermissionsOptions, CancellationToken)
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.TestBucketIamPermissionsAsync*
+  name: TestBucketIamPermissionsAsync
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_TestBucketIamPermissionsAsync_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.TestBucketIamPermissionsAsync
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.TestBucketIamPermissionsAsync
+  nameWithType: StorageClientImpl.TestBucketIamPermissionsAsync
 - uid: Google.Cloud.Storage.V1.StorageClientImpl.UpdateBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.UpdateBucketOptions)
   name: UpdateBucket(Bucket, UpdateBucketOptions)
   href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_UpdateBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_UpdateBucketOptions_
@@ -14354,6 +14522,12 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.UploadObjectAsync
   fullName: Google.Cloud.Storage.V1.StorageClientImpl.UploadObjectAsync
   nameWithType: StorageClientImpl.UploadObjectAsync
+- uid: Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions
+  name: TestBucketIamPermissionsOptions
+  href: api/Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions.html
+  commentId: T:Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions
+  fullName: Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions
+  nameWithType: TestBucketIamPermissionsOptions
 - uid: Google.Cloud.Storage.V1.UpdateBucketOptions
   name: UpdateBucketOptions
   href: api/Google.Cloud.Storage.V1.UpdateBucketOptions.html

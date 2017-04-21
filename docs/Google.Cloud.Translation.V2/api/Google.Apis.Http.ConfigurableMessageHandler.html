@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ConfigurableMessageHandler
    | Google.Cloud.Translation.V2 ">
-    <meta name="generator" content="docfx 2.14.1.0">
+    <meta name="generator" content="docfx 2.16.0.499">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -197,12 +197,12 @@ It also contains important properties like number of tries, follow redirect, etc
               </table>
               <a id="Google_Apis_Http_ConfigurableMessageHandler_ExceptionHandlers_" data-uid="Google.Apis.Http.ConfigurableMessageHandler.ExceptionHandlers*"></a>
               <h4 id="Google_Apis_Http_ConfigurableMessageHandler_ExceptionHandlers" data-uid="Google.Apis.Http.ConfigurableMessageHandler.ExceptionHandlers">ExceptionHandlers</h4>
-              <div class="markdown level1 summary"><p>Gets a list of <a class="xref" href="Google.Apis.Http.IHttpExceptionHandler.html">IHttpExceptionHandler</a>s.</p>
+              <div class="markdown level1 summary"><p>Gets a list of <a class="xref" href="Google.Apis.Http.IHttpExceptionHandler.html">IHttpExceptionHandler</a>s.
 <remarks>
 Since version 1.10, <a class="xref" href="Google.Apis.Http.ConfigurableMessageHandler.html#Google_Apis_Http_ConfigurableMessageHandler_AddExceptionHandler_Google_Apis_Http_IHttpExceptionHandler_">AddExceptionHandler(IHttpExceptionHandler)</a> and <a class="xref" href="Google.Apis.Http.ConfigurableMessageHandler.html#Google_Apis_Http_ConfigurableMessageHandler_RemoveExceptionHandler_Google_Apis_Http_IHttpExceptionHandler_">RemoveExceptionHandler(IHttpExceptionHandler)</a> were added
 in order to keep this class thread-safe.  More information is available on
 <a href="https://github.com/google/google-api-dotnet-client/issues/592">#592</a>.
-</remarks>
+</remarks></p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -227,12 +227,12 @@ public IList&lt;IHttpExceptionHandler&gt; ExceptionHandlers { get; }</code></pre
               </table>
               <a id="Google_Apis_Http_ConfigurableMessageHandler_ExecuteInterceptors_" data-uid="Google.Apis.Http.ConfigurableMessageHandler.ExecuteInterceptors*"></a>
               <h4 id="Google_Apis_Http_ConfigurableMessageHandler_ExecuteInterceptors" data-uid="Google.Apis.Http.ConfigurableMessageHandler.ExecuteInterceptors">ExecuteInterceptors</h4>
-              <div class="markdown level1 summary"><p>Gets a list of <a class="xref" href="Google.Apis.Http.IHttpExecuteInterceptor.html">IHttpExecuteInterceptor</a>s.</p>
+              <div class="markdown level1 summary"><p>Gets a list of <a class="xref" href="Google.Apis.Http.IHttpExecuteInterceptor.html">IHttpExecuteInterceptor</a>s.
 <remarks>
 Since version 1.10, <a class="xref" href="Google.Apis.Http.ConfigurableMessageHandler.html#Google_Apis_Http_ConfigurableMessageHandler_AddExecuteInterceptor_Google_Apis_Http_IHttpExecuteInterceptor_">AddExecuteInterceptor(IHttpExecuteInterceptor)</a> and <a class="xref" href="Google.Apis.Http.ConfigurableMessageHandler.html#Google_Apis_Http_ConfigurableMessageHandler_RemoveExecuteInterceptor_Google_Apis_Http_IHttpExecuteInterceptor_">RemoveExecuteInterceptor(IHttpExecuteInterceptor)</a> were
 added in order to keep this class thread-safe.  More information is available on
 <a href="https://github.com/google/google-api-dotnet-client/issues/592">#592</a>.
-</remarks>
+</remarks></p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -358,13 +358,13 @@ See <a class="xref" href="Google.Apis.Http.ConfigurableMessageHandler.html#Googl
               <div class="markdown level1 summary"><p>Gets or sets the number of tries that will be allowed to execute. Retries occur as a result of either
 <a class="xref" href="Google.Apis.Http.IHttpUnsuccessfulResponseHandler.html">IHttpUnsuccessfulResponseHandler</a> or <a class="xref" href="Google.Apis.Http.IHttpExceptionHandler.html">IHttpExceptionHandler</a> which handles the
 abnormal HTTP response or exception before being terminated. 
-Set <code>1</code> for not retrying requests. The default value is <code>3</code>.</p>
+Set <code>1</code> for not retrying requests. The default value is <code>3</code>.
 <remarks>
 The number of allowed redirects (3xx) is defined by <a class="xref" href="Google.Apis.Http.ConfigurableMessageHandler.html#Google_Apis_Http_ConfigurableMessageHandler_NumRedirects">NumRedirects</a>. This property defines
 only the allowed tries for &gt;=400 responses, or when an exception is thrown. For example if you set 
 <a class="xref" href="Google.Apis.Http.ConfigurableMessageHandler.html#Google_Apis_Http_ConfigurableMessageHandler_NumTries">NumTries</a> to 1 and <a class="xref" href="Google.Apis.Http.ConfigurableMessageHandler.html#Google_Apis_Http_ConfigurableMessageHandler_NumRedirects">NumRedirects</a> to 5, the library will send up to five redirect
 requests, but will not send any retry requests due to an error HTTP status code.
-</remarks>
+</remarks></p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -388,13 +388,13 @@ requests, but will not send any retry requests due to an error HTTP status code.
               </table>
               <a id="Google_Apis_Http_ConfigurableMessageHandler_UnsuccessfulResponseHandlers_" data-uid="Google.Apis.Http.ConfigurableMessageHandler.UnsuccessfulResponseHandlers*"></a>
               <h4 id="Google_Apis_Http_ConfigurableMessageHandler_UnsuccessfulResponseHandlers" data-uid="Google.Apis.Http.ConfigurableMessageHandler.UnsuccessfulResponseHandlers">UnsuccessfulResponseHandlers</h4>
-              <div class="markdown level1 summary"><p>Gets a list of <a class="xref" href="Google.Apis.Http.IHttpUnsuccessfulResponseHandler.html">IHttpUnsuccessfulResponseHandler</a>s.</p>
+              <div class="markdown level1 summary"><p>Gets a list of <a class="xref" href="Google.Apis.Http.IHttpUnsuccessfulResponseHandler.html">IHttpUnsuccessfulResponseHandler</a>s.
 <remarks>
 Since version 1.10, <a class="xref" href="Google.Apis.Http.ConfigurableMessageHandler.html#Google_Apis_Http_ConfigurableMessageHandler_AddUnsuccessfulResponseHandler_Google_Apis_Http_IHttpUnsuccessfulResponseHandler_">AddUnsuccessfulResponseHandler(IHttpUnsuccessfulResponseHandler)</a> and
 <a class="xref" href="Google.Apis.Http.ConfigurableMessageHandler.html#Google_Apis_Http_ConfigurableMessageHandler_RemoveUnsuccessfulResponseHandler_Google_Apis_Http_IHttpUnsuccessfulResponseHandler_">RemoveUnsuccessfulResponseHandler(IHttpUnsuccessfulResponseHandler)</a> were added in order to keep this class thread-safe.
 More information is available on
 <a href="https://github.com/google/google-api-dotnet-client/issues/592">#592</a>.
-</remarks>
+</remarks></p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

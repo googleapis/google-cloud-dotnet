@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TextWriterLogger
    | Google.Cloud.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.14.1.0">
+    <meta name="generator" content="docfx 2.16.0.499">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,31 +81,16 @@
                   <div class="level1"><span class="xref">TextWriterLogger</span></div>
                   <div class="level2"><a class="xref" href="Grpc.Core.Logging.ConsoleLogger.html">ConsoleLogger</a></div>
               </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
               <h6><strong>Namespace</strong>:Grpc.Core.Logging</h6>
               <h6><strong>Assembly</strong>:Grpc.Core.dll</h6>
               <h5 id="Grpc_Core_Logging_TextWriterLogger_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class TextWriterLogger : ILogger</code></pre>
+                <pre><code class="lang-csharp hljs">public class TextWriterLogger : object, ILogger</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
               <a id="Grpc_Core_Logging_TextWriterLogger__ctor_" data-uid="Grpc.Core.Logging.TextWriterLogger.#ctor*"></a>
-              <h4 id="Grpc_Core_Logging_TextWriterLogger__ctor_System_Func_System_IO_TextWriter__" data-uid="Grpc.Core.Logging.TextWriterLogger.#ctor(System.Func{System.IO.TextWriter})">TextWriterLogger(Func&lt;TextWriter&gt;)</h4>
+              <h4 id="Grpc_Core_Logging_TextWriterLogger__ctor_Func_TextWriter__" data-uid="Grpc.Core.Logging.TextWriterLogger.#ctor(Func{TextWriter})">TextWriterLogger(Func&lt;TextWriter&gt;)</h4>
               <div class="markdown level1 summary"><p>Creates a console logger not associated to any specific type and writes to a <code>System.IO.TextWriter</code> obtained from given provider.
 User is responsible for providing an instance of TextWriter that is thread-safe.</p>
 </div>
@@ -125,14 +110,14 @@ User is responsible for providing an instance of TextWriter that is thread-safe.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Func</span>&lt;<span class="xref">System.IO.TextWriter</span>&gt;</td>
+                    <td><span class="xref">Func</span>&lt;<span class="xref">TextWriter</span>&gt;</td>
                     <td><span class="parametername">textWriterProvider</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <a id="Grpc_Core_Logging_TextWriterLogger__ctor_" data-uid="Grpc.Core.Logging.TextWriterLogger.#ctor*"></a>
-              <h4 id="Grpc_Core_Logging_TextWriterLogger__ctor_System_Func_System_IO_TextWriter__System_Type_" data-uid="Grpc.Core.Logging.TextWriterLogger.#ctor(System.Func{System.IO.TextWriter},System.Type)">TextWriterLogger(Func&lt;TextWriter&gt;, Type)</h4>
+              <h4 id="Grpc_Core_Logging_TextWriterLogger__ctor_Func_TextWriter__Type_" data-uid="Grpc.Core.Logging.TextWriterLogger.#ctor(Func{TextWriter},Type)">TextWriterLogger(Func&lt;TextWriter&gt;, Type)</h4>
               <div class="markdown level1 summary"><p>Creates a console logger that logs messsage specific for given type.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -151,19 +136,19 @@ User is responsible for providing an instance of TextWriter that is thread-safe.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Func</span>&lt;<span class="xref">System.IO.TextWriter</span>&gt;</td>
+                    <td><span class="xref">Func</span>&lt;<span class="xref">TextWriter</span>&gt;</td>
                     <td><span class="parametername">textWriterProvider</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="xref">Type</span></td>
                     <td><span class="parametername">forType</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <a id="Grpc_Core_Logging_TextWriterLogger__ctor_" data-uid="Grpc.Core.Logging.TextWriterLogger.#ctor*"></a>
-              <h4 id="Grpc_Core_Logging_TextWriterLogger__ctor_System_IO_TextWriter_" data-uid="Grpc.Core.Logging.TextWriterLogger.#ctor(System.IO.TextWriter)">TextWriterLogger(TextWriter)</h4>
+              <h4 id="Grpc_Core_Logging_TextWriterLogger__ctor_TextWriter_" data-uid="Grpc.Core.Logging.TextWriterLogger.#ctor(TextWriter)">TextWriterLogger(TextWriter)</h4>
               <div class="markdown level1 summary"><p>Creates a console logger not associated to any specific type and writes to given <code>System.IO.TextWriter</code>.
 User is responsible for providing an instance of TextWriter that is thread-safe.</p>
 </div>
@@ -183,7 +168,7 @@ User is responsible for providing an instance of TextWriter that is thread-safe.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.IO.TextWriter</span></td>
+                    <td><span class="xref">TextWriter</span></td>
                     <td><span class="parametername">textWriter</span></td>
                     <td></td>
                   </tr>
@@ -210,7 +195,7 @@ User is responsible for providing an instance of TextWriter that is thread-safe.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="xref">Type</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -279,7 +264,7 @@ User is responsible for providing an instance of TextWriter that is thread-safe.
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Grpc.Core.Logging.ILogger.html#Grpc_Core_Logging_ILogger_Debug_System_String_System_Object___">ILogger.Debug(String, Object[])</a></div>
               <a id="Grpc_Core_Logging_TextWriterLogger_Error_" data-uid="Grpc.Core.Logging.TextWriterLogger.Error*"></a>
-              <h4 id="Grpc_Core_Logging_TextWriterLogger_Error_System_Exception_System_String_" data-uid="Grpc.Core.Logging.TextWriterLogger.Error(System.Exception,System.String)">Error(Exception, String)</h4>
+              <h4 id="Grpc_Core_Logging_TextWriterLogger_Error_Exception_System_String_" data-uid="Grpc.Core.Logging.TextWriterLogger.Error(Exception,System.String)">Error(Exception, String)</h4>
               <div class="markdown level1 summary"><p>Logs a message and an associated exception with severity Error.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -298,7 +283,7 @@ User is responsible for providing an instance of TextWriter that is thread-safe.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Exception</span></td>
+                    <td><span class="xref">Exception</span></td>
                     <td><span class="parametername">exception</span></td>
                     <td></td>
                   </tr>
@@ -310,7 +295,7 @@ User is responsible for providing an instance of TextWriter that is thread-safe.
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Grpc.Core.Logging.ILogger.html#Grpc_Core_Logging_ILogger_Error_System_Exception_System_String_">ILogger.Error(Exception, String)</a></div>
+                  <div><a class="xref" href="Grpc.Core.Logging.ILogger.html#Grpc_Core_Logging_ILogger_Error_Exception_System_String_">ILogger.Error(Exception, String)</a></div>
               <a id="Grpc_Core_Logging_TextWriterLogger_Error_" data-uid="Grpc.Core.Logging.TextWriterLogger.Error*"></a>
               <h4 id="Grpc_Core_Logging_TextWriterLogger_Error_System_String_" data-uid="Grpc.Core.Logging.TextWriterLogger.Error(System.String)">Error(String)</h4>
               <div class="markdown level1 summary"><p>Logs a message with severity Error.</p>
@@ -475,7 +460,7 @@ User is responsible for providing an instance of TextWriter that is thread-safe.
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Grpc.Core.Logging.ILogger.html#Grpc_Core_Logging_ILogger_Info_System_String_System_Object___">ILogger.Info(String, Object[])</a></div>
               <a id="Grpc_Core_Logging_TextWriterLogger_Warning_" data-uid="Grpc.Core.Logging.TextWriterLogger.Warning*"></a>
-              <h4 id="Grpc_Core_Logging_TextWriterLogger_Warning_System_Exception_System_String_" data-uid="Grpc.Core.Logging.TextWriterLogger.Warning(System.Exception,System.String)">Warning(Exception, String)</h4>
+              <h4 id="Grpc_Core_Logging_TextWriterLogger_Warning_Exception_System_String_" data-uid="Grpc.Core.Logging.TextWriterLogger.Warning(Exception,System.String)">Warning(Exception, String)</h4>
               <div class="markdown level1 summary"><p>Logs a message and an associated exception with severity Warning.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -494,7 +479,7 @@ User is responsible for providing an instance of TextWriter that is thread-safe.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Exception</span></td>
+                    <td><span class="xref">Exception</span></td>
                     <td><span class="parametername">exception</span></td>
                     <td></td>
                   </tr>
@@ -506,7 +491,7 @@ User is responsible for providing an instance of TextWriter that is thread-safe.
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Grpc.Core.Logging.ILogger.html#Grpc_Core_Logging_ILogger_Warning_System_Exception_System_String_">ILogger.Warning(Exception, String)</a></div>
+                  <div><a class="xref" href="Grpc.Core.Logging.ILogger.html#Grpc_Core_Logging_ILogger_Warning_Exception_System_String_">ILogger.Warning(Exception, String)</a></div>
               <a id="Grpc_Core_Logging_TextWriterLogger_Warning_" data-uid="Grpc.Core.Logging.TextWriterLogger.Warning*"></a>
               <h4 id="Grpc_Core_Logging_TextWriterLogger_Warning_System_String_" data-uid="Grpc.Core.Logging.TextWriterLogger.Warning(System.String)">Warning(String)</h4>
               <div class="markdown level1 summary"><p>Logs a message with severity Warning.</p>

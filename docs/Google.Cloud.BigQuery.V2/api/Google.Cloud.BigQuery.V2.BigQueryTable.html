@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BigQueryTable
    | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.14.1.0">
+    <meta name="generator" content="docfx 2.16.0.499">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -1040,11 +1040,11 @@ instead of a period between the project ID and the dataset ID.</p>
               <div class="markdown level1 remarks"><p><p>
 This is designed to facilitate constructing queries by simply
 including the table in the string.
-</p></p>
+</p>
 <example>
 <pre><code>var table = client.GetTable(datasetId, tableId);
 var query = $"SELECT name, age from {table}";</code></pre>
-</example>
+</example></p>
 </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryTable_ToString_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.ToString*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_ToString_System_String_System_IFormatProvider_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.ToString(System.String,System.IFormatProvider)">ToString(String, IFormatProvider)</h4>
@@ -1103,11 +1103,11 @@ is used; otherwise, the Standard SQL format is used.</p>
               <div class="markdown level1 remarks"><p><p>
 This method allows the Legacy SQL format to be used simply within an
 interpolated string.
-</p></p>
+</p>
 <example>
 <pre><code>var table = client.GetTable(datasetId, tableId);
 var query = $"SELECT name, age from {table:legacy}";</code></pre>
-</example>
+</example></p>
 </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryTable_UploadAvro_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.UploadAvro*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_UploadAvro_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.UploadAvro(System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions)">UploadAvro(Stream, UploadAvroOptions)</h4>

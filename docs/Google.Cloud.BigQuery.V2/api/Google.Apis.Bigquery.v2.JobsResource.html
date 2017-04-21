@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class JobsResource
    | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.14.1.0">
+    <meta name="generator" content="docfx 2.16.0.499">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,37 +80,22 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">JobsResource</span></div>
               </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-              </div>
               <h6><strong>Namespace</strong>:Google.Apis.Bigquery.v2</h6>
               <h6><strong>Assembly</strong>:Google.Apis.Bigquery.v2.dll</h6>
               <h5 id="Google_Apis_Bigquery_v2_JobsResource_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class JobsResource</code></pre>
+                <pre><code class="lang-csharp hljs">public class JobsResource : object</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
               <a id="Google_Apis_Bigquery_v2_JobsResource__ctor_" data-uid="Google.Apis.Bigquery.v2.JobsResource.#ctor*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_JobsResource__ctor_Google_Apis_Services_IClientService_" data-uid="Google.Apis.Bigquery.v2.JobsResource.#ctor(Google.Apis.Services.IClientService)">JobsResource(IClientService)</h4>
+              <h4 id="Google_Apis_Bigquery_v2_JobsResource__ctor_Google_Apis_Services_IClientService_" data-uid="Google.Apis.Bigquery.v2.JobsResource.#ctor(Google.Apis.Services.IClientService)">JobsResource(Services.IClientService)</h4>
               <div class="markdown level1 summary"><p>Constructs a new resource.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public JobsResource(IClientService service)</code></pre>
+                <pre><code class="lang-csharp hljs">public JobsResource(Services.IClientService service)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -330,13 +315,13 @@ of the query job</p>
                 </tbody>
               </table>
               <a id="Google_Apis_Bigquery_v2_JobsResource_Insert_" data-uid="Google.Apis.Bigquery.v2.JobsResource.Insert*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_JobsResource_Insert_Google_Apis_Bigquery_v2_Data_Job_System_String_System_IO_Stream_System_String_" data-uid="Google.Apis.Bigquery.v2.JobsResource.Insert(Google.Apis.Bigquery.v2.Data.Job,System.String,System.IO.Stream,System.String)">Insert(Job, String, Stream, String)</h4>
+              <h4 id="Google_Apis_Bigquery_v2_JobsResource_Insert_Google_Apis_Bigquery_v2_Data_Job_System_String_System_IO_Stream_System_String_" data-uid="Google.Apis.Bigquery.v2.JobsResource.Insert(Google.Apis.Bigquery.v2.Data.Job,System.String,System.IO.Stream,System.String)">Insert(Job, String, System.IO.Stream, String)</h4>
               <div class="markdown level1 summary"><p>Starts a new asynchronous job. Requires the Can View project role.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual JobsResource.InsertMediaUpload Insert(Job body, string projectId, Stream stream, string contentType)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual JobsResource.InsertMediaUpload Insert(Job body, string projectId, System.IO.Stream stream, string contentType)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">

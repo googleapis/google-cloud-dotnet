@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct CallOptions
    | Google.Cloud.Speech.V1 ">
-    <meta name="generator" content="docfx 2.14.1.0">
+    <meta name="generator" content="docfx 2.16.0.499">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -75,18 +75,6 @@
               <div class="markdown level0 summary"><p>Options for calls made by client.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.ValueType.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.ValueType.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-              </div>
               <h6><strong>Namespace</strong>:Grpc.Core</h6>
               <h6><strong>Assembly</strong>:Grpc.Core.dll</h6>
               <h5 id="Grpc_Core_CallOptions_syntax">Syntax</h5>
@@ -96,7 +84,7 @@
               <h3 id="constructors">Constructors
               </h3>
               <a id="Grpc_Core_CallOptions__ctor_" data-uid="Grpc.Core.CallOptions.#ctor*"></a>
-              <h4 id="Grpc_Core_CallOptions__ctor_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_Grpc_Core_WriteOptions_Grpc_Core_ContextPropagationToken_Grpc_Core_CallCredentials_" data-uid="Grpc.Core.CallOptions.#ctor(Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken,Grpc.Core.WriteOptions,Grpc.Core.ContextPropagationToken,Grpc.Core.CallCredentials)">CallOptions(Metadata, Nullable&lt;DateTime&gt;, CancellationToken, WriteOptions, ContextPropagationToken, CallCredentials)</h4>
+              <h4 id="Grpc_Core_CallOptions__ctor_Grpc_Core_Metadata_System_Nullable_DateTime__CancellationToken_Grpc_Core_WriteOptions_Grpc_Core_ContextPropagationToken_Grpc_Core_CallCredentials_" data-uid="Grpc.Core.CallOptions.#ctor(Grpc.Core.Metadata,System.Nullable{DateTime},CancellationToken,Grpc.Core.WriteOptions,Grpc.Core.ContextPropagationToken,Grpc.Core.CallCredentials)">CallOptions(Metadata, Nullable&lt;DateTime&gt;, CancellationToken, WriteOptions, ContextPropagationToken, CallCredentials)</h4>
               <div class="markdown level1 summary"><p>Creates a new instance of <code>CallOptions</code> struct.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -121,13 +109,13 @@
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">DateTime</span>&gt;</td>
                     <td><span class="parametername">deadline</span></td>
                     <td><p>Deadline for the call to finish. null means no deadline.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="xref">CancellationToken</span></td>
                     <td><span class="parametername">cancellationToken</span></td>
                     <td><p>Can be used to request cancellation of the call.</p>
 </td>
@@ -179,7 +167,7 @@ the call will finish with <code>StatusCode.Cancelled</code> status.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="xref">CancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -227,7 +215,7 @@ the call will finish with <code>StatusCode.Cancelled</code> status.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">DateTime</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -333,7 +321,7 @@ Note: experimental API that can change or be removed without any prior notice.</
               <h3 id="methods">Methods
               </h3>
               <a id="Grpc_Core_CallOptions_WithCancellationToken_" data-uid="Grpc.Core.CallOptions.WithCancellationToken*"></a>
-              <h4 id="Grpc_Core_CallOptions_WithCancellationToken_System_Threading_CancellationToken_" data-uid="Grpc.Core.CallOptions.WithCancellationToken(System.Threading.CancellationToken)">WithCancellationToken(CancellationToken)</h4>
+              <h4 id="Grpc_Core_CallOptions_WithCancellationToken_CancellationToken_" data-uid="Grpc.Core.CallOptions.WithCancellationToken(CancellationToken)">WithCancellationToken(CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Returns new instance of <a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a> with
 <code>CancellationToken</code> set to the value provided. Values of all other fields are preserved.</p>
 </div>
@@ -353,7 +341,7 @@ Note: experimental API that can change or be removed without any prior notice.</
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="xref">CancellationToken</span></td>
                     <td><span class="parametername">cancellationToken</span></td>
                     <td><p>The cancellation token.</p>
 </td>
@@ -419,7 +407,7 @@ Note: experimental API that can change or be removed without any prior notice.</
                 </tbody>
               </table>
               <a id="Grpc_Core_CallOptions_WithDeadline_" data-uid="Grpc.Core.CallOptions.WithDeadline*"></a>
-              <h4 id="Grpc_Core_CallOptions_WithDeadline_System_DateTime_" data-uid="Grpc.Core.CallOptions.WithDeadline(System.DateTime)">WithDeadline(DateTime)</h4>
+              <h4 id="Grpc_Core_CallOptions_WithDeadline_DateTime_" data-uid="Grpc.Core.CallOptions.WithDeadline(DateTime)">WithDeadline(DateTime)</h4>
               <div class="markdown level1 summary"><p>Returns new instance of <a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a> with
 <code>Deadline</code> set to the value provided. Values of all other fields are preserved.</p>
 </div>
@@ -439,7 +427,7 @@ Note: experimental API that can change or be removed without any prior notice.</
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.DateTime</span></td>
+                    <td><span class="xref">DateTime</span></td>
                     <td><span class="parametername">deadline</span></td>
                     <td><p>The deadline.</p>
 </td>

@@ -13,15 +13,12 @@ references:
   commentId: T:Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension
   fullName: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension
   nameWithType: CloudTraceExtension
-- uid: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,Google.Cloud.Diagnostics.Common.TraceConfiguration,Google.Cloud.Trace.V1.TraceServiceClient,System.Func{Microsoft.AspNetCore.Http.HttpRequest,System.Nullable{System.Boolean}})
-  name: AddGoogleTrace(IServiceCollection, String, TraceConfiguration, TraceServiceClient, Func<HttpRequest, Nullable<Boolean>>)
-  href: api/Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_Google_Cloud_Diagnostics_Common_TraceConfiguration_Google_Cloud_Trace_V1_TraceServiceClient_System_Func_Microsoft_AspNetCore_Http_HttpRequest_System_Nullable_System_Boolean___
-  commentId: M:Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,Google.Cloud.Diagnostics.Common.TraceConfiguration,Google.Cloud.Trace.V1.TraceServiceClient,System.Func{Microsoft.AspNetCore.Http.HttpRequest,System.Nullable{System.Boolean}})
-  name.vb: AddGoogleTrace(IServiceCollection, String, TraceConfiguration, TraceServiceClient, Func(Of HttpRequest, Nullable(Of Boolean)))
-  fullName: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.String, Google.Cloud.Diagnostics.Common.TraceConfiguration, Google.Cloud.Trace.V1.TraceServiceClient, System.Func<Microsoft.AspNetCore.Http.HttpRequest, System.Nullable<System.Boolean>>)
-  fullName.vb: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.String, Google.Cloud.Diagnostics.Common.TraceConfiguration, Google.Cloud.Trace.V1.TraceServiceClient, System.Func(Of Microsoft.AspNetCore.Http.HttpRequest, System.Nullable(Of System.Boolean)))
-  nameWithType: CloudTraceExtension.AddGoogleTrace(IServiceCollection, String, TraceConfiguration, TraceServiceClient, Func<HttpRequest, Nullable<Boolean>>)
-  nameWithType.vb: CloudTraceExtension.AddGoogleTrace(IServiceCollection, String, TraceConfiguration, TraceServiceClient, Func(Of HttpRequest, Nullable(Of Boolean)))
+- uid: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,Google.Cloud.Diagnostics.Common.TraceConfiguration,Google.Cloud.Trace.V1.TraceServiceClient,Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)
+  name: AddGoogleTrace(IServiceCollection, String, TraceConfiguration, TraceServiceClient, TraceDecisionPredicate)
+  href: api/Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_Google_Cloud_Diagnostics_Common_TraceConfiguration_Google_Cloud_Trace_V1_TraceServiceClient_Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_
+  commentId: M:Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,Google.Cloud.Diagnostics.Common.TraceConfiguration,Google.Cloud.Trace.V1.TraceServiceClient,Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)
+  fullName: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.String, Google.Cloud.Diagnostics.Common.TraceConfiguration, Google.Cloud.Trace.V1.TraceServiceClient, Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)
+  nameWithType: CloudTraceExtension.AddGoogleTrace(IServiceCollection, String, TraceConfiguration, TraceServiceClient, TraceDecisionPredicate)
 - uid: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace*
   name: AddGoogleTrace
   href: api/Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_
@@ -1051,6 +1048,63 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.Common.TraceConfiguration.QpsSampleRate
   fullName: Google.Cloud.Diagnostics.Common.TraceConfiguration.QpsSampleRate
   nameWithType: TraceConfiguration.QpsSampleRate
+- uid: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate
+  name: TraceDecisionPredicate
+  href: api/Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html
+  commentId: T:Google.Cloud.Diagnostics.Common.TraceDecisionPredicate
+  fullName: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate
+  nameWithType: TraceDecisionPredicate
+- uid: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create(System.Func{Microsoft.AspNetCore.Http.HttpRequest,System.Nullable{System.Boolean}},System.Boolean)
+  name: Create(Func<HttpRequest, Nullable<Boolean>>, Boolean)
+  href: api/Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html#Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_Create_System_Func_Microsoft_AspNetCore_Http_HttpRequest_System_Nullable_System_Boolean___System_Boolean_
+  commentId: M:Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create(System.Func{Microsoft.AspNetCore.Http.HttpRequest,System.Nullable{System.Boolean}},System.Boolean)
+  name.vb: Create(Func(Of HttpRequest, Nullable(Of Boolean)), Boolean)
+  fullName: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create(System.Func<Microsoft.AspNetCore.Http.HttpRequest, System.Nullable<System.Boolean>>, System.Boolean)
+  fullName.vb: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create(System.Func(Of Microsoft.AspNetCore.Http.HttpRequest, System.Nullable(Of System.Boolean)), System.Boolean)
+  nameWithType: TraceDecisionPredicate.Create(Func<HttpRequest, Nullable<Boolean>>, Boolean)
+  nameWithType.vb: TraceDecisionPredicate.Create(Func(Of HttpRequest, Nullable(Of Boolean)), Boolean)
+- uid: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create*
+  name: Create
+  href: api/Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html#Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_Create_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create
+  fullName: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create
+  nameWithType: TraceDecisionPredicate.Create
+- uid: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Default
+  name: Default
+  href: api/Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html#Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_Default
+  commentId: P:Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Default
+  fullName: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Default
+  nameWithType: TraceDecisionPredicate.Default
+- uid: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Default*
+  name: Default
+  href: api/Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html#Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_Default_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Default
+  fullName: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Default
+  nameWithType: TraceDecisionPredicate.Default
+- uid: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.DoNothing
+  name: DoNothing
+  href: api/Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html#Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_DoNothing
+  commentId: P:Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.DoNothing
+  fullName: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.DoNothing
+  nameWithType: TraceDecisionPredicate.DoNothing
+- uid: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.DoNothing*
+  name: DoNothing
+  href: api/Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html#Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_DoNothing_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.DoNothing
+  fullName: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.DoNothing
+  nameWithType: TraceDecisionPredicate.DoNothing
+- uid: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace(Microsoft.AspNetCore.Http.HttpRequest)
+  name: ShouldTrace(HttpRequest)
+  href: api/Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html#Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_ShouldTrace_Microsoft_AspNetCore_Http_HttpRequest_
+  commentId: M:Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace(Microsoft.AspNetCore.Http.HttpRequest)
+  fullName: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace(Microsoft.AspNetCore.Http.HttpRequest)
+  nameWithType: TraceDecisionPredicate.ShouldTrace(HttpRequest)
+- uid: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace*
+  name: ShouldTrace
+  href: api/Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html#Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_ShouldTrace_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace
+  fullName: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace
+  nameWithType: TraceDecisionPredicate.ShouldTrace
 - uid: Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler
   name: TraceHeaderPropagatingHandler
   href: api/Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.html

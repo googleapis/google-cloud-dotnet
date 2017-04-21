@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Channel
    | Google.Cloud.PubSub.V1 ">
-    <meta name="generator" content="docfx 2.14.1.0">
+    <meta name="generator" content="docfx 2.16.0.499">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -82,26 +82,11 @@ a remote call so in general you should reuse a single channel for as many calls 
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">Channel</span></div>
               </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
               <h6><strong>Namespace</strong>:Grpc.Core</h6>
               <h6><strong>Assembly</strong>:Grpc.Core.dll</h6>
               <h5 id="Grpc_Core_Channel_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class Channel</code></pre>
+                <pre><code class="lang-csharp hljs">public class Channel : object</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
@@ -140,7 +125,7 @@ Port will default to 80 for an unsecure channel and to 443 for a secure channel.
                 </tbody>
               </table>
               <a id="Grpc_Core_Channel__ctor_" data-uid="Grpc.Core.Channel.#ctor*"></a>
-              <h4 id="Grpc_Core_Channel__ctor_System_String_Grpc_Core_ChannelCredentials_System_Collections_Generic_IEnumerable_Grpc_Core_ChannelOption__" data-uid="Grpc.Core.Channel.#ctor(System.String,Grpc.Core.ChannelCredentials,System.Collections.Generic.IEnumerable{Grpc.Core.ChannelOption})">Channel(String, ChannelCredentials, IEnumerable&lt;ChannelOption&gt;)</h4>
+              <h4 id="Grpc_Core_Channel__ctor_System_String_Grpc_Core_ChannelCredentials_IEnumerable_Grpc_Core_ChannelOption__" data-uid="Grpc.Core.Channel.#ctor(System.String,Grpc.Core.ChannelCredentials,IEnumerable{Grpc.Core.ChannelOption})">Channel(String, ChannelCredentials, IEnumerable&lt;ChannelOption&gt;)</h4>
               <div class="markdown level1 summary"><p>Creates a channel that connects to a specific host.
 Port will default to 80 for an unsecure channel and to 443 for a secure channel.</p>
 </div>
@@ -172,7 +157,7 @@ Port will default to 80 for an unsecure channel and to 443 for a secure channel.
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Grpc.Core.ChannelOption.html">ChannelOption</a>&gt;</td>
+                    <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Grpc.Core.ChannelOption.html">ChannelOption</a>&gt;</td>
                     <td><span class="parametername">options</span></td>
                     <td><p>Channel options.</p>
 </td>
@@ -219,7 +204,7 @@ Port will default to 80 for an unsecure channel and to 443 for a secure channel.
                 </tbody>
               </table>
               <a id="Grpc_Core_Channel__ctor_" data-uid="Grpc.Core.Channel.#ctor*"></a>
-              <h4 id="Grpc_Core_Channel__ctor_System_String_System_Int32_Grpc_Core_ChannelCredentials_System_Collections_Generic_IEnumerable_Grpc_Core_ChannelOption__" data-uid="Grpc.Core.Channel.#ctor(System.String,System.Int32,Grpc.Core.ChannelCredentials,System.Collections.Generic.IEnumerable{Grpc.Core.ChannelOption})">Channel(String, Int32, ChannelCredentials, IEnumerable&lt;ChannelOption&gt;)</h4>
+              <h4 id="Grpc_Core_Channel__ctor_System_String_System_Int32_Grpc_Core_ChannelCredentials_IEnumerable_Grpc_Core_ChannelOption__" data-uid="Grpc.Core.Channel.#ctor(System.String,System.Int32,Grpc.Core.ChannelCredentials,IEnumerable{Grpc.Core.ChannelOption})">Channel(String, Int32, ChannelCredentials, IEnumerable&lt;ChannelOption&gt;)</h4>
               <div class="markdown level1 summary"><p>Creates a channel that connects to a specific host and port.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -256,7 +241,7 @@ Port will default to 80 for an unsecure channel and to 443 for a secure channel.
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Grpc.Core.ChannelOption.html">ChannelOption</a>&gt;</td>
+                    <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Grpc.Core.ChannelOption.html">ChannelOption</a>&gt;</td>
                     <td><span class="parametername">options</span></td>
                     <td><p>Channel options.</p>
 </td>
@@ -308,7 +293,7 @@ Port will default to 80 for an unsecure channel and to 443 for a secure channel.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="xref">CancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -365,7 +350,7 @@ After channel is has been shutdown, <code>ChannelState.Shutdown</code> will be r
               <h3 id="methods">Methods
               </h3>
               <a id="Grpc_Core_Channel_ConnectAsync_" data-uid="Grpc.Core.Channel.ConnectAsync*"></a>
-              <h4 id="Grpc_Core_Channel_ConnectAsync_System_Nullable_System_DateTime__" data-uid="Grpc.Core.Channel.ConnectAsync(System.Nullable{System.DateTime})">ConnectAsync(Nullable&lt;DateTime&gt;)</h4>
+              <h4 id="Grpc_Core_Channel_ConnectAsync_System_Nullable_DateTime__" data-uid="Grpc.Core.Channel.ConnectAsync(System.Nullable{DateTime})">ConnectAsync(Nullable&lt;DateTime&gt;)</h4>
               <div class="markdown level1 summary"><p>Allows explicitly requesting channel to connect without starting an RPC.
 Returned task completes once state Ready was seen. If the deadline is reached,
 or channel enters the Shutdown state, the task is cancelled.
@@ -388,7 +373,7 @@ Starting an RPC on a new channel will request connection implicitly.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">DateTime</span>&gt;</td>
                     <td><span class="parametername">deadline</span></td>
                     <td><p>The deadline. <code>null</code> indicates no deadline.</p>
 </td>
@@ -405,7 +390,7 @@ Starting an RPC on a new channel will request connection implicitly.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><span class="xref">Task</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -430,7 +415,7 @@ all previously created channels before exiting from the process.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><span class="xref">Task</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -443,7 +428,7 @@ before shutting down the channel to ensure channel shutdown won&#39;t impact
 the outcome of those remote calls.</p>
 </div>
               <a id="Grpc_Core_Channel_WaitForStateChangedAsync_" data-uid="Grpc.Core.Channel.WaitForStateChangedAsync*"></a>
-              <h4 id="Grpc_Core_Channel_WaitForStateChangedAsync_Grpc_Core_ChannelState_System_Nullable_System_DateTime__" data-uid="Grpc.Core.Channel.WaitForStateChangedAsync(Grpc.Core.ChannelState,System.Nullable{System.DateTime})">WaitForStateChangedAsync(ChannelState, Nullable&lt;DateTime&gt;)</h4>
+              <h4 id="Grpc_Core_Channel_WaitForStateChangedAsync_Grpc_Core_ChannelState_System_Nullable_DateTime__" data-uid="Grpc.Core.Channel.WaitForStateChangedAsync(Grpc.Core.ChannelState,System.Nullable{DateTime})">WaitForStateChangedAsync(ChannelState, Nullable&lt;DateTime&gt;)</h4>
               <div class="markdown level1 summary"><p>Returned tasks completes once channel state has become different from 
 given lastObservedState. 
 If deadline is reached or and error occurs, returned task is cancelled.</p>
@@ -469,7 +454,7 @@ If deadline is reached or and error occurs, returned task is cancelled.</p>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">DateTime</span>&gt;</td>
                     <td><span class="parametername">deadline</span></td>
                     <td></td>
                   </tr>
@@ -485,7 +470,7 @@ If deadline is reached or and error occurs, returned task is cancelled.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><span class="xref">Task</span></td>
                     <td></td>
                   </tr>
                 </tbody>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Server
    | Google.Cloud.Vision.V1 ">
-    <meta name="generator" content="docfx 2.14.1.0">
+    <meta name="generator" content="docfx 2.16.0.499">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,26 +80,11 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">Server</span></div>
               </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
               <h6><strong>Namespace</strong>:Grpc.Core</h6>
               <h6><strong>Assembly</strong>:Grpc.Core.dll</h6>
               <h5 id="Grpc_Core_Server_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class Server</code></pre>
+                <pre><code class="lang-csharp hljs">public class Server : object</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
@@ -113,7 +98,7 @@
                 <pre><code class="lang-csharp hljs">public Server()</code></pre>
               </div>
               <a id="Grpc_Core_Server__ctor_" data-uid="Grpc.Core.Server.#ctor*"></a>
-              <h4 id="Grpc_Core_Server__ctor_System_Collections_Generic_IEnumerable_Grpc_Core_ChannelOption__" data-uid="Grpc.Core.Server.#ctor(System.Collections.Generic.IEnumerable{Grpc.Core.ChannelOption})">Server(IEnumerable&lt;ChannelOption&gt;)</h4>
+              <h4 id="Grpc_Core_Server__ctor_IEnumerable_Grpc_Core_ChannelOption__" data-uid="Grpc.Core.Server.#ctor(IEnumerable{Grpc.Core.ChannelOption})">Server(IEnumerable&lt;ChannelOption&gt;)</h4>
               <div class="markdown level1 summary"><p>Creates a new server.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -132,7 +117,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Grpc.Core.ChannelOption.html">ChannelOption</a>&gt;</td>
+                    <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Grpc.Core.ChannelOption.html">ChannelOption</a>&gt;</td>
                     <td><span class="parametername">options</span></td>
                     <td><p>Channel options.</p>
 </td>
@@ -235,7 +220,7 @@ server by adding its definition to this collection.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><span class="xref">Task</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -262,7 +247,7 @@ The returned task finishes when shutdown procedure is complete.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><span class="xref">Task</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -291,7 +276,7 @@ is complete.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><span class="xref">Task</span></td>
                     <td></td>
                   </tr>
                 </tbody>

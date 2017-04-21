@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Policy
    | Google.Cloud.Storage.V1 ">
-    <meta name="generator" content="docfx 2.14.1.0">
+    <meta name="generator" content="docfx 2.16.0.499">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,26 +80,11 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">Policy</span></div>
               </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-              </div>
               <h6><strong>Namespace</strong>:Google.Apis.Storage.v1.Data</h6>
               <h6><strong>Assembly</strong>:Google.Apis.Storage.v1.dll</h6>
               <h5 id="Google_Apis_Storage_v1_Data_Policy_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class Policy : IDirectResponseSchema</code></pre>
+                <pre><code class="lang-csharp hljs">public class Policy : Requests.IDirectResponseSchema</code></pre>
               </div>
               <h3 id="properties">Properties
               </h3>
@@ -111,8 +96,7 @@ that role.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;bindings&quot;)]
-public virtual IList&lt;Policy.BindingsData&gt; Bindings { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual System.Collections.Generic.IList&lt;Policy.BindingsData&gt; Bindings { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -136,8 +120,7 @@ public virtual IList&lt;Policy.BindingsData&gt; Bindings { get; set; }</code></p
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;etag&quot;)]
-public virtual string ETag { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual string ETag { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -154,8 +137,6 @@ public virtual string ETag { get; set; }</code></pre>
                   </tr>
                 </tbody>
               </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
               <a id="Google_Apis_Storage_v1_Data_Policy_Kind_" data-uid="Google.Apis.Storage.v1.Data.Policy.Kind*"></a>
               <h4 id="Google_Apis_Storage_v1_Data_Policy_Kind" data-uid="Google.Apis.Storage.v1.Data.Policy.Kind">Kind</h4>
               <div class="markdown level1 summary"><p>The kind of item this is. For policies, this is always storage#policy. This field is ignored on
@@ -164,8 +145,7 @@ input.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;kind&quot;)]
-public virtual string Kind { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual string Kind { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -192,8 +172,7 @@ buckets, and buckets/bucket/objects/object for objects. A specific generation ma
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;resourceId&quot;)]
-public virtual string ResourceId { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual string ResourceId { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">

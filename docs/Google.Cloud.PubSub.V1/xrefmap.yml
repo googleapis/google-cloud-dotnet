@@ -20854,13 +20854,13 @@ references:
   commentId: T:Grpc.Core.CallOptions
   fullName: Grpc.Core.CallOptions
   nameWithType: CallOptions
-- uid: Grpc.Core.CallOptions.#ctor(Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken,Grpc.Core.WriteOptions,Grpc.Core.ContextPropagationToken,Grpc.Core.CallCredentials)
+- uid: Grpc.Core.CallOptions.#ctor(Grpc.Core.Metadata,System.Nullable{DateTime},CancellationToken,Grpc.Core.WriteOptions,Grpc.Core.ContextPropagationToken,Grpc.Core.CallCredentials)
   name: CallOptions(Metadata, Nullable<DateTime>, CancellationToken, WriteOptions, ContextPropagationToken, CallCredentials)
-  href: api/Grpc.Core.CallOptions.html#Grpc_Core_CallOptions__ctor_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_Grpc_Core_WriteOptions_Grpc_Core_ContextPropagationToken_Grpc_Core_CallCredentials_
-  commentId: M:Grpc.Core.CallOptions.#ctor(Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken,Grpc.Core.WriteOptions,Grpc.Core.ContextPropagationToken,Grpc.Core.CallCredentials)
+  href: api/Grpc.Core.CallOptions.html#Grpc_Core_CallOptions__ctor_Grpc_Core_Metadata_System_Nullable_DateTime__CancellationToken_Grpc_Core_WriteOptions_Grpc_Core_ContextPropagationToken_Grpc_Core_CallCredentials_
+  commentId: M:Grpc.Core.CallOptions.#ctor(Grpc.Core.Metadata,System.Nullable{DateTime},CancellationToken,Grpc.Core.WriteOptions,Grpc.Core.ContextPropagationToken,Grpc.Core.CallCredentials)
   name.vb: CallOptions(Metadata, Nullable(Of DateTime), CancellationToken, WriteOptions, ContextPropagationToken, CallCredentials)
-  fullName: Grpc.Core.CallOptions.CallOptions(Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken, Grpc.Core.WriteOptions, Grpc.Core.ContextPropagationToken, Grpc.Core.CallCredentials)
-  fullName.vb: Grpc.Core.CallOptions.CallOptions(Grpc.Core.Metadata, System.Nullable(Of System.DateTime), System.Threading.CancellationToken, Grpc.Core.WriteOptions, Grpc.Core.ContextPropagationToken, Grpc.Core.CallCredentials)
+  fullName: Grpc.Core.CallOptions.CallOptions(Grpc.Core.Metadata, System.Nullable<DateTime>, CancellationToken, Grpc.Core.WriteOptions, Grpc.Core.ContextPropagationToken, Grpc.Core.CallCredentials)
+  fullName.vb: Grpc.Core.CallOptions.CallOptions(Grpc.Core.Metadata, System.Nullable(Of DateTime), CancellationToken, Grpc.Core.WriteOptions, Grpc.Core.ContextPropagationToken, Grpc.Core.CallCredentials)
   nameWithType: CallOptions.CallOptions(Metadata, Nullable<DateTime>, CancellationToken, WriteOptions, ContextPropagationToken, CallCredentials)
   nameWithType.vb: CallOptions.CallOptions(Metadata, Nullable(Of DateTime), CancellationToken, WriteOptions, ContextPropagationToken, CallCredentials)
 - uid: Grpc.Core.CallOptions.#ctor*
@@ -20941,11 +20941,11 @@ references:
   commentId: Overload:Grpc.Core.CallOptions.PropagationToken
   fullName: Grpc.Core.CallOptions.PropagationToken
   nameWithType: CallOptions.PropagationToken
-- uid: Grpc.Core.CallOptions.WithCancellationToken(System.Threading.CancellationToken)
+- uid: Grpc.Core.CallOptions.WithCancellationToken(CancellationToken)
   name: WithCancellationToken(CancellationToken)
-  href: api/Grpc.Core.CallOptions.html#Grpc_Core_CallOptions_WithCancellationToken_System_Threading_CancellationToken_
-  commentId: M:Grpc.Core.CallOptions.WithCancellationToken(System.Threading.CancellationToken)
-  fullName: Grpc.Core.CallOptions.WithCancellationToken(System.Threading.CancellationToken)
+  href: api/Grpc.Core.CallOptions.html#Grpc_Core_CallOptions_WithCancellationToken_CancellationToken_
+  commentId: M:Grpc.Core.CallOptions.WithCancellationToken(CancellationToken)
+  fullName: Grpc.Core.CallOptions.WithCancellationToken(CancellationToken)
   nameWithType: CallOptions.WithCancellationToken(CancellationToken)
 - uid: Grpc.Core.CallOptions.WithCancellationToken*
   name: WithCancellationToken
@@ -20965,11 +20965,11 @@ references:
   commentId: Overload:Grpc.Core.CallOptions.WithCredentials
   fullName: Grpc.Core.CallOptions.WithCredentials
   nameWithType: CallOptions.WithCredentials
-- uid: Grpc.Core.CallOptions.WithDeadline(System.DateTime)
+- uid: Grpc.Core.CallOptions.WithDeadline(DateTime)
   name: WithDeadline(DateTime)
-  href: api/Grpc.Core.CallOptions.html#Grpc_Core_CallOptions_WithDeadline_System_DateTime_
-  commentId: M:Grpc.Core.CallOptions.WithDeadline(System.DateTime)
-  fullName: Grpc.Core.CallOptions.WithDeadline(System.DateTime)
+  href: api/Grpc.Core.CallOptions.html#Grpc_Core_CallOptions_WithDeadline_DateTime_
+  commentId: M:Grpc.Core.CallOptions.WithDeadline(DateTime)
+  fullName: Grpc.Core.CallOptions.WithDeadline(DateTime)
   nameWithType: CallOptions.WithDeadline(DateTime)
 - uid: Grpc.Core.CallOptions.WithDeadline*
   name: WithDeadline
@@ -21130,13 +21130,13 @@ references:
   commentId: M:Grpc.Core.Channel.#ctor(System.String,Grpc.Core.ChannelCredentials)
   fullName: Grpc.Core.Channel.Channel(System.String, Grpc.Core.ChannelCredentials)
   nameWithType: Channel.Channel(String, ChannelCredentials)
-- uid: Grpc.Core.Channel.#ctor(System.String,Grpc.Core.ChannelCredentials,System.Collections.Generic.IEnumerable{Grpc.Core.ChannelOption})
+- uid: Grpc.Core.Channel.#ctor(System.String,Grpc.Core.ChannelCredentials,IEnumerable{Grpc.Core.ChannelOption})
   name: Channel(String, ChannelCredentials, IEnumerable<ChannelOption>)
-  href: api/Grpc.Core.Channel.html#Grpc_Core_Channel__ctor_System_String_Grpc_Core_ChannelCredentials_System_Collections_Generic_IEnumerable_Grpc_Core_ChannelOption__
-  commentId: M:Grpc.Core.Channel.#ctor(System.String,Grpc.Core.ChannelCredentials,System.Collections.Generic.IEnumerable{Grpc.Core.ChannelOption})
+  href: api/Grpc.Core.Channel.html#Grpc_Core_Channel__ctor_System_String_Grpc_Core_ChannelCredentials_IEnumerable_Grpc_Core_ChannelOption__
+  commentId: M:Grpc.Core.Channel.#ctor(System.String,Grpc.Core.ChannelCredentials,IEnumerable{Grpc.Core.ChannelOption})
   name.vb: Channel(String, ChannelCredentials, IEnumerable(Of ChannelOption))
-  fullName: Grpc.Core.Channel.Channel(System.String, Grpc.Core.ChannelCredentials, System.Collections.Generic.IEnumerable<Grpc.Core.ChannelOption>)
-  fullName.vb: Grpc.Core.Channel.Channel(System.String, Grpc.Core.ChannelCredentials, System.Collections.Generic.IEnumerable(Of Grpc.Core.ChannelOption))
+  fullName: Grpc.Core.Channel.Channel(System.String, Grpc.Core.ChannelCredentials, IEnumerable<Grpc.Core.ChannelOption>)
+  fullName.vb: Grpc.Core.Channel.Channel(System.String, Grpc.Core.ChannelCredentials, IEnumerable(Of Grpc.Core.ChannelOption))
   nameWithType: Channel.Channel(String, ChannelCredentials, IEnumerable<ChannelOption>)
   nameWithType.vb: Channel.Channel(String, ChannelCredentials, IEnumerable(Of ChannelOption))
 - uid: Grpc.Core.Channel.#ctor(System.String,System.Int32,Grpc.Core.ChannelCredentials)
@@ -21145,13 +21145,13 @@ references:
   commentId: M:Grpc.Core.Channel.#ctor(System.String,System.Int32,Grpc.Core.ChannelCredentials)
   fullName: Grpc.Core.Channel.Channel(System.String, System.Int32, Grpc.Core.ChannelCredentials)
   nameWithType: Channel.Channel(String, Int32, ChannelCredentials)
-- uid: Grpc.Core.Channel.#ctor(System.String,System.Int32,Grpc.Core.ChannelCredentials,System.Collections.Generic.IEnumerable{Grpc.Core.ChannelOption})
+- uid: Grpc.Core.Channel.#ctor(System.String,System.Int32,Grpc.Core.ChannelCredentials,IEnumerable{Grpc.Core.ChannelOption})
   name: Channel(String, Int32, ChannelCredentials, IEnumerable<ChannelOption>)
-  href: api/Grpc.Core.Channel.html#Grpc_Core_Channel__ctor_System_String_System_Int32_Grpc_Core_ChannelCredentials_System_Collections_Generic_IEnumerable_Grpc_Core_ChannelOption__
-  commentId: M:Grpc.Core.Channel.#ctor(System.String,System.Int32,Grpc.Core.ChannelCredentials,System.Collections.Generic.IEnumerable{Grpc.Core.ChannelOption})
+  href: api/Grpc.Core.Channel.html#Grpc_Core_Channel__ctor_System_String_System_Int32_Grpc_Core_ChannelCredentials_IEnumerable_Grpc_Core_ChannelOption__
+  commentId: M:Grpc.Core.Channel.#ctor(System.String,System.Int32,Grpc.Core.ChannelCredentials,IEnumerable{Grpc.Core.ChannelOption})
   name.vb: Channel(String, Int32, ChannelCredentials, IEnumerable(Of ChannelOption))
-  fullName: Grpc.Core.Channel.Channel(System.String, System.Int32, Grpc.Core.ChannelCredentials, System.Collections.Generic.IEnumerable<Grpc.Core.ChannelOption>)
-  fullName.vb: Grpc.Core.Channel.Channel(System.String, System.Int32, Grpc.Core.ChannelCredentials, System.Collections.Generic.IEnumerable(Of Grpc.Core.ChannelOption))
+  fullName: Grpc.Core.Channel.Channel(System.String, System.Int32, Grpc.Core.ChannelCredentials, IEnumerable<Grpc.Core.ChannelOption>)
+  fullName.vb: Grpc.Core.Channel.Channel(System.String, System.Int32, Grpc.Core.ChannelCredentials, IEnumerable(Of Grpc.Core.ChannelOption))
   nameWithType: Channel.Channel(String, Int32, ChannelCredentials, IEnumerable<ChannelOption>)
   nameWithType.vb: Channel.Channel(String, Int32, ChannelCredentials, IEnumerable(Of ChannelOption))
 - uid: Grpc.Core.Channel.#ctor*
@@ -21160,13 +21160,13 @@ references:
   commentId: Overload:Grpc.Core.Channel.#ctor
   fullName: Grpc.Core.Channel.Channel
   nameWithType: Channel.Channel
-- uid: Grpc.Core.Channel.ConnectAsync(System.Nullable{System.DateTime})
+- uid: Grpc.Core.Channel.ConnectAsync(System.Nullable{DateTime})
   name: ConnectAsync(Nullable<DateTime>)
-  href: api/Grpc.Core.Channel.html#Grpc_Core_Channel_ConnectAsync_System_Nullable_System_DateTime__
-  commentId: M:Grpc.Core.Channel.ConnectAsync(System.Nullable{System.DateTime})
+  href: api/Grpc.Core.Channel.html#Grpc_Core_Channel_ConnectAsync_System_Nullable_DateTime__
+  commentId: M:Grpc.Core.Channel.ConnectAsync(System.Nullable{DateTime})
   name.vb: ConnectAsync(Nullable(Of DateTime))
-  fullName: Grpc.Core.Channel.ConnectAsync(System.Nullable<System.DateTime>)
-  fullName.vb: Grpc.Core.Channel.ConnectAsync(System.Nullable(Of System.DateTime))
+  fullName: Grpc.Core.Channel.ConnectAsync(System.Nullable<DateTime>)
+  fullName.vb: Grpc.Core.Channel.ConnectAsync(System.Nullable(Of DateTime))
   nameWithType: Channel.ConnectAsync(Nullable<DateTime>)
   nameWithType.vb: Channel.ConnectAsync(Nullable(Of DateTime))
 - uid: Grpc.Core.Channel.ConnectAsync*
@@ -21235,13 +21235,13 @@ references:
   commentId: Overload:Grpc.Core.Channel.Target
   fullName: Grpc.Core.Channel.Target
   nameWithType: Channel.Target
-- uid: Grpc.Core.Channel.WaitForStateChangedAsync(Grpc.Core.ChannelState,System.Nullable{System.DateTime})
+- uid: Grpc.Core.Channel.WaitForStateChangedAsync(Grpc.Core.ChannelState,System.Nullable{DateTime})
   name: WaitForStateChangedAsync(ChannelState, Nullable<DateTime>)
-  href: api/Grpc.Core.Channel.html#Grpc_Core_Channel_WaitForStateChangedAsync_Grpc_Core_ChannelState_System_Nullable_System_DateTime__
-  commentId: M:Grpc.Core.Channel.WaitForStateChangedAsync(Grpc.Core.ChannelState,System.Nullable{System.DateTime})
+  href: api/Grpc.Core.Channel.html#Grpc_Core_Channel_WaitForStateChangedAsync_Grpc_Core_ChannelState_System_Nullable_DateTime__
+  commentId: M:Grpc.Core.Channel.WaitForStateChangedAsync(Grpc.Core.ChannelState,System.Nullable{DateTime})
   name.vb: WaitForStateChangedAsync(ChannelState, Nullable(Of DateTime))
-  fullName: Grpc.Core.Channel.WaitForStateChangedAsync(Grpc.Core.ChannelState, System.Nullable<System.DateTime>)
-  fullName.vb: Grpc.Core.Channel.WaitForStateChangedAsync(Grpc.Core.ChannelState, System.Nullable(Of System.DateTime))
+  fullName: Grpc.Core.Channel.WaitForStateChangedAsync(Grpc.Core.ChannelState, System.Nullable<DateTime>)
+  fullName.vb: Grpc.Core.Channel.WaitForStateChangedAsync(Grpc.Core.ChannelState, System.Nullable(Of DateTime))
   nameWithType: Channel.WaitForStateChangedAsync(ChannelState, Nullable<DateTime>)
   nameWithType.vb: Channel.WaitForStateChangedAsync(ChannelState, Nullable(Of DateTime))
 - uid: Grpc.Core.Channel.WaitForStateChangedAsync*
@@ -22159,11 +22159,11 @@ references:
   commentId: Overload:Grpc.Core.Logging.ILogger.Debug
   fullName: Grpc.Core.Logging.ILogger.Debug
   nameWithType: ILogger.Debug
-- uid: Grpc.Core.Logging.ILogger.Error(System.Exception,System.String)
+- uid: Grpc.Core.Logging.ILogger.Error(Exception,System.String)
   name: Error(Exception, String)
-  href: api/Grpc.Core.Logging.ILogger.html#Grpc_Core_Logging_ILogger_Error_System_Exception_System_String_
-  commentId: M:Grpc.Core.Logging.ILogger.Error(System.Exception,System.String)
-  fullName: Grpc.Core.Logging.ILogger.Error(System.Exception, System.String)
+  href: api/Grpc.Core.Logging.ILogger.html#Grpc_Core_Logging_ILogger_Error_Exception_System_String_
+  commentId: M:Grpc.Core.Logging.ILogger.Error(Exception,System.String)
+  fullName: Grpc.Core.Logging.ILogger.Error(Exception, System.String)
   nameWithType: ILogger.Error(Exception, String)
 - uid: Grpc.Core.Logging.ILogger.Error(System.String)
   name: Error(String)
@@ -22222,11 +22222,11 @@ references:
   commentId: Overload:Grpc.Core.Logging.ILogger.Info
   fullName: Grpc.Core.Logging.ILogger.Info
   nameWithType: ILogger.Info
-- uid: Grpc.Core.Logging.ILogger.Warning(System.Exception,System.String)
+- uid: Grpc.Core.Logging.ILogger.Warning(Exception,System.String)
   name: Warning(Exception, String)
-  href: api/Grpc.Core.Logging.ILogger.html#Grpc_Core_Logging_ILogger_Warning_System_Exception_System_String_
-  commentId: M:Grpc.Core.Logging.ILogger.Warning(System.Exception,System.String)
-  fullName: Grpc.Core.Logging.ILogger.Warning(System.Exception, System.String)
+  href: api/Grpc.Core.Logging.ILogger.html#Grpc_Core_Logging_ILogger_Warning_Exception_System_String_
+  commentId: M:Grpc.Core.Logging.ILogger.Warning(Exception,System.String)
+  fullName: Grpc.Core.Logging.ILogger.Warning(Exception, System.String)
   nameWithType: ILogger.Warning(Exception, String)
 - uid: Grpc.Core.Logging.ILogger.Warning(System.String)
   name: Warning(String)
@@ -22318,11 +22318,11 @@ references:
   commentId: Overload:Grpc.Core.Logging.LogLevelFilterLogger.Debug
   fullName: Grpc.Core.Logging.LogLevelFilterLogger.Debug
   nameWithType: LogLevelFilterLogger.Debug
-- uid: Grpc.Core.Logging.LogLevelFilterLogger.Error(System.Exception,System.String)
+- uid: Grpc.Core.Logging.LogLevelFilterLogger.Error(Exception,System.String)
   name: Error(Exception, String)
-  href: api/Grpc.Core.Logging.LogLevelFilterLogger.html#Grpc_Core_Logging_LogLevelFilterLogger_Error_System_Exception_System_String_
-  commentId: M:Grpc.Core.Logging.LogLevelFilterLogger.Error(System.Exception,System.String)
-  fullName: Grpc.Core.Logging.LogLevelFilterLogger.Error(System.Exception, System.String)
+  href: api/Grpc.Core.Logging.LogLevelFilterLogger.html#Grpc_Core_Logging_LogLevelFilterLogger_Error_Exception_System_String_
+  commentId: M:Grpc.Core.Logging.LogLevelFilterLogger.Error(Exception,System.String)
+  fullName: Grpc.Core.Logging.LogLevelFilterLogger.Error(Exception, System.String)
   nameWithType: LogLevelFilterLogger.Error(Exception, String)
 - uid: Grpc.Core.Logging.LogLevelFilterLogger.Error(System.String)
   name: Error(String)
@@ -22381,11 +22381,11 @@ references:
   commentId: Overload:Grpc.Core.Logging.LogLevelFilterLogger.Info
   fullName: Grpc.Core.Logging.LogLevelFilterLogger.Info
   nameWithType: LogLevelFilterLogger.Info
-- uid: Grpc.Core.Logging.LogLevelFilterLogger.Warning(System.Exception,System.String)
+- uid: Grpc.Core.Logging.LogLevelFilterLogger.Warning(Exception,System.String)
   name: Warning(Exception, String)
-  href: api/Grpc.Core.Logging.LogLevelFilterLogger.html#Grpc_Core_Logging_LogLevelFilterLogger_Warning_System_Exception_System_String_
-  commentId: M:Grpc.Core.Logging.LogLevelFilterLogger.Warning(System.Exception,System.String)
-  fullName: Grpc.Core.Logging.LogLevelFilterLogger.Warning(System.Exception, System.String)
+  href: api/Grpc.Core.Logging.LogLevelFilterLogger.html#Grpc_Core_Logging_LogLevelFilterLogger_Warning_Exception_System_String_
+  commentId: M:Grpc.Core.Logging.LogLevelFilterLogger.Warning(Exception,System.String)
+  fullName: Grpc.Core.Logging.LogLevelFilterLogger.Warning(Exception, System.String)
   nameWithType: LogLevelFilterLogger.Warning(Exception, String)
 - uid: Grpc.Core.Logging.LogLevelFilterLogger.Warning(System.String)
   name: Warning(String)
@@ -22435,11 +22435,11 @@ references:
   commentId: Overload:Grpc.Core.Logging.NullLogger.Debug
   fullName: Grpc.Core.Logging.NullLogger.Debug
   nameWithType: NullLogger.Debug
-- uid: Grpc.Core.Logging.NullLogger.Error(System.Exception,System.String)
+- uid: Grpc.Core.Logging.NullLogger.Error(Exception,System.String)
   name: Error(Exception, String)
-  href: api/Grpc.Core.Logging.NullLogger.html#Grpc_Core_Logging_NullLogger_Error_System_Exception_System_String_
-  commentId: M:Grpc.Core.Logging.NullLogger.Error(System.Exception,System.String)
-  fullName: Grpc.Core.Logging.NullLogger.Error(System.Exception, System.String)
+  href: api/Grpc.Core.Logging.NullLogger.html#Grpc_Core_Logging_NullLogger_Error_Exception_System_String_
+  commentId: M:Grpc.Core.Logging.NullLogger.Error(Exception,System.String)
+  fullName: Grpc.Core.Logging.NullLogger.Error(Exception, System.String)
   nameWithType: NullLogger.Error(Exception, String)
 - uid: Grpc.Core.Logging.NullLogger.Error(System.String)
   name: Error(String)
@@ -22498,11 +22498,11 @@ references:
   commentId: Overload:Grpc.Core.Logging.NullLogger.Info
   fullName: Grpc.Core.Logging.NullLogger.Info
   nameWithType: NullLogger.Info
-- uid: Grpc.Core.Logging.NullLogger.Warning(System.Exception,System.String)
+- uid: Grpc.Core.Logging.NullLogger.Warning(Exception,System.String)
   name: Warning(Exception, String)
-  href: api/Grpc.Core.Logging.NullLogger.html#Grpc_Core_Logging_NullLogger_Warning_System_Exception_System_String_
-  commentId: M:Grpc.Core.Logging.NullLogger.Warning(System.Exception,System.String)
-  fullName: Grpc.Core.Logging.NullLogger.Warning(System.Exception, System.String)
+  href: api/Grpc.Core.Logging.NullLogger.html#Grpc_Core_Logging_NullLogger_Warning_Exception_System_String_
+  commentId: M:Grpc.Core.Logging.NullLogger.Warning(Exception,System.String)
+  fullName: Grpc.Core.Logging.NullLogger.Warning(Exception, System.String)
   nameWithType: NullLogger.Warning(Exception, String)
 - uid: Grpc.Core.Logging.NullLogger.Warning(System.String)
   name: Warning(String)
@@ -22531,29 +22531,29 @@ references:
   commentId: T:Grpc.Core.Logging.TextWriterLogger
   fullName: Grpc.Core.Logging.TextWriterLogger
   nameWithType: TextWriterLogger
-- uid: Grpc.Core.Logging.TextWriterLogger.#ctor(System.Func{System.IO.TextWriter})
+- uid: Grpc.Core.Logging.TextWriterLogger.#ctor(Func{TextWriter})
   name: TextWriterLogger(Func<TextWriter>)
-  href: api/Grpc.Core.Logging.TextWriterLogger.html#Grpc_Core_Logging_TextWriterLogger__ctor_System_Func_System_IO_TextWriter__
-  commentId: M:Grpc.Core.Logging.TextWriterLogger.#ctor(System.Func{System.IO.TextWriter})
+  href: api/Grpc.Core.Logging.TextWriterLogger.html#Grpc_Core_Logging_TextWriterLogger__ctor_Func_TextWriter__
+  commentId: M:Grpc.Core.Logging.TextWriterLogger.#ctor(Func{TextWriter})
   name.vb: TextWriterLogger(Func(Of TextWriter))
-  fullName: Grpc.Core.Logging.TextWriterLogger.TextWriterLogger(System.Func<System.IO.TextWriter>)
-  fullName.vb: Grpc.Core.Logging.TextWriterLogger.TextWriterLogger(System.Func(Of System.IO.TextWriter))
+  fullName: Grpc.Core.Logging.TextWriterLogger.TextWriterLogger(Func<TextWriter>)
+  fullName.vb: Grpc.Core.Logging.TextWriterLogger.TextWriterLogger(Func(Of TextWriter))
   nameWithType: TextWriterLogger.TextWriterLogger(Func<TextWriter>)
   nameWithType.vb: TextWriterLogger.TextWriterLogger(Func(Of TextWriter))
-- uid: Grpc.Core.Logging.TextWriterLogger.#ctor(System.Func{System.IO.TextWriter},System.Type)
+- uid: Grpc.Core.Logging.TextWriterLogger.#ctor(Func{TextWriter},Type)
   name: TextWriterLogger(Func<TextWriter>, Type)
-  href: api/Grpc.Core.Logging.TextWriterLogger.html#Grpc_Core_Logging_TextWriterLogger__ctor_System_Func_System_IO_TextWriter__System_Type_
-  commentId: M:Grpc.Core.Logging.TextWriterLogger.#ctor(System.Func{System.IO.TextWriter},System.Type)
+  href: api/Grpc.Core.Logging.TextWriterLogger.html#Grpc_Core_Logging_TextWriterLogger__ctor_Func_TextWriter__Type_
+  commentId: M:Grpc.Core.Logging.TextWriterLogger.#ctor(Func{TextWriter},Type)
   name.vb: TextWriterLogger(Func(Of TextWriter), Type)
-  fullName: Grpc.Core.Logging.TextWriterLogger.TextWriterLogger(System.Func<System.IO.TextWriter>, System.Type)
-  fullName.vb: Grpc.Core.Logging.TextWriterLogger.TextWriterLogger(System.Func(Of System.IO.TextWriter), System.Type)
+  fullName: Grpc.Core.Logging.TextWriterLogger.TextWriterLogger(Func<TextWriter>, Type)
+  fullName.vb: Grpc.Core.Logging.TextWriterLogger.TextWriterLogger(Func(Of TextWriter), Type)
   nameWithType: TextWriterLogger.TextWriterLogger(Func<TextWriter>, Type)
   nameWithType.vb: TextWriterLogger.TextWriterLogger(Func(Of TextWriter), Type)
-- uid: Grpc.Core.Logging.TextWriterLogger.#ctor(System.IO.TextWriter)
+- uid: Grpc.Core.Logging.TextWriterLogger.#ctor(TextWriter)
   name: TextWriterLogger(TextWriter)
-  href: api/Grpc.Core.Logging.TextWriterLogger.html#Grpc_Core_Logging_TextWriterLogger__ctor_System_IO_TextWriter_
-  commentId: M:Grpc.Core.Logging.TextWriterLogger.#ctor(System.IO.TextWriter)
-  fullName: Grpc.Core.Logging.TextWriterLogger.TextWriterLogger(System.IO.TextWriter)
+  href: api/Grpc.Core.Logging.TextWriterLogger.html#Grpc_Core_Logging_TextWriterLogger__ctor_TextWriter_
+  commentId: M:Grpc.Core.Logging.TextWriterLogger.#ctor(TextWriter)
+  fullName: Grpc.Core.Logging.TextWriterLogger.TextWriterLogger(TextWriter)
   nameWithType: TextWriterLogger.TextWriterLogger(TextWriter)
 - uid: Grpc.Core.Logging.TextWriterLogger.#ctor*
   name: TextWriterLogger
@@ -22594,11 +22594,11 @@ references:
   commentId: Overload:Grpc.Core.Logging.TextWriterLogger.Debug
   fullName: Grpc.Core.Logging.TextWriterLogger.Debug
   nameWithType: TextWriterLogger.Debug
-- uid: Grpc.Core.Logging.TextWriterLogger.Error(System.Exception,System.String)
+- uid: Grpc.Core.Logging.TextWriterLogger.Error(Exception,System.String)
   name: Error(Exception, String)
-  href: api/Grpc.Core.Logging.TextWriterLogger.html#Grpc_Core_Logging_TextWriterLogger_Error_System_Exception_System_String_
-  commentId: M:Grpc.Core.Logging.TextWriterLogger.Error(System.Exception,System.String)
-  fullName: Grpc.Core.Logging.TextWriterLogger.Error(System.Exception, System.String)
+  href: api/Grpc.Core.Logging.TextWriterLogger.html#Grpc_Core_Logging_TextWriterLogger_Error_Exception_System_String_
+  commentId: M:Grpc.Core.Logging.TextWriterLogger.Error(Exception,System.String)
+  fullName: Grpc.Core.Logging.TextWriterLogger.Error(Exception, System.String)
   nameWithType: TextWriterLogger.Error(Exception, String)
 - uid: Grpc.Core.Logging.TextWriterLogger.Error(System.String)
   name: Error(String)
@@ -22657,11 +22657,11 @@ references:
   commentId: Overload:Grpc.Core.Logging.TextWriterLogger.Info
   fullName: Grpc.Core.Logging.TextWriterLogger.Info
   nameWithType: TextWriterLogger.Info
-- uid: Grpc.Core.Logging.TextWriterLogger.Warning(System.Exception,System.String)
+- uid: Grpc.Core.Logging.TextWriterLogger.Warning(Exception,System.String)
   name: Warning(Exception, String)
-  href: api/Grpc.Core.Logging.TextWriterLogger.html#Grpc_Core_Logging_TextWriterLogger_Warning_System_Exception_System_String_
-  commentId: M:Grpc.Core.Logging.TextWriterLogger.Warning(System.Exception,System.String)
-  fullName: Grpc.Core.Logging.TextWriterLogger.Warning(System.Exception, System.String)
+  href: api/Grpc.Core.Logging.TextWriterLogger.html#Grpc_Core_Logging_TextWriterLogger_Warning_Exception_System_String_
+  commentId: M:Grpc.Core.Logging.TextWriterLogger.Warning(Exception,System.String)
+  fullName: Grpc.Core.Logging.TextWriterLogger.Warning(Exception, System.String)
   nameWithType: TextWriterLogger.Warning(Exception, String)
 - uid: Grpc.Core.Logging.TextWriterLogger.Warning(System.String)
   name: Warning(String)
@@ -22693,13 +22693,13 @@ references:
   fullName.vb: Grpc.Core.Marshaller(Of T)
   nameWithType: Marshaller<T>
   nameWithType.vb: Marshaller(Of T)
-- uid: Grpc.Core.Marshaller`1.#ctor(System.Func{`0,System.Byte[]},System.Func{System.Byte[],`0})
+- uid: Grpc.Core.Marshaller`1.#ctor(Func{`0,System.Byte[]},Func{System.Byte[],`0})
   name: Marshaller(Func<T, Byte[]>, Func<Byte[], T>)
-  href: api/Grpc.Core.Marshaller-1.html#Grpc_Core_Marshaller_1__ctor_System_Func__0_System_Byte____System_Func_System_Byte____0__
-  commentId: M:Grpc.Core.Marshaller`1.#ctor(System.Func{`0,System.Byte[]},System.Func{System.Byte[],`0})
+  href: api/Grpc.Core.Marshaller-1.html#Grpc_Core_Marshaller_1__ctor_Func__0_System_Byte____Func_System_Byte____0__
+  commentId: M:Grpc.Core.Marshaller`1.#ctor(Func{`0,System.Byte[]},Func{System.Byte[],`0})
   name.vb: Marshaller(Func(Of T, Byte()), Func(Of Byte(), T))
-  fullName: Grpc.Core.Marshaller<T>.Marshaller(System.Func<T, System.Byte[]>, System.Func<System.Byte[], T>)
-  fullName.vb: Grpc.Core.Marshaller(Of T).Marshaller(System.Func(Of T, System.Byte()), System.Func(Of System.Byte(), T))
+  fullName: Grpc.Core.Marshaller<T>.Marshaller(Func<T, System.Byte[]>, Func<System.Byte[], T>)
+  fullName.vb: Grpc.Core.Marshaller(Of T).Marshaller(Func(Of T, System.Byte()), Func(Of System.Byte(), T))
   nameWithType: Marshaller<T>.Marshaller(Func<T, Byte[]>, Func<Byte[], T>)
   nameWithType.vb: Marshaller(Of T).Marshaller(Func(Of T, Byte()), Func(Of Byte(), T))
 - uid: Grpc.Core.Marshaller`1.#ctor*
@@ -22754,13 +22754,13 @@ references:
   commentId: Overload:Grpc.Core.Marshallers.Create
   fullName: Grpc.Core.Marshallers.Create
   nameWithType: Marshallers.Create
-- uid: Grpc.Core.Marshallers.Create``1(System.Func{``0,System.Byte[]},System.Func{System.Byte[],``0})
+- uid: Grpc.Core.Marshallers.Create``1(Func{``0,System.Byte[]},Func{System.Byte[],``0})
   name: Create<T>(Func<T, Byte[]>, Func<Byte[], T>)
-  href: api/Grpc.Core.Marshallers.html#Grpc_Core_Marshallers_Create__1_System_Func___0_System_Byte____System_Func_System_Byte_____0__
-  commentId: M:Grpc.Core.Marshallers.Create``1(System.Func{``0,System.Byte[]},System.Func{System.Byte[],``0})
+  href: api/Grpc.Core.Marshallers.html#Grpc_Core_Marshallers_Create__1_Func___0_System_Byte____Func_System_Byte_____0__
+  commentId: M:Grpc.Core.Marshallers.Create``1(Func{``0,System.Byte[]},Func{System.Byte[],``0})
   name.vb: Create(Of T)(Func(Of T, Byte()), Func(Of Byte(), T))
-  fullName: Grpc.Core.Marshallers.Create<T>(System.Func<T, System.Byte[]>, System.Func<System.Byte[], T>)
-  fullName.vb: Grpc.Core.Marshallers.Create(Of T)(System.Func(Of T, System.Byte()), System.Func(Of System.Byte(), T))
+  fullName: Grpc.Core.Marshallers.Create<T>(Func<T, System.Byte[]>, Func<System.Byte[], T>)
+  fullName.vb: Grpc.Core.Marshallers.Create(Of T)(Func(Of T, System.Byte()), Func(Of System.Byte(), T))
   nameWithType: Marshallers.Create<T>(Func<T, Byte[]>, Func<Byte[], T>)
   nameWithType.vb: Marshallers.Create(Of T)(Func(Of T, Byte()), Func(Of Byte(), T))
 - uid: Grpc.Core.Marshallers.StringMarshaller
@@ -23057,22 +23057,6 @@ references:
   commentId: Overload:Grpc.Core.Metadata.RemoveAt
   fullName: Grpc.Core.Metadata.RemoveAt
   nameWithType: Metadata.RemoveAt
-- uid: Grpc.Core.Metadata.System#Collections#IEnumerable#GetEnumerator
-  name: IEnumerable.GetEnumerator()
-  href: api/Grpc.Core.Metadata.html#Grpc_Core_Metadata_System_Collections_IEnumerable_GetEnumerator
-  commentId: M:Grpc.Core.Metadata.System#Collections#IEnumerable#GetEnumerator
-  name.vb: System.Collections.IEnumerable.GetEnumerator()
-  fullName: Grpc.Core.Metadata.System.Collections.IEnumerable.GetEnumerator()
-  nameWithType: Metadata.IEnumerable.GetEnumerator()
-  nameWithType.vb: Metadata.System.Collections.IEnumerable.GetEnumerator()
-- uid: Grpc.Core.Metadata.System#Collections#IEnumerable#GetEnumerator*
-  name: IEnumerable.GetEnumerator
-  href: api/Grpc.Core.Metadata.html#Grpc_Core_Metadata_System_Collections_IEnumerable_GetEnumerator_
-  commentId: Overload:Grpc.Core.Metadata.System#Collections#IEnumerable#GetEnumerator
-  name.vb: System.Collections.IEnumerable.GetEnumerator
-  fullName: Grpc.Core.Metadata.System.Collections.IEnumerable.GetEnumerator
-  nameWithType: Metadata.IEnumerable.GetEnumerator
-  nameWithType.vb: Metadata.System.Collections.IEnumerable.GetEnumerator
 - uid: Grpc.Core.Method`2
   name: Method<TRequest, TResponse>
   href: api/Grpc.Core.Method-2.html
@@ -23273,13 +23257,13 @@ references:
   commentId: M:Grpc.Core.Server.#ctor
   fullName: Grpc.Core.Server.Server()
   nameWithType: Server.Server()
-- uid: Grpc.Core.Server.#ctor(System.Collections.Generic.IEnumerable{Grpc.Core.ChannelOption})
+- uid: Grpc.Core.Server.#ctor(IEnumerable{Grpc.Core.ChannelOption})
   name: Server(IEnumerable<ChannelOption>)
-  href: api/Grpc.Core.Server.html#Grpc_Core_Server__ctor_System_Collections_Generic_IEnumerable_Grpc_Core_ChannelOption__
-  commentId: M:Grpc.Core.Server.#ctor(System.Collections.Generic.IEnumerable{Grpc.Core.ChannelOption})
+  href: api/Grpc.Core.Server.html#Grpc_Core_Server__ctor_IEnumerable_Grpc_Core_ChannelOption__
+  commentId: M:Grpc.Core.Server.#ctor(IEnumerable{Grpc.Core.ChannelOption})
   name.vb: Server(IEnumerable(Of ChannelOption))
-  fullName: Grpc.Core.Server.Server(System.Collections.Generic.IEnumerable<Grpc.Core.ChannelOption>)
-  fullName.vb: Grpc.Core.Server.Server(System.Collections.Generic.IEnumerable(Of Grpc.Core.ChannelOption))
+  fullName: Grpc.Core.Server.Server(IEnumerable<Grpc.Core.ChannelOption>)
+  fullName.vb: Grpc.Core.Server.Server(IEnumerable(Of Grpc.Core.ChannelOption))
   nameWithType: Server.Server(IEnumerable<ChannelOption>)
   nameWithType.vb: Server.Server(IEnumerable(Of ChannelOption))
 - uid: Grpc.Core.Server.#ctor*
@@ -23360,22 +23344,6 @@ references:
   commentId: Overload:Grpc.Core.Server.ServerPortCollection.GetEnumerator
   fullName: Grpc.Core.Server.ServerPortCollection.GetEnumerator
   nameWithType: Server.ServerPortCollection.GetEnumerator
-- uid: Grpc.Core.Server.ServerPortCollection.System#Collections#IEnumerable#GetEnumerator
-  name: IEnumerable.GetEnumerator()
-  href: api/Grpc.Core.Server.ServerPortCollection.html#Grpc_Core_Server_ServerPortCollection_System_Collections_IEnumerable_GetEnumerator
-  commentId: M:Grpc.Core.Server.ServerPortCollection.System#Collections#IEnumerable#GetEnumerator
-  name.vb: System.Collections.IEnumerable.GetEnumerator()
-  fullName: Grpc.Core.Server.ServerPortCollection.System.Collections.IEnumerable.GetEnumerator()
-  nameWithType: Server.ServerPortCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: Server.ServerPortCollection.System.Collections.IEnumerable.GetEnumerator()
-- uid: Grpc.Core.Server.ServerPortCollection.System#Collections#IEnumerable#GetEnumerator*
-  name: IEnumerable.GetEnumerator
-  href: api/Grpc.Core.Server.ServerPortCollection.html#Grpc_Core_Server_ServerPortCollection_System_Collections_IEnumerable_GetEnumerator_
-  commentId: Overload:Grpc.Core.Server.ServerPortCollection.System#Collections#IEnumerable#GetEnumerator
-  name.vb: System.Collections.IEnumerable.GetEnumerator
-  fullName: Grpc.Core.Server.ServerPortCollection.System.Collections.IEnumerable.GetEnumerator
-  nameWithType: Server.ServerPortCollection.IEnumerable.GetEnumerator
-  nameWithType.vb: Server.ServerPortCollection.System.Collections.IEnumerable.GetEnumerator
 - uid: Grpc.Core.Server.ServiceDefinitionCollection
   name: Server.ServiceDefinitionCollection
   href: api/Grpc.Core.Server.ServiceDefinitionCollection.html
@@ -23406,22 +23374,6 @@ references:
   commentId: Overload:Grpc.Core.Server.ServiceDefinitionCollection.GetEnumerator
   fullName: Grpc.Core.Server.ServiceDefinitionCollection.GetEnumerator
   nameWithType: Server.ServiceDefinitionCollection.GetEnumerator
-- uid: Grpc.Core.Server.ServiceDefinitionCollection.System#Collections#IEnumerable#GetEnumerator
-  name: IEnumerable.GetEnumerator()
-  href: api/Grpc.Core.Server.ServiceDefinitionCollection.html#Grpc_Core_Server_ServiceDefinitionCollection_System_Collections_IEnumerable_GetEnumerator
-  commentId: M:Grpc.Core.Server.ServiceDefinitionCollection.System#Collections#IEnumerable#GetEnumerator
-  name.vb: System.Collections.IEnumerable.GetEnumerator()
-  fullName: Grpc.Core.Server.ServiceDefinitionCollection.System.Collections.IEnumerable.GetEnumerator()
-  nameWithType: Server.ServiceDefinitionCollection.IEnumerable.GetEnumerator()
-  nameWithType.vb: Server.ServiceDefinitionCollection.System.Collections.IEnumerable.GetEnumerator()
-- uid: Grpc.Core.Server.ServiceDefinitionCollection.System#Collections#IEnumerable#GetEnumerator*
-  name: IEnumerable.GetEnumerator
-  href: api/Grpc.Core.Server.ServiceDefinitionCollection.html#Grpc_Core_Server_ServiceDefinitionCollection_System_Collections_IEnumerable_GetEnumerator_
-  commentId: Overload:Grpc.Core.Server.ServiceDefinitionCollection.System#Collections#IEnumerable#GetEnumerator
-  name.vb: System.Collections.IEnumerable.GetEnumerator
-  fullName: Grpc.Core.Server.ServiceDefinitionCollection.System.Collections.IEnumerable.GetEnumerator
-  nameWithType: Server.ServiceDefinitionCollection.IEnumerable.GetEnumerator
-  nameWithType.vb: Server.ServiceDefinitionCollection.System.Collections.IEnumerable.GetEnumerator
 - uid: Grpc.Core.Server.Services
   name: Services
   href: api/Grpc.Core.Server.html#Grpc_Core_Server_Services
@@ -23869,22 +23821,22 @@ references:
   commentId: T:Grpc.Core.SslServerCredentials
   fullName: Grpc.Core.SslServerCredentials
   nameWithType: SslServerCredentials
-- uid: Grpc.Core.SslServerCredentials.#ctor(System.Collections.Generic.IEnumerable{Grpc.Core.KeyCertificatePair})
+- uid: Grpc.Core.SslServerCredentials.#ctor(IEnumerable{Grpc.Core.KeyCertificatePair})
   name: SslServerCredentials(IEnumerable<KeyCertificatePair>)
-  href: api/Grpc.Core.SslServerCredentials.html#Grpc_Core_SslServerCredentials__ctor_System_Collections_Generic_IEnumerable_Grpc_Core_KeyCertificatePair__
-  commentId: M:Grpc.Core.SslServerCredentials.#ctor(System.Collections.Generic.IEnumerable{Grpc.Core.KeyCertificatePair})
+  href: api/Grpc.Core.SslServerCredentials.html#Grpc_Core_SslServerCredentials__ctor_IEnumerable_Grpc_Core_KeyCertificatePair__
+  commentId: M:Grpc.Core.SslServerCredentials.#ctor(IEnumerable{Grpc.Core.KeyCertificatePair})
   name.vb: SslServerCredentials(IEnumerable(Of KeyCertificatePair))
-  fullName: Grpc.Core.SslServerCredentials.SslServerCredentials(System.Collections.Generic.IEnumerable<Grpc.Core.KeyCertificatePair>)
-  fullName.vb: Grpc.Core.SslServerCredentials.SslServerCredentials(System.Collections.Generic.IEnumerable(Of Grpc.Core.KeyCertificatePair))
+  fullName: Grpc.Core.SslServerCredentials.SslServerCredentials(IEnumerable<Grpc.Core.KeyCertificatePair>)
+  fullName.vb: Grpc.Core.SslServerCredentials.SslServerCredentials(IEnumerable(Of Grpc.Core.KeyCertificatePair))
   nameWithType: SslServerCredentials.SslServerCredentials(IEnumerable<KeyCertificatePair>)
   nameWithType.vb: SslServerCredentials.SslServerCredentials(IEnumerable(Of KeyCertificatePair))
-- uid: Grpc.Core.SslServerCredentials.#ctor(System.Collections.Generic.IEnumerable{Grpc.Core.KeyCertificatePair},System.String,System.Boolean)
+- uid: Grpc.Core.SslServerCredentials.#ctor(IEnumerable{Grpc.Core.KeyCertificatePair},System.String,System.Boolean)
   name: SslServerCredentials(IEnumerable<KeyCertificatePair>, String, Boolean)
-  href: api/Grpc.Core.SslServerCredentials.html#Grpc_Core_SslServerCredentials__ctor_System_Collections_Generic_IEnumerable_Grpc_Core_KeyCertificatePair__System_String_System_Boolean_
-  commentId: M:Grpc.Core.SslServerCredentials.#ctor(System.Collections.Generic.IEnumerable{Grpc.Core.KeyCertificatePair},System.String,System.Boolean)
+  href: api/Grpc.Core.SslServerCredentials.html#Grpc_Core_SslServerCredentials__ctor_IEnumerable_Grpc_Core_KeyCertificatePair__System_String_System_Boolean_
+  commentId: M:Grpc.Core.SslServerCredentials.#ctor(IEnumerable{Grpc.Core.KeyCertificatePair},System.String,System.Boolean)
   name.vb: SslServerCredentials(IEnumerable(Of KeyCertificatePair), String, Boolean)
-  fullName: Grpc.Core.SslServerCredentials.SslServerCredentials(System.Collections.Generic.IEnumerable<Grpc.Core.KeyCertificatePair>, System.String, System.Boolean)
-  fullName.vb: Grpc.Core.SslServerCredentials.SslServerCredentials(System.Collections.Generic.IEnumerable(Of Grpc.Core.KeyCertificatePair), System.String, System.Boolean)
+  fullName: Grpc.Core.SslServerCredentials.SslServerCredentials(IEnumerable<Grpc.Core.KeyCertificatePair>, System.String, System.Boolean)
+  fullName.vb: Grpc.Core.SslServerCredentials.SslServerCredentials(IEnumerable(Of Grpc.Core.KeyCertificatePair), System.String, System.Boolean)
   nameWithType: SslServerCredentials.SslServerCredentials(IEnumerable<KeyCertificatePair>, String, Boolean)
   nameWithType.vb: SslServerCredentials.SslServerCredentials(IEnumerable(Of KeyCertificatePair), String, Boolean)
 - uid: Grpc.Core.SslServerCredentials.#ctor*
@@ -24130,13 +24082,13 @@ references:
   commentId: Overload:Grpc.Core.Utils.AsyncStreamExtensions.ForEachAsync
   fullName: Grpc.Core.Utils.AsyncStreamExtensions.ForEachAsync
   nameWithType: AsyncStreamExtensions.ForEachAsync
-- uid: Grpc.Core.Utils.AsyncStreamExtensions.ForEachAsync``1(Grpc.Core.IAsyncStreamReader{``0},System.Func{``0,System.Threading.Tasks.Task})
+- uid: Grpc.Core.Utils.AsyncStreamExtensions.ForEachAsync``1(Grpc.Core.IAsyncStreamReader{``0},Func{``0,Task})
   name: ForEachAsync<T>(IAsyncStreamReader<T>, Func<T, Task>)
-  href: api/Grpc.Core.Utils.AsyncStreamExtensions.html#Grpc_Core_Utils_AsyncStreamExtensions_ForEachAsync__1_Grpc_Core_IAsyncStreamReader___0__System_Func___0_System_Threading_Tasks_Task__
-  commentId: M:Grpc.Core.Utils.AsyncStreamExtensions.ForEachAsync``1(Grpc.Core.IAsyncStreamReader{``0},System.Func{``0,System.Threading.Tasks.Task})
+  href: api/Grpc.Core.Utils.AsyncStreamExtensions.html#Grpc_Core_Utils_AsyncStreamExtensions_ForEachAsync__1_Grpc_Core_IAsyncStreamReader___0__Func___0_Task__
+  commentId: M:Grpc.Core.Utils.AsyncStreamExtensions.ForEachAsync``1(Grpc.Core.IAsyncStreamReader{``0},Func{``0,Task})
   name.vb: ForEachAsync(Of T)(IAsyncStreamReader(Of T), Func(Of T, Task))
-  fullName: Grpc.Core.Utils.AsyncStreamExtensions.ForEachAsync<T>(Grpc.Core.IAsyncStreamReader<T>, System.Func<T, System.Threading.Tasks.Task>)
-  fullName.vb: Grpc.Core.Utils.AsyncStreamExtensions.ForEachAsync(Of T)(Grpc.Core.IAsyncStreamReader(Of T), System.Func(Of T, System.Threading.Tasks.Task))
+  fullName: Grpc.Core.Utils.AsyncStreamExtensions.ForEachAsync<T>(Grpc.Core.IAsyncStreamReader<T>, Func<T, Task>)
+  fullName.vb: Grpc.Core.Utils.AsyncStreamExtensions.ForEachAsync(Of T)(Grpc.Core.IAsyncStreamReader(Of T), Func(Of T, Task))
   nameWithType: AsyncStreamExtensions.ForEachAsync<T>(IAsyncStreamReader<T>, Func<T, Task>)
   nameWithType.vb: AsyncStreamExtensions.ForEachAsync(Of T)(IAsyncStreamReader(Of T), Func(Of T, Task))
 - uid: Grpc.Core.Utils.AsyncStreamExtensions.ToListAsync*
@@ -24160,22 +24112,22 @@ references:
   commentId: Overload:Grpc.Core.Utils.AsyncStreamExtensions.WriteAllAsync
   fullName: Grpc.Core.Utils.AsyncStreamExtensions.WriteAllAsync
   nameWithType: AsyncStreamExtensions.WriteAllAsync
-- uid: Grpc.Core.Utils.AsyncStreamExtensions.WriteAllAsync``1(Grpc.Core.IClientStreamWriter{``0},System.Collections.Generic.IEnumerable{``0},System.Boolean)
+- uid: Grpc.Core.Utils.AsyncStreamExtensions.WriteAllAsync``1(Grpc.Core.IClientStreamWriter{``0},IEnumerable{``0},System.Boolean)
   name: WriteAllAsync<T>(IClientStreamWriter<T>, IEnumerable<T>, Boolean)
-  href: api/Grpc.Core.Utils.AsyncStreamExtensions.html#Grpc_Core_Utils_AsyncStreamExtensions_WriteAllAsync__1_Grpc_Core_IClientStreamWriter___0__System_Collections_Generic_IEnumerable___0__System_Boolean_
-  commentId: M:Grpc.Core.Utils.AsyncStreamExtensions.WriteAllAsync``1(Grpc.Core.IClientStreamWriter{``0},System.Collections.Generic.IEnumerable{``0},System.Boolean)
+  href: api/Grpc.Core.Utils.AsyncStreamExtensions.html#Grpc_Core_Utils_AsyncStreamExtensions_WriteAllAsync__1_Grpc_Core_IClientStreamWriter___0__IEnumerable___0__System_Boolean_
+  commentId: M:Grpc.Core.Utils.AsyncStreamExtensions.WriteAllAsync``1(Grpc.Core.IClientStreamWriter{``0},IEnumerable{``0},System.Boolean)
   name.vb: WriteAllAsync(Of T)(IClientStreamWriter(Of T), IEnumerable(Of T), Boolean)
-  fullName: Grpc.Core.Utils.AsyncStreamExtensions.WriteAllAsync<T>(Grpc.Core.IClientStreamWriter<T>, System.Collections.Generic.IEnumerable<T>, System.Boolean)
-  fullName.vb: Grpc.Core.Utils.AsyncStreamExtensions.WriteAllAsync(Of T)(Grpc.Core.IClientStreamWriter(Of T), System.Collections.Generic.IEnumerable(Of T), System.Boolean)
+  fullName: Grpc.Core.Utils.AsyncStreamExtensions.WriteAllAsync<T>(Grpc.Core.IClientStreamWriter<T>, IEnumerable<T>, System.Boolean)
+  fullName.vb: Grpc.Core.Utils.AsyncStreamExtensions.WriteAllAsync(Of T)(Grpc.Core.IClientStreamWriter(Of T), IEnumerable(Of T), System.Boolean)
   nameWithType: AsyncStreamExtensions.WriteAllAsync<T>(IClientStreamWriter<T>, IEnumerable<T>, Boolean)
   nameWithType.vb: AsyncStreamExtensions.WriteAllAsync(Of T)(IClientStreamWriter(Of T), IEnumerable(Of T), Boolean)
-- uid: Grpc.Core.Utils.AsyncStreamExtensions.WriteAllAsync``1(Grpc.Core.IServerStreamWriter{``0},System.Collections.Generic.IEnumerable{``0})
+- uid: Grpc.Core.Utils.AsyncStreamExtensions.WriteAllAsync``1(Grpc.Core.IServerStreamWriter{``0},IEnumerable{``0})
   name: WriteAllAsync<T>(IServerStreamWriter<T>, IEnumerable<T>)
-  href: api/Grpc.Core.Utils.AsyncStreamExtensions.html#Grpc_Core_Utils_AsyncStreamExtensions_WriteAllAsync__1_Grpc_Core_IServerStreamWriter___0__System_Collections_Generic_IEnumerable___0__
-  commentId: M:Grpc.Core.Utils.AsyncStreamExtensions.WriteAllAsync``1(Grpc.Core.IServerStreamWriter{``0},System.Collections.Generic.IEnumerable{``0})
+  href: api/Grpc.Core.Utils.AsyncStreamExtensions.html#Grpc_Core_Utils_AsyncStreamExtensions_WriteAllAsync__1_Grpc_Core_IServerStreamWriter___0__IEnumerable___0__
+  commentId: M:Grpc.Core.Utils.AsyncStreamExtensions.WriteAllAsync``1(Grpc.Core.IServerStreamWriter{``0},IEnumerable{``0})
   name.vb: WriteAllAsync(Of T)(IServerStreamWriter(Of T), IEnumerable(Of T))
-  fullName: Grpc.Core.Utils.AsyncStreamExtensions.WriteAllAsync<T>(Grpc.Core.IServerStreamWriter<T>, System.Collections.Generic.IEnumerable<T>)
-  fullName.vb: Grpc.Core.Utils.AsyncStreamExtensions.WriteAllAsync(Of T)(Grpc.Core.IServerStreamWriter(Of T), System.Collections.Generic.IEnumerable(Of T))
+  fullName: Grpc.Core.Utils.AsyncStreamExtensions.WriteAllAsync<T>(Grpc.Core.IServerStreamWriter<T>, IEnumerable<T>)
+  fullName.vb: Grpc.Core.Utils.AsyncStreamExtensions.WriteAllAsync(Of T)(Grpc.Core.IServerStreamWriter(Of T), IEnumerable(Of T))
   nameWithType: AsyncStreamExtensions.WriteAllAsync<T>(IServerStreamWriter<T>, IEnumerable<T>)
   nameWithType.vb: AsyncStreamExtensions.WriteAllAsync(Of T)(IServerStreamWriter(Of T), IEnumerable(Of T))
 - uid: Grpc.Core.Utils.BenchmarkUtil
@@ -24184,11 +24136,11 @@ references:
   commentId: T:Grpc.Core.Utils.BenchmarkUtil
   fullName: Grpc.Core.Utils.BenchmarkUtil
   nameWithType: BenchmarkUtil
-- uid: Grpc.Core.Utils.BenchmarkUtil.RunBenchmark(System.Int32,System.Int32,System.Action)
+- uid: Grpc.Core.Utils.BenchmarkUtil.RunBenchmark(System.Int32,System.Int32,Action)
   name: RunBenchmark(Int32, Int32, Action)
-  href: api/Grpc.Core.Utils.BenchmarkUtil.html#Grpc_Core_Utils_BenchmarkUtil_RunBenchmark_System_Int32_System_Int32_System_Action_
-  commentId: M:Grpc.Core.Utils.BenchmarkUtil.RunBenchmark(System.Int32,System.Int32,System.Action)
-  fullName: Grpc.Core.Utils.BenchmarkUtil.RunBenchmark(System.Int32, System.Int32, System.Action)
+  href: api/Grpc.Core.Utils.BenchmarkUtil.html#Grpc_Core_Utils_BenchmarkUtil_RunBenchmark_System_Int32_System_Int32_Action_
+  commentId: M:Grpc.Core.Utils.BenchmarkUtil.RunBenchmark(System.Int32,System.Int32,Action)
+  fullName: Grpc.Core.Utils.BenchmarkUtil.RunBenchmark(System.Int32, System.Int32, Action)
   nameWithType: BenchmarkUtil.RunBenchmark(Int32, Int32, Action)
 - uid: Grpc.Core.Utils.BenchmarkUtil.RunBenchmark*
   name: RunBenchmark

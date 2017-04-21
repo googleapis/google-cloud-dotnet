@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class CloudTrace
    | Google.Cloud.Diagnostics.AspNet ">
-    <meta name="generator" content="docfx 2.14.1.0">
+    <meta name="generator" content="docfx 2.16.0.499">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -165,7 +165,7 @@ This <a class="xref" href="Google.Cloud.Diagnostics.Common.IManagedTracer.html">
               <a id="Google_Cloud_Diagnostics_AspNet_CloudTrace_CreateTracingHttpMessageHandler_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.CreateTracingHttpMessageHandler*"></a>
               <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_CreateTracingHttpMessageHandler" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.CreateTracingHttpMessageHandler">CreateTracingHttpMessageHandler()</h4>
               <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.html">TraceHeaderPropagatingHandler</a> to propagate trace headers
-in Http requests.</p>
+in Http requests.
 <example>
 <pre><code>public void DoSomething()
 {
@@ -175,7 +175,7 @@ in Http requests.</p>
         ...
     }
 }</code></pre>
-</example>
+</example></p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -208,13 +208,13 @@ in Http requests.</p>
               <h5 class="implements">Implements</h5>
                   <div><span class="xref">System.IDisposable.Dispose()</span></div>
               <a id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Initialize_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Initialize_System_Web_HttpApplication_System_String_Google_Cloud_Diagnostics_Common_TraceConfiguration_Google_Cloud_Trace_V1_TraceServiceClient_System_Func_System_Web_HttpRequest_System_Nullable_System_Boolean___" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize(System.Web.HttpApplication,System.String,Google.Cloud.Diagnostics.Common.TraceConfiguration,Google.Cloud.Trace.V1.TraceServiceClient,System.Func{System.Web.HttpRequest,System.Nullable{System.Boolean}})">Initialize(HttpApplication, String, TraceConfiguration, TraceServiceClient, Func&lt;HttpRequest, Nullable&lt;Boolean&gt;&gt;)</h4>
+              <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Initialize_System_Web_HttpApplication_System_String_Google_Cloud_Diagnostics_Common_TraceConfiguration_Google_Cloud_Trace_V1_TraceServiceClient_Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize(System.Web.HttpApplication,System.String,Google.Cloud.Diagnostics.Common.TraceConfiguration,Google.Cloud.Trace.V1.TraceServiceClient,Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)">Initialize(HttpApplication, String, TraceConfiguration, TraceServiceClient, TraceDecisionPredicate)</h4>
               <div class="markdown level1 summary"><p>Initialize tracing for this application.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static void Initialize(HttpApplication application, string projectId = null, TraceConfiguration config = null, TraceServiceClient client = null, Func&lt;HttpRequest, bool ? &gt; traceFallbackPredicate = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public static void Initialize(HttpApplication application, string projectId = null, TraceConfiguration config = null, TraceServiceClient client = null, TraceDecisionPredicate traceFallbackPredicate = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -253,13 +253,11 @@ in Http requests.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Web.HttpRequest</span>, <span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+                    <td><a class="xref" href="Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html">TraceDecisionPredicate</a></td>
                     <td><span class="parametername">traceFallbackPredicate</span></td>
                     <td><p>Optional function to trace requests. If the trace header is not set
     then this function will be called to determine if a given request should be traced.  This will
-    not override trace headers. If the function returns true the request will be traced, if false
-    is returned the trace will not be traced and if null is returned it will not affect the
-    trace decision.</p>
+    not override trace headers.</p>
 </td>
                   </tr>
                 </tbody>

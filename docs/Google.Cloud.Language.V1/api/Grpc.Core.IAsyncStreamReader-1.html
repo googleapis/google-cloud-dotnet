@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IAsyncStreamReader&lt;T&gt;
    | Google.Cloud.Language.V1 ">
-    <meta name="generator" content="docfx 2.14.1.0">
+    <meta name="generator" content="docfx 2.16.0.499">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -75,7 +75,7 @@
               <div class="markdown level0 summary"><p>A stream of messages to be read.
 Messages can be awaited <code>await reader.MoveNext()</code>, that returns <code>true</code>
 if there is a message available and <code>false</code> if there are no more messages
-(i.e. the stream has been closed).</p>
+(i.e. the stream has been closed).
 <p>
 On the client side, the last invocation of <code>MoveNext()</code> either returns <code>false</code>
 if the call has finished successfully or throws <code>RpcException</code> if call finished
@@ -87,7 +87,7 @@ On the server side, <code>MoveNext()</code> does not throw exceptions.
 In case of a failure, the request stream will appear to be finished
 (<code>MoveNext</code> will return <code>false</code>) and the <code>CancellationToken</code>
 associated with the call will be cancelled to signal the failure.
-</p>
+</p></p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <h6><strong>Namespace</strong>:Grpc.Core</h6>

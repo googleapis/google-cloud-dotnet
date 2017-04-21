@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Enum TranslationModel
    | Google.Cloud.Translation.V2 ">
-    <meta name="generator" content="docfx 2.14.1.0">
+    <meta name="generator" content="docfx 2.16.0.499">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,7 +72,8 @@
               
               <h1 id="Google_Cloud_Translation_V2_TranslationModel" data-uid="Google.Cloud.Translation.V2.TranslationModel">Enum TranslationModel
               </h1>
-              <div class="markdown level0 summary"><p>Underlying model used by the Google Cloud Translation API.</p>
+              <div class="markdown level0 summary"><p>Underlying model used by the Google Cloud Translation API. This can be explicitly
+specified on a per-client or per-method basis.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <h6><strong>Namespace</strong>:Google.Cloud.Translation.V2</h6>
@@ -92,14 +93,20 @@
                 <thead>
                 <tbody>
                   <tr>
-                    <td id="Google_Cloud_Translation_V2_TranslationModel_Base">Base</td>
-                    <td><p>Standard edition translation model.</p>
+                    <td id="Google_Cloud_Translation_V2_TranslationModel_NeuralMachineTranslation">NeuralMachineTranslation</td>
+                    <td><p>The Neural Machine Translation model (&quot;nmt&quot;) provides higher quality results
+where available, but is more computationally intensive, leading to
+slightly higher latency.</p>
 </td>
                   </tr>
                   <tr>
-                    <td id="Google_Cloud_Translation_V2_TranslationModel_NeuralMachineTranslation">NeuralMachineTranslation</td>
-                    <td><p>Only available in Premium edition, the Neural Machine Translation
-model provides higher quality results.</p>
+                    <td id="Google_Cloud_Translation_V2_TranslationModel_PhraseBasedMachineTranslation">PhraseBasedMachineTranslation</td>
+                    <td><p>The original translation Phrase-Based Machine Translation model (&quot;base&quot;).</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td id="Google_Cloud_Translation_V2_TranslationModel_ServiceDefault">ServiceDefault</td>
+                    <td><p>Explicitly allow the API service to decide which model to use.</p>
 </td>
                   </tr>
                 </tbody>

@@ -8,7 +8,7 @@
     <title>Google.Cloud.Translation.V2 | Google.Cloud.Translation.V2 </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google.Cloud.Translation.V2 | Google.Cloud.Translation.V2 ">
-    <meta name="generator" content="docfx 2.14.1.0">
+    <meta name="generator" content="docfx 2.16.0.499">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -110,16 +110,26 @@ foreach (TranslationResult result in results)
 {
     Console.WriteLine($&quot;Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}&quot;);
 }
-</code></pre><h2 id="using-neural-machine-translation">Using Neural Machine Translation</h2>
-<p><a href="https://cloud.google.com/translate/docs/premium">Premium Edition</a> customers may request
-translations using the Neural Machine Translation model. This can either be set as the default model for a client:</p>
-<pre><code class="lang-cs">TranslationClient client = TranslationClient.Create(model: TranslationModel.NeuralMachineTranslation);
+</code></pre><h2 id="specifying-a-translation-model">Specifying a translation model</h2>
+<p>The Translation API is implemented by multiple underlying models. At the time of writing, the two models available are:</p>
+<ul>
+<li>Neural Machine Translation (NMT)</li>
+<li>Phrase-Based Machine Translation (PBMT, also known as &quot;base&quot;)</li>
+</ul>
+<p>The current default is to use NMT where it is available for the requested language translation pair, but this is
+more computationally-intensive than the PBMT model; if you have low latency requirements, you may wish to explicitly
+required PBMT. Explicitly requesting NMT is valid, but currently has no effect, as this is the current default. If
+no model is specified, the service will pick a model, which means if a new model is introduced as the default, you won&#39;t need
+to change your code or even update this client library package in order to use it.</p>
+<p>See the <a href="https://cloud.google.com/translate/release-notes">API release notes</a> for on-going changes and new models.</p>
+<p>When specifying a model, it can either be selected as the model to use for all requests for that <code>TranslationClient</code> instance:</p>
+<pre><code class="lang-cs">TranslationClient client = TranslationClient.Create(model: TranslationModel.PhraseBasedMachineTranslation);
 TranslationResult result = client.TranslateText(&quot;It is raining.&quot;, LanguageCodes.French);
 Console.WriteLine($&quot;Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}&quot;);
 </code></pre><p>... or it can be specified on a per-request basis:</p>
 <pre><code class="lang-cs">TranslationClient client = TranslationClient.Create();
 TranslationResult result = client.TranslateText(&quot;It is raining.&quot;, LanguageCodes.French,
-    model: TranslationModel.NeuralMachineTranslation);
+    model: TranslationModel.PhraseBasedMachineTranslation);
 Console.WriteLine($&quot;Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}&quot;);
 </code></pre>
             </article>

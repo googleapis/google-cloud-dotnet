@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class JobConfigurationLoad
    | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.14.1.0">
+    <meta name="generator" content="docfx 2.16.0.499">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,26 +79,11 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">JobConfigurationLoad</span></div>
               </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-              </div>
               <h6><strong>Namespace</strong>:Google.Apis.Bigquery.v2.Data</h6>
               <h6><strong>Assembly</strong>:Google.Apis.Bigquery.v2.dll</h6>
               <h5 id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class JobConfigurationLoad : IDirectResponseSchema</code></pre>
+                <pre><code class="lang-csharp hljs">public class JobConfigurationLoad : Requests.IDirectResponseSchema</code></pre>
               </div>
               <h3 id="properties">Properties
               </h3>
@@ -112,8 +97,7 @@ applicable to CSV, ignored for other formats.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;allowJaggedRows&quot;)]
-public virtual bool ? AllowJaggedRows { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;bool&gt; AllowJaggedRows { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -138,8 +122,7 @@ file. The default value is false.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;allowQuotedNewlines&quot;)]
-public virtual bool ? AllowQuotedNewlines { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;bool&gt; AllowQuotedNewlines { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -164,8 +147,7 @@ sources.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;autodetect&quot;)]
-public virtual bool ? Autodetect { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;bool&gt; Autodetect { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -193,8 +175,7 @@ completion.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;createDisposition&quot;)]
-public virtual string CreateDisposition { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual string CreateDisposition { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -218,8 +199,7 @@ public virtual string CreateDisposition { get; set; }</code></pre>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;destinationTable&quot;)]
-public virtual TableReference DestinationTable { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual TableReference DestinationTable { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -245,8 +225,7 @@ of the quote and fieldDelimiter properties.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;encoding&quot;)]
-public virtual string Encoding { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual string Encoding { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -287,8 +266,6 @@ public virtual string Encoding { get; set; }</code></pre>
                   </tr>
                 </tbody>
               </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
               <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad_FieldDelimiter_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.FieldDelimiter*"></a>
               <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad_FieldDelimiter" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.FieldDelimiter">FieldDelimiter</h4>
               <div class="markdown level1 summary"><p>[Optional] The separator for fields in a CSV file. The separator can be any ISO-8859-1 single-byte
@@ -300,8 +277,7 @@ default value is a comma (&#39;,&#39;).</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;fieldDelimiter&quot;)]
-public virtual string FieldDelimiter { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual string FieldDelimiter { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -329,8 +305,7 @@ columns JSON: Named values that don&#39;t match any column names</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;ignoreUnknownValues&quot;)]
-public virtual bool ? IgnoreUnknownValues { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;bool&gt; IgnoreUnknownValues { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -356,8 +331,7 @@ is 0, which requires that all records are valid.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;maxBadRecords&quot;)]
-public virtual int ? MaxBadRecords { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;int&gt; MaxBadRecords { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -385,8 +359,7 @@ empty string as an empty value.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;nullMarker&quot;)]
-public virtual string NullMarker { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual string NullMarker { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -413,8 +386,7 @@ Cloud Datastore backup, an invalid error is returned in the job result.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;projectionFields&quot;)]
-public virtual IList&lt;string&gt; ProjectionFields { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual System.Collections.Generic.IList&lt;string&gt; ProjectionFields { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -442,8 +414,7 @@ set the allowQuotedNewlines property to true.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;quote&quot;)]
-public virtual string Quote { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual string Quote { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -468,8 +439,7 @@ already exists, or if you&#39;re loading data from Google Cloud Datastore.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;schema&quot;)]
-public virtual TableSchema Schema { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual TableSchema Schema { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -494,8 +464,7 @@ example, &quot;foo:STRING, bar:INTEGER, baz:FLOAT&quot;.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;schemaInline&quot;)]
-public virtual string SchemaInline { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual string SchemaInline { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -519,8 +488,7 @@ public virtual string SchemaInline { get; set; }</code></pre>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;schemaInlineFormat&quot;)]
-public virtual string SchemaInlineFormat { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual string SchemaInlineFormat { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -549,8 +517,7 @@ ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema t
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;schemaUpdateOptions&quot;)]
-public virtual IList&lt;string&gt; SchemaUpdateOptions { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual System.Collections.Generic.IList&lt;string&gt; SchemaUpdateOptions { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -576,8 +543,7 @@ skipped.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;skipLeadingRows&quot;)]
-public virtual int ? SkipLeadingRows { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;int&gt; SkipLeadingRows { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -603,8 +569,7 @@ specify &quot;DATASTORE_BACKUP&quot;. For newline-delimited JSON, specify &quot;
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;sourceFormat&quot;)]
-public virtual string SourceFormat { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual string SourceFormat { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -629,8 +594,7 @@ contain one &#39;*&#39; wildcard character and it must come after the &#39;bucke
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;sourceUris&quot;)]
-public virtual IList&lt;string&gt; SourceUris { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual System.Collections.Generic.IList&lt;string&gt; SourceUris { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -659,8 +623,7 @@ Creation, truncation and append actions occur as one atomic update upon job comp
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;writeDisposition&quot;)]
-public virtual string WriteDisposition { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual string WriteDisposition { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">

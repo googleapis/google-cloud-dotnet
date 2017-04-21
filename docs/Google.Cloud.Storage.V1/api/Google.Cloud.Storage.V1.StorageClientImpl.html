@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class StorageClientImpl
    | Google.Cloud.Storage.V1 ">
-    <meta name="generator" content="docfx 2.14.1.0">
+    <meta name="generator" content="docfx 2.16.0.499">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -1608,6 +1608,117 @@ defaults will be used.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetBucketAsync_System_String_Google_Cloud_Storage_V1_GetBucketOptions_System_Threading_CancellationToken_">StorageClient.GetBucketAsync(String, GetBucketOptions, CancellationToken)</a></div>
+              <a id="Google_Cloud_Storage_V1_StorageClientImpl_GetBucketIamPolicy_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetBucketIamPolicy*"></a>
+              <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_GetBucketIamPolicy_System_String_Google_Cloud_Storage_V1_GetBucketIamPolicyOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetBucketIamPolicy(System.String,Google.Cloud.Storage.V1.GetBucketIamPolicyOptions)">GetBucketIamPolicy(String, GetBucketIamPolicyOptions)</h4>
+              <div class="markdown level1 summary"><p>Fetches the IAM policy information about a bucket synchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Policy GetBucketIamPolicy(string bucket, GetBucketIamPolicyOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">bucket</span></td>
+                    <td><p>The name of the bucket. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.GetBucketIamPolicyOptions.html">GetBucketIamPolicyOptions</a></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>Additional options for the fetch operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Policy.html">Policy</a></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Storage.v1.Data.Policy.html">Policy</a> representation of the storage bucket IAM policy.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetBucketIamPolicy_System_String_Google_Cloud_Storage_V1_GetBucketIamPolicyOptions_">StorageClient.GetBucketIamPolicy(String, GetBucketIamPolicyOptions)</a></div>
+              <a id="Google_Cloud_Storage_V1_StorageClientImpl_GetBucketIamPolicyAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetBucketIamPolicyAsync*"></a>
+              <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_GetBucketIamPolicyAsync_System_String_Google_Cloud_Storage_V1_GetBucketIamPolicyOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetBucketIamPolicyAsync(System.String,Google.Cloud.Storage.V1.GetBucketIamPolicyOptions,System.Threading.CancellationToken)">GetBucketIamPolicyAsync(String, GetBucketIamPolicyOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Fetches the IAM policy information about a bucket asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;Policy&gt; GetBucketIamPolicyAsync(string bucket, GetBucketIamPolicyOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">bucket</span></td>
+                    <td><p>The name of the bucket. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.GetBucketIamPolicyOptions.html">GetBucketIamPolicyOptions</a></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>Additional options for the fetch operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Policy.html">Policy</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation, with a result returning the
+<a class="xref" href="Google.Apis.Storage.v1.Data.Policy.html">Policy</a> representation of the storage bucket IAM policy.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetBucketIamPolicyAsync_System_String_Google_Cloud_Storage_V1_GetBucketIamPolicyOptions_System_Threading_CancellationToken_">StorageClient.GetBucketIamPolicyAsync(String, GetBucketIamPolicyOptions, CancellationToken)</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_GetObject_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetObject*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_GetObject_System_String_System_String_Google_Cloud_Storage_V1_GetObjectOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetObject(System.String,System.String,Google.Cloud.Storage.V1.GetObjectOptions)">GetObject(String, String, GetObjectOptions)</h4>
               <div class="markdown level1 summary"><p>Fetches the information about an object synchronously.</p>
@@ -2201,6 +2312,252 @@ defaults will be used.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_PatchObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_PatchObjectOptions_System_Threading_CancellationToken_">StorageClient.PatchObjectAsync(Object, PatchObjectOptions, CancellationToken)</a></div>
+              <a id="Google_Cloud_Storage_V1_StorageClientImpl_SetBucketIamPolicy_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.SetBucketIamPolicy*"></a>
+              <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_SetBucketIamPolicy_System_String_Google_Apis_Storage_v1_Data_Policy_Google_Cloud_Storage_V1_SetBucketIamPolicyOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.SetBucketIamPolicy(System.String,Google.Apis.Storage.v1.Data.Policy,Google.Cloud.Storage.V1.SetBucketIamPolicyOptions)">SetBucketIamPolicy(String, Policy, SetBucketIamPolicyOptions)</h4>
+              <div class="markdown level1 summary"><p>Updates the IAM policy information about a bucket synchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Policy SetBucketIamPolicy(string bucket, Policy policy, SetBucketIamPolicyOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">bucket</span></td>
+                    <td><p>The name of the bucket. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Policy.html">Policy</a></td>
+                    <td><span class="parametername">policy</span></td>
+                    <td><p>The new IAM policy for the bucket. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.SetBucketIamPolicyOptions.html">SetBucketIamPolicyOptions</a></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>Additional options for the operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Policy.html">Policy</a></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Storage.v1.Data.Policy.html">Policy</a> representation of the resulting storage bucket IAM policy.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_SetBucketIamPolicy_System_String_Google_Apis_Storage_v1_Data_Policy_Google_Cloud_Storage_V1_SetBucketIamPolicyOptions_">StorageClient.SetBucketIamPolicy(String, Policy, SetBucketIamPolicyOptions)</a></div>
+              <a id="Google_Cloud_Storage_V1_StorageClientImpl_SetBucketIamPolicyAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.SetBucketIamPolicyAsync*"></a>
+              <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_SetBucketIamPolicyAsync_System_String_Google_Apis_Storage_v1_Data_Policy_Google_Cloud_Storage_V1_SetBucketIamPolicyOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.SetBucketIamPolicyAsync(System.String,Google.Apis.Storage.v1.Data.Policy,Google.Cloud.Storage.V1.SetBucketIamPolicyOptions,System.Threading.CancellationToken)">SetBucketIamPolicyAsync(String, Policy, SetBucketIamPolicyOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Updates the IAM policy information about a bucket asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;Policy&gt; SetBucketIamPolicyAsync(string bucket, Policy policy, SetBucketIamPolicyOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">bucket</span></td>
+                    <td><p>The name of the bucket. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Policy.html">Policy</a></td>
+                    <td><span class="parametername">policy</span></td>
+                    <td><p>The new IAM policy for the bucket. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.SetBucketIamPolicyOptions.html">SetBucketIamPolicyOptions</a></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>Additional options for the fetch operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Policy.html">Policy</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation, with a result returning the
+<a class="xref" href="Google.Apis.Storage.v1.Data.Policy.html">Policy</a> representation of the resulting storage bucket IAM policy.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_SetBucketIamPolicyAsync_System_String_Google_Apis_Storage_v1_Data_Policy_Google_Cloud_Storage_V1_SetBucketIamPolicyOptions_System_Threading_CancellationToken_">StorageClient.SetBucketIamPolicyAsync(String, Policy, SetBucketIamPolicyOptions, CancellationToken)</a></div>
+              <a id="Google_Cloud_Storage_V1_StorageClientImpl_TestBucketIamPermissions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.TestBucketIamPermissions*"></a>
+              <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_TestBucketIamPermissions_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_Storage_V1_TestBucketIamPermissionsOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.TestBucketIamPermissions(System.String,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions)">TestBucketIamPermissions(String, IEnumerable&lt;String&gt;, TestBucketIamPermissionsOptions)</h4>
+              <div class="markdown level1 summary"><p>Tests the IAM permissions for a bucket synchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override IList&lt;string&gt; TestBucketIamPermissions(string bucket, IEnumerable&lt;string&gt; permissions, TestBucketIamPermissionsOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">bucket</span></td>
+                    <td><p>The name of the bucket. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><span class="parametername">permissions</span></td>
+                    <td><p>The permissions to test. Must not be null or empty.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions.html">TestBucketIamPermissionsOptions</a></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>Additional options for the operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><p>The permissions held by the caller.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_TestBucketIamPermissions_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_Storage_V1_TestBucketIamPermissionsOptions_">StorageClient.TestBucketIamPermissions(String, IEnumerable&lt;String&gt;, TestBucketIamPermissionsOptions)</a></div>
+              <a id="Google_Cloud_Storage_V1_StorageClientImpl_TestBucketIamPermissionsAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.TestBucketIamPermissionsAsync*"></a>
+              <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_TestBucketIamPermissionsAsync_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_Storage_V1_TestBucketIamPermissionsOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.TestBucketIamPermissionsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions,System.Threading.CancellationToken)">TestBucketIamPermissionsAsync(String, IEnumerable&lt;String&gt;, TestBucketIamPermissionsOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Tests the IAM policy information about a bucket asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;IList&lt;string&gt;&gt; TestBucketIamPermissionsAsync(string bucket, IEnumerable&lt;string&gt; permissions, TestBucketIamPermissionsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">bucket</span></td>
+                    <td><p>The name of the bucket. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><span class="parametername">permissions</span></td>
+                    <td><p>The permissions to test. Must not be null or empty.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions.html">TestBucketIamPermissionsOptions</a></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>Additional options for the operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+                    <td><p>A task representing the asynchronous operation, with a result returning the
+permissions held by the caller.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_TestBucketIamPermissionsAsync_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_Storage_V1_TestBucketIamPermissionsOptions_System_Threading_CancellationToken_">StorageClient.TestBucketIamPermissionsAsync(String, IEnumerable&lt;String&gt;, TestBucketIamPermissionsOptions, CancellationToken)</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_UpdateBucket_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.UpdateBucket*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_UpdateBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_UpdateBucketOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.UpdateBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.UpdateBucketOptions)">UpdateBucket(Bucket, UpdateBucketOptions)</h4>
               <div class="markdown level1 summary"><p>Updates the metadata for a storage bucket synchronously.</p>

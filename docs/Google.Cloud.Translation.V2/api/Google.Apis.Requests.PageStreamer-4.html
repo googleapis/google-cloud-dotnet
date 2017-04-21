@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PageStreamer&lt;TResource, TRequest, TResponse, TToken&gt;
    | Google.Cloud.Translation.V2 ">
-    <meta name="generator" content="docfx 2.14.1.0">
+    <meta name="generator" content="docfx 2.16.0.499">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -146,14 +146,14 @@ and then use the instance methods to obtain paginated results.
 such as the following. The pattern for other APIs would be very similar, with the <code>request.PageToken</code>,
 <code>response.NextPageToken</code> and <code>response.Items</code> properties potentially having different names. Constructing
 the page streamer doesn&#39;t require any service references or authentication, so it&#39;s completely safe to perform this
-in a type initializer.</p>
+in a type initializer.
 <pre><code>using Google.Apis.YouTube.v3;
 using Google.Apis.YouTube.v3.Data;
 ...
 private static readonly snippetPageStreamer = new PageStreamer&lt;SearchResult, SearchResource.ListRequest, SearchListResponse, string&gt;(
     (request, token) =&gt; request.PageToken = token,
     response =&gt; response.NextPageToken,
-    response =&gt; response.Items);</code></pre>
+    response =&gt; response.Items);</code></pre></p>
 
               <h3 id="constructors">Constructors
               </h3>
