@@ -22,21 +22,21 @@ namespace Google.Cloud.Translation.V2.Snippets
     public class TranslationClientSnippets
     {
         
-        public void TranslateTextNmtDefaultModel()
+        public void TranslateTextPbmtDefaultModel()
         {
-            // Sample: TranslateTextNmtDefaultModel
-            TranslationClient client = TranslationClient.Create(model: TranslationModel.NeuralMachineTranslation);
+            // Sample: TranslateTextPbmtDefaultModel
+            TranslationClient client = TranslationClient.Create(model: TranslationModel.PhraseBasedMachineTranslation);
             TranslationResult result = client.TranslateText("It is raining.", LanguageCodes.French);
             Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
             // End sample
         }
 
-        public void TranslateTextNmtOverrideModel()
+        public void TranslateTextPbmtOverrideModel()
         {
-            // Sample: TranslateTextNmtOverrideModel
+            // Sample: TranslateTextPbmtOverrideModel
             TranslationClient client = TranslationClient.Create();
             TranslationResult result = client.TranslateText("It is raining.", LanguageCodes.French,
-                model: TranslationModel.NeuralMachineTranslation);
+                model: TranslationModel.PhraseBasedMachineTranslation);
             Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
             // End sample
         }
