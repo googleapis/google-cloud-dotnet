@@ -21,11 +21,6 @@ namespace Google.Cloud.Spanner
     /// </summary>
     public sealed class ConnectionPoolOptions
     {
-        /// <summary>
-        ///     The default instance of connection pool options.
-        /// </summary>
-        public static readonly ConnectionPoolOptions s_instance = new ConnectionPoolOptions();
-
         private ConnectionPoolOptions()
         {
         }
@@ -33,7 +28,7 @@ namespace Google.Cloud.Spanner
         /// <summary>
         ///     The default instance of connection pool options.
         /// </summary>
-        public static ConnectionPoolOptions Instance => s_instance;
+        public static ConnectionPoolOptions Instance { get; } = new ConnectionPoolOptions();
 
         /// <summary>
         /// </summary>

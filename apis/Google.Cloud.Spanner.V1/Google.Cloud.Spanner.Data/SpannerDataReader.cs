@@ -14,9 +14,14 @@
 
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Data.Common;
+using System.Threading;
+using System.Threading.Tasks;
 using Google.Cloud.Spanner.V1;
+using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
+using static System.String;
 
 #if NET451
 using System.Data;
@@ -33,6 +38,9 @@ namespace Google.Cloud.Spanner
     {
         private readonly ReliableStreamReader _resultset;
         private readonly SpannerConnection _connectionToClose;
+        private ResultSetMetadata _metadata;
+        private readonly List<Value> _innerList = new List<Value>();
+        private Dictionary<string, int> _fieldIndex;
 
         internal SpannerDataReader(ReliableStreamReader resultset)
         {
@@ -45,59 +53,55 @@ namespace Google.Cloud.Spanner
             _connectionToClose = connectionToClose;
         }
 
+        // Nesting is not supported, so we return 0.
         /// <inheritdoc />
-        public override int Depth
-        {
-            get { throw new NotImplementedException(); }
-        }
-
+        public override int Depth => 0;
 
         /// <inheritdoc />
-        public override int FieldCount
-        {
-            get { throw new NotImplementedException(); }
-        }
+        public override int FieldCount => GetMetadataAsync(CancellationToken.None).Result.RowType.Fields.Count;
 
         /// <inheritdoc />
-        public override bool HasRows
-        {
-            get { throw new NotImplementedException(); }
-        }
+        public override bool HasRows => _resultset.HasData(CancellationToken.None).Result;
 
         /// <inheritdoc />
-        public override bool IsClosed
-        {
-            get { throw new NotImplementedException(); }
-        }
+        public override bool IsClosed => _resultset.IsClosed;
 
         /// <inheritdoc />
-        public override object this[int i]
+        public override object this[int i] => _innerList[i].ConvertToClrType(GetSpannerFieldType(i));
+
+        private async Task<int> GetFieldIndexAsync(string fieldName, CancellationToken cancellationToken)
         {
-            get { throw new NotImplementedException(); }
+            if (_fieldIndex == null)
+            {
+                _fieldIndex = new Dictionary<string, int>();
+                var metadata = await GetMetadataAsync(cancellationToken);
+                if (metadata != null)
+                {
+                    int i = 0;
+                    foreach (var field in metadata.RowType.Fields)
+                    {
+                        _fieldIndex[field.Name] = i;
+                    }
+                }
+            }
+            return _fieldIndex[fieldName];
         }
+        /// <inheritdoc />
+        public override object this[string name] => this[GetFieldIndexAsync(name, CancellationToken.None).Result];
 
         /// <inheritdoc />
-        public override object this[string name]
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        /// <inheritdoc />
-        public override int RecordsAffected
-        {
-            get { throw new NotImplementedException(); }
-        }
+        public override int RecordsAffected => -1;
 
         /// <inheritdoc />
         public override bool GetBoolean(int i)
         {
-            throw new NotImplementedException();
+            return (bool)_innerList[i].ConvertToClrType(GetSpannerFieldType(i), typeof(bool));
         }
 
         /// <inheritdoc />
         public override byte GetByte(int i)
         {
-            throw new NotImplementedException();
+            return (byte)_innerList[i].ConvertToClrType(GetSpannerFieldType(i), typeof(byte));
         }
 
         /// <inheritdoc />
@@ -109,7 +113,7 @@ namespace Google.Cloud.Spanner
         /// <inheritdoc />
         public override char GetChar(int i)
         {
-            throw new NotImplementedException();
+            return (char)_innerList[i].ConvertToClrType(GetSpannerFieldType(i), typeof(char));
         }
 
         /// <inheritdoc />
@@ -121,118 +125,177 @@ namespace Google.Cloud.Spanner
         /// <inheritdoc />
         public override string GetDataTypeName(int i)
         {
-            throw new NotImplementedException();
+            return GetSpannerFieldType(i).Code.ToString();
         }
 
         /// <inheritdoc />
         public override DateTime GetDateTime(int i)
         {
-            throw new NotImplementedException();
+            return (DateTime)_innerList[i].ConvertToClrType(GetSpannerFieldType(i), typeof(DateTime));
         }
 
         /// <inheritdoc />
         public override decimal GetDecimal(int i)
         {
-            throw new NotImplementedException();
+            return (decimal)_innerList[i].ConvertToClrType(GetSpannerFieldType(i), typeof(decimal));
         }
 
         /// <inheritdoc />
         public override double GetDouble(int i)
         {
-            throw new NotImplementedException();
+            return (double)_innerList[i].ConvertToClrType(GetSpannerFieldType(i), typeof(double));
         }
 
         /// <inheritdoc />
         public override IEnumerator GetEnumerator()
         {
-            throw new NotImplementedException();
+#if NET45 || NET451
+            return new DbEnumerator(this);
+#else
+            throw new NotSupportedException("GetEnumerator not yet supported in .NET Core");
+#endif
         }
 
         /// <inheritdoc />
         public override System.Type GetFieldType(int i)
         {
-            throw new NotImplementedException();
+            var fieldMetadata = GetMetadataAsync(CancellationToken.None).Result.RowType.Fields[i];
+            return fieldMetadata.Type.Code.GetDefaultClrTypeFromSpannerType();
+        }
+
+        private V1.Type GetSpannerFieldType(int i)
+        {
+            var fieldMetadata = GetMetadataAsync(CancellationToken.None).Result.RowType.Fields[i];
+            return fieldMetadata.Type;
         }
 
         /// <inheritdoc />
         public override float GetFloat(int i)
         {
-            throw new NotImplementedException();
+            return (float)_innerList[i].ConvertToClrType(GetSpannerFieldType(i), typeof(float));
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="i"></param>
+        /// <returns></returns>
+        public Value GetJsonValue(int i)
+        {
+            return (Value)_innerList[i].ConvertToClrType(GetSpannerFieldType(i), typeof(Value));
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="i"></param>
+        /// <returns></returns>
+        public Timestamp GetTimestamp(int i)
+        {
+            //TODO, figure out how to better convert to Timestamp from RFC 3339
+            return Timestamp.FromDateTime((DateTime)_innerList[i].ConvertToClrType(GetSpannerFieldType(i), typeof(DateTime)));
         }
 
         /// <inheritdoc />
         public override Guid GetGuid(int i)
         {
-            throw new NotImplementedException();
+            return (Guid)_innerList[i].ConvertToClrType(GetSpannerFieldType(i), typeof(Guid));
         }
 
         /// <inheritdoc />
         public override short GetInt16(int i)
         {
-            throw new NotImplementedException();
+            return (short)_innerList[i].ConvertToClrType(GetSpannerFieldType(i), typeof(short));
         }
 
         /// <inheritdoc />
         public override int GetInt32(int i)
         {
-            throw new NotImplementedException();
+            return (int)_innerList[i].ConvertToClrType(GetSpannerFieldType(i), typeof(int));
         }
 
         /// <inheritdoc />
         public override long GetInt64(int i)
         {
-            throw new NotImplementedException();
+            return (long)_innerList[i].ConvertToClrType(GetSpannerFieldType(i), typeof(long));
         }
 
         /// <inheritdoc />
         public override string GetName(int i)
         {
-            throw new NotImplementedException();
+            return _resultset.GetMetadataAsync(CancellationToken.None).Result.RowType.Fields[i].Name;
         }
 
         /// <inheritdoc />
         public override int GetOrdinal(string name)
         {
-            throw new NotImplementedException();
+            var fields = _resultset.GetMetadataAsync(CancellationToken.None).Result.RowType.Fields;
+            for (int i = 0; i < fields.Count; i++)
+            {
+                if (name != null && Compare(name, fields[i].Name, StringComparison.Ordinal) == 0)
+                    return i;
+            }
+            return -1;
         }
 
         /// <inheritdoc />
         public override string GetString(int i)
         {
-            throw new NotImplementedException();
+            return (string)_innerList[i].ConvertToClrType(GetSpannerFieldType(i), typeof(string));
         }
 
         /// <inheritdoc />
         public override object GetValue(int i)
         {
-            throw new NotImplementedException();
+            return this[i];
         }
 
         /// <inheritdoc />
         public override int GetValues(object[] values)
         {
-            throw new NotImplementedException();
+            var count = Math.Min(FieldCount, values.Length);
+            for (var i = 0; i < count; i++)
+                values[i] = this[i];
+            return count;
         }
 
 
         /// <inheritdoc />
         public override bool IsDBNull(int i)
         {
-            throw new NotImplementedException();
+            return GetJsonValue(i).KindCase == Value.KindOneofCase.NullValue;
         }
 
         /// <inheritdoc />
         public override bool NextResult()
         {
-            throw new NotImplementedException();
+            throw new NotSupportedException("Spanner does not support multiple SQL queries in a single command.");
         }
 
         /// <inheritdoc />
         public override bool Read()
         {
-            throw new NotImplementedException();
+            return ReadAsync(CancellationToken.None).Result;
         }
 
+        private async Task<ResultSetMetadata> GetMetadataAsync(CancellationToken cancellationToken)
+        {
+            return _metadata ?? (_metadata = await _resultset.GetMetadataAsync(cancellationToken));
+        }
+
+        /// <inheritdoc />
+        public override async Task<bool> ReadAsync(CancellationToken cancellationToken)
+        {
+            var metadata = await GetMetadataAsync(cancellationToken);
+            _innerList.Clear();
+            //read # values == # fields.
+            for (int i = 0; i < _metadata.RowType.Fields.Count; i++)
+            {
+                _innerList.Add(await _resultset.Next(cancellationToken));
+            }
+
+            return true;
+        }
 
         /// <inheritdoc />
         protected override void Dispose(bool disposing)
@@ -241,17 +304,16 @@ namespace Google.Cloud.Spanner
         }
 
 #if NET451
-
         /// <inheritdoc />
         public override void Close()
         {
-            throw new NotImplementedException();
+            _resultset.Close();
         }
 
         /// <inheritdoc />
         public override DataTable GetSchemaTable()
         {
-            throw new NotImplementedException();
+            throw new NotSupportedException("Querying Schema information about queries is not supported in Spanner.");
         }
 
 #endif
