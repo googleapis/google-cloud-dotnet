@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-beta08-*",
+  "version": "1.0.0-beta09-*",
   "description": "Google Stackdriver Instrumentation Libraries for ASP.NET.",
   "authors": [ "Google Inc." ],
 
