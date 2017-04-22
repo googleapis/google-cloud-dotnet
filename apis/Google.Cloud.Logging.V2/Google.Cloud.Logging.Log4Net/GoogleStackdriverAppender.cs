@@ -15,8 +15,10 @@
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Cloud.DevTools.Source.V1;
 using Google.Cloud.Logging.Type;
 using Google.Cloud.Logging.V2;
+using Google.Protobuf;
 using log4net.Appender;
 using log4net.Core;
 using System;
@@ -269,6 +271,7 @@ namespace Google.Cloud.Logging.Log4Net
             {
                 labels.Add(nameof(MetaDataType.Level), loggingEvent.Level?.Name ?? unknown);
             }
+            TryAddGitRevisionId(labels);
             foreach (var customLabel in _customLabels)
             {
                 labels.Add(customLabel.Key, customLabel.Value);
@@ -287,6 +290,23 @@ namespace Google.Cloud.Logging.Log4Net
                 logEntry.SourceLocation = sourceLocation;
             }
             return logEntry;
+        }
+
+        private void TryAddGitRevisionId(Dictionary<string, string> labels)
+        {
+            string gitId = null;
+            try
+            {
+                gitId = SourceContext.AppSourceContext?.Git?.RevisionId;
+            }
+            catch (Exception ex) when (ex is System.Security.SecurityException || ex is InvalidProtocolBufferException
+                || ex is InvalidJsonException || ex is UnauthorizedAccessException)
+            { }
+
+            if (!String.IsNullOrWhiteSpace(gitId))
+            {
+                labels.Add(SourceContext.GitRevisionIdLogLabel, gitId);
+            }
         }
 
         private LogEntrySourceLocation BuildLogEntryLocation(LoggingEvent loggingEvent)
