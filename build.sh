@@ -28,8 +28,8 @@ then
   $NUGET install -Verbosity quiet -OutputDirectory packages -Version 4.6.519 OpenCover
   $NUGET install -Verbosity quiet -OutputDirectory packages -Version 2.4.5.0 ReportGenerator
   # Comment out the lines below to disable coverage
-  OPENCOVER=$PWD/packages/OpenCover.4.6.519/tools/OpenCover.Console.exe
-  REPORTGENERATOR=$PWD/packages/ReportGenerator.2.4.5.0/tools/ReportGenerator.exe
+  # OPENCOVER=$PWD/packages/OpenCover.4.6.519/tools/OpenCover.Console.exe
+  # REPORTGENERATOR=$PWD/packages/ReportGenerator.2.4.5.0/tools/ReportGenerator.exe
 else
   OS=Linux
 fi
@@ -67,7 +67,7 @@ dotnet build $DOTNET_BUILD_ARGS `$FIND . -mindepth 1 -maxdepth 1 -name 'Google*'
 cd ..
 
 cd apis
-dotnet build $DOTNET_BUILD_ARGS `$FIND * -mindepth 1 -maxdepth 1 -name 'Google*' -type d`
+dotnet build $DOTNET_BUILD_ARGS `$FIND * -mindepth 1 -maxdepth 1 -name 'Google.Cloud.Dat*' -type d`
 
 echo Testing
 
@@ -75,7 +75,7 @@ coverage=../coverage
 rm -rf $coverage
 mkdir $coverage
 
-for testdir in */*.Tests
+for testdir in *Data*/*.Tests
 do
   api=`echo $testdir | cut -d/ -f1`
   # The full framework test is different under Windows and Linux, and
