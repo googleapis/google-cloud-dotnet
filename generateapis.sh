@@ -118,7 +118,7 @@ $PROTOC \
   --include_source_info \
   -o $OUTDIR/protos.desc \
   $CORE_PROTOS_ROOT/google/protobuf/*.proto \
-  `find googleapis -name '*.proto'`
+  `find googleapis/google -name '*.proto'`
 
 # Generate LongRunning, after changing the license text (because we use
 # Apache for LRO where other languages use BSD)
