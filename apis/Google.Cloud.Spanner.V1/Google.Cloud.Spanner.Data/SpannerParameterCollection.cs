@@ -14,8 +14,9 @@
 
 using System;
 using System.Collections;
-using System.Data;
+using System.Collections.Generic;
 using System.Data.Common;
+using System.Linq;
 
 namespace Google.Cloud.Spanner
 {
@@ -23,35 +24,31 @@ namespace Google.Cloud.Spanner
     /// </summary>
     public sealed class SpannerParameterCollection : DbParameterCollection
     {
-        /// <inheritdoc />
-        public override int Count
-        {
-            get { throw new NotImplementedException(); }
-        }
+        private List<SpannerParameter> InnerList { get; } = new List<SpannerParameter>();
 
         /// <inheritdoc />
-        public override object SyncRoot
-        {
-            get { throw new NotImplementedException(); }
-        }
+        public override int Count => InnerList.Count;
+
+        /// <inheritdoc />
+        public override object SyncRoot => InnerList;
 
         /// <summary>
         /// </summary>
         /// <param name="parameterName"></param>
-        /// <param name="type"></param>
-        public void Add(string parameterName, SpannerDbType type)
+        /// <param name="dbType"></param>
+        public void Add(string parameterName, SpannerDbType dbType)
         {
-            throw new NotImplementedException();
+            InnerList.Add(new SpannerParameter(parameterName, dbType));
         }
 
         /// <summary>
         /// </summary>
         /// <param name="parameterName"></param>
         /// <param name="value"></param>
-        /// <param name="type"></param>
-        public void Add(string parameterName, object value, SpannerDbType type)
+        /// <param name="dbType"></param>
+        public void Add(string parameterName, object value, SpannerDbType dbType)
         {
-            throw new NotImplementedException();
+            InnerList.Add(new SpannerParameter(parameterName, dbType) { Value = value});
         }
 
         /// <summary>
@@ -61,120 +58,127 @@ namespace Google.Cloud.Spanner
         /// <param name="sourceColumn"></param>
         public void Add(string parameterName, SpannerDbType dbType, string sourceColumn)
         {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// </summary>
-        /// <param name="parameterName"></param>
-        /// <param name="dbType"></param>
-        /// <param name="sourceColumn"></param>
-        /// <param name="direction"></param>
-        public void Add(string parameterName, SpannerDbType dbType, string sourceColumn, ParameterDirection direction)
-        {
-            throw new NotImplementedException();
+            InnerList.Add(new SpannerParameter(parameterName, dbType, sourceColumn));
         }
 
         /// <inheritdoc />
         public override int Add(object value)
         {
-            throw new NotImplementedException();
+            InnerList.Add((SpannerParameter)value);
+            return InnerList.Count - 1;
         }
 
         /// <inheritdoc />
         public override void AddRange(Array values)
         {
-            throw new NotImplementedException();
+            InnerList.AddRange(values.Cast<SpannerParameter>());
         }
 
         /// <inheritdoc />
         public override void Clear()
         {
-            throw new NotImplementedException();
+            InnerList.Clear();
         }
 
         /// <inheritdoc />
         public override bool Contains(object value)
         {
-            throw new NotImplementedException();
+            return InnerList.Contains(value as SpannerParameter);
         }
 
         /// <inheritdoc />
         public override bool Contains(string value)
         {
-            throw new NotImplementedException();
+            return InnerList.Any(x => x.ParameterName.Equals(value));
         }
 
         /// <inheritdoc />
         public override void CopyTo(Array array, int index)
         {
-            throw new NotImplementedException();
+            foreach (var item in InnerList)
+            {
+                array?.SetValue(item, index);
+                index++;
+            }
         }
 
         /// <inheritdoc />
         public override IEnumerator GetEnumerator()
         {
-            throw new NotImplementedException();
+            return InnerList.GetEnumerator();
         }
 
         /// <inheritdoc />
         public override int IndexOf(object value)
         {
-            throw new NotImplementedException();
+           return InnerList.IndexOf(value as SpannerParameter);
         }
 
         /// <inheritdoc />
         public override int IndexOf(string parameterName)
         {
-            throw new NotImplementedException();
+            return InnerList.FindIndex(x => x.ParameterName.Equals(parameterName));
         }
 
         /// <inheritdoc />
         public override void Insert(int index, object value)
         {
-            throw new NotImplementedException();
+            InnerList.Insert(index, (SpannerParameter)value);
         }
 
         /// <inheritdoc />
         public override void Remove(object value)
         {
-            throw new NotImplementedException();
+            InnerList.Remove((SpannerParameter)value);
         }
 
         /// <inheritdoc />
         public override void RemoveAt(int index)
         {
-            throw new NotImplementedException();
+            InnerList.RemoveAt(index);
         }
 
         /// <inheritdoc />
         public override void RemoveAt(string parameterName)
         {
-            throw new NotImplementedException();
+            InnerList.RemoveAt(IndexOf(parameterName));
         }
 
         /// <inheritdoc />
         protected override DbParameter GetParameter(int index)
         {
-            throw new NotImplementedException();
+            return InnerList[index];
         }
 
         /// <inheritdoc />
         protected override DbParameter GetParameter(string parameterName)
         {
-            throw new NotImplementedException();
+            var index = IndexOf(parameterName);
+            if (index == -1)
+            {
+                return null;
+            }
+            return InnerList[index];
         }
 
         /// <inheritdoc />
         protected override void SetParameter(int index, DbParameter value)
         {
-            throw new NotImplementedException();
+            InnerList[index] = (SpannerParameter) value;
         }
 
         /// <inheritdoc />
         protected override void SetParameter(string parameterName, DbParameter value)
         {
-            throw new NotImplementedException();
+            var index = IndexOf(parameterName);
+            if (index == -1)
+            {
+                InnerList.Add((SpannerParameter) value);
+            }
+            else
+            {
+                InnerList[index] = (SpannerParameter) value;
+            }
         }
     }
 }

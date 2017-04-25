@@ -13,11 +13,14 @@
 // limitations under the License.
 
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Cloud.Spanner.V1;
+using Google.Protobuf.WellKnownTypes;
 
 // ReSharper disable UnusedParameter.Local
 
@@ -33,6 +36,7 @@ namespace Google.Cloud.Spanner
         private readonly SpannerTransaction _transaction;
         private readonly CancellationTokenSource _synchronousCancellationTokenSource = new CancellationTokenSource();
         private int _commandTimeout;
+        private string _readIndex;
 
         /// <summary>
         /// </summary>
@@ -130,6 +134,24 @@ namespace Google.Cloud.Spanner
         internal SpannerCommandTextBuilder SpannerCommandTextBuilder { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public string ReadIndex
+        {
+            get { return _readIndex; }
+            set
+            {
+                if (!string.IsNullOrEmpty(value) &&
+                    (SpannerCommandTextBuilder == null || SpannerCommandTextBuilder.SpannerCommandType !=
+                     SpannerCommandType.Read))
+                {
+                    throw new InvalidOperationException("ReadIndex can only be set on Read Commands.  See SpannerConnection.CreateTableDirectReadCommand.");
+                }
+                _readIndex = value;
+            }
+        }
+
+        /// <summary>
         /// </summary>
         /// <returns></returns>
         public object Clone()
@@ -205,9 +227,56 @@ namespace Google.Cloud.Spanner
                 throw new InvalidOperationException(
                     "You must assign a SpannerConnection to this command to execute it.");
             }
-            if (SpannerCommandTextBuilder.SpannerCommandType != SpannerCommandType.Select)
+            if (SpannerCommandTextBuilder.SpannerCommandType != SpannerCommandType.Select
+                && SpannerCommandTextBuilder.SpannerCommandType != SpannerCommandType.Read)
             {
-                throw new InvalidOperationException("You can only call ExecuteNonQuery on a Select Command");
+                throw new InvalidOperationException("You can only call ExecuteReader on a Select or Read Command");
+            }
+            if (!SpannerConnection.IsOpen)
+            {
+                //implicit open
+                await SpannerConnection.OpenAsync(cancellationToken);
+            }
+            if (!SpannerConnection.IsOpen)
+            {
+                throw new InvalidOperationException("Unable to open the Spanner connection to the database.");
+            }
+
+            string sql;
+            if (SpannerCommandTextBuilder.SpannerCommandType == SpannerCommandType.Read)
+            {
+                sql = $"SELECT * FROM {SpannerCommandTextBuilder.TargetTable}";  //TODO, actual READ calls (not SELECT QUERIES)
+            }
+            else
+            {
+                sql = CommandText;
+            }
+            // Execute the command.
+            var resultset = await SpannerConnection.ExecuteSqlAsync(new ExecuteSqlRequest
+            {
+                Sql = sql,
+            }, cancellationToken);
+
+            if ((behavior & CommandBehavior.CloseConnection) == CommandBehavior.CloseConnection)
+                return new SpannerDataReader(resultset, SpannerConnection);
+            return new SpannerDataReader(resultset);
+        }
+
+        /// <inheritdoc />
+        public override async Task<int> ExecuteNonQueryAsync(CancellationToken cancellationToken)
+        {
+            // There must be a valid and open connection.
+            if (SpannerConnection == null)
+            {
+                throw new InvalidOperationException(
+                    "You must assign a SpannerConnection to this command to execute it.");
+            }
+            if (SpannerCommandTextBuilder.SpannerCommandType != SpannerCommandType.Delete
+                && SpannerCommandTextBuilder.SpannerCommandType != SpannerCommandType.Insert
+                && SpannerCommandTextBuilder.SpannerCommandType != SpannerCommandType.InsertOrUpdate
+                && SpannerCommandTextBuilder.SpannerCommandType != SpannerCommandType.Update)
+            {
+                throw new InvalidOperationException("You can only call ExecuteReader on a Delete, Insert, InsertUpdate, or Update Command");
             }
             if (!SpannerConnection.IsOpen)
             {
@@ -220,26 +289,101 @@ namespace Google.Cloud.Spanner
             }
 
             // Execute the command.
-            var resultset = await SpannerConnection.ExecuteSqlAsync(new ExecuteSqlRequest
+            List<Mutation> mutations = new List<Mutation>();
+            if (SpannerCommandTextBuilder.SpannerCommandType != SpannerCommandType.Delete)
             {
-                Sql = CommandText,
-            }, cancellationToken);
+                var w = new Mutation.Types.Write {Table = SpannerCommandTextBuilder.TargetTable};
+                w.Columns.AddRange(Parameters.Cast<SpannerParameter>().Select(x => x.SourceColumn ?? x.ParameterName));
+                w.Values.Add(new ListValue {
+                    Values = {Parameters.Cast<SpannerParameter>().Select(x => TypeMap.ToValue(x.Value, x.TypeCode))}
+                });
+                switch (SpannerCommandTextBuilder.SpannerCommandType)
+                {
+                    case SpannerCommandType.Update:
+                        mutations.Add(new Mutation
+                        {
+                            Update = w
+                        });
+                        break;
+                    case SpannerCommandType.Insert:
+                        mutations.Add(new Mutation
+                        {
+                            Insert = w
+                        });
+                        break;
+                    case SpannerCommandType.InsertOrUpdate:
+                        mutations.Add(new Mutation
+                        {
+                            InsertOrUpdate = w
+                        });
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+            }
+            else
+            {
+                var w = new Mutation.Types.Delete { Table = SpannerCommandTextBuilder.TargetTable };
+                w.KeySet.Keys.Add(new ListValue
+                {
+                    Values = { Parameters.Cast<SpannerParameter>().Select(x => TypeMap.ToValue(x.Value, x.TypeCode)) }
+                });
+                switch (SpannerCommandTextBuilder.SpannerCommandType)
+                {
+                    case SpannerCommandType.Delete:
+                        mutations.Add(new Mutation
+                        {
+                            Delete = w
+                        });
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+            }
 
-            if ((behavior & CommandBehavior.CloseConnection) == CommandBehavior.CloseConnection)
-                return new SpannerDataReader(resultset, SpannerConnection);
-            return new SpannerDataReader(resultset);
+
+            // Make the request
+            await SpannerConnection.CommitAsync(mutations, cancellationToken);
+
+            // Return the number of records affected.
+            return mutations.Count;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public async Task<T> ExecuteScalarAsync<T>()
+        {
+            return await ExecuteScalarAsync<T>(CancellationToken.None);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public async Task<T> ExecuteScalarAsync<T>(CancellationToken cancellationToken)
+        {
+            var reader = await ExecuteDbDataReaderAsync(CommandBehavior.SingleRow, cancellationToken);
+            if (await reader.ReadAsync(cancellationToken) && reader.HasRows && reader.FieldCount > 0)
+            {
+                return reader.GetFieldValue<T>(0);
+            }
+            return default(T);
         }
 
         /// <inheritdoc />
-        public override Task<int> ExecuteNonQueryAsync(CancellationToken cancellationToken)
+        public override async Task<object> ExecuteScalarAsync(CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
-        }
-
-        /// <inheritdoc />
-        public override Task<object> ExecuteScalarAsync(CancellationToken cancellationToken)
-        {
-            throw new NotImplementedException();
+            var reader = await ExecuteDbDataReaderAsync(CommandBehavior.SingleRow, cancellationToken);
+            if (await reader.ReadAsync(cancellationToken) && reader.HasRows && reader.FieldCount > 0)
+            {
+                return reader[0];
+            }
+            return null;
         }
     }
 }

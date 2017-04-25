@@ -15,6 +15,7 @@
 using System;
 using System.Data;
 using System.Data.Common;
+using TypeCode = Google.Cloud.Spanner.V1.TypeCode;
 
 // ReSharper disable UnusedParameter.Local
 
@@ -27,55 +28,27 @@ namespace Google.Cloud.Spanner
         , ICloneable
 #endif
     {
+        private string _sourceColumn;
+
+        private string _spannerColumnName;
+        private TypeCode _spannerTypeCode;
+        private ParameterDirection _direction = ParameterDirection.Input;
+        private object _value;
+
         /// <summary>
         /// </summary>
         public SpannerParameter()
         {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// </summary>
-        /// <param name="spannerColumnName"></param>
-        public SpannerParameter(string spannerColumnName)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// </summary>
-        /// <param name="spannerColumnName"></param>
-        /// <param name="sourceDataTableName"></param>
-        public SpannerParameter(string spannerColumnName, string sourceDataTableName)
-        {
-            throw new NotImplementedException();
         }
 
         /// <summary>
         /// </summary>
         /// <param name="spannerColumnName"></param>
         /// <param name="type"></param>
-        public SpannerParameter(string spannerColumnName, SpannerDbType type) : this(spannerColumnName)
+        public SpannerParameter(string spannerColumnName, SpannerDbType type)
         {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// </summary>
-        /// <param name="spannerColumnName"></param>
-        /// <param name="type"></param>
-        public SpannerParameter(string spannerColumnName, DbType type) : this(spannerColumnName)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// </summary>
-        /// <param name="spannerColumnName"></param>
-        /// <param name="value"></param>
-        public SpannerParameter(string spannerColumnName, object value) : this(spannerColumnName)
-        {
-            throw new NotImplementedException();
+            _spannerColumnName = spannerColumnName;
+            _spannerTypeCode = type.GetSpannerTypeCode();
         }
 
         /// <summary>
@@ -86,108 +59,96 @@ namespace Google.Cloud.Spanner
         public SpannerParameter(string spannerColumnName, SpannerDbType type, string sourceColumn) : this(
             spannerColumnName, type)
         {
-            throw new NotImplementedException();
+            _sourceColumn = sourceColumn;
         }
 
         /// <inheritdoc />
         public override DbType DbType
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return _spannerTypeCode.GetDbType(); }
+            set { _spannerTypeCode = value.GetSpannerType(); }
         }
 
         /// <inheritdoc />
         public override ParameterDirection Direction
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return _direction; }
+            set
+            {
+                throw new InvalidOperationException("Spanner does not support anything except input parameters.");
+            }
         }
 
         /// <inheritdoc />
-        public override bool IsNullable
-        {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
-        }
+        public override bool IsNullable { get; set; } = true;
 
         /// <inheritdoc />
         public override string ParameterName
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return _spannerColumnName; }
+            set { _spannerColumnName = value; }
         }
 
         /// <inheritdoc />
-        public override byte Precision
-        {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
-        }
+        public override byte Precision { get; set; }
 
         /// <inheritdoc />
-        public override byte Scale
-        {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
-        }
+        public override byte Scale { get; set; }
 
         /// <inheritdoc />
-        public override int Size
-        {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
-        }
+        public override int Size { get; set; }
 
         /// <inheritdoc />
         public override string SourceColumn
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return _sourceColumn; }
+            set { _sourceColumn = value; }
         }
 
         /// <inheritdoc />
-        public override bool SourceColumnNullMapping
-        {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
-        }
+        public override bool SourceColumnNullMapping { get; set; } = true;
 
 #if NET451
 
         /// <inheritdoc />
-        public override DataRowVersion SourceVersion
-        {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
-        }
+        public override DataRowVersion SourceVersion { get; set; } = DataRowVersion.Current;
 
 #endif
+
+        internal V1.TypeCode TypeCode =>  _spannerTypeCode;
 
         /// <summary>
         /// </summary>
         public SpannerDbType SpannerDbType
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return _spannerTypeCode.GetSpannerDbType(); }
+            set { _spannerTypeCode = value.GetSpannerTypeCode(); }
         }
 
         /// <inheritdoc />
         public override object Value
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return _value; }
+            set
+            {
+                if (_spannerTypeCode == TypeCode.Unspecified)
+                {
+                    throw new ArgumentException("SpannerDbType must be set to one of (Bool, Int64, Float64, Timestamp, Date, String, Bytes)");
+                }
+                _value = value;
+            }
         }
 
         /// <inheritdoc />
         public object Clone()
         {
-            throw new NotImplementedException();
+            return (SpannerParameter)MemberwiseClone();
         }
 
         /// <inheritdoc />
         public override void ResetDbType()
         {
-            throw new NotImplementedException();
+            _spannerTypeCode = TypeCode.Unspecified;
         }
     }
 }

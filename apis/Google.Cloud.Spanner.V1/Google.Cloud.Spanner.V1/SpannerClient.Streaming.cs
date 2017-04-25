@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Grpc.Core;
 // ReSharper disable UnusedParameterInPartialMethod
@@ -48,10 +49,13 @@ namespace Google.Cloud.Spanner.V1
     {
         private ApiServerStreamingCall<ExecuteSqlRequest, PartialResultSet> _callExecuteSqlStream;
 
+        private CallSettings ExecuteSqlStreamSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromTimeout(TimeSpan.FromSeconds(60)));
+
         partial void OnConstruction(Spanner.SpannerClient grpcClient, SpannerSettings effectiveSettings, ClientHelper clientHelper)
         {
             _callExecuteSqlStream = clientHelper.BuildApiCall<ExecuteSqlRequest, PartialResultSet>(
-                GrpcClient.ExecuteStreamingSql, effectiveSettings.ExecuteSqlSettings);
+                GrpcClient.ExecuteStreamingSql, null);
         }
 
         /// <summary>

@@ -27,25 +27,99 @@ namespace Google.Cloud.Spanner
 {
     internal static class TypeMap
     {
-        public static DbType GetDbType(this TypeCode code)
+        public static DbType GetDbType(this TypeCode spannerType)
         {
-            throw new NotImplementedException();
+            switch (spannerType)
+            {
+                case TypeCode.Bool:
+                    return DbType.Boolean;
+                case TypeCode.Int64:
+                    return DbType.Int64;
+                case TypeCode.Float64:
+                    return DbType.Double;
+                case TypeCode.Timestamp:
+                    return DbType.DateTime;
+                case TypeCode.Date:
+                    return DbType.Date;
+                case TypeCode.String:
+                    return DbType.String;
+                case TypeCode.Bytes:
+                    return DbType.Binary;
+                case TypeCode.Unspecified:
+                case TypeCode.Array:
+                case TypeCode.Struct:
+                    return DbType.Object;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(spannerType), spannerType, null);
+            }
         }
 
-
-        public static DbType GetDbType(this SpannerDbType code)
+        public static TypeCode GetSpannerType(this DbType dbType)
         {
-            throw new NotImplementedException();
+            switch (dbType)
+            {
+                case DbType.Binary:
+                    return TypeCode.Bytes;
+                case DbType.Boolean:
+                    return TypeCode.Bool;
+                case DbType.Date:
+                    return TypeCode.Date;
+                case DbType.DateTime:
+                    return TypeCode.Timestamp;
+                case DbType.Double:
+                    return TypeCode.Float64;
+                case DbType.Int64:
+                    return TypeCode.Int64;
+                case DbType.Object:
+                    return TypeCode.Unspecified;
+                case DbType.String:
+                    return TypeCode.String;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(dbType), dbType, null);
+            }
         }
 
-        public static SpannerDbType GetSpannerType(this DbType code)
+        private static string StripTimePart(string rfc3339String)
         {
-            throw new NotImplementedException();
+            if (!string.IsNullOrEmpty(rfc3339String))
+            {
+                int timeIndex = rfc3339String.IndexOf('T');
+                if (timeIndex != -1)
+                {
+                    return rfc3339String.Substring(0, timeIndex);
+                }
+            }
+            return rfc3339String;
         }
 
-        public static Value ToValue(object value)
+        public static Value ToValue(object value, V1.TypeCode typeCode)
         {
-            throw new NotImplementedException();
+            switch (typeCode)
+            {
+                case TypeCode.Bool:
+                    return new Value {BoolValue = Convert.ToBoolean(value)};
+                case TypeCode.String:
+                case TypeCode.Int64:
+                    return new Value { StringValue = value?.ToString()};
+                case TypeCode.Float64:
+                    return new Value { NumberValue = Convert.ToDouble(value) };
+                case TypeCode.Timestamp:
+                    var stringValue = value as string;
+                    if (stringValue != null)
+                    {
+                        return new Value { StringValue =stringValue };
+                    }
+                    return new Value { StringValue = XmlConvert.ToString(Convert.ToDateTime(value), XmlDateTimeSerializationMode.Utc) };
+                case TypeCode.Date:
+                    stringValue = value as string;
+                    if (stringValue != null)
+                    {
+                        return new Value { StringValue = stringValue };
+                    }
+                    return new Value { StringValue = StripTimePart(XmlConvert.ToString(Convert.ToDateTime(value), XmlDateTimeSerializationMode.Utc)) };
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(typeCode), typeCode, null);
+            }
         }
 
         public static object ConvertToClrType(this Value wireValue, V1.Type spannerType)
@@ -56,7 +130,7 @@ namespace Google.Cloud.Spanner
         public static object ConvertToClrType(this Value wireValue, V1.Type spannerType, System.Type targetClrType)
         {
             //extra supported conversions that are modifications of the "core" versions but may have loss of precision.
-            //we call the code with the known supported version and cast it down to lose precision.
+            //we call the spannerType with the known supported version and cast it down to lose precision.
             if (targetClrType == typeof(int))
             {
                 return Convert.ToInt32((long)ConvertToClrTypeImpl(wireValue, spannerType, typeof(long)));
@@ -100,7 +174,7 @@ namespace Google.Cloud.Spanner
         {
             //If the wireValue itself is assignable to the target type, just return it
             //This covers both typeof(Value) and typeof(object).
-            if (targetClrType == null || targetClrType.IsAssignableFrom(typeof(Value)))
+            if (wireValue == null || targetClrType == null || targetClrType.IsAssignableFrom(typeof(Value)))
             {
                 return wireValue;
             }
@@ -276,6 +350,64 @@ namespace Google.Cloud.Spanner
                 default:
                     //if we don't recognize it (or its a struct), we use the google native wellknown type.
                     return typeof(Value);
+            }
+        }
+
+        public static TypeCode GetSpannerTypeCode(this SpannerDbType spannerDbType)
+        {
+            switch (spannerDbType)
+            {
+                case SpannerDbType.Unspecified:
+                    return TypeCode.Unspecified;
+                case SpannerDbType.Bool:
+                    return TypeCode.Bool;
+                case SpannerDbType.Int64:
+                    return TypeCode.Int64;
+                case SpannerDbType.Float64:
+                    return TypeCode.Float64;
+                case SpannerDbType.Timestamp:
+                    return TypeCode.Timestamp;
+                case SpannerDbType.Date:
+                    return TypeCode.Date;
+                case SpannerDbType.String:
+                    return TypeCode.String;
+                case SpannerDbType.Bytes:
+                    return TypeCode.Bytes;
+                case SpannerDbType.Array:
+                    return TypeCode.Array;
+                case SpannerDbType.Struct:
+                    return TypeCode.Struct;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(spannerDbType), spannerDbType, null);
+            }
+        }
+
+        public static SpannerDbType GetSpannerDbType(this TypeCode typeCode)
+        {
+            switch (typeCode)
+            {
+                case TypeCode.Unspecified:
+                    return SpannerDbType.Unspecified;
+                case TypeCode.Bool:
+                    return SpannerDbType.Bool;
+                case TypeCode.Int64:
+                    return SpannerDbType.Int64;
+                case TypeCode.Float64:
+                    return SpannerDbType.Float64;
+                case TypeCode.Timestamp:
+                    return SpannerDbType.Timestamp;
+                case TypeCode.Date:
+                    return SpannerDbType.Date;
+                case TypeCode.String:
+                    return SpannerDbType.String;
+                case TypeCode.Bytes:
+                    return SpannerDbType.Bytes;
+                case TypeCode.Array:
+                    return SpannerDbType.Array;
+                case TypeCode.Struct:
+                    return SpannerDbType.Struct;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(typeCode), typeCode, null);
             }
         }
     }

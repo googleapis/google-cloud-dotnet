@@ -26,6 +26,7 @@ namespace Google.Cloud.Spanner.V1
         private readonly Session _session;
         private readonly CallSettings _callSettings;
         private ResultSetMetadata _metadata;
+        private bool _isReading = true;
 
         internal ReliableStreamReader(SpannerClient spannerClientImpl, ExecuteSqlRequest request, Session session)
         {
@@ -41,18 +42,23 @@ namespace Google.Cloud.Spanner.V1
         /// Ensures we have executed the query initially or from recovery and have read the initial metadata
         /// </summary>
         /// <returns></returns>
-        private async Task StartReadingAsync(CancellationToken cancellationToken)
+        private async Task<bool> StartReadingAsync(CancellationToken cancellationToken)
         {
             if (_currentCall == null)
             {
                 _currentCall = _spannerClient.ExecuteSqlStream(_request, _callSettings);
+                _isReading = await _currentCall.ResponseStream.MoveNext(CancellationToken.None);
+                if (!_isReading)
+                {
+                    return false;
+                }
                 if (_currentCall.ResponseStream.Current == null)
                 {
                     throw new InvalidOperationException("stream read error!");
                 }
                 _metadata = _currentCall.ResponseStream.Current.Metadata;
-                await _currentCall.ResponseStream.MoveNext(cancellationToken);
             }
+            return _isReading;
         }
 
         public async Task<ResultSetMetadata> GetMetadataAsync(CancellationToken cancellationToken)
@@ -96,8 +102,7 @@ namespace Google.Cloud.Spanner.V1
 
         public async Task<bool> HasData(CancellationToken cancellationToken)
         {
-            await StartReadingAsync(cancellationToken);
-            return _metadata != null && _currentCall.ResponseStream.Current.Values.Any();
+            return await StartReadingAsync(cancellationToken);
         }
 
 
@@ -111,8 +116,12 @@ namespace Google.Cloud.Spanner.V1
             if (_currentIndex >= _currentCall.ResponseStream.Current.Values.Count)
             {
                 //we need to move next
-                await _currentCall.ResponseStream.MoveNext(cancellationToken);
+                _isReading = await _currentCall.ResponseStream.MoveNext(CancellationToken.None);
                 _currentIndex = 0;
+                if (!_isReading)
+                {
+                    return null;
+                }
             }
             var result = _currentCall.ResponseStream.Current.Values[_currentIndex];
             _currentIndex++;

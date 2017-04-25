@@ -219,9 +219,10 @@ namespace Google.Cloud.Spanner.V1
 
         private void Dispose(bool disposing)
         {
-            DisposeAsync().Start();
             if (disposing)
             {
+                //TODO finalizer warning, recovery...
+                DisposeAsync().Start();
                 GC.SuppressFinalize(this);
             }
         }

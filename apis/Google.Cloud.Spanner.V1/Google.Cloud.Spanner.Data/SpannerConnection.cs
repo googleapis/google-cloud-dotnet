@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.Threading;
@@ -238,6 +239,20 @@ namespace Google.Cloud.Spanner
 
         /// <summary>
         /// </summary>
+        /// <param name="tableName"></param>
+        /// <param name="indexToUse"></param>
+        /// <param name="columnsToRead"></param>
+        /// <returns></returns>
+        public SpannerCommand CreateTableDirectReadCommand(string tableName, string indexToUse = null,
+            SpannerParameterCollection columnsToRead = null)
+        {
+            return new SpannerCommand(SpannerCommandTextBuilder.CreateTableDirectReadTextBuilder(tableName), this, null,
+                    columnsToRead)
+                {ReadIndex = indexToUse};
+        }
+
+        /// <summary>
+        /// </summary>
         /// <param name="databaseTable"></param>
         /// <param name="updateParameters"></param>
         /// <returns></returns>
@@ -320,6 +335,20 @@ namespace Google.Cloud.Spanner
         {
             AssertClosed("change connection information.");
             _connectionStringBuilder = newBuilder;
+        }
+
+        internal async Task<CommitResponse> CommitAsync(List<Mutation> mutations, CancellationToken cancellationToken)
+        {
+            var sessionToUse = await AllocateSession(cancellationToken);
+            try
+            {
+                return await _client.CommitAsync(sessionToUse.SessionName,
+                    new TransactionOptions {ReadWrite = new TransactionOptions.Types.ReadWrite()}, mutations);
+            }
+            finally
+            {
+                await SessionPool.ReleaseSessionAsync(sessionToUse);
+            }
         }
 
         internal async Task<ReliableStreamReader> ExecuteSqlAsync(

@@ -20,7 +20,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
 using static System.String;
 
 #if NET451
@@ -81,6 +80,7 @@ namespace Google.Cloud.Spanner
                     foreach (var field in metadata.RowType.Fields)
                     {
                         _fieldIndex[field.Name] = i;
+                        i++;
                     }
                 }
             }
@@ -119,7 +119,7 @@ namespace Google.Cloud.Spanner
         /// <inheritdoc />
         public override long GetChars(int i, long fieldoffset, char[] buffer, int bufferoffset, int length)
         {
-            throw new NotImplementedException();
+            throw new NotSupportedException();
         }
 
         /// <inheritdoc />
@@ -232,7 +232,7 @@ namespace Google.Cloud.Spanner
             var fields = _resultset.GetMetadataAsync(CancellationToken.None).Result.RowType.Fields;
             for (int i = 0; i < fields.Count; i++)
             {
-                if (name != null && Compare(name, fields[i].Name, StringComparison.Ordinal) == 0)
+                if (Compare(name, fields[i].Name, StringComparison.Ordinal) == 0)
                     return i;
             }
             return -1;
@@ -242,6 +242,12 @@ namespace Google.Cloud.Spanner
         public override string GetString(int i)
         {
             return (string)_innerList[i].ConvertToClrType(GetSpannerFieldType(i), typeof(string));
+        }
+
+        /// <inheritdoc />
+        public override T GetFieldValue<T>(int ordinal)
+        {
+            return (T)_innerList[ordinal].ConvertToClrType(GetSpannerFieldType(ordinal), typeof(T));
         }
 
         /// <inheritdoc />
@@ -286,10 +292,17 @@ namespace Google.Cloud.Spanner
         /// <inheritdoc />
         public override async Task<bool> ReadAsync(CancellationToken cancellationToken)
         {
-            var metadata = await GetMetadataAsync(cancellationToken);
+            await GetMetadataAsync(cancellationToken);
             _innerList.Clear();
             //read # values == # fields.
-            for (int i = 0; i < _metadata.RowType.Fields.Count; i++)
+            var first = await _resultset.Next(cancellationToken);
+            if (first == null)
+            {
+                return false;
+            }
+            _innerList.Add(first);
+            //we expect to get full rows...
+            for (int i = 0; i < _metadata.RowType.Fields.Count - 1; i++)
             {
                 _innerList.Add(await _resultset.Next(cancellationToken));
             }

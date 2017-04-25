@@ -45,11 +45,21 @@ namespace Google.Cloud.Spanner
         {
         }
 
+        private string GetValueOrDefault(string key, string defaultValue = "")
+        {
+            key = key.ToLower();
+            if (ContainsKey(key))
+            {
+                return (string)this[key];
+            }
+            return defaultValue;
+        }
+
         /// <summary>
         /// </summary>
         public string ClientId
         {
-            get { return (string) this[nameof(ClientId)]; }
+            get { return (string) GetValueOrDefault(nameof(ClientId)); }
             private set { this[nameof(ClientId)] = value; }
         }
 
@@ -57,7 +67,7 @@ namespace Google.Cloud.Spanner
         /// </summary>
         public string ClientSecret
         {
-            get { return (string) this[nameof(ClientSecret)]; }
+            get { return (string) GetValueOrDefault(nameof(ClientSecret)); }
             private set { this[nameof(ClientSecret)] = value; }
         }
 
@@ -69,7 +79,7 @@ namespace Google.Cloud.Spanner
         /// </summary>
         public string DataSource
         {
-            get { return (string) this["Data Source"]; }
+            get { return (string) GetValueOrDefault("Data Source"); }
             private set { this["Data Source"] = value; }
         }
 
@@ -81,8 +91,8 @@ namespace Google.Cloud.Spanner
         /// </summary>
         public string Host
         {
-            get { return (string) this["Host"] ?? SpannerClient.DefaultEndpoint.Host; }
-            private set { this["Host"] = value; }
+            get { return  GetValueOrDefault(nameof(Host), SpannerClient.DefaultEndpoint.Host); }
+            private set { this[nameof(Host)] = value; }
         }
 
         /// <summary>
@@ -92,13 +102,13 @@ namespace Google.Cloud.Spanner
             get
             {
                 var result = SpannerClient.DefaultEndpoint.Port;
-                var value = (string) this["Port"];
-                if (value != null)
+                var value = (string) GetValueOrDefault(nameof(Port));
+                if (!string.IsNullOrEmpty(value))
                     if (!int.TryParse(value, out result))
                         result = SpannerClient.DefaultEndpoint.Port;
                 return result;
             }
-            private set { this["Port"] = value.ToString(); }
+            private set { this[nameof(Port)] = value.ToString(); }
         }
 
         /// <summary>
@@ -117,7 +127,7 @@ namespace Google.Cloud.Spanner
         /// </summary>
         public string UserName
         {
-            get { return (string) this[nameof(UserName)]; }
+            get { return (string) GetValueOrDefault(nameof(UserName)); }
             private set { this[nameof(UserName)] = value; }
         }
 
