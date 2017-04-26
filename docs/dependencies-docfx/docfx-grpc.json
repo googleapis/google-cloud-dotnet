@@ -1,0 +1,8 @@
+{
+  "metadata": [
+    {
+      "src": [{ "files": ["src/csharp/Grpc.Core/project.json"] }],
+      "dest": "api/Grpc.Core",
+    }
+  ]
+}

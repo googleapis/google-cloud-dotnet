@@ -6,6 +6,8 @@ bin
 project.lock.json
 _site
 site
+dependencies
+# Legacy docs/external; now docs/dependencies
 external
 output
 *~

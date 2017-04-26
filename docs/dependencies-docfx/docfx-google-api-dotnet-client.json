@@ -1,0 +1,24 @@
+{
+  "metadata": [
+    {
+      "src": [{ "files": ["Src/Support/GoogleApis/Net45/GoogleApis_Net45.csproj"] }],
+      "dest": "api/Google.Apis",
+    },
+    {
+      "src": [{ "files": ["Src/Support/GoogleApis.Core/Net45/GoogleApis.Core_Net45.csproj"] }],
+      "dest": "api/Google.Apis.Core",
+    },
+    {
+      "src": [{ "files": ["Src/Support/GoogleApis.Auth/Net45/GoogleApis.Auth_Net45.csproj"] }],
+      "dest": "api/Google.Apis.Auth",
+    },
+    {
+      "src": [{ "files": ["Src/Generated/Google.Apis.Storage.v1/NetStandard/Google.Apis.Storage.v1.csproj"] }],
+      "dest": "api/Google.Apis.Storage.v1",
+    },
+    {
+      "src": [{ "files": ["Src/Generated/Google.Apis.Bigquery.v2/NetStandard/Google.Apis.Bigquery.v2.csproj"] }],
+      "dest": "api/Google.Apis.Bigquery.v2",
+    }
+  ]
+}
