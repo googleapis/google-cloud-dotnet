@@ -1,0 +1,24 @@
+{
+  "metadata": [
+    {
+      "src": [{ "files": ["src/Google.Api.CommonProtos/Google.Api.CommonProtos.csproj"] }],
+      "properties": { "TargetFramework": "net45" },
+      "dest": "api/Google.Api.CommonProtos",
+    },
+    {
+      "src": [{ "files": ["src/Google.Api.Gax/Google.Api.Gax.csproj"] }],
+      "properties": { "TargetFramework": "net45" },
+      "dest": "api/Google.Api.Gax",
+    },
+    {
+      "src": [{ "files": ["src/Google.Api.Gax.Rest/Google.Api.Gax.Rest.csproj"] }],
+      "properties": { "TargetFramework": "net45" },
+      "dest": "api/Google.Api.Gax.Rest",
+    },
+    {
+      "src": [{ "files": ["src/Google.Api.Gax.Grpc/Google.Api.Gax.Grpc.csproj"] }],
+      "properties": { "TargetFramework": "net45" },
+      "dest": "api/Google.Api.Gax.Grpc",
+    },
+  ]
+}
