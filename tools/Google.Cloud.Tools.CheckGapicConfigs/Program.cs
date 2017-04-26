@@ -16,7 +16,7 @@ using System;
 using System.IO;
 using YamlDotNet.RepresentationModel;
 
-namespace Google.Cloud.CheckGapicConfigs
+namespace Google.Cloud.Tools.CheckGapicConfigs
 {
     public class Program
     {
