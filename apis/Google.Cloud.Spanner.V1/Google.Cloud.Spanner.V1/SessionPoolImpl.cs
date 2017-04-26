@@ -34,10 +34,13 @@ namespace Google.Cloud.Spanner.V1
             await Task.WhenAll(entries.Select(sessionpoolentry => EvictImmediately(sessionpoolentry.Session, CancellationToken.None)).ToArray());
         }
 
-        private async Task EvictSessionPoolEntry(Session session, CancellationToken cancellationToken)
+        private Task EvictSessionPoolEntry(Session session, CancellationToken cancellationToken)
         {
-            await Task.Delay(SessionPool.PoolEvictTimeSpan, cancellationToken);
-            await EvictImmediately(session, cancellationToken);
+            var task = Task.Delay(SessionPool.PoolEvictTimeSpan, cancellationToken);
+            return task.ContinueWith(async (delayTask, o) => 
+            {
+                await EvictImmediately(session, cancellationToken);
+            }, null, cancellationToken);
         }
 
         private async Task EvictImmediately(Session session, CancellationToken cancellationToken)
