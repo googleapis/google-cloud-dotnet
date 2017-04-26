@@ -1,0 +1,14 @@
+﻿{
+  "description": "Console app to generate a dependency map JSON file for use in ShowReverseDependencies",
+  "buildOptions": {
+    "emitEntryPoint": true
+  },
+  "dependencies": {
+    "NuGet.CatalogReader": "1.2.0"
+  },
+  "frameworks": {
+    "net46": {
+      "Newtonsoft.Json": "10.0.2"
+    }
+  }
+}
