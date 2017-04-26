@@ -79,21 +79,16 @@ namespace Google.Cloud.Spanner.V1
         {
             lock (_sessionMruStack)
             {
-                _sessionMruStack.Add(entry);
+                _sessionMruStack.Insert(0, entry);
                 Interlocked.Increment(ref s_activeSessionsPooled);
             }
         }
 
-        public async Task<Session> AcquireSessionAsync(CancellationToken cancellationToken, bool createIfNeeded = true)
+        public async Task<Session> AcquireSessionAsync(CancellationToken cancellationToken)
         {
             SessionPoolEntry sessionEntry;
             if (!TryPop(out sessionEntry))
             {
-                if (!createIfNeeded)
-                {
-                    return null;
-                }
-
                 //create a new session, blocking or throwing if at the limit.
                 return await Key.Client.CreateSessionAsync(new DatabaseName(Key.Project, Key.Instance, Key.Database), cancellationToken);
             }
@@ -101,6 +96,26 @@ namespace Google.Cloud.Spanner.V1
             //note that the evict task will only actually delete the session if it was able to remove it from the pool.
             //at this point, this is not possible because we removed it from the pool, so even if the task completes (which
             // is possible due to a race), it will see that the session isn't pooled and cancel out.
+            sessionEntry.EvictTaskCancellationSource.Cancel();
+            return sessionEntry.Session;
+        }
+
+        public Session AcquireEvictionCandidate()
+        {
+            SessionPoolEntry sessionEntry = default(SessionPoolEntry);
+            lock (_sessionMruStack)
+            {
+                if (_sessionMruStack.Count > 0)
+                {
+                    sessionEntry = _sessionMruStack[_sessionMruStack.Count - 1];
+                    _sessionMruStack.RemoveAt(_sessionMruStack.Count - 1);
+                    Interlocked.Decrement(ref s_activeSessionsPooled);
+                }
+            }
+            if (sessionEntry.Session == null || sessionEntry.EvictTaskCancellationSource == null)
+            {
+                return null;
+            }
             sessionEntry.EvictTaskCancellationSource.Cancel();
             return sessionEntry.Session;
         }

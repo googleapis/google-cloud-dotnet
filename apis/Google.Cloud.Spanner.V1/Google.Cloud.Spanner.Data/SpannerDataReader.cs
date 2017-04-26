@@ -192,8 +192,7 @@ namespace Google.Cloud.Spanner
         /// <returns></returns>
         public Timestamp GetTimestamp(int i)
         {
-            //TODO, figure out how to better convert to Timestamp from RFC 3339
-            return Timestamp.FromDateTime((DateTime)_innerList[i].ConvertToClrType(GetSpannerFieldType(i), typeof(DateTime)));
+            return (Timestamp)_innerList[i].ConvertToClrType(GetSpannerFieldType(i), typeof(Timestamp));
         }
 
         /// <inheritdoc />

@@ -35,15 +35,15 @@ namespace WindowsFormsApplication1
                     }
                 }
 
-                // READ EXAMPLE
-                cmd = connection.CreateTableDirectReadCommand("Books");
-                using (var reader = await cmd.ExecuteReaderAsync())
-                {
-                    while (await reader.ReadAsync())
-                    {
-                        Debug.WriteLine($"Name: {reader["Name"]}");
-                    }
-                }
+                //// READ EXAMPLE
+                //cmd = connection.CreateTableDirectReadCommand("Books");
+                //using (var reader = await cmd.ExecuteReaderAsync())
+                //{
+                //    while (await reader.ReadAsync())
+                //    {
+                //        Debug.WriteLine($"Name: {reader["Name"]}");
+                //    }
+                //}
 
                 //QUERY SCALAR
                 cmd = connection.CreateSelectCommand("SELECT MAX(ID) FROM Books");

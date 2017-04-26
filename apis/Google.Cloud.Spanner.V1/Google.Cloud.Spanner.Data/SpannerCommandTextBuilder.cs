@@ -29,7 +29,6 @@ namespace Google.Cloud.Spanner
         private static readonly string s_updateCommand = "UPDATE";
         private static readonly string s_deleteCommand = "DELETE";
         private static readonly string s_selectCommand = "SELECT";
-        private static readonly string s_readCommand = "READ";
 
         private string _targetTable;
 
@@ -48,7 +47,6 @@ namespace Google.Cloud.Spanner
             if (!TryParseCommand(this, s_deleteCommand, SpannerCommandType.Delete, commandSections)
                 && !TryParseCommand(this, s_updateCommand, SpannerCommandType.Update, commandSections)
                 && !TryParseCommand(this, s_insertCommand, SpannerCommandType.Insert, commandSections)
-                && !TryParseCommand(this, s_readCommand, SpannerCommandType.Read, commandSections )
                 && !TryParseCommand(this, s_insertUpdateCommand, SpannerCommandType.InsertOrUpdate, commandSections))
             {
                 if (!commandSections[0].ToUpper().StartsWith(s_selectCommand))
@@ -135,20 +133,6 @@ namespace Google.Cloud.Spanner
             return new SpannerCommandTextBuilder {
                 SpannerCommandType = SpannerCommandType.Select,
                 CommandText = sqlQuery
-            };
-        }
-
-        /// <summary>
-        /// </summary>
-        /// <param name="databaseTable"></param>
-        /// <returns></returns>
-        public static SpannerCommandTextBuilder CreateTableDirectReadTextBuilder(string databaseTable)
-        {
-            return new SpannerCommandTextBuilder
-            {
-                SpannerCommandType = SpannerCommandType.Read,
-                TargetTable = databaseTable,
-                CommandText = $"{s_readCommand} {databaseTable}"
             };
         }
 

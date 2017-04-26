@@ -251,6 +251,19 @@ namespace Google.Cloud.Spanner
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
                 }
             }
+            if (targetClrType == typeof(Timestamp))
+            {
+                switch (wireValue.KindCase)
+                {
+                    case Value.KindOneofCase.NullValue:
+                        return null;
+                    case Value.KindOneofCase.StringValue:
+                        return Timestamp.Parser.ParseJson(wireValue.StringValue);
+                    default:
+                        throw new InvalidOperationException(
+                            $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
+                }
+            }
             if (targetClrType == typeof(string))
             {
                 switch (wireValue.KindCase)

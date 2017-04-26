@@ -32,6 +32,7 @@ namespace Google.Cloud.Spanner.V1
 
         private static int s_sessionsCreating;
         private static readonly ConcurrentQueue<TaskCompletionSource<int>> s_waitQueue = new ConcurrentQueue<TaskCompletionSource<int>>();
+        private static readonly object s_waitSync = new object();
 
         private static ConcurrentDictionary<SessionPoolKey, SessionPoolImpl> GlobalPool { get; } =
             new ConcurrentDictionary<SessionPoolKey, SessionPoolImpl>();
@@ -64,7 +65,7 @@ namespace Google.Cloud.Spanner.V1
 
         private static async Task StartSessionCreating(CancellationToken cancellationToken)
         {
-            lock (s_waitQueue)
+            lock (s_waitSync)
             {
                 if (CurrentActiveSessions < MaximumActiveSessions)
                 {
@@ -82,7 +83,7 @@ namespace Google.Cloud.Spanner.V1
                     s_waitQueue.Enqueue(signal);
                     await Task.WhenAny(signal.Task, canceledTask);
                     cancellationToken.ThrowIfCancellationRequested();
-                    lock (s_waitQueue)
+                    lock (s_waitSync)
                     {
                         if (CurrentActiveSessions < MaximumActiveSessions)
                         {
@@ -100,10 +101,11 @@ namespace Google.Cloud.Spanner.V1
 
         private static void EndSessionCreating()
         {
-            lock (s_waitQueue)
+            lock (s_waitSync)
             {
                 s_sessionsCreating--;
             }
+            SignalAnyWaitingRequests();
         }
 
         /// <summary>
@@ -125,14 +127,13 @@ namespace Google.Cloud.Spanner.V1
             await StartSessionCreating(cancellationToken);
             try
             {
-                SessionPoolImpl targetPool = GlobalPool.GetOrAdd(
-                    new SessionPoolKey {
-                        Client = spannerClient,
-                        Project = project,
-                        Instance = spannerInstance,
-                        Database = spannerDatabase
-                    },
-                    key => new SessionPoolImpl(key));
+                var sessionPoolKey = new SessionPoolKey {
+                    Client = spannerClient,
+                    Project = project,
+                    Instance = spannerInstance,
+                    Database = spannerDatabase
+                };
+                SessionPoolImpl targetPool = GlobalPool.GetOrAdd(sessionPoolKey, key => new SessionPoolImpl(key));
 
                 var session = await targetPool.AcquireSessionAsync(cancellationToken);
                 if (session != null)
@@ -140,20 +141,13 @@ namespace Google.Cloud.Spanner.V1
                     //refresh the mru list which tells us what sessions need to be trimmed from the pool when we want
                     // to add another poolEntry.
                     ReSortMru(targetPool);
-                    SessionPoolKey newKey = new SessionPoolKey {
-                        Client = spannerClient,
-                        Database = spannerDatabase,
-                        Instance = spannerInstance,
-                        Project = project
-                    };
-                    s_sessionsInUse.AddOrUpdate(session, x => newKey, (x, y) => newKey);
+                    s_sessionsInUse.AddOrUpdate(session, x => sessionPoolKey, (x, y) => sessionPoolKey);
                 }
                 return session;
             }
             finally
             {
                 EndSessionCreating();
-                SignalAnyWaitingRequests();
             }
         }
 
@@ -194,50 +188,28 @@ namespace Google.Cloud.Spanner.V1
             if (s_sessionsInUse.TryRemove(session, out result))
             {
                 SignalAnyWaitingRequests();
-                SessionPoolImpl targetPool = GlobalPool.GetOrAdd(
-                    result,
-                    key => new SessionPoolImpl(key));
+                SessionPoolImpl targetPool = GlobalPool.GetOrAdd(result,
+                                             key => new SessionPoolImpl(key));
 
-                Session sessionToClose = null;
-                SpannerClient closingSessionClient = null;
+                SpannerClient evictionClient = result.Client;
+                Session evictionSession = null;
 
-                //1. Figure out if we want to pool this released session.
-                // true if either
-                //  a) _activeSessionsPooled < MaximumPooledSessions
-                //  b) _activeSessionsPooled >= MaximumPooledSessions && targetPool isn't top on PriorityList
-                //     if this is true, we evict a session from PriorityList.Top() and pool this new session.
+                //Figure out if we want to pool this released session.
                 lock (s_priorityListSync)
                 {
-                    Debug.Assert(PriorityList.Count > 0);
-                    if (CurrentPooledSessions < MaximumPooledSessions)
+                    targetPool.ReleaseSessionToPool(session);
+                    if (CurrentPooledSessions > MaximumPooledSessions)
                     {
-                        targetPool.ReleaseSessionToPool(session);
-                        //re-sort the MRU (if it needs it).
-                        ReSortMru(targetPool);
+                        var evictionPool = PriorityList.First().Value;
+                        evictionClient = evictionPool.Key.Client;
+                        evictionSession = evictionPool.AcquireEvictionCandidate();
+                        ReSortMru(evictionPool);
                     }
-                    else if (PriorityList.First().Value != targetPool)
-                    {
-                        var evictedPool = PriorityList.First().Value;
-                        sessionToClose = evictedPool.AcquireSessionAsync(CancellationToken.None, false).Result;
-                        Debug.Assert(sessionToClose != null);
-                        closingSessionClient = evictedPool.Key.Client;
-
-                        targetPool.ReleaseSessionToPool(session);
-
-                        //re-sort the MRU.
-                        ReSortMru(targetPool);
-                        ReSortMru(evictedPool);
-                    }
-                    else
-                    {
-                        sessionToClose = session;
-                        closingSessionClient = result.Client;
-                    }
+                    ReSortMru(targetPool);
                 }
-                if (sessionToClose != null)
+                if (evictionSession != null)
                 {
-                    Debug.Assert(closingSessionClient != null);
-                    await closingSessionClient.DeleteSessionAsync(sessionToClose.SessionName);
+                    await evictionClient.DeleteSessionAsync(evictionSession.SessionName);
                 }
             }
         }

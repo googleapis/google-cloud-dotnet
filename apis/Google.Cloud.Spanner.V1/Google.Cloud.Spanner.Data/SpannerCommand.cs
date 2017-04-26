@@ -36,7 +36,6 @@ namespace Google.Cloud.Spanner
         private readonly SpannerTransaction _transaction;
         private readonly CancellationTokenSource _synchronousCancellationTokenSource = new CancellationTokenSource();
         private int _commandTimeout;
-        private string _readIndex;
 
         /// <summary>
         /// </summary>
@@ -132,24 +131,6 @@ namespace Google.Cloud.Spanner
         /// <summary>
         /// </summary>
         internal SpannerCommandTextBuilder SpannerCommandTextBuilder { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public string ReadIndex
-        {
-            get { return _readIndex; }
-            set
-            {
-                if (!string.IsNullOrEmpty(value) &&
-                    (SpannerCommandTextBuilder == null || SpannerCommandTextBuilder.SpannerCommandType !=
-                     SpannerCommandType.Read))
-                {
-                    throw new InvalidOperationException("ReadIndex can only be set on Read Commands.  See SpannerConnection.CreateTableDirectReadCommand.");
-                }
-                _readIndex = value;
-            }
-        }
 
         /// <summary>
         /// </summary>
