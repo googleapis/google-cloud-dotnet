@@ -4,9 +4,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
+using Google.Cloud.Spanner.V1;
 using Grpc.Auth;
 
-namespace Google.Cloud.Spanner.V1
+namespace Google.Cloud.Spanner
 {
     internal static class ClientPool
     {

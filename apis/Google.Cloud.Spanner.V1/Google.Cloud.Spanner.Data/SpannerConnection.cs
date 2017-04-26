@@ -180,7 +180,7 @@ namespace Google.Cloud.Spanner
             {
                 //release the session if its not used.
                 //if it's used, we'll detect a closed state after the operation and release it then.
-                var task = SessionPool.ReleaseSessionAsync(session);
+                var task = session.ReleaseToPool();
                 task.ContinueWith(t =>
                 {
                     //TODO, proper logging.
@@ -288,8 +288,7 @@ namespace Google.Cloud.Spanner
                     _connectionStringBuilder.EndPoint);
                 _session =
                     await
-                        SessionPool.AcquireSessionAsync(_connectionStringBuilder.Credential,
-                            _connectionStringBuilder.EndPoint,
+                        _client.CreateSessionFromPoolAsync(
                             _connectionStringBuilder.Project,
                             _connectionStringBuilder.SpannerInstance,
                             _connectionStringBuilder.SpannerDatabase, cancellationToken);
@@ -347,7 +346,7 @@ namespace Google.Cloud.Spanner
             }
             finally
             {
-                await SessionPool.ReleaseSessionAsync(sessionToUse);
+                await sessionToUse.ReleaseToPool();
             }
         }
 
@@ -367,7 +366,7 @@ namespace Google.Cloud.Spanner
                 }
                 else
                 {
-                    await SessionPool.ReleaseSessionAsync(sessionToUse);
+                    await sessionToUse.ReleaseToPool();
                 }
             };
             return streamReader;
@@ -383,9 +382,7 @@ namespace Google.Cloud.Spanner
                 sessionToUse = _session;
             }
 
-            return sessionToUse ?? await SessionPool.AcquireSessionAsync(
-                       _connectionStringBuilder.Credential,
-                       _connectionStringBuilder.EndPoint,
+            return sessionToUse ?? await _client.CreateSessionFromPoolAsync(
                        _connectionStringBuilder.Project, _connectionStringBuilder.SpannerInstance,
                        _connectionStringBuilder.SpannerDatabase, cancellationToken);
         }

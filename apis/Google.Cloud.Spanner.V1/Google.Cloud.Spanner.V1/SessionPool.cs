@@ -5,188 +5,317 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Google.Api.Gax.Grpc;
-using Google.Apis.Auth.OAuth2;
 using Google.Apis.Util;
 
 namespace Google.Cloud.Spanner.V1
 {
     /// <summary>
-    /// 
+    /// The SessionPool is the preferred method of managing Spanner Sessions.
+    /// It performs pooling of sessions with an evict timer along with configurable settings to control the maximum
+    /// number of pooled and active sessions.
+    /// To create a session using the sessionpool, use the extension method on SpannerClient.
+    ///   var session = await spannerClient.CreateSessionFromPoolAsync(project, spannerInstance, database, cancellationtoken);
+    /// To release a session back to the sessionpool:
+    ///   session.ReleaseToPool();
+    /// If you use the SessionPool, you must make sure sessions are properly released back into the pool and are not simply GC'd.
+    /// Allowing a session to GC will incur penalties on the current process as the session will count towards the maximum allowed
+    /// and it will incur a penalty on other spanner processes because it will be an hour before the server frees the session if 
+    /// its not properly deleted.
     /// </summary>
-    internal class SessionPool : IComparable
+    public static class SessionPool
     {
-        private readonly SessionPoolKey _key;
-        private readonly ConcurrentStack<Session> _sessionMruStack = new ConcurrentStack<Session>();
-        private int _lastAccessTime;
+        private static readonly TimeSpan s_shutDownTimer = TimeSpan.FromSeconds(60);
 
-        private static int _activeSessionsPooled;
-        private static ConcurrentDictionary<SessionPoolKey, SessionPool> GlobalPool { get; } =
-            new ConcurrentDictionary<SessionPoolKey, SessionPool>();
+        // This member holds information we'll use when the session later gets released.
+        private static readonly ConcurrentDictionary<Session, SessionPoolKey>
+            s_sessionsInUse = new ConcurrentDictionary<Session, SessionPoolKey>();
+
+        private static int s_sessionsCreating;
+        private static readonly ConcurrentQueue<TaskCompletionSource<int>> s_waitQueue = new ConcurrentQueue<TaskCompletionSource<int>>();
+
+        private static ConcurrentDictionary<SessionPoolKey, SessionPoolImpl> GlobalPool { get; } =
+            new ConcurrentDictionary<SessionPoolKey, SessionPoolImpl>();
         private static readonly object s_priorityListSync = new object();
-        private static SortedList<SessionPool, SessionPool> PriorityList { get; }
-            = new SortedList<SessionPool, SessionPool>();
+        private static SortedList<SessionPoolImpl, SessionPoolImpl> PriorityList { get; }
+            = new SortedList<SessionPoolImpl, SessionPoolImpl>();
 
-        private SessionPool(SessionPoolKey key)
+        static SessionPool()
         {
-            _key = key;
+#if NET45
+            AppDomain.CurrentDomain.DomainUnload += (sender, args) =>
+            {
+                ReleaseAll().Wait(s_shutDownTimer);
+            };
+#endif
+#if NETSTANDARD1_5
+            System.Runtime.Loader.AssemblyLoadContext.Default.Unloading += context =>
+            {
+                ReleaseAll().Wait(s_shutDownTimer);
+            };
+#endif
+        }
+
+        private static Task WhenCanceled(this CancellationToken cancellationToken)
+        {
+            var tcs = new TaskCompletionSource<bool>();
+            cancellationToken.Register(s => ((TaskCompletionSource<bool>)s).SetResult(true), tcs);
+            return tcs.Task;
+        }
+
+        private static async Task StartSessionCreating(CancellationToken cancellationToken)
+        {
+            lock (s_waitQueue)
+            {
+                if (CurrentActiveSessions < MaximumActiveSessions)
+                {
+                    s_sessionsCreating++;
+                    return;
+                }
+            }
+            var canceledTask = cancellationToken.WhenCanceled();
+            //we need to block or throw because we are out of allocations.
+            while (true)
+            {
+                if (WaitOnResourcesExhausted)
+                {
+                    TaskCompletionSource<int> signal = new TaskCompletionSource<int>();
+                    s_waitQueue.Enqueue(signal);
+                    await Task.WhenAny(signal.Task, canceledTask);
+                    cancellationToken.ThrowIfCancellationRequested();
+                    lock (s_waitQueue)
+                    {
+                        if (CurrentActiveSessions < MaximumActiveSessions)
+                        {
+                            s_sessionsCreating++;
+                            return;
+                        }
+                    }
+                }
+                else
+                {
+                    throw new InvalidOperationException("Number of available Sessions exhausted.");
+                }
+            }
+        }
+
+        private static void EndSessionCreating()
+        {
+            lock (s_waitQueue)
+            {
+                s_sessionsCreating--;
+            }
         }
 
         /// <summary>
-        /// Creates a new session or acquired a warm session from the session pool.
+        /// Allocates a session from the pool if possible, or creates a new Spanner Session.
         /// </summary>
-        /// <param name="credential"></param>
-        /// <param name="endpoint"></param>
+        /// <param name="spannerClient"></param>
         /// <param name="project"></param>
         /// <param name="spannerInstance"></param>
         /// <param name="spannerDatabase"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Session> AcquireSessionAsync(ITokenAccess credential, ServiceEndpoint endpoint,
+        public static async Task<Session> CreateSessionFromPoolAsync(this SpannerClient spannerClient,
             string project, string spannerInstance, string spannerDatabase, CancellationToken cancellationToken)
         {
             project.ThrowIfNullOrEmpty(nameof(project));
-            spannerInstance.ThrowIfNullOrEmpty(nameof(project));
-            spannerDatabase.ThrowIfNullOrEmpty(nameof(project));
-            SessionPool targetPool = GlobalPool.GetOrAdd(
-                new SessionPoolKey {
-                    Credential = credential,
-                    ServiceEndpoint = endpoint,
-                    Project = project,
-                    Instance = spannerInstance,
-                    Database = spannerDatabase},
-                key => new SessionPool(key));
+            spannerInstance.ThrowIfNullOrEmpty(nameof(spannerInstance));
+            spannerDatabase.ThrowIfNullOrEmpty(nameof(spannerDatabase));
 
-            var session = await targetPool.AcquireSessionAsync(cancellationToken);
-            //refresh the mru list which tells us what sessions need to be trimmed from the pool when we want
-            // to add another poolEntry.
-            lock (s_priorityListSync)
+            await StartSessionCreating(cancellationToken);
+            try
             {
-                PriorityList.Remove(targetPool);
-                PriorityList.Add(targetPool, targetPool);
+                SessionPoolImpl targetPool = GlobalPool.GetOrAdd(
+                    new SessionPoolKey {
+                        Client = spannerClient,
+                        Project = project,
+                        Instance = spannerInstance,
+                        Database = spannerDatabase
+                    },
+                    key => new SessionPoolImpl(key));
+
+                var session = await targetPool.AcquireSessionAsync(cancellationToken);
+                if (session != null)
+                {
+                    //refresh the mru list which tells us what sessions need to be trimmed from the pool when we want
+                    // to add another poolEntry.
+                    ReSortMru(targetPool);
+                    SessionPoolKey newKey = new SessionPoolKey {
+                        Client = spannerClient,
+                        Database = spannerDatabase,
+                        Instance = spannerInstance,
+                        Project = project
+                    };
+                    s_sessionsInUse.AddOrUpdate(session, x => newKey, (x, y) => newKey);
+                }
+                return session;
             }
-            return session;
+            finally
+            {
+                EndSessionCreating();
+                SignalAnyWaitingRequests();
+            }
+        }
+
+        private static void SignalAnyWaitingRequests()
+        {
+            TaskCompletionSource<int> waitingSessionRequest;
+            //if anyone is waiting, let them query for their session.
+            if (CurrentActiveSessions < MaximumActiveSessions
+                && s_waitQueue.TryDequeue(out waitingSessionRequest))
+            {
+                waitingSessionRequest.SetResult(0);
+            }
         }
 
         /// <summary>
-        /// Releases a Session back into the pool when no longer needed.
+        /// Releases a session back into the pool, possibly causing another entry to be evicted if the maximum pool size has been
+        /// reached.
+        /// </summary>
+        /// <param name="spannerClient"></param>
+        /// <param name="session"></param>
+        /// <returns></returns>
+        public static async Task ReleaseSessionToPoolAsync(this SpannerClient spannerClient, Session session)
+        {
+            await session.ReleaseToPool();
+        }
+
+        /// <summary>
+        /// Releases a session back into the pool, possibly causing another entry to be evicted if the maximum pool size has been
+        /// reached.
         /// </summary>
         /// <param name="session"></param>
-        public static async Task ReleaseSessionAsync(Session session)
+        /// <returns></returns>
+        public static async Task ReleaseToPool(this Session session)
         {
             session.ThrowIfNull(nameof(session));
-            if (session.DatabaseName == null)
-            {
-                throw new InvalidOperationException("Released session was not created through the pool.");
-            }
 
-            SessionPool targetPool = GlobalPool.GetOrAdd(
-                new SessionPoolKey {
-                    Credential = session.AssociatedCredential,
-                    ServiceEndpoint = session.AssociatedEndPoint,
-                    Project = session.DatabaseName.ProjectId,
-                    Instance = session.DatabaseName.InstanceId,
-                    Database = session.DatabaseName.DatabaseId
-                },
-                key => new SessionPool(key));
-
-            Session sessionToClose = null;
-            //1. Figure out if we want to pool this released session.
-            // true if either
-            //  a) _activeSessionsPooled < MaxIdleSessionPoolSize
-            //  b) _activeSessionsPooled >= MaxIdleSessionPoolSize && targetPool isn't top on PriorityList
-            //     if this is true, we evict a session from PriorityList.Top() and pool this new session.
-            lock (s_priorityListSync)
+            SessionPoolKey result;
+            if (s_sessionsInUse.TryRemove(session, out result))
             {
-                Debug.Assert(PriorityList.Count > 0);
-                if (_activeSessionsPooled < MaxIdleSessionPoolSize)
+                SignalAnyWaitingRequests();
+                SessionPoolImpl targetPool = GlobalPool.GetOrAdd(
+                    result,
+                    key => new SessionPoolImpl(key));
+
+                Session sessionToClose = null;
+                SpannerClient closingSessionClient = null;
+
+                //1. Figure out if we want to pool this released session.
+                // true if either
+                //  a) _activeSessionsPooled < MaximumPooledSessions
+                //  b) _activeSessionsPooled >= MaximumPooledSessions && targetPool isn't top on PriorityList
+                //     if this is true, we evict a session from PriorityList.Top() and pool this new session.
+                lock (s_priorityListSync)
                 {
-                    targetPool.ReleaseSessionToPool(session);
-                    //re-sort the MRU (if it needs it).
-                    if (PriorityList.Count > 1)
+                    Debug.Assert(PriorityList.Count > 0);
+                    if (CurrentPooledSessions < MaximumPooledSessions)
                     {
-                        PriorityList.Remove(targetPool);
-                        PriorityList.Add(targetPool, targetPool);
+                        targetPool.ReleaseSessionToPool(session);
+                        //re-sort the MRU (if it needs it).
+                        ReSortMru(targetPool);
+                    }
+                    else if (PriorityList.First().Value != targetPool)
+                    {
+                        var evictedPool = PriorityList.First().Value;
+                        sessionToClose = evictedPool.AcquireSessionAsync(CancellationToken.None, false).Result;
+                        Debug.Assert(sessionToClose != null);
+                        closingSessionClient = evictedPool.Key.Client;
+
+                        targetPool.ReleaseSessionToPool(session);
+
+                        //re-sort the MRU.
+                        ReSortMru(targetPool);
+                        ReSortMru(evictedPool);
+                    }
+                    else
+                    {
+                        sessionToClose = session;
+                        closingSessionClient = result.Client;
                     }
                 }
-                else if (PriorityList.First().Value != targetPool)
+                if (sessionToClose != null)
                 {
-                    sessionToClose = PriorityList.First().Value.AcquireSessionAsync(CancellationToken.None, false).Result;
-                    Debug.Assert(sessionToClose != null);
-                    targetPool.ReleaseSessionToPool(session);
+                    Debug.Assert(closingSessionClient != null);
+                    await closingSessionClient.DeleteSessionAsync(sessionToClose.SessionName);
+                }
+            }
+        }
 
-                    //re-sort the MRU.
+        /// <summary>
+        /// Called to close a session and release it without putting it back into the pool.
+        /// </summary>
+        /// <param name="session"></param>
+        /// <returns></returns>
+        public static async Task Close(this Session session)
+        {
+            session.ThrowIfNull(nameof(session));
+
+            SessionPoolKey result;
+            if (s_sessionsInUse.TryRemove(session, out result))
+            {
+                SignalAnyWaitingRequests();
+                await result.Client.DeleteSessionAsync(session.SessionName);
+            }
+            throw new InvalidOperationException("ClosePooledSession was not able to locate the provided session.");
+        }
+
+        private static void ReSortMru(SessionPoolImpl targetPool)
+        {
+            lock (s_priorityListSync)
+            {
+                if (PriorityList.Count > 1)
+                {
                     PriorityList.Remove(targetPool);
-                    PriorityList.Remove(PriorityList.First().Value);
                     PriorityList.Add(targetPool, targetPool);
-                    PriorityList.Add(PriorityList.First().Value, PriorityList.First().Value);
-                }
-                else
-                {
-                    sessionToClose = session;
                 }
             }
-            if (sessionToClose != null)
-            {
-                SessionName name = sessionToClose.SessionName;
-                await sessionToClose.DisposeAsync();
-                var client = await ClientPool.AcquireClientAsync(sessionToClose.AssociatedCredential, sessionToClose.AssociatedEndPoint);
-                await client.DeleteSessionAsync(name);
-            }
         }
 
-        public static int MaxIdleSessionPoolSize { get; set; } = 10; //TODO, should 0 be default?
-
-        public async Task<Session> AcquireSessionAsync(CancellationToken cancellationToken, bool forceAllocate = true)
+        /// <summary>
+        /// Releases all pooled sessions and frees resources on the server.
+        /// </summary>
+        /// <returns></returns>
+        public static async Task ReleaseAll()
         {
-            Session session;
-            if (!_sessionMruStack.TryPop(out session))
-            {
-                if (!forceAllocate)
-                {
-                    return null;
-                }
-                var client = await ClientPool.AcquireClientAsync(_key.Credential, _key.ServiceEndpoint);
-
-                //create a new session, blocking or throwing if at the limit.
-                session = await Session.CreateAsync(client, _key.Project, _key.Instance, _key.Database, cancellationToken);
-                session.InitializePoolManagedSession(_key.Credential, _key.ServiceEndpoint);
-            }
-            else
-            {
-                Interlocked.Decrement(ref _activeSessionsPooled);
-            }
-            MarkUsed();
-            return session;
+            var entries = GlobalPool.Values;
+            GlobalPool.Clear(); // ReleaseAll should not be called while other operations are starting.
+            await Task.WhenAll(entries.Select(sessionpool => sessionpool.ReleaseAllImpl()).ToArray());
         }
 
-        private void MarkUsed()
-        {
-            _lastAccessTime = Environment.TickCount;
-        }
+        /// <summary>
+        /// The current number of active sessions in use by the application.
+        /// </summary>
+        public static int CurrentActiveSessions => s_sessionsInUse.Count + s_sessionsCreating;
 
-        public void ReleaseSessionToPool(Session session)
-        {
-            _sessionMruStack.Push(session);
-            Interlocked.Increment(ref _activeSessionsPooled);
-        }
+        /// <summary>
+        /// The current number of sessions in the Session Pool.
+        /// </summary>
+        public static int CurrentPooledSessions => SessionPoolImpl.ActiveSessionsPooled;
 
-        public int CompareTo(object obj)
-        {
-            SessionPool other = obj as SessionPool;
-            if (other == null)
-            {
-                return -1;
-            }
-            if (other._sessionMruStack.Count > _sessionMruStack.Count)
-            {
-                return 1;
-            }
-            if (other._sessionMruStack.Count < _sessionMruStack.Count)
-            {
-                return -1;
-            }
-            return _lastAccessTime.CompareTo(other._lastAccessTime);
-        }
+        /// <summary>
+        /// Maximum number of active sessions that can be in use by the application at any one time.
+        /// </summary>
+        public static int MaximumActiveSessions { get; set; } = int.MaxValue;
+
+        /// <summary>
+        /// The maximum number of sessions that can be held in the session pool.
+        /// </summary>
+        public static int MaximumPooledSessions { get; set; } = int.MaxValue;
+
+        /// <summary>
+        /// If true, then CreateSessionFromPoolAsync will block until CurrentActiveSessions is less than MaximumActiveSessions
+        /// If false, then CreateSessionFromPoolAsync will throw an exception if CurrentActiveSessions is equal to or greater than MaximumActiveSessions
+        /// </summary>
+        public static bool WaitOnResourcesExhausted { get; set; } = true;
+
+        /// <summary>
+        /// The amount of time before sessions get forcibly evicted from the session pool.
+        /// A lower value will cause the process to free sessions more aggressively when they get released
+        /// at the cost of performance due to lower reuse of sessions.
+        /// This value must be less than the expire timer on the Spanner server currently set at 60 minutes.
+        /// </summary>
+        public static TimeSpan PoolEvictTimeSpan { get; set; } = TimeSpan.FromMinutes(15);
+
     }
 }

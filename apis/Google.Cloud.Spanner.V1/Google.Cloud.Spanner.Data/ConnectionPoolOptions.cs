@@ -32,26 +32,26 @@ namespace Google.Cloud.Spanner
 
         /// <summary>
         /// </summary>
-        public TimeSpan KeepAliveIntervalMinutes
+        public TimeSpan PoolEvictTimeSpan
         {
-            get { return Session.KeepAliveIntervalMinutes; }
-            set { Session.KeepAliveIntervalMinutes = value; }
+            get { return SessionPool.PoolEvictTimeSpan; }
+            set { SessionPool.PoolEvictTimeSpan = value; }
         }
 
         /// <summary>
         /// </summary>
-        public int MaxIdleSessionPoolSize
+        public int MaximumPooledSessions
         {
-            get { return SessionPool.MaxIdleSessionPoolSize; }
-            set { SessionPool.MaxIdleSessionPoolSize = value; }
+            get { return SessionPool.MaximumPooledSessions; }
+            set { SessionPool.MaximumPooledSessions = value; }
         }
 
         /// <summary>
         /// </summary>
-        public int MaxSessionCount
+        public int MaximumActiveSessions
         {
-            get { return Session.MaximumActiveSessions; }
-            set { Session.MaximumActiveSessions = value; }
+            get { return SessionPool.MaximumActiveSessions; }
+            set { SessionPool.MaximumActiveSessions = value; }
         }
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace Google.Cloud.Spanner
         {
             get
             {
-                return Session.WaitOnResourcesExhausted
+                return SessionPool.WaitOnResourcesExhausted
                     ? ResourcesExhaustedBehavior.Block
                     : ResourcesExhaustedBehavior.Fail;
             }
-            set { Session.WaitOnResourcesExhausted = value == ResourcesExhaustedBehavior.Block; }
+            set { SessionPool.WaitOnResourcesExhausted = value == ResourcesExhaustedBehavior.Block; }
         }
 
         /// <summary>

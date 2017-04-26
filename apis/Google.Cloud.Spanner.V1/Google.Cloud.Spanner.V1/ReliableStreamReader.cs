@@ -16,7 +16,7 @@ namespace Google.Cloud.Spanner.V1
     /// Provides streaming access to a Spanner SQL query that automatically retries, handles
     /// chunking and recoverable errors.
     /// </summary>
-    internal sealed class ReliableStreamReader : IDisposable
+    public sealed class ReliableStreamReader : IDisposable
     {
         //WIP: add actual stream reads, retries, etc.
         private AsyncServerStreamingCall<PartialResultSet> _currentCall;
@@ -61,6 +61,11 @@ namespace Google.Cloud.Spanner.V1
             return _isReading;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         public async Task<ResultSetMetadata> GetMetadataAsync(CancellationToken cancellationToken)
         {
             await StartReadingAsync(cancellationToken);
@@ -100,6 +105,11 @@ namespace Google.Cloud.Spanner.V1
             GC.SuppressFinalize(this);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         public async Task<bool> HasData(CancellationToken cancellationToken)
         {
             return await StartReadingAsync(cancellationToken);
@@ -107,6 +117,11 @@ namespace Google.Cloud.Spanner.V1
 
 
         private int _currentIndex;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         public async Task<Value> Next(CancellationToken cancellationToken)
         {
             if (!await HasData(cancellationToken))
