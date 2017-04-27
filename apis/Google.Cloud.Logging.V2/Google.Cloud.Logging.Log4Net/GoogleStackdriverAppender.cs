@@ -24,6 +24,7 @@ using log4net.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -294,18 +295,21 @@ namespace Google.Cloud.Logging.Log4Net
 
         private void TryAddGitRevisionId(Dictionary<string, string> labels)
         {
-            string gitId = null;
             try
             {
-                gitId = SourceContext.AppSourceContext?.Git?.RevisionId;
+                var gitId = SourceContext.AppSourceContext?.Git?.RevisionId;
+                if (!String.IsNullOrWhiteSpace(gitId))
+                {
+                    labels.Add(SourceContext.GitRevisionIdLogLabel, gitId);
+                }
             }
-            catch (Exception ex) when (ex is System.Security.SecurityException || ex is InvalidProtocolBufferException
-                || ex is InvalidJsonException || ex is UnauthorizedAccessException)
-            { }
-
-            if (!String.IsNullOrWhiteSpace(gitId))
+            catch (Exception ex) when (
+                ex is SecurityException 
+                || ex is InvalidProtocolBufferException
+                || ex is InvalidJsonException 
+                || ex is UnauthorizedAccessException)
             {
-                labels.Add(SourceContext.GitRevisionIdLogLabel, gitId);
+                // This is best-effort only, exceptions from reading/parsing the source_context.json are ignored.
             }
         }
 
