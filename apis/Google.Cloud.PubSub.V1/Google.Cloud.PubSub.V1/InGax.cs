@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Api.Gax
 {
     public sealed class BatchingSettings
     {
-        long? ElementCountThreshold { get; set; }
-        long? RequestByteThreshold { get; set; }
-        TimeSpan? DelayThreshold { get; set; }
+        public long? ElementCountThreshold { get; set; }
+        public long? RequestByteThreshold { get; set; }
+        public TimeSpan? DelayThreshold { get; set; }
     }
 
     public enum LimitExceededBehavior
@@ -21,8 +22,8 @@ namespace Google.Api.Gax
 
     public sealed class FlowControlSettings
     {
-        int? MaxOutstandingElementCount { get; set; }
-        int? MaxOutstandingRequestBytes { get; set; }
-        LimitExceededBehavior LimitExceededBehavior { get; set; }
+        public int? MaxOutstandingElementCount { get; set; }
+        public int? MaxOutstandingRequestBytes { get; set; }
+        public LimitExceededBehavior LimitExceededBehavior { get; set; }
     }
 }

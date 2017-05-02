@@ -1,6 +1,8 @@
 ﻿using Google.Api.Gax;
+using Google.Protobuf;
 using Grpc.Core;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -15,7 +17,7 @@ namespace Google.Cloud.PubSub.V1
     /// </summary>
     /// <remarks>
     /// <para>To receive messages, The <see cref="Start(Func{PubsubMessage, Reply})"/>  or
-    /// <see cref="StartAsync(Func{PubsubMessage, Task{Reply}})"/> method must be called,
+    /// <see cref="StartAsync(Func{PubsubMessage, Task{Reply}}, CancellationToken)"/> method must be called,
     /// with a suitable message handler.</para>
     /// <para>This message handler <see cref="Reply"/> states whether to acknowledge the message;
     /// if acknowledged then it will not be received on this subscription again.</para>
@@ -52,32 +54,32 @@ namespace Google.Cloud.PubSub.V1
             /// If <c>null</c>, creates channels using the default PubSub endpoint
             /// and default credentials.
             /// </summary>
-            Func<Channel> ChannelProvider { get; set; }
+            public Func<Channel> ChannelProvider { get; set; }
 
             /// <summary>
             /// <see cref="SubscriberSettings"/> used when creating <see cref="SubscriberClient"/>
             /// instances.
             /// If <c>null</c>, uses default settings from <see cref="SubscriberSettings.GetDefault"/>.
             /// </summary>
-            SubscriberSettings SubscriberSettings { get; set; }
+            public SubscriberSettings SubscriberSettings { get; set; }
 
             /// <summary>
             /// Flow control settings.
             /// If <c>null</c>, uses flow control settings from <see cref="DefaultFlowControlSettings"/>. 
             /// </summary>
-            FlowControlSettings FlowControlSettings { get; set; }
+            public FlowControlSettings FlowControlSettings { get; set; }
 
             /// <summary>
             /// Duration before message expiration.
             /// If <c>null</c>, uses the default of TODO seconds.
             /// </summary>
-            TimeSpan? AckExtensionWindow { get; set; }
+            public TimeSpan? AckExtensionWindow { get; set; }
 
             /// <summary>
             /// A custom <see cref="TaskFactory"/> used to execute message handlers.
             /// If <c>null</c>, the system default <see cref="Task.Factory"/> is used. 
             /// </summary>
-            TaskFactory TaskFactory { get; set; }
+            public TaskFactory TaskFactory { get; set; }
         }
 
         /// <summary>

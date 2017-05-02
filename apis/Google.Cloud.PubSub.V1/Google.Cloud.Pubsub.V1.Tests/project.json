@@ -1,0 +1,27 @@
+﻿{
+  "buildOptions": {
+    "keyFile": "../../GoogleApis.snk"
+  },
+
+  "dependencies": {
+    "Google.Cloud.PubSub.V1": { "target": "project" },
+    "Google.Api.Gax.Testing": "1.0.1",
+    "xunit": "2.3.0-beta1-build3642",
+    "Xunit.Combinatorial": "1.2.1",
+    "Moq": "4.6.36-alpha",
+    "dotnet-test-xunit": "2.2.0-preview2-build1029"
+  },
+  "testRunner": "xunit",
+
+  "frameworks": {
+    "net451": {},
+    "netcoreapp1.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "version": "1.0.0",
+          "type": "platform"
+        }
+      }
+    }
+  }
+}
