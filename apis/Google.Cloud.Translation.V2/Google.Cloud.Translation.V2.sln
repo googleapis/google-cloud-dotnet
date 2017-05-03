@@ -1,24 +1,24 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26114.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Translation.V2", "Google.Cloud.Translation.V2\Google.Cloud.Translation.V2.xproj", "{3434B211-D93C-4E78-9F62-47E404E2511C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Translation.V2", "Google.Cloud.Translation.V2\Google.Cloud.Translation.V2.csproj", "{3434B211-D93C-4E78-9F62-47E404E2511C}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Translation.V2.LanguageCodeGenerator", "Google.Cloud.Translation.V2.LanguageCodeGenerator\Google.Cloud.Translation.V2.LanguageCodeGenerator.xproj", "{E5C40E3B-E76D-4E4E-9D25-E777B9BEE9F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Translation.V2.LanguageCodeGenerator", "Google.Cloud.Translation.V2.LanguageCodeGenerator\Google.Cloud.Translation.V2.LanguageCodeGenerator.csproj", "{E5C40E3B-E76D-4E4E-9D25-E777B9BEE9F6}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Translation.V2.Snippets", "Google.Cloud.Translation.V2.Snippets\Google.Cloud.Translation.V2.Snippets.xproj", "{05AF166A-4B0D-475F-ACCE-82C1E6295999}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Translation.V2.Snippets", "Google.Cloud.Translation.V2.Snippets\Google.Cloud.Translation.V2.Snippets.csproj", "{05AF166A-4B0D-475F-ACCE-82C1E6295999}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{D64DC15F-64B5-48D0-9D17-A7E827C93C22}"
 	ProjectSection(SolutionItems) = preProject
 		docs\index.md = docs\index.md
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Translation.V2.Tests", "Google.Cloud.Translation.V2.Tests\Google.Cloud.Translation.V2.Tests.xproj", "{BF18DEDA-330E-49FF-BD0E-EA347B2C2DB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Translation.V2.Tests", "Google.Cloud.Translation.V2.Tests\Google.Cloud.Translation.V2.Tests.csproj", "{BF18DEDA-330E-49FF-BD0E-EA347B2C2DB5}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.xproj", "{4810D3AB-8422-4940-BB99-0A89AD057C1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{4810D3AB-8422-4940-BB99-0A89AD057C1D}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Translation.V2.IntegrationTests", "Google.Cloud.Translation.V2.IntegrationTests\Google.Cloud.Translation.V2.IntegrationTests.xproj", "{DA1886EA-D6F0-47EC-8FE9-2BA50119BDEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Translation.V2.IntegrationTests", "Google.Cloud.Translation.V2.IntegrationTests\Google.Cloud.Translation.V2.IntegrationTests.csproj", "{DA1886EA-D6F0-47EC-8FE9-2BA50119BDEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

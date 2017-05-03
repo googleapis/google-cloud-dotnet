@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp1.0;net452</TargetFrameworks>
+    <IsPackable>false</IsPackable>
+    <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Google.Cloud.Monitoring.V3\Google.Cloud.Monitoring.V3.csproj" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
+    <PackageReference Include="Moq" Version="4.7.8" />
+    <PackageReference Include="xunit" Version="2.3.0-beta1-build3642" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.0-beta1-build1309 " />
+    <Reference Condition="'$(TargetFramework)' == 'net452'" Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
+</Project>

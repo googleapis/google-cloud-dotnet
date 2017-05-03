@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <TargetFramework>net451</TargetFramework>
+    <AssemblyName>Google.Cloud.Docs.Snippets</AssemblyName>
+    <PackageId>Google.Cloud.Docs.Snippets</PackageId>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\apis\Google.Cloud.PubSub.V1\Google.Cloud.PubSub.V1\Google.Cloud.PubSub.V1.csproj" />
+    <ProjectReference Include="..\..\apis\Google.Cloud.Translation.V2\Google.Cloud.Translation.V2\Google.Cloud.Translation.V2.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0-preview-20170106-08" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0-beta5-build1225" />
+    <PackageReference Include="xunit" Version="2.2.0-beta5-build3474" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net451' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+</Project>

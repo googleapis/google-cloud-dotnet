@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26114.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.ErrorReporting.V1Beta1", "Google.Cloud.ErrorReporting.V1Beta1\Google.Cloud.ErrorReporting.V1Beta1.xproj", "{7408D53D-88E6-42BB-B79A-1B18B027633D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ErrorReporting.V1Beta1", "Google.Cloud.ErrorReporting.V1Beta1\Google.Cloud.ErrorReporting.V1Beta1.csproj", "{7408D53D-88E6-42BB-B79A-1B18B027633D}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.ErrorReporting.V1Beta1.Snippets", "Google.Cloud.ErrorReporting.V1Beta1.Snippets\Google.Cloud.ErrorReporting.V1Beta1.Snippets.xproj", "{BDA29173-1B20-4111-86BC-1B292744FFA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ErrorReporting.V1Beta1.Snippets", "Google.Cloud.ErrorReporting.V1Beta1.Snippets\Google.Cloud.ErrorReporting.V1Beta1.Snippets.csproj", "{BDA29173-1B20-4111-86BC-1B292744FFA7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{7E477049-02F4-4038-810B-9E7FC7E828A6}"
 	ProjectSection(SolutionItems) = preProject

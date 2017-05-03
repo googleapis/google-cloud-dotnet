@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <AssemblyName>Google.Cloud.Tools.CheckGapicConfigs</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>Google.Cloud.Tools.CheckGapicConfigs</PackageId>
+    <RuntimeFrameworkVersion>1.0.4</RuntimeFrameworkVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="YamlDotNet.NetCore" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>

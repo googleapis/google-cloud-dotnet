@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26114.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.LongRunning", "Google.LongRunning\Google.LongRunning.xproj", "{2DA31819-9094-49EC-96B6-744A481EB4F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.LongRunning", "Google.LongRunning\Google.LongRunning.csproj", "{2DA31819-9094-49EC-96B6-744A481EB4F9}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.xproj", "{4810D3AB-8422-4940-BB99-0A89AD057C1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{4810D3AB-8422-4940-BB99-0A89AD057C1D}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.LongRunning.Tests", "Google.LongRunning.Tests\Google.LongRunning.Tests.xproj", "{DF30E2FF-781A-4F5F-B60C-1C38291341E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.LongRunning.Tests", "Google.LongRunning.Tests\Google.LongRunning.Tests.csproj", "{DF30E2FF-781A-4F5F-B60C-1C38291341E3}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.LongRunning.Snippets", "Google.LongRunning.Snippets\Google.LongRunning.Snippets.xproj", "{D1D90E1A-E504-4193-B2A1-91527114D949}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.LongRunning.Snippets", "Google.LongRunning.Snippets\Google.LongRunning.Snippets.csproj", "{D1D90E1A-E504-4193-B2A1-91527114D949}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

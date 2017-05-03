@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <TargetFrameworks>netstandard1.3;net451</TargetFrameworks>
+    <AssemblyName>Google.Cloud.ClientTesting</AssemblyName>
+    <AssemblyOriginatorKeyFile>../GoogleApiTools.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    <PackageId>Google.Cloud.ClientTesting</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="2.2.0-beta5-build3474" />
+    <PackageReference Include="Google.Apis" Version="1.25.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)'=='Net451'">
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+
+  <Import Project="..\..\StripDesktopOnNonWindows.xml" />
+</Project>

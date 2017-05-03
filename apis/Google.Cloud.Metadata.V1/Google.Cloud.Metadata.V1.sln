@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26114.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Metadata.V1", "Google.Cloud.Metadata.V1\Google.Cloud.Metadata.V1.xproj", "{A0F0EB53-5C8B-44DE-85C4-42842A763619}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Metadata.V1", "Google.Cloud.Metadata.V1\Google.Cloud.Metadata.V1.csproj", "{A0F0EB53-5C8B-44DE-85C4-42842A763619}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Metadata.V1.IntegrationTests", "Google.Cloud.Metadata.V1.IntegrationTests\Google.Cloud.Metadata.V1.IntegrationTests.xproj", "{6A8E8F5E-D508-4051-BC56-F77E9AB5AA7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Metadata.V1.IntegrationTests", "Google.Cloud.Metadata.V1.IntegrationTests\Google.Cloud.Metadata.V1.IntegrationTests.csproj", "{6A8E8F5E-D508-4051-BC56-F77E9AB5AA7C}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Metadata.V1.Tests", "Google.Cloud.Metadata.V1.Tests\Google.Cloud.Metadata.V1.Tests.xproj", "{4895ABA2-6D01-45F3-85A3-0A262ADA7B15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Metadata.V1.Tests", "Google.Cloud.Metadata.V1.Tests\Google.Cloud.Metadata.V1.Tests.csproj", "{4895ABA2-6D01-45F3-85A3-0A262ADA7B15}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.xproj", "{4810D3AB-8422-4940-BB99-0A89AD057C1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{4810D3AB-8422-4940-BB99-0A89AD057C1D}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Metadata.V1.Snippets", "Google.Cloud.Metadata.V1.Snippets\Google.Cloud.Metadata.V1.Snippets.xproj", "{B9305E66-71C6-4B4B-AE61-A48224F1E02B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Metadata.V1.Snippets", "Google.Cloud.Metadata.V1.Snippets\Google.Cloud.Metadata.V1.Snippets.csproj", "{B9305E66-71C6-4B4B-AE61-A48224F1E02B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

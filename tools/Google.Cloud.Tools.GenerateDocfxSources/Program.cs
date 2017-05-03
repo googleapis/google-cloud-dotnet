@@ -70,7 +70,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
             {
                 src.Add(new JObject
                 {
-                    ["files"] = new JArray { $"{project.Name}/project.json" },
+                    ["files"] = new JArray { $"{project.Name}/{project.Name}.csproj" },
                     ["cwd"] = $"../../../apis/{api}"
                 });
             }
@@ -84,7 +84,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                 {
                     src.Add(new JObject
                     {
-                        ["files"] = new JArray { $"{dependency}/project.json" },
+                        ["files"] = new JArray { $"{dependency}/{dependency}.csproj" },
                         ["cwd"] = candidateDependency
                     });
                     continue;
@@ -98,8 +98,10 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                     {
                         ["src"] = src,
                         ["dest"] = "obj/api",
-                        ["filter"] = "filterConfig.yml"
-                    }
+                        ["filter"] = "filterConfig.yml",
+                        // TODO: net45, really?
+                        ["properties"] = new JObject { ["TargetFramework"] = "net45" }
+                    },
                 },
                 ["build"] = new JObject {
                     ["content"] = new JArray {

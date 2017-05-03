@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26114.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Datastore.V1", "Google.Cloud.Datastore.V1\Google.Cloud.Datastore.V1.xproj", "{F8B4458D-72E0-4316-B921-EBD69B42CEC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Datastore.V1", "Google.Cloud.Datastore.V1\Google.Cloud.Datastore.V1.csproj", "{F8B4458D-72E0-4316-B921-EBD69B42CEC9}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Datastore.V1.IntegrationTests", "Google.Cloud.Datastore.V1.IntegrationTests\Google.Cloud.Datastore.V1.IntegrationTests.xproj", "{5F3C8A95-6023-4C47-B118-51F1F06E1243}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Datastore.V1.IntegrationTests", "Google.Cloud.Datastore.V1.IntegrationTests\Google.Cloud.Datastore.V1.IntegrationTests.csproj", "{5F3C8A95-6023-4C47-B118-51F1F06E1243}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Datastore.V1.Snippets", "Google.Cloud.Datastore.V1.Snippets\Google.Cloud.Datastore.V1.Snippets.xproj", "{39920E40-11B2-427D-8F39-9907CB9EB9CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Datastore.V1.Snippets", "Google.Cloud.Datastore.V1.Snippets\Google.Cloud.Datastore.V1.Snippets.csproj", "{39920E40-11B2-427D-8F39-9907CB9EB9CE}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Datastore.V1.Tests", "Google.Cloud.Datastore.V1.Tests\Google.Cloud.Datastore.V1.Tests.xproj", "{3D518A4B-DDE0-4DEA-B873-076F216B782B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Datastore.V1.Tests", "Google.Cloud.Datastore.V1.Tests\Google.Cloud.Datastore.V1.Tests.csproj", "{3D518A4B-DDE0-4DEA-B873-076F216B782B}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.xproj", "{4810D3AB-8422-4940-BB99-0A89AD057C1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{4810D3AB-8422-4940-BB99-0A89AD057C1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
