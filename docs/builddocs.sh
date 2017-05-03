@@ -12,12 +12,12 @@ build_api_docs() {
     cp -r root output/root
     mkdir -p output/root/obj/api
   else
-    dotnet run -p ../tools/Google.Cloud.Tools.GenerateDocfxSources -- $api
+    dotnet run -p ../tools/Google.Cloud.Tools.GenerateDocfxSources/*.csproj -- $api
   fi
   cp filterConfig.yml output/$api
   docfx metadata -f output/$api/docfx.json | tee errors.txt
   (! grep --quiet 'Build failed.' errors.txt)
-  dotnet run -p ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- $api
+  dotnet run -p ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown/*.csproj -- $api
   
   # Copy external dependency yml files into the API and concatenate toc.yml
   for dep in $(cat output/$api/dependencies)

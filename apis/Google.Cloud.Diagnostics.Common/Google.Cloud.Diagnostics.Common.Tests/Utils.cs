@@ -40,7 +40,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
         public static bool IsWindows()
         {
-#if NET451
+#if NET452
             return Environment.OSVersion.ToString().Contains("Windows");
 #else
             return RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
