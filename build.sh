@@ -2,140 +2,79 @@
 
 set -e
 
-# Myget has sometimes used caps and sometimes not for
-# its environment variables...
-if [ -n "$PrereleaseTag" -a -z "$PRERELEASETAG" ]
+cd $(dirname $0)
+
+# Make it easier to handle globbing that doesn't
+# match anything, e.g. when looking for tests.
+shopt -s nullglob
+
+# Command line arguments are the APIs to build. Each argument
+# should be the name of a directory, either relative to the location
+# of this script, or under apis.
+apis=$@
+if [ -z "$apis" ]
 then
-  PRERELEASETAG="$PrereleaseTag"
+  apis="tools $(echo apis/Google.* | sed 's/apis\///g')"
 fi
 
-# Use an appropriate version of nuget... preferring
-# first an existing NUGET variable, then NuGet, then
-# just falling back to the path.
-if [ -z "$NUGET" ]
+# First build up a solution file with all the projects, and a text
+# file with paths to all the test project files.
+
+cat > AllProjects.sln <<End-of-sln
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26114.2
+MinimumVisualStudioVersion = 10.0.40219.1
+End-of-sln
+
+> AllTests.txt
+
+if [[ "$OS" == "Windows_NT" ]]
 then
-  if [ -n "$NuGet" ]
-  then
-    NUGET="$NuGet"
-  else
-    NUGET="nuget"
-  fi
-fi
-
-if [ $(dotnet --info | grep "OS Platform" | grep -c Windows) -ne 0 ]
-then
-  OS=Windows
-  $NUGET install -Verbosity quiet -OutputDirectory packages -Version 4.6.519 OpenCover
-  $NUGET install -Verbosity quiet -OutputDirectory packages -Version 2.4.5.0 ReportGenerator
-  # Comment out the lines below to disable coverage
-  OPENCOVER=$PWD/packages/OpenCover.4.6.519/tools/OpenCover.Console.exe
-  REPORTGENERATOR=$PWD/packages/ReportGenerator.2.4.5.0/tools/ReportGenerator.exe
-else
-  OS=Linux
-fi
-
-FIND=/usr/bin/find
-
-CONFIG=Release
-# Arguments to use for all build-related commands (build, pack)
-DOTNET_BUILD_ARGS="-c $CONFIG"
-# Arguments to use for test-related commands (test)
-DOTNET_TEST_ARGS="$DOTNET_BUILD_ARGS"
-
-# Three options:
-# - No environment variables: make sure it's not for release
-# - PRERELEASETAG set: use that
-# - NOVERSIONSUFFIX set: use no suffix; build as per project.json
-if [ -n "$PRERELEASETAG" ]
-then
-  DOTNET_BUILD_ARGS="$DOTNET_BUILD_ARGS --version-suffix $PRERELEASETAG"
-elif [ -z "$NOVERSIONSUFFIX" ]
-then
-  DOTNET_BUILD_ARGS="$DOTNET_BUILD_ARGS --version-suffix dont-release"
-fi
-
-echo CLI args: $DOTNET_BUILD_ARGS
-
-echo Restoring
-
-dotnet restore -v Warning tools apis
-
-echo Building tools
-
-cd tools
-dotnet build $DOTNET_BUILD_ARGS `$FIND . -mindepth 1 -maxdepth 1 -name 'Google*' -type d `
-cd ..
-
-cd apis
-dotnet build $DOTNET_BUILD_ARGS `$FIND * -mindepth 1 -maxdepth 1 -name 'Google*' -type d`
-
-echo Testing
-
-coverage=../coverage
-rm -rf $coverage
-mkdir $coverage
-
-for testdir in */*.Tests
-do
-  api=`echo $testdir | cut -d/ -f1`
-  # The full framework test is different under Windows and Linux, and
-  # we only do coverage tests on Windows.
-  if [[ "$testdir" =~ (AspNetCore) ]]
-  then
-    echo "Skipping $testdir, it will not run on .NET 4.5.1"
-  elif [ $OS == "Windows" ]
-  then
-    dotnet test --no-build  -f net451 $DOTNET_TEST_ARGS $testdir
-    if [ -n "$OPENCOVER" ]
-    then
-      # OpenCover is picky about how it finds the excluded files. There may be a better approach than this,
-      # but it'll do for now.
-      generatedFiles=`$FIND $api/$api -name '*.cs' | xargs grep -l "// Generated" | sed 's/.*\/.*\//*\\\\*\\\\/g' | tr '\n' ';'`
-      echo Coverage excluding files $generatedFiles
-      
-      # TODO: We still end up with output lines for the service and client, but with nothing
-      # available to be covered or uncovered. Protobuf messages don't appear (which is right!)
-      # so excludebyfile appears to be working. Odd.
-      $OPENCOVER \
-        -target:"c:\Program Files\dotnet\dotnet.exe" \
-        -targetargs:"test --no-build -f net451 $DOTNET_TEST_ARGS $testdir" \
-        -mergeoutput \
-        -hideskipped:File \
-        -output:$coverage/coverage.xml \
-        -oldStyle \
-        -filter:"+[$api]*" \
-        -searchdirs:$testdir/bin/$CONFIG/net451/win7-x64 \
-        -register:user \
-        -excludebyfile:$generatedFiles
-    fi
-  else
-    project=`echo $testdir | cut -d/ -f2`
-    bin=$testdir/bin/$CONFIG/net451/ubuntu.14.04-x64
-    mono $bin/dotnet-test-xunit.exe $bin/$project.dll
-  fi
+  # On Windows, we can just add all the projects, unconditionally.
+  # (And it's faster to add them all in one call to dotnet sln than
+  # to do them one at a time.)
+  for api in $apis
+  do 
+    [[ -d "$api" ]] && apidir=$api || apidir=apis/$api
+    dotnet sln AllProjects.sln add $apidir/*/*.csproj
   
-  # Other than log4net and aspnet, everything can be tested under .NET Core.
-  if [[ "$testdir" =~ (AspNet\.|Log4Net) ]]
-  then
-    echo "Skipping $testdir, it will not run on .NET Core"
-  else
-    dotnet test --no-build -f netcoreapp1.0 $DOTNET_TEST_ARGS $testdir
-  fi
-done
-
-if [ -n "$OPENCOVER" -a -n "REPORTGENERATOR" ]
-then
-  $REPORTGENERATOR \
-    -reports:$coverage/coverage.xml \
-    -targetdir:$coverage \
-    -verbosity:Error
+    for testproject in $apidir/*.Tests/*.csproj
+    do
+      echo "$testproject" >> AllTests.txt
+    done
+  done
+else
+  # On Linux, we don't have desktop .NET, so any projects which only
+  # support desktop .NET are going to be broken. Just don't add them.
+  for api in $apis
+  do 
+    [[ -d "$api" ]] && apidir=$api || apidir=apis/$api
+    for project in $apidir/*/*.csproj
+    do
+      if ! grep -q -E '>net[0-9]+<' $project
+      then
+        dotnet sln AllProjects.sln add $project
+      fi
+    done
+  
+    for testproject in $apidir/*.Tests/*.csproj
+    do
+      if ! grep -q -E '>net[0-9]+<' $testproject
+      then
+        echo "$testproject" >> AllTests.txt
+      fi
+    done
+  done
 fi
 
-echo Packing
+# Restore, build, test.
+dotnet restore AllProjects.sln
+dotnet build -c Release AllProjects.sln
 
-# Assume each packagable project has a version property exactly two spaces in.
-# This is nasty, but we can do something better after moving to csproj
-for package in $($FIND . -name project.json | xargs grep -le '^  \"version\"' | sed 's/\/project.json//g')
-do
-  dotnet pack --no-build $DOTNET_BUILD_ARGS $package
-done
+# Could use xargs, but this is more flexible
+while read testproject
+do  
+  echo "Testing $testproject"
+  dotnet test -c Release $testproject
+done < AllTests.txt

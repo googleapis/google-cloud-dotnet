@@ -28,9 +28,8 @@ rm -rf releasebuild
 git clone https://github.com/GoogleCloudPlatform/google-cloud-dotnet.git releasebuild
 cd releasebuild
 git checkout $tag
-NOVERSIONSUFFIX=yes ./build.sh
-mkdir nuget
-cp `find . -name 'Google.*.nupkg'` nuget
+./build.sh
+dotnet pack AllProjects.sln --no-build -o $PWD/nuget -c Release
 
 # TODO: Make builddocs.sh cope with being run from any directory.
 cd docs

@@ -41,7 +41,6 @@ namespace Google.Cloud.Storage.V1.Tests
             typeof(ObjectsResource.InsertRequest.PredefinedAclEnum),
             typeof(ObjectsResource.UpdateRequest.PredefinedAclEnum),
             typeof(ObjectsResource.PatchRequest.PredefinedAclEnum),
-            typeof(ObjectsResource.InsertRequest.PredefinedAclEnum),
             typeof(ObjectsResource.InsertMediaUpload.PredefinedAclEnum),
         };
 

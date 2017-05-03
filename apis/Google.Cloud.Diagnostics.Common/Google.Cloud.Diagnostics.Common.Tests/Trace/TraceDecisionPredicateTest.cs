@@ -15,7 +15,7 @@
 using System;
 using Xunit;
 
-#if NET451
+#if NET452
 using System.Web;
 #else
 using Microsoft.AspNetCore.Http;
@@ -28,7 +28,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
     {
         private HttpRequest CreateRequest(string path)
         {
-#if NET451
+#if NET452
             return new HttpRequest("somefile", $"https://www.google.com{path}", "");
 #else
             return new DefaultHttpRequest(new DefaultHttpContext())
