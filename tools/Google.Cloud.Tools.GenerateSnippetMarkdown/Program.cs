@@ -77,9 +77,9 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
         // All these characters need to be converted to _ when creating a link
         private static readonly Regex DocfxUidCharactersToEscape = new Regex(@"[\(\),\.\[\]\{\}<>]");
         private static readonly Regex DocfxSnippetPattern = new Regex(@"^[\w\.]+$", RegexOptions.Compiled);
-        private static readonly Regex NullablePattern = new Regex(@"^System.Nullable\{([\w\.]*)\}+$", RegexOptions.Compiled);
-        private static readonly Regex GenericMemberPattern = new Regex(@"^([\w\.]+)\{([\w\.]*,?)\}+$", RegexOptions.Compiled);
-        private static readonly Regex GenericSnippetPattern = new Regex(@"^([\w\.]+)\<([\w\.]*,?)\>+$", RegexOptions.Compiled);
+        private static readonly Regex NullablePattern = new Regex(@"^System.Nullable\{([\w\.]*)\}$", RegexOptions.Compiled);
+        private static readonly Regex GenericMemberPattern = new Regex(@"^([\w\.]+)\{([\w\.,]*)\}$", RegexOptions.Compiled);
+        private static readonly Regex GenericSnippetPattern = new Regex(@"^([\w\.]+)\<([\w\., ]*)\>$", RegexOptions.Compiled);
         private static readonly Dictionary<string, string> KeywordAliases = new Dictionary<string, string>
         {
             { "string", "System.String" },
@@ -249,6 +249,8 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
         {
             var canonicalName = Path.GetFullPath(snippetSourceDir);
             var projectName = TrimSuffix(Path.GetFileName(canonicalName), ".Snippets");
+            // Experimental libraries will be in non-experimental namespaces.
+            projectName = TrimSuffix(projectName, ".Experimental");
             var query = from sourceFile in Directory.GetFiles(snippetSourceDir, "*.cs")
                         let type = projectName + "." + TrimSuffix(Path.GetFileName(sourceFile), "Snippets.cs", "Snippets.g.cs")
                         from snippet in LoadFileSnippets(sourceFile, errors)
@@ -404,6 +406,8 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
         {
             var canonicalName = Path.GetFullPath(snippetSourceDir);
             var projectName = TrimSuffix(Path.GetFileName(canonicalName), ".Snippets");
+            // Experimental libraries will be in non-experimental namespaces.
+            projectName = TrimSuffix(projectName, ".Experimental");
             var query = from sourceFile in Directory.GetFiles(snippetSourceDir, "*.cs")
                         let type = projectName + "." + TrimSuffix(Path.GetFileName(sourceFile), "Snippets.cs", "Snippets.g.cs")
                         from snippet in LoadFileSeeAlsos(sourceFile, errors)
@@ -763,8 +767,8 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
                     return snippetParameters == "";
                 }
 
-                string[] splitSnippetParameters = snippetParameters.Split(',');
-                string[] splitMemberParameters = SplitMemberParameters(memberParameters);
+                string[] splitSnippetParameters = SplitParameters(snippetParameters);
+                string[] splitMemberParameters = SplitParameters(memberParameters);
                 if (splitMemberParameters.Length != splitSnippetParameters.Length)
                 {
                     return false;
@@ -778,7 +782,7 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
             }
         }
 
-        private static string[] SplitMemberParameters(string parameters)
+        private static string[] SplitParameters(string parameters)
         {
             // Commas can appear in generic parameter types as well as at the "top level".
             // Temporarily replace any comma which appears within braces with #,
@@ -789,9 +793,11 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
             {
                 switch (builder[i])
                 {
+                    case '<':
                     case '{':
                         arity++;
                         break;
+                    case '>':
                     case '}':
                         arity--;
                         break;
@@ -836,11 +842,11 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
                     return false;
                 }
                 // Both the type name and all the type arguments must match.
-                var memberTypeArguments = genericMemberMatch.Groups[2].Value.Split(',');
-                var snippetTypeArguments = genericSnippetMatch.Groups[2].Value.Split(',');
+                var memberTypeArguments = SplitParameters(genericMemberMatch.Groups[2].Value);
+                var snippetTypeArguments = SplitParameters(genericSnippetMatch.Groups[2].Value);
                 return IsParameterMatch(genericMemberMatch.Groups[1].Value, genericSnippetMatch.Groups[1].Value) &&
-                    memberTypeArguments.Zip(snippetTypeArguments, (mta, sta) => new { mta, sta })
-                        .All(pair => IsParameterMatch(pair.mta, pair.sta));
+                    memberTypeArguments.Length == snippetTypeArguments.Length &&
+                    memberTypeArguments.Zip(snippetTypeArguments, IsParameterMatch).All(x => x);
             }
 
             // Ignore namespaces, for now.

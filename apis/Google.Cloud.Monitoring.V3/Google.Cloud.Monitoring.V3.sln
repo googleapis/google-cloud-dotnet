@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26114.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Monitoring.V3", "Google.Cloud.Monitoring.V3\Google.Cloud.Monitoring.V3.xproj", "{E15626D3-88A8-483A-B51E-F728BF5502C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Monitoring.V3", "Google.Cloud.Monitoring.V3\Google.Cloud.Monitoring.V3.csproj", "{E15626D3-88A8-483A-B51E-F728BF5502C3}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Monitoring.V3.Snippets", "Google.Cloud.Monitoring.V3.Snippets\Google.Cloud.Monitoring.V3.Snippets.xproj", "{78BEF984-45BA-4385-A8B4-468AE94E64D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Monitoring.V3.Snippets", "Google.Cloud.Monitoring.V3.Snippets\Google.Cloud.Monitoring.V3.Snippets.csproj", "{78BEF984-45BA-4385-A8B4-468AE94E64D3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{1BB4B59A-54D9-4B48-B696-6A07CC1860AC}"
 	ProjectSection(SolutionItems) = preProject
