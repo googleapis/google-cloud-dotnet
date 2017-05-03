@@ -1,0 +1,34 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26114.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Logging.Log4Net", "Google.Cloud.Logging.Log4Net\Google.Cloud.Logging.Log4Net.csproj", "{B27E7461-3714-44F6-BD2D-E7579A85F759}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Logging.Log4Net.Snippets", "Google.Cloud.Logging.Log4Net.Snippets\Google.Cloud.Logging.Log4Net.Snippets.csproj", "{A41CFEF8-67FF-47EF-9EB0-671EF5861733}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Logging.Log4Net.Tests", "Google.Cloud.Logging.Log4Net.Tests\Google.Cloud.Logging.Log4Net.Tests.csproj", "{C359B60F-6E40-43EA-BEF3-9C1222BA7B28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B27E7461-3714-44F6-BD2D-E7579A85F759}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B27E7461-3714-44F6-BD2D-E7579A85F759}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B27E7461-3714-44F6-BD2D-E7579A85F759}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B27E7461-3714-44F6-BD2D-E7579A85F759}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A41CFEF8-67FF-47EF-9EB0-671EF5861733}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A41CFEF8-67FF-47EF-9EB0-671EF5861733}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A41CFEF8-67FF-47EF-9EB0-671EF5861733}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A41CFEF8-67FF-47EF-9EB0-671EF5861733}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C359B60F-6E40-43EA-BEF3-9C1222BA7B28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C359B60F-6E40-43EA-BEF3-9C1222BA7B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C359B60F-6E40-43EA-BEF3-9C1222BA7B28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C359B60F-6E40-43EA-BEF3-9C1222BA7B28}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
