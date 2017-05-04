@@ -17,8 +17,8 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Reflection;
-using System.Text;
 using Xunit;
 
 
@@ -76,7 +76,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                     { "gameStarted", BigQueryDbType.Timestamp },
                     { "score", BigQueryDbType.Int64 }
                 }.Build());
-            table.InsertRows(new[]
+            
+            var rows = new[]
             {
                 new BigQueryInsertRow {
                     { "player", "Bob" },
@@ -93,7 +94,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                     { "score", 1 },
                     { "gameStarted", new DateTime(2001, 1, 1, 0, 0, 0, DateTimeKind.Utc) }
                 }
-            });
+            };
+            InsertAndWait(table, () => table.InsertRows(rows), 3);
         }
 
         private void CreatePeopleTable(BigQueryDataset dataset)
@@ -210,7 +212,18 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 { "array_record", recordSchema, BigQueryFieldMode.Repeated },                
             }.Build());
 
-            table.InsertRow(ExhaustiveTypesTest.GetSampleRow());
+            InsertAndWait(table, () => table.InsertRow(ExhaustiveTypesTest.GetSampleRow()), 1);
+        }
+
+        internal void InsertAndWait(BigQueryTable table, Action insertAction, int expectedRowCountChange)
+        {
+            var countBefore = table.ListRows().Count();
+            var expectedCount = countBefore + expectedRowCountChange;
+            insertAction();
+            // Wait until there are *at least* enough rows
+            int actualCount = table.PollUntilRowCountIsAtLeast(expectedCount);
+            // Now check it's *exactly* the right number of rows.
+            Assert.Equal(expectedCount, actualCount);
         }
 
         internal List<string> LoadTextResource(string relativeName)

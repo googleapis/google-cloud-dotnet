@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
+using Google.Cloud.BigQuery.V2.IntegrationTests;
 using Google.Cloud.Storage.V1;
 using System;
 using System.Collections.Generic;
@@ -304,8 +305,8 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             client.InsertRows(datasetId, tableId, row1, row2);
             // End snippet
 
-            int rowsAfter = table.ListRows().Count();
-            Assert.Equal(rowsBefore + 2, rowsAfter);
+            int actualCount = table.PollUntilRowCountIsAtLeast(rowsBefore + 2);
+            Assert.Equal(rowsBefore + 2, actualCount);
         }
 
         [Fact]
@@ -969,9 +970,8 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             };
             await client.InsertRowsAsync(datasetId, tableId, row1, row2);
             // End snippet
-
-            int rowsAfter = table.ListRows().Count();
-            Assert.Equal(rowsBefore + 2, rowsAfter);
+            int actualCount = table.PollUntilRowCountIsAtLeast(rowsBefore + 2);
+            Assert.Equal(rowsBefore + 2, actualCount);
         }
 
         [Fact]
