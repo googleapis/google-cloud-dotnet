@@ -43,20 +43,10 @@ do
     echo "Skipping $testdir; test already run"
   elif [ -n "$OPENCOVER" ]
   then
-    api=`echo $testdir | cut -d/ -f1`
-    generatedFiles=`$FIND $api/$api -name '*.cs' | xargs grep -l "// Generated" | sed 's/.*\/.*\//*\\\\*\\\\/g' | tr '\n' ';'`
-    $OPENCOVER \
-        -target:"c:\Program Files\dotnet\dotnet.exe" \
-        -targetargs:"test -c Release --no-build -f net451 $DOTNET_TEST_ARGS $testdir/*.csproj" \
-        -mergeoutput \
-        -hideskipped:File \
-        -output:../coverage/coverage.xml \
-        -oldStyle \
-        -filter:"+[$api]*" \
-        -searchdirs:$testdir/bin/$CONFIG/net451/win7-x64 \
-        -register:user \
-        -excludebyfile:$generatedFiles
-    echo "$testdir" >> $PROGRESS_FILE
+    # TODO: When coverage is working again, use it. No point in
+    # having a non-working version here yet...
+    echo "Coverage not yet supported in .NET Core SDK 1.0.0...."
+    exit 1
   else
     dotnet test -c Release --no-build -f netcoreapp1.0 $DOTNET_TEST_ARGS $testdir/*.csproj
     echo "$testdir" >> $PROGRESS_FILE
