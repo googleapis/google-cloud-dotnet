@@ -19,15 +19,8 @@ fi
 
 # First build up a solution file with all the projects, and a text
 # file with paths to all the test project files.
-
-cat > AllProjects.sln <<End-of-sln
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26114.2
-MinimumVisualStudioVersion = 10.0.40219.1
-End-of-sln
-
 > AllTests.txt
+dotnet new sln --name AllProjects
 
 if [[ "$OS" == "Windows_NT" ]]
 then
