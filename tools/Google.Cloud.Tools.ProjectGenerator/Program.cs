@@ -23,7 +23,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
 {
     public class Program
     {
-        static void Main()
+        static int Main()
         {
             try
             {
@@ -36,10 +36,12 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 {
                     GenerateProjects(Path.Combine(root, "apis", api.Id), api);
                 }
+                return 0;
             }
             catch (Exception e)
             {
                 Console.WriteLine($"Failed: {e}");
+                return 1;
             }
         }
 
