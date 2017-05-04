@@ -303,6 +303,24 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Null(s["x"]);
         }
 
+        [Fact]
+        public void StringValueThatLooksLikeADate()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var row = client.CreateQueryJob("SELECT '2017-05-04T15:01:00Z' AS value")
+                .PollQueryUntilCompleted()
+                .GetRows()
+                .Single();
+
+            // Check that the schema really claims it's a string...
+            var field = row.Schema.Fields.Single();
+            Assert.Equal("value", field.Name);
+            Assert.Equal("STRING", field.Type);
+
+            // And we should be able to get the value as a string too...
+            Assert.Equal("2017-05-04T15:01:00Z", (string) row["value"]);
+        }
+
         // TODO: Struct containing array or array containing struct.
 
         [Fact]
