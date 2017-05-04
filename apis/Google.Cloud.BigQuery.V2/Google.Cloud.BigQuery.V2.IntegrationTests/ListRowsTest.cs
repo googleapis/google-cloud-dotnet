@@ -50,7 +50,9 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                     new BigQueryInsertRow { ["first"] = "x", ["last"] = "y" }
                 }
             };
-            table.InsertRow(insertRow);
+
+            _fixture.InsertAndWait(table, () => table.InsertRow(insertRow), 1);
+
             var result = table.ListRows();
             var row = result.Single(r => (string)r["guid"] == guid);
             var tags = (string[])row["tags"];

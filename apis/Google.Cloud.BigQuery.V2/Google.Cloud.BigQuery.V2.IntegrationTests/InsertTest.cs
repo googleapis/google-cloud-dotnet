@@ -37,17 +37,14 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var dataset = client.GetDataset(_fixture.DatasetId);
             var table = dataset.GetTable(_fixture.HighScoreTableId);
 
-            var countBefore = table.ListRows().Count();
-
             var row = BuildRow("Joe", 100, new DateTime(2016, 4, 26, 11, 43, 1, DateTimeKind.Utc));
-            table.InsertRow(row);
+
+            _fixture.InsertAndWait(table, () => table.InsertRow(row), 1);
 
             var rowsAfter = table.ListRows();
             var fetched = rowsAfter.Single(r => (string)r["player"] == "Joe");
             Assert.Equal(row["score"], fetched["score"]);
             Assert.Equal(row["gameStarted"], fetched["gameStarted"]);
-
-            Assert.Equal(countBefore + 1, rowsAfter.Count());
         }
 
         [Fact]
@@ -57,20 +54,17 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var dataset = client.GetDataset(_fixture.DatasetId);
             var table = dataset.GetTable(_fixture.HighScoreTableId);
 
-            var countBefore = table.ListRows().Count();
-
             var rows = new[]
             {
                 BuildRow("Jenny", 125, new DateTime(2012, 5, 22, 1, 20, 30, DateTimeKind.Utc)),
                 BuildRow("Lisa", 90, new DateTime(2011, 10, 12, 0, 0, 0, DateTimeKind.Utc))
             };
-            table.InsertRows(rows);
 
-            var rowsAfter = table.ListRows();
+            _fixture.InsertAndWait(table, () => table.InsertRows(rows), 2);
+
+            var rowsAfter = table.ListRows().ToList();
             Assert.True(rowsAfter.Any(r => (string)r["player"] == "Jenny"));
             Assert.True(rowsAfter.Any(r => (string)r["player"] == "Lisa"));
-
-            Assert.Equal(countBefore + 2, rowsAfter.Count());
         }
 
         [Fact]
@@ -93,15 +87,12 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 _fixture.CreateTableId(),
                 new TableSchemaBuilder { { "name", BigQueryDbType.String } }.Build());
 
-            Assert.Equal(0, table.ListRows().Count());
             var row = new BigQueryInsertRow { { "noSuchField", 10 } };
-            table.InsertRow(row, new InsertOptions { AllowUnknownFields = true });
 
-            // Check that we get the row. Use WaitForRows as
-            // sometimes this seems to be not-completely-immediate.
-            var command = new BigQueryCommand($"SELECT * FROM {table}");
-            Assert.Equal(1, WaitForRows(client, command).Count());
+            var options = new InsertOptions { AllowUnknownFields = true };
+            _fixture.InsertAndWait(table, () => table.InsertRow(row, options), 1);
         }
+
 
         [Fact]
         public void InsertRow_RecordField()
@@ -109,18 +100,21 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var dataset = client.GetDataset(_fixture.DatasetId);
             var table = dataset.GetTable(_fixture.ComplexTypesTableId);
+
             var guid = Guid.NewGuid().ToString();
             var row = new BigQueryInsertRow
             {
                 ["guid"] = guid,
                 ["position"] = new BigQueryInsertRow { ["x"] = 10L, ["y"] = 20L }
             };
-            table.InsertRow(row);
+
+            _fixture.InsertAndWait(table, () => table.InsertRow(row), 1);
             var command = new BigQueryCommand($"SELECT guid, position.x, position.y FROM {table} WHERE guid=@guid")
             {
                 Parameters = { { "guid", BigQueryDbType.String, guid } }
             };
-            var resultRows = WaitForRows(client, command)
+            var resultRows = client.ExecuteQuery(command)
+                .GetRows()
                 .Select(r => new { Guid = (string)r["guid"], X = (long)r["x"], Y = (long)r["y"] })
                 .ToList();
             var expectedResults = new[]
@@ -142,12 +136,14 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 ["guid"] = guid,
                 ["tags"] = new[] { "a", "b"}
             };
-            table.InsertRow(row);
+            _fixture.InsertAndWait(table, () => table.InsertRow(row), 1);
+
             var command = new BigQueryCommand($"SELECT guid, tag FROM {table}, UNNEST(tags) AS tag WHERE guid=@guid ORDER BY tag")
             {
                 Parameters = { { "guid", BigQueryDbType.String, guid } }
             };
-            var resultRows = WaitForRows(client, command)
+            var resultRows = client.ExecuteQuery(command)
+                .GetRows()
                 .Select(r => new { Guid = (string)r["guid"], Tag = (string)r["tag"] })
                 .ToList();
             var expectedResults = new[]
@@ -173,13 +169,16 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                     new BigQueryInsertRow { ["first"] = "x", ["last"] = "y" }
                 }
             };
-            table.InsertRow(row);
+
+            _fixture.InsertAndWait(table, () => table.InsertRow(row), 1);
+
             // Fetch flattened fields
             var command = new BigQueryCommand($"SELECT guid, name.first, name.last FROM {table}, UNNEST(names) AS name WHERE guid=@guid ORDER BY name.first")
             {
                 Parameters = { { "guid", BigQueryDbType.String, guid } }
             };
-            var resultRows = WaitForRows(client, command)
+            var resultRows = client.ExecuteQuery(command)
+                .GetRows()
                 .Select(r => new { Guid = (string)r["guid"], FirstName = (string)r["first"], LastName = (string)r["last"] })
                 .ToList();
             var expectedResults = new[]
@@ -193,7 +192,9 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             {
                 Parameters = { { "guid", BigQueryDbType.String, guid } }
             };
-            var resultRow = WaitForRows(client, command).Single();
+            var resultRow = client.ExecuteQuery(command)
+                .GetRows()
+                .Single();
             var fetchedNames = (Dictionary<string, object>[]) resultRow["names"];
             Assert.Equal(2, fetchedNames.Length);
             Assert.True(fetchedNames.Any(d => (string) d["first"] == "a" && (string) d["last"] == "b"));
@@ -212,36 +213,19 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 ["guid"] = guid,
                 ["job"] = new BigQueryInsertRow { ["company"] = "Pet Store", ["roles"] = new[] { "cashier", "manager" } },
             };
-            table.InsertRow(row);
+
+            _fixture.InsertAndWait(table, () => table.InsertRow(row), 1);
+
             var command = new BigQueryCommand($"SELECT job FROM {table} WHERE guid=@guid")
             {
                 Parameters = { { "guid", BigQueryDbType.String, guid } }
             };
-            var fetchedRow = WaitForRows(client, command).Single();
+            var fetchedRow = client.ExecuteQuery(command)
+                    .GetRows()
+                    .Single();
             var job = (Dictionary<string, object>) fetchedRow["job"];
             Assert.Equal("Pet Store", (string) job["company"]);
             Assert.Equal(new[] { "cashier", "manager" }, (string[]) job["roles"]);
-        }
-
-        /// <summary>
-        /// Waits for a query to return a non-empty result set. Some inserts may take a few seconds before the results are visible
-        /// via queries - and much longer to show up in ListRows. (It looks like these are inserts with repeated fields and/or record fields.)
-        /// </summary>
-        private IEnumerable<BigQueryRow> WaitForRows(BigQueryClient client, BigQueryCommand command)
-        {
-            for (int i = 0; i < 5; i++)
-            {
-                var rows = client.ExecuteQuery(command)
-                    .PollUntilCompleted()
-                    .GetRows()
-                    .ToList();
-                if (rows.Count > 0)
-                {
-                    return rows;
-                }
-                Thread.Sleep(1000);
-            }
-            throw new TimeoutException("Expected rows were not available after 5 seconds");
         }
 
         private BigQueryInsertRow BuildRow(string player, long score, DateTime gameStarted) =>

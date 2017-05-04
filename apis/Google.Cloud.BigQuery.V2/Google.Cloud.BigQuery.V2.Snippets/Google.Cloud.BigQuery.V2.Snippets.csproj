@@ -17,5 +17,9 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.3.0-beta1-build1309 " />
     <Reference Condition="'$(TargetFramework)' == 'net452'" Include="Microsoft.CSharp" />
   </ItemGroup>
+  <!-- For BigQueryTableExtensions -->
+  <ItemGroup>
+    <ProjectReference Include="..\Google.Cloud.BigQuery.V2.IntegrationTests\Google.Cloud.BigQuery.V2.IntegrationTests.csproj" />
+  </ItemGroup>
   <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
 </Project>

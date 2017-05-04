@@ -36,3 +36,6 @@ pushselectedreleases.sh
 # Generated files when building
 AllProjects.sln
 AllTests.txt
+
+# Test result files
+*.trx
