@@ -22,6 +22,13 @@
     <PackageReference Include="Google.Api.Gax.Rest" Version="1.0.1" />
     <PackageReference Include="Google.Apis.Bigquery.v2" Version="1.25.0.819" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Compile Update="BigQueryClient.*.cs">
+      <DependentUpon>BigQueryClient.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BigQueryClientImpl.*.cs">
+      <DependentUpon>BigQueryClientImpl.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
   <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
 </Project>
