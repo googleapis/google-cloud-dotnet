@@ -31,11 +31,6 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
         public string SnippetId { get; set; }
 
         /// <summary>
-        /// The reference to use in the link to the member referred to by SnippetId.
-        /// </summary>
-        public string SnippetRef { get; set; }
-
-        /// <summary>
         /// The metadata UID for the member referred to by SnippetId.
         /// </summary>
         public string SnippetUid { get; set; }

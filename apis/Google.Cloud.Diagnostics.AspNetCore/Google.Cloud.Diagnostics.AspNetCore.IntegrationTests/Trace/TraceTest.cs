@@ -134,7 +134,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.True(headerContext.ShouldTrace);
         }
 
-        [Fact]
+        [Fact(Skip = "Disabling as this test is about 50% flaky.  Enable once #966 is fixed.")]
         public async Task Trace_QPS()
         {
             string testId = Utils.GetTestId();
@@ -211,6 +211,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.NotEmpty(span.Labels);
             Assert.Contains(nameof(TraceController), span.Labels[TraceLabels.StackTrace]);
             Assert.Contains(nameof(TraceController.ThrowException), span.Labels[TraceLabels.StackTrace]);
+        }
+
+        [Fact]
+        public async Task Trace_IgnoreHealthChecks()
+        {
+            string testId = Utils.GetTestId();
+            var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
+
+            var client = _noBufferHighQps.CreateClient();
+            await client.GetAsync("/_ah/health");
+
+            var trace = _polling.GetTrace("/_ah/health", startTime, expectTrace: false);
+            Assert.Null(trace);
         }
     }
 
@@ -289,7 +302,26 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Trace}/{action=Index}/{id}");
+
+                routes.MapRoute(
+                   name: "_ah",
+                   template: "{controller=Health}/{action=Health}");
             });
+        }
+    }
+
+    [Route("_ah")]
+    public class HealthCheckController : Controller
+    {
+        [HttpGet(Name = "health")]
+        public string Health([FromServices] IManagedTracer tracer)
+        {
+            string message = "/_ah/health";
+            using (tracer.StartSpan(message))
+            {
+                Thread.Sleep(10);
+            }
+            return message;
         }
     }
 

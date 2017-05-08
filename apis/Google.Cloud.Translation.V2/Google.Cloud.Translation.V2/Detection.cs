@@ -17,12 +17,18 @@ using Google.Apis.Translate.v2.Data;
 namespace Google.Cloud.Translation.V2
 {
     /// <summary>
-    /// One possible option as the result of detecting the language of a piece of text
+    /// A result of detecting the language of a piece of text
     /// via <see cref="TranslationClient.DetectLanguage(string)"/> or
-    /// <see cref="TranslationClient.DetectLanguageAsync(string, System.Threading.CancellationToken)"/>.
+    /// <see cref="TranslationClient.DetectLanguageAsync(string, System.Threading.CancellationToken)"/>,
+    /// or the multiple-item equivalents.
     /// </summary>
     public sealed class Detection
     {
+        /// <summary>
+        /// The text that was used for the input of language detection.
+        /// </summary>
+        public string Text { get; }
+
         /// <summary>
         /// The language code for the detected language.
         /// </summary>
@@ -41,17 +47,21 @@ namespace Google.Cloud.Translation.V2
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
+        /// <param name="text">The text that was used for the input of language detection.</param>
         /// <param name="language">The detected language code.</param>
         /// <param name="confidence">The confidence of the detection.</param>
         /// <param name="isReliable">The reliability of the detection.</param>
-        public Detection(string language, float confidence, bool isReliable)
+        public Detection(string text, string language, float confidence, bool isReliable)
         {
+            Text = text;
             Language = language;
             Confidence = confidence;
             IsReliable = isReliable;
         }
 
-        internal static Detection FromResource(DetectionsResourceItems resource) =>
-            new Detection(resource.Language, resource.Confidence.GetValueOrDefault(), resource.IsReliable ?? false);
+        internal Detection(string text, DetectionsResourceItems resource)
+            : this(text, resource.Language, resource.Confidence.GetValueOrDefault(), resource.IsReliable ?? false)
+        {
+        }
     }
 }

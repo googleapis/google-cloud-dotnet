@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26114.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Vision.V1", "Google.Cloud.Vision.V1\Google.Cloud.Vision.V1.xproj", "{E9BEC793-0D92-4696-820B-B72268572D9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Vision.V1", "Google.Cloud.Vision.V1\Google.Cloud.Vision.V1.csproj", "{E9BEC793-0D92-4696-820B-B72268572D9D}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Vision.V1.Snippets", "Google.Cloud.Vision.V1.Snippets\Google.Cloud.Vision.V1.Snippets.xproj", "{1306FD30-A8DC-42DC-8EB1-DA5784EB04A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Vision.V1.Snippets", "Google.Cloud.Vision.V1.Snippets\Google.Cloud.Vision.V1.Snippets.csproj", "{1306FD30-A8DC-42DC-8EB1-DA5784EB04A5}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Vision.V1.Tests", "Google.Cloud.Vision.V1.Tests\Google.Cloud.Vision.V1.Tests.xproj", "{BEBAE9D9-36D8-4A04-91ED-BA9025973AE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Vision.V1.Tests", "Google.Cloud.Vision.V1.Tests\Google.Cloud.Vision.V1.Tests.csproj", "{BEBAE9D9-36D8-4A04-91ED-BA9025973AE7}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Vision.V1.IntegrationTests", "Google.Cloud.Vision.V1.IntegrationTests\Google.Cloud.Vision.V1.IntegrationTests.xproj", "{43B28767-4FBD-40C6-B2BE-8DFC91E2F6F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Vision.V1.IntegrationTests", "Google.Cloud.Vision.V1.IntegrationTests\Google.Cloud.Vision.V1.IntegrationTests.csproj", "{43B28767-4FBD-40C6-B2BE-8DFC91E2F6F2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{655FEAA7-59DF-4CAE-8035-63CEB11D136B}"
 	ProjectSection(SolutionItems) = preProject

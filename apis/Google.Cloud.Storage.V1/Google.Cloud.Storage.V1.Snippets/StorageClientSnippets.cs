@@ -19,6 +19,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
@@ -593,6 +595,102 @@ namespace Google.Cloud.Storage.V1.Snippets
         // Member: DeleteBucketAsync(Bucket,*,*)
         // Member: DeleteBucketAsync(string,*,*)
         // See [DeleteBucket](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void GetBucketIamPolicy()
+        {
+            var bucketName = _fixture.BucketName;
+            // Snippet: GetBucketIamPolicy(string,*)
+            StorageClient client = StorageClient.Create();
+
+            Policy policy = client.GetBucketIamPolicy(bucketName);
+            foreach (Policy.BindingsData binding in policy.Bindings)
+            {
+                Console.WriteLine($"Role: {binding.Role}");
+                foreach (var permission in binding.Members)
+                {
+                    Console.WriteLine($"  {permission}");
+                }
+            }
+            // End snippet
+        }
+
+        // See-also: GetBucketIamPolicy(string,*)
+        // Member: GetBucketIamPolicyAsync(string,*,*)
+        // See [GetBucketIamPolicy](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public async Task SetBucketIamPolicy()
+        {
+            var projectId = _fixture.ProjectId;
+            var bucketName = Guid.NewGuid().ToString();
+            _fixture.RegisterBucketToDelete(bucketName);
+
+            // Snippet: SetBucketIamPolicy(string, *, *)
+            // Create a new bucket and an empty file within it
+            StorageClient client = StorageClient.Create();
+            Bucket bucket = client.CreateBucket(projectId, bucketName);
+            var obj = client.UploadObject(bucketName, "empty.txt", "text/plain", new MemoryStream());
+
+            // Demonstrate that without authentication, we can't download the object
+            HttpClient httpClient = new HttpClient();
+            HttpResponseMessage response1 = await httpClient.GetAsync(obj.MediaLink);
+            Console.WriteLine($"Response code before setting policy: {response1.StatusCode}");
+
+            // Fetch the current IAM policy, and modify it in memory to allow all users
+            // to view objects.
+            Policy policy = client.GetBucketIamPolicy(bucketName);
+            string role = "roles/storage.objectViewer";
+            Policy.BindingsData binding = policy.Bindings
+                .Where(b => b.Role == role)
+                .FirstOrDefault();
+            if (binding == null)
+            {
+                binding = new Policy.BindingsData { Role = role, Members = new List<string>() };
+                policy.Bindings.Add(binding);
+            }
+            binding.Members.Add("allUsers");
+
+            // Update the IAM policy on the bucket.
+            client.SetBucketIamPolicy(bucketName, policy);
+
+            // Download the object again: this time the response should be OK
+            HttpResponseMessage response2 = await httpClient.GetAsync(obj.MediaLink);
+            Console.WriteLine($"Response code after setting policy: {response2.StatusCode}");
+
+            // End snippet
+
+            Assert.Equal(HttpStatusCode.Unauthorized, response1.StatusCode);
+            Assert.Equal(HttpStatusCode.OK, response2.StatusCode);
+        }
+
+        // See-also: SetBucketIamPolicy(string, *, *)
+        // Member: SetBucketIamPolicyAsync(string,*,*,*)
+        // See [SetBucketIamPolicy](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void TestBucketIamPermissions()
+        {
+            var bucketName = _fixture.BucketName;
+            // Snippet: TestBucketIamPermissions(string,*,*)
+            StorageClient client = StorageClient.Create();
+            
+            IList<string> permissions = client.TestBucketIamPermissions(bucketName,
+                new[] { "storage.buckets.get", "storage.objects.list" });
+            Console.WriteLine("Permissions held:");
+            foreach (string permission in permissions)
+            {
+                Console.WriteLine($"  {permission}");
+            }
+            // End snippet
+        }
+
+        // See-also: TestBucketIamPermissions(string,*,*)
+        // Member: TestBucketIamPermissionsAsync(string,*,*,*)
+        // See [TestBucketIamPermissions](ref) for a synchronous example.
         // End see-also
     }
 }

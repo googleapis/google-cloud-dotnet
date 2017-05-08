@@ -18,6 +18,19 @@ using System;
 
 namespace Google.LongRunning
 {
+    public partial class OperationsSettings
+    {
+        /// <summary>
+        /// The poll settings used by default for repeated polling operations.
+        /// </summary>
+        public PollSettings DefaultPollSettings { get; private set; }
+
+        partial void OnCopy(OperationsSettings existing)
+        {
+            DefaultPollSettings = existing.DefaultPollSettings;
+        }
+    }
+
     public partial class OperationsClient
     {
         /// <summary>
@@ -32,6 +45,15 @@ namespace Google.LongRunning
         /// The scheduler used for timeouts, retries and polling.
         /// </summary>
         public virtual IScheduler Scheduler
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// The poll settings used by default for repeated polling operations.
+        /// May be null if no defaults have been set.
+        /// </summary>
+        public virtual PollSettings DefaultPollSettings
         {
             get { throw new NotImplementedException(); }
         }
@@ -57,12 +79,16 @@ namespace Google.LongRunning
     {
         private IClock _clock;
         private IScheduler _scheduler;
+        private PollSettings _defaultPollSettings;
 
         /// <inheritdoc />
         public override IClock Clock => _clock;
 
         /// <inheritdoc />
         public override IScheduler Scheduler => _scheduler;
+
+        /// <inheritdoc />
+        public override PollSettings DefaultPollSettings => _defaultPollSettings;
 
         // Note: if we ever have a partial Modify_GetOperationRequest call body,
         // we'd want to call it here, but cope with not providing a request.
@@ -75,6 +101,7 @@ namespace Google.LongRunning
         {
             _clock = clientHelper.Clock;
             _scheduler = clientHelper.Scheduler;
+            _defaultPollSettings = effectiveSettings?.DefaultPollSettings;
         }
     }
 }

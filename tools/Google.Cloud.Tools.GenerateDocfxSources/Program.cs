@@ -25,24 +25,6 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
 {
     public class Program
     {
-        // Mapping from the dependency name to the file within "external" that docfx should generate metadata from
-        private static readonly Dictionary<string, string> s_dependencyReferences = new Dictionary<string, string>
-        {
-            { "Google.Protobuf", "protobuf/csharp/src/Google.Protobuf/project.json" },
-            { "Google.Apis", "google-api-dotnet-client/Src/Support/GoogleApis/Net45/GoogleApis_Net45.csproj" },
-            { "Google.Apis.Core", "google-api-dotnet-client/Src/Support/GoogleApis.Core/Net45/GoogleApis.Core_Net45.csproj" },
-            { "Google.Apis.Auth", "google-api-dotnet-client/Src/Support/GoogleApis.Auth/Net45/GoogleApis.Auth_Net45.csproj" },
-            { "Google.Api.Gax", "gax-dotnet/src/Google.Api.Gax/project.json" },
-            { "Google.Api.Gax.Grpc", "gax-dotnet/src/Google.Api.Gax.Grpc/project.json" },
-            { "Google.Api.Gax.Rest", "gax-dotnet/src/Google.Api.Gax.Rest/project.json" },
-            { "Google.Api.CommonProtos", "gax-dotnet/src/Google.Api.CommonProtos/project.json" },
-            { "Grpc.Core", "grpc/src/csharp/Grpc.Core/Grpc.Core.csproj" },
-
-            // It's easier to hard-code these for now than generalise them...
-            { "Google.Apis.Storage.v1", "google-api-dotnet-client/Src/Generated/Google.Apis.Storage.v1/NetStandard/Google.Apis.Storage.v1.csproj" },
-            { "Google.Apis.Bigquery.v2", "google-api-dotnet-client/Src/Generated/Google.Apis.Bigquery.v2/NetStandard/Google.Apis.Bigquery.v2.csproj" },
-        };
-
         private static int Main(string[] args)
         {
             try
@@ -88,7 +70,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
             {
                 src.Add(new JObject
                 {
-                    ["files"] = new JArray { $"{project.Name}/project.json" },
+                    ["files"] = new JArray { $"{project.Name}/{project.Name}.csproj" },
                     ["cwd"] = $"../../../apis/{api}"
                 });
             }
@@ -96,23 +78,13 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
             var dependencies = projects.SelectMany(p => p.Dependencies).OrderBy(d => d).Distinct().ToList();
             foreach (var dependency in dependencies)
             {
-                string path;
-                if (s_dependencyReferences.TryGetValue(dependency, out path))
-                {
-                    src.Add(new JObject
-                    {
-                        ["files"] = new JArray { path },
-                        ["cwd"] = $"../../external"
-                    });
-                    continue;
-                }
                 // Cross-API dependencies (currently for IAM and LRO)
                 string candidateDependency = $"../../../apis/{dependency}";
                 if (Directory.Exists(Path.Combine(outputDirectory, candidateDependency)))
                 {
                     src.Add(new JObject
                     {
-                        ["files"] = new JArray { $"{dependency}/project.json" },
+                        ["files"] = new JArray { $"{dependency}/{dependency}.csproj" },
                         ["cwd"] = candidateDependency
                     });
                     continue;
@@ -126,14 +98,16 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                     {
                         ["src"] = src,
                         ["dest"] = "obj/api",
-                        ["filter"] = "filterConfig.yml"
-                    }
+                        ["filter"] = "filterConfig.yml",
+                        // TODO: net45, really?
+                        ["properties"] = new JObject { ["TargetFramework"] = "net45" }
+                    },
                 },
                 ["build"] = new JObject {
                     ["content"] = new JArray {
                         new JObject
                         {
-                            ["files"] = new JArray { "**/*.yml" },
+                            ["files"] = "*.yml",
                             ["src"] = "obj/api",
                             ["dest"] = "api"
                         },
@@ -152,8 +126,16 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                     ["dest"] = "site"
                 }
             };
-
             File.WriteAllText(Path.Combine(outputDirectory, "docfx.json"), json.ToString());
+
+            // We let the build script do work with the dependencies:
+            // - Copy all yml files
+            // - Concatenate toc.yml files
+            var externalDependencies = dependencies
+                .Where(d => Directory.Exists(Path.Combine(outputDirectory, $"../../dependencies/api/{d}")))
+                .ToList();
+
+            File.WriteAllText(Path.Combine(outputDirectory, "dependencies"), string.Join(" ", externalDependencies));
         }
 
         private static void CopyAndGenerateArticles(string api, string inputDirectory, string outputDirectory)

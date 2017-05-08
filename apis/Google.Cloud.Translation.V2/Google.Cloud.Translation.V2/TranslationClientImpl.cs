@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Rest;
 using Google.Apis.Translate.v2;
+using Google.Apis.Translate.v2.Data;
 using Google.Apis.Util;
 using System;
 using System.Collections.Generic;
@@ -81,8 +82,8 @@ namespace Google.Cloud.Translation.V2
         /// Constructs a new client wrapping the given <see cref="TranslateService"/>.
         /// </summary>
         /// <param name="service">The service to wrap. Must not be null.</param>
-        /// <param name="model">The default translation model to use. Defaults to <see cref="TranslationModel.Base"/>.</param>
-        public TranslationClientImpl(TranslateService service, TranslationModel model = TranslationModel.Base)
+        /// <param name="model">The default translation model to use. Defaults to <see cref="TranslationModel.ServiceDefault"/>.</param>
+        public TranslationClientImpl(TranslateService service, TranslationModel model = TranslationModel.ServiceDefault)
         {
             Service = GaxPreconditions.CheckNotNull(service, nameof(service));
             TranslationModels.ValidateModel(model);
@@ -90,54 +91,32 @@ namespace Google.Cloud.Translation.V2
         }
 
         /// <inheritdoc />
-        public override TranslationResult TranslateText(string text, string targetLanguage, string sourceLanguage = null, TranslationModel? model = null)
-        {
-            var request = Service.Translations.List(new Repeatable<string>(new[] { text }), targetLanguage);
-            ModifyRequest(request, sourceLanguage, FormatEnum.Text, model);
-            var result = request.Execute().Translations[0];
-            return new TranslationResult(result, text, sourceLanguage, targetLanguage);
-        }
-
-        /// <inheritdoc />
-        public override TranslationResult TranslateHtml(string text, string targetLanguage, string sourceLanguage = null, TranslationModel? model = null)
-        {
-            var request = Service.Translations.List(new Repeatable<string>(new[] { text }), targetLanguage);
-            ModifyRequest(request, sourceLanguage, FormatEnum.Html, model);
-            var result = request.Execute().Translations[0];
-            return new TranslationResult(result, text, sourceLanguage, targetLanguage);
-        }
-
-        /// <inheritdoc />
         public override IList<TranslationResult> TranslateText(IEnumerable<string> textItems, string targetLanguage, string sourceLanguage = null, TranslationModel? model = null)
         {
-            // Evaluate once so we can zip suitably.
-            List<string> items = textItems.ToList();
+            var items = ConvertToListAndCheckNoNullElements(textItems, nameof(textItems));
+            GaxPreconditions.CheckNotNull(targetLanguage, nameof(targetLanguage));
             var request = Service.Translations.List(new Repeatable<string>(items), targetLanguage);
             ModifyRequest(request, sourceLanguage, FormatEnum.Text, model);
-            return request.Execute().Translations
-                .Zip(items, (result, item) => new TranslationResult(result, item, sourceLanguage, targetLanguage))
-                .ToList();
+            return UnpackTranslationResponse(items, sourceLanguage, targetLanguage, request.Execute());
         }
 
         /// <inheritdoc />
         public override IList<TranslationResult> TranslateHtml(IEnumerable<string> htmlItems, string targetLanguage, string sourceLanguage = null, TranslationModel? model = null)
         {
-            // Evaluate once so we can zip suitably.
-            List<string> items = htmlItems.ToList();
+            var items = ConvertToListAndCheckNoNullElements(htmlItems, nameof(htmlItems));
+            GaxPreconditions.CheckNotNull(targetLanguage, nameof(targetLanguage));
             var request = Service.Translations.List(new Repeatable<string>(items), targetLanguage);
             ModifyRequest(request, sourceLanguage, FormatEnum.Html, model);
-            return request.Execute().Translations
-                .Zip(items, (result, item) => new TranslationResult(result, item, sourceLanguage, targetLanguage))
-                .ToList();
+            return UnpackTranslationResponse(items, sourceLanguage, targetLanguage, request.Execute());
         }
 
         /// <inheritdoc />
-        public override IList<Detection> DetectLanguage(string text)
+        public override IList<Detection> DetectLanguages(IEnumerable<string> textItems)
         {
-            var request = Service.Detections.List(new Repeatable<string>(new[] { text }));
+            var items = ConvertToListAndCheckNoNullElements(textItems, nameof(textItems));
+            var request = Service.Detections.List(new Repeatable<string>(items));
             request.ModifyRequest += _versionHeaderAction;
-            var result = request.Execute().Detections[0];
-            return result.Select(Detection.FromResource).ToList();
+            return UnpackDetectResponse(items, request.Execute());
         }
 
         /// <inheritdoc />
@@ -150,58 +129,37 @@ namespace Google.Cloud.Translation.V2
         }
 
         /// <inheritdoc />
-        public override async Task<TranslationResult> TranslateTextAsync(string text, string targetLanguage, string sourceLanguage = null,
-            TranslationModel? model = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            var request = Service.Translations.List(new Repeatable<string>(new[] { text }), targetLanguage);
-            ModifyRequest(request, sourceLanguage, FormatEnum.Text, model);
-            var result = (await request.ExecuteAsync(cancellationToken).ConfigureAwait(false)).Translations[0];
-            return new TranslationResult(result, text, sourceLanguage, targetLanguage);
-        }
-
-        /// <inheritdoc />
-        public override async Task<TranslationResult> TranslateHtmlAsync(string text, string targetLanguage, string sourceLanguage = null,
-            TranslationModel? model = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            var request = Service.Translations.List(new Repeatable<string>(new[] { text }), targetLanguage);
-            ModifyRequest(request, sourceLanguage, FormatEnum.Html, model);
-            var result = (await request.ExecuteAsync(cancellationToken).ConfigureAwait(false)).Translations[0];
-            return new TranslationResult(result, text, sourceLanguage, targetLanguage);
-        }
-
-        /// <inheritdoc />
         public override async Task<IList<TranslationResult>> TranslateTextAsync(IEnumerable<string> textItems, string targetLanguage, string sourceLanguage = null,
             TranslationModel? model = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // Evaluate once so we can zip suitably.
-            List<string> items = textItems.ToList();
+            var items = ConvertToListAndCheckNoNullElements(textItems, nameof(textItems));
+            GaxPreconditions.CheckNotNull(targetLanguage, nameof(targetLanguage));
             var request = Service.Translations.List(new Repeatable<string>(items), targetLanguage);
             ModifyRequest(request, sourceLanguage, FormatEnum.Text, model);
-            return (await request.ExecuteAsync(cancellationToken).ConfigureAwait(false)).Translations
-                .Zip(items, (result, item) => new TranslationResult(result, item, sourceLanguage, targetLanguage))
-                .ToList();
+            var response = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            return UnpackTranslationResponse(items, sourceLanguage, targetLanguage, response);
         }
 
         /// <inheritdoc />
         public override async Task<IList<TranslationResult>> TranslateHtmlAsync(IEnumerable<string> htmlItems, string targetLanguage, string sourceLanguage = null,
             TranslationModel? model = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // Evaluate once so we can zip suitably.
-            List<string> items = htmlItems.ToList();
+            var items = ConvertToListAndCheckNoNullElements(htmlItems, nameof(htmlItems));
+            GaxPreconditions.CheckNotNull(targetLanguage, nameof(targetLanguage));
             var request = Service.Translations.List(new Repeatable<string>(items), targetLanguage);
             ModifyRequest(request, sourceLanguage, FormatEnum.Html, model);
-            return (await request.ExecuteAsync(cancellationToken).ConfigureAwait(false)).Translations
-                .Zip(items, (result, item) => new TranslationResult(result, item, sourceLanguage, targetLanguage))
-                .ToList();
+            var response = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            return UnpackTranslationResponse(items, sourceLanguage, targetLanguage, response);
         }
 
         /// <inheritdoc />
-        public override async Task<IList<Detection>> DetectLanguageAsync(string text, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<IList<Detection>> DetectLanguagesAsync(IEnumerable<string> textItems, CancellationToken cancellationToken = default(CancellationToken))
         {
-            var request = Service.Detections.List(new Repeatable<string>(new[] { text }));
+            var items = ConvertToListAndCheckNoNullElements(textItems, nameof(textItems));
+            var request = Service.Detections.List(new Repeatable<string>(items));
             request.ModifyRequest += _versionHeaderAction;
-            var result = (await request.ExecuteAsync(cancellationToken).ConfigureAwait(false)).Detections[0];
-            return result.Select(Detection.FromResource).ToList();
+            var response = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            return UnpackDetectResponse(items, response);
         }
 
         /// <inheritdoc />
@@ -213,6 +171,42 @@ namespace Google.Cloud.Translation.V2
             return (await request.ExecuteAsync(cancellationToken).ConfigureAwait(false)).Languages.Select(Language.FromResource).ToList();
         }
 
+        private static List<string> ConvertToListAndCheckNoNullElements(IEnumerable<string> source, string paramName)
+        {
+            GaxPreconditions.CheckNotNull(source, paramName);
+            var ret = source.ToList();
+            GaxPreconditions.CheckArgument(!ret.Contains(null), paramName, "Null elements are not permitted");
+            return ret;
+        }
+
+        private static IList<TranslationResult> UnpackTranslationResponse(
+            List<string> inputs, string sourceLanguage, string targetLanguage, TranslationsListResponse response)
+        {
+            var translations = response.Translations;
+            if (inputs.Count != translations.Count)
+            {
+                throw new InvalidOperationException($"Expected {inputs.Count} translation results; got {translations.Count}");
+            }
+            return inputs.Zip(translations, (input, translation) => new TranslationResult(translation, input, sourceLanguage, targetLanguage))
+                .ToList();
+        }
+
+        private static IList<Detection> UnpackDetectResponse(List<string> inputs, DetectionsListResponse response)
+        {
+            var detections = response.Detections;
+            if (inputs.Count != detections.Count)
+            {
+                throw new InvalidOperationException($"Expected {inputs.Count} detection results; got {detections.Count}");
+            }
+            var firstInvalid = detections.FirstOrDefault(list => list.Count != 1);
+            if (firstInvalid != null)
+            {
+                throw new InvalidOperationException($"Unexpected detection result: {firstInvalid.Count} items");
+            }                
+            return inputs.Zip(detections, (input, resourceList) => new Detection(input, resourceList[0]))
+                .ToList();
+        }
+
         private void ModifyRequest(ListRequest request, string sourceLanguage, FormatEnum format, TranslationModel? model)
         {
             request.ModifyRequest += _versionHeaderAction;
@@ -220,8 +214,7 @@ namespace Google.Cloud.Translation.V2
             request.Format = format;
             var effectiveModel = model ?? DefaultModel;
             TranslationModels.ValidateModel(effectiveModel);
-            // Never explicitly request the base model.
-            request.Model = effectiveModel == TranslationModel.Base ? null : effectiveModel.ToApiName();
+            request.Model = effectiveModel.ToApiName();
         }      
     }
 }

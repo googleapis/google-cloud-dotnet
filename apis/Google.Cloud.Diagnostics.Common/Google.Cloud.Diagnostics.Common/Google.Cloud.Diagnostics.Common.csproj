@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Version>1.0.0-beta01</Version>
+    <TargetFrameworks>netstandard1.5;net45</TargetFrameworks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    <Description>Google Stackdriver Instrumentation Libraries Common Components.</Description>
+    <PackageTags>Error;Reporting;Stackdriver;ExceptionLogger;Trace;Diagnostics;Google;Cloud</PackageTags>
+    <IncludeSymbols>true</IncludeSymbols>
+    <Copyright>Copyright 2017 Google Inc.</Copyright>
+    <Authors>Google Inc.</Authors>
+    <IconUrl>https://cloud.google.com/images/gcp-icon-64x64.png</IconUrl>
+    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/GoogleCloudPlatform/google-cloud-dotnet</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/GoogleCloudPlatform/google-cloud-dotnet</RepositoryUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Google.Cloud.ErrorReporting.V1Beta1\Google.Cloud.ErrorReporting.V1Beta1\Google.Cloud.ErrorReporting.V1Beta1.csproj" />
+    <ProjectReference Include="..\..\Google.Cloud.Logging.V2\Google.Cloud.Logging.V2\Google.Cloud.Logging.V2.csproj" />
+    <ProjectReference Include="..\..\Google.Cloud.Trace.V1\Google.Cloud.Trace.V1\Google.Cloud.Trace.V1.csproj" />
+    <PackageReference Include="System.Collections.Immutable" Version="1.3.1" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.5'">
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="1.1.0" />
+    <PackageReference Include="System.Diagnostics.StackTrace" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
+</Project>

@@ -3,12 +3,14 @@
 # it elsewhere...
 version: 1.0.{build}-appveyor
 
-# We're using Visual Studio 2015
-image: Visual Studio 2015
+image: Visual Studio 2017
 
 branches:
   only:
     - master
+
+init:
+  - git config --global core.autocrlf true
 
 environment:
   COVERALLS_REPO_TOKEN:
@@ -18,15 +20,10 @@ environment:
 install:
   # Make sure curl is available
   - set PATH=C:\Program Files\Git\mingw64\bin;%PATH%
-  # Download the installer for dotnet.
-  - mkdir .\scripts
-  - curl -SL https://raw.githubusercontent.com/dotnet/cli/rel/1.0.0/scripts/obtain/dotnet-install.ps1 -o .\scripts\dotnet-install.ps1
-  - ps: $env:DOTNET_INSTALL_DIR = "$pwd\.dotnetcli"
-  - ps: '& .\scripts\dotnet-install.ps1 -InstallDir "$env:DOTNET_INSTALL_DIR" -Version 1.0.0-preview2-003121 -NoPath'
   # Download and unpack docfx
   - mkdir docfx
   - cd docfx
-  - curl -SL https://github.com/dotnet/docfx/releases/download/v2.14.1/docfx.zip -o docfx.zip
+  - curl -SL https://github.com/dotnet/docfx/releases/download/v2.16/docfx.zip -o docfx.zip
   - unzip docfx.zip
   - cd ..
   # add dotnet and docfx to PATH
@@ -35,10 +32,16 @@ install:
 # Perform the build.
 build_script:
   - dotnet --info
+  - echo "Regenerating projects: if this fails, run generateprojects.sh and commit changes"
+  - generateprojects.sh && git diff --exit-code
   - bash build.sh
-  - bash coveralls.sh
   - cd docs
   - bash builddocs.sh
+
+# TODO: Reinstate these...
+#  - bash runcoverage.sh
+#  - bash coveralls.sh
+
 
 # The tests are run as part of the build.
 test: off

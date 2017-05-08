@@ -28,9 +28,15 @@ namespace Google.LongRunning
     /// For simplicity, no methods on this type modify the proto message. Instead, to get up-to-date
     /// information you can use Refresh to obtain a new instance.
     /// </remarks>
-    /// <typeparam name="T">The response message type.</typeparam>
-    public class Operation<T> where T : IMessage<T>, new()
+    /// <typeparam name="TResponse">The response message type.</typeparam>
+    /// <typeparam name="TMetadata">The metata message type.</typeparam>
+    public sealed class Operation<TResponse, TMetadata>
+        where TResponse : IMessage<TResponse>, new()
+        where TMetadata : class, IMessage<TMetadata>, new()
     {
+        /// <summary>
+        /// The poll settings to use if the neither the OperationsClient nor the caller provides anything.
+        /// </summary>
         private static readonly PollSettings s_defaultPollSettings = new PollSettings(Expiration.None, TimeSpan.FromSeconds(10));
 
         /// <summary>
@@ -47,10 +53,10 @@ namespace Google.LongRunning
         private readonly Lazy<OperationFailedException> _lazyException;
 
         /// <summary>
-        /// 
+        /// Constructs a new instance from the given RPC message.
         /// </summary>
-        /// <param name="rpcMessage"></param>
-        /// <param name="client"></param>
+        /// <param name="rpcMessage">The RPC message describing the operation. Must not be null.</param>
+        /// <param name="client">The client to use for further calls. Must not be null.</param>
         public Operation(Operation rpcMessage, OperationsClient client)
         {
             RpcMessage = GaxPreconditions.CheckNotNull(rpcMessage, nameof(rpcMessage));
@@ -96,6 +102,12 @@ namespace Google.LongRunning
         public OperationFailedException Exception => _lazyException.Value;
 
         /// <summary>
+        /// Retrieves the metadata associated with this operation, or <c>null</c> if there is no
+        /// metadata in the underlying response message.
+        /// </summary>
+        public TMetadata Metadata => RpcMessage.Metadata?.Unpack<TMetadata>();
+
+        /// <summary>
         /// Retrieves the result of the operation, throwing an exception if the operation failed or hasn't completed.
         /// Unlike <see cref="Task{T}.Result"/>, this does not block.
         /// </summary>
@@ -104,7 +116,7 @@ namespace Google.LongRunning
         /// </remarks>
         /// <exception cref="OperationFailedException">The operation completed with an error.</exception>
         /// <exception cref="InvalidOperationException">The operation has not completed yet.</exception>
-        public T Result
+        public TResponse Result
         {
             get
             {
@@ -113,10 +125,22 @@ namespace Google.LongRunning
                     case Operation.ResultOneofCase.Error:
                         throw Exception;
                     case Operation.ResultOneofCase.Response:
-                        return RpcMessage.Response.Unpack<T>();
+                        return RpcMessage.Response.Unpack<TResponse>();
                     default:
                         throw new InvalidOperationException();
                 }
+            }
+        }
+
+        /// <summary>
+        /// Executes the given callback with the metadata in the RPC message
+        /// if both the callback and the metadata are non-null.
+        /// </summary>
+        private void MaybeFireCallback(Action<TMetadata> metadataCallback)
+        {
+            if (metadataCallback != null && RpcMessage.Metadata != null)
+            {
+                metadataCallback(Metadata);
             }
         }
 
@@ -130,8 +154,13 @@ namespace Google.LongRunning
         /// <param name="pollSettings">The settings to use for repeated polling, or null
         /// to use the default poll settings (poll once every 10 seconds, forever).</param>
         /// <param name="callSettings">The call settings to apply on each call, or null for default settings.</param>
+        /// <param name="metadataCallback">The callback to invoke whenever a polled result contains metadata, or null
+        /// for no callback.</param>
         /// <returns>The completed operation, which can then be checked for errors or a result.</returns>
-        public Operation<T> PollUntilCompleted(PollSettings pollSettings = null, CallSettings callSettings = null)
+        public Operation<TResponse, TMetadata> PollUntilCompleted(
+            PollSettings pollSettings = null,
+            CallSettings callSettings = null,
+            Action<TMetadata> metadataCallback = null)
         {
             if (IsCompleted)
             {
@@ -139,10 +168,17 @@ namespace Google.LongRunning
             }
             callSettings = Client.GetEffectiveCallSettingsForGetOperation(callSettings);
 
-            Func<DateTime?, Operation<T>> pollAction = deadline => PollOnce(callSettings.WithEarlierDeadline(deadline, Client.Clock));
+            Func<DateTime?, Operation<TResponse, TMetadata>> pollAction =
+                deadline =>
+                {
+                    var result = PollOnce(callSettings.WithEarlierDeadline(deadline, Client.Clock));
+                    result.MaybeFireCallback(metadataCallback);
+                    return result;
+                };
+
             return Polling.PollRepeatedly(
                 pollAction, o => o.IsCompleted,
-                Client.Clock, Client.Scheduler, pollSettings ?? s_defaultPollSettings,
+                Client.Clock, Client.Scheduler, pollSettings ?? Client.DefaultPollSettings ?? s_defaultPollSettings,
                 callSettings?.CancellationToken ?? CancellationToken.None);
         }
 
@@ -156,18 +192,29 @@ namespace Google.LongRunning
         /// <param name="pollSettings">The settings to use for repeated polling, or null
         /// to use the default poll settings (poll once every 10 seconds, forever).</param>
         /// <param name="callSettings">The call settings to apply on each call, or null for default settings.</param>
+        /// <param name="metadataCallback">The callback to invoke whenever a polled result contains metadata, or null
+        /// for no callback.</param>
         /// <returns>The completed operation, which can then be checked for errors or a result.</returns>
-        public Task<Operation<T>> PollUntilCompletedAsync(PollSettings pollSettings = null, CallSettings callSettings = null)
+        public Task<Operation<TResponse, TMetadata>> PollUntilCompletedAsync(
+            PollSettings pollSettings = null,
+            CallSettings callSettings = null,
+            Action<TMetadata> metadataCallback = null)
         {
             if (IsCompleted)
             {
                 return Task.FromResult(this);
             }
             callSettings = Client.GetEffectiveCallSettingsForGetOperation(callSettings);
-            Func<DateTime?, Task<Operation<T>>> pollAction = deadline => PollOnceAsync(callSettings.WithEarlierDeadline(deadline, Client.Clock));
+            Func<DateTime?, Task<Operation<TResponse, TMetadata>>> pollAction =
+                async deadline =>
+                {
+                    var result = await PollOnceAsync(callSettings.WithEarlierDeadline(deadline, Client.Clock)).ConfigureAwait(false);
+                    result.MaybeFireCallback(metadataCallback);
+                    return result;
+                };
             return Polling.PollRepeatedlyAsync(
                 pollAction, o => o.IsCompleted,
-                Client.Clock, Client.Scheduler, pollSettings ?? s_defaultPollSettings,
+                Client.Clock, Client.Scheduler, pollSettings ?? Client.DefaultPollSettings ?? s_defaultPollSettings,
                 callSettings?.CancellationToken ?? CancellationToken.None);
         }
 
@@ -177,7 +224,7 @@ namespace Google.LongRunning
         /// <param name="callSettings">Any overriding call settings to apply to the RPC.</param>
         /// <returns>The most recent state of the operation, or a reference to the same
         /// object if the operation has already completed.</returns>
-        public Operation<T> PollOnce(CallSettings callSettings = null)
+        public Operation<TResponse, TMetadata> PollOnce(CallSettings callSettings = null)
             => IsCompleted ? this : PollOnceFromName(Name, Client, callSettings);
 
         /// <summary>
@@ -187,7 +234,7 @@ namespace Google.LongRunning
         /// <returns>A task representing the asynchronous poll operation. The result of the task is 
         /// the most recent state of the operation, or a reference to the same
         /// object if the operation has already completed.</returns>
-        public Task<Operation<T>> PollOnceAsync(CallSettings callSettings = null) =>
+        public Task<Operation<TResponse, TMetadata>> PollOnceAsync(CallSettings callSettings = null) =>
             IsCompleted ? Task.FromResult(this) : PollOnceFromNameAsync(Name, Client, callSettings);
 
         /// <summary>
@@ -197,7 +244,7 @@ namespace Google.LongRunning
         /// <returns>A task representing the asynchronous poll operation. The result of the task is 
         /// the most recent state of the operation, or a reference to the same
         /// object if the operation has already completed.</returns>
-        public Task<Operation<T>> PollOnceAsync(CancellationToken cancellationToken) =>
+        public Task<Operation<TResponse, TMetadata>> PollOnceAsync(CancellationToken cancellationToken) =>
             PollOnceAsync(CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -263,12 +310,12 @@ namespace Google.LongRunning
         /// <param name="callSettings">Any overriding call settings to apply to the RPC. May be null, in which case
         /// the default settings are used.</param>
         /// <returns>The current state of the operation identified by <paramref name="name"/>.</returns>
-        public static Operation<T> PollOnceFromName(string name, OperationsClient client, CallSettings callSettings = null)
+        public static Operation<TResponse, TMetadata> PollOnceFromName(string name, OperationsClient client, CallSettings callSettings = null)
         {
             GaxPreconditions.CheckNotNull(name, nameof(name));
             GaxPreconditions.CheckNotNull(client, nameof(client));
             var operation = client.GetOperation(name, callSettings);
-            return new Operation<T>(operation, client);
+            return new Operation<TResponse, TMetadata>(operation, client);
         }
 
         /// <summary>
@@ -280,12 +327,12 @@ namespace Google.LongRunning
         /// the default settings are used.</param>
         /// <returns>A task representing the asynchronous "fetch" operation. The result of the task is
         /// the current state of the operation identified by <paramref name="name"/>.</returns>
-        public static async Task<Operation<T>> PollOnceFromNameAsync(string name, OperationsClient client, CallSettings callSettings = null)
+        public static async Task<Operation<TResponse, TMetadata>> PollOnceFromNameAsync(string name, OperationsClient client, CallSettings callSettings = null)
         {
             GaxPreconditions.CheckNotNull(name, nameof(name));
             GaxPreconditions.CheckNotNull(client, nameof(client));
             var operation = await client.GetOperationAsync(name, callSettings).ConfigureAwait(false);
-            return new Operation<T>(operation, client);
+            return new Operation<TResponse, TMetadata>(operation, client);
         }
 
         /// <summary>
@@ -296,7 +343,7 @@ namespace Google.LongRunning
         /// <param name="cancellationToken">A cancellation token for the "fetch" operation.</param>
         /// <returns>A task representing the asynchronous "fetch" operation. The result of the task is
         /// the current state of the operation identified by <paramref name="name"/>.</returns>
-        public static Task<Operation<T>> PollOnceFromNameAsync(string name, OperationsClient client, CancellationToken cancellationToken) =>
+        public static Task<Operation<TResponse, TMetadata>> PollOnceFromNameAsync(string name, OperationsClient client, CancellationToken cancellationToken) =>
             PollOnceFromNameAsync(name, client, CallSettings.FromCancellationToken(cancellationToken));
     }
 }

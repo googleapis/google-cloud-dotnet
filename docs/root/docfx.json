@@ -1,23 +1,14 @@
 {
   "metadata": [
     {
-      "src": [
-        {
-          "files": [
-            "gax-dotnet/src/Google.Api.Gax/project.json",
-            "gax-dotnet/src/Google.Api.Gax.Grpc/project.json",
-            "gax-dotnet/src/Google.Api.Gax.Rest/project.json"
-          ],
-          "cwd": "../../external"
-        }
-      ],
+      "src": { },
       "dest": "obj/api"
     }
   ],
   "build": {
     "content": [
       {
-        "files": [ "**/*.yml" ],
+        "files": [ "*.yml" ],
         "src": "obj/api",
         "dest": "api"
       },

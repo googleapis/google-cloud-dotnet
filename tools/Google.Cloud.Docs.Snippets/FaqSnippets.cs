@@ -12,7 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Logging;
 using Google.Cloud.PubSub.V1;
+using Google.Cloud.Translation.V2;
+using static Google.Apis.Http.ConfigurableMessageHandler;
 using Grpc.Core;
 using System;
 
@@ -33,6 +36,29 @@ namespace Google.Cloud.Tools.Snippets
             {
                 Console.WriteLine(topic.Name);
             }
+            // End sample
+        }
+        
+        public void RestLogging()
+        {
+            // Sample: RestLogging
+            // Required using directives:
+            // using static Google.Apis.Http.ConfigurableMessageHandler;
+            // using Google.Apis.Logging;
+            // using Google.Cloud.Translation.V2;
+
+            // Register a verbose console logger
+            ApplicationContext.RegisterLogger(new ConsoleLogger(LogLevel.All));
+
+            // Create a translation client
+            TranslationClient client = TranslationClient.Create();
+
+            // Configure which events the message handler will log.
+            client.Service.HttpClient.MessageHandler.LogEvents =
+                LogEventType.RequestHeaders | LogEventType.ResponseBody;
+
+            // Make the request
+            client.ListLanguages();
             // End sample
         }
     }

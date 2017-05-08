@@ -66,6 +66,9 @@ namespace Google.Cloud.Translation.V2
         /// <summary>
         /// Translates a single item of text synchronously.
         /// </summary>
+        /// <remarks>
+        /// This implementation simply delegates to <see cref="TranslateText(IEnumerable{string}, string, string, TranslationModel?)"/>
+        /// </remarks>
         /// <param name="text">The text to translate.</param>
         /// <param name="targetLanguage">The code for the language to translate into. Must not be null.</param>
         /// <param name="sourceLanguage">The code for the language to translate from. May be null, in which case the server
@@ -73,17 +76,25 @@ namespace Google.Cloud.Translation.V2
         /// <param name="model">The model to request for translation. May be null, in which case <see cref="DefaultModel"/> is
         /// used.</param>
         /// <returns>The translation of <paramref name="text"/>.</returns>
-        public virtual TranslationResult TranslateText(string text, string targetLanguage, string sourceLanguage = null, TranslationModel? model = null)
-        {
-            throw new NotImplementedException();
-        }
+        public virtual TranslationResult TranslateText(
+            string text, string targetLanguage, string sourceLanguage = null, TranslationModel? model = null) =>
+            TranslateText(
+                new[] { GaxPreconditions.CheckNotNull(text, nameof(text)) },
+                targetLanguage,
+                sourceLanguage,
+                model)[0];
 
         /// <summary>
         /// Translates a single item of HTML synchronously.
         /// </summary>
         /// <remarks>
+        /// <para>
+        /// This implementation simply delegates to <see cref="TranslateHtml(IEnumerable{string}, string, string, TranslationModel?)"/>
+        /// </para>
+        /// <para>
         /// See the [Translation API documentation](https://cloud.google.com/translate/markup) for more details
         /// on how to translate HTML and the terms of service.
+        /// </para>
         /// </remarks>
         /// <param name="html">The HTML to translate.</param>
         /// <param name="targetLanguage">The code for the language to translate into. Must not be null.</param>
@@ -92,10 +103,13 @@ namespace Google.Cloud.Translation.V2
         /// <param name="model">The model to request for translation. May be null, in which case <see cref="DefaultModel"/> is
         /// used.</param>
         /// <returns>The translation of <paramref name="html"/>.</returns>
-        public virtual TranslationResult TranslateHtml(string html, string targetLanguage, string sourceLanguage = null, TranslationModel? model = null)
-        {
-            throw new NotImplementedException();
-        }
+        public virtual TranslationResult TranslateHtml(
+            string html, string targetLanguage, string sourceLanguage = null, TranslationModel? model = null) =>
+            TranslateHtml(
+                new[] { GaxPreconditions.CheckNotNull(html, nameof(html)) },
+                targetLanguage,
+                sourceLanguage,
+                model)[0];
 
         /// <summary>
         /// Translates multiple items of text synchronously.
@@ -134,9 +148,18 @@ namespace Google.Cloud.Translation.V2
         /// <summary>
         /// Detects the language of the specified text synchronously.
         /// </summary>
+        /// <remarks>This implementation simply delegates to <see cref="DetectLanguages(IEnumerable{string})"/>.</remarks>
         /// <param name="text">The text to detect the language of. Must not be null.</param>
-        /// <returns>A list of detected language possibilities.</returns>
-        public virtual IList<Detection> DetectLanguage(string text)
+        /// <returns>The most likely detected language.</returns>
+        public virtual Detection DetectLanguage(string text) =>
+            DetectLanguages(new[] { GaxPreconditions.CheckNotNull(text, nameof(text)) })[0];
+
+        /// <summary>
+        /// Detects the languages of the specified text items synchronously.
+        /// </summary>
+        /// <param name="textItems">The text items to detect the language of. Must not be null or contain null elements.</param>
+        /// <returns>A list of detected languages. This will be the same size as <paramref name="textItems"/>, in the same order.</returns>
+        public virtual IList<Detection> DetectLanguages(IEnumerable<string> textItems)
         {
             throw new NotImplementedException();
         }
@@ -155,7 +178,10 @@ namespace Google.Cloud.Translation.V2
         /// <summary>
         /// Translates a single item of text asynchronously.
         /// </summary>
-        /// <param name="text">The text to translate.</param>
+        /// <remarks>
+        /// This implementation simply delegates to <see cref="TranslateTextAsync(IEnumerable{string}, string, string, TranslationModel?, CancellationToken)"/>
+        /// </remarks>
+        /// <param name="text">The text to translate. Must not be null.</param>
         /// <param name="targetLanguage">The code for the language to translate into. Must not be null.</param>
         /// <param name="sourceLanguage">The code for the language to translate from. May be null, in which case the server
         /// will detect the source language.</param>
@@ -163,20 +189,28 @@ namespace Google.Cloud.Translation.V2
         /// used.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>The translation of <paramref name="text"/>.</returns>
-        public virtual Task<TranslationResult> TranslateTextAsync(string text, string targetLanguage, string sourceLanguage = null,
-            TranslationModel? model = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            throw new NotImplementedException();
-        }
+        public virtual async Task<TranslationResult> TranslateTextAsync(string text, string targetLanguage, string sourceLanguage = null,
+            TranslationModel? model = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            (await TranslateTextAsync(
+                new[] { GaxPreconditions.CheckNotNull(text, nameof(text)) },
+                targetLanguage,
+                sourceLanguage,
+                model,
+                cancellationToken).ConfigureAwait(false))[0];
 
         /// <summary>
         /// Translates a single item of HTML asynchronously.
         /// </summary>
         /// <remarks>
+        /// <para>
+        /// This implementation simply delegates to <see cref="TranslateHtmlAsync(IEnumerable{string}, string, string, TranslationModel?, CancellationToken)"/>
+        /// </para>
+        /// <para>
         /// See the [Translation API documentation](https://cloud.google.com/translate/markup) for more details
         /// on how to translate HTML and the terms of service.
+        /// </para>
         /// </remarks>
-        /// <param name="html">The HTML to translate.</param>
+        /// <param name="html">The HTML to translate. Must not be null.</param>
         /// <param name="targetLanguage">The code for the language to translate into. Must not be null.</param>
         /// <param name="sourceLanguage">The code for the language to translate from. May be null, in which case the server
         /// will detect the source language.</param>
@@ -184,11 +218,14 @@ namespace Google.Cloud.Translation.V2
         /// used.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>The translation of <paramref name="html"/>.</returns>
-        public virtual Task<TranslationResult> TranslateHtmlAsync(string html, string targetLanguage, string sourceLanguage = null,
-            TranslationModel? model = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            throw new NotImplementedException();
-        }
+        public virtual async Task<TranslationResult> TranslateHtmlAsync(string html, string targetLanguage, string sourceLanguage = null,
+            TranslationModel? model = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            (await TranslateHtmlAsync(
+                new[] { GaxPreconditions.CheckNotNull(html, nameof(html)) },
+                targetLanguage,
+                sourceLanguage,
+                model,
+                cancellationToken).ConfigureAwait(false))[0];
 
         /// <summary>
         /// Translates multiple items of text asynchronously.
@@ -231,10 +268,21 @@ namespace Google.Cloud.Translation.V2
         /// <summary>
         /// Detects the language of the specified text asynchronously.
         /// </summary>
+        /// <remarks>This implementation simply delegates to <see cref="DetectLanguagesAsync(IEnumerable{string}, CancellationToken)"/>.</remarks>
         /// <param name="text">The text to detect the language of. Must not be null.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A list of detected language possibilities.</returns>
-        public virtual Task<IList<Detection>> DetectLanguageAsync(string text, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>The most likely detected language.</returns>
+        public virtual async Task<Detection> DetectLanguageAsync(string text, CancellationToken cancellationToken = default(CancellationToken)) =>
+            (await DetectLanguagesAsync(new[] { GaxPreconditions.CheckNotNull(text, nameof(text)) }, cancellationToken)
+            .ConfigureAwait(false))[0];
+
+        /// <summary>
+        /// Detects the languages of the specified text items asynchronously.
+        /// </summary>
+        /// <param name="textItems">The text items to detect the language of. Must not be null or contain null elements.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A list of detected languages. This will be the same size as <paramref name="textItems"/>, in the same order.</returns>
+        public virtual Task<IList<Detection>> DetectLanguagesAsync(IEnumerable<string> textItems, CancellationToken cancellationToken = default(CancellationToken))
         {
             throw new NotImplementedException();
         }
@@ -259,9 +307,9 @@ namespace Google.Cloud.Translation.V2
         /// The credentials are scoped as necessary.
         /// </remarks>
         /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
-        /// <param name="model">The default translation model to use. Defaults to <see cref="TranslationModel.Base"/>.</param>
+        /// <param name="model">The default translation model to use. Defaults to <see cref="TranslationModel.ServiceDefault"/>.</param>
         /// <returns>The task representing the created <see cref="TranslationClient"/>.</returns>
-        public static async Task<TranslationClient> CreateAsync(GoogleCredential credential = null, TranslationModel model = TranslationModel.Base)
+        public static async Task<TranslationClient> CreateAsync(GoogleCredential credential = null, TranslationModel model = TranslationModel.ServiceDefault)
         {
             var scopedCredentials = await _credentialProvider.GetCredentialsAsync(credential).ConfigureAwait(false);
             return CreateImpl(scopedCredentials, null, model);
@@ -275,9 +323,9 @@ namespace Google.Cloud.Translation.V2
         /// from using API keys to OAuth2 credentials straightforward.
         /// </remarks>
         /// <param name="apiKey">API key to use. Must not be null.</param>
-        /// <param name="model">The default translation model to use. Defaults to <see cref="TranslationModel.Base"/>.</param>
+        /// <param name="model">The default translation model to use. Defaults to <see cref="TranslationModel.ServiceDefault"/>.</param>
         /// <returns>The created <see cref="TranslationClient"/>.</returns>
-        public static TranslationClient CreateFromApiKey(string apiKey, TranslationModel model = TranslationModel.Base)
+        public static TranslationClient CreateFromApiKey(string apiKey, TranslationModel model = TranslationModel.ServiceDefault)
         {
             GaxPreconditions.CheckNotNull(apiKey, nameof(apiKey));
             return CreateImpl(null, apiKey, model);
@@ -291,9 +339,9 @@ namespace Google.Cloud.Translation.V2
         /// The credentials are scoped as necessary.
         /// </remarks>
         /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
-        /// <param name="model">The default translation model to use. Defaults to <see cref="TranslationModel.Base"/>.</param>
+        /// <param name="model">The default translation model to use. Defaults to <see cref="TranslationModel.ServiceDefault"/>.</param>
         /// <returns>The created <see cref="TranslationClient"/>.</returns>
-        public static TranslationClient Create(GoogleCredential credential = null, TranslationModel model = TranslationModel.Base)
+        public static TranslationClient Create(GoogleCredential credential = null, TranslationModel model = TranslationModel.ServiceDefault)
         {
             var scopedCredentials = _credentialProvider.GetCredentials(credential);
             return CreateImpl(scopedCredentials, null, model);

@@ -21,14 +21,15 @@ namespace Google.Cloud.Translation.V2
     /// </summary>
     internal static class TranslationModels
     {
-        private const string BaseApiName = "base";
+        private const string PhraseBasedMachineTranslationApiName = "base";
         private const string NeuralMachineTranslationApiName = "nmt";
 
         internal static void ValidateModel(TranslationModel model)
         {
             switch (model)
             {
-                case TranslationModel.Base: return;
+                case TranslationModel.ServiceDefault: return;
+                case TranslationModel.PhraseBasedMachineTranslation: return;
                 case TranslationModel.NeuralMachineTranslation: return;
             }
             throw new ArgumentException($"Unknown translation model {model}", nameof(model));
@@ -38,7 +39,9 @@ namespace Google.Cloud.Translation.V2
         {
             switch (model)
             {
-                case TranslationModel.Base: return BaseApiName;
+                // null in an outbound API call means "no client preference"
+                case TranslationModel.ServiceDefault: return null;
+                case TranslationModel.PhraseBasedMachineTranslation: return PhraseBasedMachineTranslationApiName;
                 case TranslationModel.NeuralMachineTranslation: return NeuralMachineTranslationApiName;
                 default: throw new InvalidOperationException($"Unknown translation model {model}");
             }
@@ -50,9 +53,12 @@ namespace Google.Cloud.Translation.V2
             {
                 return null;
             }
+            // Note: the response only contains a translation model if it was explicitly requested,
+            // so if a new model comes out and is used by default, it's fine that we wouldn't recognize its
+            // API name - we won't see that anyway.
             switch (name)
             {
-                case BaseApiName: return TranslationModel.Base;
+                case PhraseBasedMachineTranslationApiName: return TranslationModel.PhraseBasedMachineTranslation;
                 case NeuralMachineTranslationApiName: return TranslationModel.NeuralMachineTranslation;
                 default: throw new InvalidOperationException($"Unknown translation model {name}");
             }

@@ -2,18 +2,6 @@
 
 set -e
 
-fetch() {
-  # $1: repo (and directory name)
-  # $2: organization
-  if [ -d "external/$1" ]
-  then
-    echo Skipping $1
-    return
-  fi
-  echo Fetching $1
-  git clone https://github.com/$2/$1 external/$1 --quiet --depth=1
-}
-
 build_api_docs() {
   echo Building docs for $1
   local api=$1
@@ -22,13 +10,22 @@ build_api_docs() {
   if [ "$api" == "root" ]
   then
     cp -r root output/root
+    mkdir -p output/root/obj/api
   else
-    dotnet run -p ../tools/Google.Cloud.Tools.GenerateDocfxSources -- $api
+    dotnet run -p ../tools/Google.Cloud.Tools.GenerateDocfxSources/*.csproj -- $api
   fi
   cp filterConfig.yml output/$api
   docfx metadata -f output/$api/docfx.json | tee errors.txt
   (! grep --quiet 'Build failed.' errors.txt)
-  dotnet run -p ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- $api
+  dotnet run -p ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown/*.csproj -- $api
+  
+  # Copy external dependency yml files into the API and concatenate toc.yml
+  for dep in $(cat output/$api/dependencies)
+  do
+    cp dependencies/api/$dep/*.yml output/$api/obj/api
+    cat dependencies/api/$dep/toc >> output/$api/obj/api/toc.yml
+  done
+  
   docfx build output/$api/docfx.json | tee errors.txt
   (! grep --quiet 'Build failed.' errors.txt)
 
@@ -46,37 +43,16 @@ build_api_docs() {
   echo Finished building docs for $api
 }
 
-if [ ! -d external ]
+
+if [[ ! -d "dependencies" ]]
 then
-  mkdir external
+  echo "Fetching external dependencies repo"
+  git clone https://github.com/GoogleCloudPlatform/google-cloud-dotnet dependencies --quiet -b dependencies --depth=1
 fi
 
-# TODO: Only do this if there's a parameter?
 rm -rf output
 mkdir output
 mkdir output/assembled
-
-# For Google.Api.Gax and Google.Api.Gax.Rest
-fetch gax-dotnet googleapis
-dotnet restore -v Warning external/gax-dotnet
-
-# For Google.Protobuf
-fetch protobuf google
-dotnet restore -v Warning external/protobuf/csharp/src
-# Remove // comments in project.json; dotnet cli is fine with it, but docfx isn't.
-sed -i -r 's/\s+\/\/.*//g' external/protobuf/csharp/src/Google.Protobuf/project.json
-
-# For Grpc.Core etc
-fetch grpc grpc
-dotnet restore -v Warning external/grpc/src/csharp
-
-# For all REST-based APIs
-fetch google-api-dotnet-client google
-mkdir -p external/google-api-dotnet-client/NuPkgs/Support
-dotnet restore -v Warning external/google-api-dotnet-client
-
-# TODO: google/google-api-dotnet-client, but those projects
-# don't work with docfx right now
 
 apis=$@
 if [ -z "$apis" ]

@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <IsPackable>False</IsPackable>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="../Google.Cloud.Translation.V2/Google.Cloud.Translation.V2.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26114.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Trace.V1", "Google.Cloud.Trace.V1\Google.Cloud.Trace.V1.xproj", "{939FA175-86CE-4B80-98E8-EDE676FD7821}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Trace.V1", "Google.Cloud.Trace.V1\Google.Cloud.Trace.V1.csproj", "{939FA175-86CE-4B80-98E8-EDE676FD7821}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Trace.V1.Snippets", "Google.Cloud.Trace.V1.Snippets\Google.Cloud.Trace.V1.Snippets.xproj", "{475EC66A-501B-4C3D-88BE-C188C59C64C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Trace.V1.Snippets", "Google.Cloud.Trace.V1.Snippets\Google.Cloud.Trace.V1.Snippets.csproj", "{475EC66A-501B-4C3D-88BE-C188C59C64C5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{567D4C59-8A8B-494C-AA53-EACAD643C1C2}"
 	ProjectSection(SolutionItems) = preProject

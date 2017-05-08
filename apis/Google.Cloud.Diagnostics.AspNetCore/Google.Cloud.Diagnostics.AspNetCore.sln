@@ -1,29 +1,29 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26114.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Diagnostics.AspNetCore", "Google.Cloud.Diagnostics.AspNetCore\Google.Cloud.Diagnostics.AspNetCore.xproj", "{F16E8DCA-4D54-4EC7-9E80-FC9FC666E1DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.AspNetCore", "Google.Cloud.Diagnostics.AspNetCore\Google.Cloud.Diagnostics.AspNetCore.csproj", "{F16E8DCA-4D54-4EC7-9E80-FC9FC666E1DE}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Diagnostics.AspNetCore.Tests", "Google.Cloud.Diagnostics.AspNetCore.Tests\Google.Cloud.Diagnostics.AspNetCore.Tests.xproj", "{F596CA83-4FC5-4D8A-97DA-700F754FF82C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.AspNetCore.Tests", "Google.Cloud.Diagnostics.AspNetCore.Tests\Google.Cloud.Diagnostics.AspNetCore.Tests.csproj", "{F596CA83-4FC5-4D8A-97DA-700F754FF82C}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Diagnostics.Common", "..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.xproj", "{4291BC6A-A0DA-423F-A88C-B9FF54BAF95A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.Common", "..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.csproj", "{4291BC6A-A0DA-423F-A88C-B9FF54BAF95A}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Diagnostics.Common.Tests", "..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.Tests\Google.Cloud.Diagnostics.Common.Tests.xproj", "{12283521-8B1F-460C-9B94-E68482FF3F30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.Common.Tests", "..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.Tests\Google.Cloud.Diagnostics.Common.Tests.csproj", "{12283521-8B1F-460C-9B94-E68482FF3F30}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Logging.V2", "..\Google.Cloud.Logging.V2\Google.Cloud.Logging.V2\Google.Cloud.Logging.V2.xproj", "{35B8D21D-0253-417F-B171-06BF70AA9485}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Logging.V2", "..\Google.Cloud.Logging.V2\Google.Cloud.Logging.V2\Google.Cloud.Logging.V2.csproj", "{35B8D21D-0253-417F-B171-06BF70AA9485}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Logging.Type", "..\Google.Cloud.Logging.V2\Google.Cloud.Logging.Type\Google.Cloud.Logging.Type.xproj", "{A8382B79-21E7-4AAD-AFF8-AB8707958128}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Logging.Type", "..\Google.Cloud.Logging.V2\Google.Cloud.Logging.Type\Google.Cloud.Logging.Type.csproj", "{A8382B79-21E7-4AAD-AFF8-AB8707958128}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Diagnostics.AspNetCore.IntegrationTests", "Google.Cloud.Diagnostics.AspNetCore.IntegrationTests\Google.Cloud.Diagnostics.AspNetCore.IntegrationTests.xproj", "{CB080F6C-FD87-4A1E-B3B0-A81DB8DBDE7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.AspNetCore.IntegrationTests", "Google.Cloud.Diagnostics.AspNetCore.IntegrationTests\Google.Cloud.Diagnostics.AspNetCore.IntegrationTests.csproj", "{CB080F6C-FD87-4A1E-B3B0-A81DB8DBDE7D}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.ErrorReporting.V1Beta1", "..\Google.Cloud.ErrorReporting.V1Beta1\Google.Cloud.ErrorReporting.V1Beta1\Google.Cloud.ErrorReporting.V1Beta1.xproj", "{7408D53D-88E6-42BB-B79A-1B18B027633D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ErrorReporting.V1Beta1", "..\Google.Cloud.ErrorReporting.V1Beta1\Google.Cloud.ErrorReporting.V1Beta1\Google.Cloud.ErrorReporting.V1Beta1.csproj", "{7408D53D-88E6-42BB-B79A-1B18B027633D}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Diagnostics.AspNetCore.Snippets", "Google.Cloud.Diagnostics.AspNetCore.Snippets\Google.Cloud.Diagnostics.AspNetCore.Snippets.xproj", "{2E997CB6-772E-422B-9A1F-4DB31F5D6FC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.AspNetCore.Snippets", "Google.Cloud.Diagnostics.AspNetCore.Snippets\Google.Cloud.Diagnostics.AspNetCore.Snippets.csproj", "{2E997CB6-772E-422B-9A1F-4DB31F5D6FC3}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Trace.V1", "..\Google.Cloud.Trace.V1\Google.Cloud.Trace.V1\Google.Cloud.Trace.V1.xproj", "{939FA175-86CE-4B80-98E8-EDE676FD7821}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Trace.V1", "..\Google.Cloud.Trace.V1\Google.Cloud.Trace.V1\Google.Cloud.Trace.V1.csproj", "{939FA175-86CE-4B80-98E8-EDE676FD7821}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Diagnostics.Common.IntegrationTests", "..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.IntegrationTests\Google.Cloud.Diagnostics.Common.IntegrationTests.xproj", "{DE96A626-6BAF-4012-889C-E1AAADE5CB3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.Common.IntegrationTests", "..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.IntegrationTests\Google.Cloud.Diagnostics.Common.IntegrationTests.csproj", "{DE96A626-6BAF-4012-889C-E1AAADE5CB3A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

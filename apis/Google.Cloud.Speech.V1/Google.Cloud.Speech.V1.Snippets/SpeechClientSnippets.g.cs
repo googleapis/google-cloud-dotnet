@@ -142,11 +142,11 @@ namespace Google.Cloud.Speech.V1.Snippets
                 Uri = "gs://bucket_name/file_name.flac",
             };
             // Make the request
-            Operation<LongRunningRecognizeResponse> response =
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> response =
                 await speechClient.LongRunningRecognizeAsync(config, audio);
 
             // Poll until the returned long-running operation is complete
-            Operation<LongRunningRecognizeResponse> completedResponse =
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> completedResponse =
                 await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             LongRunningRecognizeResponse result = completedResponse.Result;
@@ -154,7 +154,7 @@ namespace Google.Cloud.Speech.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<LongRunningRecognizeResponse> retrievedResponse =
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> retrievedResponse =
                 await speechClient.PollOnceLongRunningRecognizeAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
@@ -182,11 +182,11 @@ namespace Google.Cloud.Speech.V1.Snippets
                 Uri = "gs://bucket_name/file_name.flac",
             };
             // Make the request
-            Operation<LongRunningRecognizeResponse> response =
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> response =
                 speechClient.LongRunningRecognize(config, audio);
 
             // Poll until the returned long-running operation is complete
-            Operation<LongRunningRecognizeResponse> completedResponse =
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> completedResponse =
                 response.PollUntilCompleted();
             // Retrieve the operation result
             LongRunningRecognizeResponse result = completedResponse.Result;
@@ -194,7 +194,7 @@ namespace Google.Cloud.Speech.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<LongRunningRecognizeResponse> retrievedResponse =
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> retrievedResponse =
                 speechClient.PollOnceLongRunningRecognize(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
@@ -225,11 +225,11 @@ namespace Google.Cloud.Speech.V1.Snippets
                         },
             };
             // Make the request
-            Operation<LongRunningRecognizeResponse> response =
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> response =
                 await speechClient.LongRunningRecognizeAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<LongRunningRecognizeResponse> completedResponse =
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> completedResponse =
                 await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             LongRunningRecognizeResponse result = completedResponse.Result;
@@ -237,7 +237,7 @@ namespace Google.Cloud.Speech.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<LongRunningRecognizeResponse> retrievedResponse =
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> retrievedResponse =
                 await speechClient.PollOnceLongRunningRecognizeAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
@@ -268,11 +268,11 @@ namespace Google.Cloud.Speech.V1.Snippets
                         },
             };
             // Make the request
-            Operation<LongRunningRecognizeResponse> response =
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> response =
                 speechClient.LongRunningRecognize(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<LongRunningRecognizeResponse> completedResponse =
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> completedResponse =
                 response.PollUntilCompleted();
             // Retrieve the operation result
             LongRunningRecognizeResponse result = completedResponse.Result;
@@ -280,7 +280,7 @@ namespace Google.Cloud.Speech.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<LongRunningRecognizeResponse> retrievedResponse =
+            Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> retrievedResponse =
                 speechClient.PollOnceLongRunningRecognize(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)

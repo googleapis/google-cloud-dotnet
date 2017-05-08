@@ -74,6 +74,10 @@ namespace Google.Cloud.ClientTesting
             {
                 return "x";
             }
+            if (type == typeof(IEnumerable<string>))
+            {
+                return new[] { "x" };
+            }
             return null;
         }
     }

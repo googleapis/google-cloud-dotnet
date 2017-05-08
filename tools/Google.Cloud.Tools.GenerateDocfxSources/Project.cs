@@ -12,10 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Xml.Linq;
 
 namespace Google.Cloud.Tools.GenerateDocfxSources
 {
@@ -24,14 +25,14 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
     /// </summary>
     public class Project
     {
-        private readonly JObject _json;
+        private readonly XElement _project;
 
         public string Name { get; }
 
-        private Project(string name, JObject json)
+        private Project(string name, XElement project)
         {
             Name = name;
-            _json = json;
+            _project = project;
         }
 
         // TODO: Handle dependencies in framework elements
@@ -41,13 +42,37 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
             get
             {
                 // We mostly only care about the explicit dependencies, but we should include Gax when we depend on Gax.Rest or Gax.Grpc.
-                var dependencies = new HashSet<string>(((JObject)_json["dependencies"])?.Properties().Select(prop => prop.Name));
+                var packageRefs = _project.Elements("ItemGroup").Elements("PackageReference").Select(x => (string) x.Attribute("Include"));
+                var projectRefs = _project.Elements("ItemGroup").Elements("ProjectReference").Select(ExtractProjectReference);
+                var dependencies = new HashSet<string>(packageRefs.Concat(projectRefs));
                 if (dependencies.Contains("Google.Api.Gax.Rest") ||
                     dependencies.Contains("Google.Api.Gax.Grpc"))
                 {
                     dependencies.Add("Google.Api.Gax");
                 }
+                // Likewise add protobuf and GRPC whenever we depend on Gax.Rrpc...
+                // (It would be quite nice to do all this automatically...)
+                if (dependencies.Contains("Google.Api.Gax.Grpc"))
+                {
+                    dependencies.Add("Google.Protobuf");
+                    dependencies.Add("Google.Api.CommonProtos");
+                    dependencies.Add("Grpc.Core");
+                }
                 return dependencies;
+            }
+        }
+
+        private static string ExtractProjectReference(XElement element)
+        {
+            string project = (string)element.Attribute("Include");
+            string lastPart = project.Split('\\', '/').Last();
+            if (lastPart.EndsWith(".csproj"))
+            {
+                return lastPart.Substring(0, lastPart.Length - ".csproj".Length);
+            }
+            else
+            {
+                throw new Exception($"Unable to determine project reference from {project}");
             }
         }
 
@@ -55,15 +80,15 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
         {
             foreach (string candidate in Directory.GetDirectories(directory, "Google.*"))
             {
-                string projectJson = Path.Combine(candidate, "project.json");
-                if (!File.Exists(projectJson))
+                var csproj = Directory.GetFiles(candidate, "*.csproj").FirstOrDefault();
+                if (csproj == null)
                 {
                     continue;
                 }
-                JObject json = JObject.Parse(File.ReadAllText(projectJson));
-                if (json["version"] != null)
+                XElement project = XElement.Load(csproj);
+                if (project.Descendants("Version").Any())
                 {
-                    yield return new Project(Path.GetFileName(candidate), json);
+                    yield return new Project(Path.GetFileName(candidate), project);
                 }
             }
         }

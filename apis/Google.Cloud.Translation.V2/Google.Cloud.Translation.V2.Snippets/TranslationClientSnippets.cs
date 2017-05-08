@@ -22,21 +22,21 @@ namespace Google.Cloud.Translation.V2.Snippets
     public class TranslationClientSnippets
     {
         
-        public void TranslateTextNmtDefaultModel()
+        public void TranslateTextPbmtDefaultModel()
         {
-            // Sample: TranslateTextNmtDefaultModel
-            TranslationClient client = TranslationClient.Create(model: TranslationModel.NeuralMachineTranslation);
+            // Sample: TranslateTextPbmtDefaultModel
+            TranslationClient client = TranslationClient.Create(model: TranslationModel.PhraseBasedMachineTranslation);
             TranslationResult result = client.TranslateText("It is raining.", LanguageCodes.French);
             Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
             // End sample
         }
 
-        public void TranslateTextNmtOverrideModel()
+        public void TranslateTextPbmtOverrideModel()
         {
-            // Sample: TranslateTextNmtOverrideModel
+            // Sample: TranslateTextPbmtOverrideModel
             TranslationClient client = TranslationClient.Create();
             TranslationResult result = client.TranslateText("It is raining.", LanguageCodes.French,
-                model: TranslationModel.NeuralMachineTranslation);
+                model: TranslationModel.PhraseBasedMachineTranslation);
             Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
             // End sample
         }
@@ -129,17 +129,41 @@ namespace Google.Cloud.Translation.V2.Snippets
             // Sample: DetectLanguage
             // Additional: DetectLanguage(string)
             TranslationClient client = TranslationClient.Create();
-            IList<Detection> results = client.DetectLanguage("It is raining.");
-            foreach (Detection result in results)
-            {
-                Console.WriteLine($"Result: {result.Language}; confidence {result.Confidence}");
-            }
+            Detection result = client.DetectLanguage("It is raining.");
+            Console.WriteLine($"Language: {result.Language}; confidence {result.Confidence}");
             // End sample
+
+            Assert.Equal("en", result.Language);
+            Assert.Equal("It is raining.", result.Text);
         }
 
         // See-also: DetectLanguage(string)
         // Member: DetectLanguageAsync(string, CancellationToken)
         // See [DetectLanguage](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void DetectLanguages()
+        {
+            // Sample: DetectLanguages
+            // Additional: DetectLanguages(IEnumerable<string>)
+            TranslationClient client = TranslationClient.Create();
+            IList<Detection> results = client.DetectLanguages(new[] { "It is raining.", "Il pleut." });
+            foreach (var result in results)
+            {
+                Console.WriteLine($"Text: {result.Text}; language: {result.Language}; confidence {result.Confidence}");
+            }
+            // End sample
+
+            Assert.Equal("en", results[0].Language);
+            Assert.Equal("It is raining.", results[0].Text);
+            Assert.Equal("fr", results[1].Language);
+            Assert.Equal("Il pleut.", results[1].Text);
+        }
+
+        // See-also: DetectLanguages(IEnumerable<string>)
+        // Member: DetectLanguagesAsync(IEnumerable<string>, CancellationToken)
+        // See [DetectLanguages](ref) for a synchronous example.
         // End see-also
 
         [Fact]

@@ -6,6 +6,8 @@ bin
 project.lock.json
 _site
 site
+dependencies
+# Legacy docs/external; now docs/dependencies
 external
 output
 *~
@@ -30,3 +32,10 @@ language-codes.tmp.txt
 # Generated files when releasing
 tagselectedreleases.sh
 pushselectedreleases.sh
+
+# Generated files when building
+AllProjects.sln
+AllTests.txt
+
+# Test result files
+*.trx

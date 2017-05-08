@@ -1,19 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26114.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Storage.V1", "Google.Cloud.Storage.V1\Google.Cloud.Storage.V1.xproj", "{E8814844-5FA9-4F2B-AEAD-E7CE427DE48A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Storage.V1", "Google.Cloud.Storage.V1\Google.Cloud.Storage.V1.csproj", "{E8814844-5FA9-4F2B-AEAD-E7CE427DE48A}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Storage.V1.IntegrationTests", "Google.Cloud.Storage.V1.IntegrationTests\Google.Cloud.Storage.V1.IntegrationTests.xproj", "{077DDB17-CF46-4285-8853-D9AE576320F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Storage.V1.IntegrationTests", "Google.Cloud.Storage.V1.IntegrationTests\Google.Cloud.Storage.V1.IntegrationTests.csproj", "{077DDB17-CF46-4285-8853-D9AE576320F5}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Storage.V1.Snippets", "Google.Cloud.Storage.V1.Snippets\Google.Cloud.Storage.V1.Snippets.xproj", "{4A4D750B-97E7-49D6-AFBE-D07CBCF89A1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Storage.V1.Snippets", "Google.Cloud.Storage.V1.Snippets\Google.Cloud.Storage.V1.Snippets.csproj", "{4A4D750B-97E7-49D6-AFBE-D07CBCF89A1F}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Storage.V1.Tests", "Google.Cloud.Storage.V1.Tests\Google.Cloud.Storage.V1.Tests.xproj", "{C9B4D3E8-47C4-4498-BEFF-276060D1EA13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Storage.V1.Tests", "Google.Cloud.Storage.V1.Tests\Google.Cloud.Storage.V1.Tests.csproj", "{C9B4D3E8-47C4-4498-BEFF-276060D1EA13}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.xproj", "{4810D3AB-8422-4940-BB99-0A89AD057C1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{4810D3AB-8422-4940-BB99-0A89AD057C1D}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Storage.V1.CleanTestData", "Google.Cloud.Storage.V1.CleanTestData\Google.Cloud.Storage.V1.CleanTestData.xproj", "{04517FA6-646A-430E-9799-F6D6E34A0B50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Storage.V1.CleanTestData", "Google.Cloud.Storage.V1.CleanTestData\Google.Cloud.Storage.V1.CleanTestData.csproj", "{04517FA6-646A-430E-9799-F6D6E34A0B50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

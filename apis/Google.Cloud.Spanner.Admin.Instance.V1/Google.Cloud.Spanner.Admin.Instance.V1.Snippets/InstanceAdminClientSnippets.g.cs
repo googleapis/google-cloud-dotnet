@@ -511,11 +511,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             InstanceName instanceId = new InstanceName("[PROJECT]", "[INSTANCE]");
             Instance instance = new Instance();
             // Make the request
-            Operation<Instance> response =
+            Operation<Instance, CreateInstanceMetadata> response =
                 await instanceAdminClient.CreateInstanceAsync(parent, instanceId, instance);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance> completedResponse =
+            Operation<Instance, CreateInstanceMetadata> completedResponse =
                 await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Instance result = completedResponse.Result;
@@ -523,7 +523,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance> retrievedResponse =
+            Operation<Instance, CreateInstanceMetadata> retrievedResponse =
                 await instanceAdminClient.PollOnceCreateInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
@@ -544,11 +544,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             InstanceName instanceId = new InstanceName("[PROJECT]", "[INSTANCE]");
             Instance instance = new Instance();
             // Make the request
-            Operation<Instance> response =
+            Operation<Instance, CreateInstanceMetadata> response =
                 instanceAdminClient.CreateInstance(parent, instanceId, instance);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance> completedResponse =
+            Operation<Instance, CreateInstanceMetadata> completedResponse =
                 response.PollUntilCompleted();
             // Retrieve the operation result
             Instance result = completedResponse.Result;
@@ -556,7 +556,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance> retrievedResponse =
+            Operation<Instance, CreateInstanceMetadata> retrievedResponse =
                 instanceAdminClient.PollOnceCreateInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
@@ -580,11 +580,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
                 Instance = new Instance(),
             };
             // Make the request
-            Operation<Instance> response =
+            Operation<Instance, CreateInstanceMetadata> response =
                 await instanceAdminClient.CreateInstanceAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance> completedResponse =
+            Operation<Instance, CreateInstanceMetadata> completedResponse =
                 await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Instance result = completedResponse.Result;
@@ -592,7 +592,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance> retrievedResponse =
+            Operation<Instance, CreateInstanceMetadata> retrievedResponse =
                 await instanceAdminClient.PollOnceCreateInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
@@ -616,11 +616,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
                 Instance = new Instance(),
             };
             // Make the request
-            Operation<Instance> response =
+            Operation<Instance, CreateInstanceMetadata> response =
                 instanceAdminClient.CreateInstance(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance> completedResponse =
+            Operation<Instance, CreateInstanceMetadata> completedResponse =
                 response.PollUntilCompleted();
             // Retrieve the operation result
             Instance result = completedResponse.Result;
@@ -628,7 +628,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance> retrievedResponse =
+            Operation<Instance, CreateInstanceMetadata> retrievedResponse =
                 instanceAdminClient.PollOnceCreateInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
@@ -649,11 +649,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             Instance instance = new Instance();
             FieldMask fieldMask = new FieldMask();
             // Make the request
-            Operation<Instance> response =
+            Operation<Instance, CreateInstanceMetadata> response =
                 await instanceAdminClient.UpdateInstanceAsync(instance, fieldMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance> completedResponse =
+            Operation<Instance, CreateInstanceMetadata> completedResponse =
                 await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Instance result = completedResponse.Result;
@@ -661,7 +661,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance> retrievedResponse =
+            Operation<Instance, CreateInstanceMetadata> retrievedResponse =
                 await instanceAdminClient.PollOnceUpdateInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
@@ -681,11 +681,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             Instance instance = new Instance();
             FieldMask fieldMask = new FieldMask();
             // Make the request
-            Operation<Instance> response =
+            Operation<Instance, CreateInstanceMetadata> response =
                 instanceAdminClient.UpdateInstance(instance, fieldMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance> completedResponse =
+            Operation<Instance, CreateInstanceMetadata> completedResponse =
                 response.PollUntilCompleted();
             // Retrieve the operation result
             Instance result = completedResponse.Result;
@@ -693,7 +693,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance> retrievedResponse =
+            Operation<Instance, CreateInstanceMetadata> retrievedResponse =
                 instanceAdminClient.PollOnceUpdateInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
@@ -716,11 +716,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
                 FieldMask = new FieldMask(),
             };
             // Make the request
-            Operation<Instance> response =
+            Operation<Instance, CreateInstanceMetadata> response =
                 await instanceAdminClient.UpdateInstanceAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance> completedResponse =
+            Operation<Instance, CreateInstanceMetadata> completedResponse =
                 await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Instance result = completedResponse.Result;
@@ -728,7 +728,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance> retrievedResponse =
+            Operation<Instance, CreateInstanceMetadata> retrievedResponse =
                 await instanceAdminClient.PollOnceUpdateInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
@@ -751,11 +751,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
                 FieldMask = new FieldMask(),
             };
             // Make the request
-            Operation<Instance> response =
+            Operation<Instance, CreateInstanceMetadata> response =
                 instanceAdminClient.UpdateInstance(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance> completedResponse =
+            Operation<Instance, CreateInstanceMetadata> completedResponse =
                 response.PollUntilCompleted();
             // Retrieve the operation result
             Instance result = completedResponse.Result;
@@ -763,7 +763,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance> retrievedResponse =
+            Operation<Instance, CreateInstanceMetadata> retrievedResponse =
                 instanceAdminClient.PollOnceUpdateInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)

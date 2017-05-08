@@ -1,21 +1,21 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26114.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.BigQuery.V2", "Google.Cloud.BigQuery.V2\Google.Cloud.BigQuery.V2.xproj", "{1A49495F-B749-42F6-AE05-28B1B3E1EDF3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.V2", "Google.Cloud.BigQuery.V2\Google.Cloud.BigQuery.V2.csproj", "{1A49495F-B749-42F6-AE05-28B1B3E1EDF3}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.BigQuery.V2.CleanTestData", "Google.Cloud.BigQuery.V2.CleanTestData\Google.Cloud.BigQuery.V2.CleanTestData.xproj", "{B5F7491C-ED9E-4032-88C0-22EE959D19E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.V2.CleanTestData", "Google.Cloud.BigQuery.V2.CleanTestData\Google.Cloud.BigQuery.V2.CleanTestData.csproj", "{B5F7491C-ED9E-4032-88C0-22EE959D19E8}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.BigQuery.V2.IntegrationTests", "Google.Cloud.BigQuery.V2.IntegrationTests\Google.Cloud.BigQuery.V2.IntegrationTests.xproj", "{CBD350EE-3B27-4129-8999-1815DECF9E66}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.V2.IntegrationTests", "Google.Cloud.BigQuery.V2.IntegrationTests\Google.Cloud.BigQuery.V2.IntegrationTests.csproj", "{CBD350EE-3B27-4129-8999-1815DECF9E66}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.BigQuery.V2.Snippets", "Google.Cloud.BigQuery.V2.Snippets\Google.Cloud.BigQuery.V2.Snippets.xproj", "{A55F5009-37C2-4EB6-A100-AB86885A3AE9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.V2.Snippets", "Google.Cloud.BigQuery.V2.Snippets\Google.Cloud.BigQuery.V2.Snippets.csproj", "{A55F5009-37C2-4EB6-A100-AB86885A3AE9}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.BigQuery.V2.Tests", "Google.Cloud.BigQuery.V2.Tests\Google.Cloud.BigQuery.V2.Tests.xproj", "{96BDCC84-EF76-4B35-A390-D2F6D7B8F55B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.V2.Tests", "Google.Cloud.BigQuery.V2.Tests\Google.Cloud.BigQuery.V2.Tests.csproj", "{96BDCC84-EF76-4B35-A390-D2F6D7B8F55B}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Storage.V1", "..\Google.Cloud.Storage.V1\Google.Cloud.Storage.V1\Google.Cloud.Storage.V1.xproj", "{E8814844-5FA9-4F2B-AEAD-E7CE427DE48A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Storage.V1", "..\Google.Cloud.Storage.V1\Google.Cloud.Storage.V1\Google.Cloud.Storage.V1.csproj", "{E8814844-5FA9-4F2B-AEAD-E7CE427DE48A}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.xproj", "{4810D3AB-8422-4940-BB99-0A89AD057C1D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{4810D3AB-8422-4940-BB99-0A89AD057C1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

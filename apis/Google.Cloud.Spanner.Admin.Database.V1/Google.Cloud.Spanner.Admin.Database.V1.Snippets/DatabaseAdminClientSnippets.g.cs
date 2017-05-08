@@ -222,11 +222,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
             string createStatement = "";
             // Make the request
-            Operation<Database> response =
+            Operation<Database, CreateDatabaseMetadata> response =
                 await databaseAdminClient.CreateDatabaseAsync(parent, createStatement);
 
             // Poll until the returned long-running operation is complete
-            Operation<Database> completedResponse =
+            Operation<Database, CreateDatabaseMetadata> completedResponse =
                 await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Database result = completedResponse.Result;
@@ -234,7 +234,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Database> retrievedResponse =
+            Operation<Database, CreateDatabaseMetadata> retrievedResponse =
                 await databaseAdminClient.PollOnceCreateDatabaseAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
@@ -254,11 +254,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
             string createStatement = "";
             // Make the request
-            Operation<Database> response =
+            Operation<Database, CreateDatabaseMetadata> response =
                 databaseAdminClient.CreateDatabase(parent, createStatement);
 
             // Poll until the returned long-running operation is complete
-            Operation<Database> completedResponse =
+            Operation<Database, CreateDatabaseMetadata> completedResponse =
                 response.PollUntilCompleted();
             // Retrieve the operation result
             Database result = completedResponse.Result;
@@ -266,7 +266,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Database> retrievedResponse =
+            Operation<Database, CreateDatabaseMetadata> retrievedResponse =
                 databaseAdminClient.PollOnceCreateDatabase(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
@@ -289,11 +289,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
                 CreateStatement = "",
             };
             // Make the request
-            Operation<Database> response =
+            Operation<Database, CreateDatabaseMetadata> response =
                 await databaseAdminClient.CreateDatabaseAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Database> completedResponse =
+            Operation<Database, CreateDatabaseMetadata> completedResponse =
                 await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Database result = completedResponse.Result;
@@ -301,7 +301,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Database> retrievedResponse =
+            Operation<Database, CreateDatabaseMetadata> retrievedResponse =
                 await databaseAdminClient.PollOnceCreateDatabaseAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
@@ -324,11 +324,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
                 CreateStatement = "",
             };
             // Make the request
-            Operation<Database> response =
+            Operation<Database, CreateDatabaseMetadata> response =
                 databaseAdminClient.CreateDatabase(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Database> completedResponse =
+            Operation<Database, CreateDatabaseMetadata> completedResponse =
                 response.PollUntilCompleted();
             // Retrieve the operation result
             Database result = completedResponse.Result;
@@ -336,7 +336,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Database> retrievedResponse =
+            Operation<Database, CreateDatabaseMetadata> retrievedResponse =
                 databaseAdminClient.PollOnceCreateDatabase(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
@@ -412,18 +412,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             IEnumerable<string> statements = new List<string>();
             // Make the request
-            Operation<Empty> response =
+            Operation<Empty, UpdateDatabaseDdlMetadata> response =
                 await databaseAdminClient.UpdateDatabaseDdlAsync(database, statements);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty> completedResponse =
+            Operation<Empty, UpdateDatabaseDdlMetadata> completedResponse =
                 await response.PollUntilCompletedAsync();
             // The long-running operation is now complete.
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty> retrievedResponse =
+            Operation<Empty, UpdateDatabaseDdlMetadata> retrievedResponse =
                 await databaseAdminClient.PollOnceUpdateDatabaseDdlAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
@@ -442,18 +442,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             IEnumerable<string> statements = new List<string>();
             // Make the request
-            Operation<Empty> response =
+            Operation<Empty, UpdateDatabaseDdlMetadata> response =
                 databaseAdminClient.UpdateDatabaseDdl(database, statements);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty> completedResponse =
+            Operation<Empty, UpdateDatabaseDdlMetadata> completedResponse =
                 response.PollUntilCompleted();
             // The long-running operation is now complete.
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty> retrievedResponse =
+            Operation<Empty, UpdateDatabaseDdlMetadata> retrievedResponse =
                 databaseAdminClient.PollOnceUpdateDatabaseDdl(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
@@ -475,18 +475,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
                 Statements = { },
             };
             // Make the request
-            Operation<Empty> response =
+            Operation<Empty, UpdateDatabaseDdlMetadata> response =
                 await databaseAdminClient.UpdateDatabaseDdlAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty> completedResponse =
+            Operation<Empty, UpdateDatabaseDdlMetadata> completedResponse =
                 await response.PollUntilCompletedAsync();
             // The long-running operation is now complete.
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty> retrievedResponse =
+            Operation<Empty, UpdateDatabaseDdlMetadata> retrievedResponse =
                 await databaseAdminClient.PollOnceUpdateDatabaseDdlAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
@@ -508,18 +508,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
                 Statements = { },
             };
             // Make the request
-            Operation<Empty> response =
+            Operation<Empty, UpdateDatabaseDdlMetadata> response =
                 databaseAdminClient.UpdateDatabaseDdl(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty> completedResponse =
+            Operation<Empty, UpdateDatabaseDdlMetadata> completedResponse =
                 response.PollUntilCompleted();
             // The long-running operation is now complete.
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty> retrievedResponse =
+            Operation<Empty, UpdateDatabaseDdlMetadata> retrievedResponse =
                 databaseAdminClient.PollOnceUpdateDatabaseDdl(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
