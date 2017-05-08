@@ -1,4 +1,6 @@
 ﻿using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
+using Google.Cloud.PubSub.V1.Tasks;
 using Google.Protobuf;
 using Grpc.Core;
 using System;
@@ -80,6 +82,8 @@ namespace Google.Cloud.PubSub.V1
             /// If <c>null</c>, the system default <see cref="Task.Factory"/> is used. 
             /// </summary>
             public TaskFactory TaskFactory { get; set; }
+
+            public IScheduler Scheduler { get; set; }
         }
 
         /// <summary>
@@ -185,16 +189,177 @@ namespace Google.Cloud.PubSub.V1
     /// </summary>
     public sealed class HiPerfSubscriberImpl : HiPerfSubscriber
     {
-        /// <summary>
-        /// TODO...
-        /// </summary>
-        /// <param name="subscriptionName"></param>
-        /// <param name="settings"></param>
-        public HiPerfSubscriberImpl(SubscriptionName subscriptionName, Settings settings)
+        private class SubscriberState
         {
-            // TODO
+            private SubscriberClient _client;
+
+            private Queue<string> _queuedAckIds;
+            private Queue<string> _queuedExtensionIds;
         }
 
-        // TODO: Implementation
+        public HiPerfSubscriberImpl(SubscriptionName subscriptionName, Settings settings)
+        {
+        }
+
+        internal HiPerfSubscriberImpl(SubscriptionName subscriptionName, Func<Task<SubscriberClient>> clientProvider, Settings settings, TaskHelper taskHelper)
+        {
+            _subscriptionName = subscriptionName;
+            _scheduler = settings.Scheduler;
+            _taskHelper = taskHelper;
+            _clientProvider = clientProvider;
+        }
+
+        private readonly object _lock = new object();
+        private readonly SubscriptionName _subscriptionName;
+        private readonly IScheduler _scheduler;
+        private readonly TaskHelper _taskHelper;
+        private readonly Func<Task<SubscriberClient>> _clientProvider;
+        private readonly int _clientCount;
+
+        // Flow-control settings
+        private readonly int _flowMaxOutstandingElementCount;
+        private readonly int _flowMaxOutstandingRequestBytes;
+        private readonly LimitExceededBehavior _flowLimitExceededBehavior;
+
+        private IReadOnlyList<Task> _clientTasks;
+        private CancellationTokenSource _runCts;
+        //private int _unhandledMessages;
+        private long _flowElementCount;
+        private long _flowByteCount;
+
+        public override Task StartAsync(Func<PubsubMessage, Task<Reply>> handler, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var startupTasks = new Task[_clientCount];
+            lock (_lock)
+            {
+                if (_runCts != null)
+                {
+                    throw new Exception("Already started");
+                }
+                _flowElementCount = 0;
+                _flowByteCount = 0;
+                _runCts = new CancellationTokenSource();
+                var clientTasks = new Task[_clientCount];
+                for (int i = 0; i < _clientCount; i++)
+                {
+                    var startupTcs = new TaskCompletionSource<int>();
+                    clientTasks[i] = RunOneClient(handler, startupTcs);
+                    startupTasks[i] = startupTcs.Task;
+                }
+                _clientTasks = clientTasks;
+            }
+            return Task.WhenAll(startupTasks);
+        }
+
+        public override Task<IEnumerable<string>> StopAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+            lock (_lock)
+            {
+                if (_runCts == null)
+                {
+                    throw new Exception("Not running can't stop");
+                }
+                _runCts.Cancel();
+                _runCts = null;
+            }
+        }
+
+        private async Task RunOneClient(Func<PubsubMessage, Task<Reply>> handler, TaskCompletionSource<int> startupTcs)
+        {
+            // Acks and deadline-extensions are required to use the same channel as received the message 
+            SubscriberClient sub = null;
+            while (true)
+            {
+                if (sub == null)
+                {
+                    sub = await _taskHelper.ConfigureAwait(_clientProvider());
+                }
+                var pull = sub.StreamingPull(streamingSettings: new BidirectionalStreamingSettings(1));
+                // Start streaming
+                await _taskHelper.ConfigureAwait(pull.WriteAsync(new StreamingPullRequest
+                {
+                    StreamAckDeadlineSeconds = 600, // TODO
+                    SubscriptionAsSubscriptionName = _subscriptionName
+                }));
+                // Mark subscriber as operational, if not already done
+                if (startupTcs != null)
+                {
+                    startupTcs.SetResult(0);
+                    startupTcs = null;
+                }
+                // Start responding to received messages
+                var ackQueue = new AsyncBlockingQueue<string>(_taskHelper);
+                var extendQueue = new AsyncBlockingQueue<string>(_taskHelper);
+                Task receiveTask = ReceiveMessages(pull.ResponseStream, handler, extendQueue);
+                Task ackExtendTask = AckExtendMessages(sub, ackQueue, extendQueue);
+            }
+        }
+
+        private class MessageSet
+        {
+            public HashSet<string> Ids { get; }
+        }
+
+        private async Task ReceiveMessages(IAsyncEnumerator<StreamingPullResponse> stream, Func<PubsubMessage, Task<Reply>> handler, AsyncBlockingQueue<string> extendQueue, CancellationToken ct)
+        {
+            while (await _taskHelper.ConfigureAwait(stream.MoveNext(ct)))
+            {
+                var messages = stream.Current.ReceivedMessages;
+                // Prepare deadline-extension timers for all messages
+                var idSet = new HashSet<string>(messages.Select(x => x.AckId));
+                ExtendAfterDelay(idSet, extendQueue, ct);
+                foreach (var message in messages)
+                {
+                    Task unusedExtendTask = ExtendAfterDelay(message.AckId, null, ct);
+                }
+                foreach (var message in messages)
+                {
+                    var messageByteCount = message.Message.CalculateSize();
+                    lock (_lock)
+                    {
+                        _flowElementCount += 1;
+                        _flowByteCount += messageByteCount;
+                    }
+                    Task task = _taskHelper.Run(async () =>
+                    {
+                        var reply = await _taskHelper.ConfigureAwait(handler(message.Message));
+                        lock (_lock)
+                        {
+                            _flowElementCount -= 1;
+                            _flowByteCount -= messageByteCount;
+                        }
+                    });
+                }
+            }
+        }
+
+        private async Task AckExtendMessages(SubscriberClient.StreamingPullStream pull, AsyncBlockingQueue<string> ackQueue, AsyncBlockingQueue<string> extendQueue, CancellationToken ct)
+        {
+            while (true)
+            {
+                ct.ThrowIfCancellationRequested();
+                await _taskHelper.ConfigureAwait(Task.WhenAny(ackQueue.WaitAsync(ct), extendQueue.WaitAsync(ct)));
+                ct.ThrowIfCancellationRequested();
+                var extend = extendQueue.Dequeue(1000);
+                var ack = ackQueue.Dequeue(1000 - extend.Count);
+                if (extend.Count > 0 || ack.Count > 0)
+                {
+                    await pull.WriteAsync(new StreamingPullRequest {
+                        ModifyDeadlineAckIds = { extend },
+                        ModifyDeadlineSeconds = { Enumerable.Repeat(600, extend.Count) }, // TODO: extend time
+                        AckIds = { ack },
+                    });
+                }
+            }
+        }
+
+        private async Task ExtendAfterDelay(string messageId, AsyncBlockingQueue<string> extendQueue, CancellationToken ct)
+        {
+            while (true)
+            {
+                await _scheduler.Delay(TimeSpan.FromSeconds(600 - 10), ct); // TODO: Timeout
+                extendQueue.Enqueue(messageId);
+            }
+        }
     }
 }

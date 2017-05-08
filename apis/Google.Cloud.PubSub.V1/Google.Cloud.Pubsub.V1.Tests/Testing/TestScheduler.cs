@@ -155,9 +155,9 @@ namespace Google.Cloud.PubSub.V1.Tests.Testing
                 _scheduler._taskScheduler.Wait(task);
             }
 
-            public override TaskAwaitable ConfigureAwait(Task task) => new TaskAwaitable(task, _scheduler._taskScheduler);
+            public override TaskAwaitable ConfigureAwait(Task task) => new TaskAwaitable(new TestAwaiter(task, _scheduler._taskScheduler));
 
-            public override TaskAwaitable<T> ConfigureAwait<T>(Task<T> task) => new TaskAwaitable<T>(task, _scheduler._taskScheduler);
+            public override TaskAwaitable<T> ConfigureAwait<T>(Task<T> task) => new TaskAwaitable<T>(new TestAwaiter<T>(task, _scheduler._taskScheduler));
         }
 
         private struct DelayTask

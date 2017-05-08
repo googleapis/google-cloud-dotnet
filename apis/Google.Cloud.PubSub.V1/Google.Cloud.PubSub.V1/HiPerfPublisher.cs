@@ -187,6 +187,9 @@ namespace Google.Cloud.PubSub.V1
             }
         }
 
+        // TODO: Logging
+        // TODO: Change to allow new clients to be constructed when existing client fail.
+
         /// <summary>
         /// Construct a <see cref="HiPerfPublisherImpl"/>. 
         /// </summary>
