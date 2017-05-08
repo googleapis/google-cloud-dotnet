@@ -24,5 +24,10 @@
     <ProjectReference Include="..\..\Google.Cloud.Logging.V2\Google.Cloud.Logging.V2\Google.Cloud.Logging.V2.csproj" />
     <PackageReference Include="log4net" Version="2.0.8" />
   </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.5'">
+    <PackageReference Include="Microsoft.Extensions.DependencyModel">
+      <Version>1.1.1</Version>
+    </PackageReference>
+  </ItemGroup>
   <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
 </Project>
