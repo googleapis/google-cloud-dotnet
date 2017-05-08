@@ -17,6 +17,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using YamlDotNet.Serialization;
@@ -636,8 +637,6 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
                 {
                     continue;
                 }
-                string escapedUid = DocfxUidCharactersToEscape.Replace(snippetMember.Uid, "_");
-                seeAlso.SnippetRef = $"{type}.html#{escapedUid}";
                 seeAlso.SnippetUid = snippetMember.Uid;
 
                 foreach (var seeAlsoMemberId in seeAlso.MetadataMembers)
@@ -714,7 +713,7 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
             {
                 foreach (var seeAlso in seeAlsos)
                 {
-                    string target = $"({seeAlso.SnippetRef})";
+                    string target = $"(xref:{WebUtility.UrlEncode(seeAlso.SnippetUid)})";
                     foreach (var metadataUid in seeAlso.MetadataUids)
                     {
                         writer.WriteLine("---");
