@@ -26,27 +26,29 @@ we'll be able to accept your pull requests.
 Code Layout
 ===
 
-The source code is divided into subdirectories based on its purpose:
+The source code is divided into two top-level directories:
 
-- `src`: the main API code, shipped as NuGet packages
-- `test`: tests of the code in `src`, both unit tests and
-  integration tests
-- `snippets`: small pieces of code used to add examples to the API
-  reference and demonstrate the functionality available. These are
-  written in the form of integration tests, but are not expected
-  to fully test the functionality of the API. Instead, the assertions
-  are really present to ensure that the snippets themselves are
-  correct.
-- `tools`: tools used within this project. These are not shipped
-  externally, and not expected to be used by developers who only
-  need to access the Google APIs covered in this repository.
+- `apis` - main code
+- `tools` - tools related to build procedures etc
+
+Within each directory in `apis`, there are potential several subdirectories.
+
+Taking an API of `Google.Foo.V1` as a sample API name, there might be:
+
+- `Google.Foo.V1`: The main client library code
+- `Google.Foo.V1.Tests`: Unit tests
+- `Google.Foo.V1.IntegrationTests`: Integration tests (calling the real API)
+- `Google.Foo.V1.Snippets`: Documentation snippets which are merged with the XML
+  documentation when creating the API reference; written as integration tests
+- Other tools (e.g. for cleaning test data)
+
+Not all directories will be present for every API.
 
 Running the tests
 ---
 
-As noted above, both the `snippets` directory and the `test`
-directory contain tests, of different flavours. All tests use
-[xUnit.Net](http://xunit.github.io/). Unit tests do not require
+As noted above, there can be several locations for tests of different flavors.
+All tests use [xUnit.Net](http://xunit.github.io/). Unit tests do not require
 any access to Google Cloud Platform, but the integration tests
 and snippet tests require a Google Cloud Platform project with
 billing enabled.
@@ -64,8 +66,10 @@ set-up steps:
 
 - Ensure that your project has the corresponding API enabled in
   the [API Manager](https://console.developers.google.com/apis/library)
-- Download and install the [https://cloud.google.com/sdk/](Cloud SDK)
-- Run `gcloud auth login` to set up default application credentials
+- Download and install the [Cloud SDK](https://cloud.google.com/sdk/)
+- Run `gcloud auth application-default login` to set up default application credentials,
+  or set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable to refer
+  to a service account JSON file
 - Set the `TEST_PROJECT` environment variable to the name of your project.
   To run the tests from a command line, you can just set them directly
   and run the tests. To run the tests from Visual Studio, you should set
@@ -73,12 +77,6 @@ set-up steps:
   it's already running.
 - Build all the code, either from Visual Studio, or from the command line
   with `dotnet test`
-
-<!---
-TODO: Can we just set the environment variable in the
-project properties in VS? It looks like it should work, but I
-haven't tried...
---->
 
 The tests can be run from Visual Studio's built-in test runner
 (under the "Test" menu, select "Run" then "All Tests"), or
@@ -91,70 +89,11 @@ directory and simply run
 Snippet extraction
 ---
 
-Code in the `snippets` directory can be marked up to be used in the
+Code in snippets directories can be marked up to be used in the
 API reference documentation. The
-`Google.GCloud.Tools.GenerateSnippetMarkdown` tool (in the `tools`
-directory) extract snippets from projects underneath `snippets`. To
-add a snippet, simply include a comment on a line on its own at the
-start of the snippet, of the form:
-
-    // Snippet: <method-name>
-    
-or
-
-    // Sample: <sample-name>
-    
-where *method-name* is the name of the method the snippet should be
-attached to as an example. At the end of the snippet, use a closing
-comment:
-
-    // End snippet
-    
-or
-
-    // End sample
-
-The extraction tool assumes certain
-conventions:
-
-- The project name is the API name with a suffix of `.Snippets`
-- The namespace of the type being documented matches the project name
-- The name of the file containing the snippet matches the name of the
-  type being documented, with a suffix of `Snippets`.
-  
-
-
-A full example is shown below, which will attach a snippet to the
-`StorageClient.ListObjects` documentation. Only the three lines
-(including a comment) between the start and end tag comment lines
-are present in the documentation. Currently we assume that the user
-will know the meaning of `bucketId` (and likewise other resource IDs
-or names which are likely to crop up).
-
-```csharp
-[Fact]
-public void ListObjects()
-{
-    var bucketId = _fixture.BucketId;
-
-    // Snippet: ListObjects
-    var client = StorageClient.Create();
-    // List only objects with a name starting with "Hello"
-    var objects = client.ListObjects(bucketId, "Hello");
-    // End snippet
-    var names = objects.Select(obj => obj.Name).ToList();
-    Assert.Contains(_fixture.HelloWorldName, names);
-}
-```
-
-The difference between a snippet and a sample is that a snippet must
-match at least one member, and will end up in the API reference
-documentation for that member, whereas a sample is designed to be
-referenced from other documentation written in Markdown.
-
-See the [tool source
-code](tools/Google.GCloud.Tools.GenerateSnippetMarkdown/Program.cs)
-for more details.
+`Google.Google.Cloud.Tools.GenerateSnippetMarkdown` tool (in the `tools`
+directory) extracts snippets from snippet projects underneath `snippets`.
+See the source code (and examples in the snippets) for more details.
 
 Generating documentation
 ---
