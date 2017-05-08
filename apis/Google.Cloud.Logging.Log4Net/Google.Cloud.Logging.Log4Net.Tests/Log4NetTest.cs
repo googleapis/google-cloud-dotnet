@@ -29,6 +29,7 @@ using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using System.Reflection;
 
 namespace Google.Cloud.Logging.Log4Net.Tests
 {
@@ -38,7 +39,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
         [MethodImpl(MethodImplOptions.NoInlining)]
         private void LogInfo(IEnumerable<string> messages)
         {
-            ILog log = LogManager.GetLogger("testlogger");
+            ILog log = LogManager.GetLogger(Assembly.GetEntryAssembly(), "testlogger");
             foreach (string message in messages)
             {
                 log.Info(message);
@@ -98,7 +99,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             Hierarchy hierarchy = null;
             if (requiresLog4Net)
             {
-                hierarchy = (Hierarchy)LogManager.GetRepository();
+                hierarchy = (Hierarchy)LogManager.GetRepository(Assembly.GetEntryAssembly());
             }
             try
             {
@@ -168,7 +169,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             {
                 Level = level,
                 Message = msg,
-                TimeStamp = s_time0 + TimeSpan.FromSeconds(secondsOfs),
+                TimeStampUtc = s_time0 + TimeSpan.FromSeconds(secondsOfs),
             };
             return new LoggingEvent(loggingData);
         }

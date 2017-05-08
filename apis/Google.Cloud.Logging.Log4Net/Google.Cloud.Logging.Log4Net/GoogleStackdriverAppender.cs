@@ -12,6 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security;
+using System.Threading;
+using System.Threading.Tasks;
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
@@ -21,12 +27,10 @@ using Google.Cloud.Logging.V2;
 using Google.Protobuf;
 using log4net.Appender;
 using log4net.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security;
-using System.Threading;
-using System.Threading.Tasks;
+#if NETSTANDARD1_5
+using System.Reflection;
+using Microsoft.Extensions.DependencyModel;
+#endif
 
 namespace Google.Cloud.Logging.Log4Net
 {
@@ -231,7 +235,7 @@ namespace Google.Cloud.Logging.Log4Net
                         Level = Level.Warn,
                         LoggerName = "",
                         Message = s_mismatchedProjectIdMessage,
-                        TimeStamp = _clock.GetCurrentDateTimeUtc()
+                        TimeStampUtc = _clock.GetCurrentDateTimeUtc()
                     })));
                 }
             }
@@ -322,8 +326,7 @@ namespace Google.Cloud.Logging.Log4Net
             {
                 file = loggingEvent.LocationInformation?.FileName;
             }
-            long lineNumber;
-            if (long.TryParse(loggingEvent.LocationInformation?.LineNumber, out lineNumber))
+            if (long.TryParse(loggingEvent.LocationInformation?.LineNumber, out long lineNumber))
             {
                 line = lineNumber;
             }
@@ -335,9 +338,15 @@ namespace Google.Cloud.Logging.Log4Net
                 {
                     try
                     {
+#if NET45
                         return AppDomain.CurrentDomain.GetAssemblies()
                             .SelectMany(a => a.GetTypes())
                             .FirstOrDefault(t => t.FullName == fullTypeName);
+#endif
+#if NETSTANDARD1_5
+
+                        return null;
+#endif
                     }
                     catch
                     {
@@ -378,6 +387,29 @@ namespace Google.Cloud.Logging.Log4Net
             }
             return null;
         }
+
+//#if NETSTANDARD1_5
+//        public static IEnumerable<Assembly> GetReferencingAssemblies(Assembly assem)
+//        {
+//            var assemblies = new List<Assembly>();
+//            var dependencies = DependencyContext.Equals.RuntimeLibraries;
+//            foreach (var library in dependencies)
+//            {
+//                if (IsCandidateLibrary(library, assemblyName))
+//                {
+//                    var assembly = Assembly.Load(new AssemblyName(library.Name));
+//                    assemblies.Add(assembly);
+//                }
+//            }
+//            return assemblies;
+//        }
+
+//        private static bool IsCandidateLibrary(RuntimeLibrary library, string assemblyName)
+//        {
+//            return library.Name == (assemblyName)
+//                || library.Dependencies.Any(d => d.Name.StartsWith(assemblyName));
+//        }
+//#endif
 
         private void Write(IEnumerable<LogEntry> logEntries)
         {
