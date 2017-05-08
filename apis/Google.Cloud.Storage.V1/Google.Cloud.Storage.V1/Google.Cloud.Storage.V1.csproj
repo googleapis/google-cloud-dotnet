@@ -22,5 +22,13 @@
     <PackageReference Include="Google.Api.Gax.Rest" Version="1.0.1" />
     <PackageReference Include="Google.Apis.Storage.v1" Version="1.25.0.811" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Update="StorageClient.*.cs">
+      <DependentUpon>StorageClient.cs</DependentUpon>
+    </Compile>
+    <Compile Update="StorageClientImpl.*.cs">
+      <DependentUpon>StorageClientImpl.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
   <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
 </Project>
