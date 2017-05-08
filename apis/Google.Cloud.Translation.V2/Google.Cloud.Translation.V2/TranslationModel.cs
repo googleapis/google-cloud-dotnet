@@ -16,7 +16,8 @@ namespace Google.Cloud.Translation.V2
 {
     /// <summary>
     /// Underlying model used by the Google Cloud Translation API. This can be explicitly
-    /// specified on a per-client or per-method basis.
+    /// specified on a per-client or per-method basis. See
+    /// https://cloud.google.com/translate/release-notes for on-going changes and new models.
     /// </summary>
     public enum TranslationModel
     {
@@ -25,13 +26,12 @@ namespace Google.Cloud.Translation.V2
         /// </summary>
         ServiceDefault,
         /// <summary>
-        /// The original translation Phrase-Based Machine Translation model ("base").
+        /// The "base" model. The exact meaning of this model may change over time.
         /// </summary>
-        PhraseBasedMachineTranslation,
+        Base,
         /// <summary>
         /// The Neural Machine Translation model ("nmt") provides higher quality results
-        /// where available, but is more computationally intensive, leading to
-        /// slightly higher latency.
+        /// where available, but is computationally intensive.
         /// </summary>
         NeuralMachineTranslation
     }
