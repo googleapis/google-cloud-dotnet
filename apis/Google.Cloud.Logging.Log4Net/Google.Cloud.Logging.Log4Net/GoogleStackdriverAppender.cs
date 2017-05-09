@@ -328,21 +328,17 @@ namespace Google.Cloud.Logging.Log4Net
             }
             string function0 = null;
             string fullTypeName = loggingEvent.LocationInformation?.ClassName;
+#if NET45
             if (fullTypeName != null)
             {
                 var type = _typeCache.GetOrAdd(fullTypeName, () =>
                 {
                     try
                     {
-#if NET45
+
                          return AppDomain.CurrentDomain.GetAssemblies()
                              .SelectMany(a => a.GetTypes())
                              .FirstOrDefault(t => t.FullName == fullTypeName);
-#endif
-#if NETSTANDARD1_5
-
-                        return null;
-#endif
                     }
                     catch
                     {
@@ -356,6 +352,10 @@ namespace Google.Cloud.Logging.Log4Net
                     function0 = type.AssemblyQualifiedName;
                 }
             }
+#endif
+#if NETSTANDARD1_5
+            // TODO: Support type lookup in netstandard
+#endif
             string function1 = loggingEvent.LocationInformation?.MethodName;
             if (function0 != null || function1 != null)
             {

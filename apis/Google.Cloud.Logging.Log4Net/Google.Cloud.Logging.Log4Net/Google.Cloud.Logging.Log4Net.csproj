@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>1.0.0-beta11</Version>
+    <Version>1.0.0-beta10</Version>
     <TargetFrameworks>netstandard1.5;net45</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
@@ -23,11 +23,7 @@
     <ProjectReference Include="..\..\Google.Cloud.DevTools.Common\Google.Cloud.DevTools.Common\Google.Cloud.DevTools.Common.csproj" />
     <ProjectReference Include="..\..\Google.Cloud.Logging.V2\Google.Cloud.Logging.V2\Google.Cloud.Logging.V2.csproj" />
     <PackageReference Include="log4net" Version="2.0.8" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.5'">
-    <PackageReference Include="Microsoft.Extensions.DependencyModel">
-      <Version>1.1.1</Version>
-    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="1.1.1" />
   </ItemGroup>
   <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
 </Project>
