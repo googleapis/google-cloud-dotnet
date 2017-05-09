@@ -135,9 +135,12 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 );
             }
 
-            using (var writer = File.CreateText(Path.Combine(directory, $"{Path.GetFileName(directory)}.csproj")))
+            // Don't use File.CreateText as that omits the byte order mark.
+            // While byte order marks are nasty, Visual Studio will add it back any time a project file is
+            // manually edited, so it's best if we follow suit.
+            using (var stream = File.Create(Path.Combine(directory, $"{Path.GetFileName(directory)}.csproj")))
             {
-                doc.Save(writer);
+                doc.Save(stream);
             }
         }
         private static string GenerateProjectReference(string key)
