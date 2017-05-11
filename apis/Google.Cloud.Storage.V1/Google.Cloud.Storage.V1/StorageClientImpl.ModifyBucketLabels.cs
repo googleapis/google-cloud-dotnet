@@ -14,6 +14,8 @@
 
 using System;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Storage.V1
 {
@@ -35,6 +37,25 @@ namespace Google.Cloud.Storage.V1
             throw new NotImplementedException();
         }
 
-        // TODO: Async
+        /// <inheritdoc />
+        public override IDictionary<string, string> ClearBucketLabels(string bucket, ModifyBucketLabelsOptions options = null)
+        {
+            // TODO: Implement
+            throw new NotImplementedException();
+        }
+
+        /// <inheritdoc />
+        public override Task<IDictionary<string, string>> ModifyBucketLabelsAsync(string bucket, IDictionary<string, string> labels, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // TODO: Implement
+            throw new NotImplementedException();
+        }
+
+        /// <inheritdoc />
+        public override IDictionary<string, string> ClearBucketLabelsAsync(string bucket, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // TODO: Implement
+            throw new NotImplementedException();
+        }
     }
 }
