@@ -135,7 +135,7 @@ namespace Google.Cloud.Storage.V1
             StorageClientImpl.ValidateBucketName(bucket);
             GaxPreconditions.CheckNotNull(labelName, nameof(labelName));
             var newLabels = new Dictionary<string, string> { [labelName] = null };
-            var oldLabels = await ModifyBucketLabelsAsync(bucket, newLabels, options).ConfigureAwait(false);
+            var oldLabels = await ModifyBucketLabelsAsync(bucket, newLabels, options, cancellationToken).ConfigureAwait(false);
             return oldLabels[labelName];
         }
 
@@ -168,7 +168,7 @@ namespace Google.Cloud.Storage.V1
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A dictionary with the labels on the bucket before they were cleared.</returns>
-        public virtual IDictionary<string, string> ClearBucketLabelsAsync(string bucket, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<IDictionary<string, string>> ClearBucketLabelsAsync(string bucket, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             throw new NotImplementedException();
     }
 }

@@ -12,8 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
+using Google.Api.Gax;
+using Google.Apis.Storage.v1.Data;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -24,38 +27,151 @@ namespace Google.Cloud.Storage.V1
         /// <inheritdoc />
         public override IDictionary<string, string> ModifyBucketLabels(string bucket, IDictionary<string, string> labels, ModifyBucketLabelsOptions options = null)
         {
-            // TODO: Implement:
-            // - Fetch bucket with GetBucket
-            // - Modify the in-memory dictionary (and remember old values)
-            // - Call PatchBucket pass in the metageneration
-            // - Repeat from scratch up to N times as per options if we get conflicts.
+            ValidateBucketName(bucket);
+            GaxPreconditions.CheckNotNull(labels, nameof(labels));
 
-            // In theory, many label modifications could be performed with just a single call rather than
-            // read-modify-write, but:
-            // - Always doing a read-modify-write simplifies the code
-            // - This way we get to return the previous values as well
-            throw new NotImplementedException();
+            int retries = options?.Retries ?? ModifyBucketLabelsOptions.DefaultRetries;
+            var getOptions = new GetBucketOptions { IfMetagenerationMatch = options?.IfMetagenerationMatch };
+
+            while (true)
+            {
+                // Outside the catch, as we don't need to retry if *this* fails the precondition.
+                // If the bucket originally has the "right" version but then changes before we patch it, we'll end up retrying this
+                // part as well, and it will immediately fail.
+                var bucketMetadata = GetBucket(bucket, getOptions);
+                try
+                {
+                    var existingLabels = bucketMetadata.Labels ?? new Dictionary<string, string>();
+                    var patchOptions = new PatchBucketOptions { IfMetagenerationMatch = bucketMetadata.Metageneration };
+
+                    // We could just supply the values that have changed, but there's no particular reason to.
+                    PatchBucket(new Bucket { Name = bucketMetadata.Name, Labels = labels }, patchOptions);
+
+                    var oldValues = new Dictionary<string, string>();
+                    foreach (var entry in labels)
+                    {
+                        existingLabels.TryGetValue(entry.Key, out string existingValue);
+                        oldValues[entry.Key] = existingValue; // May be null
+                    }
+                    return oldValues;
+                }
+                catch (GoogleApiException e) when (retries > 0 && e.HttpStatusCode == HttpStatusCode.PreconditionFailed)
+                {
+                    retries--;
+                    // No delay here: we're only trying to catch the case where another change is made between Get/Patch.
+                }
+            }
         }
 
         /// <inheritdoc />
         public override IDictionary<string, string> ClearBucketLabels(string bucket, ModifyBucketLabelsOptions options = null)
         {
-            // TODO: Implement
-            throw new NotImplementedException();
+            ValidateBucketName(bucket);
+
+            int retries = options?.Retries ?? ModifyBucketLabelsOptions.DefaultRetries;
+            var getOptions = new GetBucketOptions { IfMetagenerationMatch = options?.IfMetagenerationMatch };
+
+            while (true)
+            {
+                // Outside the catch, as we don't need to retry if *this* fails the precondition.
+                // If the bucket originally has the "right" version but then changes before we patch it, we'll end up retrying this
+                // part as well, and it will immediately fail.
+                var bucketMetadata = GetBucket(bucket, getOptions);
+                try
+                {
+                    var existingLabels = bucketMetadata.Labels;
+                    if (existingLabels == null || existingLabels.Count == 0)
+                    {
+                        return new Dictionary<string, string>();
+                    }
+                    var patchOptions = new PatchBucketOptions { IfMetagenerationMatch = bucketMetadata.Metageneration };
+
+                    var labels = existingLabels.Keys.ToDictionary(key => key, key => (string) null);
+                    PatchBucket(new Bucket { Name = bucketMetadata.Name, Labels = labels }, patchOptions);
+
+                    return existingLabels;
+                }
+                catch (GoogleApiException e) when (retries > 0 && e.HttpStatusCode == HttpStatusCode.PreconditionFailed)
+                {
+                    retries--;
+                    // No delay here: we're only trying to catch the case where another change is made between Get/Patch.
+                }
+            }
         }
 
         /// <inheritdoc />
-        public override Task<IDictionary<string, string>> ModifyBucketLabelsAsync(string bucket, IDictionary<string, string> labels, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<IDictionary<string, string>> ModifyBucketLabelsAsync(string bucket, IDictionary<string, string> labels, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // TODO: Implement
-            throw new NotImplementedException();
+            ValidateBucketName(bucket);
+            GaxPreconditions.CheckNotNull(labels, nameof(labels));
+
+            int retries = options?.Retries ?? ModifyBucketLabelsOptions.DefaultRetries;
+            var getOptions = new GetBucketOptions { IfMetagenerationMatch = options?.IfMetagenerationMatch };
+
+            while (true)
+            {
+                // Outside the catch, as we don't need to retry if *this* fails the precondition.
+                // If the bucket originally has the "right" version but then changes before we patch it, we'll end up retrying this
+                // part as well, and it will immediately fail.
+                var bucketMetadata = await GetBucketAsync(bucket, getOptions, cancellationToken).ConfigureAwait(false);
+                try
+                {
+                    var existingLabels = bucketMetadata.Labels ?? new Dictionary<string, string>();
+                    var patchOptions = new PatchBucketOptions { IfMetagenerationMatch = bucketMetadata.Metageneration };
+
+                    // We could just supply the values that have changed, but there's no particular reason to.
+                    await PatchBucketAsync(new Bucket { Name = bucketMetadata.Name, Labels = labels }, patchOptions, cancellationToken).ConfigureAwait(false);
+
+                    var oldValues = new Dictionary<string, string>();
+                    foreach (var entry in labels)
+                    {
+                        existingLabels.TryGetValue(entry.Key, out string existingValue);
+                        oldValues[entry.Key] = existingValue; // May be null
+                    }
+                    return oldValues;
+                }
+                catch (GoogleApiException e) when (retries > 0 && e.HttpStatusCode == HttpStatusCode.PreconditionFailed)
+                {
+                    retries--;
+                    // No delay here: we're only trying to catch the case where another change is made between Get/Patch.
+                }
+            }
         }
 
         /// <inheritdoc />
-        public override IDictionary<string, string> ClearBucketLabelsAsync(string bucket, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<IDictionary<string, string>> ClearBucketLabelsAsync(string bucket, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // TODO: Implement
-            throw new NotImplementedException();
+            ValidateBucketName(bucket);
+
+            int retries = options?.Retries ?? ModifyBucketLabelsOptions.DefaultRetries;
+            var getOptions = new GetBucketOptions { IfMetagenerationMatch = options?.IfMetagenerationMatch };
+
+            while (true)
+            {
+                // Outside the catch, as we don't need to retry if *this* fails the precondition.
+                // If the bucket originally has the "right" version but then changes before we patch it, we'll end up retrying this
+                // part as well, and it will immediately fail.
+                var bucketMetadata = await GetBucketAsync(bucket, getOptions, cancellationToken).ConfigureAwait(false);
+                try
+                {
+                    var existingLabels = bucketMetadata.Labels;
+                    if (existingLabels == null || existingLabels.Count == 0)
+                    {
+                        return new Dictionary<string, string>();
+                    }
+                    var patchOptions = new PatchBucketOptions { IfMetagenerationMatch = bucketMetadata.Metageneration };
+
+                    var labels = existingLabels.Keys.ToDictionary(key => key, key => (string)null);
+                    await PatchBucketAsync(new Bucket { Name = bucketMetadata.Name, Labels = labels }, patchOptions, cancellationToken).ConfigureAwait(false);
+
+                    return existingLabels;
+                }
+                catch (GoogleApiException e) when (retries > 0 && e.HttpStatusCode == HttpStatusCode.PreconditionFailed)
+                {
+                    retries--;
+                    // No delay here: we're only trying to catch the case where another change is made between Get/Patch.
+                }
+            }
         }
     }
 }
