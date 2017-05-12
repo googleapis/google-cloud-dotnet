@@ -114,6 +114,8 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         /// </summary>
         public string BucketBeginningWithZ => BucketPrefix + "zbucketname";
 
+        public string LabelsTestBucket => BucketPrefix + "labels";
+
         /// <summary>
         /// Returns all the known buckets that have been created for this test run.
         /// (This includes any buckets created by <see cref="CreateBucket"/> or registered
@@ -139,12 +141,13 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 throw new InvalidOperationException(
                     $"Please set the {ProjectEnvironmentVariable} environment variable before running tests");
             }
-            BucketPrefix = "tests-" + Guid.NewGuid().ToString().ToLowerInvariant() + "-";
+            BucketPrefix = "tests-" + Guid.NewGuid().ToString().ToLowerInvariant().Replace("-", "") + "-";
             LargeContent = Encoding.UTF8.GetBytes(string.Join("\n", Enumerable.Repeat("All work and no play makes Jack a dull boy.", 500)));
             CreateBucket(SingleVersionBucket, false);
             CreateBucket(MultiVersionBucket, true);
             CreateAndPopulateReadBucket();
             CreateBucket(BucketBeginningWithZ, false);
+            CreateBucket(LabelsTestBucket, false);
         }
 
         internal void CreateBucket(string name, bool multiVersion)
@@ -252,6 +255,22 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 }
                 client.DeleteBucket(bucket);
             }
+        }
+
+        /// <summary>
+        /// Sets the labels on <see cref="LabelsTestBucket"/> without using any of the client *Labels methods.
+        /// Any old labels are wiped.
+        /// </summary>
+        public void SetUpLabels(Dictionary<string, string> labels)
+        {
+            // Just avoid mutating the parameter...
+            labels = new Dictionary<string, string>(labels);
+            var oldLabels = Client.GetBucket(LabelsTestBucket).Labels ?? new Dictionary<string, string>();
+            foreach (var key in oldLabels.Keys.Except(labels.Keys))
+            {
+                labels[key] = null;
+            }
+            Client.PatchBucket(new Bucket { Name = LabelsTestBucket, Labels = labels });
         }
 
         private class DelayTestInfo
