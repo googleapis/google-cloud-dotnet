@@ -17,6 +17,7 @@ using Google.Apis.Storage.v1.Data;
 using Google.Apis.Upload;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -691,6 +692,109 @@ namespace Google.Cloud.Storage.V1.Snippets
         // See-also: TestBucketIamPermissions(string,*,*)
         // Member: TestBucketIamPermissionsAsync(string,*,*,*)
         // See [TestBucketIamPermissions](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void SetBucketLabel()
+        {
+            var bucketName = _fixture.BucketName;
+            // Snippet: SetBucketLabel(string, string, string, *)
+            StorageClient client = StorageClient.Create();
+
+            string now = DateTime.UtcNow.ToString("yyyy-MM-dd_HH-mm-ss", CultureInfo.InvariantCulture);
+            string newValue = "new_value_" + now;
+            string oldValue = client.SetBucketLabel(bucketName, "label", newValue);
+            Console.WriteLine($"Old value: {oldValue}");
+            // Verify the label is now correct...
+            Bucket bucket = client.GetBucket(bucketName);
+            string fetchedValue = bucket.Labels?["label"];
+            Console.WriteLine($"Fetched value: {fetchedValue}");
+            // End snippet
+
+            Assert.Equal(newValue, fetchedValue);
+        }
+
+        // See-also: SetBucketLabel(string, string, string, *)
+        // Member: SetBucketLabelAsync(string, string, string, *, *)
+        // See [SetBucketLabel](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void RemoveBucketLabel()
+        {
+            var bucketName = _fixture.BucketName;
+            // Snippet: RemoveBucketLabel(string, string, *)
+            StorageClient client = StorageClient.Create();
+
+            string oldValue = client.RemoveBucketLabel(bucketName, "label");
+            Console.WriteLine($"Old value: {oldValue}");
+            // Verify the label is now gone...
+            Bucket bucket = client.GetBucket(bucketName);
+            string fetchedValue = null;
+            bucket.Labels?.TryGetValue("label", out fetchedValue);
+            Console.WriteLine($"Fetched value: {fetchedValue}");
+            // End snippet
+
+            Assert.Null(fetchedValue);
+        }
+
+        // See-also: RemoveBucketLabel(string, string, *)
+        // Member: RemoveBucketLabelAsync(string, string, *, *)
+        // See [RemoveBucketLabel](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void ClearBucketLabels()
+        {
+            var bucketName = _fixture.BucketName;
+            // Snippet: ClearBucketLabels(string, *)
+            StorageClient client = StorageClient.Create();
+
+            IDictionary<string, string> oldLabels = client.ClearBucketLabels(bucketName);
+            Console.WriteLine($"Number of labels before clearing: {oldLabels.Count}");
+            // End snippet
+
+            Assert.Null(client.GetBucket(bucketName).Labels);
+        }
+
+        // See-also: ClearBucketLabels(string, *)
+        // Member: ClearBucketLabelsAsync(string, *, *)
+        // See [ClearBucketLabels](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void ModifyBucketLabels()
+        {
+            var bucketName = _fixture.BucketName;
+
+            // Snippet: ModifyBucketLabels(string, *, *)
+            StorageClient client = StorageClient.Create();
+
+            string now = DateTime.UtcNow.ToString("yyyy-MM-dd_HH-mm-ss", CultureInfo.InvariantCulture);
+            IDictionary<string, string> labelChanges = new Dictionary<string, string>
+            {
+                { "label1", "new_value_1_" + now },
+                { "label2", "new_value_2_" + now },
+            };
+
+            IDictionary<string, string> oldValues = client.ModifyBucketLabels(bucketName, labelChanges);
+            Console.WriteLine("Old values for changed labels:");
+            foreach (KeyValuePair<string, string> entry in oldValues)
+            {
+                Console.WriteLine($"  {entry.Key}: {entry.Value}");
+            }
+            Console.WriteLine("All labels:");
+            IDictionary<string, string> allLabels = client.GetBucket(bucketName).Labels ?? new Dictionary<string, string>();
+            foreach (KeyValuePair<string, string> entry in allLabels)
+            {
+                Console.WriteLine($"  {entry.Key}: {entry.Value}");
+            }
+            // End snippet
+        }
+
+        // See-also: ModifyBucketLabels(string, *, *)
+        // Member: ModifyBucketLabelsAsync(string, *, *, *)
+        // See [ModifyBucketLabels](ref) for a synchronous example.
         // End see-also
     }
 }
