@@ -68,5 +68,18 @@ namespace Google.Cloud.BigQuery.V2.Tests
             InsertRequest request = new InsertRequest(new BigqueryService(), table, "project", "dataset");
             Assert.Throws<ArgumentException>(() => options.ModifyRequest(table, request));
         }
+
+        [Fact]
+        public void ExternalConfigurationAndViewInvalid()
+        {
+            var options = new CreateTableOptions
+            {
+                ExternalDataConfiguration = new ExternalDataConfiguration(),
+                View = new ViewDefinition()
+            };
+            Table table = new Table();
+            InsertRequest request = new InsertRequest(new BigqueryService(), table, "project", "dataset");
+            Assert.Throws<ArgumentException>(() => options.ModifyRequest(table, request));
+        }
     }
 }
