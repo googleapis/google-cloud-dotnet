@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Bigquery.v2.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -303,5 +304,22 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         }
 
         // TODO: Struct containing array or array containing struct.
+
+        [Fact]
+        public void QueryOnView()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
+            var viewDefinition = new ViewDefinition { Query = $"SELECT player, MAX(score) AS score FROM {table} WHERE player IS NOT NULL GROUP BY player ORDER BY 2 DESC", UseLegacySql = false };
+            var view = client.CreateTable(_fixture.DatasetId, "highscore_view", schema: null, options: new CreateTableOptions { View = viewDefinition });
+
+            // This is how a client can check that a BigQueryTable is a view.
+            Assert.NotNull(view.Resource.View);
+
+            var queryResults = client.CreateQueryJob($"SELECT * FROM {view} WHERE player = 'Bob'").GetQueryResults().GetRows().ToList();
+            Assert.Equal(1, queryResults.Count);
+            // The earlier game is not present in the view
+            Assert.Equal(85L, (long) queryResults[0]["score"]);
+        }
     }
 }
