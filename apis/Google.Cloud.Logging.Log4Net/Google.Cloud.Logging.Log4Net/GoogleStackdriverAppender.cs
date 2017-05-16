@@ -328,17 +328,22 @@ namespace Google.Cloud.Logging.Log4Net
             }
             string function0 = null;
             string fullTypeName = loggingEvent.LocationInformation?.ClassName;
-#if NET45
             if (fullTypeName != null)
             {
                 var type = _typeCache.GetOrAdd(fullTypeName, () =>
                 {
                     try
                     {
-
-                         return AppDomain.CurrentDomain.GetAssemblies()
-                             .SelectMany(a => a.GetTypes())
-                             .FirstOrDefault(t => t.FullName == fullTypeName);
+#if NET45
+                            return AppDomain.CurrentDomain.GetAssemblies()
+                                .SelectMany(a => a.GetTypes())
+                                .FirstOrDefault(t => t.FullName == fullTypeName);
+#elif NETSTANDARD1_5
+                            // TODO: Support type lookup in netstandard
+                            return null;
+#else
+#error Unsupported platform.
+#endif
                     }
                     catch
                     {
@@ -352,10 +357,6 @@ namespace Google.Cloud.Logging.Log4Net
                     function0 = type.AssemblyQualifiedName;
                 }
             }
-#endif
-#if NETSTANDARD1_5
-            // TODO: Support type lookup in netstandard
-#endif
             string function1 = loggingEvent.LocationInformation?.MethodName;
             if (function0 != null || function1 != null)
             {
