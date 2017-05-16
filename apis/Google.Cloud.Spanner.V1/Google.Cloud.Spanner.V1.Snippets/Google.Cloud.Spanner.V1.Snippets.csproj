@@ -6,6 +6,8 @@
     <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>1701;1702;1705;4014</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.Spanner.V1\Google.Cloud.Spanner.V1.csproj" />

@@ -5,6 +5,7 @@
     <TargetFramework>net451</TargetFramework>
     <OutputType>Exe</OutputType>
     <IsPackable>False</IsPackable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 
   <ItemGroup>
