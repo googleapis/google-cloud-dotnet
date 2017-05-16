@@ -38,9 +38,9 @@ The full resource names above are the ones you would see and use in the underlyi
 make the client libraries easier to use correctly, a class is generated for each kind of resource name. The classes
 generated for the above resources are:
 
-- [ProjectName](Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.ProjectName.html)
-- [TopicName](Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.TopicName.html)
-- [SubscriptionName](Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.SubscriptionName.html)
+- [ProjectName](../Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.ProjectName.html)
+- [TopicName](../Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.TopicName.html)
+- [SubscriptionName](../Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.SubscriptionName.html)
 
 Constructing an instance of a resource name type from its resource IDs is very simple: just call the constructor. Each
 resource name type has a constructor with one parameter for each resource ID within the name.
@@ -55,17 +55,17 @@ have a `Name` property representing the string resource name, the additional pro
 uses of resource names, the extra property is just the name of the string property with a suffix of `AsXyzName`, where `XyzName` is
 the name of the generated type.
 
-For example, [Subscription](Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.Subscription.html) has
-a [SubscriptionName](Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription_SubscriptionName)
-property. When that property is fetched, it parses the value retrieved from the [Name](Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription_Name) property. Likewise, when the `SubscriptionName` property is
+For example, [Subscription](../Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.Subscription.html) has
+a [SubscriptionName](../Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription_SubscriptionName)
+property. When that property is fetched, it parses the value retrieved from the [Name](../Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription_Name) property. Likewise, when the `SubscriptionName` property is
 set, the value is formatted and stored in `Name`.
 
 ## API calls
 
 API calls where the request uses a resource name are typically mapped to use the corresponding class. For example, to list all the topics
-in the `projects/petstore` project, you would use the [PublisherClient.ListTopics](Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ListTopics_Google_Cloud_PubSub_V1_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_) method:
+in the `projects/petstore` project, you would use the [PublisherClient.ListTopics](../Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ListTopics_Google_Cloud_PubSub_V1_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_) method:
 
-[!code-cs[](obj/snippets/Google.Cloud.Docs.ResourceName.txt#ListTopics)]
+[!code-cs[](../obj/snippets/Google.Cloud.Docs.ResourceName.txt#ListTopics)]
 
 Where API calls haven't been configured to use the resource name type, but instead accept a string, simply create the
 resource name instance anyway, and call `ToString()` to obtain the appropriate string representation.
@@ -82,8 +82,8 @@ resource names being specified in the API for unusual circumstances.
 
 For example, a subscription refers to a topic resource name - but if the topic has been deleted, the name will be `_deleted-topic_`.
 Rather than just fail to parse this, a "one-of" resource name class is generated (in this case
-[TopicNameOneof](Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.TopicNameOneof.html)). That is then used as the type of the
-corresponding extra property ([TopicAsTopicNameOneof](Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription_TopicAsTopicNameOneof)) in `Subscription`.
+[TopicNameOneof](../Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.TopicNameOneof.html)). That is then used as the type of the
+corresponding extra property ([TopicAsTopicNameOneof](../Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription_TopicAsTopicNameOneof)) in `Subscription`.
 
 This kind of resource name can still be parsed from a string and still be formatted with `ToString`, but can also be created
 from the appropriate specific resource name types (`TopicName` and `DeletedTopicNameFixed` in this case). A nested enum and a property

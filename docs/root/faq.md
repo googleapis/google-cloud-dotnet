@@ -3,7 +3,7 @@
 ## How can I use non-default credentials for gRPC-based APIs?
 
 The generated classes for gRPC-based APIs (such as
-[PublisherClient](Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html))
+[PublisherClient](Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.PublisherClient.html))
 have `Create` overloads of this form:
 
 ```csharp
@@ -20,7 +20,7 @@ optionally shut down using the `ShutDownDefaultChannelsAsync` method.
 
 The second of these never creates a new channel, and the caller is
 responsible for explicit clean-up if required. See ["Unmanaged
-resource clean-up"](cleanup.md) for more details on situations where
+resource clean-up"](guides/cleanup.md) for more details on situations where
 this is important.
 
 To create a client with specific credentials, you have to create the
