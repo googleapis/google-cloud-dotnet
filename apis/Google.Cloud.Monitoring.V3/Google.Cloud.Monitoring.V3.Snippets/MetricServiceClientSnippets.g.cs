@@ -41,7 +41,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             ProjectName name = new ProjectName("[PROJECT]");
             // Make the request
-            PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse,MonitoredResourceDescriptor> response =
+            PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response =
                 metricServiceClient.ListMonitoredResourceDescriptorsAsync(name);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -84,7 +84,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             ProjectName name = new ProjectName("[PROJECT]");
             // Make the request
-            PagedEnumerable<ListMonitoredResourceDescriptorsResponse,MonitoredResourceDescriptor> response =
+            PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response =
                 metricServiceClient.ListMonitoredResourceDescriptors(name);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -130,7 +130,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 ProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse,MonitoredResourceDescriptor> response =
+            PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response =
                 metricServiceClient.ListMonitoredResourceDescriptorsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -176,7 +176,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 ProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
-            PagedEnumerable<ListMonitoredResourceDescriptorsResponse,MonitoredResourceDescriptor> response =
+            PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response =
                 metricServiceClient.ListMonitoredResourceDescriptors(request);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -274,7 +274,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             ProjectName name = new ProjectName("[PROJECT]");
             // Make the request
-            PagedAsyncEnumerable<ListMetricDescriptorsResponse,MetricDescriptor> response =
+            PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response =
                 metricServiceClient.ListMetricDescriptorsAsync(name);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -317,7 +317,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             ProjectName name = new ProjectName("[PROJECT]");
             // Make the request
-            PagedEnumerable<ListMetricDescriptorsResponse,MetricDescriptor> response =
+            PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response =
                 metricServiceClient.ListMetricDescriptors(name);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -363,7 +363,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 ProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListMetricDescriptorsResponse,MetricDescriptor> response =
+            PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response =
                 metricServiceClient.ListMetricDescriptorsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -409,7 +409,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 ProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
-            PagedEnumerable<ListMetricDescriptorsResponse,MetricDescriptor> response =
+            PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response =
                 metricServiceClient.ListMetricDescriptors(request);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -624,7 +624,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             TimeInterval interval = new TimeInterval();
             ListTimeSeriesRequest.Types.TimeSeriesView view = ListTimeSeriesRequest.Types.TimeSeriesView.Full;
             // Make the request
-            PagedAsyncEnumerable<ListTimeSeriesResponse,TimeSeries> response =
+            PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> response =
                 metricServiceClient.ListTimeSeriesAsync(name, filter, interval, view);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -670,7 +670,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             TimeInterval interval = new TimeInterval();
             ListTimeSeriesRequest.Types.TimeSeriesView view = ListTimeSeriesRequest.Types.TimeSeriesView.Full;
             // Make the request
-            PagedEnumerable<ListTimeSeriesResponse,TimeSeries> response =
+            PagedEnumerable<ListTimeSeriesResponse, TimeSeries> response =
                 metricServiceClient.ListTimeSeries(name, filter, interval, view);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -719,7 +719,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 View = ListTimeSeriesRequest.Types.TimeSeriesView.Full,
             };
             // Make the request
-            PagedAsyncEnumerable<ListTimeSeriesResponse,TimeSeries> response =
+            PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> response =
                 metricServiceClient.ListTimeSeriesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -768,7 +768,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 View = ListTimeSeriesRequest.Types.TimeSeriesView.Full,
             };
             // Make the request
-            PagedEnumerable<ListTimeSeriesResponse,TimeSeries> response =
+            PagedEnumerable<ListTimeSeriesResponse, TimeSeries> response =
                 metricServiceClient.ListTimeSeries(request);
 
             // Iterate over all response items, lazily performing RPCs as required

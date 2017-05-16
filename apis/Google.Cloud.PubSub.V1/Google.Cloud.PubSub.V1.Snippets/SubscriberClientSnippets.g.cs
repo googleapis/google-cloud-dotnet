@@ -191,7 +191,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Initialize request argument(s)
             ProjectName project = new ProjectName("[PROJECT]");
             // Make the request
-            PagedAsyncEnumerable<ListSubscriptionsResponse,Subscription> response =
+            PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> response =
                 subscriberClient.ListSubscriptionsAsync(project);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -234,7 +234,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Initialize request argument(s)
             ProjectName project = new ProjectName("[PROJECT]");
             // Make the request
-            PagedEnumerable<ListSubscriptionsResponse,Subscription> response =
+            PagedEnumerable<ListSubscriptionsResponse, Subscription> response =
                 subscriberClient.ListSubscriptions(project);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -280,7 +280,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 ProjectAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListSubscriptionsResponse,Subscription> response =
+            PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> response =
                 subscriberClient.ListSubscriptionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -326,7 +326,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 ProjectAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
-            PagedEnumerable<ListSubscriptionsResponse,Subscription> response =
+            PagedEnumerable<ListSubscriptionsResponse, Subscription> response =
                 subscriberClient.ListSubscriptions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -709,7 +709,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Initialize request argument(s)
             ProjectName project = new ProjectName("[PROJECT]");
             // Make the request
-            PagedAsyncEnumerable<ListSnapshotsResponse,Snapshot> response =
+            PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> response =
                 subscriberClient.ListSnapshotsAsync(project);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -752,7 +752,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Initialize request argument(s)
             ProjectName project = new ProjectName("[PROJECT]");
             // Make the request
-            PagedEnumerable<ListSnapshotsResponse,Snapshot> response =
+            PagedEnumerable<ListSnapshotsResponse, Snapshot> response =
                 subscriberClient.ListSnapshots(project);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -798,7 +798,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 ProjectAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListSnapshotsResponse,Snapshot> response =
+            PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> response =
                 subscriberClient.ListSnapshotsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -844,7 +844,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 ProjectAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
-            PagedEnumerable<ListSnapshotsResponse,Snapshot> response =
+            PagedEnumerable<ListSnapshotsResponse, Snapshot> response =
                 subscriberClient.ListSnapshots(request);
 
             // Iterate over all response items, lazily performing RPCs as required

@@ -347,8 +347,7 @@ namespace Google.Cloud.Language.V1
         /// Analyzes the sentiment of the provided text.
         /// </summary>
         /// <param name="document">
-        /// Input document. Currently, `analyzeSentiment` only supports English text
-        /// ([Document.language][google.cloud.language.v1.Document.language]="EN").
+        /// Input document.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -369,8 +368,7 @@ namespace Google.Cloud.Language.V1
         /// Analyzes the sentiment of the provided text.
         /// </summary>
         /// <param name="document">
-        /// Input document. Currently, `analyzeSentiment` only supports English text
-        /// ([Document.language][google.cloud.language.v1.Document.language]="EN").
+        /// Input document.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -388,8 +386,7 @@ namespace Google.Cloud.Language.V1
         /// Analyzes the sentiment of the provided text.
         /// </summary>
         /// <param name="document">
-        /// Input document. Currently, `analyzeSentiment` only supports English text
-        /// ([Document.language][google.cloud.language.v1.Document.language]="EN").
+        /// Input document.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.

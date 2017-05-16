@@ -40,7 +40,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Initialize request argument(s)
             ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
             // Make the request
-            PagedAsyncEnumerable<ListSinksResponse,LogSink> response =
+            PagedAsyncEnumerable<ListSinksResponse, LogSink> response =
                 configServiceV2Client.ListSinksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -83,7 +83,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Initialize request argument(s)
             ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
             // Make the request
-            PagedEnumerable<ListSinksResponse,LogSink> response =
+            PagedEnumerable<ListSinksResponse, LogSink> response =
                 configServiceV2Client.ListSinks(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -129,7 +129,7 @@ namespace Google.Cloud.Logging.V2.Snippets
                 ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
             };
             // Make the request
-            PagedAsyncEnumerable<ListSinksResponse,LogSink> response =
+            PagedAsyncEnumerable<ListSinksResponse, LogSink> response =
                 configServiceV2Client.ListSinksAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -175,7 +175,7 @@ namespace Google.Cloud.Logging.V2.Snippets
                 ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
             };
             // Make the request
-            PagedEnumerable<ListSinksResponse,LogSink> response =
+            PagedEnumerable<ListSinksResponse, LogSink> response =
                 configServiceV2Client.ListSinks(request);
 
             // Iterate over all response items, lazily performing RPCs as required
