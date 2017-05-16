@@ -4,9 +4,9 @@
 
 All client libraries wrapping gRPC-based APIs (see the [API layers](api-layers.md) article)
 allow customization of RPC calls by using
-[CallSettings](obj/api/Google.Api.Gax.Grpc.CallSettings.yml). If `CallSettings` are
+[CallSettings](../obj/api/Google.Api.Gax.Grpc.CallSettings.yml). If `CallSettings` are
 not specified sensible defaults are automatically provided.
-See the [CallSettings documentation](obj/api/Google.Api.Gax.Grpc.CallSettings.yml)
+See the [CallSettings documentation](../obj/api/Google.Api.Gax.Grpc.CallSettings.yml)
 for descriptions of the available properties.
 
 The underlying gRPC API uses
@@ -19,7 +19,7 @@ There are three distinct places where `CallSettings` may optionally be provided:
 
 * When calling an RPC method *(highest priority)*.
 * Client-wide when creating a client object (for example, using
-[PublisherClient.Create()](Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_PublisherSettings_)).
+[PublisherClient.Create()](../Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Cloud_PubSub_V1_PublisherSettings_)).
 * Per-RPC-method when creating a client object *(lowest priority)*.
 
 It's important to understand exactly which properties of which `CallSettings` will be used during an RPC invocation.
@@ -30,40 +30,40 @@ property is used.
 The client-wide `CallSettings` is higher-priority than per-RPC-method `CallSettings`
 because it is often useful to be able to easily specify common properties to use
 for all RPC invocations. For example, a common set of
-[headers](obj/api/Google.Api.Gax.Grpc.CallSettings.yml#Google_Api_Gax_Grpc_CallSettings_Headers);
+[headers](../obj/api/Google.Api.Gax.Grpc.CallSettings.yml#Google_Api_Gax_Grpc_CallSettings_Headers);
 or a common
-[deadline](obj/api/Google.Api.Gax.Grpc.CallSettings.yml#Google_Api_Gax_Grpc_CallSettings_Timing)
+[deadline](../obj/api/Google.Api.Gax.Grpc.CallSettings.yml#Google_Api_Gax_Grpc_CallSettings_Timing)
 for multiple RPC invocations.
 
 ## Examples
 
 ### Per-RPC (highest priority)
 
-[!code-cs[](obj/snippets/Google.Cloud.Docs.CallSettings.txt#PerRpc)]
+[!code-cs[](../obj/snippets/Google.Cloud.Docs.CallSettings.txt#PerRpc)]
 
 ### Client configuration; client-wide
 
-[!code-cs[](obj/snippets/Google.Cloud.Docs.CallSettings.txt#ClientWide)]
+[!code-cs[](../obj/snippets/Google.Cloud.Docs.CallSettings.txt#ClientWide)]
 
 ### Client configuration; per-RPC-method (lowest priority)
 
-[!code-cs[](obj/snippets/Google.Cloud.Docs.CallSettings.txt#ClientPerMethod)]
+[!code-cs[](../obj/snippets/Google.Cloud.Docs.CallSettings.txt#ClientPerMethod)]
 
 ### Multiple `Callsettings` specified
 
-[!code-cs[](obj/snippets/Google.Cloud.Docs.CallSettings.txt#Overrides)]
+[!code-cs[](../obj/snippets/Google.Cloud.Docs.CallSettings.txt#Overrides)]
 
 ## Defaults
 
 By default there is a per-RPC-method client configuration that specifies a sensible
 retry policy for every method. See, for example,
-[PublisherSettings.CreateTopicSettings](Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings_CreateTopicSettings)
+[PublisherSettings.CreateTopicSettings](../Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.PublisherSettings.html#Google_Cloud_PubSub_V1_PublisherSettings_CreateTopicSettings)
 
 ## Timing settings
 
-The timing settings for an RPC are specified using [CallTiming](obj/api/Google.Api.Gax.Grpc.CallTiming.yml).
-This is either a simple [Expiration](obj/api/Google.Api.Gax.Grpc.Expiration.yml),
-or a [RetrySettings](obj/api/Google.Api.Gax.Grpc.RetrySettings.yml). `RetrySettings` uses an `Expiration` as well,
+The timing settings for an RPC are specified using [CallTiming](../obj/api/Google.Api.Gax.Grpc.CallTiming.yml).
+This is either a simple [Expiration](../obj/api/Google.Api.Gax.Expiration.yml),
+or a [RetrySettings](../obj/api/Google.Api.Gax.Grpc.RetrySettings.yml). `RetrySettings` uses an `Expiration` as well,
 so let's look at `Expiration` first.
 
 ### Expiration
@@ -88,7 +88,7 @@ for you to meet them.
 ### RetrySettings
 
 Retry is inherently complicated. There will be potentially multiple RPCs made, each with its own expiration, some
-back-off between RPCs, and the situations under which it's reasonable to retry. The [RetrySettings](obj/api/Google.Api.Gax.Grpc.RetrySettings.yml) exposes this via the following properties (all set by the constructor):
+back-off between RPCs, and the situations under which it's reasonable to retry. The [RetrySettings](../obj/api/Google.Api.Gax.Grpc.RetrySettings.yml) exposes this via the following properties (all set by the constructor):
 
 - `TimeoutBackoff`: how the expiration for each individual RPC varies
   (for example, the first RPC might have a timeout
@@ -103,12 +103,12 @@ back-off between RPCs, and the situations under which it's reasonable to retry. 
   a little. This avoids multiple clients accidentally synchronizing their retries and periodically hitting
   a service very hard. This is exposed for testability, but is unlikely to need tweaking in production use.
 
- `TimeoutBackoff` and `RetryBackoff` are both expressed in terms of a [BackoffSettings](obj/api/Google.Api.Gax.Grpc.BackoffSettings.yml), which consists of an initial timeout, a maximum timeout, and a multiplier.
+ `TimeoutBackoff` and `RetryBackoff` are both expressed in terms of a [BackoffSettings](../obj/api/Google.Api.Gax.Grpc.BackoffSettings.yml), which consists of an initial timeout, a maximum timeout, and a multiplier.
  The multiplier is applied to the "current" timeout to determine the "next" timeout, capped at the maximum.
 
  All of this is probably best demonstrated with a worked example. Consider the following settings:
 
- [!code-cs[](obj/snippets/Google.Cloud.Docs.CallSettings.txt#RetrySettingsTiming)]
+ [!code-cs[](../obj/snippets/Google.Cloud.Docs.CallSettings.txt#RetrySettingsTiming)]
 
  Here we're using the default RPC filter and jitter for simplicity. Suppose we have a server which returns a
  "not found" error (which is retriable) after 2 seconds each time we make an RPC. The timing with the above settings looks like this (assuming there's no actual jitter):

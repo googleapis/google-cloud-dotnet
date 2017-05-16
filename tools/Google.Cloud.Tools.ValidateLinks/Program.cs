@@ -69,7 +69,7 @@ namespace Google.Cloud.Tools.ValidateLinks
             {
                 htmlDoc.OutputXml = true;
                 // FIXME! (Probably a docfx issue...)
-                htmlDoc.NewInlineTags = "see,example,returns";
+                htmlDoc.NewInlineTags = "see,example,returns,seealso";
                 htmlDoc.ShowWarnings = false;
                 htmlDoc.ShowInfo = false;
                 htmlDoc.CleanAndRepair();
@@ -87,7 +87,7 @@ namespace Google.Cloud.Tools.ValidateLinks
 
             var directory = Path.GetDirectoryName(Path.GetFullPath(file));
 
-            var brokenHrefs = relativeHrefs.Where(href => !File.Exists(Path.Combine(directory, href))).ToList();
+            var brokenHrefs = relativeHrefs.Where(href => !File.Exists(Path.Combine(directory, href))).GroupBy(x => x).ToList();
             if (brokenHrefs.Count == 0)
             {
                 return true;
@@ -102,7 +102,7 @@ namespace Google.Cloud.Tools.ValidateLinks
             Console.WriteLine($"Invalid relative hrefs in {file}:");
             foreach (var href in brokenHrefs)
             {
-                Console.WriteLine($"  {href}");
+                Console.WriteLine($"  {href.Key} ({href.Count()})");
             }
 
             return false;
