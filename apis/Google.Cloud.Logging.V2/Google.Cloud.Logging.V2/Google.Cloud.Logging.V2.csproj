@@ -7,6 +7,7 @@
     <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Description>Recommended Google client library to access the Google Stackdriver Logging API, which writes log entries and manages your logs, log sinks, and logs-based metrics.</Description>
     <PackageTags>Logging;Stackdriver;Google;Cloud</PackageTags>
     <IncludeSymbols>true</IncludeSymbols>

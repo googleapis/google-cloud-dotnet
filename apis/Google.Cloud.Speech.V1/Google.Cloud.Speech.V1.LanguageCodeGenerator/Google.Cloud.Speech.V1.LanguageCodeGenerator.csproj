@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net45</TargetFramework>
     <IsPackable>False</IsPackable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 
 </Project>
