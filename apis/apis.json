@@ -51,7 +51,7 @@
     "tags": [ "Tools" ],
     "dependencies": {
       "Google.Api.CommonProtos": "1.0.0",
-      "Google.Protobuf": "3.2.0"
+      "Google.Protobuf": "3.3.0"
     }
   },
 
