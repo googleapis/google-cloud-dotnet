@@ -292,13 +292,12 @@ namespace Google.Cloud.Diagnostics.Common
         }
 #endif
 
-        // TODO: Remove when https://github.com/dotnet/roslyn/issues/12255 is fixed and go back to using System.Collections.Immutable
-        private class ImmutableStack<T>
+        private sealed class ImmutableStack<T>
         {
             public static readonly ImmutableStack<T> Empty = new ImmutableStack<T>(default(T), null);
 
-            private ImmutableStack<T> _previous;
-            private T _value;
+            private readonly ImmutableStack<T> _previous;
+            private readonly T _value;
 
             private ImmutableStack(T value, ImmutableStack<T> previous)
             {
