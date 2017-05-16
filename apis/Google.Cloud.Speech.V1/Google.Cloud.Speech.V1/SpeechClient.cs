@@ -734,7 +734,7 @@ namespace Google.Cloud.Speech.V1
         {
             Modify_LongRunningRecognizeRequest(ref request, ref callSettings);
             return new Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>(
-                await _callLongRunningRecognize.Async(request, callSettings), LongRunningOperationsClient);
+                await _callLongRunningRecognize.Async(request, callSettings).ConfigureAwait(false), LongRunningOperationsClient);
         }
 
         /// <summary>
@@ -781,7 +781,7 @@ namespace Google.Cloud.Speech.V1
             Modify_StreamingRecognizeRequestCallSettings(ref callSettings);
             BidirectionalStreamingSettings effectiveStreamingSettings =
                 streamingSettings ?? _callStreamingRecognize.StreamingSettings;
-            AsyncDuplexStreamingCall<StreamingRecognizeRequest,StreamingRecognizeResponse> call =
+            AsyncDuplexStreamingCall<StreamingRecognizeRequest, StreamingRecognizeResponse> call =
                 _callStreamingRecognize.Call(callSettings);
             BufferedClientStreamWriter<StreamingRecognizeRequest> writeBuffer =
                 new BufferedClientStreamWriter<StreamingRecognizeRequest>(
@@ -803,7 +803,7 @@ namespace Google.Cloud.Speech.V1
             /// instance associated with this streaming call.</param>
             public StreamingRecognizeStreamImpl(
                 SpeechClientImpl service,
-                AsyncDuplexStreamingCall<StreamingRecognizeRequest,StreamingRecognizeResponse> call,
+                AsyncDuplexStreamingCall<StreamingRecognizeRequest, StreamingRecognizeResponse> call,
                 BufferedClientStreamWriter<StreamingRecognizeRequest> writeBuffer)
             {
                 _service = service;
@@ -821,7 +821,7 @@ namespace Google.Cloud.Speech.V1
             }
 
             /// <inheritdoc/>
-            public override AsyncDuplexStreamingCall<StreamingRecognizeRequest,StreamingRecognizeResponse> GrpcCall { get; }
+            public override AsyncDuplexStreamingCall<StreamingRecognizeRequest, StreamingRecognizeResponse> GrpcCall { get; }
 
             /// <inheritdoc/>
             public override Task TryWriteAsync(StreamingRecognizeRequest message) =>

@@ -42,7 +42,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
             // Make the request
-            PagedAsyncEnumerable<ListDatabasesResponse,Database> response =
+            PagedAsyncEnumerable<ListDatabasesResponse, Database> response =
                 databaseAdminClient.ListDatabasesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -85,7 +85,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
             // Make the request
-            PagedEnumerable<ListDatabasesResponse,Database> response =
+            PagedEnumerable<ListDatabasesResponse, Database> response =
                 databaseAdminClient.ListDatabases(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -131,7 +131,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
                 ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListDatabasesResponse,Database> response =
+            PagedAsyncEnumerable<ListDatabasesResponse, Database> response =
                 databaseAdminClient.ListDatabasesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -177,7 +177,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
                 ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             // Make the request
-            PagedEnumerable<ListDatabasesResponse,Database> response =
+            PagedEnumerable<ListDatabasesResponse, Database> response =
                 databaseAdminClient.ListDatabases(request);
 
             // Iterate over all response items, lazily performing RPCs as required
