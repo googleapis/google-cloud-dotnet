@@ -332,9 +332,8 @@ namespace Google.Cloud.Language.V1 {
     /// The language of the document (if not specified, the language is
     /// automatically detected). Both ISO and BCP-47 language codes are
     /// accepted.&lt;br>
-    /// **Current Language Restrictions:**
-    ///
-    ///  * Only English, Spanish, and Japanese textual content are supported.
+    /// [Language Support](https://cloud.google.com/natural-language/docs/languages)
+    /// lists currently supported languages for each API method.
     /// If the language (either specified by the caller or automatically detected)
     /// is not supported by the called API method, an `INVALID_ARGUMENT` error
     /// is returned.
@@ -3107,8 +3106,7 @@ namespace Google.Cloud.Language.V1 {
     public const int DocumentFieldNumber = 1;
     private global::Google.Cloud.Language.V1.Document document_;
     /// <summary>
-    /// Input document. Currently, `analyzeSentiment` only supports English text
-    /// ([Document.language][google.cloud.language.v1.Document.language]="EN").
+    /// Input document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.Document Document {
@@ -3285,7 +3283,7 @@ namespace Google.Cloud.Language.V1 {
     /// <summary>
     /// The language of the text, which will be the same as the language specified
     /// in the request or, if not specified, the automatically-detected language.
-    /// See `Document.language` field for more details.
+    /// See [Document.language][google.cloud.language.v1.Document.language] field for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Language {
@@ -3628,7 +3626,7 @@ namespace Google.Cloud.Language.V1 {
     /// <summary>
     /// The language of the text, which will be the same as the language specified
     /// in the request or, if not specified, the automatically-detected language.
-    /// See `Document.language` field for more details.
+    /// See [Document.language][google.cloud.language.v1.Document.language] field for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Language {
@@ -3950,7 +3948,7 @@ namespace Google.Cloud.Language.V1 {
     /// <summary>
     /// The language of the text, which will be the same as the language specified
     /// in the request or, if not specified, the automatically-detected language.
-    /// See `Document.language` field for more details.
+    /// See [Document.language][google.cloud.language.v1.Document.language] field for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Language {
@@ -4547,7 +4545,7 @@ namespace Google.Cloud.Language.V1 {
     /// <summary>
     /// The language of the text, which will be the same as the language specified
     /// in the request or, if not specified, the automatically-detected language.
-    /// See `Document.language` field for more details.
+    /// See [Document.language][google.cloud.language.v1.Document.language] field for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Language {

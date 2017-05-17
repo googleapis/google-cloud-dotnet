@@ -26,7 +26,7 @@ installed, run the following command in a Google Cloud SDK Shell:
 
 # Support from third party libraries
 
-The [Logary](github.com/logary/logary) logging library has a target
+The [Logary](https://github.com/logary/logary) logging library has a target
 supporting Google Stackdriver logging. Install the [NuGet
 package](https://www.nuget.org/packages/Logary.Targets.Stackdriver)
 and follow the [instructions on the project

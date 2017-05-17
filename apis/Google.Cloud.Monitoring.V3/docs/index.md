@@ -24,9 +24,8 @@ installed, run the following command in a Google Cloud SDK Shell:
 
 # Getting started
 
-There are three client classes to be aware of:
+There are two client classes to be aware of:
 
-- [AgentTranslationServiceClient](obj/api/Google.Cloud.Monitoring.V3.AgentTranslationServiceClient.yml)
 - [GroupServiceClient](obj/api/Google.Cloud.Monitoring.V3.GroupServiceClient.yml)
 - [MetricServiceClient](obj/api/Google.Cloud.Monitoring.V3.MetricServiceClient.yml)
 

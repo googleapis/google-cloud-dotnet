@@ -6,6 +6,7 @@
     <AssemblyName>Google.Cloud.Docs.Snippets</AssemblyName>
     <PackageId>Google.Cloud.Docs.Snippets</PackageId>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
   </PropertyGroup>
 
   <ItemGroup>

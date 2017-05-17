@@ -25,46 +25,46 @@ namespace Google.Cloud.Logging.V2 {
             "CiZnb29nbGUvbG9nZ2luZy92Mi9sb2dnaW5nX2NvbmZpZy5wcm90bxIRZ29v",
             "Z2xlLmxvZ2dpbmcudjIaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8a",
             "G2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
-            "L3RpbWVzdGFtcC5wcm90byK9AgoHTG9nU2luaxIMCgRuYW1lGAEgASgJEhMK",
+            "L3RpbWVzdGFtcC5wcm90byLXAgoHTG9nU2luaxIMCgRuYW1lGAEgASgJEhMK",
             "C2Rlc3RpbmF0aW9uGAMgASgJEg4KBmZpbHRlchgFIAEoCRJHChVvdXRwdXRf",
             "dmVyc2lvbl9mb3JtYXQYBiABKA4yKC5nb29nbGUubG9nZ2luZy52Mi5Mb2dT",
-            "aW5rLlZlcnNpb25Gb3JtYXQSFwoPd3JpdGVyX2lkZW50aXR5GAggASgJEi4K",
-            "CnN0YXJ0X3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "EiwKCGVuZF90aW1lGAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cCI/Cg1WZXJzaW9uRm9ybWF0Eh4KGlZFUlNJT05fRk9STUFUX1VOU1BFQ0lG",
-            "SUVEEAASBgoCVjIQARIGCgJWMRACIkkKEExpc3RTaW5rc1JlcXVlc3QSDgoG",
-            "cGFyZW50GAEgASgJEhIKCnBhZ2VfdG9rZW4YAiABKAkSEQoJcGFnZV9zaXpl",
-            "GAMgASgFIlcKEUxpc3RTaW5rc1Jlc3BvbnNlEikKBXNpbmtzGAEgAygLMhou",
-            "Z29vZ2xlLmxvZ2dpbmcudjIuTG9nU2luaxIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
-            "AiABKAkiIwoOR2V0U2lua1JlcXVlc3QSEQoJc2lua19uYW1lGAEgASgJIm0K",
-            "EUNyZWF0ZVNpbmtSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIoCgRzaW5rGAIg",
-            "ASgLMhouZ29vZ2xlLmxvZ2dpbmcudjIuTG9nU2luaxIeChZ1bmlxdWVfd3Jp",
-            "dGVyX2lkZW50aXR5GAMgASgIInAKEVVwZGF0ZVNpbmtSZXF1ZXN0EhEKCXNp",
-            "bmtfbmFtZRgBIAEoCRIoCgRzaW5rGAIgASgLMhouZ29vZ2xlLmxvZ2dpbmcu",
-            "djIuTG9nU2luaxIeChZ1bmlxdWVfd3JpdGVyX2lkZW50aXR5GAMgASgIIiYK",
-            "EURlbGV0ZVNpbmtSZXF1ZXN0EhEKCXNpbmtfbmFtZRgBIAEoCTL+BAoPQ29u",
-            "ZmlnU2VydmljZVYyEn0KCUxpc3RTaW5rcxIjLmdvb2dsZS5sb2dnaW5nLnYy",
-            "Lkxpc3RTaW5rc1JlcXVlc3QaJC5nb29nbGUubG9nZ2luZy52Mi5MaXN0U2lu",
-            "a3NSZXNwb25zZSIlgtPkkwIfEh0vdjIve3BhcmVudD1wcm9qZWN0cy8qfS9z",
-            "aW5rcxJ0CgdHZXRTaW5rEiEuZ29vZ2xlLmxvZ2dpbmcudjIuR2V0U2lua1Jl",
-            "cXVlc3QaGi5nb29nbGUubG9nZ2luZy52Mi5Mb2dTaW5rIiqC0+STAiQSIi92",
-            "Mi97c2lua19uYW1lPXByb2plY3RzLyovc2lua3MvKn0SewoKQ3JlYXRlU2lu",
-            "axIkLmdvb2dsZS5sb2dnaW5nLnYyLkNyZWF0ZVNpbmtSZXF1ZXN0GhouZ29v",
-            "Z2xlLmxvZ2dpbmcudjIuTG9nU2luayIrgtPkkwIlIh0vdjIve3BhcmVudD1w",
-            "cm9qZWN0cy8qfS9zaW5rczoEc2luaxKAAQoKVXBkYXRlU2luaxIkLmdvb2ds",
-            "ZS5sb2dnaW5nLnYyLlVwZGF0ZVNpbmtSZXF1ZXN0GhouZ29vZ2xlLmxvZ2dp",
-            "bmcudjIuTG9nU2luayIwgtPkkwIqGiIvdjIve3NpbmtfbmFtZT1wcm9qZWN0",
-            "cy8qL3NpbmtzLyp9OgRzaW5rEnYKCkRlbGV0ZVNpbmsSJC5nb29nbGUubG9n",
-            "Z2luZy52Mi5EZWxldGVTaW5rUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5F",
-            "bXB0eSIqgtPkkwIkKiIvdjIve3NpbmtfbmFtZT1wcm9qZWN0cy8qL3Npbmtz",
-            "Lyp9QoEBChVjb20uZ29vZ2xlLmxvZ2dpbmcudjJCEkxvZ2dpbmdDb25maWdQ",
-            "cm90b1ABWjhnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
-            "L2xvZ2dpbmcvdjI7bG9nZ2luZ6oCF0dvb2dsZS5DbG91ZC5Mb2dnaW5nLlYy",
-            "YgZwcm90bzM="));
+            "aW5rLlZlcnNpb25Gb3JtYXQSFwoPd3JpdGVyX2lkZW50aXR5GAggASgJEhgK",
+            "EGluY2x1ZGVfY2hpbGRyZW4YCSABKAgSLgoKc3RhcnRfdGltZRgKIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYCyABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIj8KDVZlcnNpb25Gb3JtYXQS",
+            "HgoaVkVSU0lPTl9GT1JNQVRfVU5TUEVDSUZJRUQQABIGCgJWMhABEgYKAlYx",
+            "EAIiSQoQTGlzdFNpbmtzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSEgoKcGFn",
+            "ZV90b2tlbhgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUiVwoRTGlzdFNpbmtz",
+            "UmVzcG9uc2USKQoFc2lua3MYASADKAsyGi5nb29nbGUubG9nZ2luZy52Mi5M",
+            "b2dTaW5rEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIjCg5HZXRTaW5rUmVx",
+            "dWVzdBIRCglzaW5rX25hbWUYASABKAkibQoRQ3JlYXRlU2lua1JlcXVlc3QS",
+            "DgoGcGFyZW50GAEgASgJEigKBHNpbmsYAiABKAsyGi5nb29nbGUubG9nZ2lu",
+            "Zy52Mi5Mb2dTaW5rEh4KFnVuaXF1ZV93cml0ZXJfaWRlbnRpdHkYAyABKAgi",
+            "cAoRVXBkYXRlU2lua1JlcXVlc3QSEQoJc2lua19uYW1lGAEgASgJEigKBHNp",
+            "bmsYAiABKAsyGi5nb29nbGUubG9nZ2luZy52Mi5Mb2dTaW5rEh4KFnVuaXF1",
+            "ZV93cml0ZXJfaWRlbnRpdHkYAyABKAgiJgoRRGVsZXRlU2lua1JlcXVlc3QS",
+            "EQoJc2lua19uYW1lGAEgASgJMv4ECg9Db25maWdTZXJ2aWNlVjISfQoJTGlz",
+            "dFNpbmtzEiMuZ29vZ2xlLmxvZ2dpbmcudjIuTGlzdFNpbmtzUmVxdWVzdBok",
+            "Lmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RTaW5rc1Jlc3BvbnNlIiWC0+STAh8S",
+            "HS92Mi97cGFyZW50PXByb2plY3RzLyp9L3NpbmtzEnQKB0dldFNpbmsSIS5n",
+            "b29nbGUubG9nZ2luZy52Mi5HZXRTaW5rUmVxdWVzdBoaLmdvb2dsZS5sb2dn",
+            "aW5nLnYyLkxvZ1NpbmsiKoLT5JMCJBIiL3YyL3tzaW5rX25hbWU9cHJvamVj",
+            "dHMvKi9zaW5rcy8qfRJ7CgpDcmVhdGVTaW5rEiQuZ29vZ2xlLmxvZ2dpbmcu",
+            "djIuQ3JlYXRlU2lua1JlcXVlc3QaGi5nb29nbGUubG9nZ2luZy52Mi5Mb2dT",
+            "aW5rIiuC0+STAiUiHS92Mi97cGFyZW50PXByb2plY3RzLyp9L3NpbmtzOgRz",
+            "aW5rEoABCgpVcGRhdGVTaW5rEiQuZ29vZ2xlLmxvZ2dpbmcudjIuVXBkYXRl",
+            "U2lua1JlcXVlc3QaGi5nb29nbGUubG9nZ2luZy52Mi5Mb2dTaW5rIjCC0+ST",
+            "AioaIi92Mi97c2lua19uYW1lPXByb2plY3RzLyovc2lua3MvKn06BHNpbmsS",
+            "dgoKRGVsZXRlU2luaxIkLmdvb2dsZS5sb2dnaW5nLnYyLkRlbGV0ZVNpbmtS",
+            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IiqC0+STAiQqIi92Mi97",
+            "c2lua19uYW1lPXByb2plY3RzLyovc2lua3MvKn1CgQEKFWNvbS5nb29nbGUu",
+            "bG9nZ2luZy52MkISTG9nZ2luZ0NvbmZpZ1Byb3RvUAFaOGdvb2dsZS5nb2xh",
+            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvbG9nZ2luZy92Mjtsb2dnaW5n",
+            "qgIXR29vZ2xlLkNsb3VkLkxvZ2dpbmcuVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogSink), global::Google.Cloud.Logging.V2.LogSink.Parser, new[]{ "Name", "Destination", "Filter", "OutputVersionFormat", "WriterIdentity", "StartTime", "EndTime" }, null, new[]{ typeof(global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogSink), global::Google.Cloud.Logging.V2.LogSink.Parser, new[]{ "Name", "Destination", "Filter", "OutputVersionFormat", "WriterIdentity", "IncludeChildren", "StartTime", "EndTime" }, null, new[]{ typeof(global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListSinksRequest), global::Google.Cloud.Logging.V2.ListSinksRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListSinksResponse), global::Google.Cloud.Logging.V2.ListSinksResponse.Parser, new[]{ "Sinks", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.GetSinkRequest), global::Google.Cloud.Logging.V2.GetSinkRequest.Parser, new[]{ "SinkName" }, null, null, null),
@@ -113,6 +113,7 @@ namespace Google.Cloud.Logging.V2 {
       filter_ = other.filter_;
       outputVersionFormat_ = other.outputVersionFormat_;
       writerIdentity_ = other.writerIdentity_;
+      includeChildren_ = other.includeChildren_;
       StartTime = other.startTime_ != null ? other.StartTime.Clone() : null;
       EndTime = other.endTime_ != null ? other.EndTime.Clone() : null;
     }
@@ -228,6 +229,32 @@ namespace Google.Cloud.Logging.V2 {
       }
     }
 
+    /// <summary>Field number for the "include_children" field.</summary>
+    public const int IncludeChildrenFieldNumber = 9;
+    private bool includeChildren_;
+    /// <summary>
+    /// Optional. This field applies only to sinks owned by organizations and
+    /// folders. If the field is false, the default, only the logs owned by the
+    /// sink's parent resource are available for export. If the field is true, then
+    /// logs from all the projects, folders, and billing accounts contained in the
+    /// sink's parent resource are also available for export. Whether a particular
+    /// log entry from the children is exported depends on the sink's filter
+    /// expression. For example, if this field is true, then the filter
+    /// `resource.type=gce_instance` would export all Compute Engine VM instance
+    /// log entries from all projects in the sink's parent. To only export entries
+    /// from certain child projects, filter on the project part of the log name:
+    ///
+    ///     logName:("projects/test-project1/" OR "projects/test-project2/") AND
+    ///     resource.type=gce_instance
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IncludeChildren {
+      get { return includeChildren_; }
+      set {
+        includeChildren_ = value;
+      }
+    }
+
     /// <summary>Field number for the "start_time" field.</summary>
     public const int StartTimeFieldNumber = 10;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
@@ -281,6 +308,7 @@ namespace Google.Cloud.Logging.V2 {
       if (Filter != other.Filter) return false;
       if (OutputVersionFormat != other.OutputVersionFormat) return false;
       if (WriterIdentity != other.WriterIdentity) return false;
+      if (IncludeChildren != other.IncludeChildren) return false;
       if (!object.Equals(StartTime, other.StartTime)) return false;
       if (!object.Equals(EndTime, other.EndTime)) return false;
       return true;
@@ -294,6 +322,7 @@ namespace Google.Cloud.Logging.V2 {
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
       if (OutputVersionFormat != 0) hash ^= OutputVersionFormat.GetHashCode();
       if (WriterIdentity.Length != 0) hash ^= WriterIdentity.GetHashCode();
+      if (IncludeChildren != false) hash ^= IncludeChildren.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
       return hash;
@@ -326,6 +355,10 @@ namespace Google.Cloud.Logging.V2 {
         output.WriteRawTag(66);
         output.WriteString(WriterIdentity);
       }
+      if (IncludeChildren != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(IncludeChildren);
+      }
       if (startTime_ != null) {
         output.WriteRawTag(82);
         output.WriteMessage(StartTime);
@@ -353,6 +386,9 @@ namespace Google.Cloud.Logging.V2 {
       }
       if (WriterIdentity.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(WriterIdentity);
+      }
+      if (IncludeChildren != false) {
+        size += 1 + 1;
       }
       if (startTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
@@ -382,6 +418,9 @@ namespace Google.Cloud.Logging.V2 {
       }
       if (other.WriterIdentity.Length != 0) {
         WriterIdentity = other.WriterIdentity;
+      }
+      if (other.IncludeChildren != false) {
+        IncludeChildren = other.IncludeChildren;
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
@@ -423,6 +462,10 @@ namespace Google.Cloud.Logging.V2 {
           }
           case 66: {
             WriterIdentity = input.ReadString();
+            break;
+          }
+          case 72: {
+            IncludeChildren = input.ReadBool();
             break;
           }
           case 82: {

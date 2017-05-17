@@ -65,6 +65,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 new XElement("AssemblyOriginatorKeyFile", "../../GoogleApis.snk"),
                 new XElement("SignAssembly", true),
                 new XElement("PublicSign", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), true),
+                new XElement("TreatWarningsAsErrors", true),
                 // Package-related properties
                 new XElement("Description", Description),
                 new XElement("PackageTags", string.Join(";", Tags.Concat(new[] { "Google", "Cloud" }))),
@@ -97,7 +98,12 @@ namespace Google.Cloud.Tools.ProjectGenerator
                     new XElement("IsPackable", false),
                     new XElement("AssemblyOriginatorKeyFile", "../../GoogleApis.snk"),
                     new XElement("SignAssembly", true),
-                    new XElement("PublicSign", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), true)
+                    new XElement("PublicSign", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), true),
+                    new XElement("TreatWarningsAsErrors", true),
+                    // 1701, 1702 and 1705 are disabled by default.
+                    // 4014 is required as snippets for streaming samples call Task.Run and don't await the result.
+                    // See https://github.com/googleapis/toolkit/issues/1271 - when that's fixed, we can remove this.
+                    new XElement("NoWarn", "1701;1702;1705;4014")
                 );
             var itemGroup = CreateDependenciesElement(dependencies);
             // Allow test projects to use dynamic...
@@ -135,9 +141,12 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 );
             }
 
-            using (var writer = File.CreateText(Path.Combine(directory, $"{Path.GetFileName(directory)}.csproj")))
+            // Don't use File.CreateText as that omits the byte order mark.
+            // While byte order marks are nasty, Visual Studio will add it back any time a project file is
+            // manually edited, so it's best if we follow suit.
+            using (var stream = File.Create(Path.Combine(directory, $"{Path.GetFileName(directory)}.csproj")))
             {
-                doc.Save(writer);
+                doc.Save(stream);
             }
         }
         private static string GenerateProjectReference(string key)

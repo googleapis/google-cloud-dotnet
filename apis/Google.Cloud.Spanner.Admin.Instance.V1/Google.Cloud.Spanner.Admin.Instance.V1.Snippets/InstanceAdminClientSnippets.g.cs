@@ -42,7 +42,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             ProjectName parent = new ProjectName("[PROJECT]");
             // Make the request
-            PagedAsyncEnumerable<ListInstanceConfigsResponse,InstanceConfig> response =
+            PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> response =
                 instanceAdminClient.ListInstanceConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -85,7 +85,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             ProjectName parent = new ProjectName("[PROJECT]");
             // Make the request
-            PagedEnumerable<ListInstanceConfigsResponse,InstanceConfig> response =
+            PagedEnumerable<ListInstanceConfigsResponse, InstanceConfig> response =
                 instanceAdminClient.ListInstanceConfigs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -131,7 +131,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
                 ParentAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListInstanceConfigsResponse,InstanceConfig> response =
+            PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> response =
                 instanceAdminClient.ListInstanceConfigsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -177,7 +177,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
                 ParentAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
-            PagedEnumerable<ListInstanceConfigsResponse,InstanceConfig> response =
+            PagedEnumerable<ListInstanceConfigsResponse, InstanceConfig> response =
                 instanceAdminClient.ListInstanceConfigs(request);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -275,7 +275,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             ProjectName parent = new ProjectName("[PROJECT]");
             // Make the request
-            PagedAsyncEnumerable<ListInstancesResponse,Instance> response =
+            PagedAsyncEnumerable<ListInstancesResponse, Instance> response =
                 instanceAdminClient.ListInstancesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -318,7 +318,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             ProjectName parent = new ProjectName("[PROJECT]");
             // Make the request
-            PagedEnumerable<ListInstancesResponse,Instance> response =
+            PagedEnumerable<ListInstancesResponse, Instance> response =
                 instanceAdminClient.ListInstances(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -364,7 +364,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
                 ParentAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListInstancesResponse,Instance> response =
+            PagedAsyncEnumerable<ListInstancesResponse, Instance> response =
                 instanceAdminClient.ListInstancesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -410,7 +410,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
                 ParentAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
-            PagedEnumerable<ListInstancesResponse,Instance> response =
+            PagedEnumerable<ListInstancesResponse, Instance> response =
                 instanceAdminClient.ListInstances(request);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -649,11 +649,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             Instance instance = new Instance();
             FieldMask fieldMask = new FieldMask();
             // Make the request
-            Operation<Instance, CreateInstanceMetadata> response =
+            Operation<Instance, UpdateInstanceMetadata> response =
                 await instanceAdminClient.UpdateInstanceAsync(instance, fieldMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, CreateInstanceMetadata> completedResponse =
+            Operation<Instance, UpdateInstanceMetadata> completedResponse =
                 await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Instance result = completedResponse.Result;
@@ -661,7 +661,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, CreateInstanceMetadata> retrievedResponse =
+            Operation<Instance, UpdateInstanceMetadata> retrievedResponse =
                 await instanceAdminClient.PollOnceUpdateInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
@@ -681,11 +681,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             Instance instance = new Instance();
             FieldMask fieldMask = new FieldMask();
             // Make the request
-            Operation<Instance, CreateInstanceMetadata> response =
+            Operation<Instance, UpdateInstanceMetadata> response =
                 instanceAdminClient.UpdateInstance(instance, fieldMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, CreateInstanceMetadata> completedResponse =
+            Operation<Instance, UpdateInstanceMetadata> completedResponse =
                 response.PollUntilCompleted();
             // Retrieve the operation result
             Instance result = completedResponse.Result;
@@ -693,7 +693,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, CreateInstanceMetadata> retrievedResponse =
+            Operation<Instance, UpdateInstanceMetadata> retrievedResponse =
                 instanceAdminClient.PollOnceUpdateInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
@@ -716,11 +716,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
                 FieldMask = new FieldMask(),
             };
             // Make the request
-            Operation<Instance, CreateInstanceMetadata> response =
+            Operation<Instance, UpdateInstanceMetadata> response =
                 await instanceAdminClient.UpdateInstanceAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, CreateInstanceMetadata> completedResponse =
+            Operation<Instance, UpdateInstanceMetadata> completedResponse =
                 await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Instance result = completedResponse.Result;
@@ -728,7 +728,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, CreateInstanceMetadata> retrievedResponse =
+            Operation<Instance, UpdateInstanceMetadata> retrievedResponse =
                 await instanceAdminClient.PollOnceUpdateInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
@@ -751,11 +751,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
                 FieldMask = new FieldMask(),
             };
             // Make the request
-            Operation<Instance, CreateInstanceMetadata> response =
+            Operation<Instance, UpdateInstanceMetadata> response =
                 instanceAdminClient.UpdateInstance(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, CreateInstanceMetadata> completedResponse =
+            Operation<Instance, UpdateInstanceMetadata> completedResponse =
                 response.PollUntilCompleted();
             // Retrieve the operation result
             Instance result = completedResponse.Result;
@@ -763,7 +763,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, CreateInstanceMetadata> retrievedResponse =
+            Operation<Instance, UpdateInstanceMetadata> retrievedResponse =
                 instanceAdminClient.PollOnceUpdateInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)

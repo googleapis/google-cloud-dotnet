@@ -3453,7 +3453,7 @@ namespace Google.Cloud.PubSub.V1
             Modify_StreamingPullRequestCallSettings(ref callSettings);
             BidirectionalStreamingSettings effectiveStreamingSettings =
                 streamingSettings ?? _callStreamingPull.StreamingSettings;
-            AsyncDuplexStreamingCall<StreamingPullRequest,StreamingPullResponse> call =
+            AsyncDuplexStreamingCall<StreamingPullRequest, StreamingPullResponse> call =
                 _callStreamingPull.Call(callSettings);
             BufferedClientStreamWriter<StreamingPullRequest> writeBuffer =
                 new BufferedClientStreamWriter<StreamingPullRequest>(
@@ -3475,7 +3475,7 @@ namespace Google.Cloud.PubSub.V1
             /// instance associated with this streaming call.</param>
             public StreamingPullStreamImpl(
                 SubscriberClientImpl service,
-                AsyncDuplexStreamingCall<StreamingPullRequest,StreamingPullResponse> call,
+                AsyncDuplexStreamingCall<StreamingPullRequest, StreamingPullResponse> call,
                 BufferedClientStreamWriter<StreamingPullRequest> writeBuffer)
             {
                 _service = service;
@@ -3493,7 +3493,7 @@ namespace Google.Cloud.PubSub.V1
             }
 
             /// <inheritdoc/>
-            public override AsyncDuplexStreamingCall<StreamingPullRequest,StreamingPullResponse> GrpcCall { get; }
+            public override AsyncDuplexStreamingCall<StreamingPullRequest, StreamingPullResponse> GrpcCall { get; }
 
             /// <inheritdoc/>
             public override Task TryWriteAsync(StreamingPullRequest message) =>

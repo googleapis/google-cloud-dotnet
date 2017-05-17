@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Version>1.0.0-beta01</Version>
@@ -7,6 +7,7 @@
     <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Description>Experimental library for the Google Cloud Natural Language API, containing features which may still change before final release.</Description>
     <PackageTags>Language;Experimental;Google;Cloud</PackageTags>
     <IncludeSymbols>true</IncludeSymbols>

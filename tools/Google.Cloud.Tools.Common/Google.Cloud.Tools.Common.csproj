@@ -6,6 +6,7 @@
     <AssemblyName>Google.Cloud.Tools.Common</AssemblyName>
     <PackageId>Google.Cloud.Tools.Common</PackageId>
     <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net451' ">

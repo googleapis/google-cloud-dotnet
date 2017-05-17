@@ -40,7 +40,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Initialize request argument(s)
             ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
             // Make the request
-            PagedAsyncEnumerable<ListLogMetricsResponse,LogMetric> response =
+            PagedAsyncEnumerable<ListLogMetricsResponse, LogMetric> response =
                 metricsServiceV2Client.ListLogMetricsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -83,7 +83,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Initialize request argument(s)
             ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
             // Make the request
-            PagedEnumerable<ListLogMetricsResponse,LogMetric> response =
+            PagedEnumerable<ListLogMetricsResponse, LogMetric> response =
                 metricsServiceV2Client.ListLogMetrics(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -129,7 +129,7 @@ namespace Google.Cloud.Logging.V2.Snippets
                 ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
             };
             // Make the request
-            PagedAsyncEnumerable<ListLogMetricsResponse,LogMetric> response =
+            PagedAsyncEnumerable<ListLogMetricsResponse, LogMetric> response =
                 metricsServiceV2Client.ListLogMetricsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -175,7 +175,7 @@ namespace Google.Cloud.Logging.V2.Snippets
                 ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
             };
             // Make the request
-            PagedEnumerable<ListLogMetricsResponse,LogMetric> response =
+            PagedEnumerable<ListLogMetricsResponse, LogMetric> response =
                 metricsServiceV2Client.ListLogMetrics(request);
 
             // Iterate over all response items, lazily performing RPCs as required

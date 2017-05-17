@@ -13,7 +13,7 @@
         "dest": "api"
       },
       {
-        "files": [ "index.md", "toc.yml", "*.md" ],
+        "files": [ "index.md", "**/toc.yml", "**/*.md" ],
       }
     ],
     "globalMetadata": {

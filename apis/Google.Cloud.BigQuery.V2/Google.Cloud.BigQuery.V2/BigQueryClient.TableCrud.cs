@@ -95,7 +95,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="projectId">The project ID. Must not be null.</param>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema for the new table. Must not be null.</param>
+        /// <param name="schema">The schema for the new table. Must not be null unless the schema can be inferred (e.g. for a view).</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The newly created table.</returns>
         public virtual BigQueryTable CreateTable(string projectId, string datasetId, string tableId, TableSchema schema, CreateTableOptions options = null) =>
@@ -107,7 +107,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema for the new table. Must not be null.</param>
+        /// <param name="schema">The schema for the new table. Must not be null unless the schema can be inferred (e.g. for a view).</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The newly created table.</returns>
         public virtual BigQueryTable CreateTable(string datasetId, string tableId, TableSchema schema, CreateTableOptions options = null) =>
@@ -117,7 +117,7 @@ namespace Google.Cloud.BigQuery.V2
         /// Creates a table with the given schema.
         /// </summary>
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
-        /// <param name="schema">The schema for the new table. Must not be null.</param>
+        /// <param name="schema">The schema for the new table. Must not be null unless the schema can be inferred (e.g. for a view).</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The newly created table.</returns>
         public virtual BigQueryTable CreateTable(TableReference tableReference, TableSchema schema, CreateTableOptions options = null)
@@ -134,7 +134,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="tableId">The table ID. Must not be null.</param>
         /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="schema">The schema to use to create the table if necessary. Must not be null.</param>
+        /// <param name="schema">The schema to use to create the table if necessary. Must not be null unless the schema can be inferred (e.g. for a view).</param>
         /// <returns>The existing or new table.</returns>
         public virtual BigQueryTable GetOrCreateTable(string projectId, string datasetId, string tableId, TableSchema schema,
             GetTableOptions getOptions = null, CreateTableOptions createOptions = null) =>
@@ -146,7 +146,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema to use to create the table if necessary. Must not be null.</param>
+        /// <param name="schema">The schema to use to create the table if necessary. Must not be null unless the schema can be inferred (e.g. for a view).</param>
         /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The existing or new table.</returns>
@@ -158,7 +158,7 @@ namespace Google.Cloud.BigQuery.V2
         /// Attempts to fetch a table, creating it if it doesn't exist.
         /// </summary>
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
-        /// <param name="schema">The schema to use to create the table if necessary. Must not be null.</param>
+        /// <param name="schema">The schema to use to create the table if necessary. Must not be null unless the schema can be inferred (e.g. for a view).</param>
         /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The existing or new table.</returns>
@@ -278,7 +278,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="projectId">The project ID. Must not be null.</param>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema for the new table. Must not be null.</param>
+        /// <param name="schema">The schema for the new table. Must not be null unless the schema can be inferred (e.g. for a view).</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
@@ -292,7 +292,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema for the new table. Must not be null.</param>
+        /// <param name="schema">The schema for the new table. Must not be null unless the schema can be inferred (e.g. for a view).</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
@@ -304,7 +304,7 @@ namespace Google.Cloud.BigQuery.V2
         /// Creates a table with the given schema.
         /// </summary>
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
-        /// <param name="schema">The schema for the new table. Must not be null.</param>
+        /// <param name="schema">The schema for the new table. Must not be null unless the schema can be inferred (e.g. for a view).</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
@@ -321,7 +321,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="projectId">The project ID. Must not be null.</param>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema to use to create the table if necessary. Must not be null.</param>
+        /// <param name="schema">The schema to use to create the table if necessary. Must not be null unless the schema can be inferred (e.g. for a view).</param>
         /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
@@ -337,7 +337,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema to use to create the table if necessary. Must not be null.</param>
+        /// <param name="schema">The schema to use to create the table if necessary. Must not be null unless the schema can be inferred (e.g. for a view).</param>
         /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
@@ -351,7 +351,7 @@ namespace Google.Cloud.BigQuery.V2
         /// Attempts to fetch a table, creating it if it doesn't exist.
         /// </summary>
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
-        /// <param name="schema">The schema to use to create the table if necessary. Must not be null.</param>
+        /// <param name="schema">The schema to use to create the table if necessary. Must not be null unless the schema can be inferred (e.g. for a view).</param>
         /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>

@@ -7,6 +7,7 @@
     <AssemblyName>Google.Cloud.Tools.ValidateLinks</AssemblyName>
     <OutputType>Exe</OutputType>
     <PackageId>Google.Cloud.Tools.ValidateLinks</PackageId>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
   </PropertyGroup>
 
   <ItemGroup>

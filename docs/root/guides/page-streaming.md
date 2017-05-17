@@ -20,9 +20,9 @@ difficult, but it is tedious and error-prone, so the C# client
 libraries have abstracted this away.
 
 Operations listing resources synchronously return a
-[PagedEnumerable&lt;TResponse, TResource&gt;](obj/api/Google.Api.Gax.PagedEnumerable-2.yml), and operations listing
+[PagedEnumerable&lt;TResponse, TResource&gt;](../obj/api/Google.Api.Gax.PagedEnumerable-2.yml), and operations listing
 resources asynchronously return a
-[PagedAsyncEnumerable&lt;TResponse, TResource&gt;](obj/api/Google.Api.Gax.PagedAsyncEnumerable-2.yml).
+[PagedAsyncEnumerable&lt;TResponse, TResource&gt;](../obj/api/Google.Api.Gax.PagedAsyncEnumerable-2.yml).
 These are equivalent other than their asynchrony, so
 this document focuses on the synchronous version for simplicity.
 
@@ -33,7 +33,7 @@ the API response type for the list operation, and the `TResource` is
 the type of the resource being listed. In the Pub/Sub API for
 example, the `ListTopics` operation accepts a `ListTopicsRequest`
 and returns a `ListTopicsResponse` containing a set of `Topic`
-resources - so the [PublisherClient.ListTopics](Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ListTopics_Google_Cloud_PubSub_V1_ProjectName_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_)
+resources - so the [PublisherClient.ListTopics](../Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_ListTopics_Google_Cloud_PubSub_V1_ProjectName_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_)
 method returns a `PagedEnumerable<ListTopicsResponse, Topic>`.
 
 `PagedEnumerable<TResponse, TResource>` implements
@@ -46,7 +46,7 @@ the resources as the caller requests them.
 
 For more advanced scenarios, however, your application may need access
 to the raw responses returned by the API instead. The
-[PagedEnumerable&lt;TResponse, TResource&gt;.AsRawResponses()](obj/api/Google.Api.Gax.PagedEnumerable-2.yml#Google_Api_Gax_PagedEnumerable_2_AsRawResponses)
+[PagedEnumerable&lt;TResponse, TResource&gt;.AsRawResponses()](../obj/api/Google.Api.Gax.PagedEnumerable-2.yml#Google_Api_Gax_PagedEnumerable_2_AsRawResponses)
 method returns an `IEnumerable<TResponse>`, so you can iterate over the responses easily. Each
 response provides access to the individual resources within the page, and some APIs may
 provide additional information such as the time taken for the request or the total number of
@@ -56,7 +56,7 @@ transparently, propagating the page token from one response to the next request.
 ## `ReadPage`
 
 `PagedEnumerable<TResponse, TResource>` also has a 
-[ReadPage(int)](obj/api/Google.Api.Gax.PagedEnumerable-2.yml#Google_Api_Gax_PagedEnumerable_2_ReadPage_System_Int32_)
+[ReadPage(int)](../obj/api/Google.Api.Gax.PagedEnumerable-2.yml#Google_Api_Gax_PagedEnumerable_2_ReadPage_System_Int32_)
 method to cater for web applications which require precise page sizes.
 
 Although APIs generally allow the application to specify the page size to return, this
@@ -67,7 +67,7 @@ where typically you want to provide the exact same number of results per page.
 
 The `ReadPage` method makes multiple API requests if necessary, in order to "fill" a page (of a specified size)
 until it reaches the end of the resources being listed. The return value is a
-[Page&lt;TResource&gt;](obj/api/Google.Api.Gax.Page-1.yml#Google_Api_Gax_Page_1) which provides the items
+[Page&lt;TResource&gt;](../obj/api/Google.Api.Gax.Page-1.yml#Google_Api_Gax_Page_1) which provides the items
 within each page, along with the page token used to retrieve the next page. (This would typically be used in a "next page" link
 in the web results.)
 
@@ -75,22 +75,22 @@ in the web results.)
 
 ### Iterate over all resources, ignoring pagination
 
-[!code-cs[](obj/snippets/Google.Cloud.Docs.PageStreaming.txt#AllResources)]
+[!code-cs[](../obj/snippets/Google.Cloud.Docs.PageStreaming.txt#AllResources)]
 
 ### Iterate over all responses, remembering page tokens
 
-[!code-cs[](obj/snippets/Google.Cloud.Docs.PageStreaming.txt#Responses)]
+[!code-cs[](../obj/snippets/Google.Cloud.Docs.PageStreaming.txt#Responses)]
 
 ### Obtain a single "natural" page of results
 
-[!code-cs[](obj/snippets/Google.Cloud.Docs.PageStreaming.txt#SingleResponse)]
+[!code-cs[](../obj/snippets/Google.Cloud.Docs.PageStreaming.txt#SingleResponse)]
 
 ### Display the next fixed-sized page of results
 
 This is typically used in web applications; it will only display a less-than-full
 page if it reaches the end of the data.
 
-[!code-cs[](obj/snippets/Google.Cloud.Docs.PageStreaming.txt#ReadPage)]
+[!code-cs[](../obj/snippets/Google.Cloud.Docs.PageStreaming.txt#ReadPage)]
 
 ## Feedback
 

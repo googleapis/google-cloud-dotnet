@@ -53,7 +53,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                     $"Please set the {ProjectEnvironmentVariable} environment variable before running tests");
             }
 
-            DatasetId = DateTime.UtcNow.ToString("'test'_yyyyMMddTHHmmssFFF", CultureInfo.InvariantCulture);
+            DatasetId = DateTime.UtcNow.ToString("'test'_yyyyMMddTHHmmssfff", CultureInfo.InvariantCulture);
 
             CreateData();
         }
@@ -85,6 +85,11 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                     { "gameStarted", new DateTime(2000, 1, 1, 0, 0, 0, DateTimeKind.Utc) }
                 },
                 new BigQueryInsertRow {
+                    { "player", "Bob" },
+                    { "score", 60 },
+                    { "gameStarted", new DateTime(1999, 1, 1, 0, 0, 0, DateTimeKind.Utc) }
+                },
+                new BigQueryInsertRow {
                     { "player", "Angela" },
                     { "score", 95 },
                     { "gameStarted", new DateTime(2002, 1, 1, 0, 0, 0, DateTimeKind.Utc) }
@@ -95,7 +100,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                     { "gameStarted", new DateTime(2001, 1, 1, 0, 0, 0, DateTimeKind.Utc) }
                 }
             };
-            InsertAndWait(table, () => table.InsertRows(rows), 3);
+            InsertAndWait(table, () => table.InsertRows(rows), 4);
         }
 
         private void CreatePeopleTable(BigQueryDataset dataset)

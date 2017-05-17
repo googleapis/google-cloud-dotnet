@@ -28,31 +28,33 @@ namespace Google.Cloud.Logging.V2 {
             "bmcvdHlwZS9odHRwX3JlcXVlc3QucHJvdG8aJmdvb2dsZS9sb2dnaW5nL3R5",
             "cGUvbG9nX3NldmVyaXR5LnByb3RvGhlnb29nbGUvcHJvdG9idWYvYW55LnBy",
             "b3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJv",
-            "dG9idWYvdGltZXN0YW1wLnByb3RvIvIECghMb2dFbnRyeRIQCghsb2dfbmFt",
+            "dG9idWYvdGltZXN0YW1wLnByb3RvIqkFCghMb2dFbnRyeRIQCghsb2dfbmFt",
             "ZRgMIAEoCRIvCghyZXNvdXJjZRgIIAEoCzIdLmdvb2dsZS5hcGkuTW9uaXRv",
             "cmVkUmVzb3VyY2USLQoNcHJvdG9fcGF5bG9hZBgCIAEoCzIULmdvb2dsZS5w",
             "cm90b2J1Zi5BbnlIABIWCgx0ZXh0X3BheWxvYWQYAyABKAlIABIvCgxqc29u",
             "X3BheWxvYWQYBiABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0SAASLQoJ",
-            "dGltZXN0YW1wGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIy",
-            "CghzZXZlcml0eRgKIAEoDjIgLmdvb2dsZS5sb2dnaW5nLnR5cGUuTG9nU2V2",
-            "ZXJpdHkSEQoJaW5zZXJ0X2lkGAQgASgJEjYKDGh0dHBfcmVxdWVzdBgHIAEo",
-            "CzIgLmdvb2dsZS5sb2dnaW5nLnR5cGUuSHR0cFJlcXVlc3QSNwoGbGFiZWxz",
-            "GAsgAygLMicuZ29vZ2xlLmxvZ2dpbmcudjIuTG9nRW50cnkuTGFiZWxzRW50",
-            "cnkSNwoJb3BlcmF0aW9uGA8gASgLMiQuZ29vZ2xlLmxvZ2dpbmcudjIuTG9n",
-            "RW50cnlPcGVyYXRpb24SDQoFdHJhY2UYFiABKAkSQgoPc291cmNlX2xvY2F0",
-            "aW9uGBcgASgLMikuZ29vZ2xlLmxvZ2dpbmcudjIuTG9nRW50cnlTb3VyY2VM",
-            "b2NhdGlvbhotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
-            "AiABKAk6AjgBQgkKB3BheWxvYWQiTgoRTG9nRW50cnlPcGVyYXRpb24SCgoC",
-            "aWQYASABKAkSEAoIcHJvZHVjZXIYAiABKAkSDQoFZmlyc3QYAyABKAgSDAoE",
-            "bGFzdBgEIAEoCCJGChZMb2dFbnRyeVNvdXJjZUxvY2F0aW9uEgwKBGZpbGUY",
-            "ASABKAkSDAoEbGluZRgCIAEoAxIQCghmdW5jdGlvbhgDIAEoCUJ/ChVjb20u",
-            "Z29vZ2xlLmxvZ2dpbmcudjJCDUxvZ0VudHJ5UHJvdG9QAVo4Z29vZ2xlLmdv",
-            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9sb2dnaW5nL3YyO2xvZ2dp",
-            "bmf4AQGqAhdHb29nbGUuQ2xvdWQuTG9nZ2luZy5WMmIGcHJvdG8z"));
+            "dGltZXN0YW1wGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI1",
+            "ChFyZWNlaXZlX3RpbWVzdGFtcBgYIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXASMgoIc2V2ZXJpdHkYCiABKA4yIC5nb29nbGUubG9nZ2luZy50",
+            "eXBlLkxvZ1NldmVyaXR5EhEKCWluc2VydF9pZBgEIAEoCRI2CgxodHRwX3Jl",
+            "cXVlc3QYByABKAsyIC5nb29nbGUubG9nZ2luZy50eXBlLkh0dHBSZXF1ZXN0",
+            "EjcKBmxhYmVscxgLIAMoCzInLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ0VudHJ5",
+            "LkxhYmVsc0VudHJ5EjcKCW9wZXJhdGlvbhgPIAEoCzIkLmdvb2dsZS5sb2dn",
+            "aW5nLnYyLkxvZ0VudHJ5T3BlcmF0aW9uEg0KBXRyYWNlGBYgASgJEkIKD3Nv",
+            "dXJjZV9sb2NhdGlvbhgXIAEoCzIpLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ0Vu",
+            "dHJ5U291cmNlTG9jYXRpb24aLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJ",
+            "Eg0KBXZhbHVlGAIgASgJOgI4AUIJCgdwYXlsb2FkIk4KEUxvZ0VudHJ5T3Bl",
+            "cmF0aW9uEgoKAmlkGAEgASgJEhAKCHByb2R1Y2VyGAIgASgJEg0KBWZpcnN0",
+            "GAMgASgIEgwKBGxhc3QYBCABKAgiRgoWTG9nRW50cnlTb3VyY2VMb2NhdGlv",
+            "bhIMCgRmaWxlGAEgASgJEgwKBGxpbmUYAiABKAMSEAoIZnVuY3Rpb24YAyAB",
+            "KAlCfwoVY29tLmdvb2dsZS5sb2dnaW5nLnYyQg1Mb2dFbnRyeVByb3RvUAFa",
+            "OGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvbG9nZ2lu",
+            "Zy92Mjtsb2dnaW5n+AEBqgIXR29vZ2xlLkNsb3VkLkxvZ2dpbmcuVjJiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Logging.Type.HttpRequestReflection.Descriptor, global::Google.Cloud.Logging.Type.LogSeverityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntry), global::Google.Cloud.Logging.V2.LogEntry.Parser, new[]{ "LogName", "Resource", "ProtoPayload", "TextPayload", "JsonPayload", "Timestamp", "Severity", "InsertId", "HttpRequest", "Labels", "Operation", "Trace", "SourceLocation" }, new[]{ "Payload" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntry), global::Google.Cloud.Logging.V2.LogEntry.Parser, new[]{ "LogName", "Resource", "ProtoPayload", "TextPayload", "JsonPayload", "Timestamp", "ReceiveTimestamp", "Severity", "InsertId", "HttpRequest", "Labels", "Operation", "Trace", "SourceLocation" }, new[]{ "Payload" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntryOperation), global::Google.Cloud.Logging.V2.LogEntryOperation.Parser, new[]{ "Id", "Producer", "First", "Last" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntrySourceLocation), global::Google.Cloud.Logging.V2.LogEntrySourceLocation.Parser, new[]{ "File", "Line", "Function" }, null, null, null)
           }));
@@ -91,6 +93,7 @@ namespace Google.Cloud.Logging.V2 {
       logName_ = other.logName_;
       Resource = other.resource_ != null ? other.Resource.Clone() : null;
       Timestamp = other.timestamp_ != null ? other.Timestamp.Clone() : null;
+      ReceiveTimestamp = other.receiveTimestamp_ != null ? other.ReceiveTimestamp.Clone() : null;
       severity_ = other.severity_;
       insertId_ = other.insertId_;
       HttpRequest = other.httpRequest_ != null ? other.HttpRequest.Clone() : null;
@@ -225,6 +228,20 @@ namespace Google.Cloud.Logging.V2 {
       get { return timestamp_; }
       set {
         timestamp_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "receive_timestamp" field.</summary>
+    public const int ReceiveTimestampFieldNumber = 24;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp receiveTimestamp_;
+    /// <summary>
+    /// Output only. The time the log entry was received by Stackdriver Logging.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ReceiveTimestamp {
+      get { return receiveTimestamp_; }
+      set {
+        receiveTimestamp_ = value;
       }
     }
 
@@ -377,6 +394,7 @@ namespace Google.Cloud.Logging.V2 {
       if (TextPayload != other.TextPayload) return false;
       if (!object.Equals(JsonPayload, other.JsonPayload)) return false;
       if (!object.Equals(Timestamp, other.Timestamp)) return false;
+      if (!object.Equals(ReceiveTimestamp, other.ReceiveTimestamp)) return false;
       if (Severity != other.Severity) return false;
       if (InsertId != other.InsertId) return false;
       if (!object.Equals(HttpRequest, other.HttpRequest)) return false;
@@ -397,6 +415,7 @@ namespace Google.Cloud.Logging.V2 {
       if (payloadCase_ == PayloadOneofCase.TextPayload) hash ^= TextPayload.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.JsonPayload) hash ^= JsonPayload.GetHashCode();
       if (timestamp_ != null) hash ^= Timestamp.GetHashCode();
+      if (receiveTimestamp_ != null) hash ^= ReceiveTimestamp.GetHashCode();
       if (Severity != 0) hash ^= Severity.GetHashCode();
       if (InsertId.Length != 0) hash ^= InsertId.GetHashCode();
       if (httpRequest_ != null) hash ^= HttpRequest.GetHashCode();
@@ -464,6 +483,10 @@ namespace Google.Cloud.Logging.V2 {
         output.WriteRawTag(186, 1);
         output.WriteMessage(SourceLocation);
       }
+      if (receiveTimestamp_ != null) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(ReceiveTimestamp);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -486,6 +509,9 @@ namespace Google.Cloud.Logging.V2 {
       }
       if (timestamp_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Timestamp);
+      }
+      if (receiveTimestamp_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ReceiveTimestamp);
       }
       if (Severity != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Severity);
@@ -528,6 +554,12 @@ namespace Google.Cloud.Logging.V2 {
           timestamp_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         Timestamp.MergeFrom(other.Timestamp);
+      }
+      if (other.receiveTimestamp_ != null) {
+        if (receiveTimestamp_ == null) {
+          receiveTimestamp_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ReceiveTimestamp.MergeFrom(other.ReceiveTimestamp);
       }
       if (other.Severity != 0) {
         Severity = other.Severity;
@@ -654,6 +686,13 @@ namespace Google.Cloud.Logging.V2 {
               sourceLocation_ = new global::Google.Cloud.Logging.V2.LogEntrySourceLocation();
             }
             input.ReadMessage(sourceLocation_);
+            break;
+          }
+          case 194: {
+            if (receiveTimestamp_ == null) {
+              receiveTimestamp_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(receiveTimestamp_);
             break;
           }
         }
