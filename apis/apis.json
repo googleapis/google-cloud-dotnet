@@ -293,6 +293,20 @@
   },
 
   {
+    "id": "Google.Cloud.VideoIntelligence.V1Beta1",
+    "version": "1.0.0-alpha01",
+    "type": "grpc",
+    "description": "Recommended Google client library to access the Google Cloud Video Intelligence API.",
+    "tags": [ "VideoIntelligence" ],
+    "dependencies": {
+       // Deliberately pinned to 1.0.0-beta08 as a package reference,
+       // in order to be able to push before we release the new LRO
+       // with metadata
+       "Google.LongRunning": "1.0.0-beta08"
+    },
+  },
+  
+  {
     "id": "Google.Cloud.Vision.V1",
     "version": "1.0.0-beta02",
     "type": "grpc",
