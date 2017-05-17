@@ -6,6 +6,8 @@
     <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="../../Google.Cloud.Diagnostics.Common/Google.Cloud.Diagnostics.Common.IntegrationTests/Google.Cloud.Diagnostics.Common.IntegrationTests.csproj" />
