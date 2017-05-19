@@ -321,6 +321,11 @@ namespace Google.Cloud.Logging.Log4Net
             if (loggingEvent.LocationInformation?.FileName != null)
             {
                 file = loggingEvent.LocationInformation?.FileName;
+
+                if (file == "?")
+                {
+                    file = null;
+                }
             }
             if (long.TryParse(loggingEvent.LocationInformation?.LineNumber, out long lineNumber))
             {
@@ -358,6 +363,10 @@ namespace Google.Cloud.Logging.Log4Net
                 }
             }
             string function1 = loggingEvent.LocationInformation?.MethodName;
+            if (function1 == "?")
+            {
+                function1 = null;
+            }
             if (function0 != null || function1 != null)
             {
                 function = $"[{function0 ?? ""}].{function1 ?? ""}";

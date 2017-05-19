@@ -60,7 +60,7 @@ namespace Google.Cloud.Logging.Log4Net.Snippets
                 // Resource: log4net-template.xml log4net_template
                 // Sample: Overview
                 // Configure log4net to use Google Stackdriver logging from the XML configuration file.
-                XmlConfigurator.Configure(LogManager.GetRepository(Assembly.GetEntryAssembly()), new FileInfo("log4net.xml"));
+                XmlConfigurator.Configure(LogManager.GetRepository(GetType().GetTypeInfo().Assembly), new FileInfo("log4net.xml"));
 
                 // Retrieve a logger for this context.
                 ILog log = LogManager.GetLogger(typeof(Program));
@@ -84,7 +84,7 @@ namespace Google.Cloud.Logging.Log4Net.Snippets
             // Resource: log4net-aspnet-template.xml log4net_aspnet_template
             // Sample: Overview_AspNet
             // Load log4net configuration from Web.config
-            log4net.Config.XmlConfigurator.Configure(LogManager.GetRepository(Assembly.GetEntryAssembly()));
+            log4net.Config.XmlConfigurator.Configure(LogManager.GetRepository(GetType().GetTypeInfo().Assembly));
             // End sample
         }
     }
