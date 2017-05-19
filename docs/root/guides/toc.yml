@@ -10,3 +10,5 @@
   href: call-settings.md
 - name: Resource clean-up
   href: cleanup.md
+- name: GAX and dependencies
+  href: gax-dependencies.md
