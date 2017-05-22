@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Script to create a release (with corresponding tag) on github.
-# Sample: tagrelease.sh Google.Pubsub.V1 1.0.0-beta05
+# Sample: tagrelease.sh Google.Pubsub.V1
+# Sample: tagrelease.sh Google.Cloud.Logging.V2 Google.Cloud.Logging.Type
 # Make sure github_access_token is set to a valid github personal
 # access token first.
 
@@ -31,10 +32,12 @@ package=$2
 # Do everything from the repository root for sanity.
 cd $(dirname $0)
 
+project=apis/$api/$package/$package.csproj
+
 # Check that the API exists.
-if [ ! -f apis/$api/$package/project.json ]
+if [[ ! -f $project ]]
 then
-  echo "Can't find apis/$api/$package/project.json; check for typos"
+  echo "Can't find $project; check for typos"
   exit 1
 fi
 
@@ -45,9 +48,9 @@ git fetch -v --dry-run upstream 2>&1 \
   | grep -E '\[up to date\]\s+master\s+->\s+upstream/master' > /dev/null \
   || (echo Please update your local git repo before creating a release; exit 1)
 
-version=`grep -E '"version": "[0-9]+\.[0-9]+\.[0-9]+(-[a-z0-9]+)?-\*",' apis/$api/$package/project.json \
-  | sed -E 's/"version": "//g' \
-  | sed 's/-\*",//g' \
+version=`grep -E '<Version>[0-9]+\.[0-9]+\.[0-9]+(-[a-z0-9]+)?</Version>' $project \
+  | sed -E 's/<Version>//g' \
+  | sed 's/<\/Version>//g' \
   | sed 's/ //g'`
 
 echo "Creating release for package $package version $version"
