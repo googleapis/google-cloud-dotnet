@@ -48,11 +48,11 @@ namespace Google.Cloud.Tools.ProjectGenerator
             switch (Type)
             {
                 case "rest":
-                    dependencies.Add("Google.Api.Gax.Rest", "1.0.1");
+                    dependencies.Add("Google.Api.Gax.Rest", "2.0.0-beta01");
                     targetFrameworks = targetFrameworks ?? "netstandard1.3;net45";
                     break;
                 case "grpc":
-                    dependencies.Add("Google.Api.Gax.Grpc", "1.0.1");
+                    dependencies.Add("Google.Api.Gax.Grpc", "2.0.0-beta01");
                     targetFrameworks = targetFrameworks ?? "netstandard1.5;net45";
                     break;
             }
