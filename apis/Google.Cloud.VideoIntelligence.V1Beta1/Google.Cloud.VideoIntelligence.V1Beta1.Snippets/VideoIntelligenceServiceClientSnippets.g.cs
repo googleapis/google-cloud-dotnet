@@ -46,11 +46,11 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1.Snippets
             string outputUri = "";
             string locationId = "";
             // Make the request
-            Operation<AnnotateVideoResponse> response =
+            Operation<AnnotateVideoResponse, AnnotateVideoProgress> response =
                 await videoIntelligenceServiceClient.AnnotateVideoAsync(inputUri, features, videoContext, outputUri, locationId);
 
             // Poll until the returned long-running operation is complete
-            Operation<AnnotateVideoResponse> completedResponse =
+            Operation<AnnotateVideoResponse, AnnotateVideoProgress> completedResponse =
                 await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             AnnotateVideoResponse result = completedResponse.Result;
@@ -58,7 +58,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AnnotateVideoResponse> retrievedResponse =
+            Operation<AnnotateVideoResponse, AnnotateVideoProgress> retrievedResponse =
                 await videoIntelligenceServiceClient.PollOnceAnnotateVideoAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
@@ -81,11 +81,11 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1.Snippets
             string outputUri = "";
             string locationId = "";
             // Make the request
-            Operation<AnnotateVideoResponse> response =
+            Operation<AnnotateVideoResponse, AnnotateVideoProgress> response =
                 videoIntelligenceServiceClient.AnnotateVideo(inputUri, features, videoContext, outputUri, locationId);
 
             // Poll until the returned long-running operation is complete
-            Operation<AnnotateVideoResponse> completedResponse =
+            Operation<AnnotateVideoResponse, AnnotateVideoProgress> completedResponse =
                 response.PollUntilCompleted();
             // Retrieve the operation result
             AnnotateVideoResponse result = completedResponse.Result;
@@ -93,7 +93,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AnnotateVideoResponse> retrievedResponse =
+            Operation<AnnotateVideoResponse, AnnotateVideoProgress> retrievedResponse =
                 videoIntelligenceServiceClient.PollOnceAnnotateVideo(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
@@ -116,11 +116,11 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1.Snippets
                 Features = { },
             };
             // Make the request
-            Operation<AnnotateVideoResponse> response =
+            Operation<AnnotateVideoResponse, AnnotateVideoProgress> response =
                 await videoIntelligenceServiceClient.AnnotateVideoAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<AnnotateVideoResponse> completedResponse =
+            Operation<AnnotateVideoResponse, AnnotateVideoProgress> completedResponse =
                 await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             AnnotateVideoResponse result = completedResponse.Result;
@@ -128,7 +128,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AnnotateVideoResponse> retrievedResponse =
+            Operation<AnnotateVideoResponse, AnnotateVideoProgress> retrievedResponse =
                 await videoIntelligenceServiceClient.PollOnceAnnotateVideoAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
@@ -151,11 +151,11 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1.Snippets
                 Features = { },
             };
             // Make the request
-            Operation<AnnotateVideoResponse> response =
+            Operation<AnnotateVideoResponse, AnnotateVideoProgress> response =
                 videoIntelligenceServiceClient.AnnotateVideo(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<AnnotateVideoResponse> completedResponse =
+            Operation<AnnotateVideoResponse, AnnotateVideoProgress> completedResponse =
                 response.PollUntilCompleted();
             // Retrieve the operation result
             AnnotateVideoResponse result = completedResponse.Result;
@@ -163,7 +163,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1.Snippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AnnotateVideoResponse> retrievedResponse =
+            Operation<AnnotateVideoResponse, AnnotateVideoProgress> retrievedResponse =
                 videoIntelligenceServiceClient.PollOnceAnnotateVideo(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
