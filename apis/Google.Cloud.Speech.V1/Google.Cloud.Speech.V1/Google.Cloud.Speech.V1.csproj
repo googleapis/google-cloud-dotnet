@@ -21,7 +21,7 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj" />
-    <PackageReference Include="Google.Api.Gax.Grpc" Version="1.0.1" />
+    <PackageReference Include="Google.Api.Gax.Grpc" Version="2.0.0-beta01" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="*.raw" />

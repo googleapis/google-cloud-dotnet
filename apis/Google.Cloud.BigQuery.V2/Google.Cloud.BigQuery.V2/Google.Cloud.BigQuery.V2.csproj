@@ -20,7 +20,7 @@
     <RepositoryUrl>https://github.com/GoogleCloudPlatform/google-cloud-dotnet</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Google.Api.Gax.Rest" Version="1.0.1" />
+    <PackageReference Include="Google.Api.Gax.Rest" Version="2.0.0-beta01" />
     <PackageReference Include="Google.Apis.Bigquery.v2" Version="1.25.0.819" />
   </ItemGroup>
   <ItemGroup>
