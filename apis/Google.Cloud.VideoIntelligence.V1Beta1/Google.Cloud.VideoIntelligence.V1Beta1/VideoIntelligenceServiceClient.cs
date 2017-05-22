@@ -308,7 +308,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<AnnotateVideoResponse>> AnnotateVideoAsync(
+        public virtual Task<Operation<AnnotateVideoResponse, AnnotateVideoProgress>> AnnotateVideoAsync(
             string inputUri,
             IEnumerable<Feature> features,
             VideoContext videoContext,
@@ -368,7 +368,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<AnnotateVideoResponse>> AnnotateVideoAsync(
+        public virtual Task<Operation<AnnotateVideoResponse, AnnotateVideoProgress>> AnnotateVideoAsync(
             string inputUri,
             IEnumerable<Feature> features,
             VideoContext videoContext,
@@ -425,7 +425,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<AnnotateVideoResponse> AnnotateVideo(
+        public virtual Operation<AnnotateVideoResponse, AnnotateVideoProgress> AnnotateVideo(
             string inputUri,
             IEnumerable<Feature> features,
             VideoContext videoContext,
@@ -457,7 +457,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<AnnotateVideoResponse>> AnnotateVideoAsync(
+        public virtual Task<Operation<AnnotateVideoResponse, AnnotateVideoProgress>> AnnotateVideoAsync(
             AnnotateVideoRequest request,
             CallSettings callSettings = null)
         {
@@ -470,9 +470,9 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual Task<Operation<AnnotateVideoResponse>> PollOnceAnnotateVideoAsync(
+        public virtual Task<Operation<AnnotateVideoResponse, AnnotateVideoProgress>> PollOnceAnnotateVideoAsync(
             string operationName,
-            CallSettings callSettings = null) => Operation<AnnotateVideoResponse>.PollOnceFromNameAsync(
+            CallSettings callSettings = null) => Operation<AnnotateVideoResponse, AnnotateVideoProgress>.PollOnceFromNameAsync(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 LongRunningOperationsClient,
                 callSettings);
@@ -492,7 +492,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<AnnotateVideoResponse> AnnotateVideo(
+        public virtual Operation<AnnotateVideoResponse, AnnotateVideoProgress> AnnotateVideo(
             AnnotateVideoRequest request,
             CallSettings callSettings = null)
         {
@@ -505,9 +505,9 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual Operation<AnnotateVideoResponse> PollOnceAnnotateVideo(
+        public virtual Operation<AnnotateVideoResponse, AnnotateVideoProgress> PollOnceAnnotateVideo(
             string operationName,
-            CallSettings callSettings = null) => Operation<AnnotateVideoResponse>.PollOnceFromName(
+            CallSettings callSettings = null) => Operation<AnnotateVideoResponse, AnnotateVideoProgress>.PollOnceFromName(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 LongRunningOperationsClient,
                 callSettings);
@@ -568,12 +568,12 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override async Task<Operation<AnnotateVideoResponse>> AnnotateVideoAsync(
+        public override async Task<Operation<AnnotateVideoResponse, AnnotateVideoProgress>> AnnotateVideoAsync(
             AnnotateVideoRequest request,
             CallSettings callSettings = null)
         {
             Modify_AnnotateVideoRequest(ref request, ref callSettings);
-            return new Operation<AnnotateVideoResponse>(
+            return new Operation<AnnotateVideoResponse, AnnotateVideoProgress>(
                 await _callAnnotateVideo.Async(request, callSettings).ConfigureAwait(false), LongRunningOperationsClient);
         }
 
@@ -592,12 +592,12 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override Operation<AnnotateVideoResponse> AnnotateVideo(
+        public override Operation<AnnotateVideoResponse, AnnotateVideoProgress> AnnotateVideo(
             AnnotateVideoRequest request,
             CallSettings callSettings = null)
         {
             Modify_AnnotateVideoRequest(ref request, ref callSettings);
-            return new Operation<AnnotateVideoResponse>(
+            return new Operation<AnnotateVideoResponse, AnnotateVideoProgress>(
                 _callAnnotateVideo.Sync(request, callSettings), LongRunningOperationsClient);
         }
 
