@@ -50,7 +50,7 @@
     "description": "Common Protocol Buffer messages for Google Cloud Developer Tools APIs.",
     "tags": [ "Tools" ],
     "dependencies": {
-      "Google.Api.CommonProtos": "1.0.0",
+      "Google.Api.CommonProtos": "1.1.0",
       "Google.Protobuf": "3.3.0"
     }
   },
