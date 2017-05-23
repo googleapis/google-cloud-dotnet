@@ -21,7 +21,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Google.Api.Gax.Rest" Version="2.0.0-beta01" />
-    <PackageReference Include="Google.Apis.Bigquery.v2" Version="1.25.0.819" />
+    <PackageReference Include="Google.Apis.Bigquery.v2" Version="1.26.2.861" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="BigQueryClient.*.cs">
