@@ -77,6 +77,12 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Constructs a new client wrapping the given <see cref="BigqueryService"/>.
         /// </summary>
+        /// <remarks>
+        /// Care should be taken when constructing the service: if the default serializer settings are used,
+        /// result values which can be parsed as date/time values can cause problems. Where possible, either use
+        /// <see cref="BigQueryClient.Create(string, Apis.Auth.OAuth2.GoogleCredential)"/> or construct a service
+        /// using serializer settings from <see cref="BigQueryClient.CreateJsonSerializersSettings"/>.
+        /// </remarks>
         /// <param name="projectId">The ID of the project to work with. Must not be null.</param>
         /// <param name="service">The service to wrap. Must not be null.</param>
         public BigQueryClientImpl(string projectId, BigqueryService service)
@@ -88,6 +94,12 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Constructs a new client wrapping the given <see cref="BigqueryService"/>.
         /// </summary>
+        /// <remarks>
+        /// Care should be taken when constructing the service: if the default serializer settings are used,
+        /// result values which can be parsed as date/time values can cause problems. Where possible, either use
+        /// <see cref="BigQueryClient.Create(string, Apis.Auth.OAuth2.GoogleCredential)"/> or construct a service
+        /// using serializer settings from <see cref="BigQueryClient.CreateJsonSerializersSettings"/>.
+        /// </remarks>
         /// <param name="projectReference">A fully-qualified identifier for the project. Must not be null.</param>
         /// <param name="service">The service to wrap. Must not be null.</param>
         public BigQueryClientImpl(ProjectReference projectReference, BigqueryService service)

@@ -55,6 +55,7 @@ namespace Google.Cloud.BigQuery.V2
         };
         private static readonly Func<string, DateTime> DateConverter = v => DateTime.ParseExact(v, "yyyy-MM-dd", CultureInfo.InvariantCulture);
         private static readonly Func<string, TimeSpan> TimeConverter = v => DateTime.ParseExact(v, "HH:mm:ss.FFFFFF", CultureInfo.InvariantCulture).TimeOfDay;
+        private static readonly Func<string, DateTime> DateTimeConverter = v => DateTime.ParseExact(v, "yyyy-MM-dd'T'HH:mm:ss.FFFFFF", CultureInfo.InvariantCulture);
         private static readonly Func<string, byte[]> BytesConverter = v => Convert.FromBase64String(v);
         private static readonly Func<string, bool> BooleanConverter = v => v == "true";
 
@@ -107,7 +108,7 @@ namespace Google.Cloud.BigQuery.V2
                     case BigQueryDbType.Time:
                         return ConvertArray(array, TimeConverter);
                     case BigQueryDbType.DateTime:
-                        return ConvertArray(array, obj => (DateTime) obj);
+                        return ConvertArray(array, DateTimeConverter);
                     case BigQueryDbType.Struct:
                         return ConvertRecordArray(array, field);
                     default:
@@ -133,9 +134,7 @@ namespace Google.Cloud.BigQuery.V2
                 case BigQueryDbType.Time:
                     return TimeConverter((string) rawValue);
                 case BigQueryDbType.DateTime:
-                    return rawValue is DateTime
-                        ? (DateTime) rawValue
-                        : (DateTime) (JValue) rawValue;
+                    return DateTimeConverter((string) rawValue);
                 case BigQueryDbType.Struct:
                     return ConvertRecord((JObject)rawValue, field);
                 default:
