@@ -27,12 +27,14 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var options = new ListJobsOptions
             {
                 PageSize = 25,
-                StateFilter = JobState.Pending
+                StateFilter = JobState.Pending,
+                AllUsers = true
             };
             ListRequest request = new ListRequest(new BigqueryService(), "project");
             options.ModifyRequest(request);
             Assert.Equal(25, request.MaxResults);
             Assert.Equal(StateFilterEnum.Pending, request.StateFilter);
+            Assert.Equal(true, request.AllUsers);
         }
     }
 }
