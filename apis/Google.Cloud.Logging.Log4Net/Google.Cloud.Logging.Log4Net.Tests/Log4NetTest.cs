@@ -25,6 +25,7 @@ using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
@@ -38,7 +39,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
         [MethodImpl(MethodImplOptions.NoInlining)]
         private void LogInfo(IEnumerable<string> messages)
         {
-            ILog log = LogManager.GetLogger("testlogger");
+            ILog log = LogManager.GetLogger(GetType().GetTypeInfo().Assembly, "testlogger");
             foreach (string message in messages)
             {
                 log.Info(message);
@@ -98,7 +99,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             Hierarchy hierarchy = null;
             if (requiresLog4Net)
             {
-                hierarchy = (Hierarchy)LogManager.GetRepository();
+                hierarchy = (Hierarchy)LogManager.GetRepository(GetType().GetTypeInfo().Assembly);
             }
             try
             {
@@ -168,7 +169,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             {
                 Level = level,
                 Message = msg,
-                TimeStamp = s_time0 + TimeSpan.FromSeconds(secondsOfs),
+                TimeStampUtc = s_time0 + TimeSpan.FromSeconds(secondsOfs),
             };
             return new LoggingEvent(loggingData);
         }
@@ -243,13 +244,16 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             Assert.Equal(1, uploadedEntries.Count);
             var entry0 = uploadedEntries[0];
             Assert.Equal("Message0", entry0.TextPayload.Trim());
-            Assert.NotNull(entry0.SourceLocation);
-            Assert.True(string.IsNullOrEmpty(entry0.SourceLocation.File) || entry0.SourceLocation.File.EndsWith("Log4NetTest.cs"),
+
+            if (entry0.SourceLocation != null)
+            {
+                Assert.True(string.IsNullOrEmpty(entry0.SourceLocation.File) || entry0.SourceLocation.File.EndsWith("Log4NetTest.cs"),
                 $"Actual 'entry0.SourceLocation.File' = '{entry0.SourceLocation.File}'");
-            // Line 44 on dev machine, line 42 on AppVeyor. Don't ask, I don't understand.
-            Assert.True(entry0.SourceLocation.Line == 0L || entry0.SourceLocation.Line == 44L || entry0.SourceLocation.Line == 42L,
-                $"Actual 'entry0.SourceLocation.Line' = '{entry0.SourceLocation.Line}'"); // This may change when this file is edited ;)
-            Assert.Matches(@"\[Google\.Cloud\.Logging\.Log4Net\.Tests\.Log4NetTest, Google\.Cloud\.Logging\.Log4Net\.Tests, .*]\.LogInfo", entry0.SourceLocation.Function);
+                // Line 44 on dev machine, line 42 on AppVeyor. Don't ask, I don't understand.
+                Assert.True(entry0.SourceLocation.Line == 0L || entry0.SourceLocation.Line == 45L || entry0.SourceLocation.Line == 43L,
+                    $"Actual 'entry0.SourceLocation.Line' = '{entry0.SourceLocation.Line}'"); // This may change when this file is edited ;)
+                Assert.Matches(@"\[Google\.Cloud\.Logging\.Log4Net\.Tests\.Log4NetTest, Google\.Cloud\.Logging\.Log4Net\.Tests, .*]\.LogInfo", entry0.SourceLocation.Function);
+            }
         }
 
         [Fact]

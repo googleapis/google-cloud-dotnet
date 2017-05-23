@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -231,7 +231,7 @@ namespace Google.Cloud.Logging.Log4Net
                         Level = Level.Warn,
                         LoggerName = "",
                         Message = s_mismatchedProjectIdMessage,
-                        TimeStamp = _clock.GetCurrentDateTimeUtc()
+                        TimeStampUtc = _clock.GetCurrentDateTimeUtc()
                     })));
                 }
             }
@@ -321,9 +321,13 @@ namespace Google.Cloud.Logging.Log4Net
             if (loggingEvent.LocationInformation?.FileName != null)
             {
                 file = loggingEvent.LocationInformation?.FileName;
+
+                if (file == "?")
+                {
+                    file = null;
+                }
             }
-            long lineNumber;
-            if (long.TryParse(loggingEvent.LocationInformation?.LineNumber, out lineNumber))
+            if (long.TryParse(loggingEvent.LocationInformation?.LineNumber, out long lineNumber))
             {
                 line = lineNumber;
             }
@@ -335,9 +339,16 @@ namespace Google.Cloud.Logging.Log4Net
                 {
                     try
                     {
-                        return AppDomain.CurrentDomain.GetAssemblies()
-                            .SelectMany(a => a.GetTypes())
-                            .FirstOrDefault(t => t.FullName == fullTypeName);
+#if NET45
+                            return AppDomain.CurrentDomain.GetAssemblies()
+                                .SelectMany(a => a.GetTypes())
+                                .FirstOrDefault(t => t.FullName == fullTypeName);
+#elif NETSTANDARD1_5
+                            // TODO: Support type lookup in netstandard
+                            return null;
+#else
+#error Unsupported platform.
+#endif
                     }
                     catch
                     {
@@ -352,6 +363,10 @@ namespace Google.Cloud.Logging.Log4Net
                 }
             }
             string function1 = loggingEvent.LocationInformation?.MethodName;
+            if (function1 == "?")
+            {
+                function1 = null;
+            }
             if (function0 != null || function1 != null)
             {
                 function = $"[{function0 ?? ""}].{function1 ?? ""}";
