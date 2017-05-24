@@ -11,6 +11,7 @@
     <Description>Google Compute Engine Metadata v1 client library</Description>
     <PackageTags>Metadata;Google;Cloud</PackageTags>
     <IncludeSymbols>true</IncludeSymbols>
+    <IncludeSource>true</IncludeSource>
     <Copyright>Copyright 2017 Google Inc.</Copyright>
     <Authors>Google Inc.</Authors>
     <IconUrl>https://cloud.google.com/images/gcp-icon-64x64.png</IconUrl>
