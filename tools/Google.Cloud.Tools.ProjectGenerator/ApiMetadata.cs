@@ -70,6 +70,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 new XElement("Description", Description),
                 new XElement("PackageTags", string.Join(";", Tags.Concat(new[] { "Google", "Cloud" }))),
                 new XElement("IncludeSymbols", true),
+                new XElement("IncludeSource", true),
                 new XElement("Copyright", "Copyright 2017 Google Inc."),
                 new XElement("Authors", "Google Inc."),
                 new XElement("IconUrl", "https://cloud.google.com/images/gcp-icon-64x64.png"), // TODO: Check element name
