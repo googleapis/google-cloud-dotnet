@@ -22,6 +22,9 @@ namespace Google.Cloud.Tools.ProjectGenerator
 {
     public class ApiMetadata
     {
+        const string GrpcVersion = "1.3.0";
+        const string GaxVersion = "2.0.0-beta01";
+
         const string StripDesktopOnNonWindows = @"..\..\..\StripDesktopOnNonWindows.xml";
 
         public string Version { get; set; }
@@ -48,11 +51,12 @@ namespace Google.Cloud.Tools.ProjectGenerator
             switch (Type)
             {
                 case "rest":
-                    dependencies.Add("Google.Api.Gax.Rest", "2.0.0-beta01");
+                    dependencies.Add("Google.Api.Gax.Rest", GaxVersion);
                     targetFrameworks = targetFrameworks ?? "netstandard1.3;net45";
                     break;
                 case "grpc":
-                    dependencies.Add("Google.Api.Gax.Grpc", "2.0.0-beta01");
+                    dependencies.Add("Google.Api.Gax.Grpc", GaxVersion);
+                    dependencies.Add("Grpc.Core", GrpcVersion);
                     targetFrameworks = targetFrameworks ?? "netstandard1.5;net45";
                     break;
             }
@@ -175,7 +179,10 @@ namespace Google.Cloud.Tools.ProjectGenerator
                     .Where(d => d.Value != "")
                     .Select(d => new XElement("PackageReference",
                         new XAttribute("Include", d.Key),
-                        new XAttribute("Version", d.Value))
+                        new XAttribute("Version", d.Value),
+                        // Make references to Grpc.Core deploy native dependencies
+                        // See https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1066
+                        d.Key == "Grpc.Core" ? new XElement("PrivateAssets", "None") : null)
                     )
             );
     }
