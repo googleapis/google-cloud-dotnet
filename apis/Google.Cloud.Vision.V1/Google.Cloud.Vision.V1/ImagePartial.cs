@@ -164,13 +164,7 @@ namespace Google.Cloud.Vision.V1
         public static Image FromStream(Stream stream)
         {
             GaxPreconditions.CheckNotNull(stream, nameof(stream));
-            var output = new MemoryStream();
-            stream.CopyTo(output);
-#if NETSTANDARD1_5
-            return FromBytes(output.ToArray());
-#else
-            return FromBytes(output.GetBuffer(), 0, checked((int)output.Length));
-#endif
+            return new Image { Content = ByteString.FromStream(stream) };
         }
 
         /// <summary>
@@ -180,13 +174,8 @@ namespace Google.Cloud.Vision.V1
         /// <returns>The newly created image.</returns>
         public static async Task<Image> FromStreamAsync(Stream stream)
         {
-            var output = new MemoryStream();
-            await stream.CopyToAsync(output).ConfigureAwait(false);
-#if NETSTANDARD1_5
-            return FromBytes(output.ToArray());
-#else
-            return FromBytes(output.GetBuffer(), 0, checked((int)output.Length));
-#endif
+            GaxPreconditions.CheckNotNull(stream, nameof(stream));
+            return new Image { Content = await ByteString.FromStreamAsync(stream).ConfigureAwait(false) };
         }
 
         /// <summary>
