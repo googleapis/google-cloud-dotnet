@@ -28,8 +28,6 @@ cp dependencies-docfx/docfx-grpc.json dependencies/grpc/docfx.json
 cp dependencies-docfx/docfx-google-api-dotnet-client.json dependencies/google-api-dotnet-client/docfx.json
 
 # Restore packages and build metadata
-# TODO: The last of these fails to find System.DateTime in Storage. No idea why,
-# but chances are it'll be fixed when google-api-dotnet-client updates to csproj...
 (cd dependencies/gax-dotnet; dotnet restore Gax.sln; docfx metadata)
 (cd dependencies/protobuf; echo '{"sdk": {"version": "1.0.0-preview2-003131"}}' > global.json && dotnet restore csharp/src; docfx metadata)
 (cd dependencies/grpc; dotnet restore src/csharp/Grpc.sln; docfx metadata)
