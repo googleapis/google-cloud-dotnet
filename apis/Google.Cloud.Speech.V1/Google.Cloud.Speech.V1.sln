@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Speech.V1", "G
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Speech.V1.Snippets", "Google.Cloud.Speech.V1.Snippets\Google.Cloud.Speech.V1.Snippets.csproj", "{25D98E51-33AF-455B-B5DD-C0E17F65EA0F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Longrunning", "..\Google.Longrunning\Google.Longrunning\Google.Longrunning.csproj", "{2DA31819-9094-49EC-96B6-744A481EB4F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.LongRunning", "..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj", "{2DA31819-9094-49EC-96B6-744A481EB4F9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Speech.V1.LanguageCodeGenerator", "Google.Cloud.Speech.V1.LanguageCodeGenerator\Google.Cloud.Speech.V1.LanguageCodeGenerator.csproj", "{1E891B79-7EA0-441D-83E1-A1D492B68ED9}"
 EndProject
