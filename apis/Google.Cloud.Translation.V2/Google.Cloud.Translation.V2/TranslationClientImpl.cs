@@ -120,11 +120,12 @@ namespace Google.Cloud.Translation.V2
         }
 
         /// <inheritdoc />
-        public override IList<Language> ListLanguages(string target = null)
+        public override IList<Language> ListLanguages(string target = null, TranslationModel? model = null)
         {
             var request = Service.Languages.List();
             request.ModifyRequest += _versionHeaderAction;
             request.Target = target;
+            request.Model = GetEffectiveModelName(model);
             return request.Execute().Languages.Select(Language.FromResource).ToList();
         }
 
@@ -163,11 +164,12 @@ namespace Google.Cloud.Translation.V2
         }
 
         /// <inheritdoc />
-        public override async Task<IList<Language>> ListLanguagesAsync(string target = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<IList<Language>> ListLanguagesAsync(string target = null, TranslationModel? model = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             var request = Service.Languages.List();
             request.ModifyRequest += _versionHeaderAction;
             request.Target = target;
+            request.Model = GetEffectiveModelName(model);
             return (await request.ExecuteAsync(cancellationToken).ConfigureAwait(false)).Languages.Select(Language.FromResource).ToList();
         }
 
@@ -212,9 +214,14 @@ namespace Google.Cloud.Translation.V2
             request.ModifyRequest += _versionHeaderAction;
             request.Source = sourceLanguage;
             request.Format = format;
+            request.Model = GetEffectiveModelName(model);
+        }
+
+        private string GetEffectiveModelName(TranslationModel? model)
+        {
             var effectiveModel = model ?? DefaultModel;
             TranslationModels.ValidateModel(effectiveModel);
-            request.Model = effectiveModel.ToApiName();
-        }      
+            return effectiveModel.ToApiName();
+        }
     }
 }

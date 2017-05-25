@@ -169,7 +169,7 @@ namespace Google.Cloud.Translation.V2.Snippets
         [Fact]
         public void ListLanguages()
         {
-            // Snippet: ListLanguages(string)
+            // Snippet: ListLanguages(string, TranslationModel?)
             TranslationClient client = TranslationClient.Create();
             IList<Language> languages = client.ListLanguages(LanguageCodes.English);
             // Display just the first 10 languages for brevity
@@ -180,8 +180,8 @@ namespace Google.Cloud.Translation.V2.Snippets
             // End snippet
         }
 
-        // See-also: ListLanguages(string)
-        // Member: ListLanguagesAsync(string, CancellationToken)
+        // See-also: ListLanguages(string, TranslationModel?)
+        // Member: ListLanguagesAsync(string, TranslationModel?, CancellationToken)
         // See [ListLanguages](ref) for a synchronous example.
         // End see-also
     }
