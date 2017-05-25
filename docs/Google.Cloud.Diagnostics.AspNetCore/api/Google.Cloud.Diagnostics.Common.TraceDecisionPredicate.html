@@ -72,7 +72,7 @@
               
               <h1 id="Google_Cloud_Diagnostics_Common_TraceDecisionPredicate" data-uid="Google.Cloud.Diagnostics.Common.TraceDecisionPredicate">Class TraceDecisionPredicate
               </h1>
-              <div class="markdown level0 summary"><p>Used to determine if an <span class="xref">Microsoft.AspNetCore.Http.HttpRequest</span> should be traced. This will not override
+              <div class="markdown level0 summary"><p>Used to determine if an <span class="xref">System.Web.HttpRequest</span> should be traced. This will not override
 a decision by the trace header. </p>
 </div>
               <div class="markdown level0 conceptual"></div>
@@ -84,6 +84,9 @@ a decision by the trace header. </p>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
                   <span class="xref">System.Object.GetHashCode()</span>
                 </div>
                 <div>
@@ -91,9 +94,6 @@ a decision by the trace header. </p>
                 </div>
                 <div>
                   <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
                 </div>
               </div>
               <h6><strong>Namespace</strong>:Google.Cloud.Diagnostics.Common</h6>
@@ -156,7 +156,7 @@ trace decisions and does not disable tracing health checks.</p>
               <h3 id="methods">Methods
               </h3>
               <a id="Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_Create_" data-uid="Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create*"></a>
-              <h4 id="Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_Create_System_Func_Microsoft_AspNetCore_Http_HttpRequest_System_Nullable_System_Boolean___System_Boolean_" data-uid="Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create(System.Func{Microsoft.AspNetCore.Http.HttpRequest,System.Nullable{System.Boolean}},System.Boolean)">Create(Func&lt;HttpRequest, Nullable&lt;Boolean&gt;&gt;, Boolean)</h4>
+              <h4 id="Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_Create_System_Func_System_Web_HttpRequest_System_Nullable_System_Boolean___System_Boolean_" data-uid="Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create(System.Func{System.Web.HttpRequest,System.Nullable{System.Boolean}},System.Boolean)">Create(Func&lt;HttpRequest, Nullable&lt;Boolean&gt;&gt;, Boolean)</h4>
               <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html">TraceDecisionPredicate</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -175,10 +175,10 @@ trace decisions and does not disable tracing health checks.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Func</span>&lt;<span class="xref">Microsoft.AspNetCore.Http.HttpRequest</span>, <span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+                    <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Web.HttpRequest</span>, <span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
                     <td><span class="parametername">traceDecisionPredicate</span></td>
                     <td><p>Used to determine if a request should be traced.
-Takes an <span class="xref">Microsoft.AspNetCore.Http.HttpRequest</span>.  It should return true if the request should be traced,
+Takes an <span class="xref">System.Web.HttpRequest</span>.  It should return true if the request should be traced,
 false if the request should not be traced and null if the decision should be left to other
 sampling mechanisms. Cannot be null.</p>
 </td>
@@ -207,14 +207,14 @@ not be traced. Defaults to true.</p>
                   </tr>
                 </tbody>
               </table>
-              <h5 id="Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_Create_System_Func_Microsoft_AspNetCore_Http_HttpRequest_System_Nullable_System_Boolean___System_Boolean__remarks">Remarks</h5>
+              <h5 id="Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_Create_System_Func_System_Web_HttpRequest_System_Nullable_System_Boolean___System_Boolean__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>Ignoring of health checks (<span class="paramref">ignoreHealthChecks</span>) takes precedence over the
 predicate (<span class="paramref">traceDecisionPredicate</span>).  If <span class="paramref">ignoreHealthChecks</span>
 is true and the request is a health check <span class="paramref">traceDecisionPredicate</span> will not
 be called.</p>
 </div>
               <a id="Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_ShouldTrace_" data-uid="Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace*"></a>
-              <h4 id="Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_ShouldTrace_Microsoft_AspNetCore_Http_HttpRequest_" data-uid="Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace(Microsoft.AspNetCore.Http.HttpRequest)">ShouldTrace(HttpRequest)</h4>
+              <h4 id="Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_ShouldTrace_System_Web_HttpRequest_" data-uid="Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace(System.Web.HttpRequest)">ShouldTrace(HttpRequest)</h4>
               <div class="markdown level1 summary"><p>Used to determine if a request should be traced.  This will not override a trace header
 decision.</p>
 </div>
@@ -234,7 +234,7 @@ decision.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Microsoft.AspNetCore.Http.HttpRequest</span></td>
+                    <td><span class="xref">System.Web.HttpRequest</span></td>
                     <td><span class="parametername">request</span></td>
                     <td><p>The http request to check.</p>
 </td>

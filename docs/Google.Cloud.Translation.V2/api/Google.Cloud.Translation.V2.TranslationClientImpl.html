@@ -72,7 +72,7 @@
               
               <h1 id="Google_Cloud_Translation_V2_TranslationClientImpl" data-uid="Google.Cloud.Translation.V2.TranslationClientImpl">Class TranslationClientImpl
               </h1>
-              <div class="markdown level0 summary"><p>Wrapper around <a class="xref" href="Google.Apis.Translate.v2.TranslateService.html">TranslateService</a> to provide simpler operations.</p>
+              <div class="markdown level0 summary"><p>Wrapper around <span class="xref">Google.Apis.Translate.v2.TranslateService</span> to provide simpler operations.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -141,7 +141,7 @@ The constructor of this class is public for the sake of constructor-based depend
               </h3>
               <a id="Google_Cloud_Translation_V2_TranslationClientImpl__ctor_" data-uid="Google.Cloud.Translation.V2.TranslationClientImpl.#ctor*"></a>
               <h4 id="Google_Cloud_Translation_V2_TranslationClientImpl__ctor_Google_Apis_Translate_v2_TranslateService_Google_Cloud_Translation_V2_TranslationModel_" data-uid="Google.Cloud.Translation.V2.TranslationClientImpl.#ctor(Google.Apis.Translate.v2.TranslateService,Google.Cloud.Translation.V2.TranslationModel)">TranslationClientImpl(TranslateService, TranslationModel)</h4>
-              <div class="markdown level1 summary"><p>Constructs a new client wrapping the given <a class="xref" href="Google.Apis.Translate.v2.TranslateService.html">TranslateService</a>.</p>
+              <div class="markdown level1 summary"><p>Constructs a new client wrapping the given <span class="xref">Google.Apis.Translate.v2.TranslateService</span>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -159,7 +159,7 @@ The constructor of this class is public for the sake of constructor-based depend
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Translate.v2.TranslateService.html">TranslateService</a></td>
+                    <td><span class="xref">Google.Apis.Translate.v2.TranslateService</span></td>
                     <td><span class="parametername">service</span></td>
                     <td><p>The service to wrap. Must not be null.</p>
 </td>
@@ -176,7 +176,7 @@ The constructor of this class is public for the sake of constructor-based depend
               </h3>
               <a id="Google_Cloud_Translation_V2_TranslationClientImpl_ApplicationName_" data-uid="Google.Cloud.Translation.V2.TranslationClientImpl.ApplicationName*"></a>
               <h4 id="Google_Cloud_Translation_V2_TranslationClientImpl_ApplicationName" data-uid="Google.Cloud.Translation.V2.TranslationClientImpl.ApplicationName">ApplicationName</h4>
-              <div class="markdown level1 summary"><p>The default application name used when creating a <a class="xref" href="Google.Apis.Translate.v2.TranslateService.html">TranslateService</a>.
+              <div class="markdown level1 summary"><p>The default application name used when creating a <span class="xref">Google.Apis.Translate.v2.TranslateService</span>.
 Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -251,7 +251,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Translate.v2.TranslateService.html">TranslateService</a></td>
+                    <td><span class="xref">Google.Apis.Translate.v2.TranslateService</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -363,13 +363,13 @@ application naming etc).</p>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Translation.V2.TranslationClient.html#Google_Cloud_Translation_V2_TranslationClient_DetectLanguagesAsync_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_">TranslationClient.DetectLanguagesAsync(IEnumerable&lt;String&gt;, CancellationToken)</a></div>
               <a id="Google_Cloud_Translation_V2_TranslationClientImpl_ListLanguages_" data-uid="Google.Cloud.Translation.V2.TranslationClientImpl.ListLanguages*"></a>
-              <h4 id="Google_Cloud_Translation_V2_TranslationClientImpl_ListLanguages_System_String_" data-uid="Google.Cloud.Translation.V2.TranslationClientImpl.ListLanguages(System.String)">ListLanguages(String)</h4>
+              <h4 id="Google_Cloud_Translation_V2_TranslationClientImpl_ListLanguages_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__" data-uid="Google.Cloud.Translation.V2.TranslationClientImpl.ListLanguages(System.String,System.Nullable{Google.Cloud.Translation.V2.TranslationModel})">ListLanguages(String, Nullable&lt;TranslationModel&gt;)</h4>
               <div class="markdown level1 summary"><p>Lists the language supported by the Translate API synchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override IList&lt;Language&gt; ListLanguages(string target = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override IList&lt;Language&gt; ListLanguages(string target = null, TranslationModel? model = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -386,6 +386,13 @@ application naming etc).</p>
                     <td><span class="parametername">target</span></td>
                     <td><p>The target language in which to return the language names in the results,
 for display purposes. May be null, in which case only the language codes are returned.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.TranslationModel.html">TranslationModel</a>&gt;</td>
+                    <td><span class="parametername">model</span></td>
+                    <td><p>The model to request languages for. May be null, in which case <a class="xref" href="Google.Cloud.Translation.V2.TranslationClient.html#Google_Cloud_Translation_V2_TranslationClient_DefaultModel">DefaultModel</a> is
+used.</p>
 </td>
                   </tr>
                 </tbody>
@@ -407,15 +414,15 @@ for display purposes. May be null, in which case only the language codes are ret
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Cloud.Translation.V2.TranslationClient.html#Google_Cloud_Translation_V2_TranslationClient_ListLanguages_System_String_">TranslationClient.ListLanguages(String)</a></div>
+              <div><a class="xref" href="Google.Cloud.Translation.V2.TranslationClient.html#Google_Cloud_Translation_V2_TranslationClient_ListLanguages_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__">TranslationClient.ListLanguages(String, Nullable&lt;TranslationModel&gt;)</a></div>
               <a id="Google_Cloud_Translation_V2_TranslationClientImpl_ListLanguagesAsync_" data-uid="Google.Cloud.Translation.V2.TranslationClientImpl.ListLanguagesAsync*"></a>
-              <h4 id="Google_Cloud_Translation_V2_TranslationClientImpl_ListLanguagesAsync_System_String_System_Threading_CancellationToken_" data-uid="Google.Cloud.Translation.V2.TranslationClientImpl.ListLanguagesAsync(System.String,System.Threading.CancellationToken)">ListLanguagesAsync(String, CancellationToken)</h4>
+              <h4 id="Google_Cloud_Translation_V2_TranslationClientImpl_ListLanguagesAsync_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__System_Threading_CancellationToken_" data-uid="Google.Cloud.Translation.V2.TranslationClientImpl.ListLanguagesAsync(System.String,System.Nullable{Google.Cloud.Translation.V2.TranslationModel},System.Threading.CancellationToken)">ListLanguagesAsync(String, Nullable&lt;TranslationModel&gt;, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Lists the language supported by the Translate API asynchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override Task&lt;IList&lt;Language&gt;&gt; ListLanguagesAsync(string target = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override Task&lt;IList&lt;Language&gt;&gt; ListLanguagesAsync(string target = null, TranslationModel? model = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -432,6 +439,13 @@ for display purposes. May be null, in which case only the language codes are ret
                     <td><span class="parametername">target</span></td>
                     <td><p>The target language in which to return the language names in the results,
 for display purposes. May be null, in which case only the language codes are returned.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.TranslationModel.html">TranslationModel</a>&gt;</td>
+                    <td><span class="parametername">model</span></td>
+                    <td><p>The model to request languages for. May be null, in which case <a class="xref" href="Google.Cloud.Translation.V2.TranslationClient.html#Google_Cloud_Translation_V2_TranslationClient_DefaultModel">DefaultModel</a> is
+used.</p>
 </td>
                   </tr>
                   <tr>
@@ -459,7 +473,7 @@ for display purposes. May be null, in which case only the language codes are ret
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Cloud.Translation.V2.TranslationClient.html#Google_Cloud_Translation_V2_TranslationClient_ListLanguagesAsync_System_String_System_Threading_CancellationToken_">TranslationClient.ListLanguagesAsync(String, CancellationToken)</a></div>
+              <div><a class="xref" href="Google.Cloud.Translation.V2.TranslationClient.html#Google_Cloud_Translation_V2_TranslationClient_ListLanguagesAsync_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__System_Threading_CancellationToken_">TranslationClient.ListLanguagesAsync(String, Nullable&lt;TranslationModel&gt;, CancellationToken)</a></div>
               <a id="Google_Cloud_Translation_V2_TranslationClientImpl_TranslateHtml_" data-uid="Google.Cloud.Translation.V2.TranslationClientImpl.TranslateHtml*"></a>
               <h4 id="Google_Cloud_Translation_V2_TranslationClientImpl_TranslateHtml_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__" data-uid="Google.Cloud.Translation.V2.TranslationClientImpl.TranslateHtml(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Nullable{Google.Cloud.Translation.V2.TranslationModel})">TranslateHtml(IEnumerable&lt;String&gt;, String, String, Nullable&lt;TranslationModel&gt;)</h4>
               <div class="markdown level1 summary"><p>Translates multiple items of HTML synchronously.</p>
@@ -740,10 +754,6 @@ used.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Translation.V2.TranslationClient.html#Google_Cloud_Translation_V2_TranslationClient_TranslateTextAsync_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__System_Threading_CancellationToken_">TranslationClient.TranslateTextAsync(IEnumerable&lt;String&gt;, String, String, Nullable&lt;TranslationModel&gt;, CancellationToken)</a></div>
-              <h3 id="extensionmethods">Extension Methods</h3>
-              <div>
-                  <a class="xref" href="Google.Apis.Util.Utilities.html#Google_Apis_Util_Utilities_ThrowIfNull__1___0_System_String_">Utilities.ThrowIfNull&lt;T&gt;(T, String)</a>
-              </div>
                         </article>
           </div>
           

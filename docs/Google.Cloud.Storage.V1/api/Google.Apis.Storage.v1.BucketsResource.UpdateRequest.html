@@ -79,8 +79,9 @@ configuration changes may take time to propagate.</p>
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html">StorageBaseServiceRequest</a>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a>&gt;</div>
-                  <div class="level2"><span class="xref">BucketsResource.UpdateRequest</span></div>
+                  <div class="level1"><span class="xref">Google.Apis.Requests.ClientServiceRequest</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a>&gt;</div>
+                  <div class="level2"><a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html">StorageBaseServiceRequest</a>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a>&gt;</div>
+                  <div class="level3"><span class="xref">BucketsResource.UpdateRequest</span></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
@@ -105,23 +106,83 @@ configuration changes may take time to propagate.</p>
                 <div>
                   <a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html#Google_Apis_Storage_v1_StorageBaseServiceRequest_1_UserIp">StorageBaseServiceRequest&lt;Bucket&gt;.UserIp</a>
                 </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Bucket&gt;.Execute()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Bucket&gt;.ExecuteAsStream()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Bucket&gt;.ExecuteAsync()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Bucket&gt;.ExecuteAsync(System.Threading.CancellationToken)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Bucket&gt;.ExecuteAsStreamAsync()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Bucket&gt;.ExecuteAsStreamAsync(System.Threading.CancellationToken)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Bucket&gt;.CreateRequest(System.Nullable&lt;System.Boolean&gt;)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Bucket&gt;.GenerateRequestUri()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Bucket&gt;.GetDefaultETagAction(System.String)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Bucket&gt;.ETagAction</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Bucket&gt;.ModifyRequest</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Bucket&gt;.RequestParameters</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Bucket&gt;.Service</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
               </div>
               <h6><strong>Namespace</strong>:Google.Apis.Storage.v1</h6>
               <h6><strong>Assembly</strong>:Google.Apis.Storage.v1.dll</h6>
               <h5 id="Google_Apis_Storage_v1_BucketsResource_UpdateRequest_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class UpdateRequest : StorageBaseServiceRequest&lt;Bucket&gt;</code></pre>
+                <pre><code class="lang-csharp hljs">public class UpdateRequest : StorageBaseServiceRequest&lt;Bucket&gt;, IClientServiceRequest&lt;Bucket&gt;, IClientServiceRequest</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
               <a id="Google_Apis_Storage_v1_BucketsResource_UpdateRequest__ctor_" data-uid="Google.Apis.Storage.v1.BucketsResource.UpdateRequest.#ctor*"></a>
-              <h4 id="Google_Apis_Storage_v1_BucketsResource_UpdateRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Bucket_System_String_" data-uid="Google.Apis.Storage.v1.BucketsResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Bucket,System.String)">UpdateRequest(Services.IClientService, Bucket, String)</h4>
+              <h4 id="Google_Apis_Storage_v1_BucketsResource_UpdateRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Bucket_System_String_" data-uid="Google.Apis.Storage.v1.BucketsResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Bucket,System.String)">UpdateRequest(IClientService, Bucket, String)</h4>
               <div class="markdown level1 summary"><p>Constructs a new Update request.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public UpdateRequest(Services.IClientService service, Bucket body, string bucket)</code></pre>
+                <pre><code class="lang-csharp hljs">public UpdateRequest(IClientService service, Bucket body, string bucket)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +220,8 @@ configuration changes may take time to propagate.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string Bucket { get; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;bucket&quot;, RequestParameterType.Path)]
+public virtual string Bucket { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -200,6 +262,8 @@ configuration changes may take time to propagate.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Bucket&gt;.HttpMethod</span></div>
               <a id="Google_Apis_Storage_v1_BucketsResource_UpdateRequest_IfMetagenerationMatch_" data-uid="Google.Apis.Storage.v1.BucketsResource.UpdateRequest.IfMetagenerationMatch*"></a>
               <h4 id="Google_Apis_Storage_v1_BucketsResource_UpdateRequest_IfMetagenerationMatch" data-uid="Google.Apis.Storage.v1.BucketsResource.UpdateRequest.IfMetagenerationMatch">IfMetagenerationMatch</h4>
               <div class="markdown level1 summary"><p>Makes the return of the bucket metadata conditional on whether the bucket&#39;s current
@@ -208,7 +272,8 @@ metageneration matches the given value.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;long&gt; IfMetagenerationMatch { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifMetagenerationMatch&quot;, RequestParameterType.Query)]
+public virtual long ? IfMetagenerationMatch { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -233,7 +298,8 @@ metageneration does not match the given value.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;long&gt; IfMetagenerationNotMatch { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifMetagenerationNotMatch&quot;, RequestParameterType.Query)]
+public virtual long ? IfMetagenerationNotMatch { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -274,6 +340,8 @@ metageneration does not match the given value.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Bucket&gt;.MethodName</span></div>
               <a id="Google_Apis_Storage_v1_BucketsResource_UpdateRequest_PredefinedAcl_" data-uid="Google.Apis.Storage.v1.BucketsResource.UpdateRequest.PredefinedAcl*"></a>
               <h4 id="Google_Apis_Storage_v1_BucketsResource_UpdateRequest_PredefinedAcl" data-uid="Google.Apis.Storage.v1.BucketsResource.UpdateRequest.PredefinedAcl">PredefinedAcl</h4>
               <div class="markdown level1 summary"><p>Apply a predefined set of access controls to this bucket.</p>
@@ -281,7 +349,8 @@ metageneration does not match the given value.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;BucketsResource.UpdateRequest.PredefinedAclEnum&gt; PredefinedAcl { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;predefinedAcl&quot;, RequestParameterType.Query)]
+public virtual BucketsResource.UpdateRequest.PredefinedAclEnum? PredefinedAcl { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -305,7 +374,8 @@ metageneration does not match the given value.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;BucketsResource.UpdateRequest.PredefinedDefaultObjectAclEnum&gt; PredefinedDefaultObjectAcl { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;predefinedDefaultObjectAcl&quot;, RequestParameterType.Query)]
+public virtual BucketsResource.UpdateRequest.PredefinedDefaultObjectAclEnum? PredefinedDefaultObjectAcl { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -329,7 +399,8 @@ metageneration does not match the given value.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;BucketsResource.UpdateRequest.ProjectionEnum&gt; Projection { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;projection&quot;, RequestParameterType.Query)]
+public virtual BucketsResource.UpdateRequest.ProjectionEnum? Projection { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -354,6 +425,33 @@ metageneration does not match the given value.</p>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public override string RestPath { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Bucket&gt;.RestPath</span></div>
+              <a id="Google_Apis_Storage_v1_BucketsResource_UpdateRequest_UserProject_" data-uid="Google.Apis.Storage.v1.BucketsResource.UpdateRequest.UserProject*"></a>
+              <h4 id="Google_Apis_Storage_v1_BucketsResource_UpdateRequest_UserProject" data-uid="Google.Apis.Storage.v1.BucketsResource.UpdateRequest.UserProject">UserProject</h4>
+              <div class="markdown level1 summary"><p>The project number to be billed for this request, for Requester Pays buckets.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;userProject&quot;, RequestParameterType.Query)]
+public virtual string UserProject { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -396,6 +494,8 @@ metageneration does not match the given value.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Bucket&gt;.GetBody()</span></div>
               <a id="Google_Apis_Storage_v1_BucketsResource_UpdateRequest_InitParameters_" data-uid="Google.Apis.Storage.v1.BucketsResource.UpdateRequest.InitParameters*"></a>
               <h4 id="Google_Apis_Storage_v1_BucketsResource_UpdateRequest_InitParameters" data-uid="Google.Apis.Storage.v1.BucketsResource.UpdateRequest.InitParameters">InitParameters()</h4>
               <div class="markdown level1 summary"><p>Initializes Update parameter list.</p>

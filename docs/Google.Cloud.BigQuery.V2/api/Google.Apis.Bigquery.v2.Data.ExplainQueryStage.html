@@ -79,11 +79,35 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">ExplainQueryStage</span></div>
               </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
               <h6><strong>Namespace</strong>:Google.Apis.Bigquery.v2.Data</h6>
               <h6><strong>Assembly</strong>:Google.Apis.Bigquery.v2.dll</h6>
               <h5 id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class ExplainQueryStage : Requests.IDirectResponseSchema</code></pre>
+                <pre><code class="lang-csharp hljs">public class ExplainQueryStage : IDirectResponseSchema</code></pre>
               </div>
               <h3 id="properties">Properties
               </h3>
@@ -94,7 +118,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;double&gt; ComputeRatioAvg { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;computeRatioAvg&quot;)]
+public virtual double ? ComputeRatioAvg { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -118,7 +143,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;double&gt; ComputeRatioMax { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;computeRatioMax&quot;)]
+public virtual double ? ComputeRatioMax { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -159,6 +185,8 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
               <a id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_Id_" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.Id*"></a>
               <h4 id="Google_Apis_Bigquery_v2_Data_ExplainQueryStage_Id" data-uid="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.Id">Id</h4>
               <div class="markdown level1 summary"><p>Unique ID for stage within plan.</p>
@@ -166,7 +194,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;long&gt; Id { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;id&quot;)]
+public virtual long ? Id { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -190,7 +219,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string Name { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;name&quot;)]
+public virtual string Name { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -214,7 +244,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;double&gt; ReadRatioAvg { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;readRatioAvg&quot;)]
+public virtual double ? ReadRatioAvg { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -238,7 +269,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;double&gt; ReadRatioMax { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;readRatioMax&quot;)]
+public virtual double ? ReadRatioMax { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -262,7 +294,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;long&gt; RecordsRead { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;recordsRead&quot;)]
+public virtual long ? RecordsRead { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -286,7 +319,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;long&gt; RecordsWritten { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;recordsWritten&quot;)]
+public virtual long ? RecordsWritten { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -310,7 +344,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string Status { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;status&quot;)]
+public virtual string Status { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -334,7 +369,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Collections.Generic.IList&lt;ExplainQueryStep&gt; Steps { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;steps&quot;)]
+public virtual IList&lt;ExplainQueryStep&gt; Steps { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -358,7 +394,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;double&gt; WaitRatioAvg { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;waitRatioAvg&quot;)]
+public virtual double ? WaitRatioAvg { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -382,7 +419,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;double&gt; WaitRatioMax { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;waitRatioMax&quot;)]
+public virtual double ? WaitRatioMax { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -406,7 +444,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;double&gt; WriteRatioAvg { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;writeRatioAvg&quot;)]
+public virtual double ? WriteRatioAvg { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -430,7 +469,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;double&gt; WriteRatioMax { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;writeRatioMax&quot;)]
+public virtual double ? WriteRatioMax { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">

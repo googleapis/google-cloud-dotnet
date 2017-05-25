@@ -1,0 +1,394 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ConfigServiceV2.ConfigServiceV2Base
+   | Google.Cloud.Logging.Log4Net </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ConfigServiceV2.ConfigServiceV2Base
+   | Google.Cloud.Logging.Log4Net ">
+    <meta name="generator" content="docfx 2.16.0.499">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base">Class ConfigServiceV2.ConfigServiceV2Base
+              </h1>
+              <div class="markdown level0 summary"><p>Base class for server-side implementations of ConfigServiceV2</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">ConfigServiceV2.ConfigServiceV2Base</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Cloud.Logging.V2</h6>
+              <h6><strong>Assembly</strong>:Google.Cloud.Logging.V2.dll</h6>
+              <h5 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public abstract class ConfigServiceV2Base</code></pre>
+              </div>
+              <h3 id="methods">Methods
+              </h3>
+              <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_CreateSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.CreateSink*"></a>
+              <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_CreateSink_Google_Cloud_Logging_V2_CreateSinkRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.CreateSink(Google.Cloud.Logging.V2.CreateSinkRequest,Grpc.Core.ServerCallContext)">CreateSink(CreateSinkRequest, ServerCallContext)</h4>
+              <div class="markdown level1 summary"><p>Creates a sink that exports specified log entries to a destination.  The
+export of newly-ingested log entries begins immediately, unless the current
+time is outside the sink&#39;s start and end times or the sink&#39;s
+<code>writer_identity</code> is not permitted to write to the destination.  A sink can
+export log entries only from the resource owning the sink.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;LogSink&gt; CreateSink(CreateSinkRequest request, ServerCallContext context)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.CreateSinkRequest.html">CreateSinkRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request received from the client.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a>&gt;</td>
+                    <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_DeleteSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.DeleteSink*"></a>
+              <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_DeleteSink_Google_Cloud_Logging_V2_DeleteSinkRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.DeleteSink(Google.Cloud.Logging.V2.DeleteSinkRequest,Grpc.Core.ServerCallContext)">DeleteSink(DeleteSinkRequest, ServerCallContext)</h4>
+              <div class="markdown level1 summary"><p>Deletes a sink. If the sink has a unique <code>writer_identity</code>, then that
+service account is also deleted.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Empty&gt; DeleteSink(DeleteSinkRequest request, ServerCallContext context)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.DeleteSinkRequest.html">DeleteSinkRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request received from the client.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+                    <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_GetSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.GetSink*"></a>
+              <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_GetSink_Google_Cloud_Logging_V2_GetSinkRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.GetSink(Google.Cloud.Logging.V2.GetSinkRequest,Grpc.Core.ServerCallContext)">GetSink(GetSinkRequest, ServerCallContext)</h4>
+              <div class="markdown level1 summary"><p>Gets a sink.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;LogSink&gt; GetSink(GetSinkRequest request, ServerCallContext context)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.GetSinkRequest.html">GetSinkRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request received from the client.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a>&gt;</td>
+                    <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_ListSinks_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.ListSinks*"></a>
+              <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_ListSinks_Google_Cloud_Logging_V2_ListSinksRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.ListSinks(Google.Cloud.Logging.V2.ListSinksRequest,Grpc.Core.ServerCallContext)">ListSinks(ListSinksRequest, ServerCallContext)</h4>
+              <div class="markdown level1 summary"><p>Lists sinks.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;ListSinksResponse&gt; ListSinks(ListSinksRequest request, ServerCallContext context)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.ListSinksRequest.html">ListSinksRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request received from the client.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListSinksResponse.html">ListSinksResponse</a>&gt;</td>
+                    <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_UpdateSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.UpdateSink*"></a>
+              <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Base_UpdateSink_Google_Cloud_Logging_V2_UpdateSinkRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Base.UpdateSink(Google.Cloud.Logging.V2.UpdateSinkRequest,Grpc.Core.ServerCallContext)">UpdateSink(UpdateSinkRequest, ServerCallContext)</h4>
+              <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&#39;t exist, then this method is
+identical to
+<a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>.
+If the named sink does exist, then this method replaces the following
+fields in the existing sink with values from the new sink: <code>destination</code>,
+<code>filter</code>, <code>output_version_format</code>, <code>start_time</code>, and <code>end_time</code>.
+The updated filter might also have a new <code>writer_identity</code>; see the
+<code>unique_writer_identity</code> field.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;LogSink&gt; UpdateSink(UpdateSinkRequest request, ServerCallContext context)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.UpdateSinkRequest.html">UpdateSinkRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request received from the client.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a>&gt;</td>
+                    <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+                        </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

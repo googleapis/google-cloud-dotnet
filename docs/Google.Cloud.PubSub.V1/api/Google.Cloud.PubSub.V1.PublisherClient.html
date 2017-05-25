@@ -1507,7 +1507,7 @@ ListTopicsRequest request = new ListTopicsRequest
     ProjectAsProjectName = new ProjectName(&quot;[PROJECT]&quot;),
 };
 // Make the request
-PagedEnumerable&lt;ListTopicsResponse,Topic&gt; response =
+PagedEnumerable&lt;ListTopicsResponse, Topic&gt; response =
     publisherClient.ListTopics(request);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -1669,7 +1669,7 @@ ListTopicsRequest request = new ListTopicsRequest
     ProjectAsProjectName = new ProjectName(&quot;[PROJECT]&quot;),
 };
 // Make the request
-PagedAsyncEnumerable&lt;ListTopicsResponse,Topic&gt; response =
+PagedAsyncEnumerable&lt;ListTopicsResponse, Topic&gt; response =
     publisherClient.ListTopicsAsync(request);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -1832,7 +1832,7 @@ ListTopicSubscriptionsRequest request = new ListTopicSubscriptionsRequest
     TopicAsTopicName = new TopicName(&quot;[PROJECT]&quot;, &quot;[TOPIC]&quot;),
 };
 // Make the request
-PagedEnumerable&lt;ListTopicSubscriptionsResponse,SubscriptionName&gt; response =
+PagedEnumerable&lt;ListTopicSubscriptionsResponse, SubscriptionName&gt; response =
     publisherClient.ListTopicSubscriptions(request);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -1919,7 +1919,7 @@ PublisherClient publisherClient = PublisherClient.Create();
 // Initialize request argument(s)
 TopicName topic = new TopicName(&quot;[PROJECT]&quot;, &quot;[TOPIC]&quot;);
 // Make the request
-PagedEnumerable&lt;ListTopicSubscriptionsResponse,SubscriptionName&gt; response =
+PagedEnumerable&lt;ListTopicSubscriptionsResponse, SubscriptionName&gt; response =
     publisherClient.ListTopicSubscriptions(topic);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -2024,7 +2024,7 @@ ListTopicSubscriptionsRequest request = new ListTopicSubscriptionsRequest
     TopicAsTopicName = new TopicName(&quot;[PROJECT]&quot;, &quot;[TOPIC]&quot;),
 };
 // Make the request
-PagedAsyncEnumerable&lt;ListTopicSubscriptionsResponse,SubscriptionName&gt; response =
+PagedAsyncEnumerable&lt;ListTopicSubscriptionsResponse, SubscriptionName&gt; response =
     publisherClient.ListTopicSubscriptionsAsync(request);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -2111,7 +2111,7 @@ PublisherClient publisherClient = await PublisherClient.CreateAsync();
 // Initialize request argument(s)
 TopicName topic = new TopicName(&quot;[PROJECT]&quot;, &quot;[TOPIC]&quot;);
 // Make the request
-PagedAsyncEnumerable&lt;ListTopicSubscriptionsResponse,SubscriptionName&gt; response =
+PagedAsyncEnumerable&lt;ListTopicSubscriptionsResponse, SubscriptionName&gt; response =
     publisherClient.ListTopicSubscriptionsAsync(topic);
 
 // Iterate over all response items, lazily performing RPCs as required

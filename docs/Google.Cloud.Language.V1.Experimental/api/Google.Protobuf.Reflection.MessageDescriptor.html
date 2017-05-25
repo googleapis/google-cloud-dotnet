@@ -96,6 +96,15 @@
                   <span class="xref">System.Object.ToString()</span>
                 </div>
                 <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
                   <span class="xref">System.Object.GetHashCode()</span>
                 </div>
                 <div>
@@ -172,6 +181,30 @@ a wrapper type, and handle the result appropriately.
                     <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html">MessageDescriptor</a></td>
                     <td><p>If this is a nested type, get the outer descriptor, otherwise null.</p>
 </td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_Reflection_MessageDescriptor_CustomOptions_" data-uid="Google.Protobuf.Reflection.MessageDescriptor.CustomOptions*"></a>
+              <h4 id="Google_Protobuf_Reflection_MessageDescriptor_CustomOptions" data-uid="Google.Protobuf.Reflection.MessageDescriptor.CustomOptions">CustomOptions</h4>
+              <div class="markdown level1 summary"><p>The (possibly empty) set of custom options for this message.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public CustomOptions CustomOptions { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Reflection.CustomOptions.html">CustomOptions</a></td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>
@@ -297,6 +330,48 @@ a wrapper type, and handle the result appropriately.
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Protobuf_Reflection_MessageDescriptor_Parser_" data-uid="Google.Protobuf.Reflection.MessageDescriptor.Parser*"></a>
+              <h4 id="Google_Protobuf_Reflection_MessageDescriptor_Parser" data-uid="Google.Protobuf.Reflection.MessageDescriptor.Parser">Parser</h4>
+              <div class="markdown level1 summary"><p>A parser for this message type.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public MessageParser Parser { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.MessageParser.html">MessageParser</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Protobuf_Reflection_MessageDescriptor_Parser_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+As <a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html">MessageDescriptor</a> is not generic, this cannot be statically
+typed to the relevant type, but it should produce objects of a type compatible with <a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html#Google_Protobuf_Reflection_MessageDescriptor_ClrType">ClrType</a>.
+</p>
+<p>
+The value returned by this property will be non-null for all regular fields. However,
+if a message containing a map field is introspected, the list of nested messages will include
+an auto-generated nested key/value pair message for the field. No message parser object is created for
+such messages, so this property will return null in such cases.
+</p>
+<p>
+For wrapper types (<a class="xref" href="Google.Protobuf.WellKnownTypes.StringValue.html">StringValue</a> and the like), the parser returned here
+will be the generated message type, not the native type used by reflection for fields of those types. Code
+using reflection should call <span class="xref">Google.Protobuf.Reflection.MessageDescriptor.IsWrapperType</span> to determine whether a message descriptor represents
+a wrapper type, and handle the result appropriately.
+</p>
+</div>
               <h3 id="methods">Methods
               </h3>
               <a id="Google_Protobuf_Reflection_MessageDescriptor_FindDescriptor_" data-uid="Google.Protobuf.Reflection.MessageDescriptor.FindDescriptor*"></a>

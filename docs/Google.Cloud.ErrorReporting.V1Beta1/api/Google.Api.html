@@ -80,6 +80,9 @@
                   <section><p>Generated advice about this change, used for providing more
 information about how a change will affect the existing service.</p>
 </section>
+                  <h4><a class="xref" href="Google.Api.AnnotationsReflection.html">AnnotationsReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/annotations.proto</p>
+</section>
                   <h4><a class="xref" href="Google.Api.Authentication.html">Authentication</a></h4>
                   <section><p><code>Authentication</code> defines the authentication configuration for an API.</p>
 <p>Example for an API targeted for external use:</p>
@@ -114,9 +117,15 @@ authorization check will be done.</p>
  authorization:
    provider: firebaserules.googleapis.com</p>
 </section>
+                  <h4><a class="xref" href="Google.Api.AuthorizationConfigReflection.html">AuthorizationConfigReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/experimental/authorization_config.proto</p>
+</section>
                   <h4><a class="xref" href="Google.Api.AuthProvider.html">AuthProvider</a></h4>
                   <section><p>Configuration for an anthentication provider, including support for
 <a href="https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32">JSON Web Token (JWT)</a>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.AuthReflection.html">AuthReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/auth.proto</p>
 </section>
                   <h4><a class="xref" href="Google.Api.AuthRequirement.html">AuthRequirement</a></h4>
                   <section><p>User-defined authentication requirements, including support for
@@ -124,6 +133,9 @@ authorization check will be done.</p>
 </section>
                   <h4><a class="xref" href="Google.Api.Backend.html">Backend</a></h4>
                   <section><p><code>Backend</code> defines the backend configuration for a service.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.BackendReflection.html">BackendReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/backend.proto</p>
 </section>
                   <h4><a class="xref" href="Google.Api.BackendRule.html">BackendRule</a></h4>
                   <section><p>A backend rule provides configuration for an individual API element.</p>
@@ -169,6 +181,9 @@ In addition, services can choose to allow both <code>current</code> and <code>de
 statuses when serving read-only requests to resources. If there&#39;s no
 matching selector for operation, no billing status check will be performed.</p>
 </section>
+                  <h4><a class="xref" href="Google.Api.BillingReflection.html">BillingReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/billing.proto</p>
+</section>
                   <h4><a class="xref" href="Google.Api.BillingStatusRule.html">BillingStatusRule</a></h4>
                   <section><p>Defines the billing status requirements for operations.</p>
 <p>When used with
@@ -192,6 +207,12 @@ configuration.</p>
 applicable advice about potential consequences for the change, such as
 backwards-incompatibility.</p>
 </section>
+                  <h4><a class="xref" href="Google.Api.ConfigChangeReflection.html">ConfigChangeReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/config_change.proto</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.ConsumerReflection.html">ConsumerReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/consumer.proto</p>
+</section>
                   <h4><a class="xref" href="Google.Api.Context.html">Context</a></h4>
                   <section><p><code>Context</code> defines which contexts an API requests.</p>
 <p>Example:</p>
@@ -211,6 +232,9 @@ requested:<ul>
 <p>Available context types are defined in package
 <code>google.rpc.context</code>.</p>
 </section>
+                  <h4><a class="xref" href="Google.Api.ContextReflection.html">ContextReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/context.proto</p>
+</section>
                   <h4><a class="xref" href="Google.Api.ContextRule.html">ContextRule</a></h4>
                   <section><p>A context rule provides information about the context for an individual API
 element.</p>
@@ -219,6 +243,9 @@ element.</p>
                   <section><p>Selects and configures the service controller used by the service.  The
 service controller handles features like abuse, quota, billing, logging,
 monitoring, etc.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.ControlReflection.html">ControlReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/control.proto</p>
 </section>
                   <h4><a class="xref" href="Google.Api.CustomHttpPattern.html">CustomHttpPattern</a></h4>
                   <section><p>A custom pattern is used for defining custom HTTP verb.</p>
@@ -295,6 +322,9 @@ Lower bound (1 &lt;= i &lt; N):       offset + (width * (i - 1)).</p>
                   <h4><a class="xref" href="Google.Api.Distribution.Types.Range.html">Distribution.Types.Range</a></h4>
                   <section><p>The range of the population values.</p>
 </section>
+                  <h4><a class="xref" href="Google.Api.DistributionReflection.html">DistributionReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/distribution.proto</p>
+</section>
                   <h4><a class="xref" href="Google.Api.Documentation.html">Documentation</a></h4>
                   <section><p><code>Documentation</code> provides the information for describing a service.</p>
 <p>Example:
@@ -352,6 +382,9 @@ to infer the resource from the operations in a collection:
 The directive <code>suppress_warning</code> does not directly affect documentation
 and is documented together with service config validation.</p>
 </section>
+                  <h4><a class="xref" href="Google.Api.DocumentationReflection.html">DocumentationReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/documentation.proto</p>
+</section>
                   <h4><a class="xref" href="Google.Api.DocumentationRule.html">DocumentationRule</a></h4>
                   <section><p>A documentation rule provides information about individual API elements.</p>
 </section>
@@ -373,9 +406,15 @@ endpoints:</p>
 allow_cors: true</li>
 </ul>
 </section>
+                  <h4><a class="xref" href="Google.Api.EndpointReflection.html">EndpointReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/endpoint.proto</p>
+</section>
                   <h4><a class="xref" href="Google.Api.Experimental.html">Experimental</a></h4>
                   <section><p>Experimental service configuration. These configuration options can
 only be used by whitelisted users.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.ExperimentalReflection.html">ExperimentalReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/experimental/experimental.proto</p>
 </section>
                   <h4><a class="xref" href="Google.Api.Http.html">Http</a></h4>
                   <section><p>Defines the HTTP configuration for a service. It contains a list of
@@ -411,6 +450,12 @@ request fields and also want access to the raw HTTP body.</p>
 }</p>
 <p>Use of this type only changes how the request and response bodies are
 handled, all other features will continue to work unchanged.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.HttpbodyReflection.html">HttpbodyReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/httpbody.proto</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.HttpReflection.html">HttpReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/http.proto</p>
 </section>
                   <h4><a class="xref" href="Google.Api.HttpRule.html">HttpRule</a></h4>
                   <section><p><code>HttpRule</code> defines the mapping of an RPC method to one or more HTTP
@@ -645,6 +690,9 @@ content to Web (HTML) clients.</p>
                   <h4><a class="xref" href="Google.Api.LabelDescriptor.Types.html">LabelDescriptor.Types</a></h4>
                   <section><p>Container for nested types declared in the LabelDescriptor message type.</p>
 </section>
+                  <h4><a class="xref" href="Google.Api.LabelReflection.html">LabelReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/label.proto</p>
+</section>
                   <h4><a class="xref" href="Google.Api.LogDescriptor.html">LogDescriptor</a></h4>
                   <section><p>A description of a log type. Example in YAML format:</p>
 <ul>
@@ -706,6 +754,12 @@ logs:<ul>
                   <section><p>Configuration of a specific logging destination (the producer project
 or the consumer project).</p>
 </section>
+                  <h4><a class="xref" href="Google.Api.LoggingReflection.html">LoggingReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/logging.proto</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.LogReflection.html">LogReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/log.proto</p>
+</section>
                   <h4><a class="xref" href="Google.Api.Metric.html">Metric</a></h4>
                   <section><p>A specific metric, identified by specifying values for all of the
 labels of a [<code>MetricDescriptor</code>][google.api.MetricDescriptor].</p>
@@ -717,6 +771,9 @@ existing data unusable.</p>
 </section>
                   <h4><a class="xref" href="Google.Api.MetricDescriptor.Types.html">MetricDescriptor.Types</a></h4>
                   <section><p>Container for nested types declared in the MetricDescriptor message type.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.MetricReflection.html">MetricReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/metric.proto</p>
 </section>
                   <h4><a class="xref" href="Google.Api.MetricRule.html">MetricRule</a></h4>
                   <section><p>Bind API methods to metrics. Binding a method to a metric causes that
@@ -747,6 +804,9 @@ descriptor for Google Compute Engine VM instances has a type of
 <p>Different APIs can support different monitored resource types. APIs generally
 provide a <code>list</code> method that returns the monitored resource descriptors used
 by the API.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.MonitoredResourceReflection.html">MonitoredResourceReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/monitored_resource.proto</p>
 </section>
                   <h4><a class="xref" href="Google.Api.Monitoring.html">Monitoring</a></h4>
                   <section><p>Monitoring configuration of the service.</p>
@@ -803,6 +863,9 @@ metrics:<ul>
                   <h4><a class="xref" href="Google.Api.Monitoring.Types.MonitoringDestination.html">Monitoring.Types.MonitoringDestination</a></h4>
                   <section><p>Configuration of a specific monitoring destination (the producer project
 or the consumer project).</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.MonitoringReflection.html">MonitoringReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/monitoring.proto</p>
 </section>
                   <h4><a class="xref" href="Google.Api.OAuthRequirements.html">OAuthRequirements</a></h4>
                   <section><p>OAuth scopes are a way to define data and permissions on data. For example,
@@ -912,6 +975,9 @@ value_type: INT64</p>
 for a limit type. There can be at most one limit for a duration and limit
 type combination defined within a <code>QuotaGroup</code>.</p>
 </section>
+                  <h4><a class="xref" href="Google.Api.QuotaReflection.html">QuotaReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/quota.proto</p>
+</section>
                   <h4><a class="xref" href="Google.Api.Service.html">Service</a></h4>
                   <section><p><code>Service</code> is the root object of Google service configuration schema. It
 describes basic information about a service, such as the name and the
@@ -939,13 +1005,22 @@ requirements:
 </li>
 </ul>
 </section>
+                  <h4><a class="xref" href="Google.Api.ServiceReflection.html">ServiceReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/service.proto</p>
+</section>
                   <h4><a class="xref" href="Google.Api.SourceInfo.html">SourceInfo</a></h4>
                   <section><p>Source information used to create a Service Config</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.SourceInfoReflection.html">SourceInfoReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/source_info.proto</p>
 </section>
                   <h4><a class="xref" href="Google.Api.SystemParameter.html">SystemParameter</a></h4>
                   <section><p>Define a parameter&#39;s name and location. The parameter may be passed as either
 an HTTP header or a URL query parameter, and if both are passed the behavior
 is implementation-dependent.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.SystemParameterReflection.html">SystemParameterReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/system_parameter.proto</p>
 </section>
                   <h4><a class="xref" href="Google.Api.SystemParameterRule.html">SystemParameterRule</a></h4>
                   <section><p>Define a system parameter rule mapping system parameter definitions to
@@ -960,6 +1035,9 @@ change the names of the system parameters.</p>
 </section>
                   <h4><a class="xref" href="Google.Api.Usage.html">Usage</a></h4>
                   <section><p>Configuration controlling usage of a service.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.UsageReflection.html">UsageReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/usage.proto</p>
 </section>
                   <h4><a class="xref" href="Google.Api.UsageRule.html">UsageRule</a></h4>
                   <section><p>Usage configuration rules for the service.</p>

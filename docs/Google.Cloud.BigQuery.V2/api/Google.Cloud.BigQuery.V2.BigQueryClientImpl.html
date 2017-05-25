@@ -111,6 +111,9 @@
                   <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_GetJobReference_System_String_System_String_">BigQueryClient.GetJobReference(String, String)</a>
                 </div>
                 <div>
+                  <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateJsonSerializersSettings">BigQueryClient.CreateJsonSerializersSettings()</a>
+                </div>
+                <div>
                   <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_GetDataset_System_String_Google_Cloud_BigQuery_V2_GetDatasetOptions_">BigQueryClient.GetDataset(String, GetDatasetOptions)</a>
                 </div>
                 <div>
@@ -513,6 +516,12 @@ of this class is public for the sake of constructor-based dependency injection.<
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClientImpl__ctor_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Apis_Bigquery_v2_BigqueryService__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Care should be taken when constructing the service: if the default serializer settings are used,
+result values which can be parsed as date/time values can cause problems. Where possible, either use
+<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_Create_System_String_Google_Apis_Auth_OAuth2_GoogleCredential_">Create(String, GoogleCredential)</a> or construct a service
+using serializer settings from <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateJsonSerializersSettings">CreateJsonSerializersSettings()</a>.</p>
+</div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClientImpl__ctor_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.#ctor*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClientImpl__ctor_System_String_Google_Apis_Bigquery_v2_BigqueryService_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.#ctor(System.String,Google.Apis.Bigquery.v2.BigqueryService)">BigQueryClientImpl(String, BigqueryService)</h4>
               <div class="markdown level1 summary"><p>Constructs a new client wrapping the given <a class="xref" href="Google.Apis.Bigquery.v2.BigqueryService.html">BigqueryService</a>.</p>
@@ -546,6 +555,12 @@ of this class is public for the sake of constructor-based dependency injection.<
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClientImpl__ctor_System_String_Google_Apis_Bigquery_v2_BigqueryService__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Care should be taken when constructing the service: if the default serializer settings are used,
+result values which can be parsed as date/time values can cause problems. Where possible, either use
+<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_Create_System_String_Google_Apis_Auth_OAuth2_GoogleCredential_">Create(String, GoogleCredential)</a> or construct a service
+using serializer settings from <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateJsonSerializersSettings">CreateJsonSerializersSettings()</a>.</p>
+</div>
               <h3 id="properties">Properties
               </h3>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_ApplicationName_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.ApplicationName*"></a>
@@ -1510,7 +1525,7 @@ the results of the query.</p>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
                     <td><span class="parametername">schema</span></td>
-                    <td><p>The schema for the new table. Must not be null.</p>
+                    <td><p>The schema for the new table. Must not be null unless the schema can be inferred (e.g. for a view).</p>
 </td>
                   </tr>
                   <tr>
@@ -1567,7 +1582,7 @@ the results of the query.</p>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
                     <td><span class="parametername">schema</span></td>
-                    <td><p>The schema for the new table. Must not be null.</p>
+                    <td><p>The schema for the new table. Must not be null unless the schema can be inferred (e.g. for a view).</p>
 </td>
                   </tr>
                   <tr>
@@ -2374,7 +2389,7 @@ the existing or new dataset.</p>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
                     <td><span class="parametername">schema</span></td>
-                    <td><p>The schema to use to create the table if necessary. Must not be null.</p>
+                    <td><p>The schema to use to create the table if necessary. Must not be null unless the schema can be inferred (e.g. for a view).</p>
 </td>
                   </tr>
                   <tr>
@@ -2437,7 +2452,7 @@ the existing or new dataset.</p>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
                     <td><span class="parametername">schema</span></td>
-                    <td><p>The schema to use to create the table if necessary. Must not be null.</p>
+                    <td><p>The schema to use to create the table if necessary. Must not be null unless the schema can be inferred (e.g. for a view).</p>
 </td>
                   </tr>
                   <tr>

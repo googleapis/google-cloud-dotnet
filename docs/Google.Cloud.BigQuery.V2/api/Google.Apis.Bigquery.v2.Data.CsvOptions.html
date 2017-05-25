@@ -79,11 +79,35 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">CsvOptions</span></div>
               </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
               <h6><strong>Namespace</strong>:Google.Apis.Bigquery.v2.Data</h6>
               <h6><strong>Assembly</strong>:Google.Apis.Bigquery.v2.dll</h6>
               <h5 id="Google_Apis_Bigquery_v2_Data_CsvOptions_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class CsvOptions : Requests.IDirectResponseSchema</code></pre>
+                <pre><code class="lang-csharp hljs">public class CsvOptions : IDirectResponseSchema</code></pre>
               </div>
               <h3 id="properties">Properties
               </h3>
@@ -97,7 +121,8 @@ the job result. The default value is false.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;bool&gt; AllowJaggedRows { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;allowJaggedRows&quot;)]
+public virtual bool ? AllowJaggedRows { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +147,8 @@ in a CSV file. The default value is false.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;bool&gt; AllowQuotedNewlines { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;allowQuotedNewlines&quot;)]
+public virtual bool ? AllowQuotedNewlines { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -148,7 +174,8 @@ of the quote and fieldDelimiter properties.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string Encoding { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;encoding&quot;)]
+public virtual string Encoding { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -189,6 +216,8 @@ of the quote and fieldDelimiter properties.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
               <a id="Google_Apis_Bigquery_v2_Data_CsvOptions_FieldDelimiter_" data-uid="Google.Apis.Bigquery.v2.Data.CsvOptions.FieldDelimiter*"></a>
               <h4 id="Google_Apis_Bigquery_v2_Data_CsvOptions_FieldDelimiter" data-uid="Google.Apis.Bigquery.v2.Data.CsvOptions.FieldDelimiter">FieldDelimiter</h4>
               <div class="markdown level1 summary"><p>[Optional] The separator for fields in a CSV file. BigQuery converts the string to ISO-8859-1
@@ -199,7 +228,8 @@ BigQuery also supports the escape sequence &quot;\t&quot; to specify a tab separ
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string FieldDelimiter { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;fieldDelimiter&quot;)]
+public virtual string FieldDelimiter { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -227,7 +257,8 @@ set the allowQuotedNewlines property to true.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string Quote { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;quote&quot;)]
+public virtual string Quote { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -253,7 +284,8 @@ skipped.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;long&gt; SkipLeadingRows { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;skipLeadingRows&quot;)]
+public virtual long ? SkipLeadingRows { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">

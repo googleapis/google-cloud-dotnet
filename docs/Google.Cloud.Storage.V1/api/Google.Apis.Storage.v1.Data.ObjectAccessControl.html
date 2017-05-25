@@ -80,11 +80,35 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">ObjectAccessControl</span></div>
               </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
               <h6><strong>Namespace</strong>:Google.Apis.Storage.v1.Data</h6>
               <h6><strong>Assembly</strong>:Google.Apis.Storage.v1.dll</h6>
               <h5 id="Google_Apis_Storage_v1_Data_ObjectAccessControl_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class ObjectAccessControl : Requests.IDirectResponseSchema</code></pre>
+                <pre><code class="lang-csharp hljs">public class ObjectAccessControl : IDirectResponseSchema</code></pre>
               </div>
               <h3 id="properties">Properties
               </h3>
@@ -95,7 +119,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string Bucket { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;bucket&quot;)]
+public virtual string Bucket { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -119,7 +144,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string Domain { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;domain&quot;)]
+public virtual string Domain { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -143,7 +169,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string Email { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;email&quot;)]
+public virtual string Email { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -171,7 +198,8 @@ example.com, the entity would be domain-example.com.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string Entity { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;entity&quot;)]
+public virtual string Entity { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -195,7 +223,8 @@ example.com, the entity would be domain-example.com.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string EntityId { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;entityId&quot;)]
+public virtual string EntityId { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -219,7 +248,8 @@ example.com, the entity would be domain-example.com.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string ETag { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;etag&quot;)]
+public virtual string ETag { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -236,6 +266,8 @@ example.com, the entity would be domain-example.com.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
               <a id="Google_Apis_Storage_v1_Data_ObjectAccessControl_Generation_" data-uid="Google.Apis.Storage.v1.Data.ObjectAccessControl.Generation*"></a>
               <h4 id="Google_Apis_Storage_v1_Data_ObjectAccessControl_Generation" data-uid="Google.Apis.Storage.v1.Data.ObjectAccessControl.Generation">Generation</h4>
               <div class="markdown level1 summary"><p>The content generation of the object, if applied to an object.</p>
@@ -243,7 +275,8 @@ example.com, the entity would be domain-example.com.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;long&gt; Generation { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;generation&quot;)]
+public virtual long ? Generation { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -267,7 +300,8 @@ example.com, the entity would be domain-example.com.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string Id { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;id&quot;)]
+public virtual string Id { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -292,7 +326,8 @@ storage#objectAccessControl.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string Kind { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;kind&quot;)]
+public virtual string Kind { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -316,7 +351,8 @@ storage#objectAccessControl.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string Object__ { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;object&quot;)]
+public virtual string Object__ { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -340,7 +376,8 @@ storage#objectAccessControl.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual ObjectAccessControl.ProjectTeamData ProjectTeam { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;projectTeam&quot;)]
+public virtual ObjectAccessControl.ProjectTeamData ProjectTeam { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -364,7 +401,8 @@ storage#objectAccessControl.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string Role { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;role&quot;)]
+public virtual string Role { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -388,7 +426,8 @@ storage#objectAccessControl.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string SelfLink { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;selfLink&quot;)]
+public virtual string SelfLink { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">

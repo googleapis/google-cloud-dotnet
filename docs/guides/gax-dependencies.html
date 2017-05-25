@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>GAX and dependencies | Google Cloud APIs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="GAX and dependencies | Google Cloud APIs ">
+    <meta name="generator" content="docfx 2.16.0.499">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="gax-and-dependencies">GAX and dependencies</h1>
+              
+<p>The Google Cloud Libraries for .NET depend on <a href="https://github.com/googleapis/gax-dotnet">GAX (&quot;Google API
+Extensions&quot;)</a>
+libraries for common operations and settings. This
+document describes how the dependencies are changing, and the impact
+on the Google Cloud Libraries.</p>
+<h2 id="background">Background</h2>
+<p>Each Google Cloud Library for .NET depends on either
+<code>Google.Api.Gax.Rest</code> or <code>Google.Api.Gax.Grpc</code> based on whether
+it exposes a REST-only API or a gRPC-enabled API. Each of these
+libraries in turn depends on <code>Google.Api.Gax</code>. The overall
+dependency tree looks something like this:</p>
+<p><img src="dependencies-v1.svg" alt="Diagram of v1 dependencies"></p>
+<p>In GAX v1, <code>Google.Api.Gax</code> depended on the authentication libraries
+from the <a href="https://github.com/google/google-api-dotnet-client">&quot;Google APIs client library for
+.NET&quot;</a>. The
+result is that installing a single API library involves accepting
+dependencies for:</p>
+<ul>
+<li>The library itself (e.g. Google.Cloud.Datastore.V1)</li>
+<li>Google.Api.Gax.Grpc or Google.Api.Gax.Rest</li>
+<li>Google.Api.Gax</li>
+<li>Google.Apis.Auth</li>
+<li>Google.Apis</li>
+<li>Google.Apis.Core</li>
+<li>Newtonsoft.Json</li>
+</ul>
+<p>That&#39;s a lot of dependencies, including one we don&#39;t control
+(Json.NET). Every dependency is a source of possible pain in terms
+of version incompatibilities. A particular issue is the &quot;diamond
+dependency&quot; problem: if your application (A) depends on libraries B
+and C, and B and C both depend on library D, <em>but depend on different,
+incompatible versions</em>, this can become intractable.</p>
+<p>In GAX v1, a single class (<code>ScopedCredentialProvider</code>) really tied
+Google.Api.Gax to <code>Google.Apis.Auth</code>. In hindsight, this class should
+have been in <code>Google.Api.Gax.Rest</code> - we didn&#39;t think it was a problem,
+because we hadn&#39;t considered all the possibilities for how to remove
+the dependency for gRPC-based APIs, given that <code>Grpc.Auth</code> depends on
+<code>Google.Apis.Auth</code>.</p>
+<p>We have come up with an alternative plan (see below), but in order
+to make that work, we need to move <code>ScopedCredentialProvider</code> to the
+right place, which is a breaking change. For that reason, the GAX
+libraries will get a major version bump, and all the non-prerelease
+libraries that depend on them will too.</p>
+<h2 id="expected-final-state">Expected final state</h2>
+<p>In order to remove the dependency between gRPC and
+<code>Google.Apis.Auth</code>, we will create two new libraries:</p>
+<ul>
+<li><code>Google.Cloud.Auth</code>: this serves the same purpose as <code>Google.Apis.Auth</code>, but with no other
+dependencies.</li>
+<li><code>Grpc.Auth.Google</code>: like <code>Grpc.Auth</code>, this is just a translation
+layer, this time between <code>Grpc.Core</code> and <code>Google.Cloud.Auth</code>.</li>
+</ul>
+<p>Both of these names are very much subject to change - it&#39;s just
+easier to document in some concrete terms.</p>
+<p>With those libraries in place, <code>Google.Api.Gax.Grpc</code> can depend on
+<code>Grpc.Auth.Google</code> instead of <code>Grpc.Auth</code>, at which point all the
+legacy dependencies drop away, and gRPC-based libraries will have a
+much smaller and more understandable set of dependencies.</p>
+<p>The final dependencies will therefore look like this:</p>
+<p><img src="dependencies-final.svg" alt="Diagram of final dependencies"></p>
+<h2 id="plan-to-get-there">Plan to get there</h2>
+<p>Getting to the final state without breaking customers is not
+trivial. In particular, the new auth libraries have not been written
+yet, and we don&#39;t want to rush them. However, we know we need to
+make the breaking change to GAX, so we want to do that as soon as
+possible. The start of the plan is (all dates in 2017):</p>
+<ul>
+<li>(Done) Early May: commit the changes to GAX that move
+<code>ScopedCredentialProvider</code>, and add dependencies directly from both
+<code>Google.Api.Gax.Rest</code> and <code>Google.Api.Gax.Grpc</code> to
+<code>Google.Apis.Auth</code>, bumping the version number to 2.0. Nothing is
+released to NuGet.</li>
+<li>Mid May: Release GAX v2.0.0-beta01 libraries, and immediately release
+new pre-release versions of <em>all</em> Google Cloud Libraries to refer to
+them. The previously-released GA libraries (Logging, Datastore, Storage)
+need to go to 2.0.0-beta01.</li>
+<li>Late May: If all looks well with the pre-releases, release GAX v2
+libraries and immediately release new versions of all Google Cloud Libraries
+to refer to them. This time the previously-GA libraries will be new GA
+versions; everything else will still be pre-release.</li>
+</ul>
+<p>At that point, we have breathing room: everything refers to GAX v2,
+and <code>Google.Api.Gax</code> doesn&#39;t depend on <code>Google.Apis.Auth</code> or expose
+anything from that package. In particular, we can release GA
+versions of Google Cloud Libraries which are ready from this point
+onwards, without needing to worry about a future major version bump
+in the near future.</p>
+<p>Note that the breaking change in GAX (moving
+<code>ScopedCredentialProvider</code> to a different package) is <em>not</em> expected
+to break any user code, as <code>ScopedCredentialProvider</code> is really
+aimed at the Google Cloud Libraries code. It&#39;s definitely a breaking
+change for the Google Cloud Libraries (you wouldn&#39;t be able to use a
+REST-based library compiled against GAX v1 with GAX v2). Any users
+who <em>do</em> explicitly use <code>ScopedCredentialProvider</code> will simply need
+to make sure they take a dependency on <code>Google.Api.Gax.Rest</code>, and
+import it from its new location.</p>
+<p>In the second half of 2017, we hope to work on the new auth
+libraries. When those are complete, we can create a new <em>minor</em>
+release of GAX which drops the dependency on the old auth libraries and
+takes a dependency on the new auth libraries instead.</p>
+<p>Taking a new dependency would normally require a major version bump
+in SemVer. The scenario in which this causes breakage is very
+unlikely in our case however, particularly because this will be a
+new package and we certainly don&#39;t expect to have multiple major
+versions of it in the near future. Practically speaking, the best
+experience for our users will be to make this a minor version bump
+instead.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Any breaking changes are annoying, but we&#39;ve decided that it&#39;s far
+better to take the pain now while we only have a small number of GA
+libraries, leaving a cleaner set of dependencies for the future. It
+would be much more painful to do this in a year or two, and equally
+it would be painful to continue with our legacy set of dependencies.</p>
+<p>This document hopefully clears up any concerns or questions around
+why the versions are changing, but if you have any further
+questions, please <a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/new">file an
+issue</a>.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

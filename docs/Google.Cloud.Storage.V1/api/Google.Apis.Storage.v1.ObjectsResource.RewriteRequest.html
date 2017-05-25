@@ -78,8 +78,9 @@
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html">StorageBaseServiceRequest</a>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.RewriteResponse.html">RewriteResponse</a>&gt;</div>
-                  <div class="level2"><span class="xref">ObjectsResource.RewriteRequest</span></div>
+                  <div class="level1"><span class="xref">Google.Apis.Requests.ClientServiceRequest</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.RewriteResponse.html">RewriteResponse</a>&gt;</div>
+                  <div class="level2"><a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html">StorageBaseServiceRequest</a>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.RewriteResponse.html">RewriteResponse</a>&gt;</div>
+                  <div class="level3"><span class="xref">ObjectsResource.RewriteRequest</span></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
@@ -104,23 +105,83 @@
                 <div>
                   <a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html#Google_Apis_Storage_v1_StorageBaseServiceRequest_1_UserIp">StorageBaseServiceRequest&lt;RewriteResponse&gt;.UserIp</a>
                 </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.RewriteResponse&gt;.Execute()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.RewriteResponse&gt;.ExecuteAsStream()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.RewriteResponse&gt;.ExecuteAsync()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.RewriteResponse&gt;.ExecuteAsync(System.Threading.CancellationToken)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.RewriteResponse&gt;.ExecuteAsStreamAsync()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.RewriteResponse&gt;.ExecuteAsStreamAsync(System.Threading.CancellationToken)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.RewriteResponse&gt;.CreateRequest(System.Nullable&lt;System.Boolean&gt;)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.RewriteResponse&gt;.GenerateRequestUri()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.RewriteResponse&gt;.GetDefaultETagAction(System.String)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.RewriteResponse&gt;.ETagAction</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.RewriteResponse&gt;.ModifyRequest</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.RewriteResponse&gt;.RequestParameters</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.RewriteResponse&gt;.Service</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
               </div>
               <h6><strong>Namespace</strong>:Google.Apis.Storage.v1</h6>
               <h6><strong>Assembly</strong>:Google.Apis.Storage.v1.dll</h6>
               <h5 id="Google_Apis_Storage_v1_ObjectsResource_RewriteRequest_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class RewriteRequest : StorageBaseServiceRequest&lt;RewriteResponse&gt;</code></pre>
+                <pre><code class="lang-csharp hljs">public class RewriteRequest : StorageBaseServiceRequest&lt;RewriteResponse&gt;, IClientServiceRequest&lt;RewriteResponse&gt;, IClientServiceRequest</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
               <a id="Google_Apis_Storage_v1_ObjectsResource_RewriteRequest__ctor_" data-uid="Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.#ctor*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_RewriteRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Object_System_String_System_String_System_String_System_String_" data-uid="Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Object,System.String,System.String,System.String,System.String)">RewriteRequest(Services.IClientService, Object, String, String, String, String)</h4>
+              <h4 id="Google_Apis_Storage_v1_ObjectsResource_RewriteRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Object_System_String_System_String_System_String_System_String_" data-uid="Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Object,System.String,System.String,System.String,System.String)">RewriteRequest(IClientService, Object, String, String, String, String)</h4>
               <div class="markdown level1 summary"><p>Constructs a new Rewrite request.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RewriteRequest(Services.IClientService service, Object body, string sourceBucket, string sourceObject, string destinationBucket, string destinationObject)</code></pre>
+                <pre><code class="lang-csharp hljs">public RewriteRequest(IClientService service, Object body, string sourceBucket, string sourceObject, string destinationBucket, string destinationObject)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -174,7 +235,8 @@ bucket value, if any.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string DestinationBucket { get; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;destinationBucket&quot;, RequestParameterType.Path)]
+public virtual string DestinationBucket { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -200,7 +262,8 @@ path safe, see Encoding URI Path Parts.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string DestinationObject { get; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;destinationObject&quot;, RequestParameterType.Path)]
+public virtual string DestinationObject { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -224,7 +287,8 @@ path safe, see Encoding URI Path Parts.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;ObjectsResource.RewriteRequest.DestinationPredefinedAclEnum&gt; DestinationPredefinedAcl { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;destinationPredefinedAcl&quot;, RequestParameterType.Query)]
+public virtual ObjectsResource.RewriteRequest.DestinationPredefinedAclEnum? DestinationPredefinedAcl { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -265,6 +329,8 @@ path safe, see Encoding URI Path Parts.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.RewriteResponse&gt;.HttpMethod</span></div>
               <a id="Google_Apis_Storage_v1_ObjectsResource_RewriteRequest_IfGenerationMatch_" data-uid="Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.IfGenerationMatch*"></a>
               <h4 id="Google_Apis_Storage_v1_ObjectsResource_RewriteRequest_IfGenerationMatch" data-uid="Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.IfGenerationMatch">IfGenerationMatch</h4>
               <div class="markdown level1 summary"><p>Makes the operation conditional on whether the destination object&#39;s current generation matches
@@ -273,7 +339,8 @@ the given value.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;long&gt; IfGenerationMatch { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifGenerationMatch&quot;, RequestParameterType.Query)]
+public virtual long ? IfGenerationMatch { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -298,7 +365,8 @@ match the given value.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;long&gt; IfGenerationNotMatch { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifGenerationNotMatch&quot;, RequestParameterType.Query)]
+public virtual long ? IfGenerationNotMatch { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -323,7 +391,8 @@ matches the given value.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;long&gt; IfMetagenerationMatch { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifMetagenerationMatch&quot;, RequestParameterType.Query)]
+public virtual long ? IfMetagenerationMatch { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -348,7 +417,8 @@ not match the given value.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;long&gt; IfMetagenerationNotMatch { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifMetagenerationNotMatch&quot;, RequestParameterType.Query)]
+public virtual long ? IfMetagenerationNotMatch { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -373,7 +443,8 @@ value.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;long&gt; IfSourceGenerationMatch { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifSourceGenerationMatch&quot;, RequestParameterType.Query)]
+public virtual long ? IfSourceGenerationMatch { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -398,7 +469,8 @@ given value.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;long&gt; IfSourceGenerationNotMatch { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifSourceGenerationNotMatch&quot;, RequestParameterType.Query)]
+public virtual long ? IfSourceGenerationNotMatch { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -423,7 +495,8 @@ the given value.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;long&gt; IfSourceMetagenerationMatch { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifSourceMetagenerationMatch&quot;, RequestParameterType.Query)]
+public virtual long ? IfSourceMetagenerationMatch { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -448,7 +521,8 @@ match the given value.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;long&gt; IfSourceMetagenerationNotMatch { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifSourceMetagenerationNotMatch&quot;, RequestParameterType.Query)]
+public virtual long ? IfSourceMetagenerationNotMatch { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -476,7 +550,8 @@ rewrite calls else you&#39;ll get an error that the rewriteToken is invalid.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;long&gt; MaxBytesRewrittenPerCall { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;maxBytesRewrittenPerCall&quot;, RequestParameterType.Query)]
+public virtual long ? MaxBytesRewrittenPerCall { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -517,6 +592,8 @@ rewrite calls else you&#39;ll get an error that the rewriteToken is invalid.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.RewriteResponse&gt;.MethodName</span></div>
               <a id="Google_Apis_Storage_v1_ObjectsResource_RewriteRequest_Projection_" data-uid="Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.Projection*"></a>
               <h4 id="Google_Apis_Storage_v1_ObjectsResource_RewriteRequest_Projection" data-uid="Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.Projection">Projection</h4>
               <div class="markdown level1 summary"><p>Set of properties to return. Defaults to noAcl, unless the object resource specifies the acl
@@ -525,7 +602,8 @@ property, when it defaults to full.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;ObjectsResource.RewriteRequest.ProjectionEnum&gt; Projection { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;projection&quot;, RequestParameterType.Query)]
+public virtual ObjectsResource.RewriteRequest.ProjectionEnum? Projection { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -566,6 +644,8 @@ property, when it defaults to full.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.RewriteResponse&gt;.RestPath</span></div>
               <a id="Google_Apis_Storage_v1_ObjectsResource_RewriteRequest_RewriteToken_" data-uid="Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.RewriteToken*"></a>
               <h4 id="Google_Apis_Storage_v1_ObjectsResource_RewriteRequest_RewriteToken" data-uid="Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.RewriteToken">RewriteToken</h4>
               <div class="markdown level1 summary"><p>Include this field (from the previous rewrite response) on each rewrite request after the first
@@ -576,7 +656,8 @@ request.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string RewriteToken { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;rewriteToken&quot;, RequestParameterType.Query)]
+public virtual string RewriteToken { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -600,7 +681,8 @@ request.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string SourceBucket { get; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;sourceBucket&quot;, RequestParameterType.Path)]
+public virtual string SourceBucket { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -625,7 +707,8 @@ the default).</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;long&gt; SourceGeneration { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;sourceGeneration&quot;, RequestParameterType.Query)]
+public virtual long ? SourceGeneration { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -650,7 +733,33 @@ safe, see Encoding URI Path Parts.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string SourceObject { get; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;sourceObject&quot;, RequestParameterType.Path)]
+public virtual string SourceObject { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Storage_v1_ObjectsResource_RewriteRequest_UserProject_" data-uid="Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.UserProject*"></a>
+              <h4 id="Google_Apis_Storage_v1_ObjectsResource_RewriteRequest_UserProject" data-uid="Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.UserProject">UserProject</h4>
+              <div class="markdown level1 summary"><p>The project number to be billed for this request, for Requester Pays buckets.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;userProject&quot;, RequestParameterType.Query)]
+public virtual string UserProject { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -693,6 +802,8 @@ safe, see Encoding URI Path Parts.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.RewriteResponse&gt;.GetBody()</span></div>
               <a id="Google_Apis_Storage_v1_ObjectsResource_RewriteRequest_InitParameters_" data-uid="Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.InitParameters*"></a>
               <h4 id="Google_Apis_Storage_v1_ObjectsResource_RewriteRequest_InitParameters" data-uid="Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.InitParameters">InitParameters()</h4>
               <div class="markdown level1 summary"><p>Initializes Rewrite parameter list.</p>

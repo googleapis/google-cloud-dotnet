@@ -254,7 +254,8 @@ current platform.
                   <div><span class="xref">System.IDisposable.Dispose()</span></div>
               <a id="Google_Cloud_Diagnostics_AspNet_GoogleExceptionLogger_Log_" data-uid="Google.Cloud.Diagnostics.AspNet.GoogleExceptionLogger.Log*"></a>
               <h4 id="Google_Cloud_Diagnostics_AspNet_GoogleExceptionLogger_Log_System_Exception_System_Web_HttpContext_" data-uid="Google.Cloud.Diagnostics.AspNet.GoogleExceptionLogger.Log(System.Exception,System.Web.HttpContext)">Log(Exception, HttpContext)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Logs an exception that occurred.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -273,20 +274,24 @@ current platform.
                   <tr>
                     <td><span class="xref">System.Exception</span></td>
                     <td><span class="parametername">exception</span></td>
-                    <td></td>
+                    <td><p>The exception to log. Cannot be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Web.HttpContext</span></td>
                     <td><span class="parametername">context</span></td>
-                    <td></td>
+                    <td><p>Optional, the current http context. If unset the
+    current context will be retrieved automatically.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Cloud.Diagnostics.Common.IExceptionLogger.Log(System.Exception, System.Web.HttpContext)</span></div>
+                  <div><a class="xref" href="Google.Cloud.Diagnostics.Common.IExceptionLogger.html#Google_Cloud_Diagnostics_Common_IExceptionLogger_Log_System_Exception_System_Web_HttpContext_">IExceptionLogger.Log(Exception, HttpContext)</a></div>
               <a id="Google_Cloud_Diagnostics_AspNet_GoogleExceptionLogger_LogAsync_" data-uid="Google.Cloud.Diagnostics.AspNet.GoogleExceptionLogger.LogAsync*"></a>
               <h4 id="Google_Cloud_Diagnostics_AspNet_GoogleExceptionLogger_LogAsync_System_Exception_System_Web_HttpContext_System_Threading_CancellationToken_" data-uid="Google.Cloud.Diagnostics.AspNet.GoogleExceptionLogger.LogAsync(System.Exception,System.Web.HttpContext,System.Threading.CancellationToken)">LogAsync(Exception, HttpContext, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Asynchronously logs an exception that occurred.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -305,17 +310,21 @@ current platform.
                   <tr>
                     <td><span class="xref">System.Exception</span></td>
                     <td><span class="parametername">exception</span></td>
-                    <td></td>
+                    <td><p>The exception to log. Cannot be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Web.HttpContext</span></td>
                     <td><span class="parametername">context</span></td>
-                    <td></td>
+                    <td><p>Optional, the current http context. If unset the
+    current context will be retrieved automatically.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><span class="parametername">cancellationToken</span></td>
-                    <td></td>
+                    <td><p>Optional, The token to monitor for cancellation requests.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -330,12 +339,13 @@ current platform.
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td></td>
+                    <td><p>A task representing the asynchronous operation.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Cloud.Diagnostics.Common.IExceptionLogger.LogAsync(System.Exception, System.Web.HttpContext, System.Threading.CancellationToken)</span></div>
+                  <div><a class="xref" href="Google.Cloud.Diagnostics.Common.IExceptionLogger.html#Google_Cloud_Diagnostics_Common_IExceptionLogger_LogAsync_System_Exception_System_Web_HttpContext_System_Threading_CancellationToken_">IExceptionLogger.LogAsync(Exception, HttpContext, CancellationToken)</a></div>
                         </article>
           </div>
           

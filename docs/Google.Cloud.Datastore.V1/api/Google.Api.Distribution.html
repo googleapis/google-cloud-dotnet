@@ -94,10 +94,10 @@ will render the <code>mean</code> and <code>sum_of_squared_deviation</code> fiel
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
-                  <span class="xref">System.Object.ToString()</span>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
                 </div>
                 <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
                 </div>
                 <div>
                   <span class="xref">System.Object.GetType()</span>
@@ -112,6 +112,181 @@ will render the <code>mean</code> and <code>sum_of_squared_deviation</code> fiel
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public sealed class Distribution : IMessage&lt;Distribution&gt;, IMessage, IEquatable&lt;Distribution&gt;, IDeepCloneable&lt;Distribution&gt;</code></pre>
               </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <a id="Google_Api_Distribution__ctor_" data-uid="Google.Api.Distribution.#ctor*"></a>
+              <h4 id="Google_Api_Distribution__ctor" data-uid="Google.Api.Distribution.#ctor">Distribution()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Distribution()</code></pre>
+              </div>
+              <a id="Google_Api_Distribution__ctor_" data-uid="Google.Api.Distribution.#ctor*"></a>
+              <h4 id="Google_Api_Distribution__ctor_Google_Api_Distribution_" data-uid="Google.Api.Distribution.#ctor(Google.Api.Distribution)">Distribution(Distribution)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Distribution(Distribution other)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Distribution.html">Distribution</a></td>
+                    <td><span class="parametername">other</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="fields">Fields
+              </h3>
+              <h4 id="Google_Api_Distribution_BucketCountsFieldNumber" data-uid="Google.Api.Distribution.BucketCountsFieldNumber">BucketCountsFieldNumber</h4>
+              <div class="markdown level1 summary"><p>Field number for the &quot;bucket_counts&quot; field.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public const int BucketCountsFieldNumber = 7</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Api_Distribution_BucketOptionsFieldNumber" data-uid="Google.Api.Distribution.BucketOptionsFieldNumber">BucketOptionsFieldNumber</h4>
+              <div class="markdown level1 summary"><p>Field number for the &quot;bucket_options&quot; field.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public const int BucketOptionsFieldNumber = 6</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Api_Distribution_CountFieldNumber" data-uid="Google.Api.Distribution.CountFieldNumber">CountFieldNumber</h4>
+              <div class="markdown level1 summary"><p>Field number for the &quot;count&quot; field.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public const int CountFieldNumber = 1</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Api_Distribution_MeanFieldNumber" data-uid="Google.Api.Distribution.MeanFieldNumber">MeanFieldNumber</h4>
+              <div class="markdown level1 summary"><p>Field number for the &quot;mean&quot; field.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public const int MeanFieldNumber = 2</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Api_Distribution_RangeFieldNumber" data-uid="Google.Api.Distribution.RangeFieldNumber">RangeFieldNumber</h4>
+              <div class="markdown level1 summary"><p>Field number for the &quot;range&quot; field.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public const int RangeFieldNumber = 4</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Api_Distribution_SumOfSquaredDeviationFieldNumber" data-uid="Google.Api.Distribution.SumOfSquaredDeviationFieldNumber">SumOfSquaredDeviationFieldNumber</h4>
+              <div class="markdown level1 summary"><p>Field number for the &quot;sum_of_squared_deviation&quot; field.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public const int SumOfSquaredDeviationFieldNumber = 3</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h3 id="properties">Properties
               </h3>
               <a id="Google_Api_Distribution_BucketCounts_" data-uid="Google.Api.Distribution.BucketCounts*"></a>
@@ -194,6 +369,29 @@ have numbers 1 through N-2; the overflow bucket has number N-1).</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Distribution_Descriptor_" data-uid="Google.Api.Distribution.Descriptor*"></a>
+              <h4 id="Google_Api_Distribution_Descriptor" data-uid="Google.Api.Distribution.Descriptor">Descriptor</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html">MessageDescriptor</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <a id="Google_Api_Distribution_Mean_" data-uid="Google.Api.Distribution.Mean*"></a>
               <h4 id="Google_Api_Distribution_Mean" data-uid="Google.Api.Distribution.Mean">Mean</h4>
               <div class="markdown level1 summary"><p>The arithmetic mean of the values in the population. If <code>count</code> is zero
@@ -215,6 +413,29 @@ then this field must be zero.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Double</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Distribution_Parser_" data-uid="Google.Api.Distribution.Parser*"></a>
+              <h4 id="Google_Api_Distribution_Parser" data-uid="Google.Api.Distribution.Parser">Parser</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static MessageParser&lt;Distribution&gt; Parser { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.MessageParser-1.html">MessageParser</a>&lt;<a class="xref" href="Google.Api.Distribution.html">Distribution</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -273,6 +494,300 @@ describes Welford&#39;s method for accumulating this sum in one pass.</p>
                   </tr>
                 </tbody>
               </table>
+              <h3 id="methods">Methods
+              </h3>
+              <a id="Google_Api_Distribution_CalculateSize_" data-uid="Google.Api.Distribution.CalculateSize*"></a>
+              <h4 id="Google_Api_Distribution_CalculateSize" data-uid="Google.Api.Distribution.CalculateSize">CalculateSize()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int CalculateSize()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
+              <a id="Google_Api_Distribution_Clone_" data-uid="Google.Api.Distribution.Clone*"></a>
+              <h4 id="Google_Api_Distribution_Clone" data-uid="Google.Api.Distribution.Clone">Clone()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Distribution Clone()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Distribution.html">Distribution</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;T&gt;.Clone()</a></div>
+              <a id="Google_Api_Distribution_Equals_" data-uid="Google.Api.Distribution.Equals*"></a>
+              <h4 id="Google_Api_Distribution_Equals_Google_Api_Distribution_" data-uid="Google.Api.Distribution.Equals(Google.Api.Distribution)">Equals(Distribution)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Equals(Distribution other)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Distribution.html">Distribution</a></td>
+                    <td><span class="parametername">other</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.IEquatable&lt;T&gt;.Equals(T)</span></div>
+              <a id="Google_Api_Distribution_Equals_" data-uid="Google.Api.Distribution.Equals*"></a>
+              <h4 id="Google_Api_Distribution_Equals_System_Object_" data-uid="Google.Api.Distribution.Equals(System.Object)">Equals(Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override bool Equals(object other)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">other</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+              <a id="Google_Api_Distribution_GetHashCode_" data-uid="Google.Api.Distribution.GetHashCode*"></a>
+              <h4 id="Google_Api_Distribution_GetHashCode" data-uid="Google.Api.Distribution.GetHashCode">GetHashCode()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.GetHashCode()</span></div>
+              <a id="Google_Api_Distribution_MergeFrom_" data-uid="Google.Api.Distribution.MergeFrom*"></a>
+              <h4 id="Google_Api_Distribution_MergeFrom_Google_Api_Distribution_" data-uid="Google.Api.Distribution.MergeFrom(Google.Api.Distribution)">MergeFrom(Distribution)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void MergeFrom(Distribution other)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Distribution.html">Distribution</a></td>
+                    <td><span class="parametername">other</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;T&gt;.MergeFrom(T)</a></div>
+              <a id="Google_Api_Distribution_MergeFrom_" data-uid="Google.Api.Distribution.MergeFrom*"></a>
+              <h4 id="Google_Api_Distribution_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.Distribution.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void MergeFrom(CodedInputStream input)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html">CodedInputStream</a></td>
+                    <td><span class="parametername">input</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
+              <a id="Google_Api_Distribution_ToString_" data-uid="Google.Api.Distribution.ToString*"></a>
+              <h4 id="Google_Api_Distribution_ToString" data-uid="Google.Api.Distribution.ToString">ToString()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.ToString()</span></div>
+              <a id="Google_Api_Distribution_WriteTo_" data-uid="Google.Api.Distribution.WriteTo*"></a>
+              <h4 id="Google_Api_Distribution_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.Distribution.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void WriteTo(CodedOutputStream output)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html">CodedOutputStream</a></td>
+                    <td><span class="parametername">output</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
+              <h3 id="eii">Explicit Interface Implementations
+              </h3>
+              <a id="Google_Api_Distribution_Google_Protobuf_IMessage_Descriptor_" data-uid="Google.Api.Distribution.Google#Protobuf#IMessage#Descriptor*"></a>
+              <h4 id="Google_Api_Distribution_Google_Protobuf_IMessage_Descriptor" data-uid="Google.Api.Distribution.Google#Protobuf#IMessage#Descriptor">IMessage.Descriptor</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html">MessageDescriptor</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_Descriptor">IMessage.Descriptor</a></div>
                         </article>
           </div>
           

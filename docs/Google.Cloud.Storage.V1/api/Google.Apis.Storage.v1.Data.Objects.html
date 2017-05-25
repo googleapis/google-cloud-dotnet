@@ -80,11 +80,35 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">Objects</span></div>
               </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
               <h6><strong>Namespace</strong>:Google.Apis.Storage.v1.Data</h6>
               <h6><strong>Assembly</strong>:Google.Apis.Storage.v1.dll</h6>
               <h5 id="Google_Apis_Storage_v1_Data_Objects_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class Objects : Requests.IDirectResponseSchema</code></pre>
+                <pre><code class="lang-csharp hljs">public class Objects : IDirectResponseSchema</code></pre>
               </div>
               <h3 id="properties">Properties
               </h3>
@@ -112,6 +136,8 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
               <a id="Google_Apis_Storage_v1_Data_Objects_Items_" data-uid="Google.Apis.Storage.v1.Data.Objects.Items*"></a>
               <h4 id="Google_Apis_Storage_v1_Data_Objects_Items" data-uid="Google.Apis.Storage.v1.Data.Objects.Items">Items</h4>
               <div class="markdown level1 summary"><p>The list of items.</p>
@@ -119,7 +145,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Collections.Generic.IList&lt;Object&gt; Items { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;items&quot;)]
+public virtual IList&lt;Object&gt; Items { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -143,7 +170,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string Kind { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;kind&quot;)]
+public virtual string Kind { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -168,7 +196,8 @@ request to return the next page of results.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string NextPageToken { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;nextPageToken&quot;)]
+public virtual string NextPageToken { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -193,7 +222,8 @@ delimiter.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Collections.Generic.IList&lt;string&gt; Prefixes { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;prefixes&quot;)]
+public virtual IList&lt;string&gt; Prefixes { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">

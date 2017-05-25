@@ -111,25 +111,18 @@ foreach (TranslationResult result in results)
     Console.WriteLine($&quot;Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}&quot;);
 }
 </code></pre><h2 id="specifying-a-translation-model">Specifying a translation model</h2>
-<p>The Translation API is implemented by multiple underlying models. At the time of writing, the two models available are:</p>
-<ul>
-<li>Neural Machine Translation (NMT)</li>
-<li>Phrase-Based Machine Translation (PBMT, also known as &quot;base&quot;)</li>
-</ul>
-<p>The current default is to use NMT where it is available for the requested language translation pair, but this is
-more computationally-intensive than the PBMT model; if you have low latency requirements, you may wish to explicitly
-required PBMT. Explicitly requesting NMT is valid, but currently has no effect, as this is the current default. If
-no model is specified, the service will pick a model, which means if a new model is introduced as the default, you won&#39;t need
-to change your code or even update this client library package in order to use it.</p>
+<p>The Translation API is implemented by multiple underlying models.
+At the time of writing, one model is available in addition to &quot;base&quot;: Neural Machine Translation (NMT).
+If you don&#39;t explicitly specify a model to use, the service will pick one.</p>
 <p>See the <a href="https://cloud.google.com/translate/release-notes">API release notes</a> for on-going changes and new models.</p>
-<p>When specifying a model, it can either be selected as the model to use for all requests for that <code>TranslationClient</code> instance:</p>
-<pre><code class="lang-cs">TranslationClient client = TranslationClient.Create(model: TranslationModel.PhraseBasedMachineTranslation);
+<p>When specifying a model, it can either be selected as the model to use for all requests for that <code>TranslationClient</code> instance.</p>
+<pre><code class="lang-cs">TranslationClient client = TranslationClient.Create(model: TranslationModel.Base);
 TranslationResult result = client.TranslateText(&quot;It is raining.&quot;, LanguageCodes.French);
 Console.WriteLine($&quot;Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}&quot;);
 </code></pre><p>... or it can be specified on a per-request basis:</p>
 <pre><code class="lang-cs">TranslationClient client = TranslationClient.Create();
 TranslationResult result = client.TranslateText(&quot;It is raining.&quot;, LanguageCodes.French,
-    model: TranslationModel.PhraseBasedMachineTranslation);
+    model: TranslationModel.Base);
 Console.WriteLine($&quot;Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}&quot;);
 </code></pre>
             </article>

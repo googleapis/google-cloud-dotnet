@@ -337,7 +337,18 @@ necessary.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_CreateLogMetric_Google_Cloud_Logging_V2_CreateLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.CreateLogMetric(Google.Cloud.Logging.V2.CreateLogMetricRequest,Google.Api.Gax.Grpc.CallSettings)">CreateLogMetric(CreateLogMetricRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates a logs-based metric.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = MetricsServiceV2Client.Create();
+// Initialize request argument(s)
+CreateLogMetricRequest request = new CreateLogMetricRequest
+{
+    ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;)),
+    Metric = new LogMetric(),
+};
+// Make the request
+LogMetric response = metricsServiceV2Client.CreateLogMetric(request);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual LogMetric CreateLogMetric(CreateLogMetricRequest request, CallSettings callSettings = null)</code></pre>
@@ -386,7 +397,15 @@ necessary.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_CreateLogMetric_Google_Cloud_Logging_V2_ParentNameOneof_Google_Cloud_Logging_V2_LogMetric_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.CreateLogMetric(Google.Cloud.Logging.V2.ParentNameOneof,Google.Cloud.Logging.V2.LogMetric,Google.Api.Gax.Grpc.CallSettings)">CreateLogMetric(ParentNameOneof, LogMetric, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates a logs-based metric.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = MetricsServiceV2Client.Create();
+// Initialize request argument(s)
+ParentNameOneof parent = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;));
+LogMetric metric = new LogMetric();
+// Make the request
+LogMetric response = metricsServiceV2Client.CreateLogMetric(parent, metric);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual LogMetric CreateLogMetric(ParentNameOneof parent, LogMetric metric, CallSettings callSettings = null)</code></pre>
@@ -444,7 +463,18 @@ already exists.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_CreateLogMetricAsync_Google_Cloud_Logging_V2_CreateLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.CreateLogMetricAsync(Google.Cloud.Logging.V2.CreateLogMetricRequest,Google.Api.Gax.Grpc.CallSettings)">CreateLogMetricAsync(CreateLogMetricRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates a logs-based metric.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+CreateLogMetricRequest request = new CreateLogMetricRequest
+{
+    ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;)),
+    Metric = new LogMetric(),
+};
+// Make the request
+LogMetric response = await metricsServiceV2Client.CreateLogMetricAsync(request);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;LogMetric&gt; CreateLogMetricAsync(CreateLogMetricRequest request, CallSettings callSettings = null)</code></pre>
@@ -493,7 +523,15 @@ already exists.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_CreateLogMetricAsync_Google_Cloud_Logging_V2_ParentNameOneof_Google_Cloud_Logging_V2_LogMetric_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.CreateLogMetricAsync(Google.Cloud.Logging.V2.ParentNameOneof,Google.Cloud.Logging.V2.LogMetric,Google.Api.Gax.Grpc.CallSettings)">CreateLogMetricAsync(ParentNameOneof, LogMetric, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates a logs-based metric.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+ParentNameOneof parent = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;));
+LogMetric metric = new LogMetric();
+// Make the request
+LogMetric response = await metricsServiceV2Client.CreateLogMetricAsync(parent, metric);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;LogMetric&gt; CreateLogMetricAsync(ParentNameOneof parent, LogMetric metric, CallSettings callSettings = null)</code></pre>
@@ -551,7 +589,15 @@ already exists.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_CreateLogMetricAsync_Google_Cloud_Logging_V2_ParentNameOneof_Google_Cloud_Logging_V2_LogMetric_System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.CreateLogMetricAsync(Google.Cloud.Logging.V2.ParentNameOneof,Google.Cloud.Logging.V2.LogMetric,System.Threading.CancellationToken)">CreateLogMetricAsync(ParentNameOneof, LogMetric, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Creates a logs-based metric.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+ParentNameOneof parent = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;));
+LogMetric metric = new LogMetric();
+// Make the request
+LogMetric response = await metricsServiceV2Client.CreateLogMetricAsync(parent, metric);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;LogMetric&gt; CreateLogMetricAsync(ParentNameOneof parent, LogMetric metric, CancellationToken cancellationToken)</code></pre>
@@ -609,7 +655,17 @@ already exists.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_DeleteLogMetric_Google_Cloud_Logging_V2_DeleteLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.DeleteLogMetric(Google.Cloud.Logging.V2.DeleteLogMetricRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteLogMetric(DeleteLogMetricRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes a logs-based metric.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = MetricsServiceV2Client.Create();
+// Initialize request argument(s)
+DeleteLogMetricRequest request = new DeleteLogMetricRequest
+{
+    MetricNameAsMetricNameOneof = MetricNameOneof.From(new MetricName(&quot;[PROJECT]&quot;, &quot;[METRIC]&quot;)),
+};
+// Make the request
+metricsServiceV2Client.DeleteLogMetric(request);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void DeleteLogMetric(DeleteLogMetricRequest request, CallSettings callSettings = null)</code></pre>
@@ -642,7 +698,14 @@ already exists.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_DeleteLogMetric_Google_Cloud_Logging_V2_MetricNameOneof_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.DeleteLogMetric(Google.Cloud.Logging.V2.MetricNameOneof,Google.Api.Gax.Grpc.CallSettings)">DeleteLogMetric(MetricNameOneof, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes a logs-based metric.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = MetricsServiceV2Client.Create();
+// Initialize request argument(s)
+MetricNameOneof metricName = MetricNameOneof.From(new MetricName(&quot;[PROJECT]&quot;, &quot;[METRIC]&quot;));
+// Make the request
+metricsServiceV2Client.DeleteLogMetric(metricName);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void DeleteLogMetric(MetricNameOneof metricName, CallSettings callSettings = null)</code></pre>
@@ -676,7 +739,17 @@ already exists.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_DeleteLogMetricAsync_Google_Cloud_Logging_V2_DeleteLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.DeleteLogMetricAsync(Google.Cloud.Logging.V2.DeleteLogMetricRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteLogMetricAsync(DeleteLogMetricRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes a logs-based metric.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+DeleteLogMetricRequest request = new DeleteLogMetricRequest
+{
+    MetricNameAsMetricNameOneof = MetricNameOneof.From(new MetricName(&quot;[PROJECT]&quot;, &quot;[METRIC]&quot;)),
+};
+// Make the request
+await metricsServiceV2Client.DeleteLogMetricAsync(request);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteLogMetricAsync(DeleteLogMetricRequest request, CallSettings callSettings = null)</code></pre>
@@ -725,7 +798,14 @@ already exists.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_DeleteLogMetricAsync_Google_Cloud_Logging_V2_MetricNameOneof_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.DeleteLogMetricAsync(Google.Cloud.Logging.V2.MetricNameOneof,Google.Api.Gax.Grpc.CallSettings)">DeleteLogMetricAsync(MetricNameOneof, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes a logs-based metric.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+MetricNameOneof metricName = MetricNameOneof.From(new MetricName(&quot;[PROJECT]&quot;, &quot;[METRIC]&quot;));
+// Make the request
+await metricsServiceV2Client.DeleteLogMetricAsync(metricName);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteLogMetricAsync(MetricNameOneof metricName, CallSettings callSettings = null)</code></pre>
@@ -775,7 +855,14 @@ already exists.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_DeleteLogMetricAsync_Google_Cloud_Logging_V2_MetricNameOneof_System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.DeleteLogMetricAsync(Google.Cloud.Logging.V2.MetricNameOneof,System.Threading.CancellationToken)">DeleteLogMetricAsync(MetricNameOneof, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Deletes a logs-based metric.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+MetricNameOneof metricName = MetricNameOneof.From(new MetricName(&quot;[PROJECT]&quot;, &quot;[METRIC]&quot;));
+// Make the request
+await metricsServiceV2Client.DeleteLogMetricAsync(metricName);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteLogMetricAsync(MetricNameOneof metricName, CancellationToken cancellationToken)</code></pre>
@@ -825,7 +912,17 @@ already exists.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_GetLogMetric_Google_Cloud_Logging_V2_GetLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.GetLogMetric(Google.Cloud.Logging.V2.GetLogMetricRequest,Google.Api.Gax.Grpc.CallSettings)">GetLogMetric(GetLogMetricRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets a logs-based metric.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = MetricsServiceV2Client.Create();
+// Initialize request argument(s)
+GetLogMetricRequest request = new GetLogMetricRequest
+{
+    MetricNameAsMetricNameOneof = MetricNameOneof.From(new MetricName(&quot;[PROJECT]&quot;, &quot;[METRIC]&quot;)),
+};
+// Make the request
+LogMetric response = metricsServiceV2Client.GetLogMetric(request);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual LogMetric GetLogMetric(GetLogMetricRequest request, CallSettings callSettings = null)</code></pre>
@@ -874,7 +971,14 @@ already exists.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_GetLogMetric_Google_Cloud_Logging_V2_MetricNameOneof_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.GetLogMetric(Google.Cloud.Logging.V2.MetricNameOneof,Google.Api.Gax.Grpc.CallSettings)">GetLogMetric(MetricNameOneof, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets a logs-based metric.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = MetricsServiceV2Client.Create();
+// Initialize request argument(s)
+MetricNameOneof metricName = MetricNameOneof.From(new MetricName(&quot;[PROJECT]&quot;, &quot;[METRIC]&quot;));
+// Make the request
+LogMetric response = metricsServiceV2Client.GetLogMetric(metricName);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual LogMetric GetLogMetric(MetricNameOneof metricName, CallSettings callSettings = null)</code></pre>
@@ -924,7 +1028,17 @@ already exists.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_GetLogMetricAsync_Google_Cloud_Logging_V2_GetLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.GetLogMetricAsync(Google.Cloud.Logging.V2.GetLogMetricRequest,Google.Api.Gax.Grpc.CallSettings)">GetLogMetricAsync(GetLogMetricRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets a logs-based metric.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+GetLogMetricRequest request = new GetLogMetricRequest
+{
+    MetricNameAsMetricNameOneof = MetricNameOneof.From(new MetricName(&quot;[PROJECT]&quot;, &quot;[METRIC]&quot;)),
+};
+// Make the request
+LogMetric response = await metricsServiceV2Client.GetLogMetricAsync(request);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;LogMetric&gt; GetLogMetricAsync(GetLogMetricRequest request, CallSettings callSettings = null)</code></pre>
@@ -973,7 +1087,14 @@ already exists.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_GetLogMetricAsync_Google_Cloud_Logging_V2_MetricNameOneof_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.GetLogMetricAsync(Google.Cloud.Logging.V2.MetricNameOneof,Google.Api.Gax.Grpc.CallSettings)">GetLogMetricAsync(MetricNameOneof, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets a logs-based metric.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+MetricNameOneof metricName = MetricNameOneof.From(new MetricName(&quot;[PROJECT]&quot;, &quot;[METRIC]&quot;));
+// Make the request
+LogMetric response = await metricsServiceV2Client.GetLogMetricAsync(metricName);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;LogMetric&gt; GetLogMetricAsync(MetricNameOneof metricName, CallSettings callSettings = null)</code></pre>
@@ -1023,7 +1144,14 @@ already exists.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_GetLogMetricAsync_Google_Cloud_Logging_V2_MetricNameOneof_System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.GetLogMetricAsync(Google.Cloud.Logging.V2.MetricNameOneof,System.Threading.CancellationToken)">GetLogMetricAsync(MetricNameOneof, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Gets a logs-based metric.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+MetricNameOneof metricName = MetricNameOneof.From(new MetricName(&quot;[PROJECT]&quot;, &quot;[METRIC]&quot;));
+// Make the request
+LogMetric response = await metricsServiceV2Client.GetLogMetricAsync(metricName);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;LogMetric&gt; GetLogMetricAsync(MetricNameOneof metricName, CancellationToken cancellationToken)</code></pre>
@@ -1073,7 +1201,48 @@ already exists.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_ListLogMetrics_Google_Cloud_Logging_V2_ListLogMetricsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.ListLogMetrics(Google.Cloud.Logging.V2.ListLogMetricsRequest,Google.Api.Gax.Grpc.CallSettings)">ListLogMetrics(ListLogMetricsRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists logs-based metrics.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = MetricsServiceV2Client.Create();
+// Initialize request argument(s)
+ListLogMetricsRequest request = new ListLogMetricsRequest
+{
+    ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;)),
+};
+// Make the request
+PagedEnumerable&lt;ListLogMetricsResponse, LogMetric&gt; response =
+    metricsServiceV2Client.ListLogMetrics(request);
+
+// Iterate over all response items, lazily performing RPCs as required
+foreach (LogMetric item in response)
+{
+    // Do something with each item
+    Console.WriteLine(item);
+}
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+foreach (ListLogMetricsResponse page in response.AsRawResponses())
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (LogMetric item in page)
+    {
+        Console.WriteLine(item);
+    }
+}
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;LogMetric&gt; singlePage = response.ReadPage(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (LogMetric item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListLogMetricsResponse, LogMetric&gt; ListLogMetrics(ListLogMetricsRequest request, CallSettings callSettings = null)</code></pre>
@@ -1122,7 +1291,45 @@ already exists.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_ListLogMetrics_Google_Cloud_Logging_V2_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.ListLogMetrics(Google.Cloud.Logging.V2.ParentNameOneof,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListLogMetrics(ParentNameOneof, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists logs-based metrics.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = MetricsServiceV2Client.Create();
+// Initialize request argument(s)
+ParentNameOneof parent = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;));
+// Make the request
+PagedEnumerable&lt;ListLogMetricsResponse, LogMetric&gt; response =
+    metricsServiceV2Client.ListLogMetrics(parent);
+
+// Iterate over all response items, lazily performing RPCs as required
+foreach (LogMetric item in response)
+{
+    // Do something with each item
+    Console.WriteLine(item);
+}
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+foreach (ListLogMetricsResponse page in response.AsRawResponses())
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (LogMetric item in page)
+    {
+        Console.WriteLine(item);
+    }
+}
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;LogMetric&gt; singlePage = response.ReadPage(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (LogMetric item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListLogMetricsResponse, LogMetric&gt; ListLogMetrics(ParentNameOneof parent, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
@@ -1186,7 +1393,48 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_ListLogMetricsAsync_Google_Cloud_Logging_V2_ListLogMetricsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.ListLogMetricsAsync(Google.Cloud.Logging.V2.ListLogMetricsRequest,Google.Api.Gax.Grpc.CallSettings)">ListLogMetricsAsync(ListLogMetricsRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists logs-based metrics.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+ListLogMetricsRequest request = new ListLogMetricsRequest
+{
+    ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;)),
+};
+// Make the request
+PagedAsyncEnumerable&lt;ListLogMetricsResponse, LogMetric&gt; response =
+    metricsServiceV2Client.ListLogMetricsAsync(request);
+
+// Iterate over all response items, lazily performing RPCs as required
+await response.ForEachAsync((LogMetric item) =&gt;
+{
+    // Do something with each item
+    Console.WriteLine(item);
+});
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+await response.AsRawResponses().ForEachAsync((ListLogMetricsResponse page) =&gt;
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (LogMetric item in page)
+    {
+        Console.WriteLine(item);
+    }
+});
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;LogMetric&gt; singlePage = await response.ReadPageAsync(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (LogMetric item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListLogMetricsResponse, LogMetric&gt; ListLogMetricsAsync(ListLogMetricsRequest request, CallSettings callSettings = null)</code></pre>
@@ -1235,7 +1483,45 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_ListLogMetricsAsync_Google_Cloud_Logging_V2_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.ListLogMetricsAsync(Google.Cloud.Logging.V2.ParentNameOneof,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListLogMetricsAsync(ParentNameOneof, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists logs-based metrics.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+ParentNameOneof parent = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;));
+// Make the request
+PagedAsyncEnumerable&lt;ListLogMetricsResponse, LogMetric&gt; response =
+    metricsServiceV2Client.ListLogMetricsAsync(parent);
+
+// Iterate over all response items, lazily performing RPCs as required
+await response.ForEachAsync((LogMetric item) =&gt;
+{
+    // Do something with each item
+    Console.WriteLine(item);
+});
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+await response.AsRawResponses().ForEachAsync((ListLogMetricsResponse page) =&gt;
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (LogMetric item in page)
+    {
+        Console.WriteLine(item);
+    }
+});
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;LogMetric&gt; singlePage = await response.ReadPageAsync(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (LogMetric item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListLogMetricsResponse, LogMetric&gt; ListLogMetricsAsync(ParentNameOneof parent, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
@@ -1331,7 +1617,15 @@ in turn be shut down by another call to this method.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_UpdateLogMetric_Google_Cloud_Logging_V2_MetricNameOneof_Google_Cloud_Logging_V2_LogMetric_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.UpdateLogMetric(Google.Cloud.Logging.V2.MetricNameOneof,Google.Cloud.Logging.V2.LogMetric,Google.Api.Gax.Grpc.CallSettings)">UpdateLogMetric(MetricNameOneof, LogMetric, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates or updates a logs-based metric.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = MetricsServiceV2Client.Create();
+// Initialize request argument(s)
+MetricNameOneof metricName = MetricNameOneof.From(new MetricName(&quot;[PROJECT]&quot;, &quot;[METRIC]&quot;));
+LogMetric metric = new LogMetric();
+// Make the request
+LogMetric response = metricsServiceV2Client.UpdateLogMetric(metricName, metric);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual LogMetric UpdateLogMetric(MetricNameOneof metricName, LogMetric metric, CallSettings callSettings = null)</code></pre>
@@ -1390,7 +1684,18 @@ does not exist in <code>[PROJECT_ID]</code>, then a new metric is created.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_UpdateLogMetric_Google_Cloud_Logging_V2_UpdateLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.UpdateLogMetric(Google.Cloud.Logging.V2.UpdateLogMetricRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateLogMetric(UpdateLogMetricRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates or updates a logs-based metric.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = MetricsServiceV2Client.Create();
+// Initialize request argument(s)
+UpdateLogMetricRequest request = new UpdateLogMetricRequest
+{
+    MetricNameAsMetricNameOneof = MetricNameOneof.From(new MetricName(&quot;[PROJECT]&quot;, &quot;[METRIC]&quot;)),
+    Metric = new LogMetric(),
+};
+// Make the request
+LogMetric response = metricsServiceV2Client.UpdateLogMetric(request);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual LogMetric UpdateLogMetric(UpdateLogMetricRequest request, CallSettings callSettings = null)</code></pre>
@@ -1439,7 +1744,15 @@ does not exist in <code>[PROJECT_ID]</code>, then a new metric is created.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_UpdateLogMetricAsync_Google_Cloud_Logging_V2_MetricNameOneof_Google_Cloud_Logging_V2_LogMetric_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.UpdateLogMetricAsync(Google.Cloud.Logging.V2.MetricNameOneof,Google.Cloud.Logging.V2.LogMetric,Google.Api.Gax.Grpc.CallSettings)">UpdateLogMetricAsync(MetricNameOneof, LogMetric, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates or updates a logs-based metric.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+MetricNameOneof metricName = MetricNameOneof.From(new MetricName(&quot;[PROJECT]&quot;, &quot;[METRIC]&quot;));
+LogMetric metric = new LogMetric();
+// Make the request
+LogMetric response = await metricsServiceV2Client.UpdateLogMetricAsync(metricName, metric);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;LogMetric&gt; UpdateLogMetricAsync(MetricNameOneof metricName, LogMetric metric, CallSettings callSettings = null)</code></pre>
@@ -1498,7 +1811,15 @@ does not exist in <code>[PROJECT_ID]</code>, then a new metric is created.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_UpdateLogMetricAsync_Google_Cloud_Logging_V2_MetricNameOneof_Google_Cloud_Logging_V2_LogMetric_System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.UpdateLogMetricAsync(Google.Cloud.Logging.V2.MetricNameOneof,Google.Cloud.Logging.V2.LogMetric,System.Threading.CancellationToken)">UpdateLogMetricAsync(MetricNameOneof, LogMetric, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Creates or updates a logs-based metric.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+MetricNameOneof metricName = MetricNameOneof.From(new MetricName(&quot;[PROJECT]&quot;, &quot;[METRIC]&quot;));
+LogMetric metric = new LogMetric();
+// Make the request
+LogMetric response = await metricsServiceV2Client.UpdateLogMetricAsync(metricName, metric);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;LogMetric&gt; UpdateLogMetricAsync(MetricNameOneof metricName, LogMetric metric, CancellationToken cancellationToken)</code></pre>
@@ -1557,7 +1878,18 @@ does not exist in <code>[PROJECT_ID]</code>, then a new metric is created.</p>
               <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2Client_UpdateLogMetricAsync_Google_Cloud_Logging_V2_UpdateLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2Client.UpdateLogMetricAsync(Google.Cloud.Logging.V2.UpdateLogMetricRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateLogMetricAsync(UpdateLogMetricRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates or updates a logs-based metric.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+UpdateLogMetricRequest request = new UpdateLogMetricRequest
+{
+    MetricNameAsMetricNameOneof = MetricNameOneof.From(new MetricName(&quot;[PROJECT]&quot;, &quot;[METRIC]&quot;)),
+    Metric = new LogMetric(),
+};
+// Make the request
+LogMetric response = await metricsServiceV2Client.UpdateLogMetricAsync(request);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;LogMetric&gt; UpdateLogMetricAsync(UpdateLogMetricRequest request, CallSettings callSettings = null)</code></pre>

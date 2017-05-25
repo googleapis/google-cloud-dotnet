@@ -13,11 +13,11 @@ references:
   commentId: T:Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension
   fullName: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension
   nameWithType: CloudTraceExtension
-- uid: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,Google.Cloud.Diagnostics.Common.TraceConfiguration,Google.Cloud.Trace.V1.TraceServiceClient,Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)
+- uid: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(IServiceCollection,System.String,Google.Cloud.Diagnostics.Common.TraceConfiguration,TraceServiceClient,Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)
   name: AddGoogleTrace(IServiceCollection, String, TraceConfiguration, TraceServiceClient, TraceDecisionPredicate)
-  href: api/Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_Google_Cloud_Diagnostics_Common_TraceConfiguration_Google_Cloud_Trace_V1_TraceServiceClient_Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_
-  commentId: M:Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,Google.Cloud.Diagnostics.Common.TraceConfiguration,Google.Cloud.Trace.V1.TraceServiceClient,Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)
-  fullName: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.String, Google.Cloud.Diagnostics.Common.TraceConfiguration, Google.Cloud.Trace.V1.TraceServiceClient, Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)
+  href: api/Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_IServiceCollection_System_String_Google_Cloud_Diagnostics_Common_TraceConfiguration_TraceServiceClient_Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_
+  commentId: M:Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(IServiceCollection,System.String,Google.Cloud.Diagnostics.Common.TraceConfiguration,TraceServiceClient,Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)
+  fullName: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(IServiceCollection, System.String, Google.Cloud.Diagnostics.Common.TraceConfiguration, TraceServiceClient, Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)
   nameWithType: CloudTraceExtension.AddGoogleTrace(IServiceCollection, String, TraceConfiguration, TraceServiceClient, TraceDecisionPredicate)
 - uid: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace*
   name: AddGoogleTrace
@@ -25,11 +25,11 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace
   fullName: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace
   nameWithType: CloudTraceExtension.AddGoogleTrace
-- uid: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.UseGoogleTrace(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+- uid: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.UseGoogleTrace(IApplicationBuilder)
   name: UseGoogleTrace(IApplicationBuilder)
-  href: api/Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_UseGoogleTrace_Microsoft_AspNetCore_Builder_IApplicationBuilder_
-  commentId: M:Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.UseGoogleTrace(Microsoft.AspNetCore.Builder.IApplicationBuilder)
-  fullName: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.UseGoogleTrace(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  href: api/Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_UseGoogleTrace_IApplicationBuilder_
+  commentId: M:Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.UseGoogleTrace(IApplicationBuilder)
+  fullName: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.UseGoogleTrace(IApplicationBuilder)
   nameWithType: CloudTraceExtension.UseGoogleTrace(IApplicationBuilder)
 - uid: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.UseGoogleTrace*
   name: UseGoogleTrace
@@ -43,17 +43,17 @@ references:
   commentId: T:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension
   fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension
   nameWithType: ErrorReportingExceptionLoggerExtension
-- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)
+- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection,System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)
   name: AddGoogleExceptionLogging(IServiceCollection, String, String, ErrorReportingOptions)
-  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension_AddGoogleExceptionLogging_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_System_String_Google_Cloud_Diagnostics_Common_ErrorReportingOptions_
-  commentId: M:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)
-  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.String, System.String, Google.Cloud.Diagnostics.Common.ErrorReportingOptions)
+  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension_AddGoogleExceptionLogging_IServiceCollection_System_String_System_String_Google_Cloud_Diagnostics_Common_ErrorReportingOptions_
+  commentId: M:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection,System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)
+  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection, System.String, System.String, Google.Cloud.Diagnostics.Common.ErrorReportingOptions)
   nameWithType: ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection, String, String, ErrorReportingOptions)
-- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)
+- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection,System.String,System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)
   name: AddGoogleExceptionLogging(IServiceCollection, String, String, String, ErrorReportingOptions)
-  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension_AddGoogleExceptionLogging_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_System_String_System_String_Google_Cloud_Diagnostics_Common_ErrorReportingOptions_
-  commentId: M:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)
-  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.String, System.String, System.String, Google.Cloud.Diagnostics.Common.ErrorReportingOptions)
+  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension_AddGoogleExceptionLogging_IServiceCollection_System_String_System_String_System_String_Google_Cloud_Diagnostics_Common_ErrorReportingOptions_
+  commentId: M:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection,System.String,System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)
+  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection, System.String, System.String, System.String, Google.Cloud.Diagnostics.Common.ErrorReportingOptions)
   nameWithType: ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection, String, String, String, ErrorReportingOptions)
 - uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging*
   name: AddGoogleExceptionLogging
@@ -61,11 +61,11 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging
   fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging
   nameWithType: ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging
-- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.UseGoogleExceptionLogging(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.UseGoogleExceptionLogging(IApplicationBuilder)
   name: UseGoogleExceptionLogging(IApplicationBuilder)
-  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension_UseGoogleExceptionLogging_Microsoft_AspNetCore_Builder_IApplicationBuilder_
-  commentId: M:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.UseGoogleExceptionLogging(Microsoft.AspNetCore.Builder.IApplicationBuilder)
-  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.UseGoogleExceptionLogging(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension_UseGoogleExceptionLogging_IApplicationBuilder_
+  commentId: M:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.UseGoogleExceptionLogging(IApplicationBuilder)
+  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.UseGoogleExceptionLogging(IApplicationBuilder)
   nameWithType: ErrorReportingExceptionLoggerExtension.UseGoogleExceptionLogging(IApplicationBuilder)
 - uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.UseGoogleExceptionLogging*
   name: UseGoogleExceptionLogging
@@ -79,11 +79,11 @@ references:
   commentId: T:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware
   fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware
   nameWithType: ErrorReportingExceptionLoggerMiddleware
-- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Google.Cloud.Diagnostics.Common.IExceptionLogger)
+- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.#ctor(RequestDelegate,Google.Cloud.Diagnostics.Common.IExceptionLogger)
   name: ErrorReportingExceptionLoggerMiddleware(RequestDelegate, IExceptionLogger)
-  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Google_Cloud_Diagnostics_Common_IExceptionLogger_
-  commentId: M:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Google.Cloud.Diagnostics.Common.IExceptionLogger)
-  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.ErrorReportingExceptionLoggerMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Google.Cloud.Diagnostics.Common.IExceptionLogger)
+  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerMiddleware__ctor_RequestDelegate_Google_Cloud_Diagnostics_Common_IExceptionLogger_
+  commentId: M:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.#ctor(RequestDelegate,Google.Cloud.Diagnostics.Common.IExceptionLogger)
+  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.ErrorReportingExceptionLoggerMiddleware(RequestDelegate, Google.Cloud.Diagnostics.Common.IExceptionLogger)
   nameWithType: ErrorReportingExceptionLoggerMiddleware.ErrorReportingExceptionLoggerMiddleware(RequestDelegate, IExceptionLogger)
 - uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.#ctor*
   name: ErrorReportingExceptionLoggerMiddleware
@@ -91,11 +91,11 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.#ctor
   fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.ErrorReportingExceptionLoggerMiddleware
   nameWithType: ErrorReportingExceptionLoggerMiddleware.ErrorReportingExceptionLoggerMiddleware
-- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)
+- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.Invoke(HttpContext)
   name: Invoke(HttpContext)
-  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerMiddleware_Invoke_Microsoft_AspNetCore_Http_HttpContext_
-  commentId: M:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)
-  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)
+  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerMiddleware_Invoke_HttpContext_
+  commentId: M:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.Invoke(HttpContext)
+  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.Invoke(HttpContext)
   nameWithType: ErrorReportingExceptionLoggerMiddleware.Invoke(HttpContext)
 - uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.Invoke*
   name: Invoke
@@ -124,11 +124,11 @@ references:
   fullName.vb: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.BeginScope(Of TState)(TState)
   nameWithType: GoogleLogger.BeginScope<TState>(TState)
   nameWithType.vb: GoogleLogger.BeginScope(Of TState)(TState)
-- uid: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.IsEnabled(Microsoft.Extensions.Logging.LogLevel)
+- uid: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.IsEnabled(System.LogLevel)
   name: IsEnabled(LogLevel)
-  href: api/Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.html#Google_Cloud_Diagnostics_AspNetCore_GoogleLogger_IsEnabled_Microsoft_Extensions_Logging_LogLevel_
-  commentId: M:Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.IsEnabled(Microsoft.Extensions.Logging.LogLevel)
-  fullName: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.IsEnabled(Microsoft.Extensions.Logging.LogLevel)
+  href: api/Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.html#Google_Cloud_Diagnostics_AspNetCore_GoogleLogger_IsEnabled_System_LogLevel_
+  commentId: M:Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.IsEnabled(System.LogLevel)
+  fullName: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.IsEnabled(System.LogLevel)
   nameWithType: GoogleLogger.IsEnabled(LogLevel)
 - uid: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.IsEnabled*
   name: IsEnabled
@@ -142,13 +142,13 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.Log
   fullName: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.Log
   nameWithType: GoogleLogger.Log
-- uid: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})
+- uid: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.Log``1(System.LogLevel,EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})
   name: Log<TState>(LogLevel, EventId, TState, Exception, Func<TState, Exception, String>)
-  href: api/Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.html#Google_Cloud_Diagnostics_AspNetCore_GoogleLogger_Log__1_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId___0_System_Exception_System_Func___0_System_Exception_System_String__
-  commentId: M:Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})
+  href: api/Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.html#Google_Cloud_Diagnostics_AspNetCore_GoogleLogger_Log__1_System_LogLevel_EventId___0_System_Exception_System_Func___0_System_Exception_System_String__
+  commentId: M:Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.Log``1(System.LogLevel,EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})
   name.vb: Log(Of TState)(LogLevel, EventId, TState, Exception, Func(Of TState, Exception, String))
-  fullName: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.Log<TState>(Microsoft.Extensions.Logging.LogLevel, Microsoft.Extensions.Logging.EventId, TState, System.Exception, System.Func<TState, System.Exception, System.String>)
-  fullName.vb: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.Log(Of TState)(Microsoft.Extensions.Logging.LogLevel, Microsoft.Extensions.Logging.EventId, TState, System.Exception, System.Func(Of TState, System.Exception, System.String))
+  fullName: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.Log<TState>(System.LogLevel, EventId, TState, System.Exception, System.Func<TState, System.Exception, System.String>)
+  fullName.vb: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.Log(Of TState)(System.LogLevel, EventId, TState, System.Exception, System.Func(Of TState, System.Exception, System.String))
   nameWithType: GoogleLogger.Log<TState>(LogLevel, EventId, TState, Exception, Func<TState, Exception, String>)
   nameWithType.vb: GoogleLogger.Log(Of TState)(LogLevel, EventId, TState, Exception, Func(Of TState, Exception, String))
 - uid: Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions
@@ -157,17 +157,17 @@ references:
   commentId: T:Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions
   fullName: Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions
   nameWithType: GoogleLoggerFactoryExtensions
-- uid: Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.AddGoogle(Microsoft.Extensions.Logging.ILoggerFactory,Google.Cloud.Diagnostics.Common.LogTarget,Google.Cloud.Diagnostics.AspNetCore.LoggerOptions,Google.Cloud.Logging.V2.LoggingServiceV2Client)
+- uid: Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.AddGoogle(ILoggerFactory,Google.Cloud.Diagnostics.Common.LogTarget,Google.Cloud.Diagnostics.AspNetCore.LoggerOptions,LoggingServiceV2Client)
   name: AddGoogle(ILoggerFactory, LogTarget, LoggerOptions, LoggingServiceV2Client)
-  href: api/Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.html#Google_Cloud_Diagnostics_AspNetCore_GoogleLoggerFactoryExtensions_AddGoogle_Microsoft_Extensions_Logging_ILoggerFactory_Google_Cloud_Diagnostics_Common_LogTarget_Google_Cloud_Diagnostics_AspNetCore_LoggerOptions_Google_Cloud_Logging_V2_LoggingServiceV2Client_
-  commentId: M:Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.AddGoogle(Microsoft.Extensions.Logging.ILoggerFactory,Google.Cloud.Diagnostics.Common.LogTarget,Google.Cloud.Diagnostics.AspNetCore.LoggerOptions,Google.Cloud.Logging.V2.LoggingServiceV2Client)
-  fullName: Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.AddGoogle(Microsoft.Extensions.Logging.ILoggerFactory, Google.Cloud.Diagnostics.Common.LogTarget, Google.Cloud.Diagnostics.AspNetCore.LoggerOptions, Google.Cloud.Logging.V2.LoggingServiceV2Client)
+  href: api/Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.html#Google_Cloud_Diagnostics_AspNetCore_GoogleLoggerFactoryExtensions_AddGoogle_ILoggerFactory_Google_Cloud_Diagnostics_Common_LogTarget_Google_Cloud_Diagnostics_AspNetCore_LoggerOptions_LoggingServiceV2Client_
+  commentId: M:Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.AddGoogle(ILoggerFactory,Google.Cloud.Diagnostics.Common.LogTarget,Google.Cloud.Diagnostics.AspNetCore.LoggerOptions,LoggingServiceV2Client)
+  fullName: Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.AddGoogle(ILoggerFactory, Google.Cloud.Diagnostics.Common.LogTarget, Google.Cloud.Diagnostics.AspNetCore.LoggerOptions, LoggingServiceV2Client)
   nameWithType: GoogleLoggerFactoryExtensions.AddGoogle(ILoggerFactory, LogTarget, LoggerOptions, LoggingServiceV2Client)
-- uid: Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.AddGoogle(Microsoft.Extensions.Logging.ILoggerFactory,System.String,Google.Cloud.Diagnostics.AspNetCore.LoggerOptions,Google.Cloud.Logging.V2.LoggingServiceV2Client)
+- uid: Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.AddGoogle(ILoggerFactory,System.String,Google.Cloud.Diagnostics.AspNetCore.LoggerOptions,LoggingServiceV2Client)
   name: AddGoogle(ILoggerFactory, String, LoggerOptions, LoggingServiceV2Client)
-  href: api/Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.html#Google_Cloud_Diagnostics_AspNetCore_GoogleLoggerFactoryExtensions_AddGoogle_Microsoft_Extensions_Logging_ILoggerFactory_System_String_Google_Cloud_Diagnostics_AspNetCore_LoggerOptions_Google_Cloud_Logging_V2_LoggingServiceV2Client_
-  commentId: M:Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.AddGoogle(Microsoft.Extensions.Logging.ILoggerFactory,System.String,Google.Cloud.Diagnostics.AspNetCore.LoggerOptions,Google.Cloud.Logging.V2.LoggingServiceV2Client)
-  fullName: Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.AddGoogle(Microsoft.Extensions.Logging.ILoggerFactory, System.String, Google.Cloud.Diagnostics.AspNetCore.LoggerOptions, Google.Cloud.Logging.V2.LoggingServiceV2Client)
+  href: api/Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.html#Google_Cloud_Diagnostics_AspNetCore_GoogleLoggerFactoryExtensions_AddGoogle_ILoggerFactory_System_String_Google_Cloud_Diagnostics_AspNetCore_LoggerOptions_LoggingServiceV2Client_
+  commentId: M:Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.AddGoogle(ILoggerFactory,System.String,Google.Cloud.Diagnostics.AspNetCore.LoggerOptions,LoggingServiceV2Client)
+  fullName: Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.AddGoogle(ILoggerFactory, System.String, Google.Cloud.Diagnostics.AspNetCore.LoggerOptions, LoggingServiceV2Client)
   nameWithType: GoogleLoggerFactoryExtensions.AddGoogle(ILoggerFactory, String, LoggerOptions, LoggingServiceV2Client)
 - uid: Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.AddGoogle*
   name: AddGoogle
@@ -223,13 +223,13 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.BufferOptions
   fullName: Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.BufferOptions
   nameWithType: LoggerOptions.BufferOptions
-- uid: Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create(Microsoft.Extensions.Logging.LogLevel,System.Collections.Generic.Dictionary{System.String,System.String},Google.Api.MonitoredResource,Google.Cloud.Diagnostics.Common.BufferOptions)
+- uid: Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create(LogLevel,System.Collections.Generic.Dictionary{System.String,System.String},MonitoredResource,Google.Cloud.Diagnostics.Common.BufferOptions)
   name: Create(LogLevel, Dictionary<String, String>, MonitoredResource, BufferOptions)
-  href: api/Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.html#Google_Cloud_Diagnostics_AspNetCore_LoggerOptions_Create_Microsoft_Extensions_Logging_LogLevel_System_Collections_Generic_Dictionary_System_String_System_String__Google_Api_MonitoredResource_Google_Cloud_Diagnostics_Common_BufferOptions_
-  commentId: M:Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create(Microsoft.Extensions.Logging.LogLevel,System.Collections.Generic.Dictionary{System.String,System.String},Google.Api.MonitoredResource,Google.Cloud.Diagnostics.Common.BufferOptions)
+  href: api/Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.html#Google_Cloud_Diagnostics_AspNetCore_LoggerOptions_Create_LogLevel_System_Collections_Generic_Dictionary_System_String_System_String__MonitoredResource_Google_Cloud_Diagnostics_Common_BufferOptions_
+  commentId: M:Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create(LogLevel,System.Collections.Generic.Dictionary{System.String,System.String},MonitoredResource,Google.Cloud.Diagnostics.Common.BufferOptions)
   name.vb: Create(LogLevel, Dictionary(Of String, String), MonitoredResource, BufferOptions)
-  fullName: Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create(Microsoft.Extensions.Logging.LogLevel, System.Collections.Generic.Dictionary<System.String, System.String>, Google.Api.MonitoredResource, Google.Cloud.Diagnostics.Common.BufferOptions)
-  fullName.vb: Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create(Microsoft.Extensions.Logging.LogLevel, System.Collections.Generic.Dictionary(Of System.String, System.String), Google.Api.MonitoredResource, Google.Cloud.Diagnostics.Common.BufferOptions)
+  fullName: Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create(LogLevel, System.Collections.Generic.Dictionary<System.String, System.String>, MonitoredResource, Google.Cloud.Diagnostics.Common.BufferOptions)
+  fullName.vb: Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create(LogLevel, System.Collections.Generic.Dictionary(Of System.String, System.String), MonitoredResource, Google.Cloud.Diagnostics.Common.BufferOptions)
   nameWithType: LoggerOptions.Create(LogLevel, Dictionary<String, String>, MonitoredResource, BufferOptions)
   nameWithType.vb: LoggerOptions.Create(LogLevel, Dictionary(Of String, String), MonitoredResource, BufferOptions)
 - uid: Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create*
@@ -577,11 +577,11 @@ references:
   commentId: T:Google.Cloud.Diagnostics.Common.IExceptionLogger
   fullName: Google.Cloud.Diagnostics.Common.IExceptionLogger
   nameWithType: IExceptionLogger
-- uid: Google.Cloud.Diagnostics.Common.IExceptionLogger.Log(System.Exception,Microsoft.AspNetCore.Http.HttpContext)
+- uid: Google.Cloud.Diagnostics.Common.IExceptionLogger.Log(System.Exception,System.Web.HttpContext)
   name: Log(Exception, HttpContext)
-  href: api/Google.Cloud.Diagnostics.Common.IExceptionLogger.html#Google_Cloud_Diagnostics_Common_IExceptionLogger_Log_System_Exception_Microsoft_AspNetCore_Http_HttpContext_
-  commentId: M:Google.Cloud.Diagnostics.Common.IExceptionLogger.Log(System.Exception,Microsoft.AspNetCore.Http.HttpContext)
-  fullName: Google.Cloud.Diagnostics.Common.IExceptionLogger.Log(System.Exception, Microsoft.AspNetCore.Http.HttpContext)
+  href: api/Google.Cloud.Diagnostics.Common.IExceptionLogger.html#Google_Cloud_Diagnostics_Common_IExceptionLogger_Log_System_Exception_System_Web_HttpContext_
+  commentId: M:Google.Cloud.Diagnostics.Common.IExceptionLogger.Log(System.Exception,System.Web.HttpContext)
+  fullName: Google.Cloud.Diagnostics.Common.IExceptionLogger.Log(System.Exception, System.Web.HttpContext)
   nameWithType: IExceptionLogger.Log(Exception, HttpContext)
 - uid: Google.Cloud.Diagnostics.Common.IExceptionLogger.Log*
   name: Log
@@ -589,11 +589,11 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.Common.IExceptionLogger.Log
   fullName: Google.Cloud.Diagnostics.Common.IExceptionLogger.Log
   nameWithType: IExceptionLogger.Log
-- uid: Google.Cloud.Diagnostics.Common.IExceptionLogger.LogAsync(System.Exception,Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
+- uid: Google.Cloud.Diagnostics.Common.IExceptionLogger.LogAsync(System.Exception,System.Web.HttpContext,System.Threading.CancellationToken)
   name: LogAsync(Exception, HttpContext, CancellationToken)
-  href: api/Google.Cloud.Diagnostics.Common.IExceptionLogger.html#Google_Cloud_Diagnostics_Common_IExceptionLogger_LogAsync_System_Exception_Microsoft_AspNetCore_Http_HttpContext_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.Diagnostics.Common.IExceptionLogger.LogAsync(System.Exception,Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
-  fullName: Google.Cloud.Diagnostics.Common.IExceptionLogger.LogAsync(System.Exception, Microsoft.AspNetCore.Http.HttpContext, System.Threading.CancellationToken)
+  href: api/Google.Cloud.Diagnostics.Common.IExceptionLogger.html#Google_Cloud_Diagnostics_Common_IExceptionLogger_LogAsync_System_Exception_System_Web_HttpContext_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Diagnostics.Common.IExceptionLogger.LogAsync(System.Exception,System.Web.HttpContext,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Diagnostics.Common.IExceptionLogger.LogAsync(System.Exception, System.Web.HttpContext, System.Threading.CancellationToken)
   nameWithType: IExceptionLogger.LogAsync(Exception, HttpContext, CancellationToken)
 - uid: Google.Cloud.Diagnostics.Common.IExceptionLogger.LogAsync*
   name: LogAsync
@@ -1054,13 +1054,13 @@ references:
   commentId: T:Google.Cloud.Diagnostics.Common.TraceDecisionPredicate
   fullName: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate
   nameWithType: TraceDecisionPredicate
-- uid: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create(System.Func{Microsoft.AspNetCore.Http.HttpRequest,System.Nullable{System.Boolean}},System.Boolean)
+- uid: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create(System.Func{System.Web.HttpRequest,System.Nullable{System.Boolean}},System.Boolean)
   name: Create(Func<HttpRequest, Nullable<Boolean>>, Boolean)
-  href: api/Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html#Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_Create_System_Func_Microsoft_AspNetCore_Http_HttpRequest_System_Nullable_System_Boolean___System_Boolean_
-  commentId: M:Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create(System.Func{Microsoft.AspNetCore.Http.HttpRequest,System.Nullable{System.Boolean}},System.Boolean)
+  href: api/Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html#Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_Create_System_Func_System_Web_HttpRequest_System_Nullable_System_Boolean___System_Boolean_
+  commentId: M:Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create(System.Func{System.Web.HttpRequest,System.Nullable{System.Boolean}},System.Boolean)
   name.vb: Create(Func(Of HttpRequest, Nullable(Of Boolean)), Boolean)
-  fullName: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create(System.Func<Microsoft.AspNetCore.Http.HttpRequest, System.Nullable<System.Boolean>>, System.Boolean)
-  fullName.vb: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create(System.Func(Of Microsoft.AspNetCore.Http.HttpRequest, System.Nullable(Of System.Boolean)), System.Boolean)
+  fullName: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create(System.Func<System.Web.HttpRequest, System.Nullable<System.Boolean>>, System.Boolean)
+  fullName.vb: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create(System.Func(Of System.Web.HttpRequest, System.Nullable(Of System.Boolean)), System.Boolean)
   nameWithType: TraceDecisionPredicate.Create(Func<HttpRequest, Nullable<Boolean>>, Boolean)
   nameWithType.vb: TraceDecisionPredicate.Create(Func(Of HttpRequest, Nullable(Of Boolean)), Boolean)
 - uid: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create*
@@ -1093,11 +1093,11 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.DoNothing
   fullName: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.DoNothing
   nameWithType: TraceDecisionPredicate.DoNothing
-- uid: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace(Microsoft.AspNetCore.Http.HttpRequest)
+- uid: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace(System.Web.HttpRequest)
   name: ShouldTrace(HttpRequest)
-  href: api/Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html#Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_ShouldTrace_Microsoft_AspNetCore_Http_HttpRequest_
-  commentId: M:Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace(Microsoft.AspNetCore.Http.HttpRequest)
-  fullName: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace(Microsoft.AspNetCore.Http.HttpRequest)
+  href: api/Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html#Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_ShouldTrace_System_Web_HttpRequest_
+  commentId: M:Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace(System.Web.HttpRequest)
+  fullName: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace(System.Web.HttpRequest)
   nameWithType: TraceDecisionPredicate.ShouldTrace(HttpRequest)
 - uid: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace*
   name: ShouldTrace

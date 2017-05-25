@@ -132,8 +132,14 @@ field. Example (for message [google.protobuf.Duration][]):</p>
  &quot;value&quot;: &quot;1.212s&quot;
 }</p>
 </section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.AnyReflection.html">AnyReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/protobuf/any.proto</p>
+</section>
                   <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Api.html">Api</a></h4>
                   <section><p>Api is a light-weight descriptor for a protocol buffer service.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.ApiReflection.html">ApiReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/protobuf/api.proto</p>
 </section>
                   <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.BoolValue.html">BoolValue</a></h4>
                   <section><p>Wrapper message for <code>bool</code>.</p>
@@ -154,6 +160,7 @@ resolution. It is independent of any calendar and concepts like &quot;day&quot;
 or &quot;month&quot;. It is related to Timestamp in that the difference between
 two Timestamp values is a Duration and it can be added or subtracted
 from a Timestamp. Range is approximately +-10,000 years.</p>
+<h1 id="examples">Examples</h1>
 <p>Example 1: Compute Duration from two Timestamps in pseudo code.</p>
 <p>Timestamp start = ...;
 Timestamp end = ...;
@@ -184,6 +191,17 @@ end.nanos = start.nanos + duration.nanos;</p>
 <p>td = datetime.timedelta(days=3, minutes=10)
 duration = Duration()
 duration.FromTimedelta(td)</p>
+<h1 id="json-mapping">JSON Mapping</h1>
+<p>In JSON format, the Duration type is encoded as a string rather than an
+object, where the string ends in the suffix &quot;s&quot; (indicating seconds) and
+is preceded by the number of seconds, with nanoseconds expressed as
+fractional seconds. For example, 3 seconds with 0 nanoseconds should be
+encoded in JSON format as &quot;3s&quot;, while 3 seconds and 1 nanosecond should
+be expressed in JSON format as &quot;3.000000001s&quot;, and 3 seconds and 1
+microsecond should be expressed in JSON format as &quot;3.000001s&quot;.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.DurationReflection.html">DurationReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/protobuf/duration.proto</p>
 </section>
                   <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a></h4>
                   <section><p>A generic empty message that you can re-use to avoid defining duplicated
@@ -193,6 +211,9 @@ or the response type of an API method. For instance:</p>
  rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);
 }</p>
 <p>The JSON representation for <code>Empty</code> is empty JSON object <code>{}</code>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.EmptyReflection.html">EmptyReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/protobuf/empty.proto</p>
 </section>
                   <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Enum.html">Enum</a></h4>
                   <section><p>Enum type definition.</p>
@@ -361,6 +382,9 @@ following message:</p>
 <p>Note that oneof type names (&quot;test_oneof&quot; in this case) cannot be used in
 paths.</p>
 </section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.FieldMaskReflection.html">FieldMaskReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/protobuf/field_mask.proto</p>
+</section>
                   <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.FloatValue.html">FloatValue</a></h4>
                   <section><p>Wrapper message for <code>float</code>.</p>
 <p>The JSON representation for <code>FloatValue</code> is JSON number.</p>
@@ -464,6 +488,9 @@ enumeration, etc.</p>
                   <section><p><code>SourceContext</code> represents information about the source of a
 protobuf element, like the file in which it is defined.</p>
 </section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.SourceContextReflection.html">SourceContextReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/protobuf/source_context.proto</p>
+</section>
                   <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.StringValue.html">StringValue</a></h4>
                   <section><p>Wrapper message for <code>string</code>.</p>
 <p>The JSON representation for <code>StringValue</code> is JSON string.</p>
@@ -476,6 +503,9 @@ scripting languages like JS a struct is represented as an
 object. The details of that representation are described together
 with the proto support for the language.</p>
 <p>The JSON representation for <code>Struct</code> is JSON object.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.StructReflection.html">StructReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/protobuf/struct.proto</p>
 </section>
                   <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.TimeExtensions.html">TimeExtensions</a></h4>
                   <section><p>Extension methods on BCL time-related types, converting to protobuf types.</p>
@@ -492,6 +522,7 @@ table is needed for interpretation. Range is from
 By restricting to that range, we ensure that we can convert to
 and from  RFC 3339 date strings.
 See <a href="https://www.ietf.org/rfc/rfc3339.txt">https://www.ietf.org/rfc/rfc3339.txt</a>.</p>
+<h1 id="examples">Examples</h1>
 <p>Example 1: Compute Timestamp from POSIX <code>time()</code>.</p>
 <p>Timestamp timestamp;
 timestamp.set_seconds(time(NULL));
@@ -518,9 +549,33 @@ timestamp.set_nanos((INT32) ((ticks % 10000000) * 100));</p>
 <p>Example 5: Compute Timestamp from current time in Python.</p>
 <p>timestamp = Timestamp()
 timestamp.GetCurrentTime()</p>
+<h1 id="json-mapping">JSON Mapping</h1>
+<p>In JSON format, the Timestamp type is encoded as a string in the
+<a href="https://www.ietf.org/rfc/rfc3339.txt">RFC 3339</a> format. That is, the
+format is &quot;{year}-{month}-{day}T{hour}:{min}:{sec}[.{frac_sec}]Z&quot;
+where {year} is always expressed using four digits while {month}, {day},
+{hour}, {min}, and {sec} are zero-padded to two digits each. The fractional
+seconds, which can go up to 9 digits (i.e. up to 1 nanosecond resolution),
+are optional. The &quot;Z&quot; suffix indicates the timezone (&quot;UTC&quot;); the timezone
+is required, though only UTC (as indicated by &quot;Z&quot;) is presently supported.</p>
+<p>For example, &quot;2017-01-15T01:30:15.01Z&quot; encodes 15.01 seconds past
+01:30 UTC on January 15, 2017.</p>
+<p>In JavaScript, one can convert a Date object to this format using the
+standard [toISOString()](<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString</a>]
+method. In Python, a standard <code>datetime.datetime</code> object can be converted
+to this format using <a href="https://docs.python.org/2/library/time.html#time.strftime"><code>strftime</code></a>
+with the time format spec &#39;%Y-%m-%dT%H:%M:%S.%fZ&#39;. Likewise, in Java, one
+can use the Joda Time&#39;s <a href="http://joda-time.sourceforge.net/apidocs/org/joda/time/format/ISODateTimeFormat.html#dateTime()"><code>ISODateTimeFormat.dateTime()</code></a>
+to obtain a formatter capable of generating timestamps in this format.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.TimestampReflection.html">TimestampReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/protobuf/timestamp.proto</p>
 </section>
                   <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Type.html">Type</a></h4>
                   <section><p>A protocol buffer message type.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.TypeReflection.html">TypeReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/protobuf/type.proto</p>
 </section>
                   <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.UInt32Value.html">UInt32Value</a></h4>
                   <section><p>Wrapper message for <code>uint32</code>.</p>
@@ -536,6 +591,9 @@ null, a number, a string, a boolean, a recursive struct value, or a
 list of values. A producer of value is expected to set one of that
 variants, absence of any variant indicates an error.</p>
 <p>The JSON representation for <code>Value</code> is JSON value.</p>
+</section>
+                  <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.WrappersReflection.html">WrappersReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/protobuf/wrappers.proto</p>
 </section>
                 <h3 id="enums">Enums
               </h3>

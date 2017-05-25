@@ -78,8 +78,9 @@
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><a class="xref" href="Google.Apis.Bigquery.v2.BigqueryBaseServiceRequest-1.html">BigqueryBaseServiceRequest</a>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.html">GetQueryResultsResponse</a>&gt;</div>
-                  <div class="level2"><span class="xref">JobsResource.GetQueryResultsRequest</span></div>
+                  <div class="level1"><span class="xref">Google.Apis.Requests.ClientServiceRequest</span>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.html">GetQueryResultsResponse</a>&gt;</div>
+                  <div class="level2"><a class="xref" href="Google.Apis.Bigquery.v2.BigqueryBaseServiceRequest-1.html">BigqueryBaseServiceRequest</a>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.html">GetQueryResultsResponse</a>&gt;</div>
+                  <div class="level3"><span class="xref">JobsResource.GetQueryResultsRequest</span></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
@@ -104,23 +105,86 @@
                 <div>
                   <a class="xref" href="Google.Apis.Bigquery.v2.BigqueryBaseServiceRequest-1.html#Google_Apis_Bigquery_v2_BigqueryBaseServiceRequest_1_UserIp">BigqueryBaseServiceRequest&lt;GetQueryResultsResponse&gt;.UserIp</a>
                 </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse&gt;.Execute()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse&gt;.ExecuteAsStream()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse&gt;.ExecuteAsync()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse&gt;.ExecuteAsync(System.Threading.CancellationToken)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse&gt;.ExecuteAsStreamAsync()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse&gt;.ExecuteAsStreamAsync(System.Threading.CancellationToken)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse&gt;.CreateRequest(System.Nullable&lt;System.Boolean&gt;)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse&gt;.GenerateRequestUri()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse&gt;.GetBody()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse&gt;.GetDefaultETagAction(System.String)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse&gt;.ETagAction</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse&gt;.ModifyRequest</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse&gt;.RequestParameters</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse&gt;.Service</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
               </div>
               <h6><strong>Namespace</strong>:Google.Apis.Bigquery.v2</h6>
               <h6><strong>Assembly</strong>:Google.Apis.Bigquery.v2.dll</h6>
               <h5 id="Google_Apis_Bigquery_v2_JobsResource_GetQueryResultsRequest_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class GetQueryResultsRequest : BigqueryBaseServiceRequest&lt;GetQueryResultsResponse&gt;</code></pre>
+                <pre><code class="lang-csharp hljs">public class GetQueryResultsRequest : BigqueryBaseServiceRequest&lt;GetQueryResultsResponse&gt;, IClientServiceRequest&lt;GetQueryResultsResponse&gt;, IClientServiceRequest</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
               <a id="Google_Apis_Bigquery_v2_JobsResource_GetQueryResultsRequest__ctor_" data-uid="Google.Apis.Bigquery.v2.JobsResource.GetQueryResultsRequest.#ctor*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_JobsResource_GetQueryResultsRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_" data-uid="Google.Apis.Bigquery.v2.JobsResource.GetQueryResultsRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">GetQueryResultsRequest(Services.IClientService, String, String)</h4>
+              <h4 id="Google_Apis_Bigquery_v2_JobsResource_GetQueryResultsRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_" data-uid="Google.Apis.Bigquery.v2.JobsResource.GetQueryResultsRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">GetQueryResultsRequest(IClientService, String, String)</h4>
               <div class="markdown level1 summary"><p>Constructs a new GetQueryResults request.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public GetQueryResultsRequest(Services.IClientService service, string projectId, string jobId)</code></pre>
+                <pre><code class="lang-csharp hljs">public GetQueryResultsRequest(IClientService service, string projectId, string jobId)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -175,6 +239,8 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse&gt;.HttpMethod</span></div>
               <a id="Google_Apis_Bigquery_v2_JobsResource_GetQueryResultsRequest_JobId_" data-uid="Google.Apis.Bigquery.v2.JobsResource.GetQueryResultsRequest.JobId*"></a>
               <h4 id="Google_Apis_Bigquery_v2_JobsResource_GetQueryResultsRequest_JobId" data-uid="Google.Apis.Bigquery.v2.JobsResource.GetQueryResultsRequest.JobId">JobId</h4>
               <div class="markdown level1 summary"><p>[Required] Job ID of the query job</p>
@@ -182,7 +248,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string JobId { get; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;jobId&quot;, RequestParameterType.Path)]
+public virtual string JobId { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -206,7 +273,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;long&gt; MaxResults { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;maxResults&quot;, RequestParameterType.Query)]
+public virtual long ? MaxResults { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -247,6 +315,8 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse&gt;.MethodName</span></div>
               <a id="Google_Apis_Bigquery_v2_JobsResource_GetQueryResultsRequest_PageToken_" data-uid="Google.Apis.Bigquery.v2.JobsResource.GetQueryResultsRequest.PageToken*"></a>
               <h4 id="Google_Apis_Bigquery_v2_JobsResource_GetQueryResultsRequest_PageToken" data-uid="Google.Apis.Bigquery.v2.JobsResource.GetQueryResultsRequest.PageToken">PageToken</h4>
               <div class="markdown level1 summary"><p>Page token, returned by a previous call, to request the next page of results</p>
@@ -254,7 +324,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string PageToken { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;pageToken&quot;, RequestParameterType.Query)]
+public virtual string PageToken { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -278,7 +349,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string ProjectId { get; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;projectId&quot;, RequestParameterType.Path)]
+public virtual string ProjectId { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -319,6 +391,8 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse&gt;.RestPath</span></div>
               <a id="Google_Apis_Bigquery_v2_JobsResource_GetQueryResultsRequest_StartIndex_" data-uid="Google.Apis.Bigquery.v2.JobsResource.GetQueryResultsRequest.StartIndex*"></a>
               <h4 id="Google_Apis_Bigquery_v2_JobsResource_GetQueryResultsRequest_StartIndex" data-uid="Google.Apis.Bigquery.v2.JobsResource.GetQueryResultsRequest.StartIndex">StartIndex</h4>
               <div class="markdown level1 summary"><p>Zero-based index of the starting row</p>
@@ -326,7 +400,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;ulong&gt; StartIndex { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;startIndex&quot;, RequestParameterType.Query)]
+public virtual ulong ? StartIndex { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -352,7 +427,8 @@ false</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;long&gt; TimeoutMs { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;timeoutMs&quot;, RequestParameterType.Query)]
+public virtual long ? TimeoutMs { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">

@@ -72,7 +72,7 @@
               
               <h1 id="Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerMiddleware" data-uid="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware">Class ErrorReportingExceptionLoggerMiddleware
               </h1>
-              <div class="markdown level0 summary"><p>Middleware that will, when invoked, call the next <span class="xref">Microsoft.AspNetCore.Http.RequestDelegate</span>,
+              <div class="markdown level0 summary"><p>Middleware that will, when invoked, call the next <see cref="!:RequestDelegate"></see>,
 catch any exception that it may throw, send that exception to the
 Stackdriver Error Reporting API and rethrow the given exception.</p>
 </div>
@@ -85,6 +85,9 @@ Stackdriver Error Reporting API and rethrow the given exception.</p>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
                   <span class="xref">System.Object.GetHashCode()</span>
                 </div>
                 <div>
@@ -92,9 +95,6 @@ Stackdriver Error Reporting API and rethrow the given exception.</p>
                 </div>
                 <div>
                   <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
                 </div>
               </div>
               <h6><strong>Namespace</strong>:Google.Cloud.Diagnostics.AspNetCore</h6>
@@ -106,7 +106,7 @@ Stackdriver Error Reporting API and rethrow the given exception.</p>
               <h3 id="constructors">Constructors
               </h3>
               <a id="Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerMiddleware__ctor_" data-uid="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.#ctor*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Google_Cloud_Diagnostics_Common_IExceptionLogger_" data-uid="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Google.Cloud.Diagnostics.Common.IExceptionLogger)">ErrorReportingExceptionLoggerMiddleware(RequestDelegate, IExceptionLogger)</h4>
+              <h4 id="Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerMiddleware__ctor_RequestDelegate_Google_Cloud_Diagnostics_Common_IExceptionLogger_" data-uid="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.#ctor(RequestDelegate,Google.Cloud.Diagnostics.Common.IExceptionLogger)">ErrorReportingExceptionLoggerMiddleware(RequestDelegate, IExceptionLogger)</h4>
               <div class="markdown level1 summary"><p>Create a new instance of <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.html">ErrorReportingExceptionLoggerMiddleware</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -125,7 +125,7 @@ Stackdriver Error Reporting API and rethrow the given exception.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Microsoft.AspNetCore.Http.RequestDelegate</span></td>
+                    <td><span class="xref">RequestDelegate</span></td>
                     <td><span class="parametername">next</span></td>
                     <td><p>The next request delegate. Cannot be null.</p>
 </td>
@@ -141,8 +141,8 @@ Stackdriver Error Reporting API and rethrow the given exception.</p>
               <h3 id="methods">Methods
               </h3>
               <a id="Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerMiddleware_Invoke_" data-uid="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.Invoke*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerMiddleware_Invoke_Microsoft_AspNetCore_Http_HttpContext_" data-uid="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">Invoke(HttpContext)</h4>
-              <div class="markdown level1 summary"><p>Invokes the next <span class="xref">Microsoft.AspNetCore.Http.RequestDelegate</span>, catches any exception thrown,
+              <h4 id="Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerMiddleware_Invoke_HttpContext_" data-uid="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.Invoke(HttpContext)">Invoke(HttpContext)</h4>
+              <div class="markdown level1 summary"><p>Invokes the next <see cref="!:RequestDelegate"></see>, catches any exception thrown,
 reports the exception to the  Stackdriver Error Reporting API and rethrows
 the exception.</p>
 </div>
@@ -162,7 +162,7 @@ the exception.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Microsoft.AspNetCore.Http.HttpContext</span></td>
+                    <td><span class="xref">HttpContext</span></td>
                     <td><span class="parametername">httpContext</span></td>
                     <td></td>
                   </tr>

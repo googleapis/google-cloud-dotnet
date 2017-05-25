@@ -86,6 +86,15 @@
                   <span class="xref">System.Object.ToString()</span>
                 </div>
                 <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
                   <span class="xref">System.Object.GetHashCode()</span>
                 </div>
                 <div>
@@ -216,6 +225,30 @@ should be formatted (true) or omitted (false).</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Protobuf_JsonFormatter_Settings_FormatEnumsAsIntegers_" data-uid="Google.Protobuf.JsonFormatter.Settings.FormatEnumsAsIntegers*"></a>
+              <h4 id="Google_Protobuf_JsonFormatter_Settings_FormatEnumsAsIntegers" data-uid="Google.Protobuf.JsonFormatter.Settings.FormatEnumsAsIntegers">FormatEnumsAsIntegers</h4>
+              <div class="markdown level1 summary"><p>Whether to format enums as ints. Defaults to false.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool FormatEnumsAsIntegers { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <a id="Google_Protobuf_JsonFormatter_Settings_TypeRegistry_" data-uid="Google.Protobuf.JsonFormatter.Settings.TypeRegistry*"></a>
               <h4 id="Google_Protobuf_JsonFormatter_Settings_TypeRegistry" data-uid="Google.Protobuf.JsonFormatter.Settings.TypeRegistry">TypeRegistry</h4>
               <div class="markdown level1 summary"><p>The type registry used to format <a class="xref" href="Google.Protobuf.WellKnownTypes.Any.html">Any</a> messages.</p>
@@ -236,6 +269,134 @@ should be formatted (true) or omitted (false).</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.Reflection.TypeRegistry.html">TypeRegistry</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              <a id="Google_Protobuf_JsonFormatter_Settings_WithFormatDefaultValues_" data-uid="Google.Protobuf.JsonFormatter.Settings.WithFormatDefaultValues*"></a>
+              <h4 id="Google_Protobuf_JsonFormatter_Settings_WithFormatDefaultValues_System_Boolean_" data-uid="Google.Protobuf.JsonFormatter.Settings.WithFormatDefaultValues(System.Boolean)">WithFormatDefaultValues(Boolean)</h4>
+              <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Protobuf.JsonFormatter.Settings.html">JsonFormatter.Settings</a> object with the specified formatting of default values and the current settings.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public JsonFormatter.Settings WithFormatDefaultValues(bool formatDefaultValues)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><span class="parametername">formatDefaultValues</span></td>
+                    <td><p><code>true</code> if default values (0, empty strings etc) should be formatted; <code>false</code> otherwise.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.JsonFormatter.Settings.html">JsonFormatter.Settings</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_JsonFormatter_Settings_WithFormatEnumsAsIntegers_" data-uid="Google.Protobuf.JsonFormatter.Settings.WithFormatEnumsAsIntegers*"></a>
+              <h4 id="Google_Protobuf_JsonFormatter_Settings_WithFormatEnumsAsIntegers_System_Boolean_" data-uid="Google.Protobuf.JsonFormatter.Settings.WithFormatEnumsAsIntegers(System.Boolean)">WithFormatEnumsAsIntegers(Boolean)</h4>
+              <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Protobuf.JsonFormatter.Settings.html">JsonFormatter.Settings</a> object with the specified enums formatting option and the current settings.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public JsonFormatter.Settings WithFormatEnumsAsIntegers(bool formatEnumsAsIntegers)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><span class="parametername">formatEnumsAsIntegers</span></td>
+                    <td><p><code>true</code> to format the enums as integers; <code>false</code> to format enums as enum names.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.JsonFormatter.Settings.html">JsonFormatter.Settings</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_JsonFormatter_Settings_WithTypeRegistry_" data-uid="Google.Protobuf.JsonFormatter.Settings.WithTypeRegistry*"></a>
+              <h4 id="Google_Protobuf_JsonFormatter_Settings_WithTypeRegistry_Google_Protobuf_Reflection_TypeRegistry_" data-uid="Google.Protobuf.JsonFormatter.Settings.WithTypeRegistry(Google.Protobuf.Reflection.TypeRegistry)">WithTypeRegistry(TypeRegistry)</h4>
+              <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Protobuf.JsonFormatter.Settings.html">JsonFormatter.Settings</a> object with the specified type registry and the current settings.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public JsonFormatter.Settings WithTypeRegistry(TypeRegistry typeRegistry)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Reflection.TypeRegistry.html">TypeRegistry</a></td>
+                    <td><span class="parametername">typeRegistry</span></td>
+                    <td><p>The <a class="xref" href="Google.Protobuf.JsonFormatter.Settings.html#Google_Protobuf_JsonFormatter_Settings_TypeRegistry">TypeRegistry</a> to use when formatting <a class="xref" href="Google.Protobuf.WellKnownTypes.Any.html">Any</a> messages.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.JsonFormatter.Settings.html">JsonFormatter.Settings</a></td>
                     <td></td>
                   </tr>
                 </tbody>

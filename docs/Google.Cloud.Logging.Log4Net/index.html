@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Google.Cloud.Logging.Log4Net | Google.Cloud.Logging.Log4Net </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Google.Cloud.Logging.Log4Net | Google.Cloud.Logging.Log4Net ">
+    <meta name="generator" content="docfx 2.16.0.499">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="googlecloudlogginglog4net">Google.Cloud.Logging.Log4Net</h1>
+              
+<p><code>Google.Cloud.Logging.Log4Net</code> is a .NET client library to integrate  <a href="https://cloud.google.com/logging/">Google Stackdriver
+Logging</a> with
+<a href="https://logging.apache.org/log4net/">log4net</a>.</p>
+<h1 id="installation">Installation</h1>
+<p>Install the <code>Google.Cloud.Logging.Log4Net</code> package from NuGet. Add it to
+your project in the normal way (for example by right-clicking on the
+project in Visual Studio and choosing &quot;Manage NuGet Packages...&quot;).
+Please ensure you enable pre-release packages (for example, in the
+Visual Studio NuGet user interface, check the &quot;Include prerelease&quot;
+box).</p>
+<h1 id="authentication">Authentication</h1>
+<p>To authenticate all your API calls, first install and setup the
+<a href="https://cloud.google.com/sdk/">Google Cloud SDK</a>. After that is
+installed, run the following command in a Google Cloud SDK Shell:</p>
+<pre><code class="lang-sh">&gt; gcloud auth application-default login
+</code></pre><h1 id="getting-started">Getting started</h1>
+<p>See the <a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/blob/master/apis/Google.Cloud.Logging.Log4Net/Google.Cloud.Logging.Log4Net/readme.md">readme</a> for all GoogleStackdriverAppender configuration options.</p>
+<h2 id="aspnet">ASP.NET</h2>
+<p>Add the log4net section to the <code>Web.config</code> file:</p>
+<pre><code class="lang-xml">&lt;configuration&gt;
+  &lt;configSections&gt;
+
+    &lt;!-- Other configSection item --&gt;
+
+    &lt;!-- Specify a configuration section for log4net --&gt;
+    &lt;section name=&quot;log4net&quot; type=&quot;log4net.Config.Log4NetConfigurationSectionHandler,log4net&quot; /&gt;
+  &lt;/configSections&gt;
+
+  &lt;!-- The log4net configuration --&gt;
+  &lt;log4net&gt;
+    &lt;appender name=&quot;CloudLogger&quot; type=&quot;Google.Logging.Log4Net.GoogleStackdriverAppender,Google.Cloud.Logging.Log4Net&quot;&gt;
+      &lt;layout type=&quot;log4net.Layout.PatternLayout&quot;&gt;
+        &lt;conversionPattern value=&quot;%-4timestamp [%thread] %-5level %logger %ndc - %message&quot; /&gt;
+      &lt;/layout&gt;
+      &lt;projectId value=&quot;PROJECT_ID&quot; /&gt;
+      &lt;logId value=&quot;LOG_ID&quot; /&gt;
+    &lt;/appender&gt;
+    &lt;root&gt;
+      &lt;level value=&quot;ALL&quot; /&gt;
+      &lt;appender-ref ref=&quot;CloudLogger&quot; /&gt;
+    &lt;/root&gt;
+  &lt;/log4net&gt;
+
+  &lt;!-- Other configuration items --&gt;
+
+&lt;/configuration&gt;
+</code></pre><p>Edit the file replacing <code>PROJECT_ID</code> with your Google Cloud Project
+ID, and <code>LOG_ID</code> with an identifier for your application.</p>
+<pre><code class="lang-cs">// Load log4net configuration from Web.config
+log4net.Config.XmlConfigurator.Configure(LogManager.GetRepository(GetType().GetTypeInfo().Assembly));
+</code></pre><p>If executing on <a href="https://cloud.google.com/appengine/">Google App Engine (GAE)</a> or <a href="https://cloud.google.com/compute/">Google Compute Engine (GCE)</a>, then the <code>&lt;projectId value=&quot;PROJECT_ID&quot; /&gt;</code> configuration setting can be omitted; it will be auto-detected from the platform at run-time.</p>
+<h2 id="console-app">Console app</h2>
+<p>Create a <code>log4net</code> configuration file (<code>log4net.xml</code>):</p>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;log4net&gt;
+  &lt;appender name=&quot;CloudLogger&quot; type=&quot;Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender,Google.Cloud.Logging.Log4Net&quot;&gt;
+    &lt;layout type=&quot;log4net.Layout.PatternLayout&quot;&gt;
+      &lt;conversionPattern value=&quot;%-4timestamp [%thread] %-5level %logger %ndc - %message&quot; /&gt;
+    &lt;/layout&gt;
+    &lt;projectId value=&quot;PROJECT_ID&quot; /&gt;
+    &lt;logId value=&quot;LOG_ID&quot; /&gt;
+  &lt;/appender&gt;
+  &lt;root&gt;
+    &lt;level value=&quot;ALL&quot; /&gt;
+    &lt;appender-ref ref=&quot;CloudLogger&quot; /&gt;
+  &lt;/root&gt;
+&lt;/log4net&gt;
+</code></pre><p>Edit the file replacing <code>PROJECT_ID</code> with your Google Cloud Project
+ID, and <code>LOG_ID</code> with an identifier for your application.</p>
+<p>Use this
+file to configure <code>log4net</code> and then log as normal:</p>
+<pre><code class="lang-cs">// Configure log4net to use Google Stackdriver logging from the XML configuration file.
+XmlConfigurator.Configure(LogManager.GetRepository(GetType().GetTypeInfo().Assembly), new FileInfo(&quot;log4net.xml&quot;));
+
+// Retrieve a logger for this context.
+ILog log = LogManager.GetLogger(typeof(Program));
+// Log some information. This log entry will be sent to Google Stackdriver Logging.
+log.Info(&quot;An exciting log entry!&quot;);
+</code></pre><p>If executing on <a href="https://cloud.google.com/appengine/">Google App Engine (GAE)</a> or <a href="https://cloud.google.com/compute/">Google Compute Engine (GCE)</a>, then the <code>&lt;projectId value=&quot;PROJECT_ID&quot; /&gt;</code> configuration setting can be omitted; it will be auto-detected from the platform at run-time.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

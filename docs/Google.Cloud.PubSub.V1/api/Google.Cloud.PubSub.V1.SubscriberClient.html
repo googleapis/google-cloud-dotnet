@@ -2639,7 +2639,7 @@ ListSnapshotsRequest request = new ListSnapshotsRequest
     ProjectAsProjectName = new ProjectName(&quot;[PROJECT]&quot;),
 };
 // Make the request
-PagedEnumerable&lt;ListSnapshotsResponse,Snapshot&gt; response =
+PagedEnumerable&lt;ListSnapshotsResponse, Snapshot&gt; response =
     subscriberClient.ListSnapshots(request);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -2726,7 +2726,7 @@ SubscriberClient subscriberClient = SubscriberClient.Create();
 // Initialize request argument(s)
 ProjectName project = new ProjectName(&quot;[PROJECT]&quot;);
 // Make the request
-PagedEnumerable&lt;ListSnapshotsResponse,Snapshot&gt; response =
+PagedEnumerable&lt;ListSnapshotsResponse, Snapshot&gt; response =
     subscriberClient.ListSnapshots(project);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -2831,7 +2831,7 @@ ListSnapshotsRequest request = new ListSnapshotsRequest
     ProjectAsProjectName = new ProjectName(&quot;[PROJECT]&quot;),
 };
 // Make the request
-PagedAsyncEnumerable&lt;ListSnapshotsResponse,Snapshot&gt; response =
+PagedAsyncEnumerable&lt;ListSnapshotsResponse, Snapshot&gt; response =
     subscriberClient.ListSnapshotsAsync(request);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -2918,7 +2918,7 @@ SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
 // Initialize request argument(s)
 ProjectName project = new ProjectName(&quot;[PROJECT]&quot;);
 // Make the request
-PagedAsyncEnumerable&lt;ListSnapshotsResponse,Snapshot&gt; response =
+PagedAsyncEnumerable&lt;ListSnapshotsResponse, Snapshot&gt; response =
     subscriberClient.ListSnapshotsAsync(project);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -3023,7 +3023,7 @@ ListSubscriptionsRequest request = new ListSubscriptionsRequest
     ProjectAsProjectName = new ProjectName(&quot;[PROJECT]&quot;),
 };
 // Make the request
-PagedEnumerable&lt;ListSubscriptionsResponse,Subscription&gt; response =
+PagedEnumerable&lt;ListSubscriptionsResponse, Subscription&gt; response =
     subscriberClient.ListSubscriptions(request);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -3185,7 +3185,7 @@ ListSubscriptionsRequest request = new ListSubscriptionsRequest
     ProjectAsProjectName = new ProjectName(&quot;[PROJECT]&quot;),
 };
 // Make the request
-PagedAsyncEnumerable&lt;ListSubscriptionsResponse,Subscription&gt; response =
+PagedAsyncEnumerable&lt;ListSubscriptionsResponse, Subscription&gt; response =
     subscriberClient.ListSubscriptionsAsync(request);
 
 // Iterate over all response items, lazily performing RPCs as required

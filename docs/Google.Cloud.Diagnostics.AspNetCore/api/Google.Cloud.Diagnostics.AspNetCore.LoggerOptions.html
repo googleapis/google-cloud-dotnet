@@ -83,6 +83,9 @@
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
                   <span class="xref">System.Object.GetHashCode()</span>
                 </div>
                 <div>
@@ -90,9 +93,6 @@
                 </div>
                 <div>
                   <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
                 </div>
               </div>
               <h6><strong>Namespace</strong>:Google.Cloud.Diagnostics.AspNetCore</h6>
@@ -170,7 +170,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Microsoft.Extensions.Logging.LogLevel</span></td>
+                    <td><span class="xref">LogLevel</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -194,7 +194,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.MonitoredResource</span></td>
+                    <td><span class="xref">MonitoredResource</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -202,13 +202,13 @@
               <h3 id="methods">Methods
               </h3>
               <a id="Google_Cloud_Diagnostics_AspNetCore_LoggerOptions_Create_" data-uid="Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNetCore_LoggerOptions_Create_Microsoft_Extensions_Logging_LogLevel_System_Collections_Generic_Dictionary_System_String_System_String__Google_Api_MonitoredResource_Google_Cloud_Diagnostics_Common_BufferOptions_" data-uid="Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create(Microsoft.Extensions.Logging.LogLevel,System.Collections.Generic.Dictionary{System.String,System.String},Google.Api.MonitoredResource,Google.Cloud.Diagnostics.Common.BufferOptions)">Create(LogLevel, Dictionary&lt;String, String&gt;, MonitoredResource, BufferOptions)</h4>
+              <h4 id="Google_Cloud_Diagnostics_AspNetCore_LoggerOptions_Create_LogLevel_System_Collections_Generic_Dictionary_System_String_System_String__MonitoredResource_Google_Cloud_Diagnostics_Common_BufferOptions_" data-uid="Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create(LogLevel,System.Collections.Generic.Dictionary{System.String,System.String},MonitoredResource,Google.Cloud.Diagnostics.Common.BufferOptions)">Create(LogLevel, Dictionary&lt;String, String&gt;, MonitoredResource, BufferOptions)</h4>
               <div class="markdown level1 summary"><p>Create a new instance of <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.html">LoggerOptions</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static LoggerOptions Create(LogLevel logLevel = LogLevel.Information, Dictionary&lt;string, string&gt; labels = null, MonitoredResource monitoredResource = null, BufferOptions bufferOptions = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public static LoggerOptions Create(LogLevel logLevel = null, Dictionary&lt;string, string&gt; labels = null, MonitoredResource monitoredResource = null, BufferOptions bufferOptions = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -221,9 +221,9 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Microsoft.Extensions.Logging.LogLevel</span></td>
+                    <td><span class="xref">LogLevel</span></td>
                     <td><span class="parametername">logLevel</span></td>
-                    <td><p>Optional, the minimum log level.  Defaults to <span class="xref">Microsoft.Extensions.Logging.LogLevel.Information</span></p>
+                    <td><p>Optional, the minimum log level.  Defaults to <see cref="!:LogLevel.Information"></see></p>
 </td>
                   </tr>
                   <tr>
@@ -233,7 +233,7 @@
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.MonitoredResource</span></td>
+                    <td><span class="xref">MonitoredResource</span></td>
                     <td><span class="parametername">monitoredResource</span></td>
                     <td><p>Optional, the monitored resource.  The monitored resource will
     be automatically detected if it is not set and will default to the global resource if the detection fails.

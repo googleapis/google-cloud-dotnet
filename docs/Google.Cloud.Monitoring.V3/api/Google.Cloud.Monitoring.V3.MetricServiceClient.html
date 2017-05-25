@@ -1836,7 +1836,7 @@ ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
     ProjectName = new ProjectName(&quot;[PROJECT]&quot;),
 };
 // Make the request
-PagedEnumerable&lt;ListMetricDescriptorsResponse,MetricDescriptor&gt; response =
+PagedEnumerable&lt;ListMetricDescriptorsResponse, MetricDescriptor&gt; response =
     metricServiceClient.ListMetricDescriptors(request);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -1998,7 +1998,7 @@ ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
     ProjectName = new ProjectName(&quot;[PROJECT]&quot;),
 };
 // Make the request
-PagedAsyncEnumerable&lt;ListMetricDescriptorsResponse,MetricDescriptor&gt; response =
+PagedAsyncEnumerable&lt;ListMetricDescriptorsResponse, MetricDescriptor&gt; response =
     metricServiceClient.ListMetricDescriptorsAsync(request);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -2085,7 +2085,7 @@ MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync(
 // Initialize request argument(s)
 ProjectName name = new ProjectName(&quot;[PROJECT]&quot;);
 // Make the request
-PagedAsyncEnumerable&lt;ListMetricDescriptorsResponse,MetricDescriptor&gt; response =
+PagedAsyncEnumerable&lt;ListMetricDescriptorsResponse, MetricDescriptor&gt; response =
     metricServiceClient.ListMetricDescriptorsAsync(name);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -2190,7 +2190,7 @@ ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescr
     ProjectName = new ProjectName(&quot;[PROJECT]&quot;),
 };
 // Make the request
-PagedEnumerable&lt;ListMonitoredResourceDescriptorsResponse,MonitoredResourceDescriptor&gt; response =
+PagedEnumerable&lt;ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor&gt; response =
     metricServiceClient.ListMonitoredResourceDescriptors(request);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -2277,7 +2277,7 @@ MetricServiceClient metricServiceClient = MetricServiceClient.Create();
 // Initialize request argument(s)
 ProjectName name = new ProjectName(&quot;[PROJECT]&quot;);
 // Make the request
-PagedEnumerable&lt;ListMonitoredResourceDescriptorsResponse,MonitoredResourceDescriptor&gt; response =
+PagedEnumerable&lt;ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor&gt; response =
     metricServiceClient.ListMonitoredResourceDescriptors(name);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -2382,7 +2382,7 @@ ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescr
     ProjectName = new ProjectName(&quot;[PROJECT]&quot;),
 };
 // Make the request
-PagedAsyncEnumerable&lt;ListMonitoredResourceDescriptorsResponse,MonitoredResourceDescriptor&gt; response =
+PagedAsyncEnumerable&lt;ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor&gt; response =
     metricServiceClient.ListMonitoredResourceDescriptorsAsync(request);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -2469,7 +2469,7 @@ MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync(
 // Initialize request argument(s)
 ProjectName name = new ProjectName(&quot;[PROJECT]&quot;);
 // Make the request
-PagedAsyncEnumerable&lt;ListMonitoredResourceDescriptorsResponse,MonitoredResourceDescriptor&gt; response =
+PagedAsyncEnumerable&lt;ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor&gt; response =
     metricServiceClient.ListMonitoredResourceDescriptorsAsync(name);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -2577,7 +2577,7 @@ ListTimeSeriesRequest request = new ListTimeSeriesRequest
     View = ListTimeSeriesRequest.Types.TimeSeriesView.Full,
 };
 // Make the request
-PagedEnumerable&lt;ListTimeSeriesResponse,TimeSeries&gt; response =
+PagedEnumerable&lt;ListTimeSeriesResponse, TimeSeries&gt; response =
     metricServiceClient.ListTimeSeries(request);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -2667,7 +2667,7 @@ string filter = &quot;&quot;;
 TimeInterval interval = new TimeInterval();
 ListTimeSeriesRequest.Types.TimeSeriesView view = ListTimeSeriesRequest.Types.TimeSeriesView.Full;
 // Make the request
-PagedEnumerable&lt;ListTimeSeriesResponse,TimeSeries&gt; response =
+PagedEnumerable&lt;ListTimeSeriesResponse, TimeSeries&gt; response =
     metricServiceClient.ListTimeSeries(name, filter, interval, view);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -2800,7 +2800,7 @@ ListTimeSeriesRequest request = new ListTimeSeriesRequest
     View = ListTimeSeriesRequest.Types.TimeSeriesView.Full,
 };
 // Make the request
-PagedAsyncEnumerable&lt;ListTimeSeriesResponse,TimeSeries&gt; response =
+PagedAsyncEnumerable&lt;ListTimeSeriesResponse, TimeSeries&gt; response =
     metricServiceClient.ListTimeSeriesAsync(request);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -2890,7 +2890,7 @@ string filter = &quot;&quot;;
 TimeInterval interval = new TimeInterval();
 ListTimeSeriesRequest.Types.TimeSeriesView view = ListTimeSeriesRequest.Types.TimeSeriesView.Full;
 // Make the request
-PagedAsyncEnumerable&lt;ListTimeSeriesResponse,TimeSeries&gt; response =
+PagedAsyncEnumerable&lt;ListTimeSeriesResponse, TimeSeries&gt; response =
     metricServiceClient.ListTimeSeriesAsync(name, filter, interval, view);
 
 // Iterate over all response items, lazily performing RPCs as required

@@ -78,8 +78,9 @@
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html">StorageBaseServiceRequest</a>&lt;<span class="xref">System.String</span>&gt;</div>
-                  <div class="level2"><span class="xref">ChannelsResource.StopRequest</span></div>
+                  <div class="level1"><span class="xref">Google.Apis.Requests.ClientServiceRequest</span>&lt;<span class="xref">System.String</span>&gt;</div>
+                  <div class="level2"><a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html">StorageBaseServiceRequest</a>&lt;<span class="xref">System.String</span>&gt;</div>
+                  <div class="level3"><span class="xref">ChannelsResource.StopRequest</span></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
@@ -104,23 +105,83 @@
                 <div>
                   <a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html#Google_Apis_Storage_v1_StorageBaseServiceRequest_1_UserIp">StorageBaseServiceRequest&lt;String&gt;.UserIp</a>
                 </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;System.String&gt;.Execute()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;System.String&gt;.ExecuteAsStream()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;System.String&gt;.ExecuteAsync()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;System.String&gt;.ExecuteAsync(System.Threading.CancellationToken)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;System.String&gt;.ExecuteAsStreamAsync()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;System.String&gt;.ExecuteAsStreamAsync(System.Threading.CancellationToken)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;System.String&gt;.CreateRequest(System.Nullable&lt;System.Boolean&gt;)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;System.String&gt;.GenerateRequestUri()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;System.String&gt;.GetDefaultETagAction(System.String)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;System.String&gt;.ETagAction</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;System.String&gt;.ModifyRequest</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;System.String&gt;.RequestParameters</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;System.String&gt;.Service</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
               </div>
               <h6><strong>Namespace</strong>:Google.Apis.Storage.v1</h6>
               <h6><strong>Assembly</strong>:Google.Apis.Storage.v1.dll</h6>
               <h5 id="Google_Apis_Storage_v1_ChannelsResource_StopRequest_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class StopRequest : StorageBaseServiceRequest&lt;string&gt;</code></pre>
+                <pre><code class="lang-csharp hljs">public class StopRequest : StorageBaseServiceRequest&lt;string&gt;, IClientServiceRequest&lt;string&gt;, IClientServiceRequest</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
               <a id="Google_Apis_Storage_v1_ChannelsResource_StopRequest__ctor_" data-uid="Google.Apis.Storage.v1.ChannelsResource.StopRequest.#ctor*"></a>
-              <h4 id="Google_Apis_Storage_v1_ChannelsResource_StopRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Channel_" data-uid="Google.Apis.Storage.v1.ChannelsResource.StopRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Channel)">StopRequest(Services.IClientService, Channel)</h4>
+              <h4 id="Google_Apis_Storage_v1_ChannelsResource_StopRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Channel_" data-uid="Google.Apis.Storage.v1.ChannelsResource.StopRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Channel)">StopRequest(IClientService, Channel)</h4>
               <div class="markdown level1 summary"><p>Constructs a new Stop request.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public StopRequest(Services.IClientService service, Channel body)</code></pre>
+                <pre><code class="lang-csharp hljs">public StopRequest(IClientService service, Channel body)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -170,6 +231,8 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;System.String&gt;.HttpMethod</span></div>
               <a id="Google_Apis_Storage_v1_ChannelsResource_StopRequest_MethodName_" data-uid="Google.Apis.Storage.v1.ChannelsResource.StopRequest.MethodName*"></a>
               <h4 id="Google_Apis_Storage_v1_ChannelsResource_StopRequest_MethodName" data-uid="Google.Apis.Storage.v1.ChannelsResource.StopRequest.MethodName">MethodName</h4>
               <div class="markdown level1 summary"><p>Gets the method name.</p>
@@ -194,6 +257,8 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;System.String&gt;.MethodName</span></div>
               <a id="Google_Apis_Storage_v1_ChannelsResource_StopRequest_RestPath_" data-uid="Google.Apis.Storage.v1.ChannelsResource.StopRequest.RestPath*"></a>
               <h4 id="Google_Apis_Storage_v1_ChannelsResource_StopRequest_RestPath" data-uid="Google.Apis.Storage.v1.ChannelsResource.StopRequest.RestPath">RestPath</h4>
               <div class="markdown level1 summary"><p>Gets the REST path.</p>
@@ -218,6 +283,8 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;System.String&gt;.RestPath</span></div>
               <h3 id="methods">Methods
               </h3>
               <a id="Google_Apis_Storage_v1_ChannelsResource_StopRequest_GetBody_" data-uid="Google.Apis.Storage.v1.ChannelsResource.StopRequest.GetBody*"></a>
@@ -244,6 +311,8 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;System.String&gt;.GetBody()</span></div>
               <a id="Google_Apis_Storage_v1_ChannelsResource_StopRequest_InitParameters_" data-uid="Google.Apis.Storage.v1.ChannelsResource.StopRequest.InitParameters*"></a>
               <h4 id="Google_Apis_Storage_v1_ChannelsResource_StopRequest_InitParameters" data-uid="Google.Apis.Storage.v1.ChannelsResource.StopRequest.InitParameters">InitParameters()</h4>
               <div class="markdown level1 summary"><p>Initializes Stop parameter list.</p>

@@ -79,11 +79,35 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">TableReference</span></div>
               </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
               <h6><strong>Namespace</strong>:Google.Apis.Bigquery.v2.Data</h6>
               <h6><strong>Assembly</strong>:Google.Apis.Bigquery.v2.dll</h6>
               <h5 id="Google_Apis_Bigquery_v2_Data_TableReference_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class TableReference : Requests.IDirectResponseSchema</code></pre>
+                <pre><code class="lang-csharp hljs">public class TableReference : IDirectResponseSchema</code></pre>
               </div>
               <h3 id="properties">Properties
               </h3>
@@ -94,7 +118,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string DatasetId { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;datasetId&quot;)]
+public virtual string DatasetId { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -135,6 +160,8 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
               <a id="Google_Apis_Bigquery_v2_Data_TableReference_ProjectId_" data-uid="Google.Apis.Bigquery.v2.Data.TableReference.ProjectId*"></a>
               <h4 id="Google_Apis_Bigquery_v2_Data_TableReference_ProjectId" data-uid="Google.Apis.Bigquery.v2.Data.TableReference.ProjectId">ProjectId</h4>
               <div class="markdown level1 summary"><p>[Required] The ID of the project containing this table.</p>
@@ -142,7 +169,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string ProjectId { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;projectId&quot;)]
+public virtual string ProjectId { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -167,7 +195,8 @@ underscores (_). The maximum length is 1,024 characters.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string TableId { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;tableId&quot;)]
+public virtual string TableId { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">

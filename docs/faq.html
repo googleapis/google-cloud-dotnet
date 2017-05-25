@@ -63,7 +63,7 @@
               
 <h2 id="how-can-i-use-non-default-credentials-for-grpc-based-apis">How can I use non-default credentials for gRPC-based APIs?</h2>
 <p>The generated classes for gRPC-based APIs (such as
-<a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html">PublisherClient</a>)
+<a href="Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.PublisherClient.html">PublisherClient</a>)
 have <code>Create</code> overloads of this form:</p>
 <pre><code class="lang-csharp">public static PublisherClient Create(ServiceEndpoint endpoint = null, PublisherSettings settings = null)
 
@@ -73,7 +73,7 @@ public static PublisherClient Create(Channel channel, PublisherSettings settings
 which is shared by all instances created in the same way, and
 optionally shut down using the <code>ShutDownDefaultChannelsAsync</code> method.</p>
 <p>The second of these never creates a new channel, and the caller is
-responsible for explicit clean-up if required. See <a href="cleanup.html">&quot;Unmanaged
+responsible for explicit clean-up if required. See <a href="guides/cleanup.html">&quot;Unmanaged
 resource clean-up&quot;</a> for more details on situations where
 this is important.</p>
 <p>To create a client with specific credentials, you have to create the

@@ -79,11 +79,35 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">Job</span></div>
               </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
               <h6><strong>Namespace</strong>:Google.Apis.Bigquery.v2.Data</h6>
               <h6><strong>Assembly</strong>:Google.Apis.Bigquery.v2.dll</h6>
               <h5 id="Google_Apis_Bigquery_v2_Data_Job_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class Job : Requests.IDirectResponseSchema</code></pre>
+                <pre><code class="lang-csharp hljs">public class Job : IDirectResponseSchema</code></pre>
               </div>
               <h3 id="properties">Properties
               </h3>
@@ -94,7 +118,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual JobConfiguration Configuration { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;configuration&quot;)]
+public virtual JobConfiguration Configuration { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -118,7 +143,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string ETag { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;etag&quot;)]
+public virtual string ETag { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -135,6 +161,8 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
               <a id="Google_Apis_Bigquery_v2_Data_Job_Id_" data-uid="Google.Apis.Bigquery.v2.Data.Job.Id*"></a>
               <h4 id="Google_Apis_Bigquery_v2_Data_Job_Id" data-uid="Google.Apis.Bigquery.v2.Data.Job.Id">Id</h4>
               <div class="markdown level1 summary"><p>[Output-only] Opaque ID field of the job</p>
@@ -142,7 +170,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string Id { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;id&quot;)]
+public virtual string Id { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -166,7 +195,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual JobReference JobReference { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;jobReference&quot;)]
+public virtual JobReference JobReference { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -190,7 +220,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string Kind { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;kind&quot;)]
+public virtual string Kind { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -214,7 +245,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string SelfLink { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;selfLink&quot;)]
+public virtual string SelfLink { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -239,7 +271,8 @@ job.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual JobStatistics Statistics { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;statistics&quot;)]
+public virtual JobStatistics Statistics { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -264,7 +297,8 @@ the job is complete.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual JobStatus Status { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;status&quot;)]
+public virtual JobStatus Status { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -288,7 +322,8 @@ the job is complete.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string UserEmail { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;user_email&quot;)]
+public virtual string UserEmail { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">

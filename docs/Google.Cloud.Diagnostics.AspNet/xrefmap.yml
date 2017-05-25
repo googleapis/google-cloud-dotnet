@@ -538,11 +538,11 @@ references:
   commentId: T:Google.Cloud.Diagnostics.Common.IExceptionLogger
   fullName: Google.Cloud.Diagnostics.Common.IExceptionLogger
   nameWithType: IExceptionLogger
-- uid: Google.Cloud.Diagnostics.Common.IExceptionLogger.Log(System.Exception,Microsoft.AspNetCore.Http.HttpContext)
+- uid: Google.Cloud.Diagnostics.Common.IExceptionLogger.Log(System.Exception,System.Web.HttpContext)
   name: Log(Exception, HttpContext)
-  href: api/Google.Cloud.Diagnostics.Common.IExceptionLogger.html#Google_Cloud_Diagnostics_Common_IExceptionLogger_Log_System_Exception_Microsoft_AspNetCore_Http_HttpContext_
-  commentId: M:Google.Cloud.Diagnostics.Common.IExceptionLogger.Log(System.Exception,Microsoft.AspNetCore.Http.HttpContext)
-  fullName: Google.Cloud.Diagnostics.Common.IExceptionLogger.Log(System.Exception, Microsoft.AspNetCore.Http.HttpContext)
+  href: api/Google.Cloud.Diagnostics.Common.IExceptionLogger.html#Google_Cloud_Diagnostics_Common_IExceptionLogger_Log_System_Exception_System_Web_HttpContext_
+  commentId: M:Google.Cloud.Diagnostics.Common.IExceptionLogger.Log(System.Exception,System.Web.HttpContext)
+  fullName: Google.Cloud.Diagnostics.Common.IExceptionLogger.Log(System.Exception, System.Web.HttpContext)
   nameWithType: IExceptionLogger.Log(Exception, HttpContext)
 - uid: Google.Cloud.Diagnostics.Common.IExceptionLogger.Log*
   name: Log
@@ -550,11 +550,11 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.Common.IExceptionLogger.Log
   fullName: Google.Cloud.Diagnostics.Common.IExceptionLogger.Log
   nameWithType: IExceptionLogger.Log
-- uid: Google.Cloud.Diagnostics.Common.IExceptionLogger.LogAsync(System.Exception,Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
+- uid: Google.Cloud.Diagnostics.Common.IExceptionLogger.LogAsync(System.Exception,System.Web.HttpContext,System.Threading.CancellationToken)
   name: LogAsync(Exception, HttpContext, CancellationToken)
-  href: api/Google.Cloud.Diagnostics.Common.IExceptionLogger.html#Google_Cloud_Diagnostics_Common_IExceptionLogger_LogAsync_System_Exception_Microsoft_AspNetCore_Http_HttpContext_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.Diagnostics.Common.IExceptionLogger.LogAsync(System.Exception,Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)
-  fullName: Google.Cloud.Diagnostics.Common.IExceptionLogger.LogAsync(System.Exception, Microsoft.AspNetCore.Http.HttpContext, System.Threading.CancellationToken)
+  href: api/Google.Cloud.Diagnostics.Common.IExceptionLogger.html#Google_Cloud_Diagnostics_Common_IExceptionLogger_LogAsync_System_Exception_System_Web_HttpContext_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Diagnostics.Common.IExceptionLogger.LogAsync(System.Exception,System.Web.HttpContext,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Diagnostics.Common.IExceptionLogger.LogAsync(System.Exception, System.Web.HttpContext, System.Threading.CancellationToken)
   nameWithType: IExceptionLogger.LogAsync(Exception, HttpContext, CancellationToken)
 - uid: Google.Cloud.Diagnostics.Common.IExceptionLogger.LogAsync*
   name: LogAsync
@@ -1015,13 +1015,13 @@ references:
   commentId: T:Google.Cloud.Diagnostics.Common.TraceDecisionPredicate
   fullName: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate
   nameWithType: TraceDecisionPredicate
-- uid: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create(System.Func{Microsoft.AspNetCore.Http.HttpRequest,System.Nullable{System.Boolean}},System.Boolean)
+- uid: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create(System.Func{System.Web.HttpRequest,System.Nullable{System.Boolean}},System.Boolean)
   name: Create(Func<HttpRequest, Nullable<Boolean>>, Boolean)
-  href: api/Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html#Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_Create_System_Func_Microsoft_AspNetCore_Http_HttpRequest_System_Nullable_System_Boolean___System_Boolean_
-  commentId: M:Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create(System.Func{Microsoft.AspNetCore.Http.HttpRequest,System.Nullable{System.Boolean}},System.Boolean)
+  href: api/Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html#Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_Create_System_Func_System_Web_HttpRequest_System_Nullable_System_Boolean___System_Boolean_
+  commentId: M:Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create(System.Func{System.Web.HttpRequest,System.Nullable{System.Boolean}},System.Boolean)
   name.vb: Create(Func(Of HttpRequest, Nullable(Of Boolean)), Boolean)
-  fullName: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create(System.Func<Microsoft.AspNetCore.Http.HttpRequest, System.Nullable<System.Boolean>>, System.Boolean)
-  fullName.vb: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create(System.Func(Of Microsoft.AspNetCore.Http.HttpRequest, System.Nullable(Of System.Boolean)), System.Boolean)
+  fullName: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create(System.Func<System.Web.HttpRequest, System.Nullable<System.Boolean>>, System.Boolean)
+  fullName.vb: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create(System.Func(Of System.Web.HttpRequest, System.Nullable(Of System.Boolean)), System.Boolean)
   nameWithType: TraceDecisionPredicate.Create(Func<HttpRequest, Nullable<Boolean>>, Boolean)
   nameWithType.vb: TraceDecisionPredicate.Create(Func(Of HttpRequest, Nullable(Of Boolean)), Boolean)
 - uid: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.Create*
@@ -1054,11 +1054,11 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.DoNothing
   fullName: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.DoNothing
   nameWithType: TraceDecisionPredicate.DoNothing
-- uid: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace(Microsoft.AspNetCore.Http.HttpRequest)
+- uid: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace(System.Web.HttpRequest)
   name: ShouldTrace(HttpRequest)
-  href: api/Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html#Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_ShouldTrace_Microsoft_AspNetCore_Http_HttpRequest_
-  commentId: M:Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace(Microsoft.AspNetCore.Http.HttpRequest)
-  fullName: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace(Microsoft.AspNetCore.Http.HttpRequest)
+  href: api/Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html#Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_ShouldTrace_System_Web_HttpRequest_
+  commentId: M:Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace(System.Web.HttpRequest)
+  fullName: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace(System.Web.HttpRequest)
   nameWithType: TraceDecisionPredicate.ShouldTrace(HttpRequest)
 - uid: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace*
   name: ShouldTrace

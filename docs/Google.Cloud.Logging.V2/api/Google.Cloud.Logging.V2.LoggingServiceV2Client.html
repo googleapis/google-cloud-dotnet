@@ -340,7 +340,17 @@ The log reappears if it receives new entries.
 Log entries written shortly before the delete operation might not be
 deleted.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+// Initialize request argument(s)
+DeleteLogRequest request = new DeleteLogRequest
+{
+    LogNameAsLogNameOneof = LogNameOneof.From(new LogName(&quot;[PROJECT]&quot;, &quot;[LOG]&quot;)),
+};
+// Make the request
+loggingServiceV2Client.DeleteLog(request);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void DeleteLog(DeleteLogRequest request, CallSettings callSettings = null)</code></pre>
@@ -376,7 +386,14 @@ The log reappears if it receives new entries.
 Log entries written shortly before the delete operation might not be
 deleted.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+// Initialize request argument(s)
+LogNameOneof logName = LogNameOneof.From(new LogName(&quot;[PROJECT]&quot;, &quot;[LOG]&quot;));
+// Make the request
+loggingServiceV2Client.DeleteLog(logName);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void DeleteLog(LogNameOneof logName, CallSettings callSettings = null)</code></pre>
@@ -421,7 +438,17 @@ The log reappears if it receives new entries.
 Log entries written shortly before the delete operation might not be
 deleted.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+DeleteLogRequest request = new DeleteLogRequest
+{
+    LogNameAsLogNameOneof = LogNameOneof.From(new LogName(&quot;[PROJECT]&quot;, &quot;[LOG]&quot;)),
+};
+// Make the request
+await loggingServiceV2Client.DeleteLogAsync(request);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteLogAsync(DeleteLogRequest request, CallSettings callSettings = null)</code></pre>
@@ -473,7 +500,14 @@ The log reappears if it receives new entries.
 Log entries written shortly before the delete operation might not be
 deleted.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+LogNameOneof logName = LogNameOneof.From(new LogName(&quot;[PROJECT]&quot;, &quot;[LOG]&quot;));
+// Make the request
+await loggingServiceV2Client.DeleteLogAsync(logName);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteLogAsync(LogNameOneof logName, CallSettings callSettings = null)</code></pre>
@@ -534,7 +568,14 @@ The log reappears if it receives new entries.
 Log entries written shortly before the delete operation might not be
 deleted.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+LogNameOneof logName = LogNameOneof.From(new LogName(&quot;[PROJECT]&quot;, &quot;[LOG]&quot;));
+// Make the request
+await loggingServiceV2Client.DeleteLogAsync(logName);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteLogAsync(LogNameOneof logName, CancellationToken cancellationToken)</code></pre>
@@ -594,7 +635,48 @@ For more information about log names, see
 Stackdriver Logging.  For ways to export log entries, see
 <a href="/logging/docs/export">Exporting Logs</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+// Initialize request argument(s)
+ListLogEntriesRequest request = new ListLogEntriesRequest
+{
+    ResourceNames = { },
+};
+// Make the request
+PagedEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; response =
+    loggingServiceV2Client.ListLogEntries(request);
+
+// Iterate over all response items, lazily performing RPCs as required
+foreach (LogEntry item in response)
+{
+    // Do something with each item
+    Console.WriteLine(item);
+}
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+foreach (ListLogEntriesResponse page in response.AsRawResponses())
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (LogEntry item in page)
+    {
+        Console.WriteLine(item);
+    }
+}
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;LogEntry&gt; singlePage = response.ReadPage(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (LogEntry item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; ListLogEntries(ListLogEntriesRequest request, CallSettings callSettings = null)</code></pre>
@@ -645,7 +727,47 @@ Stackdriver Logging.  For ways to export log entries, see
 Stackdriver Logging.  For ways to export log entries, see
 <a href="/logging/docs/export">Exporting Logs</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+// Initialize request argument(s)
+IEnumerable&lt;string&gt; resourceNames = new List&lt;string&gt;();
+string filter = &quot;&quot;;
+string orderBy = &quot;&quot;;
+// Make the request
+PagedEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; response =
+    loggingServiceV2Client.ListLogEntries(resourceNames, filter, orderBy);
+
+// Iterate over all response items, lazily performing RPCs as required
+foreach (LogEntry item in response)
+{
+    // Do something with each item
+    Console.WriteLine(item);
+}
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+foreach (ListLogEntriesResponse page in response.AsRawResponses())
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (LogEntry item in page)
+    {
+        Console.WriteLine(item);
+    }
+}
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;LogEntry&gt; singlePage = response.ReadPage(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (LogEntry item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; ListLogEntries(IEnumerable&lt;string&gt; resourceNames, string filter, string orderBy, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
@@ -739,7 +861,48 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
 Stackdriver Logging.  For ways to export log entries, see
 <a href="/logging/docs/export">Exporting Logs</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+ListLogEntriesRequest request = new ListLogEntriesRequest
+{
+    ResourceNames = { },
+};
+// Make the request
+PagedAsyncEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; response =
+    loggingServiceV2Client.ListLogEntriesAsync(request);
+
+// Iterate over all response items, lazily performing RPCs as required
+await response.ForEachAsync((LogEntry item) =&gt;
+{
+    // Do something with each item
+    Console.WriteLine(item);
+});
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+await response.AsRawResponses().ForEachAsync((ListLogEntriesResponse page) =&gt;
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (LogEntry item in page)
+    {
+        Console.WriteLine(item);
+    }
+});
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;LogEntry&gt; singlePage = await response.ReadPageAsync(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (LogEntry item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; ListLogEntriesAsync(ListLogEntriesRequest request, CallSettings callSettings = null)</code></pre>
@@ -790,7 +953,47 @@ Stackdriver Logging.  For ways to export log entries, see
 Stackdriver Logging.  For ways to export log entries, see
 <a href="/logging/docs/export">Exporting Logs</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+IEnumerable&lt;string&gt; resourceNames = new List&lt;string&gt;();
+string filter = &quot;&quot;;
+string orderBy = &quot;&quot;;
+// Make the request
+PagedAsyncEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; response =
+    loggingServiceV2Client.ListLogEntriesAsync(resourceNames, filter, orderBy);
+
+// Iterate over all response items, lazily performing RPCs as required
+await response.ForEachAsync((LogEntry item) =&gt;
+{
+    // Do something with each item
+    Console.WriteLine(item);
+});
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+await response.AsRawResponses().ForEachAsync((ListLogEntriesResponse page) =&gt;
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (LogEntry item in page)
+    {
+        Console.WriteLine(item);
+    }
+});
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;LogEntry&gt; singlePage = await response.ReadPageAsync(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (LogEntry item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; ListLogEntriesAsync(IEnumerable&lt;string&gt; resourceNames, string filter, string orderBy, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
@@ -883,7 +1086,48 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
               <div class="markdown level1 summary"><p>Lists the logs in projects, organizations, folders, or billing accounts.
 Only logs that have entries are listed.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+// Initialize request argument(s)
+ListLogsRequest request = new ListLogsRequest
+{
+    ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;)),
+};
+// Make the request
+PagedEnumerable&lt;ListLogsResponse, string&gt; response =
+    loggingServiceV2Client.ListLogs(request);
+
+// Iterate over all response items, lazily performing RPCs as required
+foreach (string item in response)
+{
+    // Do something with each item
+    Console.WriteLine(item);
+}
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+foreach (ListLogsResponse page in response.AsRawResponses())
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (string item in page)
+    {
+        Console.WriteLine(item);
+    }
+}
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;string&gt; singlePage = response.ReadPage(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (string item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListLogsResponse, string&gt; ListLogs(ListLogsRequest request, CallSettings callSettings = null)</code></pre>
@@ -933,7 +1177,45 @@ Only logs that have entries are listed.</p>
               <div class="markdown level1 summary"><p>Lists the logs in projects, organizations, folders, or billing accounts.
 Only logs that have entries are listed.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+// Initialize request argument(s)
+ParentNameOneof parent = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;));
+// Make the request
+PagedEnumerable&lt;ListLogsResponse, string&gt; response =
+    loggingServiceV2Client.ListLogs(parent);
+
+// Iterate over all response items, lazily performing RPCs as required
+foreach (string item in response)
+{
+    // Do something with each item
+    Console.WriteLine(item);
+}
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+foreach (ListLogsResponse page in response.AsRawResponses())
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (string item in page)
+    {
+        Console.WriteLine(item);
+    }
+}
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;string&gt; singlePage = response.ReadPage(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (string item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListLogsResponse, string&gt; ListLogs(ParentNameOneof parent, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
@@ -1001,7 +1283,48 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
               <div class="markdown level1 summary"><p>Lists the logs in projects, organizations, folders, or billing accounts.
 Only logs that have entries are listed.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+ListLogsRequest request = new ListLogsRequest
+{
+    ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;)),
+};
+// Make the request
+PagedAsyncEnumerable&lt;ListLogsResponse, string&gt; response =
+    loggingServiceV2Client.ListLogsAsync(request);
+
+// Iterate over all response items, lazily performing RPCs as required
+await response.ForEachAsync((string item) =&gt;
+{
+    // Do something with each item
+    Console.WriteLine(item);
+});
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+await response.AsRawResponses().ForEachAsync((ListLogsResponse page) =&gt;
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (string item in page)
+    {
+        Console.WriteLine(item);
+    }
+});
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;string&gt; singlePage = await response.ReadPageAsync(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (string item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListLogsResponse, string&gt; ListLogsAsync(ListLogsRequest request, CallSettings callSettings = null)</code></pre>
@@ -1051,7 +1374,45 @@ Only logs that have entries are listed.</p>
               <div class="markdown level1 summary"><p>Lists the logs in projects, organizations, folders, or billing accounts.
 Only logs that have entries are listed.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+ParentNameOneof parent = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;));
+// Make the request
+PagedAsyncEnumerable&lt;ListLogsResponse, string&gt; response =
+    loggingServiceV2Client.ListLogsAsync(parent);
+
+// Iterate over all response items, lazily performing RPCs as required
+await response.ForEachAsync((string item) =&gt;
+{
+    // Do something with each item
+    Console.WriteLine(item);
+});
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+await response.AsRawResponses().ForEachAsync((ListLogsResponse page) =&gt;
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (string item in page)
+    {
+        Console.WriteLine(item);
+    }
+});
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;string&gt; singlePage = await response.ReadPageAsync(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (string item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListLogsResponse, string&gt; ListLogsAsync(ParentNameOneof parent, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
@@ -1119,7 +1480,45 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
               <div class="markdown level1 summary"><p>Lists the descriptors for monitored resource types used by Stackdriver
 Logging.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+// Initialize request argument(s)
+ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest();
+// Make the request
+PagedEnumerable&lt;ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor&gt; response =
+    loggingServiceV2Client.ListMonitoredResourceDescriptors(request);
+
+// Iterate over all response items, lazily performing RPCs as required
+foreach (MonitoredResourceDescriptor item in response)
+{
+    // Do something with each item
+    Console.WriteLine(item);
+}
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+foreach (ListMonitoredResourceDescriptorsResponse page in response.AsRawResponses())
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (MonitoredResourceDescriptor item in page)
+    {
+        Console.WriteLine(item);
+    }
+}
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;MonitoredResourceDescriptor&gt; singlePage = response.ReadPage(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (MonitoredResourceDescriptor item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor&gt; ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest request, CallSettings callSettings = null)</code></pre>
@@ -1169,7 +1568,45 @@ Logging.</p>
               <div class="markdown level1 summary"><p>Lists the descriptors for monitored resource types used by Stackdriver
 Logging.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest();
+// Make the request
+PagedAsyncEnumerable&lt;ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor&gt; response =
+    loggingServiceV2Client.ListMonitoredResourceDescriptorsAsync(request);
+
+// Iterate over all response items, lazily performing RPCs as required
+await response.ForEachAsync((MonitoredResourceDescriptor item) =&gt;
+{
+    // Do something with each item
+    Console.WriteLine(item);
+});
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+await response.AsRawResponses().ForEachAsync((ListMonitoredResourceDescriptorsResponse page) =&gt;
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (MonitoredResourceDescriptor item in page)
+    {
+        Console.WriteLine(item);
+    }
+});
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;MonitoredResourceDescriptor&gt; singlePage = await response.ReadPageAsync(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (MonitoredResourceDescriptor item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor&gt; ListMonitoredResourceDescriptorsAsync(ListMonitoredResourceDescriptorsRequest request, CallSettings callSettings = null)</code></pre>
@@ -1250,7 +1687,17 @@ in turn be shut down by another call to this method.</p>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntries_Google_Cloud_Logging_V2_LogNameOneof_Google_Api_MonitoredResource_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_IEnumerable_Google_Cloud_Logging_V2_LogEntry__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntries(Google.Cloud.Logging.V2.LogNameOneof,Google.Api.MonitoredResource,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Google.Cloud.Logging.V2.LogEntry},Google.Api.Gax.Grpc.CallSettings)">WriteLogEntries(LogNameOneof, MonitoredResource, IDictionary&lt;String, String&gt;, IEnumerable&lt;LogEntry&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+// Initialize request argument(s)
+LogNameOneof logName = LogNameOneof.From(new LogName(&quot;[PROJECT]&quot;, &quot;[LOG]&quot;));
+MonitoredResource resource = new MonitoredResource();
+IDictionary&lt;string, string&gt; labels = new Dictionary&lt;string, string&gt;();
+IEnumerable&lt;LogEntry&gt; entries = new List&lt;LogEntry&gt;();
+// Make the request
+WriteLogEntriesResponse response = loggingServiceV2Client.WriteLogEntries(logName, resource, labels, entries);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual WriteLogEntriesResponse WriteLogEntries(LogNameOneof logName, MonitoredResource resource, IDictionary&lt;string, string&gt; labels, IEnumerable&lt;LogEntry&gt; entries, CallSettings callSettings = null)</code></pre>
@@ -1347,7 +1794,17 @@ calling this method for each individual log entry.</p>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntries_Google_Cloud_Logging_V2_WriteLogEntriesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntries(Google.Cloud.Logging.V2.WriteLogEntriesRequest,Google.Api.Gax.Grpc.CallSettings)">WriteLogEntries(WriteLogEntriesRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+// Initialize request argument(s)
+WriteLogEntriesRequest request = new WriteLogEntriesRequest
+{
+    Entries = { },
+};
+// Make the request
+WriteLogEntriesResponse response = loggingServiceV2Client.WriteLogEntries(request);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual WriteLogEntriesResponse WriteLogEntries(WriteLogEntriesRequest request, CallSettings callSettings = null)</code></pre>
@@ -1396,7 +1853,17 @@ calling this method for each individual log entry.</p>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntriesAsync_Google_Cloud_Logging_V2_LogNameOneof_Google_Api_MonitoredResource_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_IEnumerable_Google_Cloud_Logging_V2_LogEntry__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync(Google.Cloud.Logging.V2.LogNameOneof,Google.Api.MonitoredResource,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Google.Cloud.Logging.V2.LogEntry},Google.Api.Gax.Grpc.CallSettings)">WriteLogEntriesAsync(LogNameOneof, MonitoredResource, IDictionary&lt;String, String&gt;, IEnumerable&lt;LogEntry&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+LogNameOneof logName = LogNameOneof.From(new LogName(&quot;[PROJECT]&quot;, &quot;[LOG]&quot;));
+MonitoredResource resource = new MonitoredResource();
+IDictionary&lt;string, string&gt; labels = new Dictionary&lt;string, string&gt;();
+IEnumerable&lt;LogEntry&gt; entries = new List&lt;LogEntry&gt;();
+// Make the request
+WriteLogEntriesResponse response = await loggingServiceV2Client.WriteLogEntriesAsync(logName, resource, labels, entries);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;WriteLogEntriesResponse&gt; WriteLogEntriesAsync(LogNameOneof logName, MonitoredResource resource, IDictionary&lt;string, string&gt; labels, IEnumerable&lt;LogEntry&gt; entries, CallSettings callSettings = null)</code></pre>
@@ -1493,7 +1960,17 @@ calling this method for each individual log entry.</p>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntriesAsync_Google_Cloud_Logging_V2_LogNameOneof_Google_Api_MonitoredResource_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_IEnumerable_Google_Cloud_Logging_V2_LogEntry__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync(Google.Cloud.Logging.V2.LogNameOneof,Google.Api.MonitoredResource,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Google.Cloud.Logging.V2.LogEntry},System.Threading.CancellationToken)">WriteLogEntriesAsync(LogNameOneof, MonitoredResource, IDictionary&lt;String, String&gt;, IEnumerable&lt;LogEntry&gt;, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+LogNameOneof logName = LogNameOneof.From(new LogName(&quot;[PROJECT]&quot;, &quot;[LOG]&quot;));
+MonitoredResource resource = new MonitoredResource();
+IDictionary&lt;string, string&gt; labels = new Dictionary&lt;string, string&gt;();
+IEnumerable&lt;LogEntry&gt; entries = new List&lt;LogEntry&gt;();
+// Make the request
+WriteLogEntriesResponse response = await loggingServiceV2Client.WriteLogEntriesAsync(logName, resource, labels, entries);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;WriteLogEntriesResponse&gt; WriteLogEntriesAsync(LogNameOneof logName, MonitoredResource resource, IDictionary&lt;string, string&gt; labels, IEnumerable&lt;LogEntry&gt; entries, CancellationToken cancellationToken)</code></pre>
@@ -1590,7 +2067,17 @@ calling this method for each individual log entry.</p>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntriesAsync_Google_Cloud_Logging_V2_WriteLogEntriesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync(Google.Cloud.Logging.V2.WriteLogEntriesRequest,Google.Api.Gax.Grpc.CallSettings)">WriteLogEntriesAsync(WriteLogEntriesRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+WriteLogEntriesRequest request = new WriteLogEntriesRequest
+{
+    Entries = { },
+};
+// Make the request
+WriteLogEntriesResponse response = await loggingServiceV2Client.WriteLogEntriesAsync(request);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;WriteLogEntriesResponse&gt; WriteLogEntriesAsync(WriteLogEntriesRequest request, CallSettings callSettings = null)</code></pre>

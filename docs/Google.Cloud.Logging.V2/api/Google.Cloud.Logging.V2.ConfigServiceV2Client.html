@@ -341,7 +341,18 @@ time is outside the sink&#39;s start and end times or the sink&#39;s
 <code>writer_identity</code> is not permitted to write to the destination.  A sink can
 export log entries only from the resource owning the sink.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+// Initialize request argument(s)
+CreateSinkRequest request = new CreateSinkRequest
+{
+    ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;)),
+    Sink = new LogSink(),
+};
+// Make the request
+LogSink response = configServiceV2Client.CreateSink(request);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual LogSink CreateSink(CreateSinkRequest request, CallSettings callSettings = null)</code></pre>
@@ -394,7 +405,15 @@ time is outside the sink&#39;s start and end times or the sink&#39;s
 <code>writer_identity</code> is not permitted to write to the destination.  A sink can
 export log entries only from the resource owning the sink.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+// Initialize request argument(s)
+ParentNameOneof parent = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;));
+LogSink sink = new LogSink();
+// Make the request
+LogSink response = configServiceV2Client.CreateSink(parent, sink);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual LogSink CreateSink(ParentNameOneof parent, LogSink sink, CallSettings callSettings = null)</code></pre>
@@ -459,7 +478,18 @@ time is outside the sink&#39;s start and end times or the sink&#39;s
 <code>writer_identity</code> is not permitted to write to the destination.  A sink can
 export log entries only from the resource owning the sink.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+CreateSinkRequest request = new CreateSinkRequest
+{
+    ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;)),
+    Sink = new LogSink(),
+};
+// Make the request
+LogSink response = await configServiceV2Client.CreateSinkAsync(request);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;LogSink&gt; CreateSinkAsync(CreateSinkRequest request, CallSettings callSettings = null)</code></pre>
@@ -512,7 +542,15 @@ time is outside the sink&#39;s start and end times or the sink&#39;s
 <code>writer_identity</code> is not permitted to write to the destination.  A sink can
 export log entries only from the resource owning the sink.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+ParentNameOneof parent = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;));
+LogSink sink = new LogSink();
+// Make the request
+LogSink response = await configServiceV2Client.CreateSinkAsync(parent, sink);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;LogSink&gt; CreateSinkAsync(ParentNameOneof parent, LogSink sink, CallSettings callSettings = null)</code></pre>
@@ -577,7 +615,15 @@ time is outside the sink&#39;s start and end times or the sink&#39;s
 <code>writer_identity</code> is not permitted to write to the destination.  A sink can
 export log entries only from the resource owning the sink.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+ParentNameOneof parent = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;));
+LogSink sink = new LogSink();
+// Make the request
+LogSink response = await configServiceV2Client.CreateSinkAsync(parent, sink);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;LogSink&gt; CreateSinkAsync(ParentNameOneof parent, LogSink sink, CancellationToken cancellationToken)</code></pre>
@@ -639,7 +685,17 @@ is not already in use.</p>
               <div class="markdown level1 summary"><p>Deletes a sink. If the sink has a unique <code>writer_identity</code>, then that
 service account is also deleted.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+// Initialize request argument(s)
+DeleteSinkRequest request = new DeleteSinkRequest
+{
+    SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName(&quot;[PROJECT]&quot;, &quot;[SINK]&quot;)),
+};
+// Make the request
+configServiceV2Client.DeleteSink(request);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void DeleteSink(DeleteSinkRequest request, CallSettings callSettings = null)</code></pre>
@@ -673,7 +729,14 @@ service account is also deleted.</p>
               <div class="markdown level1 summary"><p>Deletes a sink. If the sink has a unique <code>writer_identity</code>, then that
 service account is also deleted.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+// Initialize request argument(s)
+SinkNameOneof sinkName = SinkNameOneof.From(new SinkName(&quot;[PROJECT]&quot;, &quot;[SINK]&quot;));
+// Make the request
+configServiceV2Client.DeleteSink(sinkName);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void DeleteSink(SinkNameOneof sinkName, CallSettings callSettings = null)</code></pre>
@@ -713,7 +776,17 @@ parent resource and the sink identifier:</p>
               <div class="markdown level1 summary"><p>Deletes a sink. If the sink has a unique <code>writer_identity</code>, then that
 service account is also deleted.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+DeleteSinkRequest request = new DeleteSinkRequest
+{
+    SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName(&quot;[PROJECT]&quot;, &quot;[SINK]&quot;)),
+};
+// Make the request
+await configServiceV2Client.DeleteSinkAsync(request);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteSinkAsync(DeleteSinkRequest request, CallSettings callSettings = null)</code></pre>
@@ -763,7 +836,14 @@ service account is also deleted.</p>
               <div class="markdown level1 summary"><p>Deletes a sink. If the sink has a unique <code>writer_identity</code>, then that
 service account is also deleted.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+SinkNameOneof sinkName = SinkNameOneof.From(new SinkName(&quot;[PROJECT]&quot;, &quot;[SINK]&quot;));
+// Make the request
+await configServiceV2Client.DeleteSinkAsync(sinkName);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteSinkAsync(SinkNameOneof sinkName, CallSettings callSettings = null)</code></pre>
@@ -819,7 +899,14 @@ parent resource and the sink identifier:</p>
               <div class="markdown level1 summary"><p>Deletes a sink. If the sink has a unique <code>writer_identity</code>, then that
 service account is also deleted.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+SinkNameOneof sinkName = SinkNameOneof.From(new SinkName(&quot;[PROJECT]&quot;, &quot;[SINK]&quot;));
+// Make the request
+await configServiceV2Client.DeleteSinkAsync(sinkName);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteSinkAsync(SinkNameOneof sinkName, CancellationToken cancellationToken)</code></pre>
@@ -874,7 +961,17 @@ parent resource and the sink identifier:</p>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_GetSink_Google_Cloud_Logging_V2_GetSinkRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSink(Google.Cloud.Logging.V2.GetSinkRequest,Google.Api.Gax.Grpc.CallSettings)">GetSink(GetSinkRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets a sink.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+// Initialize request argument(s)
+GetSinkRequest request = new GetSinkRequest
+{
+    SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName(&quot;[PROJECT]&quot;, &quot;[SINK]&quot;)),
+};
+// Make the request
+LogSink response = configServiceV2Client.GetSink(request);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual LogSink GetSink(GetSinkRequest request, CallSettings callSettings = null)</code></pre>
@@ -923,7 +1020,14 @@ parent resource and the sink identifier:</p>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_GetSink_Google_Cloud_Logging_V2_SinkNameOneof_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSink(Google.Cloud.Logging.V2.SinkNameOneof,Google.Api.Gax.Grpc.CallSettings)">GetSink(SinkNameOneof, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets a sink.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+// Initialize request argument(s)
+SinkNameOneof sinkName = SinkNameOneof.From(new SinkName(&quot;[PROJECT]&quot;, &quot;[SINK]&quot;));
+// Make the request
+LogSink response = configServiceV2Client.GetSink(sinkName);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual LogSink GetSink(SinkNameOneof sinkName, CallSettings callSettings = null)</code></pre>
@@ -977,7 +1081,17 @@ parent resource and the sink identifier:</p>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_GetSinkAsync_Google_Cloud_Logging_V2_GetSinkRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSinkAsync(Google.Cloud.Logging.V2.GetSinkRequest,Google.Api.Gax.Grpc.CallSettings)">GetSinkAsync(GetSinkRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets a sink.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+GetSinkRequest request = new GetSinkRequest
+{
+    SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName(&quot;[PROJECT]&quot;, &quot;[SINK]&quot;)),
+};
+// Make the request
+LogSink response = await configServiceV2Client.GetSinkAsync(request);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;LogSink&gt; GetSinkAsync(GetSinkRequest request, CallSettings callSettings = null)</code></pre>
@@ -1026,7 +1140,14 @@ parent resource and the sink identifier:</p>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_GetSinkAsync_Google_Cloud_Logging_V2_SinkNameOneof_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSinkAsync(Google.Cloud.Logging.V2.SinkNameOneof,Google.Api.Gax.Grpc.CallSettings)">GetSinkAsync(SinkNameOneof, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets a sink.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+SinkNameOneof sinkName = SinkNameOneof.From(new SinkName(&quot;[PROJECT]&quot;, &quot;[SINK]&quot;));
+// Make the request
+LogSink response = await configServiceV2Client.GetSinkAsync(sinkName);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;LogSink&gt; GetSinkAsync(SinkNameOneof sinkName, CallSettings callSettings = null)</code></pre>
@@ -1080,7 +1201,14 @@ parent resource and the sink identifier:</p>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_GetSinkAsync_Google_Cloud_Logging_V2_SinkNameOneof_System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.GetSinkAsync(Google.Cloud.Logging.V2.SinkNameOneof,System.Threading.CancellationToken)">GetSinkAsync(SinkNameOneof, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Gets a sink.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+SinkNameOneof sinkName = SinkNameOneof.From(new SinkName(&quot;[PROJECT]&quot;, &quot;[SINK]&quot;));
+// Make the request
+LogSink response = await configServiceV2Client.GetSinkAsync(sinkName);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;LogSink&gt; GetSinkAsync(SinkNameOneof sinkName, CancellationToken cancellationToken)</code></pre>
@@ -1134,7 +1262,48 @@ parent resource and the sink identifier:</p>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_ListSinks_Google_Cloud_Logging_V2_ListSinksRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.ListSinks(Google.Cloud.Logging.V2.ListSinksRequest,Google.Api.Gax.Grpc.CallSettings)">ListSinks(ListSinksRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists sinks.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+// Initialize request argument(s)
+ListSinksRequest request = new ListSinksRequest
+{
+    ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;)),
+};
+// Make the request
+PagedEnumerable&lt;ListSinksResponse, LogSink&gt; response =
+    configServiceV2Client.ListSinks(request);
+
+// Iterate over all response items, lazily performing RPCs as required
+foreach (LogSink item in response)
+{
+    // Do something with each item
+    Console.WriteLine(item);
+}
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+foreach (ListSinksResponse page in response.AsRawResponses())
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (LogSink item in page)
+    {
+        Console.WriteLine(item);
+    }
+}
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;LogSink&gt; singlePage = response.ReadPage(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (LogSink item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListSinksResponse, LogSink&gt; ListSinks(ListSinksRequest request, CallSettings callSettings = null)</code></pre>
@@ -1183,7 +1352,45 @@ parent resource and the sink identifier:</p>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_ListSinks_Google_Cloud_Logging_V2_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.ListSinks(Google.Cloud.Logging.V2.ParentNameOneof,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListSinks(ParentNameOneof, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists sinks.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+// Initialize request argument(s)
+ParentNameOneof parent = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;));
+// Make the request
+PagedEnumerable&lt;ListSinksResponse, LogSink&gt; response =
+    configServiceV2Client.ListSinks(parent);
+
+// Iterate over all response items, lazily performing RPCs as required
+foreach (LogSink item in response)
+{
+    // Do something with each item
+    Console.WriteLine(item);
+}
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+foreach (ListSinksResponse page in response.AsRawResponses())
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (LogSink item in page)
+    {
+        Console.WriteLine(item);
+    }
+}
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;LogSink&gt; singlePage = response.ReadPage(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (LogSink item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListSinksResponse, LogSink&gt; ListSinks(ParentNameOneof parent, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
@@ -1250,7 +1457,48 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_ListSinksAsync_Google_Cloud_Logging_V2_ListSinksRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.ListSinksAsync(Google.Cloud.Logging.V2.ListSinksRequest,Google.Api.Gax.Grpc.CallSettings)">ListSinksAsync(ListSinksRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists sinks.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+ListSinksRequest request = new ListSinksRequest
+{
+    ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;)),
+};
+// Make the request
+PagedAsyncEnumerable&lt;ListSinksResponse, LogSink&gt; response =
+    configServiceV2Client.ListSinksAsync(request);
+
+// Iterate over all response items, lazily performing RPCs as required
+await response.ForEachAsync((LogSink item) =&gt;
+{
+    // Do something with each item
+    Console.WriteLine(item);
+});
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+await response.AsRawResponses().ForEachAsync((ListSinksResponse page) =&gt;
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (LogSink item in page)
+    {
+        Console.WriteLine(item);
+    }
+});
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;LogSink&gt; singlePage = await response.ReadPageAsync(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (LogSink item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListSinksResponse, LogSink&gt; ListSinksAsync(ListSinksRequest request, CallSettings callSettings = null)</code></pre>
@@ -1299,7 +1547,45 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_ListSinksAsync_Google_Cloud_Logging_V2_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.ListSinksAsync(Google.Cloud.Logging.V2.ParentNameOneof,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListSinksAsync(ParentNameOneof, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists sinks.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+ParentNameOneof parent = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;));
+// Make the request
+PagedAsyncEnumerable&lt;ListSinksResponse, LogSink&gt; response =
+    configServiceV2Client.ListSinksAsync(parent);
+
+// Iterate over all response items, lazily performing RPCs as required
+await response.ForEachAsync((LogSink item) =&gt;
+{
+    // Do something with each item
+    Console.WriteLine(item);
+});
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+await response.AsRawResponses().ForEachAsync((ListSinksResponse page) =&gt;
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (LogSink item in page)
+    {
+        Console.WriteLine(item);
+    }
+});
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;LogSink&gt; singlePage = await response.ReadPageAsync(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (LogSink item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListSinksResponse, LogSink&gt; ListSinksAsync(ParentNameOneof parent, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
@@ -1405,7 +1691,15 @@ fields in the existing sink with values from the new sink: <code>destination</co
 The updated filter might also have a new <code>writer_identity</code>; see the
 <code>unique_writer_identity</code> field.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+// Initialize request argument(s)
+SinkNameOneof sinkName = SinkNameOneof.From(new SinkName(&quot;[PROJECT]&quot;, &quot;[SINK]&quot;));
+LogSink sink = new LogSink();
+// Make the request
+LogSink response = configServiceV2Client.UpdateSink(sinkName, sink);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual LogSink UpdateSink(SinkNameOneof sinkName, LogSink sink, CallSettings callSettings = null)</code></pre>
@@ -1475,7 +1769,18 @@ fields in the existing sink with values from the new sink: <code>destination</co
 The updated filter might also have a new <code>writer_identity</code>; see the
 <code>unique_writer_identity</code> field.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+// Initialize request argument(s)
+UpdateSinkRequest request = new UpdateSinkRequest
+{
+    SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName(&quot;[PROJECT]&quot;, &quot;[SINK]&quot;)),
+    Sink = new LogSink(),
+};
+// Make the request
+LogSink response = configServiceV2Client.UpdateSink(request);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual LogSink UpdateSink(UpdateSinkRequest request, CallSettings callSettings = null)</code></pre>
@@ -1531,7 +1836,15 @@ fields in the existing sink with values from the new sink: <code>destination</co
 The updated filter might also have a new <code>writer_identity</code>; see the
 <code>unique_writer_identity</code> field.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+SinkNameOneof sinkName = SinkNameOneof.From(new SinkName(&quot;[PROJECT]&quot;, &quot;[SINK]&quot;));
+LogSink sink = new LogSink();
+// Make the request
+LogSink response = await configServiceV2Client.UpdateSinkAsync(sinkName, sink);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;LogSink&gt; UpdateSinkAsync(SinkNameOneof sinkName, LogSink sink, CallSettings callSettings = null)</code></pre>
@@ -1601,7 +1914,15 @@ fields in the existing sink with values from the new sink: <code>destination</co
 The updated filter might also have a new <code>writer_identity</code>; see the
 <code>unique_writer_identity</code> field.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+SinkNameOneof sinkName = SinkNameOneof.From(new SinkName(&quot;[PROJECT]&quot;, &quot;[SINK]&quot;));
+LogSink sink = new LogSink();
+// Make the request
+LogSink response = await configServiceV2Client.UpdateSinkAsync(sinkName, sink);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;LogSink&gt; UpdateSinkAsync(SinkNameOneof sinkName, LogSink sink, CancellationToken cancellationToken)</code></pre>
@@ -1671,7 +1992,18 @@ fields in the existing sink with values from the new sink: <code>destination</co
 The updated filter might also have a new <code>writer_identity</code>; see the
 <code>unique_writer_identity</code> field.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+UpdateSinkRequest request = new UpdateSinkRequest
+{
+    SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName(&quot;[PROJECT]&quot;, &quot;[SINK]&quot;)),
+    Sink = new LogSink(),
+};
+// Make the request
+LogSink response = await configServiceV2Client.UpdateSinkAsync(request);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;LogSink&gt; UpdateSinkAsync(UpdateSinkRequest request, CallSettings callSettings = null)</code></pre>

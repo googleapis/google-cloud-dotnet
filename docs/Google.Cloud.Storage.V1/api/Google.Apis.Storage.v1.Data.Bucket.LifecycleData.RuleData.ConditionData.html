@@ -80,11 +80,35 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">Bucket.LifecycleData.RuleData.ConditionData</span></div>
               </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
               <h6><strong>Namespace</strong>:Google.Apis.Storage.v1.Data</h6>
               <h6><strong>Assembly</strong>:Google.Apis.Storage.v1.dll</h6>
               <h5 id="Google_Apis_Storage_v1_Data_Bucket_LifecycleData_RuleData_ConditionData_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class ConditionData : object</code></pre>
+                <pre><code class="lang-csharp hljs">public class ConditionData</code></pre>
               </div>
               <h3 id="properties">Properties
               </h3>
@@ -96,7 +120,8 @@ specified age.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;int&gt; Age { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;age&quot;)]
+public virtual int ? Age { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +147,8 @@ UTC.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string CreatedBefore { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;createdBefore&quot;)]
+public virtual string CreatedBefore { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -147,7 +173,8 @@ objects; if the value is false, it matches archived objects.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;bool&gt; IsLive { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;isLive&quot;)]
+public virtual bool ? IsLive { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -173,7 +200,8 @@ DURABLE_REDUCED_AVAILABILITY.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Collections.Generic.IList&lt;string&gt; MatchesStorageClass { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;matchesStorageClass&quot;)]
+public virtual IList&lt;string&gt; MatchesStorageClass { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -199,7 +227,8 @@ object.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;int&gt; NumNewerVersions { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;numNewerVersions&quot;)]
+public virtual int ? NumNewerVersions { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">

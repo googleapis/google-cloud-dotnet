@@ -83,6 +83,7 @@ table is needed for interpretation. Range is from
 By restricting to that range, we ensure that we can convert to
 and from  RFC 3339 date strings.
 See <a href="https://www.ietf.org/rfc/rfc3339.txt">https://www.ietf.org/rfc/rfc3339.txt</a>.</p>
+<h1 id="examples">Examples</h1>
 <p>Example 1: Compute Timestamp from POSIX <code>time()</code>.</p>
 <p>Timestamp timestamp;
 timestamp.set_seconds(time(NULL));
@@ -109,6 +110,24 @@ timestamp.set_nanos((INT32) ((ticks % 10000000) * 100));</p>
 <p>Example 5: Compute Timestamp from current time in Python.</p>
 <p>timestamp = Timestamp()
 timestamp.GetCurrentTime()</p>
+<h1 id="json-mapping">JSON Mapping</h1>
+<p>In JSON format, the Timestamp type is encoded as a string in the
+<a href="https://www.ietf.org/rfc/rfc3339.txt">RFC 3339</a> format. That is, the
+format is &quot;{year}-{month}-{day}T{hour}:{min}:{sec}[.{frac_sec}]Z&quot;
+where {year} is always expressed using four digits while {month}, {day},
+{hour}, {min}, and {sec} are zero-padded to two digits each. The fractional
+seconds, which can go up to 9 digits (i.e. up to 1 nanosecond resolution),
+are optional. The &quot;Z&quot; suffix indicates the timezone (&quot;UTC&quot;); the timezone
+is required, though only UTC (as indicated by &quot;Z&quot;) is presently supported.</p>
+<p>For example, &quot;2017-01-15T01:30:15.01Z&quot; encodes 15.01 seconds past
+01:30 UTC on January 15, 2017.</p>
+<p>In JavaScript, one can convert a Date object to this format using the
+standard [toISOString()](<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString</a>]
+method. In Python, a standard <code>datetime.datetime</code> object can be converted
+to this format using <a href="https://docs.python.org/2/library/time.html#time.strftime"><code>strftime</code></a>
+with the time format spec &#39;%Y-%m-%dT%H:%M:%S.%fZ&#39;. Likewise, in Java, one
+can use the Joda Time&#39;s <a href="http://joda-time.sourceforge.net/apidocs/org/joda/time/format/ISODateTimeFormat.html#dateTime()"><code>ISODateTimeFormat.dateTime()</code></a>
+to obtain a formatter capable of generating timestamps in this format.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -119,10 +138,10 @@ timestamp.GetCurrentTime()</p>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
-                  <span class="xref">System.Object.ToString()</span>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
                 </div>
                 <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
                 </div>
                 <div>
                   <span class="xref">System.Object.GetType()</span>
@@ -137,8 +156,114 @@ timestamp.GetCurrentTime()</p>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public sealed class Timestamp : IMessage&lt;Timestamp&gt;, IEquatable&lt;Timestamp&gt;, IDeepCloneable&lt;Timestamp&gt;, ICustomDiagnosticMessage, IMessage</code></pre>
               </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <a id="Google_Protobuf_WellKnownTypes_Timestamp__ctor_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.#ctor*"></a>
+              <h4 id="Google_Protobuf_WellKnownTypes_Timestamp__ctor" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.#ctor">Timestamp()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Timestamp()</code></pre>
+              </div>
+              <a id="Google_Protobuf_WellKnownTypes_Timestamp__ctor_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.#ctor*"></a>
+              <h4 id="Google_Protobuf_WellKnownTypes_Timestamp__ctor_Google_Protobuf_WellKnownTypes_Timestamp_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.#ctor(Google.Protobuf.WellKnownTypes.Timestamp)">Timestamp(Timestamp)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Timestamp(Timestamp other)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html">Timestamp</a></td>
+                    <td><span class="parametername">other</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="fields">Fields
+              </h3>
+              <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_NanosFieldNumber" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.NanosFieldNumber">NanosFieldNumber</h4>
+              <div class="markdown level1 summary"><p>Field number for the &quot;nanos&quot; field.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public const int NanosFieldNumber = 2</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_SecondsFieldNumber" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.SecondsFieldNumber">SecondsFieldNumber</h4>
+              <div class="markdown level1 summary"><p>Field number for the &quot;seconds&quot; field.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public const int SecondsFieldNumber = 1</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Protobuf_WellKnownTypes_Timestamp_Descriptor_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.Descriptor*"></a>
+              <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_Descriptor" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.Descriptor">Descriptor</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html">MessageDescriptor</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <a id="Google_Protobuf_WellKnownTypes_Timestamp_Nanos_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.Nanos*"></a>
               <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_Nanos" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.Nanos">Nanos</h4>
               <div class="markdown level1 summary"><p>Non-negative fractions of a second at nanosecond resolution. Negative
@@ -162,6 +287,29 @@ inclusive.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Protobuf_WellKnownTypes_Timestamp_Parser_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.Parser*"></a>
+              <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_Parser" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.Parser">Parser</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static MessageParser&lt;Timestamp&gt; Parser { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.MessageParser-1.html">MessageParser</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html">Timestamp</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -194,6 +342,140 @@ inclusive.</p>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Protobuf_WellKnownTypes_Timestamp_CalculateSize_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.CalculateSize*"></a>
+              <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_CalculateSize" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.CalculateSize">CalculateSize()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int CalculateSize()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
+              <a id="Google_Protobuf_WellKnownTypes_Timestamp_Clone_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.Clone*"></a>
+              <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_Clone" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.Clone">Clone()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Timestamp Clone()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html">Timestamp</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;T&gt;.Clone()</a></div>
+              <a id="Google_Protobuf_WellKnownTypes_Timestamp_Equals_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.Equals*"></a>
+              <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_Equals_Google_Protobuf_WellKnownTypes_Timestamp_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.Equals(Google.Protobuf.WellKnownTypes.Timestamp)">Equals(Timestamp)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Equals(Timestamp other)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html">Timestamp</a></td>
+                    <td><span class="parametername">other</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.IEquatable&lt;T&gt;.Equals(T)</span></div>
+              <a id="Google_Protobuf_WellKnownTypes_Timestamp_Equals_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.Equals*"></a>
+              <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_Equals_System_Object_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.Equals(System.Object)">Equals(Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override bool Equals(object other)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">other</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.Equals(System.Object)</span></div>
               <a id="Google_Protobuf_WellKnownTypes_Timestamp_FromDateTime_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.FromDateTime*"></a>
               <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_FromDateTime_System_DateTime_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.FromDateTime(System.DateTime)">FromDateTime(DateTime)</h4>
               <div class="markdown level1 summary"><p>Converts the specified <span class="xref">System.DateTime</span> to a <a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html">Timestamp</a>.</p>
@@ -300,6 +582,85 @@ inclusive.</p>
 is represented) but is not a separate part of the resulting value. In other words, there is no
 roundtrip operation to retrieve the original <code>DateTimeOffset</code>.</p>
 </div>
+              <a id="Google_Protobuf_WellKnownTypes_Timestamp_GetHashCode_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.GetHashCode*"></a>
+              <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_GetHashCode" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.GetHashCode">GetHashCode()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.GetHashCode()</span></div>
+              <a id="Google_Protobuf_WellKnownTypes_Timestamp_MergeFrom_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.MergeFrom*"></a>
+              <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void MergeFrom(CodedInputStream input)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html">CodedInputStream</a></td>
+                    <td><span class="parametername">input</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
+              <a id="Google_Protobuf_WellKnownTypes_Timestamp_MergeFrom_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.MergeFrom*"></a>
+              <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_MergeFrom_Google_Protobuf_WellKnownTypes_Timestamp_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.MergeFrom(Google.Protobuf.WellKnownTypes.Timestamp)">MergeFrom(Timestamp)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void MergeFrom(Timestamp other)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html">Timestamp</a></td>
+                    <td><span class="parametername">other</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;T&gt;.MergeFrom(T)</a></div>
               <a id="Google_Protobuf_WellKnownTypes_Timestamp_ToDateTime_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.ToDateTime*"></a>
               <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_ToDateTime" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.ToDateTime">ToDateTime()</h4>
               <div class="markdown level1 summary"><p>Converts this timestamp into a <span class="xref">System.DateTime</span>.</p>
@@ -430,6 +791,58 @@ instead, including a warning. This is to avoid exceptions being thrown when tryi
 diagnose problems - the regular JSON formatter will still throw an exception for non-normalized
 values.</p>
 </div>
+              <a id="Google_Protobuf_WellKnownTypes_Timestamp_ToString_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.ToString*"></a>
+              <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_ToString" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.ToString">ToString()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.ToString()</span></div>
+              <a id="Google_Protobuf_WellKnownTypes_Timestamp_WriteTo_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.WriteTo*"></a>
+              <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void WriteTo(CodedOutputStream output)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html">CodedOutputStream</a></td>
+                    <td><span class="parametername">output</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
               <h3 id="operators">Operators
               </h3>
               <a id="Google_Protobuf_WellKnownTypes_Timestamp_op_Addition_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.op_Addition*"></a>
@@ -579,6 +992,33 @@ values.</p>
                   </tr>
                 </tbody>
               </table>
+              <h3 id="eii">Explicit Interface Implementations
+              </h3>
+              <a id="Google_Protobuf_WellKnownTypes_Timestamp_Google_Protobuf_IMessage_Descriptor_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.Google#Protobuf#IMessage#Descriptor*"></a>
+              <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_Google_Protobuf_IMessage_Descriptor" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.Google#Protobuf#IMessage#Descriptor">IMessage.Descriptor</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html">MessageDescriptor</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_Descriptor">IMessage.Descriptor</a></div>
               <h3 id="extensionmethods">Extension Methods</h3>
               <div>
                   <a class="xref" href="Google.Protobuf.MessageExtensions.html#Google_Protobuf_MessageExtensions_MergeFrom_Google_Protobuf_IMessage_System_Byte___">MessageExtensions.MergeFrom(IMessage, Byte[])</a>

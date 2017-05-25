@@ -79,11 +79,35 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">JobStatistics2</span></div>
               </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
               <h6><strong>Namespace</strong>:Google.Apis.Bigquery.v2.Data</h6>
               <h6><strong>Assembly</strong>:Google.Apis.Bigquery.v2.dll</h6>
               <h5 id="Google_Apis_Bigquery_v2_Data_JobStatistics2_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class JobStatistics2 : Requests.IDirectResponseSchema</code></pre>
+                <pre><code class="lang-csharp hljs">public class JobStatistics2 : IDirectResponseSchema</code></pre>
               </div>
               <h3 id="properties">Properties
               </h3>
@@ -94,7 +118,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;int&gt; BillingTier { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;billingTier&quot;)]
+public virtual int ? BillingTier { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -118,7 +143,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;bool&gt; CacheHit { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;cacheHit&quot;)]
+public virtual bool ? CacheHit { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -159,6 +185,8 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
               <a id="Google_Apis_Bigquery_v2_Data_JobStatistics2_NumDmlAffectedRows_" data-uid="Google.Apis.Bigquery.v2.Data.JobStatistics2.NumDmlAffectedRows*"></a>
               <h4 id="Google_Apis_Bigquery_v2_Data_JobStatistics2_NumDmlAffectedRows" data-uid="Google.Apis.Bigquery.v2.Data.JobStatistics2.NumDmlAffectedRows">NumDmlAffectedRows</h4>
               <div class="markdown level1 summary"><p>[Output-only] The number of rows affected by a DML statement. Present only for DML statements
@@ -167,7 +195,8 @@ INSERT, UPDATE or DELETE.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;long&gt; NumDmlAffectedRows { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;numDmlAffectedRows&quot;)]
+public virtual long ? NumDmlAffectedRows { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -191,7 +220,8 @@ INSERT, UPDATE or DELETE.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Collections.Generic.IList&lt;ExplainQueryStage&gt; QueryPlan { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;queryPlan&quot;)]
+public virtual IList&lt;ExplainQueryStage&gt; QueryPlan { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -216,7 +246,8 @@ tables will not have a complete list.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Collections.Generic.IList&lt;TableReference&gt; ReferencedTables { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;referencedTables&quot;)]
+public virtual IList&lt;TableReference&gt; ReferencedTables { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -241,7 +272,8 @@ legacy SQL queries.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual TableSchema Schema { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;schema&quot;)]
+public virtual TableSchema Schema { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -265,7 +297,8 @@ legacy SQL queries.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string StatementType { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;statementType&quot;)]
+public virtual string StatementType { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -289,7 +322,8 @@ legacy SQL queries.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;long&gt; TotalBytesBilled { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;totalBytesBilled&quot;)]
+public virtual long ? TotalBytesBilled { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -313,7 +347,8 @@ legacy SQL queries.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;long&gt; TotalBytesProcessed { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;totalBytesProcessed&quot;)]
+public virtual long ? TotalBytesProcessed { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -338,7 +373,8 @@ a dry run validation.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual System.Collections.Generic.IList&lt;QueryParameter&gt; UndeclaredQueryParameters { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;undeclaredQueryParameters&quot;)]
+public virtual IList&lt;QueryParameter&gt; UndeclaredQueryParameters { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">

@@ -89,10 +89,10 @@ authorization check will be done.</p>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
-                  <span class="xref">System.Object.ToString()</span>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
                 </div>
                 <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
                 </div>
                 <div>
                   <span class="xref">System.Object.GetType()</span>
@@ -107,8 +107,114 @@ authorization check will be done.</p>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public sealed class AuthorizationConfig : IMessage&lt;AuthorizationConfig&gt;, IMessage, IEquatable&lt;AuthorizationConfig&gt;, IDeepCloneable&lt;AuthorizationConfig&gt;</code></pre>
               </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <a id="Google_Api_AuthorizationConfig__ctor_" data-uid="Google.Api.AuthorizationConfig.#ctor*"></a>
+              <h4 id="Google_Api_AuthorizationConfig__ctor" data-uid="Google.Api.AuthorizationConfig.#ctor">AuthorizationConfig()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public AuthorizationConfig()</code></pre>
+              </div>
+              <a id="Google_Api_AuthorizationConfig__ctor_" data-uid="Google.Api.AuthorizationConfig.#ctor*"></a>
+              <h4 id="Google_Api_AuthorizationConfig__ctor_Google_Api_AuthorizationConfig_" data-uid="Google.Api.AuthorizationConfig.#ctor(Google.Api.AuthorizationConfig)">AuthorizationConfig(AuthorizationConfig)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public AuthorizationConfig(AuthorizationConfig other)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.AuthorizationConfig.html">AuthorizationConfig</a></td>
+                    <td><span class="parametername">other</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="fields">Fields
+              </h3>
+              <h4 id="Google_Api_AuthorizationConfig_ProviderFieldNumber" data-uid="Google.Api.AuthorizationConfig.ProviderFieldNumber">ProviderFieldNumber</h4>
+              <div class="markdown level1 summary"><p>Field number for the &quot;provider&quot; field.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public const int ProviderFieldNumber = 1</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Api_AuthorizationConfig_Descriptor_" data-uid="Google.Api.AuthorizationConfig.Descriptor*"></a>
+              <h4 id="Google_Api_AuthorizationConfig_Descriptor" data-uid="Google.Api.AuthorizationConfig.Descriptor">Descriptor</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html">MessageDescriptor</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_AuthorizationConfig_Parser_" data-uid="Google.Api.AuthorizationConfig.Parser*"></a>
+              <h4 id="Google_Api_AuthorizationConfig_Parser" data-uid="Google.Api.AuthorizationConfig.Parser">Parser</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static MessageParser&lt;AuthorizationConfig&gt; Parser { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.MessageParser-1.html">MessageParser</a>&lt;<a class="xref" href="Google.Api.AuthorizationConfig.html">AuthorizationConfig</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <a id="Google_Api_AuthorizationConfig_Provider_" data-uid="Google.Api.AuthorizationConfig.Provider*"></a>
               <h4 id="Google_Api_AuthorizationConfig_Provider" data-uid="Google.Api.AuthorizationConfig.Provider">Provider</h4>
               <div class="markdown level1 summary"><p>The name of the authorization provider, such as
@@ -134,6 +240,300 @@ firebaserules.googleapis.com.</p>
                   </tr>
                 </tbody>
               </table>
+              <h3 id="methods">Methods
+              </h3>
+              <a id="Google_Api_AuthorizationConfig_CalculateSize_" data-uid="Google.Api.AuthorizationConfig.CalculateSize*"></a>
+              <h4 id="Google_Api_AuthorizationConfig_CalculateSize" data-uid="Google.Api.AuthorizationConfig.CalculateSize">CalculateSize()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int CalculateSize()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
+              <a id="Google_Api_AuthorizationConfig_Clone_" data-uid="Google.Api.AuthorizationConfig.Clone*"></a>
+              <h4 id="Google_Api_AuthorizationConfig_Clone" data-uid="Google.Api.AuthorizationConfig.Clone">Clone()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public AuthorizationConfig Clone()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.AuthorizationConfig.html">AuthorizationConfig</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;T&gt;.Clone()</a></div>
+              <a id="Google_Api_AuthorizationConfig_Equals_" data-uid="Google.Api.AuthorizationConfig.Equals*"></a>
+              <h4 id="Google_Api_AuthorizationConfig_Equals_Google_Api_AuthorizationConfig_" data-uid="Google.Api.AuthorizationConfig.Equals(Google.Api.AuthorizationConfig)">Equals(AuthorizationConfig)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Equals(AuthorizationConfig other)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.AuthorizationConfig.html">AuthorizationConfig</a></td>
+                    <td><span class="parametername">other</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.IEquatable&lt;T&gt;.Equals(T)</span></div>
+              <a id="Google_Api_AuthorizationConfig_Equals_" data-uid="Google.Api.AuthorizationConfig.Equals*"></a>
+              <h4 id="Google_Api_AuthorizationConfig_Equals_System_Object_" data-uid="Google.Api.AuthorizationConfig.Equals(System.Object)">Equals(Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override bool Equals(object other)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">other</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+              <a id="Google_Api_AuthorizationConfig_GetHashCode_" data-uid="Google.Api.AuthorizationConfig.GetHashCode*"></a>
+              <h4 id="Google_Api_AuthorizationConfig_GetHashCode" data-uid="Google.Api.AuthorizationConfig.GetHashCode">GetHashCode()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.GetHashCode()</span></div>
+              <a id="Google_Api_AuthorizationConfig_MergeFrom_" data-uid="Google.Api.AuthorizationConfig.MergeFrom*"></a>
+              <h4 id="Google_Api_AuthorizationConfig_MergeFrom_Google_Api_AuthorizationConfig_" data-uid="Google.Api.AuthorizationConfig.MergeFrom(Google.Api.AuthorizationConfig)">MergeFrom(AuthorizationConfig)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void MergeFrom(AuthorizationConfig other)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.AuthorizationConfig.html">AuthorizationConfig</a></td>
+                    <td><span class="parametername">other</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;T&gt;.MergeFrom(T)</a></div>
+              <a id="Google_Api_AuthorizationConfig_MergeFrom_" data-uid="Google.Api.AuthorizationConfig.MergeFrom*"></a>
+              <h4 id="Google_Api_AuthorizationConfig_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.AuthorizationConfig.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void MergeFrom(CodedInputStream input)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html">CodedInputStream</a></td>
+                    <td><span class="parametername">input</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
+              <a id="Google_Api_AuthorizationConfig_ToString_" data-uid="Google.Api.AuthorizationConfig.ToString*"></a>
+              <h4 id="Google_Api_AuthorizationConfig_ToString" data-uid="Google.Api.AuthorizationConfig.ToString">ToString()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.ToString()</span></div>
+              <a id="Google_Api_AuthorizationConfig_WriteTo_" data-uid="Google.Api.AuthorizationConfig.WriteTo*"></a>
+              <h4 id="Google_Api_AuthorizationConfig_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.AuthorizationConfig.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void WriteTo(CodedOutputStream output)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html">CodedOutputStream</a></td>
+                    <td><span class="parametername">output</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
+              <h3 id="eii">Explicit Interface Implementations
+              </h3>
+              <a id="Google_Api_AuthorizationConfig_Google_Protobuf_IMessage_Descriptor_" data-uid="Google.Api.AuthorizationConfig.Google#Protobuf#IMessage#Descriptor*"></a>
+              <h4 id="Google_Api_AuthorizationConfig_Google_Protobuf_IMessage_Descriptor" data-uid="Google.Api.AuthorizationConfig.Google#Protobuf#IMessage#Descriptor">IMessage.Descriptor</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html">MessageDescriptor</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_Descriptor">IMessage.Descriptor</a></div>
                         </article>
           </div>
           

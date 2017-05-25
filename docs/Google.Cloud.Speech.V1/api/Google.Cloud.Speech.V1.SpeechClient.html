@@ -382,11 +382,11 @@ LongRunningRecognizeRequest request = new LongRunningRecognizeRequest
             },
 };
 // Make the request
-Operation&lt;LongRunningRecognizeResponse&gt; response =
+Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; response =
     speechClient.LongRunningRecognize(request);
 
 // Poll until the returned long-running operation is complete
-Operation&lt;LongRunningRecognizeResponse&gt; completedResponse =
+Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; completedResponse =
     response.PollUntilCompleted();
 // Retrieve the operation result
 LongRunningRecognizeResponse result = completedResponse.Result;
@@ -394,7 +394,7 @@ LongRunningRecognizeResponse result = completedResponse.Result;
 // Or get the name of the operation
 string operationName = response.Name;
 // This name can be stored, then the long-running operation retrieved later by name
-Operation&lt;LongRunningRecognizeResponse&gt; retrievedResponse =
+Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; retrievedResponse =
     speechClient.PollOnceLongRunningRecognize(operationName);
 // Check if the retrieved long-running operation has completed
 if (retrievedResponse.IsCompleted)
@@ -405,7 +405,7 @@ if (retrievedResponse.IsCompleted)
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Operation&lt;LongRunningRecognizeResponse&gt; LongRunningRecognize(LongRunningRecognizeRequest request, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; LongRunningRecognize(LongRunningRecognizeRequest request, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -441,7 +441,7 @@ if (retrievedResponse.IsCompleted)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.LongRunning.Operation-1.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeResponse.html">LongRunningRecognizeResponse</a>&gt;</td>
+                    <td><a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeResponse.html">LongRunningRecognizeResponse</a>, <a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeMetadata.html">LongRunningRecognizeMetadata</a>&gt;</td>
                     <td><p>The RPC response.</p>
 </td>
                   </tr>
@@ -469,11 +469,11 @@ RecognitionAudio audio = new RecognitionAudio
     Uri = &quot;gs://bucket_name/file_name.flac&quot;,
 };
 // Make the request
-Operation&lt;LongRunningRecognizeResponse&gt; response =
+Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; response =
     speechClient.LongRunningRecognize(config, audio);
 
 // Poll until the returned long-running operation is complete
-Operation&lt;LongRunningRecognizeResponse&gt; completedResponse =
+Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; completedResponse =
     response.PollUntilCompleted();
 // Retrieve the operation result
 LongRunningRecognizeResponse result = completedResponse.Result;
@@ -481,7 +481,7 @@ LongRunningRecognizeResponse result = completedResponse.Result;
 // Or get the name of the operation
 string operationName = response.Name;
 // This name can be stored, then the long-running operation retrieved later by name
-Operation&lt;LongRunningRecognizeResponse&gt; retrievedResponse =
+Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; retrievedResponse =
     speechClient.PollOnceLongRunningRecognize(operationName);
 // Check if the retrieved long-running operation has completed
 if (retrievedResponse.IsCompleted)
@@ -492,7 +492,7 @@ if (retrievedResponse.IsCompleted)
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Operation&lt;LongRunningRecognizeResponse&gt; LongRunningRecognize(RecognitionConfig config, RecognitionAudio audio, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; LongRunningRecognize(RecognitionConfig config, RecognitionAudio audio, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -535,7 +535,7 @@ process the request.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.LongRunning.Operation-1.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeResponse.html">LongRunningRecognizeResponse</a>&gt;</td>
+                    <td><a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeResponse.html">LongRunningRecognizeResponse</a>, <a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeMetadata.html">LongRunningRecognizeMetadata</a>&gt;</td>
                     <td><p>The RPC response.</p>
 </td>
                   </tr>
@@ -566,11 +566,11 @@ LongRunningRecognizeRequest request = new LongRunningRecognizeRequest
             },
 };
 // Make the request
-Operation&lt;LongRunningRecognizeResponse&gt; response =
+Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; response =
     await speechClient.LongRunningRecognizeAsync(request);
 
 // Poll until the returned long-running operation is complete
-Operation&lt;LongRunningRecognizeResponse&gt; completedResponse =
+Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; completedResponse =
     await response.PollUntilCompletedAsync();
 // Retrieve the operation result
 LongRunningRecognizeResponse result = completedResponse.Result;
@@ -578,7 +578,7 @@ LongRunningRecognizeResponse result = completedResponse.Result;
 // Or get the name of the operation
 string operationName = response.Name;
 // This name can be stored, then the long-running operation retrieved later by name
-Operation&lt;LongRunningRecognizeResponse&gt; retrievedResponse =
+Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; retrievedResponse =
     await speechClient.PollOnceLongRunningRecognizeAsync(operationName);
 // Check if the retrieved long-running operation has completed
 if (retrievedResponse.IsCompleted)
@@ -589,7 +589,7 @@ if (retrievedResponse.IsCompleted)
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;LongRunningRecognizeResponse&gt;&gt; LongRunningRecognizeAsync(LongRunningRecognizeRequest request, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt;&gt; LongRunningRecognizeAsync(LongRunningRecognizeRequest request, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -625,7 +625,7 @@ if (retrievedResponse.IsCompleted)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-1.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeResponse.html">LongRunningRecognizeResponse</a>&gt;&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeResponse.html">LongRunningRecognizeResponse</a>, <a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeMetadata.html">LongRunningRecognizeMetadata</a>&gt;&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -653,11 +653,11 @@ RecognitionAudio audio = new RecognitionAudio
     Uri = &quot;gs://bucket_name/file_name.flac&quot;,
 };
 // Make the request
-Operation&lt;LongRunningRecognizeResponse&gt; response =
+Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; response =
     await speechClient.LongRunningRecognizeAsync(config, audio);
 
 // Poll until the returned long-running operation is complete
-Operation&lt;LongRunningRecognizeResponse&gt; completedResponse =
+Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; completedResponse =
     await response.PollUntilCompletedAsync();
 // Retrieve the operation result
 LongRunningRecognizeResponse result = completedResponse.Result;
@@ -665,7 +665,7 @@ LongRunningRecognizeResponse result = completedResponse.Result;
 // Or get the name of the operation
 string operationName = response.Name;
 // This name can be stored, then the long-running operation retrieved later by name
-Operation&lt;LongRunningRecognizeResponse&gt; retrievedResponse =
+Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; retrievedResponse =
     await speechClient.PollOnceLongRunningRecognizeAsync(operationName);
 // Check if the retrieved long-running operation has completed
 if (retrievedResponse.IsCompleted)
@@ -676,7 +676,7 @@ if (retrievedResponse.IsCompleted)
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;LongRunningRecognizeResponse&gt;&gt; LongRunningRecognizeAsync(RecognitionConfig config, RecognitionAudio audio, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt;&gt; LongRunningRecognizeAsync(RecognitionConfig config, RecognitionAudio audio, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -719,7 +719,7 @@ process the request.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-1.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeResponse.html">LongRunningRecognizeResponse</a>&gt;&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeResponse.html">LongRunningRecognizeResponse</a>, <a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeMetadata.html">LongRunningRecognizeMetadata</a>&gt;&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -747,11 +747,11 @@ RecognitionAudio audio = new RecognitionAudio
     Uri = &quot;gs://bucket_name/file_name.flac&quot;,
 };
 // Make the request
-Operation&lt;LongRunningRecognizeResponse&gt; response =
+Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; response =
     await speechClient.LongRunningRecognizeAsync(config, audio);
 
 // Poll until the returned long-running operation is complete
-Operation&lt;LongRunningRecognizeResponse&gt; completedResponse =
+Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; completedResponse =
     await response.PollUntilCompletedAsync();
 // Retrieve the operation result
 LongRunningRecognizeResponse result = completedResponse.Result;
@@ -759,7 +759,7 @@ LongRunningRecognizeResponse result = completedResponse.Result;
 // Or get the name of the operation
 string operationName = response.Name;
 // This name can be stored, then the long-running operation retrieved later by name
-Operation&lt;LongRunningRecognizeResponse&gt; retrievedResponse =
+Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; retrievedResponse =
     await speechClient.PollOnceLongRunningRecognizeAsync(operationName);
 // Check if the retrieved long-running operation has completed
 if (retrievedResponse.IsCompleted)
@@ -770,7 +770,7 @@ if (retrievedResponse.IsCompleted)
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;LongRunningRecognizeResponse&gt;&gt; LongRunningRecognizeAsync(RecognitionConfig config, RecognitionAudio audio, CancellationToken cancellationToken)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt;&gt; LongRunningRecognizeAsync(RecognitionConfig config, RecognitionAudio audio, CancellationToken cancellationToken)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -813,7 +813,7 @@ process the request.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-1.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeResponse.html">LongRunningRecognizeResponse</a>&gt;&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeResponse.html">LongRunningRecognizeResponse</a>, <a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeMetadata.html">LongRunningRecognizeMetadata</a>&gt;&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -826,7 +826,7 @@ process the request.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Operation&lt;LongRunningRecognizeResponse&gt; PollOnceLongRunningRecognize(string operationName, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; PollOnceLongRunningRecognize(string operationName, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -862,7 +862,7 @@ process the request.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.LongRunning.Operation-1.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeResponse.html">LongRunningRecognizeResponse</a>&gt;</td>
+                    <td><a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeResponse.html">LongRunningRecognizeResponse</a>, <a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeMetadata.html">LongRunningRecognizeMetadata</a>&gt;</td>
                     <td><p>The result of polling the operation.</p>
 </td>
                   </tr>
@@ -875,7 +875,7 @@ process the request.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;LongRunningRecognizeResponse&gt;&gt; PollOnceLongRunningRecognizeAsync(string operationName, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt;&gt; PollOnceLongRunningRecognizeAsync(string operationName, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -911,7 +911,7 @@ process the request.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-1.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeResponse.html">LongRunningRecognizeResponse</a>&gt;&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeResponse.html">LongRunningRecognizeResponse</a>, <a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeMetadata.html">LongRunningRecognizeMetadata</a>&gt;&gt;</td>
                     <td><p>A task representing the result of polling the operation.</p>
 </td>
                   </tr>

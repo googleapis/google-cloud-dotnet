@@ -655,7 +655,7 @@ ListTracesRequest request = new ListTracesRequest
     ProjectId = &quot;&quot;,
 };
 // Make the request
-PagedEnumerable&lt;ListTracesResponse,Trace&gt; response =
+PagedEnumerable&lt;ListTracesResponse, Trace&gt; response =
     traceServiceClient.ListTraces(request);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -819,7 +819,7 @@ ListTracesRequest request = new ListTracesRequest
     ProjectId = &quot;&quot;,
 };
 // Make the request
-PagedAsyncEnumerable&lt;ListTracesResponse,Trace&gt; response =
+PagedAsyncEnumerable&lt;ListTracesResponse, Trace&gt; response =
     traceServiceClient.ListTracesAsync(request);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -906,7 +906,7 @@ TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
 // Initialize request argument(s)
 string projectId = &quot;&quot;;
 // Make the request
-PagedAsyncEnumerable&lt;ListTracesResponse,Trace&gt; response =
+PagedAsyncEnumerable&lt;ListTracesResponse, Trace&gt; response =
     traceServiceClient.ListTracesAsync(projectId);
 
 // Iterate over all response items, lazily performing RPCs as required

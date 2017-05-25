@@ -73,7 +73,8 @@
               <h1 id="Google_Cloud_Translation_V2_TranslationModel" data-uid="Google.Cloud.Translation.V2.TranslationModel">Enum TranslationModel
               </h1>
               <div class="markdown level0 summary"><p>Underlying model used by the Google Cloud Translation API. This can be explicitly
-specified on a per-client or per-method basis.</p>
+specified on a per-client or per-method basis. See
+<a href="https://cloud.google.com/translate/release-notes">https://cloud.google.com/translate/release-notes</a> for on-going changes and new models.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <h6><strong>Namespace</strong>:Google.Cloud.Translation.V2</h6>
@@ -93,15 +94,14 @@ specified on a per-client or per-method basis.</p>
                 <thead>
                 <tbody>
                   <tr>
-                    <td id="Google_Cloud_Translation_V2_TranslationModel_NeuralMachineTranslation">NeuralMachineTranslation</td>
-                    <td><p>The Neural Machine Translation model (&quot;nmt&quot;) provides higher quality results
-where available, but is more computationally intensive, leading to
-slightly higher latency.</p>
+                    <td id="Google_Cloud_Translation_V2_TranslationModel_Base">Base</td>
+                    <td><p>The &quot;base&quot; model. The exact meaning of this model may change over time.</p>
 </td>
                   </tr>
                   <tr>
-                    <td id="Google_Cloud_Translation_V2_TranslationModel_PhraseBasedMachineTranslation">PhraseBasedMachineTranslation</td>
-                    <td><p>The original translation Phrase-Based Machine Translation model (&quot;base&quot;).</p>
+                    <td id="Google_Cloud_Translation_V2_TranslationModel_NeuralMachineTranslation">NeuralMachineTranslation</td>
+                    <td><p>The Neural Machine Translation model (&quot;nmt&quot;) provides higher quality results
+where available, but is computationally intensive.</p>
 </td>
                   </tr>
                   <tr>
@@ -111,10 +111,6 @@ slightly higher latency.</p>
                   </tr>
                 </tbody>
               </thead></thead></table>
-              <h3 id="extensionmethods">Extension Methods</h3>
-              <div>
-                  <a class="xref" href="Google.Apis.Util.Utilities.html#Google_Apis_Util_Utilities_ThrowIfNull__1___0_System_String_">Utilities.ThrowIfNull&lt;TranslationModel&gt;(String)</a>
-              </div>
                         </article>
           </div>
           

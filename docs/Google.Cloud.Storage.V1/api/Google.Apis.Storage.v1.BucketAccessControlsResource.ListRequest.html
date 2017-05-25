@@ -78,8 +78,9 @@
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html">StorageBaseServiceRequest</a>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.BucketAccessControls.html">BucketAccessControls</a>&gt;</div>
-                  <div class="level2"><span class="xref">BucketAccessControlsResource.ListRequest</span></div>
+                  <div class="level1"><span class="xref">Google.Apis.Requests.ClientServiceRequest</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.BucketAccessControls.html">BucketAccessControls</a>&gt;</div>
+                  <div class="level2"><a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html">StorageBaseServiceRequest</a>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.BucketAccessControls.html">BucketAccessControls</a>&gt;</div>
+                  <div class="level3"><span class="xref">BucketAccessControlsResource.ListRequest</span></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
@@ -104,23 +105,86 @@
                 <div>
                   <a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html#Google_Apis_Storage_v1_StorageBaseServiceRequest_1_UserIp">StorageBaseServiceRequest&lt;BucketAccessControls&gt;.UserIp</a>
                 </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.BucketAccessControls&gt;.Execute()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.BucketAccessControls&gt;.ExecuteAsStream()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.BucketAccessControls&gt;.ExecuteAsync()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.BucketAccessControls&gt;.ExecuteAsync(System.Threading.CancellationToken)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.BucketAccessControls&gt;.ExecuteAsStreamAsync()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.BucketAccessControls&gt;.ExecuteAsStreamAsync(System.Threading.CancellationToken)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.BucketAccessControls&gt;.CreateRequest(System.Nullable&lt;System.Boolean&gt;)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.BucketAccessControls&gt;.GenerateRequestUri()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.BucketAccessControls&gt;.GetBody()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.BucketAccessControls&gt;.GetDefaultETagAction(System.String)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.BucketAccessControls&gt;.ETagAction</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.BucketAccessControls&gt;.ModifyRequest</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.BucketAccessControls&gt;.RequestParameters</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.BucketAccessControls&gt;.Service</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
               </div>
               <h6><strong>Namespace</strong>:Google.Apis.Storage.v1</h6>
               <h6><strong>Assembly</strong>:Google.Apis.Storage.v1.dll</h6>
               <h5 id="Google_Apis_Storage_v1_BucketAccessControlsResource_ListRequest_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class ListRequest : StorageBaseServiceRequest&lt;BucketAccessControls&gt;</code></pre>
+                <pre><code class="lang-csharp hljs">public class ListRequest : StorageBaseServiceRequest&lt;BucketAccessControls&gt;, IClientServiceRequest&lt;BucketAccessControls&gt;, IClientServiceRequest</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
               <a id="Google_Apis_Storage_v1_BucketAccessControlsResource_ListRequest__ctor_" data-uid="Google.Apis.Storage.v1.BucketAccessControlsResource.ListRequest.#ctor*"></a>
-              <h4 id="Google_Apis_Storage_v1_BucketAccessControlsResource_ListRequest__ctor_Google_Apis_Services_IClientService_System_String_" data-uid="Google.Apis.Storage.v1.BucketAccessControlsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">ListRequest(Services.IClientService, String)</h4>
+              <h4 id="Google_Apis_Storage_v1_BucketAccessControlsResource_ListRequest__ctor_Google_Apis_Services_IClientService_System_String_" data-uid="Google.Apis.Storage.v1.BucketAccessControlsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">ListRequest(IClientService, String)</h4>
               <div class="markdown level1 summary"><p>Constructs a new List request.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ListRequest(Services.IClientService service, string bucket)</code></pre>
+                <pre><code class="lang-csharp hljs">public ListRequest(IClientService service, string bucket)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -153,7 +217,8 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string Bucket { get; }</code></pre>
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;bucket&quot;, RequestParameterType.Path)]
+public virtual string Bucket { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -194,6 +259,8 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.BucketAccessControls&gt;.HttpMethod</span></div>
               <a id="Google_Apis_Storage_v1_BucketAccessControlsResource_ListRequest_MethodName_" data-uid="Google.Apis.Storage.v1.BucketAccessControlsResource.ListRequest.MethodName*"></a>
               <h4 id="Google_Apis_Storage_v1_BucketAccessControlsResource_ListRequest_MethodName" data-uid="Google.Apis.Storage.v1.BucketAccessControlsResource.ListRequest.MethodName">MethodName</h4>
               <div class="markdown level1 summary"><p>Gets the method name.</p>
@@ -218,6 +285,8 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.BucketAccessControls&gt;.MethodName</span></div>
               <a id="Google_Apis_Storage_v1_BucketAccessControlsResource_ListRequest_RestPath_" data-uid="Google.Apis.Storage.v1.BucketAccessControlsResource.ListRequest.RestPath*"></a>
               <h4 id="Google_Apis_Storage_v1_BucketAccessControlsResource_ListRequest_RestPath" data-uid="Google.Apis.Storage.v1.BucketAccessControlsResource.ListRequest.RestPath">RestPath</h4>
               <div class="markdown level1 summary"><p>Gets the REST path.</p>
@@ -226,6 +295,33 @@
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public override string RestPath { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.BucketAccessControls&gt;.RestPath</span></div>
+              <a id="Google_Apis_Storage_v1_BucketAccessControlsResource_ListRequest_UserProject_" data-uid="Google.Apis.Storage.v1.BucketAccessControlsResource.ListRequest.UserProject*"></a>
+              <h4 id="Google_Apis_Storage_v1_BucketAccessControlsResource_ListRequest_UserProject" data-uid="Google.Apis.Storage.v1.BucketAccessControlsResource.ListRequest.UserProject">UserProject</h4>
+              <div class="markdown level1 summary"><p>The project number to be billed for this request, for Requester Pays buckets.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;userProject&quot;, RequestParameterType.Query)]
+public virtual string UserProject { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">

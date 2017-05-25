@@ -1204,7 +1204,7 @@ GroupServiceClient groupServiceClient = GroupServiceClient.Create();
 // Initialize request argument(s)
 GroupName name = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;);
 // Make the request
-PagedEnumerable&lt;ListGroupMembersResponse,MonitoredResource&gt; response =
+PagedEnumerable&lt;ListGroupMembersResponse, MonitoredResource&gt; response =
     groupServiceClient.ListGroupMembers(name);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -1309,7 +1309,7 @@ ListGroupMembersRequest request = new ListGroupMembersRequest
     GroupName = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;),
 };
 // Make the request
-PagedEnumerable&lt;ListGroupMembersResponse,MonitoredResource&gt; response =
+PagedEnumerable&lt;ListGroupMembersResponse, MonitoredResource&gt; response =
     groupServiceClient.ListGroupMembers(request);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -1396,7 +1396,7 @@ GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
 // Initialize request argument(s)
 GroupName name = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;);
 // Make the request
-PagedAsyncEnumerable&lt;ListGroupMembersResponse,MonitoredResource&gt; response =
+PagedAsyncEnumerable&lt;ListGroupMembersResponse, MonitoredResource&gt; response =
     groupServiceClient.ListGroupMembersAsync(name);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -1501,7 +1501,7 @@ ListGroupMembersRequest request = new ListGroupMembersRequest
     GroupName = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;),
 };
 // Make the request
-PagedAsyncEnumerable&lt;ListGroupMembersResponse,MonitoredResource&gt; response =
+PagedAsyncEnumerable&lt;ListGroupMembersResponse, MonitoredResource&gt; response =
     groupServiceClient.ListGroupMembersAsync(request);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -1649,7 +1649,7 @@ ListGroupsRequest request = new ListGroupsRequest
     ProjectName = new ProjectName(&quot;[PROJECT]&quot;),
 };
 // Make the request
-PagedAsyncEnumerable&lt;ListGroupsResponse,Group&gt; response =
+PagedAsyncEnumerable&lt;ListGroupsResponse, Group&gt; response =
     groupServiceClient.ListGroupsAsync(request);
 
 // Iterate over all response items, lazily performing RPCs as required

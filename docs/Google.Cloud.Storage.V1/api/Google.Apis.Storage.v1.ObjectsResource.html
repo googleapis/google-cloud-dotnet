@@ -80,22 +80,46 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">ObjectsResource</span></div>
               </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
               <h6><strong>Namespace</strong>:Google.Apis.Storage.v1</h6>
               <h6><strong>Assembly</strong>:Google.Apis.Storage.v1.dll</h6>
               <h5 id="Google_Apis_Storage_v1_ObjectsResource_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class ObjectsResource : object</code></pre>
+                <pre><code class="lang-csharp hljs">public class ObjectsResource</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
               <a id="Google_Apis_Storage_v1_ObjectsResource__ctor_" data-uid="Google.Apis.Storage.v1.ObjectsResource.#ctor*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource__ctor_Google_Apis_Services_IClientService_" data-uid="Google.Apis.Storage.v1.ObjectsResource.#ctor(Google.Apis.Services.IClientService)">ObjectsResource(Services.IClientService)</h4>
+              <h4 id="Google_Apis_Storage_v1_ObjectsResource__ctor_Google_Apis_Services_IClientService_" data-uid="Google.Apis.Storage.v1.ObjectsResource.#ctor(Google.Apis.Services.IClientService)">ObjectsResource(IClientService)</h4>
               <div class="markdown level1 summary"><p>Constructs a new resource.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ObjectsResource(Services.IClientService service)</code></pre>
+                <pre><code class="lang-csharp hljs">public ObjectsResource(IClientService service)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -439,13 +463,13 @@ bucket value, if any.</p>
                 </tbody>
               </table>
               <a id="Google_Apis_Storage_v1_ObjectsResource_Insert_" data-uid="Google.Apis.Storage.v1.ObjectsResource.Insert*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_Insert_Google_Apis_Storage_v1_Data_Object_System_String_System_IO_Stream_System_String_" data-uid="Google.Apis.Storage.v1.ObjectsResource.Insert(Google.Apis.Storage.v1.Data.Object,System.String,System.IO.Stream,System.String)">Insert(Object, String, System.IO.Stream, String)</h4>
+              <h4 id="Google_Apis_Storage_v1_ObjectsResource_Insert_Google_Apis_Storage_v1_Data_Object_System_String_System_IO_Stream_System_String_" data-uid="Google.Apis.Storage.v1.ObjectsResource.Insert(Google.Apis.Storage.v1.Data.Object,System.String,System.IO.Stream,System.String)">Insert(Object, String, Stream, String)</h4>
               <div class="markdown level1 summary"><p>Stores a new object and metadata.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual ObjectsResource.InsertMediaUpload Insert(Object body, string bucket, System.IO.Stream stream, string contentType)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual ObjectsResource.InsertMediaUpload Insert(Object body, string bucket, Stream stream, string contentType)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -722,14 +746,14 @@ Encoding URI Path Parts.</p>
                 </tbody>
               </table>
               <a id="Google_Apis_Storage_v1_ObjectsResource_TestIamPermissions_" data-uid="Google.Apis.Storage.v1.ObjectsResource.TestIamPermissions*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_TestIamPermissions_System_String_System_String_Google_Apis_Util_Repeatable_System_String__" data-uid="Google.Apis.Storage.v1.ObjectsResource.TestIamPermissions(System.String,System.String,Google.Apis.Util.Repeatable{System.String})">TestIamPermissions(String, String, Util.Repeatable&lt;String&gt;)</h4>
+              <h4 id="Google_Apis_Storage_v1_ObjectsResource_TestIamPermissions_System_String_System_String_Google_Apis_Util_Repeatable_System_String__" data-uid="Google.Apis.Storage.v1.ObjectsResource.TestIamPermissions(System.String,System.String,Google.Apis.Util.Repeatable{System.String})">TestIamPermissions(String, String, Repeatable&lt;String&gt;)</h4>
               <div class="markdown level1 summary"><p>Tests a set of permissions on the given object to see which, if any, are held by the
 caller.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual ObjectsResource.TestIamPermissionsRequest TestIamPermissions(string bucket, string storageObject, Util.Repeatable&lt;string&gt; permissions)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual ObjectsResource.TestIamPermissionsRequest TestIamPermissions(string bucket, string storageObject, Repeatable&lt;string&gt; permissions)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">

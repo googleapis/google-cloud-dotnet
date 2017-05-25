@@ -65,7 +65,7 @@
 library for the <a href="https://cloud.google.com/error-reporting/">Stackdriver Error Reporting
 API</a>.</p>
 <p>Support for automatic error reporting can be found in the
-<a href="Google.Cloud.Diagnostics.AspNet/index.html"><code>Google.Cloud.Diagnostics.AspNet</code></a>
+<a href="../Google.Cloud.Diagnostics.AspNet/index.html"><code>Google.Cloud.Diagnostics.AspNet</code></a>
 NuGet package.</p>
 <h1 id="installation">Installation</h1>
 <p>Install the <code>Google.Cloud.ErrorReporting.V1Beta1</code> package from NuGet. Add it to
@@ -90,7 +90,7 @@ installed, run the following command in a Google Cloud SDK Shell:</p>
 optionally specifying a service endpoint and settings.</p>
 <h1 id="sample-code">Sample code</h1>
 <h2 id="automatic-error-reporting-for-aspnet">Automatic Error Reporting for ASP.NET</h2>
-<p>Using <a href="Google.Cloud.Diagnostics.AspNet/index.html"><code>Google.Cloud.Diagnostics.AspNet</code>&#39;s ExceptionLogger or ExceptionFilter</a>
+<p>Using <a href="../Google.Cloud.Diagnostics.AspNet/index.html"><code>Google.Cloud.Diagnostics.AspNet</code>&#39;s ExceptionLogger or ExceptionFilter</a>
 uncaught exceptions in ASP.NET applications can be automatically reported to the Stackdriver Error Reporting API.</p>
 <p>In ASP.NET MVC:</p>
 <pre><code class="lang-cs">public static void RegisterGlobalFilters(GlobalFilterCollection filters)
@@ -112,7 +112,7 @@ uncaught exceptions in ASP.NET applications can be automatically reported to the
         ErrorReportingExceptionLogger.Create(projectId, serviceName, version));
 }
 </code></pre><h2 id="automatic-error-reporting-for-aspnet-core">Automatic Error Reporting for ASP.NET Core</h2>
-<p>Using <a href="Google.Cloud.Diagnostics.AspNetCore/index.html"><code>Google.Cloud.Diagnostics.AspNetCore</code>&#39;s Exception Logger Middleware</a>
+<p>Using <a href="../Google.Cloud.Diagnostics.AspNetCore/index.html"><code>Google.Cloud.Diagnostics.AspNetCore</code>&#39;s Exception Logger Middleware</a>
 uncaught exceptions in ASP.NET Core applications can be automatically reported to the Stackdriver Error Reporting API.</p>
 <pre><code class="lang-cs">public void ConfigureServices(IServiceCollection services)
 {

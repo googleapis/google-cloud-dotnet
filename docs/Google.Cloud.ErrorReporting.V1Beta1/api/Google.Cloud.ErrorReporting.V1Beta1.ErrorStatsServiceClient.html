@@ -645,7 +645,7 @@ ListEventsRequest request = new ListEventsRequest
     GroupId = &quot;&quot;,
 };
 // Make the request
-PagedEnumerable&lt;ListEventsResponse,ErrorEvent&gt; response =
+PagedEnumerable&lt;ListEventsResponse, ErrorEvent&gt; response =
     errorStatsServiceClient.ListEvents(request);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -733,7 +733,7 @@ ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create
 ProjectName projectName = new ProjectName(&quot;[PROJECT]&quot;);
 string groupId = &quot;&quot;;
 // Make the request
-PagedEnumerable&lt;ListEventsResponse,ErrorEvent&gt; response =
+PagedEnumerable&lt;ListEventsResponse, ErrorEvent&gt; response =
     errorStatsServiceClient.ListEvents(projectName, groupId);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -848,7 +848,7 @@ ListEventsRequest request = new ListEventsRequest
     GroupId = &quot;&quot;,
 };
 // Make the request
-PagedAsyncEnumerable&lt;ListEventsResponse,ErrorEvent&gt; response =
+PagedAsyncEnumerable&lt;ListEventsResponse, ErrorEvent&gt; response =
     errorStatsServiceClient.ListEventsAsync(request);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -936,7 +936,7 @@ ErrorStatsServiceClient errorStatsServiceClient = await ErrorStatsServiceClient.
 ProjectName projectName = new ProjectName(&quot;[PROJECT]&quot;);
 string groupId = &quot;&quot;;
 // Make the request
-PagedAsyncEnumerable&lt;ListEventsResponse,ErrorEvent&gt; response =
+PagedAsyncEnumerable&lt;ListEventsResponse, ErrorEvent&gt; response =
     errorStatsServiceClient.ListEventsAsync(projectName, groupId);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -1051,7 +1051,7 @@ ListGroupStatsRequest request = new ListGroupStatsRequest
     TimeRange = new QueryTimeRange(),
 };
 // Make the request
-PagedEnumerable&lt;ListGroupStatsResponse,ErrorGroupStats&gt; response =
+PagedEnumerable&lt;ListGroupStatsResponse, ErrorGroupStats&gt; response =
     errorStatsServiceClient.ListGroupStats(request);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -1233,7 +1233,7 @@ ListGroupStatsRequest request = new ListGroupStatsRequest
     TimeRange = new QueryTimeRange(),
 };
 // Make the request
-PagedAsyncEnumerable&lt;ListGroupStatsResponse,ErrorGroupStats&gt; response =
+PagedAsyncEnumerable&lt;ListGroupStatsResponse, ErrorGroupStats&gt; response =
     errorStatsServiceClient.ListGroupStatsAsync(request);
 
 // Iterate over all response items, lazily performing RPCs as required
@@ -1321,7 +1321,7 @@ ErrorStatsServiceClient errorStatsServiceClient = await ErrorStatsServiceClient.
 ProjectName projectName = new ProjectName(&quot;[PROJECT]&quot;);
 QueryTimeRange timeRange = new QueryTimeRange();
 // Make the request
-PagedAsyncEnumerable&lt;ListGroupStatsResponse,ErrorGroupStats&gt; response =
+PagedAsyncEnumerable&lt;ListGroupStatsResponse, ErrorGroupStats&gt; response =
     errorStatsServiceClient.ListGroupStatsAsync(projectName, timeRange);
 
 // Iterate over all response items, lazily performing RPCs as required
