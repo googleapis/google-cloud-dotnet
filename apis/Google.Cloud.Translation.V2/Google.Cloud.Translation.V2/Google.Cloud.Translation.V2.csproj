@@ -22,6 +22,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Google.Api.Gax.Rest" Version="2.0.0-beta01" />
+    <PackageReference Include="Google.Apis.Translate.v2" Version="1.26.2.852" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="*.txt" />

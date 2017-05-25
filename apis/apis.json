@@ -286,6 +286,9 @@
     "version": "1.0.0-alpha04",
     "type": "rest",
     "description": "Recommended Google client library to access the Translation API. It wraps the Google.Apis.Translate.v2 client library, making common operations simpler in client code. The Translate API translates text from one language to another.",
+    "dependencies": {
+      "Google.Apis.Translate.v2": "1.26.2.852"
+    },
     "tags": [ "Translate", "Translation" ],
     "testDependencies": {
       "Google.Cloud.ClientTesting": ""
