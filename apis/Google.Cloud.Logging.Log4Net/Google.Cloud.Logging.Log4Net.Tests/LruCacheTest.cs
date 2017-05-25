@@ -125,7 +125,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             }
             for (int i = 0; i < threadCount; i++)
             {
-                Assert.True(threads[i].Join((int)TimeSpan.FromSeconds(5).TotalMilliseconds));
+                Assert.True(threads[i].Join((int)TimeSpan.FromSeconds(60 * 5).TotalMilliseconds));
             }
             Assert.False(failure);
             Assert.Equal(lruCapacity, lru.Count);
