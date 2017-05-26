@@ -112,7 +112,7 @@ namespace Google.Cloud.Datastore.V1
                     {
                         effectiveCallSettings = effectiveCallSettings.WithCancellationToken(cancellationToken);
                     }
-                    var response = await _parent._apiCall.Async(_request, effectiveCallSettings);
+                    var response = await _parent._apiCall.Async(_request, effectiveCallSettings).ConfigureAwait(false);
                     _finished = !MoreResultsAvailable(response);
                     ModifyRequest(_request, response);
                     Current = response;
