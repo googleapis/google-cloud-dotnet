@@ -10,9 +10,9 @@
     <NoWarn>1701;1702;1705;4014</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Google.Api.Gax.Grpc.Testing" Version="2.0.0-beta02" />
     <ProjectReference Include="..\Google.Cloud.Datastore.V1\Google.Cloud.Datastore.V1.csproj" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
-    <PackageReference Include="Google.Api.Gax.Grpc.Testing" Version="2.0.0-beta01" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
     <PackageReference Include="Moq" Version="4.7.8" />
     <PackageReference Include="xunit" Version="2.3.0-beta1-build3642" />
