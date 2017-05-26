@@ -50,11 +50,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         {
             try
             {
-                await _next(httpContext);
+                await _next(httpContext).ConfigureAwait(false);
             }
             catch (Exception exception)
             {
-                await _logger.LogAsync(exception, httpContext);
+                await _logger.LogAsync(exception, httpContext).ConfigureAwait(false);
                 throw;
             }
         }
