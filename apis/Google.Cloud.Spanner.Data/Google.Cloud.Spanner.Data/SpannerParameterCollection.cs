@@ -206,5 +206,18 @@ namespace Google.Cloud.Spanner.Data
                 typeDictionary[parameter.ParameterName] = new V1.Type { Code = parameter.TypeCode };
             }
         }
+
+#if NET45
+        // It's odd that these are required, but it looks like it's due to a discrepancy
+        // between the reference assemblies and real assemblies. See
+        // https://stackoverflow.com/questions/44197176 for details.
+        // Fortunately the real implementations all just return false too.
+        /// <inheritdoc />
+        public override bool IsFixedSize => false;
+        /// <inheritdoc />
+        public override bool IsSynchronized => false;
+        /// <inheritdoc />
+        public override bool IsReadOnly => false;
+#endif
     }
 }
