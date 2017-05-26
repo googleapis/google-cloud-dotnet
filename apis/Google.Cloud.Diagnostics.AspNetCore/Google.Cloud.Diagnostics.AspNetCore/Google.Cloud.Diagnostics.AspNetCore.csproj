@@ -22,6 +22,9 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.csproj" />
+    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.0-beta4">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.Abstractions" Version="1.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="1.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="1.1.0" />
