@@ -22,8 +22,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
 {
     public class ApiMetadata
     {
-        const string GrpcVersion = "1.3.0";
-        const string GaxVersion = "2.0.0-beta01";
+        const string GrpcVersion = "1.3.6";
+        const string GaxVersion = "2.0.0-beta02";
 
         const string StripDesktopOnNonWindows = @"..\..\..\StripDesktopOnNonWindows.xml";
 
@@ -173,8 +173,14 @@ namespace Google.Cloud.Tools.ProjectGenerator
         // dependencies with a value will be treated as package dependencies with the value as the version.
         private static XElement CreateDependenciesElement(IDictionary<string, string> dependencies) =>
             new XElement("ItemGroup",
+                // Use the GAX version for all otherwise-unversioned GAX dependencies
                 dependencies
-                    .Where(d => d.Value == "")
+                    .Where(d => d.Value == "" && d.Key.StartsWith("Google.Api.Gax"))
+                    .Select(d => new XElement("PackageReference",
+                        new XAttribute("Include", d.Key),
+                        new XAttribute("Version", GaxVersion))),
+                dependencies
+                    .Where(d => d.Value == "" && !d.Key.StartsWith("Google.Api.Gax"))
                     .Select(d => new XElement("ProjectReference", new XAttribute("Include", GenerateProjectReference(d.Key)))),
                 dependencies
                     .Where(d => d.Value != "")

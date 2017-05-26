@@ -38,7 +38,7 @@
     "tags": [ "Datastore" ],
     "testDependencies": {
       "Google.Cloud.ClientTesting": "",
-      "Google.Api.Gax.Grpc.Testing": "2.0.0-beta01"
+      "Google.Api.Gax.Grpc.Testing": ""
     },
   },
 
@@ -99,7 +99,7 @@
       "Microsoft.AspNetCore.TestHost": "1.1.0",
       "../../Google.Cloud.Diagnostics.Common/Google.Cloud.Diagnostics.Common.Tests/Google.Cloud.Diagnostics.Common.Tests.csproj": "",
       "../../Google.Cloud.Diagnostics.Common/Google.Cloud.Diagnostics.Common.IntegrationTests/Google.Cloud.Diagnostics.Common.IntegrationTests.csproj": "",
-      "Google.Api.Gax.Testing": "2.0.0-beta01"
+      "Google.Api.Gax.Testing": ""
     }
   },
 
@@ -171,7 +171,7 @@
       "Google.Cloud.DevTools.Common": ""
     },
     "testDependencies": {
-      "Google.Api.Gax.Testing": "2.0.0-beta01"
+      "Google.Api.Gax.Testing": ""
     }
   },
 
@@ -321,7 +321,7 @@
     "description": "gRPC services for the Google Long Running Operations API. This library is typically used as a dependency for other API client libraries.",
     "tags": [ "LongRunning" ],
     "testDependencies": {
-      "Google.Api.Gax.Testing": "2.0.0-beta01"
+      "Google.Api.Gax.Testing": ""
     }
   }
 ]
