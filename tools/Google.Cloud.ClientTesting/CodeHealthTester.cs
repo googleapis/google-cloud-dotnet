@@ -31,8 +31,10 @@ namespace Google.Cloud.ClientTesting
         {
             exemptedTypes = exemptedTypes ?? Enumerable.Empty<Type>();
             var badFields = from type in sampleType.GetTypeInfo().Assembly.DefinedTypes.Except(exemptedTypes.Select(t => t.GetTypeInfo()))
-                            // Exempt enums and compiler-generated types
-                            where !type.IsEnum && !type.IsDefined(typeof(CompilerGeneratedAttribute))
+                            // Exempt enums, compiler-generated types and nested private types.
+                            // (Sometimes the compiler generates nested private types but doesn't put the CompilerGeneratedAttribute
+                            // on the nested type. It's easiest just to ignore all nested private types.)
+                            where !type.IsEnum && !type.IsDefined(typeof(CompilerGeneratedAttribute)) && !type.IsNestedPrivate
                             from field in type.DeclaredFields
                             where !field.IsPrivate && !field.IsLiteral
                             // Allow internal static readonly fields, e.g. for singletons
