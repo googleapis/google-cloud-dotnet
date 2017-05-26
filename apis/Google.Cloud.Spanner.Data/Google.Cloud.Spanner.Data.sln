@@ -4,7 +4,7 @@ VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Data", "Google.Cloud.Spanner.Data\Google.Cloud.Spanner.Data.csproj", "{CA7C98B1-9F7A-4817-9FC0-55F7D670BF4E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Data.Tests", "Google.Cloud.Spanner.Data.Tests\Google.Cloud.Spanner.Data.Tests.csproj", "{22620E8F-3803-4D75-BD55-7E6E7E9C20B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Data.IntegrationTests", "Google.Cloud.Spanner.Data.IntegrationTests\Google.Cloud.Spanner.Data.IntegrationTests.csproj", "{22620E8F-3803-4D75-BD55-7E6E7E9C20B5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Admin.Instance.V1", "..\Google.Cloud.Spanner.Admin.Instance.V1\Google.Cloud.Spanner.Admin.Instance.V1\Google.Cloud.Spanner.Admin.Instance.V1.csproj", "{96F35A33-8BDF-485C-AC12-0C9EBEB430A8}"
 EndProject

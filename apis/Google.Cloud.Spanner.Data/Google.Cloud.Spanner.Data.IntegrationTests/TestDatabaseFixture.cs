@@ -3,7 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Google.Cloud.Spanner.Admin.Database.V1;
 
-namespace Google.Cloud.Spanner.Data.Tests
+namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     public class TestDatabaseFixture : IDisposable {
 
