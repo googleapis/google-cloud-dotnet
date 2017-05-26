@@ -48,6 +48,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
             }
             string targetFrameworks = TargetFrameworks;
             var dependencies = new SortedList<string, string>(Dependencies);
+            dependencies.Add("ConfigureAwaitChecker.Analyzer", "1.0.0-beta4");
             switch (Type)
             {
                 case "rest":
@@ -182,7 +183,9 @@ namespace Google.Cloud.Tools.ProjectGenerator
                         new XAttribute("Version", d.Value),
                         // Make references to Grpc.Core deploy native dependencies
                         // See https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1066
-                        d.Key == "Grpc.Core" ? new XElement("PrivateAssets", "None") : null)
+                        d.Key == "Grpc.Core" ? new XElement("PrivateAssets", "None") : null,
+                        // Make references to ConfigureAwaitChecker effectively private
+                        d.Key == "ConfigureAwaitChecker.Analyzer" ? new XElement("PrivateAssets", "All") : null)
                     )
             );
     }
