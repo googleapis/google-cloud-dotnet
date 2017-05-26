@@ -1,0 +1,40 @@
+﻿{
+  "version": "0.1.0-*",
+  "description": "Recommended Google client library to access the Google Cloud Spanner API.",
+  "authors": ["Google Inc."],
+
+  "packOptions": {
+    "summary": "Recommended Google client library to access the Google Cloud Spanner API.",
+    "owners": ["google-cloud"],
+    "tags": ["Google", "Cloud", "Spanner"],
+    "iconUrl": "https://cloud.google.com/images/gcp-icon-64x64.png",
+    "projectUrl": "https://github.com/GoogleCloudPlatform/google-cloud-dotnet",
+    "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
+    "requireLicenseAcceptance": false
+  },
+
+  "buildOptions": {
+    "keyFile": "../../GoogleApis.snk",
+    "xmlDoc": true
+  },
+
+  "dependencies": {
+    "Google.Api.Gax.Grpc": "1.0.1",
+    "Google.Cloud.Spanner.V1": { "target": "project" }
+  },
+
+  "frameworks": {
+    "net451": {
+      "frameworkAssemblies": {
+        "System.Data": "4.0.0.0",
+        "System.Transactions": "4.0.0.0",
+        "System.Xml": "4.0.0.0"
+      }
+    },
+    "netstandard1.5": {
+      "dependencies": {
+        "System.Data.Common": "4.3.0"
+      }
+    }
+  }
+}

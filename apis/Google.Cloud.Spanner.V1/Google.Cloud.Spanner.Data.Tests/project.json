@@ -1,0 +1,32 @@
+{
+  "buildOptions": {
+    "keyFile": "../../GoogleApis.snk"
+  },
+
+  "dependencies": {
+    "Google.Cloud.Spanner.V1": { "target": "project" },
+    "Google.Cloud.Spanner.Data": { "target": "project" },
+    "Google.Cloud.ClientTesting": { "target": "project" },
+    "xunit": "2.2.0-rc3-build3528",
+    "Moq": "4.6.36-alpha",
+    "dotnet-test-xunit": "2.2.0-preview2-build1029",
+    "Google.Api.Gax.Grpc": "1.0.1",
+    "Google.Cloud.Iam.V1": { "target": "project" },
+    "Google.LongRunning": { "target": "project" },
+    "Google.Cloud.Spanner.Admin.Database.V1": { "target": "project" }
+  },
+  "testRunner": "xunit",
+
+  "frameworks": {
+    "netcoreapp1.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "version": "1.0.0",
+          "type": "platform"
+        }
+      }
+    },
+    "net451": {
+      }
+    }
+}
