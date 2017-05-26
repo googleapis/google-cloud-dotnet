@@ -81,7 +81,7 @@ namespace Google.Cloud.BigQuery.V2
         public static async Task<BigQueryClient> CreateAsync(string projectId, GoogleCredential credential = null)
         {
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            var scopedCredentials = await _credentialProvider.GetCredentialsAsync(credential);
+            var scopedCredentials = await _credentialProvider.GetCredentialsAsync(credential).ConfigureAwait(false);
             return CreateImpl(projectId, scopedCredentials);
         }
 

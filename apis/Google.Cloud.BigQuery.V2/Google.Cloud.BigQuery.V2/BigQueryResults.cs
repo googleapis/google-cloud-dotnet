@@ -250,8 +250,8 @@ namespace Google.Cloud.BigQuery.V2
         public async Task<BigQueryPage> ReadPageAsync(int pageSize, PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             GaxPreconditions.CheckArgumentRange(pageSize, nameof(pageSize), 1, int.MaxValue);
-            var job = await PollUntilCompletedAsync(pollSettings, cancellationToken);
-            return await job.ReadPageAsyncImpl(pageSize, cancellationToken);
+            var job = await PollUntilCompletedAsync(pollSettings, cancellationToken).ConfigureAwait(false);
+            return await job.ReadPageAsyncImpl(pageSize, cancellationToken).ConfigureAwait(false);
         }
 
         // Implementation of ReadPageAsync for an already-complete job.
@@ -343,7 +343,7 @@ namespace Google.Cloud.BigQuery.V2
                 {
                     if (!_job.Completed)
                     {
-                        _job = await _job.PollUntilCompletedAsync(_pollSettings, cancellationToken);
+                        _job = await _job.PollUntilCompletedAsync(_pollSettings, cancellationToken).ConfigureAwait(false);
                     }
                     _underlyingIterator = _job.ResponseRows.GetEnumerator();
                 }
