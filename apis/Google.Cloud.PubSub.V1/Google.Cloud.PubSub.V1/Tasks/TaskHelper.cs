@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.PubSub.V1.Tasks
@@ -14,6 +15,7 @@ namespace Google.Cloud.PubSub.V1.Tasks
                 new TaskAwaitable(new ForwardingAwaiter(task.ConfigureAwait(false).GetAwaiter()));
             public override TaskAwaitable<T> ConfigureAwait<T>(Task<T> task) =>
                 new TaskAwaitable<T>(new ForwardingAwaiter<T>(task.ConfigureAwait(false).GetAwaiter()));
+            public override Task WhenAll(IEnumerable<Task> tasks) => Task.WhenAll(tasks);
         }
 
         public static TaskHelper Default { get; } = new DefaultTaskHelper();
@@ -23,11 +25,14 @@ namespace Google.Cloud.PubSub.V1.Tasks
         public virtual void Wait(Task task) { throw new NotImplementedException(); }
         public virtual TaskAwaitable ConfigureAwait(Task task) { throw new NotImplementedException(); }
         public virtual TaskAwaitable<T> ConfigureAwait<T>(Task<T> task) { throw new NotImplementedException(); }
+        public virtual Task WhenAll(IEnumerable<Task> tasks) { throw new NotImplementedException(); }
 
         public virtual Task Run(Func<Task> function) => Run(async () =>
         {
             await ConfigureAwait(function());
             return Task.FromResult(0);
         });
+
+        public virtual Task WhenAll(params Task[] tasks) => WhenAll((IEnumerable<Task>)tasks);
     }
 }

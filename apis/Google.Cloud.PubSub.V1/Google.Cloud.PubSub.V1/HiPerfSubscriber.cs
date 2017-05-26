@@ -1,10 +1,13 @@
 ﻿using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Apis.Auth.OAuth2;
 using Google.Cloud.PubSub.V1.Tasks;
 using Google.Protobuf;
+using Grpc.Auth;
 using Grpc.Core;
 using System;
 using System.Collections;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -18,15 +21,39 @@ namespace Google.Cloud.PubSub.V1
     /// A PubSub subscriber that is associated with a specific <see cref="SubscriptionName"/>.
     /// </summary>
     /// <remarks>
-    /// <para>To receive messages, The <see cref="Start(Func{PubsubMessage, Reply})"/>  or
-    /// <see cref="StartAsync(Func{PubsubMessage, Task{Reply}}, CancellationToken)"/> method must be called,
+    /// <para>To receive messages, the <see cref="StartAsync"/> method must be called,
     /// with a suitable message handler.</para>
     /// <para>This message handler <see cref="Reply"/> states whether to acknowledge the message;
     /// if acknowledged then it will not be received on this subscription again.</para>
     /// </remarks>
-    public abstract class HiPerfSubscriber : IDisposable
+    public abstract class HiPerfSubscriber
     {
-        private static TimeSpan DefaultStopTimeout = TimeSpan.FromSeconds(15);
+        /// <summary>
+        /// TODO
+        /// </summary>
+        public class ProvidedSubscriber
+        {
+            /// <summary>
+            /// TODO
+            /// </summary>
+            /// <param name="client">TODO</param>
+            /// <param name="clientShutdown">TODO</param>
+            public ProvidedSubscriber(SubscriberClient client, Func<Task> clientShutdown)
+            {
+                Client = GaxPreconditions.CheckNotNull(client, nameof(client));
+                ClientShutdown = GaxPreconditions.CheckNotNull(clientShutdown, nameof(clientShutdown));
+            }
+
+            /// <summary>
+            /// TODO
+            /// </summary>
+            public SubscriberClient Client { get; }
+
+            /// <summary>
+            /// TODO
+            /// </summary>
+            public Func<Task> ClientShutdown { get; }
+        }
 
         /// <summary>
         /// Reply from a message handler; whether to <see cref="Ack"/>
@@ -56,7 +83,7 @@ namespace Google.Cloud.PubSub.V1
             /// If <c>null</c>, creates channels using the default PubSub endpoint
             /// and default credentials.
             /// </summary>
-            public Func<Channel> ChannelProvider { get; set; }
+            public Func<CancellationToken, Task<ProvidedSubscriber>> SubscriberProvider { get; set; }
 
             /// <summary>
             /// <see cref="SubscriberSettings"/> used when creating <see cref="SubscriberClient"/>
@@ -72,18 +99,41 @@ namespace Google.Cloud.PubSub.V1
             public FlowControlSettings FlowControlSettings { get; set; }
 
             /// <summary>
+            /// Back off settings for re-connecting clients with recoverable errors
+            /// </summary>
+            public BackoffSettings BackoffSettings { get; set; }
+
+            /// <summary>
+            /// The lease time before which a message must either be ACKed
+            /// or have its lease extended. This is truncated to the nearest second.
+            /// IF <c>null</c>, uses the default of TODO secods.
+            /// </summary>
+            public TimeSpan? StreamAckDeadline { get; set; }
+
+            /// <summary>
             /// Duration before message expiration.
             /// If <c>null</c>, uses the default of TODO seconds.
             /// </summary>
             public TimeSpan? AckExtensionWindow { get; set; }
 
+            // TODO: TaskFaction not yet used - is it needed?
             /// <summary>
             /// A custom <see cref="TaskFactory"/> used to execute message handlers.
             /// If <c>null</c>, the system default <see cref="Task.Factory"/> is used. 
             /// </summary>
             public TaskFactory TaskFactory { get; set; }
 
+            /// <summary>
+            /// The <see cref="IScheduler"/> used to schedule delays.
+            /// If <c>null</c>, the default <see cref="SystemScheduler"/> is used.
+            /// This is usually only used for testing.
+            /// </summary>
             public IScheduler Scheduler { get; set; }
+
+            /// <summary>
+            /// The number of clients/channels to create. Defaults to something sensible (TODO).
+            /// </summary>
+            public int? ClientCount { get; set; }
         }
 
         /// <summary>
@@ -92,8 +142,46 @@ namespace Google.Cloud.PubSub.V1
         /// <returns>Default <see cref="FlowControlSettings"/> for <see cref="HiPerfSubscriber"/>.</returns>
         public static FlowControlSettings DefaultFlowControlSettings() => new FlowControlSettings
         {
-            // TODO
+            MaxOutstandingElementCount = 10_000,
+            MaxOutstandingRequestBytes = 10_000_000,
         };
+
+        /// <summary>
+        /// Default <see cref="BackoffSettings"/> for reconnecting on recoverable errors.
+        /// </summary>
+        /// <returns>Default <see cref="BackoffSettings"/> for reconnecting on recoverable errors.</returns>
+        public static BackoffSettings DefaultBackoffSettings() => new BackoffSettings(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(60), 1.5);
+
+        private static Lazy<Task<ChannelCredentials>> s_credentials = new Lazy<Task<ChannelCredentials>>(async () =>
+        {
+            var credentials = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
+            if (credentials.IsCreateScopedRequired)
+            {
+                credentials = credentials.CreateScoped(SubscriberClient.DefaultScopes);
+            }
+            return credentials.ToChannelCredentials();
+        });
+
+        /// <summary>
+        /// TODO
+        /// </summary>
+        /// <param name="cancellationToken">TODO</param>
+        /// <returns>TODO</returns>
+        protected static async Task<ProvidedSubscriber> DefaultSubscriberProvider(CancellationToken cancellationToken)
+        {
+            // TODO: Use settings passed by user, if present
+            var credentials = await s_credentials.Value.ConfigureAwait(false);
+            var channel = new Channel(SubscriberClient.DefaultEndpoint.Host, SubscriberClient.DefaultEndpoint.Port, credentials);
+            var client = SubscriberClient.Create(channel);
+            Task Shutdown()
+            {
+                // Delibrately don't wait for shutdown to complete.
+                // Doing so would block a hard-stop of the subscriber.
+                channel.ShutdownAsync();
+                return Task.FromResult(0);
+            }
+            return new ProvidedSubscriber(client, Shutdown);
+        }
 
         /// <summary>
         /// Create a <see cref="HiPerfSubscriber"/> instance
@@ -111,77 +199,32 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         public SubscriptionName SubscriptionName { get { throw new NotImplementedException(); } }
 
-        // TODO: Currently receives messages using a callback function (sync or async).
-        //       We should also consider events, Rx, ...
-
         /// <summary>
-        /// Start receiving messages, using the specified handler.
-        /// The message receiver is fully operational once the returned <see cref="Task"/> has completed. 
-        /// </summary>
-        /// <param name="handler">The handler function for each message.
-        /// This handler function must return a task, that once complete specifies whether to
-        /// <see cref="Reply.Ack"/> or <see cref="Reply.Nack"/> the handled messages.
-        /// If the task fails or the handler throws an exception, then the message will be
-        /// <see cref="Reply.Nack"/>ed.</param>
-        /// <param name="cancellationToken">Used to abort this operation.
-        /// If cancelled, this resets this <see cref="HiPerfSubscriber"/> back to a fully
-        /// stopped state, and the task returned will be faulted.</param>
-        /// <returns>A task which completes once the message receiver is fully operational.</returns>
-        /// <exception cref="InvalidOperationException">
-        /// Thrown if this <see cref="HiPerfSubscriber"/> has already been started.</exception>
-        public virtual Task StartAsync(Func<PubsubMessage, Task<Reply>> handler, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Start receiving messages, using the specified handler.
-        /// </summary>
-        /// <param name="handler">The handler function for each message.
-        /// This handler function must return a value that specifies whether to
-        /// <see cref="Reply.Ack"/> or <see cref="Reply.Nack"/> the handled messages.
-        /// If the handler throws an exception then the message will be <see cref="Reply.Nack"/>ed.</param>
-        /// <exception cref="InvalidOperationException">
-        /// Thrown if this <see cref="HiPerfSubscriber"/> has already been started.</exception>
-        public virtual void Start(Func<PubsubMessage, Reply> handler) =>
-            StartAsync(msg => Task.FromResult(handler(msg))).WaitWithUnwrappedExceptions();
-
-        /// <summary>
-        /// Stop receiving messages.
+        /// Starts receiving subscriptions. The returned <see cref="Task"/> completes when either <see cref="StopAsync(CancellationToken)"/> is called
+        /// or if an unrecoverable fault occurs. See the remarks section for more details.
         /// </summary>
         /// <remarks>
-        /// Will wait for all messages already received to be handled, unless cancelled by the
-        /// <paramref name="cancellationToken"/>. If all messages already received are not handled
-        /// due to cancellation, then the message IDs of all unhandled messages will be returned.
+        /// TODO
         /// </remarks>
-        /// <param name="cancellationToken">Used to abort handling of all messages already received.</param>
-        /// <returns>Message IDs of all received but unhandled messages. If the Stop operation is not cancelled
-        /// then no message IDs will be returned, as all will have been handled.</returns>
-        /// <exception cref="InvalidOperationException">
-        /// Thrown if this <see cref="HiPerfSubscriber"/> is not currently started.</exception>
-        public virtual Task<IEnumerable<string>> StopAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            throw new NotImplementedException();
-        }
+        /// <param name="handlerAsync">The handler function that is passed all received messages.
+        /// This function may be called on multiple threads concurrently.</param>
+        /// <returns>A <see cref="Task"/> that completes when the subscriber is stopped, or if an unrecoverble error occurs.
+        /// </returns>
+        public virtual Task StartAsync(Func<PubsubMessage, CancellationToken, Task<Reply>> handlerAsync) => throw new NotImplementedException();
 
         /// <summary>
-        /// Stop receiving mesages, with an optional timeout on handling messages already received.
+        /// TODO
         /// </summary>
-        /// <param name="timeout">Time to wait to handle messages already received.
-        /// If <c>null</c>, uses the default of 15 seconds.</param>
-        /// <returns>Message IDs of all received but unhandled messages.</returns>
-        /// <exception cref="InvalidOperationException">
-        /// Thrown if this <see cref="HiPerfSubscriber"/> is not currently started.</exception>
-        public virtual IEnumerable<string> Stop(TimeSpan? timeout = null)
-        {
-            var cancellationToken = new CancellationTokenSource(timeout ?? DefaultStopTimeout).Token;
-            return StopAsync(cancellationToken).ResultWithUnwrappedExceptions();
-        }
+        /// <param name="hardStopToken">TODO</param>
+        /// <returns>TODO</returns>
+        public virtual Task StopAsync(CancellationToken hardStopToken) => throw new NotImplementedException();
 
         /// <summary>
-        /// <see cref="Stop(TimeSpan?)"/> receiving messages using the default timeout, and dispose of this <see cref="HiPerfSubscriber"/>.
+        /// TODO
         /// </summary>
-        public virtual void Dispose() => Stop();
+        /// <param name="timeout">TODO</param>
+        /// <returns>TODO</returns>
+        public virtual Task StopAsync(TimeSpan timeout) => StopAsync(new CancellationTokenSource(timeout).Token);
     }
 
     /// <summary>
@@ -189,176 +232,456 @@ namespace Google.Cloud.PubSub.V1
     /// </summary>
     public sealed class HiPerfSubscriberImpl : HiPerfSubscriber
     {
-        private class SubscriberState
-        {
-            private SubscriberClient _client;
-
-            private Queue<string> _queuedAckIds;
-            private Queue<string> _queuedExtensionIds;
-        }
-
-        public HiPerfSubscriberImpl(SubscriptionName subscriptionName, Settings settings)
+        /// <summary>
+        /// TODO
+        /// </summary>
+        /// <param name="subscriptionName">TODO</param>
+        /// <param name="settings">TODO</param>
+        public HiPerfSubscriberImpl(SubscriptionName subscriptionName, Settings settings) :
+            this(subscriptionName, settings, TaskHelper.Default)
         {
         }
 
-        internal HiPerfSubscriberImpl(SubscriptionName subscriptionName, Func<Task<SubscriberClient>> clientProvider, Settings settings, TaskHelper taskHelper)
+        /// <summary>
+        /// TODO
+        /// </summary>
+        /// <param name="subscriptionName">TODO</param>
+        /// <param name="settings">TODO</param>
+        /// /// <param name="taskHelper">TODO</param>
+        internal HiPerfSubscriberImpl(SubscriptionName subscriptionName, Settings settings, TaskHelper taskHelper)
         {
             _subscriptionName = subscriptionName;
+            _subscriberCount = settings.ClientCount ?? 8; // TODO: what should the default be? 
+            _subscriberProvider = settings.SubscriberProvider ?? DefaultSubscriberProvider;
+            _modifyDeadlineSeconds = (int)(settings.StreamAckDeadline?.TotalSeconds ?? 60.0); // TODO: default, and verify value
+            _autoExtendInterval = TimeSpan.FromSeconds(_modifyDeadlineSeconds) - settings.AckExtensionWindow ?? TimeSpan.FromSeconds(10); // TODO: default, and verify value
+            _maxAckExtendCount = 1000; // TODO
             _scheduler = settings.Scheduler;
             _taskHelper = taskHelper;
-            _clientProvider = clientProvider;
+            var flowControlSettings = settings.FlowControlSettings ?? DefaultFlowControlSettings();
+            _flowMaxByteCount = flowControlSettings.MaxOutstandingRequestBytes ?? long.MaxValue;
+            _flowMaxElementCount = flowControlSettings.MaxOutstandingElementCount ?? long.MaxValue;
+            var backoffSettings = settings.BackoffSettings ?? DefaultBackoffSettings();
         }
 
         private readonly object _lock = new object();
         private readonly SubscriptionName _subscriptionName;
+        private readonly int _subscriberCount;
+        private readonly Func<CancellationToken, Task<ProvidedSubscriber>> _subscriberProvider;
+        private readonly TimeSpan _autoExtendInterval; // Interval between message lease auto-extends
+        private readonly int _modifyDeadlineSeconds; // Value to use as new deadline when lease auto-extends
+        private readonly int _maxAckExtendCount; // Maximum count of acks/extends to push to server in a single messages
         private readonly IScheduler _scheduler;
         private readonly TaskHelper _taskHelper;
-        private readonly Func<Task<SubscriberClient>> _clientProvider;
-        private readonly int _clientCount;
 
-        // Flow-control settings
-        private readonly int _flowMaxOutstandingElementCount;
-        private readonly int _flowMaxOutstandingRequestBytes;
-        private readonly LimitExceededBehavior _flowLimitExceededBehavior;
+        private readonly long _flowMaxByteCount;
+        private readonly long _flowMaxElementCount;
+        private readonly TimeSpan _backoffDelay;
+        private readonly TimeSpan _backoffMaxDelay;
+        private readonly double _backoffMultiplier;
 
-        private IReadOnlyList<Task> _clientTasks;
-        private CancellationTokenSource _runCts;
-        //private int _unhandledMessages;
-        private long _flowElementCount;
-        private long _flowByteCount;
+        private TaskCompletionSource<int> _mainTcs;
+        private StateManager _stateManager;
 
-        public override Task StartAsync(Func<PubsubMessage, Task<Reply>> handler, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            var startupTasks = new Task[_clientCount];
-            lock (_lock)
-            {
-                if (_runCts != null)
-                {
-                    throw new Exception("Already started");
-                }
-                _flowElementCount = 0;
-                _flowByteCount = 0;
-                _runCts = new CancellationTokenSource();
-                var clientTasks = new Task[_clientCount];
-                for (int i = 0; i < _clientCount; i++)
-                {
-                    var startupTcs = new TaskCompletionSource<int>();
-                    clientTasks[i] = RunOneClient(handler, startupTcs);
-                    startupTasks[i] = startupTcs.Task;
-                }
-                _clientTasks = clientTasks;
-            }
-            return Task.WhenAll(startupTasks);
-        }
-
-        public override Task<IEnumerable<string>> StopAsync(CancellationToken cancellationToken = default(CancellationToken))
+        /// <inheritdoc />
+        public override Task StartAsync(Func<PubsubMessage, CancellationToken, Task<Reply>> handlerAsync)
         {
             lock (_lock)
             {
-                if (_runCts == null)
+                GaxPreconditions.CheckState(_mainTcs == null, "Can only an instance once.");
+                _mainTcs = new TaskCompletionSource<int>();
+            }
+            _stateManager = new StateManager();
+            var registeredTasks = new HashSet<Task>();
+            void RegisterTask(Task task)
+            {
+                registeredTasks.Locked(() => registeredTasks.Add(task));
+                _taskHelper.Run(async () => await _taskHelper.ConfigureAwaitWithFinally(task, () => registeredTasks.Locked(() => registeredTasks.Remove(task))));
+            }
+            Flow flow = new Flow(_flowMaxByteCount, _flowMaxElementCount, RegisterTask, _taskHelper);
+            // Start all subscribers
+            var subscriberTasks = Enumerable.Range(0, _subscriberCount).Select(_ =>
+            {
+                var singleChannel = new SingleChannel(_subscriptionName, _subscriberProvider, handlerAsync,
+                    _autoExtendInterval, _modifyDeadlineSeconds, _maxAckExtendCount, flow,
+                    _backoffDelay, _backoffMaxDelay, _backoffMultiplier, RegisterTask, _scheduler, _taskHelper, _stateManager);
+                return singleChannel.Go();
+            }).ToArray();
+            // Setup finsh task
+            _taskHelper.Run(async () =>
+            {
+                // Wait for all subscribers to stop
+                await _taskHelper.ConfigureAwaitHideErrors(_taskHelper.WhenAll(subscriberTasks));
+                // Wait for all registered Tasks to stop
+                await _taskHelper.ConfigureAwaitHideErrors(_taskHelper.WhenAll(registeredTasks.Locked(() => registeredTasks.ToArray())));
+                // Return final result
+                if (_stateManager.Exception != null)
                 {
-                    throw new Exception("Not running can't stop");
+                    var ex = _stateManager.Exception;
+                    _mainTcs.SetException((ex as AggregateException)?.Flatten().InnerException ?? ex);
                 }
-                _runCts.Cancel();
-                _runCts = null;
+                else if (_stateManager.State == State.HardStop)
+                {
+                    _mainTcs.SetCanceled();
+                }
+                else
+                {
+                    _mainTcs.SetResult(0);
+                }
+            });
+            return _mainTcs.Task;
+        }
+
+        /// <inheritdoc />
+        public override Task StopAsync(CancellationToken hardStopToken)
+        {
+            lock (_lock)
+            {
+                if (_stateManager.IsRunning)
+                {
+                    _stateManager.Set(State.Stop);
+                    if (hardStopToken.CanBeCanceled)
+                    {
+                        var registration = hardStopToken.Register(() => _stateManager.Set(State.HardStop));
+                        // Do not register this Task, it completes *after* mainTask
+                        _taskHelper.Run(async () => await _taskHelper.ConfigureAwaitWithFinally(_mainTcs.Task, () => registration.Dispose()));
+                    }
+                }
+                return _mainTcs.Task;
             }
         }
 
-        private async Task RunOneClient(Func<PubsubMessage, Task<Reply>> handler, TaskCompletionSource<int> startupTcs)
+        private enum State
         {
-            // Acks and deadline-extensions are required to use the same channel as received the message 
-            SubscriberClient sub = null;
-            while (true)
+            Running,
+            Stop,
+            HardStop
+        }
+
+        private class StateManager
+        {
+            private List<Action<State>> _stateChangeFns = new List<Action<State>>();
+            private volatile State _state = State.Running;
+            private volatile Exception _exception = null;
+            public State State => _state;
+            public bool IsRunning => State == State.Running;
+            public Exception Exception => _exception;
+            public void Set(State state)
             {
-                if (sub == null)
+                _state = state;
+                foreach (var fn in _stateChangeFns)
                 {
-                    sub = await _taskHelper.ConfigureAwait(_clientProvider());
+                    fn(state);
                 }
-                var pull = sub.StreamingPull(streamingSettings: new BidirectionalStreamingSettings(1));
-                // Start streaming
-                await _taskHelper.ConfigureAwait(pull.WriteAsync(new StreamingPullRequest
-                {
-                    StreamAckDeadlineSeconds = 600, // TODO
-                    SubscriptionAsSubscriptionName = _subscriptionName
-                }));
-                // Mark subscriber as operational, if not already done
-                if (startupTcs != null)
-                {
-                    startupTcs.SetResult(0);
-                    startupTcs = null;
-                }
-                // Start responding to received messages
-                var ackQueue = new AsyncBlockingQueue<string>(_taskHelper);
-                var extendQueue = new AsyncBlockingQueue<string>(_taskHelper);
-                Task receiveTask = ReceiveMessages(pull.ResponseStream, handler, extendQueue);
-                Task ackExtendTask = AckExtendMessages(sub, ackQueue, extendQueue);
             }
-        }
-
-        private class MessageSet
-        {
-            public HashSet<string> Ids { get; }
-        }
-
-        private async Task ReceiveMessages(IAsyncEnumerator<StreamingPullResponse> stream, Func<PubsubMessage, Task<Reply>> handler, AsyncBlockingQueue<string> extendQueue, CancellationToken ct)
-        {
-            while (await _taskHelper.ConfigureAwait(stream.MoveNext(ct)))
+            public void SetExceptionAndHardStop(Exception e)
             {
-                var messages = stream.Current.ReceivedMessages;
-                // Prepare deadline-extension timers for all messages
-                var idSet = new HashSet<string>(messages.Select(x => x.AckId));
-                ExtendAfterDelay(idSet, extendQueue, ct);
-                foreach (var message in messages)
+                _exception = e;
+                Set(State.HardStop);
+            }
+            public void Register(Action<State> stateChangeFn) => _stateChangeFns.Add(stateChangeFn);
+        }
+
+        private class Flow
+        {
+            public Flow(long maxByteCount, long maxElementCount, Action<Task> registerTaskFn, TaskHelper taskHelper)
+            {
+                _maxByteCount = maxByteCount;
+                _maxElementCount = maxElementCount;
+                _registerTaskFn = registerTaskFn;
+                _taskHelper = taskHelper;
+            }
+
+            private readonly object _lock = new object();
+            private readonly long _maxByteCount;
+            private readonly long _maxElementCount;
+            private readonly Action<Task> _registerTaskFn;
+            private readonly TaskHelper _taskHelper;
+
+            private long _byteCount;
+            private long _elementCount;
+
+            private TaskCompletionSource<int> _event = new TaskCompletionSource<int>();
+
+            private bool IsFlowOk() => _byteCount < _maxByteCount && _elementCount < _maxElementCount;
+
+            public async Task Process(long byteCount, Func<Task> fn)
+            {
+                while (true)
                 {
-                    Task unusedExtendTask = ExtendAfterDelay(message.AckId, null, ct);
-                }
-                foreach (var message in messages)
-                {
-                    var messageByteCount = message.Message.CalculateSize();
+                    Task eventTask = null;
                     lock (_lock)
                     {
-                        _flowElementCount += 1;
-                        _flowByteCount += messageByteCount;
-                    }
-                    Task task = _taskHelper.Run(async () =>
-                    {
-                        var reply = await _taskHelper.ConfigureAwait(handler(message.Message));
-                        lock (_lock)
+                        if (IsFlowOk())
                         {
-                            _flowElementCount -= 1;
-                            _flowByteCount -= messageByteCount;
+                            _byteCount += byteCount;
+                            _elementCount += 1;
+                            break;
                         }
-                    });
+                        eventTask = _event.Task;
+                    }
+                    await _taskHelper.ConfigureAwait(eventTask);
                 }
-            }
-        }
-
-        private async Task AckExtendMessages(SubscriberClient.StreamingPullStream pull, AsyncBlockingQueue<string> ackQueue, AsyncBlockingQueue<string> extendQueue, CancellationToken ct)
-        {
-            while (true)
-            {
-                ct.ThrowIfCancellationRequested();
-                await _taskHelper.ConfigureAwait(Task.WhenAny(ackQueue.WaitAsync(ct), extendQueue.WaitAsync(ct)));
-                ct.ThrowIfCancellationRequested();
-                var extend = extendQueue.Dequeue(1000);
-                var ack = ackQueue.Dequeue(1000 - extend.Count);
-                if (extend.Count > 0 || ack.Count > 0)
+                _registerTaskFn(_taskHelper.Run(async () => await _taskHelper.ConfigureAwaitWithFinally(fn(), () =>
                 {
-                    await pull.WriteAsync(new StreamingPullRequest {
-                        ModifyDeadlineAckIds = { extend },
-                        ModifyDeadlineSeconds = { Enumerable.Repeat(600, extend.Count) }, // TODO: extend time
-                        AckIds = { ack },
-                    });
-                }
+                    lock (_lock)
+                    {
+                        bool preIsFlowOk = IsFlowOk();
+                        _byteCount -= byteCount;
+                        _elementCount -= 1;
+                        if (!preIsFlowOk && IsFlowOk())
+                        {
+                            _event.SetResult(0);
+                            _event = new TaskCompletionSource<int>();
+                        }
+                    }
+                })));
             }
         }
 
-        private async Task ExtendAfterDelay(string messageId, AsyncBlockingQueue<string> extendQueue, CancellationToken ct)
+        private class SingleChannel
         {
-            while (true)
+            public SingleChannel(SubscriptionName subscriptionName,
+                Func<CancellationToken, Task<ProvidedSubscriber>> subscriberProvider, Func<PubsubMessage, CancellationToken, Task<Reply>> handlerAsync,
+                TimeSpan autoExtendInterval, int modifyDeadlineSeconds, int maxAckExtendCount, Flow flow,
+                TimeSpan backoffDelay, TimeSpan backoffMaxDelay, double backoffMultiplier,
+                Action<Task> registerTaskFn, IScheduler scheduler, TaskHelper taskHelper, StateManager stateManager)
             {
-                await _scheduler.Delay(TimeSpan.FromSeconds(600 - 10), ct); // TODO: Timeout
-                extendQueue.Enqueue(messageId);
+                _subscriptionName = subscriptionName;
+                _subscriberProvider = subscriberProvider;
+                _handlerAsync = handlerAsync;
+                _autoExtendInterval = autoExtendInterval;
+                _modifyDeadlineSeconds = modifyDeadlineSeconds;
+                _maxAckExtendCount = maxAckExtendCount;
+                _flow = flow;
+                _backoffDelay = backoffDelay;
+                _backoffMaxDelay = backoffMaxDelay;
+                _backoffMultiplier = backoffMultiplier;
+                _registerTaskFn = registerTaskFn;
+                _scheduler = scheduler;
+                _taskHelper = taskHelper;
+                _stateManager = stateManager;
+                _softStopCts = new CancellationTokenSource();
+                _hardStopCts = new CancellationTokenSource();
+                stateManager.Register(state =>
+                {
+                    _softStopCts.CancelIf(state == State.Stop || state == State.HardStop);
+                    _hardStopCts.CancelIf(state == State.HardStop);
+                    _qLock.Locked(() => _qEvent.TrySetResult(0));
+                });
+            }
+
+            private SubscriptionName _subscriptionName;
+            private readonly Func<CancellationToken, Task<ProvidedSubscriber>> _subscriberProvider;
+            private readonly Func<PubsubMessage, CancellationToken, Task<Reply>> _handlerAsync;
+            private readonly TimeSpan _autoExtendInterval;
+            private readonly int _modifyDeadlineSeconds;
+            private readonly int _maxAckExtendCount;
+            private readonly Flow _flow;
+            private readonly Action<Task> _registerTaskFn;
+            private readonly IScheduler _scheduler;
+            private readonly TaskHelper _taskHelper;
+            private readonly StateManager _stateManager;
+            private readonly TimeSpan _backoffDelay;
+            private readonly TimeSpan _backoffMaxDelay;
+            private readonly double _backoffMultiplier;
+            private readonly CancellationTokenSource _softStopCts;
+            private readonly CancellationTokenSource _hardStopCts;
+
+            private readonly object _qLock = new object();
+            private readonly Queue<string> _ackQueue = new Queue<string>();
+            private readonly Queue<string> _extendQueue = new Queue<string>();
+            private int _unAckedMsgCount;
+            private TaskCompletionSource<int> _qEvent = new TaskCompletionSource<int>();
+
+            public async Task Go()
+            {
+                // The current backoff delay.
+                var backoffDelay = _backoffDelay;
+                // Loop to re-create subscriber if it fails.
+                while (!_hardStopCts.IsCancellationRequested)
+                {
+                    // TODO: Log errors in _subscriberProvider
+                    // If hard-cancelled, this cancels back to StartAsync().
+                    ProvidedSubscriber subscriber = null;
+                    SubscriberClient.StreamingPullStream pull = null;
+                    try
+                    {
+                        subscriber = await _taskHelper.ConfigureAwait(_subscriberProvider(_hardStopCts.Token));
+                        pull = subscriber.Client.StreamingPull(CallSettings.FromCancellationToken(_hardStopCts.Token), new BidirectionalStreamingSettings(1));
+                        // Initial call to start subscribe messages
+                        await _taskHelper.ConfigureAwait(pull.WriteAsync(new StreamingPullRequest
+                        {
+                            SubscriptionAsSubscriptionName = _subscriptionName,
+                            StreamAckDeadlineSeconds = _modifyDeadlineSeconds
+                        }));
+                        // Start Push task which pushes acks and extends.
+                        var faultOrSoftStopCts = CancellationTokenSource.CreateLinkedTokenSource(_softStopCts.Token);
+                        Task pushTask = Push(pull, faultOrSoftStopCts);
+                        // Read incoming messages whilst not stopped, and not in a fault condition.
+                        while (_stateManager.IsRunning && await _taskHelper.ConfigureAwaitHideCancellation(pull.ResponseStream.MoveNext(faultOrSoftStopCts.Token), false))
+                        {
+                            var msgs = pull.ResponseStream.Current.ReceivedMessages;
+                            var ackIds = new HashSet<string>(msgs.Select(x => x.AckId));
+                            var allMsgsHandledCts = CancellationTokenSource.CreateLinkedTokenSource(_hardStopCts.Token);
+                            _registerTaskFn(AutoExtend(ackIds, allMsgsHandledCts.Token));
+                            foreach (var msg in msgs)
+                            {
+                                if (!_stateManager.IsRunning)
+                                {
+                                    break;
+                                }
+                                await _taskHelper.ConfigureAwaitHideCancellation(_flow.Process(msg.CalculateSize(), async () =>
+                                {
+                                    // IsRunning check and _unAckedMsgCount must be atomic (or _unAckedMsgCount could be done before IsRunning check)
+                                    // to avoid a Push() shutdown race condition.
+                                    if (_qLock.Locked(() =>
+                                    {
+                                        bool isRunning = _stateManager.IsRunning;
+                                        _unAckedMsgCount += isRunning ? 1 : 0;
+                                        return isRunning;
+                                    }))
+                                    {
+                                        // TODO: Log errors in user handler
+                                        var reply = await _taskHelper.ConfigureAwaitHideErrors(_handlerAsync(msg.Message, _hardStopCts.Token), Reply.Nack);
+                                        lock (_qLock)
+                                        {
+                                            if (reply == Reply.Ack)
+                                            {
+                                                ackIds.Remove(msg.AckId);
+                                                _ackQueue.Enqueue(msg.AckId);
+                                                allMsgsHandledCts.CancelIf(ackIds.Count == 0);
+                                                _qEvent.TrySetResult(0);
+                                            }
+                                            else
+                                            {
+                                                _unAckedMsgCount -= 1;
+                                            }
+                                        }
+                                    }
+                                }));
+                            }
+                        }
+                        _qLock.Locked(() => _qEvent.TrySetResult(0));
+                        await _taskHelper.ConfigureAwaitHideErrors(pushTask);
+                    }
+                    catch (Exception e) when (e.As<RpcException>()?.IsRecoverable() ?? false)
+                    {
+                        // Recoverable exception, log and use backoff before re-trying connection.
+                        // TODO: Log Exception
+                        await _taskHelper.ConfigureAwait(_scheduler.Delay(backoffDelay, _hardStopCts.Token));
+                        backoffDelay = new TimeSpan((long)(backoffDelay.Ticks * _backoffMultiplier));
+                        if (backoffDelay > _backoffMaxDelay)
+                        {
+                            backoffDelay = _backoffMaxDelay;
+                        }
+                    }
+                    catch (Exception e) when (!e.IsCancellation())
+                    {
+                        // Unrecoverable exception, log and stop the subscriber
+                        // TODO: Log exception
+                        // Hard-stop on unrecoverable error. This stops all other Tasks and subscribers.
+                        _stateManager.SetExceptionAndHardStop(e);
+                        break;
+                    }
+                    finally
+                    {
+                        // Try to cleanly shutdown the subscriber. This may or may not be possible
+                        // depending on the state of the subscriber; ignore all errors.
+                        if (pull != null)
+                        {
+                            // TODO: Log errors
+                            try
+                            {
+                                _registerTaskFn(pull.WriteCompleteAsync());
+                            }
+                            catch { }
+                        }
+                        if (subscriber != null)
+                        {
+                            // TODO: Log errors
+                            try
+                            {
+                                _registerTaskFn(subscriber.ClientShutdown());
+                            }
+                            catch { }
+                        }
+                    }
+                }
+            }
+
+            private async Task AutoExtend(HashSet<string> ackIds, CancellationToken allMsgsHandledToken)
+            {
+                // Moves ackIds into the extend-queue as required for auto lease extension
+                while (true)
+                {
+                    await _taskHelper.ConfigureAwait(_scheduler.Delay(_autoExtendInterval, allMsgsHandledToken));
+                    lock (_qLock)
+                    {
+                        _extendQueue.EnqueueAll(ackIds);
+                        _qEvent.TrySetResult(0);
+                    }
+                }
+            }
+
+            private async Task Push(SubscriberClient.StreamingPullStream pull, CancellationTokenSource faultCts)
+            {
+                try
+                {
+                    while (true)
+                    {
+                        await _taskHelper.ConfigureAwait(_qLock.Locked(() => _qEvent.Task));
+                        List<string> acks = new List<string>();
+                        List<string> extends = new List<string>();
+                        lock (_qLock)
+                        {
+                            // _qEvent must be re-created before any actual work is done.
+                            // This ensures no work will be missed if a re-trigger occurs just after the _qEvent.Task await.
+                            _qEvent = new TaskCompletionSource<int>();
+                            // On hardStop, just exit immediately. No more extends/acks will be pushed.
+                            // faultCts being cancelled means the Pull has faulted, so stop Pushing as soon as possible.
+                            if (_hardStopCts.IsCancellationRequested)
+                            {
+                                break;
+                            }
+                            // Send acks that are waiting, but no more that _maxAckExtendCount
+                            while (_ackQueue.Count > 0 && acks.Count < _maxAckExtendCount)
+                            {
+                                acks.Add(_ackQueue.Dequeue());
+                            }
+                            // Send extends that are waiting, but no more acks+extends than _maxAckExtendCount
+                            while (_extendQueue.Count > 0 && (acks.Count + extends.Count) < _maxAckExtendCount)
+                            {
+                                extends.Add(_extendQueue.Dequeue());
+                            }
+                        }
+                        // If anything to be sent, then send it now
+                        if (acks.Count > 0 || extends.Count > 0)
+                        {
+                            await _taskHelper.ConfigureAwait(pull.WriteAsync(new StreamingPullRequest
+                            {
+                                AckIds = { acks },
+                                ModifyDeadlineAckIds = { extends },
+                                ModifyDeadlineSeconds = { extends.Select(_ => _modifyDeadlineSeconds) },
+                            }));
+                            // Decrement _unAckedMsgCount by the number of acks just successfully sent.
+                            _qLock.Locked(() => _unAckedMsgCount -= acks.Count);
+                        }
+                        if (!_stateManager.IsRunning && _qLock.Locked(() => _unAckedMsgCount == 0))
+                        {
+                            // All acks sent and a soft-stop has been requested, so cancel _hardStopCts
+                            // to signal this SingleChannel has completed; then exit Pusher
+                            _hardStopCts.Cancel();
+                            break;
+                        }
+                    }
+                }
+                catch (Exception e) when (!e.IsCancellation())
+                {
+                    // If there is a fault with the Push
+                    // TODO: Log the fault
+                    faultCts.Cancel();
+                }
             }
         }
     }

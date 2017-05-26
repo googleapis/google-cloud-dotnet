@@ -13,7 +13,7 @@ namespace Google.Cloud.PubSub.V1.Tests
 {
     public class HiPerfPublisherTest
     {
-        class FakePublisher : PublisherClient
+        private class FakePublisher : PublisherClient
         {
             public FakePublisher(IScheduler scheduler, TaskHelper taskHelper, params TimeSpan[] delays)
             {

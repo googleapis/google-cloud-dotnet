@@ -21,7 +21,7 @@ namespace Google.Cloud.PubSub.V1.Tests.Testing
         public void UnsafeOnCompleted(Action continuation) =>
             _task.ContinueWith(_ => continuation(), CancellationToken.None, TaskContinuationOptions.DenyChildAttach, _taskScheduler);
         public bool IsCompleted => _task.IsCompleted;
-        public void GetResult() { }
+        public void GetResult() => _task.Wait();
     }
 
     internal class TestAwaiter<T> : ITaskAwaiter<T>

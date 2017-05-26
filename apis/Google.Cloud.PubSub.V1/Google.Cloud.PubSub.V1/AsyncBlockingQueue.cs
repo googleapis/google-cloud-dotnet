@@ -20,12 +20,19 @@ namespace Google.Cloud.PubSub.V1
 
         private TaskCompletionSource<int> _qTcs;
 
-        public void Enqueue(T item)
+        public void Enqueue(T item) => Enqueue(new[] { item });
+
+        public void Enqueue(IEnumerable<T> items)
         {
             lock (_lock)
             {
-                _q.Enqueue(item);
-                if (_qTcs != null)
+                bool any = false;
+                foreach (var item in items)
+                {
+                    _q.Enqueue(item);
+                    any = true;
+                }
+                if (any && _qTcs != null)
                 {
                     _qTcs.SetResult(0);
                     _qTcs = null;

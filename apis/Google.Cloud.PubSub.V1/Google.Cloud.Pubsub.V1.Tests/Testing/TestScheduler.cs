@@ -14,57 +14,182 @@ namespace Google.Cloud.PubSub.V1.Tests.Testing
     /// queued and executing <see cref="Task"/>s.
     /// This *must* be used in conjuction with the <see cref="TaskHelper"/>.
     /// </summary>
-    internal class TestScheduler : IScheduler
+    internal class TestScheduler : IScheduler, IDisposable
     {
         public sealed class SchedulerException : Exception
         {
             public SchedulerException(string message) : base(message) { }
         }
 
-        private class TestTaskScheduler : TaskScheduler
+        public abstract class SimpleThreadPool
         {
-            public TestTaskScheduler(int threadCount)
+            // Task completes successfully when Thread action has finished (normal exit or exception)
+            public virtual Task Start(Action action) => throw new NotImplementedException();
+        }
+
+        public class DefaultSimpleThreadPool : SimpleThreadPool
+        {
+            public static DefaultSimpleThreadPool Instance { get; } = new DefaultSimpleThreadPool();
+
+            private DefaultSimpleThreadPool() { }
+
+            public override Task Start(Action action)
             {
+                var threadTcs = new TaskCompletionSource<int>();
+                void ActionWrapper()
+                {
+                    try
+                    {
+                        action();
+                    }
+                    finally
+                    {
+                        threadTcs.SetResult(0);
+                    }
+                }
+                var thread = new Thread(ActionWrapper);
+                thread.IsBackground = true;
+                thread.Start();
+                return threadTcs.Task;
+            }
+        }
+
+        public class CachingSimpleThreadPool : SimpleThreadPool
+        {
+            public static CachingSimpleThreadPool Instance { get; } = new CachingSimpleThreadPool();
+
+            private class ThreadRunner : IDisposable
+            {
+                public ThreadRunner()
+                {
+                    _thread = new Thread(ThreadFn);
+                    _thread.IsBackground = true;
+                    _thread.Start();
+                }
+
+                private Thread _thread;
+                private Queue<Action> _actions = new Queue<Action>();
+                private volatile bool _disposed;
+                private volatile TaskCompletionSource<int> _signal = new TaskCompletionSource<int>();
+
+                private void ThreadFn()
+                {
+                    while (!_disposed)
+                    {
+                        _signal.Task.Wait();
+                        _signal = new TaskCompletionSource<int>();
+                        _actions.Locked(() => _actions.Count > 0 ? _actions.Dequeue() : null)?.Invoke();
+                    }
+                }
+
+                public void Run(Action action)
+                {
+                    _actions.Locked(() => _actions.Enqueue(action));
+                    _signal.TrySetResult(0);
+                }
+
+                public void Dispose()
+                {
+                    _disposed = true;
+                    _signal.TrySetResult(0);
+                }
+            }
+
+            private const int CacheSize = 30;
+
+            private CachingSimpleThreadPool() { }
+
+            private Stack<ThreadRunner> _cache = new Stack<ThreadRunner>();
+
+            public override Task Start(Action action)
+            {
+                var runner = _cache.Locked(() => _cache.Count == 0 ? new ThreadRunner() : _cache.Pop());
+                var threadTcs = new TaskCompletionSource<int>();
+                void ActionWrapper()
+                {
+                    try
+                    {
+                        action();
+                    }
+                    finally
+                    {
+                        lock (_cache)
+                        {
+                            if (_cache.Count >= CacheSize)
+                            {
+                                runner.Dispose();
+                            }
+                            else
+                            {
+                                _cache.Push(runner);
+                            }
+                        }
+                        threadTcs.SetResult(0);
+                    }
+                }
+                runner.Run(ActionWrapper);
+                return threadTcs.Task;
+            }
+        }
+
+        private class TestTaskScheduler : TaskScheduler, IDisposable
+        {
+            public TestTaskScheduler(int threadCount, SimpleThreadPool threadPool = null)
+            {
+                threadPool = threadPool ?? CachingSimpleThreadPool.Instance;
                 MaximumConcurrencyLevel = threadCount;
                 lock (_lock)
                 {
                     _activeThreadCount = threadCount;
                 }
-                _threads = Enumerable.Range(0, threadCount).Select(_ =>
-                {
-                    var thread = new Thread(RunThread);
-                    thread.IsBackground = true;
-                    thread.Start();
-                    return thread;
-                }).ToArray();
+                _events = Enumerable.Range(0, threadCount).Select(_ => new AutoResetEvent(false)).ToArray();
+                _runEvent = new AutoResetEvent(false);
+                _threads = Enumerable.Range(0, threadCount).Select(i => threadPool.Start(() => RunThread(_events[i]))).ToArray();
             }
 
-            private object _lock = new object();
-            private Queue<Task> _taskQueue = new Queue<Task>();
-            private Thread[] _threads;
+            private readonly object _lock = new object();
+            private readonly AutoResetEvent[] _events;
+            private readonly Task[] _threads;
+            private readonly AutoResetEvent _runEvent;
+
+            private readonly Queue<Task> _taskQueue = new Queue<Task>();
+            private readonly Dictionary<Task, Task> _waitingTasks = new Dictionary<Task, Task>(); // Key: Task that is waiting; Value: task that is being waited on
+
             private int _activeThreadCount;
-            private Dictionary<Task, Task> _waitingTasks = new Dictionary<Task, Task>(); // Key: Task that is waiting; Value: task that is being waited on
+            private bool _running;
+            private CancellationTokenSource _disposedCts = new CancellationTokenSource();
 
             [ThreadStatic]
             private static Task t_currentTask;
 
             public override int MaximumConcurrencyLevel { get; }
 
-            private void RunThread()
+            private void RunThread(AutoResetEvent ev)
             {
                 while (true)
                 {
+                    t_currentTask = null;
                     lock (_lock)
                     {
-                        t_currentTask = null;
                         _activeThreadCount -= 1;
-                        Monitor.PulseAll(_lock);
-                        while (_taskQueue.Count == 0)
+                    }
+                    while (true)
+                    {
+                        if (_disposedCts.IsCancellationRequested)
                         {
-                            Monitor.Wait(_lock);
+                            return;
                         }
-                        t_currentTask = _taskQueue.Dequeue();
-                        _activeThreadCount += 1;
+                        lock (_lock)
+                        {
+                            if (_taskQueue.Count > 0 && _running)
+                            {
+                                t_currentTask = _taskQueue.Dequeue();
+                                _activeThreadCount += 1;
+                                break;
+                            }
+                        }
+                        _runEvent.Set();
+                        ev.WaitOne();
                     }
                     TryExecuteTask(t_currentTask);
                 }
@@ -78,13 +203,21 @@ namespace Google.Cloud.PubSub.V1.Tests.Testing
                 }
             }
 
+            private void SetAllEvents()
+            {
+                foreach (var ev in _events)
+                {
+                    ev.Set();
+                }
+            }
+
             protected override void QueueTask(Task task)
             {
                 lock (_lock)
                 {
                     _taskQueue.Enqueue(task);
-                    Monitor.PulseAll(_lock);
                 }
+                SetAllEvents();
             }
 
             protected override bool TryExecuteTaskInline(Task task, bool taskWasPreviouslyQueued)
@@ -92,8 +225,8 @@ namespace Google.Cloud.PubSub.V1.Tests.Testing
                 lock (_lock)
                 {
                     _taskQueue.Enqueue(task);
-                    Monitor.PulseAll(_lock);
                 }
+                SetAllEvents();
                 return false;
             }
 
@@ -103,9 +236,9 @@ namespace Google.Cloud.PubSub.V1.Tests.Testing
                 lock (_lock)
                 {
                     _waitingTasks.Add(t_currentTask, task);
-                    Monitor.PulseAll(_lock);
                 }
-                task.Wait();
+                _runEvent.Set();
+                task.Wait(_disposedCts.Token);
                 lock (_lock)
                 {
                     _waitingTasks.Remove(t_currentTask);
@@ -116,22 +249,48 @@ namespace Google.Cloud.PubSub.V1.Tests.Testing
             {
                 lock (_lock)
                 {
-                    // Get all threads started
-                    Monitor.PulseAll(_lock);
-                    while (_taskQueue.Count + _activeThreadCount - _waitingTasks.Count > 0 || _waitingTasks.Values.Any(x => x.IsCompleted))
+                    _running = true;
+                }
+                SetAllEvents(); // Get threads started
+                while (true)
+                {
+                    bool moreTodo;
+                    lock (_lock)
+                    {
+                        moreTodo = _taskQueue.Count + _activeThreadCount - _waitingTasks.Count > 0 || _waitingTasks.Values.Any(x => x.IsCompleted);
+                    }
+                    if (!moreTodo)
+                    {
+                        lock (_lock)
+                        {
+                            _running = false;
+                        }
+                        return true; // All Tasks run, now idle
+                    }
+                    WaitHandle.WaitAny(new[] { ct.WaitHandle, _runEvent });
+                    lock (_lock)
                     {
                         if (ct.IsCancellationRequested)
                         {
+                            _taskQueue.Clear();
+                            _running = false;
+                            SetAllEvents();
                             return false;
                         }
-                        Monitor.Wait(_lock);
                         if (_waitingTasks.Count == _threads.Length)
                         {
+                            _running = false;
                             throw new SchedulerException($"All {_threads.Length} threads blocking. This code requires more threads in the thread-pool.");
                         }
                     }
-                    return true;
                 }
+            }
+
+            public void Dispose()
+            {
+                _disposedCts.Cancel();
+                SetAllEvents();
+                Task.WaitAll(_threads);
             }
         }
 
@@ -158,16 +317,30 @@ namespace Google.Cloud.PubSub.V1.Tests.Testing
             public override TaskAwaitable ConfigureAwait(Task task) => new TaskAwaitable(new TestAwaiter(task, _scheduler._taskScheduler));
 
             public override TaskAwaitable<T> ConfigureAwait<T>(Task<T> task) => new TaskAwaitable<T>(new TestAwaiter<T>(task, _scheduler._taskScheduler));
+
+            public override async Task WhenAll(IEnumerable<Task> tasks)
+            {
+                foreach (var task in tasks)
+                {
+                    try
+                    {
+                        await ConfigureAwait(task);
+                    }
+                    catch { }
+                }
+            }
         }
 
         private struct DelayTask
         {
-            public DelayTask(DateTime scheduled)
+            public DelayTask(DateTime scheduled, CancellationToken cancellationToken)
             {
                 Scheduled = scheduled;
+                CancellationToken = cancellationToken;
                 Tcs = new TaskCompletionSource<int>();
             }
             public DateTime Scheduled { get; }
+            public CancellationToken CancellationToken { get; }
             public TaskCompletionSource<int> Tcs { get; }
         }
 
@@ -189,10 +362,9 @@ namespace Google.Cloud.PubSub.V1.Tests.Testing
 
         public Task Delay(TimeSpan delay, CancellationToken cancellationToken)
         {
-            // TODO: Handle cancellation
             lock (_lock)
             {
-                var delayTask = new DelayTask(Clock.GetCurrentDateTimeUtc() + delay);
+                var delayTask = new DelayTask(Clock.GetCurrentDateTimeUtc() + delay, cancellationToken);
                 var delayNode = _delays.First;
                 while (delayNode != null && delayNode.Value.Scheduled < delayTask.Scheduled)
                 {
@@ -251,24 +423,53 @@ namespace Google.Cloud.PubSub.V1.Tests.Testing
                         return mainTask.Result.Result;
                     }
                 }
-                // Move to next clock time
+                // Cancel Tasks, or move to next clock time
+                var tasksToComplete = new List<TaskCompletionSource<int>>();
                 lock (_lock)
                 {
                     if (_delays.Count == 0)
                     {
                         throw new SchedulerException("Inconsistent state, delay queue should have content. This is probably caused by a misconfigured await.");
                     }
-                    var delayTask = _delays.First.Value;
-                    _delays.RemoveFirst();
-                    Clock.AdvanceTo(delayTask.Scheduled);
-                    if (Clock.GetCurrentDateTimeUtc() > simulatedTimeout)
+                    bool anyCancelled = false;
+                    var node = _delays.First;
+                    while (node != null)
                     {
-                        throw new SchedulerException("Simulated time has reached timeout.");
+                        var next = node.Next;
+                        if (node.Value.CancellationToken.IsCancellationRequested)
+                        {
+                            node.Value.Tcs.SetCanceled();
+                            _delays.Remove(node);
+                            anyCancelled = true;
+                        }
+                        node = next;
                     }
-                    delayTask.Tcs.SetResult(0);
+                    if (!anyCancelled)
+                    {
+                        var delayTask = _delays.First.Value;
+                        while (_delays.Count > 0 && _delays.First.Value.Scheduled <= delayTask.Scheduled)
+                        {
+                            tasksToComplete.Add(_delays.First.Value.Tcs);
+                            _delays.RemoveFirst();
+                        }
+                        Clock.AdvanceTo(delayTask.Scheduled);
+                        if (Clock.GetCurrentDateTimeUtc() > simulatedTimeout)
+                        {
+                            throw new SchedulerException("Simulated time has reached timeout.");
+                        }
+                    }
+                }
+                // Results must be set after the clock has changed, and outside the lock
+                foreach (var tcs in tasksToComplete)
+                {
+                    tcs.SetResult(0);
                 }
             }
         }
 
-    }
+        public void Dispose()
+        {
+            _taskScheduler.Dispose();
+        }
+}
 }

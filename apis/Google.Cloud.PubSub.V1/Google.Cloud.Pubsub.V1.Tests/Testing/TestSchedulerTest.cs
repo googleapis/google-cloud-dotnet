@@ -40,51 +40,57 @@ namespace Google.Cloud.PubSub.V1.Tests.Testing
         [Fact]
         public void BasicFunctionality()
         {
-            var scheduler = new TestScheduler();
-            TaskHelper taskHelper = scheduler.TaskHelper;
-            var number = scheduler.Run(async () =>
+            using (var scheduler = new TestScheduler(threadCount: 4))
             {
-                Assert.Equal(Dt(0), scheduler.Clock.GetCurrentDateTimeUtc());
-                await taskHelper.ConfigureAwait(scheduler.Delay(TimeSpan.FromSeconds(10), CancellationToken.None));
-                Assert.Equal(Dt(10), scheduler.Clock.GetCurrentDateTimeUtc());
-                await taskHelper.ConfigureAwait(scheduler.Delay(TimeSpan.FromSeconds(10), CancellationToken.None));
-                Assert.Equal(Dt(20), scheduler.Clock.GetCurrentDateTimeUtc());
-                int n1 = await taskHelper.ConfigureAwait(GetANumber1());
-                Assert.Equal(111, n1);
-                int n2 = await taskHelper.ConfigureAwait(GetANumber2());
-                Assert.Equal(222, n2);
-                Task<int>[] tasks = new Task<int>[1000];
-                for (int i = 0; i < tasks.Length; i++)
+                TaskHelper taskHelper = scheduler.TaskHelper;
+                var number = scheduler.Run(async () =>
                 {
-                    tasks[i] = WaitTest(scheduler, i);
-                }
-                await taskHelper.ConfigureAwait(Task.WhenAll(tasks));
-                return tasks.Sum(x => x.Result);
-            });
-            Assert.Equal(1000 * 999 / 2, number);
+                    Assert.Equal(Dt(0), scheduler.Clock.GetCurrentDateTimeUtc());
+                    await taskHelper.ConfigureAwait(scheduler.Delay(TimeSpan.FromSeconds(10), CancellationToken.None));
+                    Assert.Equal(Dt(10), scheduler.Clock.GetCurrentDateTimeUtc());
+                    await taskHelper.ConfigureAwait(scheduler.Delay(TimeSpan.FromSeconds(10), CancellationToken.None));
+                    Assert.Equal(Dt(20), scheduler.Clock.GetCurrentDateTimeUtc());
+                    int n1 = await taskHelper.ConfigureAwait(GetANumber1());
+                    Assert.Equal(111, n1);
+                    int n2 = await taskHelper.ConfigureAwait(GetANumber2());
+                    Assert.Equal(222, n2);
+                    Task<int>[] tasks = new Task<int>[1000];
+                    for (int i = 0; i < tasks.Length; i++)
+                    {
+                        tasks[i] = WaitTest(scheduler, i);
+                    }
+                    await taskHelper.ConfigureAwait(Task.WhenAll(tasks));
+                    return tasks.Sum(x => x.Result);
+                });
+                Assert.Equal(1000 * 999 / 2, number);
+            }
         }
 
         [Fact]
         public void WaitThreadDepletionDetection()
         {
             // Throws with 1 thread
-            var scheduler1 = new TestScheduler(threadCount: 1);
-            Assert.Throws<SchedulerException>(() =>
+            using (var scheduler1 = new TestScheduler(threadCount: 1))
             {
-                scheduler1.Run(() =>
+                Assert.Throws<SchedulerException>(() =>
                 {
-                    Task task = scheduler1.Delay(TimeSpan.FromHours(1), CancellationToken.None);
-                    scheduler1.TaskHelper.Wait(task);
+                    scheduler1.Run(() =>
+                    {
+                        Task task = scheduler1.Delay(TimeSpan.FromHours(1), CancellationToken.None);
+                        scheduler1.TaskHelper.Wait(task);
+                    });
                 });
-            });
+            }
 
             // Does not throw (and completes) with 2 threads
-            var scheduler2 = new TestScheduler(threadCount: 2);
-            scheduler2.Run(() =>
+            using (var scheduler2 = new TestScheduler(threadCount: 2))
             {
-                Task task = scheduler2.Delay(TimeSpan.FromHours(1), CancellationToken.None);
-                scheduler2.TaskHelper.Wait(task);
-            });
+                scheduler2.Run(() =>
+                {
+                    Task task = scheduler2.Delay(TimeSpan.FromHours(1), CancellationToken.None);
+                    scheduler2.TaskHelper.Wait(task);
+                });
+            }
         }
     }
 }
