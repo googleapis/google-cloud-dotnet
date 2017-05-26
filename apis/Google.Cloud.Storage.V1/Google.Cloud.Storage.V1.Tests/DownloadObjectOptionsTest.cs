@@ -45,12 +45,15 @@ namespace Google.Cloud.Storage.V1.Tests
             {
                 IfGenerationMatch = 1L,
                 IfMetagenerationMatch = 2L,
-                Generation = 3L
+                Generation = 3L,
+                UserProject = "my proj"
             };
             var uri = options.GetUri("http://url/foo?x=y");
             Assert.Contains("&ifGenerationMatch=1", uri);
             Assert.Contains("&ifMetagenerationMatch=2", uri);
             Assert.Contains("&generation=3", uri);
+            // I don't expect project IDs to actually need escaping, but let's check that it works.
+            Assert.Contains("&userProject=my%20proj", uri);
         }
 
         [Fact]

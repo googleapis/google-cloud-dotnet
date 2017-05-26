@@ -63,6 +63,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Null(upload.IfMetagenerationNotMatch);
             Assert.Null(upload.PredefinedAcl);
             Assert.Null(upload.Projection);
+            Assert.Null(upload.UserProject);
         }
 
         [Fact]
@@ -75,7 +76,8 @@ namespace Google.Cloud.Storage.V1.Tests
                 IfGenerationMatch = 1L,
                 IfMetagenerationMatch = 2L,
                 PredefinedAcl = PredefinedObjectAcl.BucketOwnerRead,
-                Projection = Projection.Full
+                Projection = Projection.Full,
+                UserProject = "proj"
             };
             options.ModifyMediaUpload(upload);
             Assert.Equal(1L, upload.IfGenerationMatch);
@@ -84,6 +86,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Null(upload.IfMetagenerationNotMatch);
             Assert.Equal(PredefinedAclEnum.BucketOwnerRead, upload.PredefinedAcl);
             Assert.Equal(ProjectionEnum.Full, upload.Projection);
+            Assert.Equal("proj", upload.UserProject);
         }
 
         [Fact]

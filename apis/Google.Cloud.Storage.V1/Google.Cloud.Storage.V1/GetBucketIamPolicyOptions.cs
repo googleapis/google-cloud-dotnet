@@ -21,8 +21,18 @@ namespace Google.Cloud.Storage.V1
     /// </summary>
     public sealed class GetBucketIamPolicyOptions
     {
+        /// <summary>
+        /// If set, this is the ID of the project which will be billed for the request, for requester-pays buckets.
+        /// The caller must have suitable permissions for the project being billed.
+        /// </summary>
+        public string UserProject { get; set; }
+
         internal void ModifyRequest(GetIamPolicyRequest request)
         {
+            if (UserProject != null)
+            {
+                request.UserProject = UserProject;
+            }
         }
     }
 }

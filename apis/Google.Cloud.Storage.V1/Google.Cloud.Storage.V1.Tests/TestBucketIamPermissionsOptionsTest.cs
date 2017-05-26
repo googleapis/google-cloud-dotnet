@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,44 +12,32 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Util;
 using Xunit;
-using static Google.Apis.Storage.v1.ObjectsResource;
-using static Google.Apis.Storage.v1.ObjectsResource.ListRequest;
+using static Google.Apis.Storage.v1.BucketsResource;
 
 namespace Google.Cloud.Storage.V1.Tests
 {
-    public class ListObjectsOptionsTest
+    public class TestBucketIamPermissionsOptionsTest
     {
         [Fact]
         public void ModifyRequest_DefaultOptions()
         {
-            var request = new ListRequest(null, "bucket");
-            var options = new ListObjectsOptions();
+            var request = new TestIamPermissionsRequest(null, "bucket", new Repeatable<string>(new string[0]));
+            var options = new TestBucketIamPermissionsOptions();
             options.ModifyRequest(request);
-            Assert.Null(request.Delimiter);
-            Assert.Null(request.Projection);
-            Assert.Null(request.MaxResults);
-            Assert.Null(request.Versions);
             Assert.Null(request.UserProject);
         }
 
         [Fact]
         public void ModifyRequest_AllOptions()
         {
-            var request = new ListRequest(null, "bucket");
-            var options = new ListObjectsOptions
+            var request = new TestIamPermissionsRequest(null, "bucket", new Repeatable<string>(new string[0]));
+            var options = new TestBucketIamPermissionsOptions
             {
-                PageSize = 10,
-                Delimiter = "/",
-                Projection = Projection.Full,
-                Versions = true,
                 UserProject = "proj"
             };
             options.ModifyRequest(request);
-            Assert.Equal(10, request.MaxResults);
-            Assert.Equal("/", request.Delimiter);
-            Assert.Equal(ProjectionEnum.Full, request.Projection);
-            Assert.True(request.Versions);
             Assert.Equal("proj", request.UserProject);
         }
     }

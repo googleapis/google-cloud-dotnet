@@ -32,6 +32,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Null(request.PredefinedAcl);
             Assert.Null(request.PredefinedDefaultObjectAcl);
             Assert.Null(request.Projection);
+            Assert.Null(request.UserProject);
         }
 
         [Fact]
@@ -43,7 +44,8 @@ namespace Google.Cloud.Storage.V1.Tests
                 IfMetagenerationMatch = 1L,
                 PredefinedAcl = PredefinedBucketAcl.AuthenticatedRead,
                 PredefinedDefaultObjectAcl = PredefinedObjectAcl.BucketOwnerFullControl,
-                Projection = Projection.Full
+                Projection = Projection.Full,
+                UserProject = "proj"
             };
             options.ModifyRequest(request);
             Assert.Equal(1L, request.IfMetagenerationMatch);
@@ -51,6 +53,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Equal(PredefinedAclEnum.AuthenticatedRead, request.PredefinedAcl);
             Assert.Equal(PredefinedDefaultObjectAclEnum.BucketOwnerFullControl, request.PredefinedDefaultObjectAcl);
             Assert.Equal(ProjectionEnum.Full, request.Projection);
+            Assert.Equal("proj", request.UserProject);
         }
 
         [Fact]

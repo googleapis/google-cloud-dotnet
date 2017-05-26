@@ -31,6 +31,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Null(request.IfGenerationNotMatch);
             Assert.Null(request.IfMetagenerationMatch);
             Assert.Null(request.IfMetagenerationNotMatch);
+            Assert.Null(request.UserProject);
         }
 
         [Fact]
@@ -41,7 +42,8 @@ namespace Google.Cloud.Storage.V1.Tests
             {
                 IfGenerationMatch = 1L,
                 IfMetagenerationMatch = 2L,
-                Generation = 3L
+                Generation = 3L,
+                UserProject = "proj"
             };
             options.ModifyRequest(request);
             Assert.Equal(1L, request.IfGenerationMatch);
@@ -49,6 +51,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Equal(2L, request.IfMetagenerationMatch);
             Assert.Null(request.IfMetagenerationNotMatch);
             Assert.Equal(3L, request.Generation);
+            Assert.Equal("proj", request.UserProject);
         }
 
         [Fact]
