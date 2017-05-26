@@ -91,6 +91,9 @@ namespace Google.Cloud.Logging.Log4Net
             return lostEntry;
         }
 
+        // Note: calls to ConfigureAwait(false) aren't strictly required here,
+        // as this method is only ever called in Task.Run, so there won't be a synchronization
+        // context, but it's simple and harmless to make it "obviously okay".
         private async Task RunUploader(CancellationToken cancellationToken)
         {
             TimeSpan errorDelay = _serverErrorBackoffSettings.Delay;
@@ -100,7 +103,7 @@ namespace Google.Cloud.Logging.Log4Net
                 // Wait/loop until there are some log entries that need uploading.
                 while (true)
                 {
-                    var peek = await _logQ.PeekAsync(_maxUploadBatchSize, cancellationToken);
+                    var peek = await _logQ.PeekAsync(_maxUploadBatchSize, cancellationToken).ConfigureAwait(false);
                     var logEntriesLost = peek.Lost;
                     entries = peek.Entries;
                     if (logEntriesLost != null)
@@ -113,13 +116,13 @@ namespace Google.Cloud.Logging.Log4Net
                         // There are log entries that need uploading, so do that now.
                         break;
                     }
-                    await _uploadReadyEvent.WaitAsync(cancellationToken);
+                    await _uploadReadyEvent.WaitAsync(cancellationToken).ConfigureAwait(false);
                 }
                 // Upload entries to the Cloud Logging server
                 try
                 {
-                    await _client.WriteLogEntriesAsync(null, null, s_emptyLabels, entries.Select(x => x.Entry), cancellationToken);
-                    await _logQ.RemoveUntilAsync(entries.Last().Id, cancellationToken);
+                    await _client.WriteLogEntriesAsync(null, null, s_emptyLabels, entries.Select(x => x.Entry), cancellationToken).ConfigureAwait(false);
+                    await _logQ.RemoveUntilAsync(entries.Last().Id, cancellationToken).ConfigureAwait(false);
                     lock (_lock)
                     {
                         _maxConfirmedSentId = entries.Last().Id;
@@ -130,7 +133,7 @@ namespace Google.Cloud.Logging.Log4Net
                 catch (Exception e)
                 {
                     // Always retry, regardless of error, as there's nothing much else to be done.
-                    await _scheduler.Delay(errorDelay, cancellationToken);
+                    await _scheduler.Delay(errorDelay, cancellationToken).ConfigureAwait(false);
                     errorDelay = new TimeSpan((long)(errorDelay.Ticks * _serverErrorBackoffSettings.DelayMultiplier));
                     if (errorDelay > _serverErrorBackoffSettings.MaxDelay)
                     {
@@ -157,7 +160,7 @@ namespace Google.Cloud.Logging.Log4Net
                     }
                 }
                 // Include waiting on the _uploaderTask so an exception can be thrown if it fails during the flush.
-                Task completed = await Task.WhenAny(_uploaderTask, _uploadCompleteEvent.WaitAsync(cancellationToken), timeoutTask);
+                Task completed = await Task.WhenAny(_uploaderTask, _uploadCompleteEvent.WaitAsync(cancellationToken), timeoutTask).ConfigureAwait(false);
                 cancellationToken.ThrowIfCancellationRequested();
                 if (completed.Exception != null)
                 {
