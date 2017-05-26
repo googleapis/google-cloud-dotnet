@@ -18,7 +18,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.Spanner.Data.Tests {
+namespace Google.Cloud.Spanner.Data.IntegrationTests {
     public class ReadTests : IClassFixture<TestDatabaseFixture> {
         private readonly TestDatabaseFixture _testFixture;
 
