@@ -28,6 +28,7 @@ namespace Google.Cloud.Storage.V1.Tests
             options.ModifyRequest(request);
             Assert.Null(request.IfMetagenerationMatch);
             Assert.Null(request.IfMetagenerationNotMatch);
+            Assert.Null(request.UserProject);
         }
 
         [Fact]

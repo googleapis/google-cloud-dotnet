@@ -59,6 +59,12 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public bool? ForceNoPreconditions { get; set; }
 
+        /// <summary>
+        /// If set, this is the ID of the project which will be billed for the request, for requester-pays buckets.
+        /// The caller must have suitable permissions for the project being billed.
+        /// </summary>
+        public string UserProject { get; set; }
+
         private bool AnyExplicitPreconditions => IfMetagenerationMatch != null || IfMetagenerationNotMatch != null;
 
         internal void ModifyRequest(UpdateRequest request, Bucket bucket)
@@ -100,6 +106,10 @@ namespace Google.Cloud.Storage.V1
             {
                 request.PredefinedDefaultObjectAcl =
                     GaxPreconditions.CheckEnumValue((PredefinedDefaultObjectAclEnum) PredefinedDefaultObjectAcl, nameof(PredefinedDefaultObjectAcl));
+            }
+            if (UserProject != null)
+            {
+                request.UserProject = UserProject;
             }
         }
     }
