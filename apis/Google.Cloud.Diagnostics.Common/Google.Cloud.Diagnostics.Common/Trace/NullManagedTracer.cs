@@ -61,7 +61,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Calls <paramref name="func"/> asynchronously and returns the result.
         /// </summary>
-        public async Task<T> RunInSpanAsync<T>(Func<Task<T>> func, string name, StartSpanOptions options = null) => await func();
+        public Task<T> RunInSpanAsync<T>(Func<Task<T>> func, string name, StartSpanOptions options = null) => Task.Run(func);
 
         /// <summary>
         /// Does nothing.
