@@ -202,7 +202,7 @@ namespace Google.Cloud.Spanner.Data
                         new ListValue {
                             Values = {
                                 Parameters.Cast<SpannerParameter>()
-                                    .Select(x => TypeMap.ToValue(x.Value, x.TypeCode))
+                                    .Select(x => ValueConversion.ToValue(x.Value, x.SpannerDbType))
                             }
                         }
                     }
@@ -229,7 +229,7 @@ namespace Google.Cloud.Spanner.Data
                                 new ListValue {
                                     Values = {
                                         Parameters.Cast<SpannerParameter>()
-                                            .Select(x => TypeMap.ToValue(x.Value, x.TypeCode))
+                                            .Select(x => ValueConversion.ToValue(x.Value, x.SpannerDbType))
                                     }
                                 }
                             }

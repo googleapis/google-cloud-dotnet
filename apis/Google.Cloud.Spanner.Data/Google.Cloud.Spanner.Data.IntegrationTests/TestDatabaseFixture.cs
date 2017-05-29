@@ -21,15 +21,15 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     public class TestDatabaseFixture : IDisposable {
 
-        private readonly string _databaseName = "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
+        private readonly string _databaseName = "scratch";// "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
         private Task _creationTask;
         private readonly string _testTable = "TestTable";
         private DatabaseAdminClient _databaseAdminClient;
 
         public void Dispose() {
-            if (_databaseAdminClient != null) {
-                _databaseAdminClient.DropDatabase(new DatabaseName(TestProjectName, TestInstanceName, DatabaseName));
-            }
+            //if (_databaseAdminClient != null) {
+            //    _databaseAdminClient.DropDatabase(new DatabaseName(TestProjectName, TestInstanceName, DatabaseName));
+            //}
         }
 
         public string TestInstanceName => "myspanner";
@@ -58,9 +58,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 return new SpannerConnection(ConnectionString);
             }
 
-            await CreateDatabaseAsync();
-            await CreateTableAsync();
-            await FillSampleData();
+            //await CreateDatabaseAsync();
+            //await CreateTableAsync();
+            //await CreateTypeTableAsync();
+            //await CreateTxTableAsync();
+            //await FillSampleData();
             creationTaskCompletionSource.SetResult(0);
             return new SpannerConnection(ConnectionString);
         }
@@ -85,6 +87,56 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             // Retrieve the operation result
             return completedResponse.Result;
         }
+
+        private async Task CreateTxTableAsync()
+        {
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+
+            var typeTable = "CREATE TABLE TX ("
+                            + "  K                   STRING(MAX) NOT NULL,"
+                            + "  StringValue         STRING(MAX),"
+                            + ") PRIMARY KEY (K)";
+            // Make the request
+            var response =
+                await databaseAdminClient.UpdateDatabaseDdlAsync(new DatabaseName(TestProjectName, TestInstanceName, DatabaseName),
+                    new[] { typeTable });
+
+            // Poll until the returned long-running operation is complete
+            await response.PollUntilCompletedAsync();
+        }
+
+        private async Task CreateTypeTableAsync()
+        {
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+
+            var typeTable = "CREATE TABLE T (" 
+                + "  K                   STRING(MAX) NOT NULL,"
+                + "  BoolValue           BOOL," 
+                + "  Int64Value          INT64,"
+                + "  Float64Value        FLOAT64," 
+                + "  StringValue         STRING(MAX),"
+                + "  BytesValue          BYTES(MAX)," 
+                + "  TimestampValue      TIMESTAMP,"
+                + "  DateValue           DATE," 
+                + "  BoolArrayValue      ARRAY<BOOL>,"
+                + "  Int64ArrayValue     ARRAY<INT64>," 
+                + "  Float64ArrayValue   ARRAY<FLOAT64>,"
+                + "  StringArrayValue    ARRAY<STRING(MAX)>,"
+                + "  BytesArrayValue     ARRAY<BYTES(MAX)>,"
+                + "  TimestampArrayValue ARRAY<TIMESTAMP>," 
+                + "  DateArrayValue      ARRAY<DATE>,"
+                + ") PRIMARY KEY (K)";
+            // Make the request
+            var response =
+                await databaseAdminClient.UpdateDatabaseDdlAsync(new DatabaseName(TestProjectName, TestInstanceName, DatabaseName),
+                    new[] { typeTable });
+
+            // Poll until the returned long-running operation is complete
+            await response.PollUntilCompletedAsync();
+        }
+
         private async Task CreateTableAsync()
         {
             // Create client

@@ -188,7 +188,7 @@ namespace Google.Cloud.Spanner.Data
                 foreach (var field in readerMetadata.RowType.Fields)
                 {
                     _parsedParameterCollection.Add(
-                        new SpannerParameter(field.Name, field.Type.Code.GetSpannerDbType(), field.Name));
+                        new SpannerParameter(field.Name, SpannerDbType.FromV1Type(field.Type), field.Name));
                 }
             }
 
