@@ -195,7 +195,7 @@ namespace Google.Cloud.Spanner.Data
         {
             foreach (var parameter in _innerList)
             {
-                valueDictionary[parameter.ParameterName] = TypeMap.ToValue(parameter.Value, parameter.TypeCode);
+                valueDictionary[parameter.ParameterName] = ValueConversion.ToValue(parameter.Value, parameter.SpannerDbType);
             }
         }
 
@@ -203,7 +203,7 @@ namespace Google.Cloud.Spanner.Data
         {
             foreach (var parameter in _innerList)
             {
-                typeDictionary[parameter.ParameterName] = new V1.Type { Code = parameter.TypeCode };
+                typeDictionary[parameter.ParameterName] = parameter.SpannerDbType.ToV1Type();
             }
         }
 

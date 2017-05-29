@@ -13,10 +13,12 @@
 // limitations under the License.
 
 using System;
+using System.Collections;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+// ReSharper disable PossibleNullReferenceException
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests {
     public class ReadTests : IClassFixture<TestDatabaseFixture> {
@@ -246,24 +248,65 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests {
         [Fact]
         public async Task TestSelectOne()
         {
-            Exception exceptionCaught = null;
-            long result = 0;
-            try
-            {
-                using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
-                {
-                    var cmd =
-                        connection.CreateSelectCommand("SELECT 1");
-                    result = await cmd.ExecuteScalarAsync<long>();
-                }
-            }
-            catch (Exception e)
-            {
-                exceptionCaught = e;
-            }
-
-            Assert.Null(exceptionCaught);
+            long result = await ExecuteAsync<long>("SELECT 1");
             Assert.Equal(1, result);
+        }
+
+        [Fact]
+        public async Task TestPositiveInf()
+        {
+            double result = await ExecuteAsync<double>("SELECT IEEE_DIVIDE(1, 0)");
+            Assert.True(double.IsPositiveInfinity(result));
+        }
+
+        [Fact]
+        public async Task TestNegativeInf()
+        {
+            double result = await ExecuteAsync<double>("SELECT IEEE_DIVIDE(-1, 0)");
+            Assert.True(double.IsNegativeInfinity(result));
+        }
+
+        [Fact]
+        public async Task TestNaN()
+        {
+            double result = await ExecuteAsync<double>("SELECT IEEE_DIVIDE(0, 0)");
+            Assert.True(double.IsNaN(result));
+        }
+
+        [Fact]
+        public async Task TestNaNArray()
+        {
+            double[] result = await ExecuteAsync<double[]>("SELECT [IEEE_DIVIDE(1, 0), IEEE_DIVIDE(-1, 0), IEEE_DIVIDE(0, 0)]");
+            Assert.True(result.Length == 3);
+            Assert.True(double.IsPositiveInfinity(result[0]));
+            Assert.True(double.IsNegativeInfinity(result[1]));
+            Assert.True(double.IsNaN(result[2]));
+        }
+
+        [Fact]
+        public async Task TestStructArray()
+        {
+            string sqlQuery = "SELECT ARRAY(SELECT AS STRUCT C1, C2 "
+                              + "FROM (SELECT 'a' AS C1, 1 AS C2 UNION ALL SELECT 'b' AS C1, 2 AS C2) "
+                              + "ORDER BY C1 ASC)";
+            IList result = await ExecuteAsync<IList>(sqlQuery);
+            Assert.True(result.Count == 2);
+            IDictionary s1 = result[0] as IDictionary;
+
+            Assert.True((string)s1["C1"] == "a");
+            Assert.True((long)s1["C2"] == 1);
+
+            s1 = result[1] as IDictionary;
+            Assert.True((string)s1["C1"] == "b");
+            Assert.True((long)s1["C2"] == 2);
+        }
+
+        [Fact]
+        public async Task TestEmptyStructArray()
+        {
+            string sqlQuery = "SELECT ARRAY(SELECT AS STRUCT * FROM (SELECT 'a', 1) WHERE 0 = 1)";
+            IList result = await ExecuteAsync<IList>(sqlQuery);
+            Assert.True(result == null || result.Count == 0);
         }
 
         //[Fact]
@@ -288,5 +331,16 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests {
         //    Assert.NotNull(exceptionCaught);
         //    Assert.Equal(0, result);
         //}
+
+        private async Task<T> ExecuteAsync<T>(string sql)
+        {
+            T result;
+            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            {
+                var cmd = connection.CreateSelectCommand(sql);
+                result = await cmd.ExecuteScalarAsync<T>();
+            }
+            return result;
+        }
     }
 }
