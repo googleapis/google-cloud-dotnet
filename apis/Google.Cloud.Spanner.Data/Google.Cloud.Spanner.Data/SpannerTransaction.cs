@@ -35,8 +35,8 @@ namespace Google.Cloud.Spanner.Data
         private readonly List<Mutation> _mutations = new List<Mutation>();
         private readonly Transaction _transaction;
 
-        internal SpannerTransaction(SpannerConnection connection, TransactionMode mode, Session session,
-            Transaction transaction)
+        internal SpannerTransaction(SpannerConnection connection, TransactionMode mode, 
+            Session session, Transaction transaction, TimestampBound timeStampBound)
         {
             GaxPreconditions.CheckNotNull(connection, nameof(connection));
             GaxPreconditions.CheckNotNull(session, nameof(session));
@@ -46,6 +46,7 @@ namespace Google.Cloud.Spanner.Data
                 () => Interlocked.Increment(ref s_transactionCount));
 
             Session = session;
+            TimeStampBound = timeStampBound;
             _transaction = transaction;
             _connection = connection;
             Mode = mode;
@@ -62,10 +63,16 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public Session Session { get; }
 
+        /// <summary>
+        /// </summary>
+        public TimestampBound TimeStampBound { get; }
+
         /// <inheritdoc />
         protected override DbConnection DbConnection => _connection;
 
         internal IEnumerable<Mutation> Mutations => _mutations;
+
+        internal Transaction WireTransaction => _transaction;
 
         Task<int> ISpannerTransaction.ExecuteMutationsAsync(List<Mutation> mutations,
             CancellationToken cancellationToken)

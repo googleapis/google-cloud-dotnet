@@ -85,21 +85,21 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override string CommandText
         {
-            get { return SpannerCommandTextBuilder?.ToString() ?? string.Empty; }
-            set { SpannerCommandTextBuilder = SpannerCommandTextBuilder.FromCommandText(value); }
+            get => SpannerCommandTextBuilder?.ToString() ?? string.Empty;
+            set => SpannerCommandTextBuilder = SpannerCommandTextBuilder.FromCommandText(value);
         }
 
         /// <inheritdoc />
         public override int CommandTimeout
         {
-            get { return _commandTimeout; }
-            set { _commandTimeout = value; }
+            get => _commandTimeout;
+            set => _commandTimeout = value;
         }
 
         /// <inheritdoc />
         public override CommandType CommandType
         {
-            get { return CommandType.Text; }
+            get => CommandType.Text;
             set
             {
                 if (value != CommandType.Text)
@@ -121,7 +121,7 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override UpdateRowSource UpdatedRowSource
         {
-            get { return UpdateRowSource.None; }
+            get => UpdateRowSource.None;
             set
             {
                 if (value != UpdateRowSource.None)
@@ -136,8 +136,8 @@ namespace Google.Cloud.Spanner.Data
         protected override DbConnection DbConnection
         {
             //TODO(benwu): update to use newer lambda forms for get/set. ditto for other places.
-            get { return SpannerConnection; }
-            set { SpannerConnection = (SpannerConnection) value; }
+            get => SpannerConnection;
+            set => SpannerConnection = (SpannerConnection) value;
         }
 
         /// <inheritdoc />
@@ -146,8 +146,8 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         protected override DbTransaction DbTransaction
         {
-            get { return _transaction; }
-            set { _transaction = (SpannerTransaction) value; }
+            get => _transaction;
+            set => _transaction = (SpannerTransaction) value;
         }
 
         /// <summary>
@@ -172,6 +172,34 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override int ExecuteNonQuery() => ExecuteNonQueryAsync(_synchronousCancellationTokenSource.Token).ResultWithUnwrappedExceptions();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public Task<DbDataReader> ExecuteReaderAsync(TimestampBound singleUseReadSettings)
+        {
+            return ExecuteReaderAsync(singleUseReadSettings, CancellationToken.None);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public async Task<DbDataReader> ExecuteReaderAsync(TimestampBound singleUseReadSettings, 
+            CancellationToken cancellationToken)
+        {
+            GaxPreconditions.CheckNotNull(singleUseReadSettings, nameof(singleUseReadSettings));
+            if (Transaction != null)
+            {
+                throw new InvalidOperationException("singleUseReadSettings cannot be used within"
+                    + " another transaction.");
+            }
+            var singleUseTransaction =
+                await SpannerConnection.BeginSingleUseTransactionAsync(singleUseReadSettings,
+                    cancellationToken);
+            return await ExecuteDbDataReaderAsync(CommandBehavior.Default, cancellationToken,
+                singleUseTransaction);
+        }
 
         /// <inheritdoc />
         public override async Task<int> ExecuteNonQueryAsync(CancellationToken cancellationToken)
@@ -315,8 +343,15 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <inheritdoc />
-        protected override async Task<DbDataReader> ExecuteDbDataReaderAsync(CommandBehavior behavior,
+        protected override Task<DbDataReader> ExecuteDbDataReaderAsync(
+            CommandBehavior behavior,
             CancellationToken cancellationToken)
+        {
+            return ExecuteDbDataReaderAsync(behavior, cancellationToken, null);
+        }
+
+        private async Task<DbDataReader> ExecuteDbDataReaderAsync(CommandBehavior behavior, 
+            CancellationToken cancellationToken, SingleUseTransaction singleUseTransaction)
         {
             // There must be a valid and open connection.
             if (SpannerConnection == null)
@@ -340,13 +375,18 @@ namespace Google.Cloud.Spanner.Data
                 Parameters.FillSpannerInternalValues(request.Params.Fields, request.ParamTypes);
             }
 
+            var tx = singleUseTransaction ?? GetSpannerTransaction();
             // Execute the command.
-            var resultset = await GetSpannerTransaction().ExecuteQueryAsync(request, cancellationToken)
+            var resultset = await tx.ExecuteQueryAsync(request, cancellationToken)
                 .WithTimeout(TimeSpan.FromSeconds(CommandTimeout), "The timeout of the SpannerCommand was exceeded.");
 
             if ((behavior & CommandBehavior.CloseConnection) == CommandBehavior.CloseConnection)
                 return new SpannerDataReader(resultset, SpannerConnection);
 
+            if (singleUseTransaction != null)
+            {
+                return new SpannerDataReader(resultset, singleUseTransaction);
+            }
             return new SpannerDataReader(resultset);
         }
 

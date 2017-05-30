@@ -80,17 +80,6 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Sets the transaction option on the session to be an implicit transaction.
-        /// This option is often used when a session is used for reads without specifying a transaction.
-        /// </summary>
-        /// <param name="session"></param>
-        /// <returns></returns>
-        public static Task SetImplicitTransactionAsync(this Session session)
-        {
-            return RemoveFromTransactionPoolAsync(session);
-        }
-
-        /// <summary>
         /// When a session is deleted or no longer used, this will remove it from the transaction pool.
         /// </summary>
         /// <param name="session"></param>
@@ -126,6 +115,18 @@ namespace Google.Cloud.Spanner.V1
             return null;
         }
 
+        public static Transaction GetCachedTransaction(this Session session,
+            TransactionOptions options)
+        {
+            SessionInfo info;
+            if (s_sessionInfoTable.TryGetValue(session, out info)
+                && info.ActiveTransactionOptions != null
+                && Equals(info.ActiveTransactionOptions, options))
+            {
+                return info.ActiveTransaction;
+            }
+            return null;
+        }
 
         /// <summary>
         /// Starts a pre-warm background task to create a transaction on the given session with the
@@ -189,6 +190,7 @@ namespace Google.Cloud.Spanner.V1
                 {
                     Session ignored;
                     s_activeTransactionTable.TryRemove(info.ActiveTransaction.GetTransactionId(), out ignored);
+                    info.MarkTransactionUsed();
                 }
             }
             else
@@ -213,6 +215,12 @@ namespace Google.Cloud.Spanner.V1
             public TransactionOptions ActiveTransactionOptions { get; private set; }
             public SpannerClient SpannerClient { get; }
             private Task PreWarmTask { get; set; }
+
+            public void MarkTransactionUsed()
+            {
+                ActiveTransactionOptions = null;
+                ActiveTransaction = null;
+            }
 
             public async Task WaitForPreWarmAsync()
             {
@@ -257,9 +265,14 @@ namespace Google.Cloud.Spanner.V1
                 // dependent on the time the transaction begins.
                 if (options?.ModeCase == TransactionOptions.ModeOneofCase.ReadWrite)
                 {
-                    Logger.Debug(() => $"Pre-warming session transaction state. Mode={options.ModeCase}");
+                    Logger.Debug(
+                        () => $"Pre-warming session transaction state. Mode={options.ModeCase}");
                     ActiveTransactionOptions = options;
                     PreWarmTask = Task.Run(() => CreateTransactionImplAsync(session));
+                }
+                else
+                {
+                    MarkTransactionUsed();
                 }
             }
         }

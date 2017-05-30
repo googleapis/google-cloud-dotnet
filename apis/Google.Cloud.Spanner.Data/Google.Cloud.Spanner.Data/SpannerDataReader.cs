@@ -42,6 +42,7 @@ namespace Google.Cloud.Spanner.Data
         private readonly ReliableStreamReader _resultSet;
         private Dictionary<string, int> _fieldIndex;
         private ResultSetMetadata _metadata;
+        private readonly SingleUseTransaction _txToClose;
 
         internal SpannerDataReader(ReliableStreamReader resultSet)
         {
@@ -51,12 +52,15 @@ namespace Google.Cloud.Spanner.Data
             _resultSet = resultSet;
         }
 
-        internal SpannerDataReader(ReliableStreamReader resultSet, SpannerConnection connectionToClose)
+        internal SpannerDataReader(ReliableStreamReader resultSet, SingleUseTransaction singleUseTransaction)
+            :this(resultSet)
         {
-            GaxPreconditions.CheckNotNull(resultSet, nameof(resultSet));
-            Logger.LogPerformanceCounter("SpannerDataReader.ActiveCount",
-                () => Interlocked.Increment(ref s_readerCount));
-            _resultSet = resultSet;
+            _txToClose = singleUseTransaction;
+        }
+
+        internal SpannerDataReader(ReliableStreamReader resultSet, SpannerConnection connectionToClose)
+            :this(resultSet)
+        {
             _connectionToClose = connectionToClose;
         }
 
@@ -239,6 +243,7 @@ namespace Google.Cloud.Spanner.Data
 
             _resultSet?.Close();
             _connectionToClose?.Close();
+            _txToClose?.Dispose();
             base.Dispose(disposing);
         }
 
