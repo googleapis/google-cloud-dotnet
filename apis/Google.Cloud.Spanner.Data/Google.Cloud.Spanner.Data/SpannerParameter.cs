@@ -87,7 +87,7 @@ namespace Google.Cloud.Spanner.Data
                         SpannerDbType = SpannerDbType.String;
                         break;
                     default:
-                        throw new ArgumentOutOfRangeException(nameof(value), value, null);
+                        throw new ArgumentOutOfRangeException(nameof(DbType), value, null);
                 }
             }
         }
@@ -96,7 +96,11 @@ namespace Google.Cloud.Spanner.Data
         public override ParameterDirection Direction
         {
             get => ParameterDirection.Input;
-            set => throw new InvalidOperationException("Spanner only supports input parameters.");
+            set
+            {
+                if (value != ParameterDirection.Input)
+                    throw new InvalidOperationException("Spanner only supports input parameters.");
+            }
         }
 
         /// <inheritdoc />
@@ -129,8 +133,7 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public SpannerDbType SpannerDbType
         {
-            get;
-            set;
+            get; set;
         }
 
         /// <inheritdoc />
@@ -141,7 +144,10 @@ namespace Google.Cloud.Spanner.Data
             {
                 if (SpannerDbType.TypeCode == TypeCode.Unspecified && value != null)
                     throw new ArgumentException(
-                        "SpannerDbType must be set to one of (Bool, Int64, Float64, Timestamp, Date, String, Bytes)");
+                        $"{nameof(SpannerDbType)} must be set to one of "
+                        + $"({nameof(SpannerDbType.Bool)}, {nameof(SpannerDbType.Int64)}, {nameof(SpannerDbType.Float64)},"
+                        + $" {nameof(SpannerDbType.Timestamp)}, {nameof(SpannerDbType.Date)}, {nameof(SpannerDbType.String)},"
+                        + $" {nameof(SpannerDbType.Bytes)})");
                 _value = value;
             }
         }

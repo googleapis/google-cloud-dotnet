@@ -33,10 +33,9 @@ namespace Google.Cloud.Spanner.Data
         private static long s_transactionCount;
         private readonly SpannerConnection _connection;
         private readonly List<Mutation> _mutations = new List<Mutation>();
-        private readonly Transaction _transaction;
 
-        internal SpannerTransaction(SpannerConnection connection, TransactionMode mode, Session session,
-            Transaction transaction)
+        internal SpannerTransaction(SpannerConnection connection, TransactionMode mode, 
+            Session session, Transaction transaction, TimestampBound timeStampBound)
         {
             GaxPreconditions.CheckNotNull(connection, nameof(connection));
             GaxPreconditions.CheckNotNull(session, nameof(session));
@@ -46,7 +45,8 @@ namespace Google.Cloud.Spanner.Data
                 () => Interlocked.Increment(ref s_transactionCount));
 
             Session = session;
-            _transaction = transaction;
+            TimeStampBound = timeStampBound;
+            WireTransaction = transaction;
             _connection = connection;
             Mode = mode;
         }
@@ -62,10 +62,16 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public Session Session { get; }
 
+        /// <summary>
+        /// </summary>
+        public TimestampBound TimeStampBound { get; }
+
         /// <inheritdoc />
         protected override DbConnection DbConnection => _connection;
 
         internal IEnumerable<Mutation> Mutations => _mutations;
+
+        internal Transaction WireTransaction { get; }
 
         Task<int> ISpannerTransaction.ExecuteMutationsAsync(List<Mutation> mutations,
             CancellationToken cancellationToken)
@@ -106,12 +112,13 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// </summary>
         /// <returns></returns>
-        public Task CommitAsync()
+        public Task<DateTime?> CommitAsync()
         {
-            return ExecuteHelper.WithErrorTranslationAndProfiling(() =>
+            return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
                 GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot commit a readonly transaction.");
-                return _transaction.CommitAsync(Session, Mutations);
+                var response = await WireTransaction.CommitAsync(Session, Mutations).ConfigureAwait(false);
+                return response.CommitTimestamp?.ToDateTime();
             }, "SpannerTransaction.Commit");
         }
 
@@ -130,7 +137,7 @@ namespace Google.Cloud.Spanner.Data
             return ExecuteHelper.WithErrorTranslationAndProfiling(() =>
             {
                 GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot roll back a readonly transaction.");
-                return _transaction.RollbackAsync(Session);
+                return WireTransaction.RollbackAsync(Session);
             }, "SpannerTransaction.Rollback");
         }
 
@@ -164,8 +171,8 @@ namespace Google.Cloud.Spanner.Data
         private TransactionSelector GetTransactionSelector(TransactionMode mode)
         {
             CheckCompatibleMode(mode);
-            GaxPreconditions.CheckState(_transaction != null, "Transaction should have been created prior to use.");
-            return new TransactionSelector {Id = _transaction?.Id};
+            GaxPreconditions.CheckState(WireTransaction != null, "Transaction should have been created prior to use.");
+            return new TransactionSelector {Id = WireTransaction?.Id};
         }
     }
 }

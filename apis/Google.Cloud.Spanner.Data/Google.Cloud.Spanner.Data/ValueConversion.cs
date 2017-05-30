@@ -43,7 +43,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 if (targetClrType.GetTypeInfo().IsValueType)
                 {
-                    //return default(T)
+                    //Returns default(T) for targetClrType
                     return Activator.CreateInstance(targetClrType);
                 }
                 return null;
@@ -150,9 +150,10 @@ namespace Google.Cloud.Spanner.Data
                     {
                         return new Value { StringValue = s };
                     }
-                    else if (value is byte[])
+                    var bArray = value as byte[];
+                    if (bArray != null)
                     {
-                        return new Value { StringValue = Convert.ToBase64String((byte[])value) };
+                        return new Value { StringValue = Convert.ToBase64String(bArray) };
                     }
                     throw new ArgumentOutOfRangeException(nameof(value), value,
                         "TypeCode.Bytes only supports string and byte[]");

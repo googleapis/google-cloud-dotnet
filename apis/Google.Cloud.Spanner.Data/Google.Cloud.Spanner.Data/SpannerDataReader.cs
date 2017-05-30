@@ -42,22 +42,17 @@ namespace Google.Cloud.Spanner.Data
         private readonly ReliableStreamReader _resultSet;
         private Dictionary<string, int> _fieldIndex;
         private ResultSetMetadata _metadata;
+        private readonly SingleUseTransaction _txToClose;
 
-        internal SpannerDataReader(ReliableStreamReader resultSet)
-        {
-            GaxPreconditions.CheckNotNull(resultSet, nameof(resultSet));
-            Logger.LogPerformanceCounter("SpannerDataReader.ActiveCount",
-                () => Interlocked.Increment(ref s_readerCount));
-            _resultSet = resultSet;
-        }
-
-        internal SpannerDataReader(ReliableStreamReader resultSet, SpannerConnection connectionToClose)
+        internal SpannerDataReader(ReliableStreamReader resultSet, SpannerConnection connectionToClose = null,
+            SingleUseTransaction singleUseTransaction = null)
         {
             GaxPreconditions.CheckNotNull(resultSet, nameof(resultSet));
             Logger.LogPerformanceCounter("SpannerDataReader.ActiveCount",
                 () => Interlocked.Increment(ref s_readerCount));
             _resultSet = resultSet;
             _connectionToClose = connectionToClose;
+            _txToClose = singleUseTransaction;
         }
 
         // Nesting is not supported, so we return 0.
@@ -239,6 +234,7 @@ namespace Google.Cloud.Spanner.Data
 
             _resultSet?.Close();
             _connectionToClose?.Close();
+            _txToClose?.Dispose();
             base.Dispose(disposing);
         }
 

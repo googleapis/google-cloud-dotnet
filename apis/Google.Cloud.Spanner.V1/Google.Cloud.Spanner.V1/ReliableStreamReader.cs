@@ -177,7 +177,7 @@ namespace Google.Cloud.Spanner.V1 {
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         public async Task<bool> HasDataAsync(CancellationToken cancellationToken) {
-            return await ReliableConnectAsync(cancellationToken);
+            return await ReliableConnectAsync(cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -189,7 +189,7 @@ namespace Google.Cloud.Spanner.V1 {
             while ((result != null)
                    && _currentCall.ResponseStream.Current.ChunkedValue
                    && (_nextIndex >= _currentCall.ResponseStream.Current.Values.Count)) {
-                result.ChunkedMerge(await NextChunkAsync(cancellationToken));
+                result.ChunkedMerge(await NextChunkAsync(cancellationToken).ConfigureAwait(false));
             }
             return result;
         }
@@ -204,7 +204,7 @@ namespace Google.Cloud.Spanner.V1 {
             }
             if (_nextIndex >= _currentCall.ResponseStream.Current.Values.Count) {
                 //we need to move next
-                _isReading = await ReliableMoveNextAsync(cancellationToken);
+                _isReading = await ReliableMoveNextAsync(cancellationToken).ConfigureAwait(false);
                 _nextIndex = 0;
                 if (!_isReading) {
                     return null;

@@ -194,7 +194,7 @@ namespace Google.Cloud.Spanner.V1
                 SessionPoolImpl targetPool = s_poolByClientAndDatabase.GetOrAdd(sessionPoolKey,
                     key => new SessionPoolImpl(key));
 
-                sessionResult = await targetPool.AcquireSessionAsync(options, cancellationToken);
+                sessionResult = await targetPool.AcquireSessionAsync(options, cancellationToken).ConfigureAwait(false);
                 //refresh the mru list which tells us what sessions need to be trimmed from the pool when we want
                 // to add another poolEntry.
                 ReSortMru(targetPool);
