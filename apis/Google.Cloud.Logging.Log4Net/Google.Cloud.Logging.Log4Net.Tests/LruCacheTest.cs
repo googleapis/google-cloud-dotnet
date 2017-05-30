@@ -100,9 +100,9 @@ namespace Google.Cloud.Logging.Log4Net.Tests
         [Fact]
         public void MultithreadedUse()
         {
-            const int threadCount = 5;
-            const int lruCapacity = 100;
-            const int perThread = 1000;
+            const int threadCount = 10;
+            const int lruCapacity = 1000;
+            const int perThread = 50000;
             var lru = new LruCache<int, object>(lruCapacity);
             bool failure = false;
             Thread[] threads = new Thread[threadCount];
