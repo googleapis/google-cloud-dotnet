@@ -135,10 +135,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 await connection.OpenAsync();
                 using (var tx = await connection.BeginReadOnlyTransactionAsync(
-                    TimestampBound.OfReadTimestamp(_history[0].Timestamp)))
+                    TimestampBound.OfReadTimestamp(_history[0].Timestamp.Subtract(TimeSpan.FromDays(1)))))
                 {
                     Assert.True(tx.Mode == TransactionMode.ReadOnly);
-                    Assert.True(Equals(tx.TimeStampBound.TimeStamp, _history[0].Timestamp));
+                    Assert.True(Equals(tx.TimeStampBound.TimeStamp, _history[0].Timestamp.Subtract(TimeSpan.FromDays(1))));
 
                     var cmd = connection.CreateSelectCommand("SELECT * FROM TX WHERE K=@k",
                         new SpannerParameterCollection { { "k", _key, SpannerDbType.String } });
@@ -147,7 +147,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     {
                         while (await reader.ReadAsync())
                         {
-                            Assert.True(reader.GetFieldValue<string>(1) == _history[0].Value);
+                            Assert.True(false, "no data should be here from yesterday!");
                             break;
                         }
                     }
