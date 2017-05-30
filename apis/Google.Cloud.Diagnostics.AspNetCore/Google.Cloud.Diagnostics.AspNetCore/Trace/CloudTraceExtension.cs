@@ -104,7 +104,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             var projectId = CommonUtils.GetAndCheckProjectId(serviceOptions.ProjectId);
 
             var consumer = ConsumerFactory<TraceProto>.GetConsumer(
-                 new GrpcTraceConsumer(client), MessageSizer<TraceProto>.GetSize, options.BufferOptions);
+                 new GrpcTraceConsumer(client), MessageSizer<TraceProto>.GetSize,
+                 options.BufferOptions, options.RetryOptions);
 
             var tracerFactory = new ManagedTracerFactory(projectId, consumer,
                 RateLimitingTraceOptionsFactory.Create(options), TraceIdFactory.Create());

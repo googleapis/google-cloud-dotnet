@@ -31,10 +31,14 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The buffer options for the error reporter.</summary>
         public BufferOptions BufferOptions { get; }
 
-        private ErrorReportingOptions(EventTarget eventTarget, BufferOptions bufferOptions)
+        /// <summary>The retry options for the error reporter.</summary>
+        public RetryOptions RetryOptions { get; }
+
+        private ErrorReportingOptions(EventTarget eventTarget, BufferOptions bufferOptions, RetryOptions retryOptions)
         {
             EventTarget = GaxPreconditions.CheckNotNull(eventTarget, nameof(eventTarget));
             BufferOptions = GaxPreconditions.CheckNotNull(bufferOptions, nameof(bufferOptions));
+            RetryOptions = GaxPreconditions.CheckNotNull(retryOptions, nameof(retryOptions));
         }
 
         /// <summary>
@@ -43,9 +47,11 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="eventTarget">Where the error events should be sent, such as the Stackdriver 
         ///     Logging or Error Reporting API. Cannot be null.</param>
         /// <param name="bufferOptions">The buffer options for the error reporter. Defaults to no buffer.</param>
+        /// <param name="retryOptions">The retry options for the error reporter. Defaults to no retry.</param>
         public static ErrorReportingOptions Create(
-            EventTarget eventTarget, BufferOptions bufferOptions = null) =>
-            new ErrorReportingOptions(eventTarget, bufferOptions ?? BufferOptions.NoBuffer());
+            EventTarget eventTarget, BufferOptions bufferOptions = null, RetryOptions retryOptions = null) =>
+            new ErrorReportingOptions(eventTarget, 
+                bufferOptions ?? BufferOptions.NoBuffer(), retryOptions ?? RetryOptions.NoRetry());
 
         /// <summary>
         /// Creates an <see cref="ErrorReportingOptions"/> that will send error events to the
@@ -55,9 +61,10 @@ namespace Google.Cloud.Diagnostics.Common
         ///     The Google Cloud Platform project ID. If running on GAE or GCE the project ID will be
         ///     detected from the platform.</param>
         /// <param name="bufferOptions">The buffer options for the error reporter. Defaults to no buffer.</param>
+        /// <param name="retryOptions">The retry options for the error reporter. Defaults to no retry.</param>
         public static ErrorReportingOptions Create(
-            string projectId = null, BufferOptions bufferOptions = null) =>
-                Create(EventTarget.ForLogging(projectId), bufferOptions);
+            string projectId = null, BufferOptions bufferOptions = null, RetryOptions retryOptions = null) =>
+                Create(EventTarget.ForLogging(projectId), bufferOptions, retryOptions);
 
         /// <summary>
         /// Gets a <see cref="IConsumer{ReportedErrorEvent}"/>.
@@ -82,7 +89,7 @@ namespace Google.Cloud.Diagnostics.Common
             }
 
             return ConsumerFactory<ReportedErrorEvent>.GetConsumer(
-                consumer, MessageSizer<ReportedErrorEvent>.GetSize, BufferOptions);
+                consumer, MessageSizer<ReportedErrorEvent>.GetSize, BufferOptions, RetryOptions);
         }
     }
 }
