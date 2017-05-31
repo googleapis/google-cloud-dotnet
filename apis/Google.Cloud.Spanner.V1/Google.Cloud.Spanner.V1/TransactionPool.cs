@@ -115,19 +115,6 @@ namespace Google.Cloud.Spanner.V1
             return null;
         }
 
-        public static Transaction GetCachedTransaction(this Session session,
-            TransactionOptions options)
-        {
-            SessionInfo info;
-            if (s_sessionInfoTable.TryGetValue(session, out info)
-                && info.ActiveTransactionOptions != null
-                && Equals(info.ActiveTransactionOptions, options))
-            {
-                return info.ActiveTransaction;
-            }
-            return null;
-        }
-
         /// <summary>
         /// Starts a pre-warm background task to create a transaction on the given session with the
         /// last used transaction options.  This method will only work if CreateTransactionAsync
@@ -149,7 +136,8 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="session"></param>
         /// <param name="mutations"></param>
         /// <returns></returns>
-        public static Task CommitAsync(this Transaction transaction, Session session, IEnumerable<Mutation> mutations)
+        public static Task<CommitResponse> CommitAsync(this Transaction transaction, Session session,
+            IEnumerable<Mutation> mutations)
         {
             return RunFinalMethodAsync(transaction, session,
                 info => info.SpannerClient.CommitAsync(session.SessionName, info.ActiveTransaction.GetTransactionId(), mutations)
@@ -162,29 +150,38 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="transaction"></param>
         /// <param name="session"></param>
         /// <returns></returns>
-        public static Task RollbackAsync(this Transaction transaction, Session session)
+        public static Task<bool> RollbackAsync(this Transaction transaction, Session session)
         {
             return RunFinalMethodAsync(transaction, session,
-                info => info.SpannerClient.RollbackAsync(session.GetSessionName(), info.ActiveTransaction.GetTransactionId())
-                    .WithSessionChecking(() => session));
+                async info =>
+                {
+                    await info.SpannerClient
+                        .RollbackAsync(session.GetSessionName(),
+                            info.ActiveTransaction.GetTransactionId())
+                        .WithSessionChecking(() => session).ConfigureAwait(false);
+                    return true;
+                });
         }
 
-        private static async Task RunFinalMethodAsync(Transaction transaction, Session session, Func<SessionInfo, Task> commitOrRollbackAction)
+        private static async Task<T> RunFinalMethodAsync<T>(Transaction transaction, Session session, Func<SessionInfo, Task<T>> commitOrRollbackAction)
         {
             SessionInfo info;
             if (s_sessionInfoTable.TryGetValue(session, out info))
             {
                 //we should have already waited, but extra checking cannot hurt.
                 await info.WaitForPreWarmAsync().ConfigureAwait(false);
-                if (!info.HasActiveTransaction
-                    || !Equals(info.ActiveTransaction.Id, transaction.Id))
+                if (!info.HasActiveTransaction)
+                {
+                    throw new InvalidOperationException("The transaction being committed was not found to have an entry.");
+                }
+                if (!Equals(info.ActiveTransaction.Id, transaction.Id))
                 {
                     throw new InvalidOperationException("The transaction being committed was not found to have a valid entry.");
                 }
 
                 try
                 {
-                    await commitOrRollbackAction(info);
+                    return await commitOrRollbackAction(info).ConfigureAwait(false);
                 }
                 finally
                 {
@@ -193,13 +190,10 @@ namespace Google.Cloud.Spanner.V1
                     info.MarkTransactionUsed();
                 }
             }
-            else
-            {
-                throw new ArgumentException(
-                    "The given transaction was not found in the transaction pool. Only " +
-                    "use this method on Transactions returned from TransactionPool." +
-                    "CreateTransactionAsync.");
-            }
+            throw new ArgumentException(
+                "The given transaction was not found in the transaction pool. Only " +
+                "use this method on Transactions returned from TransactionPool." +
+                "CreateTransactionAsync.");
         }
 
         private class SessionInfo

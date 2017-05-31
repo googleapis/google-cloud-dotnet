@@ -134,7 +134,7 @@ namespace Google.Cloud.Spanner.Data
 
         public async Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken)
         {
-            var transaction = await GetTransactionAsync(cancellationToken);
+            var transaction = await GetTransactionAsync(cancellationToken).ConfigureAwait(false);
             if (transaction == null)
                 throw new InvalidOperationException("Unable to obtain a spanner transaction to execute within.");
             return await ((ISpannerTransaction) transaction).ExecuteMutationsAsync(mutations, cancellationToken);
@@ -142,7 +142,7 @@ namespace Google.Cloud.Spanner.Data
 
         public async Task<ReliableStreamReader> ExecuteQueryAsync(ExecuteSqlRequest request, CancellationToken cancellationToken)
         {
-            var transaction = await GetTransactionAsync(cancellationToken);
+            var transaction = await GetTransactionAsync(cancellationToken).ConfigureAwait(false);
             if (transaction == null)
                 throw new InvalidOperationException("Unable to obtain a spanner transaction to execute within.");
             return await((ISpannerTransaction) transaction).ExecuteQueryAsync(request, cancellationToken);
@@ -153,8 +153,10 @@ namespace Google.Cloud.Spanner.Data
             //note that we delay transaction creation (and thereby session allocation) 
             if (_timestampBound != null)
                 return _transaction ?? (_transaction =
-                           await _spannerConnection.BeginReadOnlyTransactionAsync(_timestampBound, cancellationToken));
-            return _transaction ?? (_transaction = await _spannerConnection.BeginTransactionAsync(cancellationToken));
+                           await _spannerConnection.BeginReadOnlyTransactionAsync(_timestampBound, cancellationToken)
+                           .ConfigureAwait(false));
+            return _transaction ?? (_transaction = await _spannerConnection.BeginTransactionAsync(cancellationToken)
+                .ConfigureAwait(false));
         }
     }
 }

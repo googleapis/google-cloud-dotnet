@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System.Collections.Generic;
+using System.Linq;
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf.Collections;
 
@@ -21,72 +22,76 @@ namespace Google.Cloud.Spanner.Data
     /// <summary>
     /// These types come from Google.Cloud.Spanner.V1.TypeCode
     /// </summary>
-    public class SpannerDbType
+    public sealed class SpannerDbType
     {
-        private readonly IDictionary<string, SpannerDbType> _structMembers;
-        private readonly TypeCode _typeCode;
-        private readonly SpannerDbType _elementType;
-
         private SpannerDbType(TypeCode typeCode)
         {
-            _typeCode = typeCode;
+            TypeCode = typeCode;
         }
 
         private SpannerDbType(TypeCode typeCode, SpannerDbType arrayElementType)
             :this(typeCode)
         {
-            _elementType = arrayElementType;
+            ArrayElementType = arrayElementType;
         }
 
         private SpannerDbType(TypeCode typeCode, IDictionary<string, SpannerDbType> structMembers)
             : this(typeCode)
         {
-            _structMembers = structMembers;
+            StructMembers = structMembers;
         }
 
         private SpannerDbType(TypeCode typeCode, RepeatedField<StructType.Types.Field> structTypeFields)
             : this(typeCode)
         {
-            _structMembers = new Dictionary<string, SpannerDbType>();
+            StructMembers = new Dictionary<string, SpannerDbType>();
             foreach (StructType.Types.Field field in structTypeFields)
             {
-                _structMembers[field.Name] = FromV1Type(field.Type);
+                StructMembers[field.Name] = FromProtoBufType(field.Type);
             }
         }
 
-        internal static SpannerDbType FromV1Type(V1.Type type)
+        internal static SpannerDbType FromProtoBufType(V1.Type type)
         {
-            if (type.Code == TypeCode.Array)
+            switch (type.Code)
             {
-                return new SpannerDbType(TypeCode.Array, FromV1Type(type.ArrayElementType));
+                case TypeCode.Array:
+                    return new SpannerDbType(TypeCode.Array,
+                        FromProtoBufType(type.ArrayElementType));
+                case TypeCode.Struct:
+                    return new SpannerDbType(TypeCode.Struct, type.StructType.Fields);
+                default:
+                    return new SpannerDbType(type.Code);
             }
-            if (type.Code == TypeCode.Struct)
-            {
-                return new SpannerDbType(TypeCode.Struct, type.StructType.Fields);
-            }
-            return new SpannerDbType(type.Code);
         }
 
-        internal V1.Type ToV1Type()
+        internal V1.Type ToProtoBufType()
         {
-            if (TypeCode == TypeCode.Array)
+            switch (TypeCode)
             {
-                return new V1.Type { Code = TypeCode, ArrayElementType = _elementType.ToV1Type()};
+                case TypeCode.Array:
+                    return new V1.Type
+                    {
+                        Code = TypeCode,
+                        ArrayElementType = ArrayElementType.ToProtoBufType()
+                    };
+                case TypeCode.Struct:
+                    return new V1.Type {
+                        Code = TypeCode,
+                        StructType =
+                            new StructType {
+                                Fields = {
+                                    StructMembers.Select(kvp => new StructType.Types.Field {
+                                        Name = kvp.Key,
+                                        Type = kvp.Value.ToProtoBufType()
+                                    })
+                                }
+                            }
+                    };
+                default: return new V1.Type {Code = TypeCode};
             }
-            if (TypeCode == TypeCode.Struct)
-            {
-                var result = new V1.Type { Code = TypeCode};
-                result.StructType = new StructType();
-                foreach (var kvp in _structMembers)
-                {
-                    result.StructType.Fields.Add(new StructType.Types.Field
-                    { Name = kvp.Key, Type = kvp.Value.ToV1Type()});
-                }
-                return result;
-            }
-            return new V1.Type { Code = TypeCode};
         }
-        
+
         /// <summary>
         /// Not specified.
         /// </summary>
@@ -142,11 +147,11 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public static SpannerDbType StructOf(IDictionary<string, SpannerDbType> structMembers) => new SpannerDbType(TypeCode.Struct, structMembers);
 
-        internal TypeCode TypeCode => _typeCode;
+        internal TypeCode TypeCode { get; }
 
-        internal SpannerDbType ArrayElementType => _elementType;
+        internal SpannerDbType ArrayElementType { get; }
 
-        internal IDictionary<string, SpannerDbType> StructMembers => _structMembers;
+        internal IDictionary<string, SpannerDbType> StructMembers { get; }
 
         /// <inheritdoc />
         public override bool Equals(object obj)
@@ -156,9 +161,9 @@ namespace Google.Cloud.Spanner.Data
 
         private bool Equals(SpannerDbType other)
         {
-            return Equals(_structMembers, other._structMembers) 
-                && _typeCode == other._typeCode 
-                && Equals(_elementType, other._elementType);
+            return Equals(StructMembers, other.StructMembers) 
+                && TypeCode == other.TypeCode 
+                && Equals(ArrayElementType, other.ArrayElementType);
         }
 
         /// <inheritdoc />
@@ -166,9 +171,9 @@ namespace Google.Cloud.Spanner.Data
         {
             unchecked
             {
-                var hashCode = (_structMembers != null ? _structMembers.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (int) _typeCode;
-                hashCode = (hashCode * 397) ^ (_elementType != null ? _elementType.GetHashCode() : 0);
+                var hashCode = (StructMembers != null ? StructMembers.GetHashCode() : 0);
+                hashCode = (hashCode * 397) ^ (int) TypeCode;
+                hashCode = (hashCode * 397) ^ (ArrayElementType?.GetHashCode() ?? 0);
                 return hashCode;
             }
         }

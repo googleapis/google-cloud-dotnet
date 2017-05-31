@@ -44,24 +44,15 @@ namespace Google.Cloud.Spanner.Data
         private ResultSetMetadata _metadata;
         private readonly SingleUseTransaction _txToClose;
 
-        internal SpannerDataReader(ReliableStreamReader resultSet)
+        internal SpannerDataReader(ReliableStreamReader resultSet, SpannerConnection connectionToClose = null,
+            SingleUseTransaction singleUseTransaction = null)
         {
             GaxPreconditions.CheckNotNull(resultSet, nameof(resultSet));
             Logger.LogPerformanceCounter("SpannerDataReader.ActiveCount",
                 () => Interlocked.Increment(ref s_readerCount));
             _resultSet = resultSet;
-        }
-
-        internal SpannerDataReader(ReliableStreamReader resultSet, SingleUseTransaction singleUseTransaction)
-            :this(resultSet)
-        {
-            _txToClose = singleUseTransaction;
-        }
-
-        internal SpannerDataReader(ReliableStreamReader resultSet, SpannerConnection connectionToClose)
-            :this(resultSet)
-        {
             _connectionToClose = connectionToClose;
+            _txToClose = singleUseTransaction;
         }
 
         // Nesting is not supported, so we return 0.

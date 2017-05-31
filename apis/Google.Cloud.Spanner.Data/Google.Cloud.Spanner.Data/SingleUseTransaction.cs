@@ -20,7 +20,7 @@ using Google.Cloud.Spanner.V1;
 
 namespace Google.Cloud.Spanner.Data
 {
-    sealed class SingleUseTransaction : ISpannerTransaction, IDisposable
+    internal sealed class SingleUseTransaction : ISpannerTransaction, IDisposable
     {
         private readonly SpannerConnection _spannerConnection;
         private readonly Session _session;
@@ -44,12 +44,8 @@ namespace Google.Cloud.Spanner.Data
             GaxPreconditions.CheckNotNull(request, nameof(request));
             return ExecuteHelper.WithErrorTranslationAndProfiling(() =>
                 {
-                    var taskCompletionSource = new TaskCompletionSource<ReliableStreamReader>();
                     request.Transaction = new TransactionSelector {SingleUse = _options};
-                    taskCompletionSource.SetResult(
-                        _spannerConnection.SpannerClient.GetSqlStreamReader(request, _session));
-
-                    return taskCompletionSource.Task;
+                    return Task.FromResult(_spannerConnection.SpannerClient.GetSqlStreamReader(request, _session));
                 },
                 "SingleUseTransaction.ExecuteQuery");
         }

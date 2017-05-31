@@ -16,6 +16,7 @@ using Grpc.Core;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Google.Api.Gax;
 
 namespace Google.Cloud.Spanner.V1
 {
@@ -33,7 +34,7 @@ namespace Google.Cloud.Spanner.V1
                         SessionPool.MarkSessionExpired(sessionFunc());
                     }
                 }
-                return t.Result;
+                return t.ResultWithUnwrappedExceptions();
             });
         }
 

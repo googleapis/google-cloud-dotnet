@@ -170,53 +170,47 @@ namespace Google.Cloud.Spanner.Data
                 || targetReadTimeStamp.Mode == TimestampBoundMode.MaxStaleness)
             {
                 throw new ArgumentException(nameof(targetReadTimeStamp),
-                    "MinReadTimestamp and MaxStaleness can only be used in a single-use"
-                    + "transaction as an argument to SpannerCommand.ExecuteReader().");
+                    $"{nameof(TimestampBoundMode.MinReadTimestamp)} and "
+                    + $"{nameof(TimestampBoundMode.MaxStaleness)} can only be used in a single-use"
+                    + " transaction as an argument to SpannerCommand.ExecuteReader().");
             }
 
             return BeginTransactionImplAsync(cancellationToken,
-                ConvertToOptions(targetReadTimeStamp),
+                new TransactionOptions { ReadOnly = ConvertToOptions(targetReadTimeStamp)},
                 TransactionMode.ReadOnly,
                 targetReadTimeStamp);
         }
 
-        private TransactionOptions ConvertToOptions(TimestampBound targetReadTimeStamp)
+        private TransactionOptions.Types.ReadOnly ConvertToOptions(TimestampBound targetReadTimeStamp)
         {
-            TransactionOptions.Types.ReadOnly readOnlyOptions;
             switch (targetReadTimeStamp.Mode)
             {
                 case TimestampBoundMode.Strong:
-                    readOnlyOptions = new TransactionOptions.Types.ReadOnly { Strong = true };
-                    break;
+                    return new TransactionOptions.Types.ReadOnly { Strong = true };
                 case TimestampBoundMode.ReadTimestamp:
-                    readOnlyOptions = new TransactionOptions.Types.ReadOnly
+                    return new TransactionOptions.Types.ReadOnly
                     {
                         ReadTimestamp = Timestamp.FromDateTime(targetReadTimeStamp.TimeStamp)
                     };
-                    break;
                 case TimestampBoundMode.MinReadTimestamp:
-                    readOnlyOptions = new TransactionOptions.Types.ReadOnly
+                    return new TransactionOptions.Types.ReadOnly
                     {
                         MinReadTimestamp = Timestamp.FromDateTime(targetReadTimeStamp.TimeStamp)
                     };
-                    break;
                 case TimestampBoundMode.ExactStaleness:
-                    readOnlyOptions = new TransactionOptions.Types.ReadOnly
+                    return new TransactionOptions.Types.ReadOnly
                     {
                         ExactStaleness = Duration.FromTimeSpan(targetReadTimeStamp.Staleness)
                     };
-                    break;
                 case TimestampBoundMode.MaxStaleness:
-                    readOnlyOptions =
+                    return
                         new TransactionOptions.Types.ReadOnly
                         {
                             MaxStaleness = Duration.FromTimeSpan(targetReadTimeStamp.Staleness)
                         };
-                    break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
-            return new TransactionOptions {ReadOnly = readOnlyOptions};
         }
 
         /// <summary>
@@ -562,10 +556,10 @@ namespace Google.Cloud.Spanner.Data
                     }
                 }
 
-                var session = await result;
+                var session = await result.ConfigureAwait(false);
                 if (sharedSessionReadOnlyUse)
                 {
-                    await session.RemoveFromTransactionPoolAsync();
+                    await session.RemoveFromTransactionPoolAsync().ConfigureAwait(false);
                 }
 
                 return session;
@@ -588,14 +582,14 @@ namespace Google.Cloud.Spanner.Data
             TimestampBound targetReadTimeStamp,
             CancellationToken cancellationToken)
         {
-            var options = ConvertToOptions(targetReadTimeStamp);
+            var options = new TransactionOptions {ReadOnly = ConvertToOptions(targetReadTimeStamp)};
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
                 using (var sessionHolder = await SessionHolder.Allocate(this,
                         options, cancellationToken)
                     .ConfigureAwait(false))
                 {
-                    await sessionHolder.Session.RemoveFromTransactionPoolAsync();
+                    await sessionHolder.Session.RemoveFromTransactionPoolAsync().ConfigureAwait(false);
                     return new SingleUseTransaction(this, sessionHolder.TakeOwnership(), options);
                 }
             }, "SpannerConnection.BeginSingleUseTransaction");
@@ -610,15 +604,9 @@ namespace Google.Cloud.Spanner.Data
                 using (var sessionHolder = await SessionHolder.Allocate(this, transactionOptions, cancellationToken)
                     .ConfigureAwait(false))
                 {
-                    var transaction =
-                        sessionHolder.Session.GetCachedTransaction(transactionOptions);
-
-                    if (transaction == null)
-                    {
-                        transaction = await SpannerClient
-                            .BeginPooledTransactionAsync(sessionHolder.Session, transactionOptions)
-                            .ConfigureAwait(false);
-                    }
+                    var transaction = await SpannerClient
+                        .BeginPooledTransactionAsync(sessionHolder.Session, transactionOptions)
+                        .ConfigureAwait(false);
                     return new SpannerTransaction(this, transactionMode, sessionHolder.TakeOwnership(),
                         transaction, targetReadTimeStamp);
                 }
@@ -642,7 +630,7 @@ namespace Google.Cloud.Spanner.Data
                         try
                         {
                             request.SessionAsSessionName = sharedSession.SessionName;
-                            await SpannerClient.ExecuteSqlAsync(request).WithSessionChecking(() => sharedSession);
+                            await SpannerClient.ExecuteSqlAsync(request).WithSessionChecking(() => sharedSession).ConfigureAwait(false);
                         }
                         catch (Exception e)
                         {

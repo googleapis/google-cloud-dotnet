@@ -176,17 +176,8 @@ namespace Google.Cloud.Spanner.Data
         /// 
         /// </summary>
         /// <returns></returns>
-        public Task<DbDataReader> ExecuteReaderAsync(TimestampBound singleUseReadSettings)
-        {
-            return ExecuteReaderAsync(singleUseReadSettings, CancellationToken.None);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
         public async Task<DbDataReader> ExecuteReaderAsync(TimestampBound singleUseReadSettings, 
-            CancellationToken cancellationToken)
+            CancellationToken cancellationToken = default(CancellationToken))
         {
             GaxPreconditions.CheckNotNull(singleUseReadSettings, nameof(singleUseReadSettings));
             if (Transaction != null)
@@ -196,9 +187,9 @@ namespace Google.Cloud.Spanner.Data
             }
             var singleUseTransaction =
                 await SpannerConnection.BeginSingleUseTransactionAsync(singleUseReadSettings,
-                    cancellationToken);
+                    cancellationToken).ConfigureAwait(false);
             return await ExecuteDbDataReaderAsync(CommandBehavior.Default, cancellationToken,
-                singleUseTransaction);
+                singleUseTransaction).ConfigureAwait(false);
         }
 
         /// <inheritdoc />
@@ -281,19 +272,10 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
-        public Task<T> ExecuteScalarAsync<T>()
-        {
-            return ExecuteScalarAsync<T>(CancellationToken.None);
-        }
-
-        /// <summary>
-        /// </summary>
         /// <param name="cancellationToken"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public async Task<T> ExecuteScalarAsync<T>(CancellationToken cancellationToken)
+        public async Task<T> ExecuteScalarAsync<T>(CancellationToken cancellationToken = default(CancellationToken))
         {
             using (var reader = await ExecuteDbDataReaderAsync(CommandBehavior.SingleRow, cancellationToken)
                 .ConfigureAwait(false))
@@ -377,17 +359,13 @@ namespace Google.Cloud.Spanner.Data
 
             var tx = singleUseTransaction ?? GetSpannerTransaction();
             // Execute the command.
-            var resultset = await tx.ExecuteQueryAsync(request, cancellationToken)
+            var resultSet = await tx.ExecuteQueryAsync(request, cancellationToken)
                 .WithTimeout(TimeSpan.FromSeconds(CommandTimeout), "The timeout of the SpannerCommand was exceeded.");
 
             if ((behavior & CommandBehavior.CloseConnection) == CommandBehavior.CloseConnection)
-                return new SpannerDataReader(resultset, SpannerConnection);
+                return new SpannerDataReader(resultSet, SpannerConnection);
 
-            if (singleUseTransaction != null)
-            {
-                return new SpannerDataReader(resultset, singleUseTransaction);
-            }
-            return new SpannerDataReader(resultset);
+            return new SpannerDataReader(resultSet, null, singleUseTransaction);
         }
 
         internal ISpannerTransaction GetSpannerTransaction()
