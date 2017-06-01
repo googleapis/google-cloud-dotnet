@@ -29,10 +29,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     public class ReadTests : IClassFixture<TestDatabaseFixture>
     {
-        public ReadTests(TestDatabaseFixture testFixture)
-        {
-            _testFixture = testFixture;
-        }
+        public ReadTests(TestDatabaseFixture testFixture) => _testFixture = testFixture;
 
         private readonly TestDatabaseFixture _testFixture;
 
@@ -64,7 +61,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
                 var cmd = connection.CreateSelectCommand(sql);
-                T result = await cmd.ExecuteScalarAsync<T>();
+                var result = await cmd.ExecuteScalarAsync<T>();
                 return result;
             }
         }
@@ -74,7 +71,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             // ReSharper disable once RedundantAssignment
             int rowsRead = -1;
-            bool exceptionCaught = false;
+            var exceptionCaught = false;
 
             try
             {
@@ -108,10 +105,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public async Task BadDbName()
         {
             string connectionString = "Data Source=" + _testFixture.TestProjectName + "/"
-                                      + _testFixture.TestInstanceName + "/" + "badjuju";
+                + _testFixture.TestInstanceName + "/" + "badjuju";
             // ReSharper disable once RedundantAssignment
             int rowsRead = -1;
-            bool exceptionCaught = false;
+            var exceptionCaught = false;
 
             try
             {
@@ -145,7 +142,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             // ReSharper disable once RedundantAssignment
             int rowsRead = -1;
-            bool exceptionCaught = false;
+            var exceptionCaught = false;
 
             try
             {
@@ -178,7 +175,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public async Task CancelRead()
         {
             // ReSharper disable once RedundantAssignment
-            bool exceptionCaught = false;
+            var exceptionCaught = false;
             try
             {
                 using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
@@ -188,7 +185,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
-                        CancellationTokenSource cancellationTokenSource =
+                        var cancellationTokenSource =
                             new CancellationTokenSource();
                         var task = reader.ReadAsync(cancellationTokenSource.Token);
                         cancellationTokenSource.Cancel();
@@ -208,8 +205,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task EmptyStructArray()
         {
-            string sqlQuery = "SELECT ARRAY(SELECT AS STRUCT * FROM (SELECT 'a', 1) WHERE 0 = 1)";
-            IList result = await ExecuteAsync<IList>(sqlQuery);
+            var sqlQuery = "SELECT ARRAY(SELECT AS STRUCT * FROM (SELECT 'a', 1) WHERE 0 = 1)";
+            var result = await ExecuteAsync<IList>(sqlQuery);
             Assert.Equal(0, result.Count);
         }
 
@@ -223,7 +220,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task NaNArray()
         {
-            double[] result =
+            var result =
                 await ExecuteAsync<double[]>(
                     "SELECT [IEEE_DIVIDE(1, 0), IEEE_DIVIDE(-1, 0), IEEE_DIVIDE(0, 0)]");
             Assert.Equal(3, result.Length);
@@ -247,8 +244,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
-                var cmd = connection.CreateSelectCommand("SELECT * FROM " + _testFixture.TestTable
-                                                         + " WHERE Key = 'k1'");
+                var cmd = connection.CreateSelectCommand(
+                    "SELECT * FROM " + _testFixture.TestTable
+                    + " WHERE Key = 'k1'");
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     rowsRead = 0;
@@ -271,8 +269,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
-                var cmd = connection.CreateSelectCommand("SELECT * FROM " + _testFixture.TestTable
-                                                         + " WHERE Key = 'k99'");
+                var cmd = connection.CreateSelectCommand(
+                    "SELECT * FROM " + _testFixture.TestTable
+                    + " WHERE Key = 'k99'");
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     rowsRead = 0;
@@ -297,7 +296,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             // ReSharper disable once RedundantAssignment
             int rowsRead = -1;
-            bool exceptionCaught = false;
+            var exceptionCaught = false;
 
             try
             {
@@ -335,8 +334,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
-                var cmd = connection.CreateSelectCommand("SELECT * FROM " + _testFixture.TestTable
-                                                         + " WHERE Key >= 'k99'");
+                var cmd = connection.CreateSelectCommand(
+                    "SELECT * FROM " + _testFixture.TestTable
+                    + " WHERE Key >= 'k99'");
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     rowsRead = 0;
@@ -360,11 +360,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public async Task StructArray()
         {
             string sqlQuery = "SELECT ARRAY(SELECT AS STRUCT C1, C2 "
-                              + "FROM (SELECT 'a' AS C1, 1 AS C2 UNION ALL SELECT 'b' AS C1, 2 AS C2) "
-                              + "ORDER BY C1 ASC)";
-            IList result = await ExecuteAsync<IList>(sqlQuery);
+                + "FROM (SELECT 'a' AS C1, 1 AS C2 UNION ALL SELECT 'b' AS C1, 2 AS C2) "
+                + "ORDER BY C1 ASC)";
+            var result = await ExecuteAsync<IList>(sqlQuery);
             Assert.Equal(2, result.Count);
-            IDictionary s1 = result[0] as IDictionary;
+            var s1 = result[0] as IDictionary;
 
             Assert.Equal("a", (string) s1["C1"]);
             Assert.Equal(1, (long) s1["C2"]);

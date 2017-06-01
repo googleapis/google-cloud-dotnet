@@ -23,7 +23,7 @@ using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Logging;
 using Google.Protobuf.WellKnownTypes;
-using TransactionOptions = Google.Cloud.Spanner.V1.TransactionOptions;
+
 #if NET45 || NET451
 using Transaction = System.Transactions.Transaction;
 
@@ -70,9 +70,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Creates a SpannerConnection with no datasource or credential specified.
         /// </summary>
-        public SpannerConnection()
-        {
-        }
+        public SpannerConnection() { }
 
         /// <summary>
         /// Creates a SpannerConnection with a datasource contained in connectionString
@@ -82,9 +80,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="connectionString">A Spanner formatted connection string.</param>
         /// <param name="credential">An optional credential.</param>
         public SpannerConnection(string connectionString, ITokenAccess credential = null)
-            : this(new SpannerConnectionStringBuilder(connectionString, credential))
-        {
-        }
+            : this(new SpannerConnectionStringBuilder(connectionString, credential)) { }
 
         /// <summary>
         /// Creates a SpannerConnection with a datasource contained in connectionString.
@@ -108,11 +104,9 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override string ConnectionString
         {
-            get { return _connectionStringBuilder.ToString(); }
-            set
-            {
-                TrySetNewConnectionInfo(new SpannerConnectionStringBuilder(value, _connectionStringBuilder.Credential));
-            }
+            get => _connectionStringBuilder.ToString();
+            set => TrySetNewConnectionInfo(
+                new SpannerConnectionStringBuilder(value, _connectionStringBuilder.Credential));
         }
 
         /// <summary>
@@ -141,7 +135,6 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override ConnectionState State => _state;
 
-
         internal bool IsClosed => (State & ConnectionState.Open) == 0;
 
         internal bool IsOpen => (State & ConnectionState.Open) == ConnectionState.Open;
@@ -153,29 +146,30 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         public Task<SpannerTransaction> BeginReadOnlyTransactionAsync(
-            CancellationToken cancellationToken = default(CancellationToken))
-        {
-            return BeginReadOnlyTransactionAsync(TimestampBound.Strong, cancellationToken);
-        }
+            CancellationToken cancellationToken = default(CancellationToken)) => BeginReadOnlyTransactionAsync(
+            TimestampBound.Strong, cancellationToken);
 
         /// <summary>
         /// </summary>
         /// <param name="targetReadTimeStamp"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public Task<SpannerTransaction> BeginReadOnlyTransactionAsync(TimestampBound targetReadTimeStamp,
+        public Task<SpannerTransaction> BeginReadOnlyTransactionAsync(
+            TimestampBound targetReadTimeStamp,
             CancellationToken cancellationToken = default(CancellationToken))
         {
             if (targetReadTimeStamp.Mode == TimestampBoundMode.MinReadTimestamp
                 || targetReadTimeStamp.Mode == TimestampBoundMode.MaxStaleness)
             {
-                throw new ArgumentException(nameof(targetReadTimeStamp),
+                throw new ArgumentException(
+                    nameof(targetReadTimeStamp),
                     $"{nameof(TimestampBoundMode.MinReadTimestamp)} and "
                     + $"{nameof(TimestampBoundMode.MaxStaleness)} can only be used in a single-use"
                     + " transaction as an argument to SpannerCommand.ExecuteReader().");
             }
 
-            return BeginTransactionImplAsync(new TransactionOptions { ReadOnly = ConvertToOptions(targetReadTimeStamp) },
+            return BeginTransactionImplAsync(
+                new TransactionOptions {ReadOnly = ConvertToOptions(targetReadTimeStamp)},
                 TransactionMode.ReadOnly,
                 cancellationToken,
                 targetReadTimeStamp);
@@ -186,7 +180,7 @@ namespace Google.Cloud.Spanner.Data
             switch (targetReadTimeStamp.Mode)
             {
                 case TimestampBoundMode.Strong:
-                    return new TransactionOptions.Types.ReadOnly { Strong = true };
+                    return new TransactionOptions.Types.ReadOnly {Strong = true};
                 case TimestampBoundMode.ReadTimestamp:
                     return new TransactionOptions.Types.ReadOnly
                     {
@@ -218,19 +212,20 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         public Task<SpannerTransaction> BeginTransactionAsync(
-            CancellationToken cancellationToken = default(CancellationToken))
-        {
-            return BeginTransactionImplAsync(new TransactionOptions
+            CancellationToken cancellationToken = default(CancellationToken)) => BeginTransactionImplAsync(
+            new TransactionOptions
             {
                 ReadWrite = new TransactionOptions.Types.ReadWrite()
             }, TransactionMode.ReadWrite, cancellationToken);
-        }
 
         /// <inheritdoc />
         public override void ChangeDatabase(string newDataSource)
         {
             if (IsOpen)
+            {
                 Close();
+            }
+
             TrySetNewConnectionInfo(_connectionStringBuilder.CloneWithNewDataSource(newDataSource));
         }
 
@@ -241,7 +236,11 @@ namespace Google.Cloud.Spanner.Data
             bool primarySessionInUse;
             lock (_sync)
             {
-                if (IsClosed) return;
+                if (IsClosed)
+                {
+                    return;
+                }
+
                 _keepAliveCancellation?.Cancel();
 #if NET45 || NET451
                 _volatileResourceManager = null;
@@ -253,7 +252,9 @@ namespace Google.Cloud.Spanner.Data
                 _sharedSession = null;
             }
             if (session != null && !primarySessionInUse)
+            {
                 SpannerClient.ReleaseToPool(session);
+            }
         }
 
         /// <summary>
@@ -261,66 +262,64 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="databaseTable"></param>
         /// <param name="deleteFilterParameters"></param>
         /// <returns></returns>
-        public SpannerCommand CreateDeleteCommand(string databaseTable,
-            SpannerParameterCollection deleteFilterParameters = null)
-        {
-            return new SpannerCommand(SpannerCommandTextBuilder.CreateDeleteTextBuilder(databaseTable), this, null,
-                deleteFilterParameters);
-        }
+        public SpannerCommand CreateDeleteCommand(
+            string databaseTable,
+            SpannerParameterCollection deleteFilterParameters = null) => new SpannerCommand(
+            SpannerCommandTextBuilder.CreateDeleteTextBuilder(databaseTable), this, null,
+            deleteFilterParameters);
 
         /// <summary>
         /// </summary>
         /// <param name="databaseTable"></param>
         /// <param name="insertParameters"></param>
         /// <returns></returns>
-        public SpannerCommand CreateInsertCommand(string databaseTable,
-            SpannerParameterCollection insertParameters = null)
-        {
-            return new SpannerCommand(SpannerCommandTextBuilder.CreateInsertTextBuilder(databaseTable), this, null,
-                insertParameters);
-        }
+        public SpannerCommand CreateInsertCommand(
+            string databaseTable,
+            SpannerParameterCollection insertParameters = null) => new SpannerCommand(
+            SpannerCommandTextBuilder.CreateInsertTextBuilder(databaseTable), this, null,
+            insertParameters);
 
         /// <summary>
         /// </summary>
         /// <param name="databaseTable"></param>
         /// <param name="insertUpdateParameters"></param>
         /// <returns></returns>
-        public SpannerCommand CreateInsertOrUpdateCommand(string databaseTable,
-            SpannerParameterCollection insertUpdateParameters = null)
-        {
-            return new SpannerCommand(SpannerCommandTextBuilder.CreateInsertOrUpdateTextBuilder(databaseTable), this,
-                null, insertUpdateParameters);
-        }
+        public SpannerCommand CreateInsertOrUpdateCommand(
+            string databaseTable,
+            SpannerParameterCollection insertUpdateParameters = null) => new SpannerCommand(
+            SpannerCommandTextBuilder.CreateInsertOrUpdateTextBuilder(databaseTable), this,
+            null, insertUpdateParameters);
 
         /// <summary>
         /// </summary>
         /// <param name="sqlQueryStatement"></param>
         /// <param name="selectParameters"></param>
         /// <returns></returns>
-        public SpannerCommand CreateSelectCommand(string sqlQueryStatement,
-            SpannerParameterCollection selectParameters = null)
-        {
-            return new SpannerCommand(SpannerCommandTextBuilder.CreateSelectTextBuilder(sqlQueryStatement), this, null,
-                selectParameters);
-        }
+        public SpannerCommand CreateSelectCommand(
+            string sqlQueryStatement,
+            SpannerParameterCollection selectParameters = null) => new SpannerCommand(
+            SpannerCommandTextBuilder.CreateSelectTextBuilder(sqlQueryStatement), this, null,
+            selectParameters);
 
         /// <summary>
         /// </summary>
         /// <param name="databaseTable"></param>
         /// <param name="updateParameters"></param>
         /// <returns></returns>
-        public SpannerCommand CreateUpdateCommand(string databaseTable,
-            SpannerParameterCollection updateParameters = null)
-        {
-            return new SpannerCommand(SpannerCommandTextBuilder.CreateUpdateTextBuilder(databaseTable), this, null,
-                updateParameters);
-        }
+        public SpannerCommand CreateUpdateCommand(
+            string databaseTable,
+            SpannerParameterCollection updateParameters = null) => new SpannerCommand(
+            SpannerCommandTextBuilder.CreateUpdateTextBuilder(databaseTable), this, null,
+            updateParameters);
 
         /// <inheritdoc />
         public override void Open()
         {
             if (IsOpen)
+            {
                 return;
+            }
+
             Task.Run(OpenAsync).Wait(ConnectionPoolOptions.Instance.Timeout);
         }
 
@@ -331,45 +330,60 @@ namespace Google.Cloud.Spanner.Data
             var currentTransaction = Transaction.Current; //snap it on this thread.
 #endif
 
-            return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
-            {
-                if (IsOpen) return;
-                lock (_sync)
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                async () =>
                 {
-                    if (IsOpen) return;
-                    if (_state == ConnectionState.Connecting)
-                        throw new InvalidOperationException("The SpannerConnection is already being opened.");
-                    _state = ConnectionState.Connecting;
-                }
-                try
-                {
-                    SpannerClient = await ClientPool.AcquireClientAsync(_connectionStringBuilder.Credential,
-                            _connectionStringBuilder.EndPoint)
-                        .ConfigureAwait(false);
-                    _sharedSession = await SpannerClient.CreateSessionFromPoolAsync(
-                            _connectionStringBuilder.Project,
-                            _connectionStringBuilder.SpannerInstance,
-                            _connectionStringBuilder.SpannerDatabase,
-                            s_defaultTransactionOptions,
-                            cancellationToken)
-                        .ConfigureAwait(false);
-                    _sessionRefCount = 0;
-                    _keepAliveCancellation = new CancellationTokenSource();
-                    _keepAliveTask = Task.Run(() => KeepAlive(_keepAliveCancellation.Token),
-                        _keepAliveCancellation.Token);
-                }
-                finally
-                {
-                    _state = _sharedSession != null ? ConnectionState.Open : ConnectionState.Broken;
+                    if (IsOpen)
+                    {
+                        return;
+                    }
+
+                    lock (_sync)
+                    {
+                        if (IsOpen)
+                        {
+                            return;
+                        }
+
+                        if (_state == ConnectionState.Connecting)
+                        {
+                            throw new InvalidOperationException("The SpannerConnection is already being opened.");
+                        }
+
+                        _state = ConnectionState.Connecting;
+                    }
+                    try
+                    {
+                        SpannerClient = await ClientPool.AcquireClientAsync(
+                                _connectionStringBuilder.Credential,
+                                _connectionStringBuilder.EndPoint)
+                            .ConfigureAwait(false);
+                        _sharedSession = await SpannerClient.CreateSessionFromPoolAsync(
+                                _connectionStringBuilder.Project,
+                                _connectionStringBuilder.SpannerInstance,
+                                _connectionStringBuilder.SpannerDatabase,
+                                s_defaultTransactionOptions,
+                                cancellationToken)
+                            .ConfigureAwait(false);
+                        _sessionRefCount = 0;
+                        _keepAliveCancellation = new CancellationTokenSource();
+                        _keepAliveTask = Task.Run(
+                            () => KeepAlive(_keepAliveCancellation.Token),
+                            _keepAliveCancellation.Token);
+                    }
+                    finally
+                    {
+                        _state = _sharedSession != null ? ConnectionState.Open : ConnectionState.Broken;
 #if NET45 || NET451
                     if (IsOpen && currentTransaction != null)
                         EnlistTransaction(currentTransaction);
 #endif
-                }
-            }, "SpannerConnection.OpenAsync");
+                    }
+                }, "SpannerConnection.OpenAsync");
         }
 
 #if NET45 || NET451
+
         /// <summary>
         /// </summary>
         /// <param name="timestampBound"></param>
@@ -400,15 +414,15 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <inheritdoc />
-        protected override DbCommand CreateDbCommand()
-        {
-            return new SpannerCommand();
-        }
+        protected override DbCommand CreateDbCommand() => new SpannerCommand();
 
         /// <inheritdoc />
         protected override void Dispose(bool disposing)
         {
-            if (IsOpen) Close();
+            if (IsOpen)
+            {
+                Close();
+            }
         }
 
         internal ISpannerTransaction GetDefaultTransaction()
@@ -454,127 +468,136 @@ namespace Google.Cloud.Spanner.Data
                 }
             }
             if (sessionToRelease != null)
+            {
                 SpannerClient.ReleaseToPool(sessionToRelease);
+            }
         }
 
         private Task<Session> AllocateSession(TransactionOptions options, CancellationToken cancellationToken)
         {
-            return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
-            {
-                AssertOpen("execute command");
-                Task<Session> result;
-                // If the shared session gets used for anything but a write, we need
-                // to clear out the transaction state, because this will happen implicitly
-                // by spanner when a read is done without the active transaction.
-                // For other cases, the transaction state is always cleared as soon as its
-                // placed back into the session pool.
-                bool sharedSessionReadOnlyUse = false;
-
-                lock (_sync)
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                async () =>
                 {
-                    //first we ensure _sharedSession hasn't been invalidated/expired.
-                    if (SessionPool.IsSessionExpired(_sharedSession))
-                    {
-                        _sharedSession = null;
-                        _sessionRefCount = 0; //any existing references will fail out and release them.
-                    }
+                    AssertOpen("execute command");
+                    Task<Session> result;
+                    // If the shared session gets used for anything but a write, we need
+                    // to clear out the transaction state, because this will happen implicitly
+                    // by spanner when a read is done without the active transaction.
+                    // For other cases, the transaction state is always cleared as soon as its
+                    // placed back into the session pool.
+                    var sharedSessionReadOnlyUse = false;
 
-                    //we will use _sharedSession if
-                    //a) options == s_defaultTransactionOptions && _sharedSession != null
-                    //    (we increment refcnt) and return _sharedSession
-                    //b) options == s_defaultTransactionOptions && _sharedSession == null
-                    //    we create a new shared session and return it.
-                    //c) options != s_defaultTransactionOptions && _sharedSession != null && refcnt == 0
-                    //    we steal _sharedSession to return it, set _sharedSession = null
-                    //d) options != s_defaultTransactionOptions && (_sharedSession == null || refcnt > 0)
-                    //    we grab a new session from the pool.
-                    var isSharedReadonlyTx = Equals(options, s_defaultTransactionOptions);
-                    if (isSharedReadonlyTx && _sharedSession != null)
+                    lock (_sync)
                     {
-                        var taskSource = new TaskCompletionSource<Session>();
-                        taskSource.SetResult(_sharedSession);
-                        result = taskSource.Task;
-                        Interlocked.Increment(ref _sessionRefCount);
-                    }
-                    else if (isSharedReadonlyTx && _sharedSession == null)
-                    {
-                        sharedSessionReadOnlyUse = true;
-                        // If we enter this code path, it means a transaction has stolen our shared session.
-                        // This is ok, we'll just create another.  But need to be very careful about concurrency
-                        // as compared to OpenAsync (which is documented as not threadsafe).
-                        // To make this threadsafe, we store the creation task as a member and let other callers
-                        // hook onto the first creation task.
-                        if (_sharedSessionAllocator == null)
+                        //first we ensure _sharedSession hasn't been invalidated/expired.
+                        if (SessionPool.IsSessionExpired(_sharedSession))
                         {
-                            _sharedSessionAllocator = SpannerClient.CreateSessionFromPoolAsync(
-                                _connectionStringBuilder.Project, _connectionStringBuilder.SpannerInstance,
-                                _connectionStringBuilder.SpannerDatabase, options, CancellationToken.None);
-                            result = Task.Run(async () =>
+                            _sharedSession = null;
+                            _sessionRefCount = 0; //any existing references will fail out and release them.
+                        }
+
+                        //we will use _sharedSession if
+                        //a) options == s_defaultTransactionOptions && _sharedSession != null
+                        //    (we increment refcnt) and return _sharedSession
+                        //b) options == s_defaultTransactionOptions && _sharedSession == null
+                        //    we create a new shared session and return it.
+                        //c) options != s_defaultTransactionOptions && _sharedSession != null && refcnt == 0
+                        //    we steal _sharedSession to return it, set _sharedSession = null
+                        //d) options != s_defaultTransactionOptions && (_sharedSession == null || refcnt > 0)
+                        //    we grab a new session from the pool.
+                        bool isSharedReadonlyTx = Equals(options, s_defaultTransactionOptions);
+                        if (isSharedReadonlyTx && _sharedSession != null)
+                        {
+                            var taskSource = new TaskCompletionSource<Session>();
+                            taskSource.SetResult(_sharedSession);
+                            result = taskSource.Task;
+                            Interlocked.Increment(ref _sessionRefCount);
+                        }
+                        else if (isSharedReadonlyTx && _sharedSession == null)
+                        {
+                            sharedSessionReadOnlyUse = true;
+                            // If we enter this code path, it means a transaction has stolen our shared session.
+                            // This is ok, we'll just create another.  But need to be very careful about concurrency
+                            // as compared to OpenAsync (which is documented as not threadsafe).
+                            // To make this threadsafe, we store the creation task as a member and let other callers
+                            // hook onto the first creation task.
+                            if (_sharedSessionAllocator == null)
                             {
-                                var newSession = await _sharedSessionAllocator.ConfigureAwait(false);
-                                Interlocked.Increment(ref _sessionRefCount);
-                                // we need to make sure the refcnt is >0 before setting _sharedSession.
-                                // or else the session could again be stolen from us by another transaction.
-                                _sharedSession = newSession;
-                                return _sharedSession;
-                            }, CancellationToken.None);
+                                _sharedSessionAllocator = SpannerClient.CreateSessionFromPoolAsync(
+                                    _connectionStringBuilder.Project, _connectionStringBuilder.SpannerInstance,
+                                    _connectionStringBuilder.SpannerDatabase, options, CancellationToken.None);
+                                result = Task.Run(
+                                    async () =>
+                                    {
+                                        var newSession = await _sharedSessionAllocator.ConfigureAwait(false);
+                                        Interlocked.Increment(ref _sessionRefCount);
+                                        // we need to make sure the refcnt is >0 before setting _sharedSession.
+                                        // or else the session could again be stolen from us by another transaction.
+                                        _sharedSession = newSession;
+                                        return _sharedSession;
+                                    }, CancellationToken.None);
+                            }
+                            else
+                            {
+                                result = Task.Run(
+                                    async () =>
+                                    {
+                                        await _sharedSessionAllocator.ConfigureAwait(false);
+                                        Interlocked.Increment(ref _sessionRefCount);
+                                        return _sharedSession;
+                                    }, CancellationToken.None);
+                            }
+                        }
+                        else if (!isSharedReadonlyTx && _sharedSession != null && _sessionRefCount == 0)
+                        {
+                            //In this case, someone has called OpenAsync() followed by BeginTransactionAsync().
+                            //While we'd prefer them to just call BeginTransaction (so we can allocate a session
+                            // with the appropriate transaction semantics straight from the pool), this is still allowed
+                            // and we shouldn't create *two* sessions here for the case where they only ever use
+                            // this connection for a single transaction.
+                            //So, we'll steal the shared precreated session and re-allocate it to the transaction.
+                            //If the user later does reads outside of a transaction, it will force create a new session.
+                            var taskSource = new TaskCompletionSource<Session>();
+                            taskSource.SetResult(_sharedSession);
+                            result = taskSource.Task;
+                            _sessionRefCount = 0;
+                            _sharedSession = null;
+                            _sharedSessionAllocator = null;
                         }
                         else
                         {
-                            result = Task.Run(async () =>
-                            {
-                                await _sharedSessionAllocator.ConfigureAwait(false);
-                                Interlocked.Increment(ref _sessionRefCount);
-                                return _sharedSession;
-                            }, CancellationToken.None);
+                            //In this case, its a transaction and the shared session is also in use.
+                            //so, we'll just create a new session (from the pool).
+                            result = SpannerClient.CreateSessionFromPoolAsync(
+                                _connectionStringBuilder.Project, _connectionStringBuilder.SpannerInstance,
+                                _connectionStringBuilder.SpannerDatabase, options, cancellationToken);
                         }
                     }
-                    else if (!isSharedReadonlyTx && _sharedSession != null && _sessionRefCount == 0)
-                    {
-                        //In this case, someone has called OpenAsync() followed by BeginTransactionAsync().
-                        //While we'd prefer them to just call BeginTransaction (so we can allocate a session
-                        // with the appropriate transaction semantics straight from the pool), this is still allowed
-                        // and we shouldn't create *two* sessions here for the case where they only ever use
-                        // this connection for a single transaction.
-                        //So, we'll steal the shared precreated session and re-allocate it to the transaction.
-                        //If the user later does reads outside of a transaction, it will force create a new session.
-                        var taskSource = new TaskCompletionSource<Session>();
-                        taskSource.SetResult(_sharedSession);
-                        result = taskSource.Task;
-                        _sessionRefCount = 0;
-                        _sharedSession = null;
-                        _sharedSessionAllocator = null;
-                    }
-                    else
-                    {
-                        //In this case, its a transaction and the shared session is also in use.
-                        //so, we'll just create a new session (from the pool).
-                        result = SpannerClient.CreateSessionFromPoolAsync(
-                            _connectionStringBuilder.Project, _connectionStringBuilder.SpannerInstance,
-                            _connectionStringBuilder.SpannerDatabase, options, cancellationToken);
-                    }
-                }
 
-                var session = await result.ConfigureAwait(false);
-                if (sharedSessionReadOnlyUse)
-                {
-                    await session.RemoveFromTransactionPoolAsync().ConfigureAwait(false);
-                }
+                    var session = await result.ConfigureAwait(false);
+                    if (sharedSessionReadOnlyUse)
+                    {
+                        await session.RemoveFromTransactionPoolAsync().ConfigureAwait(false);
+                    }
 
-                return session;
-            }, "SpannerConnection.AllocateSession");
+                    return session;
+                }, "SpannerConnection.AllocateSession");
         }
 
         private void AssertClosed(string message)
         {
             if (!IsClosed)
+            {
                 throw new InvalidOperationException("The connection must be closed.  Failed to " + message);
+            }
         }
 
         private void AssertOpen(string message)
         {
             if (!IsOpen)
+            {
                 throw new InvalidOperationException("The connection must be open.  Failed to " + message);
+            }
         }
 
         internal Task<SingleUseTransaction> BeginSingleUseTransactionAsync(
@@ -582,64 +605,76 @@ namespace Google.Cloud.Spanner.Data
             CancellationToken cancellationToken)
         {
             var options = new TransactionOptions {ReadOnly = ConvertToOptions(targetReadTimeStamp)};
-            return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
-            {
-                using (var sessionHolder = await SessionHolder.Allocate(this,
-                        options, cancellationToken)
-                    .ConfigureAwait(false))
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                async () =>
                 {
-                    await sessionHolder.Session.RemoveFromTransactionPoolAsync().ConfigureAwait(false);
-                    return new SingleUseTransaction(this, sessionHolder.TakeOwnership(), options);
-                }
-            }, "SpannerConnection.BeginSingleUseTransaction");
+                    using (var sessionHolder = await SessionHolder.Allocate(
+                            this,
+                            options, cancellationToken)
+                        .ConfigureAwait(false))
+                    {
+                        await sessionHolder.Session.RemoveFromTransactionPoolAsync().ConfigureAwait(false);
+                        return new SingleUseTransaction(this, sessionHolder.TakeOwnership(), options);
+                    }
+                }, "SpannerConnection.BeginSingleUseTransaction");
         }
 
-        private Task<SpannerTransaction> BeginTransactionImplAsync(TransactionOptions transactionOptions,
-            TransactionMode transactionMode, CancellationToken cancellationToken,
+        private Task<SpannerTransaction> BeginTransactionImplAsync(
+            TransactionOptions transactionOptions,
+            TransactionMode transactionMode,
+            CancellationToken cancellationToken,
             TimestampBound targetReadTimeStamp = null)
         {
-            return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
-            {
-                using (var sessionHolder = await SessionHolder.Allocate(this, transactionOptions, cancellationToken)
-                    .ConfigureAwait(false))
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                async () =>
                 {
-                    var transaction = await SpannerClient
-                        .BeginPooledTransactionAsync(sessionHolder.Session, transactionOptions)
-                        .ConfigureAwait(false);
-                    return new SpannerTransaction(this, transactionMode, sessionHolder.TakeOwnership(),
-                        transaction, targetReadTimeStamp);
-                }
-            }, "SpannerConnection.BeginTransaction");
+                    using (var sessionHolder = await SessionHolder.Allocate(this, transactionOptions, cancellationToken)
+                        .ConfigureAwait(false))
+                    {
+                        var transaction = await SpannerClient
+                            .BeginPooledTransactionAsync(sessionHolder.Session, transactionOptions)
+                            .ConfigureAwait(false);
+                        return new SpannerTransaction(
+                            this, transactionMode, sessionHolder.TakeOwnership(),
+                            transaction, targetReadTimeStamp);
+                    }
+                }, "SpannerConnection.BeginTransaction");
         }
 
         private Task KeepAlive(CancellationToken cancellationToken)
         {
-            var request = new ExecuteSqlRequest {
+            var request = new ExecuteSqlRequest
+            {
                 Sql = "SELECT 1"
             };
 
             var task = Task.Delay(ConnectionPoolOptions.KeepAliveInterval, cancellationToken);
-            var loopTask = task.ContinueWith(async t =>
-            {
-                if (!cancellationToken.IsCancellationRequested)
+            var loopTask = task.ContinueWith(
+                async t =>
                 {
-                    //ping and reschedule.
-                    var sharedSession = _sharedSession;
-                    if (sharedSession != null)
-                        try
+                    if (!cancellationToken.IsCancellationRequested)
+                    {
+                        //ping and reschedule.
+                        var sharedSession = _sharedSession;
+                        if (sharedSession != null)
                         {
-                            request.SessionAsSessionName = sharedSession.SessionName;
-                            await SpannerClient.ExecuteSqlAsync(request).WithSessionChecking(() => sharedSession).ConfigureAwait(false);
-                        }
-                        catch (Exception e)
-                        {
-                            Logger.Warn(() => $"Exception attempting to keep session alive: {e}");
+                            try
+                            {
+                                request.SessionAsSessionName = sharedSession.SessionName;
+                                await SpannerClient.ExecuteSqlAsync(request).WithSessionChecking(() => sharedSession)
+                                    .ConfigureAwait(false);
+                            }
+                            catch (Exception e)
+                            {
+                                Logger.Warn(() => $"Exception attempting to keep session alive: {e}");
+                            }
                         }
 
-                    _keepAliveTask = Task.Run(() => KeepAlive(_keepAliveCancellation.Token),
-                        _keepAliveCancellation.Token);
-                }
-            }, cancellationToken);
+                        _keepAliveTask = Task.Run(
+                            () => KeepAlive(_keepAliveCancellation.Token),
+                            _keepAliveCancellation.Token);
+                    }
+                }, cancellationToken);
 
             return loopTask;
         }
@@ -659,37 +694,36 @@ namespace Google.Cloud.Spanner.Data
             private readonly SpannerConnection _connection;
             private Session _session;
 
+            public Session Session => _session;
+
             private SessionHolder(SpannerConnection connection, Session session)
             {
                 _connection = connection;
                 _session = session;
             }
 
-            public Session Session => _session;
-
             public void Dispose()
             {
                 var session = Interlocked.Exchange(ref _session, null);
                 if (session != null)
+                {
                     _connection.ReleaseSession(session);
+                }
             }
 
-            public static Task<SessionHolder> Allocate(SpannerConnection owner, CancellationToken cancellationToken)
-            {
-                return Allocate(owner, s_defaultTransactionOptions, cancellationToken);
-            }
+            public static Task<SessionHolder> Allocate(SpannerConnection owner, CancellationToken cancellationToken) =>
+                Allocate(owner, s_defaultTransactionOptions, cancellationToken);
 
-            public static async Task<SessionHolder> Allocate(SpannerConnection owner, TransactionOptions options,
+            public static async Task<SessionHolder> Allocate(
+                SpannerConnection owner,
+                TransactionOptions options,
                 CancellationToken cancellationToken)
             {
                 var session = await owner.AllocateSession(options, cancellationToken).ConfigureAwait(false);
                 return new SessionHolder(owner, session);
             }
 
-            public Session TakeOwnership()
-            {
-                return Interlocked.Exchange(ref _session, null);
-            }
+            public Session TakeOwnership() => Interlocked.Exchange(ref _session, null);
         }
 
 #if NET45 || NET451

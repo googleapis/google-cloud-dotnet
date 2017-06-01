@@ -32,7 +32,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public string TestProjectName => "spanneref";
 
         public string ConnectionString => "Data Source=" + TestProjectName + "/" + TestInstanceName
-                                          + "/" + DatabaseName;
+            + "/" + DatabaseName;
 
         // scratch can be used to run tests on a precreated db.
         // all tests are designed to be re-run on an exiting db (previously written state will
@@ -43,10 +43,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         public string TestTable { get; } = "TestTable";
 
-        public TestDatabaseFixture()
-        {
-            _creationTask = new Lazy<Task>(EnsureTestDatabaseImplAsync);
-        }
+        public TestDatabaseFixture() => _creationTask = new Lazy<Task>(EnsureTestDatabaseImplAsync);
 
         public void Dispose()
         {
@@ -60,17 +57,15 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             return new SpannerConnection(ConnectionString);
         }
 
-        public Task EnsureTestDatabaseAsync()
-        {
-            return _creationTask.Value;
-        }
+        public Task EnsureTestDatabaseAsync() => _creationTask.Value;
 
         private async Task EnsureTestDatabaseImplAsync()
         {
             await CreateDatabaseAsync();
-            await Task.WhenAll(CreateTableAsync(), 
-              CreateTypeTableAsync(),
-              CreateTxTableAsync()).ConfigureAwait(false);
+            await Task.WhenAll(
+                CreateTableAsync(),
+                CreateTypeTableAsync(),
+                CreateTxTableAsync()).ConfigureAwait(false);
             await FillSampleData();
         }
 
@@ -79,7 +74,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             // Create client
             _databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
-            InstanceName parent = new InstanceName(TestProjectName, TestInstanceName);
+            var parent = new InstanceName(TestProjectName, TestInstanceName);
 
             string createStatement = "CREATE DATABASE " + DatabaseName;
 
@@ -96,7 +91,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         private async Task CreateTxTableAsync()
         {
             // Create client
-            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            var databaseAdminClient = await DatabaseAdminClient.CreateAsync();
 
             var typeTable = @"CREATE TABLE TX (
                               K                   STRING(MAX) NOT NULL,
@@ -105,7 +100,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             ) PRIMARY KEY (K)";
             // Make the request
             var response =
-                await databaseAdminClient.UpdateDatabaseDdlAsync(new DatabaseName(TestProjectName,
+                await databaseAdminClient.UpdateDatabaseDdlAsync(
+                    new DatabaseName(
+                        TestProjectName,
                         TestInstanceName,
                         DatabaseName),
                     new[] {typeTable});
@@ -117,7 +114,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         private async Task CreateTypeTableAsync()
         {
             // Create client
-            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            var databaseAdminClient = await DatabaseAdminClient.CreateAsync();
 
             var typeTable = @"CREATE TABLE T ( 
                   K                   STRING(MAX) NOT NULL,
@@ -138,7 +135,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 ) PRIMARY KEY (K)";
             // Make the request
             var response =
-                await databaseAdminClient.UpdateDatabaseDdlAsync(new DatabaseName(TestProjectName,
+                await databaseAdminClient.UpdateDatabaseDdlAsync(
+                    new DatabaseName(
+                        TestProjectName,
                         TestInstanceName,
                         DatabaseName),
                     new[] {typeTable});
@@ -150,14 +149,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         private async Task CreateTableAsync()
         {
             // Create client
-            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            var databaseAdminClient = await DatabaseAdminClient.CreateAsync();
 
             string createTableStatement = $@"CREATE TABLE {TestTable} (
                                             Key                STRING(MAX) NOT NULL,
                                             StringValue        STRING(MAX),
                                           ) PRIMARY KEY (Key)";
-            string index1 = "CREATE INDEX TestTableByValue ON TestTable(StringValue)";
-            string index2 = "CREATE INDEX TestTableByValueDesc ON TestTable(StringValue DESC)";
+            var index1 = "CREATE INDEX TestTableByValue ON TestTable(StringValue)";
+            var index2 = "CREATE INDEX TestTableByValueDesc ON TestTable(StringValue DESC)";
 
             // Make the request
             var response =
@@ -169,14 +168,18 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             await response.PollUntilCompletedAsync();
 
             response =
-                await databaseAdminClient.UpdateDatabaseDdlAsync(new DatabaseName(TestProjectName,
+                await databaseAdminClient.UpdateDatabaseDdlAsync(
+                    new DatabaseName(
+                        TestProjectName,
                         TestInstanceName,
                         DatabaseName),
                     new[] {index1});
             await response.PollUntilCompletedAsync();
 
             response =
-                await databaseAdminClient.UpdateDatabaseDdlAsync(new DatabaseName(TestProjectName,
+                await databaseAdminClient.UpdateDatabaseDdlAsync(
+                    new DatabaseName(
+                        TestProjectName,
                         TestInstanceName,
                         DatabaseName),
                     new[] {index2});
@@ -190,7 +193,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 await connection.OpenAsync();
                 using (var tx = await connection.BeginTransactionAsync())
                 {
-                    var cmd = connection.CreateInsertCommand(TestTable,
+                    var cmd = connection.CreateInsertCommand(
+                        TestTable,
                         new SpannerParameterCollection
                         {
                             {"Key", SpannerDbType.String},

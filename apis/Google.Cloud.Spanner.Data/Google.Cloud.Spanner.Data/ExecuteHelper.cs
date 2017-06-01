@@ -29,10 +29,15 @@ namespace Google.Cloud.Spanner.Data
             {
                 Stopwatch sw = null;
                 if (Logger.LogPerformanceTraces)
+                {
                     sw = Stopwatch.StartNew();
+                }
+
                 t();
                 if (sw != null)
+                {
                     Logger.LogPerformanceCounterFn($"{name}.Duration", x => sw.ElapsedMilliseconds);
+                }
             }
             catch (Exception e) when ((translatedException = SpannerException.TryTranslateRpcException(e)) != null)
             {
@@ -42,11 +47,12 @@ namespace Google.Cloud.Spanner.Data
 
         internal static Task WithErrorTranslationAndProfiling(Func<Task> t, string name)
         {
-            return WithErrorTranslationAndProfiling(async () =>
-            {
-                await t().ConfigureAwait(false);
-                return 0;
-            }, name);
+            return WithErrorTranslationAndProfiling(
+                async () =>
+                {
+                    await t().ConfigureAwait(false);
+                    return 0;
+                }, name);
         }
 
         internal static async Task<T> WithErrorTranslationAndProfiling<T>(Func<Task<T>> t, string name)
@@ -57,10 +63,16 @@ namespace Google.Cloud.Spanner.Data
             {
                 Stopwatch sw = null;
                 if (Logger.LogPerformanceTraces)
+                {
                     sw = Stopwatch.StartNew();
+                }
+
                 var result = await t().ConfigureAwait(false);
                 if (sw != null)
+                {
                     Logger.LogPerformanceCounterFn($"{name}.Duration", x => sw.ElapsedMilliseconds);
+                }
+
                 return result;
             }
             catch (Exception e) when ((translatedException = SpannerException.TryTranslateRpcException(e)) != null)
@@ -72,7 +84,10 @@ namespace Google.Cloud.Spanner.Data
         internal static async Task<T> WithTimeout<T>(this Task<T> task, TimeSpan timeout, string timeoutMessage)
         {
             if (task != await Task.WhenAny(task, Task.Delay(timeout, CancellationToken.None)).ConfigureAwait(false))
+            {
                 throw new TimeoutException(timeoutMessage);
+            }
+
             return await task.ConfigureAwait(false);
         }
     }

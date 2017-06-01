@@ -22,10 +22,6 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     public sealed class ConnectionPoolOptions
     {
-        private ConnectionPoolOptions()
-        {
-        }
-
         /// <summary>
         /// The default instance of connection pool options.
         /// </summary>
@@ -35,20 +31,19 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public int MaximumPooledSessions
         {
-            get { return SessionPool.MaximumPooledSessions; }
-            set { SessionPool.MaximumPooledSessions = value; }
+            get => SessionPool.MaximumPooledSessions;
+            set => SessionPool.MaximumPooledSessions = value;
         }
 
         /// <summary>
         /// </summary>
         public int MaximumActiveSessions
         {
-            get { return SessionPool.MaximumActiveSessions; }
-            set { SessionPool.MaximumActiveSessions = value; }
+            get => SessionPool.MaximumActiveSessions;
+            set => SessionPool.MaximumActiveSessions = value;
         }
 
         /// <summary>
-        /// 
         /// </summary>
         public TimeSpan KeepAliveInterval { get; set; } = TimeSpan.FromMinutes(55);
 
@@ -59,7 +54,7 @@ namespace Google.Cloud.Spanner.Data
         {
             get
             {
-                int underlyingLevel = (int)Logger.LogLevel;
+                var underlyingLevel = (int) Logger.LogLevel;
                 if (Enum.IsDefined(typeof(LogLevel), underlyingLevel))
                 {
                     return (LogLevel) underlyingLevel;
@@ -69,10 +64,10 @@ namespace Google.Cloud.Spanner.Data
             }
             set
             {
-                int underlyingLevel = (int)value;
+                var underlyingLevel = (int) value;
                 if (Enum.IsDefined(typeof(V1.Logging.LogLevel), underlyingLevel))
                 {
-                    Logger.LogLevel = (V1.Logging.LogLevel)underlyingLevel;
+                    Logger.LogLevel = (V1.Logging.LogLevel) underlyingLevel;
                 }
                 // ReSharper disable once NotResolvedInText
                 throw new ArgumentOutOfRangeException("LogLevel");
@@ -83,54 +78,52 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public bool LogPerformanceTraces
         {
-            get { return Logger.LogPerformanceTraces; }
-            set { Logger.LogPerformanceTraces = value; }
+            get => Logger.LogPerformanceTraces;
+            set => Logger.LogPerformanceTraces = value;
         }
 
         /// <summary>
         /// </summary>
         public int PerformanceTraceLogInterval
         {
-            get { return Logger.PerformanceTraceLogInterval; }
-            set { Logger.PerformanceTraceLogInterval = value; }
+            get => Logger.PerformanceTraceLogInterval;
+            set => Logger.PerformanceTraceLogInterval = value;
         }
 
         /// <summary>
         /// </summary>
         public TimeSpan PoolEvictionDelay
         {
-            get { return SessionPool.PoolEvictionDelay; }
-            set { SessionPool.PoolEvictionDelay = value; }
+            get => SessionPool.PoolEvictionDelay;
+            set => SessionPool.PoolEvictionDelay = value;
         }
 
         /// <summary>
         /// </summary>
         public bool ResetPerformanceTracesEachInterval
         {
-            get { return Logger.ResetPerformanceTracesEachInterval; }
-            set { Logger.ResetPerformanceTracesEachInterval = value; }
+            get => Logger.ResetPerformanceTracesEachInterval;
+            set => Logger.ResetPerformanceTracesEachInterval = value;
         }
 
         /// <summary>
-        /// 
         /// </summary>
         public ResourcesExhaustedBehavior ResourcesExhaustedBehavior
         {
-            get
-            {
-                return SessionPool.WaitOnResourcesExhausted
-                    ? ResourcesExhaustedBehavior.Block
-                    : ResourcesExhaustedBehavior.Fail;
-            }
-            set { SessionPool.WaitOnResourcesExhausted = value == ResourcesExhaustedBehavior.Block; }
+            get => SessionPool.WaitOnResourcesExhausted
+                ? ResourcesExhaustedBehavior.Block
+                : ResourcesExhaustedBehavior.Fail;
+            set => SessionPool.WaitOnResourcesExhausted = value == ResourcesExhaustedBehavior.Block;
         }
 
         /// <summary>
         /// </summary>
         public TimeSpan Timeout
         {
-            get { return SessionPool.Timeout; }
-            set { SessionPool.Timeout = value; }
+            get => SessionPool.Timeout;
+            set => SessionPool.Timeout = value;
         }
+
+        private ConnectionPoolOptions() { }
     }
 }

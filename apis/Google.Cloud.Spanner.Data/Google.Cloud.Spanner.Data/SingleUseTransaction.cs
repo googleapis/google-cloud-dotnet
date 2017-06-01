@@ -11,6 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
 using System;
 using System.Collections.Generic;
 using System.Threading;
@@ -26,7 +27,9 @@ namespace Google.Cloud.Spanner.Data
         private readonly Session _session;
         private readonly TransactionOptions _options;
 
-        public SingleUseTransaction(SpannerConnection spannerConnection, Session session,
+        public SingleUseTransaction(
+            SpannerConnection spannerConnection,
+            Session session,
             TransactionOptions options)
         {
             _spannerConnection = spannerConnection;
@@ -34,25 +37,26 @@ namespace Google.Cloud.Spanner.Data
             _options = options;
         }
 
-        public Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken)
+        public void Dispose()
         {
-            throw new NotSupportedException("A single use transaction can only be used for read operations.");
+            _spannerConnection.ReleaseSession(_session);
         }
 
-        public Task<ReliableStreamReader> ExecuteQueryAsync(ExecuteSqlRequest request, CancellationToken cancellationToken)
+        public Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken) => throw
+            new NotSupportedException("A single use transaction can only be used for read operations.");
+
+        public Task<ReliableStreamReader> ExecuteQueryAsync(
+            ExecuteSqlRequest request,
+            CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckNotNull(request, nameof(request));
-            return ExecuteHelper.WithErrorTranslationAndProfiling(() =>
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                () =>
                 {
                     request.Transaction = new TransactionSelector {SingleUse = _options};
                     return Task.FromResult(_spannerConnection.SpannerClient.GetSqlStreamReader(request, _session));
                 },
                 "SingleUseTransaction.ExecuteQuery");
-        }
-
-        public void Dispose()
-        {
-            _spannerConnection.ReleaseSession(_session);
         }
     }
 }
