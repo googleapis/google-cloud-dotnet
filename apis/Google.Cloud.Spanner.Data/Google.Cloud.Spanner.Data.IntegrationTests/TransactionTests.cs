@@ -25,16 +25,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     public class TransactionTests : IClassFixture<TestDatabaseFixture>
     {
-        public TransactionTests(TestDatabaseFixture testFixture)
-        {
-            _testFixture = testFixture;
-        }
+        public TransactionTests(TestDatabaseFixture testFixture) => _testFixture = testFixture;
 
         private readonly TestDatabaseFixture _testFixture;
         private string _key;
         private readonly List<HistoryEntry> _history = new List<HistoryEntry>();
 
-        class HistoryEntry
+        private class HistoryEntry
         {
             public string Value { get; set; }
             public DateTime Timestamp { get; set; }
@@ -53,7 +50,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     await connection.OpenAsync();
                     using (var tx = await connection.BeginTransactionAsync())
                     {
-                        insupdate = connection.CreateInsertOrUpdateCommand("TX",
+                        insupdate = connection.CreateInsertOrUpdateCommand(
+                            "TX",
                             new SpannerParameterCollection
                             {
                                 {"K", _key, SpannerDbType.String},
@@ -62,11 +60,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         insupdate.Transaction = tx;
                         await insupdate.ExecuteNonQueryAsync();
                         var timestamp = await tx.CommitAsync();
-                        _history.Add(new HistoryEntry
-                        {
-                            Value = insupdate.Parameters[1].Value.ToString(),
-                            Timestamp = timestamp.GetValueOrDefault()
-                        });
+                        _history.Add(
+                            new HistoryEntry
+                            {
+                                Value = insupdate.Parameters[1].Value.ToString(),
+                                Timestamp = timestamp.GetValueOrDefault()
+                            });
                     }
 
                     await Task.Delay(250);
@@ -79,11 +78,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         insupdate.Parameters[1].Value = Guid.NewGuid().ToString();
                         await insupdate.ExecuteNonQueryAsync();
                         var timestamp = await tx.CommitAsync();
-                        _history.Add(new HistoryEntry
-                        {
-                            Value = insupdate.Parameters[1].Value.ToString(),
-                            Timestamp = timestamp.GetValueOrDefault()
-                        });
+                        _history.Add(
+                            new HistoryEntry
+                            {
+                                Value = insupdate.Parameters[1].Value.ToString(),
+                                Timestamp = timestamp.GetValueOrDefault()
+                            });
                     }
 
                     await Task.Delay(250);
@@ -95,13 +95,185 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         insupdate.Parameters[1].Value = Guid.NewGuid().ToString();
                         await insupdate.ExecuteNonQueryAsync();
                         var timestamp = await tx.CommitAsync();
-                        _history.Add(new HistoryEntry
-                        {
-                            Value = insupdate.Parameters[1].Value.ToString(),
-                            Timestamp = timestamp.GetValueOrDefault()
-                        });
+                        _history.Add(
+                            new HistoryEntry
+                            {
+                                Value = insupdate.Parameters[1].Value.ToString(),
+                                Timestamp = timestamp.GetValueOrDefault()
+                            });
                     }
                 }
+            }
+        }
+
+        private async Task IncrementByOneAsync(SpannerConnection connection)
+        {
+            SpannerException spannerException;
+            do
+            {
+                spannerException = null;
+                try
+                {
+                    //We'll do manually created transactions here so the tests run on .net core
+                    using (var transaction = await connection.BeginTransactionAsync())
+                    {
+                        long current;
+                        using (var cmd =
+                            connection.CreateSelectCommand(
+                                "SELECT Int64Value FROM TX WHERE K=@k",
+                                new SpannerParameterCollection {{"k", _key, SpannerDbType.String}}))
+                        {
+                            cmd.Transaction = transaction;
+                            current = await cmd.ExecuteScalarAsync<long>().ConfigureAwait(false);
+                        }
+
+                        using (var cmd = connection.CreateUpdateCommand(
+                            "TX",
+                            new SpannerParameterCollection
+                            {
+                                {"k", _key, SpannerDbType.String},
+                                {"Int64Value", current + 1, SpannerDbType.Int64}
+                            }))
+                        {
+                            cmd.Transaction = transaction;
+                            await cmd.ExecuteNonQueryAsync().ConfigureAwait(false);
+                            await transaction.CommitAsync().ConfigureAwait(false);
+                        }
+                    }
+                }
+                catch (SpannerException ex)
+                {
+                    spannerException = ex;
+                }
+            } while (spannerException?.IsRetryable ?? false);
+        }
+
+        private async Task<SpannerConnection> CreateAndOpen()
+        {
+            var connection = new SpannerConnection(_testFixture.ConnectionString);
+            await connection.OpenAsync();
+            return connection;
+        }
+
+        [Fact]
+        public async Task AbortedThrownCorrectly()
+        {
+            await WriteSampleRowsAsync();
+
+            // connection 1 starts a transaction and reads
+            // connection 2 starts a transaction and reads the same row
+            // connection 1 writes and commits
+            // connection 2 reads again -- abort should be thrown.
+            var connection1 = new SpannerConnection(_testFixture.ConnectionString);
+            var connection2 = new SpannerConnection(_testFixture.ConnectionString);
+
+            await Task.WhenAll(connection1.OpenAsync(), connection2.OpenAsync());
+            var tx1 = await connection1.BeginTransactionAsync();
+
+            // TX1 READ
+            using (var cmd = connection1.CreateSelectCommand(
+                "SELECT * FROM TX WHERE K=@k",
+                new SpannerParameterCollection {{"k", _key, SpannerDbType.String}}))
+            {
+                cmd.Transaction = tx1;
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    Assert.True(await reader.ReadAsync());
+                }
+            }
+
+            // TX2 START
+            var tx2 = await connection2.BeginTransactionAsync();
+
+            // TX2 READ
+            using (var cmd = connection2.CreateSelectCommand(
+                "SELECT * FROM TX WHERE K=@k",
+                new SpannerParameterCollection {{"k", _key, SpannerDbType.String}}))
+            {
+                cmd.Transaction = tx2;
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    Assert.True(await reader.ReadAsync());
+                }
+            }
+
+            // TX1 WRITE/COMMIT
+            using (var cmd = connection1.CreateUpdateCommand(
+                "TX",
+                new SpannerParameterCollection
+                {
+                    {"k", _key, SpannerDbType.String},
+                    {"Int64Value", 0, SpannerDbType.Int64}
+                }))
+            {
+                cmd.Transaction = tx1;
+                await cmd.ExecuteNonQueryAsync().ConfigureAwait(false);
+                await tx1.CommitAsync().ConfigureAwait(false);
+                tx1.Dispose();
+            }
+            connection1.Dispose();
+
+            // TX2 READ AGAIN/THROWS
+            SpannerException thrownException = null;
+            try
+            {
+                using (var cmd = connection2.CreateSelectCommand(
+                    "SELECT * FROM TX WHERE K=@k",
+                    new SpannerParameterCollection {{"k", _key, SpannerDbType.String}}))
+                {
+                    cmd.Transaction = tx2;
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        Assert.True(await reader.ReadAsync());
+                    }
+                }
+            }
+            catch (SpannerException ex)
+            {
+                thrownException = ex;
+            }
+            finally
+            {
+                tx2.Dispose();
+                connection2.Dispose();
+            }
+
+            Assert.True(thrownException?.IsRetryable ?? false);
+        }
+
+        [Fact]
+        public async Task MultiWrite()
+        {
+            await WriteSampleRowsAsync();
+            //To ensure good concurrency (ie that the transactions are not serial)
+            //we'll preopen 5 transactions to ensure they have sessions and then start the increment
+            //process
+            const int concurrentThreads = 5;
+            var connections = new SpannerConnection[concurrentThreads];
+            for (var i = 0; i < concurrentThreads; i++)
+            {
+                connections[i] = await CreateAndOpen();
+            }
+
+            var tasks = new Task[concurrentThreads];
+            for (var i = 0; i < concurrentThreads; i++)
+            {
+                tasks[i] = IncrementByOneAsync(connections[i]);
+            }
+            await Task.WhenAll(tasks).ConfigureAwait(false);
+
+            //now ensure we have the correct value
+            using (var cmd =
+                connections[0].CreateSelectCommand(
+                    "SELECT Int64Value FROM TX WHERE K=@k",
+                    new SpannerParameterCollection {{"k", _key, SpannerDbType.String}}))
+            {
+                Assert.Equal(5, await cmd.ExecuteScalarAsync<long>().ConfigureAwait(false));
+            }
+
+            for (var i = 0; i < concurrentThreads; i++)
+            {
+                connections[i].Dispose();
             }
         }
 
@@ -112,7 +284,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
                 await connection.OpenAsync();
-                DateTime targetReadTimestamp = _history[0].Timestamp.AddMinutes(-1);
+                var targetReadTimestamp = _history[0].Timestamp.AddMinutes(-1);
                 using (var tx =
                     await connection.BeginReadOnlyTransactionAsync(
                         TimestampBound.OfReadTimestamp(targetReadTimestamp)))
@@ -120,13 +292,36 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     Assert.Equal(TransactionMode.ReadOnly, tx.Mode);
                     Assert.Equal(targetReadTimestamp, tx.TimeStampBound.TimeStamp);
 
-                    var cmd = connection.CreateSelectCommand("SELECT * FROM TX WHERE K=@k",
+                    var cmd = connection.CreateSelectCommand(
+                        "SELECT * FROM TX WHERE K=@k",
                         new SpannerParameterCollection {{"k", _key, SpannerDbType.String}});
                     cmd.Transaction = tx;
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
-                        Assert.False(await reader.ReadAsync(),
+                        Assert.False(
+                            await reader.ReadAsync(),
                             "no data should be here from yesterday!");
+                    }
+                }
+            }
+        }
+
+        [Fact]
+        public async Task ReadExactSingle()
+        {
+            await WriteSampleRowsAsync();
+            await Task.Delay(6);
+            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            {
+                await connection.OpenAsync();
+                var cmd = connection.CreateSelectCommand(
+                    "SELECT * FROM TX WHERE K=@k",
+                    new SpannerParameterCollection {{"k", _key, SpannerDbType.String}});
+                using (var reader = await cmd.ExecuteReaderAsync(TimestampBound.OfReadTimestamp(_history[0].Timestamp)))
+                {
+                    if (await reader.ReadAsync())
+                    {
+                        Assert.Equal(_history[0].Value, reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
                     }
                 }
             }
@@ -151,7 +346,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     caughtException = ex;
                 }
 
-                var cmd = connection.CreateSelectCommand("SELECT * FROM TX WHERE K=@k",
+                var cmd = connection.CreateSelectCommand(
+                    "SELECT * FROM TX WHERE K=@k",
                     new SpannerParameterCollection {{"k", _key, SpannerDbType.String}});
                 using (var reader =
                     await cmd.ExecuteReaderAsync(
@@ -180,13 +376,32 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     Assert.Equal(TransactionMode.ReadOnly, tx.Mode);
                     Assert.Equal(TimeSpan.FromSeconds(50), tx.TimeStampBound.Staleness);
 
-                    var cmd = connection.CreateSelectCommand("SELECT * FROM TX WHERE K=@k",
+                    var cmd = connection.CreateSelectCommand(
+                        "SELECT * FROM TX WHERE K=@k",
                         new SpannerParameterCollection {{"k", _key, SpannerDbType.String}});
                     cmd.Transaction = tx;
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
                         Assert.False(await reader.ReadAsync(), "We should have read no rows at this time!");
                     }
+                }
+            }
+        }
+
+        [Fact]
+        public async Task ReadStaleExactSingle()
+        {
+            await WriteSampleRowsAsync();
+            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            {
+                await connection.OpenAsync();
+                var cmd = connection.CreateSelectCommand(
+                    "SELECT * FROM TX WHERE K=@k",
+                    new SpannerParameterCollection {{"k", _key, SpannerDbType.String}});
+                using (var reader =
+                    await cmd.ExecuteReaderAsync(TimestampBound.OfExactStaleness(TimeSpan.FromSeconds(50))))
+                {
+                    Assert.False(await reader.ReadAsync(), "We should have read no rows at this time!");
                 }
             }
         }
@@ -211,7 +426,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     caughtException = ex;
                 }
 
-                var cmd = connection.CreateSelectCommand("SELECT * FROM TX WHERE K=@k",
+                var cmd = connection.CreateSelectCommand(
+                    "SELECT * FROM TX WHERE K=@k",
                     new SpannerParameterCollection {{"k", _key, SpannerDbType.String}});
                 using (var reader =
                     await cmd.ExecuteReaderAsync(
@@ -236,14 +452,16 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 using (var tx =
                     await connection.BeginReadOnlyTransactionAsync(TimestampBound.Strong))
                 {
-                    var cmd = connection.CreateSelectCommand("SELECT * FROM TX WHERE K=@k",
-                        new SpannerParameterCollection { { "k", _key, SpannerDbType.String } });
+                    var cmd = connection.CreateSelectCommand(
+                        "SELECT * FROM TX WHERE K=@k",
+                        new SpannerParameterCollection {{"k", _key, SpannerDbType.String}});
                     cmd.Transaction = tx;
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
                         if (await reader.ReadAsync())
                         {
-                            Assert.Equal(_history[2].Value, reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
+                            Assert.Equal(
+                                _history[2].Value, reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
                         }
                     }
                 }
@@ -257,8 +475,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
                 await connection.OpenAsync();
-                var cmd = connection.CreateSelectCommand("SELECT * FROM TX WHERE K=@k",
-                    new SpannerParameterCollection { { "k", _key, SpannerDbType.String } });
+                var cmd = connection.CreateSelectCommand(
+                    "SELECT * FROM TX WHERE K=@k",
+                    new SpannerParameterCollection {{"k", _key, SpannerDbType.String}});
                 using (var reader = await cmd.ExecuteReaderAsync(TimestampBound.Strong))
                 {
                     if (await reader.ReadAsync())
@@ -267,207 +486,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     }
                 }
             }
-        }
-
-        [Fact]
-        public async Task ReadExactSingle()
-        {
-            await WriteSampleRowsAsync();
-            await Task.Delay(6);
-            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
-            {
-                await connection.OpenAsync();
-                var cmd = connection.CreateSelectCommand("SELECT * FROM TX WHERE K=@k",
-                    new SpannerParameterCollection { { "k", _key, SpannerDbType.String } });
-                using (var reader = await cmd.ExecuteReaderAsync(TimestampBound.OfReadTimestamp(_history[0].Timestamp)))
-                {
-                    if (await reader.ReadAsync())
-                    {
-                        Assert.Equal(_history[0].Value, reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
-                    }
-                }
-            }
-        }
-
-        [Fact]
-        public async Task ReadStaleExactSingle()
-        {
-            await WriteSampleRowsAsync();
-            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
-            {
-                await connection.OpenAsync();
-                var cmd = connection.CreateSelectCommand("SELECT * FROM TX WHERE K=@k",
-                    new SpannerParameterCollection { { "k", _key, SpannerDbType.String } });
-                using (var reader = await cmd.ExecuteReaderAsync(TimestampBound.OfExactStaleness(TimeSpan.FromSeconds(50))))
-                {
-                    Assert.False(await reader.ReadAsync(), "We should have read no rows at this time!");
-                }
-            }
-        }
-
-        [Fact]
-        public async Task AbortedThrownCorrectly()
-        {
-            await WriteSampleRowsAsync();
-
-            // connection 1 starts a transaction and reads
-            // connection 2 starts a transaction and reads the same row
-            // connection 1 writes and commits
-            // connection 2 reads again -- abort should be thrown.
-            var connection1 = new SpannerConnection(_testFixture.ConnectionString);
-            var connection2 = new SpannerConnection(_testFixture.ConnectionString);
-
-            await Task.WhenAll(connection1.OpenAsync(), connection2.OpenAsync());
-            var tx1 = await connection1.BeginTransactionAsync();
-
-            // TX1 READ
-            using (var cmd = connection1.CreateSelectCommand("SELECT * FROM TX WHERE K=@k",
-                new SpannerParameterCollection {{"k", _key, SpannerDbType.String}}))
-            {
-                cmd.Transaction = tx1;
-                using (var reader = await cmd.ExecuteReaderAsync())
-                {
-                    Assert.True(await reader.ReadAsync());
-                }
-            }
-
-            // TX2 START
-            var tx2 = await connection2.BeginTransactionAsync();
-            
-            // TX2 READ
-            using (var cmd = connection2.CreateSelectCommand("SELECT * FROM TX WHERE K=@k",
-                new SpannerParameterCollection { { "k", _key, SpannerDbType.String } }))
-            {
-                cmd.Transaction = tx2;
-                using (var reader = await cmd.ExecuteReaderAsync())
-                {
-                    Assert.True(await reader.ReadAsync());
-                }
-            }
-
-            // TX1 WRITE/COMMIT
-            using (var cmd = connection1.CreateUpdateCommand("TX",
-                new SpannerParameterCollection
-                {
-                    {"k", _key, SpannerDbType.String},
-                    {"Int64Value", 0, SpannerDbType.Int64}
-                }))
-            {
-                cmd.Transaction = tx1;
-                await cmd.ExecuteNonQueryAsync().ConfigureAwait(false);
-                await tx1.CommitAsync().ConfigureAwait(false);
-                tx1.Dispose();
-            }
-            connection1.Dispose();
-
-            // TX2 READ AGAIN/THROWS
-            SpannerException thrownException = null;
-            try
-            {
-                using (var cmd = connection2.CreateSelectCommand("SELECT * FROM TX WHERE K=@k",
-                    new SpannerParameterCollection {{"k", _key, SpannerDbType.String}}))
-                {
-                    cmd.Transaction = tx2;
-                    using (var reader = await cmd.ExecuteReaderAsync())
-                    {
-                        Assert.True(await reader.ReadAsync());
-                    }
-                }
-            }
-            catch (SpannerException ex)
-            {
-                thrownException = ex;
-            }
-            finally
-            {
-                tx2.Dispose();
-                connection2.Dispose();
-            }
-
-            Assert.True(thrownException?.IsRetryable ?? false);
-        }
-
-
-        [Fact]
-        public async Task MultiWrite()
-        {
-            await WriteSampleRowsAsync();
-            //To ensure good concurrency (ie that the transactions are not serial)
-            //we'll preopen 5 transactions to ensure they have sessions and then start the increment
-            //process
-            const int concurrentThreads = 5;
-            SpannerConnection[] connections = new SpannerConnection[concurrentThreads];
-            for (int i = 0; i < concurrentThreads; i++)
-            {
-                connections[i] = await CreateAndOpen();
-            }
-
-            Task[] tasks = new Task[concurrentThreads];
-            for (int i = 0; i < concurrentThreads; i++)
-            {
-                tasks[i] = IncrementByOneAsync(connections[i]);
-            }
-            await Task.WhenAll(tasks).ConfigureAwait(false);
-
-            //now ensure we have the correct value
-            using (var cmd =
-                connections[0].CreateSelectCommand("SELECT Int64Value FROM TX WHERE K=@k",
-                    new SpannerParameterCollection { { "k", _key, SpannerDbType.String } }))
-            {
-                Assert.Equal(5, await cmd.ExecuteScalarAsync<long>().ConfigureAwait(false));
-            }
-
-            for (int i = 0; i < concurrentThreads; i++)
-            {
-                connections[i].Dispose();
-            }
-        }
-
-        private async Task IncrementByOneAsync(SpannerConnection connection)
-        {
-            SpannerException spannerException;
-            do
-            {
-                spannerException = null;
-                try
-                {
-                    //We'll do manually created transactions here so the tests run on .net core
-                    using (var transaction = await connection.BeginTransactionAsync())
-                    {
-                        long current;
-                        using (var cmd =
-                            connection.CreateSelectCommand("SELECT Int64Value FROM TX WHERE K=@k",
-                                new SpannerParameterCollection {{"k", _key, SpannerDbType.String}}))
-                        {
-                            cmd.Transaction = transaction;
-                            current = await cmd.ExecuteScalarAsync<long>().ConfigureAwait(false);
-                        }
-
-                        using (var cmd = connection.CreateUpdateCommand("TX",
-                            new SpannerParameterCollection
-                            {
-                                {"k", _key, SpannerDbType.String},
-                                {"Int64Value", current + 1, SpannerDbType.Int64}
-                            }))
-                        {
-                            cmd.Transaction = transaction;
-                            await cmd.ExecuteNonQueryAsync().ConfigureAwait(false);
-                            await transaction.CommitAsync().ConfigureAwait(false);
-                        }
-                    }
-                }
-                catch (SpannerException ex)
-                {
-                    spannerException = ex;
-                }
-            } while (spannerException?.IsRetryable ?? false);
-        }
-
-        private async Task<SpannerConnection> CreateAndOpen()
-        {
-            var connection = new SpannerConnection(_testFixture.ConnectionString);
-            await connection.OpenAsync();
-            return connection;
         }
     }
 }

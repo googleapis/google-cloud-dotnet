@@ -29,7 +29,8 @@ namespace Google.Cloud.Spanner.Data
         private static readonly ConcurrentDictionary<ClientPoolKey, ClientPoolEntry> s_clientEntryPool =
             new ConcurrentDictionary<ClientPoolKey, ClientPoolEntry>();
 
-        public static async Task<SpannerClient> AcquireClientAsync(ITokenAccess credentials = null,
+        public static async Task<SpannerClient> AcquireClientAsync(
+            ITokenAccess credentials = null,
             ServiceEndpoint endpoint = null)
         {
             var key = new ClientPoolKey(credentials, endpoint ?? SpannerClient.DefaultEndpoint);
@@ -62,22 +63,26 @@ namespace Google.Cloud.Spanner.Data
                 Endpoint = serviceEndpoint;
             }
 
-            public bool Equals(ClientPoolKey other)
-            {
-                return Equals(Credential, other.Credential) && Equals(Endpoint, other.Endpoint);
-            }
+            public bool Equals(ClientPoolKey other) => Equals(Credential, other.Credential) &&
+                Equals(Endpoint, other.Endpoint);
 
             public override bool Equals(object obj)
             {
-                if (ReferenceEquals(null, obj)) return false;
+                if (ReferenceEquals(null, obj))
+                {
+                    return false;
+                }
+
                 return obj is ClientPoolKey && Equals((ClientPoolKey) obj);
             }
 
+            /// <inheritdoc />
             public override int GetHashCode()
             {
                 unchecked
                 {
-                    return ((Credential != null ? Credential.GetHashCode() : 0) * 397) ^ (Endpoint != null ? Endpoint.GetHashCode() : 0);
+                    return ((Credential?.GetHashCode() ?? 0) * 397) ^
+                        (Endpoint?.GetHashCode() ?? 0);
                 }
             }
         }
@@ -89,10 +94,7 @@ namespace Google.Cloud.Spanner.Data
             private volatile Task<SpannerClient> _creationTask;
             private readonly object _sync = new object();
 
-            public ClientPoolEntry(ClientPoolKey key)
-            {
-                _key = key;
-            }
+            public ClientPoolEntry(ClientPoolKey key) => _key = key;
 
             public async Task<SpannerClient> AcquireClientFromEntryAsync()
             {
@@ -102,9 +104,12 @@ namespace Google.Cloud.Spanner.Data
                     var endpoint = _key.Endpoint ?? SpannerClient.DefaultEndpoint;
                     if (_key.Credential != null)
                     {
-                        lock (_sync) {
-                            if (_client == null) {
-                                var channel = new Channel(endpoint.Host,
+                        lock (_sync)
+                        {
+                            if (_client == null)
+                            {
+                                var channel = new Channel(
+                                    endpoint.Host,
                                     endpoint.Port,
                                     _key.Credential.ToChannelCredentials());
                                 _client = SpannerClient.Create(channel);
@@ -113,8 +118,10 @@ namespace Google.Cloud.Spanner.Data
                     }
                     else
                     {
-                        lock (_sync) {
-                            if (_creationTask == null || _creationTask.IsFaulted) {
+                        lock (_sync)
+                        {
+                            if (_creationTask == null || _creationTask.IsFaulted)
+                            {
                                 _creationTask = SpannerClient.CreateAsync(endpoint);
                             }
                         }

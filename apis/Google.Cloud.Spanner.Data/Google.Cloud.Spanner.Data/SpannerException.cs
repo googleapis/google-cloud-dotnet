@@ -15,38 +15,43 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Logging;
 using Grpc.Core;
-using Google.Cloud.Spanner.V1;
 
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
     /// Represents an error communicating with the Spanner database.
     /// </summary>
-    public sealed class SpannerException : Exception {
-
+    public sealed class SpannerException : Exception
+    {
         private static readonly Dictionary<ErrorCode, string> s_errorMessageTable =
-            new Dictionary<ErrorCode, string>() {
+            new Dictionary<ErrorCode, string>
+            {
                 {ErrorCode.Cancelled, "The operation was canceled."},
                 {ErrorCode.InvalidArgument, "An invalid argument was sent to Spanner."},
                 {ErrorCode.DeadlineExceeded, "The operation deadline was exceeded."},
                 {ErrorCode.NotFound, "Object not found."},
-                {ErrorCode.AlreadyExists, "Object already exists."}, {
+                {ErrorCode.AlreadyExists, "Object already exists."},
+                {
                     ErrorCode.PermissionDenied,
                     "Insufficient permission to execute the specified operation."
                 },
                 {ErrorCode.Unauthenticated, "Invalid authentication credentials for the operation."},
-                {ErrorCode.ResourceExhausted, "Resources have been exhausted."}, {
+                {ErrorCode.ResourceExhausted, "Resources have been exhausted."},
+                {
                     ErrorCode.FailedPrecondition,
                     "Operation was rejected because the system is not in a state required for the operation's execution."
                 },
                 {ErrorCode.Aborted, "The operation was aborted."},
-                {ErrorCode.OutOfRange, "Operation was attempted past the valid range."}, {
+                {ErrorCode.OutOfRange, "Operation was attempted past the valid range."},
+                {
                     ErrorCode.Unimplemented,
                     "Operation is not implemented or not supported/enabled in this service."
                 },
-                {ErrorCode.Internal, "Internal error."}, {
+                {ErrorCode.Internal, "Internal error."},
+                {
                     ErrorCode.Unavailable,
                     "The service is currently unavailable.  This is a most likely a transient condition."
                 },
@@ -55,35 +60,17 @@ namespace Google.Cloud.Spanner.Data
             };
 
         /// <summary>
-        /// This class is a thin conversion around a grpc exception, with the additional
-        /// information of whether the operation is retryable based on the resulting error.
-        /// </summary>
-        /// <param name="code"></param>
-        /// <param name="innerException"></param>
-        internal SpannerException(ErrorCode code, RpcException innerException)
-            : base(GetMessageFromErrorCode(code), innerException) {
-            Logger.LogPerformanceCounterFn("SpannerException.Count", x => x + 1);
-            ErrorCode = innerException.IsSessionExpiredError() ? ErrorCode.Aborted : code;
-        }
-
-        internal SpannerException(ErrorCode code, string message) : base(message) {
-            Logger.LogPerformanceCounterFn("SpannerException.Count", x => x + 1);
-            ErrorCode = code;
-        }
-
-        internal SpannerException(RpcException innerException)
-            : this(ConvertFromStatusCode(innerException.Status.StatusCode), innerException) {
-        }
-
-        /// <summary>
         /// </summary>
         public ErrorCode ErrorCode { get; }
 
         /// <summary>
         /// </summary>
-        public bool IsRetryable {
-            get {
-                switch (ErrorCode) {
+        public bool IsRetryable
+        {
+            get
+            {
+                switch (ErrorCode)
+                {
                     case ErrorCode.DeadlineExceeded:
                     case ErrorCode.Aborted:
                     case ErrorCode.Unavailable:
@@ -94,19 +81,41 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        internal static SpannerException TryTranslateRpcException(Exception possibleRpcException) {
+        /// <summary>
+        /// This class is a thin conversion around a grpc exception, with the additional
+        /// information of whether the operation is retryable based on the resulting error.
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="innerException"></param>
+        internal SpannerException(ErrorCode code, RpcException innerException)
+            : base(GetMessageFromErrorCode(code), innerException)
+        {
+            Logger.LogPerformanceCounterFn("SpannerException.Count", x => x + 1);
+            ErrorCode = innerException.IsSessionExpiredError() ? ErrorCode.Aborted : code;
+        }
+
+        internal SpannerException(ErrorCode code, string message) : base(message)
+        {
+            Logger.LogPerformanceCounterFn("SpannerException.Count", x => x + 1);
+            ErrorCode = code;
+        }
+
+        internal SpannerException(RpcException innerException)
+            : this(ConvertFromStatusCode(innerException.Status.StatusCode), innerException) { }
+
+        internal static SpannerException TryTranslateRpcException(Exception possibleRpcException)
+        {
             SpannerException spannerException = null;
             var aggregateException = possibleRpcException as AggregateException;
             var rpcException = possibleRpcException as RpcException;
 
             if (aggregateException?.InnerExceptions != null)
-            { 
+            {
                 spannerException = (SpannerException) aggregateException.InnerExceptions
                     .FirstOrDefault(x => x is SpannerException);
                 rpcException = (RpcException) aggregateException.InnerExceptions
                     .FirstOrDefault(x => x is RpcException);
             }
-
 
             if (rpcException != null)
             {
@@ -115,8 +124,10 @@ namespace Google.Cloud.Spanner.Data
             return spannerException;
         }
 
-        private static ErrorCode ConvertFromStatusCode(StatusCode statusCode) {
-            switch (statusCode) {
+        private static ErrorCode ConvertFromStatusCode(StatusCode statusCode)
+        {
+            switch (statusCode)
+            {
                 case StatusCode.OK:
                     return ErrorCode.Unknown;
                 default:
@@ -124,9 +135,11 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        private static string GetMessageFromErrorCode(ErrorCode errorCode) {
+        private static string GetMessageFromErrorCode(ErrorCode errorCode)
+        {
             string message;
-            if (!s_errorMessageTable.TryGetValue(errorCode, out message)) {
+            if (!s_errorMessageTable.TryGetValue(errorCode, out message))
+            {
                 throw new ArgumentOutOfRangeException(nameof(errorCode), errorCode, null);
             }
             return message;

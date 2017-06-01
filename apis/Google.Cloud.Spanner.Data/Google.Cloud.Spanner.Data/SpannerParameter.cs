@@ -33,9 +33,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// </summary>
-        public SpannerParameter()
-        {
-        }
+        public SpannerParameter() { }
 
         /// <summary>
         /// </summary>
@@ -44,8 +42,12 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="value"></param>
         /// <param name="sourceColumn"></param>
         /// <param name="size"></param>
-        public SpannerParameter(string spannerColumnName, SpannerDbType type, object value = null,
-                string sourceColumn = null, int size = 0)
+        public SpannerParameter(
+            string spannerColumnName,
+            SpannerDbType type,
+            object value = null,
+            string sourceColumn = null,
+            int size = 0)
         {
             _spannerColumnName = spannerColumnName;
             SpannerDbType = type ?? SpannerDbType.Unspecified;
@@ -99,7 +101,9 @@ namespace Google.Cloud.Spanner.Data
             set
             {
                 if (value != ParameterDirection.Input)
+                {
                     throw new InvalidOperationException("Spanner only supports input parameters.");
+                }
             }
         }
 
@@ -131,10 +135,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// </summary>
-        public SpannerDbType SpannerDbType
-        {
-            get; set;
-        }
+        public SpannerDbType SpannerDbType { get; set; }
 
         /// <inheritdoc />
         public override object Value
@@ -143,20 +144,20 @@ namespace Google.Cloud.Spanner.Data
             set
             {
                 if (SpannerDbType.TypeCode == TypeCode.Unspecified && value != null)
+                {
                     throw new ArgumentException(
                         $"{nameof(SpannerDbType)} must be set to one of "
                         + $"({nameof(SpannerDbType.Bool)}, {nameof(SpannerDbType.Int64)}, {nameof(SpannerDbType.Float64)},"
                         + $" {nameof(SpannerDbType.Timestamp)}, {nameof(SpannerDbType.Date)}, {nameof(SpannerDbType.String)},"
                         + $" {nameof(SpannerDbType.Bytes)})");
+                }
+
                 _value = value;
             }
         }
 
         /// <inheritdoc />
-        public object Clone()
-        {
-            return (SpannerParameter) MemberwiseClone();
-        }
+        public object Clone() => (SpannerParameter) MemberwiseClone();
 
         /// <inheritdoc />
         public override void ResetDbType()

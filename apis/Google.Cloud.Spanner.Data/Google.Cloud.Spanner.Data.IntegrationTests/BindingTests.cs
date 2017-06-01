@@ -24,21 +24,19 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     public class BindingTests : IClassFixture<TestDatabaseFixture>
     {
-        public BindingTests(TestDatabaseFixture testFixture)
-        {
-            _testFixture = testFixture;
-        }
+        public BindingTests(TestDatabaseFixture testFixture) => _testFixture = testFixture;
 
         private readonly TestDatabaseFixture _testFixture;
 
         private async Task TestBind<T>(SpannerDbType parameterType, T value)
         {
             int rowsRead;
-            T valueRead = default(T);
+            var valueRead = default(T);
 
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
-                var cmd = connection.CreateSelectCommand("SELECT @v",
+                var cmd = connection.CreateSelectCommand(
+                    "SELECT @v",
                     new SpannerParameterCollection {new SpannerParameter("v", parameterType)});
 
                 cmd.Parameters["v"].Value = value;
@@ -53,17 +51,18 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
             Assert.Equal(1, rowsRead);
-            Array valueAsArray = value as Array;
+            var valueAsArray = value as Array;
             if (valueAsArray != null)
             {
-                Array valueReadAsArray = valueRead as Array;
+                var valueReadAsArray = valueRead as Array;
                 Assert.NotNull(valueReadAsArray);
-                for (int i = 0; i < valueAsArray.Length; i++)
+                for (var i = 0; i < valueAsArray.Length; i++)
                 {
                     // ReSharper disable once PossibleNullReferenceException
                     Assert.Equal(valueAsArray.GetValue(i), valueReadAsArray.GetValue(i));
                 }
-            } else
+            }
+            else
             {
                 Assert.Equal(value, valueRead);
             }
@@ -86,18 +85,19 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public Task BindBooleanNull() => TestBind<bool?>(SpannerDbType.Bool, null);
 
         [Fact]
-        public Task BindBooleanNullArray() =>
-            TestBind<bool[]>(SpannerDbType.Bool, null);
+        public Task BindBooleanNullArray() => TestBind<bool[]>(SpannerDbType.Bool, null);
 
         [Fact]
-        public Task BindByteArray() => TestBind(SpannerDbType.Bytes,
+        public Task BindByteArray() => TestBind(
+            SpannerDbType.Bytes,
             new byte[] {1, 2, 3});
 
         [Fact]
         public Task BindByteArrayNull() => TestBind<byte[]>(SpannerDbType.Bytes, null);
 
         [Fact]
-        public Task BindDate() => TestBind(SpannerDbType.Date,
+        public Task BindDate() => TestBind(
+            SpannerDbType.Date,
             new DateTime(2017, 5, 26));
 
         [Fact]
@@ -182,7 +182,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             null);
 
         [Fact]
-        public Task BindTimestamp() => TestBind(SpannerDbType.Timestamp,
+        public Task BindTimestamp() => TestBind(
+            SpannerDbType.Timestamp,
             new DateTime(2017, 5, 26, 15, 0, 0));
 
         [Fact]
@@ -197,7 +198,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             new DateTime?[] { });
 
         [Fact]
-        public Task BindTimestampNull() => TestBind<DateTime?>(SpannerDbType.Timestamp,
+        public Task BindTimestampNull() => TestBind<DateTime?>(
+            SpannerDbType.Timestamp,
             null);
 
         [Fact]
