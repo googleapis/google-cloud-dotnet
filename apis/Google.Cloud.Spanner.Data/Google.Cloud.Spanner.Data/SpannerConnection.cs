@@ -175,9 +175,9 @@ namespace Google.Cloud.Spanner.Data
                     + " transaction as an argument to SpannerCommand.ExecuteReader().");
             }
 
-            return BeginTransactionImplAsync(cancellationToken,
-                new TransactionOptions { ReadOnly = ConvertToOptions(targetReadTimeStamp)},
+            return BeginTransactionImplAsync(new TransactionOptions { ReadOnly = ConvertToOptions(targetReadTimeStamp) },
                 TransactionMode.ReadOnly,
+                cancellationToken,
                 targetReadTimeStamp);
         }
 
@@ -220,9 +220,10 @@ namespace Google.Cloud.Spanner.Data
         public Task<SpannerTransaction> BeginTransactionAsync(
             CancellationToken cancellationToken = default(CancellationToken))
         {
-            return BeginTransactionImplAsync(cancellationToken, new TransactionOptions {
+            return BeginTransactionImplAsync(new TransactionOptions
+            {
                 ReadWrite = new TransactionOptions.Types.ReadWrite()
-            }, TransactionMode.ReadWrite);
+            }, TransactionMode.ReadWrite, cancellationToken);
         }
 
         /// <inheritdoc />
@@ -508,24 +509,22 @@ namespace Google.Cloud.Spanner.Data
                             _sharedSessionAllocator = SpannerClient.CreateSessionFromPoolAsync(
                                 _connectionStringBuilder.Project, _connectionStringBuilder.SpannerInstance,
                                 _connectionStringBuilder.SpannerDatabase, options, CancellationToken.None);
-                           result = _sharedSessionAllocator.ContinueWith(t =>
+                            result = Task.Run(async () =>
                             {
-                                if (t.IsCompleted)
-                                {
-                                    // we need to make sure the refcnt is >0 before setting _sharedSession.
-                                    // or else the session could again be stolen from us by another transaction.
-                                    Interlocked.Increment(ref _sessionRefCount);
-                                    _sharedSession = t.ResultWithUnwrappedExceptions();
-                                }
+                                var newSession = await _sharedSessionAllocator.ConfigureAwait(false);
+                                Interlocked.Increment(ref _sessionRefCount);
+                                // we need to make sure the refcnt is >0 before setting _sharedSession.
+                                // or else the session could again be stolen from us by another transaction.
+                                _sharedSession = newSession;
                                 return _sharedSession;
                             }, CancellationToken.None);
                         }
                         else
                         {
-                            result = _sharedSessionAllocator.ContinueWith(t =>
+                            result = Task.Run(async () =>
                             {
-                                if (t.IsCompleted)
-                                    Interlocked.Increment(ref _sessionRefCount);
+                                await _sharedSessionAllocator.ConfigureAwait(false);
+                                Interlocked.Increment(ref _sessionRefCount);
                                 return _sharedSession;
                             }, CancellationToken.None);
                         }
@@ -595,8 +594,8 @@ namespace Google.Cloud.Spanner.Data
             }, "SpannerConnection.BeginSingleUseTransaction");
         }
 
-        private Task<SpannerTransaction> BeginTransactionImplAsync(CancellationToken cancellationToken,
-            TransactionOptions transactionOptions, TransactionMode transactionMode,
+        private Task<SpannerTransaction> BeginTransactionImplAsync(TransactionOptions transactionOptions,
+            TransactionMode transactionMode, CancellationToken cancellationToken,
             TimestampBound targetReadTimeStamp = null)
         {
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>

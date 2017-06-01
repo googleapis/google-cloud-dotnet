@@ -161,9 +161,25 @@ namespace Google.Cloud.Spanner.Data
 
         private bool Equals(SpannerDbType other)
         {
-            return Equals(StructMembers, other.StructMembers) 
-                && TypeCode == other.TypeCode 
+            return DictionaryEquals(StructMembers, other?.StructMembers) 
+                && TypeCode == other?.TypeCode 
                 && Equals(ArrayElementType, other.ArrayElementType);
+        }
+
+        private bool DictionaryEquals(IDictionary<string, SpannerDbType> d1, IDictionary<string, SpannerDbType> d2)
+        {
+            if (d1 == null && d2 == null) return true;
+            if (d1 == null || d2 == null) return false;
+            if (d1.Count != d2.Count) return false;
+            foreach (var kvp in d1)
+            {
+                SpannerDbType d2Value;
+                if (!d2.TryGetValue(kvp.Key, out d2Value) || !kvp.Value.Equals(d2Value))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         /// <inheritdoc />
@@ -171,7 +187,7 @@ namespace Google.Cloud.Spanner.Data
         {
             unchecked
             {
-                var hashCode = (StructMembers != null ? StructMembers.GetHashCode() : 0);
+                var hashCode = StructMembers?.GetHashCode() ?? 0;
                 hashCode = (hashCode * 397) ^ (int) TypeCode;
                 hashCode = (hashCode * 397) ^ (ArrayElementType?.GetHashCode() ?? 0);
                 return hashCode;

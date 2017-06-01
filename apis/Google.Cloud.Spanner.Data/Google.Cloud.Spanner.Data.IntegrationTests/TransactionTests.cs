@@ -117,8 +117,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     await connection.BeginReadOnlyTransactionAsync(
                         TimestampBound.OfReadTimestamp(targetReadTimestamp)))
                 {
-                    Assert.Equal(tx.Mode, TransactionMode.ReadOnly);
-                    Assert.Equal(tx.TimeStampBound.TimeStamp, targetReadTimestamp);
+                    Assert.Equal(TransactionMode.ReadOnly, tx.Mode);
+                    Assert.Equal(targetReadTimestamp, tx.TimeStampBound.TimeStamp);
 
                     var cmd = connection.CreateSelectCommand("SELECT * FROM TX WHERE K=@k",
                         new SpannerParameterCollection {{"k", _key, SpannerDbType.String}});
@@ -159,7 +159,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 {
                     if (await reader.ReadAsync())
                     {
-                        Assert.Equal(reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")), _history[2].Value);
+                        Assert.Equal(_history[2].Value, reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
                     }
                 }
             }
@@ -177,8 +177,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     await connection.BeginReadOnlyTransactionAsync(
                         TimestampBound.OfExactStaleness(TimeSpan.FromSeconds(50))))
                 {
-                    Assert.Equal(tx.Mode, TransactionMode.ReadOnly);
-                    Assert.Equal(tx.TimeStampBound.Staleness, TimeSpan.FromSeconds(50));
+                    Assert.Equal(TransactionMode.ReadOnly, tx.Mode);
+                    Assert.Equal(TimeSpan.FromSeconds(50), tx.TimeStampBound.Staleness);
 
                     var cmd = connection.CreateSelectCommand("SELECT * FROM TX WHERE K=@k",
                         new SpannerParameterCollection {{"k", _key, SpannerDbType.String}});
@@ -219,7 +219,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 {
                     if (await reader.ReadAsync())
                     {
-                        Assert.Equal(reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")), _history[2].Value);
+                        Assert.Equal(_history[2].Value, reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
                     }
                 }
             }
@@ -243,7 +243,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     {
                         if (await reader.ReadAsync())
                         {
-                            Assert.Equal(reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")), _history[2].Value);
+                            Assert.Equal(_history[2].Value, reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
                         }
                     }
                 }
@@ -263,7 +263,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 {
                     if (await reader.ReadAsync())
                     {
-                        Assert.Equal(reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")), _history[2].Value);
+                        Assert.Equal(_history[2].Value, reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
                     }
                 }
             }
@@ -283,7 +283,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 {
                     if (await reader.ReadAsync())
                     {
-                        Assert.Equal(reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")), _history[0].Value);
+                        Assert.Equal(_history[0].Value, reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
                     }
                 }
             }

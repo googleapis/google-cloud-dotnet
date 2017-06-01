@@ -31,10 +31,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         private readonly TestDatabaseFixture _testFixture;
 
-        async Task TestBind<T>(SpannerDbType parameterType, T value)
+        private async Task TestBind<T>(SpannerDbType parameterType, T value)
         {
-            // ReSharper disable once RedundantAssignment
-            int rowsRead = -1;
+            int rowsRead;
             T valueRead = default(T);
 
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
@@ -53,7 +52,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     }
                 }
             }
-            Assert.Equal(rowsRead, 1);
+            Assert.Equal(1, rowsRead);
             Array valueAsArray = value as Array;
             if (valueAsArray != null)
             {
@@ -62,11 +61,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 for (int i = 0; i < valueAsArray.Length; i++)
                 {
                     // ReSharper disable once PossibleNullReferenceException
-                    Assert.Equal(valueReadAsArray.GetValue(i), valueAsArray.GetValue(i));
+                    Assert.Equal(valueAsArray.GetValue(i), valueReadAsArray.GetValue(i));
                 }
             } else
             {
-                Assert.Equal(valueRead, value);
+                Assert.Equal(value, valueRead);
             }
         }
 
@@ -104,7 +103,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public Task BindDateArray() => TestBind(
             SpannerDbType.ArrayOf(SpannerDbType.Date),
-            new DateTime?[] {new DateTime(2017, 5, 26), null, new DateTime(2017, 5, 9),});
+            new DateTime?[] {new DateTime(2017, 5, 26), null, new DateTime(2017, 5, 9)});
 
         [Fact]
         public Task BindDateEmptyArray() => TestBind(

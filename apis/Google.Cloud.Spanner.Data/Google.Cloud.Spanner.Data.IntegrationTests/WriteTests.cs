@@ -35,10 +35,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         private readonly TestDatabaseFixture _testFixture;
         private string _lastKey;
 
-        private static string UniqueString()
-        {
-            return Guid.NewGuid().ToString();
-        }
+        private static string UniqueString() => Guid.NewGuid().ToString();
 
         private async Task<int> InsertAsync(SpannerParameterCollection values)
         {
@@ -66,7 +63,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task WriteNulls()
         {
-            Assert.Equal(await InsertAsync(new SpannerParameterCollection
+            Assert.Equal(1, await InsertAsync(new SpannerParameterCollection
                 {
                     new SpannerParameter("BoolValue", SpannerDbType.Bool, null),
                     new SpannerParameter("Int64Value", SpannerDbType.Int64, null),
@@ -94,9 +91,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         null),
                     new SpannerParameter("DateArrayValue",
                         SpannerDbType.ArrayOf(SpannerDbType.Date),
-                        null),
-                }),
-                1);
+                        null)
+                }));
             using (var reader = await GetLastRowAsync())
             {
                 Assert.Null(reader.GetValue(reader.GetOrdinal("BoolValue")));
@@ -127,14 +123,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             string[] bArrayArray =
             {
                 Convert.ToBase64String(new byte[] {0, 1, 2}), null,
-                Convert.ToBase64String(new byte[] {1, 2, 3}),
+                Convert.ToBase64String(new byte[] {1, 2, 3})
             };
             DateTime?[] dtArray = new DateTime?[]
-                {new DateTime(2017, 3, 17), null, new DateTime(2017, 5, 9),};
+                {new DateTime(2017, 3, 17), null, new DateTime(2017, 5, 9)};
             DateTime?[] tmArray = new DateTime?[]
-                {new DateTime(2017, 3, 17, 5, 30, 0), null, new DateTime(2017, 5, 9, 12, 45, 0),};
+                {new DateTime(2017, 3, 17, 5, 30, 0), null, new DateTime(2017, 5, 9, 12, 45, 0)};
 
-            Assert.Equal(await InsertAsync(new SpannerParameterCollection
+            Assert.Equal(1, await InsertAsync(new SpannerParameterCollection
                 {
                     new SpannerParameter("BoolValue", SpannerDbType.Bool, true),
                     new SpannerParameter("Int64Value", SpannerDbType.Int64, 1),
@@ -162,21 +158,18 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         tmArray),
                     new SpannerParameter("DateArrayValue",
                         SpannerDbType.ArrayOf(SpannerDbType.Date),
-                        dtArray),
-                }),
-                1);
+                        dtArray)
+                }));
             using (var reader = await GetLastRowAsync())
             {
                 Assert.True(reader.GetFieldValue<bool>(reader.GetOrdinal("BoolValue")));
-                Assert.Equal(reader.GetFieldValue<long>(reader.GetOrdinal("Int64Value")), 1);
+                Assert.Equal(1, reader.GetFieldValue<long>(reader.GetOrdinal("Int64Value")));
                 Assert.True(
                     Math.Abs(2.0 - reader.GetFieldValue<double>(reader.GetOrdinal("Float64Value")))
                     < double.Epsilon);
-                Assert.Equal(reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")), "abc");
-                Assert.Equal(reader.GetFieldValue<DateTime>(reader.GetOrdinal("TimestampValue")),
-                    testTimestamp);
-                Assert.Equal(reader.GetFieldValue<DateTime>(reader.GetOrdinal("DateValue")),
-                    testDate);
+                Assert.Equal("abc", reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
+                Assert.Equal(testTimestamp, reader.GetFieldValue<DateTime>(reader.GetOrdinal("TimestampValue")));
+                Assert.Equal(testDate, reader.GetFieldValue<DateTime>(reader.GetOrdinal("DateValue")));
                 Assert.Equal(bArray,
                     reader.GetFieldValue<bool?[]>(reader.GetOrdinal("BoolArrayValue")));
                 Assert.Equal(lArray,

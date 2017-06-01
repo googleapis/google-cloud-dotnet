@@ -15,7 +15,6 @@
 #region
 
 using System;
-using System.Threading;
 using System.Threading.Tasks;
 using Google.Cloud.Spanner.Admin.Database.V1;
 
@@ -25,15 +24,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     public class TestDatabaseFixture : IDisposable
     {
-        // scratch can be used to run tests on a precreated db.
-        // all tests are designed to be re-run on an exiting db (previously written state will
-        // not cause failures).
-        // if you use a scratch database, be sure to comment out the database
-        // creation and disposal methods.
-        private readonly string _databaseName = //"scratch";  
-            "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
-        private readonly string _testTable = "TestTable";
-        private Task _creationTask;
+        private readonly Lazy<Task> _creationTask;
         private DatabaseAdminClient _databaseAdminClient;
 
         public string TestInstanceName => "myspanner";
@@ -43,17 +34,24 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public string ConnectionString => "Data Source=" + TestProjectName + "/" + TestInstanceName
                                           + "/" + DatabaseName;
 
-        public string DatabaseName => _databaseName;
+        // scratch can be used to run tests on a precreated db.
+        // all tests are designed to be re-run on an exiting db (previously written state will
+        // not cause failures).
+        // if you use a scratch database, be sure to comment out the database
+        // creation and disposal methods.
+        public string DatabaseName { get; } = "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
 
-        public string TestTable => _testTable;
+        public string TestTable { get; } = "TestTable";
+
+        public TestDatabaseFixture()
+        {
+            _creationTask = new Lazy<Task>(EnsureTestDatabaseImplAsync);
+        }
 
         public void Dispose()
         {
-            if (_databaseAdminClient != null)
-            {
-                _databaseAdminClient.DropDatabase(
-                    new DatabaseName(TestProjectName, TestInstanceName, DatabaseName));
-            }
+            _databaseAdminClient?.DropDatabase(
+                new DatabaseName(TestProjectName, TestInstanceName, DatabaseName));
         }
 
         public async Task<SpannerConnection> GetTestDatabaseConnectionAsync()
@@ -62,31 +60,18 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             return new SpannerConnection(ConnectionString);
         }
 
-        public async Task EnsureTestDatabaseAsync()
+        public Task EnsureTestDatabaseAsync()
         {
-            TaskCompletionSource<int> creationTaskCompletionSource;
-            if (_creationTask == null)
-            {
-                creationTaskCompletionSource = new TaskCompletionSource<int>();
-                if (Interlocked.CompareExchange(ref _creationTask,
-                        creationTaskCompletionSource.Task,
-                        null) != null)
-                {
-                    await _creationTask;
-                    return;
-                }
-            } else
-            {
-                await _creationTask;
-                return;
-            }
+            return _creationTask.Value;
+        }
 
+        private async Task EnsureTestDatabaseImplAsync()
+        {
             await CreateDatabaseAsync();
             await Task.WhenAll(CreateTableAsync(), 
               CreateTypeTableAsync(),
               CreateTxTableAsync()).ConfigureAwait(false);
             await FillSampleData();
-            creationTaskCompletionSource.SetResult(0);
         }
 
         private async Task<Database> CreateDatabaseAsync()
@@ -167,7 +152,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
 
-            string createTableStatement = @"CREATE TABLE " + _testTable + @" (
+            string createTableStatement = $@"CREATE TABLE {TestTable} (
                                             Key                STRING(MAX) NOT NULL,
                                             StringValue        STRING(MAX),
                                           ) PRIMARY KEY (Key)";

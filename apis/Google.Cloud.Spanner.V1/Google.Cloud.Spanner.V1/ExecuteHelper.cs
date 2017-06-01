@@ -22,39 +22,36 @@ namespace Google.Cloud.Spanner.V1
 {
     internal static class ExecuteHelper
     {
-        public static Task<T> WithSessionChecking<T>(this Task<T> task, Func<Session> sessionFunc)
+        public static async Task<T> WithSessionChecking<T>(this Task<T> task, Func<Session> sessionFunc)
         {
-            return task.ContinueWith(t =>
+            try
             {
-                if (t.IsFaulted)
+                return await task.ConfigureAwait(false);
+            }
+            catch (RpcException ex)
+            {
+                if (ex.IsSessionExpiredError())
                 {
-                    RpcException rpcException = t.Exception?.InnerExceptions.OfType<RpcException>().FirstOrDefault();
-                    if (rpcException.IsSessionExpiredError())
-                    {
-                        SessionPool.MarkSessionExpired(sessionFunc());
-                    }
+                    SessionPool.MarkSessionExpired(sessionFunc());
                 }
-                return t.ResultWithUnwrappedExceptions();
-            });
+                throw;
+            }
         }
 
-        public static Task WithSessionChecking(this Task task, Func<Session> sessionFunc)
+        public static async Task WithSessionChecking(this Task task, Func<Session> sessionFunc)
         {
-            return task.ContinueWith(t =>
+            try
             {
-                if (t.IsFaulted)
+                await task.ConfigureAwait(false);
+            }
+            catch (RpcException ex)
+            {
+                if (ex.IsSessionExpiredError())
                 {
-                    RpcException rpcException = t.Exception?.InnerExceptions.OfType<RpcException>().FirstOrDefault();
-                    if (rpcException.IsSessionExpiredError())
-                    {
-                        SessionPool.MarkSessionExpired(sessionFunc());
-                    }
-                    if (t.Exception != null)
-                    {
-                        throw t.Exception;
-                    }
+                    SessionPool.MarkSessionExpired(sessionFunc());
                 }
-            });
+                throw;
+            }
         }
 
         internal static bool IsSessionExpiredError(this RpcException rpcException)

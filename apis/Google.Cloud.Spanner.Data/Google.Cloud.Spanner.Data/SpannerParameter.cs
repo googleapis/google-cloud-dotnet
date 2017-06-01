@@ -96,7 +96,11 @@ namespace Google.Cloud.Spanner.Data
         public override ParameterDirection Direction
         {
             get => ParameterDirection.Input;
-            set => throw new InvalidOperationException("Spanner only supports input parameters.");
+            set
+            {
+                if (value != ParameterDirection.Input)
+                    throw new InvalidOperationException("Spanner only supports input parameters.");
+            }
         }
 
         /// <inheritdoc />
@@ -129,8 +133,7 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public SpannerDbType SpannerDbType
         {
-            get;
-            set;
+            get; set;
         }
 
         /// <inheritdoc />

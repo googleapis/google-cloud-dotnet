@@ -61,13 +61,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         private async Task<T> ExecuteAsync<T>(string sql)
         {
-            T result;
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
                 var cmd = connection.CreateSelectCommand(sql);
-                result = await cmd.ExecuteScalarAsync<T>();
+                T result = await cmd.ExecuteScalarAsync<T>();
+                return result;
             }
-            return result;
         }
 
         [Fact]
@@ -97,7 +96,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 exceptionCaught = true;
                 Debug.WriteLine("TestBadColumnName: Caught error code:" + e.ErrorCode);
-                Assert.Equal(e.ErrorCode, ErrorCode.InvalidArgument);
+                Assert.Equal(ErrorCode.InvalidArgument, e.ErrorCode);
                 Assert.False(e.IsTransientSpannerFault());
             }
 
@@ -133,12 +132,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             catch (SpannerException e)
             {
                 exceptionCaught = true;
-                Assert.Equal(e.ErrorCode, ErrorCode.NotFound);
+                Assert.Equal(ErrorCode.NotFound, e.ErrorCode);
                 Assert.False(e.IsTransientSpannerFault());
             }
 
             Assert.True(exceptionCaught);
-            Assert.Equal(rowsRead, -1);
+            Assert.Equal(-1, rowsRead);
         }
 
         [Fact]
@@ -167,12 +166,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             catch (SpannerException e)
             {
                 exceptionCaught = true;
-                Assert.Equal(e.ErrorCode, ErrorCode.InvalidArgument);
+                Assert.Equal(ErrorCode.InvalidArgument, e.ErrorCode);
                 Assert.False(e.IsTransientSpannerFault());
             }
 
             Assert.True(exceptionCaught);
-            Assert.Equal(rowsRead, 0);
+            Assert.Equal(0, rowsRead);
         }
 
         [Fact]
@@ -211,7 +210,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             string sqlQuery = "SELECT ARRAY(SELECT AS STRUCT * FROM (SELECT 'a', 1) WHERE 0 = 1)";
             IList result = await ExecuteAsync<IList>(sqlQuery);
-            Assert.Equal(result.Count, 0);
+            Assert.Equal(0, result.Count);
         }
 
         [Fact]
@@ -227,7 +226,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             double[] result =
                 await ExecuteAsync<double[]>(
                     "SELECT [IEEE_DIVIDE(1, 0), IEEE_DIVIDE(-1, 0), IEEE_DIVIDE(0, 0)]");
-            Assert.Equal(result.Length, 3);
+            Assert.Equal(3, result.Length);
             Assert.True(double.IsPositiveInfinity(result[0]));
             Assert.True(double.IsNegativeInfinity(result[1]));
             Assert.True(double.IsNaN(result[2]));
@@ -255,13 +254,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     rowsRead = 0;
                     while (await reader.ReadAsync())
                     {
-                        Assert.Equal(reader.GetString(0), "k1");
-                        Assert.Equal(reader.GetString(1), "v1");
+                        Assert.Equal("k1", reader.GetString(0));
+                        Assert.Equal("v1", reader.GetString(1));
                         rowsRead++;
                     }
                 }
             }
-            Assert.Equal(rowsRead, 1);
+            Assert.Equal(1, rowsRead);
         }
 
         [Fact]
@@ -283,7 +282,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     }
                 }
             }
-            Assert.Equal(rowsRead, 0);
+            Assert.Equal(0, rowsRead);
         }
 
         [Fact]
@@ -320,7 +319,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 exceptionCaught = true;
                 Debug.WriteLine("TestBadColumnName: Caught error code:" + e.ErrorCode);
-                Assert.Equal(e.ErrorCode, ErrorCode.InvalidArgument);
+                Assert.Equal(ErrorCode.InvalidArgument, e.ErrorCode);
                 Assert.False(e.IsTransientSpannerFault());
             }
 
@@ -347,7 +346,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     }
                 }
             }
-            Assert.Equal(rowsRead, 0);
+            Assert.Equal(0, rowsRead);
         }
 
         [Fact]
@@ -364,15 +363,15 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                               + "FROM (SELECT 'a' AS C1, 1 AS C2 UNION ALL SELECT 'b' AS C1, 2 AS C2) "
                               + "ORDER BY C1 ASC)";
             IList result = await ExecuteAsync<IList>(sqlQuery);
-            Assert.Equal(result.Count, 2);
+            Assert.Equal(2, result.Count);
             IDictionary s1 = result[0] as IDictionary;
 
-            Assert.Equal((string) s1["C1"], "a");
-            Assert.Equal((long) s1["C2"], 1);
+            Assert.Equal("a", (string) s1["C1"]);
+            Assert.Equal(1, (long) s1["C2"]);
 
             s1 = result[1] as IDictionary;
-            Assert.Equal((string) s1["C1"], "b");
-            Assert.Equal((long) s1["C2"], 2);
+            Assert.Equal("b", (string) s1["C1"]);
+            Assert.Equal(2, (long) s1["C2"]);
         }
     }
 }
