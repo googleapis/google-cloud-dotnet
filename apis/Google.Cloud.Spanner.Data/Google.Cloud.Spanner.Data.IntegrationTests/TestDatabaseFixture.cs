@@ -39,8 +39,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // not cause failures).
         // if you use a scratch database, be sure to comment out the database
         // creation and disposal methods.
-        public string DatabaseName { get; } = "scratch";
-//            "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
+        public string DatabaseName { get; } = //"scratch";
+            "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
 
         public string TestTable { get; } = "TestTable";
 
@@ -48,8 +48,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         public void Dispose()
         {
-//            _databaseAdminClient?.DropDatabase(
-//                new DatabaseName(TestProjectName, TestInstanceName, DatabaseName));
+            _databaseAdminClient?.DropDatabase(
+                new DatabaseName(TestProjectName, TestInstanceName, DatabaseName));
         }
 
         public async Task<SpannerConnection> GetTestDatabaseConnectionAsync()
@@ -64,12 +64,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             TestLogger.Install();
             await Task.Delay(1); // this line exists so the others can be commented.
-//            await CreateDatabaseAsync();
-//            await Task.WhenAll(
-//                CreateTableAsync(),
-//                CreateTypeTableAsync(),
-//                CreateTxTableAsync()).ConfigureAwait(false);
-//            await FillSampleData();
+            await CreateDatabaseAsync();
+            await Task.WhenAll(
+                CreateTableAsync(),
+                CreateTypeTableAsync(),
+                CreateTxTableAsync()).ConfigureAwait(false);
+            await FillSampleData();
         }
 
         private async Task<Database> CreateDatabaseAsync()
