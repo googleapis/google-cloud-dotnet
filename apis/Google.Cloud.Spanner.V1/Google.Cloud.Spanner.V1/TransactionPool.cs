@@ -115,6 +115,16 @@ namespace Google.Cloud.Spanner.V1
             return null;
         }
 
+        public static bool IsPreWarmedTransactionReady(this Session session)
+        {
+            SessionInfo info;
+            if (s_sessionInfoTable.TryGetValue(session, out info))
+            {
+                return info.HasActiveTransaction;
+            }
+            return false;
+        }
+
         /// <summary>
         /// Starts a pre-warm background task to create a transaction on the given session with the
         /// last used transaction options.  This method will only work if CreateTransactionAsync
