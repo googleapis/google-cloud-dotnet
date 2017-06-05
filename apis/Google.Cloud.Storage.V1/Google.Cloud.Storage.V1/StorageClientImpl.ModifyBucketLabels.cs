@@ -19,6 +19,7 @@ using System.Linq;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
+using System;
 
 namespace Google.Cloud.Storage.V1
 {
@@ -42,10 +43,14 @@ namespace Google.Cloud.Storage.V1
                 try
                 {
                     var existingLabels = bucketMetadata.Labels ?? new Dictionary<string, string>();
-                    var patchOptions = new PatchBucketOptions { IfMetagenerationMatch = bucketMetadata.Metageneration };
 
-                    // We could just supply the values that have changed, but there's no particular reason to.
-                    PatchBucket(new Bucket { Name = bucketMetadata.Name, Labels = labels }, patchOptions);
+                    var differences = GetDifferences(labels, existingLabels);
+                    // If everything's already as we want it to be, we don't need to patch.
+                    if (differences.Count != 0)
+                    {
+                        var patchOptions = new PatchBucketOptions { IfMetagenerationMatch = bucketMetadata.Metageneration };
+                        PatchBucket(new Bucket { Name = bucketMetadata.Name, Labels = differences }, patchOptions);
+                    }
 
                     var oldValues = new Dictionary<string, string>();
                     foreach (var entry in labels)
@@ -117,10 +122,14 @@ namespace Google.Cloud.Storage.V1
                 try
                 {
                     var existingLabels = bucketMetadata.Labels ?? new Dictionary<string, string>();
-                    var patchOptions = new PatchBucketOptions { IfMetagenerationMatch = bucketMetadata.Metageneration };
 
-                    // We could just supply the values that have changed, but there's no particular reason to.
-                    await PatchBucketAsync(new Bucket { Name = bucketMetadata.Name, Labels = labels }, patchOptions, cancellationToken).ConfigureAwait(false);
+                    var differences = GetDifferences(labels, existingLabels);
+                    // If everything's already as we want it to be, we don't need to patch.
+                    if (differences.Count != 0)
+                    {
+                        var patchOptions = new PatchBucketOptions { IfMetagenerationMatch = bucketMetadata.Metageneration };
+                        await PatchBucketAsync(new Bucket { Name = bucketMetadata.Name, Labels = differences }, patchOptions, cancellationToken).ConfigureAwait(false);
+                    }
 
                     var oldValues = new Dictionary<string, string>();
                     foreach (var entry in labels)
@@ -172,6 +181,21 @@ namespace Google.Cloud.Storage.V1
                     // No delay here: we're only trying to catch the case where another change is made between Get/Patch.
                 }
             }
+        }
+
+        private static IDictionary<string, string> GetDifferences(IDictionary<string, string> requested, IDictionary<string, string> existing)
+        {
+            // The handling of null values makes it trickier to do this with LINQ.
+            var result = new Dictionary<string, string>();
+            foreach (var pair in requested)
+            {
+                existing.TryGetValue(pair.Key, out string existingValue);
+                if (pair.Value != existingValue)
+                {
+                    result[pair.Key] = pair.Value;
+                }
+            }
+            return result;
         }
     }
 }
