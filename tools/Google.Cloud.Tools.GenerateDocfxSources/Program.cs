@@ -122,6 +122,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                         ["_disableContribution"] = true,
                         ["_appFooter"] = " "
                     },
+                    ["template"] = new JArray { "default", "../../docfx-template" },
                     ["overwrite"] = new JArray { "obj/snippets/*.md" },
                     ["dest"] = "site"
                 }
