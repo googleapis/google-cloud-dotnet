@@ -239,6 +239,34 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
         }
 
+        [Theory]
+        [InlineData(false)]
+        [InlineData(true)]
+        public void RemoveBucketLabel_NoLabelsBefore(bool runAsync)
+        {
+            var client = _fixture.Client;
+            var bucketName = _fixture.LabelsTestBucket;
+            client.ClearBucketLabels(bucketName);
+            var result = RunMaybeAsync(runAsync,
+                () => client.RemoveBucketLabel(bucketName, "label"),
+                () => client.RemoveBucketLabelAsync(bucketName, "label"));
+            Assert.Null(result);
+        }
+
+        [Theory]
+        [InlineData(false)]
+        [InlineData(true)]
+        public void ClearBucketLabels_NoLabelsBefore(bool runAsync)
+        {
+            var client = _fixture.Client;
+            var bucketName = _fixture.LabelsTestBucket;            
+            client.ClearBucketLabels(bucketName);
+            var result = RunMaybeAsync(runAsync,
+                () => client.ClearBucketLabels(bucketName),
+                () => client.ClearBucketLabelsAsync(bucketName));
+            Assert.Empty(result);
+        }
+
         // TODO: Move these somewhere common, if this proves a useful pattern.
         private static T RunMaybeAsync<T>(bool runAsync, Func<T> sync, Func<Task<T>> async)
             // Run the async func separately to explicitly avoid synchronization etc.
