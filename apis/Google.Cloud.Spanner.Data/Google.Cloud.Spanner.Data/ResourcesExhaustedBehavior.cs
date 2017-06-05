@@ -15,14 +15,21 @@
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
+    /// Specifies the behavior when <see cref="SpannerOptions.MaximumActiveSessions"/>
+    /// is reached.
     /// </summary>
     public enum ResourcesExhaustedBehavior
     {
         /// <summary>
+        /// The operation is blocked until a currently running operation
+        /// completes and releases its Spanner session.
         /// </summary>
         Block = 0,
 
         /// <summary>
+        /// The operation will fail with a <see cref="SpannerException"/>
+        /// with <see cref="SpannerException.ErrorCode"/> equal to
+        /// <see cref="ErrorCode.ResourceExhausted"/>
         /// </summary>
         Fail = 1
     }

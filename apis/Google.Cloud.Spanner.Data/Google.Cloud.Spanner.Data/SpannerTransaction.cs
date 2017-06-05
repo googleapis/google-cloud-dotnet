@@ -115,7 +115,7 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override void Commit()
         {
-            if (!Task.Run(CommitAsync).Wait(ConnectionPoolOptions.Instance.Timeout))
+            if (!Task.Run(CommitAsync).Wait(SpannerOptions.Instance.Timeout))
             {
                 throw new TimeoutException("The Commit did not complete in time.");
             }
@@ -139,7 +139,7 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override void Rollback()
         {
-            if (!Task.Run(RollbackAsync).Wait(ConnectionPoolOptions.Instance.Timeout))
+            if (!Task.Run(RollbackAsync).Wait(SpannerOptions.Instance.Timeout))
             {
                 throw new TimeoutException("The Rollback did not complete in time.");
             }

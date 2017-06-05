@@ -15,26 +15,32 @@
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
+    /// Specifies the level of detail for Spanner client log messages.
     /// </summary>
     public enum LogLevel
     {
         /// <summary>
+        /// Debug and higher level messages will be logged.
         /// </summary>
         Debug = V1.Logging.LogLevel.Debug,
 
         /// <summary>
+        /// Info and higher level messages will be logged.
         /// </summary>
         Info = V1.Logging.LogLevel.Info,
 
         /// <summary>
+        /// Warn and higher level messages will be logged.
         /// </summary>
         Warn = V1.Logging.LogLevel.Warn,
 
         /// <summary>
+        /// Error and higher level messages will be logged.
         /// </summary>
         Error = V1.Logging.LogLevel.Error,
 
         /// <summary>
+        /// Logging is turned off.
         /// </summary>
         None = V1.Logging.LogLevel.None
     }

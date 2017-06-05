@@ -99,7 +99,7 @@ namespace Google.Cloud.Spanner.Data
         /// Provides options to customize how connections to Spanner are created
         /// and maintained.
         /// </summary>
-        public static ConnectionPoolOptions ConnectionPoolOptions => ConnectionPoolOptions.Instance;
+        public static SpannerOptions SpannerOptions => SpannerOptions.Instance;
 
         /// <inheritdoc />
         public override string ConnectionString
@@ -320,7 +320,7 @@ namespace Google.Cloud.Spanner.Data
                 return;
             }
 
-            Task.Run(OpenAsync).Wait(ConnectionPoolOptions.Instance.Timeout);
+            Task.Run(OpenAsync).Wait(SpannerOptions.Instance.Timeout);
         }
 
         /// <inheritdoc />
@@ -648,7 +648,7 @@ namespace Google.Cloud.Spanner.Data
                 Sql = "SELECT 1"
             };
 
-            var task = Task.Delay(ConnectionPoolOptions.KeepAliveInterval, cancellationToken);
+            var task = Task.Delay(SpannerOptions.KeepAliveInterval, cancellationToken);
             var loopTask = task.ContinueWith(
                 async t =>
                 {
