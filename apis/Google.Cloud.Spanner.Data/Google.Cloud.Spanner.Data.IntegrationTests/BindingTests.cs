@@ -65,7 +65,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 var valueReadAsArray = valueRead as Array;
                 Assert.NotNull(valueReadAsArray);
-                for (var i = 0; i < valueAsArray.Length; i++)
+                Assert.Equal(valueAsArray.Length, valueReadAsArray.Length);
+                for (int i = 0; i < valueAsArray.Length; i++)
                 {
                     // ReSharper disable once PossibleNullReferenceException
                     Assert.Equal(valueAsArray.GetValue(i), valueReadAsArray.GetValue(i));

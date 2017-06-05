@@ -28,12 +28,8 @@ namespace Google.Cloud.Spanner.V1
             {
                 return await task.ConfigureAwait(false);
             }
-            catch (RpcException ex)
+            catch (RpcException ex) when (ex.CheckForSessionExpiredError(sessionFunc))
             {
-                if (ex.IsSessionExpiredError())
-                {
-                    SessionPool.MarkSessionExpired(sessionFunc());
-                }
                 throw;
             }
         }
@@ -44,19 +40,25 @@ namespace Google.Cloud.Spanner.V1
             {
                 await task.ConfigureAwait(false);
             }
-            catch (RpcException ex)
+            catch (RpcException ex) when (ex.CheckForSessionExpiredError(sessionFunc))
             {
-                if (ex.IsSessionExpiredError())
-                {
-                    SessionPool.MarkSessionExpired(sessionFunc());
-                }
                 throw;
             }
         }
 
+        internal static bool CheckForSessionExpiredError(this RpcException rpcException, Func<Session> sessionFunc)
+        {
+            if (rpcException.IsSessionExpiredError())
+            {
+                SessionPool.MarkSessionExpired(sessionFunc());
+            }
+            return false;
+        }
+
         internal static bool IsSessionExpiredError(this RpcException rpcException)
         {
-            return rpcException!= null && rpcException.Status.StatusCode == StatusCode.NotFound && rpcException.Message.Contains("Session not found");
+            return rpcException != null && rpcException.Status.StatusCode == StatusCode.NotFound &&
+                   rpcException.Message.Contains("Session not found");
         }
     }
 }

@@ -28,6 +28,15 @@ using Google.Protobuf.WellKnownTypes;
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
+    /// Represents a SQL query or Spanner command to execute against
+    /// a Spanner database.
+    /// If the command is a SQL query, then <see cref="SpannerCommand.CommandText"/>
+    /// contains the entire SQL statement.
+    /// 
+    /// If the command is an update, insert or delete command, then <see cref="SpannerCommand.CommandText"/>
+    /// is simply "[operation] [spanner_table]" such as "UPDATE MYTABLE" with the parameter
+    /// collection containing <see cref="SpannerParameter"/> instances whose name matches a column
+    /// in the target table.
     /// </summary>
     public sealed class SpannerCommand : DbCommand
 #if NET45 || NET451
@@ -39,11 +48,12 @@ namespace Google.Cloud.Spanner.Data
         private SpannerTransaction _transaction;
 
         /// <summary>
+        /// Initializes a new instance of <see cref="SpannerCommand"/>
         /// </summary>
         public SpannerCommand()
         {
             DesignTimeVisible = true;
-            _commandTimeout = (int) ConnectionPoolOptions.Instance.Timeout.TotalSeconds;
+            _commandTimeout = (int) SpannerOptions.Instance.Timeout.TotalSeconds;
         }
 
         private SpannerCommand(
@@ -57,11 +67,19 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// Initializes a new instance of <see cref="SpannerCommand"/>
         /// </summary>
-        /// <param name="commandTextBuilder"></param>
-        /// <param name="connection"></param>
-        /// <param name="transaction"></param>
-        /// <param name="parameters"></param>
+        /// <param name="commandTextBuilder">The <see cref="SpannerCommandTextBuilder"/>
+        /// that configures the text of this command.</param>
+        /// <param name="connection">The <see cref="SpannerConnection"/> that is
+        /// associated with this <see cref="SpannerCommand"/></param>
+        /// <param name="transaction">An optional <see cref="SpannerTransaction"/>
+        /// created through <see>
+        /// <cref>SpannerConnection.BeginTransactionAsync</cref>
+        /// </see>
+        /// </param>
+        /// <param name="parameters">An optional collection of <see cref="SpannerParameter"/>
+        /// that is used in the command.</param>
         public SpannerCommand(
             SpannerCommandTextBuilder commandTextBuilder,
             SpannerConnection connection,
@@ -76,11 +94,19 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// Initializes a new instance of <see cref="SpannerCommand"/>
         /// </summary>
-        /// <param name="commandText"></param>
-        /// <param name="connection"></param>
-        /// <param name="transaction"></param>
-        /// <param name="parameters"></param>
+        /// <param name="commandText">If this command is a SQL Query, then commandText is
+        /// the SQL statement.  If its an update, insert or delete command, then this text
+        /// is "[operation] [table]" such as "UPDATE MYTABLE"</param>
+        /// <param name="connection">The <see cref="SpannerConnection"/> that is
+        /// associated with this <see cref="SpannerCommand"/></param>
+        /// <param name="transaction">An optional <see cref="SpannerTransaction"/>
+        /// created through <see>
+        /// <cref>SpannerConnection.BeginTransactionAsync</cref>
+        /// </see></param>
+        /// <param name="parameters">An optional collection of <see cref="SpannerParameter"/>
+        /// that is used in the command.</param>
         public SpannerCommand(
             string commandText,
             SpannerConnection connection,
@@ -91,7 +117,7 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override string CommandText
         {
-            get => SpannerCommandTextBuilder?.ToString() ?? string.Empty;
+            get => SpannerCommandTextBuilder?.ToString() ?? "";
             set => SpannerCommandTextBuilder = SpannerCommandTextBuilder.FromCommandText(value);
         }
 
@@ -119,10 +145,12 @@ namespace Google.Cloud.Spanner.Data
         public override bool DesignTimeVisible { get; set; }
 
         /// <summary>
+        /// The parameters of the SQL statement or command.
         /// </summary>
         public new SpannerParameterCollection Parameters { get; }
 
         /// <summary>
+        /// The connection to the data source.
         /// </summary>
         public SpannerConnection SpannerConnection { get; set; }
 
@@ -159,11 +187,10 @@ namespace Google.Cloud.Spanner.Data
             set => _transaction = (SpannerTransaction) value;
         }
 
-        /// <summary>
-        /// </summary>
-        internal SpannerCommandTextBuilder SpannerCommandTextBuilder { get; set; }
+        private SpannerCommandTextBuilder SpannerCommandTextBuilder { get; set; }
 
         /// <summary>
+        /// Returns a copy of this <see cref="SpannerCommand"/>
         /// </summary>
         /// <returns></returns>
         public object Clone() => new SpannerCommand(SpannerConnection, _transaction, Parameters)
@@ -184,6 +211,8 @@ namespace Google.Cloud.Spanner.Data
             .ResultWithUnwrappedExceptions();
 
         /// <summary>
+        /// Executes the command against the <see cref="SpannerConnection"/>, and returns a
+        /// <see cref="SpannerDataReader"/>.
         /// </summary>
         /// <returns></returns>
         public async Task<DbDataReader> ExecuteReaderAsync(
@@ -308,6 +337,8 @@ namespace Google.Cloud.Spanner.Data
             .ResultWithUnwrappedExceptions();
 
         /// <summary>
+        /// Executes the query and returns the first column of the first row in the result set returned by the query.
+        /// All other columns and rows are ignored.  The return value is converted to type T if possible.
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <typeparam name="T"></typeparam>
@@ -407,7 +438,8 @@ namespace Google.Cloud.Spanner.Data
             var tx = singleUseTransaction ?? GetSpannerTransaction();
             // Execute the command.
             var resultSet = await tx.ExecuteQueryAsync(request, cancellationToken)
-                .WithTimeout(TimeSpan.FromSeconds(CommandTimeout), "The timeout of the SpannerCommand was exceeded.");
+                .WithTimeout(TimeSpan.FromSeconds(CommandTimeout), "The timeout of the SpannerCommand was exceeded.")
+                .ConfigureAwait(false);
 
             if ((behavior & CommandBehavior.CloseConnection) == CommandBehavior.CloseConnection)
             {
