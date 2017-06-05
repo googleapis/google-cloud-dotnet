@@ -17,7 +17,9 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Google.Cloud.Spanner.V1.Logging;
 using Xunit;
+using Xunit.Abstractions;
 
 #endregion
 
@@ -25,7 +27,15 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     public class TransactionTests : IClassFixture<TestDatabaseFixture>
     {
-        public TransactionTests(TestDatabaseFixture testFixture) => _testFixture = testFixture;
+        public TransactionTests(TestDatabaseFixture testFixture, ITestOutputHelper outputHelper)
+        {
+            _testFixture = testFixture;
+            // Uncomment the lines below to enable detailed logging
+//                        SpannerConnection.ConnectionPoolOptions.LogLevel = LogLevel.Debug;
+//                        SpannerConnection.ConnectionPoolOptions.LogPerformanceTraces = true;
+//                        SpannerConnection.ConnectionPoolOptions.PerformanceTraceLogInterval = 100000;
+            TestLogger.TestOutputHelper = outputHelper;
+        }
 
         private readonly TestDatabaseFixture _testFixture;
         private string _key;
@@ -36,6 +46,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             public string Value { get; set; }
             public DateTime Timestamp { get; set; }
         }
+
+        private void LogPerformanceDataBeforeTest() => Logger.LogPerformanceData();
+        private void LogPerformanceDataAfterTest() => Logger.LogPerformanceData();
 
         private async Task WriteSampleRowsAsync()
         {
@@ -159,6 +172,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public async Task AbortedThrownCorrectly()
         {
             await WriteSampleRowsAsync();
+            LogPerformanceDataBeforeTest();
 
             // connection 1 starts a transaction and reads
             // connection 2 starts a transaction and reads the same row
@@ -239,12 +253,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
 
             Assert.True(thrownException?.IsRetryable ?? false);
+            LogPerformanceDataAfterTest();
         }
 
         [Fact]
         public async Task MultiWrite()
         {
             await WriteSampleRowsAsync();
+            LogPerformanceDataBeforeTest();
             //To ensure good concurrency (ie that the transactions are not serial)
             //we'll preopen 5 transactions to ensure they have sessions and then start the increment
             //process
@@ -275,12 +291,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 connections[i].Dispose();
             }
+            LogPerformanceDataAfterTest();
         }
 
         [Fact]
         public async Task ReadExact()
         {
             await WriteSampleRowsAsync();
+            LogPerformanceDataBeforeTest();
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
                 await connection.OpenAsync();
@@ -304,12 +322,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     }
                 }
             }
+            LogPerformanceDataAfterTest();
         }
 
         [Fact]
         public async Task ReadExactSingle()
         {
             await WriteSampleRowsAsync();
+            LogPerformanceDataBeforeTest();
             await Task.Delay(6);
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
@@ -325,6 +345,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     }
                 }
             }
+            LogPerformanceDataAfterTest();
         }
 
         [Fact]
@@ -333,6 +354,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             ArgumentException caughtException = null;
 
             await WriteSampleRowsAsync();
+            LogPerformanceDataBeforeTest();
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
                 await connection.OpenAsync();
@@ -360,12 +382,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
             Assert.NotNull(caughtException);
+            LogPerformanceDataAfterTest();
         }
 
         [Fact]
         public async Task ReadStaleExact()
         {
             await WriteSampleRowsAsync();
+            LogPerformanceDataBeforeTest();
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
                 await connection.OpenAsync();
@@ -386,12 +410,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     }
                 }
             }
+            LogPerformanceDataAfterTest();
         }
 
         [Fact]
         public async Task ReadStaleExactSingle()
         {
             await WriteSampleRowsAsync();
+            LogPerformanceDataBeforeTest();
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
                 await connection.OpenAsync();
@@ -404,6 +430,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     Assert.False(await reader.ReadAsync(), "We should have read no rows at this time!");
                 }
             }
+            LogPerformanceDataAfterTest();
         }
 
         [Fact]
@@ -412,6 +439,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             ArgumentException caughtException = null;
 
             await WriteSampleRowsAsync();
+            LogPerformanceDataBeforeTest();
             await Task.Delay(6);
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
@@ -440,12 +468,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
             Assert.NotNull(caughtException);
+            LogPerformanceDataAfterTest();
         }
 
         [Fact]
         public async Task ReadStrong()
         {
             await WriteSampleRowsAsync();
+            LogPerformanceDataBeforeTest();
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
                 await connection.OpenAsync();
@@ -466,12 +496,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     }
                 }
             }
+            LogPerformanceDataAfterTest();
         }
 
         [Fact]
         public async Task ReadStrongSingle()
         {
             await WriteSampleRowsAsync();
+            LogPerformanceDataBeforeTest();
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
                 await connection.OpenAsync();
@@ -486,6 +518,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     }
                 }
             }
+            LogPerformanceDataAfterTest();
         }
     }
 }

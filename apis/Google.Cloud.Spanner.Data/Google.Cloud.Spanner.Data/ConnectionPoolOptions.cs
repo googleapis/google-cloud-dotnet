@@ -59,8 +59,11 @@ namespace Google.Cloud.Spanner.Data
                 {
                     return (LogLevel) underlyingLevel;
                 }
-                // ReSharper disable once NotResolvedInText
-                throw new ArgumentOutOfRangeException("LogLevel");
+                else
+                {
+                    // ReSharper disable once NotResolvedInText
+                    throw new ArgumentOutOfRangeException("LogLevel");
+                }
             }
             set
             {
@@ -69,8 +72,11 @@ namespace Google.Cloud.Spanner.Data
                 {
                     Logger.LogLevel = (V1.Logging.LogLevel) underlyingLevel;
                 }
-                // ReSharper disable once NotResolvedInText
-                throw new ArgumentOutOfRangeException("LogLevel");
+                else
+                {
+                    // ReSharper disable once NotResolvedInText
+                    throw new ArgumentOutOfRangeException("LogLevel");
+                }
             }
         }
 

@@ -68,7 +68,7 @@ namespace Google.Cloud.Spanner.V1 {
         /// </summary>
         public Session Session => _session;
 
-        void IDisposable.Dispose() {
+        public void Dispose() {
             Close();
             GC.SuppressFinalize(this);
         }

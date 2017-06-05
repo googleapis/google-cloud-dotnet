@@ -79,6 +79,18 @@ namespace Google.Cloud.Spanner.V1.Logging
         /// </summary>
         public static int PerformanceTraceLogInterval { get; set; } = 30000;
 
+        public static void LogPerformanceData()
+        {
+            if (LogPerformanceTraces)
+            {
+                Instance.LogPerformanceDataImpl();
+            }
+        }
+
+        protected virtual void LogPerformanceDataImpl()
+        {
+        }
+
         /// <summary>
         /// 
         /// </summary>
