@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -100,12 +101,18 @@ namespace Google.Cloud.Logging.Log4Net
             public string Value { get; set; }
         }
 
+        private bool _disableResourceTypeDetection = false;
         /// <summary>
         /// If set, disables resource-type detection based on platform,
         /// so ResourceType will default to "global" if not manually set. 
         /// </summary>
-        public bool DisableResourceTypeDetection { get; set; } = false;
+        public bool DisableResourceTypeDetection
+        {
+            get => _disableResourceTypeDetection;
+            set => _disableResourceTypeDetection = ThrowIfActivated(value, nameof(DisableResourceTypeDetection));
+        }
 
+        private string _resourceType = null;
         /// <summary>
         /// The resource type of log entries.
         /// Default value depends on the detected platform. See the remarks section for details.
@@ -126,36 +133,53 @@ namespace Google.Cloud.Logging.Log4Net
         /// If <see cref="DisableResourceTypeDetection"/> is <c>true</c>, then this platform detection
         /// is not performed, and this ResourceType defaults to "global" if not set.
         /// </remarks>
-        public string ResourceType { get; set; } = null;
+        public string ResourceType
+        {
+            get => _resourceType;
+            set => _resourceType = ThrowIfActivated(value, nameof(ResourceType));
+        }
 
         /// <summary>
         /// Specify labels for the resource type;
         /// only used if platform detection is disabled or detects an unknown platform.
         /// </summary>
         /// <param name="label">The resource type label.</param>
-        public void AddResourceLabel(Label label)
-        {
-            _resourceLabels.Add(label);
-        }
+        public void AddResourceLabel(Label label) => _resourceLabels.Add(ThrowIfActivated(label, nameof(AddResourceLabel)));
 
+        private string _projectId;
         /// <summary>
         /// The project ID for all log entries.
         /// Must be configured in not executing on Google Compute Engine or Google App Engine.
         /// If running on GCE or GAE, the ProjectId will be automatically detected if not set.
         /// </summary>
-        public string ProjectId { get; set; }
+        public string ProjectId
+        {
+            get => _projectId;
+            set => _projectId = ThrowIfActivated(value, nameof(ProjectId));
+        }
 
+        private string _logId;
         /// <summary>
         /// LogID for all log entries. Must be configured.
         /// </summary>
-        public string LogId { get; set; }
+        public string LogId
+        {
+            get => _logId;
+            set => _logId = ThrowIfActivated(value, nameof(LogId));
+        }
 
+        private int _maxUploadBatchSize = 100;
         /// <summary>
         /// The maximum batch size when uploading to Google Cloud Logging.
         /// Default value is 100.
         /// </summary>
-        public int MaxUploadBatchSize { get; set; } = 100;
+        public int MaxUploadBatchSize
+        {
+            get => _maxUploadBatchSize;
+            set => _maxUploadBatchSize = ThrowIfActivated(value, nameof(MaxUploadBatchSize));
+        }
 
+        private LocalQueueType _localQueueType = LocalQueueType.Memory;
         /// <summary>
         /// The local queuing mechanism, used before the log is sent to Google Logging.
         /// Defaults to <see cref="LocalQueueType.Memory"/>.
@@ -177,62 +201,96 @@ namespace Google.Cloud.Logging.Log4Net
         /// </list>
         /// </para>
         /// </remarks>
-        public LocalQueueType LocalQueueType { get; set; } = LocalQueueType.Memory;
+        public LocalQueueType LocalQueueType
+        {
+            get => _localQueueType;
+            set => _localQueueType = ThrowIfActivated(value, nameof(LocalQueueType));
+        }
 
+        private long _maxMemorySize = 0;
         /// <summary>
         /// The maximum bytes of memory used by in-memory logging queue.
         /// Default value is 0 (unconfigured).
         /// Not used for file-based queuing.
         /// </summary>
-        public long MaxMemorySize { get; set; } = 0;
+        public long MaxMemorySize
+        {
+            get => _maxMemorySize;
+            set => _maxMemorySize = ThrowIfActivated(value, nameof(MaxMemorySize));
+        }
 
+        private int _maxMemoryCount = 1000;
         /// <summary>
         /// The maximum count of log entries allowed in the in-memory logging queue.
         /// Default value is 1,000
         /// Not used for file-based queueing.
         /// </summary>
-        public int MaxMemoryCount { get; set; } = 1000;
+        public int MaxMemoryCount
+        {
+            get => _maxMemoryCount;
+            set => _maxMemoryCount = ThrowIfActivated(value, nameof(MaxMemoryCount));
+        }
 
         /// <summary>
         /// Specify custom labels for all log entries.
         /// </summary>
         /// <param name="label">The custom label.</param>
-        public void AddCustomLabel(Label label)
-        {
-            _customLabels.Add(label);
-        }
+        public void AddCustomLabel(Label label) => _customLabels.Add(ThrowIfActivated(label, nameof(AddCustomLabel)));
 
         /// <summary>
         /// Specify additional metadata to include in all log entries.
         /// </summary>
         /// <param name="enable">The additional metadata to enable.</param>
-        public void AddWithMetaData(MetaDataType enable)
-        {
-            _withMetaData.Add(enable);
-        }
+        public void AddWithMetaData(MetaDataType enable) => _withMetaData.Add(ThrowIfActivated(enable, nameof(AddWithMetaData)));
 
+        private int _serverErrorBackoffDelaySeconds = 1;
         /// <summary>
         /// On receiving a server error during log upload, the initial delay in seconds before retry.
         /// Defaults value is 1 second.
         /// </summary>
-        public int ServerErrorBackoffDelaySeconds { get; set; } = 1;
+        public int ServerErrorBackoffDelaySeconds
+        {
+            get => _serverErrorBackoffDelaySeconds;
+            set => _serverErrorBackoffDelaySeconds = ThrowIfActivated(value, nameof(ServerErrorBackoffDelaySeconds));
+        }
 
+        private double _serverErrorBackoffMultiplier = 1.5;
         /// <summary>
         /// The multiplier applied to the retry delay when receiving multiple consecutive server errors during log upload.
         /// Default value is 1.5
         /// </summary>
-        public double ServerErrorBackoffMultiplier { get; set; } = 1.5;
+        public double ServerErrorBackoffMultiplier
+        {
+            get => _serverErrorBackoffMultiplier;
+            set => _serverErrorBackoffMultiplier = ThrowIfActivated(value, nameof(ServerErrorBackoffMultiplier));
+        }
 
+        private int _serverErrorBackoffMaxDelaySeconds = 60;
         /// <summary>
         /// The maxmimum retry delay when receiving multiple consecutive server errors during log upload.
         /// Default value is 60 seconds.
         /// </summary>
-        public int ServerErrorBackoffMaxDelaySeconds { get; set; } = 60;
+        public int ServerErrorBackoffMaxDelaySeconds
+        {
+            get => _serverErrorBackoffMaxDelaySeconds;
+            set => _serverErrorBackoffMaxDelaySeconds = ThrowIfActivated(value, nameof(ServerErrorBackoffMaxDelaySeconds));
+        }
 
+        private int _disposeTimeoutSeconds = 30;
         /// <summary>
         /// The maximum time the <c>Dispose()</c> call of <see cref="GoogleStackdriverAppender"/> may take. 
         /// Default value is 30 seconds.
         /// </summary>
-        public int DisposeTimeoutSeconds { get; set; } = 30;
+        public int DisposeTimeoutSeconds
+        {
+            get => _disposeTimeoutSeconds;
+            set => _disposeTimeoutSeconds = ThrowIfActivated(value, nameof(DisposeTimeoutSeconds));
+        }
+
+        private T ThrowIfActivated<T>(T value, string name)
+        {
+            GaxPreconditions.CheckState(!_isActivated, "Appender already activated; cannot modify '{0}'", name);
+            return value;
+        }
     }
 }
