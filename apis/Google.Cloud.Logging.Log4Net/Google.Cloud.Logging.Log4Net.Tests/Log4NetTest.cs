@@ -35,18 +35,10 @@ namespace Google.Cloud.Logging.Log4Net.Tests
 {
     public class Log4NetTest
     {
-        // At the top of the file to minimize line number changes.
-        [MethodImpl(MethodImplOptions.NoInlining)]
-        private void LogInfo(IEnumerable<string> messages)
-        {
-            ILog log = LogManager.GetLogger(GetType().GetTypeInfo().Assembly, "testlogger");
-            foreach (string message in messages)
-            {
-                log.Info(message);
-            }
-        }
-
-        private void LogInfo(params string[] messages) => LogInfo((IEnumerable<string>)messages);
+        // The line that calls log.Info in the LogInfo method
+        private static int s_logInfoLine;
+        // Helper method to populate s_logInfoLine...
+        private static int GetCurrentLineNumber([CallerLineNumber] int line = 0) => line;
 
         private static readonly TimeSpan s_testTimeout = TimeSpan.FromSeconds(3);
         private static readonly string s_lostMsg = GoogleStackdriverAppender.s_logsLostWarningMessage;
@@ -86,6 +78,19 @@ namespace Google.Cloud.Logging.Log4Net.Tests
         private class NoDelayScheduler : IScheduler
         {
             public Task Delay(TimeSpan delay, CancellationToken cancellationToken) => Task.FromResult(0);
+        }
+
+        private void LogInfo(params string[] messages) => LogInfo((IEnumerable<string>)messages);
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private void LogInfo(IEnumerable<string> messages)
+        {
+            ILog log = LogManager.GetLogger(GetType().GetTypeInfo().Assembly, "testlogger");
+            foreach (string message in messages)
+            {
+                s_logInfoLine = GetCurrentLineNumber() + 1;
+                log.Info(message);
+            }
         }
 
         private async Task RunTest(
@@ -295,8 +300,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             {
                 Assert.True(string.IsNullOrEmpty(entry0.SourceLocation.File) || entry0.SourceLocation.File.EndsWith("Log4NetTest.cs"),
                 $"Actual 'entry0.SourceLocation.File' = '{entry0.SourceLocation.File}'");
-                // Line 44 on dev machine, line 42 on AppVeyor. Don't ask, I don't understand.
-                Assert.True(entry0.SourceLocation.Line == 0L || entry0.SourceLocation.Line == 45L || entry0.SourceLocation.Line == 43L,
+                Assert.True(entry0.SourceLocation.Line == 0L || entry0.SourceLocation.Line == s_logInfoLine,
                     $"Actual 'entry0.SourceLocation.Line' = '{entry0.SourceLocation.Line}'"); // This may change when this file is edited ;)
                 Assert.Matches(@"\[Google\.Cloud\.Logging\.Log4Net\.Tests\.Log4NetTest, Google\.Cloud\.Logging\.Log4Net\.Tests, .*]\.LogInfo", entry0.SourceLocation.Function);
             }
