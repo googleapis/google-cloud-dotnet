@@ -359,11 +359,13 @@ namespace Google.Cloud.Spanner.Data
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
-
+            }
             if (typeof(IDictionary).IsAssignableFrom(targetClrType))
             {
                 if (targetClrType == typeof(IDictionary))
+                {
                     targetClrType = typeof(Hashtable);
+                }
                 //a bit of recursion here...
                 IDictionary dictionary = (IDictionary)Activator.CreateInstance(targetClrType);
                 switch (wireValue.KindCase)
