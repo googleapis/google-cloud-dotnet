@@ -67,7 +67,10 @@ namespace Google.Cloud.Spanner.Data
         public override int Add(object value)
         {
             if (value == null)
+            {
                 throw new ArgumentNullException(nameof(value));
+            }
+
             _innerList.Add((SpannerParameter) value);
             return _innerList.Count - 1;
         }
@@ -85,10 +88,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <inheritdoc />
-        public override bool Contains(object value)
-        {
-            return _innerList.Contains(value as SpannerParameter);
-        }
+        public override bool Contains(object value) => _innerList.Contains(value as SpannerParameter);
 
         /// <inheritdoc />
         public override bool Contains(string value)
@@ -99,11 +99,14 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override void CopyTo(Array array, int index)
         {
-            if (array == null) {
+            if (array == null)
+            {
                 throw new ArgumentNullException(nameof(array));
             }
-            if (array.Length < _innerList.Count + index) {
-                throw new ArgumentOutOfRangeException(nameof(array), "There is not enough space in the array to copy values.");
+            if (array.Length < _innerList.Count + index)
+            {
+                throw new ArgumentOutOfRangeException(
+                    nameof(array), "There is not enough space in the array to copy values.");
             }
             foreach (var item in _innerList)
             {
@@ -113,16 +116,10 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <inheritdoc />
-        public override IEnumerator GetEnumerator()
-        {
-            return _innerList.GetEnumerator();
-        }
+        public override IEnumerator GetEnumerator() => _innerList.GetEnumerator();
 
         /// <inheritdoc />
-        public override int IndexOf(object value)
-        {
-            return _innerList.IndexOf(value as SpannerParameter);
-        }
+        public override int IndexOf(object value) => _innerList.IndexOf(value as SpannerParameter);
 
         /// <inheritdoc />
         public override int IndexOf(string parameterName)
@@ -155,17 +152,17 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <inheritdoc />
-        protected override DbParameter GetParameter(int index)
-        {
-            return _innerList[index];
-        }
+        protected override DbParameter GetParameter(int index) => _innerList[index];
 
         /// <inheritdoc />
         protected override DbParameter GetParameter(string parameterName)
         {
-            var index = IndexOf(parameterName);
+            int index = IndexOf(parameterName);
             if (index == -1)
+            {
                 return null;
+            }
+
             return _innerList[index];
         }
 
@@ -178,14 +175,20 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         protected override void SetParameter(string parameterName, DbParameter value)
         {
-            var index = IndexOf(parameterName);
+            int index = IndexOf(parameterName);
             if (index == -1)
+            {
                 _innerList.Add((SpannerParameter) value);
+            }
             else
+            {
                 _innerList[index] = (SpannerParameter) value;
+            }
         }
 
-        internal void FillSpannerInternalValues(MapField<string, Value> valueDictionary, MapField<string, V1.Type> requestParamTypes)
+        internal void FillSpannerInternalValues(
+            MapField<string, Value> valueDictionary,
+            MapField<string, V1.Type> requestParamTypes)
         {
             FillSpannerInternalValues(valueDictionary);
             FillSpannerInternalTypes(requestParamTypes);
@@ -195,7 +198,8 @@ namespace Google.Cloud.Spanner.Data
         {
             foreach (var parameter in _innerList)
             {
-                valueDictionary[parameter.ParameterName] = ValueConversion.ToValue(parameter.Value, parameter.SpannerDbType);
+                valueDictionary[parameter.ParameterName] =
+                    ValueConversion.ToValue(parameter.Value, parameter.SpannerDbType);
             }
         }
 
@@ -207,12 +211,11 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-#if NET45
-        // It's odd that these are required, but it looks like it's due to a discrepancy
-        // between the reference assemblies and real assemblies. See
-        // https://stackoverflow.com/questions/44197176 for details.
-        // Fortunately the real implementations all just return false too.
-        /// <inheritdoc />
+#if NET45 // It's odd that these are required, but it looks like it's due to a discrepancy
+// between the reference assemblies and real assemblies. See
+// https://stackoverflow.com/questions/44197176 for details.
+// Fortunately the real implementations all just return false too.
+/// <inheritdoc />
         public override bool IsFixedSize => false;
         /// <inheritdoc />
         public override bool IsSynchronized => false;

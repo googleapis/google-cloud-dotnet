@@ -24,35 +24,23 @@ namespace Google.Cloud.Spanner.Data
         /// The default SpannerProviderFactory instance.
         /// This public static field is required for the providerfactory to work properly.
         /// </summary>
+        // ReSharper disable once InconsistentNaming
         public static readonly SpannerProviderFactory Instance = new SpannerProviderFactory();
 
-        private SpannerProviderFactory()
-        {
-        }
+        private SpannerProviderFactory() { }
 
         /// <inheritdoc />
-        public override DbCommand CreateCommand()
-        {
-            return new SpannerCommand();
-        }
+        public override DbCommand CreateCommand() => new SpannerCommand();
 
         /// <inheritdoc />
-        public override DbConnection CreateConnection()
-        {
-            return new SpannerConnection();
-        }
+        public override DbConnection CreateConnection() => new SpannerConnection();
 
         /// <inheritdoc />
-        public override DbConnectionStringBuilder CreateConnectionStringBuilder()
-        {
-            return new SpannerConnectionStringBuilder();
-        }
+        public override DbConnectionStringBuilder CreateConnectionStringBuilder() =>
+            new SpannerConnectionStringBuilder();
 
         /// <inheritdoc />
-        public override DbParameter CreateParameter()
-        {
-            return new SpannerParameter();
-        }
+        public override DbParameter CreateParameter() => new SpannerParameter();
 
 #if NET45 || NET451
 

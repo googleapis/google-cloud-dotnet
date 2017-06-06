@@ -34,36 +34,6 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// </summary>
-        /// <param name="commandText"></param>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <exception cref="InvalidOperationException"></exception>
-        public SpannerCommandTextBuilder(string commandText)
-        {
-            GaxPreconditions.CheckNotNullOrEmpty(commandText, nameof(commandText));
-            var commandSections = commandText.Split(' ');
-            if (commandSections.Length < 2)
-                throw new InvalidOperationException($"{commandText} is not a recognized Spanner command.");
-            var newBuilder = new SpannerCommandTextBuilder();
-            if (!TryParseCommand(this, DeleteCommand, SpannerCommandType.Delete, commandSections)
-                && !TryParseCommand(this, UpdateCommand, SpannerCommandType.Update, commandSections)
-                && !TryParseCommand(this, InsertCommand, SpannerCommandType.Insert, commandSections)
-                && !TryParseCommand(this, InsertUpdateCommand, SpannerCommandType.InsertOrUpdate, commandSections))
-            {
-                if (!commandSections[0].ToUpper().StartsWith(SelectCommand))
-                    throw new InvalidOperationException($"{commandText} is not a recognized Spanner command.");
-                newBuilder.CommandText = commandText;
-                newBuilder.SpannerCommandType = SpannerCommandType.Select;
-            }
-        }
-
-        /// <summary>
-        /// </summary>
-        private SpannerCommandTextBuilder()
-        {
-        }
-
-        /// <summary>
-        /// </summary>
         public string CommandText { get; private set; }
 
         /// <summary>
@@ -74,7 +44,7 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public string TargetTable
         {
-            get { return _targetTable; }
+            get => _targetTable;
             private set
             {
                 ValidateTable(value);
@@ -84,12 +54,47 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// </summary>
+        /// <param name="commandText"></param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="InvalidOperationException"></exception>
+        public SpannerCommandTextBuilder(string commandText)
+        {
+            GaxPreconditions.CheckNotNullOrEmpty(commandText, nameof(commandText));
+            var commandSections = commandText.Split(' ');
+            if (commandSections.Length < 2)
+            {
+                throw new InvalidOperationException($"{commandText} is not a recognized Spanner command.");
+            }
+
+            var newBuilder = new SpannerCommandTextBuilder();
+            if (!TryParseCommand(this, DeleteCommand, SpannerCommandType.Delete, commandSections)
+                && !TryParseCommand(this, UpdateCommand, SpannerCommandType.Update, commandSections)
+                && !TryParseCommand(this, InsertCommand, SpannerCommandType.Insert, commandSections)
+                && !TryParseCommand(this, InsertUpdateCommand, SpannerCommandType.InsertOrUpdate, commandSections))
+            {
+                if (!commandSections[0].ToUpper().StartsWith(SelectCommand))
+                {
+                    throw new InvalidOperationException($"{commandText} is not a recognized Spanner command.");
+                }
+
+                newBuilder.CommandText = commandText;
+                newBuilder.SpannerCommandType = SpannerCommandType.Select;
+            }
+        }
+
+        /// <summary>
+        /// </summary>
+        private SpannerCommandTextBuilder() { }
+
+        /// <summary>
+        /// </summary>
         /// <param name="table"></param>
         /// <returns></returns>
         public static SpannerCommandTextBuilder CreateDeleteTextBuilder(string table)
         {
             ValidateTable(table);
-            return new SpannerCommandTextBuilder {
+            return new SpannerCommandTextBuilder
+            {
                 SpannerCommandType = SpannerCommandType.Delete,
                 TargetTable = table,
                 CommandText = $"{DeleteCommand} {table}"
@@ -103,7 +108,8 @@ namespace Google.Cloud.Spanner.Data
         public static SpannerCommandTextBuilder CreateInsertOrUpdateTextBuilder(string table)
         {
             ValidateTable(table);
-            return new SpannerCommandTextBuilder {
+            return new SpannerCommandTextBuilder
+            {
                 SpannerCommandType = SpannerCommandType.InsertOrUpdate,
                 TargetTable = table,
                 CommandText = $"{InsertUpdateCommand} {table}"
@@ -117,7 +123,8 @@ namespace Google.Cloud.Spanner.Data
         public static SpannerCommandTextBuilder CreateInsertTextBuilder(string table)
         {
             ValidateTable(table);
-            return new SpannerCommandTextBuilder {
+            return new SpannerCommandTextBuilder
+            {
                 SpannerCommandType = SpannerCommandType.Insert,
                 TargetTable = table,
                 CommandText = $"{InsertCommand} {table}"
@@ -128,13 +135,12 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="sqlQuery"></param>
         /// <returns></returns>
-        public static SpannerCommandTextBuilder CreateSelectTextBuilder(string sqlQuery)
-        {
-            return new SpannerCommandTextBuilder {
+        public static SpannerCommandTextBuilder CreateSelectTextBuilder(string sqlQuery) => new
+            SpannerCommandTextBuilder
+            {
                 SpannerCommandType = SpannerCommandType.Select,
                 CommandText = sqlQuery
             };
-        }
 
         /// <summary>
         /// </summary>
@@ -143,7 +149,8 @@ namespace Google.Cloud.Spanner.Data
         public static SpannerCommandTextBuilder CreateUpdateTextBuilder(string table)
         {
             ValidateTable(table);
-            return new SpannerCommandTextBuilder {
+            return new SpannerCommandTextBuilder
+            {
                 SpannerCommandType = SpannerCommandType.Update,
                 TargetTable = table,
                 CommandText = $"{UpdateCommand} {table}"
@@ -161,22 +168,24 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <inheritdoc />
-        public override string ToString()
-        {
-            return CommandText;
-        }
+        public override string ToString() => CommandText;
 
-        private static bool TryParseCommand(SpannerCommandTextBuilder newbuilder,
-            string commandToParseFor, SpannerCommandType commandType,
+        private static bool TryParseCommand(
+            SpannerCommandTextBuilder newbuilder,
+            string commandToParseFor,
+            SpannerCommandType commandType,
             string[] commandSections)
         {
-            var operationName = commandSections[0].ToUpperInvariant();
+            string operationName = commandSections[0].ToUpperInvariant();
             if (operationName == commandToParseFor)
             {
                 if (commandSections.Length != 2)
+                {
                     throw new InvalidOperationException(
                         $"Spanner {commandToParseFor} commands are specified as '{commandToParseFor} <table>' with " +
                         "parameters added to customize the command with filtering or updated values.");
+                }
+
                 newbuilder.CommandText = $"{commandToParseFor} {commandSections[1]}";
                 newbuilder.SpannerCommandType = commandType;
                 newbuilder.TargetTable = commandSections[1];
@@ -189,7 +198,9 @@ namespace Google.Cloud.Spanner.Data
         {
             GaxPreconditions.CheckNotNullOrEmpty(databaseTableName, nameof(databaseTableName));
             if (!databaseTableName.All(c => char.IsLetterOrDigit(c) || c == '_'))
+            {
                 throw new ArgumentException($"{nameof(databaseTableName)} only allows letters, numbers or underscore");
+            }
         }
     }
 }

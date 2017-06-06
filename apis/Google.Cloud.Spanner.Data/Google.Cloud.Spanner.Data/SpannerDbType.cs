@@ -24,74 +24,6 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     public sealed class SpannerDbType
     {
-        private SpannerDbType(TypeCode typeCode)
-        {
-            TypeCode = typeCode;
-        }
-
-        private SpannerDbType(TypeCode typeCode, SpannerDbType arrayElementType)
-            :this(typeCode)
-        {
-            ArrayElementType = arrayElementType;
-        }
-
-        private SpannerDbType(TypeCode typeCode, IDictionary<string, SpannerDbType> structMembers)
-            : this(typeCode)
-        {
-            StructMembers = structMembers;
-        }
-
-        private SpannerDbType(TypeCode typeCode, RepeatedField<StructType.Types.Field> structTypeFields)
-            : this(typeCode)
-        {
-            StructMembers = new Dictionary<string, SpannerDbType>();
-            foreach (StructType.Types.Field field in structTypeFields)
-            {
-                StructMembers[field.Name] = FromProtoBufType(field.Type);
-            }
-        }
-
-        internal static SpannerDbType FromProtoBufType(V1.Type type)
-        {
-            switch (type.Code)
-            {
-                case TypeCode.Array:
-                    return new SpannerDbType(TypeCode.Array,
-                        FromProtoBufType(type.ArrayElementType));
-                case TypeCode.Struct:
-                    return new SpannerDbType(TypeCode.Struct, type.StructType.Fields);
-                default:
-                    return new SpannerDbType(type.Code);
-            }
-        }
-
-        internal V1.Type ToProtobufType()
-        {
-            switch (TypeCode)
-            {
-                case TypeCode.Array:
-                    return new V1.Type
-                    {
-                        Code = TypeCode,
-                        ArrayElementType = ArrayElementType.ToProtobufType()
-                    };
-                case TypeCode.Struct:
-                    return new V1.Type {
-                        Code = TypeCode,
-                        StructType =
-                            new StructType {
-                                Fields = {
-                                    StructMembers.Select(kvp => new StructType.Types.Field {
-                                        Name = kvp.Key,
-                                        Type = kvp.Value.ToProtobufType()
-                                    })
-                                }
-                            }
-                    };
-                default: return new V1.Type {Code = TypeCode};
-            }
-        }
-
         /// <summary>
         /// Not specified.
         /// </summary>
@@ -135,42 +67,115 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public static SpannerDbType Bytes { get; } = new SpannerDbType(TypeCode.Bytes);
 
-        /// <summary>
-        /// Encoded as `list`, where the list elements are represented
-        /// according to [array_element_type][google.spanner.v1.Type.array_element_type].
-        /// </summary>
-        public static SpannerDbType ArrayOf(SpannerDbType elementType) => new SpannerDbType(TypeCode.Array, elementType);
-
-        /// <summary>
-        /// Encoded as `list`, where list element `i` is represented according
-        /// to [struct_type.fields[i]][google.spanner.v1.StructType.fields].
-        /// </summary>
-        public static SpannerDbType StructOf(IDictionary<string, SpannerDbType> structMembers) => new SpannerDbType(TypeCode.Struct, structMembers);
-
         internal TypeCode TypeCode { get; }
 
         internal SpannerDbType ArrayElementType { get; }
 
         internal IDictionary<string, SpannerDbType> StructMembers { get; }
 
-        /// <inheritdoc />
-        public override bool Equals(object obj)
+        private SpannerDbType(TypeCode typeCode) => TypeCode = typeCode;
+
+        private SpannerDbType(TypeCode typeCode, SpannerDbType arrayElementType)
+            : this(typeCode) => ArrayElementType = arrayElementType;
+
+        private SpannerDbType(TypeCode typeCode, IDictionary<string, SpannerDbType> structMembers)
+            : this(typeCode) => StructMembers = structMembers;
+
+        private SpannerDbType(TypeCode typeCode, RepeatedField<StructType.Types.Field> structTypeFields)
+            : this(typeCode)
         {
-            return Equals(obj as SpannerDbType);
+            StructMembers = new Dictionary<string, SpannerDbType>();
+            foreach (var field in structTypeFields)
+            {
+                StructMembers[field.Name] = FromProtoBufType(field.Type);
+            }
         }
 
-        private bool Equals(SpannerDbType other)
+        internal static SpannerDbType FromProtoBufType(V1.Type type)
         {
-            return DictionaryEquals(StructMembers, other?.StructMembers) 
-                && TypeCode == other?.TypeCode 
-                && Equals(ArrayElementType, other.ArrayElementType);
+            switch (type.Code)
+            {
+                case TypeCode.Array:
+                    return new SpannerDbType(
+                        TypeCode.Array,
+                        FromProtoBufType(type.ArrayElementType));
+                case TypeCode.Struct:
+                    return new SpannerDbType(TypeCode.Struct, type.StructType.Fields);
+                default:
+                    return new SpannerDbType(type.Code);
+            }
         }
+
+        internal V1.Type ToProtobufType()
+        {
+            switch (TypeCode)
+            {
+                case TypeCode.Array:
+                    return new V1.Type
+                    {
+                        Code = TypeCode,
+                        ArrayElementType = ArrayElementType.ToProtobufType()
+                    };
+                case TypeCode.Struct:
+                    return new V1.Type
+                    {
+                        Code = TypeCode,
+                        StructType =
+                            new StructType
+                            {
+                                Fields =
+                                {
+                                    StructMembers.Select(
+                                        kvp => new StructType.Types.Field
+                                        {
+                                            Name = kvp.Key,
+                                            Type = kvp.Value.ToProtobufType()
+                                        })
+                                }
+                            }
+                    };
+                default: return new V1.Type {Code = TypeCode};
+            }
+        }
+
+        /// <summary>
+        /// Encoded as `list`, where the list elements are represented
+        /// according to [array_element_type][google.spanner.v1.Type.array_element_type].
+        /// </summary>
+        public static SpannerDbType ArrayOf(SpannerDbType elementType) =>
+            new SpannerDbType(TypeCode.Array, elementType);
+
+        /// <summary>
+        /// Encoded as `list`, where list element `i` is represented according
+        /// to [struct_type.fields[i]][google.spanner.v1.StructType.fields].
+        /// </summary>
+        public static SpannerDbType StructOf(IDictionary<string, SpannerDbType> structMembers) => new SpannerDbType(
+            TypeCode.Struct, structMembers);
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as SpannerDbType);
+
+        private bool Equals(SpannerDbType other) => DictionaryEquals(StructMembers, other?.StructMembers)
+            && TypeCode == other?.TypeCode
+            && Equals(ArrayElementType, other.ArrayElementType);
 
         private bool DictionaryEquals(IDictionary<string, SpannerDbType> d1, IDictionary<string, SpannerDbType> d2)
         {
-            if (d1 == null && d2 == null) return true;
-            if (d1 == null || d2 == null) return false;
-            if (d1.Count != d2.Count) return false;
+            if (d1 == null && d2 == null)
+            {
+                return true;
+            }
+
+            if (d1 == null || d2 == null)
+            {
+                return false;
+            }
+
+            if (d1.Count != d2.Count)
+            {
+                return false;
+            }
+
             foreach (var kvp in d1)
             {
                 SpannerDbType d2Value;
@@ -187,7 +192,7 @@ namespace Google.Cloud.Spanner.Data
         {
             unchecked
             {
-                var hashCode = StructMembers?.GetHashCode() ?? 0;
+                int hashCode = StructMembers?.GetHashCode() ?? 0;
                 hashCode = (hashCode * 397) ^ (int) TypeCode;
                 hashCode = (hashCode * 397) ^ (ArrayElementType?.GetHashCode() ?? 0);
                 return hashCode;

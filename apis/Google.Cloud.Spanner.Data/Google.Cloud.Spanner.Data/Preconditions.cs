@@ -27,7 +27,9 @@ namespace Google.Cloud.Spanner.Data
         public static void AssertOneOf(this object argument, string nameofArg, string detail, params object[] values)
         {
             if (values == null || !values.Any(x => Equals(argument, x)))
+            {
                 throw new ArgumentException($"Invalid value for {nameofArg}. {detail}");
+            }
         }
     }
 }

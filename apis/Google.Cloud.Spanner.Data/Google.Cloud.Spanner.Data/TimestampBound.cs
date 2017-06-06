@@ -40,48 +40,40 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="duration"></param>
         /// <returns></returns>
-        public static TimestampBound OfExactStaleness(TimeSpan duration)
+        public static TimestampBound OfExactStaleness(TimeSpan duration) => new TimestampBound
         {
-            return new TimestampBound {
-                Mode = TimestampBoundMode.ExactStaleness,
-                Staleness = duration
-            };
-        }
+            Mode = TimestampBoundMode.ExactStaleness,
+            Staleness = duration
+        };
 
         /// <summary>
         /// </summary>
         /// <param name="duration"></param>
         /// <returns></returns>
-        public static TimestampBound OfMaxStaleness(TimeSpan duration)
+        public static TimestampBound OfMaxStaleness(TimeSpan duration) => new TimestampBound
         {
-            return new TimestampBound {
-                Mode = TimestampBoundMode.MaxStaleness,
-                Staleness = duration
-            };
-        }
+            Mode = TimestampBoundMode.MaxStaleness,
+            Staleness = duration
+        };
 
         /// <summary>
         /// </summary>
         /// <param name="timestamp"></param>
         /// <returns></returns>
-        public static TimestampBound OfMinReadTimestamp(DateTime timestamp)
+        public static TimestampBound OfMinReadTimestamp(DateTime timestamp) => new TimestampBound
         {
-            return new TimestampBound {
-                Mode = TimestampBoundMode.MinReadTimestamp,
-                TimeStamp = timestamp
-            };
-        }
+            Mode = TimestampBoundMode.MinReadTimestamp,
+            TimeStamp = timestamp
+        };
 
         /// <summary>
         /// </summary>
         /// <param name="timestamp"></param>
         /// <returns></returns>
-        public static TimestampBound OfReadTimestamp(DateTime timestamp)
+        public static TimestampBound OfReadTimestamp(DateTime timestamp) => new TimestampBound
         {
-            return new TimestampBound {
-                Mode = TimestampBoundMode.ReadTimestamp,
-                TimeStamp = timestamp
-            };
-        }
+            Mode = TimestampBoundMode.ReadTimestamp,
+            TimeStamp = timestamp
+        };
     }
 }
