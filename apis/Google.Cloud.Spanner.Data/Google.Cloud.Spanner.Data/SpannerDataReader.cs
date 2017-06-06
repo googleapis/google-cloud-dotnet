@@ -135,6 +135,21 @@ namespace Google.Cloud.Spanner.Data
             return (T) _innerList[ordinal].ConvertToClrType(GetSpannerFieldType(ordinal), typeof(T));
         }
 
+        /// <summary>
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="columnName"></param>
+        /// <returns></returns>
+        public T GetFieldValue<T>(string columnName)
+        {
+            var ordinal = GetOrdinal(columnName);
+            if (ordinal == -1)
+            {
+                throw new ArgumentException($"{columnName} is not a valid column", nameof(columnName));
+            }
+            return (T)_innerList[ordinal].ConvertToClrType(GetSpannerFieldType(ordinal), typeof(T));
+        }
+
         /// <inheritdoc />
         public override float GetFloat(int i) => _innerList[i].ConvertToClrType<float>(GetSpannerFieldType(i));
 

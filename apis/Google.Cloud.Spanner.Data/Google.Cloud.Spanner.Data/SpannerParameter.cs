@@ -28,7 +28,6 @@ namespace Google.Cloud.Spanner.Data
         , ICloneable
 #endif
     {
-        private string _spannerColumnName;
         private object _value;
 
         /// <summary>
@@ -47,7 +46,7 @@ namespace Google.Cloud.Spanner.Data
         public SpannerParameter(string spannerColumnName, SpannerDbType type, object value = null,
                 string sourceColumn = null, int size = 0)
         {
-            _spannerColumnName = spannerColumnName;
+            ParameterName = spannerColumnName;
             SpannerDbType = type ?? SpannerDbType.Unspecified;
             Value = value;
             SourceColumn = sourceColumn;
@@ -107,11 +106,7 @@ namespace Google.Cloud.Spanner.Data
         public override bool IsNullable { get; set; } = true;
 
         /// <inheritdoc />
-        public override string ParameterName
-        {
-            get => _spannerColumnName;
-            set => _spannerColumnName = value;
-        }
+        public override string ParameterName { get; set; }
 
         /// <inheritdoc />
         public override int Size { get; set; }

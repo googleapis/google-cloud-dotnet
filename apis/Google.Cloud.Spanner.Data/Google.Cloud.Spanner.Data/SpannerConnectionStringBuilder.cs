@@ -117,9 +117,9 @@ namespace Google.Cloud.Spanner.Data
         {
             var dataSource = DataSource;
             if (string.IsNullOrEmpty(dataSource))
-                return string.Empty;
+                return "";
             var parts = dataSource.Split('/');
-            if (parts.Length != 3) return string.Empty;
+            if (parts.Length != 3) return "";
             return parts[index];
         }
     }
