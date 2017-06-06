@@ -207,7 +207,7 @@ namespace Google.Cloud.Spanner.Data
         {
             foreach (var parameter in _innerList)
             {
-                typeDictionary[parameter.ParameterName] = parameter.SpannerDbType.ToProtoBufType();
+                typeDictionary[parameter.ParameterName] = parameter.SpannerDbType.ToProtobufType();
             }
         }
 

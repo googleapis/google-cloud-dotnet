@@ -106,7 +106,7 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        internal V1.Type ToProtoBufType()
+        internal V1.Type ToProtobufType()
         {
             switch (TypeCode)
             {
@@ -114,7 +114,7 @@ namespace Google.Cloud.Spanner.Data
                     return new V1.Type
                     {
                         Code = TypeCode,
-                        ArrayElementType = ArrayElementType.ToProtoBufType()
+                        ArrayElementType = ArrayElementType.ToProtobufType()
                     };
                 case TypeCode.Struct:
                     return new V1.Type
@@ -129,7 +129,7 @@ namespace Google.Cloud.Spanner.Data
                                         kvp => new StructType.Types.Field
                                         {
                                             Name = kvp.Key,
-                                            Type = kvp.Value.ToProtoBufType()
+                                            Type = kvp.Value.ToProtobufType()
                                         })
                                 }
                             }

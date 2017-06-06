@@ -91,7 +91,7 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override string CommandText
         {
-            get => SpannerCommandTextBuilder?.ToString() ?? string.Empty;
+            get => SpannerCommandTextBuilder?.ToString() ?? "";
             set => SpannerCommandTextBuilder = SpannerCommandTextBuilder.FromCommandText(value);
         }
 
@@ -407,7 +407,8 @@ namespace Google.Cloud.Spanner.Data
             var tx = singleUseTransaction ?? GetSpannerTransaction();
             // Execute the command.
             var resultSet = await tx.ExecuteQueryAsync(request, cancellationToken)
-                .WithTimeout(TimeSpan.FromSeconds(CommandTimeout), "The timeout of the SpannerCommand was exceeded.");
+                .WithTimeout(TimeSpan.FromSeconds(CommandTimeout), "The timeout of the SpannerCommand was exceeded.")
+                .ConfigureAwait(false);
 
             if ((behavior & CommandBehavior.CloseConnection) == CommandBehavior.CloseConnection)
             {

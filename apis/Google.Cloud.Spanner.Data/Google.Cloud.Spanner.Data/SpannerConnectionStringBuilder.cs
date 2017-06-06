@@ -123,13 +123,13 @@ namespace Google.Cloud.Spanner.Data
             string dataSource = DataSource;
             if (string.IsNullOrEmpty(dataSource))
             {
-                return string.Empty;
+                return "";
             }
 
             var parts = dataSource.Split('/');
             if (parts.Length != 3)
             {
-                return string.Empty;
+                return "";
             }
 
             return parts[index];

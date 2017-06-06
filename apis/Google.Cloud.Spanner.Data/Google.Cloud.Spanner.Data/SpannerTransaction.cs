@@ -194,8 +194,7 @@ namespace Google.Cloud.Spanner.Data
         private TransactionSelector GetTransactionSelector(TransactionMode mode)
         {
             CheckCompatibleMode(mode);
-            GaxPreconditions.CheckState(WireTransaction != null, "Transaction should have been created prior to use.");
-            return new TransactionSelector {Id = WireTransaction?.Id};
+            return new TransactionSelector {Id = WireTransaction.Id};
         }
     }
 }
