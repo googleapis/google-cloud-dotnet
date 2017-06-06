@@ -16,49 +16,49 @@ using Grpc.Core;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Google.Api.Gax;
 
 namespace Google.Cloud.Spanner.V1
 {
     internal static class ExecuteHelper
     {
-        public static Task<T> WithSessionChecking<T>(this Task<T> task, Func<Session> sessionFunc)
+        public static async Task<T> WithSessionChecking<T>(this Task<T> task, Func<Session> sessionFunc)
         {
-            return task.ContinueWith(t =>
+            try
             {
-                if (t.IsFaulted)
-                {
-                    RpcException rpcException = t.Exception?.InnerExceptions.OfType<RpcException>().FirstOrDefault();
-                    if (rpcException.IsSessionExpiredError())
-                    {
-                        SessionPool.MarkSessionExpired(sessionFunc());
-                    }
-                }
-                return t.Result;
-            });
+                return await task.ConfigureAwait(false);
+            }
+            catch (RpcException ex) when (ex.CheckForSessionExpiredError(sessionFunc))
+            {
+                throw;
+            }
         }
 
-        public static Task WithSessionChecking(this Task task, Func<Session> sessionFunc)
+        public static async Task WithSessionChecking(this Task task, Func<Session> sessionFunc)
         {
-            return task.ContinueWith(t =>
+            try
             {
-                if (t.IsFaulted)
-                {
-                    RpcException rpcException = t.Exception?.InnerExceptions.OfType<RpcException>().FirstOrDefault();
-                    if (rpcException.IsSessionExpiredError())
-                    {
-                        SessionPool.MarkSessionExpired(sessionFunc());
-                    }
-                    if (t.Exception != null)
-                    {
-                        throw t.Exception;
-                    }
-                }
-            });
+                await task.ConfigureAwait(false);
+            }
+            catch (RpcException ex) when (ex.CheckForSessionExpiredError(sessionFunc))
+            {
+                throw;
+            }
+        }
+
+        internal static bool CheckForSessionExpiredError(this RpcException rpcException, Func<Session> sessionFunc)
+        {
+            if (rpcException.IsSessionExpiredError())
+            {
+                SessionPool.MarkSessionExpired(sessionFunc());
+            }
+            return false;
         }
 
         internal static bool IsSessionExpiredError(this RpcException rpcException)
         {
-            return rpcException!= null && rpcException.Status.StatusCode == StatusCode.NotFound && rpcException.Message.Contains("Session not found");
+            return rpcException != null && rpcException.Status.StatusCode == StatusCode.NotFound &&
+                   rpcException.Message.Contains("Session not found");
         }
     }
 }

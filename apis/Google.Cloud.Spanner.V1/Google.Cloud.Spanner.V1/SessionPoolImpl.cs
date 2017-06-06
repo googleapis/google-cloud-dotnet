@@ -60,7 +60,7 @@ namespace Google.Cloud.Spanner.V1
             return task.ContinueWith(async (delayTask, o) => 
             {
                 Logger.Debug(() => "Evict timer triggered.");
-                await EvictImmediatelyAsync(session, cancellationToken);
+                await EvictImmediatelyAsync(session, cancellationToken).ConfigureAwait(false);
             }, null, cancellationToken);
         }
 

@@ -33,23 +33,6 @@ namespace Google.Cloud.Spanner.Data
         private static long s_transactionCount;
         private readonly SpannerConnection _connection;
         private readonly List<Mutation> _mutations = new List<Mutation>();
-        private readonly Transaction _transaction;
-
-        internal SpannerTransaction(SpannerConnection connection, TransactionMode mode, Session session,
-            Transaction transaction)
-        {
-            GaxPreconditions.CheckNotNull(connection, nameof(connection));
-            GaxPreconditions.CheckNotNull(session, nameof(session));
-            GaxPreconditions.CheckNotNull(transaction, nameof(transaction));
-
-            Logger.LogPerformanceCounter("Transactions.ActiveCount",
-                () => Interlocked.Increment(ref s_transactionCount));
-
-            Session = session;
-            _transaction = transaction;
-            _connection = connection;
-            Mode = mode;
-        }
 
         /// <inheritdoc />
         public override IsolationLevel IsolationLevel => IsolationLevel.Serializable;
@@ -62,64 +45,104 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public Session Session { get; }
 
+        /// <summary>
+        /// </summary>
+        public TimestampBound TimeStampBound { get; }
+
         /// <inheritdoc />
         protected override DbConnection DbConnection => _connection;
 
         internal IEnumerable<Mutation> Mutations => _mutations;
 
-        Task<int> ISpannerTransaction.ExecuteMutationsAsync(List<Mutation> mutations,
+        internal Transaction WireTransaction { get; }
+
+        internal SpannerTransaction(
+            SpannerConnection connection,
+            TransactionMode mode,
+            Session session,
+            Transaction transaction,
+            TimestampBound timeStampBound)
+        {
+            GaxPreconditions.CheckNotNull(connection, nameof(connection));
+            GaxPreconditions.CheckNotNull(session, nameof(session));
+            GaxPreconditions.CheckNotNull(transaction, nameof(transaction));
+
+            Logger.LogPerformanceCounter(
+                "Transactions.ActiveCount",
+                () => Interlocked.Increment(ref s_transactionCount));
+
+            Session = session;
+            TimeStampBound = timeStampBound;
+            WireTransaction = transaction;
+            _connection = connection;
+            Mode = mode;
+        }
+
+        Task<int> ISpannerTransaction.ExecuteMutationsAsync(
+            List<Mutation> mutations,
             CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckNotNull(mutations, nameof(mutations));
             CheckCompatibleMode(TransactionMode.ReadWrite);
-            return ExecuteHelper.WithErrorTranslationAndProfiling(() =>
-            {
-                var taskCompletionSource = new TaskCompletionSource<int>();
-                cancellationToken.ThrowIfCancellationRequested();
-                _mutations.AddRange(mutations);
-                taskCompletionSource.SetResult(mutations.Count);
-                return taskCompletionSource.Task;
-            }, "SpannerTransaction.ExecuteMutations");
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                () =>
+                {
+                    var taskCompletionSource = new TaskCompletionSource<int>();
+                    cancellationToken.ThrowIfCancellationRequested();
+                    _mutations.AddRange(mutations);
+                    taskCompletionSource.SetResult(mutations.Count);
+                    return taskCompletionSource.Task;
+                }, "SpannerTransaction.ExecuteMutations");
         }
 
-        Task<ReliableStreamReader> ISpannerTransaction.ExecuteQueryAsync(ExecuteSqlRequest request, CancellationToken cancellationToken)
+        Task<ReliableStreamReader> ISpannerTransaction.ExecuteQueryAsync(
+            ExecuteSqlRequest request,
+            CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckNotNull(request, nameof(request));
-            return ExecuteHelper.WithErrorTranslationAndProfiling(() =>
-            {
-                var taskCompletionSource =
-                    new TaskCompletionSource<ReliableStreamReader>();
-                request.Transaction = GetTransactionSelector(TransactionMode.ReadOnly);
-                taskCompletionSource.SetResult(_connection.SpannerClient.GetSqlStreamReader(request, Session));
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                () =>
+                {
+                    var taskCompletionSource =
+                        new TaskCompletionSource<ReliableStreamReader>();
+                    request.Transaction = GetTransactionSelector(TransactionMode.ReadOnly);
+                    taskCompletionSource.SetResult(_connection.SpannerClient.GetSqlStreamReader(request, Session));
 
-                return taskCompletionSource.Task;
-            }, "SpannerTransaction.ExecuteQuery");
+                    return taskCompletionSource.Task;
+                }, "SpannerTransaction.ExecuteQuery");
         }
 
         /// <inheritdoc />
         public override void Commit()
         {
             if (!Task.Run(CommitAsync).Wait(ConnectionPoolOptions.Instance.Timeout))
+            {
                 throw new TimeoutException("The Commit did not complete in time.");
+            }
         }
 
         /// <summary>
         /// </summary>
         /// <returns></returns>
-        public Task CommitAsync()
+        public Task<DateTime?> CommitAsync()
         {
-            return ExecuteHelper.WithErrorTranslationAndProfiling(() =>
-            {
-                GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot commit a readonly transaction.");
-                return _transaction.CommitAsync(Session, Mutations);
-            }, "SpannerTransaction.Commit");
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                async () =>
+                {
+                    GaxPreconditions.CheckState(
+                        Mode != TransactionMode.ReadOnly, "You cannot commit a readonly transaction.");
+                    var response = await WireTransaction.CommitAsync(Session, Mutations).ConfigureAwait(false);
+                    return response.CommitTimestamp?.ToDateTime();
+                }, "SpannerTransaction.Commit");
         }
 
         /// <inheritdoc />
         public override void Rollback()
         {
             if (!Task.Run(RollbackAsync).Wait(ConnectionPoolOptions.Instance.Timeout))
+            {
                 throw new TimeoutException("The Rollback did not complete in time.");
+            }
         }
 
         /// <summary>
@@ -127,17 +150,20 @@ namespace Google.Cloud.Spanner.Data
         /// <returns></returns>
         public Task RollbackAsync()
         {
-            return ExecuteHelper.WithErrorTranslationAndProfiling(() =>
-            {
-                GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot roll back a readonly transaction.");
-                return _transaction.RollbackAsync(Session);
-            }, "SpannerTransaction.Rollback");
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                () =>
+                {
+                    GaxPreconditions.CheckState(
+                        Mode != TransactionMode.ReadOnly, "You cannot roll back a readonly transaction.");
+                    return WireTransaction.RollbackAsync(Session);
+                }, "SpannerTransaction.Rollback");
         }
 
         /// <inheritdoc />
         protected override void Dispose(bool disposing)
         {
-            Logger.LogPerformanceCounter("Transactions.ActiveCount",
+            Logger.LogPerformanceCounter(
+                "Transactions.ActiveCount",
                 () => Interlocked.Decrement(ref s_transactionCount));
             _connection.ReleaseSession(Session);
         }
@@ -148,12 +174,16 @@ namespace Google.Cloud.Spanner.Data
             {
                 case TransactionMode.ReadOnly:
                 {
-                    GaxPreconditions.CheckState(Mode == TransactionMode.ReadOnly || Mode == TransactionMode.ReadWrite, "You can only execute reads on a ReadWrite or ReadOnly Transaction!");
+                    GaxPreconditions.CheckState(
+                        Mode == TransactionMode.ReadOnly || Mode == TransactionMode.ReadWrite,
+                        "You can only execute reads on a ReadWrite or ReadOnly Transaction!");
                 }
                     break;
                 case TransactionMode.ReadWrite:
                 {
-                    GaxPreconditions.CheckState(Mode == TransactionMode.ReadWrite, "You can only execute read/write commands on a ReadWrite Transaction!");
+                    GaxPreconditions.CheckState(
+                        Mode == TransactionMode.ReadWrite,
+                        "You can only execute read/write commands on a ReadWrite Transaction!");
                 }
                     break;
                 default:
@@ -164,8 +194,7 @@ namespace Google.Cloud.Spanner.Data
         private TransactionSelector GetTransactionSelector(TransactionMode mode)
         {
             CheckCompatibleMode(mode);
-            GaxPreconditions.CheckState(_transaction != null, "Transaction should have been created prior to use.");
-            return new TransactionSelector {Id = _transaction?.Id};
+            return new TransactionSelector {Id = WireTransaction.Id};
         }
     }
 }

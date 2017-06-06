@@ -28,25 +28,29 @@ namespace Google.Cloud.Spanner.Data
         , ICloneable
 #endif
     {
-        private string _spannerColumnName;
         private object _value;
 
         /// <summary>
         /// </summary>
-        public SpannerParameter()
-        {
-        }
+        public SpannerParameter() { }
 
         /// <summary>
         /// </summary>
         /// <param name="spannerColumnName"></param>
         /// <param name="type"></param>
+        /// <param name="value"></param>
         /// <param name="sourceColumn"></param>
         /// <param name="size"></param>
-        public SpannerParameter(string spannerColumnName, SpannerDbType type, string sourceColumn = null, int size = 0)
+        public SpannerParameter(
+            string spannerColumnName,
+            SpannerDbType type,
+            object value = null,
+            string sourceColumn = null,
+            int size = 0)
         {
-            _spannerColumnName = spannerColumnName;
-            TypeCode = type.GetSpannerTypeCode();
+            ParameterName = spannerColumnName;
+            SpannerDbType = type ?? SpannerDbType.Unspecified;
+            Value = value;
             SourceColumn = sourceColumn;
             Size = size;
         }
@@ -54,26 +58,59 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override DbType DbType
         {
-            get { return TypeCode.GetDbType(); }
-            set { TypeCode = value.GetSpannerType(); }
+            get => (SpannerDbType?.TypeCode.GetDbType()).GetValueOrDefault(DbType.Object);
+            set
+            {
+                switch (value)
+                {
+                    case DbType.Binary:
+                        SpannerDbType = SpannerDbType.Bytes;
+                        break;
+                    case DbType.Boolean:
+                        SpannerDbType = SpannerDbType.Bool;
+                        break;
+                    case DbType.Date:
+                        SpannerDbType = SpannerDbType.Date;
+                        break;
+                    case DbType.DateTime:
+                        SpannerDbType = SpannerDbType.Timestamp;
+                        break;
+                    case DbType.Double:
+                        SpannerDbType = SpannerDbType.Float64;
+                        break;
+                    case DbType.Int64:
+                        SpannerDbType = SpannerDbType.Int64;
+                        break;
+                    case DbType.Object:
+                        SpannerDbType = SpannerDbType.Unspecified;
+                        break;
+                    case DbType.String:
+                        SpannerDbType = SpannerDbType.String;
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException(nameof(DbType), value, null);
+                }
+            }
         }
 
         /// <inheritdoc />
         public override ParameterDirection Direction
         {
-            get { return ParameterDirection.Input; }
-            set { throw new InvalidOperationException("Spanner only supports input parameters."); }
+            get => ParameterDirection.Input;
+            set
+            {
+                if (value != ParameterDirection.Input)
+                {
+                    throw new InvalidOperationException("Spanner only supports input parameters.");
+                }
+            }
         }
 
         /// <inheritdoc />
         public override bool IsNullable { get; set; } = true;
 
         /// <inheritdoc />
-        public override string ParameterName
-        {
-            get { return _spannerColumnName; }
-            set { _spannerColumnName = value; }
-        }
+        public override string ParameterName { get; set; }
 
         /// <inheritdoc />
         public override int Size { get; set; }
@@ -93,37 +130,34 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// </summary>
-        public SpannerDbType SpannerDbType
-        {
-            get { return TypeCode.GetSpannerDbType(); }
-            set { TypeCode = value.GetSpannerTypeCode(); }
-        }
+        public SpannerDbType SpannerDbType { get; set; }
 
         /// <inheritdoc />
         public override object Value
         {
-            get { return _value; }
+            get => _value;
             set
             {
-                if (TypeCode == TypeCode.Unspecified)
+                if (SpannerDbType.TypeCode == TypeCode.Unspecified && value != null)
+                {
                     throw new ArgumentException(
-                        "SpannerDbType must be set to one of (Bool, Int64, Float64, Timestamp, Date, String, Bytes)");
+                        $"{nameof(SpannerDbType)} must be set to one of "
+                        + $"({nameof(SpannerDbType.Bool)}, {nameof(SpannerDbType.Int64)}, {nameof(SpannerDbType.Float64)},"
+                        + $" {nameof(SpannerDbType.Timestamp)}, {nameof(SpannerDbType.Date)}, {nameof(SpannerDbType.String)},"
+                        + $" {nameof(SpannerDbType.Bytes)})");
+                }
+
                 _value = value;
             }
         }
 
-        internal TypeCode TypeCode { get; private set; }
-
         /// <inheritdoc />
-        public object Clone()
-        {
-            return (SpannerParameter) MemberwiseClone();
-        }
+        public object Clone() => (SpannerParameter) MemberwiseClone();
 
         /// <inheritdoc />
         public override void ResetDbType()
         {
-            TypeCode = TypeCode.Unspecified;
+            SpannerDbType = SpannerDbType.Unspecified;
         }
     }
 }

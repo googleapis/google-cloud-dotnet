@@ -14,6 +14,7 @@
 
 // ReSharper disable EmptyNamespace
 
+
 #if NET45 || NET451
 using System;
 using System.Data;

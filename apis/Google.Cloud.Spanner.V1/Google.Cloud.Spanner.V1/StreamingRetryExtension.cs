@@ -64,7 +64,7 @@ namespace Google.Cloud.Spanner.V1
                 RetrySettings retrySettings = callSettings.Timing?.Retry;
                 if (retrySettings == null)
                 {
-                    return await someMethod();
+                    return await someMethod().ConfigureAwait(false);
                 }
                 DateTime? overallDeadline = retrySettings.TotalExpiration.CalculateDeadline(clock);
                 TimeSpan retryDelay = retrySettings.RetryBackoff.Delay;
@@ -72,7 +72,7 @@ namespace Google.Cloud.Spanner.V1
                 {
                     try
                     {
-                        return await someMethod();
+                        return await someMethod().ConfigureAwait(false);
                     }
                     catch (RpcException e) when (retrySettings.RetryFilter(e))
                     {
@@ -82,7 +82,7 @@ namespace Google.Cloud.Spanner.V1
                         {
                             throw;
                         }
-                        await scheduler.Delay(actualDelay, callSettings.CancellationToken.GetValueOrDefault());
+                        await scheduler.Delay(actualDelay, callSettings.CancellationToken.GetValueOrDefault()).ConfigureAwait(false);
                         retryDelay = retrySettings.RetryBackoff.NextDelay(retryDelay);
                     }
                 }

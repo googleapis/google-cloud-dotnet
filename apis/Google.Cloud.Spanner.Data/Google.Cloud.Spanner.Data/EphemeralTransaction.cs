@@ -50,39 +50,43 @@ namespace Google.Cloud.Spanner.Data
             Logger.Debug(() => "Executing a mutation change through an ephemeral transaction.");
             int count;
 
-            return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
-            {
-                using (var transaction = await _connection.BeginTransactionAsync(cancellationToken)
-                    .ConfigureAwait(false))
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                async () =>
                 {
-                    count = await ((ISpannerTransaction) transaction)
-                        .ExecuteMutationsAsync(mutations, cancellationToken)
-                        .ConfigureAwait(false);
-                    await transaction.CommitAsync().ConfigureAwait(false);
-                }
-                return count;
-            }, "EphemeralTransaction.ExecuteMutations");
+                    using (var transaction = await _connection.BeginTransactionAsync(cancellationToken)
+                        .ConfigureAwait(false))
+                    {
+                        count = await ((ISpannerTransaction) transaction)
+                            .ExecuteMutationsAsync(mutations, cancellationToken)
+                            .ConfigureAwait(false);
+                        await transaction.CommitAsync().ConfigureAwait(false);
+                    }
+                    return count;
+                }, "EphemeralTransaction.ExecuteMutations");
         }
 
-        public Task<ReliableStreamReader> ExecuteQueryAsync(ExecuteSqlRequest request, CancellationToken cancellationToken)
+        public Task<ReliableStreamReader> ExecuteQueryAsync(
+            ExecuteSqlRequest request,
+            CancellationToken cancellationToken)
         {
-            return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
-            {
-                GaxPreconditions.CheckNotNull(request, nameof(request));
-                Logger.Debug(() => "Executing a query through an ephemeral transaction.");
-
-                using (var holder = await SpannerConnection.SessionHolder
-                    .Allocate(_connection, cancellationToken)
-                    .ConfigureAwait(false))
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                async () =>
                 {
-                    var streamReader = _connection.SpannerClient.GetSqlStreamReader(request, holder.Session);
+                    GaxPreconditions.CheckNotNull(request, nameof(request));
+                    Logger.Debug(() => "Executing a query through an ephemeral transaction.");
 
-                    holder.TakeOwnership();
-                    streamReader.StreamClosed += (o, e) => { _connection.ReleaseSession(streamReader.Session); };
+                    using (var holder = await SpannerConnection.SessionHolder
+                        .Allocate(_connection, cancellationToken)
+                        .ConfigureAwait(false))
+                    {
+                        var streamReader = _connection.SpannerClient.GetSqlStreamReader(request, holder.Session);
 
-                    return streamReader;
-                }
-            }, "EphemeralTransaction.ExecuteQuery");
+                        holder.TakeOwnership();
+                        streamReader.StreamClosed += (o, e) => { _connection.ReleaseSession(streamReader.Session); };
+
+                        return streamReader;
+                    }
+                }, "EphemeralTransaction.ExecuteQuery");
         }
     }
 }

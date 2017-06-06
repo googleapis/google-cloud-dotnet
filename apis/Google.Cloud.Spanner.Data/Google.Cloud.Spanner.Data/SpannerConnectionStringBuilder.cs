@@ -28,31 +28,14 @@ namespace Google.Cloud.Spanner.Data
     {
         /// <summary>
         /// </summary>
-        /// <param name="connectionString"></param>
-        /// <param name="credential"></param>
-        public SpannerConnectionStringBuilder(string connectionString, ITokenAccess credential)
-        {
-            connectionString.ThrowIfNullOrEmpty(nameof(connectionString));
-            Credential = credential;
-            ConnectionString = connectionString;
-        }
-
-        /// <summary>
-        /// </summary>
-        public SpannerConnectionStringBuilder()
-        {
-        }
-
-        /// <summary>
-        /// </summary>
         public ITokenAccess Credential { get; private set; }
 
         /// <summary>
         /// </summary>
         public string DataSource
         {
-            get { return GetValueOrDefault("Data Source"); }
-            private set { this["Data Source"] = value; }
+            get => GetValueOrDefault("Data Source");
+            private set => this["Data Source"] = value;
         }
 
         /// <summary>
@@ -63,8 +46,8 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public string Host
         {
-            get { return GetValueOrDefault(nameof(Host), SpannerClient.DefaultEndpoint.Host); }
-            private set { this[nameof(Host)] = value; }
+            get => GetValueOrDefault(nameof(Host), SpannerClient.DefaultEndpoint.Host);
+            private set => this[nameof(Host)] = value;
         }
 
         /// <summary>
@@ -73,14 +56,19 @@ namespace Google.Cloud.Spanner.Data
         {
             get
             {
-                var result = SpannerClient.DefaultEndpoint.Port;
-                var value = GetValueOrDefault(nameof(Port));
+                int result = SpannerClient.DefaultEndpoint.Port;
+                string value = GetValueOrDefault(nameof(Port));
                 if (!string.IsNullOrEmpty(value))
+                {
                     if (!int.TryParse(value, out result))
+                    {
                         result = SpannerClient.DefaultEndpoint.Port;
+                    }
+                }
+
                 return result;
             }
-            private set { this[nameof(Port)] = value.ToString(); }
+            private set => this[nameof(Port)] = value.ToString();
         }
 
         /// <summary>
@@ -95,31 +83,55 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public string SpannerInstance => ParsedDataSourcePart(1);
 
-        internal SpannerConnectionStringBuilder CloneWithNewDataSource(string dataSource)
+        /// <summary>
+        /// </summary>
+        /// <param name="connectionString"></param>
+        /// <param name="credential"></param>
+        public SpannerConnectionStringBuilder(string connectionString, ITokenAccess credential)
         {
-            return new SpannerConnectionStringBuilder {
+            connectionString.ThrowIfNullOrEmpty(nameof(connectionString));
+            Credential = credential;
+            ConnectionString = connectionString;
+        }
+
+        /// <summary>
+        /// </summary>
+        public SpannerConnectionStringBuilder() { }
+
+        internal SpannerConnectionStringBuilder CloneWithNewDataSource(string dataSource) => new
+            SpannerConnectionStringBuilder
+            {
                 Credential = Credential,
                 Host = Host,
                 Port = Port,
                 DataSource = dataSource
             };
-        }
 
         private string GetValueOrDefault(string key, string defaultValue = "")
         {
             key = key.ToLower();
             if (ContainsKey(key))
+            {
                 return (string) this[key];
+            }
+
             return defaultValue;
         }
 
         private string ParsedDataSourcePart(int index)
         {
-            var dataSource = DataSource;
+            string dataSource = DataSource;
             if (string.IsNullOrEmpty(dataSource))
-                return string.Empty;
+            {
+                return "";
+            }
+
             var parts = dataSource.Split('/');
-            if (parts.Length != 3) return string.Empty;
+            if (parts.Length != 3)
+            {
+                return "";
+            }
+
             return parts[index];
         }
     }

@@ -15,6 +15,7 @@
 // ReSharper disable UnusedParameter.Local
 // ReSharper disable EmptyNamespace
 
+
 #if NET45 || NET451
 using System;
 using System.ComponentModel;
@@ -184,11 +185,12 @@ namespace Google.Cloud.Spanner.Data
             SpannerDataReader spannerDataReader = dataReader as SpannerDataReader;
             if (spannerDataReader != null && BuildUpdateCommands)
             {
-                var readerMetadata = spannerDataReader.PopulateMetadataAsync(CancellationToken.None).ResultWithUnwrappedExceptions();
+                var readerMetadata =
+spannerDataReader.PopulateMetadataAsync(CancellationToken.None).ResultWithUnwrappedExceptions();
                 foreach (var field in readerMetadata.RowType.Fields)
                 {
                     _parsedParameterCollection.Add(
-                        new SpannerParameter(field.Name, field.Type.Code.GetSpannerDbType(), field.Name));
+                        new SpannerParameter(field.Name, SpannerDbType.FromProtoBufType(field.Type), field.Name));
                 }
             }
 
