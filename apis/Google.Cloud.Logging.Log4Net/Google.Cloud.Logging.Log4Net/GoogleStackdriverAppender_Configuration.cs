@@ -289,7 +289,7 @@ namespace Google.Cloud.Logging.Log4Net
 
         private T ThrowIfActivated<T>(T value, string name)
         {
-            GaxPreconditions.CheckState(!_isActivated, $"Appender already activated; cannot modify '{name}'");
+            GaxPreconditions.CheckState(!_isActivated, "Appender already activated; cannot modify '{0}'", name);
             return value;
         }
     }

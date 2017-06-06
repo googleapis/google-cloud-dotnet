@@ -183,21 +183,21 @@ namespace Google.Cloud.Logging.Log4Net.Tests
         {
             await RunTestWorkingServer(appender =>
             {
-                Assert.Throws<InvalidOperationException>(() => { appender.DisableResourceTypeDetection = true; });
-                Assert.Throws<InvalidOperationException>(() => { appender.ResourceType = ""; });
+                Assert.Throws<InvalidOperationException>(() => appender.DisableResourceTypeDetection = true);
+                Assert.Throws<InvalidOperationException>(() => appender.ResourceType = "");
                 Assert.Throws<InvalidOperationException>(() => appender.AddResourceLabel(new GoogleStackdriverAppender.Label { Key = "a", Value = "b" }));
-                Assert.Throws<InvalidOperationException>(() => { appender.ProjectId = ""; });
-                Assert.Throws<InvalidOperationException>(() => { appender.LogId = ""; });
-                Assert.Throws<InvalidOperationException>(() => { appender.MaxUploadBatchSize = 0; });
-                Assert.Throws<InvalidOperationException>(() => { appender.LocalQueueType = LocalQueueType.Memory; });
-                Assert.Throws<InvalidOperationException>(() => { appender.MaxMemorySize = 0; });
-                Assert.Throws<InvalidOperationException>(() => { appender.MaxMemoryCount = 0; });
+                Assert.Throws<InvalidOperationException>(() => appender.ProjectId = "");
+                Assert.Throws<InvalidOperationException>(() => appender.LogId = "");
+                Assert.Throws<InvalidOperationException>(() => appender.MaxUploadBatchSize = 0);
+                Assert.Throws<InvalidOperationException>(() => appender.LocalQueueType = LocalQueueType.Memory);
+                Assert.Throws<InvalidOperationException>(() => appender.MaxMemorySize = 0);
+                Assert.Throws<InvalidOperationException>(() => appender.MaxMemoryCount = 0);
                 Assert.Throws<InvalidOperationException>(() => appender.AddCustomLabel(new GoogleStackdriverAppender.Label { Key = "a", Value = "b" }));
                 Assert.Throws<InvalidOperationException>(() => appender.AddWithMetaData(MetaDataType.Domain));
-                Assert.Throws<InvalidOperationException>(() => { appender.ServerErrorBackoffDelaySeconds = 0; });
-                Assert.Throws<InvalidOperationException>(() => { appender.ServerErrorBackoffMultiplier = 0; });
-                Assert.Throws<InvalidOperationException>(() => { appender.ServerErrorBackoffMaxDelaySeconds = 0; });
-                Assert.Throws<InvalidOperationException>(() => { appender.DisposeTimeoutSeconds = 0; });
+                Assert.Throws<InvalidOperationException>(() => appender.ServerErrorBackoffDelaySeconds = 0);
+                Assert.Throws<InvalidOperationException>(() => appender.ServerErrorBackoffMultiplier = 0);
+                Assert.Throws<InvalidOperationException>(() => appender.ServerErrorBackoffMaxDelaySeconds = 0);
+                Assert.Throws<InvalidOperationException>(() => appender.DisposeTimeoutSeconds = 0);
                 return Task.FromResult(0);
             });
         }
