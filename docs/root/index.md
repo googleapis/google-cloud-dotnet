@@ -43,3 +43,4 @@ Beta:
 Alpha:
 
 - [Google.Cloud.Metadata.V1](Google.Cloud.Metadata.V1/index.html)
+- [Google.Cloud.VideoIntelligence.V1Beta1](Google.Cloud.VideoIntelligence.V1Beta1/index.html)
