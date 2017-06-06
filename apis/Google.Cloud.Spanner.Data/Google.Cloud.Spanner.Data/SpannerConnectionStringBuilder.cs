@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
 using System.Data.Common;
 using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
@@ -35,7 +36,25 @@ namespace Google.Cloud.Spanner.Data
         public string DataSource
         {
             get => GetValueOrDefault("Data Source");
-            private set => this["Data Source"] = value;
+            private set => this["Data Source"] = ValidatedDataSource(value);
+        }
+
+        private string ValidatedDataSource(string dataSource)
+        {
+            var parts = dataSource?.Split('/');
+            if (parts?.Length == 3)
+            {
+                return dataSource;
+            }
+            if (parts?.Length == 6
+                && String.Equals(parts[0], "projects", StringComparison.OrdinalIgnoreCase)
+                && String.Equals(parts[2], "instances", StringComparison.OrdinalIgnoreCase)
+                && String.Equals(parts[4], "databases", StringComparison.OrdinalIgnoreCase))
+            {
+                return dataSource;
+            }
+            throw new ArgumentException($"'{dataSource}' is not a valid value for ${nameof(DataSource)}.  It should be of the form "
+                + "projects/<project>/instances/<instance>/databases/<database>.", nameof(DataSource));
         }
 
         /// <summary>
@@ -127,12 +146,15 @@ namespace Google.Cloud.Spanner.Data
             }
 
             var parts = dataSource.Split('/');
-            if (parts.Length != 3)
+            if (parts.Length == 3)
             {
-                return "";
+                return parts[index];
             }
-
-            return parts[index];
+            else if (parts.Length == 6)
+            {
+                return parts[index * 2 + 1];
+            }
+            return "";
         }
     }
 }
