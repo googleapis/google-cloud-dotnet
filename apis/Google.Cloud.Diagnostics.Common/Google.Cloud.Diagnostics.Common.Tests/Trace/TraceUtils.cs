@@ -22,12 +22,19 @@ namespace Google.Cloud.Diagnostics.Common.Tests
     internal static class TraceUtils
     {
         /// <summary>
-        /// Creates a rate limiter that will allow 1 QPS with the elapsed milliseconds.
+        /// Creates a rate limiter that will allow 1 QPS with <paramref name="elapsedMilliseconds"/>
+        /// elapsing between calls.
         /// </summary>
         internal static RateLimiter GetRateLimiter(long elapsedMilliseconds)
         {
+            long time = 0;
             var watch = new Mock<ITimer>();
-            watch.Setup(w => w.GetElapsedMilliseconds()).Returns(elapsedMilliseconds);
+            watch.Setup(w => w.GetElapsedMilliseconds()).Returns(() =>
+            {
+                long current = time;
+                time += elapsedMilliseconds;
+                return current;
+            });
             return new RateLimiter(1, watch.Object);
         }
 
