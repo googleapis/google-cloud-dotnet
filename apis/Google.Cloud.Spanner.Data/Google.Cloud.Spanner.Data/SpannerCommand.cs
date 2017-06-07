@@ -28,15 +28,18 @@ using Google.Protobuf.WellKnownTypes;
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
-    /// Represents a SQL query or Spanner command to execute against
+    /// Represents a SQL query or command to execute against
     /// a Spanner database.
     /// If the command is a SQL query, then <see cref="SpannerCommand.CommandText"/>
-    /// contains the entire SQL statement.
+    /// contains the entire SQL statement.  Use <see cref="ExecuteReaderAsync"/>  to obtain results.
     /// 
     /// If the command is an update, insert or delete command, then <see cref="SpannerCommand.CommandText"/>
     /// is simply "[operation] [spanner_table]" such as "UPDATE MYTABLE" with the parameter
     /// collection containing <see cref="SpannerParameter"/> instances whose name matches a column
-    /// in the target table.
+    /// in the target table.  Use <see cref="ExecuteNonQueryAsync"/> to execute the command.
+    /// 
+    /// The command may also be a DDL statement such as CREATE TABLE. Use <see cref="ExecuteNonQueryAsync"/>
+    /// to execute the statement.
     /// </summary>
     public sealed class SpannerCommand : DbCommand
 #if NET45 || NET451

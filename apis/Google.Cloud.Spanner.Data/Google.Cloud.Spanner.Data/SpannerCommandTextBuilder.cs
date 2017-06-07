@@ -21,6 +21,8 @@ using Google.Api.Gax;
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
+    /// Builds the <see cref="SpannerCommand.CommandText"/> string for executing a query or operation
+    /// on a Spanner Database.
     /// </summary>
     public sealed class SpannerCommandTextBuilder
     {
