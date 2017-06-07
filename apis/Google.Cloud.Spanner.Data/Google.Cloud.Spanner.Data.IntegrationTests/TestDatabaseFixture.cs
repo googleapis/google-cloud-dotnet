@@ -51,9 +51,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public void Dispose()
         {
             //TODO(benwu):DROP Database is not supported in DDL form yet.
-            var databaseAdminClient = DatabaseAdminClient.CreateAsync().Result;
+            var databaseAdminClient = DatabaseAdminClient.Create();
 
-            databaseAdminClient?.DropDatabase(
+            databaseAdminClient.DropDatabase(
                 new DatabaseName(TestProjectName, TestInstanceName, DatabaseName));
         }
 
@@ -80,7 +80,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var connection = new SpannerConnection(NoDbConnectionString))
             {
                 var createCmd = connection.CreateDdlCommand("CREATE DATABASE " + DatabaseName);
-                await createCmd.ExecuteNonQueryAsync(CancellationToken.None);
+                await createCmd.ExecuteNonQueryAsync();
             }
         }
 
@@ -92,10 +92,15 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                               StringValue         STRING(MAX),
                             ) PRIMARY KEY (K)";
 
+            await ExecuteDdlAsync(typeTable);
+        }
+
+        private async Task ExecuteDdlAsync(string ddlStatement)
+        {
             using (var connection = new SpannerConnection(ConnectionString))
             {
-                var createCmd = connection.CreateDdlCommand(typeTable);
-                await createCmd.ExecuteNonQueryAsync(CancellationToken.None);
+                var createCmd = connection.CreateDdlCommand(ddlStatement);
+                await createCmd.ExecuteNonQueryAsync();
             }
         }
 
@@ -119,11 +124,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                   DateArrayValue      ARRAY<DATE>,
                 ) PRIMARY KEY (K)";
 
-            using (var connection = new SpannerConnection(ConnectionString))
-            {
-                var createCmd = connection.CreateDdlCommand(typeTable);
-                await createCmd.ExecuteNonQueryAsync(CancellationToken.None);
-            }
+            await ExecuteDdlAsync(typeTable);
         }
 
         private async Task CreateTableAsync()
@@ -135,15 +136,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             var index1 = "CREATE INDEX TestTableByValue ON TestTable(StringValue)";
             var index2 = "CREATE INDEX TestTableByValueDesc ON TestTable(StringValue DESC)";
 
-            using (var connection = new SpannerConnection(ConnectionString))
-            {
-                var createTable = connection.CreateDdlCommand(createTableStatement);
-                var createIndex1 = connection.CreateDdlCommand(index1);
-                var createIndex2 = connection.CreateDdlCommand(index2);
-                await createTable.ExecuteNonQueryAsync(CancellationToken.None);
-                await createIndex1.ExecuteNonQueryAsync(CancellationToken.None);
-                await createIndex2.ExecuteNonQueryAsync(CancellationToken.None);
-            }
+            await ExecuteDdlAsync(createTableStatement);
+            await ExecuteDdlAsync(index1);
+            await ExecuteDdlAsync(index2);
         }
 
         public async Task FillSampleData()

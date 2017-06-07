@@ -227,17 +227,13 @@ namespace Google.Cloud.Spanner.Data
             if (SpannerCommandTextBuilder.SpannerCommandType == SpannerCommandType.Select)
             {
                 throw new InvalidOperationException(
-                    "You can only call ExecuteNonQueryAsync on a Delete, Insert, InsertUpdate, or Update Command");
+                    $"You can only call ExecuteNonQueryAsync on a {SpannerCommandType.Delete}, {SpannerCommandType.Insert},"
+                    + $"{SpannerCommandType.InsertOrUpdate}, {SpannerCommandType.Update}, or {SpannerCommandType.Ddl} Command");
             }
 
-            if (SpannerCommandTextBuilder.SpannerCommandType == SpannerCommandType.Ddl)
-            {
-                return ExecuteDdlAsync(cancellationToken);
-            }
-            else
-            {
-                return ExecuteMutationsAsync(cancellationToken);
-            }
+            return SpannerCommandTextBuilder.SpannerCommandType == SpannerCommandType.Ddl
+                ? ExecuteDdlAsync(cancellationToken)
+                : ExecuteMutationsAsync(cancellationToken);
         }
 
         private async Task<int> ExecuteDdlAsync(CancellationToken cancellationToken)

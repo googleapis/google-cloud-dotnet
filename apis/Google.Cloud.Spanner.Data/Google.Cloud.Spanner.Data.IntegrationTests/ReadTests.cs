@@ -92,7 +92,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             catch (SpannerException e)
             {
                 exceptionCaught = true;
-                Debug.WriteLine("TestBadColumnName: Caught error code:" + e.ErrorCode);
+                Debug.WriteLine($"TestBadColumnName: Caught error code:{e.ErrorCode}");
                 Assert.Equal(ErrorCode.InvalidArgument, e.ErrorCode);
                 Assert.False(e.IsTransientSpannerFault());
             }
@@ -104,8 +104,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task BadDbName()
         {
-            string connectionString = "Data Source=projects/" + _testFixture.TestProjectName + "/instances/"
-                + _testFixture.TestInstanceName + "/databases/" + "badjuju";
+            string connectionString = $"Data Source=projects/{_testFixture.TestProjectName}/instances/"
+                + $"{_testFixture.TestInstanceName}/databases/badjuju";
             // ReSharper disable once RedundantAssignment
             int rowsRead = -1;
             var exceptionCaught = false;
@@ -115,7 +115,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 using (var connection = new SpannerConnection(connectionString))
                 {
                     var cmd = connection.CreateSelectCommand(
-                        "SELECT * FROM " + _testFixture.TestTable + " WHERE Key = 'k1'");
+                        $"SELECT * FROM {_testFixture.TestTable} WHERE Key = 'k1'");
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
                         rowsRead = 0;
@@ -181,7 +181,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
                 {
                     var cmd = connection.CreateSelectCommand(
-                        "SELECT * FROM " + _testFixture.TestTable);
+                        $"SELECT * FROM {_testFixture.TestTable}");
 
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
@@ -245,8 +245,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
                 var cmd = connection.CreateSelectCommand(
-                    "SELECT * FROM " + _testFixture.TestTable
-                    + " WHERE Key = 'k1'");
+                    $"SELECT * FROM {_testFixture.TestTable} WHERE Key = 'k1'");
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     rowsRead = 0;
@@ -270,8 +269,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
                 var cmd = connection.CreateSelectCommand(
-                    "SELECT * FROM " + _testFixture.TestTable
-                    + " WHERE Key = 'k99'");
+                    $"SELECT * FROM {_testFixture.TestTable} WHERE Key = 'k99'");
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     rowsRead = 0;
@@ -303,7 +301,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
                 {
                     var cmd = connection.CreateSelectCommand(
-                        "SLECT * FROM " + _testFixture.TestTable);
+                        $"SLECT * FROM {_testFixture.TestTable}");
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
                         rowsRead = 0;
@@ -335,8 +333,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
                 var cmd = connection.CreateSelectCommand(
-                    "SELECT * FROM " + _testFixture.TestTable
-                    + " WHERE Key >= 'k99'");
+                    $"SELECT * FROM {_testFixture.TestTable} WHERE Key >= 'k99'");
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     rowsRead = 0;

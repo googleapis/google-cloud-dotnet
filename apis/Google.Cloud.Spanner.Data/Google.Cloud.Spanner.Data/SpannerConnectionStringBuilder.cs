@@ -17,7 +17,9 @@ using System.Data.Common;
 using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Util;
+using Google.Cloud.Spanner.Admin.Database.V1;
 using Google.Cloud.Spanner.V1;
+using DatabaseName = Google.Cloud.Spanner.V1.DatabaseName;
 
 // ReSharper disable UnusedParameter.Local
 namespace Google.Cloud.Spanner.Data
@@ -27,6 +29,9 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     public sealed class SpannerConnectionStringBuilder : DbConnectionStringBuilder
     {
+        private InstanceName _instanceName;
+        private DatabaseName _databaseName;
+
         /// <summary>
         /// </summary>
         public ITokenAccess Credential { get; private set; }
@@ -39,29 +44,25 @@ namespace Google.Cloud.Spanner.Data
             private set => this["Data Source"] = ValidatedDataSource(value);
         }
 
+        private bool ParseCurrentDataSource()
+        {
+            return ParseDataSource(DataSource);
+        }
+
+        private bool ParseDataSource(string dataSource)
+        {
+            return DatabaseName.TryParse(dataSource, out _databaseName)
+                || InstanceName.TryParse(dataSource, out _instanceName);
+        }
+
         private string ValidatedDataSource(string dataSource)
         {
-            var parts = dataSource?.Split('/');
-            if (parts == null ||
-                (parts.Length != 4
-                && parts.Length != 6))
+            if (!ParseDataSource(dataSource))
             {
                 throw new ArgumentException($"'{dataSource}' is not a valid value for ${nameof(DataSource)}.  It should be of the form "
                     + "projects/<project>/instances/<instance>/databases/<database>.", nameof(DataSource));
             }
 
-            if (!String.Equals(parts[0], "projects", StringComparison.OrdinalIgnoreCase)
-                || !String.Equals(parts[2], "instances", StringComparison.OrdinalIgnoreCase))
-            {
-                throw new ArgumentException($"'{dataSource}' is not a valid value for ${nameof(DataSource)}.  It should be of the form "
-                    + "projects/<project>/instances/<instance>/databases/<database>.", nameof(DataSource));
-            }
-            if (parts.Length == 6
-                && !String.Equals(parts[4], "databases", StringComparison.OrdinalIgnoreCase))
-            {
-                throw new ArgumentException($"'{dataSource}' is not a valid value for ${nameof(DataSource)}.  It should be of the form "
-                    + "projects/<project>/instances/<instance>/databases/<database>.", nameof(DataSource));
-            }
             return dataSource;
         }
 
@@ -71,6 +72,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// </summary>
+        // ReSharper disable once MemberCanBePrivate.Global
         public string Host
         {
             get => GetValueOrDefault(nameof(Host), SpannerClient.DefaultEndpoint.Host);
@@ -79,6 +81,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// </summary>
+        // ReSharper disable once MemberCanBePrivate.Global
         public int Port
         {
             get
@@ -100,15 +103,36 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// </summary>
-        public string Project => ParsedDataSourcePart(0);
+        public string Project
+        {
+            get
+            {
+                ParseCurrentDataSource();
+                return _databaseName?.ProjectId ?? _instanceName?.ProjectId;
+            }
+        }
 
         /// <summary>
         /// </summary>
-        public string SpannerDatabase => ParsedDataSourcePart(2);
+        public string SpannerDatabase
+        {
+            get
+            {
+                ParseCurrentDataSource();
+                return _databaseName?.DatabaseId;
+            }
+        }
 
         /// <summary>
         /// </summary>
-        public string SpannerInstance => ParsedDataSourcePart(1);
+        public string SpannerInstance
+        {
+            get
+            {
+                ParseCurrentDataSource();
+                return _databaseName?.InstanceId ?? _instanceName?.InstanceId;
+            }
+        }
 
         /// <summary>
         /// </summary>
@@ -143,22 +167,6 @@ namespace Google.Cloud.Spanner.Data
             }
 
             return defaultValue;
-        }
-
-        private string ParsedDataSourcePart(int index)
-        {
-            string dataSource = DataSource;
-            if (string.IsNullOrEmpty(dataSource))
-            {
-                return "";
-            }
-
-            var parts = dataSource.Split('/');
-            if (parts.Length > index * 2 + 1)
-            {
-                return parts[index * 2 + 1];
-            }
-            return "";
         }
     }
 }
