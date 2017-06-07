@@ -153,8 +153,6 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        public static TypeCode GetSpannerTypeCode(this SpannerDbType spannerDbType) => spannerDbType.TypeCode;
-
         public static Value ToValue(object value, SpannerDbType spannerDbType)
         {
             if (value == null)
@@ -165,19 +163,15 @@ namespace Google.Cloud.Spanner.Data
             switch (spannerDbType.TypeCode)
             {
                 case TypeCode.Bytes:
-                    var s = value as string;
-                    if (s != null)
+                    if (value is string s)
                     {
                         return new Value {StringValue = s};
                     }
-                    var bArray = value as byte[];
-                    if (bArray != null)
+                    if (value is byte[] bArray)
                     {
                         return new Value {StringValue = Convert.ToBase64String(bArray)};
                     }
-                    throw new ArgumentOutOfRangeException(
-                        nameof(value), value,
-                        "TypeCode.Bytes only supports string and byte[]");
+                    throw new ArgumentException("TypeCode.Bytes only supports string and byte[]", nameof(value));
                 case TypeCode.Bool:
                     return new Value {BoolValue = Convert.ToBoolean(value)};
                 case TypeCode.String:
@@ -186,42 +180,34 @@ namespace Google.Cloud.Spanner.Data
                 case TypeCode.Float64:
                     return new Value {NumberValue = Convert.ToDouble(value)};
                 case TypeCode.Timestamp:
-                    var stringValue = value as string;
-                    if (stringValue != null)
+                    if (value is string s2)
                     {
-                        return new Value {StringValue = stringValue};
+                        return new Value { StringValue = s2 };
                     }
-
                     return new Value
                     {
                         StringValue = XmlConvert.ToString(Convert.ToDateTime(value), XmlDateTimeSerializationMode.Utc)
                     };
                 case TypeCode.Date:
-                    stringValue = value as string;
-                    if (stringValue != null)
+                    if (value is string s3)
                     {
-                        return new Value {StringValue = stringValue};
+                        return new Value { StringValue = s3 };
                     }
-
                     return new Value
                     {
                         StringValue = StripTimePart(
                             XmlConvert.ToString(Convert.ToDateTime(value), XmlDateTimeSerializationMode.Utc))
                     };
                 case TypeCode.Array:
-                    var enumerable = value as IEnumerable;
-                    if (enumerable != null)
+                    if (value is IEnumerable enumerable)
                     {
                         return Value.ForList(
                             enumerable.Cast<object>()
                                 .Select(x => ToValue(x, spannerDbType.ArrayElementType)).ToArray());
                     }
-                    throw new ArgumentOutOfRangeException(
-                        nameof(spannerDbType), spannerDbType,
-                        "The given array instance needs to implement IEnumerable.");
+                    throw new ArgumentException("The given array instance needs to implement IEnumerable.", nameof(spannerDbType));
                 case TypeCode.Struct:
-                    var dictionary = value as IDictionary;
-                    if (dictionary != null)
+                    if (value is IDictionary dictionary)
                     {
                         var structValue = new Struct();
                         foreach (var key in dictionary.Keys)
@@ -229,9 +215,7 @@ namespace Google.Cloud.Spanner.Data
                             string keyString = key.ToString();
                             if (!structValue.Fields.ContainsKey(keyString))
                             {
-                                throw new ArgumentOutOfRangeException(
-                                    nameof(value), value,
-                                    "The given struct instance has members not defined in the Struct.");
+                                throw new ArgumentException("The given struct instance has members not defined in the Struct.", nameof(value));
                             }
                             structValue.Fields[keyString] = ToValue(
                                 dictionary[key],
@@ -239,9 +223,7 @@ namespace Google.Cloud.Spanner.Data
                         }
                         return Value.ForStruct(structValue);
                     }
-                    throw new ArgumentOutOfRangeException(
-                        nameof(spannerDbType), spannerDbType,
-                        "The given struct instance needs to implement IDictionary.");
+                    throw new ArgumentException("The given struct instance needs to implement IDictionary.", nameof(spannerDbType));
 
                 default:
                     throw new ArgumentOutOfRangeException(nameof(spannerDbType), spannerDbType, null);
@@ -378,31 +360,17 @@ namespace Google.Cloud.Spanner.Data
                         throw new ArgumentOutOfRangeException();
                 }
             }
-
-            if (targetClrType == typeof(ArrayList) || targetClrType == typeof(IList))
+            if (typeof(IDictionary).IsAssignableFrom(targetClrType))
             {
-                switch (wireValue.KindCase)
+                if (targetClrType == typeof(IDictionary))
                 {
-                    case Value.KindOneofCase.NullValue: return null;
-                    case Value.KindOneofCase.ListValue:
-                        return new ArrayList(
-                            wireValue.ListValue.Values
-                                .Select(x => x.ConvertToClrType(spannerType.ArrayElementType))
-                                .ToList());
-                    default:
-                        throw new InvalidOperationException(
-                            $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
+                    targetClrType = typeof(Hashtable);
                 }
-            }
-            if (targetClrType == typeof(Hashtable) ||
-                targetClrType == typeof(IDictionary))
-            {
                 //a bit of recursion here...
-                Hashtable dictionary;
+                IDictionary dictionary = (IDictionary)Activator.CreateInstance(targetClrType);
                 switch (wireValue.KindCase)
                 {
                     case Value.KindOneofCase.StructValue:
-                        dictionary = new Hashtable();
                         foreach (var structField in spannerType.StructType.Fields)
                         {
                             dictionary[structField.Name] =
@@ -412,7 +380,6 @@ namespace Google.Cloud.Spanner.Data
 
                         return dictionary;
                     case Value.KindOneofCase.ListValue:
-                        dictionary = new Hashtable();
                         if (spannerType.Code == TypeCode.Struct)
                         {
                             for (var i = 0; i < spannerType.StructType.Fields.Count; i++)
@@ -463,6 +430,8 @@ namespace Google.Cloud.Spanner.Data
             }
             if (typeof(IList).IsAssignableFrom(targetClrType))
             {
+                if (targetClrType == typeof(IList))
+                    targetClrType = typeof(ArrayList);
                 switch (wireValue.KindCase)
                 {
                     case Value.KindOneofCase.NullValue: return null;

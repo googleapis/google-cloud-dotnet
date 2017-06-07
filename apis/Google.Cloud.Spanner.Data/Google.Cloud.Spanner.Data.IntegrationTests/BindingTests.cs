@@ -25,14 +25,16 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     public class BindingTests : IClassFixture<TestDatabaseFixture>
     {
+        // ReSharper disable once UnusedParameter.Local
         public BindingTests(TestDatabaseFixture testFixture, ITestOutputHelper outputHelper)
         {
             _testFixture = testFixture;
-            // Uncomment the lines below to enable detailed logging
-            //            SpannerConnection.ConnectionPoolOptions.LogLevel = LogLevel.Debug;
-            //            SpannerConnection.ConnectionPoolOptions.LogPerformanceTraces = true;
-            //            SpannerConnection.ConnectionPoolOptions.PerformanceTraceLogInterval = 1000;
+#if LoggingOn
+            SpannerConnection.ConnectionPoolOptions.LogLevel = LogLevel.Debug;
+            SpannerConnection.ConnectionPoolOptions.LogPerformanceTraces = true;
+            SpannerConnection.ConnectionPoolOptions.PerformanceTraceLogInterval = 1000;
             TestLogger.TestOutputHelper = outputHelper;
+#endif
         }
 
         private readonly TestDatabaseFixture _testFixture;
@@ -65,7 +67,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 var valueReadAsArray = valueRead as Array;
                 Assert.NotNull(valueReadAsArray);
-                for (var i = 0; i < valueAsArray.Length; i++)
+                Assert.Equal(valueAsArray.Length, valueReadAsArray.Length);
+                for (int i = 0; i < valueAsArray.Length; i++)
                 {
                     // ReSharper disable once PossibleNullReferenceException
                     Assert.Equal(valueAsArray.GetValue(i), valueReadAsArray.GetValue(i));

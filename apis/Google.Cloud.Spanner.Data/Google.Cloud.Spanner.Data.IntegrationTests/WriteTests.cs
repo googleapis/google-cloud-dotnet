@@ -28,14 +28,16 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     public class WriteTests : IClassFixture<TestDatabaseFixture>
     {
+        // ReSharper disable once UnusedParameter.Local
         public WriteTests(TestDatabaseFixture testFixture, ITestOutputHelper outputHelper)
         {
             _testFixture = testFixture;
-            // Uncomment the lines below to enable detailed logging
-            //            SpannerConnection.ConnectionPoolOptions.LogLevel = LogLevel.Debug;
-            //            SpannerConnection.ConnectionPoolOptions.LogPerformanceTraces = true;
-            //            SpannerConnection.ConnectionPoolOptions.PerformanceTraceLogInterval = 1000;
+#if LoggingOn
+            SpannerConnection.ConnectionPoolOptions.LogLevel = LogLevel.Debug;
+            SpannerConnection.ConnectionPoolOptions.LogPerformanceTraces = true;
+            SpannerConnection.ConnectionPoolOptions.PerformanceTraceLogInterval = 1000;
             TestLogger.TestOutputHelper = outputHelper;
+#endif
         }
 
         private readonly TestDatabaseFixture _testFixture;

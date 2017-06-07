@@ -184,7 +184,7 @@ namespace Google.Cloud.Spanner.V1
                 {
                     throw new InvalidOperationException("The transaction being committed was not found to have an entry.");
                 }
-                if (!Equals(info.ActiveTransaction.Id, transaction.Id))
+                if (info.ActiveTransaction.Id != transaction.Id)
                 {
                     throw new InvalidOperationException("The transaction being committed was not found to have a valid entry.");
                 }
