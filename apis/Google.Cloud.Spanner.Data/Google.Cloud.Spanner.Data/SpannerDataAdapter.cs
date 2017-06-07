@@ -14,7 +14,7 @@
 
 // ReSharper disable UnusedParameter.Local
 // ReSharper disable EmptyNamespace
-
+// ReSharper disable MemberCanBePrivate.Global
 
 #if NET45 || NET451
 using System;
@@ -23,6 +23,7 @@ using System.Data;
 using System.Data.Common;
 using System.Threading;
 using Google.Api.Gax;
+
 #endif
 
 namespace Google.Cloud.Spanner.Data
@@ -30,33 +31,21 @@ namespace Google.Cloud.Spanner.Data
 #if NET45 || NET451
 
     /// <summary>
+    /// Represents a set of data commands and a database connection that are used to fill the DataSet
+    /// and update a Spanner database.
     /// </summary>
     public sealed class SpannerDataAdapter : DbDataAdapter, IDbDataAdapter
     {
-        private SpannerCommand _selectCommand;
+        private readonly SpannerParameterCollection _parsedParameterCollection = new SpannerParameterCollection();
         private SpannerCommand _builtInsertCommand;
+        private SpannerCommand _builtUpdateCommand;
+        private SpannerCommand _builtDeleteCommand;
+        private string _autoUpdateTable;
 
         /// <summary>
-        /// </summary>
-        public SpannerDataAdapter()
-        {
-        }
-
-        /// <summary>
-        /// </summary>
-        /// <param name="sqlQuery"></param>
-        /// <param name="connection"></param>
-        public SpannerDataAdapter(string sqlQuery, SpannerConnection connection)
-        {
-            SpannerConnection = connection;
-            SelectCommand = connection.CreateSelectCommand(sqlQuery);
-        }
-
-        /// <summary>
-        /// 
         /// </summary>
         [Category("Configuration")]
-        public bool BuildUpdateCommands { get; set; } = true;
+        public bool AutoBuildUpdateCommands => !string.IsNullOrEmpty(AutoUpdateTable);
 
         /// <summary>
         /// </summary>
@@ -71,76 +60,75 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// </summary>
         [Category("Commands")]
-        public new SpannerCommand SelectCommand
-        {
-            get
-            {
-                if (_selectCommand == null && SpannerConnection != null && SelectStatement != null)
-                {
-                    ClearBuiltCommands();
-                    _selectCommand = SpannerConnection.CreateSelectCommand(SelectStatement);
-                }
-                return _selectCommand;
-            }
-            set
-            {
-                ClearBuiltCommands();
-                _selectCommand = value;
-            }
-        }
+        public new SpannerCommand SelectCommand { get; set; }
 
         /// <summary>
         /// </summary>
         [Category("Commands")]
         public new SpannerCommand UpdateCommand { get; set; }
 
+        /// <summary>
+        /// </summary>
+        [Category("Configuration")]
+        public SpannerConnection SpannerConnection { get; set; }
+
+        /// <summary>
+        /// The table to use for automatically built commands.
+        /// </summary>
+        [Category("Configuration")]
+        public string AutoUpdateTable
+        {
+            get => _autoUpdateTable;
+            set
+            {
+                ClearBuiltCommands();
+                _autoUpdateTable = value;
+            }
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the SpannerDataAdapter class
+        /// </summary>
+        public SpannerDataAdapter() { }
+
+        /// <summary>
+        /// Initializes a new instance of the SpannerDataAdapter class with the specified
+        /// </summary>
+        /// <param name="autoUpdateTable"></param>
+        /// <param name="connection"></param>
+        public SpannerDataAdapter(string autoUpdateTable, SpannerConnection connection)
+        {
+            SpannerConnection = connection;
+            AutoUpdateTable = autoUpdateTable;
+        }
+
         [Browsable(false)]
         IDbCommand IDbDataAdapter.DeleteCommand
         {
-            get { return DeleteCommand; }
-            set { DeleteCommand = (SpannerCommand) value; }
+            get => DeleteCommand;
+            set => DeleteCommand = (SpannerCommand) value;
         }
 
         [Browsable(false)]
         IDbCommand IDbDataAdapter.InsertCommand
         {
-            get { return InsertCommand; }
-            set { InsertCommand = (SpannerCommand) value; }
+            get => InsertCommand;
+            set => InsertCommand = (SpannerCommand) value;
         }
 
         [Browsable(false)]
         IDbCommand IDbDataAdapter.SelectCommand
         {
-            get { return SelectCommand; }
-            set { SelectCommand = (SpannerCommand) value; }
+            get => SelectCommand;
+            set => SelectCommand = (SpannerCommand) value;
         }
 
         [Browsable(false)]
         IDbCommand IDbDataAdapter.UpdateCommand
         {
-            get { return UpdateCommand; }
-            set { UpdateCommand = (SpannerCommand) value; }
+            get => UpdateCommand;
+            set => UpdateCommand = (SpannerCommand) value;
         }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [Category("Configuration")]
-        public string SelectStatement
-        {
-            get { return _selectStatement; }
-            set
-            {
-                _selectCommand = null;
-                _selectStatement = value;
-            }
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [Category("Configuration")]
-        public SpannerConnection SpannerConnection { get; set; }
 
         /// <summary>
         /// </summary>
@@ -154,18 +142,20 @@ namespace Google.Cloud.Spanner.Data
          * Implement abstract methods inherited from DbDataAdapter.
          */
         /// <inheritdoc />
-        protected override RowUpdatedEventArgs CreateRowUpdatedEvent(DataRow dataRow, IDbCommand command,
-            StatementType statementType, DataTableMapping tableMapping)
-        {
-            return new SpannerRowUpdatedEventArgs(dataRow, command, statementType, tableMapping);
-        }
+        protected override RowUpdatedEventArgs CreateRowUpdatedEvent(
+            DataRow dataRow,
+            IDbCommand command,
+            StatementType statementType,
+            DataTableMapping tableMapping) => new SpannerRowUpdatedEventArgs(
+            dataRow, command, statementType, tableMapping);
 
         /// <inheritdoc />
-        protected override RowUpdatingEventArgs CreateRowUpdatingEvent(DataRow dataRow, IDbCommand command,
-            StatementType statementType, DataTableMapping tableMapping)
-        {
-            return new SpannerRowUpdatingEventArgs(dataRow, command, statementType, tableMapping);
-        }
+        protected override RowUpdatingEventArgs CreateRowUpdatingEvent(
+            DataRow dataRow,
+            IDbCommand command,
+            StatementType statementType,
+            DataTableMapping tableMapping) => new SpannerRowUpdatingEventArgs(
+            dataRow, command, statementType, tableMapping);
 
         /// <inheritdoc />
         protected override void OnRowUpdated(RowUpdatedEventArgs rowUpdatedEventArgs)
@@ -173,20 +163,19 @@ namespace Google.Cloud.Spanner.Data
             RowUpdated?.Invoke(this, (SpannerRowUpdatedEventArgs) rowUpdatedEventArgs);
         }
 
-        private readonly SpannerParameterCollection _parsedParameterCollection = new SpannerParameterCollection();
-        private SpannerCommand _builtUpdateCommand;
-        private SpannerCommand _builtDeleteCommand;
-        private string _selectStatement;
-        private string _updateTable;
-
         /// <inheritdoc />
-        protected override int Fill(DataSet dataSet, string srcTable, IDataReader dataReader, int startRecord, int maxRecords)
+        protected override int Fill(
+            DataSet dataSet,
+            string srcTable,
+            IDataReader dataReader,
+            int startRecord,
+            int maxRecords)
         {
-            SpannerDataReader spannerDataReader = dataReader as SpannerDataReader;
-            if (spannerDataReader != null && BuildUpdateCommands)
+            var spannerDataReader = dataReader as SpannerDataReader;
+            if (spannerDataReader != null && AutoBuildUpdateCommands)
             {
                 var readerMetadata =
-spannerDataReader.PopulateMetadataAsync(CancellationToken.None).ResultWithUnwrappedExceptions();
+                    spannerDataReader.PopulateMetadataAsync(CancellationToken.None).ResultWithUnwrappedExceptions();
                 foreach (var field in readerMetadata.RowType.Fields)
                 {
                     _parsedParameterCollection.Add(
@@ -212,7 +201,8 @@ spannerDataReader.PopulateMetadataAsync(CancellationToken.None).ResultWithUnwrap
             }
             if (_parsedParameterCollection != null)
             {
-                _builtInsertCommand = SpannerConnection.CreateInsertCommand(UpdateTable, _parsedParameterCollection);
+                _builtInsertCommand =
+                    SpannerConnection.CreateInsertCommand(AutoUpdateTable, _parsedParameterCollection);
             }
             return _builtInsertCommand;
         }
@@ -225,7 +215,8 @@ spannerDataReader.PopulateMetadataAsync(CancellationToken.None).ResultWithUnwrap
             }
             if (_parsedParameterCollection != null)
             {
-                _builtUpdateCommand = SpannerConnection.CreateUpdateCommand(UpdateTable, _parsedParameterCollection);
+                _builtUpdateCommand =
+                    SpannerConnection.CreateUpdateCommand(AutoUpdateTable, _parsedParameterCollection);
             }
             return _builtUpdateCommand;
         }
@@ -238,7 +229,8 @@ spannerDataReader.PopulateMetadataAsync(CancellationToken.None).ResultWithUnwrap
             }
             if (_parsedParameterCollection != null)
             {
-                _builtDeleteCommand = SpannerConnection.CreateDeleteCommand(UpdateTable, _parsedParameterCollection);
+                _builtDeleteCommand =
+                    SpannerConnection.CreateDeleteCommand(AutoUpdateTable, _parsedParameterCollection);
             }
             return _builtDeleteCommand;
         }
@@ -246,13 +238,14 @@ spannerDataReader.PopulateMetadataAsync(CancellationToken.None).ResultWithUnwrap
         /// <inheritdoc />
         protected override void OnRowUpdating(RowUpdatingEventArgs rowUpdatingEventArgs)
         {
-            if (rowUpdatingEventArgs.Command == null && BuildUpdateCommands)
+            if (rowUpdatingEventArgs.Command == null && AutoBuildUpdateCommands)
             {
                 //show a friendly exception before this bails later in case
                 //the user forgot to set this property.
-                if (string.IsNullOrEmpty(UpdateTable))
+                if (string.IsNullOrEmpty(AutoUpdateTable))
                 {
-                    throw new InvalidOperationException("You must set SpannderDataAdapter.UpdateTable to automatically generate update commands.");
+                    throw new InvalidOperationException(
+                        "You must set SpannderDataAdapter.UpdateTable to automatically generate update commands.");
                 }
 
                 // Note that we auto build the commands as a feature of the *Data adapter* versus a separate class.
@@ -282,20 +275,6 @@ spannerDataReader.PopulateMetadataAsync(CancellationToken.None).ResultWithUnwrap
                 }
             }
             RowUpdating?.Invoke(this, (SpannerRowUpdatingEventArgs) rowUpdatingEventArgs);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [Category("Configuration")]
-        public string UpdateTable
-        {
-            get { return _updateTable; }
-            set
-            {
-                ClearBuiltCommands();
-                _updateTable = value;
-            }
         }
     }
 #endif

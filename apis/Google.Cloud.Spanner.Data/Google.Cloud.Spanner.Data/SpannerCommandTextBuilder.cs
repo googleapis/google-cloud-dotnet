@@ -21,6 +21,8 @@ using Google.Api.Gax;
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
+    /// Builds the <see cref="SpannerCommand.CommandText"/> string for executing a query or operation
+    /// on a Spanner Database.
     /// </summary>
     public sealed class SpannerCommandTextBuilder
     {
@@ -37,14 +39,18 @@ namespace Google.Cloud.Spanner.Data
         private string _targetTable;
 
         /// <summary>
+        /// Gets the resulting string to be used for <see cref="SpannerCommand.CommandText"/>.
         /// </summary>
         public string CommandText { get; private set; }
 
         /// <summary>
+        /// Gets the type of Spanner command (Select, Update, Delete, InsertOrUpdate, Insert, Ddl)
         /// </summary>
         public SpannerCommandType SpannerCommandType { get; private set; }
 
         /// <summary>
+        /// Gets the target Spanner Database Table if the command is Update, Delete, InsertOrUpdate,
+        /// or Insert
         /// </summary>
         public string TargetTable
         {
@@ -57,8 +63,17 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// Initializes a new SpannerCommandTextBuilder with the given command text.
+        /// The given text will be analyzed to choose the proper <see cref="SpannerCommandType"/>.
         /// </summary>
-        /// <param name="commandText"></param>
+        /// <param name="commandText">The command text intended for <see cref="SpannerCommand.CommandText"/>
+        /// If the intended <see cref="SpannerCommandType"/> is Select, then this string should be
+        /// a SQL Query. If the intended <see cref="SpannerCommandType"/> is Ddl, then this string should be
+        /// the Ddl statement (eg 'CREATE TABLE MYTABLE...')
+        /// If the intended <see cref="SpannerCommandType"/> is Update, Delete,
+        /// InsertOrUpdate, or Insert, then the text should be '[spannercommandtype] [tablename]'
+        /// such as 'INSERT MYTABLE'.
+        /// </param>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="InvalidOperationException"></exception>
         public SpannerCommandTextBuilder(string commandText)
@@ -102,17 +117,17 @@ namespace Google.Cloud.Spanner.Data
                 || string.Equals(commandPart, DropCommand, StringComparison.OrdinalIgnoreCase);
         }
 
-        /// <summary>
-        /// </summary>
-        public bool IsCreateDatabaseCommand => CommandText?.StartsWith(CreateDatabaseCommand, StringComparison.OrdinalIgnoreCase) ?? false;
+        internal bool IsCreateDatabaseCommand => CommandText?.StartsWith(CreateDatabaseCommand, StringComparison.OrdinalIgnoreCase) ?? false;
 
         /// <summary>
         /// </summary>
         private SpannerCommandTextBuilder() { }
 
         /// <summary>
+        /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
+        /// for deleting rows.
         /// </summary>
-        /// <param name="table"></param>
+        /// <param name="table">The name of the Spanner Database table from which rows will be deleted.</param>
         /// <returns></returns>
         public static SpannerCommandTextBuilder CreateDeleteTextBuilder(string table)
         {
@@ -126,8 +141,10 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
+        /// for inserting or updating rows.
         /// </summary>
-        /// <param name="table"></param>
+        /// <param name="table">The name of the Spanner Database table from which rows will be updated or inserted.</param>
         /// <returns></returns>
         public static SpannerCommandTextBuilder CreateInsertOrUpdateTextBuilder(string table)
         {
@@ -141,8 +158,10 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
+        /// for inserting rows.
         /// </summary>
-        /// <param name="table"></param>
+        /// <param name="table">The name of the Spanner Database table from which rows will be inserted.</param>
         /// <returns></returns>
         public static SpannerCommandTextBuilder CreateInsertTextBuilder(string table)
         {
@@ -156,8 +175,10 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
+        /// for querying rows via a SQL query.
         /// </summary>
-        /// <param name="sqlQuery"></param>
+        /// <param name="sqlQuery">The full SQL query.</param>
         /// <returns></returns>
         public static SpannerCommandTextBuilder CreateSelectTextBuilder(string sqlQuery) => new
             SpannerCommandTextBuilder
@@ -167,8 +188,10 @@ namespace Google.Cloud.Spanner.Data
             };
 
         /// <summary>
+        /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
+        /// for updating rows.
         /// </summary>
-        /// <param name="table"></param>
+        /// <param name="table">The name of the Spanner Database table from which rows will be updated.</param>
         /// <returns></returns>
         public static SpannerCommandTextBuilder CreateUpdateTextBuilder(string table)
         {
@@ -182,8 +205,10 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
+        /// for executing a DDL statement.
         /// </summary>
-        /// <param name="ddlStatement"></param>
+        /// <param name="ddlStatement">The full DDL statement.</param>
         /// <returns></returns>
         public static SpannerCommandTextBuilder CreateDdlTextBuilder(string ddlStatement)
         {
@@ -195,8 +220,10 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// Creates a <see cref="SpannerCommandTextBuilder"/> instance by parsing existing command text.
         /// </summary>
-        /// <param name="commandText"></param>
+        /// <param name="commandText">The full command text containing a query, ddl statement or insert/update/delete
+        /// operation.  The given text will be parsed and validated.</param>
         /// <returns></returns>
         public static SpannerCommandTextBuilder FromCommandText(string commandText)
         {

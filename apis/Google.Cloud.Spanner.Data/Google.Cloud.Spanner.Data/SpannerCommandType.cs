@@ -15,30 +15,37 @@
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
+    /// Indicates the type of <see cref="SpannerCommand"/> that will be executed.
     /// </summary>
     public enum SpannerCommandType
     {
         /// <summary>
+        /// A SQL Query.
         /// </summary>
         Select = 0,
 
         /// <summary>
+        /// Updates rows in a table.
         /// </summary>
         Update = 1,
 
         /// <summary>
+        /// Deletes rows from a table.
         /// </summary>
         Delete = 2,
 
         /// <summary>
+        /// Inserts rows into a table.
         /// </summary>
         Insert = 3,
 
         /// <summary>
+        /// Inserts or updates rows in a table.
         /// </summary>
         InsertOrUpdate = 4,
 
         /// <summary>
+        /// A DDL statement to create or drop tables and indices.
         /// </summary>
         Ddl
     }

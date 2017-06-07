@@ -30,15 +30,18 @@ using DatabaseName = Google.Cloud.Spanner.Admin.Database.V1.DatabaseName;
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
-    /// Represents a SQL query or Spanner command to execute against
+    /// Represents a SQL query or command to execute against
     /// a Spanner database.
     /// If the command is a SQL query, then <see cref="SpannerCommand.CommandText"/>
-    /// contains the entire SQL statement.
+    /// contains the entire SQL statement.  Use <see cref="ExecuteReaderAsync"/>  to obtain results.
     /// 
     /// If the command is an update, insert or delete command, then <see cref="SpannerCommand.CommandText"/>
     /// is simply "[operation] [spanner_table]" such as "UPDATE MYTABLE" with the parameter
     /// collection containing <see cref="SpannerParameter"/> instances whose name matches a column
-    /// in the target table.
+    /// in the target table.  Use <see cref="ExecuteNonQueryAsync"/> to execute the command.
+    /// 
+    /// The command may also be a DDL statement such as CREATE TABLE. Use <see cref="ExecuteNonQueryAsync"/>
+    /// to execute the statement.
     /// </summary>
     public sealed class SpannerCommand : DbCommand
 #if NET45 || NET451
@@ -378,9 +381,9 @@ namespace Google.Cloud.Spanner.Data
         /// Executes the query and returns the first column of the first row in the result set returned by the query.
         /// All other columns and rows are ignored.  The return value is converted to type T if possible.
         /// </summary>
-        /// <param name="cancellationToken"></param>
-        /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <typeparam name="T">The expected return Type.  If possible the return type will be converted to this Type.</typeparam>
+        /// <returns>The first column of the first row resulting from execution of the query.</returns>
         public async Task<T> ExecuteScalarAsync<T>(CancellationToken cancellationToken = default(CancellationToken))
         {
             using (var reader = await ExecuteDbDataReaderAsync(CommandBehavior.SingleRow, cancellationToken)
