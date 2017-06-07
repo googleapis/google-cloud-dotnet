@@ -42,19 +42,27 @@ namespace Google.Cloud.Spanner.Data
         private string ValidatedDataSource(string dataSource)
         {
             var parts = dataSource?.Split('/');
-            if (parts?.Length == 3)
+            if (parts == null ||
+                (parts.Length != 4
+                && parts.Length != 6))
             {
-                return dataSource;
+                throw new ArgumentException($"'{dataSource}' is not a valid value for ${nameof(DataSource)}.  It should be of the form "
+                    + "projects/<project>/instances/<instance>/databases/<database>.", nameof(DataSource));
             }
-            if (parts?.Length == 6
-                && String.Equals(parts[0], "projects", StringComparison.OrdinalIgnoreCase)
-                && String.Equals(parts[2], "instances", StringComparison.OrdinalIgnoreCase)
-                && String.Equals(parts[4], "databases", StringComparison.OrdinalIgnoreCase))
+
+            if (!String.Equals(parts[0], "projects", StringComparison.OrdinalIgnoreCase)
+                || !String.Equals(parts[2], "instances", StringComparison.OrdinalIgnoreCase))
             {
-                return dataSource;
+                throw new ArgumentException($"'{dataSource}' is not a valid value for ${nameof(DataSource)}.  It should be of the form "
+                    + "projects/<project>/instances/<instance>/databases/<database>.", nameof(DataSource));
             }
-            throw new ArgumentException($"'{dataSource}' is not a valid value for ${nameof(DataSource)}.  It should be of the form "
-                + "projects/<project>/instances/<instance>/databases/<database>.", nameof(DataSource));
+            if (parts.Length == 6
+                && !String.Equals(parts[4], "databases", StringComparison.OrdinalIgnoreCase))
+            {
+                throw new ArgumentException($"'{dataSource}' is not a valid value for ${nameof(DataSource)}.  It should be of the form "
+                    + "projects/<project>/instances/<instance>/databases/<database>.", nameof(DataSource));
+            }
+            return dataSource;
         }
 
         /// <summary>
@@ -146,11 +154,7 @@ namespace Google.Cloud.Spanner.Data
             }
 
             var parts = dataSource.Split('/');
-            if (parts.Length == 3)
-            {
-                return parts[index];
-            }
-            else if (parts.Length == 6)
+            if (parts.Length > index * 2 + 1)
             {
                 return parts[index * 2 + 1];
             }

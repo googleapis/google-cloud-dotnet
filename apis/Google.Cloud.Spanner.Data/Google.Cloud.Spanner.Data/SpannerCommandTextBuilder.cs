@@ -29,6 +29,10 @@ namespace Google.Cloud.Spanner.Data
         private const string UpdateCommand = "UPDATE";
         private const string DeleteCommand = "DELETE";
         private const string SelectCommand = "SELECT";
+        private const string AlterCommand = "ALTER";
+        private const string CreateCommand = "CREATE";
+        private const string DropCommand = "DROP";
+        private const string CreateDatabaseCommand = "CREATE DATABASE";
 
         private string _targetTable;
 
@@ -72,15 +76,35 @@ namespace Google.Cloud.Spanner.Data
                 && !TryParseCommand(this, InsertCommand, SpannerCommandType.Insert, commandSections)
                 && !TryParseCommand(this, InsertUpdateCommand, SpannerCommandType.InsertOrUpdate, commandSections))
             {
-                if (!commandSections[0].ToUpper().StartsWith(SelectCommand))
+                if (string.Equals(commandSections[0], SelectCommand, StringComparison.OrdinalIgnoreCase))
+                {
+                    newBuilder.CommandText = commandText;
+                    newBuilder.SpannerCommandType = SpannerCommandType.Select;
+                }
+                else if (IsDdl(commandSections[0]))
+                {
+                    newBuilder.CommandText = commandText;
+                    newBuilder.SpannerCommandType = SpannerCommandType.Ddl;
+                }
+                else
                 {
                     throw new InvalidOperationException($"{commandText} is not a recognized Spanner command.");
                 }
-
-                newBuilder.CommandText = commandText;
-                newBuilder.SpannerCommandType = SpannerCommandType.Select;
             }
         }
+
+        private static bool IsDdl(string commandPart)
+        {
+            // These three form the ddl for spanner.
+            // For reference: https://cloud.google.com/spanner/docs/data-definition-language
+            return string.Equals(commandPart, CreateCommand, StringComparison.OrdinalIgnoreCase)
+                || string.Equals(commandPart, AlterCommand, StringComparison.OrdinalIgnoreCase)
+                || string.Equals(commandPart, DropCommand, StringComparison.OrdinalIgnoreCase);
+        }
+
+        /// <summary>
+        /// </summary>
+        public bool IsCreateDatabaseCommand => CommandText?.ToUpper().StartsWith(CreateDatabaseCommand) ?? false;
 
         /// <summary>
         /// </summary>
@@ -154,6 +178,19 @@ namespace Google.Cloud.Spanner.Data
                 SpannerCommandType = SpannerCommandType.Update,
                 TargetTable = table,
                 CommandText = $"{UpdateCommand} {table}"
+            };
+        }
+
+        /// <summary>
+        /// </summary>
+        /// <param name="ddlStatement"></param>
+        /// <returns></returns>
+        public static SpannerCommandTextBuilder CreateDdlTextBuilder(string ddlStatement)
+        {
+            return new SpannerCommandTextBuilder
+            {
+                SpannerCommandType = SpannerCommandType.Ddl,
+                CommandText = ddlStatement
             };
         }
 

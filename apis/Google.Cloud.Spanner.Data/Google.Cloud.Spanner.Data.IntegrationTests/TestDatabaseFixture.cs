@@ -15,6 +15,7 @@
 #region
 
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 using Google.Cloud.Spanner.Admin.Database.V1;
 
@@ -25,14 +26,16 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     public class TestDatabaseFixture : IDisposable
     {
         private readonly Lazy<Task> _creationTask;
-        private DatabaseAdminClient _databaseAdminClient;
 
         public string TestInstanceName => "myspanner";
 
         public string TestProjectName => "spanneref";
 
-        public string ConnectionString => "Data Source=" + TestProjectName + "/" + TestInstanceName
-            + "/" + DatabaseName;
+        public string ConnectionString => "Data Source=projects/" + TestProjectName + "/instances/" + TestInstanceName
+            + "/databases/" + DatabaseName;
+
+        private string NoDbConnectionString => "Data Source=projects/" + TestProjectName + "/instances/" +
+            TestInstanceName;
 
         // scratch can be used to run tests on a precreated db.
         // all tests are designed to be re-run on an exiting db (previously written state will
@@ -47,7 +50,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         public void Dispose()
         {
-            _databaseAdminClient?.DropDatabase(
+            //TODO(benwu):DROP Database is not supported in DDL form yet.
+            var databaseAdminClient = DatabaseAdminClient.CreateAsync().Result;
+
+            databaseAdminClient?.DropDatabase(
                 new DatabaseName(TestProjectName, TestInstanceName, DatabaseName));
         }
 
@@ -69,53 +75,32 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             await FillSampleData();
         }
 
-        private async Task<Database> CreateDatabaseAsync()
+        private async Task CreateDatabaseAsync()
         {
-            // Create client
-            _databaseAdminClient = await DatabaseAdminClient.CreateAsync();
-            // Initialize request argument(s)
-            var parent = new InstanceName(TestProjectName, TestInstanceName);
-
-            string createStatement = "CREATE DATABASE " + DatabaseName;
-
-            // Make the request
-            var response = await _databaseAdminClient.CreateDatabaseAsync(parent, createStatement);
-
-            // Poll until the returned long-running operation is complete
-            var completedResponse = await response.PollUntilCompletedAsync();
-
-            // Retrieve the operation result
-            return completedResponse.Result;
+            using (var connection = new SpannerConnection(NoDbConnectionString))
+            {
+                var createCmd = connection.CreateDdlCommand("CREATE DATABASE " + DatabaseName);
+                await createCmd.ExecuteNonQueryAsync(CancellationToken.None);
+            }
         }
 
         private async Task CreateTxTableAsync()
         {
-            // Create client
-            var databaseAdminClient = await DatabaseAdminClient.CreateAsync();
-
             var typeTable = @"CREATE TABLE TX (
                               K                   STRING(MAX) NOT NULL,
                               Int64Value          INT64,
                               StringValue         STRING(MAX),
                             ) PRIMARY KEY (K)";
-            // Make the request
-            var response =
-                await databaseAdminClient.UpdateDatabaseDdlAsync(
-                    new DatabaseName(
-                        TestProjectName,
-                        TestInstanceName,
-                        DatabaseName),
-                    new[] {typeTable});
 
-            // Poll until the returned long-running operation is complete
-            await response.PollUntilCompletedAsync();
+            using (var connection = new SpannerConnection(ConnectionString))
+            {
+                var createCmd = connection.CreateDdlCommand(typeTable);
+                await createCmd.ExecuteNonQueryAsync(CancellationToken.None);
+            }
         }
 
         private async Task CreateTypeTableAsync()
         {
-            // Create client
-            var databaseAdminClient = await DatabaseAdminClient.CreateAsync();
-
             var typeTable = @"CREATE TABLE T ( 
                   K                   STRING(MAX) NOT NULL,
                   BoolValue           BOOL,
@@ -133,24 +118,16 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                   TimestampArrayValue ARRAY<TIMESTAMP>,
                   DateArrayValue      ARRAY<DATE>,
                 ) PRIMARY KEY (K)";
-            // Make the request
-            var response =
-                await databaseAdminClient.UpdateDatabaseDdlAsync(
-                    new DatabaseName(
-                        TestProjectName,
-                        TestInstanceName,
-                        DatabaseName),
-                    new[] {typeTable});
 
-            // Poll until the returned long-running operation is complete
-            await response.PollUntilCompletedAsync();
+            using (var connection = new SpannerConnection(ConnectionString))
+            {
+                var createCmd = connection.CreateDdlCommand(typeTable);
+                await createCmd.ExecuteNonQueryAsync(CancellationToken.None);
+            }
         }
 
         private async Task CreateTableAsync()
         {
-            // Create client
-            var databaseAdminClient = await DatabaseAdminClient.CreateAsync();
-
             string createTableStatement = $@"CREATE TABLE {TestTable} (
                                             Key                STRING(MAX) NOT NULL,
                                             StringValue        STRING(MAX),
@@ -158,32 +135,15 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             var index1 = "CREATE INDEX TestTableByValue ON TestTable(StringValue)";
             var index2 = "CREATE INDEX TestTableByValueDesc ON TestTable(StringValue DESC)";
 
-            // Make the request
-            var response =
-                await databaseAdminClient.UpdateDatabaseDdlAsync(
-                    new DatabaseName(TestProjectName, TestInstanceName, DatabaseName),
-                    new[] {createTableStatement});
-
-            // Poll until the returned long-running operation is complete
-            await response.PollUntilCompletedAsync();
-
-            response =
-                await databaseAdminClient.UpdateDatabaseDdlAsync(
-                    new DatabaseName(
-                        TestProjectName,
-                        TestInstanceName,
-                        DatabaseName),
-                    new[] {index1});
-            await response.PollUntilCompletedAsync();
-
-            response =
-                await databaseAdminClient.UpdateDatabaseDdlAsync(
-                    new DatabaseName(
-                        TestProjectName,
-                        TestInstanceName,
-                        DatabaseName),
-                    new[] {index2});
-            await response.PollUntilCompletedAsync();
+            using (var connection = new SpannerConnection(ConnectionString))
+            {
+                var createTable = connection.CreateDdlCommand(createTableStatement);
+                var createIndex1 = connection.CreateDdlCommand(index1);
+                var createIndex2 = connection.CreateDdlCommand(index2);
+                await createTable.ExecuteNonQueryAsync(CancellationToken.None);
+                await createIndex1.ExecuteNonQueryAsync(CancellationToken.None);
+                await createIndex2.ExecuteNonQueryAsync(CancellationToken.None);
+            }
         }
 
         public async Task FillSampleData()
