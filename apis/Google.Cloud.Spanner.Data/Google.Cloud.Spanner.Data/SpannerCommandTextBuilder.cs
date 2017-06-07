@@ -104,7 +104,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// </summary>
-        public bool IsCreateDatabaseCommand => CommandText?.ToUpper().StartsWith(CreateDatabaseCommand) ?? false;
+        public bool IsCreateDatabaseCommand => CommandText?.StartsWith(CreateDatabaseCommand, StringComparison.OrdinalIgnoreCase) ?? false;
 
         /// <summary>
         /// </summary>
