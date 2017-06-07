@@ -12,89 +12,90 @@ namespace Google.Cloud.Spanner.V1.Logging
     {
         private int _perfLoggingTaskEnabled;
         private readonly ConcurrentDictionary<string, PerformanceTimeEntry> _perfCounterDictionary = new ConcurrentDictionary<string, PerformanceTimeEntry>();
+        private object _perfLogSyncObject = new object();
 
-        public override void Debug(string message)
+        protected virtual void WriteLine(string message)
         {
 #if NET45 || NET451
             Trace.TraceInformation(message);
 #else
             Console.Error.WriteLine(message);
 #endif
+        }
+
+        public override void Debug(string message)
+        {
+            WriteLine(message);
         }
 
         public override void Info(string message)
         {
-#if NET45 || NET451
-            Trace.TraceInformation(message);
-#else
-            Console.Error.WriteLine(message);
-#endif
+            WriteLine(message);
         }
 
         public override void Warn(string message)
         {
-#if NET45 || NET451
-            Trace.TraceWarning(message);
-#else
-            Console.Error.WriteLine(message);
-#endif
+            WriteLine(message);
         }
 
         public override void Error(string message, Exception exception = null)
         {
-#if NET45 || NET451
-            Trace.TraceError(message);
-#else
-            Console.Error.WriteLine(message);
-#endif
+            WriteLine(message);
+        }
+
+        protected override void LogPerformanceDataImpl()
+        {
+            lock (_perfLogSyncObject)
+            {
+                if (!_perfCounterDictionary.IsEmpty)
+                {
+                    StringBuilder message = new StringBuilder();
+                    SortedList metricList = new SortedList();
+                    message.AppendLine("Spanner performance metrics:");
+
+                    foreach (var kvp in _perfCounterDictionary)
+                    {
+                        //to make the tavg correct, we re-record the last value at the current timestamp.
+                        UpdateTimeWeightedAvg(kvp.Value, DateTime.UtcNow);
+
+                        //log it.
+                        metricList.Add(
+                            kvp.Key,
+                            $" {kvp.Key}({kvp.Value.Instances}) tavg={kvp.Value.TimeWeightedAverage} avg={kvp.Value.Average} max={kvp.Value.Maximum} min={kvp.Value.Minimum} last={kvp.Value.Last}");
+
+                        //now reset to last.
+                        if (ResetPerformanceTracesEachInterval)
+                        {
+                            lock (kvp.Value)
+                            {
+                                kvp.Value.Last = 0;
+                                kvp.Value.Instances = 0;
+                                kvp.Value.TotalTime = default(TimeSpan);
+                                kvp.Value.LastMeasureTime = DateTime.UtcNow;
+                                kvp.Value.Maximum = 0;
+                                kvp.Value.Minimum = 0;
+                                kvp.Value.Average = 0;
+                                kvp.Value.TimeWeightedAverage = 0;
+                            }
+                        }
+                    }
+
+                    foreach (string s in metricList.GetValueList())
+                    {
+                        message.AppendLine(s);
+                    }
+
+                    WriteLine(message.ToString());
+                }
+            }
         }
 
         private async Task PerformanceLogAsync()
         {
-            StringBuilder message = new StringBuilder();
-            SortedList metricList = new SortedList();
             while (true)
             {
-                message.Clear();
-                metricList.Clear();
                 await Task.Delay(PerformanceTraceLogInterval);
-                message.AppendLine("Spanner performance metrics:");
-                foreach (var kvp in _perfCounterDictionary)
-                {
-                    //to make the tavg correct, we re-record the last value at the current timestamp.
-                    UpdateTimeWeightedAvg(kvp.Value, DateTime.UtcNow);
-
-                    //log it.
-                    metricList.Add(kvp.Key,
-                        $" {kvp.Key}({kvp.Value.Instances}) tavg={kvp.Value.TimeWeightedAverage} avg={kvp.Value.Average} max={kvp.Value.Maximum} min={kvp.Value.Minimum} last={kvp.Value.Last}");
-
-                    //now reset to last.
-                    if (ResetPerformanceTracesEachInterval)
-                    {
-                        lock (kvp.Value)
-                        {
-                            kvp.Value.Last = 0;
-                            kvp.Value.Instances = 0;
-                            kvp.Value.TotalTime = default(TimeSpan);
-                            kvp.Value.LastMeasureTime = DateTime.UtcNow;
-                            kvp.Value.Maximum = 0;
-                            kvp.Value.Minimum = 0;
-                            kvp.Value.Average = 0;
-                            kvp.Value.TimeWeightedAverage = 0;
-                        }
-                    }
-                }
-
-                foreach (string s in metricList.GetValueList())
-                {
-                    message.AppendLine(s);
-                }
-
-#if NET45 || NET451
-                Trace.TraceInformation(message.ToString());
-#else
-                Console.Error.WriteLine(message.ToString());
-#endif
+                LogPerformanceDataImpl();
             }
             // ReSharper disable once FunctionNeverReturns
         }

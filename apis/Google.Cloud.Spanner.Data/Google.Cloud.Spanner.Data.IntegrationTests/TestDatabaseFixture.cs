@@ -42,7 +42,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // not cause failures).
         // if you use a scratch database, be sure to comment out the database
         // creation and disposal methods.
-        public string DatabaseName { get; } = "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
+        public string DatabaseName { get; } = //"scratch";
+            "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
 
         public string TestTable { get; } = "TestTable";
 
@@ -67,6 +68,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         private async Task EnsureTestDatabaseImplAsync()
         {
+            TestLogger.Install();
+            await Task.Delay(1); // this line exists so the others can be commented.
             await CreateDatabaseAsync();
             await Task.WhenAll(
                 CreateTableAsync(),

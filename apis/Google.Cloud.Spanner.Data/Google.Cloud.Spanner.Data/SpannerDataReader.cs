@@ -260,7 +260,7 @@ namespace Google.Cloud.Spanner.Data
                 "SpannerDataReader.ActiveCount",
                 () => Interlocked.Decrement(ref s_readerCount));
 
-            _resultSet?.Close();
+            _resultSet?.Dispose();
             _connectionToClose?.Close();
             _txToClose?.Dispose();
             base.Dispose(disposing);

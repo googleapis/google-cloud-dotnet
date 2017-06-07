@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Logging;
 
@@ -55,22 +56,13 @@ namespace Google.Cloud.Spanner.Data
             get
             {
                 var underlyingLevel = (int) Logger.LogLevel;
-                if (Enum.IsDefined(typeof(LogLevel), underlyingLevel))
-                {
-                    return (LogLevel) underlyingLevel;
-                }
-                // ReSharper disable once NotResolvedInText
-                throw new ArgumentOutOfRangeException("LogLevel");
+                return GaxPreconditions.CheckEnumValue((LogLevel) underlyingLevel, nameof(LogLevel));
             }
             set
             {
                 var underlyingLevel = (int) value;
-                if (Enum.IsDefined(typeof(V1.Logging.LogLevel), underlyingLevel))
-                {
-                    Logger.LogLevel = (V1.Logging.LogLevel) underlyingLevel;
-                }
-                // ReSharper disable once NotResolvedInText
-                throw new ArgumentOutOfRangeException("LogLevel");
+                Logger.LogLevel = GaxPreconditions.CheckEnumValue((V1.Logging.LogLevel) underlyingLevel,
+                    nameof(LogLevel));
             }
         }
 

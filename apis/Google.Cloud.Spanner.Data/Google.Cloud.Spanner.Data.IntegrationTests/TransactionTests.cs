@@ -17,15 +17,28 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Google.Cloud.Spanner.V1.Logging;
 using Xunit;
+using Xunit.Abstractions;
 
 #endregion
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
+    [PerformanceLog]
     public class TransactionTests : IClassFixture<TestDatabaseFixture>
     {
-        public TransactionTests(TestDatabaseFixture testFixture) => _testFixture = testFixture;
+        // ReSharper disable once UnusedParameter.Local
+        public TransactionTests(TestDatabaseFixture testFixture, ITestOutputHelper outputHelper)
+        {
+            _testFixture = testFixture;
+#if LoggingOn
+            SpannerConnection.ConnectionPoolOptions.LogLevel = LogLevel.Debug;
+            SpannerConnection.ConnectionPoolOptions.LogPerformanceTraces = true;
+            SpannerConnection.ConnectionPoolOptions.PerformanceTraceLogInterval = 1000;
+            TestLogger.TestOutputHelper = outputHelper;
+#endif
+        }
 
         private readonly TestDatabaseFixture _testFixture;
         private string _key;

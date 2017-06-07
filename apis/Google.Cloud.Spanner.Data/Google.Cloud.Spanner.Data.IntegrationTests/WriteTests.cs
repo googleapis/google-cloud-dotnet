@@ -18,6 +18,7 @@ using System;
 using System.Data.Common;
 using System.Threading.Tasks;
 using Xunit;
+using Xunit.Abstractions;
 
 #endregion
 
@@ -27,7 +28,17 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     public class WriteTests : IClassFixture<TestDatabaseFixture>
     {
-        public WriteTests(TestDatabaseFixture testFixture) => _testFixture = testFixture;
+        // ReSharper disable once UnusedParameter.Local
+        public WriteTests(TestDatabaseFixture testFixture, ITestOutputHelper outputHelper)
+        {
+            _testFixture = testFixture;
+#if LoggingOn
+            SpannerConnection.ConnectionPoolOptions.LogLevel = LogLevel.Debug;
+            SpannerConnection.ConnectionPoolOptions.LogPerformanceTraces = true;
+            SpannerConnection.ConnectionPoolOptions.PerformanceTraceLogInterval = 1000;
+            TestLogger.TestOutputHelper = outputHelper;
+#endif
+        }
 
         private readonly TestDatabaseFixture _testFixture;
         private string _lastKey;

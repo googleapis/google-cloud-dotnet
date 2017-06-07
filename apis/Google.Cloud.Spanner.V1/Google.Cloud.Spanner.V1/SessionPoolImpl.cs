@@ -100,25 +100,30 @@ namespace Google.Cloud.Spanner.V1
                 if (_sessionMruStack.Count > 0)
                 {
                     Logger.Debug(() => "Searching for a session with matching transaction semantics.");
-                    bool found = false;
-                    for (int indexToUse = 0; indexToUse < _sessionMruStack.Count
-                        && indexToUse < MaximumLinearSearchDepth; indexToUse++)
+                    int indexToUse = -1;
+                    for (int i = 0; i < _sessionMruStack.Count
+                        && i < MaximumLinearSearchDepth; i++)
                     {
-                        entry = _sessionMruStack[indexToUse];
+                        entry = _sessionMruStack[i];
                         if (Equals(entry.Session.GetLastUsedTransactionOptions(), options))
                         {
                             Logger.Debug(() => "found a session with matching transaction semantics.");
-                            found = true;
-                            _sessionMruStack.RemoveAt(indexToUse);
-                            break;
+                            indexToUse = i;
+                            if (options.ModeCase == TransactionOptions.ModeOneofCase.ReadOnly
+                                || entry.Session.IsPreWarmedTransactionReady())
+                            {
+                                //if our prewarmed tx is ready, we can jump out immediately.
+                                break;
+                            }
                         }
                     }
-                    if (!found)
+                    if (indexToUse == -1)
                     {
                         Logger.Debug(() => "did not find a session with matching transaction semantics - popping at top.");
-                        entry = _sessionMruStack[0];
-                        _sessionMruStack.RemoveAt(0);
+                        indexToUse = 0;
                     }
+                    entry = _sessionMruStack[indexToUse];
+                    _sessionMruStack.RemoveAt(indexToUse);
 
                     Interlocked.Decrement(ref s_activeSessionsPooled);
                     LogSessionsPooled();

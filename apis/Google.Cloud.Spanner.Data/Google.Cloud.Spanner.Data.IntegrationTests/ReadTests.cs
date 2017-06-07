@@ -20,6 +20,7 @@ using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using Xunit.Abstractions;
 
 #endregion
 
@@ -29,7 +30,17 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     public class ReadTests : IClassFixture<TestDatabaseFixture>
     {
-        public ReadTests(TestDatabaseFixture testFixture) => _testFixture = testFixture;
+        // ReSharper disable once UnusedParameter.Local
+        public ReadTests(TestDatabaseFixture testFixture, ITestOutputHelper outputHelper)
+        {
+            _testFixture = testFixture;
+#if LoggingOn
+            SpannerConnection.ConnectionPoolOptions.LogLevel = LogLevel.Debug;
+            SpannerConnection.ConnectionPoolOptions.LogPerformanceTraces = true;
+            SpannerConnection.ConnectionPoolOptions.PerformanceTraceLogInterval = 1000;
+            TestLogger.TestOutputHelper = outputHelper;
+#endif
+        }
 
         private readonly TestDatabaseFixture _testFixture;
 
