@@ -20,8 +20,10 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Api.Gax;
+using Google.Cloud.Spanner.Admin.Database.V1;
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf.WellKnownTypes;
+using DatabaseName = Google.Cloud.Spanner.Admin.Database.V1.DatabaseName;
 
 // ReSharper disable UnusedParameter.Local
 
@@ -220,6 +222,12 @@ namespace Google.Cloud.Spanner.Data
             CancellationToken cancellationToken = default(CancellationToken))
         {
             GaxPreconditions.CheckNotNull(singleUseReadSettings, nameof(singleUseReadSettings));
+            // There must be a valid and open connection.
+            if (SpannerConnection == null)
+            {
+                throw new InvalidOperationException(
+                    "You must assign a SpannerConnection to this command to execute it.");
+            }
             if (Transaction != null)
             {
                 throw new InvalidOperationException(
@@ -236,7 +244,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <inheritdoc />
-        public override async Task<int> ExecuteNonQueryAsync(CancellationToken cancellationToken)
+        public override Task<int> ExecuteNonQueryAsync(CancellationToken cancellationToken)
         {
             // There must be a valid and open connection.
             if (SpannerConnection == null)
@@ -248,9 +256,39 @@ namespace Google.Cloud.Spanner.Data
             if (SpannerCommandTextBuilder.SpannerCommandType == SpannerCommandType.Select)
             {
                 throw new InvalidOperationException(
-                    "You can only call ExecuteNonQueryAsync on a Delete, Insert, InsertUpdate, or Update Command");
+                    $"You can only call ExecuteNonQueryAsync on a {SpannerCommandType.Delete}, {SpannerCommandType.Insert},"
+                    + $"{SpannerCommandType.InsertOrUpdate}, {SpannerCommandType.Update}, or {SpannerCommandType.Ddl} Command");
             }
 
+            return SpannerCommandTextBuilder.SpannerCommandType == SpannerCommandType.Ddl
+                ? ExecuteDdlAsync(cancellationToken)
+                : ExecuteMutationsAsync(cancellationToken);
+        }
+
+        private async Task<int> ExecuteDdlAsync(CancellationToken cancellationToken)
+        {
+            var databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+
+            if (SpannerCommandTextBuilder.IsCreateDatabaseCommand)
+            {
+                var parent = new InstanceName(SpannerConnection.Project, SpannerConnection.SpannerInstance);
+                var response = await databaseAdminClient.CreateDatabaseAsync(parent, CommandText);
+                await response.PollUntilCompletedAsync();
+            }
+            else
+            {
+                var response =
+                    await databaseAdminClient.UpdateDatabaseDdlAsync(
+                        new DatabaseName(
+                            SpannerConnection.Project, SpannerConnection.SpannerInstance, SpannerConnection.Database),
+                        new[] {CommandText});
+                await response.PollUntilCompletedAsync();
+            }
+            return 0;
+        }
+
+        private async Task<int> ExecuteMutationsAsync(CancellationToken cancellationToken)
+        {
             if (!SpannerConnection.IsOpen)
             {
                 await SpannerConnection.OpenAsync(cancellationToken).ConfigureAwait(false);

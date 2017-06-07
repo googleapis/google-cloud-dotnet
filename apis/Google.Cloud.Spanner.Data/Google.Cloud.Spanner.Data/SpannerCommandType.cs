@@ -36,6 +36,10 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// </summary>
-        InsertOrUpdate = 4
+        InsertOrUpdate = 4,
+
+        /// <summary>
+        /// </summary>
+        Ddl
     }
 }

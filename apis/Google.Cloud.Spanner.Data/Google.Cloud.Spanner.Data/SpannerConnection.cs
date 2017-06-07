@@ -312,6 +312,14 @@ namespace Google.Cloud.Spanner.Data
             SpannerCommandTextBuilder.CreateUpdateTextBuilder(databaseTable), this, null,
             updateParameters);
 
+        /// <summary>
+        /// </summary>
+        /// <param name="ddlStatement"></param>
+        /// <returns></returns>
+        public SpannerCommand CreateDdlCommand(
+            string ddlStatement) => new SpannerCommand(
+            SpannerCommandTextBuilder.CreateDdlTextBuilder(ddlStatement), this);
+
         /// <inheritdoc />
         public override void Open()
         {
@@ -329,10 +337,14 @@ namespace Google.Cloud.Spanner.Data
 #if NET45 || NET451
             var currentTransaction = Transaction.Current; //snap it on this thread.
 #endif
-
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 async () =>
                 {
+                    if (string.IsNullOrEmpty(_connectionStringBuilder?.SpannerDatabase))
+                    {
+                        Logger.Warn(() => "No database was defined.  Therefore OpenAsync did not establish a session.");
+                        return;
+                    }
                     if (IsOpen)
                     {
                         return;
