@@ -76,13 +76,10 @@ namespace Google.LongRunning
         /// for "NonIdempotent" <see cref="OperationsClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "NonIdempotent" RPC methods are:
-        /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
-        /// </list>
+        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
         public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.Unavailable);
+            RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="OperationsClient"/> RPC methods.
@@ -113,14 +110,14 @@ namespace Google.LongRunning
         /// <remarks>
         /// The "Default" timeout backoff for <see cref="OperationsClient"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 90000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
+        /// <item><description>Maximum timeout: 90000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
-            delay: TimeSpan.FromMilliseconds(20000),
-            maxDelay: TimeSpan.FromMilliseconds(20000),
+            delay: TimeSpan.FromMilliseconds(90000),
+            maxDelay: TimeSpan.FromMilliseconds(90000),
             delayMultiplier: 1.0
         );
 
@@ -135,9 +132,9 @@ namespace Google.LongRunning
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 90000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 90000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -165,9 +162,9 @@ namespace Google.LongRunning
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 90000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 90000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -195,9 +192,9 @@ namespace Google.LongRunning
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 90000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 90000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -225,9 +222,9 @@ namespace Google.LongRunning
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 90000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 90000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
