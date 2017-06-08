@@ -90,7 +90,7 @@ Next, choose a method for authenticating API requests from within your project:
 ## Supported platforms
 
 See the [Supported Platforms
-documentation](https://googlecloudplatform.github.io/google-cloud-dotnet/docs/platforms.html)
+documentation](https://googlecloudplatform.github.io/google-cloud-dotnet/docs/guides/platforms.html)
 for details on where the Google Cloud Libraries for .NET are
 supported.
 
