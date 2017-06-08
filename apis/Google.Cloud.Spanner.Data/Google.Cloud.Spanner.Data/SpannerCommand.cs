@@ -381,9 +381,9 @@ namespace Google.Cloud.Spanner.Data
         /// Executes the query and returns the first column of the first row in the result set returned by the query.
         /// All other columns and rows are ignored.  The return value is converted to type T if possible.
         /// </summary>
-        /// <param name="cancellationToken"></param>
-        /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <typeparam name="T">The expected return Type.  If possible the return type will be converted to this Type.</typeparam>
+        /// <returns>The first column of the first row resulting from execution of the query.</returns>
         public async Task<T> ExecuteScalarAsync<T>(CancellationToken cancellationToken = default(CancellationToken))
         {
             using (var reader = await ExecuteDbDataReaderAsync(CommandBehavior.SingleRow, cancellationToken)

@@ -26,6 +26,8 @@ namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
     /// A connection string builder for Spanner connection strings.
+    /// The connection string should be of the form:
+    /// Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={hostname};][Port={portnumber}]
     /// </summary>
     public sealed class SpannerConnectionStringBuilder : DbConnectionStringBuilder
     {
@@ -33,10 +35,15 @@ namespace Google.Cloud.Spanner.Data
         private DatabaseName _databaseName;
 
         /// <summary>
+        /// The <see cref="ITokenAccess"/> credential used to communicate with Spanner.
+        /// If not set, then default application credentials will be used.
+        /// Credentials can be retrieved from a file or obtained interactively.
+        /// See google cloud documentation for more information.
         /// </summary>
         public ITokenAccess Credential { get; private set; }
 
         /// <summary>
+        /// DataSource of the Spanner database in the form of 'projects/{project}/instances/{instance}/databases/{database}'
         /// </summary>
         public string DataSource
         {
@@ -67,10 +74,14 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// The <see cref="ServiceEndpoint"/> to use to connect to Spanner.  If not supplied in the
+        /// connection string, the default endpoint will be used.
         /// </summary>
         public ServiceEndpoint EndPoint => new ServiceEndpoint(Host, Port);
 
         /// <summary>
+        /// The tcp Host name to connect to Spanner.  If not supplied in the connection string, the default
+        /// host will be used.
         /// </summary>
         // ReSharper disable once MemberCanBePrivate.Global
         public string Host
@@ -80,6 +91,8 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// The tcp port number to connect to Spanner.  If not supplied in the connection string, the default
+        /// port will be used.
         /// </summary>
         // ReSharper disable once MemberCanBePrivate.Global
         public int Port
@@ -102,6 +115,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// The Spanner Project name parsed from <see cref="DataSource"/>
         /// </summary>
         public string Project
         {
@@ -113,6 +127,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// The Spanner Database name parsed from <see cref="DataSource"/>
         /// </summary>
         public string SpannerDatabase
         {
@@ -124,6 +139,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// The Spanner Instance name parsed from <see cref="DataSource"/>
         /// </summary>
         public string SpannerInstance
         {
@@ -135,10 +151,14 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// Creates a new <see cref="SpannerConnectionStringBuilder"/> with the given
+        /// connection string and optional credential
         /// </summary>
-        /// <param name="connectionString"></param>
-        /// <param name="credential"></param>
-        public SpannerConnectionStringBuilder(string connectionString, ITokenAccess credential)
+        /// <param name="connectionString">A connection string of the form
+        /// Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={hostname};][Port={portnumber}]
+        /// </param>
+        /// <param name="credential">Optionally supplied credential to use for the connection.</param>
+        public SpannerConnectionStringBuilder(string connectionString, ITokenAccess credential = null)
         {
             connectionString.ThrowIfNullOrEmpty(nameof(connectionString));
             Credential = credential;
@@ -146,6 +166,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// Creates a new <see cref="SpannerConnectionStringBuilder"/>.
         /// </summary>
         public SpannerConnectionStringBuilder() { }
 
