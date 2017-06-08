@@ -47,7 +47,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// </summary>
-        public TimestampBound TimeStampBound { get; }
+        public TimestampBound TimestampBound { get; }
 
         /// <inheritdoc />
         protected override DbConnection DbConnection => _connection;
@@ -61,7 +61,7 @@ namespace Google.Cloud.Spanner.Data
             TransactionMode mode,
             Session session,
             Transaction transaction,
-            TimestampBound timeStampBound)
+            TimestampBound timestampBound)
         {
             GaxPreconditions.CheckNotNull(connection, nameof(connection));
             GaxPreconditions.CheckNotNull(session, nameof(session));
@@ -72,7 +72,7 @@ namespace Google.Cloud.Spanner.Data
                 () => Interlocked.Increment(ref s_transactionCount));
 
             Session = session;
-            TimeStampBound = timeStampBound;
+            TimestampBound = timestampBound;
             WireTransaction = transaction;
             _connection = connection;
             Mode = mode;
