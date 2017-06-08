@@ -174,11 +174,6 @@ namespace Google.Cloud.Logging.Log4Net
                     throw new InvalidOperationException($"Invalid {nameof(Log4Net.LocalQueueType)}: '{LocalQueueType}'");
             }
             _initIdTask = Task.Run(_logQ.GetPreviousExecutionIdAsync);
-            var labels = new Dictionary<string, string>();
-            foreach (var customLabel in _customLabels)
-            {
-                labels.Add(customLabel.Key, customLabel.Value);
-            }
             var logsLostWarningEntry = new LogEntry
             {
                 TextPayload = s_logsLostWarningMessage,

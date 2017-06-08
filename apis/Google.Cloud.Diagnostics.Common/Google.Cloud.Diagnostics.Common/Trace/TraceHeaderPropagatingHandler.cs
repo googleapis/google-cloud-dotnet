@@ -83,7 +83,7 @@ namespace Google.Cloud.Diagnostics.Common
                 async () =>
                 {
                     tracer.AnnotateSpan(TraceLabels.FromHttpRequestMessage(request));
-                    var response = await base.SendAsync(request, cancellationToken);
+                    var response = await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
                     tracer.AnnotateSpan(TraceLabels.FromHttpResponseMessage(response));
                     return response;
                 },

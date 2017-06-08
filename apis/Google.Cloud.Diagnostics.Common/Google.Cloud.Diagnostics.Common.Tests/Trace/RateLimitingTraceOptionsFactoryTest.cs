@@ -25,7 +25,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             var rateLimiter = TraceUtils.GetRateLimiter(1001);
             var factory = new RateLimitingTraceOptionsFactory(rateLimiter);
-            Assert.True(factory.CreateOptions().ShouldTrace);
+            Assert.True(factory.CreateOptions().ShouldTrace); // t=0ms
+            Assert.True(factory.CreateOptions().ShouldTrace); // t=1001ms
         }
 
         [Fact]
@@ -33,7 +34,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             var rateLimiter = TraceUtils.GetRateLimiter(999);
             var factory = new RateLimitingTraceOptionsFactory(rateLimiter);
-            Assert.False(factory.CreateOptions().ShouldTrace);
+            Assert.True(factory.CreateOptions().ShouldTrace);  // t=0ms
+            Assert.False(factory.CreateOptions().ShouldTrace); // t=999ms
         }
     }
 }

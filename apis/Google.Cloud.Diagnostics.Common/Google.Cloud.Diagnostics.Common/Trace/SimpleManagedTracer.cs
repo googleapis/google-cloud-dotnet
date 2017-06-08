@@ -152,7 +152,7 @@ namespace Google.Cloud.Diagnostics.Common
                 catch (Exception e) when (SetStackTraceAndReturnFalse(e))
                 {
                     // This will never return as the condition above will always be false.
-                    return await Task.FromResult(default(T));
+                    return default(T);
                 }
             }
         }

@@ -697,9 +697,9 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
                     {
                         writer.WriteLine("---");
                         writer.WriteLine($"uid: {metadataUid}");
+                        writer.WriteLine("snippet: *content");
                         writer.WriteLine("---");
                         writer.WriteLine();
-                        writer.WriteLine("Example:");
                         writer.WriteLine($"[!code-cs[]({relativeSnippetFile}#L{snippet.StartLine}-L{snippet.EndLine})]");
                         writer.WriteLine();
                     }
@@ -718,6 +718,7 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
                     {
                         writer.WriteLine("---");
                         writer.WriteLine($"uid: {metadataUid}");
+                        writer.WriteLine("snippet: *content");
                         writer.WriteLine("---");
                         writer.WriteLine();
                         foreach (var line in seeAlso.Lines)

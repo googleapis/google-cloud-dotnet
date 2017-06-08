@@ -94,7 +94,7 @@ namespace Google.Cloud.Spanner.V1.Logging
         {
             while (true)
             {
-                await Task.Delay(PerformanceTraceLogInterval);
+                await Task.Delay(PerformanceTraceLogInterval).ConfigureAwait(false);
                 LogPerformanceDataImpl();
             }
             // ReSharper disable once FunctionNeverReturns
