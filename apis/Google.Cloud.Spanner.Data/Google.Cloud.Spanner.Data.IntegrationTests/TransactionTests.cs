@@ -303,7 +303,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         TimestampBound.OfReadTimestamp(targetReadTimestamp)))
                 {
                     Assert.Equal(TransactionMode.ReadOnly, tx.Mode);
-                    Assert.Equal(targetReadTimestamp, tx.TimeStampBound.TimeStamp);
+                    Assert.Equal(targetReadTimestamp, tx.TimestampBound.Timestamp);
 
                     var cmd = connection.CreateSelectCommand(
                         "SELECT * FROM TX WHERE K=@k",
@@ -387,7 +387,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         TimestampBound.OfExactStaleness(TimeSpan.FromSeconds(50))))
                 {
                     Assert.Equal(TransactionMode.ReadOnly, tx.Mode);
-                    Assert.Equal(TimeSpan.FromSeconds(50), tx.TimeStampBound.Staleness);
+                    Assert.Equal(TimeSpan.FromSeconds(50), tx.TimestampBound.Staleness);
 
                     var cmd = connection.CreateSelectCommand(
                         "SELECT * FROM TX WHERE K=@k",

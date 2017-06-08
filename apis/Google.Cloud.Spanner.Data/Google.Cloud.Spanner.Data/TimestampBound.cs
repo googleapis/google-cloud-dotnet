@@ -34,7 +34,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// </summary>
-        public DateTime TimeStamp { get; internal set; }
+        public DateTime Timestamp { get; internal set; }
 
         /// <summary>
         /// </summary>
@@ -63,7 +63,7 @@ namespace Google.Cloud.Spanner.Data
         public static TimestampBound OfMinReadTimestamp(DateTime timestamp) => new TimestampBound
         {
             Mode = TimestampBoundMode.MinReadTimestamp,
-            TimeStamp = timestamp
+            Timestamp = timestamp
         };
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace Google.Cloud.Spanner.Data
         public static TimestampBound OfReadTimestamp(DateTime timestamp) => new TimestampBound
         {
             Mode = TimestampBoundMode.ReadTimestamp,
-            TimeStamp = timestamp
+            Timestamp = timestamp
         };
     }
 }
