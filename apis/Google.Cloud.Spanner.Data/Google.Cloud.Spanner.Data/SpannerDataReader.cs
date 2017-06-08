@@ -34,6 +34,7 @@ using System.Data;
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
+    /// Reads a forward-only stream of rows from a data source.
     /// </summary>
     public sealed class SpannerDataReader : DbDataReader
     {
@@ -135,10 +136,16 @@ namespace Google.Cloud.Spanner.Data
             .ConvertToClrType(GetSpannerFieldType(ordinal), typeof(T));
 
         /// <summary>
+        /// Gets the value of the specified column as type T.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="columnName"></param>
-        /// <returns></returns>
+        /// <typeparam name="T">The expected return type. If possible the return type will be converted to this type.
+        /// If conversion is requested between incompatible types, an <see cref="InvalidOperationException"/>
+        /// will be thrown.
+        /// If the conversion fails due to the contents returned (for example a string representing a
+        /// boolean does not have either 'true' or 'false') then a <see cref="FormatException"/> exception will be
+        /// thrown as documented by the <see cref="Convert"/> class.</typeparam>
+        /// <param name="columnName">The name of the column whose value will be returned. Must not be null.</param>
+        /// <returns>The value of the column at the current row, converted to type T.</returns>
         public T GetFieldValue<T>(string columnName)
         {
             var ordinal = GetOrdinal(columnName);
@@ -165,9 +172,10 @@ namespace Google.Cloud.Spanner.Data
         public override long GetInt64(int i) => _innerList[i].ConvertToClrType<long>(GetSpannerFieldType(i));
 
         /// <summary>
+        /// Gets the value of the specified column as a pure Protobuf type.
         /// </summary>
-        /// <param name="i"></param>
-        /// <returns></returns>
+        /// <param name="i">The index of the column whose value will be returned.</param>
+        /// <returns>The raw protobuf as a <see cref="Value"/>.</returns>
         public Value GetJsonValue(int i) => _innerList[i].ConvertToClrType<Value>(GetSpannerFieldType(i));
 
         /// <inheritdoc />
@@ -196,8 +204,9 @@ namespace Google.Cloud.Spanner.Data
         public override string GetString(int i) => _innerList[i].ConvertToClrType<string>(GetSpannerFieldType(i));
 
         /// <summary>
+        /// Gets the value of the specified column as type <see cref="Timestamp"/>.
         /// </summary>
-        /// <param name="i"></param>
+        /// <param name="i">The index of the column to retrieve.</param>
         /// <returns></returns>
         public Timestamp GetTimestamp(int i) => _innerList[i].ConvertToClrType<Timestamp>(GetSpannerFieldType(i));
 
@@ -220,8 +229,11 @@ namespace Google.Cloud.Spanner.Data
         public override bool IsDBNull(int i) => GetJsonValue(i).KindCase == Value.KindOneofCase.NullValue;
 
         /// <inheritdoc />
-        public override bool NextResult() => throw new NotSupportedException(
-            "Spanner does not support multiple SQL queries in a single command.");
+        public override bool NextResult()
+        {
+            Logger.Warn(() => "Spanner does not support multiple SQL queries in a single command");
+            return false;
+        }
 
         /// <inheritdoc />
         public override bool Read() => ReadAsync(CancellationToken.None).ResultWithUnwrappedExceptions();

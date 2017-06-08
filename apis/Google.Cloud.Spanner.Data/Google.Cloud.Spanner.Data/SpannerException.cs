@@ -53,17 +53,19 @@ namespace Google.Cloud.Spanner.Data
                 {ErrorCode.Internal, "Internal error."},
                 {
                     ErrorCode.Unavailable,
-                    "The service is currently unavailable.  This is a most likely a transient condition."
+                    "The service is currently unavailable. This is a most likely a transient condition."
                 },
                 {ErrorCode.DataLoss, "Unrecoverable data loss or corruption."},
                 {ErrorCode.Unknown, "An unknown error occurred."}
             };
 
         /// <summary>
+        /// An error code that indicates the general class of problem.
         /// </summary>
         public ErrorCode ErrorCode { get; }
 
         /// <summary>
+        /// If true, the error was likely a transient error and a retry of the operation may succeed.
         /// </summary>
         public bool IsRetryable
         {
@@ -85,8 +87,6 @@ namespace Google.Cloud.Spanner.Data
         /// This class is a thin conversion around a grpc exception, with the additional
         /// information of whether the operation is retryable based on the resulting error.
         /// </summary>
-        /// <param name="code"></param>
-        /// <param name="innerException"></param>
         internal SpannerException(ErrorCode code, RpcException innerException)
             : base(GetMessageFromErrorCode(code), innerException)
         {

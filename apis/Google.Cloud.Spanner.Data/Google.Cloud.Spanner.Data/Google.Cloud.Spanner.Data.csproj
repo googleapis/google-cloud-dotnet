@@ -33,11 +33,5 @@
   <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
     <Reference Include="System.Transactions" />
   </ItemGroup>
-  
-  <ItemGroup>
-    <Compile Update="SpannerCommand.cs">
-      <SubType>Component</SubType>
-    </Compile>
-  </ItemGroup>
   <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
 </Project>

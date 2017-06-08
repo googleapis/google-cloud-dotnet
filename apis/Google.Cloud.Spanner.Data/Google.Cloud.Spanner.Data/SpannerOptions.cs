@@ -32,7 +32,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// The maximum number of Spanner sessions that are kept in a pool.
         /// If the number of pooled sessions reaches this level, then additional
-        /// Sessions released to  will be deleted immediately.
+        /// Sessions released to the pool will be deleted immediately.
         /// </summary>
         public int MaximumPooledSessions
         {
@@ -42,9 +42,9 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// The maximum number of sessions that can be in active use by the application.
-        /// If this number is reached, then an additional allocations from
-        /// the internal session pool will act acoording to
-        /// <see cref="ResourcesExhaustedBehavior"/>.  If <see>
+        /// If this number is reached, then any additional allocations from
+        /// the internal session pool will act according to
+        /// <see cref="ResourcesExhaustedBehavior"/>. If <see>
         /// <cref>ResourcesExhaustedBehavior.Block</cref>
         /// </see>
         /// , the operation will block until other operations have completed.
@@ -54,7 +54,7 @@ namespace Google.Cloud.Spanner.Data
         /// , the operation will immediately throw a <see cref="SpannerException"/> with
         /// an error code <see>
         /// <cref>ErrorCode.ResourceExhausted</cref>
-        /// </see>
+        /// </see>.
         /// This number will be similar to the maximum number of simultaneous operations.
         /// </summary>
         public int MaximumActiveSessions
@@ -64,7 +64,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// Spanner sessions expire on the server after 60 minutes.  However,
+        /// Spanner sessions expire on the server after 60 minutes. However,
         /// <see cref="SpannerConnection"/> reserves a session for indefinite use
         /// and preserves the session by sending keepalive messages according to this
         /// interval.
@@ -122,8 +122,6 @@ namespace Google.Cloud.Spanner.Data
             set => SessionPool.PoolEvictionDelay = value;
         }
 
-        /// <summary>
-        /// </summary>
         internal bool ResetPerformanceTracesEachInterval
         {
             get => Logger.ResetPerformanceTracesEachInterval;
@@ -141,8 +139,7 @@ namespace Google.Cloud.Spanner.Data
         /// </see>
         /// , the operation will immediately throw a <see cref="SpannerException"/> with
         /// an error code <see>
-        /// <cref>ErrorCode.ResourceExhausted</cref>
-        /// </see>
+        /// <cref>ErrorCode.ResourceExhausted</cref></see>.
         /// </summary>
         public ResourcesExhaustedBehavior ResourcesExhaustedBehavior
         {
@@ -155,7 +152,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Defines the global timeout duration.
         /// Operations sent to the server that take greater than this duration will fail
-        /// with a <see cref="SpannerException"/> and error code <see cref="ErrorCode.DeadlineExceeded"/>
+        /// with a <see cref="SpannerException"/> and error code <see cref="ErrorCode.DeadlineExceeded"/>.
         /// </summary>
         public TimeSpan Timeout
         {

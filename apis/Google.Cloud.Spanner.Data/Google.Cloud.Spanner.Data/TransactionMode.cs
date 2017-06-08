@@ -15,14 +15,23 @@
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
+    /// Indicates the mode for the transaction.
     /// </summary>
     public enum TransactionMode
     {
         /// <summary>
+        /// Read-only transactions provide guaranteed consistency across several reads,
+        /// but do not allow writes. Read-only transactions can be configured to read at
+        /// timestamps in the past. Read-only transactions do not need to be committed and
+        /// do not take locks.
         /// </summary>
         ReadOnly = 0,
 
         /// <summary>
+        /// Locking read-write transactions are the only transaction type that support writing
+        /// data into Cloud Spanner. These transactions rely on pessimistic locking and, if
+        /// necessary, two-phase commit. Locking read-write transactions may abort, requiring
+        /// the application to retry.
         /// </summary>
         ReadWrite = 1
     }

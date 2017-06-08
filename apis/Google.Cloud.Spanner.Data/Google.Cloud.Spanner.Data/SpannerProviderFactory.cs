@@ -17,6 +17,7 @@ using System.Data.Common;
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
+    /// Represents a set of methods for creating instances of the Spanner data provider's implementation of the data source classes.
     /// </summary>
     public sealed class SpannerProviderFactory : DbProviderFactory
     {

@@ -45,7 +45,7 @@ namespace Google.Cloud.Spanner.Data
         InsertOrUpdate = 4,
 
         /// <summary>
-        /// A DDL statement to create or drop tables and indices.
+        /// A DDL statement (e.g. a statement to create or modify table schema).
         /// </summary>
         Ddl
     }

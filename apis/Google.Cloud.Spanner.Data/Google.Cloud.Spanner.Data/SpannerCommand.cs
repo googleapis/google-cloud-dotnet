@@ -33,15 +33,15 @@ namespace Google.Cloud.Spanner.Data
     /// Represents a SQL query or command to execute against
     /// a Spanner database.
     /// If the command is a SQL query, then <see cref="SpannerCommand.CommandText"/>
-    /// contains the entire SQL statement.  Use <see cref="ExecuteReaderAsync"/>  to obtain results.
+    /// contains the entire SQL statement. Use <see cref="ExecuteReaderAsync"/>  to obtain results.
     /// 
     /// If the command is an update, insert or delete command, then <see cref="SpannerCommand.CommandText"/>
     /// is simply "[operation] [spanner_table]" such as "UPDATE MYTABLE" with the parameter
     /// collection containing <see cref="SpannerParameter"/> instances whose name matches a column
-    /// in the target table.  Use <see cref="ExecuteNonQueryAsync"/> to execute the command.
+    /// in the target table. Use <see cref="ExecuteNonQueryAsync"/> to execute the command.
     /// 
     /// The command may also be a DDL statement such as CREATE TABLE. Use <see cref="ExecuteNonQueryAsync"/>
-    /// to execute the statement.
+    /// to execute a DDL statement.
     /// </summary>
     public sealed class SpannerCommand : DbCommand
 #if NET45 || NET451
@@ -53,7 +53,7 @@ namespace Google.Cloud.Spanner.Data
         private SpannerTransaction _transaction;
 
         /// <summary>
-        /// Initializes a new instance of <see cref="SpannerCommand"/>
+        /// Initializes a new instance of <see cref="SpannerCommand"/>.
         /// </summary>
         public SpannerCommand()
         {
@@ -72,19 +72,19 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// Initializes a new instance of <see cref="SpannerCommand"/>
+        /// Initializes a new instance of <see cref="SpannerCommand"/>.
         /// </summary>
         /// <param name="commandTextBuilder">The <see cref="SpannerCommandTextBuilder"/>
-        /// that configures the text of this command.</param>
+        /// that configures the text of this command. Must not be null.</param>
         /// <param name="connection">The <see cref="SpannerConnection"/> that is
-        /// associated with this <see cref="SpannerCommand"/></param>
+        /// associated with this <see cref="SpannerCommand"/>. Must not be null.</param>
         /// <param name="transaction">An optional <see cref="SpannerTransaction"/>
         /// created through <see>
         /// <cref>SpannerConnection.BeginTransactionAsync</cref>
         /// </see>
-        /// </param>
+        /// </param>. May be null.
         /// <param name="parameters">An optional collection of <see cref="SpannerParameter"/>
-        /// that is used in the command.</param>
+        /// that is used in the command. May be null.</param>
         public SpannerCommand(
             SpannerCommandTextBuilder commandTextBuilder,
             SpannerConnection connection,
@@ -102,16 +102,15 @@ namespace Google.Cloud.Spanner.Data
         /// Initializes a new instance of <see cref="SpannerCommand"/>
         /// </summary>
         /// <param name="commandText">If this command is a SQL Query, then commandText is
-        /// the SQL statement.  If its an update, insert or delete command, then this text
-        /// is "[operation] [table]" such as "UPDATE MYTABLE"</param>
+        /// the SQL statement. If its an update, insert or delete command, then this text
+        /// is "[operation] [table]" such as "UPDATE MYTABLE"</param>. Must not be null.
         /// <param name="connection">The <see cref="SpannerConnection"/> that is
-        /// associated with this <see cref="SpannerCommand"/></param>
+        /// associated with this <see cref="SpannerCommand"/>. Must not be null.</param>
         /// <param name="transaction">An optional <see cref="SpannerTransaction"/>
         /// created through <see>
-        /// <cref>SpannerConnection.BeginTransactionAsync</cref>
-        /// </see></param>
+        /// <cref>SpannerConnection.BeginTransactionAsync</cref></see>. May be null.</param>
         /// <param name="parameters">An optional collection of <see cref="SpannerParameter"/>
-        /// that is used in the command.</param>
+        /// that is used in the command. May be null.</param>
         public SpannerCommand(
             string commandText,
             SpannerConnection connection,
@@ -195,9 +194,9 @@ namespace Google.Cloud.Spanner.Data
         private SpannerCommandTextBuilder SpannerCommandTextBuilder { get; set; }
 
         /// <summary>
-        /// Returns a copy of this <see cref="SpannerCommand"/>
+        /// Returns a copy of this <see cref="SpannerCommand"/>.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>a copy of this <see cref="SpannerCommand"/>.</returns>
         public object Clone() => new SpannerCommand(SpannerConnection, _transaction, Parameters)
         {
             DesignTimeVisible = DesignTimeVisible,
@@ -216,10 +215,9 @@ namespace Google.Cloud.Spanner.Data
             .ResultWithUnwrappedExceptions();
 
         /// <summary>
-        /// Executes the command against the <see cref="SpannerConnection"/>, and returns a
-        /// <see cref="SpannerDataReader"/>.
+        /// Executes the command against the <see cref="SpannerConnection"/>.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>a <see cref="SpannerDataReader"/>.</returns>
         public async Task<DbDataReader> ExecuteReaderAsync(
             TimestampBound singleUseReadSettings,
             CancellationToken cancellationToken = default(CancellationToken))
@@ -366,7 +364,7 @@ namespace Google.Cloud.Spanner.Data
                 mutations.Add(new Mutation {Delete = w});
             }
 
-            // Make the request.  This will commit immediately or not depending on whether a transaction was explicitly created.
+            // Make the request. This will commit immediately or not depending on whether a transaction was explicitly created.
             await GetSpannerTransaction().ExecuteMutationsAsync(mutations, cancellationToken)
                 .WithTimeout(TimeSpan.FromSeconds(CommandTimeout), "The timeout of the SpannerCommand was exceeded.");
             // Return the number of records affected.
@@ -379,10 +377,15 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// Executes the query and returns the first column of the first row in the result set returned by the query.
-        /// All other columns and rows are ignored.  The return value is converted to type T if possible.
+        /// All other columns and rows are ignored. The return value is converted to type T if possible.
         /// </summary>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
-        /// <typeparam name="T">The expected return Type.  If possible the return type will be converted to this Type.</typeparam>
+        /// <typeparam name="T">The expected return type. If possible the return type will be converted to this type.
+        /// If conversion is requested between incompatible types, an <see cref="InvalidOperationException"/>
+        /// will be thrown.
+        /// If the conversion fails due to the contents returned (for example a string representing a
+        /// boolean does not have either 'true' or 'false') then a <see cref="FormatException"/> exception will be
+        /// thrown as documented by the <see cref="Convert"/> class.</typeparam>
         /// <returns>The first column of the first row resulting from execution of the query.</returns>
         public async Task<T> ExecuteScalarAsync<T>(CancellationToken cancellationToken = default(CancellationToken))
         {
@@ -504,11 +507,6 @@ namespace Google.Cloud.Spanner.Data
             {
                 throw new NotSupportedException(
                     $"{nameof(CommandBehavior.SchemaOnly)} is not supported by Cloud Spanner.");
-            }
-            if ((behavior & CommandBehavior.SequentialAccess) == CommandBehavior.SequentialAccess)
-            {
-                throw new NotSupportedException(
-                    $"{nameof(CommandBehavior.SequentialAccess)} is not supported by Cloud Spanner.");
             }
         }
     }

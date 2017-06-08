@@ -22,14 +22,17 @@ namespace Google.Cloud.Spanner.Data
     {
         /// <summary>
         /// The operation is blocked until a currently running operation
-        /// completes and releases its Spanner session.
+        /// completes and releases its Spanner session.  If the operation is
+        /// synchronous, the thread will be blocked until it can complete.
+        /// If the operation is asynchronous, it will be completed on the
+        /// threadpool when resources become available.
         /// </summary>
         Block = 0,
 
         /// <summary>
         /// The operation will fail with a <see cref="SpannerException"/>
         /// with <see cref="SpannerException.ErrorCode"/> equal to
-        /// <see cref="ErrorCode.ResourceExhausted"/>
+        /// <see cref="ErrorCode.ResourceExhausted"/>.
         /// </summary>
         Fail = 1
     }

@@ -38,7 +38,7 @@ namespace Google.Cloud.Spanner.Data
         /// The <see cref="ITokenAccess"/> credential used to communicate with Spanner.
         /// If not set, then default application credentials will be used.
         /// Credentials can be retrieved from a file or obtained interactively.
-        /// See google cloud documentation for more information.
+        /// See Google Cloud documentation for more information.
         /// </summary>
         public ITokenAccess Credential { get; private set; }
 
@@ -66,7 +66,7 @@ namespace Google.Cloud.Spanner.Data
         {
             if (!ParseDataSource(dataSource))
             {
-                throw new ArgumentException($"'{dataSource}' is not a valid value for ${nameof(DataSource)}.  It should be of the form "
+                throw new ArgumentException($"'{dataSource}' is not a valid value for ${nameof(DataSource)}. It should be of the form "
                     + "projects/<project>/instances/<instance>/databases/<database>.", nameof(DataSource));
             }
 
@@ -74,13 +74,13 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// The <see cref="ServiceEndpoint"/> to use to connect to Spanner.  If not supplied in the
+        /// The <see cref="ServiceEndpoint"/> to use to connect to Spanner. If not supplied in the
         /// connection string, the default endpoint will be used.
         /// </summary>
         public ServiceEndpoint EndPoint => new ServiceEndpoint(Host, Port);
 
         /// <summary>
-        /// The tcp Host name to connect to Spanner.  If not supplied in the connection string, the default
+        /// The TCP Host name to connect to Spanner. If not supplied in the connection string, the default
         /// host will be used.
         /// </summary>
         // ReSharper disable once MemberCanBePrivate.Global
@@ -91,7 +91,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// The tcp port number to connect to Spanner.  If not supplied in the connection string, the default
+        /// The TCP port number to connect to Spanner. If not supplied in the connection string, the default
         /// port will be used.
         /// </summary>
         // ReSharper disable once MemberCanBePrivate.Global
@@ -155,9 +155,14 @@ namespace Google.Cloud.Spanner.Data
         /// connection string and optional credential
         /// </summary>
         /// <param name="connectionString">A connection string of the form
-        /// Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={hostname};][Port={portnumber}]
+        /// Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={hostname};][Port={portnumber}].
+        /// Must not be null.
         /// </param>
-        /// <param name="credential">Optionally supplied credential to use for the connection.</param>
+        /// <param name="credential">Optionally supplied credential to use for the connection.
+        /// If not set, then default application credentials will be used.
+        /// Credentials can be retrieved from a file or obtained interactively.
+        /// See Google Cloud documentation for more information. May be null.
+        /// </param>
         public SpannerConnectionStringBuilder(string connectionString, ITokenAccess credential = null)
         {
             connectionString.ThrowIfNullOrEmpty(nameof(connectionString));
