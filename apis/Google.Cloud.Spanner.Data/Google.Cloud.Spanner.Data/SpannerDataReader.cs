@@ -220,8 +220,11 @@ namespace Google.Cloud.Spanner.Data
         public override bool IsDBNull(int i) => GetJsonValue(i).KindCase == Value.KindOneofCase.NullValue;
 
         /// <inheritdoc />
-        public override bool NextResult() => throw new NotSupportedException(
-            "Spanner does not support multiple SQL queries in a single command.");
+        public override bool NextResult()
+        {
+            Logger.Warn(() => "Spanner does not support multiple SQL queries in a single command");
+            return false;
+        }
 
         /// <inheritdoc />
         public override bool Read() => ReadAsync(CancellationToken.None).ResultWithUnwrappedExceptions();

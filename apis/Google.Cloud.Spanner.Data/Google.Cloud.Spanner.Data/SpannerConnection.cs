@@ -14,6 +14,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Data.Common;
 using System.Threading;
@@ -109,9 +110,9 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override string ConnectionString
         {
-            get => _connectionStringBuilder.ToString();
+            get => _connectionStringBuilder?.ToString();
             set => TrySetNewConnectionInfo(
-                new SpannerConnectionStringBuilder(value, _connectionStringBuilder.Credential));
+                new SpannerConnectionStringBuilder(value, _connectionStringBuilder?.Credential));
         }
 
         /// <summary>
@@ -119,18 +120,19 @@ namespace Google.Cloud.Spanner.Data
         /// If credentials are not specified, then application default credentials are used instead.
         /// See gcloud documentation on how to set up application default credentials.
         /// </summary>
-        public ITokenAccess Credential => _connectionStringBuilder.Credential;
+        public ITokenAccess Credential => _connectionStringBuilder?.Credential;
 
         /// <inheritdoc />
-        public override string Database => _connectionStringBuilder.SpannerDatabase;
+        public override string Database => _connectionStringBuilder?.SpannerDatabase;
 
         /// <inheritdoc />
-        public override string DataSource => _connectionStringBuilder.DataSource;
+        public override string DataSource => _connectionStringBuilder?.DataSource;
 
         /// <summary>
         /// The Spanner project name.
         /// </summary>
-        public string Project => _connectionStringBuilder.Project;
+        [Category("Data")]
+        public string Project => _connectionStringBuilder?.Project;
 
         /// <inheritdoc />
         public override string ServerVersion => "0.0";
@@ -138,7 +140,8 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// The Spanner instance name
         /// </summary>
-        public string SpannerInstance => _connectionStringBuilder.SpannerInstance;
+        [Category("Data")]
+        public string SpannerInstance => _connectionStringBuilder?.SpannerInstance;
 
         /// <inheritdoc />
         public override ConnectionState State => _state;
@@ -243,7 +246,7 @@ namespace Google.Cloud.Spanner.Data
                 Close();
             }
 
-            TrySetNewConnectionInfo(_connectionStringBuilder.CloneWithNewDataSource(newDataSource));
+            TrySetNewConnectionInfo(_connectionStringBuilder?.CloneWithNewDataSource(newDataSource));
         }
 
         /// <inheritdoc />

@@ -505,11 +505,6 @@ namespace Google.Cloud.Spanner.Data
                 throw new NotSupportedException(
                     $"{nameof(CommandBehavior.SchemaOnly)} is not supported by Cloud Spanner.");
             }
-            if ((behavior & CommandBehavior.SequentialAccess) == CommandBehavior.SequentialAccess)
-            {
-                throw new NotSupportedException(
-                    $"{nameof(CommandBehavior.SequentialAccess)} is not supported by Cloud Spanner.");
-            }
         }
     }
 }

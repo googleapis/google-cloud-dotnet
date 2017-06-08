@@ -27,7 +27,7 @@ namespace Google.Cloud.Spanner.Data
     internal static class ValueConversion
     {
         public static object ConvertToClrType(this Value wireValue, V1.Type spannerType) => ConvertToClrType(
-            wireValue, spannerType, spannerType?.Code.GetDefaultClrTypeFromSpannerType());
+            wireValue, spannerType, typeof(object));
 
         public static T ConvertToClrType<T>(
             this Value wireValue,
@@ -43,6 +43,11 @@ namespace Google.Cloud.Spanner.Data
                     return Activator.CreateInstance(targetClrType);
                 }
                 return null;
+            }
+            if (targetClrType == typeof(object))
+            {
+                //then we decide the type for you
+                targetClrType = spannerType?.Code.GetDefaultClrTypeFromSpannerType();
             }
             var possibleUnderlyingType = Nullable.GetUnderlyingType(targetClrType);
             if (possibleUnderlyingType != null)
@@ -131,14 +136,14 @@ namespace Google.Cloud.Spanner.Data
             switch (code)
             {
                 case TypeCode.Bool:
-                    return typeof(bool?);
+                    return typeof(bool);
                 case TypeCode.Int64:
-                    return typeof(long?);
+                    return typeof(long);
                 case TypeCode.Float64:
-                    return typeof(double?);
+                    return typeof(double);
                 case TypeCode.Timestamp:
                 case TypeCode.Date:
-                    return typeof(DateTime?);
+                    return typeof(DateTime);
                 case TypeCode.String:
                     return typeof(string);
                 case TypeCode.Bytes:
