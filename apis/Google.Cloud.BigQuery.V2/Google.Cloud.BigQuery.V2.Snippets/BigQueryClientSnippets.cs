@@ -201,9 +201,8 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             }
             // End snippet
 
-            // Note: if this fails, run the clean-up tool to make sure there
-            // are fewer than 20 datasets in the project, then rerun.
-            List<string> ids = datasets.Select(ds => ds.Reference.DatasetId).ToList();
+            // We only show 20 above, but let's validate that the complete list includes the dataset we want.
+            List<string> ids = client.ListDatasets().Select(ds => ds.Reference.DatasetId).ToList();
             Assert.Contains(_fixture.GameDatasetId, ids);
         }
 
@@ -867,9 +866,8 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             }
             // End snippet
 
-            // Note: if this fails, run the clean-up tool to make sure there
-            // are fewer than 20 datasets in the project, then rerun.
-            List<string> ids = datasets.Select(ds => ds.Reference.DatasetId).ToList();
+            // We only show 20 above, but let's validate that the complete list includes the dataset we want.
+            List<string> ids = await client.ListDatasetsAsync().Select(ds => ds.Reference.DatasetId).ToList();
             Assert.Contains(_fixture.GameDatasetId, ids);
         }
 

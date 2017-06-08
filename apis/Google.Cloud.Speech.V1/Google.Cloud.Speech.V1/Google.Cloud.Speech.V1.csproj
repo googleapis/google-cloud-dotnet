@@ -22,8 +22,11 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj" />
-    <PackageReference Include="Google.Api.Gax.Grpc" Version="2.0.0-beta01" />
-    <PackageReference Include="Grpc.Core" Version="1.3.0">
+    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.0-beta4">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Google.Api.Gax.Grpc" Version="2.0.0-beta02" />
+    <PackageReference Include="Grpc.Core" Version="1.3.6">
       <PrivateAssets>None</PrivateAssets>
     </PackageReference>
   </ItemGroup>
