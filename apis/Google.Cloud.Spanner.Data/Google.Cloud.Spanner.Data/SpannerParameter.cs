@@ -22,6 +22,7 @@ using TypeCode = Google.Cloud.Spanner.V1.TypeCode;
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
+    /// Represents a parameter to a <see cref="SpannerCommand"/> and optionally its mapping to DataSet columns.
     /// </summary>
     public sealed class SpannerParameter : DbParameter
 #if NET45 || NET451
@@ -31,24 +32,28 @@ namespace Google.Cloud.Spanner.Data
         private object _value;
 
         /// <summary>
+        /// Initializes a new instance of the SpannerParameter class
         /// </summary>
         public SpannerParameter() { }
 
         /// <summary>
+        /// Initializes a new instance of the SpannerParameter class
         /// </summary>
-        /// <param name="spannerColumnName"></param>
-        /// <param name="type"></param>
-        /// <param name="value"></param>
-        /// <param name="sourceColumn"></param>
-        /// <param name="size"></param>
+        /// <param name="parameterName">The name of the parameter.  For Insert, Update and Delete commands, this name should
+        /// be the name of a valid Column in a Spanner table.  In Select commands, this name should be the name of a parameter
+        /// used in the SQL Query.</param>
+        /// <param name="type">One of the <see cref="SpannerDbType"/> values that indicates the type of the parameter.</param>
+        /// <param name="value">An object that is the value of the SpannerParameter.</param>
+        /// <param name="sourceColumn">The name of the DataTable source column (SourceColumn) if this SpannerParameter is used in a call to Update</param>
+        /// <param name="size">The length of the parameter.  The value is for informational purposes only.</param>
         public SpannerParameter(
-            string spannerColumnName,
+            string parameterName,
             SpannerDbType type,
             object value = null,
             string sourceColumn = null,
             int size = 0)
         {
-            ParameterName = spannerColumnName;
+            ParameterName = parameterName;
             SpannerDbType = type ?? SpannerDbType.Unspecified;
             Value = value;
             SourceColumn = sourceColumn;
@@ -129,6 +134,8 @@ namespace Google.Cloud.Spanner.Data
 #endif
 
         /// <summary>
+        /// The <see cref="SpannerDbType"/> of the parameter or column.  This should match the type as defined in Spanner
+        /// or as defined by the result of a SQL Query.
         /// </summary>
         public SpannerDbType SpannerDbType { get; set; }
 

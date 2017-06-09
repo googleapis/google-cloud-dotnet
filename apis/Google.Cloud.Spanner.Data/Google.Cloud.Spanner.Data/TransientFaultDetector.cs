@@ -17,10 +17,24 @@ using System;
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
+    /// Transactions can be retried using the Transient Fault Handling Application Block.
+    /// This extension helps you create a strategy that will detect transient faults when performing
+    /// transactions with Spanner.
+    /// To create an execution strategy, create a class
+    /// <code>
+    /// class SpannerTransientErrorDetectionStrategy : ITransientErrorDetectionStrategy
+    /// {
+    ///   public bool IsTransient(Exception ex) => ex.IsTransientSpannerFault();
+    /// }
+    /// </code>
     /// </summary>
     public static class TransientFaultDetector
     {
         /// <summary>
+        /// Returns true if the exception represents a transient error in Spanner.
+        /// This indicates that the operation may succeed if it is attempted again.
+        /// Common errors that can cause this include temporary network interruption
+        /// or the service being temporarily unavailable.
         /// </summary>
         /// <returns></returns>
         public static bool IsTransientSpannerFault(this Exception exception)

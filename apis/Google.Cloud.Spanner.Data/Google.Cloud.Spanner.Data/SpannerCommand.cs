@@ -41,7 +41,7 @@ namespace Google.Cloud.Spanner.Data
     /// in the target table.  Use <see cref="ExecuteNonQueryAsync"/> to execute the command.
     /// 
     /// The command may also be a DDL statement such as CREATE TABLE. Use <see cref="ExecuteNonQueryAsync"/>
-    /// to execute the statement.
+    /// to execute a DDL statement.
     /// </summary>
     public sealed class SpannerCommand : DbCommand
 #if NET45 || NET451

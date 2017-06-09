@@ -23,6 +23,8 @@ using Google.Protobuf.WellKnownTypes;
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
+    /// Represents a collection of parameters associated with a <see cref="SpannerCommand"/> and their
+    /// respective mappings to columns in a DataSet.
     /// </summary>
     public sealed class SpannerParameterCollection : DbParameterCollection
     {
@@ -35,29 +37,39 @@ namespace Google.Cloud.Spanner.Data
         private readonly List<SpannerParameter> _innerList = new List<SpannerParameter>();
 
         /// <summary>
+        /// Adds a new <see cref="SpannerParameter"/> to the <see cref="SpannerParameterCollection"/>.
         /// </summary>
-        /// <param name="parameterName"></param>
-        /// <param name="dbType"></param>
+        /// <param name="parameterName">The name of the parameter.  For Insert, Update and Delete commands, this name should
+        /// be the name of a valid Column in a Spanner table.  In Select commands, this name should be the name of a parameter
+        /// used in the SQL Query.</param>
+        /// <param name="dbType">One of the <see cref="SpannerDbType"/> values that indicates the type of the parameter.</param>
         public void Add(string parameterName, SpannerDbType dbType)
         {
             _innerList.Add(new SpannerParameter(parameterName, dbType));
         }
 
         /// <summary>
+        /// Adds a new <see cref="SpannerParameter"/> to the <see cref="SpannerParameterCollection"/>
         /// </summary>
-        /// <param name="parameterName"></param>
-        /// <param name="value"></param>
-        /// <param name="dbType"></param>
+        /// <param name="parameterName">The name of the parameter.  For Insert, Update and Delete commands, this name should
+        /// be the name of a valid Column in a Spanner table.  In Select commands, this name should be the name of a parameter
+        /// used in the SQL Query.</param>
+        /// <param name="value">An object that is the value of the SpannerParameter.</param>
+        /// <param name="dbType">One of the <see cref="SpannerDbType"/> values that indicates the type of the parameter.</param>
         public void Add(string parameterName, object value, SpannerDbType dbType)
         {
             _innerList.Add(new SpannerParameter(parameterName, dbType) {Value = value});
         }
 
         /// <summary>
+        /// Adds a new <see cref="SpannerParameter"/> to the <see cref="SpannerParameterCollection"/>
         /// </summary>
-        /// <param name="parameterName"></param>
-        /// <param name="dbType"></param>
-        /// <param name="sourceColumn"></param>
+        /// <param name="parameterName">The name of the parameter.  For Insert, Update and Delete commands, this name should
+        /// be the name of a valid Column in a Spanner table.  In Select commands, this name should be the name of a parameter
+        /// used in the SQL Query.</param>
+        /// <param name="dbType">One of the <see cref="SpannerDbType"/> values that indicates the type of the parameter.</param>
+        /// <param name="sourceColumn">The name of the DataTable source column (SourceColumn) if this SpannerParameter is used
+        /// in a call to Update</param>
         public void Add(string parameterName, SpannerDbType dbType, string sourceColumn)
         {
             _innerList.Add(new SpannerParameter(parameterName, dbType, sourceColumn));

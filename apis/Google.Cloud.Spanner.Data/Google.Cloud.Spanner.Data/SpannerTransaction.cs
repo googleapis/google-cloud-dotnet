@@ -27,6 +27,10 @@ using Google.Cloud.Spanner.V1.Logging;
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
+    /// Represents a SQL transaction to be made in a Spanner database.
+    /// A transaction in Cloud Spanner is a set of reads and writes that execute
+    /// atomically at a single logical point in time across columns, rows, and
+    /// tables in a database.
     /// </summary>
     public sealed class SpannerTransaction : DbTransaction, ISpannerTransaction
     {
@@ -38,14 +42,28 @@ namespace Google.Cloud.Spanner.Data
         public override IsolationLevel IsolationLevel => IsolationLevel.Serializable;
 
         /// <summary>
+        /// Indicates the <see cref="TransactionMode"/> for the transaction.
+        /// Cloud Spanner supports two transaction modes:
+        /// Locking read-write transactions are the only transaction type that supports writing
+        /// data into Cloud Spanner. These transactions rely on pessimistic locking and, if
+        /// necessary, two-phase commit. Locking read-write transactions may abort, requiring
+        /// the application to retry.
+        /// Read-only transactions provide guaranteed consistency across several reads,
+        /// but does not allow writes. Read-only transactions can be configured to read at
+        /// timestamps in the past. Read-only transactions do not need to be committed and
+        /// do not take locks.
         /// </summary>
         public TransactionMode Mode { get; }
 
-        /// <summary>
-        /// </summary>
-        public Session Session { get; }
+        private Session Session { get; }
 
         /// <summary>
+        /// Tells Cloud Spanner how to choose a timestamp at which to read the data for read-only
+        /// transactions.
+        /// The types of timestamp bounds are:
+        ///  Strong(the default): read the latest data.
+        ///  Bounded staleness: read a version of the data that's no staler than a bound.
+        ///  Exact staleness: read the version of the data at an exact timestamp.
         /// </summary>
         public TimestampBound TimeStampBound { get; }
 
@@ -54,7 +72,7 @@ namespace Google.Cloud.Spanner.Data
 
         internal IEnumerable<Mutation> Mutations => _mutations;
 
-        internal Transaction WireTransaction { get; }
+        private Transaction WireTransaction { get; }
 
         internal SpannerTransaction(
             SpannerConnection connection,
@@ -122,8 +140,9 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// Commits the database transaction asynchronously.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Returns the Utc timestamp when the data was written to the database.</returns>
         public Task<DateTime?> CommitAsync()
         {
             return ExecuteHelper.WithErrorTranslationAndProfiling(
@@ -146,6 +165,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// Rolls back a transaction asynchronously.
         /// </summary>
         /// <returns></returns>
         public Task RollbackAsync()

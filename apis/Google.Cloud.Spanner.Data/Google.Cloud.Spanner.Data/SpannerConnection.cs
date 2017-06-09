@@ -41,6 +41,8 @@ namespace Google.Cloud.Spanner.Data
     /// will use this session to execute their operation.  Concurrent read operations can
     /// share this session, but concurrent write operations may cause additional sessions
     /// to be opened to the database.
+    /// Underlying sessions with the Spanner database are pooled and are closed after a
+    /// configurable <see cref="SpannerOptions.PoolEvictionDelay"/>
     /// </summary>
     public sealed class SpannerConnection : DbConnection
     {
@@ -84,8 +86,9 @@ namespace Google.Cloud.Spanner.Data
         /// and optional credential information supplied in connectionString or the credential
         /// argument.
         /// </summary>
-        /// <param name="connectionString">A Spanner formatted connection string.</param>
-        /// <param name="credential">An optional credential.</param>
+        /// <param name="connectionString">A Spanner formatted connection string. This is usually of the form 
+        /// `Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={hostname};][Port={portnumber}]`</param>
+        /// <param name="credential">An optional credential for operations to be performed on the Spanner database.</param>
         public SpannerConnection(string connectionString, ITokenAccess credential = null)
             : this(new SpannerConnectionStringBuilder(connectionString, credential)) { }
 

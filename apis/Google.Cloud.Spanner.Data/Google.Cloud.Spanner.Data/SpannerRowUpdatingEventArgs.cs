@@ -26,15 +26,17 @@ namespace Google.Cloud.Spanner.Data
 #if NET45 || NET451
 
     /// <summary>
+    /// Provides data for the RowUpdating event of the Spanner data provider.
     /// </summary>
     public sealed class SpannerRowUpdatingEventArgs : RowUpdatingEventArgs
     {
         /// <summary>
+        /// Initializes a new instance of the <see cref="SpannerRowUpdatingEventArgs"/> class.
         /// </summary>
-        /// <param name="row"></param>
-        /// <param name="command"></param>
-        /// <param name="statementType"></param>
-        /// <param name="tableMapping"></param>
+        /// <param name="row">The DataRow sent through an Update.</param>
+        /// <param name="command">The <see cref="SpannerCommand"/> executed when Update is called.</param>
+        /// <param name="statementType">The type of SQL statement executed.</param>
+        /// <param name="tableMapping">The DataTableMapping sent through an Update.</param>
         public SpannerRowUpdatingEventArgs(DataRow row, IDbCommand command, StatementType statementType,
             DataTableMapping tableMapping)
             : base(row, command, statementType, tableMapping)
