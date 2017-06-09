@@ -34,6 +34,7 @@ using System.Data;
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
+    /// Reads a forward-only stream of rows from a data source.
     /// </summary>
     public sealed class SpannerDataReader : DbDataReader
     {
@@ -135,9 +136,10 @@ namespace Google.Cloud.Spanner.Data
             .ConvertToClrType(GetSpannerFieldType(ordinal), typeof(T));
 
         /// <summary>
+        /// Gets the value of the specified column as type T.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="columnName"></param>
+        /// <typeparam name="T">The type to coerce the value to.</typeparam>
+        /// <param name="columnName">The name of the column who value will be returned.</param>
         /// <returns></returns>
         public T GetFieldValue<T>(string columnName)
         {
@@ -165,8 +167,9 @@ namespace Google.Cloud.Spanner.Data
         public override long GetInt64(int i) => _innerList[i].ConvertToClrType<long>(GetSpannerFieldType(i));
 
         /// <summary>
+        /// Gets the value of the specified column as a pure Protobuf type.
         /// </summary>
-        /// <param name="i"></param>
+        /// <param name="i">The index of the column whose value will be returned.</param>
         /// <returns></returns>
         public Value GetJsonValue(int i) => _innerList[i].ConvertToClrType<Value>(GetSpannerFieldType(i));
 
@@ -196,6 +199,7 @@ namespace Google.Cloud.Spanner.Data
         public override string GetString(int i) => _innerList[i].ConvertToClrType<string>(GetSpannerFieldType(i));
 
         /// <summary>
+        /// Gets the value of the specified column as type <see cref="Timestamp"/>.
         /// </summary>
         /// <param name="i"></param>
         /// <returns></returns>

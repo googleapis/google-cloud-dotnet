@@ -60,10 +60,12 @@ namespace Google.Cloud.Spanner.Data
             };
 
         /// <summary>
+        /// An Error code that indicates the general class of problem.
         /// </summary>
         public ErrorCode ErrorCode { get; }
 
         /// <summary>
+        /// If true, the error was likely a transient error and a retry of the operation may succeed.
         /// </summary>
         public bool IsRetryable
         {

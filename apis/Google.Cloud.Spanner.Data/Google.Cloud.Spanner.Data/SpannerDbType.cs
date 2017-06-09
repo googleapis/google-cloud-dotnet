@@ -20,7 +20,7 @@ using Google.Protobuf.Collections;
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
-    /// These types come from Google.Cloud.Spanner.V1.TypeCode
+    /// Represents a Type that can be stored in a Spanner column or returned from a query.
     /// </summary>
     public sealed class SpannerDbType
     {
@@ -30,40 +30,37 @@ namespace Google.Cloud.Spanner.Data
         public static SpannerDbType Unspecified { get; } = new SpannerDbType(TypeCode.Unspecified);
 
         /// <summary>
-        /// Encoded as JSON `true` or `false`.
+        /// `true` or `false`.
         /// </summary>
         public static SpannerDbType Bool { get; } = new SpannerDbType(TypeCode.Bool);
 
         /// <summary>
-        /// Encoded as `string`, in decimal format.
+        /// 64 bit signed integer.
         /// </summary>
         public static SpannerDbType Int64 { get; } = new SpannerDbType(TypeCode.Int64);
 
         /// <summary>
-        /// Encoded as `number`, or the strings `"NaN"`, `"Infinity"`, or
-        /// `"-Infinity"`.
+        /// 64 bit floating point number.
         /// </summary>
         public static SpannerDbType Float64 { get; } = new SpannerDbType(TypeCode.Float64);
 
         /// <summary>
-        /// Encoded as `string` in RFC 3339 timestamp format. The time zone
-        /// must be present, and must be `"Z"`.
+        /// Date and Time.
         /// </summary>
         public static SpannerDbType Timestamp { get; } = new SpannerDbType(TypeCode.Timestamp);
 
         /// <summary>
-        /// Encoded as `string` in RFC 3339 date format.
+        /// A Date.
         /// </summary>
         public static SpannerDbType Date { get; } = new SpannerDbType(TypeCode.Date);
 
         /// <summary>
-        /// Encoded as `string`.
+        /// A string.
         /// </summary>
         public static SpannerDbType String { get; } = new SpannerDbType(TypeCode.String);
 
         /// <summary>
-        /// Encoded as a base64-encoded `string`, as described in RFC 4648,
-        /// section 4.
+        /// A byte array (byte[])
         /// </summary>
         public static SpannerDbType Bytes { get; } = new SpannerDbType(TypeCode.Bytes);
 
@@ -139,16 +136,18 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// Encoded as `list`, where the list elements are represented
-        /// according to [array_element_type][google.spanner.v1.Type.array_element_type].
+        /// Creates an array of the specified type.  This can be done on any arbitrary <see cref="SpannerDbType"/>.
         /// </summary>
         public static SpannerDbType ArrayOf(SpannerDbType elementType) =>
             new SpannerDbType(TypeCode.Array, elementType);
 
+
         /// <summary>
-        /// Encoded as `list`, where list element `i` is represented according
-        /// to [struct_type.fields[i]][google.spanner.v1.StructType.fields].
+        /// Creates an struct of the specified type.
+        /// A struct has field names and field values.
         /// </summary>
+        /// <param name="structMembers">A dictionary containing the field names and types of each member of the struct.</param>
+        /// <returns></returns>
         public static SpannerDbType StructOf(IDictionary<string, SpannerDbType> structMembers) => new SpannerDbType(
             TypeCode.Struct, structMembers);
 

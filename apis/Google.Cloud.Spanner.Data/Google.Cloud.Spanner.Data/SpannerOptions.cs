@@ -32,7 +32,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// The maximum number of Spanner sessions that are kept in a pool.
         /// If the number of pooled sessions reaches this level, then additional
-        /// Sessions released to  will be deleted immediately.
+        /// Sessions released to the pool will be deleted immediately.
         /// </summary>
         public int MaximumPooledSessions
         {
