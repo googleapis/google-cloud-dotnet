@@ -42,7 +42,7 @@ namespace Google.Cloud.Spanner.Data
         /// If <see cref="Mode"/> is <see cref="TimestampBoundMode.ReadTimestamp"/> or
         /// <see cref="TimestampBoundMode.MinReadTimestamp"/>, this indicates the timestamp to use.
         /// </summary>
-        public DateTime TimeStamp { get; private set; }
+        public DateTime Timestamp { get; private set; }
 
         /// <summary>
         /// Read at a timestamp where all previously committed transactions
@@ -108,7 +108,7 @@ namespace Google.Cloud.Spanner.Data
         public static TimestampBound OfMinReadTimestamp(DateTime minReadTimestamp) => new TimestampBound
         {
             Mode = TimestampBoundMode.MinReadTimestamp,
-            TimeStamp = minReadTimestamp
+            Timestamp = minReadTimestamp
         };
 
         /// <summary>
@@ -127,7 +127,7 @@ namespace Google.Cloud.Spanner.Data
         public static TimestampBound OfReadTimestamp(DateTime timestamp) => new TimestampBound
         {
             Mode = TimestampBoundMode.ReadTimestamp,
-            TimeStamp = timestamp
+            Timestamp = timestamp
         };
     }
 }

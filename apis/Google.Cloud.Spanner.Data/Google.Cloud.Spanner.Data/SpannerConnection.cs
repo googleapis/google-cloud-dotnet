@@ -42,7 +42,9 @@ namespace Google.Cloud.Spanner.Data
     /// share this session, but concurrent write operations may cause additional sessions
     /// to be opened to the database.
     /// Underlying sessions with the Spanner database are pooled and are closed after a
-    /// configurable <see cref="SpannerOptions.PoolEvictionDelay"/>
+    /// configurable <see>
+    /// <cref>SpannerOptions.PoolEvictionDelay</cref>
+    /// </see>
     /// </summary>
     public sealed class SpannerConnection : DbConnection
     {
@@ -173,56 +175,56 @@ namespace Google.Cloud.Spanner.Data
         /// Read transactions are preferred if possible because they do not impose locks internally.
         /// Stale read-only transactions can execute more quickly than strong or read-write transactions,.
         /// </summary>
-        /// <param name="targetReadTimeStamp">Specifies the timestamp or allowed staleness of data.</param>
+        /// <param name="targetReadTimestamp">Specifies the timestamp or allowed staleness of data.</param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
         /// <returns></returns>
         public Task<SpannerTransaction> BeginReadOnlyTransactionAsync(
-            TimestampBound targetReadTimeStamp,
+            TimestampBound targetReadTimestamp,
             CancellationToken cancellationToken = default(CancellationToken))
         {
-            if (targetReadTimeStamp.Mode == TimestampBoundMode.MinReadTimestamp
-                || targetReadTimeStamp.Mode == TimestampBoundMode.MaxStaleness)
+            if (targetReadTimestamp.Mode == TimestampBoundMode.MinReadTimestamp
+                || targetReadTimestamp.Mode == TimestampBoundMode.MaxStaleness)
             {
                 throw new ArgumentException(
-                    nameof(targetReadTimeStamp),
+                    nameof(targetReadTimestamp),
                     $"{nameof(TimestampBoundMode.MinReadTimestamp)} and "
                     + $"{nameof(TimestampBoundMode.MaxStaleness)} can only be used in a single-use"
                     + " transaction as an argument to SpannerCommand.ExecuteReader().");
             }
 
             return BeginTransactionImplAsync(
-                new TransactionOptions {ReadOnly = ConvertToOptions(targetReadTimeStamp)},
+                new TransactionOptions {ReadOnly = ConvertToOptions(targetReadTimestamp)},
                 TransactionMode.ReadOnly,
                 cancellationToken,
-                targetReadTimeStamp);
+                targetReadTimestamp);
         }
 
-        private TransactionOptions.Types.ReadOnly ConvertToOptions(TimestampBound targetReadTimeStamp)
+        private TransactionOptions.Types.ReadOnly ConvertToOptions(TimestampBound targetReadTimestamp)
         {
-            switch (targetReadTimeStamp.Mode)
+            switch (targetReadTimestamp.Mode)
             {
                 case TimestampBoundMode.Strong:
                     return new TransactionOptions.Types.ReadOnly {Strong = true};
                 case TimestampBoundMode.ReadTimestamp:
                     return new TransactionOptions.Types.ReadOnly
                     {
-                        ReadTimestamp = Timestamp.FromDateTime(targetReadTimeStamp.TimeStamp)
+                        ReadTimestamp = Timestamp.FromDateTime(targetReadTimestamp.Timestamp)
                     };
                 case TimestampBoundMode.MinReadTimestamp:
                     return new TransactionOptions.Types.ReadOnly
                     {
-                        MinReadTimestamp = Timestamp.FromDateTime(targetReadTimeStamp.TimeStamp)
+                        MinReadTimestamp = Timestamp.FromDateTime(targetReadTimestamp.Timestamp)
                     };
                 case TimestampBoundMode.ExactStaleness:
                     return new TransactionOptions.Types.ReadOnly
                     {
-                        ExactStaleness = Duration.FromTimeSpan(targetReadTimeStamp.Staleness)
+                        ExactStaleness = Duration.FromTimeSpan(targetReadTimestamp.Staleness)
                     };
                 case TimestampBoundMode.MaxStaleness:
                     return
                         new TransactionOptions.Types.ReadOnly
                         {
-                            MaxStaleness = Duration.FromTimeSpan(targetReadTimeStamp.Staleness)
+                            MaxStaleness = Duration.FromTimeSpan(targetReadTimestamp.Staleness)
                         };
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -667,10 +669,10 @@ namespace Google.Cloud.Spanner.Data
         }
 
         internal Task<SingleUseTransaction> BeginSingleUseTransactionAsync(
-            TimestampBound targetReadTimeStamp,
+            TimestampBound targetReadTimestamp,
             CancellationToken cancellationToken)
         {
-            var options = new TransactionOptions {ReadOnly = ConvertToOptions(targetReadTimeStamp)};
+            var options = new TransactionOptions {ReadOnly = ConvertToOptions(targetReadTimestamp)};
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 async () =>
                 {
@@ -689,7 +691,7 @@ namespace Google.Cloud.Spanner.Data
             TransactionOptions transactionOptions,
             TransactionMode transactionMode,
             CancellationToken cancellationToken,
-            TimestampBound targetReadTimeStamp = null)
+            TimestampBound targetReadTimestamp = null)
         {
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 async () =>
@@ -702,7 +704,7 @@ namespace Google.Cloud.Spanner.Data
                             .ConfigureAwait(false);
                         return new SpannerTransaction(
                             this, transactionMode, sessionHolder.TakeOwnership(),
-                            transaction, targetReadTimeStamp);
+                            transaction, targetReadTimestamp);
                     }
                 }, "SpannerConnection.BeginTransaction");
         }
