@@ -50,13 +50,13 @@ namespace Google.Cloud.Spanner.Data
                 //which we will no-op and allow through even if it was a two phase commit.
                 //This allows cases such as nested transactions where the inner transaction is a readonly
                 //timestamp bound read and doesn't have anything to commit.
-                Logger.Debug(() => "Received a COMMIT for a two phase commit but without changes.  This is allowed.");
+                Logger.Debug(() => "Received a COMMIT for a two phase commit but without changes. This is allowed.");
                 enlistment.Done();
                 return;
             }
             Logger.Warn(
                 () =>
-                    "Got a Commit call, which indicates two phase commit inside a transaction scope.  This is currently not supported in Spanner.");
+                    "Got a Commit call, which indicates two phase commit inside a transaction scope. This is currently not supported in Spanner.");
             throw new NotSupportedException("Spanner only supports single phase commit (2-P Commit not supported)."
                                             +
                                             " This error can happen when attempting to use multiple transaction resources but may also happen for"
@@ -67,7 +67,7 @@ namespace Google.Cloud.Spanner.Data
         {
             Logger.Warn(
                 () =>
-                    "Got a InDoubt call, which indicates two phase commit inside a transaction scope.  This is currently not supported in Spanner.");
+                    "Got a InDoubt call, which indicates two phase commit inside a transaction scope. This is currently not supported in Spanner.");
             enlistment.Done();
         }
 
@@ -78,13 +78,13 @@ namespace Google.Cloud.Spanner.Data
                 //which we will no-op and allow through even if it was a two phase commit.
                 //This allows cases such as nested transactions where the inner transaction is a readonly
                 //timestamp bound read and doesn't have anything to commit.
-                Logger.Debug(() => "Received a PREPARE for a two phase commit but without changes.  This is allowed.");
+                Logger.Debug(() => "Received a PREPARE for a two phase commit but without changes. This is allowed.");
                 preparingEnlistment.Prepared();
                 return;
             }
             Logger.Warn(
                 () =>
-                    "Got a Prepare call, which indicates two phase commit inside a transaction scope.  This is currently not supported in Spanner.");
+                    "Got a Prepare call, which indicates two phase commit inside a transaction scope. This is currently not supported in Spanner.");
             preparingEnlistment.ForceRollback(new NotSupportedException(
                 "Spanner only supports single phase commit (Prepare not supported)."
                 + " This error can happen when attempting to use multiple transaction resources but may also happen for"
@@ -140,7 +140,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 throw new InvalidOperationException("Unable to obtain a spanner transaction to execute within.");
             }
-            return await ((ISpannerTransaction) transaction).ExecuteMutationsAsync(mutations, cancellationToken);
+            return await ((ISpannerTransaction) transaction).ExecuteMutationsAsync(mutations, cancellationToken).ConfigureAwait(false);
         }
 
         public async Task<ReliableStreamReader> ExecuteQueryAsync(ExecuteSqlRequest request, CancellationToken cancellationToken)
@@ -150,7 +150,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 throw new InvalidOperationException("Unable to obtain a spanner transaction to execute within.");
             }
-            return await((ISpannerTransaction) transaction).ExecuteQueryAsync(request, cancellationToken);
+            return await((ISpannerTransaction) transaction).ExecuteQueryAsync(request, cancellationToken).ConfigureAwait(false);
         }
 
         private async Task<SpannerTransaction> GetTransactionAsync(CancellationToken cancellationToken)

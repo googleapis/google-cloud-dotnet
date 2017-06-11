@@ -53,14 +53,14 @@ namespace Google.Cloud.Spanner.Data
                 {ErrorCode.Internal, "Internal error."},
                 {
                     ErrorCode.Unavailable,
-                    "The service is currently unavailable.  This is a most likely a transient condition."
+                    "The service is currently unavailable. This is a most likely a transient condition."
                 },
                 {ErrorCode.DataLoss, "Unrecoverable data loss or corruption."},
                 {ErrorCode.Unknown, "An unknown error occurred."}
             };
 
         /// <summary>
-        /// An Error code that indicates the general class of problem.
+        /// An error code that indicates the general class of problem.
         /// </summary>
         public ErrorCode ErrorCode { get; }
 

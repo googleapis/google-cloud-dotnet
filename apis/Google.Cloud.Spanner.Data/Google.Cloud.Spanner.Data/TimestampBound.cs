@@ -51,7 +51,7 @@ namespace Google.Cloud.Spanner.Data
         public static TimestampBound Strong { get; } = new TimestampBound {Mode = TimestampBoundMode.Strong};
 
         /// <summary>
-        /// Executes all reads at a timestamp that is `duration`
+        /// Executes all reads at a timestamp that is <paramref name="duration"/>
         /// old. The timestamp is chosen soon after the read is started.
         ///
         /// Guarantees that all writes that have committed more than the
@@ -72,7 +72,7 @@ namespace Google.Cloud.Spanner.Data
         };
 
         /// <summary>
-        /// Read data at a timestamp >= `NOW - duration`. Guarantees that all
+        /// Read data at a timestamp >= `NOW - <paramref name="duration"/>`. Guarantees that all
         /// writes that have committed more than the specified number of seconds ago are
         /// visible.
         /// Because Cloud Spanner chooses the exact timestamp, this mode works even if
@@ -95,7 +95,7 @@ namespace Google.Cloud.Spanner.Data
         };
 
         /// <summary>
-        /// Executes all reads at a timestamp >= `minReadTimestamp`.
+        /// Executes all reads at a timestamp >= <paramref name="minReadTimestamp"/>.
         ///
         /// This is useful for requesting fresher data than some previous
         /// read, or data that is fresh enough to observe the effects of some

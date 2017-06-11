@@ -33,12 +33,12 @@ namespace Google.Cloud.Spanner.Data
     /// Represents a SQL query or command to execute against
     /// a Spanner database.
     /// If the command is a SQL query, then <see cref="SpannerCommand.CommandText"/>
-    /// contains the entire SQL statement.  Use <see cref="ExecuteReaderAsync"/>  to obtain results.
+    /// contains the entire SQL statement. Use <see cref="ExecuteReaderAsync"/>  to obtain results.
     /// 
     /// If the command is an update, insert or delete command, then <see cref="SpannerCommand.CommandText"/>
     /// is simply "[operation] [spanner_table]" such as "UPDATE MYTABLE" with the parameter
     /// collection containing <see cref="SpannerParameter"/> instances whose name matches a column
-    /// in the target table.  Use <see cref="ExecuteNonQueryAsync"/> to execute the command.
+    /// in the target table. Use <see cref="ExecuteNonQueryAsync"/> to execute the command.
     /// 
     /// The command may also be a DDL statement such as CREATE TABLE. Use <see cref="ExecuteNonQueryAsync"/>
     /// to execute a DDL statement.
@@ -53,7 +53,7 @@ namespace Google.Cloud.Spanner.Data
         private SpannerTransaction _transaction;
 
         /// <summary>
-        /// Initializes a new instance of <see cref="SpannerCommand"/>
+        /// Initializes a new instance of <see cref="SpannerCommand"/>.
         /// </summary>
         public SpannerCommand()
         {
@@ -72,12 +72,12 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// Initializes a new instance of <see cref="SpannerCommand"/>
+        /// Initializes a new instance of <see cref="SpannerCommand"/>.
         /// </summary>
         /// <param name="commandTextBuilder">The <see cref="SpannerCommandTextBuilder"/>
         /// that configures the text of this command.</param>
         /// <param name="connection">The <see cref="SpannerConnection"/> that is
-        /// associated with this <see cref="SpannerCommand"/></param>
+        /// associated with this <see cref="SpannerCommand"/>.</param>
         /// <param name="transaction">An optional <see cref="SpannerTransaction"/>
         /// created through <see>
         /// <cref>SpannerConnection.BeginTransactionAsync</cref>
@@ -102,7 +102,7 @@ namespace Google.Cloud.Spanner.Data
         /// Initializes a new instance of <see cref="SpannerCommand"/>
         /// </summary>
         /// <param name="commandText">If this command is a SQL Query, then commandText is
-        /// the SQL statement.  If its an update, insert or delete command, then this text
+        /// the SQL statement. If its an update, insert or delete command, then this text
         /// is "[operation] [table]" such as "UPDATE MYTABLE"</param>
         /// <param name="connection">The <see cref="SpannerConnection"/> that is
         /// associated with this <see cref="SpannerCommand"/></param>
@@ -366,7 +366,7 @@ namespace Google.Cloud.Spanner.Data
                 mutations.Add(new Mutation {Delete = w});
             }
 
-            // Make the request.  This will commit immediately or not depending on whether a transaction was explicitly created.
+            // Make the request. This will commit immediately or not depending on whether a transaction was explicitly created.
             await GetSpannerTransaction().ExecuteMutationsAsync(mutations, cancellationToken)
                 .WithTimeout(TimeSpan.FromSeconds(CommandTimeout), "The timeout of the SpannerCommand was exceeded.");
             // Return the number of records affected.
@@ -379,10 +379,10 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// Executes the query and returns the first column of the first row in the result set returned by the query.
-        /// All other columns and rows are ignored.  The return value is converted to type T if possible.
+        /// All other columns and rows are ignored. The return value is converted to type T if possible.
         /// </summary>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
-        /// <typeparam name="T">The expected return Type.  If possible the return type will be converted to this Type.</typeparam>
+        /// <typeparam name="T">The expected return Type. If possible the return type will be converted to this Type.</typeparam>
         /// <returns>The first column of the first row resulting from execution of the query.</returns>
         public async Task<T> ExecuteScalarAsync<T>(CancellationToken cancellationToken = default(CancellationToken))
         {

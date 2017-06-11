@@ -44,12 +44,12 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Indicates the <see cref="TransactionMode"/> for the transaction.
         /// Cloud Spanner supports two transaction modes:
-        /// Locking read-write transactions are the only transaction type that supports writing
+        /// Locking read-write transactions are the only transaction type that support writing
         /// data into Cloud Spanner. These transactions rely on pessimistic locking and, if
         /// necessary, two-phase commit. Locking read-write transactions may abort, requiring
         /// the application to retry.
         /// Read-only transactions provide guaranteed consistency across several reads,
-        /// but does not allow writes. Read-only transactions can be configured to read at
+        /// but do not allow writes. Read-only transactions can be configured to read at
         /// timestamps in the past. Read-only transactions do not need to be committed and
         /// do not take locks.
         /// </summary>
@@ -142,7 +142,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Commits the database transaction asynchronously.
         /// </summary>
-        /// <returns>Returns the Utc timestamp when the data was written to the database.</returns>
+        /// <returns>Returns the UTC timestamp when the data was written to the database.</returns>
         public Task<DateTime?> CommitAsync()
         {
             return ExecuteHelper.WithErrorTranslationAndProfiling(

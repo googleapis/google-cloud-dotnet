@@ -22,7 +22,7 @@ namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
     /// Builds the <see cref="SpannerCommand.CommandText"/> string for executing a query or operation
-    /// on a Spanner Database.
+    /// on a Spanner database.
     /// </summary>
     public sealed class SpannerCommandTextBuilder
     {
@@ -49,7 +49,7 @@ namespace Google.Cloud.Spanner.Data
         public SpannerCommandType SpannerCommandType { get; private set; }
 
         /// <summary>
-        /// Gets the target Spanner Database Table if the command is Update, Delete, InsertOrUpdate,
+        /// Gets the target Spanner database table if the command is Update, Delete, InsertOrUpdate,
         /// or Insert
         /// </summary>
         public string TargetTable
@@ -127,7 +127,7 @@ namespace Google.Cloud.Spanner.Data
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
         /// for deleting rows.
         /// </summary>
-        /// <param name="table">The name of the Spanner Database table from which rows will be deleted.</param>
+        /// <param name="table">The name of the Spanner database table from which rows will be deleted.</param>
         /// <returns></returns>
         public static SpannerCommandTextBuilder CreateDeleteTextBuilder(string table)
         {
@@ -144,7 +144,7 @@ namespace Google.Cloud.Spanner.Data
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
         /// for inserting or updating rows.
         /// </summary>
-        /// <param name="table">The name of the Spanner Database table from which rows will be updated or inserted.</param>
+        /// <param name="table">The name of the Spanner database table from which rows will be updated or inserted.</param>
         /// <returns></returns>
         public static SpannerCommandTextBuilder CreateInsertOrUpdateTextBuilder(string table)
         {
@@ -161,7 +161,7 @@ namespace Google.Cloud.Spanner.Data
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
         /// for inserting rows.
         /// </summary>
-        /// <param name="table">The name of the Spanner Database table from which rows will be inserted.</param>
+        /// <param name="table">The name of the Spanner database table from which rows will be inserted.</param>
         /// <returns></returns>
         public static SpannerCommandTextBuilder CreateInsertTextBuilder(string table)
         {
@@ -191,7 +191,7 @@ namespace Google.Cloud.Spanner.Data
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
         /// for updating rows.
         /// </summary>
-        /// <param name="table">The name of the Spanner Database table from which rows will be updated.</param>
+        /// <param name="table">The name of the Spanner database table from which rows will be updated.</param>
         /// <returns></returns>
         public static SpannerCommandTextBuilder CreateUpdateTextBuilder(string table)
         {

@@ -39,7 +39,7 @@ namespace Google.Cloud.Spanner.Data
         InvalidArgument = StatusCode.InvalidArgument,
 
         /// <summary>
-        /// A timeout has occurred.  A <see cref="SpannerTransaction"/> should be
+        /// A timeout has occurred. A <see cref="SpannerTransaction"/> should be
         /// retried if this error is encountered.
         /// </summary>
         DeadlineExceeded = StatusCode.DeadlineExceeded,
@@ -82,7 +82,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// The operation was aborted due to transient issue such as competing transaction
-        /// resources.  A <see cref="SpannerTransaction"/> should be retried if this error
+        /// resources. A <see cref="SpannerTransaction"/> should be retried if this error
         /// is encountered.
         /// </summary>
         Aborted = StatusCode.Aborted,

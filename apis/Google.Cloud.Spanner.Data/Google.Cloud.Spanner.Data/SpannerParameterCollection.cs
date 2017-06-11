@@ -39,8 +39,8 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Adds a new <see cref="SpannerParameter"/> to the <see cref="SpannerParameterCollection"/>.
         /// </summary>
-        /// <param name="parameterName">The name of the parameter.  For Insert, Update and Delete commands, this name should
-        /// be the name of a valid Column in a Spanner table.  In Select commands, this name should be the name of a parameter
+        /// <param name="parameterName">The name of the parameter. For Insert, Update and Delete commands, this name should
+        /// be the name of a valid Column in a Spanner table. In Select commands, this name should be the name of a parameter
         /// used in the SQL Query.</param>
         /// <param name="dbType">One of the <see cref="SpannerDbType"/> values that indicates the type of the parameter.</param>
         public void Add(string parameterName, SpannerDbType dbType)
@@ -51,8 +51,8 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Adds a new <see cref="SpannerParameter"/> to the <see cref="SpannerParameterCollection"/>
         /// </summary>
-        /// <param name="parameterName">The name of the parameter.  For Insert, Update and Delete commands, this name should
-        /// be the name of a valid Column in a Spanner table.  In Select commands, this name should be the name of a parameter
+        /// <param name="parameterName">The name of the parameter. For Insert, Update and Delete commands, this name should
+        /// be the name of a valid Column in a Spanner table. In Select commands, this name should be the name of a parameter
         /// used in the SQL Query.</param>
         /// <param name="value">An object that is the value of the SpannerParameter.</param>
         /// <param name="dbType">One of the <see cref="SpannerDbType"/> values that indicates the type of the parameter.</param>
@@ -64,8 +64,8 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Adds a new <see cref="SpannerParameter"/> to the <see cref="SpannerParameterCollection"/>
         /// </summary>
-        /// <param name="parameterName">The name of the parameter.  For Insert, Update and Delete commands, this name should
-        /// be the name of a valid Column in a Spanner table.  In Select commands, this name should be the name of a parameter
+        /// <param name="parameterName">The name of the parameter. For Insert, Update and Delete commands, this name should
+        /// be the name of a valid Column in a Spanner table. In Select commands, this name should be the name of a parameter
         /// used in the SQL Query.</param>
         /// <param name="dbType">One of the <see cref="SpannerDbType"/> values that indicates the type of the parameter.</param>
         /// <param name="sourceColumn">The name of the DataTable source column (SourceColumn) if this SpannerParameter is used

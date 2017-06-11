@@ -136,14 +136,14 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// Creates an array of the specified type.  This can be done on any arbitrary <see cref="SpannerDbType"/>.
+        /// Creates an array of the specified type. This can be done on any arbitrary <see cref="SpannerDbType"/>.
         /// </summary>
         public static SpannerDbType ArrayOf(SpannerDbType elementType) =>
             new SpannerDbType(TypeCode.Array, elementType);
 
 
         /// <summary>
-        /// Creates an struct of the specified type.
+        /// Creates a struct of the specified type.
         /// A struct has field names and field values.
         /// </summary>
         /// <param name="structMembers">A dictionary containing the field names and types of each member of the struct.</param>

@@ -29,7 +29,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// The operation will fail with a <see cref="SpannerException"/>
         /// with <see cref="SpannerException.ErrorCode"/> equal to
-        /// <see cref="ErrorCode.ResourceExhausted"/>
+        /// <see cref="ErrorCode.ResourceExhausted"/>.
         /// </summary>
         Fail = 1
     }

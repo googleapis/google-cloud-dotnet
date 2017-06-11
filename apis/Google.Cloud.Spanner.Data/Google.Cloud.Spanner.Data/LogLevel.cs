@@ -35,7 +35,7 @@ namespace Google.Cloud.Spanner.Data
         Warn = V1.Logging.LogLevel.Warn,
 
         /// <summary>
-        /// Error and higher level messages will be logged.
+        /// Error messages will be logged.
         /// </summary>
         Error = V1.Logging.LogLevel.Error,
 

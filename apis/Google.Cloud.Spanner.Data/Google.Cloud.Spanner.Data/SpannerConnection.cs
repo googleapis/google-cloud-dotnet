@@ -38,7 +38,7 @@ namespace Google.Cloud.Spanner.Data
     /// When opened, <see cref="SpannerConnection"/> will acquire and maintain a session
     /// with the target Spanner database.
     /// <see cref="SpannerCommand"/> instances using this <see cref="SpannerConnection"/>
-    /// will use this session to execute their operation.  Concurrent read operations can
+    /// will use this session to execute their operation. Concurrent read operations can
     /// share this session, but concurrent write operations may cause additional sessions
     /// to be opened to the database.
     /// Underlying sessions with the Spanner database are pooled and are closed after a
@@ -302,7 +302,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="databaseTable">The name of the table to insert rows into.</param>
         /// <param name="insertParameters">A collection of <see cref="SpannerParameter"/>
         /// where each instance represents a column in the Spanner database table being set.
-        /// The name of the parameter must match the column name in Spanner.  The value
+        /// The name of the parameter must match the column name in Spanner. The value
         /// should be the value of the new row.</param>
         /// <returns>A configured <see cref="SpannerCommand"/></returns>
         public SpannerCommand CreateInsertCommand(
@@ -317,7 +317,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="databaseTable">The name of the table to insert or updates rows.</param>
         /// <param name="insertUpdateParameters">A collection of <see cref="SpannerParameter"/>
         /// where each instance represents a column in the Spanner database table being set.
-        /// The name of the parameter must match the column name in Spanner.  The value
+        /// The name of the parameter must match the column name in Spanner. The value
         /// should be the value of the new or updated row.</param>
         /// <returns>A configured <see cref="SpannerCommand"/></returns>
         public SpannerCommand CreateInsertOrUpdateCommand(
@@ -346,7 +346,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="databaseTable">The name of the table to update rows.</param>
         /// <param name="updateParameters">A collection of <see cref="SpannerParameter"/>
         /// where each instance represents a column in the Spanner database table being set.
-        /// The name of the parameter must match the column name in Spanner.  The value
+        /// The name of the parameter must match the column name in Spanner. The value
         /// should be the value of the updated row.</param>
         /// <returns>A configured <see cref="SpannerCommand"/></returns>
         public SpannerCommand CreateUpdateCommand(
@@ -386,7 +386,7 @@ namespace Google.Cloud.Spanner.Data
                 {
                     if (string.IsNullOrEmpty(_connectionStringBuilder?.SpannerDatabase))
                     {
-                        Logger.Warn(() => "No database was defined.  Therefore OpenAsync did not establish a session.");
+                        Logger.Warn(() => "No database was defined. Therefore OpenAsync did not establish a session.");
                         return;
                     }
                     if (IsOpen)
@@ -585,7 +585,7 @@ namespace Google.Cloud.Spanner.Data
                         {
                             sharedSessionReadOnlyUse = true;
                             // If we enter this code path, it means a transaction has stolen our shared session.
-                            // This is ok, we'll just create another.  But need to be very careful about concurrency
+                            // This is ok, we'll just create another. But need to be very careful about concurrency
                             // as compared to OpenAsync (which is documented as not threadsafe).
                             // To make this threadsafe, we store the creation task as a member and let other callers
                             // hook onto the first creation task.
@@ -656,7 +656,7 @@ namespace Google.Cloud.Spanner.Data
         {
             if (!IsClosed)
             {
-                throw new InvalidOperationException("The connection must be closed.  Failed to " + message);
+                throw new InvalidOperationException("The connection must be closed. Failed to " + message);
             }
         }
 
@@ -664,7 +664,7 @@ namespace Google.Cloud.Spanner.Data
         {
             if (!IsOpen)
             {
-                throw new InvalidOperationException("The connection must be open.  Failed to " + message);
+                throw new InvalidOperationException("The connection must be open. Failed to " + message);
             }
         }
 
