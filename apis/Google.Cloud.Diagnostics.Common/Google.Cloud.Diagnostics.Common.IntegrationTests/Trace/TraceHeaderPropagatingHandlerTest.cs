@@ -77,12 +77,12 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         }
 
         /// <summary>
-        /// Helper funtion to test tracing of out going requests.
+        /// Helper function to test tracing of out going requests.
         /// </summary>
-        /// <param name="uri">The uri to call.</param>
+        /// <param name="uri">The Uri to call.</param>
         /// <param name="rootSpanName">The name for the root span.</param>
-        /// <param name="exceptionExpected">True if an exception from the request to the uri is expected.</param>
-        /// <returns>A trace with two spans.  A root span and a child span tracing the outgoing uri
+        /// <param name="exceptionExpected">True if an exception from the request to the Uri is expected.</param>
+        /// <returns>A trace with two spans.  A root span and a child span tracing the outgoing Uri
         ///     request.</returns>
         private async Task<TraceProto> TestTracingOutGoingRequest(
             string uri, string rootSpanName, bool exceptionExpected)
@@ -106,13 +106,13 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 
         /// <summary>
         /// Creates a <see cref="TraceHeaderPropagatingHandler"/> and traces the sending of a
-        /// GET request to the given uri.  The trace is wrapped in a parent span.
+        /// GET request to the given Uri.  The trace is wrapped in a parent span.
         /// </summary>
         /// <param name="tracer">The tracer to trace the request with.</param>
         /// <param name="rootSpanName">The name of the root span that will wrap the span
         ///     that traces the request.</param>
-        /// <param name="uri">The uri to request.</param>
-        /// <param name="exceptionExpected">True if an exception from the request to the uri is expected.</param>
+        /// <param name="uri">The Uri to request.</param>
+        /// <param name="exceptionExpected">True if an exception from the request to the Uri is expected.</param>
         private async Task TraceOutGoingRequest(
             IManagedTracer tracer, string rootSpanName, string uri, bool exceptionExpected)
         {

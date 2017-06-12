@@ -183,7 +183,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         /// </summary>
         /// <param name="errorEvent">The event to check.</param>
         /// <param name="testId">The id of the test.</param>
-        /// <param name="functionName">The name of the function the error occured in.</param>
+        /// <param name="functionName">The name of the function the error occurred in.</param>
         private void VerifyErrorEvent(ErrorEvent errorEvent, string testId, string functionName)
         {
             Assert.Equal(BaseErrorReportingTestApplication.Service, errorEvent.ServiceContext.Service);
@@ -266,7 +266,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             _exceptionLogger = exceptionLogger;
         }
 
-        /// <summary>Cathces and handles a thrown <see cref="Exception"/>.</summary>
+        /// <summary>Catches and handles a thrown <see cref="Exception"/>.</summary>
         public string Index(string id)
         {
             var message = GetMessage(nameof(Index), id);
@@ -295,7 +295,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             throw new ArgumentException(message);
         }
 
-        /// <summary>Cathces and logs a thrown <see cref="Exception"/>.</summary>
+        /// <summary>Catches and logs a thrown <see cref="Exception"/>.</summary>
         public string ThrowCatchLog(string id)
         {
             var message = GetMessage(nameof(Index), id);

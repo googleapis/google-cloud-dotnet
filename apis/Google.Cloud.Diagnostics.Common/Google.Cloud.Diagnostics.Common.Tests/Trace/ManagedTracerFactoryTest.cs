@@ -28,7 +28,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         /// <summary>A trace id factory instance. Not used for testing.</summary>
         private static readonly TraceIdFactory s_traceIdFactory = TraceIdFactory.Create();
 
-        /// <summary>A trace comsumer instance. Not used for testing.</summary>
+        /// <summary>A trace consumer instance. Not used for testing.</summary>
         private static readonly IConsumer<TraceProto> s_comsumer = new Mock<IConsumer<TraceProto>>().Object;
 
         /// <summary>A trace header that will say to trace.</summary>

@@ -51,7 +51,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         }
 
         /// <summary>
-        /// Checks if a span's labels are are equal to a dictionary strings.
+        /// Checks if a span's labels are equal to a dictionary of strings.
         /// </summary>
         internal static bool IsValidAnnotation(TraceSpan span, Dictionary<string, string> annotation)
         {
