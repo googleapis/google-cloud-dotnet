@@ -68,26 +68,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             app.UseMiddleware<ErrorReportingExceptionLoggerMiddleware>();
         }
 
-
-        /// <summary>
-        /// Adds services for middleware that will report all uncaught exceptions to the
-        /// Stackdriver Error Reporting API.
-        /// </summary>
-        /// <param name="services">The service collection. Cannot be null.</param>
-        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
-        /// <param name="serviceName">An identifier of the service, such as the name of the 
-        ///     executable or job. Cannot be null.</param>
-        /// <param name="version">Represents the source code version that the developer 
-        ///     provided. Cannot be null.</param> 
-        /// <param name="options">Error reporting options for exception logging.</param>  
-        public static void AddGoogleExceptionLogging(
-            this IServiceCollection services, string projectId, string serviceName, string version,
-            ErrorReportingOptions options = null)
-        {
-            GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
-            AddGoogleExceptionLoggingBase(services, projectId, serviceName, version, options);
-        }
-
         /// <summary>
         /// Adds services for middleware that will report all uncaught exceptions to the
         /// Stackdriver Error Reporting API.
@@ -98,33 +78,21 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </para>
         /// </summary>
         /// <param name="services">The service collection. Cannot be null.</param>
-        /// <param name="serviceName">An identifier of the service, such as the name of the 
-        ///     executable or job. Cannot be null.</param>
-        /// <param name="version">Represents the source code version that the developer 
-        ///     provided. Cannot be null.</param> 
-        /// <param name="options">Error reporting options for exception logging.</param>   
+        /// <param name="setupAction">Action to set up options. Cannot be null.</param>
         public static void AddGoogleExceptionLogging(
-            this IServiceCollection services, string serviceName, string version,
-            ErrorReportingOptions options = null) =>
-                AddGoogleExceptionLoggingBase(services, null, serviceName, version, options);
-
-
-        /// <summary>
-        /// Shared code for creating error reporting services.
-        /// </summary>
-        /// <param name="services">The service collection. Cannot be null.</param>
-        /// <param name="projectId">The Google Cloud Platform project ID. If null the project Id will be auto detected.</param>
-        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.
-        ///     Cannot be null.</param>
-        /// <param name="version">Represents the source code version that the developer provided. 
-        ///     Cannot be null.</param>
-        /// <param name="options">Optional, error reporting options.</param>
-        private static void AddGoogleExceptionLoggingBase(
-            this IServiceCollection services, string projectId, string serviceName, string version,
-            ErrorReportingOptions options = null)
+            this IServiceCollection services, Action<ErrorReportingServiceOptions> setupAction)
         {
+            GaxPreconditions.CheckNotNull(services, nameof(services));
+            GaxPreconditions.CheckNotNull(setupAction, nameof(setupAction));
+
+            var serviceOptions = new ErrorReportingServiceOptions();
+            setupAction(serviceOptions);
+            var serviceName = GaxPreconditions.CheckNotNull(serviceOptions.ServiceName, nameof(serviceOptions.ServiceName));
+            var version = GaxPreconditions.CheckNotNull(serviceOptions.Version, nameof(serviceOptions.Version));
+
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddSingleton(ErrorReportingContextExceptionLogger.Create(projectId, serviceName, version, options));
+            services.AddSingleton(ErrorReportingContextExceptionLogger.Create(
+                serviceOptions.ProjectId, serviceName, version, serviceOptions.Options));
             services.AddSingleton(CreateExceptionLogger);
         }
 

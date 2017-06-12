@@ -32,7 +32,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             string projectId = "[Google Cloud Platform project ID]";
             string serviceName = "[Name of service]";
             string version = "[Version of service]";
-            services.AddGoogleExceptionLogging(projectId, serviceName, version);
+
+            services.AddGoogleExceptionLogging(options =>
+            {
+                options.ProjectId = projectId;
+                options.ServiceName = serviceName;
+                options.Version = version;
+            });
         }
 
         public void Configure(IApplicationBuilder app)
@@ -83,7 +89,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             public void ConfigureServices(IServiceCollection services)
             {
                 string projectId = "[Google Cloud Platform project ID]";
-                services.AddGoogleTrace(projectId);
+                services.AddGoogleTrace(options =>
+                {
+                    options.ProjectId = projectId;
+                });
             }
 
             public void Configure(IApplicationBuilder app)

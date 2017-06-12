@@ -88,26 +88,20 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Adds the needed services for Google Cloud Tracing. Used with <see cref="UseGoogleTrace"/>.
         /// </summary>
         /// <param name="services">The service collection. Cannot be null.</param>
-        /// <param name="projectId">Optional if running on Google App Engine or Google Compute Engine.
-        ///     The Google Cloud Platform project ID. If unspecified and running on GAE or GCE the project ID will be
-        ///     detected from the platform.</param>
-        /// <param name="config">Optional trace configuration, if unset the default will be used.</param>
-        /// <param name="client">Optional Trace client, if unset the default will be used.</param>
-        /// <param name="traceFallbackPredicate">Optional function to trace requests. If the trace header is not set
-        ///     then this function will be called to determine if a given request should be traced.  This will
-        ///     not override trace headers.</param>
+        /// /// <param name="setupAction">Action to set up options. Cannot be null.</param>
         public static void AddGoogleTrace(
-            this IServiceCollection services, string projectId = null,
-            TraceConfiguration config = null, TraceServiceClient client = null,
-            TraceDecisionPredicate traceFallbackPredicate = null)
+            this IServiceCollection services, Action<TraceServiceOptions> setupAction)
         {
             GaxPreconditions.CheckNotNull(services, nameof(services));
+            GaxPreconditions.CheckNotNull(setupAction, nameof(setupAction));
 
-            client = client ?? TraceServiceClient.Create();
-            config = config ?? TraceConfiguration.Create();
-            traceFallbackPredicate = traceFallbackPredicate ?? TraceDecisionPredicate.Default;
+            var serviceOptions = new TraceServiceOptions();
+            setupAction(serviceOptions);
 
-            projectId = CommonUtils.GetAndCheckProjectId(projectId);
+            var client = serviceOptions.Client ?? TraceServiceClient.Create();
+            var config = serviceOptions.Configuration ?? TraceConfiguration.Create();
+            var traceFallbackPredicate = serviceOptions.TraceFallbackPredicate ?? TraceDecisionPredicate.Default;
+            var projectId = CommonUtils.GetAndCheckProjectId(serviceOptions.ProjectId);
 
             var consumer = ConsumerFactory<TraceProto>.GetConsumer(
                  new GrpcTraceConsumer(client), MessageSizer<TraceProto>.GetSize, config.BufferOptions);
