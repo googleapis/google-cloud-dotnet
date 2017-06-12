@@ -17,7 +17,7 @@ using Google.Cloud.Diagnostics.Common;
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
     /// <summary>
-    /// Configuration for error reporting tracing.
+    /// Configuration for initializing error reporting.
     /// </summary>
     public sealed class ErrorReportingServiceOptions
     {
@@ -28,21 +28,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// An identifier of the service, such as the name of the 
-        /// executable or job. Cannot be null.
+        /// An identifier of the service, such as the name of the  executable or job. Cannot be null.
         /// </summary>
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// Represents the source code version that the developer 
-        /// provided. Cannot be null.
+        /// Represents the source code version that the developer provided. Cannot be null.
         /// </summary>
         public string Version { get; set; }
 
         /// <summary>
-        /// Error reporting options for exception logging. Can be null or unset.
+        /// Error reporting options for exception logging. Can be null.
         /// </summary>
         public ErrorReportingOptions Options { get; set; }
     }
 }
- 

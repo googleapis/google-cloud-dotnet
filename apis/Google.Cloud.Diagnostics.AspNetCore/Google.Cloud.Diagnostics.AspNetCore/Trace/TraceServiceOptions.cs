@@ -29,20 +29,20 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// Trace configuration options. Can be null or unset.
+        /// Trace configuration options. Can be null.
         /// </summary>
         public TraceConfiguration Configuration { get; set; }
 
         /// <summary>
-        /// A client to send traces with. Can be null or unset.
+        /// A client to send traces with. Can be null.
         /// </summary>
         public TraceServiceClient Client { get; set; }
 
         /// <summary>
         ///  A function to trace requests. If the trace header is not set then this function
         ///  will be called to determine if a given request should be traced.  This will
-        ///  not override trace headers. Can be null or unset.
+        ///  not override trace headers. Can be null.
         /// </summary>
         public TraceDecisionPredicate TraceFallbackPredicate { get; set; }
-}
+    }
 }
