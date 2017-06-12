@@ -133,29 +133,23 @@ namespace Google.LongRunning
         }
 
         /// <summary>
-        /// Executes the given callback with the metadata in the RPC message
-        /// if both the callback and the metadata are non-null.
-        /// </summary>
-        private void MaybeFireCallback(Action<TMetadata> metadataCallback)
-        {
-            if (metadataCallback != null && RpcMessage.Metadata != null)
-            {
-                metadataCallback(Metadata);
-            }
-        }
-
-        /// <summary>
         /// Polls the operation until it is complete, returning the completed operation.
         /// </summary>
         /// <remarks>
-        /// If this object already represents a completed operation, it is returned immediately,
-        /// with no further RPCs.
+        /// <para>
+        /// If this object already represents a completed operation, it is returned with no further RPCs.
+        /// If <paramref name="metadataCallback"/> is non-null, the callback will be called with any metadata
+        /// present before the result is returned.
+        /// </para>
+        /// <para>
+        /// Each callback is performed synchronously: this method waits for the callback to complete before the operation is next polled.
+        /// This guarantees that for a single call, metadata callbacks will never occur in parallel.
+        /// </para>
         /// </remarks>
         /// <param name="pollSettings">The settings to use for repeated polling, or null
         /// to use the default poll settings (poll once every 10 seconds, forever).</param>
         /// <param name="callSettings">The call settings to apply on each call, or null for default settings.</param>
-        /// <param name="metadataCallback">The callback to invoke whenever a polled result contains metadata, or null
-        /// for no callback.</param>
+        /// <param name="metadataCallback">The callback to invoke with the metadata from each poll operation, even if the metadata is null.</param>
         /// <returns>The completed operation, which can then be checked for errors or a result.</returns>
         public Operation<TResponse, TMetadata> PollUntilCompleted(
             PollSettings pollSettings = null,
@@ -164,6 +158,7 @@ namespace Google.LongRunning
         {
             if (IsCompleted)
             {
+                metadataCallback?.Invoke(Metadata);
                 return this;
             }
             callSettings = Client.GetEffectiveCallSettingsForGetOperation(callSettings);
@@ -172,7 +167,7 @@ namespace Google.LongRunning
                 deadline =>
                 {
                     var result = PollOnce(callSettings.WithEarlierDeadline(deadline, Client.Clock));
-                    result.MaybeFireCallback(metadataCallback);
+                    metadataCallback?.Invoke(result.Metadata);
                     return result;
                 };
 
@@ -186,14 +181,21 @@ namespace Google.LongRunning
         /// Asynchronously polls the operation until it is complete, returning the completed operation.
         /// </summary>
         /// <remarks>
-        /// If this object already represents a completed operation, it is returned immediately,
-        /// with no further RPCs.
+        /// <para>
+        /// If this object already represents a completed operation, it is returned with no further RPCs.
+        /// If <paramref name="metadataCallback"/> is non-null, the callback will be called with any metadata
+        /// present before the result is returned.
+        /// </para>
+        /// <para>
+        /// No guarantee is made as to which thread is used for metadata callbacks. However, each callback is
+        /// performed synchronously: this method waits for the callback to complete before the operation is next polled.
+        /// This guarantees that for a single call, metadata callbacks will never occur in parallel.
+        /// </para>
         /// </remarks>
         /// <param name="pollSettings">The settings to use for repeated polling, or null
         /// to use the default poll settings (poll once every 10 seconds, forever).</param>
         /// <param name="callSettings">The call settings to apply on each call, or null for default settings.</param>
-        /// <param name="metadataCallback">The callback to invoke whenever a polled result contains metadata, or null
-        /// for no callback.</param>
+        /// <param name="metadataCallback">The callback to invoke with the metadata from each poll operation, even if the metadata is null.</param>
         /// <returns>The completed operation, which can then be checked for errors or a result.</returns>
         public Task<Operation<TResponse, TMetadata>> PollUntilCompletedAsync(
             PollSettings pollSettings = null,
@@ -202,6 +204,7 @@ namespace Google.LongRunning
         {
             if (IsCompleted)
             {
+                metadataCallback?.Invoke(Metadata);
                 return Task.FromResult(this);
             }
             callSettings = Client.GetEffectiveCallSettingsForGetOperation(callSettings);
@@ -209,7 +212,7 @@ namespace Google.LongRunning
                 async deadline =>
                 {
                     var result = await PollOnceAsync(callSettings.WithEarlierDeadline(deadline, Client.Clock)).ConfigureAwait(false);
-                    result.MaybeFireCallback(metadataCallback);
+                    metadataCallback?.Invoke(result.Metadata);
                     return result;
                 };
             return Polling.PollRepeatedlyAsync(
