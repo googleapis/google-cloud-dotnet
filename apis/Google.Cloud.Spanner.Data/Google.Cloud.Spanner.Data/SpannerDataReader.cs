@@ -138,9 +138,14 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Gets the value of the specified column as type T.
         /// </summary>
-        /// <typeparam name="T">The type to coerce the value to.</typeparam>
-        /// <param name="columnName">The name of the column whose value will be returned.</param>
-        /// <returns></returns>
+        /// <typeparam name="T">The expected return type. If possible the return type will be converted to this type.
+        /// If conversion is requested between incompatible types, an <see cref="InvalidOperationException"/>
+        /// will be thrown.
+        /// If the conversion fails due to the contents returned (for example a string representing a
+        /// boolean does not have either 'true' or 'false') then a <see cref="FormatException"/> exception will be
+        /// thrown as documented by the <see cref="Convert"/> class.</typeparam>
+        /// <param name="columnName">The name of the column whose value will be returned. Must not be null.</param>
+        /// <returns>The value of the column at the current row, converted to type T.</returns>
         public T GetFieldValue<T>(string columnName)
         {
             var ordinal = GetOrdinal(columnName);
@@ -170,7 +175,7 @@ namespace Google.Cloud.Spanner.Data
         /// Gets the value of the specified column as a pure Protobuf type.
         /// </summary>
         /// <param name="i">The index of the column whose value will be returned.</param>
-        /// <returns></returns>
+        /// <returns>The raw protobuf as a <see cref="Value"/>.</returns>
         public Value GetJsonValue(int i) => _innerList[i].ConvertToClrType<Value>(GetSpannerFieldType(i));
 
         /// <inheritdoc />

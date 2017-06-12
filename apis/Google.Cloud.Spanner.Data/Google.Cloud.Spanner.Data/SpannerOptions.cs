@@ -139,8 +139,7 @@ namespace Google.Cloud.Spanner.Data
         /// </see>
         /// , the operation will immediately throw a <see cref="SpannerException"/> with
         /// an error code <see>
-        /// <cref>ErrorCode.ResourceExhausted</cref>
-        /// </see>
+        /// <cref>ErrorCode.ResourceExhausted</cref></see>.
         /// </summary>
         public ResourcesExhaustedBehavior ResourcesExhaustedBehavior
         {
@@ -153,7 +152,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Defines the global timeout duration.
         /// Operations sent to the server that take greater than this duration will fail
-        /// with a <see cref="SpannerException"/> and error code <see cref="ErrorCode.DeadlineExceeded"/>
+        /// with a <see cref="SpannerException"/> and error code <see cref="ErrorCode.DeadlineExceeded"/>.
         /// </summary>
         public TimeSpan Timeout
         {

@@ -61,7 +61,7 @@ namespace Google.Cloud.Spanner.Data
         /// Tells Cloud Spanner how to choose a timestamp at which to read the data for read-only
         /// transactions.
         /// The types of timestamp bounds are:
-        ///  Strong(the default): read the latest data.
+        ///  Strong (the default): read the latest data.
         ///  Bounded staleness: read a version of the data that's no staler than a bound.
         ///  Exact staleness: read the version of the data at an exact timestamp.
         /// </summary>
@@ -167,7 +167,6 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Rolls back a transaction asynchronously.
         /// </summary>
-        /// <returns></returns>
         public Task RollbackAsync()
         {
             return ExecuteHelper.WithErrorTranslationAndProfiling(

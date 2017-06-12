@@ -17,6 +17,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
+using Google.Api.Gax;
 using Google.Protobuf.Collections;
 using Google.Protobuf.WellKnownTypes;
 
@@ -41,10 +42,13 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="parameterName">The name of the parameter. For Insert, Update and Delete commands, this name should
         /// be the name of a valid Column in a Spanner table. In Select commands, this name should be the name of a parameter
-        /// used in the SQL Query.</param>
-        /// <param name="dbType">One of the <see cref="SpannerDbType"/> values that indicates the type of the parameter.</param>
+        /// used in the SQL Query. Must not be null</param>
+        /// <param name="dbType">One of the <see cref="SpannerDbType"/> values that indicates the type of the parameter.
+        /// Must not be null.</param>
         public void Add(string parameterName, SpannerDbType dbType)
         {
+            GaxPreconditions.CheckNotNull(parameterName, nameof(parameterName));
+            GaxPreconditions.CheckNotNull(dbType, nameof(dbType));
             _innerList.Add(new SpannerParameter(parameterName, dbType));
         }
 
@@ -53,11 +57,15 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="parameterName">The name of the parameter. For Insert, Update and Delete commands, this name should
         /// be the name of a valid Column in a Spanner table. In Select commands, this name should be the name of a parameter
-        /// used in the SQL Query.</param>
-        /// <param name="value">An object that is the value of the SpannerParameter.</param>
-        /// <param name="dbType">One of the <see cref="SpannerDbType"/> values that indicates the type of the parameter.</param>
+        /// used in the SQL Query. Must not be null.</param>
+        /// <param name="value">An object that is the value of the SpannerParameter. May be null.</param>
+        /// <param name="dbType">One of the <see cref="SpannerDbType"/> values that indicates the type of the parameter.
+        /// Must not be null.</param>
         public void Add(string parameterName, object value, SpannerDbType dbType)
         {
+            GaxPreconditions.CheckNotNull(parameterName, nameof(parameterName));
+            GaxPreconditions.CheckNotNull(dbType, nameof(dbType));
+
             _innerList.Add(new SpannerParameter(parameterName, dbType) {Value = value});
         }
 
@@ -66,12 +74,16 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="parameterName">The name of the parameter. For Insert, Update and Delete commands, this name should
         /// be the name of a valid Column in a Spanner table. In Select commands, this name should be the name of a parameter
-        /// used in the SQL Query.</param>
-        /// <param name="dbType">One of the <see cref="SpannerDbType"/> values that indicates the type of the parameter.</param>
+        /// used in the SQL Query. Must not be null.</param>
+        /// <param name="dbType">One of the <see cref="SpannerDbType"/> values that indicates the type of the parameter.
+        /// Must not be null.</param>
         /// <param name="sourceColumn">The name of the DataTable source column (SourceColumn) if this SpannerParameter is used
-        /// in a call to Update</param>
+        /// in a call to Update. Must not be null.</param>
         public void Add(string parameterName, SpannerDbType dbType, string sourceColumn)
         {
+            GaxPreconditions.CheckNotNull(parameterName, nameof(parameterName));
+            GaxPreconditions.CheckNotNull(dbType, nameof(dbType));
+            GaxPreconditions.CheckNotNull(sourceColumn, nameof(sourceColumn));
             _innerList.Add(new SpannerParameter(parameterName, dbType, sourceColumn));
         }
 

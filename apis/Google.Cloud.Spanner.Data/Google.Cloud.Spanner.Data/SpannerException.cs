@@ -87,8 +87,6 @@ namespace Google.Cloud.Spanner.Data
         /// This class is a thin conversion around a grpc exception, with the additional
         /// information of whether the operation is retryable based on the resulting error.
         /// </summary>
-        /// <param name="code"></param>
-        /// <param name="innerException"></param>
         internal SpannerException(ErrorCode code, RpcException innerException)
             : base(GetMessageFromErrorCode(code), innerException)
         {

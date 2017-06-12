@@ -19,6 +19,8 @@
 using System;
 using System.Data;
 using System.Data.Common;
+using Google.Api.Gax;
+
 #endif
 
 namespace Google.Cloud.Spanner.Data
@@ -33,14 +35,17 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Initializes a new instance of the <see cref="SpannerRowUpdatedEventArgs"/> class.
         /// </summary>
-        /// <param name="row">The DataRow sent through an Update.</param>
-        /// <param name="command">The <see cref="SpannerCommand"/> executed when Update is called.</param>
+        /// <param name="row">The DataRow sent through an Update. Must not be null.</param>
+        /// <param name="command">The <see cref="SpannerCommand"/> executed when Update is called.
+        /// May be null.</param>
         /// <param name="statementType">The type of SQL statement executed.</param>
-        /// <param name="tableMapping">The DataTableMapping sent through an Update.</param>
+        /// <param name="tableMapping">The DataTableMapping sent through an Update.
+        /// May be null.</param>
         public SpannerRowUpdatedEventArgs(DataRow row, IDbCommand command, StatementType statementType,
             DataTableMapping tableMapping)
             : base(row, command, statementType, tableMapping)
         {
+            GaxPreconditions.CheckNotNull(row, nameof(row));
             Command = (SpannerCommand) command;
         }
 

@@ -38,7 +38,7 @@ namespace Google.Cloud.Spanner.Data
         /// The <see cref="ITokenAccess"/> credential used to communicate with Spanner.
         /// If not set, then default application credentials will be used.
         /// Credentials can be retrieved from a file or obtained interactively.
-        /// See google cloud documentation for more information.
+        /// See Google Cloud documentation for more information.
         /// </summary>
         public ITokenAccess Credential { get; private set; }
 
@@ -155,12 +155,13 @@ namespace Google.Cloud.Spanner.Data
         /// connection string and optional credential
         /// </summary>
         /// <param name="connectionString">A connection string of the form
-        /// Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={hostname};][Port={portnumber}]
+        /// Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={hostname};][Port={portnumber}].
+        /// Must not be null.
         /// </param>
         /// <param name="credential">Optionally supplied credential to use for the connection.
         /// If not set, then default application credentials will be used.
         /// Credentials can be retrieved from a file or obtained interactively.
-        /// See google cloud documentation for more information.
+        /// See Google Cloud documentation for more information. May be null.
         /// </param>
         public SpannerConnectionStringBuilder(string connectionString, ITokenAccess credential = null)
         {

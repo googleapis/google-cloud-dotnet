@@ -43,8 +43,7 @@ namespace Google.Cloud.Spanner.Data
     /// to be opened to the database.
     /// Underlying sessions with the Spanner database are pooled and are closed after a
     /// configurable <see>
-    /// <cref>SpannerOptions.PoolEvictionDelay</cref>
-    /// </see>
+    /// <cref>SpannerOptions.PoolEvictionDelay</cref></see>.
     /// </summary>
     public sealed class SpannerConnection : DbConnection
     {
@@ -90,7 +89,7 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="connectionString">A Spanner formatted connection string. This is usually of the form 
         /// `Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={hostname};][Port={portnumber}]`</param>
-        /// <param name="credential">An optional credential for operations to be performed on the Spanner database.</param>
+        /// <param name="credential">An optional credential for operations to be performed on the Spanner database.  May be null.</param>
         public SpannerConnection(string connectionString, ITokenAccess credential = null)
             : this(new SpannerConnectionStringBuilder(connectionString, credential)) { }
 
@@ -98,7 +97,7 @@ namespace Google.Cloud.Spanner.Data
         /// Creates a SpannerConnection with a datasource contained in connectionString.
         /// </summary>
         /// <param name="connectionStringBuilder">
-        /// A SpannerConnectionStringBuilder containing a formatted connection string.
+        /// A SpannerConnectionStringBuilder containing a formatted connection string.  Must not be null.
         /// </param>
         public SpannerConnection(SpannerConnectionStringBuilder connectionStringBuilder)
         {
@@ -162,7 +161,7 @@ namespace Google.Cloud.Spanner.Data
         /// Read transactions are preferred if possible because they do not impose locks internally.
         /// ReadOnly transactions run with strong consistency and return the latest copy of data.
         /// </summary>
-        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <param name="cancellationToken">An optional token for canceling the call. May be null.</param>
         /// <returns>a new <see cref="SpannerTransaction"/></returns>
         public Task<SpannerTransaction> BeginReadOnlyTransactionAsync(
             CancellationToken cancellationToken = default(CancellationToken)) => BeginReadOnlyTransactionAsync(
@@ -175,7 +174,7 @@ namespace Google.Cloud.Spanner.Data
         /// Read transactions are preferred if possible because they do not impose locks internally.
         /// Stale read-only transactions can execute more quickly than strong or read-write transactions,.
         /// </summary>
-        /// <param name="targetReadTimestamp">Specifies the timestamp or allowed staleness of data.</param>
+        /// <param name="targetReadTimestamp">Specifies the timestamp or allowed staleness of data. Must not be null.</param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
         /// <returns></returns>
         public Task<SpannerTransaction> BeginReadOnlyTransactionAsync(
@@ -285,10 +284,11 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Creates a new <see cref="SpannerCommand"/> to delete rows from a Spanner database table.
         /// </summary>
-        /// <param name="databaseTable">The name of the table from which to delete rows.</param>
+        /// <param name="databaseTable">The name of the table from which to delete rows. Must not be null.</param>
         /// <param name="deleteFilterParameters">Filter criteria to control what rows get deleted.
         /// The name of each <see cref="SpannerParameter"/> should match the column name from the Spanner Table.
-        /// The value of the parameter should be the value to filter for the delete operation.</param>
+        /// The value of the parameter should be the value to filter for the delete operation.
+        /// May be null.</param>
         /// <returns>A configured <see cref="SpannerCommand"/></returns>
         public SpannerCommand CreateDeleteCommand(
             string databaseTable,
@@ -299,11 +299,11 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Creates a new <see cref="SpannerCommand"/> to insert rows into a Spanner database table.
         /// </summary>
-        /// <param name="databaseTable">The name of the table to insert rows into.</param>
+        /// <param name="databaseTable">The name of the table to insert rows into. Must not be null.</param>
         /// <param name="insertParameters">A collection of <see cref="SpannerParameter"/>
         /// where each instance represents a column in the Spanner database table being set.
         /// The name of the parameter must match the column name in Spanner. The value
-        /// should be the value of the new row.</param>
+        /// should be the value of the new row. May be null.</param>
         /// <returns>A configured <see cref="SpannerCommand"/></returns>
         public SpannerCommand CreateInsertCommand(
             string databaseTable,
@@ -314,11 +314,11 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Creates a new <see cref="SpannerCommand"/> to insert or update rows into a Spanner database table.
         /// </summary>
-        /// <param name="databaseTable">The name of the table to insert or updates rows.</param>
+        /// <param name="databaseTable">The name of the table to insert or updates rows. Must not be null.</param>
         /// <param name="insertUpdateParameters">A collection of <see cref="SpannerParameter"/>
         /// where each instance represents a column in the Spanner database table being set.
         /// The name of the parameter must match the column name in Spanner. The value
-        /// should be the value of the new or updated row.</param>
+        /// should be the value of the new or updated row. May be null</param>
         /// <returns>A configured <see cref="SpannerCommand"/></returns>
         public SpannerCommand CreateInsertOrUpdateCommand(
             string databaseTable,
@@ -330,9 +330,9 @@ namespace Google.Cloud.Spanner.Data
         /// Creates a new <see cref="SpannerCommand"/> to select rows using a SQL query statement.
         /// </summary>
         /// <param name="sqlQueryStatement">A full SQL query statement that may optionally have
-        /// replacement parameters.</param>
+        /// replacement parameters. Must not be null.</param>
         /// <param name="selectParameters">Optionally supplied set of <see cref="SpannerParameter"/>
-        /// that correspond to the parameters used in the SQL query.</param>
+        /// that correspond to the parameters used in the SQL query. May be null.</param>
         /// <returns>A configured <see cref="SpannerCommand"/></returns>
         public SpannerCommand CreateSelectCommand(
             string sqlQueryStatement,
@@ -343,11 +343,11 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Creates a new <see cref="SpannerCommand"/> to update rows in a Spanner database table.
         /// </summary>
-        /// <param name="databaseTable">The name of the table to update rows.</param>
+        /// <param name="databaseTable">The name of the table to update rows. Must not be null.</param>
         /// <param name="updateParameters">A collection of <see cref="SpannerParameter"/>
         /// where each instance represents a column in the Spanner database table being set.
         /// The name of the parameter must match the column name in Spanner. The value
-        /// should be the value of the updated row.</param>
+        /// should be the value of the updated row. May be null.</param>
         /// <returns>A configured <see cref="SpannerCommand"/></returns>
         public SpannerCommand CreateUpdateCommand(
             string databaseTable,
@@ -358,7 +358,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Creates a new <see cref="SpannerCommand"/> to execute a DDL (CREATE/DROP TABLE, etc) statement.
         /// </summary>
-        /// <param name="ddlStatement"></param>
+        /// <param name="ddlStatement">The DDL statement (eg 'CREATE TABLE MYTABLE ...').  Must not be null.</param>
         /// <returns>A configured <see cref="SpannerCommand"/></returns>
         public SpannerCommand CreateDdlCommand(
             string ddlStatement) => new SpannerCommand(
@@ -448,8 +448,7 @@ namespace Google.Cloud.Spanner.Data
         /// from the active <see cref="System.Transactions.TransactionScope"/>
         /// </summary>
         /// <param name="timestampBound">Specifies the timestamp or maximum staleness of a
-        /// read operation.</param>
-        /// <returns></returns>
+        /// read operation. Must not be null.</param>
         public void OpenWithTimeBoundSettings(TimestampBound timestampBound)
         {
             _timestampBound = timestampBound;
@@ -462,9 +461,8 @@ namespace Google.Cloud.Spanner.Data
         /// from the active <see cref="System.Transactions.TransactionScope"/>
         /// </summary>
         /// <param name="timestampBound">Specifies the timestamp or maximum staleness of a
-        /// read operation.</param>
+        /// read operation. Must not be null.</param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
-        /// <returns></returns>
         public Task OpenWithTimeBoundSettingsAsync(TimestampBound timestampBound, CancellationToken cancellationToken)
         {
             _timestampBound = timestampBound;

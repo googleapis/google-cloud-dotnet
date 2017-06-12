@@ -60,7 +60,7 @@ namespace Google.Cloud.Spanner.Data
         public static SpannerDbType String { get; } = new SpannerDbType(TypeCode.String);
 
         /// <summary>
-        /// A byte array (byte[])
+        /// A byte array (byte[]).
         /// </summary>
         public static SpannerDbType Bytes { get; } = new SpannerDbType(TypeCode.Bytes);
 

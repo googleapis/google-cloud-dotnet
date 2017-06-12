@@ -44,7 +44,7 @@ namespace Google.Cloud.Spanner.Data
         /// read, or data that is fresh enough to observe the effects of some
         /// previously committed transaction whose timestamp is known.
         ///
-        /// Note that this option can only be used in single-use transactions
+        /// Note that this option can only be used in single-use transactions.
         /// </summary>
         MinReadTimestamp,
 
@@ -59,7 +59,7 @@ namespace Google.Cloud.Spanner.Data
         /// timestamps.
         ///
         /// Useful for reading at nearby replicas without the distributed
-        /// timestamp negotiation overhead of `max_staleness`.
+        /// timestamp negotiation overhead of <see cref="MaxStaleness"/>.
         /// </summary>
         ExactStaleness,
 
@@ -75,7 +75,7 @@ namespace Google.Cloud.Spanner.Data
         /// replica, while bounding the possible staleness if the local
         /// replica has fallen behind.
         ///
-        /// Note that this option can only be used in single-use
+        /// Note that this option can only be used in single-use.
         /// transactions.
         /// </summary>
         MaxStaleness

@@ -51,7 +51,7 @@ namespace Google.Cloud.Spanner.Data
         NotFound = StatusCode.NotFound,
 
         /// <summary>
-        /// The Spanner object could be not created because it already exists.
+        /// The given resource could be not created because it already exists.
         /// </summary>
         AlreadyExists = StatusCode.AlreadyExists,
 
@@ -75,8 +75,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// Operation was rejected because the system is not in a state required for the
-        /// operation's execution. For example, directory to be deleted may be non-empty,
-        /// an rmdir operation is applied to a non-directory, etc.
+        /// operation's execution.
         /// </summary>
         FailedPrecondition = StatusCode.FailedPrecondition,
 

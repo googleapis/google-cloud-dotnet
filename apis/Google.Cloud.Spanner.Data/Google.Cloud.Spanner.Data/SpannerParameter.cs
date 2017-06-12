@@ -15,6 +15,7 @@
 using System;
 using System.Data;
 using System.Data.Common;
+using Google.Api.Gax;
 using TypeCode = Google.Cloud.Spanner.V1.TypeCode;
 
 // ReSharper disable UnusedParameter.Local
@@ -32,19 +33,21 @@ namespace Google.Cloud.Spanner.Data
         private object _value;
 
         /// <summary>
-        /// Initializes a new instance of the SpannerParameter class
+        /// Initializes a new instance of the SpannerParameter class.
         /// </summary>
         public SpannerParameter() { }
 
         /// <summary>
-        /// Initializes a new instance of the SpannerParameter class
+        /// Initializes a new instance of the SpannerParameter class.
         /// </summary>
         /// <param name="parameterName">The name of the parameter. For Insert, Update and Delete commands, this name should
         /// be the name of a valid column in a Spanner table. In Select commands, this name should be the name of a parameter
-        /// used in the SQL Query. This value is case sensitive.</param>
-        /// <param name="type">One of the <see cref="SpannerDbType"/> values that indicates the type of the parameter.</param>
-        /// <param name="value">An object that is the value of the SpannerParameter.</param>
-        /// <param name="sourceColumn">The name of the DataTable source column (SourceColumn) if this SpannerParameter is used in a call to Update</param>
+        /// used in the SQL Query. This value is case sensitive. Must not be null.</param>
+        /// <param name="type">One of the <see cref="SpannerDbType"/> values that indicates the type of the parameter.
+        /// Must not be null.</param>
+        /// <param name="value">An object that is the value of the SpannerParameter. May be null.</param>
+        /// <param name="sourceColumn">The name of the DataTable source column (SourceColumn) if this SpannerParameter is
+        /// used in a call to Update. May be null.</param>
         /// <param name="size">The length of the parameter. The value is for informational purposes only.</param>
         public SpannerParameter(
             string parameterName,
@@ -53,8 +56,10 @@ namespace Google.Cloud.Spanner.Data
             string sourceColumn = null,
             int size = 0)
         {
+            GaxPreconditions.CheckNotNull(parameterName, nameof(parameterName));
+            GaxPreconditions.CheckNotNull(type, nameof(type));
             ParameterName = parameterName;
-            SpannerDbType = type ?? SpannerDbType.Unspecified;
+            SpannerDbType = type;
             Value = value;
             SourceColumn = sourceColumn;
             Size = size;
@@ -145,6 +150,7 @@ namespace Google.Cloud.Spanner.Data
             get => _value;
             set
             {
+                //TODO(benwu): consider allowing property sets in any order.
                 if (SpannerDbType.TypeCode == TypeCode.Unspecified && value != null)
                 {
                     throw new ArgumentException(
