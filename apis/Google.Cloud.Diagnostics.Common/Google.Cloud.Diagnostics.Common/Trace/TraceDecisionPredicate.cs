@@ -76,7 +76,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// Used to determine if a request should be traced.  This will not override a trace header
         /// decision.
         /// </summary>
-        /// <param name="request">The http request to check.</param>
+        /// <param name="request">The HTTP request to check.</param>
         /// <returns>True if the request should be traced, false if the request should not be traced
         /// and null if the decision should be left to other sampling mechanisms.</returns>
         public bool? ShouldTrace(HttpRequest request)

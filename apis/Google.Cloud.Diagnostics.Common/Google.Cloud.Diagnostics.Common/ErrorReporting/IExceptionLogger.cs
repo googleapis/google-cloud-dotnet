@@ -33,7 +33,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// Logs an exception that occurred.
         /// </summary>
         /// <param name="exception">The exception to log. Cannot be null.</param>
-        /// <param name="context">Optional, the current http context. If unset the
+        /// <param name="context">Optional, the current HTTP context. If unset the
         ///     current context will be retrieved automatically.</param>
         void Log(Exception exception, HttpContext context = null);
 
@@ -41,7 +41,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// Asynchronously logs an exception that occurred.
         /// </summary>
         /// <param name="exception">The exception to log. Cannot be null.</param>
-        /// <param name="context">Optional, the current http context. If unset the
+        /// <param name="context">Optional, the current HTTP context. If unset the
         ///     current context will be retrieved automatically.</param>
         /// <param name="cancellationToken">Optional, The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>

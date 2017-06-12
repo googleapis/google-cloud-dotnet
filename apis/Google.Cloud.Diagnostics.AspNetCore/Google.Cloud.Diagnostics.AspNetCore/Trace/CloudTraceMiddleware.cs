@@ -51,8 +51,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// taken for the next delegate to run, reporting the results to the
         /// Stackdriver Trace API.
         /// </summary>
-        /// <param name="httpContext">The current http context.</param>
-        /// <param name="traceHeaderContext">Information from the current requrest header. Cannot be null.</param>
+        /// <param name="httpContext">The current HTTP context.</param>
+        /// <param name="traceHeaderContext">Information from the current request header. Cannot be null.</param>
         public async Task Invoke(HttpContext httpContext, TraceHeaderContext traceHeaderContext)
         {
             GaxPreconditions.CheckNotNull(traceHeaderContext, nameof(traceHeaderContext));
@@ -78,7 +78,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 }
 
                 // Trace the delegate and annotate it with information from the current
-                // http context.
+                // HTTP context.
                 tracer.StartSpan(httpContext.Request.Path);
                 try
                 {

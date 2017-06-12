@@ -34,7 +34,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
         /// <summary>
         /// Gets a map of labels for a span from an <see cref="HttpContext"/>, such as request size,
-        /// method, status code, ect.
+        /// method, status code, etc.
         /// </summary>
         internal static Dictionary<string, string> FromHttpContext(HttpContext httpContext)
         {
