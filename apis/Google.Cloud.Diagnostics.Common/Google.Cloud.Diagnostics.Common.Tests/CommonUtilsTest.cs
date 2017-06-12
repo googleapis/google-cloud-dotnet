@@ -43,7 +43,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             // The string project id is not null and the MonitoredResource contains a project id
             // so the string project id is returned.  We do this as the explicitly set project id should be
-            // defaulted too.
+            // defaulted to.
             Assert.Equal(projectId, CommonUtils.GetAndCheckProjectId(projectId, monitoredResource));
 
             // The string project id is not null and the MonitoredResource does not contain a project id
