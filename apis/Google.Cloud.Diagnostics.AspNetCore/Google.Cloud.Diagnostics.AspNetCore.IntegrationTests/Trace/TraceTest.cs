@@ -40,7 +40,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             // The rate limiter instance is static and only set once.  If we do not reset it at the
             // beginning of each tests the qps will not change.  This is dependent on the tests not
             // running in parallel.
-            RateLimiter._instance = null;
+            RateLimiter.Reset();
         }
 
         [Fact]
@@ -205,6 +205,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 try
                 {
                     await client.GetAsync($"/Trace/ThrowException/{testId}");
+                    Assert.True(false, "Exception should have been thrown.");
                 }
                 catch
                 {

@@ -27,7 +27,7 @@ namespace Google.Cloud.Diagnostics.Common
         private static object _instanceMutex = new object();
 
         /// <summary>The single rate limiter instance.</summary>
-        internal static RateLimiter _instance;
+        private static RateLimiter _instance;
 
         /// <summary>The amount of time that must be waited before allowing tracing.</summary>
         private readonly long _fixedDelayMillis;
@@ -78,5 +78,11 @@ namespace Google.Cloud.Diagnostics.Common
             return (nowMillis - lastCallMillis >= _fixedDelayMillis) &&
                 Interlocked.CompareExchange(ref _lastCallMillis, nowMillis, lastCallMillis) == lastCallMillis;
         }
+
+        /// <summary>
+        /// Reset the rate limiter instance to null.  This will allow a new QPS rate limit to
+        /// be set.  For testing use only.
+        /// </summary>
+        internal static void Reset() => _instance = null;
     }
 }
