@@ -27,7 +27,7 @@ namespace Google.Cloud.Diagnostics.Common
         private static object _instanceMutex = new object();
 
         /// <summary>The single rate limiter instance.</summary>
-        private static RateLimiter _instance;
+        internal static RateLimiter _instance;
 
         /// <summary>The amount of time that must be waited before allowing tracing.</summary>
         private readonly long _fixedDelayMillis;
