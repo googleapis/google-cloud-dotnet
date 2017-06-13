@@ -268,13 +268,13 @@ namespace Google.Cloud.Spanner.Data
 
         private async Task<int> ExecuteDdlAsync(CancellationToken cancellationToken)
         {
-            var databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            var databaseAdminClient = await DatabaseAdminClient.CreateAsync().ConfigureAwait(false);
 
             if (SpannerCommandTextBuilder.IsCreateDatabaseCommand)
             {
                 var parent = new InstanceName(SpannerConnection.Project, SpannerConnection.SpannerInstance);
-                var response = await databaseAdminClient.CreateDatabaseAsync(parent, CommandText);
-                await response.PollUntilCompletedAsync();
+                var response = await databaseAdminClient.CreateDatabaseAsync(parent, CommandText).ConfigureAwait(false);
+                await response.PollUntilCompletedAsync().ConfigureAwait(false);
             }
             else
             {
@@ -282,8 +282,8 @@ namespace Google.Cloud.Spanner.Data
                     await databaseAdminClient.UpdateDatabaseDdlAsync(
                         new DatabaseName(
                             SpannerConnection.Project, SpannerConnection.SpannerInstance, SpannerConnection.Database),
-                        new[] {CommandText});
-                await response.PollUntilCompletedAsync();
+                        new[] {CommandText}).ConfigureAwait(false);
+                await response.PollUntilCompletedAsync().ConfigureAwait(false);
             }
             return 0;
         }
@@ -366,7 +366,8 @@ namespace Google.Cloud.Spanner.Data
 
             // Make the request. This will commit immediately or not depending on whether a transaction was explicitly created.
             await GetSpannerTransaction().ExecuteMutationsAsync(mutations, cancellationToken)
-                .WithTimeout(TimeSpan.FromSeconds(CommandTimeout), "The timeout of the SpannerCommand was exceeded.");
+                .WithTimeout(TimeSpan.FromSeconds(CommandTimeout), "The timeout of the SpannerCommand was exceeded.")
+                .ConfigureAwait(false);
             // Return the number of records affected.
             return mutations.Count;
         }
