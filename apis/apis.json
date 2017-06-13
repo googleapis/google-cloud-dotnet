@@ -218,7 +218,7 @@
 
   {
     "id": "Google.Cloud.Spanner.Admin.Database.V1",
-    "version": "0.2.0",
+    "version": "1.0.0-alpha01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Spanner Database Admin API.",
     "tags": [ "Spanner" ],
@@ -230,7 +230,7 @@
 
   {
     "id": "Google.Cloud.Spanner.Admin.Instance.V1",
-    "version": "0.2.0",
+    "version": "1.0.0-alpha01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Spanner Instance Admin API.",
     "tags": [ "Spanner" ],
@@ -241,8 +241,23 @@
   },
 
   {
+    "id": "Google.Cloud.Spanner.Data",
+    "version": "1.0.0-alpha01",
+    "type": "other",
+    "targetFrameworks": "netstandard1.5;net45",
+    "testTargetFrameworks": "netcoreapp1.0;net452",
+    "description": "Google ADO.NET Provider for Google Cloud Spanner.",
+    "tags": [ "Spanner", "ADO" ],
+    "dependencies": {
+       "Google.Cloud.Spanner.V1": "",
+       "Google.Cloud.Spanner.Admin.Database.V1": "",
+       "Google.Cloud.Spanner.Admin.Instance.V1": "",
+    }
+  },
+  
+  {
     "id": "Google.Cloud.Spanner.V1",
-    "version": "0.2.0",
+    "version": "1.0.0-alpha01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Spanner API.",
     "tags": [ "Spanner" ],
