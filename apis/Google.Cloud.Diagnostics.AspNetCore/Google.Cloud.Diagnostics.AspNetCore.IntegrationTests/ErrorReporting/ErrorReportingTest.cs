@@ -237,7 +237,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             public void ConfigureServices(IServiceCollection services)
             {
-                services.AddGoogleExceptionLogging(ProjectId, Service, Version, GetOptions());
+                services.AddGoogleExceptionLogging(options =>
+                {
+                    options.ProjectId = ProjectId;
+                    options.ServiceName = Service;
+                    options.Version = Version;
+                    options.Options = GetOptions();
+                });
                 services.AddMvc();
             }
 
