@@ -99,15 +99,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             setupAction(serviceOptions);
 
             var client = serviceOptions.Client ?? TraceServiceClient.Create();
-            var config = serviceOptions.Configuration ?? TraceConfiguration.Create();
+            var options = serviceOptions.Options ?? TraceOptions.Create();
             var traceFallbackPredicate = serviceOptions.TraceFallbackPredicate ?? TraceDecisionPredicate.Default;
             var projectId = CommonUtils.GetAndCheckProjectId(serviceOptions.ProjectId);
 
             var consumer = ConsumerFactory<TraceProto>.GetConsumer(
-                 new GrpcTraceConsumer(client), MessageSizer<TraceProto>.GetSize, config.BufferOptions);
+                 new GrpcTraceConsumer(client), MessageSizer<TraceProto>.GetSize, options.BufferOptions);
 
             var tracerFactory = new ManagedTracerFactory(projectId, consumer,
-                RateLimitingTraceOptionsFactory.Create(config), TraceIdFactory.Create());
+                RateLimitingTraceOptionsFactory.Create(options), TraceIdFactory.Create());
 
             services.AddScoped(CreateTraceHeaderContext);
             

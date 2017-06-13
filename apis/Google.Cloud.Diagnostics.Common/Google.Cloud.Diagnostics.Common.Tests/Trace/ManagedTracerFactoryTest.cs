@@ -112,13 +112,13 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             /// <summary>An options factory that will always return options to not trace.</summary>
             public static readonly TraceOptionsFactory NeverTrace = new TraceOptionsFactory(false);
 
-            private readonly TraceOptions _options;
+            private readonly InternalTraceOptions _options;
             public TraceOptionsFactory(bool shouldTrace)
             {
-                _options = TraceOptions.Create(shouldTrace);
+                _options = InternalTraceOptions.Create(shouldTrace);
             }
             
-            public TraceOptions CreateOptions() => _options;
+            public InternalTraceOptions CreateOptions() => _options;
         }
     }
 }

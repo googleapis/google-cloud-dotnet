@@ -23,10 +23,10 @@ namespace Google.Cloud.Diagnostics.Common
     {
         private readonly RateLimiter _rateLimiter;
 
-        private RateLimitingTraceOptionsFactory(TraceConfiguration config)
+        private RateLimitingTraceOptionsFactory(TraceOptions options)
         {
-            GaxPreconditions.CheckNotNull(config, nameof(config));
-            _rateLimiter = RateLimiter.GetInstance(config.QpsSampleRate);
+            GaxPreconditions.CheckNotNull(options, nameof(options));
+            _rateLimiter = RateLimiter.GetInstance(options.QpsSampleRate);
         }
 
         internal RateLimitingTraceOptionsFactory(RateLimiter rateLimiter)
@@ -37,16 +37,16 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Create a new <see cref="RateLimitingTraceOptionsFactory"/>.
         /// </summary>
-        /// <param name="config">Optional trace configuration, if unset the default will be used.</param>
-        public static RateLimitingTraceOptionsFactory Create(TraceConfiguration config = null)
+        /// <param name="options">Optional trace options, if unset the default will be used.</param>
+        public static RateLimitingTraceOptionsFactory Create(TraceOptions options = null)
         {
-            return new RateLimitingTraceOptionsFactory(config ?? TraceConfiguration.Create());
+            return new RateLimitingTraceOptionsFactory(options ?? TraceOptions.Create());
         }
 
         /// <inheritdoc />
-        public TraceOptions CreateOptions()
+        public InternalTraceOptions CreateOptions()
         {
-            return TraceOptions.Create(_rateLimiter.CanTrace());
+            return InternalTraceOptions.Create(_rateLimiter.CanTrace());
         }
     }
 }

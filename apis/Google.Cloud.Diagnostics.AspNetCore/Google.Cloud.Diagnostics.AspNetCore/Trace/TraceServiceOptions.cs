@@ -29,9 +29,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// Trace configuration options. Can be null.
+        /// Trace options. Can be null.
         /// </summary>
-        public TraceConfiguration Configuration { get; set; }
+        public TraceOptions Options { get; set; }
 
         /// <summary>
         /// A client to send traces with. Can be null.
