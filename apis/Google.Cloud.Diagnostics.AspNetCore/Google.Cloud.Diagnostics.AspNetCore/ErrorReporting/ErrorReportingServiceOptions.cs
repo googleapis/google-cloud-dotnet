@@ -28,7 +28,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// An identifier of the service, such as the name of the  executable or job. Cannot be null.
+        /// An identifier of the service, such as the name of the executable or job. Cannot be null.
         /// </summary>
         public string ServiceName { get; set; }
 
