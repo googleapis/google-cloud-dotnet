@@ -43,8 +43,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             var builder = new WebHostBuilder().UseStartup<SizedBufferErrorLoggerTestApplication>();
             using (TestServer server = new TestServer(builder))
+            using (var client = server.CreateClient())
             {
-                var client = server.CreateClient();
                 await client.GetAsync($"/Main/Warning/{testId}");
                 await client.GetAsync($"/Main/Error/{testId}");
                 await client.GetAsync($"/Main/Critical/{testId}");
@@ -63,8 +63,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             var builder = new WebHostBuilder().UseStartup<SizedBufferErrorLoggerTestApplication>();
             using (TestServer server = new TestServer(builder))
+            using (var client = server.CreateClient())
             {
-                var client = server.CreateClient();
                 await client.GetAsync($"/Main/Warning/{testId}");
                 await client.GetAsync($"/Main/Error/{testId}");
                 await client.GetAsync($"/Main/Critical/{testId}");
@@ -86,8 +86,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
             using (TestServer server = new TestServer(builder))
+            using (var client = server.CreateClient())
             {
-                var client = server.CreateClient();
                 await client.GetAsync($"/Main/Debug/{testId}");
                 await client.GetAsync($"/Main/Info/{testId}");
                 await client.GetAsync($"/Main/Warning/{testId}");
@@ -111,8 +111,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             var builder = new WebHostBuilder().UseStartup<SizedBufferErrorLoggerTestApplication>();
             using (TestServer server = new TestServer(builder))
+            using (var client = server.CreateClient())
             {
-                var client = server.CreateClient();
                 for (int i = 0; i < 250; i++)
                 {
                     await client.GetAsync($"/Main/Debug/{testId}");
@@ -144,9 +144,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             var builder = new WebHostBuilder().UseStartup<TimedBufferWarningLoggerTestApplication>();
             using (TestServer server = new TestServer(builder))
+            using (var client = server.CreateClient())
             {
-                var client = server.CreateClient();
-
                 await client.GetAsync($"/Main/Warning/{testId}");
                 await client.GetAsync($"/Main/Error/{testId}");
 
@@ -173,8 +172,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             var builder = new WebHostBuilder().UseStartup<NoBufferResourceLoggerTestApplication>();
             using (TestServer server = new TestServer(builder))
+            using (var client = server.CreateClient())
             {
-                var client = server.CreateClient();
                 await client.GetAsync($"/Main/Warning/{testId}");
                 await client.GetAsync($"/Main/Error/{testId}");
                 await client.GetAsync($"/Main/Critical/{testId}");
@@ -184,7 +183,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 var resourceType = NoBufferResourceLoggerTestApplication.Resource.Type;
                 var buildResources = results.Where(e => e.Resource.Type.Equals(resourceType));
                 Assert.Equal(3, buildResources.Count());
-
             }
         }
     }

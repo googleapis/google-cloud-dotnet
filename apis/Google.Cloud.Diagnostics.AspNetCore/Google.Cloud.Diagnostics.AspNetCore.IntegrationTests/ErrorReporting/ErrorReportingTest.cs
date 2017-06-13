@@ -82,8 +82,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             var builder = new WebHostBuilder().UseStartup<T>();
             using (TestServer server = new TestServer(builder))
+            using (var client = server.CreateClient())
             {
-                var client = server.CreateClient();
                 await client.GetAsync($"/ErrorReporting/Index/{testId}");
 
                 var errorEvents = _polling.GetEvents(startTime, testId, 0);
@@ -104,8 +104,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             var builder = new WebHostBuilder().UseStartup<T>();
             using (TestServer server = new TestServer(builder))
+            using (var client = server.CreateClient())
             {
-                var client = server.CreateClient();
                 await client.GetAsync($"/ErrorReporting/ThrowCatchLog/{testId}");
 
                 var errorEvents = _polling.GetEvents(startTime, testId, 1);
@@ -127,8 +127,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             var builder = new WebHostBuilder().UseStartup<T>();
             using (TestServer server = new TestServer(builder))
+            using (var client = server.CreateClient())
             {
-                var client = server.CreateClient();
                 await Assert.ThrowsAsync<Exception>(() =>
                     client.GetAsync($"/ErrorReporting/ThrowsException/{testId}"));
 
@@ -151,8 +151,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             var builder = new WebHostBuilder().UseStartup<T>();
             using (TestServer server = new TestServer(builder))
+            using (var client = server.CreateClient())
             {
-                var client = server.CreateClient();
                 await Assert.ThrowsAsync<Exception>(() =>
                     client.GetAsync($"/ErrorReporting/ThrowsException/{testId}"));
                 await Assert.ThrowsAsync<ArgumentException>(() =>
