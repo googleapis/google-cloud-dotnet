@@ -129,7 +129,7 @@ namespace Google.Cloud.Spanner.Data
         public override string SourceColumn { get; set; }
 
         /// <inheritdoc />
-        public override bool SourceColumnNullMapping { get; set; } = true;
+        public override bool SourceColumnNullMapping { get; set; }
 
 #if NET45 || NET451
 
