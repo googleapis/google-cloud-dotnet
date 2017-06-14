@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+﻿// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,13 +15,22 @@
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// A factory to generate trace options such as if the current request should be traced.
+    /// Options about a trace, such as if tracing should occur.
     /// </summary>
-    internal interface ITraceOptionsFactory
+    internal sealed class InternalTraceOptions
     {
+        /// <summary>True if the request should be traced.</summary>
+        public bool ShouldTrace { get; }
+
+        private InternalTraceOptions(bool shouldTrace)
+        {
+            ShouldTrace = shouldTrace;
+        }
+
         /// <summary>
-        /// Creates a new <see cref="InternalTraceOptions"/>.
+        /// Creates a <see cref="InternalTraceOptions"/>.
         /// </summary>
-        InternalTraceOptions CreateOptions();
+        /// <param name="shouldTrace">True if the tracing should occur.</param>
+        public static InternalTraceOptions Create(bool shouldTrace) => new InternalTraceOptions(shouldTrace);
     }
 }

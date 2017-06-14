@@ -106,21 +106,21 @@ namespace Google.Cloud.Diagnostics.AspNet
         public static TraceHeaderPropagatingHandler CreateTracingHttpMessageHandler() =>
             new TraceHeaderPropagatingHandler(() => Tracer);
 
-        private CloudTrace(string projectId, TraceConfiguration config = null, TraceServiceClient client = null,
+        private CloudTrace(string projectId, TraceOptions options = null, TraceServiceClient client = null,
             TraceDecisionPredicate traceFallbackPredicate = null)
         {
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
 
             // Create the default values if not set.
             client = client ?? TraceServiceClient.Create();
-            config = config ?? TraceConfiguration.Create(); 
+            options = options ?? TraceOptions.Create(); 
             _traceFallbackPredicate = traceFallbackPredicate ?? TraceDecisionPredicate.Default;
 
             _consumer = ConsumerFactory<TraceProto>.GetConsumer(
-                new GrpcTraceConsumer(client), MessageSizer<TraceProto>.GetSize, config.BufferOptions);
+                new GrpcTraceConsumer(client), MessageSizer<TraceProto>.GetSize, options.BufferOptions);
 
             _tracerFactory = new ManagedTracerFactory(projectId, _consumer,
-                RateLimitingTraceOptionsFactory.Create(config), TraceIdFactory.Create());
+                RateLimitingTraceOptionsFactory.Create(options), TraceIdFactory.Create());
         }
 
         /// <summary>
@@ -130,19 +130,19 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <param name="projectId">Optional if running on Google App Engine or Google Compute Engine.
         ///     The Google Cloud Platform project ID. If unspecified and running on GAE or GCE the project ID will be
         ///     detected from the platform.</param>
-        /// <param name="config">Optional trace configuration, if unset the default will be used.</param>
+        /// <param name="options">Optional trace options, if unset the default will be used.</param>
         /// <param name="client">Optional trace client, if unset the default will be used.</param>
         /// <param name="traceFallbackPredicate">Optional function to trace requests. If the trace header is not set
         ///     then this function will be called to determine if a given request should be traced.  This will
         ///     not override trace headers.</param>
         public static void Initialize(HttpApplication application, string projectId = null,
-            TraceConfiguration config = null, TraceServiceClient client = null,
+            TraceOptions options = null, TraceServiceClient client = null,
             TraceDecisionPredicate traceFallbackPredicate = null)
         {
             GaxPreconditions.CheckNotNull(application, nameof(application));
 
             projectId = CommonUtils.GetAndCheckProjectId(projectId);
-            CloudTrace trace = new CloudTrace(projectId, config, client, traceFallbackPredicate);
+            CloudTrace trace = new CloudTrace(projectId, options, client, traceFallbackPredicate);
 
             // Add event handlers to the application.
             application.BeginRequest += trace.BeginRequest;

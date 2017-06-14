@@ -12,25 +12,42 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// Options about a trace, such as if tracing should occur.
+    /// Options to be used when initializing tracing.
     /// </summary>
-    internal sealed class TraceOptions
+    public sealed class TraceOptions
     {
-        /// <summary>True if the request should be traced.</summary>
-        public bool ShouldTrace { get; }
+        internal const double DefaultQpsSampleRate = 1.0;
 
-        private TraceOptions(bool shouldTrace)
+        /// <summary>Gets the QPS sample rate.</summary>
+        public double QpsSampleRate { get; }
+
+        /// <summary>The buffer options for the tracer.</summary>
+        public BufferOptions BufferOptions { get; }
+
+        private TraceOptions(double qpsSampleRate, BufferOptions bufferOptions)
         {
-            ShouldTrace = shouldTrace;
+            GaxPreconditions.CheckArgument(
+                qpsSampleRate > 0, nameof(qpsSampleRate), "qpsSampleRate must be greater than 0.");
+            QpsSampleRate = qpsSampleRate;
+            BufferOptions = GaxPreconditions.CheckNotNull(bufferOptions, nameof(bufferOptions));
         }
 
         /// <summary>
         /// Creates a <see cref="TraceOptions"/>.
         /// </summary>
-        /// <param name="shouldTrace">True if the tracing should occur.</param>
-        public static TraceOptions Create(bool shouldTrace) => new TraceOptions(shouldTrace);
+        /// <param name="qpsSampleRate">Optional, the qps sample rate.  The sample rate determines
+        ///     how often requests are automatically traced. Defaults to <see cref="DefaultQpsSampleRate"/>.
+        /// </param>
+        /// <param name="bufferOptions">Optional, the buffer options.  Defaults to a <see cref="BufferType.Timed"/>.</param>
+        public static TraceOptions Create(
+            double qpsSampleRate = DefaultQpsSampleRate, BufferOptions bufferOptions = null)
+        {
+            return new TraceOptions(qpsSampleRate, bufferOptions ?? BufferOptions.TimedBuffer());
+        }
     }
 }
