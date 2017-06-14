@@ -41,9 +41,9 @@ namespace Google.Cloud.Diagnostics.Common
         /// Creates a <see cref="TraceOptions"/>.
         /// </summary>
         /// <param name="qpsSampleRate">Optional, the qps sample rate.  The sample rate determines
-        ///     how often requests are automatically traced. Defaults to <see cref="DefaultQpsSampleRate"/>
+        ///     how often requests are automatically traced. Defaults to <see cref="DefaultQpsSampleRate"/>.
         /// </param>
-        /// <param name="bufferOptions">Optional, the buffer options.  Defaults to a <see cref="BufferType.Timed"/></param>
+        /// <param name="bufferOptions">Optional, the buffer options.  Defaults to a <see cref="BufferType.Timed"/>.</param>
         public static TraceOptions Create(
             double qpsSampleRate = DefaultQpsSampleRate, BufferOptions bufferOptions = null)
         {
