@@ -84,18 +84,18 @@ namespace Google.Cloud.Spanner.Data
             StructMembers = new Dictionary<string, SpannerDbType>();
             foreach (var field in structTypeFields)
             {
-                StructMembers[field.Name] = FromProtoBufType(field.Type);
+                StructMembers[field.Name] = FromProtobufType(field.Type);
             }
         }
 
-        internal static SpannerDbType FromProtoBufType(V1.Type type)
+        internal static SpannerDbType FromProtobufType(V1.Type type)
         {
             switch (type.Code)
             {
                 case TypeCode.Array:
                     return new SpannerDbType(
                         TypeCode.Array,
-                        FromProtoBufType(type.ArrayElementType));
+                        FromProtobufType(type.ArrayElementType));
                 case TypeCode.Struct:
                     return new SpannerDbType(TypeCode.Struct, type.StructType.Fields);
                 default:

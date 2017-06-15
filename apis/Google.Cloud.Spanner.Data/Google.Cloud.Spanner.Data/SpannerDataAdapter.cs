@@ -97,7 +97,7 @@ namespace Google.Cloud.Spanner.Data
                 // a) We cannot create a "proper" DbCommandBuilder because DDL is not supported by Spanner.
                 //    This means any "SpannerCommandBuilder" would not live up to expectations and be castable
                 //    to DbCommandBuilder.
-                // b) The code for building these commands is both much simpler than othe providers and also
+                // b) The code for building these commands is both much simpler than other providers and also
                 //    somewhat more limiting (it only supports simple table updates whereas other command builders
                 //    use TSQL or additional sql commands to inspect a query and determine the proper way to update it).
                 //    This means that the auto build feature has more limited use, but is still useful for
@@ -222,7 +222,7 @@ namespace Google.Cloud.Spanner.Data
                 foreach (var field in readerMetadata.RowType.Fields)
                 {
                     _parsedParameterCollection.Add(
-                        new SpannerParameter(field.Name, SpannerDbType.FromProtoBufType(field.Type), null, field.Name));
+                        new SpannerParameter(field.Name, SpannerDbType.FromProtobufType(field.Type), null, field.Name));
                 }
             }
 
