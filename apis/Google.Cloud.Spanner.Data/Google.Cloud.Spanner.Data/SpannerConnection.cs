@@ -289,16 +289,13 @@ namespace Google.Cloud.Spanner.Data
         /// Creates a new <see cref="SpannerCommand"/> to delete rows from a Spanner database table.
         /// </summary>
         /// <param name="databaseTable">The name of the table from which to delete rows. Must not be null.</param>
-        /// <param name="deleteFilterParameters">Filter criteria to control what rows get deleted.
-        /// The name of each <see cref="SpannerParameter"/> should match the column name from the Spanner Table.
-        /// The value of the parameter should be the value to filter for the delete operation.
-        /// May be null.</param>
+        /// <param name="primaryKeys">The set of columns that form the primary key of the table.</param>
         /// <returns>A configured <see cref="SpannerCommand"/></returns>
         public SpannerCommand CreateDeleteCommand(
             string databaseTable,
-            SpannerParameterCollection deleteFilterParameters = null) => new SpannerCommand(
+            SpannerParameterCollection primaryKeys = null) => new SpannerCommand(
             SpannerCommandTextBuilder.CreateDeleteTextBuilder(databaseTable), this, null,
-            deleteFilterParameters);
+            primaryKeys);
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand"/> to insert rows into a Spanner database table.
