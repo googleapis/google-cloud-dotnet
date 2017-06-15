@@ -359,7 +359,7 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// The maximum number of sessions that can be held in the session pool.
         /// </summary>
-        public static int MaximumPooledSessions { get; set; } = int.MaxValue;
+        public static int MaximumPooledSessions { get; set; } = 400;
 
         /// <summary>
         /// If true, then CreateSessionFromPoolAsync will block until CurrentActiveSessions is less than MaximumActiveSessions

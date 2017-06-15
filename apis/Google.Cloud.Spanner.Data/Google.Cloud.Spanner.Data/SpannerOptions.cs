@@ -64,6 +64,13 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// The maximum number of grpc channels used per credential.
+        /// Grpc channels are used in round robin fashion and can be used for multiple
+        /// <see cref="SpannerConnection"/> instances.
+        /// </summary>
+        public int MaximumGrpcChannels { get; set; } = 4;
+
+        /// <summary>
         /// Spanner sessions expire on the server after 60 minutes. However,
         /// <see cref="SpannerConnection"/> reserves a session for indefinite use
         /// and preserves the session by sending keepalive messages according to this

@@ -14,7 +14,11 @@
 
 using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
+using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.V1;
@@ -24,46 +28,47 @@ using Grpc.Core;
 
 namespace Google.Cloud.Spanner.Data
 {
+
     internal static class ClientPool
     {
-        private static readonly ConcurrentDictionary<ClientPoolKey, ClientPoolEntry> s_clientEntryPool =
-            new ConcurrentDictionary<ClientPoolKey, ClientPoolEntry>();
+        private static readonly ConcurrentDictionary<ClientCredentialKey, CredentialClientPool> s_clientPoolByCredential =
+            new ConcurrentDictionary<ClientCredentialKey, CredentialClientPool>();
 
         public static async Task<SpannerClient> AcquireClientAsync(
             ITokenAccess credentials = null,
             ServiceEndpoint endpoint = null)
         {
-            var key = new ClientPoolKey(credentials, endpoint ?? SpannerClient.DefaultEndpoint);
-            var poolEntry = s_clientEntryPool.GetOrAdd(key, k => new ClientPoolEntry(key));
-            var result = await poolEntry.AcquireClientFromEntryAsync().ConfigureAwait(false);
-            Logger.LogPerformanceCounter("SpannerClient.Count", () => s_clientEntryPool.Count);
+            var key = new ClientCredentialKey(credentials, endpoint ?? SpannerClient.DefaultEndpoint);
+            var poolEntry = s_clientPoolByCredential.GetOrAdd(key, k => new CredentialClientPool(key));
+            var result = await poolEntry.AcquireClientAsync().ConfigureAwait(false);
+            Logger.LogPerformanceCounter("SpannerClient.Count", () => s_clientPoolByCredential.Count);
             return result;
         }
 
-        /// <summary>
-        /// Callers should be careful not to call AcquireClient while CloseAll is still running.
-        /// It is possible to obtain a stale client.
-        /// </summary>
-        /// <returns></returns>
-        public static async Task CloseAllAsync()
+        public static void ReleaseClient(SpannerClient spannerClient,
+            ITokenAccess credentials = null,
+            ServiceEndpoint endpoint = null)
         {
-            Logger.Debug(() => "Shutting down all gRPC channels.");
-            await SpannerClient.ShutdownDefaultChannelsAsync().ConfigureAwait(false);
-            s_clientEntryPool.Clear();
+            if (spannerClient != null)
+            {
+                var key = new ClientCredentialKey(credentials, endpoint ?? SpannerClient.DefaultEndpoint);
+                var poolEntry = s_clientPoolByCredential.GetOrAdd(key, k => new CredentialClientPool(key));
+                poolEntry.ReleaseClient(spannerClient);
+            }
         }
 
-        private struct ClientPoolKey : IEquatable<ClientPoolKey>
+        private struct ClientCredentialKey : IEquatable<ClientCredentialKey>
         {
             public ITokenAccess Credential { get; }
             public ServiceEndpoint Endpoint { get; }
 
-            public ClientPoolKey(ITokenAccess tokenAccess, ServiceEndpoint serviceEndpoint) : this()
+            public ClientCredentialKey(ITokenAccess tokenAccess, ServiceEndpoint serviceEndpoint) : this()
             {
                 Credential = tokenAccess;
                 Endpoint = serviceEndpoint;
             }
 
-            public bool Equals(ClientPoolKey other) => Equals(Credential, other.Credential) &&
+            public bool Equals(ClientCredentialKey other) => Equals(Credential, other.Credential) &&
                 Equals(Endpoint, other.Endpoint);
 
             public override bool Equals(object obj)
@@ -73,7 +78,7 @@ namespace Google.Cloud.Spanner.Data
                     return false;
                 }
 
-                return obj is ClientPoolKey && Equals((ClientPoolKey) obj);
+                return obj is ClientCredentialKey && Equals((ClientCredentialKey) obj);
             }
 
             /// <inheritdoc />
@@ -87,50 +92,137 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        private class ClientPoolEntry
+        private class CredentialClientPool
         {
-            private readonly ClientPoolKey _key;
-            private SpannerClient _client;
-            private volatile Task<SpannerClient> _creationTask;
+            private readonly ClientCredentialKey _key;
+            private SortedList<SpannerClientCreator, SpannerClientCreator> _multiClientPool = 
+                new SortedList<SpannerClientCreator, SpannerClientCreator>();
             private readonly object _sync = new object();
 
-            public ClientPoolEntry(ClientPoolKey key) => _key = key;
 
-            public async Task<SpannerClient> AcquireClientFromEntryAsync()
+            public CredentialClientPool(ClientCredentialKey key) => _key = key;
+
+            public Task<SpannerClient> AcquireClientAsync()
             {
-                if (_client == null)
+                Task<SpannerClient> result;
+
+                lock (_sync)
                 {
-                    Logger.Debug(() => "Creating a new SpannerClient.");
-                    var endpoint = _key.Endpoint ?? SpannerClient.DefaultEndpoint;
-                    if (_key.Credential != null)
+                    //first ensure that the pool is of the correct size.
+                    while (_multiClientPool.Count > SpannerOptions.Instance.MaximumGrpcChannels)
                     {
-                        lock (_sync)
-                        {
-                            if (_client == null)
-                            {
-                                var channel = new Channel(
-                                    endpoint.Host,
-                                    endpoint.Port,
-                                    _key.Credential.ToChannelCredentials());
-                                _client = SpannerClient.Create(channel);
-                            }
-                        }
+                        _multiClientPool.RemoveAt(_multiClientPool.Count - 1);
                     }
-                    else
+                    while (_multiClientPool.Count < SpannerOptions.Instance.MaximumGrpcChannels)
                     {
-                        lock (_sync)
-                        {
-                            if (_creationTask == null || _creationTask.IsFaulted)
-                            {
-                                _creationTask = SpannerClient.CreateAsync(endpoint);
-                            }
-                        }
-                        // await needs to be done outside of the monitor.
-                        _client = await _creationTask.ConfigureAwait(false);
+                        var newEntry = new SpannerClientCreator(_key);
+                        _multiClientPool.Add(newEntry, newEntry);
+                    }
+
+                    //now grab the first item in the sorted list, increment refcnt, re-sort and return.
+                    var first = _multiClientPool.First();
+                    result = first.Value.AcquireClientAsync();
+                    _multiClientPool.Remove(first.Key);
+                    _multiClientPool.Add(first.Key, first.Value);
+                }
+                return result;
+            }
+
+            public void ReleaseClient(SpannerClient client)
+            {
+                lock (_sync)
+                {
+                    //find the entry and release refcnt and re-sort
+                    var match = _multiClientPool.FirstOrDefault(x => x.Key.MatchesClient(client));
+                    if (match.Key != null)
+                    {
+                        match.Value.Release();
+                        _multiClientPool.Remove(match.Key);
+                        _multiClientPool.Add(match.Key, match.Value);
                     }
                 }
+            }
+        }
 
-                return _client;
+        private class SpannerClientCreator : IComparable<SpannerClientCreator>, IComparable
+        {
+            private  Lazy<Task<SpannerClient>> _creationTask;
+            private int _refCount = 0;
+            private ClientCredentialKey _key;
+
+            public SpannerClientCreator(ClientCredentialKey key)
+            {
+                _key = key;
+                _creationTask = new Lazy<Task<SpannerClient>>(AcquireClientImplAsync);
+            }
+
+            public bool MatchesClient(SpannerClient client) => _creationTask.IsValueCreated &&
+                ReferenceEquals(_creationTask.Value.ResultWithUnwrappedExceptions(), client);
+
+            private async Task<ChannelCredentials> CreateDefaultChannelCredentialsAsync()
+            {
+                var appDefaultCredentials = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
+                if (appDefaultCredentials.IsCreateScopedRequired)
+                {
+                    appDefaultCredentials = appDefaultCredentials.CreateScoped(SpannerClient.DefaultScopes);
+                }
+                return appDefaultCredentials.ToChannelCredentials();
+            }
+
+            private async Task<SpannerClient> AcquireClientImplAsync()
+            {
+                var endpoint = _key.Endpoint ?? SpannerClient.DefaultEndpoint;
+                ChannelCredentials channelCredentials;
+
+                if (_key.Credential == null)
+                {
+                    channelCredentials = await CreateDefaultChannelCredentialsAsync().ConfigureAwait(false);
+                }
+                else
+                {
+                    channelCredentials = _key.Credential.ToChannelCredentials();
+                }
+
+                var channel = new Channel(
+                    endpoint.Host,
+                    endpoint.Port,
+                    channelCredentials);
+                return SpannerClient.Create(channel);
+            }
+
+            public Task<SpannerClient> AcquireClientAsync()
+            {
+                Interlocked.Increment(ref _refCount);
+                return _creationTask.Value;
+            }
+
+            public void Release()
+            {
+                Interlocked.Decrement(ref _refCount);
+            }
+
+            /// <inheritdoc />
+            public int CompareTo(SpannerClientCreator other)
+            {
+                GaxPreconditions.CheckNotNull(other, nameof(other));
+
+                if (ReferenceEquals(this, other))
+                {
+                    return 0;
+                }
+                var result = _refCount.CompareTo(other._refCount);
+                if (result == 0)
+                {
+                    // consistent (random) tie breaker.
+                    result = GetHashCode().CompareTo(other.GetHashCode());
+                }
+                return result;
+            }
+
+            /// <inheritdoc />
+            public int CompareTo(object obj)
+            {
+                return CompareTo((SpannerClientCreator) obj);
             }
         }
     }

@@ -279,6 +279,10 @@ namespace Google.Cloud.Spanner.Data
             {
                 SpannerClient.ReleaseToPool(session);
             }
+            ClientPool.ReleaseClient(SpannerClient,
+                _connectionStringBuilder.Credential,
+                _connectionStringBuilder.EndPoint);
+            SpannerClient = null;
         }
 
         /// <summary>
