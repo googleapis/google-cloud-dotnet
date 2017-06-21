@@ -14,8 +14,7 @@
 
 using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Linq;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Api.Gax;
@@ -41,8 +40,21 @@ namespace Google.Cloud.Spanner.Data
             var key = new ClientCredentialKey(credentials, endpoint ?? SpannerClient.DefaultEndpoint);
             var poolEntry = s_clientPoolByCredential.GetOrAdd(key, k => new CredentialClientPool(key));
             var result = await poolEntry.AcquireClientAsync().ConfigureAwait(false);
-            Logger.LogPerformanceCounter("SpannerClient.Count", () => s_clientPoolByCredential.Count);
+            Logger.LogPerformanceCounter("SpannerClient.TotalCount", () => s_clientPoolByCredential.Count);
             return result;
+        }
+
+        // ReSharper disable once UnusedMember.Global
+        internal static void DumpPoolContents(StringBuilder s)
+        {
+            s.AppendLine("ClientPool.Contents:");
+            int i = 0;
+            foreach (var kvp in s_clientPoolByCredential)
+            {
+                s.AppendLine($"s_clientPoolByCredential({i}) Key:${kvp.Key}");
+                kvp.Value.DumpCredentialPoolContents(s);
+                i++;
+            }
         }
 
         public static void ReleaseClient(SpannerClient spannerClient,
@@ -90,17 +102,37 @@ namespace Google.Cloud.Spanner.Data
                         (Endpoint?.GetHashCode() ?? 0);
                 }
             }
+
+            /// <inheritdoc />
+            public override string ToString()
+            {
+                return $"Credential:{Credential?.ToString() ?? "null"} EndPoint:{Endpoint}";
+            }
         }
 
         private class CredentialClientPool
         {
             private readonly ClientCredentialKey _key;
-            private SortedList<SpannerClientCreator, SpannerClientCreator> _multiClientPool = 
-                new SortedList<SpannerClientCreator, SpannerClientCreator>();
+            private PriorityHeap<SpannerClientCreator> _clientPriorityHeap =
+                new PriorityHeap<SpannerClientCreator>();
             private readonly object _sync = new object();
 
 
             public CredentialClientPool(ClientCredentialKey key) => _key = key;
+
+            internal void DumpCredentialPoolContents(StringBuilder stringBuilder)
+            {
+                lock (_sync)
+                {
+                    int i = 0;
+                    foreach (var item in _clientPriorityHeap.GetSnapshot())
+                    {
+                        var index = i;
+                        stringBuilder.AppendLine($"  {index}:{item}");
+                        i++;
+                    }
+                }
+            }
 
             public Task<SpannerClient> AcquireClientAsync()
             {
@@ -109,21 +141,18 @@ namespace Google.Cloud.Spanner.Data
                 lock (_sync)
                 {
                     //first ensure that the pool is of the correct size.
-                    while (_multiClientPool.Count > SpannerOptions.Instance.MaximumGrpcChannels)
+                    while (_clientPriorityHeap.Count > SpannerOptions.Instance.MaximumGrpcChannels)
                     {
-                        _multiClientPool.RemoveAt(_multiClientPool.Count - 1);
+                        _clientPriorityHeap.RemoveLast();
                     }
-                    while (_multiClientPool.Count < SpannerOptions.Instance.MaximumGrpcChannels)
+                    while (_clientPriorityHeap.Count < SpannerOptions.Instance.MaximumGrpcChannels)
                     {
                         var newEntry = new SpannerClientCreator(_key);
-                        _multiClientPool.Add(newEntry, newEntry);
+                        _clientPriorityHeap.Add(newEntry);
                     }
 
                     //now grab the first item in the sorted list, increment refcnt, re-sort and return.
-                    var first = _multiClientPool.First();
-                    result = first.Value.AcquireClientAsync();
-                    _multiClientPool.Remove(first.Key);
-                    _multiClientPool.Add(first.Key, first.Value);
+                    result = _clientPriorityHeap.GetTop().AcquireClientAsync();
                 }
                 return result;
             }
@@ -133,26 +162,21 @@ namespace Google.Cloud.Spanner.Data
                 lock (_sync)
                 {
                     //find the entry and release refcnt and re-sort
-                    var match = _multiClientPool.FirstOrDefault(x => x.Key.MatchesClient(client));
-                    if (match.Key != null)
-                    {
-                        match.Value.Release();
-                        _multiClientPool.Remove(match.Key);
-                        _multiClientPool.Add(match.Key, match.Value);
-                    }
+                    var match = _clientPriorityHeap.TryFindLinear(x => x.MatchesClient(client));
+                    match?.Release();
                 }
             }
         }
 
-        private class SpannerClientCreator : IComparable<SpannerClientCreator>, IComparable
+        private class SpannerClientCreator : IPriorityHeapItem<SpannerClientCreator>
         {
-            private  Lazy<Task<SpannerClient>> _creationTask;
+            private Lazy<Task<SpannerClient>> _creationTask;
             private int _refCount = 0;
-            private ClientCredentialKey _key;
+            private ClientCredentialKey _parentKey;
 
-            public SpannerClientCreator(ClientCredentialKey key)
+            public SpannerClientCreator(ClientCredentialKey parentKey)
             {
-                _key = key;
+                _parentKey = parentKey;
                 _creationTask = new Lazy<Task<SpannerClient>>(AcquireClientImplAsync);
             }
 
@@ -171,59 +195,74 @@ namespace Google.Cloud.Spanner.Data
 
             private async Task<SpannerClient> AcquireClientImplAsync()
             {
-                var endpoint = _key.Endpoint ?? SpannerClient.DefaultEndpoint;
+                var endpoint = _parentKey.Endpoint ?? SpannerClient.DefaultEndpoint;
                 ChannelCredentials channelCredentials;
 
-                if (_key.Credential == null)
+                if (_parentKey.Credential == null)
                 {
                     channelCredentials = await CreateDefaultChannelCredentialsAsync().ConfigureAwait(false);
                 }
                 else
                 {
-                    channelCredentials = _key.Credential.ToChannelCredentials();
+                    channelCredentials = _parentKey.Credential.ToChannelCredentials();
                 }
 
                 var channel = new Channel(
                     endpoint.Host,
                     endpoint.Port,
                     channelCredentials);
+                Logger.LogPerformanceCounterFn("SpannerClient.RawCreateCount", (x) => x + 1);
+
                 return SpannerClient.Create(channel);
             }
 
             public Task<SpannerClient> AcquireClientAsync()
             {
                 Interlocked.Increment(ref _refCount);
+                OnPriorityChanged();
+
                 return _creationTask.Value;
             }
 
             public void Release()
             {
                 Interlocked.Decrement(ref _refCount);
+                OnPriorityChanged();
             }
 
             /// <inheritdoc />
             public int CompareTo(SpannerClientCreator other)
             {
-                GaxPreconditions.CheckNotNull(other, nameof(other));
-
                 if (ReferenceEquals(this, other))
                 {
                     return 0;
                 }
-                var result = _refCount.CompareTo(other._refCount);
-                if (result == 0)
+                if (ReferenceEquals(null, other))
                 {
-                    // consistent (random) tie breaker.
-                    result = GetHashCode().CompareTo(other.GetHashCode());
+                    return 1;
                 }
-                return result;
+                int refCountComparison = _refCount.CompareTo(other._refCount);
+                if (refCountComparison != 0)
+                {
+                    return refCountComparison;
+                }
+                // This has a chance of returning 0 even if the object is different.
+                // That is fine and is handled by the PriorityHeap.
+                return GetHashCode().CompareTo(other.GetHashCode());
             }
 
             /// <inheritdoc />
-            public int CompareTo(object obj)
+            public override string ToString()
             {
-                return CompareTo((SpannerClientCreator) obj);
+                return $"RefCount:{_refCount}. ParentHashCode{GetHashCode()}";
             }
+            private void OnPriorityChanged()
+            {
+                PriorityChanged?.Invoke(this, EventArgs.Empty);
+            }
+
+            /// <inheritdoc />
+            public event EventHandler<EventArgs> PriorityChanged;
         }
     }
 }

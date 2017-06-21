@@ -16,13 +16,14 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Cloud.Spanner.V1.Logging;
 
 namespace Google.Cloud.Spanner.V1
 {
-    internal class SessionPoolImpl : IComparable<SessionPoolImpl>
+    internal class SessionPoolImpl : IPriorityHeapItem<SessionPoolImpl>
     {
         //This is the maximum we will search for a matching transaction option session.
         //We'll normally not hit this, but this is to stop abnormal cases where almost all
@@ -33,7 +34,6 @@ namespace Google.Cloud.Spanner.V1
         private int _lastAccessTime;
         private static int s_activeSessionsPooled;
 
-
         public static int ActiveSessionsPooled => s_activeSessionsPooled;
 
         public SessionPoolKey Key { get; }
@@ -42,7 +42,19 @@ namespace Google.Cloud.Spanner.V1
         {
             Key = key;
         }
-
+        internal void DumpSessionPoolContents(StringBuilder stringBuilder)
+        {
+            lock (_sessionMruStack)
+            {
+                int i = 0;
+                foreach (var entry in _sessionMruStack)
+                {
+                    var instance = i;
+                    stringBuilder.AppendLine($"  {instance}:{entry.Session?.GetHashCode()}");
+                    i++;
+                }
+            }
+        }
 
         internal Task ReleaseAllImpl()
         {
@@ -73,16 +85,23 @@ namespace Google.Cloud.Spanner.V1
         {
             Logger.Debug(() => "Evicting a session from the pool.");
             SessionPoolEntry entry = default(SessionPoolEntry);
-            lock (_sessionMruStack)
+            try
             {
-                var found = _sessionMruStack.FindIndex(x => ReferenceEquals(x.Session, session));
-                if (found != -1)
+                lock (_sessionMruStack)
                 {
-                    entry = _sessionMruStack[found];
-                    _sessionMruStack.RemoveAt(found);
-                    Interlocked.Decrement(ref s_activeSessionsPooled);
-                    LogSessionsPooled();
+                    var found = _sessionMruStack.FindIndex(x => ReferenceEquals(x.Session, session));
+                    if (found != -1)
+                    {
+                        entry = _sessionMruStack[found];
+                        _sessionMruStack.RemoveAt(found);
+                        Interlocked.Decrement(ref s_activeSessionsPooled);
+                        LogSessionsPooled();
+                    }
                 }
+            }
+            finally
+            {
+                OnPriorityChanged();
             }
             if (entry.Session != null)
             {
@@ -92,55 +111,71 @@ namespace Google.Cloud.Spanner.V1
 
         private bool TryPop(TransactionOptions options, out SessionPoolEntry entry)
         {
-            entry = default(SessionPoolEntry);
-            //we make a reasonable attempt at obtaining a session with the given transactionoptions.
-            //but its not guaranteed.
-            lock (_sessionMruStack)
+            try
             {
-                if (_sessionMruStack.Count > 0)
+                //we make a reasonable attempt at obtaining a session with the given transactionoptions.
+                //but its not guaranteed.
+                lock (_sessionMruStack)
                 {
-                    Logger.Debug(() => "Searching for a session with matching transaction semantics.");
-                    int indexToUse = -1;
-                    for (int i = 0; i < _sessionMruStack.Count
-                        && i < MaximumLinearSearchDepth; i++)
+                    if (_sessionMruStack.Count > 0)
                     {
-                        entry = _sessionMruStack[i];
-                        if (Equals(entry.Session.GetLastUsedTransactionOptions(), options))
+                        Logger.Debug(() => "Searching for a session with matching transaction semantics.");
+                        int indexToUse = -1;
+                        for (int i = 0;
+                            i < _sessionMruStack.Count
+                            && i < MaximumLinearSearchDepth;
+                            i++)
                         {
-                            Logger.Debug(() => "found a session with matching transaction semantics.");
-                            indexToUse = i;
-                            if (options.ModeCase == TransactionOptions.ModeOneofCase.ReadOnly
-                                || entry.Session.IsPreWarmedTransactionReady())
+                            entry = _sessionMruStack[i];
+                            if (Equals(entry.Session.GetLastUsedTransactionOptions(), options))
                             {
-                                //if our prewarmed tx is ready, we can jump out immediately.
-                                break;
+                                Logger.Debug(() => "found a session with matching transaction semantics.");
+                                indexToUse = i;
+                                if (options.ModeCase == TransactionOptions.ModeOneofCase.ReadOnly
+                                    || entry.Session.IsPreWarmedTransactionReady())
+                                {
+                                    //if our prewarmed tx is ready, we can jump out immediately.
+                                    break;
+                                }
                             }
                         }
-                    }
-                    if (indexToUse == -1)
-                    {
-                        Logger.Debug(() => "did not find a session with matching transaction semantics - popping at top.");
-                        indexToUse = 0;
-                    }
-                    entry = _sessionMruStack[indexToUse];
-                    _sessionMruStack.RemoveAt(indexToUse);
+                        if (indexToUse == -1)
+                        {
+                            Logger.Debug(
+                                () => "did not find a session with matching transaction semantics - popping at top.");
+                            indexToUse = 0;
+                        }
+                        entry = _sessionMruStack[indexToUse];
+                        _sessionMruStack.RemoveAt(indexToUse);
 
-                    Interlocked.Decrement(ref s_activeSessionsPooled);
-                    LogSessionsPooled();
-                    return true;
+                        Interlocked.Decrement(ref s_activeSessionsPooled);
+                        LogSessionsPooled();
+                        return true;
+                    }
                 }
+                entry = default(SessionPoolEntry);
+                return false;
             }
-            entry = default(SessionPoolEntry);
-            return false;
+            finally
+            {
+                OnPriorityChanged();
+            }
         }
 
         private void Push(SessionPoolEntry entry)
         {
-            lock (_sessionMruStack)
+            try
             {
-                _sessionMruStack.Insert(0, entry);
-                Interlocked.Increment(ref s_activeSessionsPooled);
-                LogSessionsPooled();
+                lock (_sessionMruStack)
+                {
+                    _sessionMruStack.Insert(0, entry);
+                    Interlocked.Increment(ref s_activeSessionsPooled);
+                    LogSessionsPooled();
+                }
+            }
+            finally
+            {
+                OnPriorityChanged();
             }
         }
 
@@ -175,28 +210,36 @@ namespace Google.Cloud.Spanner.V1
 
         public Session AcquireEvictionCandidate()
         {
-            SessionPoolEntry sessionEntry = default(SessionPoolEntry);
-            lock (_sessionMruStack)
+            try
             {
-                if (_sessionMruStack.Count > 0)
+                SessionPoolEntry sessionEntry = default(SessionPoolEntry);
+                lock (_sessionMruStack)
                 {
-                    sessionEntry = _sessionMruStack[_sessionMruStack.Count - 1];
-                    _sessionMruStack.RemoveAt(_sessionMruStack.Count - 1);
-                    Interlocked.Decrement(ref s_activeSessionsPooled);
-                    LogSessionsPooled();
+                    if (_sessionMruStack.Count > 0)
+                    {
+                        sessionEntry = _sessionMruStack[_sessionMruStack.Count - 1];
+                        _sessionMruStack.RemoveAt(_sessionMruStack.Count - 1);
+                        Interlocked.Decrement(ref s_activeSessionsPooled);
+                        LogSessionsPooled();
+                    }
                 }
+                if (sessionEntry.Session == null || sessionEntry.EvictTaskCancellationSource == null)
+                {
+                    return null;
+                }
+                sessionEntry.EvictTaskCancellationSource.Cancel();
+                return sessionEntry.Session;
             }
-            if (sessionEntry.Session == null || sessionEntry.EvictTaskCancellationSource == null)
+            finally
             {
-                return null;
+                OnPriorityChanged();
             }
-            sessionEntry.EvictTaskCancellationSource.Cancel();
-            return sessionEntry.Session;
         }
 
         private void MarkUsed()
         {
             _lastAccessTime = Environment.TickCount;
+            OnPriorityChanged();
         }
 
         public void ReleaseSessionToPool(SpannerClient client, Session session)
@@ -207,12 +250,15 @@ namespace Google.Cloud.Spanner.V1
 
             if (SessionPool.UseTransactionWarming)
             {
-                Task.Run(() => client.PreWarmTransactionAsync(entry.Session));
+                client.StartPreWarmTransaction(entry.Session);
             }
-            Push(entry);
             //kick off the pool eviction timer.  This gets canceled when the item is pulled from the pool.
             Task.Run(() => EvictSessionPoolEntry(entry.Session, entry.EvictTaskCancellationSource.Token),
                 entry.EvictTaskCancellationSource.Token);
+
+            //It's very important that before we allow the new session to be in the pool
+            //that the state of the session is such that it can be immediately consumed.
+            Push(entry);
         }
 
         public int CompareTo(SessionPoolImpl other)
@@ -231,5 +277,13 @@ namespace Google.Cloud.Spanner.V1
             }
             return _lastAccessTime.CompareTo(other._lastAccessTime);
         }
+
+        private void OnPriorityChanged()
+        {
+            PriorityChanged?.Invoke(this, EventArgs.Empty);
+        }
+
+        /// <inheritdoc />
+        public event EventHandler<EventArgs> PriorityChanged;
     }
 }

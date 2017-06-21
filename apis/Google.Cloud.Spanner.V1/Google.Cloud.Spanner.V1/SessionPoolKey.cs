@@ -38,5 +38,11 @@ namespace Google.Cloud.Spanner.V1
             return (other.Client == Client && other.Project == Project && other.Instance == Instance
                     && other.Database == Database);
         }
+
+        /// <inheritdoc />
+        public override string ToString()
+        {
+            return $"ID:{Project}.{Instance}.{Database}";
+        }
     }
 }

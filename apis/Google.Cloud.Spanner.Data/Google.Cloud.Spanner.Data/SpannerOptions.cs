@@ -111,7 +111,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Controls the duration between periodic performance trace logs.
         /// </summary>
-        internal int PerformanceTraceLogInterval
+        internal TimeSpan PerformanceTraceLogInterval
         {
             get => Logger.PerformanceTraceLogInterval;
             set => Logger.PerformanceTraceLogInterval = value;

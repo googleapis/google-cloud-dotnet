@@ -94,8 +94,14 @@ namespace Google.Cloud.Spanner.V1.Logging
         {
             while (true)
             {
-                await Task.Delay(PerformanceTraceLogInterval).ConfigureAwait(false);
-                LogPerformanceDataImpl();
+                await Task.Delay(PerformanceTraceLogInterval != TimeSpan.Zero ?
+                    PerformanceTraceLogInterval
+                    : TimeSpan.FromSeconds(1)
+                    ).ConfigureAwait(false);
+                if (PerformanceTraceLogInterval.TotalMilliseconds > 0)
+                {
+                    LogPerformanceDataImpl();
+                }
             }
             // ReSharper disable once FunctionNeverReturns
         }
@@ -141,10 +147,13 @@ namespace Google.Cloud.Spanner.V1.Logging
                 Task.Run(PerformanceLogAsync);
             }
 
-            RecordEntryValue(_perfCounterDictionary.GetOrAdd(name, n => new PerformanceTimeEntry()), valueFunc);
+            lock (_perfLogSyncObject)
+            {
+                RecordEntryValue(_perfCounterDictionary.GetOrAdd(name, n => new PerformanceTimeEntry()), valueFunc);
+            }
         }
 
-        class PerformanceTimeEntry
+        private class PerformanceTimeEntry
         {
             public int Instances { get; set; }
             public double Average { get; set; }
@@ -154,6 +163,12 @@ namespace Google.Cloud.Spanner.V1.Logging
             public double Minimum { get; set; }
             public double Last { get; set; }
             public DateTime LastMeasureTime { get; set; }
+
+            /// <inheritdoc />
+            public override string ToString()
+            {
+                return $"Recordings({Instances}) Average({Average}) TAvg({TimeWeightedAverage})";
+            }
         }
     }
 }

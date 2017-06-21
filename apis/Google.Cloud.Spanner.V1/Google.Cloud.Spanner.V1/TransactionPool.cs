@@ -15,6 +15,7 @@
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using Google.Cloud.Spanner.V1.Logging;
 using Google.Protobuf;
@@ -48,21 +49,22 @@ namespace Google.Cloud.Spanner.V1
             TransactionOptions options)
         {
             var info = s_sessionInfoTable.GetOrAdd(session, s => new SessionInfo(client));
-        
+
             //we need to await for previous task completion anyway -- otherwise there is a bad race condition.
             await info.WaitForPreWarmAsync().ConfigureAwait(false);
-            
+
             //now we see if we can return the prewarmed transaction.
             // a lot has to be correct for us to return the precreated transaction.
             // we have to have a valid transaction object.
             // it needs to exist in the activetransactiontable to indicate that it hasn't been closed
             // the options on it must equal the passed in options.
-            if (info.HasActiveTransaction 
+            if (info.HasActiveTransaction
                 && s_activeTransactionTable.ContainsKey(info.ActiveTransaction.Id))
             {
-                if (info.ActiveTransactionOptions != null
-                    && info.ActiveTransactionOptions.Equals(options))
+                if (info.TransactionOptions != null
+                    && info.TransactionOptions.Equals(options))
                 {
+                    Logger.LogPerformanceCounterFn("Transaction.CacheHit", (x) => x + 1);
                     return info.ActiveTransaction;
                 }
                 //cache hit, but no match on options
@@ -71,6 +73,7 @@ namespace Google.Cloud.Spanner.V1
             }
 
             //ok, our cache hit didnt work for whatever reason.  Let's create a transaction with the given options and return it.
+            Logger.LogPerformanceCounterFn("Transaction.CacheMiss", (x) => x + 1);
             await info.CreateTransactionAsync(session, options).ConfigureAwait(false);
             if (info.ActiveTransaction != null)
             {
@@ -110,7 +113,7 @@ namespace Google.Cloud.Spanner.V1
             SessionInfo info;
             if (s_sessionInfoTable.TryGetValue(session, out info))
             {
-                return info.ActiveTransactionOptions;
+                return info.TransactionOptions;
             }
             return null;
         }
@@ -132,11 +135,11 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         /// <param name="session"></param>
         /// <param name="client"></param>
-        public static Task PreWarmTransactionAsync(this SpannerClient client, Session session)
+        public static void StartPreWarmTransaction(this SpannerClient client, Session session)
         {
             TransactionOptions options = session.GetLastUsedTransactionOptions();
             var info = s_sessionInfoTable.GetOrAdd(session, s => new SessionInfo(client));
-            return info.PreWarmAsync(session, options);
+            info.StartPreWarmTransaction(session, options);
         }
 
         /// <summary>
@@ -216,13 +219,12 @@ namespace Google.Cloud.Spanner.V1
             public bool HasActiveTransaction
                 => ActiveTransaction != null && !ActiveTransaction.Id.IsEmpty;
             public Transaction ActiveTransaction { get; private set; }
-            public TransactionOptions ActiveTransactionOptions { get; private set; }
+            public TransactionOptions TransactionOptions { get; private set; }
             public SpannerClient SpannerClient { get; }
             private Task PreWarmTask { get; set; }
 
             public void MarkTransactionUsed()
             {
-                ActiveTransactionOptions = null;
                 ActiveTransaction = null;
             }
 
@@ -243,40 +245,47 @@ namespace Google.Cloud.Spanner.V1
                 }
             }
 
-            public async Task CreateTransactionAsync(Session session, TransactionOptions options)
+            public Task CreateTransactionAsync(Session session, TransactionOptions options)
             {
-                await WaitForPreWarmAsync().ConfigureAwait(false);  //this is a little redundant, but just to be sure.
-                ActiveTransactionOptions = options;
-                await CreateTransactionImplAsync(session).ConfigureAwait(false);
+                return CreateTransactionImplAsync(session, options, PreWarmTask);
             }
 
-            private async Task CreateTransactionImplAsync(Session session)
-            {
-                ActiveTransaction = await SpannerClient.BeginTransactionAsync(new BeginTransactionRequest
-                {
-                    SessionAsSessionName = session.SessionName,
-                    Options = ActiveTransactionOptions
-                }).WithSessionChecking(() => session).ConfigureAwait(false);
-                s_activeTransactionTable.AddOrUpdate(ActiveTransaction.Id, session, (id, s) => session);
-            }
-
-            public async Task PreWarmAsync(Session session, TransactionOptions options)
+            private async Task CreateTransactionImplAsync(Session session, TransactionOptions options, Task oldPrewarmTask)
             {
                 //we need to await for previous task completion anyway -- otherwise there is a bad race condition.
                 //this is a little redundant, but just to be sure.
-                await WaitForPreWarmAsync().ConfigureAwait(false);
+                if (oldPrewarmTask != null)
+                {
+                    await oldPrewarmTask.ConfigureAwait(false);
+                }
+                var sw = Stopwatch.StartNew();
+                ActiveTransaction = await SpannerClient.BeginTransactionAsync(new BeginTransactionRequest
+                {
+                    SessionAsSessionName = session.SessionName,
+                    Options = options
+                }).WithSessionChecking(() => session).ConfigureAwait(false);
+
+                Logger.LogPerformanceCounterFn("Transaction.Begin.Duration", x => sw.ElapsedMilliseconds);
+                TransactionOptions = options;
+                s_activeTransactionTable.AddOrUpdate(ActiveTransaction.Id, session, (id, s) => session);
+            }
+
+            public void StartPreWarmTransaction(Session session, TransactionOptions options)
+            {
+                MarkTransactionUsed();
+
                 // for now, we only prewarm readwrite transactions because the read transaction semantics are usually
                 // dependent on the time the transaction begins.
                 if (options?.ModeCase == TransactionOptions.ModeOneofCase.ReadWrite)
                 {
+                    var oldTask = PreWarmTask;
                     Logger.Debug(
                         () => $"Pre-warming session transaction state. Mode={options.ModeCase}");
-                    ActiveTransactionOptions = options;
-                    PreWarmTask = Task.Run(() => CreateTransactionImplAsync(session));
+                    PreWarmTask = Task.Run(() => CreateTransactionImplAsync(session, options, oldTask));
                 }
                 else
                 {
-                    MarkTransactionUsed();
+                    PreWarmTask = null;
                 }
             }
         }
