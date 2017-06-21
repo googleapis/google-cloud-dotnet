@@ -17,7 +17,7 @@
 
   {
     "id": "Google.Cloud.BigQuery.V2",
-    "version": "1.0.0-beta11",
+    "version": "1.0.0-beta12",
     "type": "rest",
     "description": "Recommended Google client library to access the BigQuery API. It wraps the Google.Apis.Bigquery.v2 client library, making common operations simpler in client code. BigQuery is a data platform for customers to create, manage, share and query data.",
     "dependencies": {
@@ -32,7 +32,7 @@
 
   {
     "id": "Google.Cloud.Datastore.V1",
-    "version": "2.0.0-beta01",
+    "version": "2.0.0",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Datastore API, which accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application.",
     "tags": [ "Datastore" ],
@@ -44,7 +44,7 @@
 
   {
     "id": "Google.Cloud.DevTools.Common",
-    "version": "1.0.0-alpha02",
+    "version": "1.0.0-alpha03",
     "type": "other",
     "targetFrameworks": "netstandard1.3;net45",
     "description": "Common Protocol Buffer messages for Google Cloud Developer Tools APIs.",
@@ -57,7 +57,7 @@
 
   {
     "id": "Google.Cloud.Diagnostics.AspNet",
-    "version": "1.0.0-beta10",
+    "version": "1.0.0-beta11",
     "type": "other",
     "targetFrameworks": "net45",
     "testTargetFrameworks": "net452",
@@ -78,7 +78,7 @@
 
   {
     "id": "Google.Cloud.Diagnostics.AspNetCore",
-    "version": "1.0.0-beta10",
+    "version": "1.0.0-beta11",
     "type": "other",
     "targetFrameworks": "netstandard1.5",
     "testTargetFrameworks": "netcoreapp1.0",
@@ -105,7 +105,7 @@
 
   {
     "id": "Google.Cloud.Diagnostics.Common",
-    "version": "1.0.0-beta02",
+    "version": "1.0.0-beta03",
     "type": "other",
     "targetFrameworks": "netstandard1.5;net45",
     "testTargetFrameworks": "netcoreapp1.0;net452",
@@ -123,7 +123,7 @@
 
   {
     "id": "Google.Cloud.ErrorReporting.V1Beta1",
-    "version": "1.0.0-beta06",
+    "version": "1.0.0-beta07",
     "type": "grpc",
     "description": "Recommended Google client library to access the Stackdriver Error Reporting API, which groups and counts similar errors from cloud services. The Stackdriver Error Reporting API provides a way to report new errors and read access to error groups and their associated errors.",
     "tags": [ "ErrorReporting", "Stackdriver" ],
@@ -131,7 +131,7 @@
 
   {
     "id": "Google.Cloud.Iam.V1",
-    "version": "1.0.0-beta10",
+    "version": "1.0.0-beta11",
     "type": "grpc",
     "description": "gRPC services for the Google Identity and Access Management API. This library is typically used as a dependency for other API client libraries.",
     "tags": [ "IAM", "Identity", "Access" ],
@@ -140,7 +140,7 @@
 
   {
     "id": "Google.Cloud.Language.V1",
-    "version": "1.0.0-beta07",
+    "version": "1.0.0-beta08",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Natural Language API, which provides natural language understanding technologies to developers. Examples include sentiment analysis, entity recognition, and text annotations.",
     "tags": [ "Language" ],
@@ -148,7 +148,7 @@
 
   {
     "id": "Google.Cloud.Language.V1.Experimental",
-    "version": "1.0.0-beta02",
+    "version": "1.0.0-beta03",
     "type": "grpc",
     "description": "Experimental library for the Google Cloud Natural Language API, containing features which may still change before final release.",
     "tags": [ "Language", "Experimental" ],
@@ -159,7 +159,7 @@
 
   {
     "id": "Google.Cloud.Logging.Log4Net",
-    "version": "1.0.0-beta11",
+    "version": "1.0.0-beta12",
     "type": "other",
     "targetFrameworks": "netstandard1.5;net45",
     "testTargetFrameworks": "netcoreapp1.0;net452",
@@ -177,7 +177,7 @@
 
   {
     "id": "Google.Cloud.Logging.V2",
-    "version": "2.0.0-beta01",
+    "version": "2.0.0",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Stackdriver Logging API, which writes log entries and manages your logs, log sinks, and logs-based metrics.",
     "tags": [ "Logging", "Stackdriver" ],
@@ -188,7 +188,7 @@
 
   {
     "id": "Google.Cloud.Metadata.V1",
-    "version": "1.0.0-alpha05",
+    "version": "1.0.0-alpha06",
     "type": "rest",
     "description": "Google Compute Engine Metadata v1 client library",
     "tags": [ "Metadata" ],
@@ -199,7 +199,7 @@
 
   {
     "id": "Google.Cloud.Monitoring.V3",
-    "version": "1.0.0-beta06",
+    "version": "1.0.0-beta07",
     "type": "grpc",
     "description": "Recommended Google client library to access the Stackdriver Monitoring API, which manages your Stackdriver Monitoring data and configurations. Most projects must be associated with a Stackdriver account, with a few exceptions as noted on the individual method pages.",
     "tags": [ "Monitoring", "Stackdriver" ],
@@ -207,7 +207,7 @@
 
   {
     "id": "Google.Cloud.PubSub.V1",
-    "version": "1.0.0-beta10",
+    "version": "1.0.0-beta11",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Pub/Sub API, which provides reliable, many-to-many, asynchronous messaging between applications.",
     "dependencies": {
@@ -218,7 +218,7 @@
 
   {
     "id": "Google.Cloud.Spanner.Admin.Database.V1",
-    "version": "1.0.0-alpha02",
+    "version": "1.0.0-alpha03",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Spanner Database Admin API.",
     "tags": [ "Spanner" ],
@@ -230,7 +230,7 @@
 
   {
     "id": "Google.Cloud.Spanner.Admin.Instance.V1",
-    "version": "1.0.0-alpha02",
+    "version": "1.0.0-alpha03",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Spanner Instance Admin API.",
     "tags": [ "Spanner" ],
@@ -242,7 +242,7 @@
 
   {
     "id": "Google.Cloud.Spanner.Data",
-    "version": "1.0.0-alpha02",
+    "version": "1.0.0-alpha03",
     "type": "other",
     "targetFrameworks": "netstandard1.5;net45",
     "testTargetFrameworks": "netcoreapp1.0;net452",
@@ -257,7 +257,7 @@
   
   {
     "id": "Google.Cloud.Spanner.V1",
-    "version": "1.0.0-alpha02",
+    "version": "1.0.0-alpha03",
     "type": "grpc",
     "description": "Low-level Google client library to access the Google Cloud Spanner API. The ADO.NET provider (Google.Cloud.Spanner.Data) which depends on this package is generally preferred for Spanner access.",
     "tags": [ "Spanner" ],
@@ -265,7 +265,7 @@
 
   {
     "id": "Google.Cloud.Speech.V1",
-    "version": "1.0.0-beta09",
+    "version": "1.0.0-beta10",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Speech API, which performs speech recognition.",
     "tags": [ "Speech" ],
@@ -276,7 +276,7 @@
 
   {
     "id": "Google.Cloud.Storage.V1",
-    "version": "2.0.0-beta01",
+    "version": "2.0.0",
     "type": "rest",
     "description": "Recommended Google client library to access the Google Cloud Storage API. It wraps the Google.Apis.Storage.v1 client library, making common operations simpler in client code. Google Cloud Storage stores and retrieves potentially large, immutable data objects.",
     "dependencies": {
@@ -290,7 +290,7 @@
 
   {
     "id": "Google.Cloud.Trace.V1",
-    "version": "1.0.0-beta06",
+    "version": "1.0.0-beta07",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Trace API, which sends and retrieves trace data from Google Cloud Trace. Data is generated and available by default for all App Engine applications. Data from other applications can be written to Cloud Trace for display, reporting, and analysis.",
     "tags": [ "Tracing", "Trace" ],
@@ -298,7 +298,7 @@
 
   {
     "id": "Google.Cloud.Translation.V2",
-    "version": "1.0.0-beta01",
+    "version": "1.0.0-beta02",
     "type": "rest",
     "description": "Recommended Google client library to access the Translation API. It wraps the Google.Apis.Translate.v2 client library, making common operations simpler in client code. The Translate API translates text from one language to another.",
     "dependencies": {
@@ -312,7 +312,7 @@
 
   {
     "id": "Google.Cloud.VideoIntelligence.V1Beta1",
-    "version": "1.0.0-alpha02",
+    "version": "1.0.0-alpha03",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Video Intelligence API.",
     "tags": [ "VideoIntelligence" ],
@@ -323,7 +323,7 @@
   
   {
     "id": "Google.Cloud.Vision.V1",
-    "version": "1.0.0-beta03",
+    "version": "1.0.0-beta04",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Vision API, which integrates Google Vision features, including image labeling, face, logo, and landmark detection, optical character recognition (OCR), and detection of explicit content, into applications.",
     "tags": [ "Vision" ],
@@ -331,7 +331,7 @@
 
   {
     "id": "Google.LongRunning",
-    "version": "1.0.0-beta09",
+    "version": "1.0.0-beta10",
     "type": "grpc",
     "description": "gRPC services for the Google Long Running Operations API. This library is typically used as a dependency for other API client libraries.",
     "tags": [ "LongRunning" ],
