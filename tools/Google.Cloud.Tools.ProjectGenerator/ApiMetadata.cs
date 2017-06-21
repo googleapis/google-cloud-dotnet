@@ -22,8 +22,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
 {
     public class ApiMetadata
     {
-        const string GrpcVersion = "1.3.6";
-        const string GaxVersion = "2.0.0-beta02";
+        const string GrpcVersion = "1.4.0";
+        const string GaxVersion = "2.0.0";
 
         const string StripDesktopOnNonWindows = @"..\..\..\StripDesktopOnNonWindows.xml";
 
