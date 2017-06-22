@@ -226,7 +226,7 @@ namespace Google.Cloud.Spanner.Data
             int maxRecords)
         {
             var spannerDataReader = dataReader as SpannerDataReader;
-            if (spannerDataReader != null && AutoCreateCommands)
+            if (spannerDataReader != null && AutoCreateCommands && _parsedParameterCollection.Count == 0)
             {
                 var readerMetadata =
                     spannerDataReader.PopulateMetadataAsync(CancellationToken.None).ResultWithUnwrappedExceptions();

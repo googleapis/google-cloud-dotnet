@@ -320,7 +320,7 @@ namespace Google.Cloud.Spanner.Data
                             Values =
                             {
                                 Parameters.Cast<SpannerParameter>()
-                                    .Select(x => ValueConversion.ToValue(x.Value, x.SpannerDbType))
+                                    .Select(x => ValueConversion.ToValue(x.GetValidatedValue(), x.SpannerDbType))
                             }
                         }
                     }
@@ -355,7 +355,7 @@ namespace Google.Cloud.Spanner.Data
                                     Values =
                                     {
                                         Parameters.Cast<SpannerParameter>()
-                                            .Select(x => ValueConversion.ToValue(x.Value, x.SpannerDbType))
+                                            .Select(x => ValueConversion.ToValue(x.GetValidatedValue(), x.SpannerDbType))
                                     }
                                 }
                             }

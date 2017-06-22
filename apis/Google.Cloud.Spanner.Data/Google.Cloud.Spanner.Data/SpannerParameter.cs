@@ -30,8 +30,6 @@ namespace Google.Cloud.Spanner.Data
         , ICloneable
 #endif
     {
-        private object _value;
-
         /// <summary>
         /// Initializes a new instance of the SpannerParameter class.
         /// </summary>
@@ -144,25 +142,21 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public SpannerDbType SpannerDbType { get; set; }
 
-        /// <inheritdoc />
-        public override object Value
+        internal object GetValidatedValue()
         {
-            get => _value;
-            set
+            if (SpannerDbType.TypeCode == TypeCode.Unspecified && Value != null)
             {
-                //TODO(benwu): consider allowing property sets in any order.
-                if (SpannerDbType.TypeCode == TypeCode.Unspecified && value != null)
-                {
-                    throw new ArgumentException(
-                        $"{nameof(SpannerDbType)} must be set to one of "
-                        + $"({nameof(SpannerDbType.Bool)}, {nameof(SpannerDbType.Int64)}, {nameof(SpannerDbType.Float64)},"
-                        + $" {nameof(SpannerDbType.Timestamp)}, {nameof(SpannerDbType.Date)}, {nameof(SpannerDbType.String)},"
-                        + $" {nameof(SpannerDbType.Bytes)})");
-                }
-
-                _value = value;
+                throw new ArgumentException(
+                    $"{nameof(SpannerDbType)} must be set to one of "
+                    + $"({nameof(SpannerDbType.Bool)}, {nameof(SpannerDbType.Int64)}, {nameof(SpannerDbType.Float64)},"
+                    + $" {nameof(SpannerDbType.Timestamp)}, {nameof(SpannerDbType.Date)}, {nameof(SpannerDbType.String)},"
+                    + $" {nameof(SpannerDbType.Bytes)})");
             }
+            return Value;
         }
+
+        /// <inheritdoc />
+        public override object Value { get; set; }
 
         /// <inheritdoc />
         public object Clone() => (SpannerParameter) MemberwiseClone();
