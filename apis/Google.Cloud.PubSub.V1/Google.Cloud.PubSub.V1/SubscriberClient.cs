@@ -91,13 +91,10 @@ namespace Google.Cloud.PubSub.V1
         /// for "NonIdempotent" <see cref="SubscriberClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "NonIdempotent" RPC methods are:
-        /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
-        /// </list>
+        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
         public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.Unavailable);
+            RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
@@ -363,7 +360,7 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -392,7 +389,7 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -473,7 +470,7 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -592,7 +589,7 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -621,7 +618,7 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -680,7 +677,7 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -3453,7 +3450,7 @@ namespace Google.Cloud.PubSub.V1
             Modify_StreamingPullRequestCallSettings(ref callSettings);
             BidirectionalStreamingSettings effectiveStreamingSettings =
                 streamingSettings ?? _callStreamingPull.StreamingSettings;
-            AsyncDuplexStreamingCall<StreamingPullRequest,StreamingPullResponse> call =
+            AsyncDuplexStreamingCall<StreamingPullRequest, StreamingPullResponse> call =
                 _callStreamingPull.Call(callSettings);
             BufferedClientStreamWriter<StreamingPullRequest> writeBuffer =
                 new BufferedClientStreamWriter<StreamingPullRequest>(
@@ -3475,7 +3472,7 @@ namespace Google.Cloud.PubSub.V1
             /// instance associated with this streaming call.</param>
             public StreamingPullStreamImpl(
                 SubscriberClientImpl service,
-                AsyncDuplexStreamingCall<StreamingPullRequest,StreamingPullResponse> call,
+                AsyncDuplexStreamingCall<StreamingPullRequest, StreamingPullResponse> call,
                 BufferedClientStreamWriter<StreamingPullRequest> writeBuffer)
             {
                 _service = service;
@@ -3493,7 +3490,7 @@ namespace Google.Cloud.PubSub.V1
             }
 
             /// <inheritdoc/>
-            public override AsyncDuplexStreamingCall<StreamingPullRequest,StreamingPullResponse> GrpcCall { get; }
+            public override AsyncDuplexStreamingCall<StreamingPullRequest, StreamingPullResponse> GrpcCall { get; }
 
             /// <inheritdoc/>
             public override Task TryWriteAsync(StreamingPullRequest message) =>

@@ -1,0 +1,14 @@
+- name: Supported platforms
+  href: platforms.md
+- name: Page streaming
+  href: page-streaming.md
+- name: Resource names and IDs
+  href: resource-names.md
+- name: API layers
+  href: api-layers.md
+- name: Call settings
+  href: call-settings.md
+- name: Resource clean-up
+  href: cleanup.md
+- name: GAX and dependencies
+  href: gax-dependencies.md

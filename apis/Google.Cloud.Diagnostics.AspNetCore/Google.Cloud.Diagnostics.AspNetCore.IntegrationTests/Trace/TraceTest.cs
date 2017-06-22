@@ -289,8 +289,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         public void ConfigureServices(IServiceCollection services)
         {
-            var traceConfig = TraceConfiguration.Create(GetSampleRate(), GetBufferOptions());
-            services.AddGoogleTrace(_projectId, traceConfig);
+            var traceOptions = Common.TraceOptions.Create(GetSampleRate(), GetBufferOptions());
+            services.AddGoogleTrace(options =>
+            {
+                options.ProjectId = _projectId;
+                options.Options = traceOptions;
+            });
             services.AddMvc();
         }
 

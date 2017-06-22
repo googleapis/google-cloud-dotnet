@@ -21,7 +21,7 @@ namespace Google.Cloud.Translation.V2
     /// </summary>
     internal static class TranslationModels
     {
-        private const string PhraseBasedMachineTranslationApiName = "base";
+        private const string BaseApiName = "base";
         private const string NeuralMachineTranslationApiName = "nmt";
 
         internal static void ValidateModel(TranslationModel model)
@@ -29,7 +29,7 @@ namespace Google.Cloud.Translation.V2
             switch (model)
             {
                 case TranslationModel.ServiceDefault: return;
-                case TranslationModel.PhraseBasedMachineTranslation: return;
+                case TranslationModel.Base: return;
                 case TranslationModel.NeuralMachineTranslation: return;
             }
             throw new ArgumentException($"Unknown translation model {model}", nameof(model));
@@ -41,7 +41,7 @@ namespace Google.Cloud.Translation.V2
             {
                 // null in an outbound API call means "no client preference"
                 case TranslationModel.ServiceDefault: return null;
-                case TranslationModel.PhraseBasedMachineTranslation: return PhraseBasedMachineTranslationApiName;
+                case TranslationModel.Base: return BaseApiName;
                 case TranslationModel.NeuralMachineTranslation: return NeuralMachineTranslationApiName;
                 default: throw new InvalidOperationException($"Unknown translation model {model}");
             }
@@ -58,7 +58,7 @@ namespace Google.Cloud.Translation.V2
             // API name - we won't see that anyway.
             switch (name)
             {
-                case PhraseBasedMachineTranslationApiName: return TranslationModel.PhraseBasedMachineTranslation;
+                case BaseApiName: return TranslationModel.Base;
                 case NeuralMachineTranslationApiName: return TranslationModel.NeuralMachineTranslation;
                 default: throw new InvalidOperationException($"Unknown translation model {name}");
             }

@@ -117,29 +117,30 @@ namespace Google.Cloud.Storage.V1
             }
         }
 
-        private async Task DownloadObjectAsyncImpl(
+        private Task DownloadObjectAsyncImpl(
             string baseUri,
             Stream destination,
             DownloadObjectOptions options,
             CancellationToken cancellationToken,
-            IProgress<IDownloadProgress> progress)
-        {
-            GaxPreconditions.CheckNotNull(destination, nameof(destination));
-            var downloader = CreateDownloader(options);
-            string uri = options == null ? baseUri : options.GetUri(baseUri);
-            if (progress != null)
+            IProgress<IDownloadProgress> progress) =>
+            // Use Task.Run to prevent reporting progress synchronously in the original call.
+            // We used to await Task.Yield(), but that doesn't actually achieve what we want.
+            Task.Run(async () =>
             {
-                downloader.ProgressChanged += progress.Report;
-                // Avoid reporting progress synchronously in the original call.
-                await Task.Yield();
-                progress.Report(InitialDownloadProgress.Instance);
-            }
-            var result = await downloader.DownloadAsync(uri, destination, cancellationToken).ConfigureAwait(false);
-            if (result.Status == DownloadStatus.Failed)
-            {
-                throw result.Exception;
-            }
-        }
+                GaxPreconditions.CheckNotNull(destination, nameof(destination));
+                var downloader = CreateDownloader(options);
+                string uri = options == null ? baseUri : options.GetUri(baseUri);
+                if (progress != null)
+                {
+                    downloader.ProgressChanged += progress.Report;
+                    progress.Report(InitialDownloadProgress.Instance);
+                }
+                var result = await downloader.DownloadAsync(uri, destination, cancellationToken).ConfigureAwait(false);
+                if (result.Status == DownloadStatus.Failed)
+                {
+                    throw result.Exception;
+                }
+            });
 
         private HashValidatingDownloader CreateDownloader(DownloadObjectOptions options)
         {

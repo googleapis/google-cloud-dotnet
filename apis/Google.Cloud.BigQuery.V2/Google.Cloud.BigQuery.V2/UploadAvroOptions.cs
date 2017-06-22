@@ -41,7 +41,7 @@ namespace Google.Cloud.BigQuery.V2
         public CreateDisposition? CreateDisposition { get; set; }
 
         /// <summary>
-        /// Specifies the behavior if the destination table exists and is non-empty.
+        /// Specifies the behavior if the destination table exists.
         /// If not set, this is effectively <see cref="WriteDisposition.WriteAppend"/>.
         /// </summary>
         public WriteDisposition? WriteDisposition { get; set; }

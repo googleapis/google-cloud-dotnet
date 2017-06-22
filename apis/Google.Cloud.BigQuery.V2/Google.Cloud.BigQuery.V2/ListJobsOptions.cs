@@ -33,16 +33,27 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// When set to true, jobs for all users will be listed. By default, only jobs
+        /// for the current user will be listed.
+        /// </summary>
+        public bool? AllUsers { get; set; }
+
         internal void ModifyRequest(ListRequest request)
         {
             if (StateFilter != null)
             {
-                request.StateFilter = (StateFilterEnum) StateFilter;
+                request.StateFilter = (StateFilterEnum)StateFilter;
             }
 
             if (PageSize != null)
             {
                 request.MaxResults = PageSize;
+            }
+
+            if (AllUsers != null)
+            {
+                request.AllUsers = AllUsers;
             }
 
             // TODO: Projection?

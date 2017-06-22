@@ -15,17 +15,17 @@
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// Wraps an http context.
+    /// Wraps an HTTP context.
     /// </summary>
     internal interface IContextWrapper
     {
         /// <summary>
-        /// Gets the http method.  GET, POST, ect. Can be null.
+        /// Gets the HTTP method.  GET, POST, etc. Can be null.
         /// </summary>
         string GetHttpMethod();
 
         /// <summary>
-        /// Gets the http request uri. Can be null.
+        /// Gets the HTTP request Uri. Can be null.
         /// </summary>
         string GetUri();
 
@@ -35,7 +35,7 @@ namespace Google.Cloud.Diagnostics.Common
         string GetUserAgent();
 
         /// <summary>
-        /// Gets the http status code. If not set 0 will be returned.
+        /// Gets the HTTP status code. If not set 0 will be returned.
         /// </summary>
         int GetStatusCode();
     }

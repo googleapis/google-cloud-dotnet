@@ -16,6 +16,7 @@ using Moq;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -28,22 +29,26 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void CanTrace()
         {
             var rateLimiter = TraceUtils.GetRateLimiter(1001);
-            Assert.True(rateLimiter.CanTrace());
+            Assert.True(rateLimiter.CanTrace()); // t=0ms
+            Assert.True(rateLimiter.CanTrace()); // t=1001ms
+            Assert.True(rateLimiter.CanTrace()); // t=2002ms
         }
 
         [Fact]
         public void CanTrace_False()
         {
             var rateLimiter = TraceUtils.GetRateLimiter(999);
-            Assert.False(rateLimiter.CanTrace());
+            Assert.True(rateLimiter.CanTrace());  // t=0ms
+            Assert.False(rateLimiter.CanTrace()); // t=999ms
+            Assert.True(rateLimiter.CanTrace());  // t=1998ms
         }
 
         [Fact]
         public void CanTrace_DecimalQps()
         {
             var rateLimiter = TraceUtils.GetRateLimiter(0.1, new long[] { 9999, 10001 });
-            Assert.False(rateLimiter.CanTrace());
             Assert.True(rateLimiter.CanTrace());
+            Assert.False(rateLimiter.CanTrace());
         }
 
         [Fact]
@@ -51,8 +56,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             var rateLimiter = TraceUtils.GetRateLimiter(
                 1, new long[] { 999, 1001, 1790, 1850, 2030, 2700, 5000 });
-            Assert.False(rateLimiter.CanTrace());
             Assert.True(rateLimiter.CanTrace());
+            Assert.False(rateLimiter.CanTrace());
             Assert.False(rateLimiter.CanTrace());
             Assert.False(rateLimiter.CanTrace());
             Assert.True(rateLimiter.CanTrace());
@@ -61,52 +66,36 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         }
 
         [Fact]
-        public async Task CanTrace_StressTest()
+        public void CanTrace_StressTest()
         {
-            var source = new CancellationTokenSource();
-            try
-            {
-                // Create a rate limiter that allows 1 QPS
-                var rateLimiter = RateLimiter.GetInstance(1);
-                int canTraceCounter = 0;
-                int threads = 10;
-
-                // Start a timer to get the total time from tasks starting to ending.
-                Stopwatch timer = Stopwatch.StartNew();
-
-                // Start 10 threads to hit the rate limiter
-                Task[] tasks = new Task[threads];
-                for (int i = 0; i < threads; i++)
+            // Create a rate limiter that allows 1 QPS
+            var rateLimiter = new RateLimiter(1, StopwatchTimer.Create());
+            int canTraceCounter = 0;
+            DateTime start = DateTime.UtcNow;
+            DateTime end = start.AddSeconds(2.5);
+            // Create 10 threads to run for a little over two seconds.
+            var threads = Enumerable.Range(0, 10)
+                .Select(_ => new Thread(() =>
                 {
-                    tasks[i] = Task.Run(async () =>
+                    while (DateTime.UtcNow < end)
                     {
-                        while (!source.IsCancellationRequested)
+                        if (rateLimiter.CanTrace())
                         {
-                            if (rateLimiter.CanTrace())
-                            {
-                                Interlocked.Increment(ref canTraceCounter);
-                            }
-                            await Task.Yield();
+                            Interlocked.Increment(ref canTraceCounter);
                         }
-                    });
-                }
+                    }
+                }))
+                .ToList();
 
-                // Set a timeout to 2.1 seconds which should allow 2 traces unless control
-                // of the tasks does not return right away.  To ensure a proper trace count
-                // use the number of seconds to check the trace count.
-                await Task.Delay(2100);
-                var elapsedSeconds = Math.Floor(timer.Elapsed.TotalSeconds);
+            // Start the threads and wait for them all to finish
+            threads.ForEach(t => t.Start());
+            threads.ForEach(t => t.Join());
 
-                // Allow for the trace count to be one lower than expected to account
-                // for the elapsed time being on the second mark or close and the
-                // limiter not getting a final request.
-                Assert.InRange(canTraceCounter, elapsedSeconds - 1, elapsedSeconds);
-            }
-            finally
-            {
-                source.Cancel();
-                source.Dispose();
-            }
+            // We should have exactly 3 traces: one at t~=0, one at t~=1, one at t~=2.
+            // (The test machine would have to be very highly loaded to take half a second between
+            // the check in the while loop and the increment leading to an over-count, and it would have
+            // to take half a second to start the threads to lead to an under-count.)
+            Assert.Equal(3, canTraceCounter);
         }
     }
 }

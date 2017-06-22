@@ -75,13 +75,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// for "NonIdempotent" <see cref="ErrorStatsServiceClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "NonIdempotent" RPC methods are:
-        /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
-        /// </list>
+        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
         public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.Unavailable);
+            RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="ErrorStatsServiceClient"/> RPC methods.

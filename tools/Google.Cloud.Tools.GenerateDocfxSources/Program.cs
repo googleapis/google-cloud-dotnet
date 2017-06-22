@@ -122,6 +122,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                         ["_disableContribution"] = true,
                         ["_appFooter"] = " "
                     },
+                    ["template"] = new JArray { "default", "../../docfx-template" },
                     ["overwrite"] = new JArray { "obj/snippets/*.md" },
                     ["dest"] = "site"
                 }
@@ -190,7 +191,9 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                 tocEntries.Add(new TocEntry { Name = title, Href = Path.GetFileName(file) });
             }
 
-            tocEntries.Add(new TocEntry { Name = "API Reference", Href = $"obj/api/{api}.yml" });
+            // Ugly hack to get the TOC right for Google.Cloud.Language.V1.Experimental for now.
+            string apiNamespace = api == "Google.Cloud.Language.V1.Experimental" ? "Google.Cloud.Language.V1" : api;
+            tocEntries.Add(new TocEntry { Name = "API Reference", Href = $"obj/api/{apiNamespace}.yml" });
 
             using (var writer = File.CreateText(Path.Combine(outputDirectory, "toc.yml")))
             {

@@ -172,7 +172,7 @@ namespace Google.Cloud.Datastore.V1
         {
             // TODO: What if there are no mutations? Just rollback?
             CheckActive();
-            var response = await _client.CommitAsync(_projectId, Mode.Transactional, TransactionId, _mutations, callSettings);
+            var response = await _client.CommitAsync(_projectId, Mode.Transactional, TransactionId, _mutations, callSettings).ConfigureAwait(false);
             PropagateKeys(response);
             _active = false;
             return response;
@@ -191,7 +191,7 @@ namespace Google.Cloud.Datastore.V1
         public override async Task<RollbackResponse> RollbackAsync(CallSettings callSettings = null)
         {
             CheckActive();
-            var response = await _client.RollbackAsync(_projectId, TransactionId, callSettings);
+            var response = await _client.RollbackAsync(_projectId, TransactionId, callSettings).ConfigureAwait(false);
             _active = false;
             return response;
         }

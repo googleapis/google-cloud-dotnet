@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Rest;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Services;
 using Google.Apis.Translate.v2;
@@ -169,8 +170,10 @@ namespace Google.Cloud.Translation.V2
         /// </summary>
         /// <param name="target">The target language in which to return the language names in the results,
         /// for display purposes. May be null, in which case only the language codes are returned.</param>
+        /// <param name="model">The model to request languages for. May be null, in which case <see cref="DefaultModel"/> is
+        /// used.</param>
         /// <returns>A list of supported languages.</returns>
-        public virtual IList<Language> ListLanguages(string target = null)
+        public virtual IList<Language> ListLanguages(string target = null, TranslationModel? model = null)
         {
             throw new NotImplementedException();
         }
@@ -292,9 +295,11 @@ namespace Google.Cloud.Translation.V2
         /// </summary>
         /// <param name="target">The target language in which to return the language names in the results,
         /// for display purposes. May be null, in which case only the language codes are returned.</param>
+        /// <param name="model">The model to request languages for. May be null, in which case <see cref="DefaultModel"/> is
+        /// used.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A list of supported languages.</returns>
-        public virtual Task<IList<Language>> ListLanguagesAsync(string target = null, CancellationToken cancellationToken = default(CancellationToken))
+        public virtual Task<IList<Language>> ListLanguagesAsync(string target = null, TranslationModel? model = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             throw new NotImplementedException();
         }

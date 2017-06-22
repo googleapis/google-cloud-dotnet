@@ -159,7 +159,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             string filter = "";
             string orderBy = "";
             // Make the request
-            PagedAsyncEnumerable<ListLogEntriesResponse,LogEntry> response =
+            PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> response =
                 loggingServiceV2Client.ListLogEntriesAsync(resourceNames, filter, orderBy);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -204,7 +204,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             string filter = "";
             string orderBy = "";
             // Make the request
-            PagedEnumerable<ListLogEntriesResponse,LogEntry> response =
+            PagedEnumerable<ListLogEntriesResponse, LogEntry> response =
                 loggingServiceV2Client.ListLogEntries(resourceNames, filter, orderBy);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -250,7 +250,7 @@ namespace Google.Cloud.Logging.V2.Snippets
                 ResourceNames = { },
             };
             // Make the request
-            PagedAsyncEnumerable<ListLogEntriesResponse,LogEntry> response =
+            PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> response =
                 loggingServiceV2Client.ListLogEntriesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -296,7 +296,7 @@ namespace Google.Cloud.Logging.V2.Snippets
                 ResourceNames = { },
             };
             // Make the request
-            PagedEnumerable<ListLogEntriesResponse,LogEntry> response =
+            PagedEnumerable<ListLogEntriesResponse, LogEntry> response =
                 loggingServiceV2Client.ListLogEntries(request);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -339,7 +339,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Initialize request argument(s)
             ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest();
             // Make the request
-            PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse,MonitoredResourceDescriptor> response =
+            PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response =
                 loggingServiceV2Client.ListMonitoredResourceDescriptorsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -382,7 +382,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Initialize request argument(s)
             ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest();
             // Make the request
-            PagedEnumerable<ListMonitoredResourceDescriptorsResponse,MonitoredResourceDescriptor> response =
+            PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> response =
                 loggingServiceV2Client.ListMonitoredResourceDescriptors(request);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -425,7 +425,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Initialize request argument(s)
             ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
             // Make the request
-            PagedAsyncEnumerable<ListLogsResponse,string> response =
+            PagedAsyncEnumerable<ListLogsResponse, string> response =
                 loggingServiceV2Client.ListLogsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -468,7 +468,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Initialize request argument(s)
             ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
             // Make the request
-            PagedEnumerable<ListLogsResponse,string> response =
+            PagedEnumerable<ListLogsResponse, string> response =
                 loggingServiceV2Client.ListLogs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -514,7 +514,7 @@ namespace Google.Cloud.Logging.V2.Snippets
                 ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
             };
             // Make the request
-            PagedAsyncEnumerable<ListLogsResponse,string> response =
+            PagedAsyncEnumerable<ListLogsResponse, string> response =
                 loggingServiceV2Client.ListLogsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -560,7 +560,7 @@ namespace Google.Cloud.Logging.V2.Snippets
                 ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
             };
             // Make the request
-            PagedEnumerable<ListLogsResponse,string> response =
+            PagedEnumerable<ListLogsResponse, string> response =
                 loggingServiceV2Client.ListLogs(request);
 
             // Iterate over all response items, lazily performing RPCs as required

@@ -13,10 +13,13 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Rest;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
+using Google.Apis.Json;
 using Google.Apis.Services;
+using Newtonsoft.Json;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
@@ -78,7 +81,7 @@ namespace Google.Cloud.BigQuery.V2
         public static async Task<BigQueryClient> CreateAsync(string projectId, GoogleCredential credential = null)
         {
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            var scopedCredentials = await _credentialProvider.GetCredentialsAsync(credential);
+            var scopedCredentials = await _credentialProvider.GetCredentialsAsync(credential).ConfigureAwait(false);
             return CreateImpl(projectId, scopedCredentials);
         }
 
@@ -105,6 +108,7 @@ namespace Google.Cloud.BigQuery.V2
             {
                 HttpClientInitializer = scopedCredentials,
                 ApplicationName = BigQueryClientImpl.ApplicationName,
+                Serializer = new NewtonsoftJsonSerializer(CreateJsonSerializersSettings())
             });
 
             return new BigQueryClientImpl(projectId, service);
@@ -189,5 +193,18 @@ namespace Google.Cloud.BigQuery.V2
                 ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId)),
                 JobId = GaxPreconditions.CheckNotNull(jobId, nameof(jobId))
             };
+        
+        /// <summary>
+        /// Creates a set of <see cref="JsonSerializerSettings"/> suitable for specifying in
+        /// <see cref="BigqueryService"/> construction. The settings have Json.NET date parsing
+        /// detection disabled.
+        /// </summary>
+        /// <returns>A suitable set of settings.</returns>
+        public static JsonSerializerSettings CreateJsonSerializersSettings()
+        {
+            JsonSerializerSettings settings = NewtonsoftJsonSerializer.CreateDefaultSettings();
+            settings.DateParseHandling = DateParseHandling.None;
+            return settings;
+        }
     }
 }

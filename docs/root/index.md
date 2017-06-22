@@ -38,8 +38,9 @@ Beta:
   - Although this library works as-is, a hand-written abstraction layer is being worked on, which
     is expected to be the main way of interacting with Pub/Sub.
 - [Google.Cloud.Trace.V1](Google.Cloud.Trace.V1/index.html)
+- [Google.Cloud.Translation.V2](Google.Cloud.Translation.V2/index.html)
 
 Alpha:
 
 - [Google.Cloud.Metadata.V1](Google.Cloud.Metadata.V1/index.html)
-- [Google.Cloud.Translation.V2](Google.Cloud.Translation.V2/index.html)
+- [Google.Cloud.VideoIntelligence.V1Beta1](Google.Cloud.VideoIntelligence.V1Beta1/index.html)

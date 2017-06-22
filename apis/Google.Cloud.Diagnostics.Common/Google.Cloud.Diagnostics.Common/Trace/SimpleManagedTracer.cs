@@ -17,7 +17,6 @@ using Google.Cloud.Trace.V1;
 using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
@@ -153,7 +152,7 @@ namespace Google.Cloud.Diagnostics.Common
                 catch (Exception e) when (SetStackTraceAndReturnFalse(e))
                 {
                     // This will never return as the condition above will always be false.
-                    return await Task.FromResult(default(T));
+                    return default(T);
                 }
             }
         }
@@ -292,5 +291,36 @@ namespace Google.Cloud.Diagnostics.Common
             }
         }
 #endif
+
+        private sealed class ImmutableStack<T>
+        {
+            public static readonly ImmutableStack<T> Empty = new ImmutableStack<T>(default(T), null);
+
+            private readonly ImmutableStack<T> _previous;
+            private readonly T _value;
+
+            private ImmutableStack(T value, ImmutableStack<T> previous)
+            {
+                _value = value;
+                _previous = previous;
+            }
+
+            public bool IsEmpty => this == Empty;
+
+            public T Peek()
+            {
+                GaxPreconditions.CheckState(!IsEmpty, "The stack is empty");
+                return _value;
+            }
+
+            public ImmutableStack<T> Pop(out T value)
+            {
+                GaxPreconditions.CheckState(!IsEmpty, "The stack is empty");
+                value = _value;
+                return _previous;
+            }
+
+            public ImmutableStack<T> Push(T value) => new ImmutableStack<T>(value, this);
+         }
     }
 }

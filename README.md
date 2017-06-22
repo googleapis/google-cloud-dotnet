@@ -32,11 +32,12 @@ The following libraries are available at a [beta](#versioning) quality level:
   * Although this library works as-is, a hand-written abstraction layer is being worked on, which
     is expected to be the main way of interacting with Pub/Sub.
 * [Stackdriver Trace](https://cloud.google.com/trace/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Trace.V1/) (beta)
+* [Google Cloud Translation](https://cloud.google.com/translate/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Translation.V2/) (beta)
 
 The following libraries are available at an [alpha](#versioning) quality level:
 
 * Google Cloud Metadata - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Metadata.V1) (alpha)
-* [Google Cloud Translation](https://cloud.google.com/translate/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Translation.V2/) (alpha)
+* [Google Cloud Video Intelligence](https://cloud.google.com/video-intelligence/) - [API docs](https://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.VideoIntelligence.V1Beta1/) (alpha)
 
 See the [API documentation](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/) for details of the status
 of each library.
@@ -90,7 +91,7 @@ Next, choose a method for authenticating API requests from within your project:
 ## Supported platforms
 
 See the [Supported Platforms
-documentation](https://googlecloudplatform.github.io/google-cloud-dotnet/docs/platforms.html)
+documentation](https://googlecloudplatform.github.io/google-cloud-dotnet/docs/guides/platforms.html)
 for details on where the Google Cloud Libraries for .NET are
 supported.
 

@@ -315,7 +315,8 @@ namespace Google.Cloud.Vision.V1.Snippets
         public void ErrorHandling_SingleImage()
         {
             // Sample: ErrorHandling_SingleImage
-            Image image = new Image(); // No content or source!
+            // We create a request which passes simple validation, but isn't a valid image.
+            Image image = Image.FromBytes(new byte[10]);
             ImageAnnotatorClient client = ImageAnnotatorClient.Create();
             try
             {

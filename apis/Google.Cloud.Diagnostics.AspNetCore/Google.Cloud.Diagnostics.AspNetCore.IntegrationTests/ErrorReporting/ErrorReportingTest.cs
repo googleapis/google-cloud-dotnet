@@ -82,8 +82,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             var builder = new WebHostBuilder().UseStartup<T>();
             using (TestServer server = new TestServer(builder))
+            using (var client = server.CreateClient())
             {
-                var client = server.CreateClient();
                 await client.GetAsync($"/ErrorReporting/Index/{testId}");
 
                 var errorEvents = _polling.GetEvents(startTime, testId, 0);
@@ -104,8 +104,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             var builder = new WebHostBuilder().UseStartup<T>();
             using (TestServer server = new TestServer(builder))
+            using (var client = server.CreateClient())
             {
-                var client = server.CreateClient();
                 await client.GetAsync($"/ErrorReporting/ThrowCatchLog/{testId}");
 
                 var errorEvents = _polling.GetEvents(startTime, testId, 1);
@@ -127,8 +127,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             var builder = new WebHostBuilder().UseStartup<T>();
             using (TestServer server = new TestServer(builder))
+            using (var client = server.CreateClient())
             {
-                var client = server.CreateClient();
                 await Assert.ThrowsAsync<Exception>(() =>
                     client.GetAsync($"/ErrorReporting/ThrowsException/{testId}"));
 
@@ -151,8 +151,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             var builder = new WebHostBuilder().UseStartup<T>();
             using (TestServer server = new TestServer(builder))
+            using (var client = server.CreateClient())
             {
-                var client = server.CreateClient();
                 await Assert.ThrowsAsync<Exception>(() =>
                     client.GetAsync($"/ErrorReporting/ThrowsException/{testId}"));
                 await Assert.ThrowsAsync<ArgumentException>(() =>
@@ -183,7 +183,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         /// </summary>
         /// <param name="errorEvent">The event to check.</param>
         /// <param name="testId">The id of the test.</param>
-        /// <param name="functionName">The name of the function the error occured in.</param>
+        /// <param name="functionName">The name of the function the error occurred in.</param>
         private void VerifyErrorEvent(ErrorEvent errorEvent, string testId, string functionName)
         {
             Assert.Equal(BaseErrorReportingTestApplication.Service, errorEvent.ServiceContext.Service);
@@ -237,7 +237,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             public void ConfigureServices(IServiceCollection services)
             {
-                services.AddGoogleExceptionLogging(ProjectId, Service, Version, GetOptions());
+                services.AddGoogleExceptionLogging(options =>
+                {
+                    options.ProjectId = ProjectId;
+                    options.ServiceName = Service;
+                    options.Version = Version;
+                    options.Options = GetOptions();
+                });
                 services.AddMvc();
             }
 
@@ -266,7 +272,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             _exceptionLogger = exceptionLogger;
         }
 
-        /// <summary>Cathces and handles a thrown <see cref="Exception"/>.</summary>
+        /// <summary>Catches and handles a thrown <see cref="Exception"/>.</summary>
         public string Index(string id)
         {
             var message = GetMessage(nameof(Index), id);
@@ -295,7 +301,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             throw new ArgumentException(message);
         }
 
-        /// <summary>Cathces and logs a thrown <see cref="Exception"/>.</summary>
+        /// <summary>Catches and logs a thrown <see cref="Exception"/>.</summary>
         public string ThrowCatchLog(string id)
         {
             var message = GetMessage(nameof(Index), id);

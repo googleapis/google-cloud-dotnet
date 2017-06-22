@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>netcoreapp1.0</TargetFrameworks>
@@ -6,12 +6,18 @@
     <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>1701;1702;1705;4014</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Google.Api.Gax.Testing" Version="2.0.0" />
     <ProjectReference Include="../../Google.Cloud.Diagnostics.Common/Google.Cloud.Diagnostics.Common.IntegrationTests/Google.Cloud.Diagnostics.Common.IntegrationTests.csproj" />
     <ProjectReference Include="../../Google.Cloud.Diagnostics.Common/Google.Cloud.Diagnostics.Common.Tests/Google.Cloud.Diagnostics.Common.Tests.csproj" />
     <ProjectReference Include="..\Google.Cloud.Diagnostics.AspNetCore\Google.Cloud.Diagnostics.AspNetCore.csproj" />
-    <PackageReference Include="Google.Api.Gax.Testing" Version="1.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="1.1.0" />

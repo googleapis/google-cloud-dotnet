@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Rest;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Services;
 using Google.Apis.Storage.v1;
@@ -72,7 +73,7 @@ namespace Google.Cloud.Storage.V1
         /// <returns>The task representing the created <see cref="StorageClient"/>.</returns>
         public static async Task<StorageClient> CreateAsync(GoogleCredential credential = null, EncryptionKey encryptionKey = null)
         {
-            var scopedCredentials = await _credentialProvider.GetCredentialsAsync(credential);
+            var scopedCredentials = await _credentialProvider.GetCredentialsAsync(credential).ConfigureAwait(false);
             return CreateImpl(scopedCredentials, encryptionKey);
         }
 

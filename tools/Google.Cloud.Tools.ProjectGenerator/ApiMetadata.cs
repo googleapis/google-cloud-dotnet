@@ -22,6 +22,9 @@ namespace Google.Cloud.Tools.ProjectGenerator
 {
     public class ApiMetadata
     {
+        const string GrpcVersion = "1.4.0";
+        const string GaxVersion = "2.0.0";
+
         const string StripDesktopOnNonWindows = @"..\..\..\StripDesktopOnNonWindows.xml";
 
         public string Version { get; set; }
@@ -45,14 +48,16 @@ namespace Google.Cloud.Tools.ProjectGenerator
             }
             string targetFrameworks = TargetFrameworks;
             var dependencies = new SortedList<string, string>(Dependencies);
+            dependencies.Add("ConfigureAwaitChecker.Analyzer", "1.0.0-beta4");
             switch (Type)
             {
                 case "rest":
-                    dependencies.Add("Google.Api.Gax.Rest", "1.0.1");
+                    dependencies.Add("Google.Api.Gax.Rest", GaxVersion);
                     targetFrameworks = targetFrameworks ?? "netstandard1.3;net45";
                     break;
                 case "grpc":
-                    dependencies.Add("Google.Api.Gax.Grpc", "1.0.1");
+                    dependencies.Add("Google.Api.Gax.Grpc", GaxVersion);
+                    dependencies.Add("Grpc.Core", GrpcVersion);
                     targetFrameworks = targetFrameworks ?? "netstandard1.5;net45";
                     break;
             }
@@ -65,10 +70,12 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 new XElement("AssemblyOriginatorKeyFile", "../../GoogleApis.snk"),
                 new XElement("SignAssembly", true),
                 new XElement("PublicSign", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), true),
+                new XElement("TreatWarningsAsErrors", true),
                 // Package-related properties
                 new XElement("Description", Description),
                 new XElement("PackageTags", string.Join(";", Tags.Concat(new[] { "Google", "Cloud" }))),
                 new XElement("IncludeSymbols", true),
+                new XElement("IncludeSource", true),
                 new XElement("Copyright", "Copyright 2017 Google Inc."),
                 new XElement("Authors", "Google Inc."),
                 new XElement("IconUrl", "https://cloud.google.com/images/gcp-icon-64x64.png"), // TODO: Check element name
@@ -97,7 +104,12 @@ namespace Google.Cloud.Tools.ProjectGenerator
                     new XElement("IsPackable", false),
                     new XElement("AssemblyOriginatorKeyFile", "../../GoogleApis.snk"),
                     new XElement("SignAssembly", true),
-                    new XElement("PublicSign", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), true)
+                    new XElement("PublicSign", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), true),
+                    new XElement("TreatWarningsAsErrors", true),
+                    // 1701, 1702 and 1705 are disabled by default.
+                    // 4014 is required as snippets for streaming samples call Task.Run and don't await the result.
+                    // See https://github.com/googleapis/toolkit/issues/1271 - when that's fixed, we can remove this.
+                    new XElement("NoWarn", "1701;1702;1705;4014")
                 );
             var itemGroup = CreateDependenciesElement(dependencies);
             // Allow test projects to use dynamic...
@@ -135,9 +147,12 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 );
             }
 
-            using (var writer = File.CreateText(Path.Combine(directory, $"{Path.GetFileName(directory)}.csproj")))
+            // Don't use File.CreateText as that omits the byte order mark.
+            // While byte order marks are nasty, Visual Studio will add it back any time a project file is
+            // manually edited, so it's best if we follow suit.
+            using (var stream = File.Create(Path.Combine(directory, $"{Path.GetFileName(directory)}.csproj")))
             {
-                doc.Save(writer);
+                doc.Save(stream);
             }
         }
         private static string GenerateProjectReference(string key)
@@ -158,14 +173,25 @@ namespace Google.Cloud.Tools.ProjectGenerator
         // dependencies with a value will be treated as package dependencies with the value as the version.
         private static XElement CreateDependenciesElement(IDictionary<string, string> dependencies) =>
             new XElement("ItemGroup",
+                // Use the GAX version for all otherwise-unversioned GAX dependencies
                 dependencies
-                    .Where(d => d.Value == "")
+                    .Where(d => d.Value == "" && d.Key.StartsWith("Google.Api.Gax"))
+                    .Select(d => new XElement("PackageReference",
+                        new XAttribute("Include", d.Key),
+                        new XAttribute("Version", GaxVersion))),
+                dependencies
+                    .Where(d => d.Value == "" && !d.Key.StartsWith("Google.Api.Gax"))
                     .Select(d => new XElement("ProjectReference", new XAttribute("Include", GenerateProjectReference(d.Key)))),
                 dependencies
                     .Where(d => d.Value != "")
                     .Select(d => new XElement("PackageReference",
                         new XAttribute("Include", d.Key),
-                        new XAttribute("Version", d.Value))
+                        new XAttribute("Version", d.Value),
+                        // Make references to Grpc.Core deploy native dependencies
+                        // See https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1066
+                        d.Key == "Grpc.Core" ? new XElement("PrivateAssets", "None") : null,
+                        // Make references to ConfigureAwaitChecker effectively private
+                        d.Key == "ConfigureAwaitChecker.Analyzer" ? new XElement("PrivateAssets", "All") : null)
                     )
             );
     }

@@ -22,21 +22,21 @@ namespace Google.Cloud.Translation.V2.Snippets
     public class TranslationClientSnippets
     {
         
-        public void TranslateTextPbmtDefaultModel()
+        public void TranslateTextBaseDefaultModel()
         {
-            // Sample: TranslateTextPbmtDefaultModel
-            TranslationClient client = TranslationClient.Create(model: TranslationModel.PhraseBasedMachineTranslation);
+            // Sample: TranslateTextBaseDefaultModel
+            TranslationClient client = TranslationClient.Create(model: TranslationModel.Base);
             TranslationResult result = client.TranslateText("It is raining.", LanguageCodes.French);
             Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
             // End sample
         }
 
-        public void TranslateTextPbmtOverrideModel()
+        public void TranslateTextBaseOverrideModel()
         {
-            // Sample: TranslateTextPbmtOverrideModel
+            // Sample: TranslateTextBaseOverrideModel
             TranslationClient client = TranslationClient.Create();
             TranslationResult result = client.TranslateText("It is raining.", LanguageCodes.French,
-                model: TranslationModel.PhraseBasedMachineTranslation);
+                model: TranslationModel.Base);
             Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
             // End sample
         }
@@ -169,7 +169,7 @@ namespace Google.Cloud.Translation.V2.Snippets
         [Fact]
         public void ListLanguages()
         {
-            // Snippet: ListLanguages(string)
+            // Snippet: ListLanguages(string, TranslationModel?)
             TranslationClient client = TranslationClient.Create();
             IList<Language> languages = client.ListLanguages(LanguageCodes.English);
             // Display just the first 10 languages for brevity
@@ -180,8 +180,8 @@ namespace Google.Cloud.Translation.V2.Snippets
             // End snippet
         }
 
-        // See-also: ListLanguages(string)
-        // Member: ListLanguagesAsync(string, CancellationToken)
+        // See-also: ListLanguages(string, TranslationModel?)
+        // Member: ListLanguagesAsync(string, TranslationModel?, CancellationToken)
         // See [ListLanguages](ref) for a synchronous example.
         // End see-also
     }

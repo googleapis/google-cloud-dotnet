@@ -76,13 +76,10 @@ namespace Google.Cloud.Language.V1
         /// for "NonIdempotent" <see cref="LanguageServiceClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "NonIdempotent" RPC methods are:
-        /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
-        /// </list>
+        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
         public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.Unavailable);
+            RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="LanguageServiceClient"/> RPC methods.
@@ -347,8 +344,7 @@ namespace Google.Cloud.Language.V1
         /// Analyzes the sentiment of the provided text.
         /// </summary>
         /// <param name="document">
-        /// Input document. Currently, `analyzeSentiment` only supports English text
-        /// ([Document.language][google.cloud.language.v1.Document.language]="EN").
+        /// Input document.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -369,8 +365,7 @@ namespace Google.Cloud.Language.V1
         /// Analyzes the sentiment of the provided text.
         /// </summary>
         /// <param name="document">
-        /// Input document. Currently, `analyzeSentiment` only supports English text
-        /// ([Document.language][google.cloud.language.v1.Document.language]="EN").
+        /// Input document.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -388,8 +383,7 @@ namespace Google.Cloud.Language.V1
         /// Analyzes the sentiment of the provided text.
         /// </summary>
         /// <param name="document">
-        /// Input document. Currently, `analyzeSentiment` only supports English text
-        /// ([Document.language][google.cloud.language.v1.Document.language]="EN").
+        /// Input document.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.

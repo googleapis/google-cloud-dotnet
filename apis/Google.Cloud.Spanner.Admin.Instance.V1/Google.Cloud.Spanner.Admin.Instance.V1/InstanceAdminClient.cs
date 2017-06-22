@@ -85,13 +85,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// for "NonIdempotent" <see cref="InstanceAdminClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="StatusCode"/>s for retry for "NonIdempotent" RPC methods are:
-        /// <list type="bullet">
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
-        /// </list>
+        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
         public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.Unavailable);
+            RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="InstanceAdminClient"/> RPC methods.
@@ -270,7 +267,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -299,7 +296,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -358,7 +355,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -417,7 +414,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description>No status codes</description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -1348,7 +1345,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Instance, CreateInstanceMetadata>> UpdateInstanceAsync(
+        public virtual Task<Operation<Instance, UpdateInstanceMetadata>> UpdateInstanceAsync(
             Instance instance,
             FieldMask fieldMask,
             CallSettings callSettings = null) => UpdateInstanceAsync(
@@ -1417,7 +1414,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Instance, CreateInstanceMetadata>> UpdateInstanceAsync(
+        public virtual Task<Operation<Instance, UpdateInstanceMetadata>> UpdateInstanceAsync(
             Instance instance,
             FieldMask fieldMask,
             CancellationToken cancellationToken) => UpdateInstanceAsync(
@@ -1483,7 +1480,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<Instance, CreateInstanceMetadata> UpdateInstance(
+        public virtual Operation<Instance, UpdateInstanceMetadata> UpdateInstance(
             Instance instance,
             FieldMask fieldMask,
             CallSettings callSettings = null) => UpdateInstance(
@@ -1545,7 +1542,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation<Instance, CreateInstanceMetadata>> UpdateInstanceAsync(
+        public virtual Task<Operation<Instance, UpdateInstanceMetadata>> UpdateInstanceAsync(
             UpdateInstanceRequest request,
             CallSettings callSettings = null)
         {
@@ -1558,9 +1555,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual Task<Operation<Instance, CreateInstanceMetadata>> PollOnceUpdateInstanceAsync(
+        public virtual Task<Operation<Instance, UpdateInstanceMetadata>> PollOnceUpdateInstanceAsync(
             string operationName,
-            CallSettings callSettings = null) => Operation<Instance, CreateInstanceMetadata>.PollOnceFromNameAsync(
+            CallSettings callSettings = null) => Operation<Instance, UpdateInstanceMetadata>.PollOnceFromNameAsync(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 LongRunningOperationsClient,
                 callSettings);
@@ -1616,7 +1613,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation<Instance, CreateInstanceMetadata> UpdateInstance(
+        public virtual Operation<Instance, UpdateInstanceMetadata> UpdateInstance(
             UpdateInstanceRequest request,
             CallSettings callSettings = null)
         {
@@ -1629,9 +1626,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual Operation<Instance, CreateInstanceMetadata> PollOnceUpdateInstance(
+        public virtual Operation<Instance, UpdateInstanceMetadata> PollOnceUpdateInstance(
             string operationName,
-            CallSettings callSettings = null) => Operation<Instance, CreateInstanceMetadata>.PollOnceFromName(
+            CallSettings callSettings = null) => Operation<Instance, UpdateInstanceMetadata>.PollOnceFromName(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 LongRunningOperationsClient,
                 callSettings);
@@ -2500,7 +2497,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         {
             Modify_CreateInstanceRequest(ref request, ref callSettings);
             return new Operation<Instance, CreateInstanceMetadata>(
-                await _callCreateInstance.Async(request, callSettings), LongRunningOperationsClient);
+                await _callCreateInstance.Async(request, callSettings).ConfigureAwait(false), LongRunningOperationsClient);
         }
 
         /// <summary>
@@ -2608,13 +2605,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override async Task<Operation<Instance, CreateInstanceMetadata>> UpdateInstanceAsync(
+        public override async Task<Operation<Instance, UpdateInstanceMetadata>> UpdateInstanceAsync(
             UpdateInstanceRequest request,
             CallSettings callSettings = null)
         {
             Modify_UpdateInstanceRequest(ref request, ref callSettings);
-            return new Operation<Instance, CreateInstanceMetadata>(
-                await _callUpdateInstance.Async(request, callSettings), LongRunningOperationsClient);
+            return new Operation<Instance, UpdateInstanceMetadata>(
+                await _callUpdateInstance.Async(request, callSettings).ConfigureAwait(false), LongRunningOperationsClient);
         }
 
         /// <summary>
@@ -2668,12 +2665,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override Operation<Instance, CreateInstanceMetadata> UpdateInstance(
+        public override Operation<Instance, UpdateInstanceMetadata> UpdateInstance(
             UpdateInstanceRequest request,
             CallSettings callSettings = null)
         {
             Modify_UpdateInstanceRequest(ref request, ref callSettings);
-            return new Operation<Instance, CreateInstanceMetadata>(
+            return new Operation<Instance, UpdateInstanceMetadata>(
                 _callUpdateInstance.Sync(request, callSettings), LongRunningOperationsClient);
         }
 

@@ -41,7 +41,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             ProjectName projectName = new ProjectName("[PROJECT]");
             QueryTimeRange timeRange = new QueryTimeRange();
             // Make the request
-            PagedAsyncEnumerable<ListGroupStatsResponse,ErrorGroupStats> response =
+            PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> response =
                 errorStatsServiceClient.ListGroupStatsAsync(projectName, timeRange);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -85,7 +85,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             ProjectName projectName = new ProjectName("[PROJECT]");
             QueryTimeRange timeRange = new QueryTimeRange();
             // Make the request
-            PagedEnumerable<ListGroupStatsResponse,ErrorGroupStats> response =
+            PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> response =
                 errorStatsServiceClient.ListGroupStats(projectName, timeRange);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -132,7 +132,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
                 TimeRange = new QueryTimeRange(),
             };
             // Make the request
-            PagedAsyncEnumerable<ListGroupStatsResponse,ErrorGroupStats> response =
+            PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> response =
                 errorStatsServiceClient.ListGroupStatsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -179,7 +179,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
                 TimeRange = new QueryTimeRange(),
             };
             // Make the request
-            PagedEnumerable<ListGroupStatsResponse,ErrorGroupStats> response =
+            PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> response =
                 errorStatsServiceClient.ListGroupStats(request);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -223,7 +223,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             ProjectName projectName = new ProjectName("[PROJECT]");
             string groupId = "";
             // Make the request
-            PagedAsyncEnumerable<ListEventsResponse,ErrorEvent> response =
+            PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> response =
                 errorStatsServiceClient.ListEventsAsync(projectName, groupId);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -267,7 +267,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             ProjectName projectName = new ProjectName("[PROJECT]");
             string groupId = "";
             // Make the request
-            PagedEnumerable<ListEventsResponse,ErrorEvent> response =
+            PagedEnumerable<ListEventsResponse, ErrorEvent> response =
                 errorStatsServiceClient.ListEvents(projectName, groupId);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -314,7 +314,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
                 GroupId = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListEventsResponse,ErrorEvent> response =
+            PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> response =
                 errorStatsServiceClient.ListEventsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -361,7 +361,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
                 GroupId = "",
             };
             // Make the request
-            PagedEnumerable<ListEventsResponse,ErrorEvent> response =
+            PagedEnumerable<ListEventsResponse, ErrorEvent> response =
                 errorStatsServiceClient.ListEvents(request);
 
             // Iterate over all response items, lazily performing RPCs as required

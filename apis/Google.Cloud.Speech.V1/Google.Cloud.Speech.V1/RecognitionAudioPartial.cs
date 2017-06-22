@@ -112,16 +112,17 @@ namespace Google.Cloud.Speech.V1
         /// </summary>
         /// <param name="path">The file path to load RecognitionAudio data from. Must not be null.</param>
         /// <returns>The newly created RecognitionAudio.</returns>
-        public static async Task<RecognitionAudio> FromFileAsync(string path)
-        {
-            GaxPreconditions.CheckNotNull(path, nameof(path));
-            // We don't want any file system access to occur synchronously.
-            await Task.Yield();
-            using (var input = File.OpenRead(path))
+        public static Task<RecognitionAudio> FromFileAsync(string path) =>
+            // We don't want any file system access to occur synchronously, including opening.
+            // The ConfigureAwait(false) inside is unnecessary but harmless.
+            Task.Run(async () =>
             {
-                return await FromStreamAsync(input).ConfigureAwait(false);
-            }
-        }
+                GaxPreconditions.CheckNotNull(path, nameof(path));
+                using (var input = File.OpenRead(path))
+                {
+                    return await FromStreamAsync(input).ConfigureAwait(false);
+                }
+            });
 
         /// <summary>
         /// Constructs a <see cref="RecognitionAudio"/> by loading data from the given stream.
@@ -131,13 +132,7 @@ namespace Google.Cloud.Speech.V1
         public static RecognitionAudio FromStream(Stream stream)
         {
             GaxPreconditions.CheckNotNull(stream, nameof(stream));
-            var output = new MemoryStream();
-            stream.CopyTo(output);
-#if NETSTANDARD1_5
-            return FromBytes(output.ToArray());
-#else
-            return FromBytes(output.GetBuffer(), 0, checked((int)output.Length));
-#endif
+            return new RecognitionAudio { Content = ByteString.FromStream(stream) };
         }
 
         /// <summary>
@@ -147,13 +142,8 @@ namespace Google.Cloud.Speech.V1
         /// <returns>The newly created RecognitionAudio.</returns>
         public static async Task<RecognitionAudio> FromStreamAsync(Stream stream)
         {
-            var output = new MemoryStream();
-            await stream.CopyToAsync(output).ConfigureAwait(false);
-#if NETSTANDARD1_5
-            return FromBytes(output.ToArray());
-#else
-            return FromBytes(output.GetBuffer(), 0, checked((int)output.Length));
-#endif
+            GaxPreconditions.CheckNotNull(stream, nameof(stream));
+            return new RecognitionAudio { Content = await ByteString.FromStreamAsync(stream).ConfigureAwait(false) };
         }
 
         /// <summary>

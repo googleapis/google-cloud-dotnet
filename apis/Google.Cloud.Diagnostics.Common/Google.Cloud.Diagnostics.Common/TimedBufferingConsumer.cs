@@ -48,7 +48,7 @@ namespace Google.Cloud.Diagnostics.Common
                 {
                     Flush();
                 }
-                catch (RpcException ex)
+                catch (RpcException)
                 {
                     // TODO(talarico): This is a short term solution to ensure 
                     // we do not kill a process. See issue #842 to track the long term solution.

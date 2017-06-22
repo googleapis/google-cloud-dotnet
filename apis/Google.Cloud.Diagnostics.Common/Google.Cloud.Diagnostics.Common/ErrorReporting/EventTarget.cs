@@ -63,7 +63,7 @@ namespace Google.Cloud.Diagnostics.Common
 
         /// <summary>
         /// Creates a new <see cref="EventTarget"/> instance that will report to the Stackdriver Logging API.
-        /// The events are then automatically propigated to the Stackdriver Error Logging API from the 
+        /// The events are then automatically propagated to the Stackdriver Error Logging API from the 
         /// Stackdriver Logging API.
         /// </summary>
         /// <remarks>
@@ -88,7 +88,7 @@ namespace Google.Cloud.Diagnostics.Common
 
         /// <summary>
         /// Creates a new <see cref="EventTarget"/> instance that will report to the Stackdriver Logging API.
-        /// The events are then automatically propigated to the Stackdriver Error Logging API from the 
+        /// The events are then automatically propagated to the Stackdriver Error Logging API from the 
         /// Stackdriver Logging API.
         /// </summary>
         /// <remarks>

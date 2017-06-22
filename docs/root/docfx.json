@@ -13,9 +13,10 @@
         "dest": "api"
       },
       {
-        "files": [ "index.md", "toc.yml", "*.md" ],
+        "files": [ "index.md", "**/toc.yml", "**/*.md" ],
       }
     ],
+    "resource": "**/*.svg",
     "globalMetadata": {
       "_appTitle": "Google Cloud APIs",
       "_disableContribution": true,

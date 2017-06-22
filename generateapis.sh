@@ -7,8 +7,8 @@ set -e
 OS=linux
 [[ ${OS} = "windows" ]] && EXE_SUFFIX=.exe || EXE_SUFFIX=
 
-GRPC_VERSION=1.2.0
-PROTOBUF_VERSION=3.2.0
+GRPC_VERSION=1.3.0
+PROTOBUF_VERSION=3.3.0
 PROTOC=packages/Grpc.Tools.$GRPC_VERSION/tools/${OS}_x64/protoc${EXE_SUFFIX}
 GRPC_PLUGIN=packages/Grpc.Tools.$GRPC_VERSION/tools/${OS}_x64/grpc_csharp_plugin${EXE_SUFFIX}
 CORE_PROTOS_ROOT=packages/Google.Protobuf.Tools.$PROTOBUF_VERSION/tools
@@ -146,6 +146,7 @@ generate_api Google.Cloud.ErrorReporting.V1Beta1 google/devtools/clouderrorrepor
 generate_api Google.Cloud.PubSub.V1 google/pubsub/v1 pubsub.yaml
 generate_api Google.Cloud.Datastore.V1 google/datastore/v1 datastore.yaml
 generate_api Google.Cloud.Monitoring.V3 google/monitoring/v3 monitoring.yaml
+generate_api Google.Cloud.VideoIntelligence.V1Beta1 google/cloud/videointelligence/v1beta1 videointelligence.yaml
 
 generate_api Google.Cloud.Spanner.V1 google/spanner/v1 spanner.yaml
 generate_api Google.Cloud.Spanner.Admin.Database.V1 google/spanner/admin/database/v1 spanner_admin_database.yaml

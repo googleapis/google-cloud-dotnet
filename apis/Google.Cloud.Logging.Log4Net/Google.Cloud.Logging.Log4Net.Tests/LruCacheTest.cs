@@ -13,10 +13,7 @@
 // limitations under the License.
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Logging.Log4Net.Tests
@@ -103,9 +100,9 @@ namespace Google.Cloud.Logging.Log4Net.Tests
         [Fact]
         public void MultithreadedUse()
         {
-            const int threadCount = 50;
+            const int threadCount = 10;
             const int lruCapacity = 1000;
-            const int perThread = 10000;
+            const int perThread = 50000;
             var lru = new LruCache<int, object>(lruCapacity);
             bool failure = false;
             Thread[] threads = new Thread[threadCount];
@@ -128,7 +125,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             }
             for (int i = 0; i < threadCount; i++)
             {
-                Assert.True(threads[i].Join(TimeSpan.FromSeconds(5)));
+                Assert.True(threads[i].Join((int)TimeSpan.FromSeconds(60).TotalMilliseconds));
             }
             Assert.False(failure);
             Assert.Equal(lruCapacity, lru.Count);

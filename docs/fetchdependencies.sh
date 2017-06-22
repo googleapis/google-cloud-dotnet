@@ -12,8 +12,8 @@ git -C dependencies checkout README.md .gitignore
 
 echo "Cloning repositories"
 git clone https://github.com/googleapis/gax-dotnet dependencies/gax-dotnet --quiet --depth=1 -b master
-git clone https://github.com/google/protobuf dependencies/protobuf --quiet --depth=1 -b 3.2.x
-git clone https://github.com/grpc/grpc dependencies/grpc --quiet --depth=1 -b v1.2.x
+git clone https://github.com/google/protobuf dependencies/protobuf --quiet --depth=1 -b 3.3.x
+git clone https://github.com/grpc/grpc dependencies/grpc --quiet --depth=1 -b v1.3.x
 git clone https://github.com/google/google-api-dotnet-client dependencies/google-api-dotnet-client --quiet --depth=1 -b master
 
 # Minor fixups...
@@ -28,12 +28,10 @@ cp dependencies-docfx/docfx-grpc.json dependencies/grpc/docfx.json
 cp dependencies-docfx/docfx-google-api-dotnet-client.json dependencies/google-api-dotnet-client/docfx.json
 
 # Restore packages and build metadata
-# TODO: The last of these fails to find System.DateTime in Storage. No idea why,
-# but chances are it'll be fixed when google-api-dotnet-client updates to csproj...
 (cd dependencies/gax-dotnet; dotnet restore Gax.sln; docfx metadata)
-(cd dependencies/protobuf; dotnet restore csharp/src; docfx metadata)
-(cd dependencies/grpc; dotnet restore src/csharp; docfx metadata)
-(cd dependencies/google-api-dotnet-client; dotnet restore .; docfx metadata)
+(cd dependencies/protobuf; echo '{"sdk": {"version": "1.0.0-preview2-003131"}}' > global.json && dotnet restore csharp/src; docfx metadata)
+(cd dependencies/grpc; dotnet restore src/csharp/Grpc.sln; docfx metadata)
+(cd dependencies/google-api-dotnet-client; rm NuGet.config; dotnet restore Src/Support/GoogleApisClient.sln; dotnet restore Generated.sln; docfx metadata)
 
 # Copy the metadata into a single api directory, one subdirectory per package
 mkdir dependencies/api

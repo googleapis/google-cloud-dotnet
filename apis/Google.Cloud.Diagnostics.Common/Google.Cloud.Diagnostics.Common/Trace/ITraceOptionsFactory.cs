@@ -20,8 +20,8 @@ namespace Google.Cloud.Diagnostics.Common
     internal interface ITraceOptionsFactory
     {
         /// <summary>
-        /// Creates a new <see cref="TraceOptions"/>.
+        /// Creates a new <see cref="InternalTraceOptions"/>.
         /// </summary>
-        TraceOptions CreateOptions();
+        InternalTraceOptions CreateOptions();
     }
 }

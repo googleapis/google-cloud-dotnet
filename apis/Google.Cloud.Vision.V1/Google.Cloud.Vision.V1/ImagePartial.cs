@@ -145,16 +145,17 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         /// <param name="path">The file path to load image data from. Must not be null.</param>
         /// <returns>The newly created image.</returns>
-        public static async Task<Image> FromFileAsync(string path)
-        {
-            GaxPreconditions.CheckNotNull(path, nameof(path));
-            // We don't want any file system access to occur synchronously.
-            await Task.Yield();
-            using (var input = File.OpenRead(path))
+        public static Task<Image> FromFileAsync(string path) =>
+            // We don't want any file system access to occur synchronously, including opening.
+            // The ConfigureAwait(false) inside is unnecessary but harmless.
+            Task.Run(async () =>
             {
-                return await FromStreamAsync(input).ConfigureAwait(false);
-            }
-        }
+                GaxPreconditions.CheckNotNull(path, nameof(path));
+                using (var input = File.OpenRead(path))
+                {
+                    return await FromStreamAsync(input).ConfigureAwait(false);
+                }
+            });
 
         /// <summary>
         /// Constructs an <see cref="Image"/> by loading data from the given stream.
@@ -164,13 +165,7 @@ namespace Google.Cloud.Vision.V1
         public static Image FromStream(Stream stream)
         {
             GaxPreconditions.CheckNotNull(stream, nameof(stream));
-            var output = new MemoryStream();
-            stream.CopyTo(output);
-#if NETSTANDARD1_5
-            return FromBytes(output.ToArray());
-#else
-            return FromBytes(output.GetBuffer(), 0, checked((int)output.Length));
-#endif
+            return new Image { Content = ByteString.FromStream(stream) };
         }
 
         /// <summary>
@@ -180,13 +175,8 @@ namespace Google.Cloud.Vision.V1
         /// <returns>The newly created image.</returns>
         public static async Task<Image> FromStreamAsync(Stream stream)
         {
-            var output = new MemoryStream();
-            await stream.CopyToAsync(output).ConfigureAwait(false);
-#if NETSTANDARD1_5
-            return FromBytes(output.ToArray());
-#else
-            return FromBytes(output.GetBuffer(), 0, checked((int)output.Length));
-#endif
+            GaxPreconditions.CheckNotNull(stream, nameof(stream));
+            return new Image { Content = await ByteString.FromStreamAsync(stream).ConfigureAwait(false) };
         }
 
         /// <summary>

@@ -5,7 +5,7 @@ library for the [Stackdriver Error Reporting
 API](https://cloud.google.com/error-reporting/).
 
 Support for automatic error reporting can be found in the
-[`Google.Cloud.Diagnostics.AspNet`](Google.Cloud.Diagnostics.AspNet/index.html)
+[`Google.Cloud.Diagnostics.AspNet`](../Google.Cloud.Diagnostics.AspNet/index.html)
 NuGet package.
 
 # Installation
@@ -42,7 +42,7 @@ optionally specifying a service endpoint and settings.
 
 ## Automatic Error Reporting for ASP.NET
 
-Using [`Google.Cloud.Diagnostics.AspNet`'s ExceptionLogger or ExceptionFilter](Google.Cloud.Diagnostics.AspNet/index.html)
+Using [`Google.Cloud.Diagnostics.AspNet`'s ExceptionLogger or ExceptionFilter](../Google.Cloud.Diagnostics.AspNet/index.html)
 uncaught exceptions in ASP.NET applications can be automatically reported to the Stackdriver Error Reporting API.
 
 In ASP.NET MVC:
@@ -55,7 +55,7 @@ In Web API:
 
 ## Automatic Error Reporting for ASP.NET Core
 
-Using [`Google.Cloud.Diagnostics.AspNetCore`'s Exception Logger Middleware](Google.Cloud.Diagnostics.AspNetCore/index.html)
+Using [`Google.Cloud.Diagnostics.AspNetCore`'s Exception Logger Middleware](../Google.Cloud.Diagnostics.AspNetCore/index.html)
 uncaught exceptions in ASP.NET Core applications can be automatically reported to the Stackdriver Error Reporting API.
 
 [!code-cs[](../Google.Cloud.Diagnostics.AspNetCore/obj/snippets/Google.Cloud.Diagnostics.AspNetCore.AspNetCore.txt#ReportUnandledExceptions)]

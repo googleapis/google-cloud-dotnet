@@ -1,15 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>1.1.0-beta01</Version>
+    <Version>2.0.0</Version>
     <TargetFrameworks>netstandard1.3;net45</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Description>Recommended Google client library to access the Google Cloud Storage API. It wraps the Google.Apis.Storage.v1 client library, making common operations simpler in client code. Google Cloud Storage stores and retrieves potentially large, immutable data objects.</Description>
     <PackageTags>Storage;Google;Cloud</PackageTags>
     <IncludeSymbols>true</IncludeSymbols>
+    <IncludeSource>true</IncludeSource>
     <Copyright>Copyright 2017 Google Inc.</Copyright>
     <Authors>Google Inc.</Authors>
     <IconUrl>https://cloud.google.com/images/gcp-icon-64x64.png</IconUrl>
@@ -19,8 +21,11 @@
     <RepositoryUrl>https://github.com/GoogleCloudPlatform/google-cloud-dotnet</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Google.Api.Gax.Rest" Version="1.0.1" />
-    <PackageReference Include="Google.Apis.Storage.v1" Version="1.25.0.811" />
+    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.0-beta4">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Google.Api.Gax.Rest" Version="2.0.0" />
+    <PackageReference Include="Google.Apis.Storage.v1" Version="1.27.1.881" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="StorageClient.*.cs">

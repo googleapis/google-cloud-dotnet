@@ -3,7 +3,7 @@
 ## How can I use non-default credentials for gRPC-based APIs?
 
 The generated classes for gRPC-based APIs (such as
-[PublisherClient](Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html))
+[PublisherClient](Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.PublisherClient.html))
 have `Create` overloads of this form:
 
 ```csharp
@@ -20,7 +20,7 @@ optionally shut down using the `ShutDownDefaultChannelsAsync` method.
 
 The second of these never creates a new channel, and the caller is
 responsible for explicit clean-up if required. See ["Unmanaged
-resource clean-up"](cleanup.md) for more details on situations where
+resource clean-up"](guides/cleanup.md) for more details on situations where
 this is important.
 
 To create a client with specific credentials, you have to create the
@@ -143,3 +143,34 @@ credentials must be set to `ChannelCredentials.Insecure`.
 Example for PubSub:
 
 [!code-cs[](obj/snippets/Google.Cloud.Docs.Faq.txt#Emulator)]
+
+## Why aren't the gRPC native libraries being found?
+
+The native libraries that gRPC relies on are present in
+[Grpc.Core](https://www.nuget.org/packages/Grpc.Core/),
+and the NuGet package has targets to copy them to appropriate output
+directories. However, due to the way NuGet dependencies are
+generated with .NET Core, you may find that with transitive
+dependencies, the targets aren't executed.
+
+We've set up our client libraries (e.g. `Google.Cloud.Datastore.V1`)
+so that if you directly depend on any of them, everything should
+work - but if your application only has transitive dependencies, you
+could run into errors like this:
+
+```text
+Unhandled Exception: System.IO.FileNotFoundException:
+  Error loading native library. Not found in any of the possible locations: [...]
+   at Grpc.Core.Internal.UnmanagedLibrary.FirstValidLibraryPath(String[] libraryPathAlternatives)
+   at Grpc.Core.Internal.UnmanagedLibrary..ctor(String[] libraryPathAlternatives)
+   at Grpc.Core.Internal.NativeExtension.Load()
+   at Grpc.Core.Internal.NativeExtension..ctor()
+   at Grpc.Core.Internal.NativeExtension.Get()
+   at Grpc.Core.GrpcEnvironment.GrpcNativeInit()
+   at Grpc.Core.GrpcEnvironment..ctor()
+   ...
+```
+
+In that case, the simplest fix is to add a direct dependency to
+`Grpc.Core` from your application, which will ensure that the
+native libraries are copied appropriately.

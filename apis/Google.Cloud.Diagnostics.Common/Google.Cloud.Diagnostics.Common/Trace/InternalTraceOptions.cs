@@ -12,19 +12,25 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System.Collections.Generic;
-
 namespace Google.Cloud.Diagnostics.Common
 {
-    internal static class LogLabels
+    /// <summary>
+    /// Options about a trace, such as if tracing should occur.
+    /// </summary>
+    internal sealed class InternalTraceOptions
     {
-        ///<summary>The label key to denote this agent.</summary> 
-        public const string Agent = "agent";
+        /// <summary>True if the request should be traced.</summary>
+        public bool ShouldTrace { get; }
+
+        private InternalTraceOptions(bool shouldTrace)
+        {
+            ShouldTrace = shouldTrace;
+        }
 
         /// <summary>
-        /// Gets a map with the label for the agent which contains the agent's name and version.
+        /// Creates a <see cref="InternalTraceOptions"/>.
         /// </summary>
-        public static Dictionary<string, string> AgentLabel { get; } =
-            new Dictionary<string, string> { { Agent, CommonUtils.AgentNameAndVersion } };
+        /// <param name="shouldTrace">True if the tracing should occur.</param>
+        public static InternalTraceOptions Create(bool shouldTrace) => new InternalTraceOptions(shouldTrace);
     }
 }
