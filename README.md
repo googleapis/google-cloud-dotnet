@@ -37,6 +37,7 @@ The following libraries are available at a [beta](#versioning) quality level:
 The following libraries are available at an [alpha](#versioning) quality level:
 
 * Google Cloud Metadata - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Metadata.V1) (alpha)
+* [Google Cloud Video Intelligence](https://cloud.google.com/video-intelligence/) - [API docs](https://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.VideoIntelligence.V1Beta1/) (alpha)
 
 See the [API documentation](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/) for details of the status
 of each library.
