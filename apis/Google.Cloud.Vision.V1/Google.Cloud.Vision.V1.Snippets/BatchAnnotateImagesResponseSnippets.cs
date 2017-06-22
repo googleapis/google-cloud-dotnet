@@ -23,7 +23,8 @@ namespace Google.Cloud.Vision.V1.Snippets
         public void ThrowOnAnyError()
         {
             // Snippet: ThrowOnAnyError
-            Image image = new Image(); // No content or source!
+            // We create a request which passes simple validation, but isn't a valid image.
+            Image image = Image.FromBytes(new byte[10]);
             // Just a single request in this example, but usually BatchAnnotateImages would be
             // used with multiple requests.
             var request = new AnnotateImageRequest
