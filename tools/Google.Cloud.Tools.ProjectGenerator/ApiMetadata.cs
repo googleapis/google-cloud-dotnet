@@ -163,7 +163,6 @@ namespace Google.Cloud.Tools.ProjectGenerator
             switch (key)
             {
                 case "Google.Cloud.ClientTesting": return @"..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj";
-                case "Google.Cloud.Logging.Type": return @"..\..\Google.Cloud.Logging.V2\Google.Cloud.Logging.Type\Google.Cloud.Logging.Type.csproj";
                 case var _ when !key.Contains(".csproj"): return $@"..\..\{key}\{key}\{key}.csproj";
                 default: return key;
             }
