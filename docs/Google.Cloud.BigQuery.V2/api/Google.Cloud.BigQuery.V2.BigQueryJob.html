@@ -650,25 +650,7 @@ the completed job.</p>
 errors. A job may have errors but still contain useful information, and may also contain
 errors before completing.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
-
-string sql = $&quot;This is a broken query&quot;;
-BigQueryJob query = client.CreateQueryJob(sql).PollUntilCompleted();
-try
-{
-    // Usually this method is called in a chain. It returns the same job
-    // if there are no errors.
-    query = query.ThrowOnAnyError();
-}
-catch (GoogleApiException exception)
-{
-    foreach (var error in exception.Error.Errors)
-    {
-        Console.WriteLine($&quot;Location: {error.Location}; Reason: {error.Reason}; Message: {error.Message}&quot;);
-    }
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public BigQueryJob ThrowOnAnyError()</code></pre>
@@ -689,6 +671,27 @@ catch (GoogleApiException exception)
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryJob_ThrowOnAnyError_snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+
+string sql = $&quot;This is a broken query&quot;;
+BigQueryJob query = client.CreateQueryJob(sql).PollUntilCompleted();
+try
+{
+    // Usually this method is called in a chain. It returns the same job
+    // if there are no errors.
+    query = query.ThrowOnAnyError();
+}
+catch (GoogleApiException exception)
+{
+    foreach (var error in exception.Error.Errors)
+    {
+        Console.WriteLine($&quot;Location: {error.Location}; Reason: {error.Reason}; Message: {error.Message}&quot;);
+    }
+}
+</code></pre></div>
+              </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>

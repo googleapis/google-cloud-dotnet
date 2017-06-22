@@ -328,11 +328,7 @@ throws <span class="xref">System.NotImplementedException</span>. All these metho
               <h4 id="Google_Cloud_Metadata_V1_MetadataClient_GetCustomInstanceMetadata_System_String_" data-uid="Google.Cloud.Metadata.V1.MetadataClient.GetCustomInstanceMetadata(System.String)">GetCustomInstanceMetadata(String)</h4>
               <div class="markdown level1 summary"><p>Gets the instance&#39;s custom metadata value with the specified key synchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">MetadataClient client = MetadataClient.Create();
-string customValue = client.GetCustomInstanceMetadata(&quot;my_instance_key1&quot;);
-Console.WriteLine(customValue);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual string GetCustomInstanceMetadata(string key)</code></pre>
@@ -379,6 +375,13 @@ relatively small pieces of data to be associated with the instance.
 The key must conform to the following regular expression: [a-zA-Z0-9-_]+ and must be less than 128 bytes in length.
 </p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Metadata_V1_MetadataClient_GetCustomInstanceMetadata_System_String__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">MetadataClient client = MetadataClient.Create();
+string customValue = client.GetCustomInstanceMetadata(&quot;my_instance_key1&quot;);
+Console.WriteLine(customValue);
+</code></pre></div>
+              </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
@@ -630,11 +633,7 @@ The key must conform to the following regular expression: [a-zA-Z0-9-_]+ and mus
               <h4 id="Google_Cloud_Metadata_V1_MetadataClient_GetInstanceMetadata" data-uid="Google.Cloud.Metadata.V1.MetadataClient.GetInstanceMetadata">GetInstanceMetadata()</h4>
               <div class="markdown level1 summary"><p>Synchronously gets the metadata for the VM currently running this code.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">MetadataClient client = MetadataClient.Create();
-Instance instance = client.GetInstanceMetadata();
-Console.Write(instance.Zone);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Instance GetInstanceMetadata()</code></pre>
@@ -660,6 +659,13 @@ Console.Write(instance.Zone);
 accessed without authentication from an application running on the instance. Check <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_IsServerAvailable">IsServerAvailable()</a> or
 <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_IsServerAvailableAsync_System_Threading_CancellationToken_">IsServerAvailableAsync(CancellationToken)</a> to determine if the metadata can be accessed.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Metadata_V1_MetadataClient_GetInstanceMetadata_snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">MetadataClient client = MetadataClient.Create();
+Instance instance = client.GetInstanceMetadata();
+Console.Write(instance.Zone);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Metadata_V1_MetadataClient_GetInstanceMetadataAsync_" data-uid="Google.Cloud.Metadata.V1.MetadataClient.GetInstanceMetadataAsync*"></a>
               <h4 id="Google_Cloud_Metadata_V1_MetadataClient_GetInstanceMetadataAsync_System_Threading_CancellationToken_" data-uid="Google.Cloud.Metadata.V1.MetadataClient.GetInstanceMetadataAsync(System.Threading.CancellationToken)">GetInstanceMetadataAsync(CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Asynchronously gets the metadata for the VM currently running this code.</p>
@@ -712,14 +718,7 @@ accessed without authentication from an application running on the instance. Che
               <h4 id="Google_Cloud_Metadata_V1_MetadataClient_GetMaintenanceStatus" data-uid="Google.Cloud.Metadata.V1.MetadataClient.GetMaintenanceStatus">GetMaintenanceStatus()</h4>
               <div class="markdown level1 summary"><p>Synchronously gets the maintenance status for the VM currently running this code.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">MetadataClient client = MetadataClient.Create();
-MaintenanceStatus status = client.GetMaintenanceStatus();
-if (status == MaintenanceStatus.Migrate)
-{
-    // Backup data
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual MaintenanceStatus GetMaintenanceStatus()</code></pre>
@@ -746,6 +745,16 @@ to <a class="xref" href="Google.Cloud.Metadata.V1.MaintenanceStatus.html#Google_
 to perform any tasks in preparation for the event, such as backing up data or updating logs. Otherwise, the value will be
 <a class="xref" href="Google.Cloud.Metadata.V1.MaintenanceStatus.html#Google_Cloud_Metadata_V1_MaintenanceStatus_None">None</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Metadata_V1_MetadataClient_GetMaintenanceStatus_snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">MetadataClient client = MetadataClient.Create();
+MaintenanceStatus status = client.GetMaintenanceStatus();
+if (status == MaintenanceStatus.Migrate)
+{
+    // Backup data
+}
+</code></pre></div>
+              </div>
               <h5 id="Google_Cloud_Metadata_V1_MetadataClient_GetMaintenanceStatus_seealso">See Also</h5>
               <div class="seealso">
                   <div><span class="xref">Google.Apis.Compute.v1.Data.Scheduling.OnHostMaintenance</span></div>
@@ -807,16 +816,7 @@ to perform any tasks in preparation for the event, such as backing up data or up
               <h4 id="Google_Cloud_Metadata_V1_MetadataClient_GetMetadata_System_String_" data-uid="Google.Cloud.Metadata.V1.MetadataClient.GetMetadata(System.String)">GetMetadata(String)</h4>
               <div class="markdown level1 summary"><p>Gets the metadata value(s) specified by the relative URL synchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">MetadataClient client = MetadataClient.Create();
-
-MetadataResult result = client.GetMetadata(&quot;instance/attributes&quot;);
-JObject initialMetadata = JObject.Parse(result.Content);
-foreach (JProperty property in initialMetadata.Properties())
-{
-    Console.WriteLine(property.Name + &quot; = &quot; + property.Value);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual MetadataResult GetMetadata(string key)</code></pre>
@@ -864,6 +864,18 @@ If the key specified is a directory, a recursive request will be made and the re
 See <a href="https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata">https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata</a> for more information on available keys.
 </p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Metadata_V1_MetadataClient_GetMetadata_System_String__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">MetadataClient client = MetadataClient.Create();
+
+MetadataResult result = client.GetMetadata(&quot;instance/attributes&quot;);
+JObject initialMetadata = JObject.Parse(result.Content);
+foreach (JProperty property in initialMetadata.Properties())
+{
+    Console.WriteLine(property.Name + &quot; = &quot; + property.Value);
+}
+</code></pre></div>
+              </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
@@ -1120,36 +1132,7 @@ Google App Engine Flexible Environment, but if an metadata server emulator is av
               <h4 id="Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_System_String_System_String_System_TimeSpan_" data-uid="Google.Cloud.Metadata.V1.MetadataClient.WaitForChange(System.String,System.String,System.TimeSpan)">WaitForChange(String, String, TimeSpan)</h4>
               <div class="markdown level1 summary"><p>Waits for changes to the value or values specified by the relative URL synchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">MetadataClient client = MetadataClient.Create();
-
-// Get the original metadata and its ETag so we know when the metadata changes.
-MetadataResult initialResult = client.GetMetadata(&quot;instance/attributes&quot;);
-Console.WriteLine(&quot;Initial Metadata:&quot;);
-JObject initialMetadata = JObject.Parse(initialResult.Content);
-foreach (JProperty property in initialMetadata.Properties())
-{
-    Console.WriteLine(property.Name + &quot; = &quot; + property.Value);
-}
-string lastETag = initialResult.ETag;
-
-MetadataResult changeResult;
-while (true)
-{
-    // Wait in 30 second blocks until the value actually changes.
-    changeResult = client.WaitForChange(&quot;instance/attributes&quot;, lastETag, TimeSpan.FromSeconds(30));
-    if (changeResult.ETag != lastETag)
-    {
-        Console.WriteLine(&quot;Changed Metadata:&quot;);
-        JObject currentMetadata = JObject.Parse(changeResult.Content);
-        foreach (JProperty property in currentMetadata.Properties())
-        {
-            Console.WriteLine(property.Name + &quot; = &quot; + property.Value);
-        }
-        break;
-    }
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual MetadataResult WaitForChange(string key, string lastETag = null, TimeSpan timeout = null)</code></pre>
@@ -1222,6 +1205,38 @@ To detect any changes at the project or instance level, use a <span class="param
 Alternatively, use <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_ProjectMetadataChanged">ProjectMetadataChanged</a> or <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_InstanceMetadataChanged">InstanceMetadataChanged</a>, respectively.
 </p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_System_String_System_String_System_TimeSpan__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">MetadataClient client = MetadataClient.Create();
+
+// Get the original metadata and its ETag so we know when the metadata changes.
+MetadataResult initialResult = client.GetMetadata(&quot;instance/attributes&quot;);
+Console.WriteLine(&quot;Initial Metadata:&quot;);
+JObject initialMetadata = JObject.Parse(initialResult.Content);
+foreach (JProperty property in initialMetadata.Properties())
+{
+    Console.WriteLine(property.Name + &quot; = &quot; + property.Value);
+}
+string lastETag = initialResult.ETag;
+
+MetadataResult changeResult;
+while (true)
+{
+    // Wait in 30 second blocks until the value actually changes.
+    changeResult = client.WaitForChange(&quot;instance/attributes&quot;, lastETag, TimeSpan.FromSeconds(30));
+    if (changeResult.ETag != lastETag)
+    {
+        Console.WriteLine(&quot;Changed Metadata:&quot;);
+        JObject currentMetadata = JObject.Parse(changeResult.Content);
+        foreach (JProperty property in currentMetadata.Properties())
+        {
+            Console.WriteLine(property.Name + &quot; = &quot; + property.Value);
+        }
+        break;
+    }
+}
+</code></pre></div>
+              </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>

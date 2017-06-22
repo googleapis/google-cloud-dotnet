@@ -208,13 +208,13 @@ in Http requests.
               <h5 class="implements">Implements</h5>
                   <div><span class="xref">System.IDisposable.Dispose()</span></div>
               <a id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Initialize_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Initialize_System_Web_HttpApplication_System_String_Google_Cloud_Diagnostics_Common_TraceConfiguration_Google_Cloud_Trace_V1_TraceServiceClient_Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize(System.Web.HttpApplication,System.String,Google.Cloud.Diagnostics.Common.TraceConfiguration,Google.Cloud.Trace.V1.TraceServiceClient,Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)">Initialize(HttpApplication, String, TraceConfiguration, TraceServiceClient, TraceDecisionPredicate)</h4>
+              <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Initialize_System_Web_HttpApplication_System_String_Google_Cloud_Diagnostics_Common_TraceOptions_Google_Cloud_Trace_V1_TraceServiceClient_Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize(System.Web.HttpApplication,System.String,Google.Cloud.Diagnostics.Common.TraceOptions,Google.Cloud.Trace.V1.TraceServiceClient,Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)">Initialize(HttpApplication, String, TraceOptions, TraceServiceClient, TraceDecisionPredicate)</h4>
               <div class="markdown level1 summary"><p>Initialize tracing for this application.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static void Initialize(HttpApplication application, string projectId = null, TraceConfiguration config = null, TraceServiceClient client = null, TraceDecisionPredicate traceFallbackPredicate = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public static void Initialize(HttpApplication application, string projectId = null, TraceOptions options = null, TraceServiceClient client = null, TraceDecisionPredicate traceFallbackPredicate = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -241,9 +241,9 @@ in Http requests.
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Diagnostics.Common.TraceConfiguration.html">TraceConfiguration</a></td>
-                    <td><span class="parametername">config</span></td>
-                    <td><p>Optional trace configuration, if unset the default will be used.</p>
+                    <td><a class="xref" href="Google.Cloud.Diagnostics.Common.TraceOptions.html">TraceOptions</a></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>Optional trace options, if unset the default will be used.</p>
 </td>
                   </tr>
                   <tr>

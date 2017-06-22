@@ -37,12 +37,12 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.AspNet.CloudTrace.Dispose
   fullName: Google.Cloud.Diagnostics.AspNet.CloudTrace.Dispose
   nameWithType: CloudTrace.Dispose
-- uid: Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize(System.Web.HttpApplication,System.String,Google.Cloud.Diagnostics.Common.TraceConfiguration,Google.Cloud.Trace.V1.TraceServiceClient,Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)
-  name: Initialize(HttpApplication, String, TraceConfiguration, TraceServiceClient, TraceDecisionPredicate)
-  href: api/Google.Cloud.Diagnostics.AspNet.CloudTrace.html#Google_Cloud_Diagnostics_AspNet_CloudTrace_Initialize_System_Web_HttpApplication_System_String_Google_Cloud_Diagnostics_Common_TraceConfiguration_Google_Cloud_Trace_V1_TraceServiceClient_Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_
-  commentId: M:Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize(System.Web.HttpApplication,System.String,Google.Cloud.Diagnostics.Common.TraceConfiguration,Google.Cloud.Trace.V1.TraceServiceClient,Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)
-  fullName: Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize(System.Web.HttpApplication, System.String, Google.Cloud.Diagnostics.Common.TraceConfiguration, Google.Cloud.Trace.V1.TraceServiceClient, Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)
-  nameWithType: CloudTrace.Initialize(HttpApplication, String, TraceConfiguration, TraceServiceClient, TraceDecisionPredicate)
+- uid: Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize(System.Web.HttpApplication,System.String,Google.Cloud.Diagnostics.Common.TraceOptions,Google.Cloud.Trace.V1.TraceServiceClient,Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)
+  name: Initialize(HttpApplication, String, TraceOptions, TraceServiceClient, TraceDecisionPredicate)
+  href: api/Google.Cloud.Diagnostics.AspNet.CloudTrace.html#Google_Cloud_Diagnostics_AspNet_CloudTrace_Initialize_System_Web_HttpApplication_System_String_Google_Cloud_Diagnostics_Common_TraceOptions_Google_Cloud_Trace_V1_TraceServiceClient_Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_
+  commentId: M:Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize(System.Web.HttpApplication,System.String,Google.Cloud.Diagnostics.Common.TraceOptions,Google.Cloud.Trace.V1.TraceServiceClient,Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)
+  fullName: Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize(System.Web.HttpApplication, System.String, Google.Cloud.Diagnostics.Common.TraceOptions, Google.Cloud.Trace.V1.TraceServiceClient, Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)
+  nameWithType: CloudTrace.Initialize(HttpApplication, String, TraceOptions, TraceServiceClient, TraceDecisionPredicate)
 - uid: Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize*
   name: Initialize
   href: api/Google.Cloud.Diagnostics.AspNet.CloudTrace.html#Google_Cloud_Diagnostics_AspNet_CloudTrace_Initialize_
@@ -967,48 +967,6 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.Common.StartSpanOptions.SpanKind
   fullName: Google.Cloud.Diagnostics.Common.StartSpanOptions.SpanKind
   nameWithType: StartSpanOptions.SpanKind
-- uid: Google.Cloud.Diagnostics.Common.TraceConfiguration
-  name: TraceConfiguration
-  href: api/Google.Cloud.Diagnostics.Common.TraceConfiguration.html
-  commentId: T:Google.Cloud.Diagnostics.Common.TraceConfiguration
-  fullName: Google.Cloud.Diagnostics.Common.TraceConfiguration
-  nameWithType: TraceConfiguration
-- uid: Google.Cloud.Diagnostics.Common.TraceConfiguration.BufferOptions
-  name: BufferOptions
-  href: api/Google.Cloud.Diagnostics.Common.TraceConfiguration.html#Google_Cloud_Diagnostics_Common_TraceConfiguration_BufferOptions
-  commentId: P:Google.Cloud.Diagnostics.Common.TraceConfiguration.BufferOptions
-  fullName: Google.Cloud.Diagnostics.Common.TraceConfiguration.BufferOptions
-  nameWithType: TraceConfiguration.BufferOptions
-- uid: Google.Cloud.Diagnostics.Common.TraceConfiguration.BufferOptions*
-  name: BufferOptions
-  href: api/Google.Cloud.Diagnostics.Common.TraceConfiguration.html#Google_Cloud_Diagnostics_Common_TraceConfiguration_BufferOptions_
-  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceConfiguration.BufferOptions
-  fullName: Google.Cloud.Diagnostics.Common.TraceConfiguration.BufferOptions
-  nameWithType: TraceConfiguration.BufferOptions
-- uid: Google.Cloud.Diagnostics.Common.TraceConfiguration.Create(System.Double,Google.Cloud.Diagnostics.Common.BufferOptions)
-  name: Create(Double, BufferOptions)
-  href: api/Google.Cloud.Diagnostics.Common.TraceConfiguration.html#Google_Cloud_Diagnostics_Common_TraceConfiguration_Create_System_Double_Google_Cloud_Diagnostics_Common_BufferOptions_
-  commentId: M:Google.Cloud.Diagnostics.Common.TraceConfiguration.Create(System.Double,Google.Cloud.Diagnostics.Common.BufferOptions)
-  fullName: Google.Cloud.Diagnostics.Common.TraceConfiguration.Create(System.Double, Google.Cloud.Diagnostics.Common.BufferOptions)
-  nameWithType: TraceConfiguration.Create(Double, BufferOptions)
-- uid: Google.Cloud.Diagnostics.Common.TraceConfiguration.Create*
-  name: Create
-  href: api/Google.Cloud.Diagnostics.Common.TraceConfiguration.html#Google_Cloud_Diagnostics_Common_TraceConfiguration_Create_
-  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceConfiguration.Create
-  fullName: Google.Cloud.Diagnostics.Common.TraceConfiguration.Create
-  nameWithType: TraceConfiguration.Create
-- uid: Google.Cloud.Diagnostics.Common.TraceConfiguration.QpsSampleRate
-  name: QpsSampleRate
-  href: api/Google.Cloud.Diagnostics.Common.TraceConfiguration.html#Google_Cloud_Diagnostics_Common_TraceConfiguration_QpsSampleRate
-  commentId: P:Google.Cloud.Diagnostics.Common.TraceConfiguration.QpsSampleRate
-  fullName: Google.Cloud.Diagnostics.Common.TraceConfiguration.QpsSampleRate
-  nameWithType: TraceConfiguration.QpsSampleRate
-- uid: Google.Cloud.Diagnostics.Common.TraceConfiguration.QpsSampleRate*
-  name: QpsSampleRate
-  href: api/Google.Cloud.Diagnostics.Common.TraceConfiguration.html#Google_Cloud_Diagnostics_Common_TraceConfiguration_QpsSampleRate_
-  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceConfiguration.QpsSampleRate
-  fullName: Google.Cloud.Diagnostics.Common.TraceConfiguration.QpsSampleRate
-  nameWithType: TraceConfiguration.QpsSampleRate
 - uid: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate
   name: TraceDecisionPredicate
   href: api/Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html
@@ -1099,3 +1057,45 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.SendAsync
   fullName: Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.SendAsync
   nameWithType: TraceHeaderPropagatingHandler.SendAsync
+- uid: Google.Cloud.Diagnostics.Common.TraceOptions
+  name: TraceOptions
+  href: api/Google.Cloud.Diagnostics.Common.TraceOptions.html
+  commentId: T:Google.Cloud.Diagnostics.Common.TraceOptions
+  fullName: Google.Cloud.Diagnostics.Common.TraceOptions
+  nameWithType: TraceOptions
+- uid: Google.Cloud.Diagnostics.Common.TraceOptions.BufferOptions
+  name: BufferOptions
+  href: api/Google.Cloud.Diagnostics.Common.TraceOptions.html#Google_Cloud_Diagnostics_Common_TraceOptions_BufferOptions
+  commentId: P:Google.Cloud.Diagnostics.Common.TraceOptions.BufferOptions
+  fullName: Google.Cloud.Diagnostics.Common.TraceOptions.BufferOptions
+  nameWithType: TraceOptions.BufferOptions
+- uid: Google.Cloud.Diagnostics.Common.TraceOptions.BufferOptions*
+  name: BufferOptions
+  href: api/Google.Cloud.Diagnostics.Common.TraceOptions.html#Google_Cloud_Diagnostics_Common_TraceOptions_BufferOptions_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceOptions.BufferOptions
+  fullName: Google.Cloud.Diagnostics.Common.TraceOptions.BufferOptions
+  nameWithType: TraceOptions.BufferOptions
+- uid: Google.Cloud.Diagnostics.Common.TraceOptions.Create(System.Double,Google.Cloud.Diagnostics.Common.BufferOptions)
+  name: Create(Double, BufferOptions)
+  href: api/Google.Cloud.Diagnostics.Common.TraceOptions.html#Google_Cloud_Diagnostics_Common_TraceOptions_Create_System_Double_Google_Cloud_Diagnostics_Common_BufferOptions_
+  commentId: M:Google.Cloud.Diagnostics.Common.TraceOptions.Create(System.Double,Google.Cloud.Diagnostics.Common.BufferOptions)
+  fullName: Google.Cloud.Diagnostics.Common.TraceOptions.Create(System.Double, Google.Cloud.Diagnostics.Common.BufferOptions)
+  nameWithType: TraceOptions.Create(Double, BufferOptions)
+- uid: Google.Cloud.Diagnostics.Common.TraceOptions.Create*
+  name: Create
+  href: api/Google.Cloud.Diagnostics.Common.TraceOptions.html#Google_Cloud_Diagnostics_Common_TraceOptions_Create_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceOptions.Create
+  fullName: Google.Cloud.Diagnostics.Common.TraceOptions.Create
+  nameWithType: TraceOptions.Create
+- uid: Google.Cloud.Diagnostics.Common.TraceOptions.QpsSampleRate
+  name: QpsSampleRate
+  href: api/Google.Cloud.Diagnostics.Common.TraceOptions.html#Google_Cloud_Diagnostics_Common_TraceOptions_QpsSampleRate
+  commentId: P:Google.Cloud.Diagnostics.Common.TraceOptions.QpsSampleRate
+  fullName: Google.Cloud.Diagnostics.Common.TraceOptions.QpsSampleRate
+  nameWithType: TraceOptions.QpsSampleRate
+- uid: Google.Cloud.Diagnostics.Common.TraceOptions.QpsSampleRate*
+  name: QpsSampleRate
+  href: api/Google.Cloud.Diagnostics.Common.TraceOptions.html#Google_Cloud_Diagnostics_Common_TraceOptions_QpsSampleRate_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceOptions.QpsSampleRate
+  fullName: Google.Cloud.Diagnostics.Common.TraceOptions.QpsSampleRate
+  nameWithType: TraceOptions.QpsSampleRate

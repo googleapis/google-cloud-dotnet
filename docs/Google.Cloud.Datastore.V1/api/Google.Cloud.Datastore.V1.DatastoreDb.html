@@ -199,11 +199,7 @@ to construct instances; alternatively, you can construct a <a class="xref" href=
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateId_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.AllocateId(Google.Cloud.Datastore.V1.Key,Google.Api.Gax.Grpc.CallSettings)">AllocateId(Key, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Allocates an ID for a single incomplete key.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
-Key key = db.AllocateId(keyFactory.CreateIncompleteKey());
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Key AllocateId(Key key, CallSettings callSettings = null)</code></pre>
@@ -251,15 +247,18 @@ Key key = db.AllocateId(keyFactory.CreateIncompleteKey());
               <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateId_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_AllocateIds_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">AllocateIds(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateId_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
+Key key = db.AllocateId(keyFactory.CreateIncompleteKey());
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIdAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.AllocateIdAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIdAsync_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.AllocateIdAsync(Google.Cloud.Datastore.V1.Key,Google.Api.Gax.Grpc.CallSettings)">AllocateIdAsync(Key, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Allocates an ID for a single incomplete key asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
-Key key = await db.AllocateIdAsync(keyFactory.CreateIncompleteKey());
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Key&gt; AllocateIdAsync(Key key, CallSettings callSettings = null)</code></pre>
@@ -307,15 +306,18 @@ Key key = await db.AllocateIdAsync(keyFactory.CreateIncompleteKey());
               <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIdAsync_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">AllocateIdsAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIdAsync_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
+Key key = await db.AllocateIdAsync(keyFactory.CreateIncompleteKey());
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIds_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.AllocateIds*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIds_Google_Cloud_Datastore_V1_Key___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.AllocateIds(Google.Cloud.Datastore.V1.Key[])">AllocateIds(Key[])</h4>
               <div class="markdown level1 summary"><p>Allocates IDs for a collection of incomplete keys.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
-IReadOnlyList&lt;Key&gt; keys = db.AllocateIds(keyFactory.CreateIncompleteKey(), keyFactory.CreateIncompleteKey());
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Key&gt; AllocateIds(params Key[] keys)</code></pre>
@@ -364,12 +366,18 @@ To specify options, create a collection or array explicitly, and call <a class="
 number of keys, partition the allocations into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIds_Google_Cloud_Datastore_V1_Key____snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
+IReadOnlyList&lt;Key&gt; keys = db.AllocateIds(keyFactory.CreateIncompleteKey(), keyFactory.CreateIncompleteKey());
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIds_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.AllocateIds*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIds_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.AllocateIds(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">AllocateIds(IEnumerable&lt;Key&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Allocates IDs for a collection of incomplete keys.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_AllocateIds_Google_Cloud_Datastore_V1_Key___">AllocateIds</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Key&gt; AllocateIds(IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
@@ -419,15 +427,16 @@ number of keys, partition the allocations into batches. See
 number of keys, partition the allocations into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIds_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_AllocateIds_Google_Cloud_Datastore_V1_Key___">AllocateIds</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIdsAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.AllocateIdsAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIdsAsync_Google_Cloud_Datastore_V1_Key___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.AllocateIdsAsync(Google.Cloud.Datastore.V1.Key[])">AllocateIdsAsync(Key[])</h4>
               <div class="markdown level1 summary"><p>Allocates IDs for a collection of incomplete keys asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
-IReadOnlyList&lt;Key&gt; keys = await db.AllocateIdsAsync(keyFactory.CreateIncompleteKey(), keyFactory.CreateIncompleteKey());
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;Key&gt;&gt; AllocateIdsAsync(params Key[] keys)</code></pre>
@@ -476,12 +485,18 @@ To specify options, create a collection or array explicitly, and call <a class="
 number of keys, partition the allocations into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIdsAsync_Google_Cloud_Datastore_V1_Key____snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
+IReadOnlyList&lt;Key&gt; keys = await db.AllocateIdsAsync(keyFactory.CreateIncompleteKey(), keyFactory.CreateIncompleteKey());
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIdsAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.AllocateIdsAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.AllocateIdsAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">AllocateIdsAsync(IEnumerable&lt;Key&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Allocates IDs for a collection of incomplete keys asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_AllocateIdsAsync_Google_Cloud_Datastore_V1_Key___">AllocateIdsAsync</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;Key&gt;&gt; AllocateIdsAsync(IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
@@ -531,26 +546,16 @@ number of keys, partition the allocations into batches. See
 number of keys, partition the allocations into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_AllocateIdsAsync_Google_Cloud_Datastore_V1_Key___">AllocateIdsAsync</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_BeginTransaction_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.BeginTransaction*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_BeginTransaction_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.BeginTransaction(Google.Api.Gax.Grpc.CallSettings)">BeginTransaction(CallSettings)</h4>
               <div class="markdown level1 summary"><p>Begins a transaction, returning a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a> which can be used to operate on the transaction.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-using (DatastoreTransaction transaction = db.BeginTransaction())
-{
-    // The return value from DatastoreTransaction.Get contains the fetched entities
-    // in the same order as they are in the call.
-    IReadOnlyList&lt;Entity&gt; entities = transaction.Lookup(fromKey, toKey);
-    Entity from = entities[0];
-    Entity to = entities[1];
-    from[&quot;balance&quot;] = (long)from[&quot;balance&quot;] - amount;
-    to[&quot;balance&quot;] = (long)to[&quot;balance&quot;] - amount;
-    transaction.Update(from);
-    transaction.Update(to);
-    transaction.Commit();
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual DatastoreTransaction BeginTransaction(CallSettings callSettings = null)</code></pre>
@@ -589,12 +594,29 @@ using (DatastoreTransaction transaction = db.BeginTransaction())
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_BeginTransaction_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+using (DatastoreTransaction transaction = db.BeginTransaction())
+{
+    // The return value from DatastoreTransaction.Get contains the fetched entities
+    // in the same order as they are in the call.
+    IReadOnlyList&lt;Entity&gt; entities = transaction.Lookup(fromKey, toKey);
+    Entity from = entities[0];
+    Entity to = entities[1];
+    from[&quot;balance&quot;] = (long)from[&quot;balance&quot;] - amount;
+    to[&quot;balance&quot;] = (long)to[&quot;balance&quot;] - amount;
+    transaction.Update(from);
+    transaction.Update(to);
+    transaction.Commit();
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_BeginTransactionAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.BeginTransactionAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_BeginTransactionAsync_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.BeginTransactionAsync(Google.Api.Gax.Grpc.CallSettings)">BeginTransactionAsync(CallSettings)</h4>
               <div class="markdown level1 summary"><p>Begins a transaction asynchronously, returning a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a> which can be used to operate on the transaction.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_BeginTransaction_Google_Api_Gax_Grpc_CallSettings_">BeginTransaction</a> for an example of the synchronous equivalent of this method.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;DatastoreTransaction&gt; BeginTransactionAsync(CallSettings callSettings = null)</code></pre>
@@ -633,6 +655,11 @@ using (DatastoreTransaction transaction = db.BeginTransaction())
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_BeginTransactionAsync_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_BeginTransaction_Google_Api_Gax_Grpc_CallSettings_">BeginTransaction</a> for an example of the synchronous equivalent of this method.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Create_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Create*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Create_System_String_System_String_Google_Cloud_Datastore_V1_DatastoreClient_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Create(System.String,System.String,Google.Cloud.Datastore.V1.DatastoreClient)">Create(String, String, DatastoreClient)</h4>
               <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html">DatastoreDb</a> to operate on the partition identified by <span class="paramref">projectId</span>
@@ -737,28 +764,7 @@ using default settings.</p>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Delete(Google.Cloud.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">Delete(Entity, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes a single entity, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
-Entity message = new Entity
-{
-    Key = keyFactory.CreateIncompleteKey(),
-    [&quot;text&quot;] = &quot;Hello&quot;,
-};
-db.Insert(message);
-
-Entity fetchedBeforeDeletion = db.Lookup(message.Key);
-
-// Only the key from the entity is used to determine what to delete.
-// If you already have the key but not the entity, use Delete(Key, CallSettings) or
-// a similar overload.
-db.Delete(message);
-
-Entity fetchedAfterDeletion = db.Lookup(message.Key);
-
-Console.WriteLine($&quot;Entity exists before deletion? {fetchedBeforeDeletion != null}&quot;);
-Console.WriteLine($&quot;Entity exists after deletion? {fetchedAfterDeletion != null}&quot;);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void Delete(Entity entity, CallSettings callSettings = null)</code></pre>
@@ -790,12 +796,35 @@ Console.WriteLine($&quot;Entity exists after deletion? {fetchedAfterDeletion != 
               <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Delete(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
+Entity message = new Entity
+{
+    Key = keyFactory.CreateIncompleteKey(),
+    [&quot;text&quot;] = &quot;Hello&quot;,
+};
+db.Insert(message);
+
+Entity fetchedBeforeDeletion = db.Lookup(message.Key);
+
+// Only the key from the entity is used to determine what to delete.
+// If you already have the key but not the entity, use Delete(Key, CallSettings) or
+// a similar overload.
+db.Delete(message);
+
+Entity fetchedAfterDeletion = db.Lookup(message.Key);
+
+Console.WriteLine($&quot;Entity exists before deletion? {fetchedBeforeDeletion != null}&quot;);
+Console.WriteLine($&quot;Entity exists after deletion? {fetchedAfterDeletion != null}&quot;);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Delete*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Entity___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Delete(Google.Cloud.Datastore.V1.Entity[])">Delete(Entity[])</h4>
               <div class="markdown level1 summary"><p>Deletes a collection of entities, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void Delete(params Entity[] entities)</code></pre>
@@ -829,32 +858,16 @@ use an existing transaction, it still performs all the work in a single Commit o
 number of entities, partition the changes into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Entity____snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Delete*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Delete(Google.Cloud.Datastore.V1.Key,Google.Api.Gax.Grpc.CallSettings)">Delete(Key, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes a single key, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
-Entity message = new Entity
-{
-    Key = keyFactory.CreateIncompleteKey(),
-    [&quot;text&quot;] = &quot;Hello&quot;,
-};
-Key key = db.Insert(message);
-
-Entity fetchedBeforeDeletion = db.Lookup(key);
-
-// Only the key is required to determine what to delete.
-// If you have an entity with the right key, you can use Delete(Entity, CallSettings)
-// or a similar overload for convenience.
-db.Delete(key);
-
-Entity fetchedAfterDeletion = db.Lookup(key);
-
-Console.WriteLine($&quot;Entity exists before deletion? {fetchedBeforeDeletion != null}&quot;);
-Console.WriteLine($&quot;Entity exists after deletion? {fetchedAfterDeletion != null}&quot;);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void Delete(Key key, CallSettings callSettings = null)</code></pre>
@@ -886,12 +899,35 @@ Console.WriteLine($&quot;Entity exists after deletion? {fetchedAfterDeletion != 
               <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">Delete(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
+Entity message = new Entity
+{
+    Key = keyFactory.CreateIncompleteKey(),
+    [&quot;text&quot;] = &quot;Hello&quot;,
+};
+Key key = db.Insert(message);
+
+Entity fetchedBeforeDeletion = db.Lookup(key);
+
+// Only the key is required to determine what to delete.
+// If you have an entity with the right key, you can use Delete(Entity, CallSettings)
+// or a similar overload for convenience.
+db.Delete(key);
+
+Entity fetchedAfterDeletion = db.Lookup(key);
+
+Console.WriteLine($&quot;Entity exists before deletion? {fetchedBeforeDeletion != null}&quot;);
+Console.WriteLine($&quot;Entity exists after deletion? {fetchedAfterDeletion != null}&quot;);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Delete*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Key___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Delete(Google.Cloud.Datastore.V1.Key[])">Delete(Key[])</h4>
               <div class="markdown level1 summary"><p>Deletes a collection of keys, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void Delete(params Key[] keys)</code></pre>
@@ -925,12 +961,16 @@ use an existing transaction, it still performs all the work in a single Commit o
 number of entities, partition the changes into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Key____snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Delete*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Delete(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">Delete(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes a collection of entities, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void Delete(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
@@ -965,12 +1005,16 @@ use an existing transaction, it still performs all the work in a single Commit o
 number of entities, partition the changes into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Delete*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Delete(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">Delete(IEnumerable&lt;Key&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes a collection of keys, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void Delete(IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
@@ -1005,12 +1049,16 @@ use an existing transaction, it still performs all the work in a single Commit o
 number of entities, partition the changes into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.DeleteAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.DeleteAsync(Google.Cloud.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">DeleteAsync(Entity, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes a single entity, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteAsync(Entity entity, CallSettings callSettings = null)</code></pre>
@@ -1058,12 +1106,16 @@ number of entities, partition the changes into batches. See
               <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">DeleteAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.DeleteAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_Google_Cloud_Datastore_V1_Entity___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.DeleteAsync(Google.Cloud.Datastore.V1.Entity[])">DeleteAsync(Entity[])</h4>
               <div class="markdown level1 summary"><p>Deletes a collection of entities, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteAsync(params Entity[] entities)</code></pre>
@@ -1113,12 +1165,16 @@ use an existing transaction, it still performs all the work in a single Commit o
 number of entities, partition the changes into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_Google_Cloud_Datastore_V1_Entity____snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.DeleteAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.DeleteAsync(Google.Cloud.Datastore.V1.Key,Google.Api.Gax.Grpc.CallSettings)">DeleteAsync(Key, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes a single key, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteAsync(Key key, CallSettings callSettings = null)</code></pre>
@@ -1165,12 +1221,16 @@ number of entities, partition the changes into batches. See
               <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">DeleteAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.DeleteAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_Google_Cloud_Datastore_V1_Key___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.DeleteAsync(Google.Cloud.Datastore.V1.Key[])">DeleteAsync(Key[])</h4>
               <div class="markdown level1 summary"><p>Deletes a collection of keys, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteAsync(params Key[] keys)</code></pre>
@@ -1219,12 +1279,16 @@ use an existing transaction, it still performs all the work in a single Commit o
 number of entities, partition the changes into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_Google_Cloud_Datastore_V1_Key____snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.DeleteAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.DeleteAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">DeleteAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes a collection of entities, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteAsync(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
@@ -1275,12 +1339,16 @@ use an existing transaction, it still performs all the work in a single Commit o
 number of entities, partition the changes into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.DeleteAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.DeleteAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">DeleteAsync(IEnumerable&lt;Key&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes a collection of keys, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteAsync(IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
@@ -1330,12 +1398,16 @@ use an existing transaction, it still performs all the work in a single Commit o
 number of entities, partition the changes into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Insert_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Insert*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Insert_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Insert(Google.Cloud.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">Insert(Entity, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Inserts a single entity, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Insert_Google_Cloud_Datastore_V1_Entity___">Insert</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Key Insert(Entity entity, CallSettings callSettings = null)</code></pre>
@@ -1385,32 +1457,16 @@ number of entities, partition the changes into batches. See
               <div class="markdown level1 remarks"><p>On success, the entity will be updated in memory with the server-allocated keys.</p>
 <p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Insert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Insert_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Insert_Google_Cloud_Datastore_V1_Entity___">Insert</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Insert_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Insert*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Insert_Google_Cloud_Datastore_V1_Entity___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Insert(Google.Cloud.Datastore.V1.Entity[])">Insert(Entity[])</h4>
               <div class="markdown level1 summary"><p>Inserts a collection of entities, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-KeyFactory keyFactory = db.CreateKeyFactory(&quot;book&quot;);
-Entity book1 = new Entity
-{
-    Key = keyFactory.CreateIncompleteKey(),
-    [&quot;author&quot;] = &quot;Harper Lee&quot;,
-    [&quot;title&quot;] = &quot;To Kill a Mockingbird&quot;,
-    [&quot;publication_date&quot;] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc),
-    [&quot;genres&quot;] = new[] { &quot;Southern drama&quot;, &quot;Courtroom drama&quot;, &quot;Bildungsroman&quot; }
-};
-Entity book2 = new Entity
-{
-    Key = keyFactory.CreateIncompleteKey(),
-    [&quot;author&quot;] = &quot;Charlotte Bront&#235;&quot;,
-    [&quot;title&quot;] = &quot;Jane Eyre&quot;,
-    [&quot;publication_date&quot;] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc),
-    [&quot;genres&quot;] = new[] { &quot;Gothic&quot;, &quot;Romance&quot;, &quot;Bildungsroman&quot; }
-};
-IReadOnlyList&lt;Key&gt; insertedKeys = db.Insert(book1, book2);
-Console.WriteLine($&quot;Inserted keys: {string.Join(&quot;,&quot;, insertedKeys)}&quot;);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Key&gt; Insert(params Entity[] entities)</code></pre>
@@ -1463,12 +1519,35 @@ use an existing transaction, it still performs all the work in a single Commit o
 number of entities, partition the changes into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Insert_Google_Cloud_Datastore_V1_Entity____snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;book&quot;);
+Entity book1 = new Entity
+{
+    Key = keyFactory.CreateIncompleteKey(),
+    [&quot;author&quot;] = &quot;Harper Lee&quot;,
+    [&quot;title&quot;] = &quot;To Kill a Mockingbird&quot;,
+    [&quot;publication_date&quot;] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc),
+    [&quot;genres&quot;] = new[] { &quot;Southern drama&quot;, &quot;Courtroom drama&quot;, &quot;Bildungsroman&quot; }
+};
+Entity book2 = new Entity
+{
+    Key = keyFactory.CreateIncompleteKey(),
+    [&quot;author&quot;] = &quot;Charlotte Bront&#235;&quot;,
+    [&quot;title&quot;] = &quot;Jane Eyre&quot;,
+    [&quot;publication_date&quot;] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc),
+    [&quot;genres&quot;] = new[] { &quot;Gothic&quot;, &quot;Romance&quot;, &quot;Bildungsroman&quot; }
+};
+IReadOnlyList&lt;Key&gt; insertedKeys = db.Insert(book1, book2);
+Console.WriteLine($&quot;Inserted keys: {string.Join(&quot;,&quot;, insertedKeys)}&quot;);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Insert_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Insert*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Insert(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">Insert(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Inserts a collection of entities, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Insert_Google_Cloud_Datastore_V1_Entity___">Insert</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Key&gt; Insert(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
@@ -1522,12 +1601,16 @@ use an existing transaction, it still performs all the work in a single Commit o
 number of entities, partition the changes into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Insert_Google_Cloud_Datastore_V1_Entity___">Insert</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.InsertAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.InsertAsync(Google.Cloud.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">InsertAsync(Entity, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Inserts a single entity, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_Google_Cloud_Datastore_V1_Entity___">InsertAsync</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Key&gt; InsertAsync(Entity entity, CallSettings callSettings = null)</code></pre>
@@ -1576,32 +1659,16 @@ if it was allocated by the server, or <code>null</code> if the inserted entity h
               <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>On success, the entity will be updated in memory with the server-allocated keys.</p>
 <p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">InsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p></div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_Google_Cloud_Datastore_V1_Entity___">InsertAsync</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.InsertAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_Google_Cloud_Datastore_V1_Entity___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.InsertAsync(Google.Cloud.Datastore.V1.Entity[])">InsertAsync(Entity[])</h4>
               <div class="markdown level1 summary"><p>Inserts a collection of entities, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-KeyFactory keyFactory = db.CreateKeyFactory(&quot;book&quot;);
-Entity book1 = new Entity
-{
-    Key = keyFactory.CreateIncompleteKey(),
-    [&quot;author&quot;] = &quot;Harper Lee&quot;,
-    [&quot;title&quot;] = &quot;To Kill a Mockingbird&quot;,
-    [&quot;publication_date&quot;] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc),
-    [&quot;genres&quot;] = new[] { &quot;Southern drama&quot;, &quot;Courtroom drama&quot;, &quot;Bildungsroman&quot; }
-};
-Entity book2 = new Entity
-{
-    Key = keyFactory.CreateIncompleteKey(),
-    [&quot;author&quot;] = &quot;Charlotte Bront&#235;&quot;,
-    [&quot;title&quot;] = &quot;Jane Eyre&quot;,
-    [&quot;publication_date&quot;] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc),
-    [&quot;genres&quot;] = new[] { &quot;Gothic&quot;, &quot;Romance&quot;, &quot;Bildungsroman&quot; }
-};
-IReadOnlyList&lt;Key&gt; insertedKeys = await db.InsertAsync(book1, book2);
-Console.WriteLine($&quot;Inserted keys: {string.Join(&quot;,&quot;, insertedKeys)}&quot;);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;Key&gt;&gt; InsertAsync(params Entity[] entities)</code></pre>
@@ -1655,12 +1722,35 @@ use an existing transaction, it still performs all the work in a single Commit o
 number of entities, partition the changes into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_Google_Cloud_Datastore_V1_Entity____snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;book&quot;);
+Entity book1 = new Entity
+{
+    Key = keyFactory.CreateIncompleteKey(),
+    [&quot;author&quot;] = &quot;Harper Lee&quot;,
+    [&quot;title&quot;] = &quot;To Kill a Mockingbird&quot;,
+    [&quot;publication_date&quot;] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc),
+    [&quot;genres&quot;] = new[] { &quot;Southern drama&quot;, &quot;Courtroom drama&quot;, &quot;Bildungsroman&quot; }
+};
+Entity book2 = new Entity
+{
+    Key = keyFactory.CreateIncompleteKey(),
+    [&quot;author&quot;] = &quot;Charlotte Bront&#235;&quot;,
+    [&quot;title&quot;] = &quot;Jane Eyre&quot;,
+    [&quot;publication_date&quot;] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc),
+    [&quot;genres&quot;] = new[] { &quot;Gothic&quot;, &quot;Romance&quot;, &quot;Bildungsroman&quot; }
+};
+IReadOnlyList&lt;Key&gt; insertedKeys = await db.InsertAsync(book1, book2);
+Console.WriteLine($&quot;Inserted keys: {string.Join(&quot;,&quot;, insertedKeys)}&quot;);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.InsertAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.InsertAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">InsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Inserts a collection of entities, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_Google_Cloud_Datastore_V1_Entity___">InsertAsync</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;Key&gt;&gt; InsertAsync(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
@@ -1714,12 +1804,16 @@ the collection.</p>
 number of entities, partition the look-ups into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_Google_Cloud_Datastore_V1_Entity___">InsertAsync</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Lookup_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Lookup*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Lookup_Google_Cloud_Datastore_V1_Key_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Lookup(Google.Cloud.Datastore.V1.Key,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">Lookup(Key, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Looks up a single entity by key.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Lookup_Google_Cloud_Datastore_V1_Key___">Lookup</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Entity Lookup(Key key, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
@@ -1773,20 +1867,16 @@ number of entities, partition the look-ups into batches. See
               <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Lookup_Google_Cloud_Datastore_V1_Key_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Lookup_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_">Lookup(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Lookup_Google_Cloud_Datastore_V1_Key_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Lookup_Google_Cloud_Datastore_V1_Key___">Lookup</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Lookup_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Lookup*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Lookup_Google_Cloud_Datastore_V1_Key___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Lookup(Google.Cloud.Datastore.V1.Key[])">Lookup(Key[])</h4>
               <div class="markdown level1 summary"><p>Looks up a collection of entities by key.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-KeyFactory keyFactory = db.CreateKeyFactory(&quot;book&quot;);
-Key key1 = keyFactory.CreateKey(&quot;pride_and_prejudice&quot;);
-Key key2 = keyFactory.CreateKey(&quot;not_present&quot;);
-
-IReadOnlyList&lt;Entity&gt; entities = db.Lookup(key1, key2);
-Console.WriteLine(entities[0]); // Pride and Prejudice entity
-Console.WriteLine(entities[1]); // Nothing (value is null reference)
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Entity&gt; Lookup(params Key[] keys)</code></pre>
@@ -1840,12 +1930,23 @@ value for the read consistency and call settings.
 number of entities, partition the look-ups into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Lookup_Google_Cloud_Datastore_V1_Key____snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;book&quot;);
+Key key1 = keyFactory.CreateKey(&quot;pride_and_prejudice&quot;);
+Key key2 = keyFactory.CreateKey(&quot;not_present&quot;);
+
+IReadOnlyList&lt;Entity&gt; entities = db.Lookup(key1, key2);
+Console.WriteLine(entities[0]); // Pride and Prejudice entity
+Console.WriteLine(entities[1]); // Nothing (value is null reference)
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Lookup_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Lookup*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Lookup_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Lookup(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">Lookup(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Looks up a collection of entities by key.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Lookup_Google_Cloud_Datastore_V1_Key___">Lookup</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Entity&gt; Lookup(IEnumerable&lt;Key&gt; keys, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
@@ -1903,12 +2004,16 @@ references, or <code>null</code> where the key was not found.</p>
 number of entities, partition the look-ups into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Lookup_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Lookup_Google_Cloud_Datastore_V1_Key___">Lookup</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.LookupAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_Google_Cloud_Datastore_V1_Key_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.LookupAsync(Google.Cloud.Datastore.V1.Key,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">LookupAsync(Key, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Looks up a single entity by key asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_Google_Cloud_Datastore_V1_Key___">LookupAsync</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Entity&gt; LookupAsync(Key key, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
@@ -1962,20 +2067,16 @@ number of entities, partition the look-ups into batches. See
               <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_Google_Cloud_Datastore_V1_Key_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_">LookupAsync(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_Google_Cloud_Datastore_V1_Key_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_Google_Cloud_Datastore_V1_Key___">LookupAsync</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.LookupAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_Google_Cloud_Datastore_V1_Key___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.LookupAsync(Google.Cloud.Datastore.V1.Key[])">LookupAsync(Key[])</h4>
               <div class="markdown level1 summary"><p>Looks up a collection of entities by key asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-KeyFactory keyFactory = db.CreateKeyFactory(&quot;book&quot;);
-Key key1 = keyFactory.CreateKey(&quot;pride_and_prejudice&quot;);
-Key key2 = keyFactory.CreateKey(&quot;not_present&quot;);
-
-IReadOnlyList&lt;Entity&gt; entities = await db.LookupAsync(key1, key2);
-Console.WriteLine(entities[0]); // Pride and Prejudice entity
-Console.WriteLine(entities[1]); // Nothing (value is null reference)
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;Entity&gt;&gt; LookupAsync(params Key[] keys)</code></pre>
@@ -2029,12 +2130,23 @@ value for the read consistency and call settings.
 number of entities, partition the look-ups into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_Google_Cloud_Datastore_V1_Key____snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;book&quot;);
+Key key1 = keyFactory.CreateKey(&quot;pride_and_prejudice&quot;);
+Key key2 = keyFactory.CreateKey(&quot;not_present&quot;);
+
+IReadOnlyList&lt;Entity&gt; entities = await db.LookupAsync(key1, key2);
+Console.WriteLine(entities[0]); // Pride and Prejudice entity
+Console.WriteLine(entities[1]); // Nothing (value is null reference)
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.LookupAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.LookupAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">LookupAsync(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Looks up a collection of entities by key asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_Google_Cloud_Datastore_V1_Key___">LookupAsync</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;Entity&gt;&gt; LookupAsync(IEnumerable&lt;Key&gt; keys, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
@@ -2092,32 +2204,18 @@ references, or <code>null</code> where the key was not found.</p>
 number of entities, partition the look-ups into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_Google_Cloud_Datastore_V1_Key___">LookupAsync</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_RunQuery_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQuery*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQuery_Google_Cloud_Datastore_V1_GqlQuery_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQuery(Google.Cloud.Datastore.V1.GqlQuery,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQuery(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Runs the given query eagerly, retrieving all results in memory and indicating whether more
 results may be available beyond the query&#39;s limit. Use this method when your query has a limited
 number of results, for example to build a web application which fetches results in pages.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-GqlQuery gqlQuery = new GqlQuery
-{
-    QueryString = &quot;SELECT * FROM book WHERE author = @author LIMIT @limit&quot;,
-    NamedBindings = {
-        { &quot;author&quot;, &quot;Jane Austen&quot; },
-        { &quot;limit&quot;, 10 }
-    }
-};
-DatastoreQueryResults results = db.RunQuery(gqlQuery);
-// RunQuery fetches all the results into memory in a single call.
-// Constrast this with RunQueryLazily, which merely prepares an enumerable
-// query. Always specify a limit when you use RunQuery, to avoid running
-// out of memory.
-foreach (Entity entity in results.Entities)
-{
-    Console.WriteLine(entity);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual DatastoreQueryResults RunQuery(GqlQuery query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
@@ -2168,29 +2266,35 @@ foreach (Entity entity in results.Entities)
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQuery_Google_Cloud_Datastore_V1_GqlQuery_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+GqlQuery gqlQuery = new GqlQuery
+{
+    QueryString = &quot;SELECT * FROM book WHERE author = @author LIMIT @limit&quot;,
+    NamedBindings = {
+        { &quot;author&quot;, &quot;Jane Austen&quot; },
+        { &quot;limit&quot;, 10 }
+    }
+};
+DatastoreQueryResults results = db.RunQuery(gqlQuery);
+// RunQuery fetches all the results into memory in a single call.
+// Constrast this with RunQueryLazily, which merely prepares an enumerable
+// query. Always specify a limit when you use RunQuery, to avoid running
+// out of memory.
+foreach (Entity entity in results.Entities)
+{
+    Console.WriteLine(entity);
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_RunQuery_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQuery*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQuery_Google_Cloud_Datastore_V1_Query_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQuery(Google.Cloud.Datastore.V1.Query,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQuery(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Runs the given query eagerly, retrieving all results in memory and indicating whether more
 results may be available beyond the query&#39;s limit. Use this method when your query has a limited
 number of results, for example to build a web application which fetches results in pages.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-Query query = new Query(&quot;book&quot;)
-{
-    Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;),
-    Limit = 10
-};
-// RunQuery fetches all the results into memory in a single call.
-// Constrast this with RunQueryLazily, which merely prepares an enumerable
-// query. Always specify a limit when you use RunQuery, to avoid running
-// out of memory.
-DatastoreQueryResults results = db.RunQuery(query);
-foreach (Entity entity in results.Entities)
-{
-    Console.WriteLine(entity);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual DatastoreQueryResults RunQuery(Query query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
@@ -2241,29 +2345,32 @@ foreach (Entity entity in results.Entities)
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQuery_Google_Cloud_Datastore_V1_Query_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+Query query = new Query(&quot;book&quot;)
+{
+    Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;),
+    Limit = 10
+};
+// RunQuery fetches all the results into memory in a single call.
+// Constrast this with RunQueryLazily, which merely prepares an enumerable
+// query. Always specify a limit when you use RunQuery, to avoid running
+// out of memory.
+DatastoreQueryResults results = db.RunQuery(query);
+foreach (Entity entity in results.Entities)
+{
+    Console.WriteLine(entity);
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryAsync_Google_Cloud_Datastore_V1_GqlQuery_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryAsync(Google.Cloud.Datastore.V1.GqlQuery,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQueryAsync(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Runs the given query eagerly and asynchronously, retrieving all results in memory and indicating whether more
 results may be available beyond the query&#39;s limit. Use this method when your query has a limited
 number of results, for example to build a web application which fetches results in pages.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-GqlQuery gqlQuery = new GqlQuery
-{
-    QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
-    NamedBindings = { { &quot;author&quot;, &quot;Jane Austen&quot; } },
-};
-DatastoreQueryResults results = await db.RunQueryAsync(gqlQuery);
-// RunQuery fetches all the results into memory in a single call.
-// Constrast this with RunQueryLazily, which merely prepares an enumerable
-// query. Always specify a limit when you use RunQuery, to avoid running
-// out of memory.
-foreach (Entity entity in results.Entities)
-{
-    Console.WriteLine(entity);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;DatastoreQueryResults&gt; RunQueryAsync(GqlQuery query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
@@ -2314,20 +2421,15 @@ foreach (Entity entity in results.Entities)
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryAsync*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryAsync_Google_Cloud_Datastore_V1_Query_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryAsync(Google.Cloud.Datastore.V1.Query,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQueryAsync(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Runs the given query eagerly and asynchronously, retrieving all results in memory and indicating whether more
-results may be available beyond the query&#39;s limit. Use this method when your query has a limited
-number of results, for example to build a web application which fetches results in pages.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-Query query = new Query(&quot;book&quot;)
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryAsync_Google_Cloud_Datastore_V1_GqlQuery_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+GqlQuery gqlQuery = new GqlQuery
 {
-    Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;),
-    Limit = 10
+    QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
+    NamedBindings = { { &quot;author&quot;, &quot;Jane Austen&quot; } },
 };
-DatastoreQueryResults results = await db.RunQueryAsync(query);
+DatastoreQueryResults results = await db.RunQueryAsync(gqlQuery);
 // RunQuery fetches all the results into memory in a single call.
 // Constrast this with RunQueryLazily, which merely prepares an enumerable
 // query. Always specify a limit when you use RunQuery, to avoid running
@@ -2337,6 +2439,14 @@ foreach (Entity entity in results.Entities)
     Console.WriteLine(entity);
 }
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryAsync*"></a>
+              <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryAsync_Google_Cloud_Datastore_V1_Query_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryAsync(Google.Cloud.Datastore.V1.Query,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQueryAsync(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Runs the given query eagerly and asynchronously, retrieving all results in memory and indicating whether more
+results may be available beyond the query&#39;s limit. Use this method when your query has a limited
+number of results, for example to build a web application which fetches results in pages.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;DatastoreQueryResults&gt; RunQueryAsync(Query query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
@@ -2387,27 +2497,30 @@ foreach (Entity entity in results.Entities)
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryLazily_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryLazily*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryLazily_Google_Cloud_Datastore_V1_GqlQuery_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryLazily(Google.Cloud.Datastore.V1.GqlQuery,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQueryLazily(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lazily executes the given GQL query for asynchronous consumption.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-GqlQuery gqlQuery = new GqlQuery
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryAsync_Google_Cloud_Datastore_V1_Query_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+Query query = new Query(&quot;book&quot;)
 {
-    QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
-    NamedBindings = { { &quot;author&quot;, &quot;Jane Austen&quot; } },
+    Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;),
+    Limit = 10
 };
-LazyDatastoreQuery results = db.RunQueryLazily(gqlQuery);
-// LazyDatastoreQuery implements IEnumerable&lt;Entity&gt;, but you can
-// call AsResponses() to see the raw RPC responses, or
-// GetAllResults() to get all the results into memory, complete with
-// the end cursor and the reason for the query finishing.
-foreach (Entity entity in results)
+DatastoreQueryResults results = await db.RunQueryAsync(query);
+// RunQuery fetches all the results into memory in a single call.
+// Constrast this with RunQueryLazily, which merely prepares an enumerable
+// query. Always specify a limit when you use RunQuery, to avoid running
+// out of memory.
+foreach (Entity entity in results.Entities)
 {
     Console.WriteLine(entity);
 }
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryLazily_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryLazily*"></a>
+              <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryLazily_Google_Cloud_Datastore_V1_GqlQuery_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryLazily(Google.Cloud.Datastore.V1.GqlQuery,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQueryLazily(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lazily executes the given GQL query for asynchronous consumption.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual LazyDatastoreQuery RunQueryLazily(GqlQuery gqlQuery, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
@@ -2463,17 +2576,15 @@ foreach (Entity entity in results)
 iterating over the results. Iterating over the same <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a> object
 multiple times will execute the query again, potentially returning different results.</p>
 </div>
-              <a id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryLazily_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryLazily*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryLazily_Google_Cloud_Datastore_V1_Query_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryLazily(Google.Cloud.Datastore.V1.Query,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQueryLazily(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lazily executes the given structured query.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-Query query = new Query(&quot;book&quot;)
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryLazily_Google_Cloud_Datastore_V1_GqlQuery_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+GqlQuery gqlQuery = new GqlQuery
 {
-    Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;)
+    QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
+    NamedBindings = { { &quot;author&quot;, &quot;Jane Austen&quot; } },
 };
-LazyDatastoreQuery results = db.RunQueryLazily(query);
+LazyDatastoreQuery results = db.RunQueryLazily(gqlQuery);
 // LazyDatastoreQuery implements IEnumerable&lt;Entity&gt;, but you can
 // call AsResponses() to see the raw RPC responses, or
 // GetAllResults() to get all the results into memory, complete with
@@ -2483,6 +2594,12 @@ foreach (Entity entity in results)
     Console.WriteLine(entity);
 }
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryLazily_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryLazily*"></a>
+              <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryLazily_Google_Cloud_Datastore_V1_Query_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryLazily(Google.Cloud.Datastore.V1.Query,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQueryLazily(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lazily executes the given structured query.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual LazyDatastoreQuery RunQueryLazily(Query query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
@@ -2538,27 +2655,29 @@ foreach (Entity entity in results)
 iterating over the results. Iterating over the same <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a> object
 multiple times will execute the query again, potentially returning different results.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryLazily_Google_Cloud_Datastore_V1_Query_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+Query query = new Query(&quot;book&quot;)
+{
+    Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;)
+};
+LazyDatastoreQuery results = db.RunQueryLazily(query);
+// LazyDatastoreQuery implements IEnumerable&lt;Entity&gt;, but you can
+// call AsResponses() to see the raw RPC responses, or
+// GetAllResults() to get all the results into memory, complete with
+// the end cursor and the reason for the query finishing.
+foreach (Entity entity in results)
+{
+    Console.WriteLine(entity);
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryLazilyAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryLazilyAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryLazilyAsync_Google_Cloud_Datastore_V1_GqlQuery_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryLazilyAsync(Google.Cloud.Datastore.V1.GqlQuery,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQueryLazilyAsync(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lazily executes the given GQL query for asynchronous consumption.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-GqlQuery gqlQuery = new GqlQuery
-{
-    QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
-    NamedBindings = { { &quot;author&quot;, &quot;Jane Austen&quot; } },
-};
-AsyncLazyDatastoreQuery results = db.RunQueryLazilyAsync(gqlQuery);
-// AsyncLazyDatastoreQuery implements IAsyncEnumerable&lt;Entity&gt;, but you can
-// call AsResponses() to see the raw RPC responses, or
-// GetAllResultsAsync() to get all the results into memory, complete with
-// the end cursor and the reason for the query finishing.
-await results.ForEachAsync(entity =&gt;
-{
-    Console.WriteLine(entity);
-});
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual AsyncLazyDatastoreQuery RunQueryLazilyAsync(GqlQuery gqlQuery, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
@@ -2614,17 +2733,15 @@ await results.ForEachAsync(entity =&gt;
 iterating over the results. Iterating over the same <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a> object
 multiple times will execute the query again, potentially returning different results.</p>
 </div>
-              <a id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryLazilyAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryLazilyAsync*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryLazilyAsync_Google_Cloud_Datastore_V1_Query_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryLazilyAsync(Google.Cloud.Datastore.V1.Query,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQueryLazilyAsync(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lazily executes the given structured query for asynchronous consumption.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-Query query = new Query(&quot;book&quot;)
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryLazilyAsync_Google_Cloud_Datastore_V1_GqlQuery_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+GqlQuery gqlQuery = new GqlQuery
 {
-    Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;)
+    QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
+    NamedBindings = { { &quot;author&quot;, &quot;Jane Austen&quot; } },
 };
-AsyncLazyDatastoreQuery results = db.RunQueryLazilyAsync(query);
+AsyncLazyDatastoreQuery results = db.RunQueryLazilyAsync(gqlQuery);
 // AsyncLazyDatastoreQuery implements IAsyncEnumerable&lt;Entity&gt;, but you can
 // call AsResponses() to see the raw RPC responses, or
 // GetAllResultsAsync() to get all the results into memory, complete with
@@ -2634,6 +2751,12 @@ await results.ForEachAsync(entity =&gt;
     Console.WriteLine(entity);
 });
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryLazilyAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryLazilyAsync*"></a>
+              <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryLazilyAsync_Google_Cloud_Datastore_V1_Query_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryLazilyAsync(Google.Cloud.Datastore.V1.Query,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQueryLazilyAsync(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lazily executes the given structured query for asynchronous consumption.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual AsyncLazyDatastoreQuery RunQueryLazilyAsync(Query query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
@@ -2689,28 +2812,29 @@ await results.ForEachAsync(entity =&gt;
 iterating over the results. Iterating over the same <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a> object
 multiple times will execute the query again, potentially returning different results.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryLazilyAsync_Google_Cloud_Datastore_V1_Query_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+Query query = new Query(&quot;book&quot;)
+{
+    Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;)
+};
+AsyncLazyDatastoreQuery results = db.RunQueryLazilyAsync(query);
+// AsyncLazyDatastoreQuery implements IAsyncEnumerable&lt;Entity&gt;, but you can
+// call AsResponses() to see the raw RPC responses, or
+// GetAllResultsAsync() to get all the results into memory, complete with
+// the end cursor and the reason for the query finishing.
+await results.ForEachAsync(entity =&gt;
+{
+    Console.WriteLine(entity);
+});
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Update_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Update*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Update_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Update(Google.Cloud.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">Update(Entity, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Updates a single entity, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-KeyFactory keyFactory = db.CreateKeyFactory(&quot;book&quot;);
-Entity book = new Entity
-{
-    Key = keyFactory.CreateIncompleteKey(),
-    [&quot;author&quot;] = &quot;Harper Lee&quot;,
-    [&quot;title&quot;] = &quot;Tequila Mockingbird&quot;,
-    [&quot;publication_date&quot;] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc),
-    [&quot;genres&quot;] = new[] { &quot;Southern drama&quot;, &quot;Courtroom drama&quot;, &quot;Bildungsroman&quot; }
-};
-db.Insert(book);
-
-// Correct the typo in memory
-book[&quot;title&quot;] = &quot;To Kill a Mockingbird&quot;;
-// Then update the entity in Datastore
-db.Update(book);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void Update(Entity entity, CallSettings callSettings = null)</code></pre>
@@ -2742,12 +2866,31 @@ db.Update(book);
               <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Update_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Update(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Update_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;book&quot;);
+Entity book = new Entity
+{
+    Key = keyFactory.CreateIncompleteKey(),
+    [&quot;author&quot;] = &quot;Harper Lee&quot;,
+    [&quot;title&quot;] = &quot;Tequila Mockingbird&quot;,
+    [&quot;publication_date&quot;] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc),
+    [&quot;genres&quot;] = new[] { &quot;Southern drama&quot;, &quot;Courtroom drama&quot;, &quot;Bildungsroman&quot; }
+};
+db.Insert(book);
+
+// Correct the typo in memory
+book[&quot;title&quot;] = &quot;To Kill a Mockingbird&quot;;
+// Then update the entity in Datastore
+db.Update(book);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Update_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Update*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Update_Google_Cloud_Datastore_V1_Entity___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Update(Google.Cloud.Datastore.V1.Entity[])">Update(Entity[])</h4>
               <div class="markdown level1 summary"><p>Updates a collection of entities, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Update_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Update</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void Update(params Entity[] entities)</code></pre>
@@ -2781,12 +2924,16 @@ use an existing transaction, it still performs all the work in a single Commit o
 number of entities, partition the changes into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Update_Google_Cloud_Datastore_V1_Entity____snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Update_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Update</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Update_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Update*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Update(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">Update(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Updates a collection of entities, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Update_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Update</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void Update(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
@@ -2820,12 +2967,16 @@ number of entities, partition the changes into batches. See
 number of entities, partition the look-ups into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Update_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Update</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_UpdateAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.UpdateAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_UpdateAsync_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.UpdateAsync(Google.Cloud.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">UpdateAsync(Entity, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Updates a single entity, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Update_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Update</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task UpdateAsync(Entity entity, CallSettings callSettings = null)</code></pre>
@@ -2873,12 +3024,16 @@ number of entities, partition the look-ups into batches. See
               <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_UpdateAsync_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">UpdateAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_UpdateAsync_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Update_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Update</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_UpdateAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.UpdateAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_UpdateAsync_Google_Cloud_Datastore_V1_Entity___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.UpdateAsync(Google.Cloud.Datastore.V1.Entity[])">UpdateAsync(Entity[])</h4>
               <div class="markdown level1 summary"><p>Updates a collection of entities, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Update_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Update</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task UpdateAsync(params Entity[] entities)</code></pre>
@@ -2928,12 +3083,16 @@ use an existing transaction, it still performs all the work in a single Commit o
 number of entities, partition the changes into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_UpdateAsync_Google_Cloud_Datastore_V1_Entity____snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Update_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Update</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_UpdateAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.UpdateAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.UpdateAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">UpdateAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Updates a collection of entities, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Update_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Update</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task UpdateAsync(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
@@ -2984,12 +3143,16 @@ use an existing transaction, it still performs all the work in a single Commit o
 number of entities, partition the changes into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Update_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Update</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Upsert_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Upsert*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Upsert_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Upsert(Google.Cloud.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">Upsert(Entity, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Upserts a single entity, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Upsert_Google_Cloud_Datastore_V1_Entity___">Upsert</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Key Upsert(Entity entity, CallSettings callSettings = null)</code></pre>
@@ -3039,38 +3202,16 @@ number of entities, partition the changes into batches. See
               <div class="markdown level1 remarks"><p>On success, if entity has an incomplete key it will be updated in memory with the server-allocated keys.</p>
 <p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Upsert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Upsert_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Upsert_Google_Cloud_Datastore_V1_Entity___">Upsert</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Upsert_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Upsert*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Upsert_Google_Cloud_Datastore_V1_Entity___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Upsert(Google.Cloud.Datastore.V1.Entity[])">Upsert(Entity[])</h4>
               <div class="markdown level1 summary"><p>Upserts a collection of entities, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-KeyFactory keyFactory = db.CreateKeyFactory(&quot;book&quot;);
-Entity book1 = new Entity
-{
-    Key = keyFactory.CreateIncompleteKey(),
-    [&quot;author&quot;] = &quot;Harper Lee&quot;,
-    [&quot;title&quot;] = &quot;Tequila Mockingbird&quot;,
-    [&quot;publication_date&quot;] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc),
-    [&quot;genres&quot;] = new[] { &quot;Southern drama&quot;, &quot;Courtroom drama&quot;, &quot;Bildungsroman&quot; }
-};
-db.Insert(book1);
-
-// Correct the typo in memory
-book1[&quot;title&quot;] = &quot;To Kill a Mockingbird&quot;;
-
-Entity book2 = new Entity
-{
-    Key = keyFactory.CreateIncompleteKey(),
-    [&quot;author&quot;] = &quot;Charlotte Bront&#235;&quot;,
-    [&quot;title&quot;] = &quot;Jane Eyre&quot;,
-    [&quot;publication_date&quot;] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc),
-    [&quot;genres&quot;] = new[] { &quot;Gothic&quot;, &quot;Romance&quot;, &quot;Bildungsroman&quot; }
-};
-
-// Update book1 and insert book2 into Datastore
-db.Upsert(book1, book2);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Key&gt; Upsert(params Entity[] entities)</code></pre>
@@ -3123,12 +3264,41 @@ Call settings are not supported on this call due to restrictions with methods co
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Upsert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Upsert_Google_Cloud_Datastore_V1_Entity____snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;book&quot;);
+Entity book1 = new Entity
+{
+    Key = keyFactory.CreateIncompleteKey(),
+    [&quot;author&quot;] = &quot;Harper Lee&quot;,
+    [&quot;title&quot;] = &quot;Tequila Mockingbird&quot;,
+    [&quot;publication_date&quot;] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc),
+    [&quot;genres&quot;] = new[] { &quot;Southern drama&quot;, &quot;Courtroom drama&quot;, &quot;Bildungsroman&quot; }
+};
+db.Insert(book1);
+
+// Correct the typo in memory
+book1[&quot;title&quot;] = &quot;To Kill a Mockingbird&quot;;
+
+Entity book2 = new Entity
+{
+    Key = keyFactory.CreateIncompleteKey(),
+    [&quot;author&quot;] = &quot;Charlotte Bront&#235;&quot;,
+    [&quot;title&quot;] = &quot;Jane Eyre&quot;,
+    [&quot;publication_date&quot;] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc),
+    [&quot;genres&quot;] = new[] { &quot;Gothic&quot;, &quot;Romance&quot;, &quot;Bildungsroman&quot; }
+};
+
+// Update book1 and insert book2 into Datastore
+db.Upsert(book1, book2);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Upsert_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Upsert*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Upsert(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">Upsert(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Upserts a collection of entities, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Upsert_Google_Cloud_Datastore_V1_Entity___">Upsert</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Key&gt; Upsert(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
@@ -3183,12 +3353,16 @@ use an existing transaction, it still performs all the work in a single Commit o
 number of entities, partition the changes into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Upsert_Google_Cloud_Datastore_V1_Entity___">Upsert</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_UpsertAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.UpsertAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_UpsertAsync_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.UpsertAsync(Google.Cloud.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">UpsertAsync(Entity, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Upserts a single entity, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Upsert_Google_Cloud_Datastore_V1_Entity___">Update</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Key&gt; UpsertAsync(Entity entity, CallSettings callSettings = null)</code></pre>
@@ -3238,12 +3412,16 @@ new key if the entity was inserted and the mutation allocated the key.</p>
               <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_UpsertAsync_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">UpsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_UpsertAsync_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Upsert_Google_Cloud_Datastore_V1_Entity___">Update</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_UpsertAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.UpsertAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_UpsertAsync_Google_Cloud_Datastore_V1_Entity___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.UpsertAsync(Google.Cloud.Datastore.V1.Entity[])">UpsertAsync(Entity[])</h4>
               <div class="markdown level1 summary"><p>Upserts a collection of entities, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Upsert_Google_Cloud_Datastore_V1_Entity___">Update</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;Key&gt;&gt; UpsertAsync(params Entity[] entities)</code></pre>
@@ -3297,12 +3475,16 @@ use an existing transaction, it still performs all the work in a single Commit o
 number of entities, partition the changes into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_UpsertAsync_Google_Cloud_Datastore_V1_Entity____snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Upsert_Google_Cloud_Datastore_V1_Entity___">Update</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_UpsertAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.UpsertAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.UpsertAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">UpsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Upserts a collection of entities, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Upsert_Google_Cloud_Datastore_V1_Entity___">Update</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;Key&gt;&gt; UpsertAsync(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
@@ -3358,6 +3540,11 @@ use an existing transaction, it still performs all the work in a single Commit o
 number of entities, partition the changes into batches. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Upsert_Google_Cloud_Datastore_V1_Entity___">Update</a> for a synchronous example.</p>
+</div>
+              </div>
                         </article>
           </div>
           

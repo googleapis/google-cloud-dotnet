@@ -187,18 +187,7 @@
               <div class="markdown level1 summary"><p>Allocates IDs for the given keys, which is useful for referencing an entity
 before it is inserted.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-DatastoreClient datastoreClient = DatastoreClient.Create();
-// Initialize request argument(s)
-AllocateIdsRequest request = new AllocateIdsRequest
-{
-    ProjectId = &quot;&quot;,
-    Keys = { },
-};
-// Make the request
-AllocateIdsResponse response = datastoreClient.AllocateIds(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual AllocateIdsResponse AllocateIds(AllocateIdsRequest request, CallSettings callSettings = null)</code></pre>
@@ -243,20 +232,26 @@ AllocateIdsResponse response = datastoreClient.AllocateIds(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_AllocateIds_Google_Cloud_Datastore_V1_AllocateIdsRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+AllocateIdsRequest request = new AllocateIdsRequest
+{
+    ProjectId = &quot;&quot;,
+    Keys = { },
+};
+// Make the request
+AllocateIdsResponse response = datastoreClient.AllocateIds(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_AllocateIds_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.AllocateIds*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_AllocateIds_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.AllocateIds(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">AllocateIds(String, IEnumerable&lt;Key&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Allocates IDs for the given keys, which is useful for referencing an entity
 before it is inserted.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreClient client = DatastoreClient.Create();
-KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, &quot;message&quot;);
-AllocateIdsResponse response = client.AllocateIds(projectId,
-    new[] { keyFactory.CreateIncompleteKey(), keyFactory.CreateIncompleteKey() }
-);
-Entity entity1 = new Entity { Key = response.Keys[0], [&quot;text&quot;] = &quot;Text 1&quot; };
-Entity entity2 = new Entity { Key = response.Keys[1], [&quot;text&quot;] = &quot;Text 2&quot; };
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual AllocateIdsResponse AllocateIds(string projectId, IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
@@ -308,23 +303,23 @@ No key may be reserved/read-only.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_AllocateIds_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">DatastoreClient client = DatastoreClient.Create();
+KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, &quot;message&quot;);
+AllocateIdsResponse response = client.AllocateIds(projectId,
+    new[] { keyFactory.CreateIncompleteKey(), keyFactory.CreateIncompleteKey() }
+);
+Entity entity1 = new Entity { Key = response.Keys[0], [&quot;text&quot;] = &quot;Text 1&quot; };
+Entity entity2 = new Entity { Key = response.Keys[1], [&quot;text&quot;] = &quot;Text 2&quot; };
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_AllocateIdsAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.AllocateIdsAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_AllocateIdsAsync_Google_Cloud_Datastore_V1_AllocateIdsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.AllocateIdsAsync(Google.Cloud.Datastore.V1.AllocateIdsRequest,Google.Api.Gax.Grpc.CallSettings)">AllocateIdsAsync(AllocateIdsRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Allocates IDs for the given keys, which is useful for referencing an entity
 before it is inserted.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
-// Initialize request argument(s)
-AllocateIdsRequest request = new AllocateIdsRequest
-{
-    ProjectId = &quot;&quot;,
-    Keys = { },
-};
-// Make the request
-AllocateIdsResponse response = await datastoreClient.AllocateIdsAsync(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;AllocateIdsResponse&gt; AllocateIdsAsync(AllocateIdsRequest request, CallSettings callSettings = null)</code></pre>
@@ -369,20 +364,26 @@ AllocateIdsResponse response = await datastoreClient.AllocateIdsAsync(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_AllocateIdsAsync_Google_Cloud_Datastore_V1_AllocateIdsRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
+// Initialize request argument(s)
+AllocateIdsRequest request = new AllocateIdsRequest
+{
+    ProjectId = &quot;&quot;,
+    Keys = { },
+};
+// Make the request
+AllocateIdsResponse response = await datastoreClient.AllocateIdsAsync(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_AllocateIdsAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.AllocateIdsAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_AllocateIdsAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.AllocateIdsAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">AllocateIdsAsync(String, IEnumerable&lt;Key&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Allocates IDs for the given keys, which is useful for referencing an entity
 before it is inserted.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
-// Initialize request argument(s)
-string projectId = &quot;&quot;;
-IEnumerable&lt;Key&gt; keys = new List&lt;Key&gt;();
-// Make the request
-AllocateIdsResponse response = await datastoreClient.AllocateIdsAsync(projectId, keys);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;AllocateIdsResponse&gt; AllocateIdsAsync(string projectId, IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
@@ -434,13 +435,9 @@ No key may be reserved/read-only.</p>
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Datastore_V1_DatastoreClient_AllocateIdsAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.AllocateIdsAsync*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_AllocateIdsAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Threading_CancellationToken_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.AllocateIdsAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},System.Threading.CancellationToken)">AllocateIdsAsync(String, IEnumerable&lt;Key&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Allocates IDs for the given keys, which is useful for referencing an entity
-before it is inserted.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_AllocateIdsAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
 // Initialize request argument(s)
 string projectId = &quot;&quot;;
@@ -448,6 +445,13 @@ IEnumerable&lt;Key&gt; keys = new List&lt;Key&gt;();
 // Make the request
 AllocateIdsResponse response = await datastoreClient.AllocateIdsAsync(projectId, keys);
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Datastore_V1_DatastoreClient_AllocateIdsAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.AllocateIdsAsync*"></a>
+              <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_AllocateIdsAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Threading_CancellationToken_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.AllocateIdsAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},System.Threading.CancellationToken)">AllocateIdsAsync(String, IEnumerable&lt;Key&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Allocates IDs for the given keys, which is useful for referencing an entity
+before it is inserted.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;AllocateIdsResponse&gt; AllocateIdsAsync(string projectId, IEnumerable&lt;Key&gt; keys, CancellationToken cancellationToken)</code></pre>
@@ -499,21 +503,22 @@ No key may be reserved/read-only.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_AllocateIdsAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+IEnumerable&lt;Key&gt; keys = new List&lt;Key&gt;();
+// Make the request
+AllocateIdsResponse response = await datastoreClient.AllocateIdsAsync(projectId, keys);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_BeginTransaction_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.BeginTransaction*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_BeginTransaction_Google_Cloud_Datastore_V1_BeginTransactionRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.BeginTransaction(Google.Cloud.Datastore.V1.BeginTransactionRequest,Google.Api.Gax.Grpc.CallSettings)">BeginTransaction(BeginTransactionRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Begins a new transaction.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-DatastoreClient datastoreClient = DatastoreClient.Create();
-// Initialize request argument(s)
-BeginTransactionRequest request = new BeginTransactionRequest
-{
-    ProjectId = &quot;&quot;,
-};
-// Make the request
-BeginTransactionResponse response = datastoreClient.BeginTransaction(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual BeginTransactionResponse BeginTransaction(BeginTransactionRequest request, CallSettings callSettings = null)</code></pre>
@@ -558,18 +563,24 @@ BeginTransactionResponse response = datastoreClient.BeginTransaction(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_BeginTransaction_Google_Cloud_Datastore_V1_BeginTransactionRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+BeginTransactionRequest request = new BeginTransactionRequest
+{
+    ProjectId = &quot;&quot;,
+};
+// Make the request
+BeginTransactionResponse response = datastoreClient.BeginTransaction(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_BeginTransaction_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.BeginTransaction*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_BeginTransaction_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.BeginTransaction(System.String,Google.Api.Gax.Grpc.CallSettings)">BeginTransaction(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Begins a new transaction.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-DatastoreClient datastoreClient = DatastoreClient.Create();
-// Initialize request argument(s)
-string projectId = &quot;&quot;;
-// Make the request
-BeginTransactionResponse response = datastoreClient.BeginTransaction(projectId);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual BeginTransactionResponse BeginTransaction(string projectId, CallSettings callSettings = null)</code></pre>
@@ -614,21 +625,21 @@ BeginTransactionResponse response = datastoreClient.BeginTransaction(projectId);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_BeginTransaction_System_String_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+// Make the request
+BeginTransactionResponse response = datastoreClient.BeginTransaction(projectId);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_BeginTransactionAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.BeginTransactionAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_BeginTransactionAsync_Google_Cloud_Datastore_V1_BeginTransactionRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.BeginTransactionAsync(Google.Cloud.Datastore.V1.BeginTransactionRequest,Google.Api.Gax.Grpc.CallSettings)">BeginTransactionAsync(BeginTransactionRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Begins a new transaction.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
-// Initialize request argument(s)
-BeginTransactionRequest request = new BeginTransactionRequest
-{
-    ProjectId = &quot;&quot;,
-};
-// Make the request
-BeginTransactionResponse response = await datastoreClient.BeginTransactionAsync(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;BeginTransactionResponse&gt; BeginTransactionAsync(BeginTransactionRequest request, CallSettings callSettings = null)</code></pre>
@@ -673,18 +684,24 @@ BeginTransactionResponse response = await datastoreClient.BeginTransactionAsync(
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_BeginTransactionAsync_Google_Cloud_Datastore_V1_BeginTransactionRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
+// Initialize request argument(s)
+BeginTransactionRequest request = new BeginTransactionRequest
+{
+    ProjectId = &quot;&quot;,
+};
+// Make the request
+BeginTransactionResponse response = await datastoreClient.BeginTransactionAsync(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_BeginTransactionAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.BeginTransactionAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_BeginTransactionAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.BeginTransactionAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">BeginTransactionAsync(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Begins a new transaction.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
-// Initialize request argument(s)
-string projectId = &quot;&quot;;
-// Make the request
-BeginTransactionResponse response = await datastoreClient.BeginTransactionAsync(projectId);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;BeginTransactionResponse&gt; BeginTransactionAsync(string projectId, CallSettings callSettings = null)</code></pre>
@@ -729,18 +746,21 @@ BeginTransactionResponse response = await datastoreClient.BeginTransactionAsync(
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Datastore_V1_DatastoreClient_BeginTransactionAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.BeginTransactionAsync*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_BeginTransactionAsync_System_String_System_Threading_CancellationToken_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.BeginTransactionAsync(System.String,System.Threading.CancellationToken)">BeginTransactionAsync(String, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Begins a new transaction.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_BeginTransactionAsync_System_String_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
 // Initialize request argument(s)
 string projectId = &quot;&quot;;
 // Make the request
 BeginTransactionResponse response = await datastoreClient.BeginTransactionAsync(projectId);
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Datastore_V1_DatastoreClient_BeginTransactionAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.BeginTransactionAsync*"></a>
+              <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_BeginTransactionAsync_System_String_System_Threading_CancellationToken_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.BeginTransactionAsync(System.String,System.Threading.CancellationToken)">BeginTransactionAsync(String, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Begins a new transaction.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;BeginTransactionResponse&gt; BeginTransactionAsync(string projectId, CancellationToken cancellationToken)</code></pre>
@@ -785,24 +805,22 @@ BeginTransactionResponse response = await datastoreClient.BeginTransactionAsync(
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_BeginTransactionAsync_System_String_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+// Make the request
+BeginTransactionResponse response = await datastoreClient.BeginTransactionAsync(projectId);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_Commit_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.Commit*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_Commit_Google_Cloud_Datastore_V1_CommitRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.Commit(Google.Cloud.Datastore.V1.CommitRequest,Google.Api.Gax.Grpc.CallSettings)">Commit(CommitRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
 entities.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-DatastoreClient datastoreClient = DatastoreClient.Create();
-// Initialize request argument(s)
-CommitRequest request = new CommitRequest
-{
-    ProjectId = &quot;&quot;,
-    Mode = CommitRequest.Types.Mode.Unspecified,
-    Mutations = { },
-};
-// Make the request
-CommitResponse response = datastoreClient.Commit(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual CommitResponse Commit(CommitRequest request, CallSettings callSettings = null)</code></pre>
@@ -847,22 +865,27 @@ CommitResponse response = datastoreClient.Commit(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_Commit_Google_Cloud_Datastore_V1_CommitRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+CommitRequest request = new CommitRequest
+{
+    ProjectId = &quot;&quot;,
+    Mode = CommitRequest.Types.Mode.Unspecified,
+    Mutations = { },
+};
+// Make the request
+CommitResponse response = datastoreClient.Commit(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_Commit_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.Commit*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_Commit_System_String_Google_Cloud_Datastore_V1_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Mutation__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.Commit(System.String,Google.Cloud.Datastore.V1.CommitRequest.Types.Mode,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Mutation},Google.Api.Gax.Grpc.CallSettings)">Commit(String, CommitRequest.Types.Mode, ByteString, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
 entities.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-DatastoreClient datastoreClient = DatastoreClient.Create();
-// Initialize request argument(s)
-string projectId = &quot;&quot;;
-CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
-ByteString transaction = ByteString.CopyFromUtf8(&quot;&quot;);
-IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
-// Make the request
-CommitResponse response = datastoreClient.Commit(projectId, mode, transaction, mutations);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual CommitResponse Commit(string projectId, CommitRequest.Types.Mode mode, ByteString transaction, IEnumerable&lt;Mutation&gt; mutations, CallSettings callSettings = null)</code></pre>
@@ -938,21 +961,25 @@ entity.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_Commit_System_String_Google_Cloud_Datastore_V1_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Mutation__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
+ByteString transaction = ByteString.CopyFromUtf8(&quot;&quot;);
+IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
+// Make the request
+CommitResponse response = datastoreClient.Commit(projectId, mode, transaction, mutations);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_Commit_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.Commit*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_Commit_System_String_Google_Cloud_Datastore_V1_CommitRequest_Types_Mode_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Mutation__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.Commit(System.String,Google.Cloud.Datastore.V1.CommitRequest.Types.Mode,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Mutation},Google.Api.Gax.Grpc.CallSettings)">Commit(String, CommitRequest.Types.Mode, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
 entities.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-DatastoreClient datastoreClient = DatastoreClient.Create();
-// Initialize request argument(s)
-string projectId = &quot;&quot;;
-CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
-IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
-// Make the request
-CommitResponse response = datastoreClient.Commit(projectId, mode, mutations);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual CommitResponse Commit(string projectId, CommitRequest.Types.Mode mode, IEnumerable&lt;Mutation&gt; mutations, CallSettings callSettings = null)</code></pre>
@@ -1020,24 +1047,24 @@ entity.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_Commit_System_String_Google_Cloud_Datastore_V1_CommitRequest_Types_Mode_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Mutation__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
+IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
+// Make the request
+CommitResponse response = datastoreClient.Commit(projectId, mode, mutations);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_CommitAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.CommitAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_CommitAsync_Google_Cloud_Datastore_V1_CommitRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.CommitAsync(Google.Cloud.Datastore.V1.CommitRequest,Google.Api.Gax.Grpc.CallSettings)">CommitAsync(CommitRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
 entities.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
-// Initialize request argument(s)
-CommitRequest request = new CommitRequest
-{
-    ProjectId = &quot;&quot;,
-    Mode = CommitRequest.Types.Mode.Unspecified,
-    Mutations = { },
-};
-// Make the request
-CommitResponse response = await datastoreClient.CommitAsync(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;CommitResponse&gt; CommitAsync(CommitRequest request, CallSettings callSettings = null)</code></pre>
@@ -1082,22 +1109,27 @@ CommitResponse response = await datastoreClient.CommitAsync(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_CommitAsync_Google_Cloud_Datastore_V1_CommitRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
+// Initialize request argument(s)
+CommitRequest request = new CommitRequest
+{
+    ProjectId = &quot;&quot;,
+    Mode = CommitRequest.Types.Mode.Unspecified,
+    Mutations = { },
+};
+// Make the request
+CommitResponse response = await datastoreClient.CommitAsync(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_CommitAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.CommitAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_CommitAsync_System_String_Google_Cloud_Datastore_V1_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Mutation__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.CommitAsync(System.String,Google.Cloud.Datastore.V1.CommitRequest.Types.Mode,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Mutation},Google.Api.Gax.Grpc.CallSettings)">CommitAsync(String, CommitRequest.Types.Mode, ByteString, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
 entities.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
-// Initialize request argument(s)
-string projectId = &quot;&quot;;
-CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
-ByteString transaction = ByteString.CopyFromUtf8(&quot;&quot;);
-IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
-// Make the request
-CommitResponse response = await datastoreClient.CommitAsync(projectId, mode, transaction, mutations);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;CommitResponse&gt; CommitAsync(string projectId, CommitRequest.Types.Mode mode, ByteString transaction, IEnumerable&lt;Mutation&gt; mutations, CallSettings callSettings = null)</code></pre>
@@ -1173,13 +1205,9 @@ entity.</p>
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Datastore_V1_DatastoreClient_CommitAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.CommitAsync*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_CommitAsync_System_String_Google_Cloud_Datastore_V1_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Mutation__System_Threading_CancellationToken_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.CommitAsync(System.String,Google.Cloud.Datastore.V1.CommitRequest.Types.Mode,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Mutation},System.Threading.CancellationToken)">CommitAsync(String, CommitRequest.Types.Mode, ByteString, IEnumerable&lt;Mutation&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
-entities.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_CommitAsync_System_String_Google_Cloud_Datastore_V1_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Mutation__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
 // Initialize request argument(s)
 string projectId = &quot;&quot;;
@@ -1189,6 +1217,13 @@ IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
 // Make the request
 CommitResponse response = await datastoreClient.CommitAsync(projectId, mode, transaction, mutations);
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Datastore_V1_DatastoreClient_CommitAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.CommitAsync*"></a>
+              <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_CommitAsync_System_String_Google_Cloud_Datastore_V1_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Mutation__System_Threading_CancellationToken_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.CommitAsync(System.String,Google.Cloud.Datastore.V1.CommitRequest.Types.Mode,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Mutation},System.Threading.CancellationToken)">CommitAsync(String, CommitRequest.Types.Mode, ByteString, IEnumerable&lt;Mutation&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
+entities.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;CommitResponse&gt; CommitAsync(string projectId, CommitRequest.Types.Mode mode, ByteString transaction, IEnumerable&lt;Mutation&gt; mutations, CancellationToken cancellationToken)</code></pre>
@@ -1264,21 +1299,25 @@ entity.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_CommitAsync_System_String_Google_Cloud_Datastore_V1_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Mutation__System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
+ByteString transaction = ByteString.CopyFromUtf8(&quot;&quot;);
+IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
+// Make the request
+CommitResponse response = await datastoreClient.CommitAsync(projectId, mode, transaction, mutations);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_CommitAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.CommitAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_CommitAsync_System_String_Google_Cloud_Datastore_V1_CommitRequest_Types_Mode_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Mutation__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.CommitAsync(System.String,Google.Cloud.Datastore.V1.CommitRequest.Types.Mode,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Mutation},Google.Api.Gax.Grpc.CallSettings)">CommitAsync(String, CommitRequest.Types.Mode, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
 entities.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
-// Initialize request argument(s)
-string projectId = &quot;&quot;;
-CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
-IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
-// Make the request
-CommitResponse response = await datastoreClient.CommitAsync(projectId, mode, mutations);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;CommitResponse&gt; CommitAsync(string projectId, CommitRequest.Types.Mode mode, IEnumerable&lt;Mutation&gt; mutations, CallSettings callSettings = null)</code></pre>
@@ -1346,13 +1385,9 @@ entity.</p>
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Datastore_V1_DatastoreClient_CommitAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.CommitAsync*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_CommitAsync_System_String_Google_Cloud_Datastore_V1_CommitRequest_Types_Mode_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Mutation__System_Threading_CancellationToken_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.CommitAsync(System.String,Google.Cloud.Datastore.V1.CommitRequest.Types.Mode,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Mutation},System.Threading.CancellationToken)">CommitAsync(String, CommitRequest.Types.Mode, IEnumerable&lt;Mutation&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
-entities.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_CommitAsync_System_String_Google_Cloud_Datastore_V1_CommitRequest_Types_Mode_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Mutation__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
 // Initialize request argument(s)
 string projectId = &quot;&quot;;
@@ -1361,6 +1396,13 @@ IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
 // Make the request
 CommitResponse response = await datastoreClient.CommitAsync(projectId, mode, mutations);
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Datastore_V1_DatastoreClient_CommitAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.CommitAsync*"></a>
+              <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_CommitAsync_System_String_Google_Cloud_Datastore_V1_CommitRequest_Types_Mode_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Mutation__System_Threading_CancellationToken_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.CommitAsync(System.String,Google.Cloud.Datastore.V1.CommitRequest.Types.Mode,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Mutation},System.Threading.CancellationToken)">CommitAsync(String, CommitRequest.Types.Mode, IEnumerable&lt;Mutation&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
+entities.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;CommitResponse&gt; CommitAsync(string projectId, CommitRequest.Types.Mode mode, IEnumerable&lt;Mutation&gt; mutations, CancellationToken cancellationToken)</code></pre>
@@ -1428,6 +1470,18 @@ entity.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_CommitAsync_System_String_Google_Cloud_Datastore_V1_CommitRequest_Types_Mode_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Mutation__System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
+IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
+// Make the request
+CommitResponse response = await datastoreClient.CommitAsync(projectId, mode, mutations);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_Create_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.Create*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Datastore_V1_DatastoreSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.Create(Google.Api.Gax.Grpc.ServiceEndpoint,Google.Cloud.Datastore.V1.DatastoreSettings)">Create(ServiceEndpoint, DatastoreSettings)</h4>
               <div class="markdown level1 summary"><p>Synchronously creates a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html">DatastoreClient</a>, applying defaults for all unspecified settings,
@@ -1583,18 +1637,7 @@ necessary.</p>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_Lookup_Google_Cloud_Datastore_V1_LookupRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.Lookup(Google.Cloud.Datastore.V1.LookupRequest,Google.Api.Gax.Grpc.CallSettings)">Lookup(LookupRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Looks up entities by key.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-DatastoreClient datastoreClient = DatastoreClient.Create();
-// Initialize request argument(s)
-LookupRequest request = new LookupRequest
-{
-    ProjectId = &quot;&quot;,
-    Keys = { },
-};
-// Make the request
-LookupResponse response = datastoreClient.Lookup(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual LookupResponse Lookup(LookupRequest request, CallSettings callSettings = null)</code></pre>
@@ -1639,24 +1682,25 @@ LookupResponse response = datastoreClient.Lookup(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_Lookup_Google_Cloud_Datastore_V1_LookupRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+LookupRequest request = new LookupRequest
+{
+    ProjectId = &quot;&quot;,
+    Keys = { },
+};
+// Make the request
+LookupResponse response = datastoreClient.Lookup(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_Lookup_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.Lookup*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_Lookup_System_String_Google_Cloud_Datastore_V1_ReadOptions_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.Lookup(System.String,Google.Cloud.Datastore.V1.ReadOptions,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">Lookup(String, ReadOptions, IEnumerable&lt;Key&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Looks up entities by key.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, &quot;book&quot;);
-Key key1 = keyFactory.CreateKey(&quot;pride_and_prejudice&quot;);
-Key key2 = keyFactory.CreateKey(&quot;not_present&quot;);
-
-DatastoreClient client = DatastoreClient.Create();
-LookupResponse response = client.Lookup(
-    projectId,
-    new ReadOptions { ReadConsistency = ReadConsistency.Strong },
-    new[] { key1, key2 });
-Console.WriteLine($&quot;Found: {response.Found.Count}&quot;);
-Console.WriteLine($&quot;Deferred: {response.Deferred.Count}&quot;);
-Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual LookupResponse Lookup(string projectId, ReadOptions readOptions, IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
@@ -1713,22 +1757,27 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_Lookup_System_String_Google_Cloud_Datastore_V1_ReadOptions_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, &quot;book&quot;);
+Key key1 = keyFactory.CreateKey(&quot;pride_and_prejudice&quot;);
+Key key2 = keyFactory.CreateKey(&quot;not_present&quot;);
+
+DatastoreClient client = DatastoreClient.Create();
+LookupResponse response = client.Lookup(
+    projectId,
+    new ReadOptions { ReadConsistency = ReadConsistency.Strong },
+    new[] { key1, key2 });
+Console.WriteLine($&quot;Found: {response.Found.Count}&quot;);
+Console.WriteLine($&quot;Deferred: {response.Deferred.Count}&quot;);
+Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_LookupAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.LookupAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_LookupAsync_Google_Cloud_Datastore_V1_LookupRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.LookupAsync(Google.Cloud.Datastore.V1.LookupRequest,Google.Api.Gax.Grpc.CallSettings)">LookupAsync(LookupRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Looks up entities by key.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
-// Initialize request argument(s)
-LookupRequest request = new LookupRequest
-{
-    ProjectId = &quot;&quot;,
-    Keys = { },
-};
-// Make the request
-LookupResponse response = await datastoreClient.LookupAsync(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;LookupResponse&gt; LookupAsync(LookupRequest request, CallSettings callSettings = null)</code></pre>
@@ -1773,20 +1822,25 @@ LookupResponse response = await datastoreClient.LookupAsync(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_LookupAsync_Google_Cloud_Datastore_V1_LookupRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
+// Initialize request argument(s)
+LookupRequest request = new LookupRequest
+{
+    ProjectId = &quot;&quot;,
+    Keys = { },
+};
+// Make the request
+LookupResponse response = await datastoreClient.LookupAsync(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_LookupAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.LookupAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_LookupAsync_System_String_Google_Cloud_Datastore_V1_ReadOptions_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.LookupAsync(System.String,Google.Cloud.Datastore.V1.ReadOptions,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">LookupAsync(String, ReadOptions, IEnumerable&lt;Key&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Looks up entities by key.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
-// Initialize request argument(s)
-string projectId = &quot;&quot;;
-ReadOptions readOptions = new ReadOptions();
-IEnumerable&lt;Key&gt; keys = new List&lt;Key&gt;();
-// Make the request
-LookupResponse response = await datastoreClient.LookupAsync(projectId, readOptions, keys);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;LookupResponse&gt; LookupAsync(string projectId, ReadOptions readOptions, IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
@@ -1843,12 +1897,9 @@ LookupResponse response = await datastoreClient.LookupAsync(projectId, readOptio
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Datastore_V1_DatastoreClient_LookupAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.LookupAsync*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_LookupAsync_System_String_Google_Cloud_Datastore_V1_ReadOptions_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Threading_CancellationToken_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.LookupAsync(System.String,Google.Cloud.Datastore.V1.ReadOptions,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},System.Threading.CancellationToken)">LookupAsync(String, ReadOptions, IEnumerable&lt;Key&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Looks up entities by key.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_LookupAsync_System_String_Google_Cloud_Datastore_V1_ReadOptions_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
 // Initialize request argument(s)
 string projectId = &quot;&quot;;
@@ -1857,6 +1908,12 @@ IEnumerable&lt;Key&gt; keys = new List&lt;Key&gt;();
 // Make the request
 LookupResponse response = await datastoreClient.LookupAsync(projectId, readOptions, keys);
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Datastore_V1_DatastoreClient_LookupAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.LookupAsync*"></a>
+              <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_LookupAsync_System_String_Google_Cloud_Datastore_V1_ReadOptions_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Threading_CancellationToken_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.LookupAsync(System.String,Google.Cloud.Datastore.V1.ReadOptions,System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},System.Threading.CancellationToken)">LookupAsync(String, ReadOptions, IEnumerable&lt;Key&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Looks up entities by key.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;LookupResponse&gt; LookupAsync(string projectId, ReadOptions readOptions, IEnumerable&lt;Key&gt; keys, CancellationToken cancellationToken)</code></pre>
@@ -1913,22 +1970,23 @@ LookupResponse response = await datastoreClient.LookupAsync(projectId, readOptio
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_LookupAsync_System_String_Google_Cloud_Datastore_V1_ReadOptions_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+ReadOptions readOptions = new ReadOptions();
+IEnumerable&lt;Key&gt; keys = new List&lt;Key&gt;();
+// Make the request
+LookupResponse response = await datastoreClient.LookupAsync(projectId, readOptions, keys);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_Rollback_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.Rollback*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_Rollback_Google_Cloud_Datastore_V1_RollbackRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.Rollback(Google.Cloud.Datastore.V1.RollbackRequest,Google.Api.Gax.Grpc.CallSettings)">Rollback(RollbackRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Rolls back a transaction.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-DatastoreClient datastoreClient = DatastoreClient.Create();
-// Initialize request argument(s)
-RollbackRequest request = new RollbackRequest
-{
-    ProjectId = &quot;&quot;,
-    Transaction = ByteString.CopyFromUtf8(&quot;&quot;),
-};
-// Make the request
-RollbackResponse response = datastoreClient.Rollback(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual RollbackResponse Rollback(RollbackRequest request, CallSettings callSettings = null)</code></pre>
@@ -1973,19 +2031,25 @@ RollbackResponse response = datastoreClient.Rollback(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_Rollback_Google_Cloud_Datastore_V1_RollbackRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+RollbackRequest request = new RollbackRequest
+{
+    ProjectId = &quot;&quot;,
+    Transaction = ByteString.CopyFromUtf8(&quot;&quot;),
+};
+// Make the request
+RollbackResponse response = datastoreClient.Rollback(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_Rollback_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.Rollback*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_Rollback_System_String_Google_Protobuf_ByteString_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.Rollback(System.String,Google.Protobuf.ByteString,Google.Api.Gax.Grpc.CallSettings)">Rollback(String, ByteString, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Rolls back a transaction.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-DatastoreClient datastoreClient = DatastoreClient.Create();
-// Initialize request argument(s)
-string projectId = &quot;&quot;;
-ByteString transaction = ByteString.CopyFromUtf8(&quot;&quot;);
-// Make the request
-RollbackResponse response = datastoreClient.Rollback(projectId, transaction);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual RollbackResponse Rollback(string projectId, ByteString transaction, CallSettings callSettings = null)</code></pre>
@@ -2037,22 +2101,22 @@ RollbackResponse response = datastoreClient.Rollback(projectId, transaction);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_Rollback_System_String_Google_Protobuf_ByteString_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+ByteString transaction = ByteString.CopyFromUtf8(&quot;&quot;);
+// Make the request
+RollbackResponse response = datastoreClient.Rollback(projectId, transaction);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_RollbackAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.RollbackAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_RollbackAsync_Google_Cloud_Datastore_V1_RollbackRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.RollbackAsync(Google.Cloud.Datastore.V1.RollbackRequest,Google.Api.Gax.Grpc.CallSettings)">RollbackAsync(RollbackRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Rolls back a transaction.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
-// Initialize request argument(s)
-RollbackRequest request = new RollbackRequest
-{
-    ProjectId = &quot;&quot;,
-    Transaction = ByteString.CopyFromUtf8(&quot;&quot;),
-};
-// Make the request
-RollbackResponse response = await datastoreClient.RollbackAsync(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;RollbackResponse&gt; RollbackAsync(RollbackRequest request, CallSettings callSettings = null)</code></pre>
@@ -2097,19 +2161,25 @@ RollbackResponse response = await datastoreClient.RollbackAsync(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_RollbackAsync_Google_Cloud_Datastore_V1_RollbackRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
+// Initialize request argument(s)
+RollbackRequest request = new RollbackRequest
+{
+    ProjectId = &quot;&quot;,
+    Transaction = ByteString.CopyFromUtf8(&quot;&quot;),
+};
+// Make the request
+RollbackResponse response = await datastoreClient.RollbackAsync(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_RollbackAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.RollbackAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_RollbackAsync_System_String_Google_Protobuf_ByteString_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.RollbackAsync(System.String,Google.Protobuf.ByteString,Google.Api.Gax.Grpc.CallSettings)">RollbackAsync(String, ByteString, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Rolls back a transaction.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
-// Initialize request argument(s)
-string projectId = &quot;&quot;;
-ByteString transaction = ByteString.CopyFromUtf8(&quot;&quot;);
-// Make the request
-RollbackResponse response = await datastoreClient.RollbackAsync(projectId, transaction);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;RollbackResponse&gt; RollbackAsync(string projectId, ByteString transaction, CallSettings callSettings = null)</code></pre>
@@ -2161,12 +2231,9 @@ RollbackResponse response = await datastoreClient.RollbackAsync(projectId, trans
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Datastore_V1_DatastoreClient_RollbackAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.RollbackAsync*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_RollbackAsync_System_String_Google_Protobuf_ByteString_System_Threading_CancellationToken_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.RollbackAsync(System.String,Google.Protobuf.ByteString,System.Threading.CancellationToken)">RollbackAsync(String, ByteString, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Rolls back a transaction.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_RollbackAsync_System_String_Google_Protobuf_ByteString_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
 // Initialize request argument(s)
 string projectId = &quot;&quot;;
@@ -2174,6 +2241,12 @@ ByteString transaction = ByteString.CopyFromUtf8(&quot;&quot;);
 // Make the request
 RollbackResponse response = await datastoreClient.RollbackAsync(projectId, transaction);
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Datastore_V1_DatastoreClient_RollbackAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.RollbackAsync*"></a>
+              <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_RollbackAsync_System_String_Google_Protobuf_ByteString_System_Threading_CancellationToken_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.RollbackAsync(System.String,Google.Protobuf.ByteString,System.Threading.CancellationToken)">RollbackAsync(String, ByteString, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Rolls back a transaction.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;RollbackResponse&gt; RollbackAsync(string projectId, ByteString transaction, CancellationToken cancellationToken)</code></pre>
@@ -2225,41 +2298,22 @@ RollbackResponse response = await datastoreClient.RollbackAsync(projectId, trans
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_RollbackAsync_System_String_Google_Protobuf_ByteString_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+ByteString transaction = ByteString.CopyFromUtf8(&quot;&quot;);
+// Make the request
+RollbackResponse response = await datastoreClient.RollbackAsync(projectId, transaction);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_RunQuery_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.RunQuery*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_RunQuery_Google_Cloud_Datastore_V1_RunQueryRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.RunQuery(Google.Cloud.Datastore.V1.RunQueryRequest,Google.Api.Gax.Grpc.CallSettings)">RunQuery(RunQueryRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Queries for entities.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreClient client = DatastoreClient.Create();
-
-RunQueryRequest request = new RunQueryRequest
-{
-    ProjectId = projectId,
-    PartitionId = partitionId,
-    ReadOptions = new ReadOptions { ReadConsistency = ReadConsistency.Eventual },
-};
-// Structured query
-request.Query = new Query(&quot;book&quot;)
-{
-    Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;)
-};
-RunQueryResponse response = client.RunQuery(request);
-foreach (EntityResult result in response.Batch.EntityResults)
-{
-    Console.WriteLine(result.Entity);
-}
-
-// Equivalent GQL query
-request.GqlQuery = new GqlQuery
-{
-    QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
-    NamedBindings = { { &quot;author&quot;, &quot;Jane Austen&quot; } },
-};
-foreach (EntityResult result in response.Batch.EntityResults)
-{
-    Console.WriteLine(result.Entity);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual RunQueryResponse RunQuery(RunQueryRequest request, CallSettings callSettings = null)</code></pre>
@@ -2304,22 +2358,44 @@ foreach (EntityResult result in response.Batch.EntityResults)
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_RunQuery_Google_Cloud_Datastore_V1_RunQueryRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">DatastoreClient client = DatastoreClient.Create();
+
+RunQueryRequest request = new RunQueryRequest
+{
+    ProjectId = projectId,
+    PartitionId = partitionId,
+    ReadOptions = new ReadOptions { ReadConsistency = ReadConsistency.Eventual },
+};
+// Structured query
+request.Query = new Query(&quot;book&quot;)
+{
+    Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;)
+};
+RunQueryResponse response = client.RunQuery(request);
+foreach (EntityResult result in response.Batch.EntityResults)
+{
+    Console.WriteLine(result.Entity);
+}
+
+// Equivalent GQL query
+request.GqlQuery = new GqlQuery
+{
+    QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
+    NamedBindings = { { &quot;author&quot;, &quot;Jane Austen&quot; } },
+};
+foreach (EntityResult result in response.Batch.EntityResults)
+{
+    Console.WriteLine(result.Entity);
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_RunQueryAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.RunQueryAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_RunQueryAsync_Google_Cloud_Datastore_V1_RunQueryRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.RunQueryAsync(Google.Cloud.Datastore.V1.RunQueryRequest,Google.Api.Gax.Grpc.CallSettings)">RunQueryAsync(RunQueryRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Queries for entities.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
-// Initialize request argument(s)
-RunQueryRequest request = new RunQueryRequest
-{
-    ProjectId = &quot;&quot;,
-    PartitionId = new PartitionId(),
-};
-// Make the request
-RunQueryResponse response = await datastoreClient.RunQueryAsync(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;RunQueryResponse&gt; RunQueryAsync(RunQueryRequest request, CallSettings callSettings = null)</code></pre>
@@ -2364,6 +2440,20 @@ RunQueryResponse response = await datastoreClient.RunQueryAsync(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreClient_RunQueryAsync_Google_Cloud_Datastore_V1_RunQueryRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
+// Initialize request argument(s)
+RunQueryRequest request = new RunQueryRequest
+{
+    ProjectId = &quot;&quot;,
+    PartitionId = new PartitionId(),
+};
+// Make the request
+RunQueryResponse response = await datastoreClient.RunQueryAsync(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_ShutdownDefaultChannelsAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.ShutdownDefaultChannelsAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_ShutdownDefaultChannelsAsync" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.ShutdownDefaultChannelsAsync">ShutdownDefaultChannelsAsync()</h4>
               <div class="markdown level1 summary"><p>Shuts down any channels automatically created by <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html#Google_Cloud_Datastore_V1_DatastoreClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Datastore_V1_DatastoreSettings_">Create(ServiceEndpoint, DatastoreSettings)</a>

@@ -82,7 +82,13 @@ installed, run the following command in a Google Cloud SDK Shell:</p>
     string projectId = &quot;[Google Cloud Platform project ID]&quot;;
     string serviceName = &quot;[Name of service]&quot;;
     string version = &quot;[Version of service]&quot;;
-    services.AddGoogleExceptionLogging(projectId, serviceName, version);
+
+    services.AddGoogleExceptionLogging(options =&gt;
+    {
+        options.ProjectId = projectId;
+        options.ServiceName = serviceName;
+        options.Version = version;
+    });
 }
 
 public void Configure(IApplicationBuilder app)
@@ -122,7 +128,10 @@ public void ReadFile(IExceptionLogger exceptionLogger)
 <pre><code class="lang-cs">public void ConfigureServices(IServiceCollection services)
 {
     string projectId = &quot;[Google Cloud Platform project ID]&quot;;
-    services.AddGoogleTrace(projectId);
+    services.AddGoogleTrace(options =&gt;
+    {
+        options.ProjectId = projectId;
+    });
 }
 
 public void Configure(IApplicationBuilder app)

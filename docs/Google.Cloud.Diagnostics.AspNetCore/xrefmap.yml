@@ -13,12 +13,15 @@ references:
   commentId: T:Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension
   fullName: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension
   nameWithType: CloudTraceExtension
-- uid: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(IServiceCollection,System.String,Google.Cloud.Diagnostics.Common.TraceConfiguration,TraceServiceClient,Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)
-  name: AddGoogleTrace(IServiceCollection, String, TraceConfiguration, TraceServiceClient, TraceDecisionPredicate)
-  href: api/Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_IServiceCollection_System_String_Google_Cloud_Diagnostics_Common_TraceConfiguration_TraceServiceClient_Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_
-  commentId: M:Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(IServiceCollection,System.String,Google.Cloud.Diagnostics.Common.TraceConfiguration,TraceServiceClient,Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)
-  fullName: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(IServiceCollection, System.String, Google.Cloud.Diagnostics.Common.TraceConfiguration, TraceServiceClient, Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)
-  nameWithType: CloudTraceExtension.AddGoogleTrace(IServiceCollection, String, TraceConfiguration, TraceServiceClient, TraceDecisionPredicate)
+- uid: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(IServiceCollection,System.Action{Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions})
+  name: AddGoogleTrace(IServiceCollection, Action<TraceServiceOptions>)
+  href: api/Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_IServiceCollection_System_Action_Google_Cloud_Diagnostics_AspNetCore_TraceServiceOptions__
+  commentId: M:Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(IServiceCollection,System.Action{Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions})
+  name.vb: AddGoogleTrace(IServiceCollection, Action(Of TraceServiceOptions))
+  fullName: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(IServiceCollection, System.Action<Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions>)
+  fullName.vb: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(IServiceCollection, System.Action(Of Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions))
+  nameWithType: CloudTraceExtension.AddGoogleTrace(IServiceCollection, Action<TraceServiceOptions>)
+  nameWithType.vb: CloudTraceExtension.AddGoogleTrace(IServiceCollection, Action(Of TraceServiceOptions))
 - uid: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace*
   name: AddGoogleTrace
   href: api/Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_
@@ -43,18 +46,15 @@ references:
   commentId: T:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension
   fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension
   nameWithType: ErrorReportingExceptionLoggerExtension
-- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection,System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)
-  name: AddGoogleExceptionLogging(IServiceCollection, String, String, ErrorReportingOptions)
-  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension_AddGoogleExceptionLogging_IServiceCollection_System_String_System_String_Google_Cloud_Diagnostics_Common_ErrorReportingOptions_
-  commentId: M:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection,System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)
-  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection, System.String, System.String, Google.Cloud.Diagnostics.Common.ErrorReportingOptions)
-  nameWithType: ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection, String, String, ErrorReportingOptions)
-- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection,System.String,System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)
-  name: AddGoogleExceptionLogging(IServiceCollection, String, String, String, ErrorReportingOptions)
-  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension_AddGoogleExceptionLogging_IServiceCollection_System_String_System_String_System_String_Google_Cloud_Diagnostics_Common_ErrorReportingOptions_
-  commentId: M:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection,System.String,System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)
-  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection, System.String, System.String, System.String, Google.Cloud.Diagnostics.Common.ErrorReportingOptions)
-  nameWithType: ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection, String, String, String, ErrorReportingOptions)
+- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection,System.Action{Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions})
+  name: AddGoogleExceptionLogging(IServiceCollection, Action<ErrorReportingServiceOptions>)
+  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension_AddGoogleExceptionLogging_IServiceCollection_System_Action_Google_Cloud_Diagnostics_AspNetCore_ErrorReportingServiceOptions__
+  commentId: M:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection,System.Action{Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions})
+  name.vb: AddGoogleExceptionLogging(IServiceCollection, Action(Of ErrorReportingServiceOptions))
+  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection, System.Action<Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions>)
+  fullName.vb: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection, System.Action(Of Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions))
+  nameWithType: ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection, Action<ErrorReportingServiceOptions>)
+  nameWithType.vb: ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection, Action(Of ErrorReportingServiceOptions))
 - uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging*
   name: AddGoogleExceptionLogging
   href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension_AddGoogleExceptionLogging_
@@ -103,6 +103,60 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.Invoke
   fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.Invoke
   nameWithType: ErrorReportingExceptionLoggerMiddleware.Invoke
+- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions
+  name: ErrorReportingServiceOptions
+  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.html
+  commentId: T:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions
+  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions
+  nameWithType: ErrorReportingServiceOptions
+- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.Options
+  name: Options
+  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingServiceOptions_Options
+  commentId: P:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.Options
+  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.Options
+  nameWithType: ErrorReportingServiceOptions.Options
+- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.Options*
+  name: Options
+  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingServiceOptions_Options_
+  commentId: Overload:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.Options
+  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.Options
+  nameWithType: ErrorReportingServiceOptions.Options
+- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.ProjectId
+  name: ProjectId
+  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingServiceOptions_ProjectId
+  commentId: P:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.ProjectId
+  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.ProjectId
+  nameWithType: ErrorReportingServiceOptions.ProjectId
+- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.ProjectId*
+  name: ProjectId
+  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingServiceOptions_ProjectId_
+  commentId: Overload:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.ProjectId
+  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.ProjectId
+  nameWithType: ErrorReportingServiceOptions.ProjectId
+- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.ServiceName
+  name: ServiceName
+  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingServiceOptions_ServiceName
+  commentId: P:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.ServiceName
+  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.ServiceName
+  nameWithType: ErrorReportingServiceOptions.ServiceName
+- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.ServiceName*
+  name: ServiceName
+  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingServiceOptions_ServiceName_
+  commentId: Overload:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.ServiceName
+  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.ServiceName
+  nameWithType: ErrorReportingServiceOptions.ServiceName
+- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.Version
+  name: Version
+  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingServiceOptions_Version
+  commentId: P:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.Version
+  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.Version
+  nameWithType: ErrorReportingServiceOptions.Version
+- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.Version*
+  name: Version
+  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingServiceOptions_Version_
+  commentId: Overload:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.Version
+  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.Version
+  nameWithType: ErrorReportingServiceOptions.Version
 - uid: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger
   name: GoogleLogger
   href: api/Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.html
@@ -274,6 +328,60 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.MonitoredResource
   fullName: Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.MonitoredResource
   nameWithType: LoggerOptions.MonitoredResource
+- uid: Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions
+  name: TraceServiceOptions
+  href: api/Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.html
+  commentId: T:Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions
+  fullName: Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions
+  nameWithType: TraceServiceOptions
+- uid: Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.Client
+  name: Client
+  href: api/Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.html#Google_Cloud_Diagnostics_AspNetCore_TraceServiceOptions_Client
+  commentId: P:Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.Client
+  fullName: Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.Client
+  nameWithType: TraceServiceOptions.Client
+- uid: Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.Client*
+  name: Client
+  href: api/Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.html#Google_Cloud_Diagnostics_AspNetCore_TraceServiceOptions_Client_
+  commentId: Overload:Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.Client
+  fullName: Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.Client
+  nameWithType: TraceServiceOptions.Client
+- uid: Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.Options
+  name: Options
+  href: api/Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.html#Google_Cloud_Diagnostics_AspNetCore_TraceServiceOptions_Options
+  commentId: P:Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.Options
+  fullName: Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.Options
+  nameWithType: TraceServiceOptions.Options
+- uid: Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.Options*
+  name: Options
+  href: api/Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.html#Google_Cloud_Diagnostics_AspNetCore_TraceServiceOptions_Options_
+  commentId: Overload:Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.Options
+  fullName: Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.Options
+  nameWithType: TraceServiceOptions.Options
+- uid: Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.ProjectId
+  name: ProjectId
+  href: api/Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.html#Google_Cloud_Diagnostics_AspNetCore_TraceServiceOptions_ProjectId
+  commentId: P:Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.ProjectId
+  fullName: Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.ProjectId
+  nameWithType: TraceServiceOptions.ProjectId
+- uid: Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.ProjectId*
+  name: ProjectId
+  href: api/Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.html#Google_Cloud_Diagnostics_AspNetCore_TraceServiceOptions_ProjectId_
+  commentId: Overload:Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.ProjectId
+  fullName: Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.ProjectId
+  nameWithType: TraceServiceOptions.ProjectId
+- uid: Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.TraceFallbackPredicate
+  name: TraceFallbackPredicate
+  href: api/Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.html#Google_Cloud_Diagnostics_AspNetCore_TraceServiceOptions_TraceFallbackPredicate
+  commentId: P:Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.TraceFallbackPredicate
+  fullName: Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.TraceFallbackPredicate
+  nameWithType: TraceServiceOptions.TraceFallbackPredicate
+- uid: Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.TraceFallbackPredicate*
+  name: TraceFallbackPredicate
+  href: api/Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.html#Google_Cloud_Diagnostics_AspNetCore_TraceServiceOptions_TraceFallbackPredicate_
+  commentId: Overload:Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.TraceFallbackPredicate
+  fullName: Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.TraceFallbackPredicate
+  nameWithType: TraceServiceOptions.TraceFallbackPredicate
 - uid: Google.Cloud.Diagnostics.Common
   name: Google.Cloud.Diagnostics.Common
   href: api/Google.Cloud.Diagnostics.Common.html
@@ -1006,48 +1114,6 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.Common.StartSpanOptions.SpanKind
   fullName: Google.Cloud.Diagnostics.Common.StartSpanOptions.SpanKind
   nameWithType: StartSpanOptions.SpanKind
-- uid: Google.Cloud.Diagnostics.Common.TraceConfiguration
-  name: TraceConfiguration
-  href: api/Google.Cloud.Diagnostics.Common.TraceConfiguration.html
-  commentId: T:Google.Cloud.Diagnostics.Common.TraceConfiguration
-  fullName: Google.Cloud.Diagnostics.Common.TraceConfiguration
-  nameWithType: TraceConfiguration
-- uid: Google.Cloud.Diagnostics.Common.TraceConfiguration.BufferOptions
-  name: BufferOptions
-  href: api/Google.Cloud.Diagnostics.Common.TraceConfiguration.html#Google_Cloud_Diagnostics_Common_TraceConfiguration_BufferOptions
-  commentId: P:Google.Cloud.Diagnostics.Common.TraceConfiguration.BufferOptions
-  fullName: Google.Cloud.Diagnostics.Common.TraceConfiguration.BufferOptions
-  nameWithType: TraceConfiguration.BufferOptions
-- uid: Google.Cloud.Diagnostics.Common.TraceConfiguration.BufferOptions*
-  name: BufferOptions
-  href: api/Google.Cloud.Diagnostics.Common.TraceConfiguration.html#Google_Cloud_Diagnostics_Common_TraceConfiguration_BufferOptions_
-  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceConfiguration.BufferOptions
-  fullName: Google.Cloud.Diagnostics.Common.TraceConfiguration.BufferOptions
-  nameWithType: TraceConfiguration.BufferOptions
-- uid: Google.Cloud.Diagnostics.Common.TraceConfiguration.Create(System.Double,Google.Cloud.Diagnostics.Common.BufferOptions)
-  name: Create(Double, BufferOptions)
-  href: api/Google.Cloud.Diagnostics.Common.TraceConfiguration.html#Google_Cloud_Diagnostics_Common_TraceConfiguration_Create_System_Double_Google_Cloud_Diagnostics_Common_BufferOptions_
-  commentId: M:Google.Cloud.Diagnostics.Common.TraceConfiguration.Create(System.Double,Google.Cloud.Diagnostics.Common.BufferOptions)
-  fullName: Google.Cloud.Diagnostics.Common.TraceConfiguration.Create(System.Double, Google.Cloud.Diagnostics.Common.BufferOptions)
-  nameWithType: TraceConfiguration.Create(Double, BufferOptions)
-- uid: Google.Cloud.Diagnostics.Common.TraceConfiguration.Create*
-  name: Create
-  href: api/Google.Cloud.Diagnostics.Common.TraceConfiguration.html#Google_Cloud_Diagnostics_Common_TraceConfiguration_Create_
-  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceConfiguration.Create
-  fullName: Google.Cloud.Diagnostics.Common.TraceConfiguration.Create
-  nameWithType: TraceConfiguration.Create
-- uid: Google.Cloud.Diagnostics.Common.TraceConfiguration.QpsSampleRate
-  name: QpsSampleRate
-  href: api/Google.Cloud.Diagnostics.Common.TraceConfiguration.html#Google_Cloud_Diagnostics_Common_TraceConfiguration_QpsSampleRate
-  commentId: P:Google.Cloud.Diagnostics.Common.TraceConfiguration.QpsSampleRate
-  fullName: Google.Cloud.Diagnostics.Common.TraceConfiguration.QpsSampleRate
-  nameWithType: TraceConfiguration.QpsSampleRate
-- uid: Google.Cloud.Diagnostics.Common.TraceConfiguration.QpsSampleRate*
-  name: QpsSampleRate
-  href: api/Google.Cloud.Diagnostics.Common.TraceConfiguration.html#Google_Cloud_Diagnostics_Common_TraceConfiguration_QpsSampleRate_
-  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceConfiguration.QpsSampleRate
-  fullName: Google.Cloud.Diagnostics.Common.TraceConfiguration.QpsSampleRate
-  nameWithType: TraceConfiguration.QpsSampleRate
 - uid: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate
   name: TraceDecisionPredicate
   href: api/Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html
@@ -1138,3 +1204,45 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.SendAsync
   fullName: Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.SendAsync
   nameWithType: TraceHeaderPropagatingHandler.SendAsync
+- uid: Google.Cloud.Diagnostics.Common.TraceOptions
+  name: TraceOptions
+  href: api/Google.Cloud.Diagnostics.Common.TraceOptions.html
+  commentId: T:Google.Cloud.Diagnostics.Common.TraceOptions
+  fullName: Google.Cloud.Diagnostics.Common.TraceOptions
+  nameWithType: TraceOptions
+- uid: Google.Cloud.Diagnostics.Common.TraceOptions.BufferOptions
+  name: BufferOptions
+  href: api/Google.Cloud.Diagnostics.Common.TraceOptions.html#Google_Cloud_Diagnostics_Common_TraceOptions_BufferOptions
+  commentId: P:Google.Cloud.Diagnostics.Common.TraceOptions.BufferOptions
+  fullName: Google.Cloud.Diagnostics.Common.TraceOptions.BufferOptions
+  nameWithType: TraceOptions.BufferOptions
+- uid: Google.Cloud.Diagnostics.Common.TraceOptions.BufferOptions*
+  name: BufferOptions
+  href: api/Google.Cloud.Diagnostics.Common.TraceOptions.html#Google_Cloud_Diagnostics_Common_TraceOptions_BufferOptions_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceOptions.BufferOptions
+  fullName: Google.Cloud.Diagnostics.Common.TraceOptions.BufferOptions
+  nameWithType: TraceOptions.BufferOptions
+- uid: Google.Cloud.Diagnostics.Common.TraceOptions.Create(System.Double,Google.Cloud.Diagnostics.Common.BufferOptions)
+  name: Create(Double, BufferOptions)
+  href: api/Google.Cloud.Diagnostics.Common.TraceOptions.html#Google_Cloud_Diagnostics_Common_TraceOptions_Create_System_Double_Google_Cloud_Diagnostics_Common_BufferOptions_
+  commentId: M:Google.Cloud.Diagnostics.Common.TraceOptions.Create(System.Double,Google.Cloud.Diagnostics.Common.BufferOptions)
+  fullName: Google.Cloud.Diagnostics.Common.TraceOptions.Create(System.Double, Google.Cloud.Diagnostics.Common.BufferOptions)
+  nameWithType: TraceOptions.Create(Double, BufferOptions)
+- uid: Google.Cloud.Diagnostics.Common.TraceOptions.Create*
+  name: Create
+  href: api/Google.Cloud.Diagnostics.Common.TraceOptions.html#Google_Cloud_Diagnostics_Common_TraceOptions_Create_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceOptions.Create
+  fullName: Google.Cloud.Diagnostics.Common.TraceOptions.Create
+  nameWithType: TraceOptions.Create
+- uid: Google.Cloud.Diagnostics.Common.TraceOptions.QpsSampleRate
+  name: QpsSampleRate
+  href: api/Google.Cloud.Diagnostics.Common.TraceOptions.html#Google_Cloud_Diagnostics_Common_TraceOptions_QpsSampleRate
+  commentId: P:Google.Cloud.Diagnostics.Common.TraceOptions.QpsSampleRate
+  fullName: Google.Cloud.Diagnostics.Common.TraceOptions.QpsSampleRate
+  nameWithType: TraceOptions.QpsSampleRate
+- uid: Google.Cloud.Diagnostics.Common.TraceOptions.QpsSampleRate*
+  name: QpsSampleRate
+  href: api/Google.Cloud.Diagnostics.Common.TraceOptions.html#Google_Cloud_Diagnostics_Common_TraceOptions_QpsSampleRate_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceOptions.QpsSampleRate
+  fullName: Google.Cloud.Diagnostics.Common.TraceOptions.QpsSampleRate
+  nameWithType: TraceOptions.QpsSampleRate

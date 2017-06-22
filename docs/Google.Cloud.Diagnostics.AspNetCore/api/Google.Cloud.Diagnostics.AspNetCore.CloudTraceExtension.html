@@ -136,13 +136,13 @@ Docs: <a href="https://cloud.google.com/trace/docs/">https://cloud.google.com/tr
               <h3 id="methods">Methods
               </h3>
               <a id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_IServiceCollection_System_String_Google_Cloud_Diagnostics_Common_TraceConfiguration_TraceServiceClient_Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(IServiceCollection,System.String,Google.Cloud.Diagnostics.Common.TraceConfiguration,TraceServiceClient,Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)">AddGoogleTrace(IServiceCollection, String, TraceConfiguration, TraceServiceClient, TraceDecisionPredicate)</h4>
+              <h4 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_IServiceCollection_System_Action_Google_Cloud_Diagnostics_AspNetCore_TraceServiceOptions__" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(IServiceCollection,System.Action{Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions})">AddGoogleTrace(IServiceCollection, Action&lt;TraceServiceOptions&gt;)</h4>
               <div class="markdown level1 summary"><p>Adds the needed services for Google Cloud Tracing. Used with <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_UseGoogleTrace_IApplicationBuilder_">UseGoogleTrace(IApplicationBuilder)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static void AddGoogleTrace(this IServiceCollection services, string projectId = null, TraceConfiguration config = null, TraceServiceClient client = null, TraceDecisionPredicate traceFallbackPredicate = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public static void AddGoogleTrace(this IServiceCollection services, Action&lt;TraceServiceOptions&gt; setupAction)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -161,31 +161,9 @@ Docs: <a href="https://cloud.google.com/trace/docs/">https://cloud.google.com/tr
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">projectId</span></td>
-                    <td><p>Optional if running on Google App Engine or Google Compute Engine.
-    The Google Cloud Platform project ID. If unspecified and running on GAE or GCE the project ID will be
-    detected from the platform.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Diagnostics.Common.TraceConfiguration.html">TraceConfiguration</a></td>
-                    <td><span class="parametername">config</span></td>
-                    <td><p>Optional trace configuration, if unset the default will be used.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">TraceServiceClient</span></td>
-                    <td><span class="parametername">client</span></td>
-                    <td><p>Optional Trace client, if unset the default will be used.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html">TraceDecisionPredicate</a></td>
-                    <td><span class="parametername">traceFallbackPredicate</span></td>
-                    <td><p>Optional function to trace requests. If the trace header is not set
-    then this function will be called to determine if a given request should be traced.  This will
-    not override trace headers.</p>
+                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.html">TraceServiceOptions</a>&gt;</td>
+                    <td><span class="parametername">setupAction</span></td>
+                    <td><p>Action to set up options. Cannot be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -194,7 +172,7 @@ Docs: <a href="https://cloud.google.com/trace/docs/">https://cloud.google.com/tr
               <h4 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_UseGoogleTrace_IApplicationBuilder_" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.UseGoogleTrace(IApplicationBuilder)">UseGoogleTrace(IApplicationBuilder)</h4>
               <div class="markdown level1 summary"><p>Uses middleware that will trace time taken for all subsequent delegates to run.
 The time taken and metadata will be sent to the Stackdriver Trace API. To be
-used with <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_IServiceCollection_System_String_Google_Cloud_Diagnostics_Common_TraceConfiguration_TraceServiceClient_Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_">AddGoogleTrace(IServiceCollection, String, TraceConfiguration, TraceServiceClient, TraceDecisionPredicate)</a>,</p>
+used with <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_IServiceCollection_System_Action_Google_Cloud_Diagnostics_AspNetCore_TraceServiceOptions__">AddGoogleTrace(IServiceCollection, Action&lt;TraceServiceOptions&gt;)</a>,</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

@@ -337,18 +337,7 @@ necessary.</p>
               <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroup_Google_Cloud_Monitoring_V3_CreateGroupRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroup(Google.Cloud.Monitoring.V3.CreateGroupRequest,Google.Api.Gax.Grpc.CallSettings)">CreateGroup(CreateGroupRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates a new group.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-GroupServiceClient groupServiceClient = GroupServiceClient.Create();
-// Initialize request argument(s)
-CreateGroupRequest request = new CreateGroupRequest
-{
-    ProjectName = new ProjectName(&quot;[PROJECT]&quot;),
-    Group = new Group(),
-};
-// Make the request
-Group response = groupServiceClient.CreateGroup(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Group CreateGroup(CreateGroupRequest request, CallSettings callSettings = null)</code></pre>
@@ -393,19 +382,25 @@ Group response = groupServiceClient.CreateGroup(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroup_Google_Cloud_Monitoring_V3_CreateGroupRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+GroupServiceClient groupServiceClient = GroupServiceClient.Create();
+// Initialize request argument(s)
+CreateGroupRequest request = new CreateGroupRequest
+{
+    ProjectName = new ProjectName(&quot;[PROJECT]&quot;),
+    Group = new Group(),
+};
+// Make the request
+Group response = groupServiceClient.CreateGroup(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroup_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroup*"></a>
               <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroup_Google_Cloud_Monitoring_V3_ProjectName_Google_Cloud_Monitoring_V3_Group_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroup(Google.Cloud.Monitoring.V3.ProjectName,Google.Cloud.Monitoring.V3.Group,Google.Api.Gax.Grpc.CallSettings)">CreateGroup(ProjectName, Group, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates a new group.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-GroupServiceClient groupServiceClient = GroupServiceClient.Create();
-// Initialize request argument(s)
-ProjectName name = new ProjectName(&quot;[PROJECT]&quot;);
-Group group = new Group();
-// Make the request
-Group response = groupServiceClient.CreateGroup(name, group);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Group CreateGroup(ProjectName name, Group group, CallSettings callSettings = null)</code></pre>
@@ -458,22 +453,22 @@ the system assigns the name.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroup_Google_Cloud_Monitoring_V3_ProjectName_Google_Cloud_Monitoring_V3_Group_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+GroupServiceClient groupServiceClient = GroupServiceClient.Create();
+// Initialize request argument(s)
+ProjectName name = new ProjectName(&quot;[PROJECT]&quot;);
+Group group = new Group();
+// Make the request
+Group response = groupServiceClient.CreateGroup(name, group);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroupAsync_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync*"></a>
               <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroupAsync_Google_Cloud_Monitoring_V3_CreateGroupRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync(Google.Cloud.Monitoring.V3.CreateGroupRequest,Google.Api.Gax.Grpc.CallSettings)">CreateGroupAsync(CreateGroupRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates a new group.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
-// Initialize request argument(s)
-CreateGroupRequest request = new CreateGroupRequest
-{
-    ProjectName = new ProjectName(&quot;[PROJECT]&quot;),
-    Group = new Group(),
-};
-// Make the request
-Group response = await groupServiceClient.CreateGroupAsync(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Group&gt; CreateGroupAsync(CreateGroupRequest request, CallSettings callSettings = null)</code></pre>
@@ -518,19 +513,25 @@ Group response = await groupServiceClient.CreateGroupAsync(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroupAsync_Google_Cloud_Monitoring_V3_CreateGroupRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
+// Initialize request argument(s)
+CreateGroupRequest request = new CreateGroupRequest
+{
+    ProjectName = new ProjectName(&quot;[PROJECT]&quot;),
+    Group = new Group(),
+};
+// Make the request
+Group response = await groupServiceClient.CreateGroupAsync(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroupAsync_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync*"></a>
               <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroupAsync_Google_Cloud_Monitoring_V3_ProjectName_Google_Cloud_Monitoring_V3_Group_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync(Google.Cloud.Monitoring.V3.ProjectName,Google.Cloud.Monitoring.V3.Group,Google.Api.Gax.Grpc.CallSettings)">CreateGroupAsync(ProjectName, Group, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates a new group.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
-// Initialize request argument(s)
-ProjectName name = new ProjectName(&quot;[PROJECT]&quot;);
-Group group = new Group();
-// Make the request
-Group response = await groupServiceClient.CreateGroupAsync(name, group);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Group&gt; CreateGroupAsync(ProjectName name, Group group, CallSettings callSettings = null)</code></pre>
@@ -583,12 +584,9 @@ the system assigns the name.</p>
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroupAsync_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroupAsync_Google_Cloud_Monitoring_V3_ProjectName_Google_Cloud_Monitoring_V3_Group_System_Threading_CancellationToken_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync(Google.Cloud.Monitoring.V3.ProjectName,Google.Cloud.Monitoring.V3.Group,System.Threading.CancellationToken)">CreateGroupAsync(ProjectName, Group, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Creates a new group.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroupAsync_Google_Cloud_Monitoring_V3_ProjectName_Google_Cloud_Monitoring_V3_Group_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
 // Initialize request argument(s)
 ProjectName name = new ProjectName(&quot;[PROJECT]&quot;);
@@ -596,6 +594,12 @@ Group group = new Group();
 // Make the request
 Group response = await groupServiceClient.CreateGroupAsync(name, group);
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroupAsync_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync*"></a>
+              <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroupAsync_Google_Cloud_Monitoring_V3_ProjectName_Google_Cloud_Monitoring_V3_Group_System_Threading_CancellationToken_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync(Google.Cloud.Monitoring.V3.ProjectName,Google.Cloud.Monitoring.V3.Group,System.Threading.CancellationToken)">CreateGroupAsync(ProjectName, Group, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Creates a new group.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Group&gt; CreateGroupAsync(ProjectName name, Group group, CancellationToken cancellationToken)</code></pre>
@@ -648,21 +652,22 @@ the system assigns the name.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroupAsync_Google_Cloud_Monitoring_V3_ProjectName_Google_Cloud_Monitoring_V3_Group_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
+// Initialize request argument(s)
+ProjectName name = new ProjectName(&quot;[PROJECT]&quot;);
+Group group = new Group();
+// Make the request
+Group response = await groupServiceClient.CreateGroupAsync(name, group);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroup_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroup*"></a>
               <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroup_Google_Cloud_Monitoring_V3_DeleteGroupRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroup(Google.Cloud.Monitoring.V3.DeleteGroupRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteGroup(DeleteGroupRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes an existing group.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-GroupServiceClient groupServiceClient = GroupServiceClient.Create();
-// Initialize request argument(s)
-DeleteGroupRequest request = new DeleteGroupRequest
-{
-    GroupName = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;),
-};
-// Make the request
-groupServiceClient.DeleteGroup(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void DeleteGroup(DeleteGroupRequest request, CallSettings callSettings = null)</code></pre>
@@ -691,18 +696,24 @@ groupServiceClient.DeleteGroup(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroup_Google_Cloud_Monitoring_V3_DeleteGroupRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+GroupServiceClient groupServiceClient = GroupServiceClient.Create();
+// Initialize request argument(s)
+DeleteGroupRequest request = new DeleteGroupRequest
+{
+    GroupName = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;),
+};
+// Make the request
+groupServiceClient.DeleteGroup(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroup_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroup*"></a>
               <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroup_Google_Cloud_Monitoring_V3_GroupName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroup(Google.Cloud.Monitoring.V3.GroupName,Google.Api.Gax.Grpc.CallSettings)">DeleteGroup(GroupName, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes an existing group.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-GroupServiceClient groupServiceClient = GroupServiceClient.Create();
-// Initialize request argument(s)
-GroupName name = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;);
-// Make the request
-groupServiceClient.DeleteGroup(name);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void DeleteGroup(GroupName name, CallSettings callSettings = null)</code></pre>
@@ -732,21 +743,21 @@ groupServiceClient.DeleteGroup(name);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroup_Google_Cloud_Monitoring_V3_GroupName_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+GroupServiceClient groupServiceClient = GroupServiceClient.Create();
+// Initialize request argument(s)
+GroupName name = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;);
+// Make the request
+groupServiceClient.DeleteGroup(name);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroupAsync_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync*"></a>
               <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroupAsync_Google_Cloud_Monitoring_V3_DeleteGroupRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync(Google.Cloud.Monitoring.V3.DeleteGroupRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteGroupAsync(DeleteGroupRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes an existing group.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
-// Initialize request argument(s)
-DeleteGroupRequest request = new DeleteGroupRequest
-{
-    GroupName = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;),
-};
-// Make the request
-await groupServiceClient.DeleteGroupAsync(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteGroupAsync(DeleteGroupRequest request, CallSettings callSettings = null)</code></pre>
@@ -791,18 +802,24 @@ await groupServiceClient.DeleteGroupAsync(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroupAsync_Google_Cloud_Monitoring_V3_DeleteGroupRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
+// Initialize request argument(s)
+DeleteGroupRequest request = new DeleteGroupRequest
+{
+    GroupName = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;),
+};
+// Make the request
+await groupServiceClient.DeleteGroupAsync(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroupAsync_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync*"></a>
               <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroupAsync_Google_Cloud_Monitoring_V3_GroupName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync(Google.Cloud.Monitoring.V3.GroupName,Google.Api.Gax.Grpc.CallSettings)">DeleteGroupAsync(GroupName, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes an existing group.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
-// Initialize request argument(s)
-GroupName name = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;);
-// Make the request
-await groupServiceClient.DeleteGroupAsync(name);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteGroupAsync(GroupName name, CallSettings callSettings = null)</code></pre>
@@ -848,18 +865,21 @@ await groupServiceClient.DeleteGroupAsync(name);
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroupAsync_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroupAsync_Google_Cloud_Monitoring_V3_GroupName_System_Threading_CancellationToken_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync(Google.Cloud.Monitoring.V3.GroupName,System.Threading.CancellationToken)">DeleteGroupAsync(GroupName, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Deletes an existing group.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroupAsync_Google_Cloud_Monitoring_V3_GroupName_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
 // Initialize request argument(s)
 GroupName name = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;);
 // Make the request
 await groupServiceClient.DeleteGroupAsync(name);
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroupAsync_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync*"></a>
+              <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroupAsync_Google_Cloud_Monitoring_V3_GroupName_System_Threading_CancellationToken_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync(Google.Cloud.Monitoring.V3.GroupName,System.Threading.CancellationToken)">DeleteGroupAsync(GroupName, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Deletes an existing group.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteGroupAsync(GroupName name, CancellationToken cancellationToken)</code></pre>
@@ -905,21 +925,21 @@ await groupServiceClient.DeleteGroupAsync(name);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroupAsync_Google_Cloud_Monitoring_V3_GroupName_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
+// Initialize request argument(s)
+GroupName name = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;);
+// Make the request
+await groupServiceClient.DeleteGroupAsync(name);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroup_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroup*"></a>
               <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroup_Google_Cloud_Monitoring_V3_GetGroupRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroup(Google.Cloud.Monitoring.V3.GetGroupRequest,Google.Api.Gax.Grpc.CallSettings)">GetGroup(GetGroupRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets a single group.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-GroupServiceClient groupServiceClient = GroupServiceClient.Create();
-// Initialize request argument(s)
-GetGroupRequest request = new GetGroupRequest
-{
-    GroupName = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;),
-};
-// Make the request
-Group response = groupServiceClient.GetGroup(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Group GetGroup(GetGroupRequest request, CallSettings callSettings = null)</code></pre>
@@ -964,18 +984,24 @@ Group response = groupServiceClient.GetGroup(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroup_Google_Cloud_Monitoring_V3_GetGroupRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+GroupServiceClient groupServiceClient = GroupServiceClient.Create();
+// Initialize request argument(s)
+GetGroupRequest request = new GetGroupRequest
+{
+    GroupName = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;),
+};
+// Make the request
+Group response = groupServiceClient.GetGroup(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroup_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroup*"></a>
               <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroup_Google_Cloud_Monitoring_V3_GroupName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroup(Google.Cloud.Monitoring.V3.GroupName,Google.Api.Gax.Grpc.CallSettings)">GetGroup(GroupName, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets a single group.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-GroupServiceClient groupServiceClient = GroupServiceClient.Create();
-// Initialize request argument(s)
-GroupName name = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;);
-// Make the request
-Group response = groupServiceClient.GetGroup(name);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Group GetGroup(GroupName name, CallSettings callSettings = null)</code></pre>
@@ -1021,21 +1047,21 @@ Group response = groupServiceClient.GetGroup(name);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroup_Google_Cloud_Monitoring_V3_GroupName_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+GroupServiceClient groupServiceClient = GroupServiceClient.Create();
+// Initialize request argument(s)
+GroupName name = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;);
+// Make the request
+Group response = groupServiceClient.GetGroup(name);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroupAsync_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync*"></a>
               <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroupAsync_Google_Cloud_Monitoring_V3_GetGroupRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync(Google.Cloud.Monitoring.V3.GetGroupRequest,Google.Api.Gax.Grpc.CallSettings)">GetGroupAsync(GetGroupRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets a single group.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
-// Initialize request argument(s)
-GetGroupRequest request = new GetGroupRequest
-{
-    GroupName = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;),
-};
-// Make the request
-Group response = await groupServiceClient.GetGroupAsync(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Group&gt; GetGroupAsync(GetGroupRequest request, CallSettings callSettings = null)</code></pre>
@@ -1080,18 +1106,24 @@ Group response = await groupServiceClient.GetGroupAsync(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroupAsync_Google_Cloud_Monitoring_V3_GetGroupRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
+// Initialize request argument(s)
+GetGroupRequest request = new GetGroupRequest
+{
+    GroupName = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;),
+};
+// Make the request
+Group response = await groupServiceClient.GetGroupAsync(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroupAsync_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync*"></a>
               <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroupAsync_Google_Cloud_Monitoring_V3_GroupName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync(Google.Cloud.Monitoring.V3.GroupName,Google.Api.Gax.Grpc.CallSettings)">GetGroupAsync(GroupName, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets a single group.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
-// Initialize request argument(s)
-GroupName name = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;);
-// Make the request
-Group response = await groupServiceClient.GetGroupAsync(name);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Group&gt; GetGroupAsync(GroupName name, CallSettings callSettings = null)</code></pre>
@@ -1137,18 +1169,21 @@ Group response = await groupServiceClient.GetGroupAsync(name);
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroupAsync_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroupAsync_Google_Cloud_Monitoring_V3_GroupName_System_Threading_CancellationToken_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync(Google.Cloud.Monitoring.V3.GroupName,System.Threading.CancellationToken)">GetGroupAsync(GroupName, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Gets a single group.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroupAsync_Google_Cloud_Monitoring_V3_GroupName_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
 // Initialize request argument(s)
 GroupName name = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;);
 // Make the request
 Group response = await groupServiceClient.GetGroupAsync(name);
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroupAsync_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync*"></a>
+              <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroupAsync_Google_Cloud_Monitoring_V3_GroupName_System_Threading_CancellationToken_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync(Google.Cloud.Monitoring.V3.GroupName,System.Threading.CancellationToken)">GetGroupAsync(GroupName, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Gets a single group.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Group&gt; GetGroupAsync(GroupName name, CancellationToken cancellationToken)</code></pre>
@@ -1194,49 +1229,21 @@ Group response = await groupServiceClient.GetGroupAsync(name);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroupAsync_Google_Cloud_Monitoring_V3_GroupName_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
+// Initialize request argument(s)
+GroupName name = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;);
+// Make the request
+Group response = await groupServiceClient.GetGroupAsync(name);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembers_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembers*"></a>
               <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembers_Google_Cloud_Monitoring_V3_GroupName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembers(Google.Cloud.Monitoring.V3.GroupName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListGroupMembers(GroupName, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists the monitored resources that are members of a group.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-GroupServiceClient groupServiceClient = GroupServiceClient.Create();
-// Initialize request argument(s)
-GroupName name = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;);
-// Make the request
-PagedEnumerable&lt;ListGroupMembersResponse, MonitoredResource&gt; response =
-    groupServiceClient.ListGroupMembers(name);
-
-// Iterate over all response items, lazily performing RPCs as required
-foreach (MonitoredResource item in response)
-{
-    // Do something with each item
-    Console.WriteLine(item);
-}
-
-// Or iterate over pages (of server-defined size), performing one RPC per page
-foreach (ListGroupMembersResponse page in response.AsRawResponses())
-{
-    // Do something with each page of items
-    Console.WriteLine(&quot;A page of results:&quot;);
-    foreach (MonitoredResource item in page)
-    {
-        Console.WriteLine(item);
-    }
-}
-
-// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
-int pageSize = 10;
-Page&lt;MonitoredResource&gt; singlePage = response.ReadPage(pageSize);
-// Do something with the page of items
-Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
-foreach (MonitoredResource item in singlePage)
-{
-    Console.WriteLine(item);
-}
-// Store the pageToken, for when the next page is required.
-string nextPageToken = singlePage.NextPageToken;
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListGroupMembersResponse, MonitoredResource&gt; ListGroupMembers(GroupName name, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
@@ -1296,21 +1303,15 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembers_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembers*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembers_Google_Cloud_Monitoring_V3_ListGroupMembersRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembers(Google.Cloud.Monitoring.V3.ListGroupMembersRequest,Google.Api.Gax.Grpc.CallSettings)">ListGroupMembers(ListGroupMembersRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lists the monitored resources that are members of a group.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembers_Google_Cloud_Monitoring_V3_GroupName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 GroupServiceClient groupServiceClient = GroupServiceClient.Create();
 // Initialize request argument(s)
-ListGroupMembersRequest request = new ListGroupMembersRequest
-{
-    GroupName = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;),
-};
+GroupName name = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;);
 // Make the request
 PagedEnumerable&lt;ListGroupMembersResponse, MonitoredResource&gt; response =
-    groupServiceClient.ListGroupMembers(request);
+    groupServiceClient.ListGroupMembers(name);
 
 // Iterate over all response items, lazily performing RPCs as required
 foreach (MonitoredResource item in response)
@@ -1342,6 +1343,12 @@ foreach (MonitoredResource item in singlePage)
 // Store the pageToken, for when the next page is required.
 string nextPageToken = singlePage.NextPageToken;
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembers_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembers*"></a>
+              <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembers_Google_Cloud_Monitoring_V3_ListGroupMembersRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembers(Google.Cloud.Monitoring.V3.ListGroupMembersRequest,Google.Api.Gax.Grpc.CallSettings)">ListGroupMembers(ListGroupMembersRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lists the monitored resources that are members of a group.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListGroupMembersResponse, MonitoredResource&gt; ListGroupMembers(ListGroupMembersRequest request, CallSettings callSettings = null)</code></pre>
@@ -1386,28 +1393,28 @@ string nextPageToken = singlePage.NextPageToken;
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembersAsync_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembersAsync_Google_Cloud_Monitoring_V3_GroupName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync(Google.Cloud.Monitoring.V3.GroupName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListGroupMembersAsync(GroupName, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lists the monitored resources that are members of a group.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembers_Google_Cloud_Monitoring_V3_ListGroupMembersRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+GroupServiceClient groupServiceClient = GroupServiceClient.Create();
 // Initialize request argument(s)
-GroupName name = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;);
+ListGroupMembersRequest request = new ListGroupMembersRequest
+{
+    GroupName = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;),
+};
 // Make the request
-PagedAsyncEnumerable&lt;ListGroupMembersResponse, MonitoredResource&gt; response =
-    groupServiceClient.ListGroupMembersAsync(name);
+PagedEnumerable&lt;ListGroupMembersResponse, MonitoredResource&gt; response =
+    groupServiceClient.ListGroupMembers(request);
 
 // Iterate over all response items, lazily performing RPCs as required
-await response.ForEachAsync((MonitoredResource item) =&gt;
+foreach (MonitoredResource item in response)
 {
     // Do something with each item
     Console.WriteLine(item);
-});
+}
 
 // Or iterate over pages (of server-defined size), performing one RPC per page
-await response.AsRawResponses().ForEachAsync((ListGroupMembersResponse page) =&gt;
+foreach (ListGroupMembersResponse page in response.AsRawResponses())
 {
     // Do something with each page of items
     Console.WriteLine(&quot;A page of results:&quot;);
@@ -1415,11 +1422,11 @@ await response.AsRawResponses().ForEachAsync((ListGroupMembersResponse page) =&g
     {
         Console.WriteLine(item);
     }
-});
+}
 
 // Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
 int pageSize = 10;
-Page&lt;MonitoredResource&gt; singlePage = await response.ReadPageAsync(pageSize);
+Page&lt;MonitoredResource&gt; singlePage = response.ReadPage(pageSize);
 // Do something with the page of items
 Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
 foreach (MonitoredResource item in singlePage)
@@ -1429,6 +1436,12 @@ foreach (MonitoredResource item in singlePage)
 // Store the pageToken, for when the next page is required.
 string nextPageToken = singlePage.NextPageToken;
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembersAsync_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync*"></a>
+              <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembersAsync_Google_Cloud_Monitoring_V3_GroupName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync(Google.Cloud.Monitoring.V3.GroupName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListGroupMembersAsync(GroupName, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lists the monitored resources that are members of a group.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListGroupMembersResponse, MonitoredResource&gt; ListGroupMembersAsync(GroupName name, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
@@ -1488,21 +1501,15 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembersAsync_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembersAsync_Google_Cloud_Monitoring_V3_ListGroupMembersRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync(Google.Cloud.Monitoring.V3.ListGroupMembersRequest,Google.Api.Gax.Grpc.CallSettings)">ListGroupMembersAsync(ListGroupMembersRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lists the monitored resources that are members of a group.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembersAsync_Google_Cloud_Monitoring_V3_GroupName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
 // Initialize request argument(s)
-ListGroupMembersRequest request = new ListGroupMembersRequest
-{
-    GroupName = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;),
-};
+GroupName name = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;);
 // Make the request
 PagedAsyncEnumerable&lt;ListGroupMembersResponse, MonitoredResource&gt; response =
-    groupServiceClient.ListGroupMembersAsync(request);
+    groupServiceClient.ListGroupMembersAsync(name);
 
 // Iterate over all response items, lazily performing RPCs as required
 await response.ForEachAsync((MonitoredResource item) =&gt;
@@ -1534,6 +1541,12 @@ foreach (MonitoredResource item in singlePage)
 // Store the pageToken, for when the next page is required.
 string nextPageToken = singlePage.NextPageToken;
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembersAsync_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync*"></a>
+              <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembersAsync_Google_Cloud_Monitoring_V3_ListGroupMembersRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync(Google.Cloud.Monitoring.V3.ListGroupMembersRequest,Google.Api.Gax.Grpc.CallSettings)">ListGroupMembersAsync(ListGroupMembersRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lists the monitored resources that are members of a group.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListGroupMembersResponse, MonitoredResource&gt; ListGroupMembersAsync(ListGroupMembersRequest request, CallSettings callSettings = null)</code></pre>
@@ -1578,20 +1591,55 @@ string nextPageToken = singlePage.NextPageToken;
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembersAsync_Google_Cloud_Monitoring_V3_ListGroupMembersRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
+// Initialize request argument(s)
+ListGroupMembersRequest request = new ListGroupMembersRequest
+{
+    GroupName = new GroupName(&quot;[PROJECT]&quot;, &quot;[GROUP]&quot;),
+};
+// Make the request
+PagedAsyncEnumerable&lt;ListGroupMembersResponse, MonitoredResource&gt; response =
+    groupServiceClient.ListGroupMembersAsync(request);
+
+// Iterate over all response items, lazily performing RPCs as required
+await response.ForEachAsync((MonitoredResource item) =&gt;
+{
+    // Do something with each item
+    Console.WriteLine(item);
+});
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+await response.AsRawResponses().ForEachAsync((ListGroupMembersResponse page) =&gt;
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (MonitoredResource item in page)
+    {
+        Console.WriteLine(item);
+    }
+});
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;MonitoredResource&gt; singlePage = await response.ReadPageAsync(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (MonitoredResource item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroups_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroups*"></a>
               <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroups_Google_Cloud_Monitoring_V3_ListGroupsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroups(Google.Cloud.Monitoring.V3.ListGroupsRequest,Google.Api.Gax.Grpc.CallSettings)">ListGroups(ListGroupsRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists the existing groups.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">GroupServiceClient client = GroupServiceClient.Create();
-ProjectName projectName = new ProjectName(projectId);
-ListGroupsRequest request = new ListGroupsRequest { Name = projectName.ToString() };
-PagedEnumerable&lt;ListGroupsResponse, Group&gt; groups = client.ListGroups(request);
-foreach (Group group in groups.Take(10))
-{
-    Console.WriteLine($&quot;{group.Name}: {group.DisplayName}&quot;);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListGroupsResponse, Group&gt; ListGroups(ListGroupsRequest request, CallSettings callSettings = null)</code></pre>
@@ -1636,52 +1684,23 @@ foreach (Group group in groups.Take(10))
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroups_Google_Cloud_Monitoring_V3_ListGroupsRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">GroupServiceClient client = GroupServiceClient.Create();
+ProjectName projectName = new ProjectName(projectId);
+ListGroupsRequest request = new ListGroupsRequest { Name = projectName.ToString() };
+PagedEnumerable&lt;ListGroupsResponse, Group&gt; groups = client.ListGroups(request);
+foreach (Group group in groups.Take(10))
+{
+    Console.WriteLine($&quot;{group.Name}: {group.DisplayName}&quot;);
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupsAsync_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupsAsync*"></a>
               <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupsAsync_Google_Cloud_Monitoring_V3_ListGroupsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupsAsync(Google.Cloud.Monitoring.V3.ListGroupsRequest,Google.Api.Gax.Grpc.CallSettings)">ListGroupsAsync(ListGroupsRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists the existing groups.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
-// Initialize request argument(s)
-ListGroupsRequest request = new ListGroupsRequest
-{
-    ProjectName = new ProjectName(&quot;[PROJECT]&quot;),
-};
-// Make the request
-PagedAsyncEnumerable&lt;ListGroupsResponse, Group&gt; response =
-    groupServiceClient.ListGroupsAsync(request);
-
-// Iterate over all response items, lazily performing RPCs as required
-await response.ForEachAsync((Group item) =&gt;
-{
-    // Do something with each item
-    Console.WriteLine(item);
-});
-
-// Or iterate over pages (of server-defined size), performing one RPC per page
-await response.AsRawResponses().ForEachAsync((ListGroupsResponse page) =&gt;
-{
-    // Do something with each page of items
-    Console.WriteLine(&quot;A page of results:&quot;);
-    foreach (Group item in page)
-    {
-        Console.WriteLine(item);
-    }
-});
-
-// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
-int pageSize = 10;
-Page&lt;Group&gt; singlePage = await response.ReadPageAsync(pageSize);
-// Do something with the page of items
-Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
-foreach (Group item in singlePage)
-{
-    Console.WriteLine(item);
-}
-// Store the pageToken, for when the next page is required.
-string nextPageToken = singlePage.NextPageToken;
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListGroupsResponse, Group&gt; ListGroupsAsync(ListGroupsRequest request, CallSettings callSettings = null)</code></pre>
@@ -1726,6 +1745,50 @@ string nextPageToken = singlePage.NextPageToken;
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupsAsync_Google_Cloud_Monitoring_V3_ListGroupsRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
+// Initialize request argument(s)
+ListGroupsRequest request = new ListGroupsRequest
+{
+    ProjectName = new ProjectName(&quot;[PROJECT]&quot;),
+};
+// Make the request
+PagedAsyncEnumerable&lt;ListGroupsResponse, Group&gt; response =
+    groupServiceClient.ListGroupsAsync(request);
+
+// Iterate over all response items, lazily performing RPCs as required
+await response.ForEachAsync((Group item) =&gt;
+{
+    // Do something with each item
+    Console.WriteLine(item);
+});
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+await response.AsRawResponses().ForEachAsync((ListGroupsResponse page) =&gt;
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (Group item in page)
+    {
+        Console.WriteLine(item);
+    }
+});
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;Group&gt; singlePage = await response.ReadPageAsync(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (Group item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_ShutdownDefaultChannelsAsync_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.ShutdownDefaultChannelsAsync*"></a>
               <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_ShutdownDefaultChannelsAsync" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.ShutdownDefaultChannelsAsync">ShutdownDefaultChannelsAsync()</h4>
               <div class="markdown level1 summary"><p>Shuts down any channels automatically created by <a class="xref" href="Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Monitoring_V3_GroupServiceSettings_">Create(ServiceEndpoint, GroupServiceSettings)</a>
@@ -1763,14 +1826,7 @@ in turn be shut down by another call to this method.</p>
               <div class="markdown level1 summary"><p>Updates an existing group.
 You can change any group attributes except <code>name</code>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-GroupServiceClient groupServiceClient = GroupServiceClient.Create();
-// Initialize request argument(s)
-Group group = new Group();
-// Make the request
-Group response = groupServiceClient.UpdateGroup(group);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Group UpdateGroup(Group group, CallSettings callSettings = null)</code></pre>
@@ -1816,22 +1872,22 @@ excepting <code>name</code>, are replaced with the corresponding fields of this 
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_UpdateGroup_Google_Cloud_Monitoring_V3_Group_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+GroupServiceClient groupServiceClient = GroupServiceClient.Create();
+// Initialize request argument(s)
+Group group = new Group();
+// Make the request
+Group response = groupServiceClient.UpdateGroup(group);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_UpdateGroup_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.UpdateGroup*"></a>
               <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_UpdateGroup_Google_Cloud_Monitoring_V3_UpdateGroupRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.UpdateGroup(Google.Cloud.Monitoring.V3.UpdateGroupRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateGroup(UpdateGroupRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Updates an existing group.
 You can change any group attributes except <code>name</code>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-GroupServiceClient groupServiceClient = GroupServiceClient.Create();
-// Initialize request argument(s)
-UpdateGroupRequest request = new UpdateGroupRequest
-{
-    Group = new Group(),
-};
-// Make the request
-Group response = groupServiceClient.UpdateGroup(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Group UpdateGroup(UpdateGroupRequest request, CallSettings callSettings = null)</code></pre>
@@ -1876,19 +1932,25 @@ Group response = groupServiceClient.UpdateGroup(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_UpdateGroup_Google_Cloud_Monitoring_V3_UpdateGroupRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+GroupServiceClient groupServiceClient = GroupServiceClient.Create();
+// Initialize request argument(s)
+UpdateGroupRequest request = new UpdateGroupRequest
+{
+    Group = new Group(),
+};
+// Make the request
+Group response = groupServiceClient.UpdateGroup(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_UpdateGroupAsync_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.UpdateGroupAsync*"></a>
               <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_UpdateGroupAsync_Google_Cloud_Monitoring_V3_Group_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.UpdateGroupAsync(Google.Cloud.Monitoring.V3.Group,Google.Api.Gax.Grpc.CallSettings)">UpdateGroupAsync(Group, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Updates an existing group.
 You can change any group attributes except <code>name</code>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
-// Initialize request argument(s)
-Group group = new Group();
-// Make the request
-Group response = await groupServiceClient.UpdateGroupAsync(group);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Group&gt; UpdateGroupAsync(Group group, CallSettings callSettings = null)</code></pre>
@@ -1934,19 +1996,22 @@ excepting <code>name</code>, are replaced with the corresponding fields of this 
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_UpdateGroupAsync_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.UpdateGroupAsync*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_UpdateGroupAsync_Google_Cloud_Monitoring_V3_Group_System_Threading_CancellationToken_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.UpdateGroupAsync(Google.Cloud.Monitoring.V3.Group,System.Threading.CancellationToken)">UpdateGroupAsync(Group, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Updates an existing group.
-You can change any group attributes except <code>name</code>.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_UpdateGroupAsync_Google_Cloud_Monitoring_V3_Group_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
 // Initialize request argument(s)
 Group group = new Group();
 // Make the request
 Group response = await groupServiceClient.UpdateGroupAsync(group);
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_UpdateGroupAsync_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.UpdateGroupAsync*"></a>
+              <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_UpdateGroupAsync_Google_Cloud_Monitoring_V3_Group_System_Threading_CancellationToken_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.UpdateGroupAsync(Google.Cloud.Monitoring.V3.Group,System.Threading.CancellationToken)">UpdateGroupAsync(Group, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Updates an existing group.
+You can change any group attributes except <code>name</code>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Group&gt; UpdateGroupAsync(Group group, CancellationToken cancellationToken)</code></pre>
@@ -1992,22 +2057,22 @@ excepting <code>name</code>, are replaced with the corresponding fields of this 
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_UpdateGroupAsync_Google_Cloud_Monitoring_V3_Group_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
+// Initialize request argument(s)
+Group group = new Group();
+// Make the request
+Group response = await groupServiceClient.UpdateGroupAsync(group);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Monitoring_V3_GroupServiceClient_UpdateGroupAsync_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.UpdateGroupAsync*"></a>
               <h4 id="Google_Cloud_Monitoring_V3_GroupServiceClient_UpdateGroupAsync_Google_Cloud_Monitoring_V3_UpdateGroupRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.GroupServiceClient.UpdateGroupAsync(Google.Cloud.Monitoring.V3.UpdateGroupRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateGroupAsync(UpdateGroupRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Updates an existing group.
 You can change any group attributes except <code>name</code>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
-// Initialize request argument(s)
-UpdateGroupRequest request = new UpdateGroupRequest
-{
-    Group = new Group(),
-};
-// Make the request
-Group response = await groupServiceClient.UpdateGroupAsync(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Group&gt; UpdateGroupAsync(UpdateGroupRequest request, CallSettings callSettings = null)</code></pre>
@@ -2052,6 +2117,19 @@ Group response = await groupServiceClient.UpdateGroupAsync(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Monitoring_V3_GroupServiceClient_UpdateGroupAsync_Google_Cloud_Monitoring_V3_UpdateGroupRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
+// Initialize request argument(s)
+UpdateGroupRequest request = new UpdateGroupRequest
+{
+    Group = new Group(),
+};
+// Make the request
+Group response = await groupServiceClient.UpdateGroupAsync(request);
+</code></pre></div>
+              </div>
                         </article>
           </div>
           

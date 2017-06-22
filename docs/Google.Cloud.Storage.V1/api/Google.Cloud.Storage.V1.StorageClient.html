@@ -179,15 +179,7 @@ application naming etc).</p>
               <div class="markdown level1 summary"><p>Creates a copy of an object synchronously, potentially to a different bucket. This method uses the
 <code>rewriteObject</code> underlying API operation for more flexibility and reliability.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">var client = StorageClient.Create();
-var sourceName = &quot;greetings/hello.txt&quot;;
-var destinationName = &quot;copy.txt&quot;;
-
-// This method actually uses the &quot;rewrite&quot; API operation, for added reliability
-// when copying large objects across locations, storage classes or encryption keys.
-client.CopyObject(sourceBucket, sourceName, destinationBucket, destinationName);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Object CopyObject(string sourceBucket, string sourceObjectName, string destinationBucket, string destinationObjectName, CopyObjectOptions options = null)</code></pre>
@@ -251,13 +243,23 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_CopyObject_System_String_System_String_System_String_System_String_Google_Cloud_Storage_V1_CopyObjectOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">var client = StorageClient.Create();
+var sourceName = &quot;greetings/hello.txt&quot;;
+var destinationName = &quot;copy.txt&quot;;
+
+// This method actually uses the &quot;rewrite&quot; API operation, for added reliability
+// when copying large objects across locations, storage classes or encryption keys.
+client.CopyObject(sourceBucket, sourceName, destinationBucket, destinationName);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_CopyObjectAsync_" data-uid="Google.Cloud.Storage.V1.StorageClient.CopyObjectAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_CopyObjectAsync_System_String_System_String_System_String_System_String_Google_Cloud_Storage_V1_CopyObjectOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClient.CopyObjectAsync(System.String,System.String,System.String,System.String,Google.Cloud.Storage.V1.CopyObjectOptions,System.Threading.CancellationToken)">CopyObjectAsync(String, String, String, String, CopyObjectOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Creates a copy of an object synchronously, potentially to a different bucket. This method uses the
 <code>rewriteObject</code> underlying API operation for more flexibility and reliability.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CopyObject_System_String_System_String_System_String_System_String_Google_Cloud_Storage_V1_CopyObjectOptions_">CopyObject</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; CopyObjectAsync(string sourceBucket, string sourceObjectName, string destinationBucket = null, string destinationObjectName = null, CopyObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -328,6 +330,11 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_CopyObjectAsync_System_String_System_String_System_String_System_String_Google_Cloud_Storage_V1_CopyObjectOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CopyObject_System_String_System_String_System_String_System_String_Google_Cloud_Storage_V1_CopyObjectOptions_">CopyObject</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_Create_" data-uid="Google.Cloud.Storage.V1.StorageClient.Create*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_Create_Google_Apis_Auth_OAuth2_GoogleCredential_Google_Cloud_Storage_V1_EncryptionKey_" data-uid="Google.Cloud.Storage.V1.StorageClient.Create(Google.Apis.Auth.OAuth2.GoogleCredential,Google.Cloud.Storage.V1.EncryptionKey)">Create(GoogleCredential, EncryptionKey)</h4>
               <div class="markdown level1 summary"><p>Synchronously creates a <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html">StorageClient</a>, using application default credentials if
@@ -438,8 +445,7 @@ no credentials are specified.</p>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_CreateBucket_System_String_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_CreateBucketOptions_" data-uid="Google.Cloud.Storage.V1.StorageClient.CreateBucket(System.String,Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.CreateBucketOptions)">CreateBucket(String, Bucket, CreateBucketOptions)</h4>
               <div class="markdown level1 summary"><p>Creates a storage bucket synchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateBucket_System_String_System_String_Google_Cloud_Storage_V1_CreateBucketOptions_">CreateBucket</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Bucket CreateBucket(string projectId, Bucket bucket, CreateBucketOptions options = null)</code></pre>
@@ -491,19 +497,16 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_CreateBucket_System_String_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_CreateBucketOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateBucket_System_String_System_String_Google_Cloud_Storage_V1_CreateBucketOptions_">CreateBucket</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_CreateBucket_" data-uid="Google.Cloud.Storage.V1.StorageClient.CreateBucket*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_CreateBucket_System_String_System_String_Google_Cloud_Storage_V1_CreateBucketOptions_" data-uid="Google.Cloud.Storage.V1.StorageClient.CreateBucket(System.String,System.String,Google.Cloud.Storage.V1.CreateBucketOptions)">CreateBucket(String, String, CreateBucketOptions)</h4>
               <div class="markdown level1 summary"><p>Creates a storage bucket synchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">var client = StorageClient.Create();
-
-// GCS bucket names must be globally unique
-var bucketName = Guid.NewGuid().ToString();
-
-// Bucket defined in Google.Apis.Storage.v1.Data namespace
-var bucket = client.CreateBucket(projectId, bucketName);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Bucket CreateBucket(string projectId, string bucket, CreateBucketOptions options = null)</code></pre>
@@ -555,12 +558,22 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_CreateBucket_System_String_System_String_Google_Cloud_Storage_V1_CreateBucketOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">var client = StorageClient.Create();
+
+// GCS bucket names must be globally unique
+var bucketName = Guid.NewGuid().ToString();
+
+// Bucket defined in Google.Apis.Storage.v1.Data namespace
+var bucket = client.CreateBucket(projectId, bucketName);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_CreateBucketAsync_" data-uid="Google.Cloud.Storage.V1.StorageClient.CreateBucketAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_CreateBucketAsync_System_String_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_CreateBucketOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClient.CreateBucketAsync(System.String,Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.CreateBucketOptions,System.Threading.CancellationToken)">CreateBucketAsync(String, Bucket, CreateBucketOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Creates a storage bucket asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateBucket_System_String_System_String_Google_Cloud_Storage_V1_CreateBucketOptions_">CreateBucket</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Bucket&gt; CreateBucketAsync(string projectId, Bucket bucket, CreateBucketOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -619,12 +632,16 @@ resource representation of the newly-created bucket.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_CreateBucketAsync_System_String_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_CreateBucketOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateBucket_System_String_System_String_Google_Cloud_Storage_V1_CreateBucketOptions_">CreateBucket</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_CreateBucketAsync_" data-uid="Google.Cloud.Storage.V1.StorageClient.CreateBucketAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_CreateBucketAsync_System_String_System_String_Google_Cloud_Storage_V1_CreateBucketOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClient.CreateBucketAsync(System.String,System.String,Google.Cloud.Storage.V1.CreateBucketOptions,System.Threading.CancellationToken)">CreateBucketAsync(String, String, CreateBucketOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Creates a storage bucket asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateBucket_System_String_System_String_Google_Cloud_Storage_V1_CreateBucketOptions_">CreateBucket</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Bucket&gt; CreateBucketAsync(string projectId, string bucket, CreateBucketOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -683,6 +700,11 @@ resource representation of the newly-created bucket.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_CreateBucketAsync_System_String_System_String_Google_Cloud_Storage_V1_CreateBucketOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateBucket_System_String_System_String_Google_Cloud_Storage_V1_CreateBucketOptions_">CreateBucket</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_CreateObjectUploader_" data-uid="Google.Cloud.Storage.V1.StorageClient.CreateObjectUploader*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_CreateObjectUploader_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_" data-uid="Google.Cloud.Storage.V1.StorageClient.CreateObjectUploader(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Cloud.Storage.V1.UploadObjectOptions)">CreateObjectUploader(Object, Stream, UploadObjectOptions)</h4>
               <div class="markdown level1 summary"><p>Creates an instance which is capable of starting a resumable upload for an object.</p>
@@ -821,8 +843,7 @@ defaults will be used.</p>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_DeleteBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_DeleteBucketOptions_" data-uid="Google.Cloud.Storage.V1.StorageClient.DeleteBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.DeleteBucketOptions)">DeleteBucket(Bucket, DeleteBucketOptions)</h4>
               <div class="markdown level1 summary"><p>Deletes a bucket synchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteBucket_System_String_Google_Cloud_Storage_V1_DeleteBucketOptions_">DeleteBucket</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void DeleteBucket(Bucket bucket, DeleteBucketOptions options = null)</code></pre>
@@ -852,15 +873,16 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_DeleteBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_DeleteBucketOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteBucket_System_String_Google_Cloud_Storage_V1_DeleteBucketOptions_">DeleteBucket</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_DeleteBucket_" data-uid="Google.Cloud.Storage.V1.StorageClient.DeleteBucket*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_DeleteBucket_System_String_Google_Cloud_Storage_V1_DeleteBucketOptions_" data-uid="Google.Cloud.Storage.V1.StorageClient.DeleteBucket(System.String,Google.Cloud.Storage.V1.DeleteBucketOptions)">DeleteBucket(String, DeleteBucketOptions)</h4>
               <div class="markdown level1 summary"><p>Deletes a bucket synchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">var client = StorageClient.Create();
-
-client.DeleteBucket(bucketName);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void DeleteBucket(string bucket, DeleteBucketOptions options = null)</code></pre>
@@ -890,12 +912,18 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_DeleteBucket_System_String_Google_Cloud_Storage_V1_DeleteBucketOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">var client = StorageClient.Create();
+
+client.DeleteBucket(bucketName);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_DeleteBucketAsync_" data-uid="Google.Cloud.Storage.V1.StorageClient.DeleteBucketAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_DeleteBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_DeleteBucketOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClient.DeleteBucketAsync(Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.DeleteBucketOptions,System.Threading.CancellationToken)">DeleteBucketAsync(Bucket, DeleteBucketOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Deletes bucket asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteBucket_System_String_Google_Cloud_Storage_V1_DeleteBucketOptions_">DeleteBucket</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteBucketAsync(Bucket bucket, DeleteBucketOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -947,12 +975,16 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_DeleteBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_DeleteBucketOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteBucket_System_String_Google_Cloud_Storage_V1_DeleteBucketOptions_">DeleteBucket</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_DeleteBucketAsync_" data-uid="Google.Cloud.Storage.V1.StorageClient.DeleteBucketAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_DeleteBucketAsync_System_String_Google_Cloud_Storage_V1_DeleteBucketOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClient.DeleteBucketAsync(System.String,Google.Cloud.Storage.V1.DeleteBucketOptions,System.Threading.CancellationToken)">DeleteBucketAsync(String, DeleteBucketOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Deletes a bucket asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteBucket_System_String_Google_Cloud_Storage_V1_DeleteBucketOptions_">DeleteBucket</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteBucketAsync(string bucket, DeleteBucketOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -1004,12 +1036,16 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_DeleteBucketAsync_System_String_Google_Cloud_Storage_V1_DeleteBucketOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteBucket_System_String_Google_Cloud_Storage_V1_DeleteBucketOptions_">DeleteBucket</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_DeleteObject_" data-uid="Google.Cloud.Storage.V1.StorageClient.DeleteObject*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_DeleteObject_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_DeleteObjectOptions_" data-uid="Google.Cloud.Storage.V1.StorageClient.DeleteObject(Google.Apis.Storage.v1.Data.Object,Google.Cloud.Storage.V1.DeleteObjectOptions)">DeleteObject(Object, DeleteObjectOptions)</h4>
               <div class="markdown level1 summary"><p>Deletes a version of the specified object synchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteObject_System_String_System_String_Google_Cloud_Storage_V1_DeleteObjectOptions_">DeleteObject</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void DeleteObject(Object obj, DeleteObjectOptions options = null)</code></pre>
@@ -1059,16 +1095,16 @@ If the request attempts to delete an object that does not exist or a specific ve
 not exist, this counts as a failure with an HTTP status code of 404.
 </p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_DeleteObject_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_DeleteObjectOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteObject_System_String_System_String_Google_Cloud_Storage_V1_DeleteObjectOptions_">DeleteObject</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_DeleteObject_" data-uid="Google.Cloud.Storage.V1.StorageClient.DeleteObject*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_DeleteObject_System_String_System_String_Google_Cloud_Storage_V1_DeleteObjectOptions_" data-uid="Google.Cloud.Storage.V1.StorageClient.DeleteObject(System.String,System.String,Google.Cloud.Storage.V1.DeleteObjectOptions)">DeleteObject(String, String, DeleteObjectOptions)</h4>
               <div class="markdown level1 summary"><p>Deletes a version of the specified object synchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">var client = StorageClient.Create();
-var objectName = &quot;places/deleteme.txt&quot;;
-
-client.DeleteObject(bucketName, objectName);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void DeleteObject(string bucket, string objectName, DeleteObjectOptions options = null)</code></pre>
@@ -1122,12 +1158,19 @@ If the request attempts to delete an object that does not exist or a specific ve
 not exist, this counts as a failure with an HTTP status code of 404.
 </p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_DeleteObject_System_String_System_String_Google_Cloud_Storage_V1_DeleteObjectOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">var client = StorageClient.Create();
+var objectName = &quot;places/deleteme.txt&quot;;
+
+client.DeleteObject(bucketName, objectName);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_DeleteObjectAsync_" data-uid="Google.Cloud.Storage.V1.StorageClient.DeleteObjectAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_DeleteObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_DeleteObjectOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClient.DeleteObjectAsync(Google.Apis.Storage.v1.Data.Object,Google.Cloud.Storage.V1.DeleteObjectOptions,System.Threading.CancellationToken)">DeleteObjectAsync(Object, DeleteObjectOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Deletes a version of the specified object asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteObject_System_String_System_String_Google_Cloud_Storage_V1_DeleteObjectOptions_">DeleteObject</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteObjectAsync(Object obj, DeleteObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -1199,12 +1242,16 @@ If the request attempts to delete an object that does not exist or a specific ve
 not exist, this counts as a failure with an HTTP status code of 404.
 </p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_DeleteObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_DeleteObjectOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteObject_System_String_System_String_Google_Cloud_Storage_V1_DeleteObjectOptions_">DeleteObject</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_DeleteObjectAsync_" data-uid="Google.Cloud.Storage.V1.StorageClient.DeleteObjectAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_DeleteObjectAsync_System_String_System_String_Google_Cloud_Storage_V1_DeleteObjectOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClient.DeleteObjectAsync(System.String,System.String,Google.Cloud.Storage.V1.DeleteObjectOptions,System.Threading.CancellationToken)">DeleteObjectAsync(String, String, DeleteObjectOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Deletes a version of the specified object asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteObject_System_String_System_String_Google_Cloud_Storage_V1_DeleteObjectOptions_">DeleteObject</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteObjectAsync(string bucket, string objectName, DeleteObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -1280,12 +1327,16 @@ If the request attempts to delete an object that does not exist or a specific ve
 not exist, this counts as a failure with an HTTP status code of 404.
 </p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_DeleteObjectAsync_System_String_System_String_Google_Cloud_Storage_V1_DeleteObjectOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteObject_System_String_System_String_Google_Cloud_Storage_V1_DeleteObjectOptions_">DeleteObject</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_DownloadObject_" data-uid="Google.Cloud.Storage.V1.StorageClient.DownloadObject*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_DownloadObject_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress__" data-uid="Google.Cloud.Storage.V1.StorageClient.DownloadObject(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Cloud.Storage.V1.DownloadObjectOptions,System.IProgress{Google.Apis.Download.IDownloadProgress})">DownloadObject(Object, Stream, DownloadObjectOptions, IProgress&lt;IDownloadProgress&gt;)</h4>
               <div class="markdown level1 summary"><p>Downloads the data for an object from storage synchronously, into a specified stream.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DownloadObject_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress__">DownloadObject</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void DownloadObject(Object source, Stream destination, DownloadObjectOptions options = null, IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
@@ -1331,26 +1382,16 @@ defaults will be used.</p>
               <div class="markdown level1 remarks"><p>The generation number within <span class="paramref">source</span> is ignored by this method.
 To download a specific generation, use <a class="xref" href="Google.Cloud.Storage.V1.DownloadObjectOptions.html#Google_Cloud_Storage_V1_DownloadObjectOptions_Generation">Generation</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_DownloadObject_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress___snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DownloadObject_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress__">DownloadObject</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_DownloadObject_" data-uid="Google.Cloud.Storage.V1.StorageClient.DownloadObject*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_DownloadObject_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress__" data-uid="Google.Cloud.Storage.V1.StorageClient.DownloadObject(System.String,System.String,System.IO.Stream,Google.Cloud.Storage.V1.DownloadObjectOptions,System.IProgress{Google.Apis.Download.IDownloadProgress})">DownloadObject(String, String, Stream, DownloadObjectOptions, IProgress&lt;IDownloadProgress&gt;)</h4>
               <div class="markdown level1 summary"><p>Downloads the data for an object from storage synchronously, into a specified stream.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">var client = StorageClient.Create();
-var source = &quot;greetings/hello.txt&quot;;
-var destination = &quot;hello.txt&quot;;
-
-using (var stream = File.Create(destination))
-{
-    // IDownloadProgress defined in Google.Apis.Download namespace
-    var progress = new Progress&lt;IDownloadProgress&gt;(
-        p =&gt; Console.WriteLine($&quot;bytes: {p.BytesDownloaded}, status: {p.Status}&quot;)
-    );
-
-    // Download source object from bucket to local file system
-    client.DownloadObject(bucketName, source, stream, null, progress);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void DownloadObject(string bucket, string objectName, Stream destination, DownloadObjectOptions options = null, IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
@@ -1398,12 +1439,29 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_DownloadObject_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress___snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">var client = StorageClient.Create();
+var source = &quot;greetings/hello.txt&quot;;
+var destination = &quot;hello.txt&quot;;
+
+using (var stream = File.Create(destination))
+{
+    // IDownloadProgress defined in Google.Apis.Download namespace
+    var progress = new Progress&lt;IDownloadProgress&gt;(
+        p =&gt; Console.WriteLine($&quot;bytes: {p.BytesDownloaded}, status: {p.Status}&quot;)
+    );
+
+    // Download source object from bucket to local file system
+    client.DownloadObject(bucketName, source, stream, null, progress);
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_DownloadObjectAsync_" data-uid="Google.Cloud.Storage.V1.StorageClient.DownloadObjectAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_DownloadObjectAsync_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Download_IDownloadProgress__" data-uid="Google.Cloud.Storage.V1.StorageClient.DownloadObjectAsync(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Cloud.Storage.V1.DownloadObjectOptions,System.Threading.CancellationToken,System.IProgress{Google.Apis.Download.IDownloadProgress})">DownloadObjectAsync(Object, Stream, DownloadObjectOptions, CancellationToken, IProgress&lt;IDownloadProgress&gt;)</h4>
               <div class="markdown level1 summary"><p>Downloads the data for an object from storage asynchronously, into a specified stream.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DownloadObject_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress__">DownloadObject</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DownloadObjectAsync(Object source, Stream destination, DownloadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
@@ -1471,12 +1529,16 @@ defaults will be used.</p>
               <div class="markdown level1 remarks"><p>The generation number within <span class="paramref">source</span> is ignored by this method.
 To download a specific generation, use <a class="xref" href="Google.Cloud.Storage.V1.DownloadObjectOptions.html#Google_Cloud_Storage_V1_DownloadObjectOptions_Generation">Generation</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_DownloadObjectAsync_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Download_IDownloadProgress___snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DownloadObject_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress__">DownloadObject</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_DownloadObjectAsync_" data-uid="Google.Cloud.Storage.V1.StorageClient.DownloadObjectAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_DownloadObjectAsync_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Download_IDownloadProgress__" data-uid="Google.Cloud.Storage.V1.StorageClient.DownloadObjectAsync(System.String,System.String,System.IO.Stream,Google.Cloud.Storage.V1.DownloadObjectOptions,System.Threading.CancellationToken,System.IProgress{Google.Apis.Download.IDownloadProgress})">DownloadObjectAsync(String, String, Stream, DownloadObjectOptions, CancellationToken, IProgress&lt;IDownloadProgress&gt;)</h4>
               <div class="markdown level1 summary"><p>Downloads the data for an object from storage asynchronously, into a specified stream.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DownloadObject_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress__">DownloadObject</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DownloadObjectAsync(string bucket, string objectName, Stream destination, DownloadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
@@ -1546,17 +1608,16 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_DownloadObjectAsync_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Download_IDownloadProgress___snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DownloadObject_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress__">DownloadObject</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_GetBucket_" data-uid="Google.Cloud.Storage.V1.StorageClient.GetBucket*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_GetBucket_System_String_Google_Cloud_Storage_V1_GetBucketOptions_" data-uid="Google.Cloud.Storage.V1.StorageClient.GetBucket(System.String,Google.Cloud.Storage.V1.GetBucketOptions)">GetBucket(String, GetBucketOptions)</h4>
               <div class="markdown level1 summary"><p>Fetches the information about a bucket synchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">var client = StorageClient.Create();
-
-var bucket = client.GetBucket(bucketName);
-Console.WriteLine($&quot;Name: {bucket.Name}&quot;);
-Console.WriteLine($&quot;TimeCreated: {bucket.TimeCreated}&quot;);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Bucket GetBucket(string bucket, GetBucketOptions options = null)</code></pre>
@@ -1602,12 +1663,20 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_GetBucket_System_String_Google_Cloud_Storage_V1_GetBucketOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">var client = StorageClient.Create();
+
+var bucket = client.GetBucket(bucketName);
+Console.WriteLine($&quot;Name: {bucket.Name}&quot;);
+Console.WriteLine($&quot;TimeCreated: {bucket.TimeCreated}&quot;);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_GetBucketAsync_" data-uid="Google.Cloud.Storage.V1.StorageClient.GetBucketAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_GetBucketAsync_System_String_Google_Cloud_Storage_V1_GetBucketOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClient.GetBucketAsync(System.String,Google.Cloud.Storage.V1.GetBucketOptions,System.Threading.CancellationToken)">GetBucketAsync(String, GetBucketOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Fetches the information about a bucket asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetBucket_System_String_Google_Cloud_Storage_V1_GetBucketOptions_">GetBucket</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Bucket&gt; GetBucketAsync(string bucket, GetBucketOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -1660,23 +1729,16 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_GetBucketAsync_System_String_Google_Cloud_Storage_V1_GetBucketOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetBucket_System_String_Google_Cloud_Storage_V1_GetBucketOptions_">GetBucket</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_GetBucketIamPolicy_" data-uid="Google.Cloud.Storage.V1.StorageClient.GetBucketIamPolicy*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_GetBucketIamPolicy_System_String_Google_Cloud_Storage_V1_GetBucketIamPolicyOptions_" data-uid="Google.Cloud.Storage.V1.StorageClient.GetBucketIamPolicy(System.String,Google.Cloud.Storage.V1.GetBucketIamPolicyOptions)">GetBucketIamPolicy(String, GetBucketIamPolicyOptions)</h4>
               <div class="markdown level1 summary"><p>Fetches the IAM policy information about a bucket synchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">StorageClient client = StorageClient.Create();
-
-Policy policy = client.GetBucketIamPolicy(bucketName);
-foreach (Policy.BindingsData binding in policy.Bindings)
-{
-    Console.WriteLine($&quot;Role: {binding.Role}&quot;);
-    foreach (var permission in binding.Members)
-    {
-        Console.WriteLine($&quot;  {permission}&quot;);
-    }
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Policy GetBucketIamPolicy(string bucket, GetBucketIamPolicyOptions options = null)</code></pre>
@@ -1722,12 +1784,26 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_GetBucketIamPolicy_System_String_Google_Cloud_Storage_V1_GetBucketIamPolicyOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">StorageClient client = StorageClient.Create();
+
+Policy policy = client.GetBucketIamPolicy(bucketName);
+foreach (Policy.BindingsData binding in policy.Bindings)
+{
+    Console.WriteLine($&quot;Role: {binding.Role}&quot;);
+    foreach (var permission in binding.Members)
+    {
+        Console.WriteLine($&quot;  {permission}&quot;);
+    }
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_GetBucketIamPolicyAsync_" data-uid="Google.Cloud.Storage.V1.StorageClient.GetBucketIamPolicyAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_GetBucketIamPolicyAsync_System_String_Google_Cloud_Storage_V1_GetBucketIamPolicyOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClient.GetBucketIamPolicyAsync(System.String,Google.Cloud.Storage.V1.GetBucketIamPolicyOptions,System.Threading.CancellationToken)">GetBucketIamPolicyAsync(String, GetBucketIamPolicyOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Fetches the IAM policy information about a bucket asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetBucketIamPolicy_System_String_Google_Cloud_Storage_V1_GetBucketIamPolicyOptions_">GetBucketIamPolicy</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Policy&gt; GetBucketIamPolicyAsync(string bucket, GetBucketIamPolicyOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -1780,20 +1856,16 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_GetBucketIamPolicyAsync_System_String_Google_Cloud_Storage_V1_GetBucketIamPolicyOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetBucketIamPolicy_System_String_Google_Cloud_Storage_V1_GetBucketIamPolicyOptions_">GetBucketIamPolicy</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_GetObject_" data-uid="Google.Cloud.Storage.V1.StorageClient.GetObject*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_GetObject_System_String_System_String_Google_Cloud_Storage_V1_GetObjectOptions_" data-uid="Google.Cloud.Storage.V1.StorageClient.GetObject(System.String,System.String,Google.Cloud.Storage.V1.GetObjectOptions)">GetObject(String, String, GetObjectOptions)</h4>
               <div class="markdown level1 summary"><p>Fetches the information about an object synchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">var client = StorageClient.Create();
-var name = &quot;greetings/hello.txt&quot;;
-
-var obj = client.GetObject(bucketName, name);
-Console.WriteLine($&quot;Name: {obj.Name}&quot;);
-Console.WriteLine($&quot;Size: {obj.Size}&quot;);
-Console.WriteLine($&quot;ContentType: {obj.ContentType}&quot;);
-Console.WriteLine($&quot;TimeCreated: {obj.TimeCreated}&quot;);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Object GetObject(string bucket, string objectName, GetObjectOptions options = null)</code></pre>
@@ -1849,12 +1921,23 @@ defaults will be used.</p>
               <div class="markdown level1 remarks"><p>This does not retrieve the content of the object itself. Use <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DownloadObject_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress__">DownloadObject(String, String, Stream, DownloadObjectOptions, IProgress&lt;IDownloadProgress&gt;)</a>
 to download the content.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_GetObject_System_String_System_String_Google_Cloud_Storage_V1_GetObjectOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">var client = StorageClient.Create();
+var name = &quot;greetings/hello.txt&quot;;
+
+var obj = client.GetObject(bucketName, name);
+Console.WriteLine($&quot;Name: {obj.Name}&quot;);
+Console.WriteLine($&quot;Size: {obj.Size}&quot;);
+Console.WriteLine($&quot;ContentType: {obj.ContentType}&quot;);
+Console.WriteLine($&quot;TimeCreated: {obj.TimeCreated}&quot;);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_GetObjectAsync_" data-uid="Google.Cloud.Storage.V1.StorageClient.GetObjectAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_GetObjectAsync_System_String_System_String_Google_Cloud_Storage_V1_GetObjectOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClient.GetObjectAsync(System.String,System.String,Google.Cloud.Storage.V1.GetObjectOptions,System.Threading.CancellationToken)">GetObjectAsync(String, String, GetObjectOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Fetches the information about an object asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetObject_System_String_System_String_Google_Cloud_Storage_V1_GetObjectOptions_">GetObject</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; GetObjectAsync(string bucket, string objectName, GetObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -1917,16 +2000,16 @@ defaults will be used.</p>
               <div class="markdown level1 remarks"><p>This does not retrieve the content of the object itself. Use <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DownloadObjectAsync_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Download_IDownloadProgress__">DownloadObjectAsync(String, String, Stream, DownloadObjectOptions, CancellationToken, IProgress&lt;IDownloadProgress&gt;)</a>
 to download the content.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_GetObjectAsync_System_String_System_String_Google_Cloud_Storage_V1_GetObjectOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetObject_System_String_System_String_Google_Cloud_Storage_V1_GetObjectOptions_">GetObject</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_ListBuckets_" data-uid="Google.Cloud.Storage.V1.StorageClient.ListBuckets*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_ListBuckets_System_String_Google_Cloud_Storage_V1_ListBucketsOptions_" data-uid="Google.Cloud.Storage.V1.StorageClient.ListBuckets(System.String,Google.Cloud.Storage.V1.ListBucketsOptions)">ListBuckets(String, ListBucketsOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the buckets for a given project, synchronously but lazily.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">var client = StorageClient.Create();
-
-// List all buckets associated with a project
-var buckets = client.ListBuckets(projectId);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;Buckets, Bucket&gt; ListBuckets(string projectId, ListBucketsOptions options = null)</code></pre>
@@ -1976,12 +2059,19 @@ defaults will be supplied.</p>
               <div class="markdown level1 remarks"><p>This method fetches the buckets lazily, making requests to the underlying service
 for a page of results at a time, as required.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_ListBuckets_System_String_Google_Cloud_Storage_V1_ListBucketsOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">var client = StorageClient.Create();
+
+// List all buckets associated with a project
+var buckets = client.ListBuckets(projectId);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_ListBucketsAsync_" data-uid="Google.Cloud.Storage.V1.StorageClient.ListBucketsAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_ListBucketsAsync_System_String_Google_Cloud_Storage_V1_ListBucketsOptions_" data-uid="Google.Cloud.Storage.V1.StorageClient.ListBucketsAsync(System.String,Google.Cloud.Storage.V1.ListBucketsOptions)">ListBucketsAsync(String, ListBucketsOptions)</h4>
               <div class="markdown level1 summary"><p>Asynchronously lists the buckets in a given project.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ListBuckets_System_String_Google_Cloud_Storage_V1_ListBucketsOptions_">ListBuckets</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;Buckets, Bucket&gt; ListBucketsAsync(string projectId, ListBucketsOptions options = null)</code></pre>
@@ -2031,16 +2121,16 @@ defaults will be supplied.</p>
               <div class="markdown level1 remarks"><p>This method fetches the buckets lazily, making requests to the underlying service
 for a page of results at a time, as required.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_ListBucketsAsync_System_String_Google_Cloud_Storage_V1_ListBucketsOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ListBuckets_System_String_Google_Cloud_Storage_V1_ListBucketsOptions_">ListBuckets</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_ListObjects_" data-uid="Google.Cloud.Storage.V1.StorageClient.ListObjects*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_ListObjects_System_String_System_String_Google_Cloud_Storage_V1_ListObjectsOptions_" data-uid="Google.Cloud.Storage.V1.StorageClient.ListObjects(System.String,System.String,Google.Cloud.Storage.V1.ListObjectsOptions)">ListObjects(String, String, ListObjectsOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the objects in a given bucket, synchronously but lazily.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">var client = StorageClient.Create();
-
-// List only objects with a name starting with &quot;greet&quot;
-var objects = client.ListObjects(bucketName, &quot;greet&quot;);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;Objects, Object&gt; ListObjects(string bucket, string prefix = null, ListObjectsOptions options = null)</code></pre>
@@ -2097,12 +2187,19 @@ defaults will be supplied.</p>
               <div class="markdown level1 remarks"><p>This method fetches the objects lazily, making requests to the underlying service
 for a page of results at a time, as required.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_ListObjects_System_String_System_String_Google_Cloud_Storage_V1_ListObjectsOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">var client = StorageClient.Create();
+
+// List only objects with a name starting with &quot;greet&quot;
+var objects = client.ListObjects(bucketName, &quot;greet&quot;);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_ListObjectsAsync_" data-uid="Google.Cloud.Storage.V1.StorageClient.ListObjectsAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_ListObjectsAsync_System_String_System_String_Google_Cloud_Storage_V1_ListObjectsOptions_" data-uid="Google.Cloud.Storage.V1.StorageClient.ListObjectsAsync(System.String,System.String,Google.Cloud.Storage.V1.ListObjectsOptions)">ListObjectsAsync(String, String, ListObjectsOptions)</h4>
               <div class="markdown level1 summary"><p>Asynchronously lists the objects in a given bucket.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ListObjects_System_String_System_String_Google_Cloud_Storage_V1_ListObjectsOptions_">ListObjects</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;Objects, Object&gt; ListObjectsAsync(string bucket, string prefix = null, ListObjectsOptions options = null)</code></pre>
@@ -2159,25 +2256,16 @@ defaults will be supplied.</p>
               <div class="markdown level1 remarks"><p>This method fetches the objects lazily, making requests to the underlying service
 for a page of results at a time, as required.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_ListObjectsAsync_System_String_System_String_Google_Cloud_Storage_V1_ListObjectsOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ListObjects_System_String_System_String_Google_Cloud_Storage_V1_ListObjectsOptions_">ListObjects</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_PatchBucket_" data-uid="Google.Cloud.Storage.V1.StorageClient.PatchBucket*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_PatchBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_PatchBucketOptions_" data-uid="Google.Cloud.Storage.V1.StorageClient.PatchBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.PatchBucketOptions)">PatchBucket(Bucket, PatchBucketOptions)</h4>
               <div class="markdown level1 summary"><p>Patches the metadata for a storage bucket synchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">var client = StorageClient.Create();
-// Note: no fetching of the bucket beforehand. We only specify the values we want
-// to change.
-var bucket = new Bucket
-{
-    Name = bucketName,
-    Website = new Bucket.WebsiteData
-    {
-        MainPageSuffix = &quot;index.html&quot;,
-        NotFoundPage = &quot;404.html&quot;
-    }
-};
-client.PatchBucket(bucket);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Bucket PatchBucket(Bucket bucket, PatchBucketOptions options = null)</code></pre>
@@ -2223,12 +2311,28 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_PatchBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_PatchBucketOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">var client = StorageClient.Create();
+// Note: no fetching of the bucket beforehand. We only specify the values we want
+// to change.
+var bucket = new Bucket
+{
+    Name = bucketName,
+    Website = new Bucket.WebsiteData
+    {
+        MainPageSuffix = &quot;index.html&quot;,
+        NotFoundPage = &quot;404.html&quot;
+    }
+};
+client.PatchBucket(bucket);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_PatchBucketAsync_" data-uid="Google.Cloud.Storage.V1.StorageClient.PatchBucketAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_PatchBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_PatchBucketOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClient.PatchBucketAsync(Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.PatchBucketOptions,System.Threading.CancellationToken)">PatchBucketAsync(Bucket, PatchBucketOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Patches the metadata for a storage bucket asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_PatchBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_PatchBucketOptions_">PatchBucket</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Bucket&gt; PatchBucketAsync(Bucket bucket, PatchBucketOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -2281,42 +2385,16 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_PatchBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_PatchBucketOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_PatchBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_PatchBucketOptions_">PatchBucket</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_PatchObject_" data-uid="Google.Cloud.Storage.V1.StorageClient.PatchObject*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_PatchObject_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_PatchObjectOptions_" data-uid="Google.Cloud.Storage.V1.StorageClient.PatchObject(Google.Apis.Storage.v1.Data.Object,Google.Cloud.Storage.V1.PatchObjectOptions)">PatchObject(Object, PatchObjectOptions)</h4>
               <div class="markdown level1 summary"><p>Patches the metadata for an object in storage synchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">var client = StorageClient.Create();
-var name = &quot;patch-example.txt&quot;;
-var content = Encoding.UTF8.GetBytes(&quot;hello, world&quot;);
-var obj = new Apis.Storage.v1.Data.Object
-{
-    Bucket = bucketName,
-    Name = name,
-    ContentType = &quot;text/json&quot;, // Deliberately incorrect
-    Metadata = new Dictionary&lt;string, string&gt;
-    {
-        { &quot;key1&quot;, &quot;value1&quot; },
-        { &quot;key2&quot;, &quot;value2&quot; }
-    }
-};
-client.UploadObject(obj, new MemoryStream(content));
-
-var patchObject = new Apis.Storage.v1.Data.Object
-{
-    // The bucket and name are required; everything else is optional.
-    // Only specified properties will be updated.
-    Bucket = bucketName,
-    Name = name,
-    ContentType = &quot;text/plain&quot;,
-    Metadata = new Dictionary&lt;string, string&gt;
-    {
-        { &quot;key2&quot;, &quot;updated-value2&quot; },
-        { &quot;key3&quot;, &quot;value3&quot; }
-    }
-};
-client.PatchObject(patchObject);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Object PatchObject(Object obj, PatchObjectOptions options = null)</code></pre>
@@ -2363,12 +2441,45 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_PatchObject_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_PatchObjectOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">var client = StorageClient.Create();
+var name = &quot;patch-example.txt&quot;;
+var content = Encoding.UTF8.GetBytes(&quot;hello, world&quot;);
+var obj = new Apis.Storage.v1.Data.Object
+{
+    Bucket = bucketName,
+    Name = name,
+    ContentType = &quot;text/json&quot;, // Deliberately incorrect
+    Metadata = new Dictionary&lt;string, string&gt;
+    {
+        { &quot;key1&quot;, &quot;value1&quot; },
+        { &quot;key2&quot;, &quot;value2&quot; }
+    }
+};
+client.UploadObject(obj, new MemoryStream(content));
+
+var patchObject = new Apis.Storage.v1.Data.Object
+{
+    // The bucket and name are required; everything else is optional.
+    // Only specified properties will be updated.
+    Bucket = bucketName,
+    Name = name,
+    ContentType = &quot;text/plain&quot;,
+    Metadata = new Dictionary&lt;string, string&gt;
+    {
+        { &quot;key2&quot;, &quot;updated-value2&quot; },
+        { &quot;key3&quot;, &quot;value3&quot; }
+    }
+};
+client.PatchObject(patchObject);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_PatchObjectAsync_" data-uid="Google.Cloud.Storage.V1.StorageClient.PatchObjectAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_PatchObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_PatchObjectOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClient.PatchObjectAsync(Google.Apis.Storage.v1.Data.Object,Google.Cloud.Storage.V1.PatchObjectOptions,System.Threading.CancellationToken)">PatchObjectAsync(Object, PatchObjectOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Patches the metadata for an object in storage asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_PatchObject_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_PatchObjectOptions_">PatchObject</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; PatchObjectAsync(Object obj, PatchObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -2422,43 +2533,16 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_PatchObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_PatchObjectOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_PatchObject_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_PatchObjectOptions_">PatchObject</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_SetBucketIamPolicy_" data-uid="Google.Cloud.Storage.V1.StorageClient.SetBucketIamPolicy*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_SetBucketIamPolicy_System_String_Google_Apis_Storage_v1_Data_Policy_Google_Cloud_Storage_V1_SetBucketIamPolicyOptions_" data-uid="Google.Cloud.Storage.V1.StorageClient.SetBucketIamPolicy(System.String,Google.Apis.Storage.v1.Data.Policy,Google.Cloud.Storage.V1.SetBucketIamPolicyOptions)">SetBucketIamPolicy(String, Policy, SetBucketIamPolicyOptions)</h4>
               <div class="markdown level1 summary"><p>Updates the IAM policy information about a bucket synchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create a new bucket and an empty file within it
-StorageClient client = StorageClient.Create();
-Bucket bucket = client.CreateBucket(projectId, bucketName);
-var obj = client.UploadObject(bucketName, &quot;empty.txt&quot;, &quot;text/plain&quot;, new MemoryStream());
-
-// Demonstrate that without authentication, we can&#39;t download the object
-HttpClient httpClient = new HttpClient();
-HttpResponseMessage response1 = await httpClient.GetAsync(obj.MediaLink);
-Console.WriteLine($&quot;Response code before setting policy: {response1.StatusCode}&quot;);
-
-// Fetch the current IAM policy, and modify it in memory to allow all users
-// to view objects.
-Policy policy = client.GetBucketIamPolicy(bucketName);
-string role = &quot;roles/storage.objectViewer&quot;;
-Policy.BindingsData binding = policy.Bindings
-    .Where(b =&gt; b.Role == role)
-    .FirstOrDefault();
-if (binding == null)
-{
-    binding = new Policy.BindingsData { Role = role, Members = new List&lt;string&gt;() };
-    policy.Bindings.Add(binding);
-}
-binding.Members.Add(&quot;allUsers&quot;);
-
-// Update the IAM policy on the bucket.
-client.SetBucketIamPolicy(bucketName, policy);
-
-// Download the object again: this time the response should be OK
-HttpResponseMessage response2 = await httpClient.GetAsync(obj.MediaLink);
-Console.WriteLine($&quot;Response code after setting policy: {response2.StatusCode}&quot;);
-
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Policy SetBucketIamPolicy(string bucket, Policy policy, SetBucketIamPolicyOptions options = null)</code></pre>
@@ -2510,12 +2594,46 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_SetBucketIamPolicy_System_String_Google_Apis_Storage_v1_Data_Policy_Google_Cloud_Storage_V1_SetBucketIamPolicyOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create a new bucket and an empty file within it
+StorageClient client = StorageClient.Create();
+Bucket bucket = client.CreateBucket(projectId, bucketName);
+var obj = client.UploadObject(bucketName, &quot;empty.txt&quot;, &quot;text/plain&quot;, new MemoryStream());
+
+// Demonstrate that without authentication, we can&#39;t download the object
+HttpClient httpClient = new HttpClient();
+HttpResponseMessage response1 = await httpClient.GetAsync(obj.MediaLink);
+Console.WriteLine($&quot;Response code before setting policy: {response1.StatusCode}&quot;);
+
+// Fetch the current IAM policy, and modify it in memory to allow all users
+// to view objects.
+Policy policy = client.GetBucketIamPolicy(bucketName);
+string role = &quot;roles/storage.objectViewer&quot;;
+Policy.BindingsData binding = policy.Bindings
+    .Where(b =&gt; b.Role == role)
+    .FirstOrDefault();
+if (binding == null)
+{
+    binding = new Policy.BindingsData { Role = role, Members = new List&lt;string&gt;() };
+    policy.Bindings.Add(binding);
+}
+binding.Members.Add(&quot;allUsers&quot;);
+
+// Update the IAM policy on the bucket.
+client.SetBucketIamPolicy(bucketName, policy);
+
+// Download the object again: this time the response should be OK
+HttpResponseMessage response2 = await httpClient.GetAsync(obj.MediaLink);
+Console.WriteLine($&quot;Response code after setting policy: {response2.StatusCode}&quot;);
+
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_SetBucketIamPolicyAsync_" data-uid="Google.Cloud.Storage.V1.StorageClient.SetBucketIamPolicyAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_SetBucketIamPolicyAsync_System_String_Google_Apis_Storage_v1_Data_Policy_Google_Cloud_Storage_V1_SetBucketIamPolicyOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClient.SetBucketIamPolicyAsync(System.String,Google.Apis.Storage.v1.Data.Policy,Google.Cloud.Storage.V1.SetBucketIamPolicyOptions,System.Threading.CancellationToken)">SetBucketIamPolicyAsync(String, Policy, SetBucketIamPolicyOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Updates the IAM policy information about a bucket asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_SetBucketIamPolicy_System_String_Google_Apis_Storage_v1_Data_Policy_Google_Cloud_Storage_V1_SetBucketIamPolicyOptions_">SetBucketIamPolicy</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Policy&gt; SetBucketIamPolicyAsync(string bucket, Policy policy, SetBucketIamPolicyOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -2574,21 +2692,16 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_SetBucketIamPolicyAsync_System_String_Google_Apis_Storage_v1_Data_Policy_Google_Cloud_Storage_V1_SetBucketIamPolicyOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_SetBucketIamPolicy_System_String_Google_Apis_Storage_v1_Data_Policy_Google_Cloud_Storage_V1_SetBucketIamPolicyOptions_">SetBucketIamPolicy</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_TestBucketIamPermissions_" data-uid="Google.Cloud.Storage.V1.StorageClient.TestBucketIamPermissions*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_TestBucketIamPermissions_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_Storage_V1_TestBucketIamPermissionsOptions_" data-uid="Google.Cloud.Storage.V1.StorageClient.TestBucketIamPermissions(System.String,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions)">TestBucketIamPermissions(String, IEnumerable&lt;String&gt;, TestBucketIamPermissionsOptions)</h4>
               <div class="markdown level1 summary"><p>Tests the IAM permissions for a bucket synchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">StorageClient client = StorageClient.Create();
-
-IList&lt;string&gt; permissions = client.TestBucketIamPermissions(bucketName,
-    new[] { &quot;storage.buckets.get&quot;, &quot;storage.objects.list&quot; });
-Console.WriteLine(&quot;Permissions held:&quot;);
-foreach (string permission in permissions)
-{
-    Console.WriteLine($&quot;  {permission}&quot;);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IList&lt;string&gt; TestBucketIamPermissions(string bucket, IEnumerable&lt;string&gt; permissions, TestBucketIamPermissionsOptions options = null)</code></pre>
@@ -2640,12 +2753,24 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_TestBucketIamPermissions_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_Storage_V1_TestBucketIamPermissionsOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">StorageClient client = StorageClient.Create();
+
+IList&lt;string&gt; permissions = client.TestBucketIamPermissions(bucketName,
+    new[] { &quot;storage.buckets.get&quot;, &quot;storage.objects.list&quot; });
+Console.WriteLine(&quot;Permissions held:&quot;);
+foreach (string permission in permissions)
+{
+    Console.WriteLine($&quot;  {permission}&quot;);
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_TestBucketIamPermissionsAsync_" data-uid="Google.Cloud.Storage.V1.StorageClient.TestBucketIamPermissionsAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_TestBucketIamPermissionsAsync_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_Storage_V1_TestBucketIamPermissionsOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClient.TestBucketIamPermissionsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions,System.Threading.CancellationToken)">TestBucketIamPermissionsAsync(String, IEnumerable&lt;String&gt;, TestBucketIamPermissionsOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Tests the IAM policy information about a bucket asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_TestBucketIamPermissions_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_Storage_V1_TestBucketIamPermissionsOptions_">TestBucketIamPermissions</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;IList&lt;string&gt;&gt; TestBucketIamPermissionsAsync(string bucket, IEnumerable&lt;string&gt; permissions, TestBucketIamPermissionsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -2704,20 +2829,16 @@ permissions held by the caller.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_TestBucketIamPermissionsAsync_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_Storage_V1_TestBucketIamPermissionsOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_TestBucketIamPermissions_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_Storage_V1_TestBucketIamPermissionsOptions_">TestBucketIamPermissions</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_UpdateBucket_" data-uid="Google.Cloud.Storage.V1.StorageClient.UpdateBucket*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_UpdateBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_UpdateBucketOptions_" data-uid="Google.Cloud.Storage.V1.StorageClient.UpdateBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.UpdateBucketOptions)">UpdateBucket(Bucket, UpdateBucketOptions)</h4>
               <div class="markdown level1 summary"><p>Updates the metadata for a storage bucket synchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">var client = StorageClient.Create();
-var bucket = client.GetBucket(bucketName);
-bucket.Website = new Bucket.WebsiteData
-{
-    MainPageSuffix = &quot;index.html&quot;,
-    NotFoundPage = &quot;404.html&quot;
-};
-client.UpdateBucket(bucket);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Bucket UpdateBucket(Bucket bucket, UpdateBucketOptions options = null)</code></pre>
@@ -2770,12 +2891,23 @@ is used as a precondition for the update, unless <a class="xref" href="Google.Cl
 set to <code>true</code>.
 </p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_UpdateBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_UpdateBucketOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">var client = StorageClient.Create();
+var bucket = client.GetBucket(bucketName);
+bucket.Website = new Bucket.WebsiteData
+{
+    MainPageSuffix = &quot;index.html&quot;,
+    NotFoundPage = &quot;404.html&quot;
+};
+client.UpdateBucket(bucket);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_UpdateBucketAsync_" data-uid="Google.Cloud.Storage.V1.StorageClient.UpdateBucketAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_UpdateBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_UpdateBucketOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClient.UpdateBucketAsync(Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.UpdateBucketOptions,System.Threading.CancellationToken)">UpdateBucketAsync(Bucket, UpdateBucketOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Updates the metadata for storage bucket asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_UpdateBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_UpdateBucketOptions_">UpdateBucket</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Bucket&gt; UpdateBucketAsync(Bucket bucket, UpdateBucketOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -2835,32 +2967,16 @@ is used as a precondition for the update, unless <a class="xref" href="Google.Cl
 set to <code>true</code>.
 </p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_UpdateBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_UpdateBucketOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_UpdateBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_UpdateBucketOptions_">UpdateBucket</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_UpdateObject_" data-uid="Google.Cloud.Storage.V1.StorageClient.UpdateObject*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_UpdateObject_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_UpdateObjectOptions_" data-uid="Google.Cloud.Storage.V1.StorageClient.UpdateObject(Google.Apis.Storage.v1.Data.Object,Google.Cloud.Storage.V1.UpdateObjectOptions)">UpdateObject(Object, UpdateObjectOptions)</h4>
               <div class="markdown level1 summary"><p>Updates the metadata for an object in storage synchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">var client = StorageClient.Create();
-var name = &quot;update-example.txt&quot;;
-var content = Encoding.UTF8.GetBytes(&quot;hello, world&quot;);
-var obj = new Apis.Storage.v1.Data.Object
-{
-    Bucket = bucketName,
-    Name = name,
-    ContentType = &quot;text/json&quot;,
-    Metadata = new Dictionary&lt;string, string&gt;
-    {
-        { &quot;key1&quot;, &quot;value1&quot; },
-        { &quot;key2&quot;, &quot;value2&quot; }
-    }
-};
-obj = client.UploadObject(obj, new MemoryStream(content));
-obj.Metadata.Remove(&quot;key1&quot;);
-obj.Metadata[&quot;key2&quot;] = &quot;updated-value2&quot;;
-obj.Metadata[&quot;key3&quot;] = &quot;value3&quot;;
-obj.ContentType = &quot;text/plain&quot;;
-client.UpdateObject(obj);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Object UpdateObject(Object obj, UpdateObjectOptions options = null)</code></pre>
@@ -2915,12 +3031,35 @@ unless <a class="xref" href="Google.Cloud.Storage.V1.UpdateObjectOptions.html#Go
 set to <code>true</code>.
 </p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_UpdateObject_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_UpdateObjectOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">var client = StorageClient.Create();
+var name = &quot;update-example.txt&quot;;
+var content = Encoding.UTF8.GetBytes(&quot;hello, world&quot;);
+var obj = new Apis.Storage.v1.Data.Object
+{
+    Bucket = bucketName,
+    Name = name,
+    ContentType = &quot;text/json&quot;,
+    Metadata = new Dictionary&lt;string, string&gt;
+    {
+        { &quot;key1&quot;, &quot;value1&quot; },
+        { &quot;key2&quot;, &quot;value2&quot; }
+    }
+};
+obj = client.UploadObject(obj, new MemoryStream(content));
+obj.Metadata.Remove(&quot;key1&quot;);
+obj.Metadata[&quot;key2&quot;] = &quot;updated-value2&quot;;
+obj.Metadata[&quot;key3&quot;] = &quot;value3&quot;;
+obj.ContentType = &quot;text/plain&quot;;
+client.UpdateObject(obj);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_UpdateObjectAsync_" data-uid="Google.Cloud.Storage.V1.StorageClient.UpdateObjectAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_UpdateObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_UpdateObjectOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClient.UpdateObjectAsync(Google.Apis.Storage.v1.Data.Object,Google.Cloud.Storage.V1.UpdateObjectOptions,System.Threading.CancellationToken)">UpdateObjectAsync(Object, UpdateObjectOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Updates the metadata for an object in storage asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_UpdateObject_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_UpdateObjectOptions_">UpdateObject</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; UpdateObjectAsync(Object obj, UpdateObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -2982,12 +3121,16 @@ unless <a class="xref" href="Google.Cloud.Storage.V1.UpdateObjectOptions.html#Go
 set to <code>true</code>.
 </p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_UpdateObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_UpdateObjectOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_UpdateObject_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_UpdateObjectOptions_">UpdateObject</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_UploadObject_" data-uid="Google.Cloud.Storage.V1.StorageClient.UploadObject*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_UploadObject_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_IProgress_Google_Apis_Upload_IUploadProgress__" data-uid="Google.Cloud.Storage.V1.StorageClient.UploadObject(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Cloud.Storage.V1.UploadObjectOptions,System.IProgress{Google.Apis.Upload.IUploadProgress})">UploadObject(Object, Stream, UploadObjectOptions, IProgress&lt;IUploadProgress&gt;)</h4>
               <div class="markdown level1 summary"><p>Uploads the data for an object in storage synchronously, from a specified stream.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_UploadObject_System_String_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_IProgress_Google_Apis_Upload_IUploadProgress__">UploadObject</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Object UploadObject(Object destination, Stream source, UploadObjectOptions options = null, IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
@@ -3046,29 +3189,16 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_UploadObject_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_IProgress_Google_Apis_Upload_IUploadProgress___snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_UploadObject_System_String_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_IProgress_Google_Apis_Upload_IUploadProgress__">UploadObject</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_UploadObject_" data-uid="Google.Cloud.Storage.V1.StorageClient.UploadObject*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_UploadObject_System_String_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_IProgress_Google_Apis_Upload_IUploadProgress__" data-uid="Google.Cloud.Storage.V1.StorageClient.UploadObject(System.String,System.String,System.String,System.IO.Stream,Google.Cloud.Storage.V1.UploadObjectOptions,System.IProgress{Google.Apis.Upload.IUploadProgress})">UploadObject(String, String, String, Stream, UploadObjectOptions, IProgress&lt;IUploadProgress&gt;)</h4>
               <div class="markdown level1 summary"><p>Uploads the data for an object in storage synchronously, from a specified stream.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">var client = StorageClient.Create();
-var source = &quot;world.txt&quot;;
-var destination = &quot;places/world.txt&quot;;
-var contentType = &quot;text/plain&quot;;
-
-using (var stream = File.OpenRead(source))
-{
-    // IUploadProgress defined in Google.Apis.Upload namespace
-    var progress = new Progress&lt;IUploadProgress&gt;(
-      p =&gt; Console.WriteLine($&quot;bytes: {p.BytesSent}, status: {p.Status}&quot;)
-    );
-
-    // var acl = PredefinedAcl.PublicRead // public
-    var acl = PredefinedObjectAcl.AuthenticatedRead; // private
-    var options = new UploadObjectOptions { PredefinedAcl = acl };
-    var obj = client.UploadObject(bucketName, destination, contentType, stream, options, progress);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Object UploadObject(string bucket, string objectName, string contentType, Stream source, UploadObjectOptions options = null, IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
@@ -3139,12 +3269,32 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_UploadObject_System_String_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_IProgress_Google_Apis_Upload_IUploadProgress___snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">var client = StorageClient.Create();
+var source = &quot;world.txt&quot;;
+var destination = &quot;places/world.txt&quot;;
+var contentType = &quot;text/plain&quot;;
+
+using (var stream = File.OpenRead(source))
+{
+    // IUploadProgress defined in Google.Apis.Upload namespace
+    var progress = new Progress&lt;IUploadProgress&gt;(
+      p =&gt; Console.WriteLine($&quot;bytes: {p.BytesSent}, status: {p.Status}&quot;)
+    );
+
+    // var acl = PredefinedAcl.PublicRead // public
+    var acl = PredefinedObjectAcl.AuthenticatedRead; // private
+    var options = new UploadObjectOptions { PredefinedAcl = acl };
+    var obj = client.UploadObject(bucketName, destination, contentType, stream, options, progress);
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_UploadObjectAsync_" data-uid="Google.Cloud.Storage.V1.StorageClient.UploadObjectAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_UploadObjectAsync_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Upload_IUploadProgress__" data-uid="Google.Cloud.Storage.V1.StorageClient.UploadObjectAsync(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Cloud.Storage.V1.UploadObjectOptions,System.Threading.CancellationToken,System.IProgress{Google.Apis.Upload.IUploadProgress})">UploadObjectAsync(Object, Stream, UploadObjectOptions, CancellationToken, IProgress&lt;IUploadProgress&gt;)</h4>
               <div class="markdown level1 summary"><p>Uploads the data for an object in storage asynchronously, from a specified stream.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_UploadObject_System_String_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_IProgress_Google_Apis_Upload_IUploadProgress__">UploadObject</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; UploadObjectAsync(Object destination, Stream source, UploadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
@@ -3210,12 +3360,16 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_UploadObjectAsync_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Upload_IUploadProgress___snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_UploadObject_System_String_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_IProgress_Google_Apis_Upload_IUploadProgress__">UploadObject</a> for a synchronous example.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClient_UploadObjectAsync_" data-uid="Google.Cloud.Storage.V1.StorageClient.UploadObjectAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClient_UploadObjectAsync_System_String_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Upload_IUploadProgress__" data-uid="Google.Cloud.Storage.V1.StorageClient.UploadObjectAsync(System.String,System.String,System.String,System.IO.Stream,Google.Cloud.Storage.V1.UploadObjectOptions,System.Threading.CancellationToken,System.IProgress{Google.Apis.Upload.IUploadProgress})">UploadObjectAsync(String, String, String, Stream, UploadObjectOptions, CancellationToken, IProgress&lt;IUploadProgress&gt;)</h4>
               <div class="markdown level1 summary"><p>Uploads the data for an object in storage asynchronously, from a specified stream.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_UploadObject_System_String_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_IProgress_Google_Apis_Upload_IUploadProgress__">UploadObject</a> for a synchronous example.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; UploadObjectAsync(string bucket, string objectName, string contentType, Stream source, UploadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
@@ -3293,6 +3447,11 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClient_UploadObjectAsync_System_String_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Upload_IUploadProgress___snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_UploadObject_System_String_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_IProgress_Google_Apis_Upload_IUploadProgress__">UploadObject</a> for a synchronous example.</p>
+</div>
+              </div>
                         </article>
           </div>
           

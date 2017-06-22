@@ -876,19 +876,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
               <div class="markdown level1 summary"><p>Lists the rows within this table, similar to a <code>SELECT * FROM ...</code> query.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ListRows_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_ListRowsOptions_">ListRows(TableReference, TableSchema, ListRowsOptions)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
-BigQueryTable table = client.GetTable(datasetId, tableId);
-PagedEnumerable&lt;TableDataList, BigQueryRow&gt; result = table.ListRows();
-foreach (BigQueryRow row in result)
-{
-    DateTime timestamp = (DateTime)row[&quot;game_started&quot;];
-    long level = (long)row[&quot;level&quot;];
-    long score = (long)row[&quot;score&quot;];
-    string player = (string)row[&quot;player&quot;];
-    Console.WriteLine($&quot;{player}: {level}/{score} ({timestamp:yyyy-MM-dd HH:mm:ss})&quot;);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public PagedEnumerable&lt;TableDataList, BigQueryRow&gt; ListRows(ListRowsOptions options = null)</code></pre>
@@ -927,24 +915,27 @@ foreach (BigQueryRow row in result)
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_BigQuery_V2_BigQueryTable_ListRowsAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.ListRowsAsync*"></a>
-              <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_ListRowsAsync_Google_Cloud_BigQuery_V2_ListRowsOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.ListRowsAsync(Google.Cloud.BigQuery.V2.ListRowsOptions)">ListRowsAsync(ListRowsOptions)</h4>
-              <div class="markdown level1 summary"><p>Asynchronously lists the rows within this table, similar to a <code>SELECT * FROM ...</code> query.
-This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ListRowsAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_ListRowsOptions_">ListRowsAsync(TableReference, TableSchema, ListRowsOptions)</a>.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryTable_ListRows_Google_Cloud_BigQuery_V2_ListRowsOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
 BigQueryTable table = client.GetTable(datasetId, tableId);
-PagedAsyncEnumerable&lt;TableDataList, BigQueryRow&gt; result = table.ListRowsAsync();
-await result.ForEachAsync(row =&gt;
+PagedEnumerable&lt;TableDataList, BigQueryRow&gt; result = table.ListRows();
+foreach (BigQueryRow row in result)
 {
     DateTime timestamp = (DateTime)row[&quot;game_started&quot;];
     long level = (long)row[&quot;level&quot;];
     long score = (long)row[&quot;score&quot;];
     string player = (string)row[&quot;player&quot;];
     Console.WriteLine($&quot;{player}: {level}/{score} ({timestamp:yyyy-MM-dd HH:mm:ss})&quot;);
-});
+}
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_BigQuery_V2_BigQueryTable_ListRowsAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.ListRowsAsync*"></a>
+              <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_ListRowsAsync_Google_Cloud_BigQuery_V2_ListRowsOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.ListRowsAsync(Google.Cloud.BigQuery.V2.ListRowsOptions)">ListRowsAsync(ListRowsOptions)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously lists the rows within this table, similar to a <code>SELECT * FROM ...</code> query.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ListRowsAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_ListRowsOptions_">ListRowsAsync(TableReference, TableSchema, ListRowsOptions)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public PagedAsyncEnumerable&lt;TableDataList, BigQueryRow&gt; ListRowsAsync(ListRowsOptions options = null)</code></pre>
@@ -983,6 +974,21 @@ await result.ForEachAsync(row =&gt;
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryTable_ListRowsAsync_Google_Cloud_BigQuery_V2_ListRowsOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+BigQueryTable table = client.GetTable(datasetId, tableId);
+PagedAsyncEnumerable&lt;TableDataList, BigQueryRow&gt; result = table.ListRowsAsync();
+await result.ForEachAsync(row =&gt;
+{
+    DateTime timestamp = (DateTime)row[&quot;game_started&quot;];
+    long level = (long)row[&quot;level&quot;];
+    long score = (long)row[&quot;score&quot;];
+    string player = (string)row[&quot;player&quot;];
+    Console.WriteLine($&quot;{player}: {level}/{score} ({timestamp:yyyy-MM-dd HH:mm:ss})&quot;);
+});
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryTable_ToLegacySqlFormat_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.ToLegacySqlFormat*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_ToLegacySqlFormat" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.ToLegacySqlFormat">ToLegacySqlFormat()</h4>
               <div class="markdown level1 summary"><p>Returns the fully-qualified ID of the table in Legacy SQL format. The Legacy SQL

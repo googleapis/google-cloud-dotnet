@@ -302,8 +302,7 @@ well or signature validation will fail.</p>
               <div class="markdown level1 summary"><p>Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
 in possession of the URL, regardless of whether they have a Google account.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___">Sign</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public string Sign(string bucket, string objectName, DateTimeOffset? expiration, HttpMethod requestMethod = null, Dictionary&lt;string, IEnumerable&lt;string&gt;&gt; requestHeaders = null, Dictionary&lt;string, IEnumerable&lt;string&gt;&gt; contentHeaders = null)</code></pre>
@@ -403,13 +402,17 @@ used), both GET and HEAD requests can be made with the created signed URL.
 See <a href="https://cloud.google.com/storage/docs/access-control/signed-urls">https://cloud.google.com/storage/docs/access-control/signed-urls</a> for more information on signed URLs.
 </p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_Nullable_System_DateTimeOffset__System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String____snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___">Sign</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_UrlSigner_Sign_" data-uid="Google.Cloud.Storage.V1.UrlSigner.Sign*"></a>
               <h4 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_Nullable_System_DateTimeOffset__System_Net_Http_HttpRequestMessage_" data-uid="Google.Cloud.Storage.V1.UrlSigner.Sign(System.String,System.String,System.Nullable{System.DateTimeOffset},System.Net.Http.HttpRequestMessage)">Sign(String, String, Nullable&lt;DateTimeOffset&gt;, HttpRequestMessage)</h4>
               <div class="markdown level1 summary"><p>Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
 in possession of the URL, regardless of whether they have a Google account.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___">Sign</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public string Sign(string bucket, string objectName, DateTimeOffset? expiration, HttpRequestMessage request)</code></pre>
@@ -494,24 +497,17 @@ the created signed URL.
 See <a href="https://cloud.google.com/storage/docs/access-control/signed-urls">https://cloud.google.com/storage/docs/access-control/signed-urls</a> for more information on signed URLs.
 </p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_Nullable_System_DateTimeOffset__System_Net_Http_HttpRequestMessage__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___">Sign</a> for an example using an alternative overload.</p>
+</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_UrlSigner_Sign_" data-uid="Google.Cloud.Storage.V1.UrlSigner.Sign*"></a>
               <h4 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___" data-uid="Google.Cloud.Storage.V1.UrlSigner.Sign(System.String,System.String,System.TimeSpan,System.Net.Http.HttpMethod,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.IEnumerable{System.String}},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.IEnumerable{System.String}})">Sign(String, String, TimeSpan, HttpMethod, Dictionary&lt;String, IEnumerable&lt;String&gt;&gt;, Dictionary&lt;String, IEnumerable&lt;String&gt;&gt;)</h4>
               <div class="markdown level1 summary"><p>Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
 in possession of the URL, regardless of whether they have a Google account.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create a signed URL which can be used to get a specific object for one hour.
-UrlSigner urlSigner = UrlSigner.FromServiceAccountCredential(credential);
-string url = urlSigner.Sign(
-    bucketName,
-    objectName,
-    TimeSpan.FromHours(1),
-    HttpMethod.Get);
-
-// Get the content at the created URL.
-HttpResponseMessage response = await httpClient.GetAsync(url);
-string content = await response.Content.ReadAsStringAsync();
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public string Sign(string bucket, string objectName, TimeSpan duration, HttpMethod requestMethod = null, Dictionary&lt;string, IEnumerable&lt;string&gt;&gt; requestHeaders = null, Dictionary&lt;string, IEnumerable&lt;string&gt;&gt; contentHeaders = null)</code></pre>
@@ -610,13 +606,27 @@ used), both GET and HEAD requests can be made with the created signed URL.
 See <a href="https://cloud.google.com/storage/docs/access-control/signed-urls">https://cloud.google.com/storage/docs/access-control/signed-urls</a> for more information on signed URLs.
 </p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String____snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create a signed URL which can be used to get a specific object for one hour.
+UrlSigner urlSigner = UrlSigner.FromServiceAccountCredential(credential);
+string url = urlSigner.Sign(
+    bucketName,
+    objectName,
+    TimeSpan.FromHours(1),
+    HttpMethod.Get);
+
+// Get the content at the created URL.
+HttpResponseMessage response = await httpClient.GetAsync(url);
+string content = await response.Content.ReadAsStringAsync();
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Storage_V1_UrlSigner_Sign_" data-uid="Google.Cloud.Storage.V1.UrlSigner.Sign*"></a>
               <h4 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpRequestMessage_" data-uid="Google.Cloud.Storage.V1.UrlSigner.Sign(System.String,System.String,System.TimeSpan,System.Net.Http.HttpRequestMessage)">Sign(String, String, TimeSpan, HttpRequestMessage)</h4>
               <div class="markdown level1 summary"><p>Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
 in possession of the URL, regardless of whether they have a Google account.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>See <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___">Sign</a> for an example using an alternative overload.</p>
-</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public string Sign(string bucket, string objectName, TimeSpan duration, HttpRequestMessage request)</code></pre>
@@ -700,6 +710,11 @@ the created signed URL.
 See <a href="https://cloud.google.com/storage/docs/access-control/signed-urls">https://cloud.google.com/storage/docs/access-control/signed-urls</a> for more information on signed URLs.
 </p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpRequestMessage__snippet">Sample code</h5>
+              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___">Sign</a> for an example using an alternative overload.</p>
+</div>
+              </div>
                         </article>
           </div>
           

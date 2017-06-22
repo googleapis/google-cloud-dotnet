@@ -119,7 +119,13 @@ uncaught exceptions in ASP.NET Core applications can be automatically reported t
     string projectId = &quot;[Google Cloud Platform project ID]&quot;;
     string serviceName = &quot;[Name of service]&quot;;
     string version = &quot;[Version of service]&quot;;
-    services.AddGoogleExceptionLogging(projectId, serviceName, version);
+
+    services.AddGoogleExceptionLogging(options =&gt;
+    {
+        options.ProjectId = projectId;
+        options.ServiceName = serviceName;
+        options.Version = version;
+    });
 }
 
 public void Configure(IApplicationBuilder app)

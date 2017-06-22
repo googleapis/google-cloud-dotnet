@@ -364,45 +364,7 @@ google.longrunning.Operations interface. Returns either an
 <code>Operation.error</code> or an <code>Operation.response</code> which contains
 a <code>LongRunningRecognizeResponse</code> message.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-SpeechClient speechClient = SpeechClient.Create();
-// Initialize request argument(s)
-LongRunningRecognizeRequest request = new LongRunningRecognizeRequest
-{
-    Config = new RecognitionConfig
-             {
-                 Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                 SampleRateHertz = 44100,
-                 LanguageCode = &quot;en-US&quot;,
-             },
-    Audio = new RecognitionAudio
-            {
-                Uri = &quot;gs://bucket_name/file_name.flac&quot;,
-            },
-};
-// Make the request
-Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; response =
-    speechClient.LongRunningRecognize(request);
-
-// Poll until the returned long-running operation is complete
-Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; completedResponse =
-    response.PollUntilCompleted();
-// Retrieve the operation result
-LongRunningRecognizeResponse result = completedResponse.Result;
-
-// Or get the name of the operation
-string operationName = response.Name;
-// This name can be stored, then the long-running operation retrieved later by name
-Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; retrievedResponse =
-    speechClient.PollOnceLongRunningRecognize(operationName);
-// Check if the retrieved long-running operation has completed
-if (retrievedResponse.IsCompleted)
-{
-    // If it has completed, then access the result
-    LongRunningRecognizeResponse retrievedResult = retrievedResponse.Result;
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; LongRunningRecognize(LongRunningRecognizeRequest request, CallSettings callSettings = null)</code></pre>
@@ -447,30 +409,27 @@ if (retrievedResponse.IsCompleted)
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognize_" data-uid="Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognize*"></a>
-              <h4 id="Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognize_Google_Cloud_Speech_V1_RecognitionConfig_Google_Cloud_Speech_V1_RecognitionAudio_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognize(Google.Cloud.Speech.V1.RecognitionConfig,Google.Cloud.Speech.V1.RecognitionAudio,Google.Api.Gax.Grpc.CallSettings)">LongRunningRecognize(RecognitionConfig, RecognitionAudio, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Performs asynchronous speech recognition: receive results via the
-google.longrunning.Operations interface. Returns either an
-<code>Operation.error</code> or an <code>Operation.response</code> which contains
-a <code>LongRunningRecognizeResponse</code> message.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognize_Google_Cloud_Speech_V1_LongRunningRecognizeRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 SpeechClient speechClient = SpeechClient.Create();
 // Initialize request argument(s)
-RecognitionConfig config = new RecognitionConfig
+LongRunningRecognizeRequest request = new LongRunningRecognizeRequest
 {
-    Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-    SampleRateHertz = 44100,
-    LanguageCode = &quot;en-US&quot;,
-};
-RecognitionAudio audio = new RecognitionAudio
-{
-    Uri = &quot;gs://bucket_name/file_name.flac&quot;,
+    Config = new RecognitionConfig
+             {
+                 Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
+                 SampleRateHertz = 44100,
+                 LanguageCode = &quot;en-US&quot;,
+             },
+    Audio = new RecognitionAudio
+            {
+                Uri = &quot;gs://bucket_name/file_name.flac&quot;,
+            },
 };
 // Make the request
 Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; response =
-    speechClient.LongRunningRecognize(config, audio);
+    speechClient.LongRunningRecognize(request);
 
 // Poll until the returned long-running operation is complete
 Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; completedResponse =
@@ -490,6 +449,15 @@ if (retrievedResponse.IsCompleted)
     LongRunningRecognizeResponse retrievedResult = retrievedResponse.Result;
 }
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognize_" data-uid="Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognize*"></a>
+              <h4 id="Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognize_Google_Cloud_Speech_V1_RecognitionConfig_Google_Cloud_Speech_V1_RecognitionAudio_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognize(Google.Cloud.Speech.V1.RecognitionConfig,Google.Cloud.Speech.V1.RecognitionAudio,Google.Api.Gax.Grpc.CallSettings)">LongRunningRecognize(RecognitionConfig, RecognitionAudio, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Performs asynchronous speech recognition: receive results via the
+google.longrunning.Operations interface. Returns either an
+<code>Operation.error</code> or an <code>Operation.response</code> which contains
+a <code>LongRunningRecognizeResponse</code> message.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; LongRunningRecognize(RecognitionConfig config, RecognitionAudio audio, CallSettings callSettings = null)</code></pre>
@@ -541,37 +509,28 @@ process the request.</p>
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognizeAsync_" data-uid="Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognizeAsync*"></a>
-              <h4 id="Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognizeAsync_Google_Cloud_Speech_V1_LongRunningRecognizeRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognizeAsync(Google.Cloud.Speech.V1.LongRunningRecognizeRequest,Google.Api.Gax.Grpc.CallSettings)">LongRunningRecognizeAsync(LongRunningRecognizeRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Performs asynchronous speech recognition: receive results via the
-google.longrunning.Operations interface. Returns either an
-<code>Operation.error</code> or an <code>Operation.response</code> which contains
-a <code>LongRunningRecognizeResponse</code> message.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-SpeechClient speechClient = await SpeechClient.CreateAsync();
+              <div>
+              <h5 id="Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognize_Google_Cloud_Speech_V1_RecognitionConfig_Google_Cloud_Speech_V1_RecognitionAudio_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpeechClient speechClient = SpeechClient.Create();
 // Initialize request argument(s)
-LongRunningRecognizeRequest request = new LongRunningRecognizeRequest
+RecognitionConfig config = new RecognitionConfig
 {
-    Config = new RecognitionConfig
-             {
-                 Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                 SampleRateHertz = 44100,
-                 LanguageCode = &quot;en-US&quot;,
-             },
-    Audio = new RecognitionAudio
-            {
-                Uri = &quot;gs://bucket_name/file_name.flac&quot;,
-            },
+    Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
+    SampleRateHertz = 44100,
+    LanguageCode = &quot;en-US&quot;,
+};
+RecognitionAudio audio = new RecognitionAudio
+{
+    Uri = &quot;gs://bucket_name/file_name.flac&quot;,
 };
 // Make the request
 Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; response =
-    await speechClient.LongRunningRecognizeAsync(request);
+    speechClient.LongRunningRecognize(config, audio);
 
 // Poll until the returned long-running operation is complete
 Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; completedResponse =
-    await response.PollUntilCompletedAsync();
+    response.PollUntilCompleted();
 // Retrieve the operation result
 LongRunningRecognizeResponse result = completedResponse.Result;
 
@@ -579,7 +538,7 @@ LongRunningRecognizeResponse result = completedResponse.Result;
 string operationName = response.Name;
 // This name can be stored, then the long-running operation retrieved later by name
 Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; retrievedResponse =
-    await speechClient.PollOnceLongRunningRecognizeAsync(operationName);
+    speechClient.PollOnceLongRunningRecognize(operationName);
 // Check if the retrieved long-running operation has completed
 if (retrievedResponse.IsCompleted)
 {
@@ -587,6 +546,15 @@ if (retrievedResponse.IsCompleted)
     LongRunningRecognizeResponse retrievedResult = retrievedResponse.Result;
 }
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognizeAsync_" data-uid="Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognizeAsync*"></a>
+              <h4 id="Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognizeAsync_Google_Cloud_Speech_V1_LongRunningRecognizeRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognizeAsync(Google.Cloud.Speech.V1.LongRunningRecognizeRequest,Google.Api.Gax.Grpc.CallSettings)">LongRunningRecognizeAsync(LongRunningRecognizeRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Performs asynchronous speech recognition: receive results via the
+google.longrunning.Operations interface. Returns either an
+<code>Operation.error</code> or an <code>Operation.response</code> which contains
+a <code>LongRunningRecognizeResponse</code> message.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt;&gt; LongRunningRecognizeAsync(LongRunningRecognizeRequest request, CallSettings callSettings = null)</code></pre>
@@ -631,30 +599,27 @@ if (retrievedResponse.IsCompleted)
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognizeAsync_" data-uid="Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognizeAsync*"></a>
-              <h4 id="Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognizeAsync_Google_Cloud_Speech_V1_RecognitionConfig_Google_Cloud_Speech_V1_RecognitionAudio_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognizeAsync(Google.Cloud.Speech.V1.RecognitionConfig,Google.Cloud.Speech.V1.RecognitionAudio,Google.Api.Gax.Grpc.CallSettings)">LongRunningRecognizeAsync(RecognitionConfig, RecognitionAudio, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Performs asynchronous speech recognition: receive results via the
-google.longrunning.Operations interface. Returns either an
-<code>Operation.error</code> or an <code>Operation.response</code> which contains
-a <code>LongRunningRecognizeResponse</code> message.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognizeAsync_Google_Cloud_Speech_V1_LongRunningRecognizeRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 SpeechClient speechClient = await SpeechClient.CreateAsync();
 // Initialize request argument(s)
-RecognitionConfig config = new RecognitionConfig
+LongRunningRecognizeRequest request = new LongRunningRecognizeRequest
 {
-    Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-    SampleRateHertz = 44100,
-    LanguageCode = &quot;en-US&quot;,
-};
-RecognitionAudio audio = new RecognitionAudio
-{
-    Uri = &quot;gs://bucket_name/file_name.flac&quot;,
+    Config = new RecognitionConfig
+             {
+                 Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
+                 SampleRateHertz = 44100,
+                 LanguageCode = &quot;en-US&quot;,
+             },
+    Audio = new RecognitionAudio
+            {
+                Uri = &quot;gs://bucket_name/file_name.flac&quot;,
+            },
 };
 // Make the request
 Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; response =
-    await speechClient.LongRunningRecognizeAsync(config, audio);
+    await speechClient.LongRunningRecognizeAsync(request);
 
 // Poll until the returned long-running operation is complete
 Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; completedResponse =
@@ -674,6 +639,15 @@ if (retrievedResponse.IsCompleted)
     LongRunningRecognizeResponse retrievedResult = retrievedResponse.Result;
 }
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognizeAsync_" data-uid="Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognizeAsync*"></a>
+              <h4 id="Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognizeAsync_Google_Cloud_Speech_V1_RecognitionConfig_Google_Cloud_Speech_V1_RecognitionAudio_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognizeAsync(Google.Cloud.Speech.V1.RecognitionConfig,Google.Cloud.Speech.V1.RecognitionAudio,Google.Api.Gax.Grpc.CallSettings)">LongRunningRecognizeAsync(RecognitionConfig, RecognitionAudio, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Performs asynchronous speech recognition: receive results via the
+google.longrunning.Operations interface. Returns either an
+<code>Operation.error</code> or an <code>Operation.response</code> which contains
+a <code>LongRunningRecognizeResponse</code> message.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt;&gt; LongRunningRecognizeAsync(RecognitionConfig config, RecognitionAudio audio, CallSettings callSettings = null)</code></pre>
@@ -725,15 +699,9 @@ process the request.</p>
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognizeAsync_" data-uid="Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognizeAsync*"></a>
-              <h4 id="Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognizeAsync_Google_Cloud_Speech_V1_RecognitionConfig_Google_Cloud_Speech_V1_RecognitionAudio_System_Threading_CancellationToken_" data-uid="Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognizeAsync(Google.Cloud.Speech.V1.RecognitionConfig,Google.Cloud.Speech.V1.RecognitionAudio,System.Threading.CancellationToken)">LongRunningRecognizeAsync(RecognitionConfig, RecognitionAudio, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Performs asynchronous speech recognition: receive results via the
-google.longrunning.Operations interface. Returns either an
-<code>Operation.error</code> or an <code>Operation.response</code> which contains
-a <code>LongRunningRecognizeResponse</code> message.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognizeAsync_Google_Cloud_Speech_V1_RecognitionConfig_Google_Cloud_Speech_V1_RecognitionAudio_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 SpeechClient speechClient = await SpeechClient.CreateAsync();
 // Initialize request argument(s)
 RecognitionConfig config = new RecognitionConfig
@@ -768,6 +736,15 @@ if (retrievedResponse.IsCompleted)
     LongRunningRecognizeResponse retrievedResult = retrievedResponse.Result;
 }
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognizeAsync_" data-uid="Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognizeAsync*"></a>
+              <h4 id="Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognizeAsync_Google_Cloud_Speech_V1_RecognitionConfig_Google_Cloud_Speech_V1_RecognitionAudio_System_Threading_CancellationToken_" data-uid="Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognizeAsync(Google.Cloud.Speech.V1.RecognitionConfig,Google.Cloud.Speech.V1.RecognitionAudio,System.Threading.CancellationToken)">LongRunningRecognizeAsync(RecognitionConfig, RecognitionAudio, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Performs asynchronous speech recognition: receive results via the
+google.longrunning.Operations interface. Returns either an
+<code>Operation.error</code> or an <code>Operation.response</code> which contains
+a <code>LongRunningRecognizeResponse</code> message.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt;&gt; LongRunningRecognizeAsync(RecognitionConfig config, RecognitionAudio audio, CancellationToken cancellationToken)</code></pre>
@@ -819,6 +796,44 @@ process the request.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognizeAsync_Google_Cloud_Speech_V1_RecognitionConfig_Google_Cloud_Speech_V1_RecognitionAudio_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpeechClient speechClient = await SpeechClient.CreateAsync();
+// Initialize request argument(s)
+RecognitionConfig config = new RecognitionConfig
+{
+    Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
+    SampleRateHertz = 44100,
+    LanguageCode = &quot;en-US&quot;,
+};
+RecognitionAudio audio = new RecognitionAudio
+{
+    Uri = &quot;gs://bucket_name/file_name.flac&quot;,
+};
+// Make the request
+Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; response =
+    await speechClient.LongRunningRecognizeAsync(config, audio);
+
+// Poll until the returned long-running operation is complete
+Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; completedResponse =
+    await response.PollUntilCompletedAsync();
+// Retrieve the operation result
+LongRunningRecognizeResponse result = completedResponse.Result;
+
+// Or get the name of the operation
+string operationName = response.Name;
+// This name can be stored, then the long-running operation retrieved later by name
+Operation&lt;LongRunningRecognizeResponse, LongRunningRecognizeMetadata&gt; retrievedResponse =
+    await speechClient.PollOnceLongRunningRecognizeAsync(operationName);
+// Check if the retrieved long-running operation has completed
+if (retrievedResponse.IsCompleted)
+{
+    // If it has completed, then access the result
+    LongRunningRecognizeResponse retrievedResult = retrievedResponse.Result;
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Speech_V1_SpeechClient_PollOnceLongRunningRecognize_" data-uid="Google.Cloud.Speech.V1.SpeechClient.PollOnceLongRunningRecognize*"></a>
               <h4 id="Google_Cloud_Speech_V1_SpeechClient_PollOnceLongRunningRecognize_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Speech.V1.SpeechClient.PollOnceLongRunningRecognize(System.String,Google.Api.Gax.Grpc.CallSettings)">PollOnceLongRunningRecognize(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Poll an operation once, using an <code>operationName</code> from a previous invocation of <code>LongRunningRecognize</code>.</p>
@@ -922,17 +937,7 @@ process the request.</p>
               <div class="markdown level1 summary"><p>Performs synchronous speech recognition: receive results after all audio
 has been sent and processed.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">SpeechClient client = SpeechClient.Create();
-RecognitionConfig config = new RecognitionConfig
-{
-    Encoding = AudioEncoding.Linear16,
-    SampleRateHertz = 16000,
-    LanguageCode = LanguageCodes.English.UnitedStates
-};
-RecognizeResponse response = client.Recognize(config, audio);
-Console.WriteLine(response);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual RecognizeResponse Recognize(RecognitionConfig config, RecognitionAudio audio, CallSettings callSettings = null)</code></pre>
@@ -984,31 +989,25 @@ process the request.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Speech_V1_SpeechClient_Recognize_Google_Cloud_Speech_V1_RecognitionConfig_Google_Cloud_Speech_V1_RecognitionAudio_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">SpeechClient client = SpeechClient.Create();
+RecognitionConfig config = new RecognitionConfig
+{
+    Encoding = AudioEncoding.Linear16,
+    SampleRateHertz = 16000,
+    LanguageCode = LanguageCodes.English.UnitedStates
+};
+RecognizeResponse response = client.Recognize(config, audio);
+Console.WriteLine(response);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Speech_V1_SpeechClient_Recognize_" data-uid="Google.Cloud.Speech.V1.SpeechClient.Recognize*"></a>
               <h4 id="Google_Cloud_Speech_V1_SpeechClient_Recognize_Google_Cloud_Speech_V1_RecognizeRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Speech.V1.SpeechClient.Recognize(Google.Cloud.Speech.V1.RecognizeRequest,Google.Api.Gax.Grpc.CallSettings)">Recognize(RecognizeRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Performs synchronous speech recognition: receive results after all audio
 has been sent and processed.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-SpeechClient speechClient = SpeechClient.Create();
-// Initialize request argument(s)
-RecognizeRequest request = new RecognizeRequest
-{
-    Config = new RecognitionConfig
-             {
-                 Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                 SampleRateHertz = 44100,
-                 LanguageCode = &quot;en-US&quot;,
-             },
-    Audio = new RecognitionAudio
-            {
-                Uri = &quot;gs://bucket_name/file_name.flac&quot;,
-            },
-};
-// Make the request
-RecognizeResponse response = speechClient.Recognize(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual RecognizeResponse Recognize(RecognizeRequest request, CallSettings callSettings = null)</code></pre>
@@ -1053,28 +1052,34 @@ RecognizeResponse response = speechClient.Recognize(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Speech_V1_SpeechClient_Recognize_Google_Cloud_Speech_V1_RecognizeRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpeechClient speechClient = SpeechClient.Create();
+// Initialize request argument(s)
+RecognizeRequest request = new RecognizeRequest
+{
+    Config = new RecognitionConfig
+             {
+                 Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
+                 SampleRateHertz = 44100,
+                 LanguageCode = &quot;en-US&quot;,
+             },
+    Audio = new RecognitionAudio
+            {
+                Uri = &quot;gs://bucket_name/file_name.flac&quot;,
+            },
+};
+// Make the request
+RecognizeResponse response = speechClient.Recognize(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Speech_V1_SpeechClient_RecognizeAsync_" data-uid="Google.Cloud.Speech.V1.SpeechClient.RecognizeAsync*"></a>
               <h4 id="Google_Cloud_Speech_V1_SpeechClient_RecognizeAsync_Google_Cloud_Speech_V1_RecognitionConfig_Google_Cloud_Speech_V1_RecognitionAudio_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Speech.V1.SpeechClient.RecognizeAsync(Google.Cloud.Speech.V1.RecognitionConfig,Google.Cloud.Speech.V1.RecognitionAudio,Google.Api.Gax.Grpc.CallSettings)">RecognizeAsync(RecognitionConfig, RecognitionAudio, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Performs synchronous speech recognition: receive results after all audio
 has been sent and processed.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-SpeechClient speechClient = await SpeechClient.CreateAsync();
-// Initialize request argument(s)
-RecognitionConfig config = new RecognitionConfig
-{
-    Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-    SampleRateHertz = 44100,
-    LanguageCode = &quot;en-US&quot;,
-};
-RecognitionAudio audio = new RecognitionAudio
-{
-    Uri = &quot;gs://bucket_name/file_name.flac&quot;,
-};
-// Make the request
-RecognizeResponse response = await speechClient.RecognizeAsync(config, audio);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;RecognizeResponse&gt; RecognizeAsync(RecognitionConfig config, RecognitionAudio audio, CallSettings callSettings = null)</code></pre>
@@ -1126,13 +1131,9 @@ process the request.</p>
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Speech_V1_SpeechClient_RecognizeAsync_" data-uid="Google.Cloud.Speech.V1.SpeechClient.RecognizeAsync*"></a>
-              <h4 id="Google_Cloud_Speech_V1_SpeechClient_RecognizeAsync_Google_Cloud_Speech_V1_RecognitionConfig_Google_Cloud_Speech_V1_RecognitionAudio_System_Threading_CancellationToken_" data-uid="Google.Cloud.Speech.V1.SpeechClient.RecognizeAsync(Google.Cloud.Speech.V1.RecognitionConfig,Google.Cloud.Speech.V1.RecognitionAudio,System.Threading.CancellationToken)">RecognizeAsync(RecognitionConfig, RecognitionAudio, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Performs synchronous speech recognition: receive results after all audio
-has been sent and processed.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Speech_V1_SpeechClient_RecognizeAsync_Google_Cloud_Speech_V1_RecognitionConfig_Google_Cloud_Speech_V1_RecognitionAudio_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 SpeechClient speechClient = await SpeechClient.CreateAsync();
 // Initialize request argument(s)
 RecognitionConfig config = new RecognitionConfig
@@ -1148,6 +1149,13 @@ RecognitionAudio audio = new RecognitionAudio
 // Make the request
 RecognizeResponse response = await speechClient.RecognizeAsync(config, audio);
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Speech_V1_SpeechClient_RecognizeAsync_" data-uid="Google.Cloud.Speech.V1.SpeechClient.RecognizeAsync*"></a>
+              <h4 id="Google_Cloud_Speech_V1_SpeechClient_RecognizeAsync_Google_Cloud_Speech_V1_RecognitionConfig_Google_Cloud_Speech_V1_RecognitionAudio_System_Threading_CancellationToken_" data-uid="Google.Cloud.Speech.V1.SpeechClient.RecognizeAsync(Google.Cloud.Speech.V1.RecognitionConfig,Google.Cloud.Speech.V1.RecognitionAudio,System.Threading.CancellationToken)">RecognizeAsync(RecognitionConfig, RecognitionAudio, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Performs synchronous speech recognition: receive results after all audio
+has been sent and processed.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;RecognizeResponse&gt; RecognizeAsync(RecognitionConfig config, RecognitionAudio audio, CancellationToken cancellationToken)</code></pre>
@@ -1199,31 +1207,31 @@ process the request.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Speech_V1_SpeechClient_RecognizeAsync_Google_Cloud_Speech_V1_RecognitionConfig_Google_Cloud_Speech_V1_RecognitionAudio_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpeechClient speechClient = await SpeechClient.CreateAsync();
+// Initialize request argument(s)
+RecognitionConfig config = new RecognitionConfig
+{
+    Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
+    SampleRateHertz = 44100,
+    LanguageCode = &quot;en-US&quot;,
+};
+RecognitionAudio audio = new RecognitionAudio
+{
+    Uri = &quot;gs://bucket_name/file_name.flac&quot;,
+};
+// Make the request
+RecognizeResponse response = await speechClient.RecognizeAsync(config, audio);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Speech_V1_SpeechClient_RecognizeAsync_" data-uid="Google.Cloud.Speech.V1.SpeechClient.RecognizeAsync*"></a>
               <h4 id="Google_Cloud_Speech_V1_SpeechClient_RecognizeAsync_Google_Cloud_Speech_V1_RecognizeRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Speech.V1.SpeechClient.RecognizeAsync(Google.Cloud.Speech.V1.RecognizeRequest,Google.Api.Gax.Grpc.CallSettings)">RecognizeAsync(RecognizeRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Performs synchronous speech recognition: receive results after all audio
 has been sent and processed.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-SpeechClient speechClient = await SpeechClient.CreateAsync();
-// Initialize request argument(s)
-RecognizeRequest request = new RecognizeRequest
-{
-    Config = new RecognitionConfig
-             {
-                 Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                 SampleRateHertz = 44100,
-                 LanguageCode = &quot;en-US&quot;,
-             },
-    Audio = new RecognitionAudio
-            {
-                Uri = &quot;gs://bucket_name/file_name.flac&quot;,
-            },
-};
-// Make the request
-RecognizeResponse response = await speechClient.RecognizeAsync(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;RecognizeResponse&gt; RecognizeAsync(RecognizeRequest request, CallSettings callSettings = null)</code></pre>
@@ -1268,6 +1276,28 @@ RecognizeResponse response = await speechClient.RecognizeAsync(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Speech_V1_SpeechClient_RecognizeAsync_Google_Cloud_Speech_V1_RecognizeRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpeechClient speechClient = await SpeechClient.CreateAsync();
+// Initialize request argument(s)
+RecognizeRequest request = new RecognizeRequest
+{
+    Config = new RecognitionConfig
+             {
+                 Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
+                 SampleRateHertz = 44100,
+                 LanguageCode = &quot;en-US&quot;,
+             },
+    Audio = new RecognitionAudio
+            {
+                Uri = &quot;gs://bucket_name/file_name.flac&quot;,
+            },
+};
+// Make the request
+RecognizeResponse response = await speechClient.RecognizeAsync(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Speech_V1_SpeechClient_ShutdownDefaultChannelsAsync_" data-uid="Google.Cloud.Speech.V1.SpeechClient.ShutdownDefaultChannelsAsync*"></a>
               <h4 id="Google_Cloud_Speech_V1_SpeechClient_ShutdownDefaultChannelsAsync" data-uid="Google.Cloud.Speech.V1.SpeechClient.ShutdownDefaultChannelsAsync">ShutdownDefaultChannelsAsync()</h4>
               <div class="markdown level1 summary"><p>Shuts down any channels automatically created by <a class="xref" href="Google.Cloud.Speech.V1.SpeechClient.html#Google_Cloud_Speech_V1_SpeechClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Speech_V1_SpeechSettings_">Create(ServiceEndpoint, SpeechSettings)</a>
@@ -1305,41 +1335,7 @@ in turn be shut down by another call to this method.</p>
               <div class="markdown level1 summary"><p>Performs bidirectional streaming speech recognition: receive results while
 sending audio. This method is only available via the gRPC API (not REST).</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-SpeechClient speechClient = SpeechClient.Create();
-// Initialize streaming call, retrieving the stream object
-SpeechClient.StreamingRecognizeStream duplexStream = speechClient.StreamingRecognize();
-
-// Sending requests and retrieving responses can be arbitrarily interleaved.
-// Exact sequence will depend on client/server behavior.
-
-// Create task to do something with responses from server
-Task.Run(async () =&gt;
-{
-    IAsyncEnumerator&lt;StreamingRecognizeResponse&gt; responseStream = duplexStream.ResponseStream;
-    while (await responseStream.MoveNext())
-    {
-        StreamingRecognizeResponse response = responseStream.Current;
-        // Do something with streamed response
-    }
-    // The response stream has completed
-});
-
-// Send requests to the server
-bool done = false;
-while (!done)
-{
-    // Initialize a request
-    StreamingRecognizeRequest request = new StreamingRecognizeRequest();
-    // Stream a request to the server
-    await duplexStream.WriteAsync(request);
-
-    // Set &quot;done&quot; to true when sending requests is complete
-}
-// Complete writing requests to the stream
-await duplexStream.WriteCompleteAsync();
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual SpeechClient.StreamingRecognizeStream StreamingRecognize(CallSettings callSettings = null, BidirectionalStreamingSettings streamingSettings = null)</code></pre>
@@ -1384,6 +1380,43 @@ await duplexStream.WriteCompleteAsync();
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Speech_V1_SpeechClient_StreamingRecognize_Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Grpc_BidirectionalStreamingSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpeechClient speechClient = SpeechClient.Create();
+// Initialize streaming call, retrieving the stream object
+SpeechClient.StreamingRecognizeStream duplexStream = speechClient.StreamingRecognize();
+
+// Sending requests and retrieving responses can be arbitrarily interleaved.
+// Exact sequence will depend on client/server behavior.
+
+// Create task to do something with responses from server
+Task.Run(async () =&gt;
+{
+    IAsyncEnumerator&lt;StreamingRecognizeResponse&gt; responseStream = duplexStream.ResponseStream;
+    while (await responseStream.MoveNext())
+    {
+        StreamingRecognizeResponse response = responseStream.Current;
+        // Do something with streamed response
+    }
+    // The response stream has completed
+});
+
+// Send requests to the server
+bool done = false;
+while (!done)
+{
+    // Initialize a request
+    StreamingRecognizeRequest request = new StreamingRecognizeRequest();
+    // Stream a request to the server
+    await duplexStream.WriteAsync(request);
+
+    // Set &quot;done&quot; to true when sending requests is complete
+}
+// Complete writing requests to the stream
+await duplexStream.WriteCompleteAsync();
+</code></pre></div>
+              </div>
                         </article>
           </div>
           

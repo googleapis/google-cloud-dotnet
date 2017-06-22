@@ -186,35 +186,7 @@
               <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_Annotate_Google_Cloud_Vision_V1_AnnotateImageRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.Annotate(Google.Cloud.Vision.V1.AnnotateImageRequest,Google.Api.Gax.Grpc.CallSettings)">Annotate(AnnotateImageRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Annotates a single image.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
-AnnotateImageRequest request = new AnnotateImageRequest
-{
-    Image = image,
-    Features =
-    {
-        new Feature { Type = Feature.Types.Type.FaceDetection },
-        // By default, no limits are put on the number of results per annotation.
-        // Use the MaxResults property to specify a limit.
-        new Feature { Type = Feature.Types.Type.LandmarkDetection, MaxResults = 5 },
-    }
-};
-AnnotateImageResponse response = client.Annotate(request);
-Console.WriteLine(&quot;Faces:&quot;);
-foreach (FaceAnnotation face in response.FaceAnnotations)
-{
-    Console.WriteLine($&quot;  Confidence: {(int)(face.DetectionConfidence * 100)}%; BoundingPoly: {face.BoundingPoly}&quot;);
-}
-Console.WriteLine(&quot;Landmarks:&quot;);
-foreach (EntityAnnotation landmark in response.LandmarkAnnotations)
-{
-    Console.WriteLine($&quot;Score: {(int)(landmark.Score * 100)}%; Description: {landmark.Description}&quot;);
-}
-if (response.Error != null)
-{
-    Console.WriteLine($&quot;Error detected: {response.Error}&quot;);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual AnnotateImageResponse Annotate(AnnotateImageRequest request, CallSettings settings = null)</code></pre>
@@ -266,6 +238,37 @@ by creating a batch with a single request, and returns the single response.</p>
 <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.
 </p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_Annotate_Google_Cloud_Vision_V1_AnnotateImageRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+AnnotateImageRequest request = new AnnotateImageRequest
+{
+    Image = image,
+    Features =
+    {
+        new Feature { Type = Feature.Types.Type.FaceDetection },
+        // By default, no limits are put on the number of results per annotation.
+        // Use the MaxResults property to specify a limit.
+        new Feature { Type = Feature.Types.Type.LandmarkDetection, MaxResults = 5 },
+    }
+};
+AnnotateImageResponse response = client.Annotate(request);
+Console.WriteLine(&quot;Faces:&quot;);
+foreach (FaceAnnotation face in response.FaceAnnotations)
+{
+    Console.WriteLine($&quot;  Confidence: {(int)(face.DetectionConfidence * 100)}%; BoundingPoly: {face.BoundingPoly}&quot;);
+}
+Console.WriteLine(&quot;Landmarks:&quot;);
+foreach (EntityAnnotation landmark in response.LandmarkAnnotations)
+{
+    Console.WriteLine($&quot;Score: {(int)(landmark.Score * 100)}%; Description: {landmark.Description}&quot;);
+}
+if (response.Error != null)
+{
+    Console.WriteLine($&quot;Error detected: {response.Error}&quot;);
+}
+</code></pre></div>
+              </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
@@ -428,17 +431,7 @@ by creating a batch with a single request, and returns the single response.</p>
               <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImages_Google_Cloud_Vision_V1_BatchAnnotateImagesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImages(Google.Cloud.Vision.V1.BatchAnnotateImagesRequest,Google.Api.Gax.Grpc.CallSettings)">BatchAnnotateImages(BatchAnnotateImagesRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Run image detection and annotation for a batch of images.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-ImageAnnotatorClient imageAnnotatorClient = ImageAnnotatorClient.Create();
-// Initialize request argument(s)
-BatchAnnotateImagesRequest request = new BatchAnnotateImagesRequest
-{
-    Requests = { },
-};
-// Make the request
-BatchAnnotateImagesResponse response = imageAnnotatorClient.BatchAnnotateImages(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual BatchAnnotateImagesResponse BatchAnnotateImages(BatchAnnotateImagesRequest request, CallSettings callSettings = null)</code></pre>
@@ -483,40 +476,24 @@ BatchAnnotateImagesResponse response = imageAnnotatorClient.BatchAnnotateImages(
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImages_Google_Cloud_Vision_V1_BatchAnnotateImagesRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+ImageAnnotatorClient imageAnnotatorClient = ImageAnnotatorClient.Create();
+// Initialize request argument(s)
+BatchAnnotateImagesRequest request = new BatchAnnotateImagesRequest
+{
+    Requests = { },
+};
+// Make the request
+BatchAnnotateImagesResponse response = imageAnnotatorClient.BatchAnnotateImages(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImages_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImages*"></a>
               <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImages_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImages(System.Collections.Generic.IEnumerable{Google.Cloud.Vision.V1.AnnotateImageRequest},Google.Api.Gax.Grpc.CallSettings)">BatchAnnotateImages(IEnumerable&lt;AnnotateImageRequest&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Run image detection and annotation for a batch of images.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
-// Perform face recognition on one image, and logo recognition on another.
-AnnotateImageRequest request1 = new AnnotateImageRequest
-{
-    Image = image1,
-    Features = { new Feature { Type = Feature.Types.Type.FaceDetection } }
-};
-AnnotateImageRequest request2 = new AnnotateImageRequest
-{
-    Image = image2,
-    Features = { new Feature { Type = Feature.Types.Type.LogoDetection } }
-};
-
-BatchAnnotateImagesResponse response = client.BatchAnnotateImages(new[] { request1, request2 });
-Console.WriteLine(&quot;Faces in image 1:&quot;);
-foreach (FaceAnnotation face in response.Responses[0].FaceAnnotations)
-{
-    Console.WriteLine($&quot;  Confidence: {(int)(face.DetectionConfidence * 100)}%; BoundingPoly: {face.BoundingPoly}&quot;);
-}
-Console.WriteLine(&quot;Logos in image 2:&quot;);
-foreach (EntityAnnotation logo in response.Responses[1].LogoAnnotations)
-{
-    Console.WriteLine($&quot;Description: {logo.Description}&quot;);
-}
-foreach (Status error in response.Responses.Select(r =&gt; r.Error))
-{
-    Console.WriteLine($&quot;Error detected: error&quot;);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual BatchAnnotateImagesResponse BatchAnnotateImages(IEnumerable&lt;AnnotateImageRequest&gt; requests, CallSettings callSettings = null)</code></pre>
@@ -561,21 +538,43 @@ foreach (Status error in response.Responses.Select(r =&gt; r.Error))
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImages_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+// Perform face recognition on one image, and logo recognition on another.
+AnnotateImageRequest request1 = new AnnotateImageRequest
+{
+    Image = image1,
+    Features = { new Feature { Type = Feature.Types.Type.FaceDetection } }
+};
+AnnotateImageRequest request2 = new AnnotateImageRequest
+{
+    Image = image2,
+    Features = { new Feature { Type = Feature.Types.Type.LogoDetection } }
+};
+
+BatchAnnotateImagesResponse response = client.BatchAnnotateImages(new[] { request1, request2 });
+Console.WriteLine(&quot;Faces in image 1:&quot;);
+foreach (FaceAnnotation face in response.Responses[0].FaceAnnotations)
+{
+    Console.WriteLine($&quot;  Confidence: {(int)(face.DetectionConfidence * 100)}%; BoundingPoly: {face.BoundingPoly}&quot;);
+}
+Console.WriteLine(&quot;Logos in image 2:&quot;);
+foreach (EntityAnnotation logo in response.Responses[1].LogoAnnotations)
+{
+    Console.WriteLine($&quot;Description: {logo.Description}&quot;);
+}
+foreach (Status error in response.Responses.Select(r =&gt; r.Error))
+{
+    Console.WriteLine($&quot;Error detected: error&quot;);
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImagesAsync_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImagesAsync*"></a>
               <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImagesAsync_Google_Cloud_Vision_V1_BatchAnnotateImagesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImagesAsync(Google.Cloud.Vision.V1.BatchAnnotateImagesRequest,Google.Api.Gax.Grpc.CallSettings)">BatchAnnotateImagesAsync(BatchAnnotateImagesRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Run image detection and annotation for a batch of images.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-ImageAnnotatorClient imageAnnotatorClient = await ImageAnnotatorClient.CreateAsync();
-// Initialize request argument(s)
-BatchAnnotateImagesRequest request = new BatchAnnotateImagesRequest
-{
-    Requests = { },
-};
-// Make the request
-BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateImagesAsync(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;BatchAnnotateImagesResponse&gt; BatchAnnotateImagesAsync(BatchAnnotateImagesRequest request, CallSettings callSettings = null)</code></pre>
@@ -620,18 +619,24 @@ BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateI
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImagesAsync_Google_Cloud_Vision_V1_BatchAnnotateImagesRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+ImageAnnotatorClient imageAnnotatorClient = await ImageAnnotatorClient.CreateAsync();
+// Initialize request argument(s)
+BatchAnnotateImagesRequest request = new BatchAnnotateImagesRequest
+{
+    Requests = { },
+};
+// Make the request
+BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateImagesAsync(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImagesAsync_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImagesAsync*"></a>
               <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImagesAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImagesAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Vision.V1.AnnotateImageRequest},Google.Api.Gax.Grpc.CallSettings)">BatchAnnotateImagesAsync(IEnumerable&lt;AnnotateImageRequest&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Run image detection and annotation for a batch of images.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-ImageAnnotatorClient imageAnnotatorClient = await ImageAnnotatorClient.CreateAsync();
-// Initialize request argument(s)
-IEnumerable&lt;AnnotateImageRequest&gt; requests = new List&lt;AnnotateImageRequest&gt;();
-// Make the request
-BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateImagesAsync(requests);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;BatchAnnotateImagesResponse&gt; BatchAnnotateImagesAsync(IEnumerable&lt;AnnotateImageRequest&gt; requests, CallSettings callSettings = null)</code></pre>
@@ -676,18 +681,21 @@ BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateI
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImagesAsync_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImagesAsync*"></a>
-              <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImagesAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__System_Threading_CancellationToken_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImagesAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Vision.V1.AnnotateImageRequest},System.Threading.CancellationToken)">BatchAnnotateImagesAsync(IEnumerable&lt;AnnotateImageRequest&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Run image detection and annotation for a batch of images.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImagesAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 ImageAnnotatorClient imageAnnotatorClient = await ImageAnnotatorClient.CreateAsync();
 // Initialize request argument(s)
 IEnumerable&lt;AnnotateImageRequest&gt; requests = new List&lt;AnnotateImageRequest&gt;();
 // Make the request
 BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateImagesAsync(requests);
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImagesAsync_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImagesAsync*"></a>
+              <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImagesAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__System_Threading_CancellationToken_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImagesAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Vision.V1.AnnotateImageRequest},System.Threading.CancellationToken)">BatchAnnotateImagesAsync(IEnumerable&lt;AnnotateImageRequest&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Run image detection and annotation for a batch of images.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;BatchAnnotateImagesResponse&gt; BatchAnnotateImagesAsync(IEnumerable&lt;AnnotateImageRequest&gt; requests, CancellationToken cancellationToken)</code></pre>
@@ -732,6 +740,16 @@ BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateI
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImagesAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+ImageAnnotatorClient imageAnnotatorClient = await ImageAnnotatorClient.CreateAsync();
+// Initialize request argument(s)
+IEnumerable&lt;AnnotateImageRequest&gt; requests = new List&lt;AnnotateImageRequest&gt;();
+// Make the request
+BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateImagesAsync(requests);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Vision_V1_ImageAnnotatorClient_Create_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.Create*"></a>
               <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Vision_V1_ImageAnnotatorSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.Create(Google.Api.Gax.Grpc.ServiceEndpoint,Google.Cloud.Vision.V1.ImageAnnotatorSettings)">Create(ServiceEndpoint, ImageAnnotatorSettings)</h4>
               <div class="markdown level1 summary"><p>Synchronously creates a <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html">ImageAnnotatorClient</a>, applying defaults for all unspecified settings,
@@ -887,18 +905,7 @@ necessary.</p>
               <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectCropHints_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectCropHints(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,Google.Api.Gax.Grpc.CallSettings)">DetectCropHints(Image, ImageContext, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Suggests crop hints for a single image.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
-CropHintsAnnotation cropHints = client.DetectCropHints(image);
-foreach (CropHint hint in cropHints.CropHints)
-{
-    Console.WriteLine(&quot;Crop hint:&quot;);
-    string poly = string.Join(&quot; - &quot;, hint.BoundingPoly.Vertices.Select(v =&gt; $&quot;({v.X}, {v.Y})&quot;));
-    Console.WriteLine($&quot;  Poly: {poly}&quot;);
-    Console.WriteLine($&quot;  Confidence: {hint.Confidence}&quot;);
-    Console.WriteLine($&quot;  Importance fraction: {hint.ImportanceFraction}&quot;);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual CropHintsAnnotation DetectCropHints(Image image, ImageContext context = null, CallSettings callSettings = null)</code></pre>
@@ -953,6 +960,20 @@ foreach (CropHint hint in cropHints.CropHints)
               <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
 <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectCropHints_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+CropHintsAnnotation cropHints = client.DetectCropHints(image);
+foreach (CropHint hint in cropHints.CropHints)
+{
+    Console.WriteLine(&quot;Crop hint:&quot;);
+    string poly = string.Join(&quot; - &quot;, hint.BoundingPoly.Vertices.Select(v =&gt; $&quot;({v.X}, {v.Y})&quot;));
+    Console.WriteLine($&quot;  Poly: {poly}&quot;);
+    Console.WriteLine($&quot;  Confidence: {hint.Confidence}&quot;);
+    Console.WriteLine($&quot;  Importance fraction: {hint.ImportanceFraction}&quot;);
+}
+</code></pre></div>
+              </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
@@ -1048,28 +1069,7 @@ foreach (CropHint hint in cropHints.CropHints)
               <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectDocumentText_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectDocumentText(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,Google.Api.Gax.Grpc.CallSettings)">DetectDocumentText(Image, ImageContext, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Detects document text in a single image.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
-TextAnnotation text = client.DetectDocumentText(image);
-Console.WriteLine($&quot;Text: {text.Text}&quot;);
-foreach (var page in text.Pages)
-{
-    foreach (var block in page.Blocks)
-    {
-        string box = string.Join(&quot; - &quot;, block.BoundingBox.Vertices.Select(v =&gt; $&quot;({v.X}, {v.Y})&quot;));
-        Console.WriteLine($&quot;Block {block.BlockType} at {box}&quot;);
-        foreach (var paragraph in block.Paragraphs)
-        {
-            box = string.Join(&quot; - &quot;, paragraph.BoundingBox.Vertices.Select(v =&gt; $&quot;({v.X}, {v.Y})&quot;));
-            Console.WriteLine($&quot;  Paragraph at {box}&quot;);
-            foreach (var word in paragraph.Words)
-            {
-                Console.WriteLine($&quot;    Word: {string.Join(&quot;&quot;, word.Symbols.Select(s =&gt; s.Text))}&quot;);
-            }
-        }
-    }
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual TextAnnotation DetectDocumentText(Image image, ImageContext context = null, CallSettings callSettings = null)</code></pre>
@@ -1124,6 +1124,30 @@ foreach (var page in text.Pages)
               <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
 <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectDocumentText_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+TextAnnotation text = client.DetectDocumentText(image);
+Console.WriteLine($&quot;Text: {text.Text}&quot;);
+foreach (var page in text.Pages)
+{
+    foreach (var block in page.Blocks)
+    {
+        string box = string.Join(&quot; - &quot;, block.BoundingBox.Vertices.Select(v =&gt; $&quot;({v.X}, {v.Y})&quot;));
+        Console.WriteLine($&quot;Block {block.BlockType} at {box}&quot;);
+        foreach (var paragraph in block.Paragraphs)
+        {
+            box = string.Join(&quot; - &quot;, paragraph.BoundingBox.Vertices.Select(v =&gt; $&quot;({v.X}, {v.Y})&quot;));
+            Console.WriteLine($&quot;  Paragraph at {box}&quot;);
+            foreach (var word in paragraph.Words)
+            {
+                Console.WriteLine($&quot;    Word: {string.Join(&quot;&quot;, word.Symbols.Select(s =&gt; s.Text))}&quot;);
+            }
+        }
+    }
+}
+</code></pre></div>
+              </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
@@ -1219,14 +1243,7 @@ foreach (var page in text.Pages)
               <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectFaces_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectFaces(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.Grpc.CallSettings)">DetectFaces(Image, ImageContext, Int32, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Detects the faces in a single image.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
-IReadOnlyList&lt;FaceAnnotation&gt; result = client.DetectFaces(image);
-foreach (FaceAnnotation face in result)
-{
-    Console.WriteLine($&quot;Confidence: {(int)(face.DetectionConfidence * 100)}%; BoundingPoly: {face.BoundingPoly}&quot;);
-}            
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;FaceAnnotation&gt; DetectFaces(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
@@ -1287,6 +1304,16 @@ foreach (FaceAnnotation face in result)
               <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
 <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectFaces_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+IReadOnlyList&lt;FaceAnnotation&gt; result = client.DetectFaces(image);
+foreach (FaceAnnotation face in result)
+{
+    Console.WriteLine($&quot;Confidence: {(int)(face.DetectionConfidence * 100)}%; BoundingPoly: {face.BoundingPoly}&quot;);
+}            
+</code></pre></div>
+              </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
@@ -1388,12 +1415,7 @@ foreach (FaceAnnotation face in result)
               <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectImageProperties_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectImageProperties(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,Google.Api.Gax.Grpc.CallSettings)">DetectImageProperties(Image, ImageContext, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Performs image property processing on a single image.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
-ImageProperties properties = client.DetectImageProperties(image);
-ColorInfo dominantColor = properties.DominantColors.Colors.OrderByDescending(c =&gt; c.PixelFraction).First();
-Console.WriteLine($&quot;Dominant color in image: {dominantColor}&quot;);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual ImageProperties DetectImageProperties(Image image, ImageContext context = null, CallSettings callSettings = null)</code></pre>
@@ -1448,6 +1470,14 @@ Console.WriteLine($&quot;Dominant color in image: {dominantColor}&quot;);
               <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
 <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectImageProperties_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+ImageProperties properties = client.DetectImageProperties(image);
+ColorInfo dominantColor = properties.DominantColors.Colors.OrderByDescending(c =&gt; c.PixelFraction).First();
+Console.WriteLine($&quot;Dominant color in image: {dominantColor}&quot;);
+</code></pre></div>
+              </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
@@ -1543,14 +1573,7 @@ Console.WriteLine($&quot;Dominant color in image: {dominantColor}&quot;);
               <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectLabels_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectLabels(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.Grpc.CallSettings)">DetectLabels(Image, ImageContext, Int32, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Detects labels for a single image.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
-IReadOnlyList&lt;EntityAnnotation&gt; labels = client.DetectLabels(image);
-foreach (EntityAnnotation label in labels)
-{
-    Console.WriteLine($&quot;Score: {(int)(label.Score * 100)}%; Description: {label.Description}&quot;);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;EntityAnnotation&gt; DetectLabels(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
@@ -1611,6 +1634,16 @@ foreach (EntityAnnotation label in labels)
               <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
 <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectLabels_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+IReadOnlyList&lt;EntityAnnotation&gt; labels = client.DetectLabels(image);
+foreach (EntityAnnotation label in labels)
+{
+    Console.WriteLine($&quot;Score: {(int)(label.Score * 100)}%; Description: {label.Description}&quot;);
+}
+</code></pre></div>
+              </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
@@ -1712,14 +1745,7 @@ foreach (EntityAnnotation label in labels)
               <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectLandmarks_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectLandmarks(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.Grpc.CallSettings)">DetectLandmarks(Image, ImageContext, Int32, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Detects landmarks in a single image.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
-IReadOnlyList&lt;EntityAnnotation&gt; result = client.DetectLandmarks(image);
-foreach (EntityAnnotation landmark in result)
-{
-    Console.WriteLine($&quot;Score: {(int)(landmark.Score * 100)}%; Description: {landmark.Description}&quot;);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;EntityAnnotation&gt; DetectLandmarks(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
@@ -1780,6 +1806,16 @@ foreach (EntityAnnotation landmark in result)
               <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
 <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectLandmarks_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+IReadOnlyList&lt;EntityAnnotation&gt; result = client.DetectLandmarks(image);
+foreach (EntityAnnotation landmark in result)
+{
+    Console.WriteLine($&quot;Score: {(int)(landmark.Score * 100)}%; Description: {landmark.Description}&quot;);
+}
+</code></pre></div>
+              </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
@@ -1881,14 +1917,7 @@ foreach (EntityAnnotation landmark in result)
               <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectLogos_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectLogos(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.Grpc.CallSettings)">DetectLogos(Image, ImageContext, Int32, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Detects logos in a single image.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
-IReadOnlyList&lt;EntityAnnotation&gt; logos = client.DetectLogos(image);
-foreach (EntityAnnotation logo in logos)
-{
-    Console.WriteLine($&quot;Description: {logo.Description}&quot;);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;EntityAnnotation&gt; DetectLogos(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
@@ -1949,6 +1978,16 @@ foreach (EntityAnnotation logo in logos)
               <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
 <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectLogos_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+IReadOnlyList&lt;EntityAnnotation&gt; logos = client.DetectLogos(image);
+foreach (EntityAnnotation logo in logos)
+{
+    Console.WriteLine($&quot;Description: {logo.Description}&quot;);
+}
+</code></pre></div>
+              </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
@@ -2050,15 +2089,7 @@ foreach (EntityAnnotation logo in logos)
               <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectSafeSearch_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectSafeSearch(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,Google.Api.Gax.Grpc.CallSettings)">DetectSafeSearch(Image, ImageContext, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Performs &quot;safe search&quot; processing on a single image.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
-SafeSearchAnnotation annotation = client.DetectSafeSearch(image);
-// Each category is classified as Very Unlikely, Unlikely, Possible, Likely or Very Likely.
-Console.WriteLine($&quot;Adult? {annotation.Adult}&quot;);
-Console.WriteLine($&quot;Spoof? {annotation.Spoof}&quot;);
-Console.WriteLine($&quot;Violence? {annotation.Violence}&quot;);
-Console.WriteLine($&quot;Medical? {annotation.Medical}&quot;);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual SafeSearchAnnotation DetectSafeSearch(Image image, ImageContext context = null, CallSettings callSettings = null)</code></pre>
@@ -2113,6 +2144,17 @@ Console.WriteLine($&quot;Medical? {annotation.Medical}&quot;);
               <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
 <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectSafeSearch_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+SafeSearchAnnotation annotation = client.DetectSafeSearch(image);
+// Each category is classified as Very Unlikely, Unlikely, Possible, Likely or Very Likely.
+Console.WriteLine($&quot;Adult? {annotation.Adult}&quot;);
+Console.WriteLine($&quot;Spoof? {annotation.Spoof}&quot;);
+Console.WriteLine($&quot;Violence? {annotation.Violence}&quot;);
+Console.WriteLine($&quot;Medical? {annotation.Medical}&quot;);
+</code></pre></div>
+              </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
@@ -2208,14 +2250,7 @@ Console.WriteLine($&quot;Medical? {annotation.Medical}&quot;);
               <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectText_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectText(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,System.Int32,Google.Api.Gax.Grpc.CallSettings)">DetectText(Image, ImageContext, Int32, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Detects text in a single image.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
-IReadOnlyList&lt;EntityAnnotation&gt; textAnnotations = client.DetectText(image);
-foreach (EntityAnnotation text in textAnnotations)
-{
-    Console.WriteLine($&quot;Description: {text.Description}&quot;);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;EntityAnnotation&gt; DetectText(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
@@ -2282,6 +2317,16 @@ If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">Ann
 <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.
 </p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectText_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+IReadOnlyList&lt;EntityAnnotation&gt; textAnnotations = client.DetectText(image);
+foreach (EntityAnnotation text in textAnnotations)
+{
+    Console.WriteLine($&quot;Description: {text.Description}&quot;);
+}
+</code></pre></div>
+              </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
@@ -2389,26 +2434,7 @@ If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">Ann
               <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectWebInformation_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectWebInformation(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,Google.Api.Gax.Grpc.CallSettings)">DetectWebInformation(Image, ImageContext, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Performs web detection for a single image.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
-WebDetection webDetection = client.DetectWebInformation(image);
-foreach (WebDetection.Types.WebImage webImage in webDetection.FullMatchingImages)
-{
-    Console.WriteLine($&quot;Full image: {webImage.Url} ({webImage.Score})&quot;);
-}
-foreach (WebDetection.Types.WebImage webImage in webDetection.PartialMatchingImages)
-{
-    Console.WriteLine($&quot;Partial image: {webImage.Url} ({webImage.Score})&quot;);
-}
-foreach (WebDetection.Types.WebPage webPage in webDetection.PagesWithMatchingImages)
-{
-    Console.WriteLine($&quot;Page with matching image: {webPage.Url} ({webPage.Score})&quot;);
-}
-foreach (WebDetection.Types.WebEntity entity in webDetection.WebEntities)
-{
-    Console.WriteLine($&quot;Web entity: {entity.EntityId} / {entity.Description} ({entity.Score})&quot;);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual WebDetection DetectWebInformation(Image image, ImageContext context = null, CallSettings callSettings = null)</code></pre>
@@ -2463,6 +2489,28 @@ foreach (WebDetection.Types.WebEntity entity in webDetection.WebEntities)
               <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
 <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectWebInformation_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+WebDetection webDetection = client.DetectWebInformation(image);
+foreach (WebDetection.Types.WebImage webImage in webDetection.FullMatchingImages)
+{
+    Console.WriteLine($&quot;Full image: {webImage.Url} ({webImage.Score})&quot;);
+}
+foreach (WebDetection.Types.WebImage webImage in webDetection.PartialMatchingImages)
+{
+    Console.WriteLine($&quot;Partial image: {webImage.Url} ({webImage.Score})&quot;);
+}
+foreach (WebDetection.Types.WebPage webPage in webDetection.PagesWithMatchingImages)
+{
+    Console.WriteLine($&quot;Page with matching image: {webPage.Url} ({webPage.Score})&quot;);
+}
+foreach (WebDetection.Types.WebEntity entity in webDetection.WebEntities)
+{
+    Console.WriteLine($&quot;Web entity: {entity.EntityId} / {entity.Description} ({entity.Score})&quot;);
+}
+</code></pre></div>
+              </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>

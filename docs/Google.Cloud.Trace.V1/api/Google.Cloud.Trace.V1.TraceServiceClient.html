@@ -337,18 +337,7 @@ necessary.</p>
               <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_GetTrace_Google_Cloud_Trace_V1_GetTraceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.GetTrace(Google.Cloud.Trace.V1.GetTraceRequest,Google.Api.Gax.Grpc.CallSettings)">GetTrace(GetTraceRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets a single trace by its ID.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-TraceServiceClient traceServiceClient = TraceServiceClient.Create();
-// Initialize request argument(s)
-GetTraceRequest request = new GetTraceRequest
-{
-    ProjectId = &quot;&quot;,
-    TraceId = &quot;&quot;,
-};
-// Make the request
-Trace response = traceServiceClient.GetTrace(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Trace GetTrace(GetTraceRequest request, CallSettings callSettings = null)</code></pre>
@@ -393,19 +382,25 @@ Trace response = traceServiceClient.GetTrace(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Trace_V1_TraceServiceClient_GetTrace_Google_Cloud_Trace_V1_GetTraceRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+TraceServiceClient traceServiceClient = TraceServiceClient.Create();
+// Initialize request argument(s)
+GetTraceRequest request = new GetTraceRequest
+{
+    ProjectId = &quot;&quot;,
+    TraceId = &quot;&quot;,
+};
+// Make the request
+Trace response = traceServiceClient.GetTrace(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Trace_V1_TraceServiceClient_GetTrace_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.GetTrace*"></a>
               <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_GetTrace_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.GetTrace(System.String,System.String,Google.Api.Gax.Grpc.CallSettings)">GetTrace(String, String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets a single trace by its ID.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-TraceServiceClient traceServiceClient = TraceServiceClient.Create();
-// Initialize request argument(s)
-string projectId = &quot;&quot;;
-string traceId = &quot;&quot;;
-// Make the request
-Trace response = traceServiceClient.GetTrace(projectId, traceId);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Trace GetTrace(string projectId, string traceId, CallSettings callSettings = null)</code></pre>
@@ -456,22 +451,22 @@ Trace response = traceServiceClient.GetTrace(projectId, traceId);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Trace_V1_TraceServiceClient_GetTrace_System_String_System_String_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+TraceServiceClient traceServiceClient = TraceServiceClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+string traceId = &quot;&quot;;
+// Make the request
+Trace response = traceServiceClient.GetTrace(projectId, traceId);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Trace_V1_TraceServiceClient_GetTraceAsync_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.GetTraceAsync*"></a>
               <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_GetTraceAsync_Google_Cloud_Trace_V1_GetTraceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.GetTraceAsync(Google.Cloud.Trace.V1.GetTraceRequest,Google.Api.Gax.Grpc.CallSettings)">GetTraceAsync(GetTraceRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets a single trace by its ID.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
-// Initialize request argument(s)
-GetTraceRequest request = new GetTraceRequest
-{
-    ProjectId = &quot;&quot;,
-    TraceId = &quot;&quot;,
-};
-// Make the request
-Trace response = await traceServiceClient.GetTraceAsync(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Trace&gt; GetTraceAsync(GetTraceRequest request, CallSettings callSettings = null)</code></pre>
@@ -516,19 +511,25 @@ Trace response = await traceServiceClient.GetTraceAsync(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Trace_V1_TraceServiceClient_GetTraceAsync_Google_Cloud_Trace_V1_GetTraceRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
+// Initialize request argument(s)
+GetTraceRequest request = new GetTraceRequest
+{
+    ProjectId = &quot;&quot;,
+    TraceId = &quot;&quot;,
+};
+// Make the request
+Trace response = await traceServiceClient.GetTraceAsync(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Trace_V1_TraceServiceClient_GetTraceAsync_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.GetTraceAsync*"></a>
               <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_GetTraceAsync_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.GetTraceAsync(System.String,System.String,Google.Api.Gax.Grpc.CallSettings)">GetTraceAsync(String, String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets a single trace by its ID.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
-// Initialize request argument(s)
-string projectId = &quot;&quot;;
-string traceId = &quot;&quot;;
-// Make the request
-Trace response = await traceServiceClient.GetTraceAsync(projectId, traceId);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Trace&gt; GetTraceAsync(string projectId, string traceId, CallSettings callSettings = null)</code></pre>
@@ -579,12 +580,9 @@ Trace response = await traceServiceClient.GetTraceAsync(projectId, traceId);
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Trace_V1_TraceServiceClient_GetTraceAsync_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.GetTraceAsync*"></a>
-              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_GetTraceAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.GetTraceAsync(System.String,System.String,System.Threading.CancellationToken)">GetTraceAsync(String, String, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Gets a single trace by its ID.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Trace_V1_TraceServiceClient_GetTraceAsync_System_String_System_String_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
 // Initialize request argument(s)
 string projectId = &quot;&quot;;
@@ -592,6 +590,12 @@ string traceId = &quot;&quot;;
 // Make the request
 Trace response = await traceServiceClient.GetTraceAsync(projectId, traceId);
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Trace_V1_TraceServiceClient_GetTraceAsync_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.GetTraceAsync*"></a>
+              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_GetTraceAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.GetTraceAsync(System.String,System.String,System.Threading.CancellationToken)">GetTraceAsync(String, String, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Gets a single trace by its ID.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Trace&gt; GetTraceAsync(string projectId, string traceId, CancellationToken cancellationToken)</code></pre>
@@ -642,52 +646,22 @@ Trace response = await traceServiceClient.GetTraceAsync(projectId, traceId);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Trace_V1_TraceServiceClient_GetTraceAsync_System_String_System_String_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+string traceId = &quot;&quot;;
+// Make the request
+Trace response = await traceServiceClient.GetTraceAsync(projectId, traceId);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Trace_V1_TraceServiceClient_ListTraces_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.ListTraces*"></a>
               <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_ListTraces_Google_Cloud_Trace_V1_ListTracesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.ListTraces(Google.Cloud.Trace.V1.ListTracesRequest,Google.Api.Gax.Grpc.CallSettings)">ListTraces(ListTracesRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Returns of a list of traces that match the specified filter conditions.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-TraceServiceClient traceServiceClient = TraceServiceClient.Create();
-// Initialize request argument(s)
-ListTracesRequest request = new ListTracesRequest
-{
-    ProjectId = &quot;&quot;,
-};
-// Make the request
-PagedEnumerable&lt;ListTracesResponse, Trace&gt; response =
-    traceServiceClient.ListTraces(request);
-
-// Iterate over all response items, lazily performing RPCs as required
-foreach (Trace item in response)
-{
-    // Do something with each item
-    Console.WriteLine(item);
-}
-
-// Or iterate over pages (of server-defined size), performing one RPC per page
-foreach (ListTracesResponse page in response.AsRawResponses())
-{
-    // Do something with each page of items
-    Console.WriteLine(&quot;A page of results:&quot;);
-    foreach (Trace item in page)
-    {
-        Console.WriteLine(item);
-    }
-}
-
-// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
-int pageSize = 10;
-Page&lt;Trace&gt; singlePage = response.ReadPage(pageSize);
-// Do something with the page of items
-Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
-foreach (Trace item in singlePage)
-{
-    Console.WriteLine(item);
-}
-// Store the pageToken, for when the next page is required.
-string nextPageToken = singlePage.NextPageToken;
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListTracesResponse, Trace&gt; ListTraces(ListTracesRequest request, CallSettings callSettings = null)</code></pre>
@@ -732,22 +706,55 @@ string nextPageToken = singlePage.NextPageToken;
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Trace_V1_TraceServiceClient_ListTraces_Google_Cloud_Trace_V1_ListTracesRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+TraceServiceClient traceServiceClient = TraceServiceClient.Create();
+// Initialize request argument(s)
+ListTracesRequest request = new ListTracesRequest
+{
+    ProjectId = &quot;&quot;,
+};
+// Make the request
+PagedEnumerable&lt;ListTracesResponse, Trace&gt; response =
+    traceServiceClient.ListTraces(request);
+
+// Iterate over all response items, lazily performing RPCs as required
+foreach (Trace item in response)
+{
+    // Do something with each item
+    Console.WriteLine(item);
+}
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+foreach (ListTracesResponse page in response.AsRawResponses())
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (Trace item in page)
+    {
+        Console.WriteLine(item);
+    }
+}
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;Trace&gt; singlePage = response.ReadPage(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (Trace item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Trace_V1_TraceServiceClient_ListTraces_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.ListTraces*"></a>
               <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_ListTraces_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.ListTraces(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListTraces(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Returns of a list of traces that match the specified filter conditions.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">TraceServiceClient client = TraceServiceClient.Create();
-PagedEnumerable&lt;ListTracesResponse, Trace&gt; traces = client.ListTraces(projectId);
-foreach (Trace trace in traces.Take(10))
-{
-    Console.WriteLine($&quot;{trace.TraceId}:&quot;);
-    foreach (TraceSpan span in trace.Spans)
-    {
-        Console.WriteLine($&quot;  {span.StartTime}-{span.EndTime}: {span.Kind}&quot;);
-    }
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListTracesResponse, Trace&gt; ListTraces(string projectId, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
@@ -806,52 +813,25 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Trace_V1_TraceServiceClient_ListTraces_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">TraceServiceClient client = TraceServiceClient.Create();
+PagedEnumerable&lt;ListTracesResponse, Trace&gt; traces = client.ListTraces(projectId);
+foreach (Trace trace in traces.Take(10))
+{
+    Console.WriteLine($&quot;{trace.TraceId}:&quot;);
+    foreach (TraceSpan span in trace.Spans)
+    {
+        Console.WriteLine($&quot;  {span.StartTime}-{span.EndTime}: {span.Kind}&quot;);
+    }
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Trace_V1_TraceServiceClient_ListTracesAsync_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.ListTracesAsync*"></a>
               <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_ListTracesAsync_Google_Cloud_Trace_V1_ListTracesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.ListTracesAsync(Google.Cloud.Trace.V1.ListTracesRequest,Google.Api.Gax.Grpc.CallSettings)">ListTracesAsync(ListTracesRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Returns of a list of traces that match the specified filter conditions.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
-// Initialize request argument(s)
-ListTracesRequest request = new ListTracesRequest
-{
-    ProjectId = &quot;&quot;,
-};
-// Make the request
-PagedAsyncEnumerable&lt;ListTracesResponse, Trace&gt; response =
-    traceServiceClient.ListTracesAsync(request);
-
-// Iterate over all response items, lazily performing RPCs as required
-await response.ForEachAsync((Trace item) =&gt;
-{
-    // Do something with each item
-    Console.WriteLine(item);
-});
-
-// Or iterate over pages (of server-defined size), performing one RPC per page
-await response.AsRawResponses().ForEachAsync((ListTracesResponse page) =&gt;
-{
-    // Do something with each page of items
-    Console.WriteLine(&quot;A page of results:&quot;);
-    foreach (Trace item in page)
-    {
-        Console.WriteLine(item);
-    }
-});
-
-// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
-int pageSize = 10;
-Page&lt;Trace&gt; singlePage = await response.ReadPageAsync(pageSize);
-// Do something with the page of items
-Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
-foreach (Trace item in singlePage)
-{
-    Console.WriteLine(item);
-}
-// Store the pageToken, for when the next page is required.
-string nextPageToken = singlePage.NextPageToken;
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListTracesResponse, Trace&gt; ListTracesAsync(ListTracesRequest request, CallSettings callSettings = null)</code></pre>
@@ -896,18 +876,18 @@ string nextPageToken = singlePage.NextPageToken;
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Trace_V1_TraceServiceClient_ListTracesAsync_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.ListTracesAsync*"></a>
-              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_ListTracesAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.ListTracesAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListTracesAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Returns of a list of traces that match the specified filter conditions.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Trace_V1_TraceServiceClient_ListTracesAsync_Google_Cloud_Trace_V1_ListTracesRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
 // Initialize request argument(s)
-string projectId = &quot;&quot;;
+ListTracesRequest request = new ListTracesRequest
+{
+    ProjectId = &quot;&quot;,
+};
 // Make the request
 PagedAsyncEnumerable&lt;ListTracesResponse, Trace&gt; response =
-    traceServiceClient.ListTracesAsync(projectId);
+    traceServiceClient.ListTracesAsync(request);
 
 // Iterate over all response items, lazily performing RPCs as required
 await response.ForEachAsync((Trace item) =&gt;
@@ -939,6 +919,12 @@ foreach (Trace item in singlePage)
 // Store the pageToken, for when the next page is required.
 string nextPageToken = singlePage.NextPageToken;
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Trace_V1_TraceServiceClient_ListTracesAsync_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.ListTracesAsync*"></a>
+              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_ListTracesAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.ListTracesAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListTracesAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Returns of a list of traces that match the specified filter conditions.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListTracesResponse, Trace&gt; ListTracesAsync(string projectId, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
@@ -997,6 +983,47 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Trace_V1_TraceServiceClient_ListTracesAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+// Make the request
+PagedAsyncEnumerable&lt;ListTracesResponse, Trace&gt; response =
+    traceServiceClient.ListTracesAsync(projectId);
+
+// Iterate over all response items, lazily performing RPCs as required
+await response.ForEachAsync((Trace item) =&gt;
+{
+    // Do something with each item
+    Console.WriteLine(item);
+});
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+await response.AsRawResponses().ForEachAsync((ListTracesResponse page) =&gt;
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (Trace item in page)
+    {
+        Console.WriteLine(item);
+    }
+});
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;Trace&gt; singlePage = await response.ReadPageAsync(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (Trace item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTraces_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.PatchTraces*"></a>
               <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTraces_Google_Cloud_Trace_V1_PatchTracesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.PatchTraces(Google.Cloud.Trace.V1.PatchTracesRequest,Google.Api.Gax.Grpc.CallSettings)">PatchTraces(PatchTracesRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Sends new traces to Stackdriver Trace or updates existing traces. If the ID
@@ -1005,18 +1032,7 @@ in the existing trace and its spans are overwritten by the provided values,
 and any new fields provided are merged with the existing trace data. If the
 ID does not match, a new trace is created.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-TraceServiceClient traceServiceClient = TraceServiceClient.Create();
-// Initialize request argument(s)
-PatchTracesRequest request = new PatchTracesRequest
-{
-    ProjectId = &quot;&quot;,
-    Traces = new Traces(),
-};
-// Make the request
-traceServiceClient.PatchTraces(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void PatchTraces(PatchTracesRequest request, CallSettings callSettings = null)</code></pre>
@@ -1045,6 +1061,20 @@ traceServiceClient.PatchTraces(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTraces_Google_Cloud_Trace_V1_PatchTracesRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+TraceServiceClient traceServiceClient = TraceServiceClient.Create();
+// Initialize request argument(s)
+PatchTracesRequest request = new PatchTracesRequest
+{
+    ProjectId = &quot;&quot;,
+    Traces = new Traces(),
+};
+// Make the request
+traceServiceClient.PatchTraces(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTraces_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.PatchTraces*"></a>
               <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTraces_System_String_Google_Cloud_Trace_V1_Traces_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.PatchTraces(System.String,Google.Cloud.Trace.V1.Traces,Google.Api.Gax.Grpc.CallSettings)">PatchTraces(String, Traces, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Sends new traces to Stackdriver Trace or updates existing traces. If the ID
@@ -1053,15 +1083,7 @@ in the existing trace and its spans are overwritten by the provided values,
 and any new fields provided are merged with the existing trace data. If the
 ID does not match, a new trace is created.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-TraceServiceClient traceServiceClient = TraceServiceClient.Create();
-// Initialize request argument(s)
-string projectId = &quot;&quot;;
-Traces traces = new Traces();
-// Make the request
-traceServiceClient.PatchTraces(projectId, traces);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void PatchTraces(string projectId, Traces traces, CallSettings callSettings = null)</code></pre>
@@ -1096,6 +1118,17 @@ traceServiceClient.PatchTraces(projectId, traces);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTraces_System_String_Google_Cloud_Trace_V1_Traces_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+TraceServiceClient traceServiceClient = TraceServiceClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+Traces traces = new Traces();
+// Make the request
+traceServiceClient.PatchTraces(projectId, traces);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTracesAsync_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.PatchTracesAsync*"></a>
               <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTracesAsync_Google_Cloud_Trace_V1_PatchTracesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.PatchTracesAsync(Google.Cloud.Trace.V1.PatchTracesRequest,Google.Api.Gax.Grpc.CallSettings)">PatchTracesAsync(PatchTracesRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Sends new traces to Stackdriver Trace or updates existing traces. If the ID
@@ -1104,18 +1137,7 @@ in the existing trace and its spans are overwritten by the provided values,
 and any new fields provided are merged with the existing trace data. If the
 ID does not match, a new trace is created.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
-// Initialize request argument(s)
-PatchTracesRequest request = new PatchTracesRequest
-{
-    ProjectId = &quot;&quot;,
-    Traces = new Traces(),
-};
-// Make the request
-await traceServiceClient.PatchTracesAsync(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task PatchTracesAsync(PatchTracesRequest request, CallSettings callSettings = null)</code></pre>
@@ -1160,6 +1182,20 @@ await traceServiceClient.PatchTracesAsync(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTracesAsync_Google_Cloud_Trace_V1_PatchTracesRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
+// Initialize request argument(s)
+PatchTracesRequest request = new PatchTracesRequest
+{
+    ProjectId = &quot;&quot;,
+    Traces = new Traces(),
+};
+// Make the request
+await traceServiceClient.PatchTracesAsync(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTracesAsync_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.PatchTracesAsync*"></a>
               <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTracesAsync_System_String_Google_Cloud_Trace_V1_Traces_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.PatchTracesAsync(System.String,Google.Cloud.Trace.V1.Traces,Google.Api.Gax.Grpc.CallSettings)">PatchTracesAsync(String, Traces, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Sends new traces to Stackdriver Trace or updates existing traces. If the ID
@@ -1168,15 +1204,7 @@ in the existing trace and its spans are overwritten by the provided values,
 and any new fields provided are merged with the existing trace data. If the
 ID does not match, a new trace is created.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
-// Initialize request argument(s)
-string projectId = &quot;&quot;;
-Traces traces = new Traces();
-// Make the request
-await traceServiceClient.PatchTracesAsync(projectId, traces);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task PatchTracesAsync(string projectId, Traces traces, CallSettings callSettings = null)</code></pre>
@@ -1227,6 +1255,17 @@ await traceServiceClient.PatchTracesAsync(projectId, traces);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTracesAsync_System_String_Google_Cloud_Trace_V1_Traces_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+Traces traces = new Traces();
+// Make the request
+await traceServiceClient.PatchTracesAsync(projectId, traces);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTracesAsync_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.PatchTracesAsync*"></a>
               <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTracesAsync_System_String_Google_Cloud_Trace_V1_Traces_System_Threading_CancellationToken_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.PatchTracesAsync(System.String,Google.Cloud.Trace.V1.Traces,System.Threading.CancellationToken)">PatchTracesAsync(String, Traces, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Sends new traces to Stackdriver Trace or updates existing traces. If the ID
@@ -1235,15 +1274,7 @@ in the existing trace and its spans are overwritten by the provided values,
 and any new fields provided are merged with the existing trace data. If the
 ID does not match, a new trace is created.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
-// Initialize request argument(s)
-string projectId = &quot;&quot;;
-Traces traces = new Traces();
-// Make the request
-await traceServiceClient.PatchTracesAsync(projectId, traces);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task PatchTracesAsync(string projectId, Traces traces, CancellationToken cancellationToken)</code></pre>
@@ -1294,6 +1325,17 @@ await traceServiceClient.PatchTracesAsync(projectId, traces);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTracesAsync_System_String_Google_Cloud_Trace_V1_Traces_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+Traces traces = new Traces();
+// Make the request
+await traceServiceClient.PatchTracesAsync(projectId, traces);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Trace_V1_TraceServiceClient_ShutdownDefaultChannelsAsync_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.ShutdownDefaultChannelsAsync*"></a>
               <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_ShutdownDefaultChannelsAsync" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.ShutdownDefaultChannelsAsync">ShutdownDefaultChannelsAsync()</h4>
               <div class="markdown level1 summary"><p>Shuts down any channels automatically created by <a class="xref" href="Google.Cloud.Trace.V1.TraceServiceClient.html#Google_Cloud_Trace_V1_TraceServiceClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Trace_V1_TraceServiceSettings_">Create(ServiceEndpoint, TraceServiceSettings)</a>

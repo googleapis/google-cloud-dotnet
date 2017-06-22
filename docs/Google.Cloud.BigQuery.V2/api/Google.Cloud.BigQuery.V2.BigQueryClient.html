@@ -615,22 +615,7 @@ no credentials are specified.</p>
               <div class="markdown level1 summary"><p>Creates a job to copy one table to another.
 This method creates a single-element array and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateCopyJob_System_Collections_Generic_IEnumerable_Google_Apis_Bigquery_v2_Data_TableReference__Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_CreateCopyJobOptions_">CreateCopyJob(IEnumerable&lt;TableReference&gt;, TableReference, CreateCopyJobOptions)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
-TableReference sourceTableReference = client.GetTableReference(datasetId, sourceTableId);
-TableReference destinationTableReference = client.GetTableReference(datasetId, destinationTableId);
-
-BigQueryJob job = client.CreateCopyJob(sourceTableReference, destinationTableReference)
-    .PollUntilCompleted();
-// If there are any errors, display them.
-if (job.Status.ErrorResult != null)
-{
-    foreach (ErrorProto error in job.Status.Errors)
-    {
-        Console.WriteLine(error.Message);
-    }
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual BigQueryJob CreateCopyJob(TableReference source, TableReference destination, CreateCopyJobOptions options = null)</code></pre>
@@ -686,6 +671,24 @@ if (job.Status.ErrorResult != null)
 individual components of table references. Instead, use <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_GetTableReference_System_String_System_String_">GetTableReference(String, String)</a> or
 <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_GetTableReference_System_String_System_String_System_String_">GetTableReference(String, String, String)</a> to create table references.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateCopyJob_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_CreateCopyJobOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+TableReference sourceTableReference = client.GetTableReference(datasetId, sourceTableId);
+TableReference destinationTableReference = client.GetTableReference(datasetId, destinationTableId);
+
+BigQueryJob job = client.CreateCopyJob(sourceTableReference, destinationTableReference)
+    .PollUntilCompleted();
+// If there are any errors, display them.
+if (job.Status.ErrorResult != null)
+{
+    foreach (ErrorProto error in job.Status.Errors)
+    {
+        Console.WriteLine(error.Message);
+    }
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateCopyJob_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJob*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateCopyJob_System_Collections_Generic_IEnumerable_Google_Apis_Bigquery_v2_Data_TableReference__Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_CreateCopyJobOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJob(System.Collections.Generic.IEnumerable{Google.Apis.Bigquery.v2.Data.TableReference},Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.CreateCopyJobOptions)">CreateCopyJob(IEnumerable&lt;TableReference&gt;, TableReference, CreateCopyJobOptions)</h4>
               <div class="markdown level1 summary"><p>Creates a job to copy data from at least one table to another.</p>
@@ -751,23 +754,7 @@ individual components of table references. Instead, use <a class="xref" href="Go
               <div class="markdown level1 summary"><p>Asynchronously creates a job to copy one table to another.
 This method creates a single-element array and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateCopyJobAsync_System_Collections_Generic_IEnumerable_Google_Apis_Bigquery_v2_Data_TableReference__Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_CreateCopyJobOptions_System_Threading_CancellationToken_">CreateCopyJobAsync(IEnumerable&lt;TableReference&gt;, TableReference, CreateCopyJobOptions, CancellationToken)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
-TableReference sourceTableReference = client.GetTableReference(datasetId, sourceTableId);
-TableReference destinationTableReference = client.GetTableReference(datasetId, destinationTableId);
-
-BigQueryJob job = await client.CreateCopyJobAsync(sourceTableReference, destinationTableReference);
-job = await job.PollUntilCompletedAsync();
-
-// If there are any errors, display them.
-if (job.Status.ErrorResult != null)
-{
-    foreach (ErrorProto error in job.Status.Errors)
-    {
-        Console.WriteLine(error.Message);
-    }
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateCopyJobAsync(TableReference source, TableReference destination, CreateCopyJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -829,6 +816,25 @@ if (job.Status.ErrorResult != null)
 individual components of table references. Instead, use <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_GetTableReference_System_String_System_String_">GetTableReference(String, String)</a> or
 <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_GetTableReference_System_String_System_String_System_String_">GetTableReference(String, String, String)</a> to create table references.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateCopyJobAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_CreateCopyJobOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+TableReference sourceTableReference = client.GetTableReference(datasetId, sourceTableId);
+TableReference destinationTableReference = client.GetTableReference(datasetId, destinationTableId);
+
+BigQueryJob job = await client.CreateCopyJobAsync(sourceTableReference, destinationTableReference);
+job = await job.PollUntilCompletedAsync();
+
+// If there are any errors, display them.
+if (job.Status.ErrorResult != null)
+{
+    foreach (ErrorProto error in job.Status.Errors)
+    {
+        Console.WriteLine(error.Message);
+    }
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateCopyJobAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJobAsync*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateCopyJobAsync_System_Collections_Generic_IEnumerable_Google_Apis_Bigquery_v2_Data_TableReference__Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_CreateCopyJobOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJobAsync(System.Collections.Generic.IEnumerable{Google.Apis.Bigquery.v2.Data.TableReference},Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.CreateCopyJobOptions,System.Threading.CancellationToken)">CreateCopyJobAsync(IEnumerable&lt;TableReference&gt;, TableReference, CreateCopyJobOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Asynchronously creates a job to copy data from at least one table to another.</p>
@@ -949,11 +955,7 @@ individual components of table references. Instead, use <a class="xref" href="Go
               <div class="markdown level1 summary"><p>Creates a dataset with the specified ID in this client&#39;s project.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html">DatasetReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Cloud_BigQuery_V2_CreateDatasetOptions_">CreateDataset(DatasetReference, CreateDatasetOptions)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
-BigQueryDataset dataset = client.CreateDataset(datasetId);
-// Now populate tables in the dataset...
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual BigQueryDataset CreateDataset(string datasetId, CreateDatasetOptions options = null)</code></pre>
@@ -998,6 +1000,13 @@ BigQueryDataset dataset = client.CreateDataset(datasetId);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateDataset_System_String_Google_Cloud_BigQuery_V2_CreateDatasetOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+BigQueryDataset dataset = client.CreateDataset(datasetId);
+// Now populate tables in the dataset...
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateDataset_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateDataset*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateDataset_System_String_System_String_Google_Cloud_BigQuery_V2_CreateDatasetOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateDataset(System.String,System.String,Google.Cloud.BigQuery.V2.CreateDatasetOptions)">CreateDataset(String, String, CreateDatasetOptions)</h4>
               <div class="markdown level1 summary"><p>Creates a dataset with the specified ID in specified project.
@@ -1115,11 +1124,7 @@ the created dataset.</p>
               <div class="markdown level1 summary"><p>Asynchronously creates a dataset with the specified ID in this client&#39;s project.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html">DatasetReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateDatasetAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Cloud_BigQuery_V2_CreateDatasetOptions_System_Threading_CancellationToken_">CreateDatasetAsync(DatasetReference, CreateDatasetOptions, CancellationToken)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
-BigQueryDataset dataset = await client.CreateDatasetAsync(datasetId);
-// Now populate tables in the dataset...
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryDataset&gt; CreateDatasetAsync(string datasetId, CreateDatasetOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -1171,6 +1176,13 @@ the created dataset.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateDatasetAsync_System_String_Google_Cloud_BigQuery_V2_CreateDatasetOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
+BigQueryDataset dataset = await client.CreateDatasetAsync(datasetId);
+// Now populate tables in the dataset...
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateDatasetAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateDatasetAsync*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateDatasetAsync_System_String_System_String_Google_Cloud_BigQuery_V2_CreateDatasetOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateDatasetAsync(System.String,System.String,Google.Cloud.BigQuery.V2.CreateDatasetOptions,System.Threading.CancellationToken)">CreateDatasetAsync(String, String, CreateDatasetOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Asynchronously creates a dataset with the specified ID in specified project.
@@ -1548,27 +1560,7 @@ See <a href="https://cloud.google.com/bigquery/docs/exporting-data">the BigQuery
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJob_Google_Apis_Bigquery_v2_Data_TableReference_System_String_Google_Cloud_BigQuery_V2_CreateExtractJobOptions_">CreateExtractJob(TableReference, String, CreateExtractJobOptions)</a>.
 See <a href="https://cloud.google.com/bigquery/docs/exporting-data">the BigQuery documentation</a> for more information on extract jobs.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
-string destinationUri = $&quot;gs://{bucket}/{objectName}&quot;;
-
-BigQueryJob job = client.CreateExtractJob(projectId, datasetId, tableId, destinationUri)
-    .PollUntilCompleted();
-// If there are any errors, display them.
-if (job.Status.ErrorResult != null)
-{
-    foreach (ErrorProto error in job.Status.Errors)
-    {
-        Console.WriteLine(error.Message);
-    }
-}
-else
-{
-    StorageClient storageClient = StorageClient.Create();
-    var obj = storageClient.GetObject(bucket, objectName);
-    Console.WriteLine($&quot;Extracted file size: {obj.Size}&quot;);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual BigQueryJob CreateExtractJob(string projectId, string datasetId, string tableId, string destinationUri, CreateExtractJobOptions options = null)</code></pre>
@@ -1631,6 +1623,29 @@ else
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJob_System_String_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_CreateExtractJobOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+string destinationUri = $&quot;gs://{bucket}/{objectName}&quot;;
+
+BigQueryJob job = client.CreateExtractJob(projectId, datasetId, tableId, destinationUri)
+    .PollUntilCompleted();
+// If there are any errors, display them.
+if (job.Status.ErrorResult != null)
+{
+    foreach (ErrorProto error in job.Status.Errors)
+    {
+        Console.WriteLine(error.Message);
+    }
+}
+else
+{
+    StorageClient storageClient = StorageClient.Create();
+    var obj = storageClient.GetObject(bucket, objectName);
+    Console.WriteLine($&quot;Extracted file size: {obj.Size}&quot;);
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJobAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJobAsync_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_CreateExtractJobOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.CreateExtractJobOptions,System.Threading.CancellationToken)">CreateExtractJobAsync(TableReference, IEnumerable&lt;String&gt;, CreateExtractJobOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Asynchronously creates a job to extract data from the specified BigQuery table within this client&#39;s project to Google Cloud Storage.
@@ -1975,27 +1990,7 @@ See <a href="https://cloud.google.com/bigquery/docs/exporting-data">the BigQuery
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJobAsync_Google_Apis_Bigquery_v2_Data_TableReference_System_String_Google_Cloud_BigQuery_V2_CreateExtractJobOptions_System_Threading_CancellationToken_">CreateExtractJobAsync(TableReference, String, CreateExtractJobOptions, CancellationToken)</a>.
 See <a href="https://cloud.google.com/bigquery/docs/exporting-data">the BigQuery documentation</a> for more information on extract jobs.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
-string destinationUri = $&quot;gs://{bucket}/{objectName}&quot;;
-
-BigQueryJob job = await client.CreateExtractJobAsync(projectId, datasetId, tableId, destinationUri);
-job = await job.PollUntilCompletedAsync();
-// If there are any errors, display them.
-if (job.Status.ErrorResult != null)
-{
-    foreach (ErrorProto error in job.Status.Errors)
-    {
-        Console.WriteLine(error.Message);
-    }
-}
-else
-{
-    StorageClient storageClient = StorageClient.Create();
-    var obj = storageClient.GetObject(bucket, objectName);
-    Console.WriteLine($&quot;Extracted file size: {obj.Size}&quot;);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateExtractJobAsync(string projectId, string datasetId, string tableId, string destinationUri, CreateExtractJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -2064,6 +2059,29 @@ else
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJobAsync_System_String_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_CreateExtractJobOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+string destinationUri = $&quot;gs://{bucket}/{objectName}&quot;;
+
+BigQueryJob job = await client.CreateExtractJobAsync(projectId, datasetId, tableId, destinationUri);
+job = await job.PollUntilCompletedAsync();
+// If there are any errors, display them.
+if (job.Status.ErrorResult != null)
+{
+    foreach (ErrorProto error in job.Status.Errors)
+    {
+        Console.WriteLine(error.Message);
+    }
+}
+else
+{
+    StorageClient storageClient = StorageClient.Create();
+    var obj = storageClient.GetObject(bucket, objectName);
+    Console.WriteLine($&quot;Extracted file size: {obj.Size}&quot;);
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateJsonSerializersSettings_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateJsonSerializersSettings*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateJsonSerializersSettings" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateJsonSerializersSettings">CreateJsonSerializersSettings()</h4>
               <div class="markdown level1 summary"><p>Creates a set of <span class="xref">Newtonsoft.Json.JsonSerializerSettings</span> suitable for specifying in
@@ -2164,35 +2182,7 @@ individual components of table references. Instead, use <a class="xref" href="Go
               <div class="markdown level1 summary"><p>Creates a job to load data from a Google Cloud Storage file to a BigQuery table.
 This method creates a single-element array and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateLoadJob_System_Collections_Generic_IEnumerable_System_String__Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_CreateLoadJobOptions_">CreateLoadJob(IEnumerable&lt;String&gt;, TableReference, TableSchema, CreateLoadJobOptions)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
-
-// First extract the data to Google Cloud Storage...
-// (This is just a convenient way of getting data into Google Cloud Storage
-// to demonstrate a load job. If you only wanted to copy a table,
-// you&#39;d create a copy job instead.)
-BigQueryTable table = client.GetTable(datasetId, originalTableId);
-table.CreateExtractJob(objectUri).PollUntilCompleted().ThrowOnAnyError();
-
-TableReference newTableReference = client.GetTableReference(datasetId, newTableId);
-
-// Then load it back again, with the same schema.
-// The extracted file will contain a header row: we need to skip it when loading.
-CreateLoadJobOptions options = new CreateLoadJobOptions
-{
-    SkipLeadingRows = 1
-};
-BigQueryJob job = client.CreateLoadJob(objectUri, newTableReference, table.Schema, options).PollUntilCompleted();
-
-// If there are any errors, display them.
-if (job.Status.ErrorResult != null)
-{
-    foreach (ErrorProto error in job.Status.Errors)
-    {
-        Console.WriteLine(error.Message);
-    }
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual BigQueryJob CreateLoadJob(string sourceUri, TableReference destination, TableSchema schema, CreateLoadJobOptions options = null)</code></pre>
@@ -2256,6 +2246,37 @@ the options are set to autodetect the schema.</p>
 individual components of table references. Instead, use <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_GetTableReference_System_String_System_String_">GetTableReference(String, String)</a> or
 <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_GetTableReference_System_String_System_String_System_String_">GetTableReference(String, String, String)</a> to create table references.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateLoadJob_System_String_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_CreateLoadJobOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+
+// First extract the data to Google Cloud Storage...
+// (This is just a convenient way of getting data into Google Cloud Storage
+// to demonstrate a load job. If you only wanted to copy a table,
+// you&#39;d create a copy job instead.)
+BigQueryTable table = client.GetTable(datasetId, originalTableId);
+table.CreateExtractJob(objectUri).PollUntilCompleted().ThrowOnAnyError();
+
+TableReference newTableReference = client.GetTableReference(datasetId, newTableId);
+
+// Then load it back again, with the same schema.
+// The extracted file will contain a header row: we need to skip it when loading.
+CreateLoadJobOptions options = new CreateLoadJobOptions
+{
+    SkipLeadingRows = 1
+};
+BigQueryJob job = client.CreateLoadJob(objectUri, newTableReference, table.Schema, options).PollUntilCompleted();
+
+// If there are any errors, display them.
+if (job.Status.ErrorResult != null)
+{
+    foreach (ErrorProto error in job.Status.Errors)
+    {
+        Console.WriteLine(error.Message);
+    }
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateLoadJobAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJobAsync*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateLoadJobAsync_System_Collections_Generic_IEnumerable_System_String__Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_CreateLoadJobOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJobAsync(System.Collections.Generic.IEnumerable{System.String},Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Cloud.BigQuery.V2.CreateLoadJobOptions,System.Threading.CancellationToken)">CreateLoadJobAsync(IEnumerable&lt;String&gt;, TableReference, TableSchema, CreateLoadJobOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Asynchronously creates a job to load data from at least one Google Cloud Storage file to a BigQuery table.</p>
@@ -2335,37 +2356,7 @@ individual components of table references. Instead, use <a class="xref" href="Go
               <div class="markdown level1 summary"><p>Asynchronously creates a job to load data from a Google Cloud Storage file to a BigQuery table.
 This method creates a single-element array and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateLoadJobAsync_System_Collections_Generic_IEnumerable_System_String__Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_CreateLoadJobOptions_System_Threading_CancellationToken_">CreateLoadJobAsync(IEnumerable&lt;String&gt;, TableReference, TableSchema, CreateLoadJobOptions, CancellationToken)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
-
-// First extract the data to Google Cloud Storage...
-// (This is just a convenient way of getting data into Google Cloud Storage
-// to demonstrate a load job. If you only wanted to copy a table,
-// you&#39;d create a copy job instead.)
-BigQueryTable table = await client.GetTableAsync(datasetId, originalTableId);
-var extractJob = await table.CreateExtractJobAsync(objectUri);
-extractJob = (await extractJob.PollUntilCompletedAsync()).ThrowOnAnyError();
-
-TableReference newTableReference = client.GetTableReference(datasetId, newTableId);
-
-// Then load it back again, with the same schema.
-// The extracted file will contain a header row: we need to skip it when loading.
-CreateLoadJobOptions options = new CreateLoadJobOptions
-{
-    SkipLeadingRows = 1
-};
-BigQueryJob job = await client.CreateLoadJobAsync(objectUri, newTableReference, table.Schema, options);
-await job.PollUntilCompletedAsync();
-
-// If there are any errors, display them.
-if (job.Status.ErrorResult != null)
-{
-    foreach (ErrorProto error in job.Status.Errors)
-    {
-        Console.WriteLine(error.Message);
-    }
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateLoadJobAsync(string sourceUri, TableReference destination, TableSchema schema, CreateLoadJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -2435,6 +2426,39 @@ the options are set to autodetect the schema.</p>
 individual components of table references. Instead, use <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_GetTableReference_System_String_System_String_">GetTableReference(String, String)</a> or
 <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_GetTableReference_System_String_System_String_System_String_">GetTableReference(String, String, String)</a> to create table references.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateLoadJobAsync_System_String_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_CreateLoadJobOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+
+// First extract the data to Google Cloud Storage...
+// (This is just a convenient way of getting data into Google Cloud Storage
+// to demonstrate a load job. If you only wanted to copy a table,
+// you&#39;d create a copy job instead.)
+BigQueryTable table = await client.GetTableAsync(datasetId, originalTableId);
+var extractJob = await table.CreateExtractJobAsync(objectUri);
+extractJob = (await extractJob.PollUntilCompletedAsync()).ThrowOnAnyError();
+
+TableReference newTableReference = client.GetTableReference(datasetId, newTableId);
+
+// Then load it back again, with the same schema.
+// The extracted file will contain a header row: we need to skip it when loading.
+CreateLoadJobOptions options = new CreateLoadJobOptions
+{
+    SkipLeadingRows = 1
+};
+BigQueryJob job = await client.CreateLoadJobAsync(objectUri, newTableReference, table.Schema, options);
+await job.PollUntilCompletedAsync();
+
+// If there are any errors, display them.
+if (job.Status.ErrorResult != null)
+{
+    foreach (ErrorProto error in job.Status.Errors)
+    {
+        Console.WriteLine(error.Message);
+    }
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJob_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJob_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_CreateQueryJobOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.CreateQueryJobOptions)">CreateQueryJob(BigQueryCommand, CreateQueryJobOptions)</h4>
               <div class="markdown level1 summary"><p>Creates a job for a query/command, with more facilities than <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_ExecuteQueryOptions_">ExecuteQuery(BigQueryCommand, ExecuteQueryOptions)</a>,
@@ -2492,30 +2516,7 @@ the results of the query.</p>
               <div class="markdown level1 summary"><p>Creates a job for a SQL query, with more facilities than <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_System_String_Google_Cloud_BigQuery_V2_ExecuteQueryOptions_">ExecuteQuery(String, ExecuteQueryOptions)</a>, including the option
 to store the results in a persistent table.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
-BigQueryTable table = client.GetTable(datasetId, historyTableId);
-TableReference destination = client.GetTableReference(datasetId, queryTableId);
-// If the destination table is not specified, the results will be stored in
-// a temporary table.
-BigQueryJob job = client.CreateQueryJob(
-    $@&quot;SELECT player, MAX(score) AS score
-       FROM {table}
-       GROUP BY player
-       ORDER BY score DESC&quot;,
-    new CreateQueryJobOptions { DestinationTable = destination });
-
-// Wait for the job to complete.
-job.PollUntilCompleted();
-
-// Then we can fetch the results, either via the job or by accessing
-// the destination table.
-BigQueryResults result = client.GetQueryResults(job.Reference);
-foreach (BigQueryRow row in result.GetRows())
-{
-    Console.WriteLine($&quot;{row[&quot;player&quot;]}: {row[&quot;score&quot;]}&quot;);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual BigQueryJob CreateQueryJob(string sql, CreateQueryJobOptions options = null)</code></pre>
@@ -2561,6 +2562,32 @@ the results of the query.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJob_System_String_Google_Cloud_BigQuery_V2_CreateQueryJobOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+BigQueryTable table = client.GetTable(datasetId, historyTableId);
+TableReference destination = client.GetTableReference(datasetId, queryTableId);
+// If the destination table is not specified, the results will be stored in
+// a temporary table.
+BigQueryJob job = client.CreateQueryJob(
+    $@&quot;SELECT player, MAX(score) AS score
+       FROM {table}
+       GROUP BY player
+       ORDER BY score DESC&quot;,
+    new CreateQueryJobOptions { DestinationTable = destination });
+
+// Wait for the job to complete.
+job.PollUntilCompleted();
+
+// Then we can fetch the results, either via the job or by accessing
+// the destination table.
+BigQueryResults result = client.GetQueryResults(job.Reference);
+foreach (BigQueryRow row in result.GetRows())
+{
+    Console.WriteLine($&quot;{row[&quot;player&quot;]}: {row[&quot;score&quot;]}&quot;);
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJobAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJobAsync_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_CreateQueryJobOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.CreateQueryJobOptions,System.Threading.CancellationToken)">CreateQueryJobAsync(BigQueryCommand, CreateQueryJobOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Asynchronously creates a job for a query/command, with more facilities than <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_ExecuteQueryOptions_System_Threading_CancellationToken_">ExecuteQueryAsync(BigQueryCommand, ExecuteQueryOptions, CancellationToken)</a>,
@@ -2625,30 +2652,7 @@ the results of the query.</p>
               <div class="markdown level1 summary"><p>Asynchronously creates a job for a SQL query, with more facilities than <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_System_String_Google_Cloud_BigQuery_V2_ExecuteQueryOptions_System_Threading_CancellationToken_">ExecuteQueryAsync(String, ExecuteQueryOptions, CancellationToken)</a>, including the option
 to store the results in a persistent table.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
-BigQueryTable table = await client.GetTableAsync(datasetId, historyTableId);
-TableReference destination = client.GetTableReference(datasetId, queryTableId);
-// If the destination table is not specified, the results will be stored in
-// a temporary table.
-BigQueryJob job = await client.CreateQueryJobAsync(
-    $@&quot;SELECT player, MAX(score) AS score
-       FROM {table}
-       GROUP BY player
-       ORDER BY score DESC&quot;,
-    new CreateQueryJobOptions { DestinationTable = destination });
-
-// Wait for the job to complete.
-await job.PollUntilCompletedAsync();
-
-// Then we can fetch the results, either via the job or by accessing
-// the destination table.
-BigQueryResults result = await client.GetQueryResultsAsync(job.Reference);
-await result.GetRowsAsync().ForEachAsync(row =&gt;
-{
-    Console.WriteLine($&quot;{row[&quot;player&quot;]}: {row[&quot;score&quot;]}&quot;);
-});
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; CreateQueryJobAsync(string sql, CreateQueryJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -2701,6 +2705,32 @@ the results of the query.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJobAsync_System_String_Google_Cloud_BigQuery_V2_CreateQueryJobOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
+BigQueryTable table = await client.GetTableAsync(datasetId, historyTableId);
+TableReference destination = client.GetTableReference(datasetId, queryTableId);
+// If the destination table is not specified, the results will be stored in
+// a temporary table.
+BigQueryJob job = await client.CreateQueryJobAsync(
+    $@&quot;SELECT player, MAX(score) AS score
+       FROM {table}
+       GROUP BY player
+       ORDER BY score DESC&quot;,
+    new CreateQueryJobOptions { DestinationTable = destination });
+
+// Wait for the job to complete.
+await job.PollUntilCompletedAsync();
+
+// Then we can fetch the results, either via the job or by accessing
+// the destination table.
+BigQueryResults result = await client.GetQueryResultsAsync(job.Reference);
+await result.GetRowsAsync().ForEachAsync(row =&gt;
+{
+    Console.WriteLine($&quot;{row[&quot;player&quot;]}: {row[&quot;score&quot;]}&quot;);
+});
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateTable_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateTable*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_CreateTableOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateTable(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Cloud.BigQuery.V2.CreateTableOptions)">CreateTable(TableReference, TableSchema, CreateTableOptions)</h4>
               <div class="markdown level1 summary"><p>Creates a table with the given schema.</p>
@@ -2761,17 +2791,7 @@ the results of the query.</p>
               <div class="markdown level1 summary"><p>Creates a table within this project, specified by a dataset ID and table ID.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_CreateTableOptions_">CreateTable(TableReference, TableSchema, CreateTableOptions)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
-TableSchema schema = new TableSchemaBuilder
-{
-    { &quot;from_player&quot;, BigQueryDbType.String },
-    { &quot;to_player&quot;, BigQueryDbType.String },
-    { &quot;message&quot;, BigQueryDbType.String }
-}.Build();
-BigQueryTable table = client.CreateTable(datasetId, tableId, schema);
-// Now populate the table with data...
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual BigQueryTable CreateTable(string datasetId, string tableId, TableSchema schema, CreateTableOptions options = null)</code></pre>
@@ -2828,6 +2848,19 @@ BigQueryTable table = client.CreateTable(datasetId, tableId, schema);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateTable_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_CreateTableOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+TableSchema schema = new TableSchemaBuilder
+{
+    { &quot;from_player&quot;, BigQueryDbType.String },
+    { &quot;to_player&quot;, BigQueryDbType.String },
+    { &quot;message&quot;, BigQueryDbType.String }
+}.Build();
+BigQueryTable table = client.CreateTable(datasetId, tableId, schema);
+// Now populate the table with data...
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateTable_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateTable*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateTable_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_CreateTableOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateTable(System.String,System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Cloud.BigQuery.V2.CreateTableOptions)">CreateTable(String, String, String, TableSchema, CreateTableOptions)</h4>
               <div class="markdown level1 summary"><p>Creates a table specified by a project ID, dataset ID and table ID.
@@ -2963,17 +2996,7 @@ the newly created table.</p>
               <div class="markdown level1 summary"><p>Creates a table within this project, specified by a dataset ID and table ID.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateTableAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_CreateTableOptions_System_Threading_CancellationToken_">CreateTableAsync(TableReference, TableSchema, CreateTableOptions, CancellationToken)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
-TableSchema schema = new TableSchemaBuilder
-{
-    { &quot;from_player&quot;, BigQueryDbType.String },
-    { &quot;to_player&quot;, BigQueryDbType.String },
-    { &quot;message&quot;, BigQueryDbType.String }
-}.Build();
-BigQueryTable table = await client.CreateTableAsync(datasetId, tableId, schema);
-// Now populate the table with data...
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryTable&gt; CreateTableAsync(string datasetId, string tableId, TableSchema schema, CreateTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -3037,6 +3060,19 @@ the newly created table.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateTableAsync_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_CreateTableOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
+TableSchema schema = new TableSchemaBuilder
+{
+    { &quot;from_player&quot;, BigQueryDbType.String },
+    { &quot;to_player&quot;, BigQueryDbType.String },
+    { &quot;message&quot;, BigQueryDbType.String }
+}.Build();
+BigQueryTable table = await client.CreateTableAsync(datasetId, tableId, schema);
+// Now populate the table with data...
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateTableAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateTableAsync*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_CreateTableAsync_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_CreateTableOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.CreateTableAsync(System.String,System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Cloud.BigQuery.V2.CreateTableOptions,System.Threading.CancellationToken)">CreateTableAsync(String, String, String, TableSchema, CreateTableOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Creates a table specified by a project ID, dataset ID and table ID.
@@ -3150,10 +3186,7 @@ the newly created table.</p>
               <div class="markdown level1 summary"><p>Deletes the specified dataset within this client&#39;s project.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html">DatasetReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_DeleteDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Cloud_BigQuery_V2_DeleteDatasetOptions_">DeleteDataset(DatasetReference, DeleteDatasetOptions)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
-client.DeleteDataset(datasetId);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void DeleteDataset(string datasetId, DeleteDatasetOptions options = null)</code></pre>
@@ -3182,6 +3215,12 @@ client.DeleteDataset(datasetId);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_DeleteDataset_System_String_Google_Cloud_BigQuery_V2_DeleteDatasetOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+client.DeleteDataset(datasetId);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_DeleteDataset_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.DeleteDataset*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_DeleteDataset_System_String_System_String_Google_Cloud_BigQuery_V2_DeleteDatasetOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.DeleteDataset(System.String,System.String,Google.Cloud.BigQuery.V2.DeleteDatasetOptions)">DeleteDataset(String, String, DeleteDatasetOptions)</h4>
               <div class="markdown level1 summary"><p>Deletes the specified dataset within the given project.
@@ -3282,10 +3321,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
               <div class="markdown level1 summary"><p>Asynchronously deletes the specified dataset within this client&#39;s project.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html">DatasetReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_DeleteDatasetAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Cloud_BigQuery_V2_DeleteDatasetOptions_System_Threading_CancellationToken_">DeleteDatasetAsync(DatasetReference, DeleteDatasetOptions, CancellationToken)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
-await client.DeleteDatasetAsync(datasetId);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteDatasetAsync(string datasetId, DeleteDatasetOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -3336,6 +3372,12 @@ await client.DeleteDatasetAsync(datasetId);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_DeleteDatasetAsync_System_String_Google_Cloud_BigQuery_V2_DeleteDatasetOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
+await client.DeleteDatasetAsync(datasetId);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_DeleteDatasetAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.DeleteDatasetAsync*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_DeleteDatasetAsync_System_String_System_String_Google_Cloud_BigQuery_V2_DeleteDatasetOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.DeleteDatasetAsync(System.String,System.String,Google.Cloud.BigQuery.V2.DeleteDatasetOptions,System.Threading.CancellationToken)">DeleteDatasetAsync(String, String, DeleteDatasetOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Asynchronously deletes the specified dataset within the given project.
@@ -3436,10 +3478,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
               <div class="markdown level1 summary"><p>Deletes a table within this project specified by dataset ID and table ID.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_DeleteTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_DeleteTableOptions_">DeleteTable(TableReference, DeleteTableOptions)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
-client.DeleteTable(datasetId, tableId);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void DeleteTable(string datasetId, string tableId, DeleteTableOptions options = null)</code></pre>
@@ -3474,6 +3513,12 @@ client.DeleteTable(datasetId, tableId);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_DeleteTable_System_String_System_String_Google_Cloud_BigQuery_V2_DeleteTableOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+client.DeleteTable(datasetId, tableId);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_DeleteTable_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.DeleteTable*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_DeleteTable_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_DeleteTableOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.DeleteTable(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.DeleteTableOptions)">DeleteTable(String, String, String, DeleteTableOptions)</h4>
               <div class="markdown level1 summary"><p>Deletes a table specified by project ID, dataset ID and table ID.
@@ -3580,10 +3625,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
               <div class="markdown level1 summary"><p>Deletes a table within this project specified by dataset ID and table ID.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_DeleteTableAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_DeleteTableOptions_System_Threading_CancellationToken_">DeleteTableAsync(TableReference, DeleteTableOptions, CancellationToken)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
-await client.DeleteTableAsync(datasetId, tableId);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteTableAsync(string datasetId, string tableId, DeleteTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -3640,6 +3682,12 @@ await client.DeleteTableAsync(datasetId, tableId);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_DeleteTableAsync_System_String_System_String_Google_Cloud_BigQuery_V2_DeleteTableOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
+await client.DeleteTableAsync(datasetId, tableId);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_DeleteTableAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.DeleteTableAsync*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_DeleteTableAsync_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_DeleteTableOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.DeleteTableAsync(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.DeleteTableOptions,System.Threading.CancellationToken)">DeleteTableAsync(String, String, String, DeleteTableOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Deletes a table specified by project ID, dataset ID and table ID.
@@ -3713,19 +3761,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
               <div class="markdown level1 summary"><p>Executes a command. This overload allows query parameterization, and is preferred over
 <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_System_String_Google_Cloud_BigQuery_V2_ExecuteQueryOptions_">ExecuteQuery(String, ExecuteQueryOptions)</a> when values need to be passed in.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
-BigQueryTable table = client.GetTable(datasetId, tableId);
-BigQueryCommand command = new BigQueryCommand($&quot;SELECT player, score, level FROM {table} WHERE score &gt;= @score AND level &gt;= @level&quot;);
-// Note: could also use a collection initializer to populate the parameters.
-command.Parameters.Add(&quot;level&quot;, BigQueryDbType.Int64).Value = 2;
-command.Parameters.Add(&quot;score&quot;, BigQueryDbType.Int64).Value = 1500;
-IEnumerable&lt;BigQueryRow&gt; resultRows = client.ExecuteQuery(command).GetRows();
-foreach (BigQueryRow row in resultRows)
-{
-    Console.WriteLine($&quot;Name: {row[&quot;player&quot;]}; Score: {row[&quot;score&quot;]}; Level: {row[&quot;level&quot;]}&quot;);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual BigQueryResults ExecuteQuery(BigQueryCommand command, ExecuteQueryOptions options = null)</code></pre>
@@ -3770,23 +3806,26 @@ foreach (BigQueryRow row in resultRows)
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_ExecuteQueryOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+BigQueryTable table = client.GetTable(datasetId, tableId);
+BigQueryCommand command = new BigQueryCommand($&quot;SELECT player, score, level FROM {table} WHERE score &gt;= @score AND level &gt;= @level&quot;);
+// Note: could also use a collection initializer to populate the parameters.
+command.Parameters.Add(&quot;level&quot;, BigQueryDbType.Int64).Value = 2;
+command.Parameters.Add(&quot;score&quot;, BigQueryDbType.Int64).Value = 1500;
+IEnumerable&lt;BigQueryRow&gt; resultRows = client.ExecuteQuery(command).GetRows();
+foreach (BigQueryRow row in resultRows)
+{
+    Console.WriteLine($&quot;Name: {row[&quot;player&quot;]}; Score: {row[&quot;score&quot;]}; Level: {row[&quot;level&quot;]}&quot;);
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_System_String_Google_Cloud_BigQuery_V2_ExecuteQueryOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery(System.String,Google.Cloud.BigQuery.V2.ExecuteQueryOptions)">ExecuteQuery(String, ExecuteQueryOptions)</h4>
               <div class="markdown level1 summary"><p>Executes a query.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
-BigQueryTable table = client.GetTable(datasetId, historyTableId);
-BigQueryResults result = client.ExecuteQuery(
-    $@&quot;SELECT player, MAX(score) AS score
-       FROM {table}
-       GROUP BY player
-       ORDER BY score DESC&quot;);
-foreach (BigQueryRow row in result.GetRows())
-{
-    Console.WriteLine($&quot;{row[&quot;player&quot;]}: {row[&quot;score&quot;]}&quot;);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual BigQueryResults ExecuteQuery(string sql, ExecuteQueryOptions options = null)</code></pre>
@@ -3831,25 +3870,27 @@ foreach (BigQueryRow row in result.GetRows())
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_System_String_Google_Cloud_BigQuery_V2_ExecuteQueryOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+BigQueryTable table = client.GetTable(datasetId, historyTableId);
+BigQueryResults result = client.ExecuteQuery(
+    $@&quot;SELECT player, MAX(score) AS score
+       FROM {table}
+       GROUP BY player
+       ORDER BY score DESC&quot;);
+foreach (BigQueryRow row in result.GetRows())
+{
+    Console.WriteLine($&quot;{row[&quot;player&quot;]}: {row[&quot;score&quot;]}&quot;);
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_ExecuteQueryOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.ExecuteQueryOptions,System.Threading.CancellationToken)">ExecuteQueryAsync(BigQueryCommand, ExecuteQueryOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Asynchronously executes a command. This overload allows query parameterization, and is preferred over
 <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_System_String_Google_Cloud_BigQuery_V2_ExecuteQueryOptions_System_Threading_CancellationToken_">ExecuteQueryAsync(String, ExecuteQueryOptions, CancellationToken)</a> when values need to be passed in.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
-BigQueryTable table = await client.GetTableAsync(datasetId, tableId);
-BigQueryCommand command = new BigQueryCommand($&quot;SELECT player, score, level FROM {table} WHERE score &gt;= @score AND level &gt;= @level&quot;);
-// Note: could also use a collection initializer to populate the parameters.
-command.Parameters.Add(&quot;level&quot;, BigQueryDbType.Int64).Value = 2;
-command.Parameters.Add(&quot;score&quot;, BigQueryDbType.Int64).Value = 1500;
-BigQueryResults queryJob = await client.ExecuteQueryAsync(command);
-IAsyncEnumerable&lt;BigQueryRow&gt; resultRows = queryJob.GetRowsAsync();
-await resultRows.ForEachAsync(row =&gt;
-{
-    Console.WriteLine($&quot;Name: {row[&quot;player&quot;]}; Score: {row[&quot;score&quot;]}; Level: {row[&quot;level&quot;]}&quot;);
-});
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryResults&gt; ExecuteQueryAsync(BigQueryCommand command, ExecuteQueryOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -3901,23 +3942,27 @@ the <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryResults.html">BigQuer
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_ExecuteQueryOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
+BigQueryTable table = await client.GetTableAsync(datasetId, tableId);
+BigQueryCommand command = new BigQueryCommand($&quot;SELECT player, score, level FROM {table} WHERE score &gt;= @score AND level &gt;= @level&quot;);
+// Note: could also use a collection initializer to populate the parameters.
+command.Parameters.Add(&quot;level&quot;, BigQueryDbType.Int64).Value = 2;
+command.Parameters.Add(&quot;score&quot;, BigQueryDbType.Int64).Value = 1500;
+BigQueryResults queryJob = await client.ExecuteQueryAsync(command);
+IAsyncEnumerable&lt;BigQueryRow&gt; resultRows = queryJob.GetRowsAsync();
+await resultRows.ForEachAsync(row =&gt;
+{
+    Console.WriteLine($&quot;Name: {row[&quot;player&quot;]}; Score: {row[&quot;score&quot;]}; Level: {row[&quot;level&quot;]}&quot;);
+});
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_System_String_Google_Cloud_BigQuery_V2_ExecuteQueryOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync(System.String,Google.Cloud.BigQuery.V2.ExecuteQueryOptions,System.Threading.CancellationToken)">ExecuteQueryAsync(String, ExecuteQueryOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Asynchronously executes a query.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
-BigQueryTable table = await client.GetTableAsync(datasetId, historyTableId);
-BigQueryResults result = await client.ExecuteQueryAsync(
-    $@&quot;SELECT player, MAX(score) AS score
-       FROM {table}
-       GROUP BY player
-       ORDER BY score DESC&quot;);
-await result.GetRowsAsync().ForEachAsync(row =&gt;
-{
-    Console.WriteLine($&quot;{row[&quot;player&quot;]}: {row[&quot;score&quot;]}&quot;);
-});
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryResults&gt; ExecuteQueryAsync(string sql, ExecuteQueryOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -3969,6 +4014,21 @@ the <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryResults.html">BigQuer
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_System_String_Google_Cloud_BigQuery_V2_ExecuteQueryOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
+BigQueryTable table = await client.GetTableAsync(datasetId, historyTableId);
+BigQueryResults result = await client.ExecuteQueryAsync(
+    $@&quot;SELECT player, MAX(score) AS score
+       FROM {table}
+       GROUP BY player
+       ORDER BY score DESC&quot;);
+await result.GetRowsAsync().ForEachAsync(row =&gt;
+{
+    Console.WriteLine($&quot;{row[&quot;player&quot;]}: {row[&quot;score&quot;]}&quot;);
+});
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_GetDataset_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.GetDataset*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_GetDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Cloud_BigQuery_V2_GetDatasetOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.GetDataset(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Cloud.BigQuery.V2.GetDatasetOptions)">GetDataset(DatasetReference, GetDatasetOptions)</h4>
               <div class="markdown level1 summary"><p>Retrieves a dataset.</p>
@@ -6869,26 +6929,7 @@ To specify options, create a collection or array explicitly, and call <a class="
               <div class="markdown level1 summary"><p>Inserts all the specified rows into a table in this client&#39;s project.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRows_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_BigQueryInsertRow___">InsertRows(TableReference, BigQueryInsertRow[])</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
-// The insert ID is optional, but can avoid duplicate data
-// when retrying inserts.
-BigQueryInsertRow row1 = new BigQueryInsertRow(&quot;row1&quot;)
-{
-    { &quot;player&quot;, &quot;Jane&quot; },
-    { &quot;level&quot;, 3 },
-    { &quot;score&quot;, 3600 },
-    { &quot;game_started&quot;, DateTime.UtcNow }
-};
-BigQueryInsertRow row2 = new BigQueryInsertRow(&quot;row2&quot;)
-{
-    { &quot;player&quot;, &quot;Jeff&quot; },
-    { &quot;level&quot;, 2 },
-    { &quot;score&quot;, 2000 },
-    { &quot;game_started&quot;, DateTime.UtcNow }
-};
-client.InsertRows(datasetId, tableId, row1, row2);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void InsertRows(string datasetId, string tableId, params BigQueryInsertRow[] rows)</code></pre>
@@ -6927,6 +6968,28 @@ client.InsertRows(datasetId, tableId, row1, row2);
               <div class="markdown level1 remarks"><p>Options are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRows_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_">InsertRows(String, String, IEnumerable&lt;BigQueryInsertRow&gt;, InsertOptions)</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_InsertRows_System_String_System_String_Google_Cloud_BigQuery_V2_BigQueryInsertRow____snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+// The insert ID is optional, but can avoid duplicate data
+// when retrying inserts.
+BigQueryInsertRow row1 = new BigQueryInsertRow(&quot;row1&quot;)
+{
+    { &quot;player&quot;, &quot;Jane&quot; },
+    { &quot;level&quot;, 3 },
+    { &quot;score&quot;, 3600 },
+    { &quot;game_started&quot;, DateTime.UtcNow }
+};
+BigQueryInsertRow row2 = new BigQueryInsertRow(&quot;row2&quot;)
+{
+    { &quot;player&quot;, &quot;Jeff&quot; },
+    { &quot;level&quot;, 2 },
+    { &quot;score&quot;, 2000 },
+    { &quot;game_started&quot;, DateTime.UtcNow }
+};
+client.InsertRows(datasetId, tableId, row1, row2);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_InsertRows_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_InsertRows_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(System.String,System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions)">InsertRows(String, String, IEnumerable&lt;BigQueryInsertRow&gt;, InsertOptions)</h4>
               <div class="markdown level1 summary"><p>Inserts all the given rows of data into a table in this client&#39;s project specified by dataset ID and table ID.
@@ -7323,26 +7386,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
               <div class="markdown level1 summary"><p>Inserts all the specified rows into a table.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRowsAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_BigQueryInsertRow___">InsertRowsAsync(TableReference, BigQueryInsertRow[])</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
-// The insert ID is optional, but can avoid duplicate data
-// when retrying inserts.
-BigQueryInsertRow row1 = new BigQueryInsertRow(&quot;row1-async&quot;)
-{
-    { &quot;player&quot;, &quot;Jane&quot; },
-    { &quot;level&quot;, 3 },
-    { &quot;score&quot;, 3600 },
-    { &quot;game_started&quot;, DateTime.UtcNow }
-};
-BigQueryInsertRow row2 = new BigQueryInsertRow(&quot;row2-async&quot;)
-{
-    { &quot;player&quot;, &quot;Jeff&quot; },
-    { &quot;level&quot;, 2 },
-    { &quot;score&quot;, 2000 },
-    { &quot;game_started&quot;, DateTime.UtcNow }
-};
-await client.InsertRowsAsync(datasetId, tableId, row1, row2);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task InsertRowsAsync(string projectId, string datasetId, string tableId, params BigQueryInsertRow[] rows)</code></pre>
@@ -7403,6 +7447,28 @@ await client.InsertRowsAsync(datasetId, tableId, row1, row2);
               <div class="markdown level1 remarks"><p>Options and cancellation tokens are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRowsAsync_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_">InsertRowsAsync(String, String, String, IEnumerable&lt;BigQueryInsertRow&gt;, InsertOptions, CancellationToken)</a>.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_InsertRowsAsync_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_BigQueryInsertRow____snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
+// The insert ID is optional, but can avoid duplicate data
+// when retrying inserts.
+BigQueryInsertRow row1 = new BigQueryInsertRow(&quot;row1-async&quot;)
+{
+    { &quot;player&quot;, &quot;Jane&quot; },
+    { &quot;level&quot;, 3 },
+    { &quot;score&quot;, 3600 },
+    { &quot;game_started&quot;, DateTime.UtcNow }
+};
+BigQueryInsertRow row2 = new BigQueryInsertRow(&quot;row2-async&quot;)
+{
+    { &quot;player&quot;, &quot;Jeff&quot; },
+    { &quot;level&quot;, 2 },
+    { &quot;score&quot;, 2000 },
+    { &quot;game_started&quot;, DateTime.UtcNow }
+};
+await client.InsertRowsAsync(datasetId, tableId, row1, row2);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_InsertRowsAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_InsertRowsAsync_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)">InsertRowsAsync(String, String, String, IEnumerable&lt;BigQueryInsertRow&gt;, InsertOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Asynchronously inserts all the given rows of data into a table specified by project ID, dataset ID and table ID.
@@ -7531,14 +7597,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
               <div class="markdown level1 summary"><p>Lists the datasets within this client&#39;s project.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.ProjectReference.html">ProjectReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ListDatasets_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Cloud_BigQuery_V2_ListDatasetsOptions_">ListDatasets(ProjectReference, ListDatasetsOptions)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
-List&lt;BigQueryDataset&gt; datasets = client.ListDatasets().Take(20).ToList();
-foreach (BigQueryDataset dataset in datasets)
-{
-    Console.WriteLine(dataset.FullyQualifiedId);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;DatasetList, BigQueryDataset&gt; ListDatasets(ListDatasetsOptions options = null)</code></pre>
@@ -7577,6 +7636,16 @@ foreach (BigQueryDataset dataset in datasets)
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListDatasets_Google_Cloud_BigQuery_V2_ListDatasetsOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+List&lt;BigQueryDataset&gt; datasets = client.ListDatasets().Take(20).ToList();
+foreach (BigQueryDataset dataset in datasets)
+{
+    Console.WriteLine(dataset.FullyQualifiedId);
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_ListDatasets_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListDatasets*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListDatasets_System_String_Google_Cloud_BigQuery_V2_ListDatasetsOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListDatasets(System.String,Google.Cloud.BigQuery.V2.ListDatasetsOptions)">ListDatasets(String, ListDatasetsOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the datasets within the specified project.
@@ -7681,14 +7750,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Pr
               <div class="markdown level1 summary"><p>Asynchronously lists the datasets within this client&#39;s project.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.ProjectReference.html">ProjectReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ListDatasetsAsync_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Cloud_BigQuery_V2_ListDatasetsOptions_">ListDatasetsAsync(ProjectReference, ListDatasetsOptions)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
-List&lt;BigQueryDataset&gt; datasets = await client.ListDatasetsAsync().Take(20).ToList();
-foreach (BigQueryDataset dataset in datasets)
-{
-    Console.WriteLine(dataset.FullyQualifiedId);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;DatasetList, BigQueryDataset&gt; ListDatasetsAsync(ListDatasetsOptions options = null)</code></pre>
@@ -7727,6 +7789,16 @@ foreach (BigQueryDataset dataset in datasets)
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListDatasetsAsync_Google_Cloud_BigQuery_V2_ListDatasetsOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
+List&lt;BigQueryDataset&gt; datasets = await client.ListDatasetsAsync().Take(20).ToList();
+foreach (BigQueryDataset dataset in datasets)
+{
+    Console.WriteLine(dataset.FullyQualifiedId);
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_ListDatasetsAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListDatasetsAsync*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListDatasetsAsync_System_String_Google_Cloud_BigQuery_V2_ListDatasetsOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListDatasetsAsync(System.String,Google.Cloud.BigQuery.V2.ListDatasetsOptions)">ListDatasetsAsync(String, ListDatasetsOptions)</h4>
               <div class="markdown level1 summary"><p>Asynchronously lists the datasets within the specified project.
@@ -7831,14 +7903,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Pr
               <div class="markdown level1 summary"><p>Lists the jobs within this client&#39;s project.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.ProjectReference.html">ProjectReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ListJobs_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Cloud_BigQuery_V2_ListJobsOptions_">ListJobs(ProjectReference, ListJobsOptions)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
-List&lt;BigQueryJob&gt; jobs = client.ListJobs().Take(20).ToList();
-foreach (BigQueryJob job in jobs)
-{
-    Console.WriteLine(job.Reference.JobId);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;JobList, BigQueryJob&gt; ListJobs(ListJobsOptions options = null)</code></pre>
@@ -7877,6 +7942,16 @@ foreach (BigQueryJob job in jobs)
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListJobs_Google_Cloud_BigQuery_V2_ListJobsOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+List&lt;BigQueryJob&gt; jobs = client.ListJobs().Take(20).ToList();
+foreach (BigQueryJob job in jobs)
+{
+    Console.WriteLine(job.Reference.JobId);
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_ListJobs_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListJobs*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListJobs_System_String_Google_Cloud_BigQuery_V2_ListJobsOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListJobs(System.String,Google.Cloud.BigQuery.V2.ListJobsOptions)">ListJobs(String, ListJobsOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the jobs within the specified project.
@@ -7981,14 +8056,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Pr
               <div class="markdown level1 summary"><p>Asynchronously lists the jobs within this client&#39;s project.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.ProjectReference.html">ProjectReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ListJobsAsync_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Cloud_BigQuery_V2_ListJobsOptions_">ListJobsAsync(ProjectReference, ListJobsOptions)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
-List&lt;BigQueryJob&gt; jobs = await client.ListJobsAsync().Take(20).ToList();
-foreach (BigQueryJob job in jobs)
-{
-    Console.WriteLine(job.Reference.JobId);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;JobList, BigQueryJob&gt; ListJobsAsync(ListJobsOptions options = null)</code></pre>
@@ -8027,6 +8095,16 @@ foreach (BigQueryJob job in jobs)
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListJobsAsync_Google_Cloud_BigQuery_V2_ListJobsOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
+List&lt;BigQueryJob&gt; jobs = await client.ListJobsAsync().Take(20).ToList();
+foreach (BigQueryJob job in jobs)
+{
+    Console.WriteLine(job.Reference.JobId);
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_ListJobsAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListJobsAsync*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListJobsAsync_System_String_Google_Cloud_BigQuery_V2_ListJobsOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListJobsAsync(System.String,Google.Cloud.BigQuery.V2.ListJobsOptions)">ListJobsAsync(String, ListJobsOptions)</h4>
               <div class="markdown level1 summary"><p>Asynchronously lists the jobs within the specified project.
@@ -8081,14 +8159,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Pr
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListProjects_Google_Cloud_BigQuery_V2_ListProjectsOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListProjects(Google.Cloud.BigQuery.V2.ListProjectsOptions)">ListProjects(ListProjectsOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the cloud projects available using the current credentials.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(&quot;irrelevant&quot;);
-PagedEnumerable&lt;ProjectList, CloudProject&gt; projects = client.ListProjects();
-foreach (CloudProject project in projects)
-{
-    Console.WriteLine($&quot;{project.ProjectId}: {project.FriendlyName}&quot;);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ProjectList, CloudProject&gt; ListProjects(ListProjectsOptions options = null)</code></pre>
@@ -8130,18 +8201,21 @@ foreach (CloudProject project in projects)
               <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListProjects_Google_Cloud_BigQuery_V2_ListProjectsOptions__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>The project associated with this client is irrelevant for this operation.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListProjects_Google_Cloud_BigQuery_V2_ListProjectsOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(&quot;irrelevant&quot;);
+PagedEnumerable&lt;ProjectList, CloudProject&gt; projects = client.ListProjects();
+foreach (CloudProject project in projects)
+{
+    Console.WriteLine($&quot;{project.ProjectId}: {project.FriendlyName}&quot;);
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_ListProjectsAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListProjectsAsync*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListProjectsAsync_Google_Cloud_BigQuery_V2_ListProjectsOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListProjectsAsync(Google.Cloud.BigQuery.V2.ListProjectsOptions)">ListProjectsAsync(ListProjectsOptions)</h4>
               <div class="markdown level1 summary"><p>Asynchronously lists the cloud projects available using the current credentials.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(&quot;irrelevant&quot;);
-PagedAsyncEnumerable&lt;ProjectList, CloudProject&gt; projects = client.ListProjectsAsync();
-await projects.ForEachAsync(project =&gt;
-{
-    Console.WriteLine($&quot;{project.ProjectId}: {project.FriendlyName}&quot;);
-});
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ProjectList, CloudProject&gt; ListProjectsAsync(ListProjectsOptions options = null)</code></pre>
@@ -8183,22 +8257,21 @@ await projects.ForEachAsync(project =&gt;
               <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListProjectsAsync_Google_Cloud_BigQuery_V2_ListProjectsOptions__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>The project associated with this client is irrelevant for this operation.</p>
 </div>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListProjectsAsync_Google_Cloud_BigQuery_V2_ListProjectsOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(&quot;irrelevant&quot;);
+PagedAsyncEnumerable&lt;ProjectList, CloudProject&gt; projects = client.ListProjectsAsync();
+await projects.ForEachAsync(project =&gt;
+{
+    Console.WriteLine($&quot;{project.ProjectId}: {project.FriendlyName}&quot;);
+});
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_ListRows_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListRows*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListRows_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_ListRowsOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListRows(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Cloud.BigQuery.V2.ListRowsOptions)">ListRows(TableReference, TableSchema, ListRowsOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the rows within a table, similar to a <code>SELECT * FROM ...</code> query.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
-PagedEnumerable&lt;TableDataList, BigQueryRow&gt; result = client.ListRows(datasetId, tableId);
-foreach (BigQueryRow row in result)
-{
-    DateTime timestamp = (DateTime) row[&quot;game_started&quot;];
-    long level = (long) row[&quot;level&quot;];
-    long score = (long) row[&quot;score&quot;];
-    string player = (string) row[&quot;player&quot;];
-    Console.WriteLine($&quot;{player}: {level}/{score} ({timestamp:yyyy-MM-dd HH:mm:ss})&quot;);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;TableDataList, BigQueryRow&gt; ListRows(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)</code></pre>
@@ -8250,6 +8323,20 @@ the table first.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListRows_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_ListRowsOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+PagedEnumerable&lt;TableDataList, BigQueryRow&gt; result = client.ListRows(datasetId, tableId);
+foreach (BigQueryRow row in result)
+{
+    DateTime timestamp = (DateTime) row[&quot;game_started&quot;];
+    long level = (long) row[&quot;level&quot;];
+    long score = (long) row[&quot;score&quot;];
+    string player = (string) row[&quot;player&quot;];
+    Console.WriteLine($&quot;{player}: {level}/{score} ({timestamp:yyyy-MM-dd HH:mm:ss})&quot;);
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_ListRows_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListRows*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListRows_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_ListRowsOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListRows(System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Cloud.BigQuery.V2.ListRowsOptions)">ListRows(String, String, TableSchema, ListRowsOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the rows within a table within this client&#39;s project specified by dataset ID and table ID, similar to a <code>SELECT * FROM ...</code> query.
@@ -8443,18 +8530,7 @@ the table first.</p>
               <div class="markdown level1 summary"><p>Lists the rows within a table within this client&#39;s project specified by dataset ID and table ID, similar to a <code>SELECT * FROM ...</code> query.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ListRowsAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_ListRowsOptions_">ListRowsAsync(TableReference, TableSchema, ListRowsOptions)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
-PagedAsyncEnumerable&lt;TableDataList, BigQueryRow&gt; result = client.ListRowsAsync(datasetId, tableId);
-await result.ForEachAsync(row =&gt;
-{
-    DateTime timestamp = (DateTime) row[&quot;game_started&quot;];
-    long level = (long) row[&quot;level&quot;];
-    long score = (long) row[&quot;score&quot;];
-    string player = (string) row[&quot;player&quot;];
-    Console.WriteLine($&quot;{player}: {level}/{score} ({timestamp:yyyy-MM-dd HH:mm:ss})&quot;);
-});
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;TableDataList, BigQueryRow&gt; ListRowsAsync(string datasetId, string tableId, TableSchema schema = null, ListRowsOptions options = null)</code></pre>
@@ -8512,6 +8588,20 @@ the table first.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListRowsAsync_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_ListRowsOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
+PagedAsyncEnumerable&lt;TableDataList, BigQueryRow&gt; result = client.ListRowsAsync(datasetId, tableId);
+await result.ForEachAsync(row =&gt;
+{
+    DateTime timestamp = (DateTime) row[&quot;game_started&quot;];
+    long level = (long) row[&quot;level&quot;];
+    long score = (long) row[&quot;score&quot;];
+    string player = (string) row[&quot;player&quot;];
+    Console.WriteLine($&quot;{player}: {level}/{score} ({timestamp:yyyy-MM-dd HH:mm:ss})&quot;);
+});
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_ListRowsAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListRowsAsync*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListRowsAsync_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_ListRowsOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListRowsAsync(System.String,System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Cloud.BigQuery.V2.ListRowsOptions)">ListRowsAsync(String, String, String, TableSchema, ListRowsOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the rows within a table specified by project ID, dataset ID and table ID, similar to a <code>SELECT * FROM ...</code> query.
@@ -8635,14 +8725,7 @@ the table first.</p>
               <div class="markdown level1 summary"><p>Lists the tables in a dataset specified by dataset ID, where the dataset is in this client&#39;s project.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html">DatasetReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ListTables_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Cloud_BigQuery_V2_ListTablesOptions_">ListTables(DatasetReference, ListTablesOptions)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
-List&lt;BigQueryTable&gt; tables = client.ListTables(datasetId).Take(20).ToList();
-foreach (BigQueryTable table in tables)
-{
-    Console.WriteLine(table.FullyQualifiedId);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;TableList, BigQueryTable&gt; ListTables(string datasetId, ListTablesOptions options = null)</code></pre>
@@ -8687,6 +8770,16 @@ foreach (BigQueryTable table in tables)
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListTables_System_String_Google_Cloud_BigQuery_V2_ListTablesOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+List&lt;BigQueryTable&gt; tables = client.ListTables(datasetId).Take(20).ToList();
+foreach (BigQueryTable table in tables)
+{
+    Console.WriteLine(table.FullyQualifiedId);
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_ListTables_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListTables*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListTables_System_String_System_String_Google_Cloud_BigQuery_V2_ListTablesOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListTables(System.String,System.String,Google.Cloud.BigQuery.V2.ListTablesOptions)">ListTables(String, String, ListTablesOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the tables in a dataset specified by project ID and dataset ID.
@@ -8797,14 +8890,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
               <div class="markdown level1 summary"><p>Lists the tables in a dataset specified by dataset ID, where the dataset is in this client&#39;s project.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html">DatasetReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ListTablesAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Cloud_BigQuery_V2_ListTablesOptions_">ListTablesAsync(DatasetReference, ListTablesOptions)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
-List&lt;BigQueryTable&gt; tables = await client.ListTablesAsync(datasetId).Take(20).ToList();
-foreach (BigQueryTable table in tables)
-{
-    Console.WriteLine(table.FullyQualifiedId);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;TableList, BigQueryTable&gt; ListTablesAsync(string datasetId, ListTablesOptions options = null)</code></pre>
@@ -8849,6 +8935,16 @@ foreach (BigQueryTable table in tables)
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListTablesAsync_System_String_Google_Cloud_BigQuery_V2_ListTablesOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
+List&lt;BigQueryTable&gt; tables = await client.ListTablesAsync(datasetId).Take(20).ToList();
+foreach (BigQueryTable table in tables)
+{
+    Console.WriteLine(table.FullyQualifiedId);
+}
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_ListTablesAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListTablesAsync*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_ListTablesAsync_System_String_System_String_Google_Cloud_BigQuery_V2_ListTablesOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.ListTablesAsync(System.String,System.String,Google.Cloud.BigQuery.V2.ListTablesOptions)">ListTablesAsync(String, String, ListTablesOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the tables in a dataset specified by project ID and dataset ID.
@@ -10144,29 +10240,7 @@ a data upload job.</p>
               <div class="markdown level1 summary"><p>Uploads a stream of CSV data to a table in this project specified by dataset ID and table ID.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadCsv_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadCsvOptions_">UploadCsv(TableReference, TableSchema, Stream, UploadCsvOptions)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
-string[] csvRows =
-{
-    &quot;player,score,level,game_started&quot;,
-    &quot;Tim,5000,3,2014-08-19T12:41:35.220Z&quot;,
-    &quot;Holly,6000,4,2014-08-03T08:45:35.123Z&quot;,
-    &quot;Jane,2402,1,2015-01-20T10:13:35.059Z&quot;
-};
-
-// Normally we&#39;d be uploading from a file or similar. Any readable stream can be used.
-MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(string.Join(&quot;\n&quot;, csvRows)));
-
-// This example uploads data to an existing table. If the upload will create a new table
-// or if the schema in the CSV isn&#39;t identical to the schema in the table (for example if the
-// columns are in a different order), create a schema to pass into the call.
-TableSchema schema = null;
-BigQueryJob job = client.UploadCsv(datasetId, tableId, schema, stream,
-    // Our sample data has a header row, so we need to skip it.
-    new UploadCsvOptions { SkipLeadingRows = 1 });
-// Use the job to find out when the data has finished being inserted into the table,
-// report errors etc.
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual BigQueryJob UploadCsv(string datasetId, string tableId, TableSchema schema, Stream input, UploadCsvOptions options = null)</code></pre>
@@ -10229,6 +10303,31 @@ BigQueryJob job = client.UploadCsv(datasetId, tableId, schema, stream,
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadCsv_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadCsvOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+string[] csvRows =
+{
+    &quot;player,score,level,game_started&quot;,
+    &quot;Tim,5000,3,2014-08-19T12:41:35.220Z&quot;,
+    &quot;Holly,6000,4,2014-08-03T08:45:35.123Z&quot;,
+    &quot;Jane,2402,1,2015-01-20T10:13:35.059Z&quot;
+};
+
+// Normally we&#39;d be uploading from a file or similar. Any readable stream can be used.
+MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(string.Join(&quot;\n&quot;, csvRows)));
+
+// This example uploads data to an existing table. If the upload will create a new table
+// or if the schema in the CSV isn&#39;t identical to the schema in the table (for example if the
+// columns are in a different order), create a schema to pass into the call.
+TableSchema schema = null;
+BigQueryJob job = client.UploadCsv(datasetId, tableId, schema, stream,
+    // Our sample data has a header row, so we need to skip it.
+    new UploadCsvOptions { SkipLeadingRows = 1 });
+// Use the job to find out when the data has finished being inserted into the table,
+// report errors etc.
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadCsv_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.UploadCsv*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadCsv_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadCsvOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.UploadCsv(System.String,System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadCsvOptions)">UploadCsv(String, String, String, TableSchema, Stream, UploadCsvOptions)</h4>
               <div class="markdown level1 summary"><p>Uploads a stream of CSV data to a table specified by project ID, dataset ID and table ID.
@@ -10376,29 +10475,7 @@ a data upload job.</p>
               <div class="markdown level1 summary"><p>Asynchronously uploads a stream of CSV data to a table in this project specified by dataset ID and table ID.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadCsvAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadCsvOptions_System_Threading_CancellationToken_">UploadCsvAsync(TableReference, TableSchema, Stream, UploadCsvOptions, CancellationToken)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
-string[] csvRows =
-{
-    &quot;player,score,level,game_started&quot;,
-    &quot;Tim,5000,3,2014-08-19T12:41:35.220Z&quot;,
-    &quot;Holly,6000,4,2014-08-03T08:45:35.123Z&quot;,
-    &quot;Jane,2402,1,2015-01-20T10:13:35.059Z&quot;
-};
-
-// Normally we&#39;d be uploading from a file or similar. Any readable stream can be used.
-MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(string.Join(&quot;\n&quot;, csvRows)));
-
-// This example uploads data to an existing table. If the upload will create a new table
-// or if the schema in the CSV isn&#39;t identical to the schema in the table (for example if the
-// columns are in a different order), create a schema to pass into the call.
-TableSchema schema = null;
-BigQueryJob job = await client.UploadCsvAsync(datasetId, tableId, schema, stream,
-    // Our sample data has a header row, so we need to skip it.
-    new UploadCsvOptions { SkipLeadingRows = 1 });
-// Use the job to find out when the data has finished being inserted into the table,
-// report errors etc.
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadCsvAsync(string datasetId, string tableId, TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -10468,6 +10545,31 @@ a data upload job.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadCsvAsync_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadCsvOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
+string[] csvRows =
+{
+    &quot;player,score,level,game_started&quot;,
+    &quot;Tim,5000,3,2014-08-19T12:41:35.220Z&quot;,
+    &quot;Holly,6000,4,2014-08-03T08:45:35.123Z&quot;,
+    &quot;Jane,2402,1,2015-01-20T10:13:35.059Z&quot;
+};
+
+// Normally we&#39;d be uploading from a file or similar. Any readable stream can be used.
+MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(string.Join(&quot;\n&quot;, csvRows)));
+
+// This example uploads data to an existing table. If the upload will create a new table
+// or if the schema in the CSV isn&#39;t identical to the schema in the table (for example if the
+// columns are in a different order), create a schema to pass into the call.
+TableSchema schema = null;
+BigQueryJob job = await client.UploadCsvAsync(datasetId, tableId, schema, stream,
+    // Our sample data has a header row, so we need to skip it.
+    new UploadCsvOptions { SkipLeadingRows = 1 });
+// Use the job to find out when the data has finished being inserted into the table,
+// report errors etc.
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadCsvAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.UploadCsvAsync*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadCsvAsync_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadCsvOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.UploadCsvAsync(System.String,System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadCsvOptions,System.Threading.CancellationToken)">UploadCsvAsync(String, String, String, TableSchema, Stream, UploadCsvOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Asynchronously uploads a stream of CSV data to a table specified by project ID, dataset ID and table ID.
@@ -10681,23 +10783,7 @@ original JSON can be formatted however you choose.</p>
               <div class="markdown level1 summary"><p>Uploads a sequence of JSON rows to a table in this client&#39;s project specified by dataset ID and table ID.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadJson_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_UploadJsonOptions_">UploadJson(TableReference, TableSchema, IEnumerable&lt;String&gt;, UploadJsonOptions)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
-// Note that there&#39;s a single line per JSON object. This is not a JSON array.
-IEnumerable&lt;string&gt; jsonRows = new string[]
-{
-    &quot;{ &#39;player&#39;: &#39;Jean&#39;, &#39;score&#39;: 500, &#39;level&#39;: 1, &#39;game_started&#39;: &#39;2012-08-19 12:41:35.220&#39; }&quot;,
-    &quot;{ &#39;player&#39;: &#39;Joe&#39;, &#39;score&#39;: 705, &#39;level&#39;: 1, &#39;game_started&#39;: &#39;2014-01-01 08:30:35.000&#39; }&quot;,
-}.Select(row =&gt; row.Replace(&#39;\&#39;&#39;, &#39;&quot;&#39;)); // Simple way of representing C# in JSON to avoid escaping &quot; everywhere.
-
-// This example uploads data to an existing table. If the upload will create a new table
-// or if the schema in the JSON isn&#39;t identical to the schema in the table,
-// create a schema to pass into the call.
-TableSchema schema = null;
-BigQueryJob job = client.UploadJson(datasetId, tableId, schema, jsonRows);
-// Use the job to find out when the data has finished being inserted into the table,
-// report errors etc.
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual BigQueryJob UploadJson(string datasetId, string tableId, TableSchema schema, IEnumerable&lt;string&gt; rows, UploadJsonOptions options = null)</code></pre>
@@ -10765,31 +10851,31 @@ BigQueryJob job = client.UploadJson(datasetId, tableId, schema, jsonRows);
 feeds with spaces. This is safe as they cannot exist within well-formed JSON keys or values, and simply means that the
 original JSON can be formatted however you choose.</p>
 </div>
-              <a id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJson_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.UploadJson*"></a>
-              <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJson_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadJsonOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.UploadJson(System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadJsonOptions)">UploadJson(String, String, TableSchema, Stream, UploadJsonOptions)</h4>
-              <div class="markdown level1 summary"><p>Uploads a stream of JSON data to a table in this client&#39;s project specified by dataset ID and table ID.
-This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadJson_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadJsonOptions_">UploadJson(TableReference, TableSchema, Stream, UploadJsonOptions)</a>.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJson_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_UploadJsonOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
 // Note that there&#39;s a single line per JSON object. This is not a JSON array.
 IEnumerable&lt;string&gt; jsonRows = new string[]
 {
-    &quot;{ &#39;player&#39;: &#39;John&#39;, &#39;score&#39;: 50, &#39;level&#39;: 1, &#39;game_started&#39;: &#39;2014-08-19 12:41:35.220&#39; }&quot;,
-    &quot;{ &#39;player&#39;: &#39;Zoe&#39;, &#39;score&#39;: 605, &#39;level&#39;: 1, &#39;game_started&#39;: &#39;2016-01-01 08:30:35.000&#39; }&quot;,
+    &quot;{ &#39;player&#39;: &#39;Jean&#39;, &#39;score&#39;: 500, &#39;level&#39;: 1, &#39;game_started&#39;: &#39;2012-08-19 12:41:35.220&#39; }&quot;,
+    &quot;{ &#39;player&#39;: &#39;Joe&#39;, &#39;score&#39;: 705, &#39;level&#39;: 1, &#39;game_started&#39;: &#39;2014-01-01 08:30:35.000&#39; }&quot;,
 }.Select(row =&gt; row.Replace(&#39;\&#39;&#39;, &#39;&quot;&#39;)); // Simple way of representing C# in JSON to avoid escaping &quot; everywhere.
-
-// Normally we&#39;d be uploading from a file or similar. Any readable stream can be used.
-MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(string.Join(&quot;\n&quot;, jsonRows)));
 
 // This example uploads data to an existing table. If the upload will create a new table
 // or if the schema in the JSON isn&#39;t identical to the schema in the table,
 // create a schema to pass into the call.
 TableSchema schema = null;
-BigQueryJob job = client.UploadJson(datasetId, tableId, schema, stream);
+BigQueryJob job = client.UploadJson(datasetId, tableId, schema, jsonRows);
 // Use the job to find out when the data has finished being inserted into the table,
 // report errors etc.
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJson_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.UploadJson*"></a>
+              <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJson_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadJsonOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.UploadJson(System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadJsonOptions)">UploadJson(String, String, TableSchema, Stream, UploadJsonOptions)</h4>
+              <div class="markdown level1 summary"><p>Uploads a stream of JSON data to a table in this client&#39;s project specified by dataset ID and table ID.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadJson_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadJsonOptions_">UploadJson(TableReference, TableSchema, Stream, UploadJsonOptions)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual BigQueryJob UploadJson(string datasetId, string tableId, TableSchema schema, Stream input, UploadJsonOptions options = null)</code></pre>
@@ -10852,6 +10938,28 @@ BigQueryJob job = client.UploadJson(datasetId, tableId, schema, stream);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJson_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadJsonOptions__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+// Note that there&#39;s a single line per JSON object. This is not a JSON array.
+IEnumerable&lt;string&gt; jsonRows = new string[]
+{
+    &quot;{ &#39;player&#39;: &#39;John&#39;, &#39;score&#39;: 50, &#39;level&#39;: 1, &#39;game_started&#39;: &#39;2014-08-19 12:41:35.220&#39; }&quot;,
+    &quot;{ &#39;player&#39;: &#39;Zoe&#39;, &#39;score&#39;: 605, &#39;level&#39;: 1, &#39;game_started&#39;: &#39;2016-01-01 08:30:35.000&#39; }&quot;,
+}.Select(row =&gt; row.Replace(&#39;\&#39;&#39;, &#39;&quot;&#39;)); // Simple way of representing C# in JSON to avoid escaping &quot; everywhere.
+
+// Normally we&#39;d be uploading from a file or similar. Any readable stream can be used.
+MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(string.Join(&quot;\n&quot;, jsonRows)));
+
+// This example uploads data to an existing table. If the upload will create a new table
+// or if the schema in the JSON isn&#39;t identical to the schema in the table,
+// create a schema to pass into the call.
+TableSchema schema = null;
+BigQueryJob job = client.UploadJson(datasetId, tableId, schema, stream);
+// Use the job to find out when the data has finished being inserted into the table,
+// report errors etc.
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJson_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.UploadJson*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJson_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_UploadJsonOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.UploadJson(System.String,System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.UploadJsonOptions)">UploadJson(String, String, String, TableSchema, IEnumerable&lt;String&gt;, UploadJsonOptions)</h4>
               <div class="markdown level1 summary"><p>Uploads a sequence of JSON rows to a table specified by project ID, dataset ID and table ID.
@@ -11306,23 +11414,7 @@ a data upload job.</p>
               <div class="markdown level1 summary"><p>Asynchronously uploads a sequence of JSON rows to a table specified by project ID, dataset ID and table ID.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadJsonAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_UploadJsonOptions_System_Threading_CancellationToken_">UploadJsonAsync(TableReference, TableSchema, IEnumerable&lt;String&gt;, UploadJsonOptions, CancellationToken)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
-// Note that there&#39;s a single line per JSON object. This is not a JSON array.
-IEnumerable&lt;string&gt; jsonRows = new string[]
-{
-    &quot;{ &#39;player&#39;: &#39;Jean&#39;, &#39;score&#39;: 500, &#39;level&#39;: 1, &#39;game_started&#39;: &#39;2012-08-19 12:41:35.220&#39; }&quot;,
-    &quot;{ &#39;player&#39;: &#39;Joe&#39;, &#39;score&#39;: 705, &#39;level&#39;: 1, &#39;game_started&#39;: &#39;2014-01-01 08:30:35.000&#39; }&quot;,
-}.Select(row =&gt; row.Replace(&#39;\&#39;&#39;, &#39;&quot;&#39;)); // Simple way of representing C# in JSON to avoid escaping &quot; everywhere.
-
-// This example uploads data to an existing table. If the upload will create a new table
-// or if the schema in the JSON isn&#39;t identical to the schema in the table,
-// create a schema to pass into the call.
-TableSchema schema = null;
-BigQueryJob job = await client.UploadJsonAsync(datasetId, tableId, schema, jsonRows);
-// Use the job to find out when the data has finished being inserted into the table,
-// report errors etc.
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadJsonAsync(string projectId, string datasetId, string tableId, TableSchema schema, IEnumerable&lt;string&gt; rows, UploadJsonOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -11403,31 +11495,31 @@ a data upload job.</p>
 feeds with spaces. This is safe as they cannot exist within well-formed JSON keys or values, and simply means that the
 original JSON can be formatted however you choose.</p>
 </div>
-              <a id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJsonAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.UploadJsonAsync*"></a>
-              <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJsonAsync_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadJsonOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.UploadJsonAsync(System.String,System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadJsonOptions,System.Threading.CancellationToken)">UploadJsonAsync(String, String, String, TableSchema, Stream, UploadJsonOptions, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Asynchronously uploads a stream of JSON data to a table specified by project ID, dataset ID and table ID.
-This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadJsonAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadJsonOptions_System_Threading_CancellationToken_">UploadJsonAsync(TableReference, TableSchema, Stream, UploadJsonOptions, CancellationToken)</a>.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJsonAsync_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_UploadJsonOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
 // Note that there&#39;s a single line per JSON object. This is not a JSON array.
 IEnumerable&lt;string&gt; jsonRows = new string[]
 {
-    &quot;{ &#39;player&#39;: &#39;John&#39;, &#39;score&#39;: 50, &#39;level&#39;: 1, &#39;game_started&#39;: &#39;2014-08-19 12:41:35.220&#39; }&quot;,
-    &quot;{ &#39;player&#39;: &#39;Zoe&#39;, &#39;score&#39;: 605, &#39;level&#39;: 1, &#39;game_started&#39;: &#39;2016-01-01 08:30:35.000&#39; }&quot;,
+    &quot;{ &#39;player&#39;: &#39;Jean&#39;, &#39;score&#39;: 500, &#39;level&#39;: 1, &#39;game_started&#39;: &#39;2012-08-19 12:41:35.220&#39; }&quot;,
+    &quot;{ &#39;player&#39;: &#39;Joe&#39;, &#39;score&#39;: 705, &#39;level&#39;: 1, &#39;game_started&#39;: &#39;2014-01-01 08:30:35.000&#39; }&quot;,
 }.Select(row =&gt; row.Replace(&#39;\&#39;&#39;, &#39;&quot;&#39;)); // Simple way of representing C# in JSON to avoid escaping &quot; everywhere.
-
-// Normally we&#39;d be uploading from a file or similar. Any readable stream can be used.
-MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(string.Join(&quot;\n&quot;, jsonRows)));
 
 // This example uploads data to an existing table. If the upload will create a new table
 // or if the schema in the JSON isn&#39;t identical to the schema in the table,
 // create a schema to pass into the call.
 TableSchema schema = null;
-BigQueryJob job = await client.UploadJsonAsync(datasetId, tableId, schema, stream);
+BigQueryJob job = await client.UploadJsonAsync(datasetId, tableId, schema, jsonRows);
 // Use the job to find out when the data has finished being inserted into the table,
 // report errors etc.
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJsonAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.UploadJsonAsync*"></a>
+              <h4 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJsonAsync_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadJsonOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClient.UploadJsonAsync(System.String,System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadJsonOptions,System.Threading.CancellationToken)">UploadJsonAsync(String, String, String, TableSchema, Stream, UploadJsonOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously uploads a stream of JSON data to a table specified by project ID, dataset ID and table ID.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadJsonAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadJsonOptions_System_Threading_CancellationToken_">UploadJsonAsync(TableReference, TableSchema, Stream, UploadJsonOptions, CancellationToken)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;BigQueryJob&gt; UploadJsonAsync(string projectId, string datasetId, string tableId, TableSchema schema, Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = null)</code></pre>
@@ -11503,6 +11595,28 @@ a data upload job.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryClient_UploadJsonAsync_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadJsonOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
+// Note that there&#39;s a single line per JSON object. This is not a JSON array.
+IEnumerable&lt;string&gt; jsonRows = new string[]
+{
+    &quot;{ &#39;player&#39;: &#39;John&#39;, &#39;score&#39;: 50, &#39;level&#39;: 1, &#39;game_started&#39;: &#39;2014-08-19 12:41:35.220&#39; }&quot;,
+    &quot;{ &#39;player&#39;: &#39;Zoe&#39;, &#39;score&#39;: 605, &#39;level&#39;: 1, &#39;game_started&#39;: &#39;2016-01-01 08:30:35.000&#39; }&quot;,
+}.Select(row =&gt; row.Replace(&#39;\&#39;&#39;, &#39;&quot;&#39;)); // Simple way of representing C# in JSON to avoid escaping &quot; everywhere.
+
+// Normally we&#39;d be uploading from a file or similar. Any readable stream can be used.
+MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(string.Join(&quot;\n&quot;, jsonRows)));
+
+// This example uploads data to an existing table. If the upload will create a new table
+// or if the schema in the JSON isn&#39;t identical to the schema in the table,
+// create a schema to pass into the call.
+TableSchema schema = null;
+BigQueryJob job = await client.UploadJsonAsync(datasetId, tableId, schema, stream);
+// Use the job to find out when the data has finished being inserted into the table,
+// report errors etc.
+</code></pre></div>
+              </div>
                         </article>
           </div>
           

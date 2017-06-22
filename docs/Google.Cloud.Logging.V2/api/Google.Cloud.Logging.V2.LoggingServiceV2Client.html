@@ -340,17 +340,7 @@ The log reappears if it receives new entries.
 Log entries written shortly before the delete operation might not be
 deleted.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
-// Initialize request argument(s)
-DeleteLogRequest request = new DeleteLogRequest
-{
-    LogNameAsLogNameOneof = LogNameOneof.From(new LogName(&quot;[PROJECT]&quot;, &quot;[LOG]&quot;)),
-};
-// Make the request
-loggingServiceV2Client.DeleteLog(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void DeleteLog(DeleteLogRequest request, CallSettings callSettings = null)</code></pre>
@@ -379,6 +369,19 @@ loggingServiceV2Client.DeleteLog(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_DeleteLog_Google_Cloud_Logging_V2_DeleteLogRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+// Initialize request argument(s)
+DeleteLogRequest request = new DeleteLogRequest
+{
+    LogNameAsLogNameOneof = LogNameOneof.From(new LogName(&quot;[PROJECT]&quot;, &quot;[LOG]&quot;)),
+};
+// Make the request
+loggingServiceV2Client.DeleteLog(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_DeleteLog_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLog*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_DeleteLog_Google_Cloud_Logging_V2_LogNameOneof_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLog(Google.Cloud.Logging.V2.LogNameOneof,Google.Api.Gax.Grpc.CallSettings)">DeleteLog(LogNameOneof, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes all the log entries in a log.
@@ -386,14 +389,7 @@ The log reappears if it receives new entries.
 Log entries written shortly before the delete operation might not be
 deleted.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
-// Initialize request argument(s)
-LogNameOneof logName = LogNameOneof.From(new LogName(&quot;[PROJECT]&quot;, &quot;[LOG]&quot;));
-// Make the request
-loggingServiceV2Client.DeleteLog(logName);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void DeleteLog(LogNameOneof logName, CallSettings callSettings = null)</code></pre>
@@ -431,6 +427,16 @@ For more information about log names, see
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_DeleteLog_Google_Cloud_Logging_V2_LogNameOneof_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+// Initialize request argument(s)
+LogNameOneof logName = LogNameOneof.From(new LogName(&quot;[PROJECT]&quot;, &quot;[LOG]&quot;));
+// Make the request
+loggingServiceV2Client.DeleteLog(logName);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_DeleteLogAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLogAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_DeleteLogAsync_Google_Cloud_Logging_V2_DeleteLogRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLogAsync(Google.Cloud.Logging.V2.DeleteLogRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteLogAsync(DeleteLogRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes all the log entries in a log.
@@ -438,17 +444,7 @@ The log reappears if it receives new entries.
 Log entries written shortly before the delete operation might not be
 deleted.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
-// Initialize request argument(s)
-DeleteLogRequest request = new DeleteLogRequest
-{
-    LogNameAsLogNameOneof = LogNameOneof.From(new LogName(&quot;[PROJECT]&quot;, &quot;[LOG]&quot;)),
-};
-// Make the request
-await loggingServiceV2Client.DeleteLogAsync(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteLogAsync(DeleteLogRequest request, CallSettings callSettings = null)</code></pre>
@@ -493,6 +489,19 @@ await loggingServiceV2Client.DeleteLogAsync(request);
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_DeleteLogAsync_Google_Cloud_Logging_V2_DeleteLogRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+DeleteLogRequest request = new DeleteLogRequest
+{
+    LogNameAsLogNameOneof = LogNameOneof.From(new LogName(&quot;[PROJECT]&quot;, &quot;[LOG]&quot;)),
+};
+// Make the request
+await loggingServiceV2Client.DeleteLogAsync(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_DeleteLogAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLogAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_DeleteLogAsync_Google_Cloud_Logging_V2_LogNameOneof_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLogAsync(Google.Cloud.Logging.V2.LogNameOneof,Google.Api.Gax.Grpc.CallSettings)">DeleteLogAsync(LogNameOneof, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes all the log entries in a log.
@@ -500,14 +509,7 @@ The log reappears if it receives new entries.
 Log entries written shortly before the delete operation might not be
 deleted.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
-// Initialize request argument(s)
-LogNameOneof logName = LogNameOneof.From(new LogName(&quot;[PROJECT]&quot;, &quot;[LOG]&quot;));
-// Make the request
-await loggingServiceV2Client.DeleteLogAsync(logName);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteLogAsync(LogNameOneof logName, CallSettings callSettings = null)</code></pre>
@@ -561,6 +563,16 @@ For more information about log names, see
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_DeleteLogAsync_Google_Cloud_Logging_V2_LogNameOneof_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+LogNameOneof logName = LogNameOneof.From(new LogName(&quot;[PROJECT]&quot;, &quot;[LOG]&quot;));
+// Make the request
+await loggingServiceV2Client.DeleteLogAsync(logName);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_DeleteLogAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLogAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_DeleteLogAsync_Google_Cloud_Logging_V2_LogNameOneof_System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.DeleteLogAsync(Google.Cloud.Logging.V2.LogNameOneof,System.Threading.CancellationToken)">DeleteLogAsync(LogNameOneof, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Deletes all the log entries in a log.
@@ -568,14 +580,7 @@ The log reappears if it receives new entries.
 Log entries written shortly before the delete operation might not be
 deleted.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
-// Initialize request argument(s)
-LogNameOneof logName = LogNameOneof.From(new LogName(&quot;[PROJECT]&quot;, &quot;[LOG]&quot;));
-// Make the request
-await loggingServiceV2Client.DeleteLogAsync(logName);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteLogAsync(LogNameOneof logName, CancellationToken cancellationToken)</code></pre>
@@ -629,54 +634,23 @@ For more information about log names, see
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_DeleteLogAsync_Google_Cloud_Logging_V2_LogNameOneof_System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+LogNameOneof logName = LogNameOneof.From(new LogName(&quot;[PROJECT]&quot;, &quot;[LOG]&quot;));
+// Make the request
+await loggingServiceV2Client.DeleteLogAsync(logName);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogEntries_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogEntries_Google_Cloud_Logging_V2_ListLogEntriesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries(Google.Cloud.Logging.V2.ListLogEntriesRequest,Google.Api.Gax.Grpc.CallSettings)">ListLogEntries(ListLogEntriesRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from
 Stackdriver Logging.  For ways to export log entries, see
 <a href="/logging/docs/export">Exporting Logs</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
-// Initialize request argument(s)
-ListLogEntriesRequest request = new ListLogEntriesRequest
-{
-    ResourceNames = { },
-};
-// Make the request
-PagedEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; response =
-    loggingServiceV2Client.ListLogEntries(request);
-
-// Iterate over all response items, lazily performing RPCs as required
-foreach (LogEntry item in response)
-{
-    // Do something with each item
-    Console.WriteLine(item);
-}
-
-// Or iterate over pages (of server-defined size), performing one RPC per page
-foreach (ListLogEntriesResponse page in response.AsRawResponses())
-{
-    // Do something with each page of items
-    Console.WriteLine(&quot;A page of results:&quot;);
-    foreach (LogEntry item in page)
-    {
-        Console.WriteLine(item);
-    }
-}
-
-// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
-int pageSize = 10;
-Page&lt;LogEntry&gt; singlePage = response.ReadPage(pageSize);
-// Do something with the page of items
-Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
-foreach (LogEntry item in singlePage)
-{
-    Console.WriteLine(item);
-}
-// Store the pageToken, for when the next page is required.
-string nextPageToken = singlePage.NextPageToken;
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; ListLogEntries(ListLogEntriesRequest request, CallSettings callSettings = null)</code></pre>
@@ -721,22 +695,18 @@ string nextPageToken = singlePage.NextPageToken;
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogEntries_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries*"></a>
-              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogEntries_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListLogEntries(IEnumerable&lt;String&gt;, String, String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from
-Stackdriver Logging.  For ways to export log entries, see
-<a href="/logging/docs/export">Exporting Logs</a>.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogEntries_Google_Cloud_Logging_V2_ListLogEntriesRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
 // Initialize request argument(s)
-IEnumerable&lt;string&gt; resourceNames = new List&lt;string&gt;();
-string filter = &quot;&quot;;
-string orderBy = &quot;&quot;;
+ListLogEntriesRequest request = new ListLogEntriesRequest
+{
+    ResourceNames = { },
+};
 // Make the request
 PagedEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; response =
-    loggingServiceV2Client.ListLogEntries(resourceNames, filter, orderBy);
+    loggingServiceV2Client.ListLogEntries(request);
 
 // Iterate over all response items, lazily performing RPCs as required
 foreach (LogEntry item in response)
@@ -768,6 +738,14 @@ foreach (LogEntry item in singlePage)
 // Store the pageToken, for when the next page is required.
 string nextPageToken = singlePage.NextPageToken;
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogEntries_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogEntries_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntries(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListLogEntries(IEnumerable&lt;String&gt;, String, String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from
+Stackdriver Logging.  For ways to export log entries, see
+<a href="/logging/docs/export">Exporting Logs</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; ListLogEntries(IEnumerable&lt;string&gt; resourceNames, string filter, string orderBy, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
@@ -855,33 +833,27 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogEntriesAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync*"></a>
-              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogEntriesAsync_Google_Cloud_Logging_V2_ListLogEntriesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync(Google.Cloud.Logging.V2.ListLogEntriesRequest,Google.Api.Gax.Grpc.CallSettings)">ListLogEntriesAsync(ListLogEntriesRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from
-Stackdriver Logging.  For ways to export log entries, see
-<a href="/logging/docs/export">Exporting Logs</a>.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
+              <div>
+              <h5 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogEntries_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
 // Initialize request argument(s)
-ListLogEntriesRequest request = new ListLogEntriesRequest
-{
-    ResourceNames = { },
-};
+IEnumerable&lt;string&gt; resourceNames = new List&lt;string&gt;();
+string filter = &quot;&quot;;
+string orderBy = &quot;&quot;;
 // Make the request
-PagedAsyncEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; response =
-    loggingServiceV2Client.ListLogEntriesAsync(request);
+PagedEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; response =
+    loggingServiceV2Client.ListLogEntries(resourceNames, filter, orderBy);
 
 // Iterate over all response items, lazily performing RPCs as required
-await response.ForEachAsync((LogEntry item) =&gt;
+foreach (LogEntry item in response)
 {
     // Do something with each item
     Console.WriteLine(item);
-});
+}
 
 // Or iterate over pages (of server-defined size), performing one RPC per page
-await response.AsRawResponses().ForEachAsync((ListLogEntriesResponse page) =&gt;
+foreach (ListLogEntriesResponse page in response.AsRawResponses())
 {
     // Do something with each page of items
     Console.WriteLine(&quot;A page of results:&quot;);
@@ -889,11 +861,11 @@ await response.AsRawResponses().ForEachAsync((ListLogEntriesResponse page) =&gt;
     {
         Console.WriteLine(item);
     }
-});
+}
 
 // Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
 int pageSize = 10;
-Page&lt;LogEntry&gt; singlePage = await response.ReadPageAsync(pageSize);
+Page&lt;LogEntry&gt; singlePage = response.ReadPage(pageSize);
 // Do something with the page of items
 Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
 foreach (LogEntry item in singlePage)
@@ -903,6 +875,14 @@ foreach (LogEntry item in singlePage)
 // Store the pageToken, for when the next page is required.
 string nextPageToken = singlePage.NextPageToken;
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogEntriesAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogEntriesAsync_Google_Cloud_Logging_V2_ListLogEntriesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync(Google.Cloud.Logging.V2.ListLogEntriesRequest,Google.Api.Gax.Grpc.CallSettings)">ListLogEntriesAsync(ListLogEntriesRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from
+Stackdriver Logging.  For ways to export log entries, see
+<a href="/logging/docs/export">Exporting Logs</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; ListLogEntriesAsync(ListLogEntriesRequest request, CallSettings callSettings = null)</code></pre>
@@ -947,22 +927,18 @@ string nextPageToken = singlePage.NextPageToken;
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogEntriesAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync*"></a>
-              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogEntriesAsync_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListLogEntriesAsync(IEnumerable&lt;String&gt;, String, String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from
-Stackdriver Logging.  For ways to export log entries, see
-<a href="/logging/docs/export">Exporting Logs</a>.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogEntriesAsync_Google_Cloud_Logging_V2_ListLogEntriesRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
 // Initialize request argument(s)
-IEnumerable&lt;string&gt; resourceNames = new List&lt;string&gt;();
-string filter = &quot;&quot;;
-string orderBy = &quot;&quot;;
+ListLogEntriesRequest request = new ListLogEntriesRequest
+{
+    ResourceNames = { },
+};
 // Make the request
 PagedAsyncEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; response =
-    loggingServiceV2Client.ListLogEntriesAsync(resourceNames, filter, orderBy);
+    loggingServiceV2Client.ListLogEntriesAsync(request);
 
 // Iterate over all response items, lazily performing RPCs as required
 await response.ForEachAsync((LogEntry item) =&gt;
@@ -994,6 +970,14 @@ foreach (LogEntry item in singlePage)
 // Store the pageToken, for when the next page is required.
 string nextPageToken = singlePage.NextPageToken;
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogEntriesAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogEntriesAsync_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListLogEntriesAsync(IEnumerable&lt;String&gt;, String, String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from
+Stackdriver Logging.  For ways to export log entries, see
+<a href="/logging/docs/export">Exporting Logs</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; ListLogEntriesAsync(IEnumerable&lt;string&gt; resourceNames, string filter, string orderBy, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
@@ -1081,53 +1065,55 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogs_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs*"></a>
-              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogs_Google_Cloud_Logging_V2_ListLogsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest,Google.Api.Gax.Grpc.CallSettings)">ListLogs(ListLogsRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lists the logs in projects, organizations, folders, or billing accounts.
-Only logs that have entries are listed.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+              <div>
+              <h5 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogEntriesAsync_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
 // Initialize request argument(s)
-ListLogsRequest request = new ListLogsRequest
-{
-    ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;)),
-};
+IEnumerable&lt;string&gt; resourceNames = new List&lt;string&gt;();
+string filter = &quot;&quot;;
+string orderBy = &quot;&quot;;
 // Make the request
-PagedEnumerable&lt;ListLogsResponse, string&gt; response =
-    loggingServiceV2Client.ListLogs(request);
+PagedAsyncEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; response =
+    loggingServiceV2Client.ListLogEntriesAsync(resourceNames, filter, orderBy);
 
 // Iterate over all response items, lazily performing RPCs as required
-foreach (string item in response)
+await response.ForEachAsync((LogEntry item) =&gt;
 {
     // Do something with each item
     Console.WriteLine(item);
-}
+});
 
 // Or iterate over pages (of server-defined size), performing one RPC per page
-foreach (ListLogsResponse page in response.AsRawResponses())
+await response.AsRawResponses().ForEachAsync((ListLogEntriesResponse page) =&gt;
 {
     // Do something with each page of items
     Console.WriteLine(&quot;A page of results:&quot;);
-    foreach (string item in page)
+    foreach (LogEntry item in page)
     {
         Console.WriteLine(item);
     }
-}
+});
 
 // Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
 int pageSize = 10;
-Page&lt;string&gt; singlePage = response.ReadPage(pageSize);
+Page&lt;LogEntry&gt; singlePage = await response.ReadPageAsync(pageSize);
 // Do something with the page of items
 Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
-foreach (string item in singlePage)
+foreach (LogEntry item in singlePage)
 {
     Console.WriteLine(item);
 }
 // Store the pageToken, for when the next page is required.
 string nextPageToken = singlePage.NextPageToken;
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogs_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogs_Google_Cloud_Logging_V2_ListLogsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest,Google.Api.Gax.Grpc.CallSettings)">ListLogs(ListLogsRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lists the logs in projects, organizations, folders, or billing accounts.
+Only logs that have entries are listed.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListLogsResponse, string&gt; ListLogs(ListLogsRequest request, CallSettings callSettings = null)</code></pre>
@@ -1172,19 +1158,18 @@ string nextPageToken = singlePage.NextPageToken;
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogs_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs*"></a>
-              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogs_Google_Cloud_Logging_V2_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ParentNameOneof,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListLogs(ParentNameOneof, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lists the logs in projects, organizations, folders, or billing accounts.
-Only logs that have entries are listed.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogs_Google_Cloud_Logging_V2_ListLogsRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
 // Initialize request argument(s)
-ParentNameOneof parent = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;));
+ListLogsRequest request = new ListLogsRequest
+{
+    ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;)),
+};
 // Make the request
 PagedEnumerable&lt;ListLogsResponse, string&gt; response =
-    loggingServiceV2Client.ListLogs(parent);
+    loggingServiceV2Client.ListLogs(request);
 
 // Iterate over all response items, lazily performing RPCs as required
 foreach (string item in response)
@@ -1216,6 +1201,13 @@ foreach (string item in singlePage)
 // Store the pageToken, for when the next page is required.
 string nextPageToken = singlePage.NextPageToken;
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogs_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogs_Google_Cloud_Logging_V2_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ParentNameOneof,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListLogs(ParentNameOneof, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lists the logs in projects, organizations, folders, or billing accounts.
+Only logs that have entries are listed.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListLogsResponse, string&gt; ListLogs(ParentNameOneof parent, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
@@ -1278,32 +1270,25 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogsAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync*"></a>
-              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogsAsync_Google_Cloud_Logging_V2_ListLogsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ListLogsRequest,Google.Api.Gax.Grpc.CallSettings)">ListLogsAsync(ListLogsRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lists the logs in projects, organizations, folders, or billing accounts.
-Only logs that have entries are listed.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
+              <div>
+              <h5 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogs_Google_Cloud_Logging_V2_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
 // Initialize request argument(s)
-ListLogsRequest request = new ListLogsRequest
-{
-    ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;)),
-};
+ParentNameOneof parent = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;));
 // Make the request
-PagedAsyncEnumerable&lt;ListLogsResponse, string&gt; response =
-    loggingServiceV2Client.ListLogsAsync(request);
+PagedEnumerable&lt;ListLogsResponse, string&gt; response =
+    loggingServiceV2Client.ListLogs(parent);
 
 // Iterate over all response items, lazily performing RPCs as required
-await response.ForEachAsync((string item) =&gt;
+foreach (string item in response)
 {
     // Do something with each item
     Console.WriteLine(item);
-});
+}
 
 // Or iterate over pages (of server-defined size), performing one RPC per page
-await response.AsRawResponses().ForEachAsync((ListLogsResponse page) =&gt;
+foreach (ListLogsResponse page in response.AsRawResponses())
 {
     // Do something with each page of items
     Console.WriteLine(&quot;A page of results:&quot;);
@@ -1311,11 +1296,11 @@ await response.AsRawResponses().ForEachAsync((ListLogsResponse page) =&gt;
     {
         Console.WriteLine(item);
     }
-});
+}
 
 // Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
 int pageSize = 10;
-Page&lt;string&gt; singlePage = await response.ReadPageAsync(pageSize);
+Page&lt;string&gt; singlePage = response.ReadPage(pageSize);
 // Do something with the page of items
 Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
 foreach (string item in singlePage)
@@ -1325,6 +1310,13 @@ foreach (string item in singlePage)
 // Store the pageToken, for when the next page is required.
 string nextPageToken = singlePage.NextPageToken;
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogsAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogsAsync_Google_Cloud_Logging_V2_ListLogsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ListLogsRequest,Google.Api.Gax.Grpc.CallSettings)">ListLogsAsync(ListLogsRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lists the logs in projects, organizations, folders, or billing accounts.
+Only logs that have entries are listed.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListLogsResponse, string&gt; ListLogsAsync(ListLogsRequest request, CallSettings callSettings = null)</code></pre>
@@ -1369,19 +1361,18 @@ string nextPageToken = singlePage.NextPageToken;
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogsAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync*"></a>
-              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogsAsync_Google_Cloud_Logging_V2_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ParentNameOneof,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListLogsAsync(ParentNameOneof, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lists the logs in projects, organizations, folders, or billing accounts.
-Only logs that have entries are listed.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogsAsync_Google_Cloud_Logging_V2_ListLogsRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
 // Initialize request argument(s)
-ParentNameOneof parent = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;));
+ListLogsRequest request = new ListLogsRequest
+{
+    ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;)),
+};
 // Make the request
 PagedAsyncEnumerable&lt;ListLogsResponse, string&gt; response =
-    loggingServiceV2Client.ListLogsAsync(parent);
+    loggingServiceV2Client.ListLogsAsync(request);
 
 // Iterate over all response items, lazily performing RPCs as required
 await response.ForEachAsync((string item) =&gt;
@@ -1413,6 +1404,13 @@ foreach (string item in singlePage)
 // Store the pageToken, for when the next page is required.
 string nextPageToken = singlePage.NextPageToken;
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogsAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogsAsync_Google_Cloud_Logging_V2_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ParentNameOneof,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListLogsAsync(ParentNameOneof, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lists the logs in projects, organizations, folders, or billing accounts.
+Only logs that have entries are listed.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListLogsResponse, string&gt; ListLogsAsync(ParentNameOneof parent, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
@@ -1475,50 +1473,53 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListMonitoredResourceDescriptors_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListMonitoredResourceDescriptors*"></a>
-              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListMonitoredResourceDescriptors_Google_Cloud_Logging_V2_ListMonitoredResourceDescriptorsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListMonitoredResourceDescriptors(Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest,Google.Api.Gax.Grpc.CallSettings)">ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lists the descriptors for monitored resource types used by Stackdriver
-Logging.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+              <div>
+              <h5 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogsAsync_Google_Cloud_Logging_V2_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
 // Initialize request argument(s)
-ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest();
+ParentNameOneof parent = ParentNameOneof.From(new ProjectName(&quot;[PROJECT]&quot;));
 // Make the request
-PagedEnumerable&lt;ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor&gt; response =
-    loggingServiceV2Client.ListMonitoredResourceDescriptors(request);
+PagedAsyncEnumerable&lt;ListLogsResponse, string&gt; response =
+    loggingServiceV2Client.ListLogsAsync(parent);
 
 // Iterate over all response items, lazily performing RPCs as required
-foreach (MonitoredResourceDescriptor item in response)
+await response.ForEachAsync((string item) =&gt;
 {
     // Do something with each item
     Console.WriteLine(item);
-}
+});
 
 // Or iterate over pages (of server-defined size), performing one RPC per page
-foreach (ListMonitoredResourceDescriptorsResponse page in response.AsRawResponses())
+await response.AsRawResponses().ForEachAsync((ListLogsResponse page) =&gt;
 {
     // Do something with each page of items
     Console.WriteLine(&quot;A page of results:&quot;);
-    foreach (MonitoredResourceDescriptor item in page)
+    foreach (string item in page)
     {
         Console.WriteLine(item);
     }
-}
+});
 
 // Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
 int pageSize = 10;
-Page&lt;MonitoredResourceDescriptor&gt; singlePage = response.ReadPage(pageSize);
+Page&lt;string&gt; singlePage = await response.ReadPageAsync(pageSize);
 // Do something with the page of items
 Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
-foreach (MonitoredResourceDescriptor item in singlePage)
+foreach (string item in singlePage)
 {
     Console.WriteLine(item);
 }
 // Store the pageToken, for when the next page is required.
 string nextPageToken = singlePage.NextPageToken;
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListMonitoredResourceDescriptors_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListMonitoredResourceDescriptors*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListMonitoredResourceDescriptors_Google_Cloud_Logging_V2_ListMonitoredResourceDescriptorsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListMonitoredResourceDescriptors(Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest,Google.Api.Gax.Grpc.CallSettings)">ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lists the descriptors for monitored resource types used by Stackdriver
+Logging.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor&gt; ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest request, CallSettings callSettings = null)</code></pre>
@@ -1563,29 +1564,25 @@ string nextPageToken = singlePage.NextPageToken;
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListMonitoredResourceDescriptorsAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListMonitoredResourceDescriptorsAsync*"></a>
-              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListMonitoredResourceDescriptorsAsync_Google_Cloud_Logging_V2_ListMonitoredResourceDescriptorsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListMonitoredResourceDescriptorsAsync(Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest,Google.Api.Gax.Grpc.CallSettings)">ListMonitoredResourceDescriptorsAsync(ListMonitoredResourceDescriptorsRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lists the descriptors for monitored resource types used by Stackdriver
-Logging.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
+              <div>
+              <h5 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListMonitoredResourceDescriptors_Google_Cloud_Logging_V2_ListMonitoredResourceDescriptorsRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
 // Initialize request argument(s)
 ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest();
 // Make the request
-PagedAsyncEnumerable&lt;ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor&gt; response =
-    loggingServiceV2Client.ListMonitoredResourceDescriptorsAsync(request);
+PagedEnumerable&lt;ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor&gt; response =
+    loggingServiceV2Client.ListMonitoredResourceDescriptors(request);
 
 // Iterate over all response items, lazily performing RPCs as required
-await response.ForEachAsync((MonitoredResourceDescriptor item) =&gt;
+foreach (MonitoredResourceDescriptor item in response)
 {
     // Do something with each item
     Console.WriteLine(item);
-});
+}
 
 // Or iterate over pages (of server-defined size), performing one RPC per page
-await response.AsRawResponses().ForEachAsync((ListMonitoredResourceDescriptorsResponse page) =&gt;
+foreach (ListMonitoredResourceDescriptorsResponse page in response.AsRawResponses())
 {
     // Do something with each page of items
     Console.WriteLine(&quot;A page of results:&quot;);
@@ -1593,11 +1590,11 @@ await response.AsRawResponses().ForEachAsync((ListMonitoredResourceDescriptorsRe
     {
         Console.WriteLine(item);
     }
-});
+}
 
 // Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
 int pageSize = 10;
-Page&lt;MonitoredResourceDescriptor&gt; singlePage = await response.ReadPageAsync(pageSize);
+Page&lt;MonitoredResourceDescriptor&gt; singlePage = response.ReadPage(pageSize);
 // Do something with the page of items
 Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
 foreach (MonitoredResourceDescriptor item in singlePage)
@@ -1607,6 +1604,13 @@ foreach (MonitoredResourceDescriptor item in singlePage)
 // Store the pageToken, for when the next page is required.
 string nextPageToken = singlePage.NextPageToken;
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListMonitoredResourceDescriptorsAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListMonitoredResourceDescriptorsAsync*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListMonitoredResourceDescriptorsAsync_Google_Cloud_Logging_V2_ListMonitoredResourceDescriptorsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ListMonitoredResourceDescriptorsAsync(Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest,Google.Api.Gax.Grpc.CallSettings)">ListMonitoredResourceDescriptorsAsync(ListMonitoredResourceDescriptorsRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lists the descriptors for monitored resource types used by Stackdriver
+Logging.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor&gt; ListMonitoredResourceDescriptorsAsync(ListMonitoredResourceDescriptorsRequest request, CallSettings callSettings = null)</code></pre>
@@ -1651,6 +1655,47 @@ string nextPageToken = singlePage.NextPageToken;
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ListMonitoredResourceDescriptorsAsync_Google_Cloud_Logging_V2_ListMonitoredResourceDescriptorsRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest();
+// Make the request
+PagedAsyncEnumerable&lt;ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor&gt; response =
+    loggingServiceV2Client.ListMonitoredResourceDescriptorsAsync(request);
+
+// Iterate over all response items, lazily performing RPCs as required
+await response.ForEachAsync((MonitoredResourceDescriptor item) =&gt;
+{
+    // Do something with each item
+    Console.WriteLine(item);
+});
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+await response.AsRawResponses().ForEachAsync((ListMonitoredResourceDescriptorsResponse page) =&gt;
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (MonitoredResourceDescriptor item in page)
+    {
+        Console.WriteLine(item);
+    }
+});
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;MonitoredResourceDescriptor&gt; singlePage = await response.ReadPageAsync(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (MonitoredResourceDescriptor item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ShutdownDefaultChannelsAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ShutdownDefaultChannelsAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_ShutdownDefaultChannelsAsync" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.ShutdownDefaultChannelsAsync">ShutdownDefaultChannelsAsync()</h4>
               <div class="markdown level1 summary"><p>Shuts down any channels automatically created by <a class="xref" href="Google.Cloud.Logging.V2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2Client_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Logging_V2_LoggingServiceV2Settings_">Create(ServiceEndpoint, LoggingServiceV2Settings)</a>
@@ -1687,17 +1732,7 @@ in turn be shut down by another call to this method.</p>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntries_Google_Cloud_Logging_V2_LogNameOneof_Google_Api_MonitoredResource_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_IEnumerable_Google_Cloud_Logging_V2_LogEntry__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntries(Google.Cloud.Logging.V2.LogNameOneof,Google.Api.MonitoredResource,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Google.Cloud.Logging.V2.LogEntry},Google.Api.Gax.Grpc.CallSettings)">WriteLogEntries(LogNameOneof, MonitoredResource, IDictionary&lt;String, String&gt;, IEnumerable&lt;LogEntry&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
-// Initialize request argument(s)
-LogNameOneof logName = LogNameOneof.From(new LogName(&quot;[PROJECT]&quot;, &quot;[LOG]&quot;));
-MonitoredResource resource = new MonitoredResource();
-IDictionary&lt;string, string&gt; labels = new Dictionary&lt;string, string&gt;();
-IEnumerable&lt;LogEntry&gt; entries = new List&lt;LogEntry&gt;();
-// Make the request
-WriteLogEntriesResponse response = loggingServiceV2Client.WriteLogEntries(logName, resource, labels, entries);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual WriteLogEntriesResponse WriteLogEntries(LogNameOneof logName, MonitoredResource resource, IDictionary&lt;string, string&gt; labels, IEnumerable&lt;LogEntry&gt; entries, CallSettings callSettings = null)</code></pre>
@@ -1790,21 +1825,24 @@ calling this method for each individual log entry.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntries_Google_Cloud_Logging_V2_LogNameOneof_Google_Api_MonitoredResource_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_IEnumerable_Google_Cloud_Logging_V2_LogEntry__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+// Initialize request argument(s)
+LogNameOneof logName = LogNameOneof.From(new LogName(&quot;[PROJECT]&quot;, &quot;[LOG]&quot;));
+MonitoredResource resource = new MonitoredResource();
+IDictionary&lt;string, string&gt; labels = new Dictionary&lt;string, string&gt;();
+IEnumerable&lt;LogEntry&gt; entries = new List&lt;LogEntry&gt;();
+// Make the request
+WriteLogEntriesResponse response = loggingServiceV2Client.WriteLogEntries(logName, resource, labels, entries);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntries_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntries*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntries_Google_Cloud_Logging_V2_WriteLogEntriesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntries(Google.Cloud.Logging.V2.WriteLogEntriesRequest,Google.Api.Gax.Grpc.CallSettings)">WriteLogEntries(WriteLogEntriesRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
-// Initialize request argument(s)
-WriteLogEntriesRequest request = new WriteLogEntriesRequest
-{
-    Entries = { },
-};
-// Make the request
-WriteLogEntriesResponse response = loggingServiceV2Client.WriteLogEntries(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual WriteLogEntriesResponse WriteLogEntries(WriteLogEntriesRequest request, CallSettings callSettings = null)</code></pre>
@@ -1849,21 +1887,24 @@ WriteLogEntriesResponse response = loggingServiceV2Client.WriteLogEntries(reques
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntries_Google_Cloud_Logging_V2_WriteLogEntriesRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+// Initialize request argument(s)
+WriteLogEntriesRequest request = new WriteLogEntriesRequest
+{
+    Entries = { },
+};
+// Make the request
+WriteLogEntriesResponse response = loggingServiceV2Client.WriteLogEntries(request);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntriesAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntriesAsync_Google_Cloud_Logging_V2_LogNameOneof_Google_Api_MonitoredResource_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_IEnumerable_Google_Cloud_Logging_V2_LogEntry__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync(Google.Cloud.Logging.V2.LogNameOneof,Google.Api.MonitoredResource,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Google.Cloud.Logging.V2.LogEntry},Google.Api.Gax.Grpc.CallSettings)">WriteLogEntriesAsync(LogNameOneof, MonitoredResource, IDictionary&lt;String, String&gt;, IEnumerable&lt;LogEntry&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
-// Initialize request argument(s)
-LogNameOneof logName = LogNameOneof.From(new LogName(&quot;[PROJECT]&quot;, &quot;[LOG]&quot;));
-MonitoredResource resource = new MonitoredResource();
-IDictionary&lt;string, string&gt; labels = new Dictionary&lt;string, string&gt;();
-IEnumerable&lt;LogEntry&gt; entries = new List&lt;LogEntry&gt;();
-// Make the request
-WriteLogEntriesResponse response = await loggingServiceV2Client.WriteLogEntriesAsync(logName, resource, labels, entries);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;WriteLogEntriesResponse&gt; WriteLogEntriesAsync(LogNameOneof logName, MonitoredResource resource, IDictionary&lt;string, string&gt; labels, IEnumerable&lt;LogEntry&gt; entries, CallSettings callSettings = null)</code></pre>
@@ -1956,12 +1997,9 @@ calling this method for each individual log entry.</p>
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntriesAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync*"></a>
-              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntriesAsync_Google_Cloud_Logging_V2_LogNameOneof_Google_Api_MonitoredResource_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_IEnumerable_Google_Cloud_Logging_V2_LogEntry__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync(Google.Cloud.Logging.V2.LogNameOneof,Google.Api.MonitoredResource,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Google.Cloud.Logging.V2.LogEntry},System.Threading.CancellationToken)">WriteLogEntriesAsync(LogNameOneof, MonitoredResource, IDictionary&lt;String, String&gt;, IEnumerable&lt;LogEntry&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
+              <div>
+              <h5 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntriesAsync_Google_Cloud_Logging_V2_LogNameOneof_Google_Api_MonitoredResource_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_IEnumerable_Google_Cloud_Logging_V2_LogEntry__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
 LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
 // Initialize request argument(s)
 LogNameOneof logName = LogNameOneof.From(new LogName(&quot;[PROJECT]&quot;, &quot;[LOG]&quot;));
@@ -1971,6 +2009,12 @@ IEnumerable&lt;LogEntry&gt; entries = new List&lt;LogEntry&gt;();
 // Make the request
 WriteLogEntriesResponse response = await loggingServiceV2Client.WriteLogEntriesAsync(logName, resource, labels, entries);
 </code></pre></div>
+              </div>
+              <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntriesAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntriesAsync_Google_Cloud_Logging_V2_LogNameOneof_Google_Api_MonitoredResource_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_IEnumerable_Google_Cloud_Logging_V2_LogEntry__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync(Google.Cloud.Logging.V2.LogNameOneof,Google.Api.MonitoredResource,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Google.Cloud.Logging.V2.LogEntry},System.Threading.CancellationToken)">WriteLogEntriesAsync(LogNameOneof, MonitoredResource, IDictionary&lt;String, String&gt;, IEnumerable&lt;LogEntry&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;WriteLogEntriesResponse&gt; WriteLogEntriesAsync(LogNameOneof logName, MonitoredResource resource, IDictionary&lt;string, string&gt; labels, IEnumerable&lt;LogEntry&gt; entries, CancellationToken cancellationToken)</code></pre>
@@ -2063,21 +2107,24 @@ calling this method for each individual log entry.</p>
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntriesAsync_Google_Cloud_Logging_V2_LogNameOneof_Google_Api_MonitoredResource_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_IEnumerable_Google_Cloud_Logging_V2_LogEntry__System_Threading_CancellationToken__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+LogNameOneof logName = LogNameOneof.From(new LogName(&quot;[PROJECT]&quot;, &quot;[LOG]&quot;));
+MonitoredResource resource = new MonitoredResource();
+IDictionary&lt;string, string&gt; labels = new Dictionary&lt;string, string&gt;();
+IEnumerable&lt;LogEntry&gt; entries = new List&lt;LogEntry&gt;();
+// Make the request
+WriteLogEntriesResponse response = await loggingServiceV2Client.WriteLogEntriesAsync(logName, resource, labels, entries);
+</code></pre></div>
+              </div>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntriesAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntriesAsync_Google_Cloud_Logging_V2_WriteLogEntriesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync(Google.Cloud.Logging.V2.WriteLogEntriesRequest,Google.Api.Gax.Grpc.CallSettings)">WriteLogEntriesAsync(WriteLogEntriesRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
-// Initialize request argument(s)
-WriteLogEntriesRequest request = new WriteLogEntriesRequest
-{
-    Entries = { },
-};
-// Make the request
-WriteLogEntriesResponse response = await loggingServiceV2Client.WriteLogEntriesAsync(request);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;WriteLogEntriesResponse&gt; WriteLogEntriesAsync(WriteLogEntriesRequest request, CallSettings callSettings = null)</code></pre>
@@ -2122,6 +2169,19 @@ WriteLogEntriesResponse response = await loggingServiceV2Client.WriteLogEntriesA
                   </tr>
                 </tbody>
               </table>
+              <div>
+              <h5 id="Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntriesAsync_Google_Cloud_Logging_V2_WriteLogEntriesRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+              <div class="markdown level1"><pre><code class="lang-cs">// Create client
+LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
+// Initialize request argument(s)
+WriteLogEntriesRequest request = new WriteLogEntriesRequest
+{
+    Entries = { },
+};
+// Make the request
+WriteLogEntriesResponse response = await loggingServiceV2Client.WriteLogEntriesAsync(request);
+</code></pre></div>
+              </div>
                         </article>
           </div>
           

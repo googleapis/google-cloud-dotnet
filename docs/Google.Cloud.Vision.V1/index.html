@@ -268,7 +268,8 @@ foreach (Status error in response.Responses.Select(r =&gt; r.Error))
 <p>All the methods which annotate a single image (and therefore have a single response) throw
 <a href="api/Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> if the response
 contains an error.</p>
-<pre><code class="lang-cs">Image image = new Image(); // No content or source!
+<pre><code class="lang-cs">// We create a request which passes simple validation, but isn&#39;t a valid image.
+Image image = Image.FromBytes(new byte[10]);
 ImageAnnotatorClient client = ImageAnnotatorClient.Create();
 try
 {
@@ -284,7 +285,8 @@ catch (AnnotateImageException e)
 method does not throw this exception, but <a href="api/Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html##Google_Cloud_Vision_V1_BatchAnnotateImagesResponse_ThrowOnAnyError">BatchAnnotateImagesResponse.ThrowOnAnyError()</a> checks
 all responses are successful, throwing an AggregateException if there are any errors.
 The AggregateException contains one AnnotateImageException for each response that contains an error.</p>
-<pre><code class="lang-cs">Image image = new Image(); // No content or source!
+<pre><code class="lang-cs">// We create a request which passes simple validation, but isn&#39;t a valid image.
+Image image = Image.FromBytes(new byte[10]);
 // Just a single request in this example, but usually BatchAnnotateImages would be
 // used with multiple requests.
 var request = new AnnotateImageRequest
