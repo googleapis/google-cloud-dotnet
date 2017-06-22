@@ -21,7 +21,7 @@
     <RepositoryUrl>https://github.com/GoogleCloudPlatform/google-cloud-dotnet</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Google.Cloud.Logging.V2\Google.Cloud.Logging.Type\Google.Cloud.Logging.Type.csproj" />
+    <ProjectReference Include="..\..\Google.Cloud.Logging.Type\Google.Cloud.Logging.Type\Google.Cloud.Logging.Type.csproj" />
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.0-beta4">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
