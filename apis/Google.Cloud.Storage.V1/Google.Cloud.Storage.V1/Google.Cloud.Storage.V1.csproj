@@ -24,7 +24,7 @@
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.0-beta4">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Google.Api.Gax.Rest" Version="2.0.0-beta02" />
+    <PackageReference Include="Google.Api.Gax.Rest" Version="2.0.0" />
     <PackageReference Include="Google.Apis.Storage.v1" Version="1.27.1.881" />
   </ItemGroup>
   <ItemGroup>
