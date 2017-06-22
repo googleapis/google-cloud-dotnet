@@ -21,7 +21,7 @@ using Xunit.Abstractions;
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     /// <summary>
-    /// Integration tests to ensure that dataadapter works properly.
+    /// Integration tests to ensure that <see cref="SpannerDataAdapter"/> works properly.
     /// </summary>
     public class DataAdapterTests : IClassFixture<TestDatabaseFixture>
     {

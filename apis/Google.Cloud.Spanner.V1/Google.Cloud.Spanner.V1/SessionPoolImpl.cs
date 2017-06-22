@@ -23,7 +23,7 @@ using Google.Cloud.Spanner.V1.Logging;
 
 namespace Google.Cloud.Spanner.V1
 {
-    internal class SessionPoolImpl : IPriorityHeapItem<SessionPoolImpl>
+    internal class SessionPoolImpl : IPriorityListItem<SessionPoolImpl>
     {
         //This is the maximum we will search for a matching transaction option session.
         //We'll normally not hit this, but this is to stop abnormal cases where almost all
@@ -49,8 +49,7 @@ namespace Google.Cloud.Spanner.V1
                 int i = 0;
                 foreach (var entry in _sessionMruStack)
                 {
-                    var instance = i;
-                    stringBuilder.AppendLine($"  {instance}:{entry.Session?.GetHashCode()}");
+                    stringBuilder.AppendLine($"  {i}:{entry.Session?.GetHashCode()}");
                     i++;
                 }
             }
@@ -113,7 +112,7 @@ namespace Google.Cloud.Spanner.V1
         {
             try
             {
-                //we make a reasonable attempt at obtaining a session with the given transactionoptions.
+                //we make a reasonable attempt at obtaining a session with the given TransactionOptions.
                 //but its not guaranteed.
                 lock (_sessionMruStack)
                 {
@@ -122,8 +121,7 @@ namespace Google.Cloud.Spanner.V1
                         Logger.Debug(() => "Searching for a session with matching transaction semantics.");
                         int indexToUse = -1;
                         for (int i = 0;
-                            i < _sessionMruStack.Count
-                            && i < MaximumLinearSearchDepth;
+                            i < _sessionMruStack.Count && i < MaximumLinearSearchDepth;
                             i++)
                         {
                             entry = _sessionMruStack[i];

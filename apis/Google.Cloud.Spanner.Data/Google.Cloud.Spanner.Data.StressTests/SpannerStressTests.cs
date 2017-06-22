@@ -23,44 +23,46 @@ namespace Google.Cloud.Spanner.Data.StressTests
     {
         private static int s_myCounter = 1;
         private static readonly string s_guid = Guid.NewGuid().ToString();
+        private static readonly Random s_rnd = new Random(Environment.TickCount);
 
-        protected  override async Task<long> TestWrite1(Stopwatch sw)
+        protected  override async Task<TimeSpan> TestWrite1(Stopwatch sw)
         {
-            await Task.Yield(); //We immediately yield to allow the spawning thread to continue.
-            var connection = new SpannerConnection(Program.SpannerConnectionString);
-
-            var localCounter = Interlocked.Increment(ref s_myCounter);
-            var insertCommand = connection.CreateInsertCommand("bookTable", new SpannerParameterCollection
+            using (var connection = new SpannerConnection(Program.SpannerConnectionString))
             {
-                {"ID", SpannerDbType.String},
-                {"Title", SpannerDbType.String}
-            });
-            insertCommand.Parameters["ID"].Value = $"{s_guid}{localCounter}";
-            insertCommand.Parameters["Title"].Value = "Title";
 
-            bool retry = true;
-            long delay = 0;
-            while (retry)
-            {
-                retry = false;
-                try
+                var localCounter = Interlocked.Increment(ref s_myCounter);
+                var insertCommand = connection.CreateInsertCommand(
+                    "bookTable", new SpannerParameterCollection
+                    {
+                        {"ID", SpannerDbType.String},
+                        {"Title", SpannerDbType.String}
+                    });
+                insertCommand.Parameters["ID"].Value = $"{s_guid}{localCounter}";
+                insertCommand.Parameters["Title"].Value = "Title";
+
+                bool retry = true;
+                long delay = 0;
+                while (retry)
                 {
-                    //The open is implicit here...
-                    await insertCommand.ExecuteNonQueryAsync();
-                }
-                catch (Exception e) when (e.IsTransientSpannerFault())
-                {
-                    //TODO(benwu): replace with topaz.
-                    retry = true;
-                    Console.WriteLine("retrying due to " + e.Message);
-                    delay = delay * 2;
-                    delay += new Random(Environment.TickCount).Next(100);
-                    delay = Math.Min(delay, 5000);
-                    await Task.Delay(TimeSpan.FromMilliseconds(delay));
+                    retry = false;
+                    try
+                    {
+                        //The open is implicit here...
+                        await insertCommand.ExecuteNonQueryAsync();
+                    }
+                    catch (Exception e) when (e.IsTransientSpannerFault())
+                    {
+                        //TODO(benwu): replace with topaz.
+                        retry = true;
+                        Console.WriteLine("retrying due to " + e.Message);
+                        delay = delay * 2;
+                        delay += s_rnd.Next(100);
+                        delay = Math.Min(delay, 5000);
+                        await Task.Delay(TimeSpan.FromMilliseconds(delay));
+                    }
                 }
             }
-            connection.Dispose();
-            return sw.ElapsedMilliseconds;
+            return sw.Elapsed;
         }
     }
 }

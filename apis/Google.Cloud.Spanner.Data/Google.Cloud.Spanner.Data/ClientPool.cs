@@ -37,8 +37,8 @@ namespace Google.Cloud.Spanner.Data
             ITokenAccess credentials = null,
             ServiceEndpoint endpoint = null)
         {
-            var key = new ClientCredentialKey(credentials, endpoint ?? SpannerClient.DefaultEndpoint);
-            var poolEntry = s_clientPoolByCredential.GetOrAdd(key, k => new CredentialClientPool(key));
+            var key = new ClientCredentialKey(credentials, endpoint);
+            var poolEntry = s_clientPoolByCredential.GetOrAdd(key, k => new CredentialClientPool(k));
             var result = await poolEntry.AcquireClientAsync().ConfigureAwait(false);
             Logger.LogPerformanceCounter("SpannerClient.TotalCount", () => s_clientPoolByCredential.Count);
             return result;
@@ -63,8 +63,8 @@ namespace Google.Cloud.Spanner.Data
         {
             if (spannerClient != null)
             {
-                var key = new ClientCredentialKey(credentials, endpoint ?? SpannerClient.DefaultEndpoint);
-                var poolEntry = s_clientPoolByCredential.GetOrAdd(key, k => new CredentialClientPool(key));
+                var key = new ClientCredentialKey(credentials, endpoint);
+                var poolEntry = s_clientPoolByCredential.GetOrAdd(key, k => new CredentialClientPool(k));
                 poolEntry.ReleaseClient(spannerClient);
             }
         }
@@ -77,7 +77,7 @@ namespace Google.Cloud.Spanner.Data
             public ClientCredentialKey(ITokenAccess tokenAccess, ServiceEndpoint serviceEndpoint) : this()
             {
                 Credential = tokenAccess;
-                Endpoint = serviceEndpoint;
+                Endpoint = serviceEndpoint ?? SpannerClient.DefaultEndpoint;
             }
 
             public bool Equals(ClientCredentialKey other) => Equals(Credential, other.Credential) &&
@@ -90,7 +90,7 @@ namespace Google.Cloud.Spanner.Data
                     return false;
                 }
 
-                return obj is ClientCredentialKey && Equals((ClientCredentialKey) obj);
+                return obj is ClientCredentialKey other && Equals(other);
             }
 
             /// <inheritdoc />
@@ -113,8 +113,8 @@ namespace Google.Cloud.Spanner.Data
         private class CredentialClientPool
         {
             private readonly ClientCredentialKey _key;
-            private PriorityHeap<SpannerClientCreator> _clientPriorityHeap =
-                new PriorityHeap<SpannerClientCreator>();
+            private readonly PriorityList<SpannerClientCreator> _clientPriorityList =
+                new PriorityList<SpannerClientCreator>();
             private readonly object _sync = new object();
 
 
@@ -125,10 +125,9 @@ namespace Google.Cloud.Spanner.Data
                 lock (_sync)
                 {
                     int i = 0;
-                    foreach (var item in _clientPriorityHeap.GetSnapshot())
+                    foreach (var item in _clientPriorityList.GetSnapshot())
                     {
-                        var index = i;
-                        stringBuilder.AppendLine($"  {index}:{item}");
+                        stringBuilder.AppendLine($"  {i}:{item}");
                         i++;
                     }
                 }
@@ -141,18 +140,18 @@ namespace Google.Cloud.Spanner.Data
                 lock (_sync)
                 {
                     //first ensure that the pool is of the correct size.
-                    while (_clientPriorityHeap.Count > SpannerOptions.Instance.MaximumGrpcChannels)
+                    while (_clientPriorityList.Count > SpannerOptions.Instance.MaximumGrpcChannels)
                     {
-                        _clientPriorityHeap.RemoveLast();
+                        _clientPriorityList.RemoveLast();
                     }
-                    while (_clientPriorityHeap.Count < SpannerOptions.Instance.MaximumGrpcChannels)
+                    while (_clientPriorityList.Count < SpannerOptions.Instance.MaximumGrpcChannels)
                     {
                         var newEntry = new SpannerClientCreator(_key);
-                        _clientPriorityHeap.Add(newEntry);
+                        _clientPriorityList.Add(newEntry);
                     }
 
                     //now grab the first item in the sorted list, increment refcnt, re-sort and return.
-                    result = _clientPriorityHeap.GetTop().AcquireClientAsync();
+                    result = _clientPriorityList.GetTop().AcquireClientAsync();
                 }
                 return result;
             }
@@ -162,17 +161,19 @@ namespace Google.Cloud.Spanner.Data
                 lock (_sync)
                 {
                     //find the entry and release refcnt and re-sort
-                    var match = _clientPriorityHeap.TryFindLinear(x => x.MatchesClient(client));
-                    match?.Release();
+                    SpannerClientCreator match;
+                    if (_clientPriorityList.TryFindLinear(x => x.MatchesClient(client), out match)) {
+                        match.Release();
+                    }
                 }
             }
         }
 
-        private class SpannerClientCreator : IPriorityHeapItem<SpannerClientCreator>
+        private class SpannerClientCreator : IPriorityListItem<SpannerClientCreator>
         {
             private Lazy<Task<SpannerClient>> _creationTask;
             private int _refCount = 0;
-            private ClientCredentialKey _parentKey;
+            private readonly ClientCredentialKey _parentKey;
 
             public SpannerClientCreator(ClientCredentialKey parentKey)
             {
@@ -181,6 +182,7 @@ namespace Google.Cloud.Spanner.Data
             }
 
             public bool MatchesClient(SpannerClient client) => _creationTask.IsValueCreated &&
+                !_creationTask.Value.IsFaulted &&
                 ReferenceEquals(_creationTask.Value.ResultWithUnwrappedExceptions(), client);
 
             private async Task<ChannelCredentials> CreateDefaultChannelCredentialsAsync()
@@ -195,7 +197,7 @@ namespace Google.Cloud.Spanner.Data
 
             private async Task<SpannerClient> AcquireClientImplAsync()
             {
-                var endpoint = _parentKey.Endpoint ?? SpannerClient.DefaultEndpoint;
+                var endpoint = _parentKey.Endpoint;
                 ChannelCredentials channelCredentials;
 
                 if (_parentKey.Credential == null)
@@ -216,12 +218,19 @@ namespace Google.Cloud.Spanner.Data
                 return SpannerClient.Create(channel);
             }
 
-            public Task<SpannerClient> AcquireClientAsync()
+            public async Task<SpannerClient> AcquireClientAsync()
             {
+                if (_creationTask.Value.IsFaulted)
+                {
+                    //retry an already failed task.
+                    _creationTask = new Lazy<Task<SpannerClient>>(AcquireClientImplAsync);
+                }
+
+                var spannerClient = await _creationTask.Value.ConfigureAwait(false);
                 Interlocked.Increment(ref _refCount);
                 OnPriorityChanged();
 
-                return _creationTask.Value;
+                return spannerClient;
             }
 
             public void Release()

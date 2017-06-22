@@ -68,8 +68,6 @@ namespace Google.Cloud.Spanner.Data.StressTests
                 BindingFlags.Instance | BindingFlags.NonPublic);
             pi?.SetValue(SpannerOptions.Instance, true);
 
-            //SpannerOptions.Instance.MaximumGrpcChannels = Program.ParallelTaskCount;
-
             //prewarm
             // The maximum roundtrip time for spanner (and mysql) is about 200ms per
             // write.  so if we initialize with the target sustained # sessions,
@@ -91,12 +89,12 @@ namespace Google.Cloud.Spanner.Data.StressTests
                     var prewarm = new List<SpannerConnection>();
                     var localCount = Math.Min(increment, countToPreWarm);
                     Console.WriteLine($"prewarming {localCount} spanner sessions");
-                    for (var i = 0; i < Math.Min(increment, countToPreWarm); i++)
+                    for (var i = 0; i < localCount; i++)
                     {
                         prewarm.Add(new SpannerConnection(SpannerConnectionString));
                     }
                     await Task.WhenAll(prewarm.Select(x => x.OpenAsync()));
-                    await Task.Delay(1000);
+                    await Task.Delay(TimeSpan.FromSeconds(1));
                     all.AddRange(prewarm);
                     countToPreWarm -= increment;
                 }

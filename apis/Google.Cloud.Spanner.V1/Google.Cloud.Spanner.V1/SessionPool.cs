@@ -52,7 +52,7 @@ namespace Google.Cloud.Spanner.V1
 
         private static readonly ConcurrentDictionary<SessionPoolKey, SessionPoolImpl>
             s_poolByClientAndDatabase = new ConcurrentDictionary<SessionPoolKey, SessionPoolImpl>();
-        private static readonly PriorityHeap<SessionPoolImpl> s_priorityHeap = new PriorityHeap<SessionPoolImpl>();
+        private static readonly PriorityList<SessionPoolImpl> s_priorityList = new PriorityList<SessionPoolImpl>();
 
         private static readonly ConcurrentDictionary<string, bool> s_blackListedSessions = new ConcurrentDictionary<string, bool>();
 
@@ -72,7 +72,7 @@ namespace Google.Cloud.Spanner.V1
         {
             s.AppendLine("SessionPool.Contents (by priority):");
             int i = 0;
-            foreach (var priorityListEntry in s_priorityHeap.GetSnapshot())
+            foreach (var priorityListEntry in s_priorityList.GetSnapshot())
             {
                 s.AppendLine($"SessionPool({i}) Key:${priorityListEntry.Key}"
                     + $" HashCode_of_Pool:{priorityListEntry.GetHashCode()}");
@@ -271,12 +271,12 @@ namespace Google.Cloud.Spanner.V1
 
                 //Figure out if we want to pool this released session.
                 targetPool.ReleaseSessionToPool(client, session);
-                s_priorityHeap.Add(targetPool);
+                s_priorityList.Add(targetPool);
                 if (CurrentPooledSessions > MaximumPooledSessions)
                 {
-                    var evictionPool = s_priorityHeap.GetTop();
-                    var evictionClient = evictionPool.Key.Client;
-                    var evictionSession = evictionPool.AcquireEvictionCandidate();
+                    var evictionPool = s_priorityList.GetTop();
+                    var evictionClient = evictionPool?.Key.Client;
+                    var evictionSession = evictionPool?.AcquireEvictionCandidate();
                     if (evictionSession != null)
                     {
                         Task.Run(() => EvictSessionAsync(evictionClient, evictionSession));

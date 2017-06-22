@@ -16,7 +16,7 @@ using System;
 
 namespace Google.Cloud.Spanner.V1
 {
-    internal interface IPriorityHeapItem<in T> : IComparable<T>
+    internal interface IPriorityListItem<in T> : IComparable<T>
     {
         event EventHandler<EventArgs> PriorityChanged;
     }

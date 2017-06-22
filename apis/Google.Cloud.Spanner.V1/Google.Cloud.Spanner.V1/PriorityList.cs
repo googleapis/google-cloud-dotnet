@@ -20,7 +20,7 @@ namespace Google.Cloud.Spanner.V1
     /// <summary>
     /// A simple sorted list that allows items to return equality for IComparable.CompareTo
     /// </summary>
-    internal class PriorityHeap<T> where T : IPriorityHeapItem<T>
+    internal class PriorityList<T> where T : IPriorityListItem<T>
     {
         private readonly List<T> _innerList = new List<T>();
 
@@ -39,9 +39,7 @@ namespace Google.Cloud.Spanner.V1
         {
             lock (_innerList)
             {
-                var copy = new T[_innerList.Count];
-                _innerList.CopyTo(copy);
-                return copy;
+                return _innerList.ToArray();
             }
         }
 
@@ -49,14 +47,14 @@ namespace Google.Cloud.Spanner.V1
         {
             lock (_innerList)
             {
-                int index;
-                if (!TryFindIndex(item, out index))
+                var index = _innerList.BinarySearch(item);
+                if (index < 0)
                 {
                     //if priority changes during this call, it will be blocked from
                     //processing until after Add has completed.
                     item.PriorityChanged += Item_PriorityChanged;
 
-                    _innerList.Insert(index, item);
+                    _innerList.Insert(~index, item);
                 }
             }
         }
@@ -111,37 +109,6 @@ namespace Google.Cloud.Spanner.V1
             }
         }
 
-        private bool TryFindIndex(T itemToFind, out int index)
-        {
-            lock (_innerList)
-            {
-                index = TryFindIndex(itemToFind, 0, _innerList.Count - 1);
-                return index < _innerList.Count && ReferenceEquals(_innerList[index], itemToFind);
-            }
-        }
-
-        private int TryFindIndex(T itemToFind, int start, int end)
-        {
-            if (start > end)
-            {
-                return start;
-            }
-            int mid = (start + end) / 2;
-            var comparison = itemToFind.CompareTo(_innerList[mid]);
-            if (comparison == 0)
-            {
-                return mid;
-            }
-            else if (comparison > 0)
-            {
-                return TryFindIndex(itemToFind, mid + 1, end);
-            }
-            else
-            {
-                return TryFindIndex(itemToFind, start, mid - 1);
-            }
-        }
-
         public T GetTop()
         {
             lock (_innerList)
@@ -150,7 +117,7 @@ namespace Google.Cloud.Spanner.V1
             }
         }
 
-        public T TryFindLinear(Predicate<T> testPredicate)
+        public bool TryFindLinear(Predicate<T> testPredicate, out T result)
         {
             lock (_innerList)
             {
@@ -158,10 +125,12 @@ namespace Google.Cloud.Spanner.V1
                 {
                     if (testPredicate(item))
                     {
-                        return item;
+                        result = item;
+                        return true;
                     }
                 }
-                return default(T);
+                result = default(T);
+                return false;
             }
         }
     }

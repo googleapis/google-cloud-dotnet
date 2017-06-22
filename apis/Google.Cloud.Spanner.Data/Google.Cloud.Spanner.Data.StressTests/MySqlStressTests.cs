@@ -25,24 +25,24 @@ namespace Google.Cloud.Spanner.Data.StressTests
         private static readonly string s_guid = Guid.NewGuid().ToString();
         private static int s_myCounter = 1;
 
-        protected override async Task<long> TestWrite1(Stopwatch sw)
+        protected override async Task<TimeSpan> TestWrite1(Stopwatch sw)
         {
-            await Task.Yield(); //We immediately yield to allow the spawning thread to continue.
-            var connection = new MySqlConnection(Program.MySqlConnectionString);
-            var localCounter = Interlocked.Increment(ref s_myCounter);
-            await connection.OpenAsync();
-            var insertCommand = connection.CreateCommand();
-            insertCommand.CommandText = "INSERT INTO bookTable (ID, Title) VALUES (@ID, @Title)";
-            insertCommand.Parameters.Add(new MySqlParameter("@ID", MySqlDbType.String));
-            insertCommand.Parameters.Add(new MySqlParameter("@Title", MySqlDbType.String));
+            using (var connection = new MySqlConnection(Program.MySqlConnectionString))
+            {
+                var localCounter = Interlocked.Increment(ref s_myCounter);
+                await connection.OpenAsync();
+                var insertCommand = connection.CreateCommand();
+                insertCommand.CommandText = "INSERT INTO bookTable (ID, Title) VALUES (@ID, @Title)";
+                insertCommand.Parameters.Add(new MySqlParameter("@ID", MySqlDbType.String));
+                insertCommand.Parameters.Add(new MySqlParameter("@Title", MySqlDbType.String));
 
-            insertCommand.Parameters["@ID"].Value = $"{s_guid}{localCounter}";
-            insertCommand.Parameters["@Title"].Value = "Title";
-            await insertCommand.ExecuteNonQueryAsync();
+                insertCommand.Parameters["@ID"].Value = $"{s_guid}{localCounter}";
+                insertCommand.Parameters["@Title"].Value = "Title";
+                await insertCommand.ExecuteNonQueryAsync();
 
-            await connection.CloseAsync();
-            connection.Dispose();
-            return sw.ElapsedMilliseconds;
+                await connection.CloseAsync();
+            }
+            return sw.Elapsed;
         }
     }
 }

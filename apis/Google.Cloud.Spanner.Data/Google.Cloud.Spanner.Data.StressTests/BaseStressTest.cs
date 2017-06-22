@@ -22,34 +22,40 @@ namespace Google.Cloud.Spanner.Data.StressTests
 {
     internal abstract class BaseStressTest
     {
-        protected abstract Task<long> TestWrite1(Stopwatch sw);
+        protected abstract Task<TimeSpan> TestWrite1(Stopwatch sw);
 
-        private async Task Timeout(TimeSpan milliTestTime)
+        private async Task<TimeSpan> TestWrite(Stopwatch sw)
         {
-            await Task.Delay(milliTestTime.Add(TimeSpan.FromSeconds(10)));
+            await Task.Yield(); //We immediately yield to allow the spawning thread to continue.
+            return await TestWrite1(sw);
+        }
+
+
+        private async Task Timeout(TimeSpan testTime)
+        {
+            await Task.Delay(testTime.Add(TimeSpan.FromSeconds(10)));
         }
 
         public async Task<double> TestWriteLatencyWithQps(double queriesPerSecond, TimeSpan milliTestTime)
         {
-            var qPerMs = queriesPerSecond / 1000;
             var sw = Stopwatch.StartNew();
-            var all = new List<Task<long>>();
+            var all = new List<Task<TimeSpan>>();
             var timeout = Timeout(milliTestTime);
 
-            while (sw.ElapsedMilliseconds < milliTestTime.TotalMilliseconds)
+            while (sw.Elapsed < milliTestTime)
             {
-                while (sw.ElapsedMilliseconds * qPerMs > all.Count
-                       && sw.ElapsedMilliseconds < milliTestTime.TotalMilliseconds)
+                if (sw.Elapsed.TotalSeconds * queriesPerSecond > all.Count)
                 {
-                    all.Add(TestWrite1(Stopwatch.StartNew()));
+                    all.Add(TestWrite(Stopwatch.StartNew()));
                 }
             }
-            await Task.WhenAny(Task.WhenAll(all), timeout);
+
+            var completedTask = await Task.WhenAny(Task.WhenAll(all), timeout);
             var completed = all.Where(x => x.IsCompleted).ToList();
-            var sum = completed.Select(x => x.Result).Sum();
+            var sum = completed.Sum(x => x.Result.TotalMilliseconds);
             var result = sum / (double)completed.Count;
             Console.WriteLine($"Elapsed ms:{sw.ElapsedMilliseconds} all_count:{all.Count} sum:{sum} result:{result}");
-            if (timeout.IsCompleted)
+            if (completedTask == timeout)
             {
                 Console.WriteLine("FAILED!");
             }

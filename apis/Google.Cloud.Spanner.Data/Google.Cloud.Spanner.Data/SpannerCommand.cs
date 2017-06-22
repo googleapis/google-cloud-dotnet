@@ -310,7 +310,7 @@ namespace Google.Cloud.Spanner.Data
                     Table = SpannerCommandTextBuilder.TargetTable,
                     Columns =
                     {
-                        Parameters.Cast<SpannerParameter>()
+                        Parameters
                             .Select(x => x.SourceColumn ?? x.ParameterName)
                     },
                     Values =
@@ -319,7 +319,7 @@ namespace Google.Cloud.Spanner.Data
                         {
                             Values =
                             {
-                                Parameters.Cast<SpannerParameter>()
+                                Parameters
                                     .Select(x => ValueConversion.ToValue(x.GetValidatedValue(), x.SpannerDbType))
                             }
                         }
@@ -354,7 +354,7 @@ namespace Google.Cloud.Spanner.Data
                                 {
                                     Values =
                                     {
-                                        Parameters.Cast<SpannerParameter>()
+                                        Parameters
                                             .Select(x => ValueConversion.ToValue(x.GetValidatedValue(), x.SpannerDbType))
                                     }
                                 }
