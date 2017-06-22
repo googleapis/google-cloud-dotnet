@@ -25,7 +25,7 @@
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Google.Api.Gax.Rest" Version="2.0.0-beta02" />
-    <PackageReference Include="Google.Apis.Storage.v1" Version="1.26.2.860" />
+    <PackageReference Include="Google.Apis.Storage.v1" Version="1.27.1.881" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="StorageClient.*.cs">

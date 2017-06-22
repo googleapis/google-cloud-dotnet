@@ -25,7 +25,7 @@
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Google.Api.Gax.Rest" Version="2.0.0-beta02" />
-    <PackageReference Include="Google.Apis.Compute.v1" Version="1.24.1.802" />
+    <PackageReference Include="Google.Apis.Compute.v1" Version="1.27.1.880" />
   </ItemGroup>
   <ItemGroup>
     <Reference Condition="'$(TargetFramework)' == 'net45'" Include="Microsoft.CSharp" />
