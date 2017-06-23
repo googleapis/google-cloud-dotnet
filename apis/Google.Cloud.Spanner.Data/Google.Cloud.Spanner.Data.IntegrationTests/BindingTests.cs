@@ -23,7 +23,8 @@ using Xunit.Abstractions;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
-    public class BindingTests : IClassFixture<TestDatabaseFixture>
+    [Collection("Spanner Integration Tests")]
+    public class BindingTests
     {
         // ReSharper disable once UnusedParameter.Local
         public BindingTests(TestDatabaseFixture testFixture, ITestOutputHelper outputHelper)

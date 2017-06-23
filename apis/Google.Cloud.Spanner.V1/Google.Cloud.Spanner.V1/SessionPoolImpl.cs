@@ -42,7 +42,7 @@ namespace Google.Cloud.Spanner.V1
         {
             Key = key;
         }
-        internal void DumpSessionPoolContents(StringBuilder stringBuilder)
+        internal int DumpSessionPoolContents(StringBuilder stringBuilder)
         {
             lock (_sessionMruStack)
             {
@@ -52,6 +52,7 @@ namespace Google.Cloud.Spanner.V1
                     stringBuilder.AppendLine($"  {i}:{entry.Session?.GetHashCode()}");
                     i++;
                 }
+                return _sessionMruStack.Count;
             }
         }
 

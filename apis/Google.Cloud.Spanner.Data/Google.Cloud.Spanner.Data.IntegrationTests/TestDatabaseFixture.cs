@@ -51,6 +51,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         public string DataAdapterTestTable { get; } = "DataTestTable";
 
+        public string StressTestTable { get; } = "bookTable";
+
         public TestDatabaseFixture() => _creationTask = new Lazy<Task>(EnsureTestDatabaseImplAsync);
 
         public void Dispose()
@@ -144,11 +146,18 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                                             Key                STRING(MAX) NOT NULL,
                                             StringValue        STRING(MAX),
                                           ) PRIMARY KEY (Key)";
+            string createStressTableStatement = $@"CREATE TABLE {StressTestTable} (
+                                            ID           STRING(MAX) NOT NULL,
+                                            Title        STRING(MAX),
+                                          ) PRIMARY KEY (ID)";
 
             var index1 = "CREATE INDEX TestTableByValue ON TestTable(StringValue)";
             var index2 = "CREATE INDEX TestTableByValueDesc ON TestTable(StringValue DESC)";
 
-            await Task.WhenAll(ExecuteDdlAsync(createTableStatement), ExecuteDdlAsync(createDataTableStatement));
+            await Task.WhenAll(
+                ExecuteDdlAsync(createTableStatement),
+                ExecuteDdlAsync(createDataTableStatement),
+                ExecuteDdlAsync(createStressTableStatement));
             await ExecuteDdlAsync(index1);
             await ExecuteDdlAsync(index2);
         }

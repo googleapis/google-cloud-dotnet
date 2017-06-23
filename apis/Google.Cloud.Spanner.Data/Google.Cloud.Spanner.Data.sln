@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.13
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Data", "Google.Cloud.Spanner.Data\Google.Cloud.Spanner.Data.csproj", "{CA7C98B1-9F7A-4817-9FC0-55F7D670BF4E}"
 EndProject
@@ -15,8 +15,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.LongRunning", "..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj", "{791EA052-9963-4B75-AB55-C616F4A286DE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Iam.V1", "..\Google.Cloud.Iam.V1\Google.Cloud.Iam.V1\Google.Cloud.Iam.V1.csproj", "{188EB2ED-9C99-41BD-948C-79604EDBE68C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Spanner.Data.StressTests", "Google.Cloud.Spanner.Data.StressTests\Google.Cloud.Spanner.Data.StressTests.csproj", "{8187FE4D-29E5-42E1-9CC6-030F1C768387}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -112,18 +110,6 @@ Global
 		{188EB2ED-9C99-41BD-948C-79604EDBE68C}.Release|x64.Build.0 = Release|Any CPU
 		{188EB2ED-9C99-41BD-948C-79604EDBE68C}.Release|x86.ActiveCfg = Release|Any CPU
 		{188EB2ED-9C99-41BD-948C-79604EDBE68C}.Release|x86.Build.0 = Release|Any CPU
-		{8187FE4D-29E5-42E1-9CC6-030F1C768387}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8187FE4D-29E5-42E1-9CC6-030F1C768387}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8187FE4D-29E5-42E1-9CC6-030F1C768387}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{8187FE4D-29E5-42E1-9CC6-030F1C768387}.Debug|x64.Build.0 = Debug|Any CPU
-		{8187FE4D-29E5-42E1-9CC6-030F1C768387}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{8187FE4D-29E5-42E1-9CC6-030F1C768387}.Debug|x86.Build.0 = Debug|Any CPU
-		{8187FE4D-29E5-42E1-9CC6-030F1C768387}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8187FE4D-29E5-42E1-9CC6-030F1C768387}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8187FE4D-29E5-42E1-9CC6-030F1C768387}.Release|x64.ActiveCfg = Release|Any CPU
-		{8187FE4D-29E5-42E1-9CC6-030F1C768387}.Release|x64.Build.0 = Release|Any CPU
-		{8187FE4D-29E5-42E1-9CC6-030F1C768387}.Release|x86.ActiveCfg = Release|Any CPU
-		{8187FE4D-29E5-42E1-9CC6-030F1C768387}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

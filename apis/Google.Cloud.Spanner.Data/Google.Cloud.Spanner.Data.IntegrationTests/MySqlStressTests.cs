@@ -12,22 +12,33 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+#if NET45 || NET451 || NET452
+
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Google.Cloud.Spanner.V1.Logging;
 using MySql.Data.MySqlClient;
+using Xunit;
 
-namespace Google.Cloud.Spanner.Data.StressTests
+namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
-    internal class MySqlStressTests : BaseStressTest
+    [Collection("Spanner Integration Tests")]
+    [PerformanceLog]
+    public class MySqlStressTests : BaseStressTest
     {
+        private const string MySqlConnectionString =
+            "Server=104.198.57.196;Database=books;Uid=root;Pwd=;Max Pool Size=400";
+
         private static readonly string s_guid = Guid.NewGuid().ToString();
         private static int s_myCounter = 1;
 
         protected override async Task<TimeSpan> TestWrite1(Stopwatch sw)
         {
-            using (var connection = new MySqlConnection(Program.MySqlConnectionString))
+            using (var connection = new MySqlConnection(MySqlConnectionString))
             {
                 var localCounter = Interlocked.Increment(ref s_myCounter);
                 await connection.OpenAsync();
@@ -44,5 +55,35 @@ namespace Google.Cloud.Spanner.Data.StressTests
             }
             return sw.Elapsed;
         }
+
+        //[Fact]
+        public async Task RunStress()
+        {
+            //prewarm mysql
+            int countToPreWarm = Math.Min(TargetQps / 4, 800);
+
+            var prewarm = new List<MySqlConnection>();
+            //(note)mysql never got to use the 400 cap.  It failed at QPS=250 (62 connections).
+            for (var i = 0; i < Math.Min(400, countToPreWarm); i++)
+            {
+                prewarm.Add(new MySqlConnection(MySqlConnectionString));
+            }
+            await Task.WhenAll(prewarm.Select(x => x.OpenAsync()));
+            foreach (var preWarmCon in prewarm)
+            {
+                preWarmCon.Dispose();
+            }
+
+            //now run the test.
+            double result = await TestWriteLatencyWithQps(TargetQps, TestDurationMs);
+            Logger.Instance.Info($"MySql latency= {result}ms");
+
+            Assert.True(ValidatePoolInfo());
+
+            //mysql latency with 100 qps simulated is usually around 150ms.
+            Assert.InRange(result, 0, 250);
+        }
     }
 }
+
+#endif

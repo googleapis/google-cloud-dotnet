@@ -44,17 +44,21 @@ namespace Google.Cloud.Spanner.Data
             return result;
         }
 
-        // ReSharper disable once UnusedMember.Global
-        internal static void DumpPoolContents(StringBuilder s)
+        //ReSharper disable once UnusedMember.Global
+        //Returns true if all client reference counts are zero.
+        //For test purposes only.
+        internal static int GetTotalClientRefCount(StringBuilder poolContents)
         {
-            s.AppendLine("ClientPool.Contents:");
+            int referenceCountTotal = 0;
+            poolContents.AppendLine("ClientPool.Contents:");
             int i = 0;
             foreach (var kvp in s_clientPoolByCredential)
             {
-                s.AppendLine($"s_clientPoolByCredential({i}) Key:${kvp.Key}");
-                kvp.Value.DumpCredentialPoolContents(s);
+                poolContents.AppendLine($"s_clientPoolByCredential({i}) Key:${kvp.Key}");
+                referenceCountTotal += kvp.Value.DumpCredentialPoolContents(poolContents);
                 i++;
             }
+            return referenceCountTotal;
         }
 
         public static void ReleaseClient(SpannerClient spannerClient,
@@ -120,16 +124,20 @@ namespace Google.Cloud.Spanner.Data
 
             public CredentialClientPool(ClientCredentialKey key) => _key = key;
 
-            internal void DumpCredentialPoolContents(StringBuilder stringBuilder)
+            //Returns the total sum of reference counts.
+            internal int DumpCredentialPoolContents(StringBuilder stringBuilder)
             {
                 lock (_sync)
                 {
+                    int referenceCountTotal = 0;
                     int i = 0;
                     foreach (var item in _clientPriorityList.GetSnapshot())
                     {
                         stringBuilder.AppendLine($"  {i}:{item}");
+                        referenceCountTotal += item.RefCount;
                         i++;
                     }
+                    return referenceCountTotal;
                 }
             }
 
@@ -180,6 +188,8 @@ namespace Google.Cloud.Spanner.Data
                 _parentKey = parentKey;
                 _creationTask = new Lazy<Task<SpannerClient>>(AcquireClientImplAsync);
             }
+
+            internal int RefCount => _refCount;
 
             public bool MatchesClient(SpannerClient client) => _creationTask.IsValueCreated &&
                 !_creationTask.Value.IsFaulted &&
@@ -250,7 +260,7 @@ namespace Google.Cloud.Spanner.Data
                 {
                     return 1;
                 }
-                int refCountComparison = _refCount.CompareTo(other._refCount);
+                int refCountComparison = RefCount.CompareTo(other.RefCount);
                 if (refCountComparison != 0)
                 {
                     return refCountComparison;
@@ -263,7 +273,7 @@ namespace Google.Cloud.Spanner.Data
             /// <inheritdoc />
             public override string ToString()
             {
-                return $"RefCount:{_refCount}. ParentHashCode{GetHashCode()}";
+                return $"RefCount:{RefCount}. ParentHashCode{GetHashCode()}";
             }
             private void OnPriorityChanged()
             {

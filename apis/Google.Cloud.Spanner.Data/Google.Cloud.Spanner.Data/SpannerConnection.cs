@@ -279,10 +279,19 @@ namespace Google.Cloud.Spanner.Data
             {
                 SpannerClient.ReleaseToPool(session);
             }
-            ClientPool.ReleaseClient(SpannerClient,
-                _connectionStringBuilder.Credential,
-                _connectionStringBuilder.EndPoint);
+            ReleaseClient(SpannerClient);
             SpannerClient = null;
+        }
+
+        private void ReleaseClient(SpannerClient client)
+        {
+            if (client != null)
+            {
+                ClientPool.ReleaseClient(
+                    client,
+                    _connectionStringBuilder.Credential,
+                    _connectionStringBuilder.EndPoint);
+            }
         }
 
         /// <summary>
@@ -409,13 +418,14 @@ namespace Google.Cloud.Spanner.Data
 
                         _state = ConnectionState.Connecting;
                     }
+                    SpannerClient localClient = null;
                     try
                     {
-                        SpannerClient = await ClientPool.AcquireClientAsync(
+                        localClient = await ClientPool.AcquireClientAsync(
                                 _connectionStringBuilder.Credential,
                                 _connectionStringBuilder.EndPoint)
                             .ConfigureAwait(false);
-                        _sharedSession = await SpannerClient.CreateSessionFromPoolAsync(
+                        _sharedSession = await localClient.CreateSessionFromPoolAsync(
                                 _connectionStringBuilder.Project,
                                 _connectionStringBuilder.SpannerInstance,
                                 _connectionStringBuilder.SpannerDatabase,
@@ -431,6 +441,14 @@ namespace Google.Cloud.Spanner.Data
                     finally
                     {
                         _state = _sharedSession != null ? ConnectionState.Open : ConnectionState.Broken;
+                        if (IsOpen)
+                        {
+                            SpannerClient = localClient;
+                        }
+                        else
+                        {
+                            ReleaseClient(localClient);
+                        }
 #if NET45 || NET451
                         if (IsOpen && currentTransaction != null)
                         {

@@ -68,25 +68,42 @@ namespace Google.Cloud.Spanner.V1
         }
 
         // ReSharper disable once UnusedMember.Global
-        internal static void DumpPoolContents(StringBuilder s)
+        // returns true if the pool has evenly split its contents.
+        // For test purposes only.
+        internal static bool GetIsPoolEvenlySplit(StringBuilder poolContents)
         {
-            s.AppendLine("SessionPool.Contents (by priority):");
+            bool result = true;
+            poolContents.AppendLine("SessionPool.Contents (by priority):");
             int i = 0;
             foreach (var priorityListEntry in s_priorityList.GetSnapshot())
             {
-                s.AppendLine($"SessionPool({i}) Key:${priorityListEntry.Key}"
+                poolContents.AppendLine($"SessionPool({i}) Key:${priorityListEntry.Key}"
                     + $" HashCode_of_Pool:{priorityListEntry.GetHashCode()}");
                 i++;
             }
-            s.AppendLine("SessionPool.Contents (by client):");
+            poolContents.AppendLine("SessionPool.Contents (by client):");
             int byClientIndex = 0;
+            int firstSize = -1;
             foreach (var byClientEntry in s_poolByClientAndDatabase)
             {
-                s.AppendLine($"SessionPool({byClientIndex}) Key:${byClientEntry.Key}"
+                poolContents.AppendLine($"SessionPool({byClientIndex}) Key:${byClientEntry.Key}"
                     + $" HashCode_of_Pool:{byClientEntry.Value.GetHashCode()}");
-                byClientEntry.Value.DumpSessionPoolContents(s);
+                var size = byClientEntry.Value.DumpSessionPoolContents(poolContents);
+                if (size > 0)
+                {
+                    if (firstSize == -1)
+                    {
+                        firstSize = size;
+                    }
+                    else if (Math.Abs(firstSize - size) > 1)
+                    {
+                        result = false;
+                    }
+                }
                 byClientIndex++;
             }
+
+            return result;
         }
 
         private static Task WhenCanceled(this CancellationToken cancellationToken)
