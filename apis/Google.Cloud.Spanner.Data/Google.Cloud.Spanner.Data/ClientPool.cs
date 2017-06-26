@@ -47,7 +47,7 @@ namespace Google.Cloud.Spanner.Data
         //ReSharper disable once UnusedMember.Global
         //Returns the total of all reference counts.
         //For test purposes only.
-        // poolContents will contain the current contents of the pool and may not be null.
+        // poolContents will be filled with the current contents of the pool and may not be null.
         internal static int GetPoolInfo(StringBuilder poolContents)
         {
             GaxPreconditions.CheckNotNull(poolContents, nameof(poolContents));
