@@ -26,7 +26,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     public abstract class BaseStressTest
     {
         protected const int TargetQps = 100;
-        protected static readonly TimeSpan TestDurationMs = TimeSpan.FromSeconds(60);
+        protected static readonly TimeSpan TestDuration = TimeSpan.FromSeconds(60);
 
         protected abstract Task<TimeSpan> TestWrite1(Stopwatch sw);
 
@@ -54,13 +54,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         ///  SpannerClient.RawCreateCount: You are looking at "recordings" here to ensure that only `MaximumGrpcChannels` are created.
         ///  Transaction.CacheHit: How many hits we got on prewarmed transactions.
         /// </summary>
-        protected async Task<double> TestWriteLatencyWithQps(double queriesPerSecond, TimeSpan milliTestTime)
+        protected async Task<double> TestWriteLatencyWithQps(double queriesPerSecond, TimeSpan testTime)
         {
             var sw = Stopwatch.StartNew();
             var all = new List<Task<TimeSpan>>();
-            var timeout = Timeout(milliTestTime);
+            var timeout = Timeout(testTime);
 
-            while (sw.Elapsed < milliTestTime)
+            while (sw.Elapsed < testTime)
             {
                 if (sw.Elapsed.TotalSeconds * queriesPerSecond > all.Count)
                 {
@@ -89,11 +89,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         protected static bool ValidatePoolInfo()
         {
             StringBuilder s = new StringBuilder();
-            bool isValid = SessionPool.GetIsPoolEvenlySplit(s);
+            bool isValid = SessionPool.GetPoolInfo(s);
             Logger.Instance.Info(s.ToString());
 
             s.Clear();
-            isValid = ClientPool.GetTotalClientRefCount(s) == 0 && isValid;
+            isValid &= ClientPool.GetPoolInfo(s) == 0;
             Logger.Instance.Info(s.ToString());
 
             return isValid;

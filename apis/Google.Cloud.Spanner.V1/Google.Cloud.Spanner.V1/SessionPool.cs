@@ -18,6 +18,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Google.Api.Gax;
 using Google.Apis.Util;
 using Google.Cloud.Spanner.V1.Logging;
 using Grpc.Core;
@@ -70,8 +71,10 @@ namespace Google.Cloud.Spanner.V1
         // ReSharper disable once UnusedMember.Global
         // returns true if the pool has evenly split its contents.
         // For test purposes only.
-        internal static bool GetIsPoolEvenlySplit(StringBuilder poolContents)
+        // poolcontents will be filled with the contents of the pool and may not be null.
+        internal static bool GetPoolInfo(StringBuilder poolContents)
         {
+            GaxPreconditions.CheckNotNull(poolContents, nameof(poolContents));
             bool result = true;
             poolContents.AppendLine("SessionPool.Contents (by priority):");
             int i = 0;

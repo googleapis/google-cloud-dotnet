@@ -45,10 +45,12 @@ namespace Google.Cloud.Spanner.Data
         }
 
         //ReSharper disable once UnusedMember.Global
-        //Returns true if all client reference counts are zero.
+        //Returns the total of all reference counts.
         //For test purposes only.
-        internal static int GetTotalClientRefCount(StringBuilder poolContents)
+        // poolContents will contain the current contents of the pool and may not be null.
+        internal static int GetPoolInfo(StringBuilder poolContents)
         {
+            GaxPreconditions.CheckNotNull(poolContents, nameof(poolContents));
             int referenceCountTotal = 0;
             poolContents.AppendLine("ClientPool.Contents:");
             int i = 0;

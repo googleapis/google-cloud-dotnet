@@ -56,6 +56,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             return sw.Elapsed;
         }
 
+        // Uncomment this to run equivalent MySQL benchmarks.
+        // You will need to have access to the MYSql database referenced in MySqlConnectionString.
         //[Fact]
         public async Task RunStress()
         {
@@ -75,7 +77,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
 
             //now run the test.
-            double result = await TestWriteLatencyWithQps(TargetQps, TestDurationMs);
+            double result = await TestWriteLatencyWithQps(TargetQps, TestDuration);
             Logger.Instance.Info($"MySql latency= {result}ms");
 
             Assert.True(ValidatePoolInfo());

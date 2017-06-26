@@ -30,7 +30,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     {
         private static int s_myCounter = 1;
         private static readonly string s_guid = Guid.NewGuid().ToString();
-        private static readonly Random s_rnd = new Random(Environment.TickCount);
+        [ThreadStatic]
+        private static Random s_rnd;
         private TestDatabaseFixture _testFixture;
 
         public SpannerStressTests(TestDatabaseFixture testFixture, ITestOutputHelper outputHelper)
@@ -70,6 +71,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         retry = true;
                         Console.WriteLine("retrying due to " + e.Message);
                         delay = delay * 2;
+                        if (s_rnd == null)
+                        {
+                            s_rnd = new Random(Environment.TickCount);
+                        }
                         delay += s_rnd.Next(100);
                         delay = Math.Min(delay, 5000);
                         await Task.Delay(TimeSpan.FromMilliseconds(delay));
@@ -121,7 +126,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
 
             //now run the test.
-            double result = await TestWriteLatencyWithQps(TargetQps, TestDurationMs);
+            double result = await TestWriteLatencyWithQps(TargetQps, TestDuration);
             Logger.Instance.Info($"Spanner latency= {result}ms");
 
             Assert.True(ValidatePoolInfo());

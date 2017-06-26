@@ -38,8 +38,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 #if LoggingOn
             SpannerConnection.ConnectionPoolOptions.LogLevel = LogLevel.Debug;
             SpannerConnection.ConnectionPoolOptions.LogPerformanceTraces = true;
-            TestLogger.TestOutputHelper = outputHelper;
 #endif
+            TestLogger.TestOutputHelper = outputHelper;
         }
 
         private readonly TestDatabaseFixture _testFixture;
