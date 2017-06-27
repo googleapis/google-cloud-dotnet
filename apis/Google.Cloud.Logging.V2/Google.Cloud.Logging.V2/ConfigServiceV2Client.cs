@@ -66,11 +66,12 @@ namespace Google.Cloud.Logging.V2
         /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Internal"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
         public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Internal, StatusCode.Unavailable);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
@@ -140,6 +141,7 @@ namespace Google.Cloud.Logging.V2
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Internal"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 45000 milliseconds.
@@ -170,6 +172,7 @@ namespace Google.Cloud.Logging.V2
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Internal"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 45000 milliseconds.
@@ -258,6 +261,7 @@ namespace Google.Cloud.Logging.V2
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Internal"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 45000 milliseconds.
