@@ -16,6 +16,7 @@ namespace Google.Cloud.PubSub.V1.Tests
 {
     public class HiPerfSubscriberTest
     {
+#if false
         private struct TimedId
         {
             public TimedId(DateTime time, string id) => (Time, Id) = (time, id);
@@ -55,17 +56,21 @@ namespace Google.Cloud.PubSub.V1.Tests
                     }
                 };
 
+            public static string MakeMsgId(int batchIndex, int msgIndex) => $"{batchIndex:D4}.{msgIndex:D4}";
+
             private class En : IAsyncEnumerator<StreamingPullResponse>
             {
-                public En(IEnumerable<ServerAction> msgs, IScheduler scheduler, TaskHelper taskHelper)
+                public En(IEnumerable<ServerAction> msgs, IScheduler scheduler, TaskHelper taskHelper, CancellationToken? ct)
                 {
                     _msgsEn = msgs.Select((x, i) => (i, x)).GetEnumerator();
                     _scheduler = scheduler;
                     _taskHelper = taskHelper;
+                    _ct = ct ?? CancellationToken.None;
                 }
 
                 private readonly IScheduler _scheduler;
                 private readonly TaskHelper _taskHelper;
+                private readonly CancellationToken _ct;
 
                 private readonly IEnumerator<(int Index, ServerAction Action)> _msgsEn;
 
@@ -73,7 +78,17 @@ namespace Google.Cloud.PubSub.V1.Tests
                 {
                     if (_msgsEn.MoveNext())
                     {
-                        await _taskHelper.ConfigureAwait(_scheduler.Delay(_msgsEn.Current.Action.PreInterval, cancellationToken));
+                        var cts = CancellationTokenSource.CreateLinkedTokenSource(_ct, cancellationToken);
+                        try
+                        {
+                            await _taskHelper.ConfigureAwait(_scheduler.Delay(_msgsEn.Current.Action.PreInterval, cts.Token));
+                        }
+                        catch (Exception e) when (e.IsCancellation() && _ct.IsCancellationRequested)
+                        {
+                            //Console.WriteLine("[FAKE.MoveNext] Throwing RpcException");
+                            // This mimics behaviour or a real server
+                            throw new RpcException(new Status(StatusCode.Cancelled, "Operation cancelled"));
+                        }
                         if (_msgsEn.Current.Action.MoveNextEx != null)
                         {
                             throw _msgsEn.Current.Action.MoveNextEx;
@@ -94,7 +109,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                         return new StreamingPullResponse
                         {
                             ReceivedMessages = {
-                                _msgsEn.Current.Action.Msgs.Select((s, i) => MakeReceivedMessage($"{_msgsEn.Current.Index:D4}.{i:D4}", s))
+                                _msgsEn.Current.Action.Msgs.Select((s, i) => MakeReceivedMessage(MakeMsgId(_msgsEn.Current.Index, i), s))
                             }
                         };
                     }
@@ -108,8 +123,8 @@ namespace Google.Cloud.PubSub.V1.Tests
             private class PullStream : StreamingPullStream
             {
                 public PullStream(IEnumerable<ServerAction> msgs, List<TimedId> extends, List<TimedId> acks, List<DateTime> writeCompletes,
-                    IScheduler scheduler, IClock clock, TaskHelper taskHelper) =>
-                    (_en, _clock, _extends, _acks, _writeCompletes) = (new En(msgs, scheduler, taskHelper), clock, extends, acks, writeCompletes);
+                    IScheduler scheduler, IClock clock, TaskHelper taskHelper, CancellationToken? ct) =>
+                    (_en, _clock, _extends, _acks, _writeCompletes) = (new En(msgs, scheduler, taskHelper, ct), clock, extends, acks, writeCompletes);
 
                 private readonly object _lock = new object();
                 private readonly IAsyncEnumerator<StreamingPullResponse> _en;
@@ -132,6 +147,7 @@ namespace Google.Cloud.PubSub.V1.Tests
 
                 public override Task WriteCompleteAsync()
                 {
+                    //Console.WriteLine("[FAKE.WriteCompleteAsync] Called");
                     lock (_lock)
                     {
                         _writeCompletes.Add(_clock.GetCurrentDateTimeUtc());
@@ -157,7 +173,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             public IReadOnlyList<DateTime> WriteCompletes => _writeCompletes;
 
             public override StreamingPullStream StreamingPull(CallSettings callSettings = null, BidirectionalStreamingSettings streamingSettings = null) =>
-                new PullStream(_msgs, _extends, _acks, _writeCompletes, _scheduler, _clock, _taskHelper);
+                new PullStream(_msgs, _extends, _acks, _writeCompletes, _scheduler, _clock, _taskHelper, callSettings?.CancellationToken);
         }
 
         private class Fake : IDisposable
@@ -265,6 +281,10 @@ namespace Google.Cloud.PubSub.V1.Tests
                 ? (hardStop && stopAfterSeconds < handlerDelaySeconds ? 0 : batchCount)
                 : Math.Max(0, stopAfterSeconds - (hardStop ? handlerDelaySeconds : 0)) / interBatchIntervalSeconds;
             var expectedMsgCount = Math.Min(expectedCompletedBatches, batchCount) * batchSize * clientCount;
+            var expectedAcks = Enumerable.Range(0, batchCount)
+                .SelectMany(batchIndex => Enumerable.Range(0, batchSize).Select(msgIndex => FakeSubscriber.MakeMsgId(batchIndex, msgIndex)))
+                .Take(expectedMsgCount / clientCount)
+                .OrderBy(x => x);
 
             var msgss = Enumerable.Range(0, batchCount)
                 .Select(batchIndex =>
@@ -290,6 +310,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     Assert.Equal(clientCount, fake.Subscribers.Count);
                     Assert.Equal(expectedMsgCount, handledMsgs.Locked(() => handledMsgs.Count));
                     Assert.Equal(expectedMsgCount, fake.Subscribers.Sum(x => x.Acks.Count));
+                    Assert.Equal(Enumerable.Repeat(expectedAcks, clientCount), fake.Subscribers.Select(x => x.Acks.Select(y => y.Id).OrderBy(y => y)));
                     Assert.Equal(Enumerable.Repeat(1, clientCount).ToArray(), fake.Subscribers.Select(x => x.WriteCompletes.Count).ToArray());
                     Assert.Equal(clientCount, fake.ClientShutdowns.Count);
                 });
@@ -463,5 +484,6 @@ namespace Google.Cloud.PubSub.V1.Tests
             }
 
         }
+#endif
     }
 }

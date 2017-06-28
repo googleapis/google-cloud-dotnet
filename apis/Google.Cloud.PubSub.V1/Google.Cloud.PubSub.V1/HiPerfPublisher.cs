@@ -1,4 +1,20 @@
-﻿using Google.Api.Gax;
+﻿// Copyright 2017, Google Inc. All rights reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
+using Google.Apis.Auth.OAuth2;
 using Google.Cloud.PubSub.V1.Tasks;
 using Google.Protobuf;
 using Grpc.Auth;
@@ -12,97 +28,246 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.PubSub.V1
 {
-    // TODO: Class name still to be decided, but can't be Publisher
     /// <summary>
     /// A PubSub publisher that is associated with a specific <see cref="TopicName"/>.
     /// </summary>
     public abstract class HiPerfPublisher
     {
+        // TODO: Logging
+
         /// <summary>
-        /// Settings for <see cref="HiPerfPublisher"/>.
-        /// Defaults will be used for <c>null</c> properties.
+        /// Settings for the <see cref="HiPerfPublisher"/>.
         /// </summary>
         public sealed class Settings
         {
             /// <summary>
-            /// Used to create new channels.
-            /// If <c>null</c>, creates channels using the default PubSub endpoint
-            /// and default credentials.
+            /// Instantiate settings with pre-created <see cref="PublisherClient"/>s.
             /// </summary>
-            public Func<Channel> ChannelProvider { get; set; }
+            /// <param name="clients">The <see cref="PublisherClient"/>s to use in a <see cref="HiPerfPublisher"/>"/>.</param>
+            public Settings(IList<PublisherClient> clients) => Clients = clients;
 
             /// <summary>
-            /// <see cref="PublisherSettings"/> used when creating <see cref="PublisherClient"/>
-            /// instances.
-            /// If <c>null</c>, uses default settings from <see cref="PublisherSettings.GetDefault"/>.
+            /// Instantiate settings, optionally specifying client creation parameters.
             /// </summary>
-            public PublisherSettings PublisherSettings { get; set; }
+            /// <param name="clientCount">Optional. The number of clients to create.
+            /// Defaults to the CPU count on the machine this is being executed on.</param>
+            /// <param name="publisherSettings">Optional. The settings to use when creating <see cref="Publisher"/> instances.</param>
+            /// <param name="credentials">Optional. Credentials to use then creating <see cref="Publisher"/> instances.
+            /// Defaults to using the default credentials.</param>
+            public Settings(int? clientCount = null, PublisherSettings publisherSettings = null, ChannelCredentials credentials = null)
+            {
+                ClientCount = clientCount;
+                PublisherSettings = publisherSettings;
+                Credentials = credentials;
+            }
+
+            internal Settings(Settings other)
+            {
+                Clients = other.Clients != null ? new List<PublisherClient>(other.Clients) : null;
+                ClientCount = other.ClientCount;
+                PublisherSettings = other.PublisherSettings?.Clone();
+                Credentials = other.Credentials;
+                BatchingSettings = other.BatchingSettings?.Clone();
+                Scheduler = other.Scheduler;
+                BatchMaxElementCount = other.BatchMaxElementCount;
+                BatchMaxByteCount = other.BatchMaxByteCount;
+            }
 
             /// <summary>
-            /// Batch settings.
-            /// If <c>null</c>, uses batch settings from <see cref="DefaultBatchingSettings"/>. 
+            /// The clients to use within a <see cref="HiPerfPublisher"/>.
+            /// </summary>
+            public IList<PublisherClient> Clients { get; }
+
+            /// <summary>
+            /// The number of <see cref="PublisherClient"/> to create and use within a <see cref="HiPerfPublisher"/> instance.
+            /// If <c>null</c>, defaults to the CPU count on the machine this is being executed on.
+            /// </summary>
+            public int? ClientCount { get; }
+
+            /// <summary>
+            /// The settings to use when creating <see cref="Publisher"/> instances.
+            /// If <c>null</c>, defaults to <see cref="PublisherSettings.GetDefault"/>.
+            /// </summary>
+            public PublisherSettings PublisherSettings { get; }
+
+            /// <summary>
+            /// Credentials to use then creating <see cref="Publisher"/> instances.
+            /// If <c>null</c>, defaults to using the default credentials.
+            /// </summary>
+            public ChannelCredentials Credentials { get; }
+
+            /// <summary>
+            /// <see cref="BatchingSettings"/> that control how messages are batched when sending.
+            /// If <c>null</c>, defaults to <see cref="DefaultBatchingSettings"/>.
             /// </summary>
             public BatchingSettings BatchingSettings { get; set; }
 
             /// <summary>
-            /// Flow control settings.
-            /// If <c>null</c>, uses flow control settings from <see cref="DefaultFlowControlSettings"/>. 
+            /// The <see cref="IScheduler"/> to use.
+            /// If <c>null</c>, defaults to <see cref="SystemScheduler"/>. Usually only useful for testing.
             /// </summary>
-            public FlowControlSettings FlowControlSettings { get; set; }
-
             public IScheduler Scheduler { get; set; }
+
+            /// <summary>
+            /// The absolute maximum element count in a pubsub Publish.
+            /// If <c>null</c>, defaults to <see cref="ApiMaxRequestElementCount"/>. Usually leave this unset.
+            /// </summary>
+            public long? BatchMaxElementCount { get; set; }
+
+            /// <summary>
+            /// The absolute maximum byte count in a pubsub Publish.
+            /// If <c>null</c>, defaults to <see cref="ApiMaxRequestByteCount"/>. Usually leave this unset.
+            /// </summary>
+            public long? BatchMaxByteCount { get; set; }
+
+            internal void Validate()
+            {
+                if (Clients != null)
+                {
+                    GaxPreconditions.CheckArgument(Clients.Count > 0, nameof(Clients), "If non-null, then must contain at least one element");
+                    GaxPreconditions.CheckArgument(Clients.All(x => x != null), nameof(Clients), "If non-null, then all elements must be non-null");
+                }
+                // Fairly arbitrary upper limit.
+                GaxPreconditions.CheckArgumentRange(ClientCount ?? 1, nameof(ClientCount), 1, 256);
+                if (BatchingSettings != null)
+                {
+                    GaxPreconditions2.CheckArgumentRange(BatchingSettings.ElementCountThreshold ?? 1, nameof(BatchingSettings.ElementCountThreshold), 1, ApiMaxRequestElementCount);
+                    GaxPreconditions2.CheckArgumentRange(BatchingSettings.RequestByteThreshold ?? 1, nameof(BatchingSettings.RequestByteThreshold), 1, ApiMaxRequestByteCount);
+                    GaxPreconditions.CheckArgument((BatchingSettings.DelayThreshold ?? TimeSpan.FromSeconds(1)) > TimeSpan.Zero, nameof(BatchingSettings.DelayThreshold), "Must be positive");
+                }
+                GaxPreconditions2.CheckArgumentRange(BatchMaxElementCount ?? 1, nameof(BatchMaxElementCount), 1, ApiMaxRequestElementCount);
+                GaxPreconditions2.CheckArgumentRange(BatchMaxByteCount ?? 1, nameof(BatchMaxByteCount), 1, ApiMaxRequestByteCount);
+            }
+
+            /// <summary>
+            /// Create a deep clone of this object.
+            /// </summary>
+            /// <returns>A deep clone of this object.</returns>
+            public Settings Clone() => new Settings(this);
         }
 
         /// <summary>
-        /// Default <see cref="FlowControlSettings"/> for <see cref="HiPerfPublisher"/>.  
+        /// A snapshot of the flow state of a <see cref="HiPerfPublisher"/>.
         /// </summary>
-        /// <returns>Default <see cref="FlowControlSettings"/> for <see cref="HiPerfPublisher"/>.</returns>
-        public static FlowControlSettings DefaultFlowControlSettings() => new FlowControlSettings
+        public struct FlowState
         {
-            // TODO
-        };
+            /// <summary>
+            /// Instantiate a <see cref="FlowState"/>.
+            /// </summary>
+            /// <param name="elementCount">The number of elements (messages) currently queued.</param>
+            /// <param name="byteCount">The number of bytes currently queued.</param>
+            public FlowState(long elementCount, long byteCount)
+            {
+                ElementCount = elementCount;
+                ByteCount = byteCount;
+            }
+
+            /// <summary>
+            /// The number of elements (messages) currently queued.
+            /// </summary>
+            public long ElementCount { get; }
+
+            /// <summary>
+            /// The number of bytes currently queued.
+            /// </summary>
+            public long ByteCount { get; }
+        }
+
+        // All defaults taken from Java (reference) implementation.
 
         /// <summary>
-        /// Default <see cref="BatchingSettings"/> for <see cref="HiPerfPublisher"/>.  
+        /// The maximum number of messages in one request; set to 1000 messages. Defined by the API.
+        /// </summary>
+        public static long ApiMaxRequestElementCount => 1000L;
+
+        /// <summary>
+        /// The maximum number of bytes in one request; set to 10 megabytes. Defined by the API.
+        /// </summary>
+        public static long ApiMaxRequestByteCount => 10_000_000L;
+
+        /// <summary>
+        /// The default batch delay threshold; set to 1 millisecond.
+        /// </summary>
+        public static TimeSpan DefaultBatchingDelayThreshold => TimeSpan.FromMilliseconds(1);
+
+        /// <summary>
+        /// The default batch element count; set to 100 messages.
+        /// </summary>
+        public static long DefaultBatchingElementCountThreshold => 100L;
+
+        /// <summary>
+        /// The default batch byte count; set to 1000 bytes (1 kilobyte).
+        /// </summary>
+        public static long DefaultBatchingRequestByteThreshold => 1000L;
+
+        /// <summary>
+        /// Default <see cref="BatchingSettings"/> for <see cref="HiPerfPublisher"/>.
+        /// Default values are: <see cref="BatchingSettings.DelayThreshold"/> = 1 millisecond;
+        /// <see cref="BatchingSettings.ElementCountThreshold"/> = 100;
+        /// <see cref="BatchingSettings.RequestByteThreshold"/> = 1000
         /// </summary>
         /// <returns>Default <see cref="BatchingSettings"/> for <see cref="HiPerfPublisher"/>.</returns>
         public static BatchingSettings DefaultBatchingSettings() => new BatchingSettings
         {
-            // TODO
+            DelayThreshold = DefaultBatchingDelayThreshold,
+            ElementCountThreshold = DefaultBatchingElementCountThreshold,
+            RequestByteThreshold = DefaultBatchingRequestByteThreshold,
         };
 
         /// <summary>
-        /// Create a <see cref="HiPerfPublisher"/> associated with the specified <see cref="TopicName"/>.
+        /// Create a <see cref="HiPerfPublisher"/> instance associated with the specified <see cref="TopicName"/>.  
         /// </summary>
-        /// <param name="topicName">The <see cref="TopicName"/> with which to publish messages.</param>
+        /// <param name="topicName">The <see cref="TopicName"/> to publish messages to.</param>
         /// <param name="settings">Optional <see cref="Settings"/> for this instance.</param>
-        /// <returns>A <see cref="HiPerfPublisher"/> associated with the specified <see cref="TopicName"/>.</returns>
+        /// <returns>A <see cref="HiPerfPublisher"/> instance associated with the specified <see cref="TopicName"/>.</returns>
         public static async Task<HiPerfPublisher> CreateAsync(TopicName topicName, Settings settings = null)
         {
-            var channelProvider = settings?.ChannelProvider ?? await DefaultChannelProvider().ConfigureAwait(false);
-            // TODO: What's the correct way to decide channelCount. Should it be user-settable?
-            // It probably won't be CPU-throttled, so using ProcessorCount seems wrong.
-            var channelCount = Environment.ProcessorCount;
-            var channels = Enumerable.Range(0, channelCount).Select(_ => settings.ChannelProvider());
-            return new HiPerfPublisherImpl(topicName, channels, settings ?? new Settings());
+            // Clone settings, just in case user modifies them and an await happens in this method
+            settings = settings?.Clone() ?? new Settings();
+            Func<Task> shutdown = null;
+            if (settings.Clients == null)
+            {
+                // Clients not given, so create default clients.
+                var clientCount = settings?.ClientCount ?? Environment.ProcessorCount;
+                var channelCredentials = settings?.Credentials;
+                // Use default credentials if none given.
+                if (channelCredentials == null)
+                {
+                    var credentials = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
+                    if (credentials.IsCreateScopedRequired)
+                    {
+                        credentials = credentials.CreateScoped(PublisherClient.DefaultScopes);
+                    }
+                    channelCredentials = credentials.ToChannelCredentials();
+                }
+                // Create the channels and clients, and register shutdown functions for each channel
+                var clients = new PublisherClient[clientCount];
+                var shutdowns = new Func<Task>[clientCount];
+                for (int i = 0; i < clientCount; i += 1)
+                {
+                    var channel = new Channel(PublisherClient.DefaultEndpoint.Host, PublisherClient.DefaultEndpoint.Port, channelCredentials);
+                    clients[i] = PublisherClient.Create(channel, settings?.PublisherSettings);
+                    shutdowns[i] = channel.ShutdownAsync;
+                }
+                shutdown = () => Task.WhenAll(shutdowns.Select(x => x()));
+                // Create new settings with the created clients, and clone the non-client settings
+                settings = new Settings(clients)
+                {
+                    BatchingSettings = settings.BatchingSettings,
+                    Scheduler = settings.Scheduler,
+                    BatchMaxElementCount = settings.BatchMaxElementCount,
+                    BatchMaxByteCount = settings.BatchMaxByteCount,
+                };
+            }
+            // Instantiate the publisher
+            return new HiPerfPublisherImpl(topicName, settings, shutdown, TaskHelper.Default);
         }
 
-        private static async Task<Func<Channel>> DefaultChannelProvider()
-        {
-            var ep = PublisherClient.DefaultEndpoint;
-            var credentials = await Google.Apis.Auth.OAuth2.GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
-            if (credentials.IsCreateScopedRequired)
-            {
-                credentials = credentials.CreateScoped(PublisherClient.DefaultScopes);
-            }
-            var grpcCredentials = credentials.ToChannelCredentials();
-            return () => new Channel(ep.Host, ep.Port, grpcCredentials);
-        }
 
         /// <summary>
         /// The associated <see cref="TopicName"/>. 
         /// </summary>
-        public virtual TopicName TopicName { get { throw new NotImplementedException(); } }
+        public virtual TopicName TopicName => throw new NotImplementedException();
 
         /// <summary>
         /// Publish a message to the topic specified in <see cref="TopicName"/>.
@@ -110,10 +275,7 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="message">The <see cref="PubsubMessage"/> to publish.</param>
         /// <returns>A task which completes once the message has been published.
         /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
-        public virtual Task<string> PublishAsync(PubsubMessage message)
-        {
-            throw new NotImplementedException();
-        }
+        public virtual Task<string> PublishAsync(PubsubMessage message) => throw new NotImplementedException();
 
         /// <summary>
         /// Publish a message to the topic specified in <see cref="TopicName"/>.
@@ -164,6 +326,34 @@ namespace Google.Cloud.PubSub.V1
             {
                 Data = ByteString.CopyFrom(message)
             });
+
+        /// <summary>
+        /// Retrieve a snapshot of the flow state.
+        /// </summary>
+        /// <returns></returns>
+        public virtual FlowState GetCurrentFlowState() => throw new NotImplementedException();
+
+        /// <summary>
+        /// Shutdown this <see cref="HiPerfPublisher"/>.
+        /// The returned <see cref="Task"/> completes when all queued messages have been published.
+        /// The returned <see cref="Task"/> cancels if the passed <see cref="CancellationToken"/> is cancelled.
+        /// Cancelling the passed <see cref="CancellationToken"/> aborts publishing, and cancels the returned
+        /// <see cref="Task"/> as quickly as possible.
+        /// </summary>
+        /// <param name="hardStopToken">Cancel this <see cref="CancellationToken"/> to abort publishing queued messages.</param>
+        /// <returns>A <see cref="Task"/> that completes when all queued messages have been published; or cancels if the
+        /// passed <see cref="CancellationToken"/> is cancelled.</returns>
+        public virtual Task ShutdownAsync(CancellationToken hardStopToken) => throw new NotImplementedException();
+
+        /// <summary>
+        /// Shutdown this <see cref="HiPerfPublisher"/>.
+        /// The returned <see cref="Task"/> completes when all queued messages have been published.
+        /// The returned <see cref="Task"/> cancels if the passed timeout expires before all messages are published.
+        /// </summary>
+        /// <param name="timeout">After this period, abort publishing queued messages.</param>
+        /// <returns>A <see cref="Task"/> that completes when all queued messages have been published; or cancels if the
+        /// passed timeout expires.</returns>
+        public virtual Task ShutdownAsync(TimeSpan timeout) => ShutdownAsync(new CancellationTokenSource(timeout).Token);
     }
 
     /// <summary>
@@ -188,57 +378,54 @@ namespace Google.Cloud.PubSub.V1
         }
 
         // TODO: Logging
-        // TODO: Change to allow new clients to be constructed when existing client fail.
 
         /// <summary>
-        /// Construct a <see cref="HiPerfPublisherImpl"/>. 
+        /// Instantiate a <see cref="HiPerfPublisherImpl"/> associated with the specified <see cref="TopicName"/>.
         /// </summary>
-        /// <param name="topicName">The topic name for all puplished messages.</param>
-        /// <param name="channels">The channels to use for publishing messages.</param>
-        /// <param name="settings">Settings; must not be <c>null</c>.</param>
-        public HiPerfPublisherImpl(TopicName topicName, IEnumerable<Channel> channels, Settings settings) :
-            this(topicName, channels.Select(channel => PublisherClient.Create(channel, settings.PublisherSettings)), settings, TaskHelper.Default)
-        {
-        }
+        /// <param name="topicName">The <see cref="TopicName"/> to publish messages to.</param>
+        /// <param name="settings"><see cref="HiPerfPublisher.Settings"/> to use in this <see cref="HiPerfPublisherImpl"/>.</param>
+        /// <param name="shutdown">Function to call on publisher shutdown.</param>
+        public HiPerfPublisherImpl(TopicName topicName, Settings settings, Func<Task> shutdown)
+            : this(topicName, settings, shutdown, TaskHelper.Default) { }
 
-        internal HiPerfPublisherImpl(TopicName topicName, IEnumerable<PublisherClient> clients, Settings settings, TaskHelper taskHelper,
-            long batchMaxElementCount = 1000, long batchMaxByteCount = 10 * 1024 * 1024)
+        internal HiPerfPublisherImpl(TopicName topicName, Settings settings, Func<Task> shutdown, TaskHelper taskHelper)
         {
             TopicName = GaxPreconditions.CheckNotNull(topicName, nameof(topicName));
             GaxPreconditions.CheckNotNull(settings, nameof(settings));
+            GaxPreconditions.CheckNotNull(settings.Clients, nameof(settings.Clients));
+            settings.Validate();
             _taskHelper = GaxPreconditions.CheckNotNull(taskHelper, nameof(taskHelper));
+            _shutdown = shutdown;
 
-            // TODO: Validate all settings and provide defaults
-            _scheduler = settings.Scheduler;
-            _flowMaxOutstandingElementCount = settings.FlowControlSettings.MaxOutstandingElementCount.Value;
-            _flowMaxOutstandingRequestBytes = settings.FlowControlSettings.MaxOutstandingRequestBytes.Value;
-            _flowLimitExceededBehavior = settings.FlowControlSettings.LimitExceededBehavior;
-            _batchElementCountThreshold = settings.BatchingSettings.ElementCountThreshold.Value;
-            _batchRequestByteThreshold = settings.BatchingSettings.RequestByteThreshold.Value;
-            _batchDelayThreshold = settings.BatchingSettings.DelayThreshold.Value;
-            _batchMaxElementCount = batchMaxElementCount;
-            _batchMaxByteCount = batchMaxByteCount;
+            // Initialise settings
+            var batchingSettings = settings.BatchingSettings ?? DefaultBatchingSettings();
+            _batchElementCountThreshold = batchingSettings.ElementCountThreshold ?? ApiMaxRequestElementCount;
+            _batchRequestByteThreshold = batchingSettings.RequestByteThreshold ?? ApiMaxRequestByteCount;
+            _batchDelayThreshold = batchingSettings.DelayThreshold ?? TimeSpan.FromHours(1);
+            _scheduler = settings.Scheduler ?? SystemScheduler.Instance;
+            _batchMaxElementCount = settings.BatchMaxElementCount ?? ApiMaxRequestElementCount;
+            _batchMaxByteCount = settings.BatchMaxByteCount ?? ApiMaxRequestByteCount;
 
             // Initialise internal state
-            _idleClients = new Queue<PublisherClient>(clients);
             _batchesReady = new Queue<Batch>();
+            _idleClients = new Queue<PublisherClient>(settings.Clients);
+            _softStopCts = new CancellationTokenSource();
+            _hardStopCts = new CancellationTokenSource();
+            _shutdownTcs = new TaskCompletionSource<int>();
         }
 
         private readonly object _lock = new object();
-        private TaskCompletionSource<int> _flowBlock;
+        private readonly object _shutdownLock = new object();
         private readonly IScheduler _scheduler;
         private readonly TaskHelper _taskHelper;
-
-        // Flow-control settings
-        private readonly int _flowMaxOutstandingElementCount;
-        private readonly int _flowMaxOutstandingRequestBytes;
-        private readonly LimitExceededBehavior _flowLimitExceededBehavior;
+        private readonly Func<Task> _shutdown;
 
         // Batching settings
         private readonly long _batchElementCountThreshold;
         private readonly long _batchRequestByteThreshold;
         private readonly TimeSpan _batchDelayThreshold;
 
+        // Absolute maximum batch values
         private readonly long _batchMaxElementCount;
         private readonly long _batchMaxByteCount;
 
@@ -248,67 +435,27 @@ namespace Google.Cloud.PubSub.V1
         private Batch _currentBatch;
         private long _queueElementCount;
         private long _queueByteCount;
+        private int _batchesInFlightCount;
+        private CancellationTokenSource _softStopCts;
+        private CancellationTokenSource _hardStopCts;
+        private TaskCompletionSource<int> _shutdownTcs;
+        private bool _shutdownStarted;
 
         /// <inheritdoc/>
         public override TopicName TopicName { get; }
 
         /// <inheritdoc/>
-        public override Task<string> PublishAsync(PubsubMessage message)
+        public override async Task<string> PublishAsync(PubsubMessage message)
         {
-            int messageByteCount = message.CalculateSize();
-            Task flowBlockTask;
-            while (true)
-            {
-                flowBlockTask = null;
-                lock (_lock)
-                {
-                    // Allow message of greater size than allowed by flow-control, if it's the only message 
-                    if (_queueElementCount >= _flowMaxOutstandingElementCount ||
-                        (_queueElementCount > 0 && _queueByteCount + messageByteCount > _flowMaxOutstandingRequestBytes))
-                    {
-                        switch (_flowLimitExceededBehavior)
-                        {
-                            case LimitExceededBehavior.Block:
-                                // Need to block, create the blocking Task if another thread hasn't already done so.
-                                if (_flowBlock == null)
-                                {
-                                    _flowBlock = new TaskCompletionSource<int>();
-                                }
-                                flowBlockTask = _flowBlock.Task;
-                                break;
-                            case LimitExceededBehavior.ThrowException:
-                                throw new FlowLimitExceededException();
-                            case LimitExceededBehavior.Ignore:
-                                break;
-                            default:
-                                throw new InvalidOperationException($"Unexpected LimitExceededBehavior: '{_flowLimitExceededBehavior}'");
-                        }
-                    }
-                    if (flowBlockTask == null)
-                    {
-                        // Not blocking, so increment flow-control queue counts.
-                        // Done before lock is released, to ensure other threads correctly honour flow-control.
-                        _queueElementCount += 1;
-                        _queueByteCount += messageByteCount;
-                        break;
-                    }
-                }
-                if (flowBlockTask != null)
-                {
-                    // If blocking, then wait for the blocking Task to complete.
-                    // This will complete when messages are removed from the queue for sending.
-                    _taskHelper.Wait(flowBlockTask);
-                }
-            };
-            return PublishAsyncPostFlow(message, messageByteCount);
-        }
-
-        private async Task<string> PublishAsyncPostFlow(PubsubMessage message, int messageByteCount)
-        {
+            CheckShutdown();
             Task<IList<string>> batchTask;
             int index;
+            int messageByteCount = message.CalculateSize();
             lock (_lock)
             {
+                // Update flow-control counts.
+                _queueElementCount += 1;
+                _queueByteCount += messageByteCount;
                 // Queue the current batch if this message would cause the batch to go over-byte-size
                 // (unless this would be the only message in the batch, then it's allowed).
                 QueueCurrentBatchIfRequired(false, messageByteCount);
@@ -324,9 +471,68 @@ namespace Google.Cloud.PubSub.V1
                 QueueCurrentBatchIfRequired(false, 0);
             }
             // Awaits until batch is sent and response received.
-            var ids = await _taskHelper.ConfigureAwait(batchTask);
+            IList<string> ids = await _taskHelper.ConfigureAwait(batchTask);
             // Return the message ID sent from the server.
             return ids[index];
+        }
+
+        /// <inheritdoc/>
+        public override FlowState GetCurrentFlowState() => _lock.Locked(() => new FlowState(_queueElementCount, _queueByteCount));
+
+        /// <inheritdoc/>
+        public override Task ShutdownAsync(CancellationToken hardStopToken)
+        {
+            lock (_lock)
+            {
+                CheckShutdown();
+                _softStopCts.Cancel();
+                QueueCurrentBatchIfRequired(true, 0);
+                var registration = hardStopToken.Register(() =>
+                {
+                    _hardStopCts.Cancel();
+                    ShutdownIfCompleted();
+                });
+                _taskHelper.Run(async () =>
+                {
+                    await _taskHelper.ConfigureAwaitHideErrors(_shutdownTcs.Task);
+                    registration.Dispose();
+                });
+                ShutdownIfCompleted();
+            }
+            return _shutdownTcs.Task;
+        }
+
+        private void CheckShutdown() => GaxPreconditions.CheckState(!_softStopCts.IsCancellationRequested, "Publisher already shutdown, cannot use");
+
+        private void ShutdownIfCompleted()
+        {
+            // Pre-condition: Must be locked if not a hard stop
+            if (_hardStopCts.IsCancellationRequested || (_softStopCts.IsCancellationRequested && _batchesInFlightCount == 0 && _batchesReady.Count == 0))
+            {
+                if (_shutdownLock.Locked(() => {
+                    var shutdownStarted = _shutdownStarted;
+                    _shutdownStarted = true;
+                    return !shutdownStarted;
+                }))
+                {
+                    // All batches sent and shutdown requested, so signal shutdown completed successfully.
+                    _taskHelper.Run(async () =>
+                    {
+                        if (_shutdown != null)
+                        {
+                            await _taskHelper.ConfigureAwaitHideErrors(_shutdown());
+                        }
+                        if (_hardStopCts.IsCancellationRequested)
+                        {
+                            _shutdownTcs.SetCanceled();
+                        }
+                        else
+                        {
+                            _shutdownTcs.SetResult(0);
+                        }
+                    });
+                }
+            }
         }
 
         // Not "async void" to gain standard async exeption handling
@@ -353,7 +559,7 @@ namespace Google.Cloud.PubSub.V1
         private void QueueCurrentBatchIfRequired(bool force, int extraByteCount)
         {
             // Pre-condition: Must be locked
-            if (force || (_currentBatch != null && CurrentBatchIsFull(_idleClients.Count == 0, extraByteCount)))
+            if (_currentBatch != null && (force || CurrentBatchIsFull(_idleClients.Count == 0, extraByteCount)))
             {
                 // Cancel the timeout for this batch.
                 _currentBatch.TimerCts.Cancel();
@@ -382,19 +588,14 @@ namespace Google.Cloud.PubSub.V1
                 // Remove client and batch from relevant queues.
                 var client = _idleClients.Dequeue();
                 var batch = _batchesReady.Dequeue();
+                _batchesInFlightCount += 1;
                 // Update flow-control counts.
                 _queueElementCount -= batch.Messages.Count;
                 _queueByteCount -= batch.ByteCount;
-                // If any threads are flow-control blocking, complete the blocking Task.
-                if (_flowBlock != null)
-                {
-                    _flowBlock.SetResult(0);
-                    _flowBlock = null;
-                }
                 // Perform the RPC to server, catching exceptions.
                 try
                 {
-                    var response = await _taskHelper.ConfigureAwait(client.PublishAsync(TopicName, batch.Messages));
+                    var response = await _taskHelper.ConfigureAwait(client.PublishAsync(TopicName, batch.Messages, CallSettings.FromCancellationToken(_hardStopCts.Token)));
                     batch.BatchCompletion.SetResult(response.MessageIds);
                 }
                 catch (Exception e)
@@ -404,7 +605,9 @@ namespace Google.Cloud.PubSub.V1
                 // A client is now idle. Record it, and see if a further batch is ready to send.
                 lock (_lock)
                 {
+                    _batchesInFlightCount -= 1;
                     _idleClients.Enqueue(client);
+                    ShutdownIfCompleted();
                     if (_batchesReady.Count > 0)
                     {
                         // Already a batch in the ready-queue, so just send it.

@@ -1,13 +1,24 @@
-﻿using Google.Api.Gax;
+﻿// Copyright 2017, Google Inc. All rights reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.PubSub.V1.Tasks;
-using Google.Protobuf;
 using Grpc.Auth;
 using Grpc.Core;
 using System;
-using System.Collections;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -28,31 +39,16 @@ namespace Google.Cloud.PubSub.V1
     /// </remarks>
     public abstract class HiPerfSubscriber
     {
-        /// <summary>
-        /// TODO
-        /// </summary>
-        public class ProvidedSubscriber
+        public sealed class ObjWithShutdown<T> where T : class
         {
-            /// <summary>
-            /// TODO
-            /// </summary>
-            /// <param name="client">TODO</param>
-            /// <param name="clientShutdown">TODO</param>
-            public ProvidedSubscriber(SubscriberClient client, Func<Task> clientShutdown)
+            public ObjWithShutdown(T obj, Func<Task> shutdown)
             {
-                Client = GaxPreconditions.CheckNotNull(client, nameof(client));
-                ClientShutdown = GaxPreconditions.CheckNotNull(clientShutdown, nameof(clientShutdown));
+                Obj = GaxPreconditions.CheckNotNull(obj, nameof(obj));
+                Shutdown = GaxPreconditions.CheckNotNull(shutdown, nameof(shutdown));
             }
 
-            /// <summary>
-            /// TODO
-            /// </summary>
-            public SubscriberClient Client { get; }
-
-            /// <summary>
-            /// TODO
-            /// </summary>
-            public Func<Task> ClientShutdown { get; }
+            public T Obj { get; }
+            public Func<Task> Shutdown { get; }
         }
 
         /// <summary>
@@ -83,14 +79,7 @@ namespace Google.Cloud.PubSub.V1
             /// If <c>null</c>, creates channels using the default PubSub endpoint
             /// and default credentials.
             /// </summary>
-            public Func<CancellationToken, Task<ProvidedSubscriber>> SubscriberProvider { get; set; }
-
-            /// <summary>
-            /// <see cref="SubscriberSettings"/> used when creating <see cref="SubscriberClient"/>
-            /// instances.
-            /// If <c>null</c>, uses default settings from <see cref="SubscriberSettings.GetDefault"/>.
-            /// </summary>
-            public SubscriberSettings SubscriberSettings { get; set; }
+            public Func<CancellationToken, Task<ObjWithShutdown<SubscriberClient>>> SubscriberProvider { get; set; }
 
             /// <summary>
             /// Flow control settings.
@@ -115,13 +104,6 @@ namespace Google.Cloud.PubSub.V1
             /// If <c>null</c>, uses the default of TODO seconds.
             /// </summary>
             public TimeSpan? AckExtensionWindow { get; set; }
-
-            // TODO: TaskFaction not yet used - is it needed?
-            /// <summary>
-            /// A custom <see cref="TaskFactory"/> used to execute message handlers.
-            /// If <c>null</c>, the system default <see cref="Task.Factory"/> is used. 
-            /// </summary>
-            public TaskFactory TaskFactory { get; set; }
 
             /// <summary>
             /// The <see cref="IScheduler"/> used to schedule delays.
@@ -167,7 +149,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="cancellationToken">TODO</param>
         /// <returns>TODO</returns>
-        protected static async Task<ProvidedSubscriber> DefaultSubscriberProvider(CancellationToken cancellationToken)
+        protected static async Task<ObjWithShutdown<SubscriberClient>> DefaultSubscriberProvider(CancellationToken cancellationToken)
         {
             // TODO: Use settings passed by user, if present
             var credentials = await s_credentials.Value.ConfigureAwait(false);
@@ -180,7 +162,7 @@ namespace Google.Cloud.PubSub.V1
                 channel.ShutdownAsync();
                 return Task.FromResult(0);
             }
-            return new ProvidedSubscriber(client, Shutdown);
+            return new ObjWithShutdown<SubscriberClient>(client, Shutdown);
         }
 
         /// <summary>
@@ -232,6 +214,8 @@ namespace Google.Cloud.PubSub.V1
     /// </summary>
     public sealed class HiPerfSubscriberImpl : HiPerfSubscriber
     {
+        public static int pushLoopCount = 0; // TODO: Remove
+        public static int[] counts = new int[15]; // TODO: Remove
         /// <summary>
         /// TODO
         /// </summary>
@@ -250,7 +234,8 @@ namespace Google.Cloud.PubSub.V1
         /// /// <param name="taskHelper">TODO</param>
         internal HiPerfSubscriberImpl(SubscriptionName subscriptionName, Settings settings, TaskHelper taskHelper)
         {
-            _subscriptionName = subscriptionName;
+            // TODO: Check settings is not null
+            _subscriptionName = subscriptionName; // TODO: Not null
             _subscriberCount = settings.ClientCount ?? 8; // TODO: what should the default be? 
             _subscriberProvider = settings.SubscriberProvider ?? DefaultSubscriberProvider;
             _modifyDeadlineSeconds = (int)(settings.StreamAckDeadline?.TotalSeconds ?? 60.0); // TODO: default, and verify value
@@ -262,12 +247,15 @@ namespace Google.Cloud.PubSub.V1
             _flowMaxByteCount = flowControlSettings.MaxOutstandingRequestBytes ?? long.MaxValue;
             _flowMaxElementCount = flowControlSettings.MaxOutstandingElementCount ?? long.MaxValue;
             var backoffSettings = settings.BackoffSettings ?? DefaultBackoffSettings();
+            _backoffDelay = backoffSettings.Delay;
+            _backoffMaxDelay = backoffSettings.MaxDelay;
+            _backoffMultiplier = backoffSettings.DelayMultiplier;
         }
 
         private readonly object _lock = new object();
         private readonly SubscriptionName _subscriptionName;
         private readonly int _subscriberCount;
-        private readonly Func<CancellationToken, Task<ProvidedSubscriber>> _subscriberProvider;
+        private readonly Func<CancellationToken, Task<ObjWithShutdown<SubscriberClient>>> _subscriberProvider;
         private readonly TimeSpan _autoExtendInterval; // Interval between message lease auto-extends
         private readonly int _modifyDeadlineSeconds; // Value to use as new deadline when lease auto-extends
         private readonly int _maxAckExtendCount; // Maximum count of acks/extends to push to server in a single messages
@@ -322,6 +310,7 @@ namespace Google.Cloud.PubSub.V1
                 }
                 else if (_stateManager.State == State.HardStop)
                 {
+                    Console.WriteLine("[StartAsync] Apparently this was a HARD-STOP");
                     _mainTcs.SetCanceled();
                 }
                 else
@@ -368,6 +357,7 @@ namespace Google.Cloud.PubSub.V1
             public Exception Exception => _exception;
             public void Set(State state)
             {
+                Console.WriteLine($"[StateManager.Set] state={state}");
                 _state = state;
                 foreach (var fn in _stateChangeFns)
                 {
@@ -376,6 +366,7 @@ namespace Google.Cloud.PubSub.V1
             }
             public void SetExceptionAndHardStop(Exception e)
             {
+                Console.WriteLine($"[SetExceptionAndHardStop] {e}");
                 _exception = e;
                 Set(State.HardStop);
             }
@@ -407,9 +398,10 @@ namespace Google.Cloud.PubSub.V1
 
             public async Task Process(long byteCount, Func<Task> fn)
             {
+                Task prevEventTask = null;
                 while (true)
                 {
-                    Task eventTask = null;
+                    Task eventTask;
                     lock (_lock)
                     {
                         if (IsFlowOk())
@@ -420,7 +412,12 @@ namespace Google.Cloud.PubSub.V1
                         }
                         eventTask = _event.Task;
                     }
+                    //if (prevEventTask == eventTask) counts[13] += 1;
+                    prevEventTask = eventTask;
+                    counts[8] += 1;
+                    if (eventTask.IsCompleted) counts[10] += 1;
                     await _taskHelper.ConfigureAwait(eventTask);
+                    counts[9] += 1;
                 }
                 _registerTaskFn(_taskHelper.Run(async () => await _taskHelper.ConfigureAwaitWithFinally(fn(), () =>
                 {
@@ -429,10 +426,15 @@ namespace Google.Cloud.PubSub.V1
                         bool preIsFlowOk = IsFlowOk();
                         _byteCount -= byteCount;
                         _elementCount -= 1;
+                        counts[11] += 1;
                         if (!preIsFlowOk && IsFlowOk())
                         {
-                            _event.SetResult(0);
+                            counts[12] += 1;
+                            var ev = _event;
                             _event = new TaskCompletionSource<int>();
+                            counts[13] += 1;
+                            ev.SetResult(0);
+                            counts[14] += 1;
                         }
                     }
                 })));
@@ -442,7 +444,7 @@ namespace Google.Cloud.PubSub.V1
         private class SingleChannel
         {
             public SingleChannel(SubscriptionName subscriptionName,
-                Func<CancellationToken, Task<ProvidedSubscriber>> subscriberProvider, Func<PubsubMessage, CancellationToken, Task<Reply>> handlerAsync,
+                Func<CancellationToken, Task<ObjWithShutdown<SubscriberClient>>> subscriberProvider, Func<PubsubMessage, CancellationToken, Task<Reply>> handlerAsync,
                 TimeSpan autoExtendInterval, int modifyDeadlineSeconds, int maxAckExtendCount, Flow flow,
                 TimeSpan backoffDelay, TimeSpan backoffMaxDelay, double backoffMultiplier,
                 Action<Task> registerTaskFn, IScheduler scheduler, TaskHelper taskHelper, StateManager stateManager)
@@ -472,7 +474,7 @@ namespace Google.Cloud.PubSub.V1
             }
 
             private SubscriptionName _subscriptionName;
-            private readonly Func<CancellationToken, Task<ProvidedSubscriber>> _subscriberProvider;
+            private readonly Func<CancellationToken, Task<ObjWithShutdown<SubscriberClient>>> _subscriberProvider;
             private readonly Func<PubsubMessage, CancellationToken, Task<Reply>> _handlerAsync;
             private readonly TimeSpan _autoExtendInterval;
             private readonly int _modifyDeadlineSeconds;
@@ -494,6 +496,11 @@ namespace Google.Cloud.PubSub.V1
             private int _unAckedMsgCount;
             private TaskCompletionSource<int> _qEvent = new TaskCompletionSource<int>();
 
+            //private void M(string s) => Console.WriteLine(s);
+            private void M(string s) { }
+
+            private static int __tempId = 0;
+
             public async Task Go()
             {
                 // The current backoff delay.
@@ -501,14 +508,20 @@ namespace Google.Cloud.PubSub.V1
                 // Loop to re-create subscriber if it fails.
                 while (!_hardStopCts.IsCancellationRequested)
                 {
+                    var tempId = (char)('A' + Interlocked.Increment(ref __tempId) - 1);
+
+                    M($"[Go:{tempId}] Start of outer loop");
                     // TODO: Log errors in _subscriberProvider
                     // If hard-cancelled, this cancels back to StartAsync().
-                    ProvidedSubscriber subscriber = null;
+                    ObjWithShutdown<SubscriberClient> subscriber = null;
                     SubscriberClient.StreamingPullStream pull = null;
                     try
                     {
+                        M($"[Go:{tempId}] About to get a new subscriber");
                         subscriber = await _taskHelper.ConfigureAwait(_subscriberProvider(_hardStopCts.Token));
-                        pull = subscriber.Client.StreamingPull(CallSettings.FromCancellationToken(_hardStopCts.Token), new BidirectionalStreamingSettings(1));
+                        M($"[Go:{tempId}] About to pull");
+                        pull = subscriber.Obj.StreamingPull(CallSettings.FromCancellationToken(_hardStopCts.Token), new BidirectionalStreamingSettings(/*1*/10));// TODO: Put back to 1 once bug fixed
+                        M($"[Go:{tempId}] Got pull");
                         // Initial call to start subscribe messages
                         await _taskHelper.ConfigureAwait(pull.WriteAsync(new StreamingPullRequest
                         {
@@ -517,35 +530,51 @@ namespace Google.Cloud.PubSub.V1
                         }));
                         // Start Push task which pushes acks and extends.
                         var faultOrSoftStopCts = CancellationTokenSource.CreateLinkedTokenSource(_softStopCts.Token);
-                        Task pushTask = Push(pull, faultOrSoftStopCts);
+                        Task pushTask = Push(pull, faultOrSoftStopCts, tempId);
                         // Read incoming messages whilst not stopped, and not in a fault condition.
-                        while (_stateManager.IsRunning && await _taskHelper.ConfigureAwaitHideCancellation(pull.ResponseStream.MoveNext(faultOrSoftStopCts.Token), false))
+                        M($"[Go:{tempId}] About to MoveNext()");
+                        // TODO!! Sort out cancellation. ResponseStream.MoveNext does not accept a cancellationtoken :(
+                        while (_stateManager.IsRunning && await _taskHelper.ConfigureAwaitHideCancellation(pull.ResponseStream.MoveNext(/*faultOrSoftStopCts.Token*/CancellationToken.None), false))
                         {
+                            if (!_stateManager.IsRunning || faultOrSoftStopCts.IsCancellationRequested) // TODO: Tidy this up now we can't cancel MoveNext()
+                            {
+                                break;
+                            }
                             var msgs = pull.ResponseStream.Current.ReceivedMessages;
+                            M($"[Go:{tempId}] MoveNext() true. msg-count:{msgs.Count}");
                             var ackIds = new HashSet<string>(msgs.Select(x => x.AckId));
                             var allMsgsHandledCts = CancellationTokenSource.CreateLinkedTokenSource(_hardStopCts.Token);
                             _registerTaskFn(AutoExtend(ackIds, allMsgsHandledCts.Token));
                             foreach (var msg in msgs)
                             {
+                                counts[6] += 1;
                                 if (!_stateManager.IsRunning)
                                 {
                                     break;
                                 }
+                                // Returned Task completes once flow-control is satisfied.
                                 await _taskHelper.ConfigureAwaitHideCancellation(_flow.Process(msg.CalculateSize(), async () =>
                                 {
+                                    counts[0] += 1;
                                     // IsRunning check and _unAckedMsgCount must be atomic (or _unAckedMsgCount could be done before IsRunning check)
                                     // to avoid a Push() shutdown race condition.
                                     if (_qLock.Locked(() =>
                                     {
+                                        counts[1] += 1;
                                         bool isRunning = _stateManager.IsRunning;
                                         _unAckedMsgCount += isRunning ? 1 : 0;
                                         return isRunning;
                                     }))
                                     {
+                                        counts[2] += 1;
                                         // TODO: Log errors in user handler
+                                        M($"[Go:{tempId}] About to user-handle msg '{msg.Message.Data.ToStringUtf8()}'");
                                         var reply = await _taskHelper.ConfigureAwaitHideErrors(_handlerAsync(msg.Message, _hardStopCts.Token), Reply.Nack);
+                                        M($"[Go:{tempId}] User-handled msg '{msg.Message.Data.ToStringUtf8()}'. Reply:{reply}");
+                                        counts[3] += 1;
                                         lock (_qLock)
                                         {
+                                            counts[4] += 1;
                                             if (reply == Reply.Ack)
                                             {
                                                 ackIds.Remove(msg.AckId);
@@ -559,11 +588,20 @@ namespace Google.Cloud.PubSub.V1
                                             }
                                         }
                                     }
+                                    counts[5] += 1;
                                 }));
+                                counts[7] += 1;
                             }
                         }
+                        M($"[Go:{tempId}] MoveNext() false (or stopped)");
                         _qLock.Locked(() => _qEvent.TrySetResult(0));
                         await _taskHelper.ConfigureAwaitHideErrors(pushTask);
+                    }
+                    catch (Exception e) when (e.As<RpcException>()?.Status.StatusCode == StatusCode.Cancelled && !_stateManager.IsRunning)
+                    {
+                        // Do nothing.
+                        // MoveNext() has been cancelled as part of the shutdown process
+                        M($"[Go:{tempId}] Controlled GRPC cancel");
                     }
                     catch (Exception e) when (e.As<RpcException>()?.IsRecoverable() ?? false)
                     {
@@ -578,6 +616,7 @@ namespace Google.Cloud.PubSub.V1
                     }
                     catch (Exception e) when (!e.IsCancellation())
                     {
+                        M($"[Go] EXCEPTION, not cancellation. {e}");
                         // Unrecoverable exception, log and stop the subscriber
                         // TODO: Log exception
                         // Hard-stop on unrecoverable error. This stops all other Tasks and subscribers.
@@ -586,6 +625,7 @@ namespace Google.Cloud.PubSub.V1
                     }
                     finally
                     {
+                        M($"[Go:{tempId}] pull != null: {pull != null}; subscriber != null:{subscriber != null}");
                         // Try to cleanly shutdown the subscriber. This may or may not be possible
                         // depending on the state of the subscriber; ignore all errors.
                         if (pull != null)
@@ -602,7 +642,7 @@ namespace Google.Cloud.PubSub.V1
                             // TODO: Log errors
                             try
                             {
-                                _registerTaskFn(subscriber.ClientShutdown());
+                                _registerTaskFn(subscriber.Shutdown());
                             }
                             catch { }
                         }
@@ -624,13 +664,15 @@ namespace Google.Cloud.PubSub.V1
                 }
             }
 
-            private async Task Push(SubscriberClient.StreamingPullStream pull, CancellationTokenSource faultCts)
+            private async Task Push(SubscriberClient.StreamingPullStream pull, CancellationTokenSource faultCts, object tempId)
             {
                 try
                 {
                     while (true)
                     {
+                        Interlocked.Increment(ref pushLoopCount);
                         await _taskHelper.ConfigureAwait(_qLock.Locked(() => _qEvent.Task));
+                        Interlocked.Increment(ref pushLoopCount);
                         List<string> acks = new List<string>();
                         List<string> extends = new List<string>();
                         lock (_qLock)
@@ -655,20 +697,33 @@ namespace Google.Cloud.PubSub.V1
                                 extends.Add(_extendQueue.Dequeue());
                             }
                         }
+                        M($"[Push:{tempId}] acks.Count:{acks.Count}, extends.Count:{extends.Count}");
                         // If anything to be sent, then send it now
                         if (acks.Count > 0 || extends.Count > 0)
                         {
-                            await _taskHelper.ConfigureAwait(pull.WriteAsync(new StreamingPullRequest
+                            M($"[Push:{tempId}] AA");
+                            try
                             {
-                                AckIds = { acks },
-                                ModifyDeadlineAckIds = { extends },
-                                ModifyDeadlineSeconds = { extends.Select(_ => _modifyDeadlineSeconds) },
-                            }));
+                                await _taskHelper.ConfigureAwait(pull.WriteAsync(new StreamingPullRequest
+                                {
+                                    AckIds = { acks },
+                                    ModifyDeadlineAckIds = { extends },
+                                    ModifyDeadlineSeconds = { extends.Select(_ => _modifyDeadlineSeconds) },
+                                }));
+                            }catch (Exception e)
+                            {
+                                M($"[Push:{tempId}] EXCEPTION {e}");
+                                throw;
+                            }
+                            M($"[Push:{tempId}] BB");
                             // Decrement _unAckedMsgCount by the number of acks just successfully sent.
                             _qLock.Locked(() => _unAckedMsgCount -= acks.Count);
+                            M($"[Push:{tempId}] CC");
                         }
+                        M($"[Push:{tempId}] _stateManager.IsRunning:{_stateManager.IsRunning}  _unAckedMsgCount:{_qLock.Locked(() => _unAckedMsgCount)}");
                         if (!_stateManager.IsRunning && _qLock.Locked(() => _unAckedMsgCount == 0))
                         {
+                            M($"[Push:{tempId}] not running, and all acks sent.");
                             // All acks sent and a soft-stop has been requested, so cancel _hardStopCts
                             // to signal this SingleChannel has completed; then exit Pusher
                             _hardStopCts.Cancel();
