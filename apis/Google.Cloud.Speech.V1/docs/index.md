@@ -56,7 +56,7 @@ request, and get a single response with the result of the analysis.
 
 The LongRunningRecognize method still requires all of the audio data to be
 passed in a single request, but the response from the RPC is a
-Google.Longrunning.Operation, representing an operation which could
+Google.LongRunning.Operation, representing an operation which could
 take some time to complete. It contains a token which can be used to
 retrieve the results later - you can think of it as a more
 persistent and remote `Task<T>` to a first approximation.
