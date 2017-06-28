@@ -64,16 +64,22 @@ namespace Google.Cloud.Tools.TagReleases
             var tags = (await client.Repository.GetAllTags(RepositoryOwner, RepositoryName)).Select(tag => tag.Name);
 
             var apis = LoadApis();
-            var noChange = apis.Where(api => tags.Contains($"{api.Id}-{api.Version}")).ToList();
+            var noChange = apis.Where(api => tags.Contains($"{api.Id}-{api.Version}") || api.Version.EndsWith("00")).ToList();
             var changed = apis.Except(noChange).ToList();
 
-            Console.WriteLine("APIs already tagged at current version:");
+            Console.WriteLine("APIs already tagged at current version (or not ready for release):");
             noChange.ForEach(Console.WriteLine);
             Console.WriteLine();
             Console.WriteLine("APIs requiring a new release:");
             changed.ForEach(Console.WriteLine);
 
             Console.WriteLine();
+
+            if (!changed.Any())
+            {
+                Console.WriteLine("No releases need to be created. Exiting.");
+                return;
+            }
 
             Console.WriteLine("Go ahead and create releases? (y/n)");
             string response = Console.ReadLine();
