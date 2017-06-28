@@ -90,6 +90,18 @@
                   <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_Create_Google_Apis_Auth_OAuth2_GoogleCredential_Google_Cloud_Storage_V1_EncryptionKey_">StorageClient.Create(GoogleCredential, EncryptionKey)</a>
                 </div>
                 <div>
+                  <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_SetBucketLabel_System_String_System_String_System_String_Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_">StorageClient.SetBucketLabel(String, String, String, ModifyBucketLabelsOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_RemoveBucketLabel_System_String_System_String_Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_">StorageClient.RemoveBucketLabel(String, String, ModifyBucketLabelsOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_SetBucketLabelAsync_System_String_System_String_System_String_Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_System_Threading_CancellationToken_">StorageClient.SetBucketLabelAsync(String, String, String, ModifyBucketLabelsOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_RemoveBucketLabelAsync_System_String_System_String_Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_System_Threading_CancellationToken_">StorageClient.RemoveBucketLabelAsync(String, String, ModifyBucketLabelsOptions, CancellationToken)</a>
+                </div>
+                <div>
                   <span class="xref">System.Object.ToString()</span>
                 </div>
                 <div>
@@ -244,6 +256,114 @@ application naming etc).</p>
 </div>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Cloud_Storage_V1_StorageClientImpl_ClearBucketLabels_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ClearBucketLabels*"></a>
+              <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_ClearBucketLabels_System_String_Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ClearBucketLabels(System.String,Google.Cloud.Storage.V1.ModifyBucketLabelsOptions)">ClearBucketLabels(String, ModifyBucketLabelsOptions)</h4>
+              <div class="markdown level1 summary"><p>Clears all labels on a bucket.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override IDictionary&lt;string, string&gt; ClearBucketLabels(string bucket, ModifyBucketLabelsOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">bucket</span></td>
+                    <td><p>The name of the bucket. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.ModifyBucketLabelsOptions.html">ModifyBucketLabelsOptions</a></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+                    <td><p>A dictionary with the labels on the bucket before they were cleared.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ClearBucketLabels_System_String_Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_">StorageClient.ClearBucketLabels(String, ModifyBucketLabelsOptions)</a></div>
+              <a id="Google_Cloud_Storage_V1_StorageClientImpl_ClearBucketLabelsAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ClearBucketLabelsAsync*"></a>
+              <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_ClearBucketLabelsAsync_System_String_Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ClearBucketLabelsAsync(System.String,Google.Cloud.Storage.V1.ModifyBucketLabelsOptions,System.Threading.CancellationToken)">ClearBucketLabelsAsync(String, ModifyBucketLabelsOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Clears all labels on a bucket asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;IDictionary&lt;string, string&gt;&gt; ClearBucketLabelsAsync(string bucket, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">bucket</span></td>
+                    <td><p>The name of the bucket. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.ModifyBucketLabelsOptions.html">ModifyBucketLabelsOptions</a></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+                    <td><p>A dictionary with the labels on the bucket before they were cleared.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ClearBucketLabelsAsync_System_String_Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_System_Threading_CancellationToken_">StorageClient.ClearBucketLabelsAsync(String, ModifyBucketLabelsOptions, CancellationToken)</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_CopyObject_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CopyObject*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_CopyObject_System_String_System_String_System_String_System_String_Google_Cloud_Storage_V1_CopyObjectOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CopyObject(System.String,System.String,System.String,System.String,Google.Cloud.Storage.V1.CopyObjectOptions)">CopyObject(String, String, String, String, CopyObjectOptions)</h4>
               <div class="markdown level1 summary"><p>Creates a copy of an object synchronously, potentially to a different bucket. This method uses the
@@ -2087,6 +2207,142 @@ defaults will be supplied.</p>
               <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_ListObjectsAsync_System_String_System_String_Google_Cloud_Storage_V1_ListObjectsOptions__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This method fetches the objects lazily, making requests to the underlying service
 for a page of results at a time, as required.</p>
+</div>
+              <a id="Google_Cloud_Storage_V1_StorageClientImpl_ModifyBucketLabels_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ModifyBucketLabels*"></a>
+              <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_ModifyBucketLabels_System_String_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ModifyBucketLabels(System.String,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.Storage.V1.ModifyBucketLabelsOptions)">ModifyBucketLabels(String, IDictionary&lt;String, String&gt;, ModifyBucketLabelsOptions)</h4>
+              <div class="markdown level1 summary"><p>Sets or removes one or more labels on a bucket.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override IDictionary&lt;string, string&gt; ModifyBucketLabels(string bucket, IDictionary&lt;string, string&gt; labels, ModifyBucketLabelsOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">bucket</span></td>
+                    <td><p>The name of the bucket. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+                    <td><span class="parametername">labels</span></td>
+                    <td><p>The labels to set. Must contain at least one entry; keys must not be null, but values
+may be (indicating label removal).</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.ModifyBucketLabelsOptions.html">ModifyBucketLabelsOptions</a></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+                    <td><p>A dictionary with the same keys as <span class="paramref">labels</span>, and values indicating the corresponding label value
+before this operation completed. Labels which weren&#39;t present on the bucket before the modification have corresponding
+null values in the returned dictionary.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ModifyBucketLabels_System_String_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_">StorageClient.ModifyBucketLabels(String, IDictionary&lt;String, String&gt;, ModifyBucketLabelsOptions)</a></div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_ModifyBucketLabels_System_String_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_Storage_V1_ModifyBucketLabelsOptions__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Each entry in <span class="paramref">labels</span> is treated as a label to set or remove. If the value is null,
+it will be removed from the bucket; otherwise, it will be set/added. Labels which do not have an entry
+in the dictionary will be ignored.</p>
+</div>
+              <a id="Google_Cloud_Storage_V1_StorageClientImpl_ModifyBucketLabelsAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ModifyBucketLabelsAsync*"></a>
+              <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_ModifyBucketLabelsAsync_System_String_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ModifyBucketLabelsAsync(System.String,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.Storage.V1.ModifyBucketLabelsOptions,System.Threading.CancellationToken)">ModifyBucketLabelsAsync(String, IDictionary&lt;String, String&gt;, ModifyBucketLabelsOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Sets or removes one or more labels on a bucket asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;IDictionary&lt;string, string&gt;&gt; ModifyBucketLabelsAsync(string bucket, IDictionary&lt;string, string&gt; labels, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">bucket</span></td>
+                    <td><p>The name of the bucket. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+                    <td><span class="parametername">labels</span></td>
+                    <td><p>The labels to set. Must contain at least one entry; keys must not be null, but values
+may be (indicating label removal).</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.ModifyBucketLabelsOptions.html">ModifyBucketLabelsOptions</a></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+                    <td><p>A dictionary with the same keys as <span class="paramref">labels</span>, and values indicating the corresponding label value
+before this operation completed. Labels which weren&#39;t present on the bucket before the modification have corresponding
+null values in the returned dictionary.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ModifyBucketLabelsAsync_System_String_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_System_Threading_CancellationToken_">StorageClient.ModifyBucketLabelsAsync(String, IDictionary&lt;String, String&gt;, ModifyBucketLabelsOptions, CancellationToken)</a></div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_ModifyBucketLabelsAsync_System_String_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Each entry in <span class="paramref">labels</span> is treated as a label to set or remove. If the value is null,
+it will be removed from the bucket; otherwise, it will be set/added. Labels which do not have an entry
+in the dictionary will be ignored.</p>
 </div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_PatchBucket_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.PatchBucket*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_PatchBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_PatchBucketOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.PatchBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.PatchBucketOptions)">PatchBucket(Bucket, PatchBucketOptions)</h4>

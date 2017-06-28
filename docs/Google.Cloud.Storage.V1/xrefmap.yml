@@ -13037,6 +13037,18 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.CopyObjectOptions.SourceGeneration
   fullName: Google.Cloud.Storage.V1.CopyObjectOptions.SourceGeneration
   nameWithType: CopyObjectOptions.SourceGeneration
+- uid: Google.Cloud.Storage.V1.CopyObjectOptions.UserProject
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.CopyObjectOptions.html#Google_Cloud_Storage_V1_CopyObjectOptions_UserProject
+  commentId: P:Google.Cloud.Storage.V1.CopyObjectOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.CopyObjectOptions.UserProject
+  nameWithType: CopyObjectOptions.UserProject
+- uid: Google.Cloud.Storage.V1.CopyObjectOptions.UserProject*
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.CopyObjectOptions.html#Google_Cloud_Storage_V1_CopyObjectOptions_UserProject_
+  commentId: Overload:Google.Cloud.Storage.V1.CopyObjectOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.CopyObjectOptions.UserProject
+  nameWithType: CopyObjectOptions.UserProject
 - uid: Google.Cloud.Storage.V1.CreateBucketOptions
   name: CreateBucketOptions
   href: api/Google.Cloud.Storage.V1.CreateBucketOptions.html
@@ -13109,6 +13121,18 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.DeleteBucketOptions.IfMetagenerationNotMatch
   fullName: Google.Cloud.Storage.V1.DeleteBucketOptions.IfMetagenerationNotMatch
   nameWithType: DeleteBucketOptions.IfMetagenerationNotMatch
+- uid: Google.Cloud.Storage.V1.DeleteBucketOptions.UserProject
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.DeleteBucketOptions.html#Google_Cloud_Storage_V1_DeleteBucketOptions_UserProject
+  commentId: P:Google.Cloud.Storage.V1.DeleteBucketOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.DeleteBucketOptions.UserProject
+  nameWithType: DeleteBucketOptions.UserProject
+- uid: Google.Cloud.Storage.V1.DeleteBucketOptions.UserProject*
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.DeleteBucketOptions.html#Google_Cloud_Storage_V1_DeleteBucketOptions_UserProject_
+  commentId: Overload:Google.Cloud.Storage.V1.DeleteBucketOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.DeleteBucketOptions.UserProject
+  nameWithType: DeleteBucketOptions.UserProject
 - uid: Google.Cloud.Storage.V1.DeleteObjectOptions
   name: DeleteObjectOptions
   href: api/Google.Cloud.Storage.V1.DeleteObjectOptions.html
@@ -13175,6 +13199,18 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.DeleteObjectOptions.IfMetagenerationNotMatch
   fullName: Google.Cloud.Storage.V1.DeleteObjectOptions.IfMetagenerationNotMatch
   nameWithType: DeleteObjectOptions.IfMetagenerationNotMatch
+- uid: Google.Cloud.Storage.V1.DeleteObjectOptions.UserProject
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.DeleteObjectOptions.html#Google_Cloud_Storage_V1_DeleteObjectOptions_UserProject
+  commentId: P:Google.Cloud.Storage.V1.DeleteObjectOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.DeleteObjectOptions.UserProject
+  nameWithType: DeleteObjectOptions.UserProject
+- uid: Google.Cloud.Storage.V1.DeleteObjectOptions.UserProject*
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.DeleteObjectOptions.html#Google_Cloud_Storage_V1_DeleteObjectOptions_UserProject_
+  commentId: Overload:Google.Cloud.Storage.V1.DeleteObjectOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.DeleteObjectOptions.UserProject
+  nameWithType: DeleteObjectOptions.UserProject
 - uid: Google.Cloud.Storage.V1.DownloadObjectOptions
   name: DownloadObjectOptions
   href: api/Google.Cloud.Storage.V1.DownloadObjectOptions.html
@@ -13277,6 +13313,18 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.DownloadObjectOptions.Range
   fullName: Google.Cloud.Storage.V1.DownloadObjectOptions.Range
   nameWithType: DownloadObjectOptions.Range
+- uid: Google.Cloud.Storage.V1.DownloadObjectOptions.UserProject
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.DownloadObjectOptions.html#Google_Cloud_Storage_V1_DownloadObjectOptions_UserProject
+  commentId: P:Google.Cloud.Storage.V1.DownloadObjectOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.DownloadObjectOptions.UserProject
+  nameWithType: DownloadObjectOptions.UserProject
+- uid: Google.Cloud.Storage.V1.DownloadObjectOptions.UserProject*
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.DownloadObjectOptions.html#Google_Cloud_Storage_V1_DownloadObjectOptions_UserProject_
+  commentId: Overload:Google.Cloud.Storage.V1.DownloadObjectOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.DownloadObjectOptions.UserProject
+  nameWithType: DownloadObjectOptions.UserProject
 - uid: Google.Cloud.Storage.V1.EncryptionKey
   name: EncryptionKey
   href: api/Google.Cloud.Storage.V1.EncryptionKey.html
@@ -13376,6 +13424,18 @@ references:
   commentId: T:Google.Cloud.Storage.V1.GetBucketIamPolicyOptions
   fullName: Google.Cloud.Storage.V1.GetBucketIamPolicyOptions
   nameWithType: GetBucketIamPolicyOptions
+- uid: Google.Cloud.Storage.V1.GetBucketIamPolicyOptions.UserProject
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.GetBucketIamPolicyOptions.html#Google_Cloud_Storage_V1_GetBucketIamPolicyOptions_UserProject
+  commentId: P:Google.Cloud.Storage.V1.GetBucketIamPolicyOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.GetBucketIamPolicyOptions.UserProject
+  nameWithType: GetBucketIamPolicyOptions.UserProject
+- uid: Google.Cloud.Storage.V1.GetBucketIamPolicyOptions.UserProject*
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.GetBucketIamPolicyOptions.html#Google_Cloud_Storage_V1_GetBucketIamPolicyOptions_UserProject_
+  commentId: Overload:Google.Cloud.Storage.V1.GetBucketIamPolicyOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.GetBucketIamPolicyOptions.UserProject
+  nameWithType: GetBucketIamPolicyOptions.UserProject
 - uid: Google.Cloud.Storage.V1.GetBucketOptions
   name: GetBucketOptions
   href: api/Google.Cloud.Storage.V1.GetBucketOptions.html
@@ -13418,6 +13478,18 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.GetBucketOptions.Projection
   fullName: Google.Cloud.Storage.V1.GetBucketOptions.Projection
   nameWithType: GetBucketOptions.Projection
+- uid: Google.Cloud.Storage.V1.GetBucketOptions.UserProject
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.GetBucketOptions.html#Google_Cloud_Storage_V1_GetBucketOptions_UserProject
+  commentId: P:Google.Cloud.Storage.V1.GetBucketOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.GetBucketOptions.UserProject
+  nameWithType: GetBucketOptions.UserProject
+- uid: Google.Cloud.Storage.V1.GetBucketOptions.UserProject*
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.GetBucketOptions.html#Google_Cloud_Storage_V1_GetBucketOptions_UserProject_
+  commentId: Overload:Google.Cloud.Storage.V1.GetBucketOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.GetBucketOptions.UserProject
+  nameWithType: GetBucketOptions.UserProject
 - uid: Google.Cloud.Storage.V1.GetObjectOptions
   name: GetObjectOptions
   href: api/Google.Cloud.Storage.V1.GetObjectOptions.html
@@ -13508,6 +13580,18 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.GetObjectOptions.Projection
   fullName: Google.Cloud.Storage.V1.GetObjectOptions.Projection
   nameWithType: GetObjectOptions.Projection
+- uid: Google.Cloud.Storage.V1.GetObjectOptions.UserProject
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.GetObjectOptions.html#Google_Cloud_Storage_V1_GetObjectOptions_UserProject
+  commentId: P:Google.Cloud.Storage.V1.GetObjectOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.GetObjectOptions.UserProject
+  nameWithType: GetObjectOptions.UserProject
+- uid: Google.Cloud.Storage.V1.GetObjectOptions.UserProject*
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.GetObjectOptions.html#Google_Cloud_Storage_V1_GetObjectOptions_UserProject_
+  commentId: Overload:Google.Cloud.Storage.V1.GetObjectOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.GetObjectOptions.UserProject
+  nameWithType: GetObjectOptions.UserProject
 - uid: Google.Cloud.Storage.V1.ListBucketsOptions
   name: ListBucketsOptions
   href: api/Google.Cloud.Storage.V1.ListBucketsOptions.html
@@ -13592,6 +13676,18 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.ListObjectsOptions.Projection
   fullName: Google.Cloud.Storage.V1.ListObjectsOptions.Projection
   nameWithType: ListObjectsOptions.Projection
+- uid: Google.Cloud.Storage.V1.ListObjectsOptions.UserProject
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.ListObjectsOptions.html#Google_Cloud_Storage_V1_ListObjectsOptions_UserProject
+  commentId: P:Google.Cloud.Storage.V1.ListObjectsOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.ListObjectsOptions.UserProject
+  nameWithType: ListObjectsOptions.UserProject
+- uid: Google.Cloud.Storage.V1.ListObjectsOptions.UserProject*
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.ListObjectsOptions.html#Google_Cloud_Storage_V1_ListObjectsOptions_UserProject_
+  commentId: Overload:Google.Cloud.Storage.V1.ListObjectsOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.ListObjectsOptions.UserProject
+  nameWithType: ListObjectsOptions.UserProject
 - uid: Google.Cloud.Storage.V1.ListObjectsOptions.Versions
   name: Versions
   href: api/Google.Cloud.Storage.V1.ListObjectsOptions.html#Google_Cloud_Storage_V1_ListObjectsOptions_Versions
@@ -13604,6 +13700,36 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.ListObjectsOptions.Versions
   fullName: Google.Cloud.Storage.V1.ListObjectsOptions.Versions
   nameWithType: ListObjectsOptions.Versions
+- uid: Google.Cloud.Storage.V1.ModifyBucketLabelsOptions
+  name: ModifyBucketLabelsOptions
+  href: api/Google.Cloud.Storage.V1.ModifyBucketLabelsOptions.html
+  commentId: T:Google.Cloud.Storage.V1.ModifyBucketLabelsOptions
+  fullName: Google.Cloud.Storage.V1.ModifyBucketLabelsOptions
+  nameWithType: ModifyBucketLabelsOptions
+- uid: Google.Cloud.Storage.V1.ModifyBucketLabelsOptions.IfMetagenerationMatch
+  name: IfMetagenerationMatch
+  href: api/Google.Cloud.Storage.V1.ModifyBucketLabelsOptions.html#Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_IfMetagenerationMatch
+  commentId: P:Google.Cloud.Storage.V1.ModifyBucketLabelsOptions.IfMetagenerationMatch
+  fullName: Google.Cloud.Storage.V1.ModifyBucketLabelsOptions.IfMetagenerationMatch
+  nameWithType: ModifyBucketLabelsOptions.IfMetagenerationMatch
+- uid: Google.Cloud.Storage.V1.ModifyBucketLabelsOptions.IfMetagenerationMatch*
+  name: IfMetagenerationMatch
+  href: api/Google.Cloud.Storage.V1.ModifyBucketLabelsOptions.html#Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_IfMetagenerationMatch_
+  commentId: Overload:Google.Cloud.Storage.V1.ModifyBucketLabelsOptions.IfMetagenerationMatch
+  fullName: Google.Cloud.Storage.V1.ModifyBucketLabelsOptions.IfMetagenerationMatch
+  nameWithType: ModifyBucketLabelsOptions.IfMetagenerationMatch
+- uid: Google.Cloud.Storage.V1.ModifyBucketLabelsOptions.Retries
+  name: Retries
+  href: api/Google.Cloud.Storage.V1.ModifyBucketLabelsOptions.html#Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_Retries
+  commentId: P:Google.Cloud.Storage.V1.ModifyBucketLabelsOptions.Retries
+  fullName: Google.Cloud.Storage.V1.ModifyBucketLabelsOptions.Retries
+  nameWithType: ModifyBucketLabelsOptions.Retries
+- uid: Google.Cloud.Storage.V1.ModifyBucketLabelsOptions.Retries*
+  name: Retries
+  href: api/Google.Cloud.Storage.V1.ModifyBucketLabelsOptions.html#Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_Retries_
+  commentId: Overload:Google.Cloud.Storage.V1.ModifyBucketLabelsOptions.Retries
+  fullName: Google.Cloud.Storage.V1.ModifyBucketLabelsOptions.Retries
+  nameWithType: ModifyBucketLabelsOptions.Retries
 - uid: Google.Cloud.Storage.V1.PatchBucketOptions
   name: PatchBucketOptions
   href: api/Google.Cloud.Storage.V1.PatchBucketOptions.html
@@ -13670,6 +13796,18 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.PatchBucketOptions.Projection
   fullName: Google.Cloud.Storage.V1.PatchBucketOptions.Projection
   nameWithType: PatchBucketOptions.Projection
+- uid: Google.Cloud.Storage.V1.PatchBucketOptions.UserProject
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.PatchBucketOptions.html#Google_Cloud_Storage_V1_PatchBucketOptions_UserProject
+  commentId: P:Google.Cloud.Storage.V1.PatchBucketOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.PatchBucketOptions.UserProject
+  nameWithType: PatchBucketOptions.UserProject
+- uid: Google.Cloud.Storage.V1.PatchBucketOptions.UserProject*
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.PatchBucketOptions.html#Google_Cloud_Storage_V1_PatchBucketOptions_UserProject_
+  commentId: Overload:Google.Cloud.Storage.V1.PatchBucketOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.PatchBucketOptions.UserProject
+  nameWithType: PatchBucketOptions.UserProject
 - uid: Google.Cloud.Storage.V1.PatchObjectOptions
   name: PatchObjectOptions
   href: api/Google.Cloud.Storage.V1.PatchObjectOptions.html
@@ -13772,6 +13910,18 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.PatchObjectOptions.Projection
   fullName: Google.Cloud.Storage.V1.PatchObjectOptions.Projection
   nameWithType: PatchObjectOptions.Projection
+- uid: Google.Cloud.Storage.V1.PatchObjectOptions.UserProject
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.PatchObjectOptions.html#Google_Cloud_Storage_V1_PatchObjectOptions_UserProject
+  commentId: P:Google.Cloud.Storage.V1.PatchObjectOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.PatchObjectOptions.UserProject
+  nameWithType: PatchObjectOptions.UserProject
+- uid: Google.Cloud.Storage.V1.PatchObjectOptions.UserProject*
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.PatchObjectOptions.html#Google_Cloud_Storage_V1_PatchObjectOptions_UserProject_
+  commentId: Overload:Google.Cloud.Storage.V1.PatchObjectOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.PatchObjectOptions.UserProject
+  nameWithType: PatchObjectOptions.UserProject
 - uid: Google.Cloud.Storage.V1.PredefinedBucketAcl
   name: PredefinedBucketAcl
   href: api/Google.Cloud.Storage.V1.PredefinedBucketAcl.html
@@ -13874,6 +14024,18 @@ references:
   commentId: T:Google.Cloud.Storage.V1.SetBucketIamPolicyOptions
   fullName: Google.Cloud.Storage.V1.SetBucketIamPolicyOptions
   nameWithType: SetBucketIamPolicyOptions
+- uid: Google.Cloud.Storage.V1.SetBucketIamPolicyOptions.UserProject
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.SetBucketIamPolicyOptions.html#Google_Cloud_Storage_V1_SetBucketIamPolicyOptions_UserProject
+  commentId: P:Google.Cloud.Storage.V1.SetBucketIamPolicyOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.SetBucketIamPolicyOptions.UserProject
+  nameWithType: SetBucketIamPolicyOptions.UserProject
+- uid: Google.Cloud.Storage.V1.SetBucketIamPolicyOptions.UserProject*
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.SetBucketIamPolicyOptions.html#Google_Cloud_Storage_V1_SetBucketIamPolicyOptions_UserProject_
+  commentId: Overload:Google.Cloud.Storage.V1.SetBucketIamPolicyOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.SetBucketIamPolicyOptions.UserProject
+  nameWithType: SetBucketIamPolicyOptions.UserProject
 - uid: Google.Cloud.Storage.V1.SignedUrlResumableUpload
   name: SignedUrlResumableUpload
   href: api/Google.Cloud.Storage.V1.SignedUrlResumableUpload.html
@@ -13970,6 +14132,30 @@ references:
   commentId: T:Google.Cloud.Storage.V1.StorageClient
   fullName: Google.Cloud.Storage.V1.StorageClient
   nameWithType: StorageClient
+- uid: Google.Cloud.Storage.V1.StorageClient.ClearBucketLabels(System.String,Google.Cloud.Storage.V1.ModifyBucketLabelsOptions)
+  name: ClearBucketLabels(String, ModifyBucketLabelsOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ClearBucketLabels_System_String_Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.ClearBucketLabels(System.String,Google.Cloud.Storage.V1.ModifyBucketLabelsOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClient.ClearBucketLabels(System.String, Google.Cloud.Storage.V1.ModifyBucketLabelsOptions)
+  nameWithType: StorageClient.ClearBucketLabels(String, ModifyBucketLabelsOptions)
+- uid: Google.Cloud.Storage.V1.StorageClient.ClearBucketLabels*
+  name: ClearBucketLabels
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ClearBucketLabels_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.ClearBucketLabels
+  fullName: Google.Cloud.Storage.V1.StorageClient.ClearBucketLabels
+  nameWithType: StorageClient.ClearBucketLabels
+- uid: Google.Cloud.Storage.V1.StorageClient.ClearBucketLabelsAsync(System.String,Google.Cloud.Storage.V1.ModifyBucketLabelsOptions,System.Threading.CancellationToken)
+  name: ClearBucketLabelsAsync(String, ModifyBucketLabelsOptions, CancellationToken)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ClearBucketLabelsAsync_System_String_Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.ClearBucketLabelsAsync(System.String,Google.Cloud.Storage.V1.ModifyBucketLabelsOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Storage.V1.StorageClient.ClearBucketLabelsAsync(System.String, Google.Cloud.Storage.V1.ModifyBucketLabelsOptions, System.Threading.CancellationToken)
+  nameWithType: StorageClient.ClearBucketLabelsAsync(String, ModifyBucketLabelsOptions, CancellationToken)
+- uid: Google.Cloud.Storage.V1.StorageClient.ClearBucketLabelsAsync*
+  name: ClearBucketLabelsAsync
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ClearBucketLabelsAsync_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.ClearBucketLabelsAsync
+  fullName: Google.Cloud.Storage.V1.StorageClient.ClearBucketLabelsAsync
+  nameWithType: StorageClient.ClearBucketLabelsAsync
 - uid: Google.Cloud.Storage.V1.StorageClient.CopyObject(System.String,System.String,System.String,System.String,Google.Cloud.Storage.V1.CopyObjectOptions)
   name: CopyObject(String, String, String, String, CopyObjectOptions)
   href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CopyObject_System_String_System_String_System_String_System_String_Google_Cloud_Storage_V1_CopyObjectOptions_
@@ -14324,6 +14510,36 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClient.ListObjectsAsync
   fullName: Google.Cloud.Storage.V1.StorageClient.ListObjectsAsync
   nameWithType: StorageClient.ListObjectsAsync
+- uid: Google.Cloud.Storage.V1.StorageClient.ModifyBucketLabels(System.String,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.Storage.V1.ModifyBucketLabelsOptions)
+  name: ModifyBucketLabels(String, IDictionary<String, String>, ModifyBucketLabelsOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ModifyBucketLabels_System_String_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.ModifyBucketLabels(System.String,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.Storage.V1.ModifyBucketLabelsOptions)
+  name.vb: ModifyBucketLabels(String, IDictionary(Of String, String), ModifyBucketLabelsOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClient.ModifyBucketLabels(System.String, System.Collections.Generic.IDictionary<System.String, System.String>, Google.Cloud.Storage.V1.ModifyBucketLabelsOptions)
+  fullName.vb: Google.Cloud.Storage.V1.StorageClient.ModifyBucketLabels(System.String, System.Collections.Generic.IDictionary(Of System.String, System.String), Google.Cloud.Storage.V1.ModifyBucketLabelsOptions)
+  nameWithType: StorageClient.ModifyBucketLabels(String, IDictionary<String, String>, ModifyBucketLabelsOptions)
+  nameWithType.vb: StorageClient.ModifyBucketLabels(String, IDictionary(Of String, String), ModifyBucketLabelsOptions)
+- uid: Google.Cloud.Storage.V1.StorageClient.ModifyBucketLabels*
+  name: ModifyBucketLabels
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ModifyBucketLabels_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.ModifyBucketLabels
+  fullName: Google.Cloud.Storage.V1.StorageClient.ModifyBucketLabels
+  nameWithType: StorageClient.ModifyBucketLabels
+- uid: Google.Cloud.Storage.V1.StorageClient.ModifyBucketLabelsAsync(System.String,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.Storage.V1.ModifyBucketLabelsOptions,System.Threading.CancellationToken)
+  name: ModifyBucketLabelsAsync(String, IDictionary<String, String>, ModifyBucketLabelsOptions, CancellationToken)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ModifyBucketLabelsAsync_System_String_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.ModifyBucketLabelsAsync(System.String,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.Storage.V1.ModifyBucketLabelsOptions,System.Threading.CancellationToken)
+  name.vb: ModifyBucketLabelsAsync(String, IDictionary(Of String, String), ModifyBucketLabelsOptions, CancellationToken)
+  fullName: Google.Cloud.Storage.V1.StorageClient.ModifyBucketLabelsAsync(System.String, System.Collections.Generic.IDictionary<System.String, System.String>, Google.Cloud.Storage.V1.ModifyBucketLabelsOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Storage.V1.StorageClient.ModifyBucketLabelsAsync(System.String, System.Collections.Generic.IDictionary(Of System.String, System.String), Google.Cloud.Storage.V1.ModifyBucketLabelsOptions, System.Threading.CancellationToken)
+  nameWithType: StorageClient.ModifyBucketLabelsAsync(String, IDictionary<String, String>, ModifyBucketLabelsOptions, CancellationToken)
+  nameWithType.vb: StorageClient.ModifyBucketLabelsAsync(String, IDictionary(Of String, String), ModifyBucketLabelsOptions, CancellationToken)
+- uid: Google.Cloud.Storage.V1.StorageClient.ModifyBucketLabelsAsync*
+  name: ModifyBucketLabelsAsync
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ModifyBucketLabelsAsync_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.ModifyBucketLabelsAsync
+  fullName: Google.Cloud.Storage.V1.StorageClient.ModifyBucketLabelsAsync
+  nameWithType: StorageClient.ModifyBucketLabelsAsync
 - uid: Google.Cloud.Storage.V1.StorageClient.PatchBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.PatchBucketOptions)
   name: PatchBucket(Bucket, PatchBucketOptions)
   href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_PatchBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_PatchBucketOptions_
@@ -14372,6 +14588,30 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClient.PatchObjectAsync
   fullName: Google.Cloud.Storage.V1.StorageClient.PatchObjectAsync
   nameWithType: StorageClient.PatchObjectAsync
+- uid: Google.Cloud.Storage.V1.StorageClient.RemoveBucketLabel(System.String,System.String,Google.Cloud.Storage.V1.ModifyBucketLabelsOptions)
+  name: RemoveBucketLabel(String, String, ModifyBucketLabelsOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_RemoveBucketLabel_System_String_System_String_Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.RemoveBucketLabel(System.String,System.String,Google.Cloud.Storage.V1.ModifyBucketLabelsOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClient.RemoveBucketLabel(System.String, System.String, Google.Cloud.Storage.V1.ModifyBucketLabelsOptions)
+  nameWithType: StorageClient.RemoveBucketLabel(String, String, ModifyBucketLabelsOptions)
+- uid: Google.Cloud.Storage.V1.StorageClient.RemoveBucketLabel*
+  name: RemoveBucketLabel
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_RemoveBucketLabel_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.RemoveBucketLabel
+  fullName: Google.Cloud.Storage.V1.StorageClient.RemoveBucketLabel
+  nameWithType: StorageClient.RemoveBucketLabel
+- uid: Google.Cloud.Storage.V1.StorageClient.RemoveBucketLabelAsync(System.String,System.String,Google.Cloud.Storage.V1.ModifyBucketLabelsOptions,System.Threading.CancellationToken)
+  name: RemoveBucketLabelAsync(String, String, ModifyBucketLabelsOptions, CancellationToken)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_RemoveBucketLabelAsync_System_String_System_String_Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.RemoveBucketLabelAsync(System.String,System.String,Google.Cloud.Storage.V1.ModifyBucketLabelsOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Storage.V1.StorageClient.RemoveBucketLabelAsync(System.String, System.String, Google.Cloud.Storage.V1.ModifyBucketLabelsOptions, System.Threading.CancellationToken)
+  nameWithType: StorageClient.RemoveBucketLabelAsync(String, String, ModifyBucketLabelsOptions, CancellationToken)
+- uid: Google.Cloud.Storage.V1.StorageClient.RemoveBucketLabelAsync*
+  name: RemoveBucketLabelAsync
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_RemoveBucketLabelAsync_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.RemoveBucketLabelAsync
+  fullName: Google.Cloud.Storage.V1.StorageClient.RemoveBucketLabelAsync
+  nameWithType: StorageClient.RemoveBucketLabelAsync
 - uid: Google.Cloud.Storage.V1.StorageClient.Service
   name: Service
   href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_Service
@@ -14408,6 +14648,30 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClient.SetBucketIamPolicyAsync
   fullName: Google.Cloud.Storage.V1.StorageClient.SetBucketIamPolicyAsync
   nameWithType: StorageClient.SetBucketIamPolicyAsync
+- uid: Google.Cloud.Storage.V1.StorageClient.SetBucketLabel(System.String,System.String,System.String,Google.Cloud.Storage.V1.ModifyBucketLabelsOptions)
+  name: SetBucketLabel(String, String, String, ModifyBucketLabelsOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_SetBucketLabel_System_String_System_String_System_String_Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.SetBucketLabel(System.String,System.String,System.String,Google.Cloud.Storage.V1.ModifyBucketLabelsOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClient.SetBucketLabel(System.String, System.String, System.String, Google.Cloud.Storage.V1.ModifyBucketLabelsOptions)
+  nameWithType: StorageClient.SetBucketLabel(String, String, String, ModifyBucketLabelsOptions)
+- uid: Google.Cloud.Storage.V1.StorageClient.SetBucketLabel*
+  name: SetBucketLabel
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_SetBucketLabel_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.SetBucketLabel
+  fullName: Google.Cloud.Storage.V1.StorageClient.SetBucketLabel
+  nameWithType: StorageClient.SetBucketLabel
+- uid: Google.Cloud.Storage.V1.StorageClient.SetBucketLabelAsync(System.String,System.String,System.String,Google.Cloud.Storage.V1.ModifyBucketLabelsOptions,System.Threading.CancellationToken)
+  name: SetBucketLabelAsync(String, String, String, ModifyBucketLabelsOptions, CancellationToken)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_SetBucketLabelAsync_System_String_System_String_System_String_Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.SetBucketLabelAsync(System.String,System.String,System.String,Google.Cloud.Storage.V1.ModifyBucketLabelsOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Storage.V1.StorageClient.SetBucketLabelAsync(System.String, System.String, System.String, Google.Cloud.Storage.V1.ModifyBucketLabelsOptions, System.Threading.CancellationToken)
+  nameWithType: StorageClient.SetBucketLabelAsync(String, String, String, ModifyBucketLabelsOptions, CancellationToken)
+- uid: Google.Cloud.Storage.V1.StorageClient.SetBucketLabelAsync*
+  name: SetBucketLabelAsync
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_SetBucketLabelAsync_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.SetBucketLabelAsync
+  fullName: Google.Cloud.Storage.V1.StorageClient.SetBucketLabelAsync
+  nameWithType: StorageClient.SetBucketLabelAsync
 - uid: Google.Cloud.Storage.V1.StorageClient.TestBucketIamPermissions(System.String,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions)
   name: TestBucketIamPermissions(String, IEnumerable<String>, TestBucketIamPermissionsOptions)
   href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_TestBucketIamPermissions_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_Storage_V1_TestBucketIamPermissionsOptions_
@@ -14564,6 +14828,30 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.ApplicationName
   fullName: Google.Cloud.Storage.V1.StorageClientImpl.ApplicationName
   nameWithType: StorageClientImpl.ApplicationName
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.ClearBucketLabels(System.String,Google.Cloud.Storage.V1.ModifyBucketLabelsOptions)
+  name: ClearBucketLabels(String, ModifyBucketLabelsOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_ClearBucketLabels_System_String_Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClientImpl.ClearBucketLabels(System.String,Google.Cloud.Storage.V1.ModifyBucketLabelsOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.ClearBucketLabels(System.String, Google.Cloud.Storage.V1.ModifyBucketLabelsOptions)
+  nameWithType: StorageClientImpl.ClearBucketLabels(String, ModifyBucketLabelsOptions)
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.ClearBucketLabels*
+  name: ClearBucketLabels
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_ClearBucketLabels_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.ClearBucketLabels
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.ClearBucketLabels
+  nameWithType: StorageClientImpl.ClearBucketLabels
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.ClearBucketLabelsAsync(System.String,Google.Cloud.Storage.V1.ModifyBucketLabelsOptions,System.Threading.CancellationToken)
+  name: ClearBucketLabelsAsync(String, ModifyBucketLabelsOptions, CancellationToken)
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_ClearBucketLabelsAsync_System_String_Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Storage.V1.StorageClientImpl.ClearBucketLabelsAsync(System.String,Google.Cloud.Storage.V1.ModifyBucketLabelsOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.ClearBucketLabelsAsync(System.String, Google.Cloud.Storage.V1.ModifyBucketLabelsOptions, System.Threading.CancellationToken)
+  nameWithType: StorageClientImpl.ClearBucketLabelsAsync(String, ModifyBucketLabelsOptions, CancellationToken)
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.ClearBucketLabelsAsync*
+  name: ClearBucketLabelsAsync
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_ClearBucketLabelsAsync_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.ClearBucketLabelsAsync
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.ClearBucketLabelsAsync
+  nameWithType: StorageClientImpl.ClearBucketLabelsAsync
 - uid: Google.Cloud.Storage.V1.StorageClientImpl.CopyObject(System.String,System.String,System.String,System.String,Google.Cloud.Storage.V1.CopyObjectOptions)
   name: CopyObject(String, String, String, String, CopyObjectOptions)
   href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_CopyObject_System_String_System_String_System_String_System_String_Google_Cloud_Storage_V1_CopyObjectOptions_
@@ -14894,6 +15182,36 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.ListObjectsAsync
   fullName: Google.Cloud.Storage.V1.StorageClientImpl.ListObjectsAsync
   nameWithType: StorageClientImpl.ListObjectsAsync
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.ModifyBucketLabels(System.String,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.Storage.V1.ModifyBucketLabelsOptions)
+  name: ModifyBucketLabels(String, IDictionary<String, String>, ModifyBucketLabelsOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_ModifyBucketLabels_System_String_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClientImpl.ModifyBucketLabels(System.String,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.Storage.V1.ModifyBucketLabelsOptions)
+  name.vb: ModifyBucketLabels(String, IDictionary(Of String, String), ModifyBucketLabelsOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.ModifyBucketLabels(System.String, System.Collections.Generic.IDictionary<System.String, System.String>, Google.Cloud.Storage.V1.ModifyBucketLabelsOptions)
+  fullName.vb: Google.Cloud.Storage.V1.StorageClientImpl.ModifyBucketLabels(System.String, System.Collections.Generic.IDictionary(Of System.String, System.String), Google.Cloud.Storage.V1.ModifyBucketLabelsOptions)
+  nameWithType: StorageClientImpl.ModifyBucketLabels(String, IDictionary<String, String>, ModifyBucketLabelsOptions)
+  nameWithType.vb: StorageClientImpl.ModifyBucketLabels(String, IDictionary(Of String, String), ModifyBucketLabelsOptions)
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.ModifyBucketLabels*
+  name: ModifyBucketLabels
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_ModifyBucketLabels_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.ModifyBucketLabels
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.ModifyBucketLabels
+  nameWithType: StorageClientImpl.ModifyBucketLabels
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.ModifyBucketLabelsAsync(System.String,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.Storage.V1.ModifyBucketLabelsOptions,System.Threading.CancellationToken)
+  name: ModifyBucketLabelsAsync(String, IDictionary<String, String>, ModifyBucketLabelsOptions, CancellationToken)
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_ModifyBucketLabelsAsync_System_String_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_Storage_V1_ModifyBucketLabelsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Storage.V1.StorageClientImpl.ModifyBucketLabelsAsync(System.String,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.Storage.V1.ModifyBucketLabelsOptions,System.Threading.CancellationToken)
+  name.vb: ModifyBucketLabelsAsync(String, IDictionary(Of String, String), ModifyBucketLabelsOptions, CancellationToken)
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.ModifyBucketLabelsAsync(System.String, System.Collections.Generic.IDictionary<System.String, System.String>, Google.Cloud.Storage.V1.ModifyBucketLabelsOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Storage.V1.StorageClientImpl.ModifyBucketLabelsAsync(System.String, System.Collections.Generic.IDictionary(Of System.String, System.String), Google.Cloud.Storage.V1.ModifyBucketLabelsOptions, System.Threading.CancellationToken)
+  nameWithType: StorageClientImpl.ModifyBucketLabelsAsync(String, IDictionary<String, String>, ModifyBucketLabelsOptions, CancellationToken)
+  nameWithType.vb: StorageClientImpl.ModifyBucketLabelsAsync(String, IDictionary(Of String, String), ModifyBucketLabelsOptions, CancellationToken)
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.ModifyBucketLabelsAsync*
+  name: ModifyBucketLabelsAsync
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_ModifyBucketLabelsAsync_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.ModifyBucketLabelsAsync
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.ModifyBucketLabelsAsync
+  nameWithType: StorageClientImpl.ModifyBucketLabelsAsync
 - uid: Google.Cloud.Storage.V1.StorageClientImpl.PatchBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.PatchBucketOptions)
   name: PatchBucket(Bucket, PatchBucketOptions)
   href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_PatchBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_PatchBucketOptions_
@@ -15110,6 +15428,18 @@ references:
   commentId: T:Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions
   fullName: Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions
   nameWithType: TestBucketIamPermissionsOptions
+- uid: Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions.UserProject
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions.html#Google_Cloud_Storage_V1_TestBucketIamPermissionsOptions_UserProject
+  commentId: P:Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions.UserProject
+  nameWithType: TestBucketIamPermissionsOptions.UserProject
+- uid: Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions.UserProject*
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions.html#Google_Cloud_Storage_V1_TestBucketIamPermissionsOptions_UserProject_
+  commentId: Overload:Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.TestBucketIamPermissionsOptions.UserProject
+  nameWithType: TestBucketIamPermissionsOptions.UserProject
 - uid: Google.Cloud.Storage.V1.UpdateBucketOptions
   name: UpdateBucketOptions
   href: api/Google.Cloud.Storage.V1.UpdateBucketOptions.html
@@ -15188,6 +15518,18 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.UpdateBucketOptions.Projection
   fullName: Google.Cloud.Storage.V1.UpdateBucketOptions.Projection
   nameWithType: UpdateBucketOptions.Projection
+- uid: Google.Cloud.Storage.V1.UpdateBucketOptions.UserProject
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.UpdateBucketOptions.html#Google_Cloud_Storage_V1_UpdateBucketOptions_UserProject
+  commentId: P:Google.Cloud.Storage.V1.UpdateBucketOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.UpdateBucketOptions.UserProject
+  nameWithType: UpdateBucketOptions.UserProject
+- uid: Google.Cloud.Storage.V1.UpdateBucketOptions.UserProject*
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.UpdateBucketOptions.html#Google_Cloud_Storage_V1_UpdateBucketOptions_UserProject_
+  commentId: Overload:Google.Cloud.Storage.V1.UpdateBucketOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.UpdateBucketOptions.UserProject
+  nameWithType: UpdateBucketOptions.UserProject
 - uid: Google.Cloud.Storage.V1.UpdateObjectOptions
   name: UpdateObjectOptions
   href: api/Google.Cloud.Storage.V1.UpdateObjectOptions.html
@@ -15302,6 +15644,18 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.UpdateObjectOptions.Projection
   fullName: Google.Cloud.Storage.V1.UpdateObjectOptions.Projection
   nameWithType: UpdateObjectOptions.Projection
+- uid: Google.Cloud.Storage.V1.UpdateObjectOptions.UserProject
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.UpdateObjectOptions.html#Google_Cloud_Storage_V1_UpdateObjectOptions_UserProject
+  commentId: P:Google.Cloud.Storage.V1.UpdateObjectOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.UpdateObjectOptions.UserProject
+  nameWithType: UpdateObjectOptions.UserProject
+- uid: Google.Cloud.Storage.V1.UpdateObjectOptions.UserProject*
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.UpdateObjectOptions.html#Google_Cloud_Storage_V1_UpdateObjectOptions_UserProject_
+  commentId: Overload:Google.Cloud.Storage.V1.UpdateObjectOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.UpdateObjectOptions.UserProject
+  nameWithType: UpdateObjectOptions.UserProject
 - uid: Google.Cloud.Storage.V1.UploadObjectOptions
   name: UploadObjectOptions
   href: api/Google.Cloud.Storage.V1.UploadObjectOptions.html
@@ -15410,6 +15764,18 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.UploadObjectOptions.Projection
   fullName: Google.Cloud.Storage.V1.UploadObjectOptions.Projection
   nameWithType: UploadObjectOptions.Projection
+- uid: Google.Cloud.Storage.V1.UploadObjectOptions.UserProject
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.UploadObjectOptions.html#Google_Cloud_Storage_V1_UploadObjectOptions_UserProject
+  commentId: P:Google.Cloud.Storage.V1.UploadObjectOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.UploadObjectOptions.UserProject
+  nameWithType: UploadObjectOptions.UserProject
+- uid: Google.Cloud.Storage.V1.UploadObjectOptions.UserProject*
+  name: UserProject
+  href: api/Google.Cloud.Storage.V1.UploadObjectOptions.html#Google_Cloud_Storage_V1_UploadObjectOptions_UserProject_
+  commentId: Overload:Google.Cloud.Storage.V1.UploadObjectOptions.UserProject
+  fullName: Google.Cloud.Storage.V1.UploadObjectOptions.UserProject
+  nameWithType: UploadObjectOptions.UserProject
 - uid: Google.Cloud.Storage.V1.UrlSigner
   name: UrlSigner
   href: api/Google.Cloud.Storage.V1.UrlSigner.html

@@ -966,8 +966,7 @@ to use the default poll settings (poll once every 10 seconds, forever).</p>
                   <tr>
                     <td><span class="xref">System.Action</span>&lt;TMetadata&gt;</td>
                     <td><span class="parametername">metadataCallback</span></td>
-                    <td><p>The callback to invoke whenever a polled result contains metadata, or null
-for no callback.</p>
+                    <td><p>The callback to invoke with the metadata from each poll operation, even if the metadata is null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -989,8 +988,15 @@ for no callback.</p>
                 </tbody>
               </table>
               <h5 id="Google_LongRunning_Operation_2_PollUntilCompleted_Google_Api_Gax_PollSettings_Google_Api_Gax_Grpc_CallSettings_System_Action__1___remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>If this object already represents a completed operation, it is returned immediately,
-with no further RPCs.</p>
+              <div class="markdown level1 remarks"><p>
+If this object already represents a completed operation, it is returned with no further RPCs.
+If <span class="paramref">metadataCallback</span> is non-null, the callback will be called with any metadata
+present before the result is returned.
+</p>
+<p>
+Each callback is performed synchronously: this method waits for the callback to complete before the operation is next polled.
+This guarantees that for a single call, metadata callbacks will never occur in parallel.
+</p>
 </div>
               <a id="Google_LongRunning_Operation_2_PollUntilCompletedAsync_" data-uid="Google.LongRunning.Operation`2.PollUntilCompletedAsync*"></a>
               <h4 id="Google_LongRunning_Operation_2_PollUntilCompletedAsync_Google_Api_Gax_PollSettings_Google_Api_Gax_Grpc_CallSettings_System_Action__1__" data-uid="Google.LongRunning.Operation`2.PollUntilCompletedAsync(Google.Api.Gax.PollSettings,Google.Api.Gax.Grpc.CallSettings,System.Action{`1})">PollUntilCompletedAsync(PollSettings, CallSettings, Action&lt;TMetadata&gt;)</h4>
@@ -1027,8 +1033,7 @@ to use the default poll settings (poll once every 10 seconds, forever).</p>
                   <tr>
                     <td><span class="xref">System.Action</span>&lt;TMetadata&gt;</td>
                     <td><span class="parametername">metadataCallback</span></td>
-                    <td><p>The callback to invoke whenever a polled result contains metadata, or null
-for no callback.</p>
+                    <td><p>The callback to invoke with the metadata from each poll operation, even if the metadata is null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1050,8 +1055,16 @@ for no callback.</p>
                 </tbody>
               </table>
               <h5 id="Google_LongRunning_Operation_2_PollUntilCompletedAsync_Google_Api_Gax_PollSettings_Google_Api_Gax_Grpc_CallSettings_System_Action__1___remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>If this object already represents a completed operation, it is returned immediately,
-with no further RPCs.</p>
+              <div class="markdown level1 remarks"><p>
+If this object already represents a completed operation, it is returned with no further RPCs.
+If <span class="paramref">metadataCallback</span> is non-null, the callback will be called with any metadata
+present before the result is returned.
+</p>
+<p>
+No guarantee is made as to which thread is used for metadata callbacks. However, each callback is
+performed synchronously: this method waits for the callback to complete before the operation is next polled.
+This guarantees that for a single call, metadata callbacks will never occur in parallel.
+</p>
 </div>
                         </article>
           </div>
