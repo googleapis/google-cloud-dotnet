@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26114.2
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.PubSub.V1", "Google.Cloud.PubSub.V1\Google.Cloud.PubSub.V1.csproj", "{768566BC-8F77-4F7C-8A15-F8A11308B74B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.PubSub.V1.Snippets", "Google.Cloud.PubSub.V1.Snippets\Google.Cloud.PubSub.V1.Snippets.csproj", "{60E5F4C2-7A10-41F1-A247-14C346A8E33A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Iam.V1", "..\Google.Cloud.Iam.V1\Google.Cloud.Iam.V1\Google.Cloud.Iam.V1.csproj", "{8BF4C91C-5611-444B-8550-D67DEBAF72F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.PubSub.V1.Tests", "Google.Cloud.PubSub.V1.Tests\Google.Cloud.PubSub.V1.Tests.csproj", "{18A6D140-7C71-4D97-BD9C-1354C4172E0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{8BF4C91C-5611-444B-8550-D67DEBAF72F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BF4C91C-5611-444B-8550-D67DEBAF72F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BF4C91C-5611-444B-8550-D67DEBAF72F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18A6D140-7C71-4D97-BD9C-1354C4172E0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18A6D140-7C71-4D97-BD9C-1354C4172E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18A6D140-7C71-4D97-BD9C-1354C4172E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18A6D140-7C71-4D97-BD9C-1354C4172E0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
