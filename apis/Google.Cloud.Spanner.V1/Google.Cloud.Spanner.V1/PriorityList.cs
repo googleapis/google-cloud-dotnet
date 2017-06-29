@@ -14,6 +14,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Google.Cloud.Spanner.V1
 {
@@ -47,15 +48,21 @@ namespace Google.Cloud.Spanner.V1
         {
             lock (_innerList)
             {
+                //just in case the priority of the item is out of sync, we'll
+                //do a full scan to remove the old version.
+                Remove(item);
+
+                //find the insertion point using a slightly faster method.
                 var index = _innerList.BinarySearch(item);
                 if (index < 0)
                 {
-                    //if priority changes during this call, it will be blocked from
-                    //processing until after Add has completed.
-                    item.PriorityChanged += Item_PriorityChanged;
-
-                    _innerList.Insert(~index, item);
+                    index = ~index;
                 }
+
+                //if priority changes during this call, it will be blocked from
+                //processing until after Add has completed.
+                item.PriorityChanged += Item_PriorityChanged;
+                _innerList.Insert(index, item);
             }
         }
 
@@ -113,7 +120,7 @@ namespace Google.Cloud.Spanner.V1
         {
             lock (_innerList)
             {
-                return _innerList.Count > 0 ? _innerList[0] : default(T);
+                return _innerList.FirstOrDefault();
             }
         }
 

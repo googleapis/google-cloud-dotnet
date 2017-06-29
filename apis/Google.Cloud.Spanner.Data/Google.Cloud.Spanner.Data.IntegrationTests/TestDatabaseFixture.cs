@@ -17,13 +17,15 @@
 using System;
 using System.Threading.Tasks;
 using Google.Cloud.Spanner.Admin.Database.V1;
+using Xunit;
 
 #endregion
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     // ReSharper disable once ClassNeverInstantiated.Global
-    public class TestDatabaseFixture : IDisposable
+    [CollectionDefinition(nameof(TestDatabaseFixture))]
+    public class TestDatabaseFixture : IDisposable, ICollectionFixture<TestDatabaseFixture>
     {
         private readonly Lazy<Task> _creationTask;
 
@@ -45,7 +47,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         private string DatabaseName { get; } = //"scratch";
             "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
 
-        public int TestDatabaseRowCount { get; } = 15;
+        public int TestTableRowCount { get; } = 15;
 
         public string TestTable { get; } = "TestTable";
 
@@ -178,7 +180,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         });
                     cmd.Transaction = tx;
 
-                    for (var i = 0; i < TestDatabaseRowCount; ++i)
+                    for (var i = 0; i < TestTableRowCount; ++i)
                     {
                         cmd.Parameters["Key"].Value = "k" + i;
                         cmd.Parameters["StringValue"].Value = "v" + i;

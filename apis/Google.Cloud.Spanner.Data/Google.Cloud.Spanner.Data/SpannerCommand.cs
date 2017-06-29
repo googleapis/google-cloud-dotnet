@@ -308,19 +308,14 @@ namespace Google.Cloud.Spanner.Data
                 var w = new Mutation.Types.Write
                 {
                     Table = SpannerCommandTextBuilder.TargetTable,
-                    Columns =
-                    {
-                        Parameters
-                            .Select(x => x.SourceColumn ?? x.ParameterName)
-                    },
+                    Columns = {Parameters.Select(x => x.SourceColumn ?? x.ParameterName)},
                     Values =
                     {
                         new ListValue
                         {
                             Values =
                             {
-                                Parameters
-                                    .Select(x => ValueConversion.ToValue(x.GetValidatedValue(), x.SpannerDbType))
+                                Parameters.Select(x => ValueConversion.ToValue(x.GetValidatedValue(), x.SpannerDbType))
                             }
                         }
                     }
@@ -354,8 +349,8 @@ namespace Google.Cloud.Spanner.Data
                                 {
                                     Values =
                                     {
-                                        Parameters
-                                            .Select(x => ValueConversion.ToValue(x.GetValidatedValue(), x.SpannerDbType))
+                                        Parameters.Select(
+                                            x => ValueConversion.ToValue(x.GetValidatedValue(), x.SpannerDbType))
                                     }
                                 }
                             }

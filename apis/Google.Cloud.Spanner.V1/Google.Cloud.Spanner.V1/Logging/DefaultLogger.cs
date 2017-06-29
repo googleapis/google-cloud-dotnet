@@ -94,6 +94,11 @@ namespace Google.Cloud.Spanner.V1.Logging
         {
             while (true)
             {
+                //while this method is only started once performance logging is turned on,
+                //we also allow performance logging to be turned off
+                //If that happens, we'll just poll every second to see if it was turned back on.
+                //TODO(benwu): if/when we expose profile stats publicly, we should end and restart
+                // the task properly.
                 await Task.Delay(PerformanceTraceLogInterval != TimeSpan.Zero ?
                     PerformanceTraceLogInterval
                     : TimeSpan.FromSeconds(1)

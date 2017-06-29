@@ -26,9 +26,9 @@ using Xunit;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
-    [Collection("Spanner Integration Tests")]
+    [Collection(nameof(TestDatabaseFixture))]
     [PerformanceLog]
-    public class MySqlStressTests : BaseStressTest
+    public class MySqlStressTests : StressTestBase
     {
         private const string MySqlConnectionString =
             "Server=104.198.57.196;Database=books;Uid=root;Pwd=;Max Pool Size=400";
@@ -36,7 +36,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         private static readonly string s_guid = Guid.NewGuid().ToString();
         private static int s_myCounter = 1;
 
-        protected override async Task<TimeSpan> TestWrite1(Stopwatch sw)
+        protected override async Task<TimeSpan> TestWriteOneRow(Stopwatch sw)
         {
             using (var connection = new MySqlConnection(MySqlConnectionString))
             {
@@ -80,7 +80,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             double result = await TestWriteLatencyWithQps(TargetQps, TestDuration);
             Logger.Instance.Info($"MySql latency= {result}ms");
 
-            Assert.True(ValidatePoolInfo());
+            ValidatePoolInfo();
 
             //mysql latency with 100 qps simulated is usually around 150ms.
             Assert.InRange(result, 0, 250);

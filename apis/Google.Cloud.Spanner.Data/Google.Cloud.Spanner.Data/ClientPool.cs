@@ -70,8 +70,15 @@ namespace Google.Cloud.Spanner.Data
             if (spannerClient != null)
             {
                 var key = new ClientCredentialKey(credentials, endpoint);
-                var poolEntry = s_clientPoolByCredential.GetOrAdd(key, k => new CredentialClientPool(k));
-                poolEntry.ReleaseClient(spannerClient);
+                CredentialClientPool poolEntry;
+                if (s_clientPoolByCredential.TryGetValue(key, out poolEntry))
+                {
+                    poolEntry.ReleaseClient(spannerClient);
+                }
+                else
+                {
+                    Logger.Error(() => "An attempt was made to release an unrecognized spanner client to the pool.");
+                }
             }
         }
 
@@ -89,15 +96,7 @@ namespace Google.Cloud.Spanner.Data
             public bool Equals(ClientCredentialKey other) => Equals(Credential, other.Credential) &&
                 Equals(Endpoint, other.Endpoint);
 
-            public override bool Equals(object obj)
-            {
-                if (ReferenceEquals(null, obj))
-                {
-                    return false;
-                }
-
-                return obj is ClientCredentialKey other && Equals(other);
-            }
+            public override bool Equals(object obj) => obj is ClientCredentialKey other && Equals(other);
 
             /// <inheritdoc />
             public override int GetHashCode()
@@ -149,18 +148,21 @@ namespace Google.Cloud.Spanner.Data
 
                 lock (_sync)
                 {
+                    var snapshotMaximumChannels = SpannerOptions.Instance.MaximumGrpcChannels;
                     //first ensure that the pool is of the correct size.
-                    while (_clientPriorityList.Count > SpannerOptions.Instance.MaximumGrpcChannels)
+                    while (_clientPriorityList.Count > snapshotMaximumChannels)
                     {
                         _clientPriorityList.RemoveLast();
                     }
-                    while (_clientPriorityList.Count < SpannerOptions.Instance.MaximumGrpcChannels)
+                    while (_clientPriorityList.Count < snapshotMaximumChannels)
                     {
                         var newEntry = new SpannerClientCreator(_key);
                         _clientPriorityList.Add(newEntry);
                     }
 
                     //now grab the first item in the sorted list, increment refcnt, re-sort and return.
+                    //The re-sorting will happen as a consequence of AcquireClientAsync changing its
+                    //state and firing an event the prioritylist listens to.
                     result = _clientPriorityList.GetTop().AcquireClientAsync();
                 }
                 return result;
@@ -225,7 +227,7 @@ namespace Google.Cloud.Spanner.Data
                     endpoint.Host,
                     endpoint.Port,
                     channelCredentials);
-                Logger.LogPerformanceCounterFn("SpannerClient.RawCreateCount", (x) => x + 1);
+                Logger.LogPerformanceCounterFn("SpannerClient.RawCreateCount", x => x + 1);
 
                 return SpannerClient.Create(channel);
             }

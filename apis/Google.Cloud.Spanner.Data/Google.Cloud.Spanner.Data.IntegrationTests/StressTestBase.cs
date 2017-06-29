@@ -20,26 +20,21 @@ using System.Text;
 using System.Threading.Tasks;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Logging;
+using Xunit;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
-    public abstract class BaseStressTest
+    public abstract class StressTestBase
     {
         protected const int TargetQps = 100;
         protected static readonly TimeSpan TestDuration = TimeSpan.FromSeconds(60);
 
-        protected abstract Task<TimeSpan> TestWrite1(Stopwatch sw);
+        protected abstract Task<TimeSpan> TestWriteOneRow(Stopwatch sw);
 
         private async Task<TimeSpan> TestWrite(Stopwatch sw)
         {
             await Task.Yield(); //We immediately yield to allow the spawning thread to continue.
-            return await TestWrite1(sw);
-        }
-
-
-        private async Task Timeout(TimeSpan testTime)
-        {
-            await Task.Delay(testTime.Add(TimeSpan.FromSeconds(10)));
+            return await TestWriteOneRow(sw);
         }
 
         /// <summary>
@@ -53,12 +48,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         ///    started falling behind the target Qps.
         ///  SpannerClient.RawCreateCount: You are looking at "recordings" here to ensure that only `MaximumGrpcChannels` are created.
         ///  Transaction.CacheHit: How many hits we got on prewarmed transactions.
+        ///  Right now the return value is the average latency. TODO(benwu):switch to 90th percentile latency.
         /// </summary>
         protected async Task<double> TestWriteLatencyWithQps(double queriesPerSecond, TimeSpan testTime)
         {
             var sw = Stopwatch.StartNew();
             var all = new List<Task<TimeSpan>>();
-            var timeout = Timeout(testTime);
 
             while (sw.Elapsed < testTime)
             {
@@ -68,6 +63,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
 
+            var timeout = Task.Delay(TimeSpan.FromSeconds(10));
             var completedTask = await Task.WhenAny(Task.WhenAll(all), timeout);
             var completed = all.Where(x => x.IsCompleted).ToList();
             var sum = completed.Sum(x => x.Result.TotalMilliseconds);
@@ -86,17 +82,15 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         /// The session pool should have sessions perfectly evenly distributed among each channel.
         /// The channel pool at test end should all have refcounts = 0.
         /// </summary>
-        protected static bool ValidatePoolInfo()
+        protected static void ValidatePoolInfo()
         {
             StringBuilder s = new StringBuilder();
-            bool isValid = SessionPool.GetPoolInfo(s);
+            Assert.InRange(SessionPool.GetPoolInfo(s), 0, 1);
             Logger.Instance.Info(s.ToString());
 
             s.Clear();
-            isValid &= ClientPool.GetPoolInfo(s) == 0;
+            Assert.Equal(0, ClientPool.GetPoolInfo(s));
             Logger.Instance.Info(s.ToString());
-
-            return isValid;
         }
     }
 }

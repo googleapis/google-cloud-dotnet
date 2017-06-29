@@ -24,14 +24,13 @@ using Xunit.Abstractions;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
-    [Collection("Spanner Integration Tests")]
+    [Collection(nameof(TestDatabaseFixture))]
     [PerformanceLog]
-    public class SpannerStressTests : BaseStressTest
+    public class SpannerStressTests : StressTestBase
     {
-        private static int s_myCounter = 1;
+        private static int s_rowCounter = 1;
         private static readonly string s_guid = Guid.NewGuid().ToString();
-        [ThreadStatic]
-        private static Random s_rnd;
+        private static ThreadLocal<Random> s_rnd = new ThreadLocal<Random>(() => new Random(Environment.TickCount));
         private TestDatabaseFixture _testFixture;
 
         public SpannerStressTests(TestDatabaseFixture testFixture, ITestOutputHelper outputHelper)
@@ -41,11 +40,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             TestLogger.TestOutputHelper = outputHelper;
         }
 
-        protected override async Task<TimeSpan> TestWrite1(Stopwatch sw)
+        protected override async Task<TimeSpan> TestWriteOneRow(Stopwatch sw)
         {
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
-                var localCounter = Interlocked.Increment(ref s_myCounter);
+                var localCounter = Interlocked.Increment(ref s_rowCounter);
                 var insertCommand = connection.CreateInsertCommand(
                     _testFixture.StressTestTable, new SpannerParameterCollection
                     {
@@ -71,11 +70,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         retry = true;
                         Console.WriteLine("retrying due to " + e.Message);
                         delay = delay * 2;
-                        if (s_rnd == null)
-                        {
-                            s_rnd = new Random(Environment.TickCount);
-                        }
-                        delay += s_rnd.Next(100);
+                        delay += s_rnd.Value.Next(100);
                         delay = Math.Min(delay, 5000);
                         await Task.Delay(TimeSpan.FromMilliseconds(delay));
                     }
@@ -129,7 +124,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             double result = await TestWriteLatencyWithQps(TargetQps, TestDuration);
             Logger.Instance.Info($"Spanner latency= {result}ms");
 
-            Assert.True(ValidatePoolInfo());
+            ValidatePoolInfo();
 
             //spanner latency with 100 qps simulated is usually around 75ms.
             Assert.InRange(result, 0, 150);

@@ -69,15 +69,16 @@ namespace Google.Cloud.Spanner.V1
         }
 
         // ReSharper disable once UnusedMember.Global
-        // returns true if the pool has evenly split its contents.
+        // returns the maximum difference in size between the smallest and largest pool.
         // For test purposes only.
         // poolcontents will be filled with the contents of the pool and may not be null.
-        internal static bool GetPoolInfo(StringBuilder poolContents)
+        internal static int GetPoolInfo(StringBuilder poolContents)
         {
             GaxPreconditions.CheckNotNull(poolContents, nameof(poolContents));
-            bool result = true;
+            var maxSize = 0;
+            var minSize = int.MaxValue;
             poolContents.AppendLine("SessionPool.Contents (by priority):");
-            int i = 0;
+            var i = 0;
             foreach (var priorityListEntry in s_priorityList.GetSnapshot())
             {
                 poolContents.AppendLine($"SessionPool({i}) Key:${priorityListEntry.Key}"
@@ -85,8 +86,7 @@ namespace Google.Cloud.Spanner.V1
                 i++;
             }
             poolContents.AppendLine("SessionPool.Contents (by client):");
-            int byClientIndex = 0;
-            int firstSize = -1;
+            var byClientIndex = 0;
             foreach (var byClientEntry in s_poolByClientAndDatabase)
             {
                 poolContents.AppendLine($"SessionPool({byClientIndex}) Key:${byClientEntry.Key}"
@@ -94,19 +94,19 @@ namespace Google.Cloud.Spanner.V1
                 var size = byClientEntry.Value.DumpSessionPoolContents(poolContents);
                 if (size > 0)
                 {
-                    if (firstSize == -1)
+                    if (minSize > size)
                     {
-                        firstSize = size;
+                        minSize = size;
                     }
-                    else if (Math.Abs(firstSize - size) > 1)
+                    if (maxSize < size)
                     {
-                        result = false;
+                        maxSize = size;
                     }
                 }
                 byClientIndex++;
             }
 
-            return result;
+            return maxSize - minSize;
         }
 
         private static Task WhenCanceled(this CancellationToken cancellationToken)

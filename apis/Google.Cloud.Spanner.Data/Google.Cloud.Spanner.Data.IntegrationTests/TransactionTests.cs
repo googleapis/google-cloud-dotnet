@@ -17,7 +17,6 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Google.Cloud.Spanner.V1.Logging;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -26,7 +25,7 @@ using Xunit.Abstractions;
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     [PerformanceLog]
-    [Collection("Spanner Integration Tests")]
+    [Collection(nameof(TestDatabaseFixture))]
     public class TransactionTests
     {
         // ReSharper disable once UnusedParameter.Local

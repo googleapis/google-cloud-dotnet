@@ -23,7 +23,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     /// <summary>
     /// Integration tests to ensure that <see cref="SpannerDataAdapter"/> works properly.
     /// </summary>
-    [Collection("Spanner Integration Tests")]
+    [Collection(nameof(TestDatabaseFixture))]
     public class DataAdapterTests
     {
         private TestDatabaseFixture _testFixture;
@@ -46,7 +46,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 adapter.Fill(testDataSet);
                 Assert.Equal(1, testDataSet.Tables.Count);
                 Assert.Equal(2, testDataSet.Tables[0].Columns.Count);
-                Assert.Equal(_testFixture.TestDatabaseRowCount, testDataSet.Tables[0].Rows.Count);
+                Assert.Equal(_testFixture.TestTableRowCount, testDataSet.Tables[0].Rows.Count);
             }
         }
 
@@ -70,7 +70,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 adapter.Update(testDataSet);
                 testDataSet.Clear();
                 adapter.Fill(testDataSet);
-                Assert.Equal(_testFixture.TestDatabaseRowCount - 1, testDataSet.Tables[0].Rows.Count);
+                Assert.Equal(_testFixture.TestTableRowCount - 1, testDataSet.Tables[0].Rows.Count);
 
                 //insert, reload
                 var newRow = testDataSet.Tables[0].NewRow();
@@ -80,7 +80,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 adapter.Update(testDataSet);
                 testDataSet.Clear();
                 adapter.Fill(testDataSet);
-                Assert.Equal(_testFixture.TestDatabaseRowCount, testDataSet.Tables[0].Rows.Count);
+                Assert.Equal(_testFixture.TestTableRowCount, testDataSet.Tables[0].Rows.Count);
             }
         }
 
@@ -97,11 +97,18 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
                 //update, reload
                 var newValue = Guid.NewGuid().ToString();
+                var oldKey = testDataSet.Tables[0].Rows[1]["Key"];
                 testDataSet.Tables[0].Rows[1]["StringValue"] = newValue;
                 adapter.Update(testDataSet);
                 testDataSet.Clear();
                 adapter.Fill(testDataSet);
-                Assert.Equal(newValue, testDataSet.Tables[0].Rows[1]["StringValue"]);
+                int i = 0;
+                for (; i < testDataSet.Tables[0].Rows.Count; i++) {
+                    if (testDataSet.Tables[0].Rows[i]["Key"].Equals(oldKey)) {
+                        break;
+                    }
+                }
+                Assert.Equal(newValue, testDataSet.Tables[0].Rows[i]["StringValue"]);
             }
         }
 
@@ -114,7 +121,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 {
                     SelectCommand =
                         connection.CreateSelectCommand(
-                            $"SELECT * FROM {_testFixture.DataAdapterTestTable} WHERE Key='k1'")
+                            $"SELECT * FROM {_testFixture.DataAdapterTestTable} WHERE Key='k2'")
                 };
 
                 //Load

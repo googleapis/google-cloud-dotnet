@@ -10,7 +10,7 @@
     <NoWarn>1701;1702;1705;4014</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp1.0|AnyCPU'">
-    <DefineConstants>TRACE;DEBUG;NETCOREAPP1_0;NETCOREAPP1_0</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;NETCOREAPP1_0</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.Spanner.Data\Google.Cloud.Spanner.Data.csproj" />
