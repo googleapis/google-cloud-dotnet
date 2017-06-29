@@ -225,6 +225,7 @@
     "dependencies": {
       "Google.Cloud.Iam.V1": ""
     },
+    "configureAwaitChecker": false,
     "tags": [ "PubSub" ],
   },
 

@@ -33,6 +33,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
         public string Type { get; set; } // TODO: enum? Autodetect based on files?
         public string TargetFrameworks { get; set; }
         public string TestTargetFrameworks { get; set; }
+        public bool? ConfigureAwaitChecker { get; set; }
 
         public string Description { get; set; }
 
@@ -49,7 +50,10 @@ namespace Google.Cloud.Tools.ProjectGenerator
             }
             string targetFrameworks = TargetFrameworks;
             var dependencies = new SortedList<string, string>(Dependencies);
-            dependencies.Add("ConfigureAwaitChecker.Analyzer", "1.0.0-beta4");
+            if (ConfigureAwaitChecker != false)
+            {
+                dependencies.Add("ConfigureAwaitChecker.Analyzer", "1.0.0-beta4");
+            }
             switch (Type)
             {
                 case "rest":
