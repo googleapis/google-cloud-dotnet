@@ -3,6 +3,7 @@
   <PropertyGroup>
     <Version>1.0.0-beta08</Version>
     <TargetFrameworks>netstandard1.5;net45</TargetFrameworks>
+    <Features>IOperation</Features>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
@@ -28,6 +29,9 @@
     <PackageReference Include="Grpc.Core" Version="1.4.0">
       <PrivateAssets>None</PrivateAssets>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\Google.Cloud.Tools.Analyzers.dll')">
+    <Analyzer Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\Google.Cloud.Tools.Analyzers.dll" />
   </ItemGroup>
   <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
 </Project>

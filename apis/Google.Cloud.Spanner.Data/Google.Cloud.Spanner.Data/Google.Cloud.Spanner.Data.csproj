@@ -3,6 +3,7 @@
   <PropertyGroup>
     <Version>1.0.0-alpha03</Version>
     <TargetFrameworks>netstandard1.5;net45</TargetFrameworks>
+    <Features>IOperation</Features>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
@@ -27,6 +28,9 @@
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.0-beta4">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\Google.Cloud.Tools.Analyzers.dll')">
+    <Analyzer Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\Google.Cloud.Tools.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.5'">
     <PackageReference Include="System.Data.Common" Version="4.3.0" />

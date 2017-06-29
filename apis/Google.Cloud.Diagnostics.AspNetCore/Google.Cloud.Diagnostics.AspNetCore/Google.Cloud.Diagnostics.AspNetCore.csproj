@@ -3,6 +3,7 @@
   <PropertyGroup>
     <Version>1.0.0-beta11</Version>
     <TargetFrameworks>netstandard1.5</TargetFrameworks>
+    <Features>IOperation</Features>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
@@ -31,6 +32,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="1.1.0" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="1.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\Google.Cloud.Tools.Analyzers.dll')">
+    <Analyzer Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\Google.Cloud.Tools.Analyzers.dll" />
   </ItemGroup>
   <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
 </Project>

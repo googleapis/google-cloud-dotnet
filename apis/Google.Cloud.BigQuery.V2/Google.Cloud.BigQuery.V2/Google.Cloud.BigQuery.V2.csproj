@@ -3,6 +3,7 @@
   <PropertyGroup>
     <Version>1.0.0-beta12</Version>
     <TargetFrameworks>netstandard1.3;net45</TargetFrameworks>
+    <Features>IOperation</Features>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
@@ -26,6 +27,9 @@
     </PackageReference>
     <PackageReference Include="Google.Api.Gax.Rest" Version="2.0.0" />
     <PackageReference Include="Google.Apis.Bigquery.v2" Version="1.27.1.885" />
+  </ItemGroup>
+  <ItemGroup Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\Google.Cloud.Tools.Analyzers.dll')">
+    <Analyzer Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\Google.Cloud.Tools.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="BigQueryClient.*.cs">

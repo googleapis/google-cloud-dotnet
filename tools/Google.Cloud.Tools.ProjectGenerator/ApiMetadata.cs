@@ -66,6 +66,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 // Build-related properties
                 new XElement("Version", Version), // TODO: Version, or VersionPrefix/VersionSuffix?
                 new XElement("TargetFrameworks", targetFrameworks),
+                new XElement("Features", "IOperation"),
                 new XElement("GenerateDocumentationFile", true),
                 new XElement("AssemblyOriginatorKeyFile", "../../GoogleApis.snk"),
                 new XElement("SignAssembly", true),
@@ -84,8 +85,9 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 new XElement("RepositoryType", "git"),
                 new XElement("RepositoryUrl", "https://github.com/GoogleCloudPlatform/google-cloud-dotnet")
             );
-            var itemGroup = CreateDependenciesElement(dependencies);
-            WriteProjectFile(directory, propertyGroup, itemGroup);
+            WriteProjectFile(directory, propertyGroup,
+                CreateDependenciesElement(dependencies),
+                CreateAnalyzerElement());
         }
 
         public void GenerateTestProject(string directory)
@@ -119,7 +121,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
             WriteProjectFile(directory, propertyGroup, itemGroup);
         }
 
-        private static void WriteProjectFile(string directory, XElement propertyGroup, XElement itemGroup)
+        private static void WriteProjectFile(
+            string directory, XElement propertyGroup, XElement dependenciesItemGroup, XElement analyzerItemGroup = null)
         {
             var file = Path.Combine(directory, $"{Path.GetFileName(directory)}.csproj");
             XElement doc;
@@ -130,7 +133,20 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 doc = XElement.Load(file);
                 doc.Elements("Import").Where(x => (string)x.Attribute("Project") == @"..\..\StripDesktopOnNonWindows.xml").Remove();
                 doc.Elements("PropertyGroup").First().ReplaceWith(propertyGroup);
-                doc.Elements("ItemGroup").First().ReplaceWith(itemGroup);
+                doc.Elements("ItemGroup").First().ReplaceWith(dependenciesItemGroup);
+                if (analyzerItemGroup != null)
+                {
+                    var secondGroup = doc.Elements("ItemGroup").Skip(1).FirstOrDefault();
+                    if (secondGroup != null && secondGroup.Elements("Analyzer").Any())
+                    {
+                        secondGroup.ReplaceWith(analyzerItemGroup);
+                    }
+                    else
+                    {
+                        dependenciesItemGroup.AddAfterSelf(analyzerItemGroup);
+                    }
+                }
+
                 if (!doc.Elements("Import").Any(x => (string) x.Attribute("Project") == StripDesktopOnNonWindows))
                 {
                     doc.Add(new XElement("Import", new XAttribute("Project", StripDesktopOnNonWindows)));
@@ -142,7 +158,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 doc = new XElement("Project",
                     new XAttribute("Sdk", "Microsoft.NET.Sdk"),
                     propertyGroup,
-                    itemGroup,
+                    dependenciesItemGroup,
+                    analyzerItemGroup,
                     new XElement("Import", new XAttribute("Project", StripDesktopOnNonWindows))
                 );
             }
@@ -193,5 +210,12 @@ namespace Google.Cloud.Tools.ProjectGenerator
                         d.Key == "ConfigureAwaitChecker.Analyzer" ? new XElement("PrivateAssets", "All") : null)
                     )
             );
+
+        private static XElement CreateAnalyzerElement()
+        {
+            var path = @"..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\Google.Cloud.Tools.Analyzers.dll";
+            return new XElement("ItemGroup", new XAttribute("Condition", $"Exists('{path}')"),
+                new XElement("Analyzer", new XAttribute("Include", path)));
+        }
     }
 }
