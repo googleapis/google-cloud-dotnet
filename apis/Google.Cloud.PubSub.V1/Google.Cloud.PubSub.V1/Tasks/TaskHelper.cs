@@ -17,6 +17,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+// This class uses TaskHelper.ConfigureAwait, rather than directly calling .ConfigureAwait().
+// When running in a non-test environment this indirectly calls .ConfigureAwait(false).
+// Disable the ConfigureAwaitChecker warning:
+#pragma warning disable ConfigureAwaitChecker // CAC001
+
 namespace Google.Cloud.PubSub.V1.Tasks
 {
     internal abstract class TaskHelper
@@ -102,7 +107,7 @@ namespace Google.Cloud.PubSub.V1.Tasks
                     await taskHelper.ConfigureAwait(task);
                     return false;
                 }
-                catch (AggregateException e) when (e.IsCancellation())
+                catch (Exception e) when (e.IsCancellation())
                 {
                     return true;
                 }
@@ -118,7 +123,7 @@ namespace Google.Cloud.PubSub.V1.Tasks
                 {
                     return await taskHelper.ConfigureAwait(task);
                 }
-                catch (AggregateException e) when (e.IsCancellation())
+                catch (Exception e) when (e.IsCancellation())
                 {
                     return resultOnCancellation;
                 }

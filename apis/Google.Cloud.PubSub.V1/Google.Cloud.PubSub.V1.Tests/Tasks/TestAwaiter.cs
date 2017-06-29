@@ -35,7 +35,16 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
         public void UnsafeOnCompleted(Action continuation) =>
             _task.ContinueWith(_ => continuation(), CancellationToken.None, TaskContinuationOptions.DenyChildAttach, _taskScheduler);
         public bool IsCompleted => _task.IsCompleted;
-        public void GetResult() => _task.Wait();
+        public void GetResult()
+        {
+            switch (_task.Status)
+            {
+                case TaskStatus.RanToCompletion: return;
+                case TaskStatus.Canceled: throw new TaskCanceledException(_task);
+                case TaskStatus.Faulted: throw _task.Exception.InnerException;
+                default: throw new InvalidOperationException();
+            }
+        }
     }
 
     internal class TestAwaiter<T> : ITaskAwaiter<T>
@@ -53,7 +62,16 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
             _task.ContinueWith(_ => continuation(), CancellationToken.None, TaskContinuationOptions.DenyChildAttach, _taskScheduler);
         public void UnsafeOnCompleted(Action continuation) =>
             _task.ContinueWith(_ => continuation(), CancellationToken.None, TaskContinuationOptions.DenyChildAttach, _taskScheduler);
-         public bool IsCompleted => _task.IsCompleted;
-        public T GetResult() => _task.Result;
+        public bool IsCompleted => _task.IsCompleted;
+        public T GetResult()
+        {
+            switch (_task.Status)
+            {
+                case TaskStatus.RanToCompletion: return _task.Result;
+                case TaskStatus.Canceled: throw new TaskCanceledException(_task);
+                case TaskStatus.Faulted: throw _task.Exception.InnerException;
+                default: throw new InvalidOperationException();
+            }
+        }
     }
 }

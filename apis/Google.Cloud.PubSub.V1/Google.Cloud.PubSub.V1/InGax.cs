@@ -47,36 +47,31 @@ namespace Google.Api.Gax
     public sealed class BatchingSettings
     {
         /// <summary>
-        /// Creates a new instance.
+        /// Create a new instance with the specified settings.
         /// </summary>
-        public BatchingSettings() { }
-
-        internal BatchingSettings(BatchingSettings other)
+        /// <param name="elementCountThreshold">The element count above which further processing of a batch will occur.</param>
+        /// <param name="requestByteThreshold">The byte count above which further processing of a batch will occur.</param>
+        /// <param name="delayThreshold">The batch lifetime above which further processing of a batch will occur.</param>
+        public BatchingSettings(long? elementCountThreshold, long? requestByteThreshold, TimeSpan? delayThreshold)
         {
-            ElementCountThreshold = other.ElementCountThreshold;
-            RequestByteThreshold = other.RequestByteThreshold;
-            DelayThreshold = other.DelayThreshold;
+            ElementCountThreshold = elementCountThreshold;
+            RequestByteThreshold = requestByteThreshold;
+            DelayThreshold = delayThreshold;
         }
 
         /// <summary>
         /// The element count above which further processing of a batch will occur.
         /// </summary>
-        public long? ElementCountThreshold { get; set; }
+        public long? ElementCountThreshold { get; }
 
         /// <summary>
         /// The byte count above which further processing of a batch will occur.
         /// </summary>
-        public long? RequestByteThreshold { get; set; }
+        public long? RequestByteThreshold { get; }
 
         /// <summary>
         /// The batch lifetime above which further processing of a batch will occur.
         /// </summary>
-        public TimeSpan? DelayThreshold { get; set; }
-
-        /// <summary>
-        /// Return a clone of this object.
-        /// </summary>
-        /// <returns>A clone of this object.</returns>
-        public BatchingSettings Clone() => new BatchingSettings(this);
+        public TimeSpan? DelayThreshold { get; }
     }
 }

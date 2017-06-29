@@ -23,9 +23,9 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Google.Cloud.Iam.V1\Google.Cloud.Iam.V1\Google.Cloud.Iam.V1.csproj" />
-    <!--<PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.0-beta4">
+    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.0-beta4">
       <PrivateAssets>All</PrivateAssets>
-    </PackageReference>--> <!-- TODO: Work out how to add this back -->
+    </PackageReference>
     <PackageReference Include="Google.Api.Gax.Grpc" Version="2.0.0" />
     <PackageReference Include="Grpc.Core" Version="1.4.0">
       <PrivateAssets>None</PrivateAssets>

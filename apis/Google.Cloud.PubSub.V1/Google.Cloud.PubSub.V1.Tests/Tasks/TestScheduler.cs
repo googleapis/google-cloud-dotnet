@@ -480,5 +480,5 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
         {
             _taskScheduler.Dispose();
         }
-}
+    }
 }
