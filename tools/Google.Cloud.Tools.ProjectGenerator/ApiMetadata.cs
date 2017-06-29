@@ -196,7 +196,11 @@ namespace Google.Cloud.Tools.ProjectGenerator
                         // Make references to ConfigureAwaitChecker effectively private
                         d.Key == "ConfigureAwaitChecker.Analyzer" ? new XElement("PrivateAssets", "All") : null)
                     ),
-                includeAnalyzers ? new XElement("Analyzer", new XAttribute("Condition", $"Exists('{AnalyzersPath}')"), new XAttribute("Include", AnalyzersPath)) : null
+                includeAnalyzers ?
+                    new XElement("Analyzer",
+                        new XAttribute("Condition", $"Exists('{AnalyzersPath}') AND $(Configuration) == 'Debug'"),
+                        new XAttribute("Include", AnalyzersPath)) :
+                    null
             );
     }
 }
