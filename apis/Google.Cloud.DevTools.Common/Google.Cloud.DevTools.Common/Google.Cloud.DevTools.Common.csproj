@@ -27,9 +27,7 @@
     </PackageReference>
     <PackageReference Include="Google.Api.CommonProtos" Version="1.1.0" />
     <PackageReference Include="Google.Protobuf" Version="3.3.0" />
-  </ItemGroup>
-  <ItemGroup Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\Google.Cloud.Tools.Analyzers.dll')">
-    <Analyzer Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\Google.Cloud.Tools.Analyzers.dll" />
+    <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\net452\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\net452\Google.Cloud.Tools.Analyzers.dll" />
   </ItemGroup>
   <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
 </Project>

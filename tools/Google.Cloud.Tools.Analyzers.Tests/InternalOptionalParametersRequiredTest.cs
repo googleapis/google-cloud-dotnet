@@ -11,6 +11,28 @@ namespace Google.Cloud.Tools.Analyzers.Test
     public class InternalOptionalParametersRequiredTest : CodeFixVerifier
     {
         [Fact]
+        public void CustomTypeNotOmitted()
+        {
+            var test = @"
+public class A
+{
+    public void B(Options x)
+    {
+        C(x);
+    }
+
+    public void C(Options options = null)
+    {
+    }
+}
+
+public class Options
+{
+}";
+            VerifyCSharpDiagnostic(test);
+        }
+
+        [Fact]
         public void CustomTypeNamesDontMatch()
         {
             var test = @"

@@ -23,8 +23,10 @@ using System;
 
 namespace Google.Cloud.Tools.Analyzers
 {
-    // Warns about omitted default arguments for calls to externally visible methods which are defined within the same assembly,
-    // but only when there is a suitable local variable or parameter available in scope which can be used for the argument.
+    /// <summary>
+    /// Warns about omitted default arguments for calls to externally visible methods which are defined within the same assembly,
+    /// but only when there is a suitable local variable or parameter available in scope which can be used for the argument.
+    /// </summary>
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     public class InternalOptionalParametersRequired : DiagnosticAnalyzer
     {
@@ -84,25 +86,23 @@ namespace Google.Cloud.Tools.Analyzers
                         symbol => symbol.Name.Equals(arg.Parameter.Name, StringComparison.OrdinalIgnoreCase));
 
                     // If the parameter's type is String or any primitive type, only show the diagnostic when there is
-                    // some variable with the same (case-insentive) name as the argument. Strings are too commmon, for
+                    // some variable with the same (case-insensitive) name as the argument. Strings are too common, for
                     // example, to assume that any string in scope should be supplied for a default parameter.
-                    if (parameterType.SpecialType == SpecialType.System_String || parameterType.IsPrimitive())
+                    if ((parameterType.SpecialType == SpecialType.System_String || parameterType.IsPrimitive()) &&
+                        nameMatch == null)
                     {
-                        if (nameMatch == null)
-                        {
-                            continue;
-                        }
+                        continue;
                     }
 
                     // Report the missing argument with a suggested variable to be used. Prefer one with a name matching
                     // the missing parameter's name if available.
-                    var preferrredVariable = nameMatch ?? convertibleVariables[0];
+                    var preferredVariable = nameMatch ?? convertibleVariables[0];
                     context.ReportDiagnostic(
                         Diagnostic.Create(
                             Rule,
                             invocationExpression.ArgumentList.GetLocation(),
                             arg.Parameter.Name,
-                            preferrredVariable.Name));
+                            preferredVariable.Name));
                 }
             }
         }

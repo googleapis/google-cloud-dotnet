@@ -1,4 +1,7 @@
-﻿using Microsoft.CodeAnalysis;
+﻿// This file was automatically created from the "Analyzer With Code Fix (NuGet + VSIX)" template.
+// It has only been updated to use xunit's Assert APIs.
+
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.Diagnostics;

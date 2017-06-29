@@ -1,4 +1,6 @@
-﻿using Microsoft.CodeAnalysis;
+﻿// This file was automatically created from the "Analyzer With Code Fix (NuGet + VSIX)" template.
+
+using Microsoft.CodeAnalysis;
 using System;
 
 namespace TestHelper

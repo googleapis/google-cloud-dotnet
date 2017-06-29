@@ -27,9 +27,7 @@
     </PackageReference>
     <PackageReference Include="Google.Api.Gax.Rest" Version="2.0.0" />
     <PackageReference Include="Google.Apis.Bigquery.v2" Version="1.27.1.885" />
-  </ItemGroup>
-  <ItemGroup Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\Google.Cloud.Tools.Analyzers.dll')">
-    <Analyzer Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\Google.Cloud.Tools.Analyzers.dll" />
+    <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\net452\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\net452\Google.Cloud.Tools.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="BigQueryClient.*.cs">

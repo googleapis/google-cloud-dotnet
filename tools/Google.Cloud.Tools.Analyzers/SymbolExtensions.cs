@@ -12,13 +12,29 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
 using Microsoft.CodeAnalysis;
+using System;
+using System.Collections.Generic;
 
 namespace Google.Cloud.Tools.Analyzers
 {
     internal static class SymbolExtensions
     {
+        private static readonly HashSet<SpecialType> s_primitiveTypes = new HashSet<SpecialType> {
+            SpecialType.System_Boolean,
+            SpecialType.System_Char,
+            SpecialType.System_SByte,
+            SpecialType.System_Byte,
+            SpecialType.System_Int16,
+            SpecialType.System_UInt16,
+            SpecialType.System_Int32,
+            SpecialType.System_UInt32,
+            SpecialType.System_Int64,
+            SpecialType.System_UInt64,
+            SpecialType.System_Single,
+            SpecialType.System_Double
+        };
+
         internal static ITypeSymbol GetVariableType(this ISymbol symbol)
         {
             switch (symbol)
@@ -45,24 +61,7 @@ namespace Google.Cloud.Tools.Analyzers
 
         internal static bool IsPrimitive(this ITypeSymbol type)
         {
-            switch (type.SpecialType)
-            {
-                case SpecialType.System_Boolean:
-                case SpecialType.System_Char:
-                case SpecialType.System_SByte:
-                case SpecialType.System_Byte:
-                case SpecialType.System_Int16:
-                case SpecialType.System_UInt16:
-                case SpecialType.System_Int32:
-                case SpecialType.System_UInt32:
-                case SpecialType.System_Int64:
-                case SpecialType.System_UInt64:
-                case SpecialType.System_Single:
-                case SpecialType.System_Double:
-                    return true;
-                default:
-                    return false;
-            }
+            return s_primitiveTypes.Contains(type.SpecialType);
         }
     }
 }

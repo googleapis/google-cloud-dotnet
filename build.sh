@@ -30,20 +30,11 @@ then
   for api in $apis
   do 
     [[ -d "$api" ]] && apidir=$api || apidir=apis/$api
-    for project in $apidir/*/*.csproj
-    do
-      if [[ $project != *"Google.Cloud.Tools.Analyzers"* ]]
-      then
-        dotnet sln AllProjects.sln add $project
-      fi
-    done
+    dotnet sln AllProjects.sln add $apidir/*/*.csproj
 
     for testproject in $apidir/*.Tests/*.csproj
     do
-      if [[ $testproject != *"Google.Cloud.Tools.Analyzers"* ]]
-      then
-        echo "$testproject" >> AllTests.txt
-      fi
+      echo "$testproject" >> AllTests.txt
     done
   done
 else
