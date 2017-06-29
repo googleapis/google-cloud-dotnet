@@ -31,7 +31,7 @@ then
   do 
     [[ -d "$api" ]] && apidir=$api || apidir=apis/$api
     dotnet sln AllProjects.sln add $apidir/*/*.csproj
-  
+
     for testproject in $apidir/*.Tests/*.csproj
     do
       echo "$testproject" >> AllTests.txt

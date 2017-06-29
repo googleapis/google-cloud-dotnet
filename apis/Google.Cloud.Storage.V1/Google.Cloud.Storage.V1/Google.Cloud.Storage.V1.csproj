@@ -3,6 +3,7 @@
   <PropertyGroup>
     <Version>2.1.0-beta00</Version>
     <TargetFrameworks>netstandard1.3;net45</TargetFrameworks>
+    <Features>IOperation</Features>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
@@ -26,6 +27,7 @@
     </PackageReference>
     <PackageReference Include="Google.Api.Gax.Rest" Version="2.0.0" />
     <PackageReference Include="Google.Apis.Storage.v1" Version="1.27.1.881" />
+    <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\net452\Google.Cloud.Tools.Analyzers.dll') AND $(Configuration) == 'Debug'" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\net452\Google.Cloud.Tools.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="StorageClient.*.cs">
