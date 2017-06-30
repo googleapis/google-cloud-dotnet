@@ -15,23 +15,47 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Protobuf;
+using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.LongRunning
 {
+    // TODO: Update the class documentation with alternatives for handling multiple types when
+    // https://github.com/google/protobuf/issues/3294 is resolved.
+
     /// <summary>
     /// A long-running operation with an associated client, and which knows the expected response type.
     /// </summary>
     /// <remarks>
+    /// <para>
     /// For simplicity, no methods on this type modify the proto message. Instead, to get up-to-date
     /// information you can use Refresh to obtain a new instance.
+    /// </para>
+    /// <para>
+    /// If the operation was created with a different major version of the service API than expected,
+    /// the metadata and response values may not be of the expected type. There are three approaches to handling this:
+    /// <list type="bullet">
+    ///   <item>
+    ///     <description>To fail with an exception if an unexpected type of value is present, use the <see cref="Result"/>
+    ///     and <see cref="Metadata"/> properties.</description>
+    ///   </item>
+    ///   <item>
+    ///     <description>To receive a null reference if an unexpected type of value is present, use the <see cref="GetResultOrNull()"/>
+    ///     and <see cref="GetMetadataOrNull()"/> methods. You can then check the returned value and ignore nulls.</description>
+    ///   </item>
+    ///   <item>
+    ///     <description>To handle multiple types, use the <see cref="RpcMessage"/> property and its <see cref="Operation.Response"/> and <see cref="Operation.Metadata"/>
+    ///     properties, of type <see cref="Any"/>. You can then use <see cref="Any.TypeUrl"/> to determine the type of the value to unpack.</description>
+    ///   </item>
+    /// </list>
+    /// </para>
     /// </remarks>
     /// <typeparam name="TResponse">The response message type.</typeparam>
     /// <typeparam name="TMetadata">The metata message type.</typeparam>
     public sealed class Operation<TResponse, TMetadata>
-        where TResponse : IMessage<TResponse>, new()
+        where TResponse : class, IMessage<TResponse>, new()
         where TMetadata : class, IMessage<TMetadata>, new()
     {
         /// <summary>
@@ -75,9 +99,6 @@ namespace Google.LongRunning
         /// </remarks>
         public string Name => RpcMessage.Name;
 
-        // TODO: Use ResultCase instead? It's slightly odd that we have both Done and ResultCase,
-        // but we could at least ignore Done entirely in this code...
-
         /// <summary>
         /// Whether the operation has completed, where "complete" can include "failed".
         /// </summary>
@@ -105,32 +126,72 @@ namespace Google.LongRunning
         /// Retrieves the metadata associated with this operation, or <c>null</c> if there is no
         /// metadata in the underlying response message.
         /// </summary>
-        public TMetadata Metadata => RpcMessage.Metadata?.Unpack<TMetadata>();
+        /// <remarks>
+        /// Only the in-memory representation of the operation (this object) is consulted for its state.
+        /// See the <see cref="Operation"/> documentation for information about dealing with different metadata type versions.
+        /// </remarks>
+        /// <exception cref="InvalidOperationException">Metadata is present, but is not of the expected type.</exception>
+        public TMetadata Metadata => Unpack<TMetadata>(RpcMessage.Metadata, true);
 
         /// <summary>
-        /// Retrieves the result of the operation, throwing an exception if the operation failed or hasn't completed.
-        /// Unlike <see cref="Task{T}.Result"/>, this does not block.
+        /// Retrieves the metadata associated with this operation, or <c>null</c> if either there is no
+        /// metadata in the underlying response message, or it does not have the expected type.
         /// </summary>
         /// <remarks>
         /// Only the in-memory representation of the operation (this object) is consulted for its state.
+        /// See the <see cref="Operation"/> documentation for information about dealing with different metadata type versions.
+        /// </remarks>
+        /// <returns>The metadata of the operation if possible, or null otherwise.</returns>
+        public TMetadata GetMetadataOrNull() => Unpack<TMetadata>(RpcMessage.Metadata, false);
+
+        /// <summary>
+        /// Retrieves the result of the operation, throwing an exception if the operation failed, hasn't completed,
+        /// or has an unexpected result type. Unlike <see cref="Task{T}.Result"/>, this does not block.
+        /// If the operation has completed but the result is not present (for example due to being excluded by
+        /// a field mask) this returns null.
+        /// </summary>
+        /// <remarks>
+        /// Only the in-memory representation of the operation (this object) is consulted for its state.
+        /// See the <see cref="Operation"/> documentation for information about dealing with different response type versions.
         /// </remarks>
         /// <exception cref="OperationFailedException">The operation completed with an error.</exception>
-        /// <exception cref="InvalidOperationException">The operation has not completed yet.</exception>
+        /// <exception cref="InvalidOperationException">The operation has not completed yet, or the result is present but
+        /// not of the expected result type.</exception>
         public TResponse Result
         {
             get
             {
-                switch (RpcMessage.ResultCase)
+                // This uses the Done property...
+                if (!IsCompleted)
                 {
-                    case Operation.ResultOneofCase.Error:
-                        throw Exception;
-                    case Operation.ResultOneofCase.Response:
-                        return RpcMessage.Response.Unpack<TResponse>();
-                    default:
-                        throw new InvalidOperationException();
+                    throw new InvalidOperationException("Operation has not completed.");
                 }
+
+                // If we have no result case, that could be because there was an error but the fieldmask
+                // excluded it, or because it had completed and the fieldmask excluded the result. We'll
+                // assume the latter and return null rather than assume an error that we don't know about.
+                // It would be odd to mask out the error, but it's very reasonable to mask out the result if
+                // it might be large and you don't really need it.
+                // This is consistent with the handling of Exception and IsFaulted.
+
+                if (RpcMessage.Error != null)
+                {
+                    throw Exception;
+                }
+                return Unpack<TResponse>(RpcMessage.Response, true);
             }
         }
+
+        /// <summary>
+        /// Retrieves the result of the operation, or null if the operation failed, hasn't completed, has an
+        /// unexpected result type, or didn't contain a result at all.
+        /// </summary>
+        /// <remarks>
+        /// Only the in-memory representation of the operation (this object) is consulted for its state.
+        /// See the <see cref="Operation"/> documentation for information about dealing with different response type versions.
+        /// </remarks>
+        /// <returns>The result of the operation if possible, or null otherwise.</returns>
+        public TResponse GetResultOrNull() => Unpack<TResponse>(RpcMessage.Response, false);
 
         /// <summary>
         /// Polls the operation until it is complete, returning the completed operation.
@@ -348,5 +409,32 @@ namespace Google.LongRunning
         /// the current state of the operation identified by <paramref name="name"/>.</returns>
         public static Task<Operation<TResponse, TMetadata>> PollOnceFromNameAsync(string name, OperationsClient client, CancellationToken cancellationToken) =>
             PollOnceFromNameAsync(name, client, CallSettings.FromCancellationToken(cancellationToken));
+
+        // TODO: This is mostly copied from Google.Protobuf... it would be nice if that would expose similar functionality cleanly.
+        // See https://github.com/google/protobuf/issues/3294
+        private static T Unpack<T>(Any any, bool throwOnWrongType) where T : class, IMessage<T>, new()
+        {
+            if (any == null)
+            {
+                return null;
+            }
+            T target = new T();
+            string anyTypeName = GetAnyTypeName(any.TypeUrl);
+            if (GetAnyTypeName(any.TypeUrl) != target.Descriptor.FullName)
+            {
+                return throwOnWrongType 
+                    ? throw new InvalidOperationException(
+                        $"Expected type {target.Descriptor.FullName}; received type is {anyTypeName}")
+                    : (T) null;
+            }
+            target.MergeFrom(any.Value);
+            return target;
+        }
+
+        private static string GetAnyTypeName(string typeUrl)
+        {
+            int lastSlash = typeUrl.LastIndexOf('/');
+            return lastSlash == -1 ? "" : typeUrl.Substring(lastSlash + 1);
+        }
     }
 }
