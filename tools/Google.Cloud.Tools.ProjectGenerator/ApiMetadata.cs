@@ -48,8 +48,10 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 throw new Exception($"No version specified for {Id}");
             }
             string targetFrameworks = TargetFrameworks;
-            var dependencies = new SortedList<string, string>(Dependencies);
-            dependencies.Add("ConfigureAwaitChecker.Analyzer", "1.0.0-beta4");
+            var dependencies = new SortedList<string, string>(Dependencies)
+            {
+                { "ConfigureAwaitChecker.Analyzer", "1.0.0-beta4" }
+            };
             switch (Type)
             {
                 case "rest":
@@ -118,6 +120,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
             itemGroup.Add(new XElement("Reference",
                 new XAttribute("Condition", "'$(TargetFramework)' == 'net452'"),
                 new XAttribute("Include", "Microsoft.CSharp")));
+            // Test service... it keeps on getting added by Visual Studio, so let's just include it everywhere.
+            itemGroup.Add(new XElement("Service", new XAttribute("Include", "{82a7f48d-3b50-4b1e-b82e-3ada8210c358}")));
             WriteProjectFile(directory, propertyGroup, itemGroup);
         }
 
