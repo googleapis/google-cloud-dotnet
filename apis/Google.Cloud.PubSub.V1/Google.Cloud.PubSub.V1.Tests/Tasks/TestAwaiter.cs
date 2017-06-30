@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Cloud.PubSub.V1.Tasks;
 using System;
 using System.Threading;
@@ -35,16 +36,7 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
         public void UnsafeOnCompleted(Action continuation) =>
             _task.ContinueWith(_ => continuation(), CancellationToken.None, TaskContinuationOptions.DenyChildAttach, _taskScheduler);
         public bool IsCompleted => _task.IsCompleted;
-        public void GetResult()
-        {
-            switch (_task.Status)
-            {
-                case TaskStatus.RanToCompletion: return;
-                case TaskStatus.Canceled: throw new TaskCanceledException(_task);
-                case TaskStatus.Faulted: throw _task.Exception.InnerException;
-                default: throw new InvalidOperationException();
-            }
-        }
+        public void GetResult() => _task.WaitWithUnwrappedExceptions();
     }
 
     internal class TestAwaiter<T> : ITaskAwaiter<T>
@@ -63,15 +55,6 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
         public void UnsafeOnCompleted(Action continuation) =>
             _task.ContinueWith(_ => continuation(), CancellationToken.None, TaskContinuationOptions.DenyChildAttach, _taskScheduler);
         public bool IsCompleted => _task.IsCompleted;
-        public T GetResult()
-        {
-            switch (_task.Status)
-            {
-                case TaskStatus.RanToCompletion: return _task.Result;
-                case TaskStatus.Canceled: throw new TaskCanceledException(_task);
-                case TaskStatus.Faulted: throw _task.Exception.InnerException;
-                default: throw new InvalidOperationException();
-            }
-        }
+        public T GetResult() => _task.ResultWithUnwrappedExceptions();
     }
 }

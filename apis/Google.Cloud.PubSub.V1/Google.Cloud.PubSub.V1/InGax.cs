@@ -38,6 +38,75 @@ namespace Google.Api.Gax
             }
             return argument;
         }
+
+        /// <summary>
+        /// Checks that the given argument value is valid, if not <c>null</c>.
+        /// </summary>
+        /// <remarks>
+        /// Note that the upper bound (<paramref name="maxInclusive"/>) is inclusive,
+        /// not exclusive. This is deliberate, to allow the specification of ranges which include
+        /// <see cref="Int64.MaxValue"/>.
+        /// </remarks>
+        /// <param name="argument">The value of the argument passed to the calling method.</param>
+        /// <param name="paramName">The name of the parameter in the calling method.</param>
+        /// <param name="minInclusive">The smallest valid value.</param>
+        /// <param name="maxInclusive">The largest valid value.</param>
+        /// <returns><paramref name="argument"/> if it was in range, or <c>null</c>.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">The argument was outside the specified range.</exception>
+        public static long? CheckArgumentRange(long? argument, string paramName, long minInclusive, long maxInclusive) =>
+            argument.HasValue ? CheckArgumentRange(argument.Value, paramName, minInclusive, maxInclusive) : argument;
+
+        /// <summary>
+        /// Check that the given argument is non-negative.
+        /// </summary>
+        /// <param name="argument">The value of the argument passed to the calling method.</param>
+        /// <param name="paramName">The name of the parameter in the calling method.</param>
+        /// <returns><paramref name="argument"/> if it was non-negative.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">The argument was negative.</exception>
+        public static long CheckNonNegative(long argument, string paramName)
+        {
+            if (argument < 0)
+            {
+                throw new ArgumentOutOfRangeException(paramName, $"Value {argument} should be non-negative");
+            }
+            return argument;
+        }
+
+        /// <summary>
+        /// Check that the given argument is non-negative, if not <c>null</c>.
+        /// </summary>
+        /// <param name="argument">The value of the argument passed to the calling method.</param>
+        /// <param name="paramName">The name of the parameter in the calling method.</param>
+        /// <returns><paramref name="argument"/> if it was non-negative, or <c>null</c>.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">The argument was negative.</exception>
+        public static long? CheckNonNegative(long? argument, string paramName) =>
+            argument.HasValue ? CheckNonNegative(argument.Value, paramName) : argument;
+
+        /// <summary>
+        /// Check that the given argument is non-negative.
+        /// </summary>
+        /// <param name="argument">The value of the argument passed to the calling method.</param>
+        /// <param name="paramName">The name of the parameter in the calling method.</param>
+        /// <returns><paramref name="argument"/> if it was non-negative.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">The argument was negative.</exception>
+        public static double CheckNonNegative(double argument, string paramName)
+        {
+            if (argument < 0)
+            {
+                throw new ArgumentOutOfRangeException(paramName, $"Value {argument} should be non-negative");
+            }
+            return argument;
+        }
+
+        /// <summary>
+        /// Check that the given argument is non-negative, if not <c>null</c>.
+        /// </summary>
+        /// <param name="argument">The value of the argument passed to the calling method.</param>
+        /// <param name="paramName">The name of the parameter in the calling method.</param>
+        /// <returns><paramref name="argument"/> if it was non-negative, or <c>null</c>.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">The argument was negative.</exception>
+        public static double? CheckNonNegative(double? argument, string paramName) =>
+            argument.HasValue ? CheckNonNegative(argument.Value, paramName) : argument;
     }
 
     /// <summary>
@@ -54,8 +123,9 @@ namespace Google.Api.Gax
         /// <param name="delayThreshold">The batch lifetime above which further processing of a batch will occur.</param>
         public BatchingSettings(long? elementCountThreshold, long? requestByteThreshold, TimeSpan? delayThreshold)
         {
-            ElementCountThreshold = elementCountThreshold;
-            RequestByteThreshold = requestByteThreshold;
+            ElementCountThreshold = GaxPreconditions2.CheckNonNegative(elementCountThreshold, nameof(elementCountThreshold));
+            RequestByteThreshold = GaxPreconditions2.CheckNonNegative(requestByteThreshold, nameof(requestByteThreshold));
+            GaxPreconditions2.CheckNonNegative(delayThreshold?.TotalSeconds, nameof(delayThreshold));
             DelayThreshold = delayThreshold;
         }
 

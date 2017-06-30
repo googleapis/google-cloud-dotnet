@@ -84,9 +84,9 @@ namespace Google.Cloud.PubSub.V1
                 {
                     if (batchingSettings != null)
                     {
-                        GaxPreconditions2.CheckArgumentRange(batchingSettings.ElementCountThreshold ?? 1,
+                        GaxPreconditions2.CheckArgumentRange(batchingSettings.ElementCountThreshold,
                             $"{name}.{nameof(BatchingSettings.ElementCountThreshold)}", 1, ApiMaxBatchingSettings.ElementCountThreshold.Value);
-                        GaxPreconditions2.CheckArgumentRange(batchingSettings.RequestByteThreshold ?? 1,
+                        GaxPreconditions2.CheckArgumentRange(batchingSettings.RequestByteThreshold,
                             $"{name}.{nameof(BatchingSettings.RequestByteThreshold)}", 1, ApiMaxBatchingSettings.RequestByteThreshold.Value);
                         GaxPreconditions.CheckArgument((batchingSettings.DelayThreshold ?? TimeSpan.FromSeconds(1)) > TimeSpan.Zero,
                             $"{name}.{nameof(BatchingSettings.DelayThreshold)}", "Must be positive");
@@ -328,7 +328,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Shutdown this <see cref="HiPerfPublisher"/>. Cancelling <paramref name="hardStopToken"/> aborts the
-        /// clean shutdown process, and will leave some locally queued messages unsent.
+        /// clean shutdown process, and may leave some locally queued messages unsent.
         /// The returned <see cref="Task"/> completes when all queued messages have been published.
         /// The returned <see cref="Task"/> cancels if the passed <see cref="CancellationToken"/> is cancelled.
         /// <see cref="Task"/> as quickly as possible.
@@ -461,7 +461,6 @@ namespace Google.Cloud.PubSub.V1
                 if (_currentBatch == null)
                 {
                     // Create a new batch if this is the first ever batch, or a batch has just been queued.
-                    //Task unusedTimeoutTask = CreateBatch();
                     _currentBatch = new Batch();
                     DelaySendCurrentBatch();
                 }
@@ -636,7 +635,8 @@ namespace Google.Cloud.PubSub.V1
             // Update flow-control counts.
             _queueElementCount -= batch.Messages.Count;
             _queueByteCount -= batch.ByteCount;
-            _taskHelper.Run(async () =>
+
+            async Task Send()
             {
                 // Perform the RPC to server, catching exceptions.
                 var publishTask = client.PublishAsync(TopicName, batch.Messages, CallSettings.FromCancellationToken(_hardStopCts.Token));
@@ -673,7 +673,10 @@ namespace Google.Cloud.PubSub.V1
                         QueueCurrentBatchIfRequired();
                     }
                 }
-            });
+            }
+
+            // Send the batch
+            _taskHelper.Run(Send);
         }
 
     }
