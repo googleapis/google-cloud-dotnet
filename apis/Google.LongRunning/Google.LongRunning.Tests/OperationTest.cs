@@ -50,6 +50,53 @@ namespace Google.LongRunning.Tests
         }
 
         [Fact]
+        public void NullResult()
+        {
+            var client = new FakeOperationsClient();
+            var operation = ForResult("name", "foo", client);
+            operation.RpcMessage.Response = null; // Maybe it's been removed via a FieldMask...
+            Assert.Null(operation.Result);
+            Assert.Null(operation.GetResultOrNull());
+        }
+
+        [Fact]
+        public void UnexpectedResultType()
+        {
+            var client = new FakeOperationsClient();
+            var operation = ForResult("name", "foo", client);
+            Duration unexpectedResult = new Duration { Seconds = 10 };
+            operation.RpcMessage.Response = Any.Pack(unexpectedResult);
+            Assert.Throws<InvalidOperationException>(() => operation.Result.ToString());
+            Assert.Null(operation.GetResultOrNull());
+            // Just to prove we can get the result again if we want...
+            Assert.Equal(unexpectedResult, operation.RpcMessage.Response.Unpack<Duration>());
+        }
+
+        [Fact]
+        public void NullMetadata()
+        {
+            var client = new FakeOperationsClient();
+            var operation = ForResult("name", "foo", client);
+            // ForResult might specify metadata or it might not. Force it.
+            operation.RpcMessage.Metadata = null;
+            Assert.Null(operation.Metadata);
+            Assert.Null(operation.GetMetadataOrNull());
+        }
+
+        [Fact]
+        public void UnexpectedMetadataType()
+        {
+            var client = new FakeOperationsClient();
+            var operation = ForResult("name", "foo", client);
+            Duration unexpectedMetadata = new Duration { Seconds = 10 };
+            operation.RpcMessage.Metadata = Any.Pack(unexpectedMetadata);
+            Assert.Throws<InvalidOperationException>(() => operation.Metadata.ToString());
+            Assert.Null(operation.GetMetadataOrNull());
+            // Just to prove we can get the result again if we want...
+            Assert.Equal(unexpectedMetadata, operation.RpcMessage.Metadata.Unpack<Duration>());
+        }
+
+        [Fact]
         public async Task Properties_WithError()
         {
             var client = new FakeOperationsClient();
@@ -57,6 +104,7 @@ namespace Google.LongRunning.Tests
             Assert.Equal("name", operation.Name);
             Assert.True(operation.IsCompleted);
             var exception = Assert.Throws<OperationFailedException>(() => operation.Result.ToString());
+            Assert.Null(operation.GetResultOrNull()); // No exception
             Assert.Contains("Bang", exception.Message);
             Assert.Equal(123, exception.Status.Code);
             Assert.Same(operation.RpcMessage, exception.Operation);
@@ -78,6 +126,7 @@ namespace Google.LongRunning.Tests
             Assert.Equal("name", operation.Name);
             Assert.False(operation.IsCompleted);
             var exception = Assert.Throws<InvalidOperationException>(() => operation.Result.ToString());
+            Assert.Null(operation.GetResultOrNull()); // No exception
             Assert.False(operation.IsFaulted);
             Assert.Equal(0, client.RequestCount);
         }
