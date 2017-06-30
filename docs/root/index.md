@@ -18,7 +18,9 @@ GA:
 
 - [Google.Cloud.Datastore.V1](Google.Cloud.Datastore.V1/index.html)
 - [Google.Cloud.Logging.V2](Google.Cloud.Logging.V2/index.html)
+  - Additionally, a [separate Log4Net integration package is available](Google.Cloud.Logging.Log4Net/index.html)
 - [Google.Cloud.Storage.V1](Google.Cloud.Storage.V1/index.html)
+- [Google.Cloud.Translation.V2](Google.Cloud.Translation.V2/index.html)
 
 Late beta:
 
@@ -38,7 +40,6 @@ Beta:
   - Although this library works as-is, a hand-written abstraction layer is being worked on, which
     is expected to be the main way of interacting with Pub/Sub.
 - [Google.Cloud.Trace.V1](Google.Cloud.Trace.V1/index.html)
-- [Google.Cloud.Translation.V2](Google.Cloud.Translation.V2/index.html)
 
 Alpha:
 
