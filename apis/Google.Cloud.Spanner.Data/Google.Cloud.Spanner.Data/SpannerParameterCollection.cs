@@ -27,7 +27,7 @@ namespace Google.Cloud.Spanner.Data
     /// Represents a collection of parameters associated with a <see cref="SpannerCommand"/> and their
     /// respective mappings to columns in a DataSet.
     /// </summary>
-    public sealed class SpannerParameterCollection : DbParameterCollection
+    public sealed class SpannerParameterCollection : DbParameterCollection, IEnumerable<SpannerParameter>
     {
         /// <inheritdoc />
         public override int Count => _innerList.Count;
@@ -140,6 +140,12 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <inheritdoc />
+        IEnumerator<SpannerParameter> IEnumerable<SpannerParameter>.GetEnumerator()
+        {
+            return _innerList.GetEnumerator();
+        }
+
+        /// <inheritdoc />
         public override IEnumerator GetEnumerator() => _innerList.GetEnumerator();
 
         /// <inheritdoc />
@@ -223,7 +229,7 @@ namespace Google.Cloud.Spanner.Data
             foreach (var parameter in _innerList)
             {
                 valueDictionary[parameter.ParameterName] =
-                    ValueConversion.ToValue(parameter.Value, parameter.SpannerDbType);
+                    ValueConversion.ToValue(parameter.GetValidatedValue(), parameter.SpannerDbType);
             }
         }
 

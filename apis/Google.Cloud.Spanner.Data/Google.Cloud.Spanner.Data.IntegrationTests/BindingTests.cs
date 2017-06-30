@@ -23,7 +23,8 @@ using Xunit.Abstractions;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
-    public class BindingTests : IClassFixture<TestDatabaseFixture>
+    [Collection(nameof(TestDatabaseFixture))]
+    public class BindingTests
     {
         // ReSharper disable once UnusedParameter.Local
         public BindingTests(TestDatabaseFixture testFixture, ITestOutputHelper outputHelper)
@@ -33,8 +34,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerConnection.ConnectionPoolOptions.LogLevel = LogLevel.Debug;
             SpannerConnection.ConnectionPoolOptions.LogPerformanceTraces = true;
             SpannerConnection.ConnectionPoolOptions.PerformanceTraceLogInterval = 1000;
-            TestLogger.TestOutputHelper = outputHelper;
 #endif
+            TestLogger.TestOutputHelper = outputHelper;
         }
 
         private readonly TestDatabaseFixture _testFixture;

@@ -15,15 +15,17 @@
 #region
 
 using System;
-using System.Threading;
 using System.Threading.Tasks;
 using Google.Cloud.Spanner.Admin.Database.V1;
+using Xunit;
 
 #endregion
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
-    public class TestDatabaseFixture : IDisposable
+    // ReSharper disable once ClassNeverInstantiated.Global
+    [CollectionDefinition(nameof(TestDatabaseFixture))]
+    public class TestDatabaseFixture : IDisposable, ICollectionFixture<TestDatabaseFixture>
     {
         private readonly Lazy<Task> _creationTask;
 
@@ -42,10 +44,16 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // not cause failures).
         // if you use a scratch database, be sure to comment out the database
         // creation and disposal methods.
-        public string DatabaseName { get; } = //"scratch";
+        private string DatabaseName { get; } = //"scratch";
             "t_" + Guid.NewGuid().ToString("N").Substring(0, 28);
 
+        public int TestTableRowCount { get; } = 15;
+
         public string TestTable { get; } = "TestTable";
+
+        public string DataAdapterTestTable { get; } = "DataTestTable";
+
+        public string StressTestTable { get; } = "bookTable";
 
         public TestDatabaseFixture() => _creationTask = new Lazy<Task>(EnsureTestDatabaseImplAsync);
 
@@ -75,7 +83,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 CreateTableAsync(),
                 CreateTypeTableAsync(),
                 CreateTxTableAsync()).ConfigureAwait(false);
-            await FillSampleData();
+            await Task.WhenAll(FillSampleData(TestTable), FillSampleData(DataAdapterTestTable));
         }
 
         private async Task CreateDatabaseAsync()
@@ -136,15 +144,27 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                                             Key                STRING(MAX) NOT NULL,
                                             StringValue        STRING(MAX),
                                           ) PRIMARY KEY (Key)";
+            string createDataTableStatement = $@"CREATE TABLE {DataAdapterTestTable} (
+                                            Key                STRING(MAX) NOT NULL,
+                                            StringValue        STRING(MAX),
+                                          ) PRIMARY KEY (Key)";
+            string createStressTableStatement = $@"CREATE TABLE {StressTestTable} (
+                                            ID           STRING(MAX) NOT NULL,
+                                            Title        STRING(MAX),
+                                          ) PRIMARY KEY (ID)";
+
             var index1 = "CREATE INDEX TestTableByValue ON TestTable(StringValue)";
             var index2 = "CREATE INDEX TestTableByValueDesc ON TestTable(StringValue DESC)";
 
-            await ExecuteDdlAsync(createTableStatement);
+            await Task.WhenAll(
+                ExecuteDdlAsync(createTableStatement),
+                ExecuteDdlAsync(createDataTableStatement),
+                ExecuteDdlAsync(createStressTableStatement));
             await ExecuteDdlAsync(index1);
             await ExecuteDdlAsync(index2);
         }
 
-        public async Task FillSampleData()
+        private async Task FillSampleData(string testTable)
         {
             using (var connection = new SpannerConnection(ConnectionString))
             {
@@ -152,7 +172,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 using (var tx = await connection.BeginTransactionAsync())
                 {
                     var cmd = connection.CreateInsertCommand(
-                        TestTable,
+                        testTable,
                         new SpannerParameterCollection
                         {
                             {"Key", SpannerDbType.String},
@@ -160,7 +180,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         });
                     cmd.Transaction = tx;
 
-                    for (var i = 0; i < 15; ++i)
+                    for (var i = 0; i < TestTableRowCount; ++i)
                     {
                         cmd.Parameters["Key"].Value = "k" + i;
                         cmd.Parameters["StringValue"].Value = "v" + i;
