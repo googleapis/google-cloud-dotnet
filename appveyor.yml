@@ -23,7 +23,7 @@ install:
   # Download and unpack docfx
   - mkdir docfx
   - cd docfx
-  - curl -SL https://github.com/dotnet/docfx/releases/download/v2.16/docfx.zip -o docfx.zip
+  - curl -SL https://github.com/dotnet/docfx/releases/download/v2.19.2/docfx.zip -o docfx.zip
   - unzip docfx.zip
   - cd ..
   # add dotnet and docfx to PATH
