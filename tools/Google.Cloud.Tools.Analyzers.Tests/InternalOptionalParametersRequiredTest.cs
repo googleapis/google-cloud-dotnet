@@ -201,6 +201,135 @@ public class Options
             VerifyCSharpDiagnostic(test);
         }
 
+        [Fact]
+        public void ImplicitConversion()
+        {
+            var test = @"
+public class A
+{
+    public void B(Options options)
+    {
+        C();
+    }
+
+    public void C(OtherOptions options = null)
+    {
+    }
+}
+
+public class Options
+{
+    public static implicit operator OtherOptions(Options options)
+    {
+        return new OtherOptions();
+    }
+}
+
+public class OtherOptions
+{
+}";
+            var expected = CreateDiagnostic("options", "options", 6, 10);
+            VerifyCSharpDiagnostic(test, expected);
+
+            var newSource = @"
+public class A
+{
+    public void B(Options options)
+    {
+        C(options);
+    }
+
+    public void C(OtherOptions options = null)
+    {
+    }
+}
+
+public class Options
+{
+    public static implicit operator OtherOptions(Options options)
+    {
+        return new OtherOptions();
+    }
+}
+
+public class OtherOptions
+{
+}";
+            VerifyCSharpFix(test, newSource);
+        }
+
+        [Fact]
+        public void ExplicitConversion()
+        {
+            var test = @"
+public class A
+{
+    public void B(Options options)
+    {
+        C();
+    }
+
+    public void C(OtherOptions options = null)
+    {
+    }
+}
+
+public class Options
+{
+    public static explicit operator OtherOptions(Options options)
+    {
+        return new OtherOptions();
+    }
+}
+
+public class OtherOptions
+{
+}";
+            
+            VerifyCSharpDiagnostic(test);
+        }
+
+        [Fact]
+        public void MatchingNamePreferred()
+        {
+            var test = @"
+public class A
+{
+    public void B(Options a, Options options, Options c)
+    {
+        C();
+    }
+
+    public void C(Options options = null)
+    {
+    }
+}
+
+public class Options
+{
+}";
+            var expected = CreateDiagnostic("options", "options", 6, 10);
+            VerifyCSharpDiagnostic(test, expected);
+
+            var newSource = @"
+public class A
+{
+    public void B(Options a, Options options, Options c)
+    {
+        C(options);
+    }
+
+    public void C(Options options = null)
+    {
+    }
+}
+
+public class Options
+{
+}";
+            VerifyCSharpFix(test, newSource);
+        }
+
         private DiagnosticResult CreateDiagnostic(
             string parameterName, string suggestionName, int line, int column) =>
                 new DiagnosticResult
