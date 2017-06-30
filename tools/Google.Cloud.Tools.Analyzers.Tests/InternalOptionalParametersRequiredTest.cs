@@ -53,6 +53,24 @@ public class Options
 }";
             var expected = CreateDiagnostic("options", "x", 6, 10);
             VerifyCSharpDiagnostic(test, expected);
+
+            var newSource = @"
+public class A
+{
+    public void B(Options x)
+    {
+        C(x);
+    }
+
+    public void C(Options options = null)
+    {
+    }
+}
+
+public class Options
+{
+}";
+            VerifyCSharpFix(test, newSource);
         }
 
         [Fact]
@@ -72,6 +90,20 @@ public class A
 }";
             var expected = CreateDiagnostic("x", "x", 6, 10);
             VerifyCSharpDiagnostic(test, expected);
+
+            var newSource = @"
+public class A
+{
+    public void B(string x)
+    {
+        C(x);
+    }
+
+    public void C(string x = ""value"")
+    {
+    }
+}";
+            VerifyCSharpFix(test, newSource);
         }
 
         [Fact]
@@ -116,6 +148,27 @@ public class Options
 }";
             var expected = CreateDiagnostic("options", "x", 6, 20);
             VerifyCSharpDiagnostic(test, expected);
+
+            var newSource = @"
+public class A
+{
+    public void B(Options x)
+    {
+        OtherType.C(45, foo: ""def"", options: x);
+    }
+}
+
+public class OtherType
+{
+    public static void C(int a, Options options = null, string foo = ""abc"")
+    {
+    }
+}
+
+public class Options
+{
+}";
+            VerifyCSharpFix(test, newSource);
         }
 
         [Fact]
@@ -152,7 +205,7 @@ public class Options
             string parameterName, string suggestionName, int line, int column) =>
                 new DiagnosticResult
                 {
-                    Id = InternalOptionalParametersRequired.DiagnosticId,
+                    Id = InternalOptionalParametersRequiredAnalyzer.DiagnosticId,
                     Message = $"The parameter '{parameterName}' should be specified, possibly with the local '{suggestionName}'",
                     Severity = DiagnosticSeverity.Warning,
                     Locations = new[] { new DiagnosticResultLocation("Test0.cs", line, column) }
@@ -160,7 +213,12 @@ public class Options
 
         protected override DiagnosticAnalyzer GetCSharpDiagnosticAnalyzer()
         {
-            return new InternalOptionalParametersRequired();
+            return new InternalOptionalParametersRequiredAnalyzer();
+        }
+
+        protected override CodeFixProvider GetCSharpCodeFixProvider()
+        {
+            return new InternalOptionalParametersRequiredCodeFixProvider();
         }
     }
 }

@@ -12,14 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System.Collections.Immutable;
-using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.CodeAnalysis.Semantics;
 using System;
+using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Linq;
 
 namespace Google.Cloud.Tools.Analyzers
 {
@@ -28,7 +29,7 @@ namespace Google.Cloud.Tools.Analyzers
     /// but only when there is a suitable local variable or parameter available in scope which can be used for the argument.
     /// </summary>
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    public class InternalOptionalParametersRequired : DiagnosticAnalyzer
+    public class InternalOptionalParametersRequiredAnalyzer : DiagnosticAnalyzer
     {
         public const string DiagnosticId = "GCP0001";
         private const string Category = "Usage";
@@ -53,8 +54,6 @@ namespace Google.Cloud.Tools.Analyzers
 
         private static void AnalyzeInvocation(OperationAnalysisContext context)
         {
-            // TODO: Move some of this to a helper and share with a code fix provider to auto-insert the missing argument.
-
             // Only perform the check on calls to externally visible methods which are defined within the same assembly.
             var invocation = (IInvocationExpression)context.Operation;
             if (invocation.Syntax is InvocationExpressionSyntax invocationExpression &&
@@ -62,10 +61,7 @@ namespace Google.Cloud.Tools.Analyzers
                 context.Compilation.Assembly == invocation.TargetMethod.ContainingAssembly)
             {
                 var semanticModel = context.Compilation.GetSemanticModel(context.Operation.Syntax.SyntaxTree);
-                var variablesInScope =
-                    (from symbol in semanticModel.LookupSymbols(context.Operation.Syntax.SpanStart)
-                     where symbol.Kind == SymbolKind.Local || symbol.Kind == SymbolKind.Parameter
-                     select symbol).ToList();
+                var variablesInScope = GetVariablesInScope(context.Operation.Syntax, semanticModel);
 
                 foreach (var arg in invocation.ArgumentsInParameterOrder)
                 {
@@ -74,29 +70,12 @@ namespace Google.Cloud.Tools.Analyzers
                         continue;
                     }
 
-                    var parameterType = arg.Parameter.Type;
-                    var convertibleVariables = variablesInScope.Where(
-                        symbol => context.Compilation.ClassifyConversion(symbol.GetVariableType(), parameterType).IsImplicit).ToList();
-                    if (convertibleVariables.Count == 0)
+                    var preferredVariable = TryGetVariableForArgument(arg.Parameter, context.Compilation, variablesInScope);
+                    if (preferredVariable == null)
                     {
                         continue;
                     }
 
-                    var nameMatch = convertibleVariables.FirstOrDefault(
-                        symbol => symbol.Name.Equals(arg.Parameter.Name, StringComparison.OrdinalIgnoreCase));
-
-                    // If the parameter's type is String or any primitive type, only show the diagnostic when there is
-                    // some variable with the same (case-insensitive) name as the argument. Strings are too common, for
-                    // example, to assume that any string in scope should be supplied for a default parameter.
-                    if ((parameterType.SpecialType == SpecialType.System_String || parameterType.IsPrimitive()) &&
-                        nameMatch == null)
-                    {
-                        continue;
-                    }
-
-                    // Report the missing argument with a suggested variable to be used. Prefer one with a name matching
-                    // the missing parameter's name if available.
-                    var preferredVariable = nameMatch ?? convertibleVariables[0];
                     context.ReportDiagnostic(
                         Diagnostic.Create(
                             Rule,
@@ -105,6 +84,39 @@ namespace Google.Cloud.Tools.Analyzers
                             preferredVariable.Name));
                 }
             }
+        }
+
+        internal static IEnumerable<ISymbol> GetVariablesInScope(SyntaxNode syntaxNode, SemanticModel semanticModel) =>
+            from symbol in semanticModel.LookupSymbols(syntaxNode.SpanStart)
+            where symbol.Kind == SymbolKind.Local || symbol.Kind == SymbolKind.Parameter
+            select symbol;
+
+        internal static ISymbol TryGetVariableForArgument(
+            IParameterSymbol parameter, Compilation compilation, IEnumerable<ISymbol> variablesInScope)
+        {
+            var parameterType = parameter.Type;
+            var convertibleVariables = variablesInScope.Where(
+                symbol => compilation.ClassifyConversion(symbol.GetVariableType(), parameterType).IsImplicit).ToList();
+            if (convertibleVariables.Count == 0)
+            {
+                return null;
+            }
+
+            var nameMatch = convertibleVariables.FirstOrDefault(
+                symbol => symbol.Name.Equals(parameter.Name, StringComparison.OrdinalIgnoreCase));
+
+            // If the parameter's type is String or any primitive type, only show the diagnostic when there is
+            // some variable with the same (case-insensitive) name as the argument. Strings are too common, for
+            // example, to assume that any string in scope should be supplied for a default parameter.
+            if ((parameterType.SpecialType == SpecialType.System_String || parameterType.IsPrimitive()) &&
+                nameMatch == null)
+            {
+                return null;
+            }
+
+            // Report the missing argument with a suggested variable to be used. Prefer one with a name matching
+            // the missing parameter's name if available.
+            return nameMatch ?? convertibleVariables[0];
         }
     }
 }
