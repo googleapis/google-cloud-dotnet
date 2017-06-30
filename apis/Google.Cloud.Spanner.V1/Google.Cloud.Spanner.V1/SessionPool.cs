@@ -94,14 +94,8 @@ namespace Google.Cloud.Spanner.V1
                 var size = byClientEntry.Value.DumpSessionPoolContents(poolContents);
                 if (size > 0)
                 {
-                    if (minSize > size)
-                    {
-                        minSize = size;
-                    }
-                    if (maxSize < size)
-                    {
-                        maxSize = size;
-                    }
+                    minSize = Math.Min(size, minSize);
+                    maxSize = Math.Max(size, maxSize);
                 }
                 byClientIndex++;
             }

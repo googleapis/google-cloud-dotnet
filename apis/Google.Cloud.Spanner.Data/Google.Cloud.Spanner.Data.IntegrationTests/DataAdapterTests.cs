@@ -14,6 +14,7 @@
 
 using System;
 using System.Data;
+using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 using Xunit.Abstractions;
@@ -108,7 +109,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         break;
                     }
                 }
-                Assert.Equal(newValue, testDataSet.Tables[0].Rows[i]["StringValue"]);
+                var row = testDataSet.Tables[0].Rows.Cast<DataRow>()
+                                .FirstOrDefault(r => r["Key"].Equals(oldKey));
+                Assert.NotNull(row);
+                Assert.Equal(newValue, row["StringValue"]);
             }
         }
 
