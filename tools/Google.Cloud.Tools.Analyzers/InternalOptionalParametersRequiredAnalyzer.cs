@@ -86,13 +86,13 @@ namespace Google.Cloud.Tools.Analyzers
             }
         }
 
-        internal static List<ISymbol> GetVariablesInScope(SyntaxNode syntaxNode, SemanticModel semanticModel) =>
-            (from symbol in semanticModel.LookupSymbols(syntaxNode.SpanStart)
-             where symbol.Kind == SymbolKind.Local || symbol.Kind == SymbolKind.Parameter
-             select symbol).ToList();
+        internal static IEnumerable<ISymbol> GetVariablesInScope(SyntaxNode syntaxNode, SemanticModel semanticModel) =>
+            from symbol in semanticModel.LookupSymbols(syntaxNode.SpanStart)
+            where symbol.Kind == SymbolKind.Local || symbol.Kind == SymbolKind.Parameter
+            select symbol;
 
         internal static ISymbol TryGetVariableForArgument(
-            IParameterSymbol parameter, Compilation compilation, List<ISymbol> variablesInScope)
+            IParameterSymbol parameter, Compilation compilation, IEnumerable<ISymbol> variablesInScope)
         {
             var parameterType = parameter.Type;
             var convertibleVariables = variablesInScope.Where(

@@ -58,9 +58,7 @@ namespace Google.Cloud.Tools.Analyzers
                 return;
             }
 
-            var invocation =
-                semanticModel.GetOperation(argumentListExpression, context.CancellationToken) as IInvocationExpression;
-            if (invocation == null)
+            if (!(semanticModel.GetOperation(argumentListExpression, context.CancellationToken) is IInvocationExpression invocation))
             {
                 return;
             }
@@ -68,7 +66,7 @@ namespace Google.Cloud.Tools.Analyzers
             var variablesInScope =
                 InternalOptionalParametersRequiredAnalyzer.GetVariablesInScope(argumentListExpression, semanticModel);
 
-            var omittedParameterVariablePairs = new List<Tuple<IParameterSymbol, ISymbol>>();
+            var omittedParameterVariablePairs = new List<Tuple<string, string>>();
             bool useNamedArguments = false;
             foreach (var argument in invocation.ArgumentsInParameterOrder)
             {
@@ -80,16 +78,16 @@ namespace Google.Cloud.Tools.Analyzers
                         useNamedArguments = true;
                         break;
                     case ArgumentKind.DefaultValue:
+                    {
+                        var preferredVariable = InternalOptionalParametersRequiredAnalyzer.TryGetVariableForArgument(
+                            argument.Parameter, semanticModel.Compilation, variablesInScope);
+                        if (preferredVariable == null)
                         {
-                            var preferredVariable = InternalOptionalParametersRequiredAnalyzer.TryGetVariableForArgument(
-                                argument.Parameter, semanticModel.Compilation, variablesInScope);
-                            if (preferredVariable == null)
-                            {
-                                return;
-                            }
-                            omittedParameterVariablePairs.Add(Tuple.Create(argument.Parameter, preferredVariable));
-                            break;
+                            return;
                         }
+                        omittedParameterVariablePairs.Add(Tuple.Create(argument.Parameter.Name, preferredVariable.Name));
+                        break;
+                    }
                     default:
                         return;
                 }
@@ -98,9 +96,9 @@ namespace Google.Cloud.Tools.Analyzers
             var generator = SyntaxGenerator.GetGenerator(document);
             var newArguments = omittedParameterVariablePairs.Select(
                 entry => (ArgumentSyntax)generator.Argument(
-                    useNamedArguments ? entry.Item1.Name : null,
+                    useNamedArguments ? entry.Item1 : null,
                     RefKind.None,
-                    generator.IdentifierName(entry.Item2.Name))).ToArray();
+                    generator.IdentifierName(entry.Item2))).ToArray();
             var newDocument = document.WithSyntaxRoot(
                 root.ReplaceNode(argumentListExpression, argumentListExpression.AddArguments(newArguments)));
 
