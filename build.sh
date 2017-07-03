@@ -8,6 +8,10 @@ cd $(dirname $0)
 # match anything, e.g. when looking for tests.
 shopt -s nullglob
 
+# First build the analyzers, for use in everything else.
+dotnet restore tools/Google.Cloud.Tools.Analyzers/Google.Cloud.Tools.Analyzers.csproj
+dotnet publish -c Release -f netstandard1.3 tools/Google.Cloud.Tools.Analyzers/Google.Cloud.Tools.Analyzers.csproj
+
 # Command line arguments are the APIs to build. Each argument
 # should be the name of a directory, either relative to the location
 # of this script, or under apis.
