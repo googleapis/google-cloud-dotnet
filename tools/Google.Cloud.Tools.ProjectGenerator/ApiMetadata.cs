@@ -25,7 +25,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
         private const string GrpcVersion = "1.4.0";
         private const string GaxVersion = "2.0.0";
 
-        private const string AnalyzersPath = @"..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\net452\Google.Cloud.Tools.Analyzers.dll";
+        private const string AnalyzersPath = @"..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll";
         private const string StripDesktopOnNonWindows = @"..\..\..\StripDesktopOnNonWindows.xml";
 
         public string Version { get; set; }
@@ -202,7 +202,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                     ),
                 includeAnalyzers ?
                     new XElement("Analyzer",
-                        new XAttribute("Condition", $"Exists('{AnalyzersPath}') AND $(Configuration) == 'Debug'"),
+                        new XAttribute("Condition", $"Exists('{AnalyzersPath}')"),
                         new XAttribute("Include", AnalyzersPath)) :
                     null
             );
