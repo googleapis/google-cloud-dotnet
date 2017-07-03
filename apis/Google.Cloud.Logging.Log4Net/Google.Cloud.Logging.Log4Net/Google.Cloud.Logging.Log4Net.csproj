@@ -28,7 +28,7 @@
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
     <PackageReference Include="log4net" Version="2.0.8" />
-    <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\net452\Google.Cloud.Tools.Analyzers.dll') AND $(Configuration) == 'Debug'" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\net452\Google.Cloud.Tools.Analyzers.dll" />
+    <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.5'">
     <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="1.1.1" />
