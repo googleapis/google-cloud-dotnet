@@ -86,8 +86,8 @@ namespace Google.Cloud.PubSub.V1
                     {
                         GaxPreconditions2.CheckArgumentRange(batchingSettings.ElementCountThreshold,
                             $"{name}.{nameof(BatchingSettings.ElementCountThreshold)}", 1, ApiMaxBatchingSettings.ElementCountThreshold.Value);
-                        GaxPreconditions2.CheckArgumentRange(batchingSettings.RequestByteThreshold,
-                            $"{name}.{nameof(BatchingSettings.RequestByteThreshold)}", 1, ApiMaxBatchingSettings.RequestByteThreshold.Value);
+                        GaxPreconditions2.CheckArgumentRange(batchingSettings.ByteCountThreshold,
+                            $"{name}.{nameof(BatchingSettings.ByteCountThreshold)}", 1, ApiMaxBatchingSettings.ByteCountThreshold.Value);
                         GaxPreconditions.CheckArgument((batchingSettings.DelayThreshold ?? TimeSpan.FromSeconds(1)) > TimeSpan.Zero,
                             $"{name}.{nameof(BatchingSettings.DelayThreshold)}", "Must be positive");
                     }
@@ -193,7 +193,7 @@ namespace Google.Cloud.PubSub.V1
         /// Default <see cref="BatchingSettings"/> for <see cref="HiPerfPublisher"/>.
         /// Default values are:
         /// <see cref="BatchingSettings.ElementCountThreshold"/> = 100;
-        /// <see cref="BatchingSettings.RequestByteThreshold"/> = 1,000;
+        /// <see cref="BatchingSettings.ByteCountThreshold"/> = 1,000;
         /// <see cref="BatchingSettings.DelayThreshold"/> = 1 millisecond;
         /// </summary>
         public static BatchingSettings DefaultBatchingSettings { get; } = new BatchingSettings(100L, 1000L, TimeSpan.FromMilliseconds(1));
@@ -202,7 +202,7 @@ namespace Google.Cloud.PubSub.V1
         /// The absolute maximum <see cref="BatchingSettings"/> supported by the service.
         /// Maximum values are:
         /// <see cref="BatchingSettings.ElementCountThreshold"/> = 1,000;
-        /// <see cref="BatchingSettings.RequestByteThreshold"/> = 10,000,000;
+        /// <see cref="BatchingSettings.ByteCountThreshold"/> = 10,000,000;
         /// </summary>
         public static BatchingSettings ApiMaxBatchingSettings { get; } = new BatchingSettings(1000L, 10_000_000L, null);
 
@@ -241,8 +241,8 @@ namespace Google.Cloud.PubSub.V1
                 clients[i] = PublisherClient.Create(channel, clientCreationsettings?.PublisherSettings);
                 shutdowns[i] = channel.ShutdownAsync;
             }
-            Func<Task> shutdown = () => Task.WhenAll(shutdowns.Select(x => x()));
-            return new HiPerfPublisherImpl(topicName, clients, settings, shutdown);
+            Task Shutdown() => Task.WhenAll(shutdowns.Select(x => x()));
+            return new HiPerfPublisherImpl(topicName, clients, settings, Shutdown);
         }
 
         /// <summary>
@@ -330,23 +330,22 @@ namespace Google.Cloud.PubSub.V1
         /// Shutdown this <see cref="HiPerfPublisher"/>. Cancelling <paramref name="hardStopToken"/> aborts the
         /// clean shutdown process, and may leave some locally queued messages unsent.
         /// The returned <see cref="Task"/> completes when all queued messages have been published.
-        /// The returned <see cref="Task"/> cancels if the passed <see cref="CancellationToken"/> is cancelled.
-        /// <see cref="Task"/> as quickly as possible.
+        /// The returned <see cref="Task"/> cancels if <paramref name="hardStopToken"/> is cancelled.
         /// </summary>
         /// <param name="hardStopToken">Cancel this <see cref="CancellationToken"/> to abort publishing queued messages.</param>
-        /// <returns>A <see cref="Task"/> that completes when all queued messages have been published; or cancels if the
-        /// passed <see cref="CancellationToken"/> is cancelled.</returns>
+        /// <returns>A <see cref="Task"/> that completes when all queued messages have been published; or cancels if
+        /// <paramref name="hardStopToken"/> is cancelled.</returns>
         public virtual Task ShutdownAsync(CancellationToken hardStopToken) => throw new NotImplementedException();
 
         /// <summary>
-        /// Shutdown this <see cref="HiPerfPublisher"/>. If the timeout expires, the clean shutdown process will
+        /// Shutdown this <see cref="HiPerfPublisher"/>. If <paramref name="timeout"/> expires, the clean shutdown process will
         /// abort; leaving some locally queued messages unsent.
         /// The returned <see cref="Task"/> completes when all queued messages have been published.
-        /// The returned <see cref="Task"/> cancels if the passed timeout expires before all messages are published.
+        /// The returned <see cref="Task"/> cancels if the <paramref name="timeout"/> expires before all messages are published.
         /// </summary>
         /// <param name="timeout">After this period, abort publishing queued messages.</param>
-        /// <returns>A <see cref="Task"/> that completes when all queued messages have been published; or cancels if the
-        /// passed timeout expires.</returns>
+        /// <returns>A <see cref="Task"/> that completes when all queued messages have been published; or cancels if
+        /// <paramref name="timeout"/> expires.</returns>
         public virtual Task ShutdownAsync(TimeSpan timeout) => ShutdownAsync(new CancellationTokenSource(timeout).Token);
     }
 
@@ -379,7 +378,7 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="topicName">The <see cref="TopicName"/> to publish messages to.</param>
         /// <param name="clients">The <see cref="PublisherClient"/>s to use.</param>
         /// <param name="settings"><see cref="HiPerfPublisher.Settings"/> to use in this <see cref="HiPerfPublisherImpl"/>.</param>
-        /// <param name="shutdown">Function to call on publisher shutdown.</param>
+        /// <param name="shutdown">Function to call on this <see cref="HiPerfPublisherImpl"/> shutdown.</param>
         public HiPerfPublisherImpl(TopicName topicName, IEnumerable<PublisherClient> clients, Settings settings, Func<Task> shutdown)
             : this(topicName, clients, settings, shutdown, TaskHelper.Default) { }
 
@@ -398,12 +397,12 @@ namespace Google.Cloud.PubSub.V1
             // Initialise batching settings. Use ApiMax settings for components not given.
             var batchingSettings = settings.BatchingSettings ?? DefaultBatchingSettings;
             _batchElementCountThreshold = batchingSettings.ElementCountThreshold ?? ApiMaxBatchingSettings.ElementCountThreshold.Value;
-            _batchRequestByteThreshold = batchingSettings.RequestByteThreshold ?? ApiMaxBatchingSettings.RequestByteThreshold.Value;
+            _batchByteCountThreshold = batchingSettings.ByteCountThreshold ?? ApiMaxBatchingSettings.ByteCountThreshold.Value;
             _batchDelayThreshold = batchingSettings.DelayThreshold;
             _scheduler = settings.Scheduler ?? SystemScheduler.Instance;
             var maxBatchingSettings = settings.MaxBatchingSettings ?? ApiMaxBatchingSettings;
             _batchMaxElementCount = maxBatchingSettings.ElementCountThreshold ?? ApiMaxBatchingSettings.ElementCountThreshold.Value;
-            _batchMaxByteCount = maxBatchingSettings.RequestByteThreshold ?? ApiMaxBatchingSettings.RequestByteThreshold.Value;
+            _batchMaxByteCount = maxBatchingSettings.ByteCountThreshold ?? ApiMaxBatchingSettings.ByteCountThreshold.Value;
 
             // Initialise internal state
             _batchesReady = new Queue<Batch>();
@@ -420,7 +419,7 @@ namespace Google.Cloud.PubSub.V1
 
         // Batching settings
         private readonly long _batchElementCountThreshold;
-        private readonly long _batchRequestByteThreshold;
+        private readonly long _batchByteCountThreshold;
         private readonly TimeSpan? _batchDelayThreshold;
 
         // Absolute maximum batch values
@@ -536,7 +535,7 @@ namespace Google.Cloud.PubSub.V1
                 {
                     if (_shutdown != null)
                     {
-                        await _taskHelper.ConfigureAwaitHideErrors(_shutdown());
+                        await _taskHelper.ConfigureAwaitHideErrors(_shutdown);
                     }
                     if (_hardStopCts.IsCancellationRequested)
                     {
@@ -600,7 +599,7 @@ namespace Google.Cloud.PubSub.V1
             _currentBatch.Messages.Count >= _batchMaxElementCount ||
                 (_currentBatch.Messages.Count > 0 && _currentBatch.ByteCount + extraByteCount >= _batchMaxByteCount) :
             _currentBatch.Messages.Count >= _batchElementCountThreshold ||
-                (_currentBatch.Messages.Count > 0 && _currentBatch.ByteCount + extraByteCount >= _batchRequestByteThreshold);
+                (_currentBatch.Messages.Count > 0 && _currentBatch.ByteCount + extraByteCount >= _batchByteCountThreshold);
             if (currentBatchIsFull)
             {
                 QueueCurrentBatch();
