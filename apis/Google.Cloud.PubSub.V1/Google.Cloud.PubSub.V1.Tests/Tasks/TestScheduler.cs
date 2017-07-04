@@ -334,10 +334,47 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
 
             public override async Task WhenAll(IEnumerable<Task> tasks)
             {
+                var exceptions = new List<Exception>();
+                var cancelled = false;
                 foreach (var task in tasks)
                 {
                     await this.ConfigureAwaitHideErrors(task);
+                    switch (task.Status)
+                    {
+                        case TaskStatus.RanToCompletion:
+                            break;
+                        case TaskStatus.Faulted:
+                            exceptions.AddRange(task.Exception.InnerExceptions);
+                            break;
+                        case TaskStatus.Canceled:
+                            cancelled = true;
+                            break;
+                        default:
+                            throw new InvalidOperationException($"Impossible Task status: {task.Status}");
+                    }
                 }
+                if (exceptions.Count > 0)
+                {
+                    throw new AggregateException(exceptions);
+                }
+                if (cancelled)
+                {
+                    throw new TaskCanceledException();
+                }
+            }
+
+            public override Task<Task> WhenAny(IEnumerable<Task> tasks)
+            {
+                var tcs = new TaskCompletionSource<Task>();
+                foreach (var task in tasks)
+                {
+                    Run(async () =>
+                    {
+                        await this.ConfigureAwaitHideErrors(task);
+                        tcs.TrySetResult(task);
+                    });
+                }
+                return tcs.Task;
             }
         }
 

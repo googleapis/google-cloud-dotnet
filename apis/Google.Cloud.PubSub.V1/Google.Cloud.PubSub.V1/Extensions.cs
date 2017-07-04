@@ -49,5 +49,27 @@ namespace Google.Cloud.PubSub.V1
             e is T || (e is AggregateException ae && ae.Flatten().InnerException is T);
 
         public static bool IsCancellation(this Exception e) => e.Is<OperationCanceledException>();
+
+        public static T As<T>(this Exception e) where T : Exception =>
+            (e as T) ?? ((e as AggregateException)?.Flatten()?.InnerException as T);
+
+        public static bool IsRpcCancellation(this Exception e) => e.As<RpcException>()?.Status.StatusCode == StatusCode.Cancelled;
+
+        public static bool IsRecoverable(this RpcException e)
+        {
+            switch (e.Status.StatusCode)
+            {
+                case StatusCode.Aborted:
+                case StatusCode.Cancelled:
+                case StatusCode.DeadlineExceeded:
+                case StatusCode.Internal:
+                case StatusCode.ResourceExhausted:
+                case StatusCode.Unknown:
+                case StatusCode.Unavailable:
+                    return true;
+                default:
+                    return false;
+            }
+        }
     }
 }
