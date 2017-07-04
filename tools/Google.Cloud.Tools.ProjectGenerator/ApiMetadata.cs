@@ -73,6 +73,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 new XElement("GenerateDocumentationFile", true),
                 new XElement("AssemblyOriginatorKeyFile", "../../GoogleApis.snk"),
                 new XElement("SignAssembly", true),
+                new XElement("Deterministic", true),
                 new XElement("PublicSign", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), true),
                 new XElement("TreatWarningsAsErrors", true),
                 // Package-related properties
