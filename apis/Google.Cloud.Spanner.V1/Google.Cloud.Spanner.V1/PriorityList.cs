@@ -19,7 +19,8 @@ using System.Linq;
 namespace Google.Cloud.Spanner.V1
 {
     /// <summary>
-    /// A simple sorted list that allows items to return equality for IComparable.CompareTo
+    /// A simple sorted list that sorts based on the result of CompareTo,
+    /// but also allows duplicate entries based on CompareTo.
     /// </summary>
     internal class PriorityList<T> where T : IPriorityListItem<T>
     {
