@@ -241,8 +241,8 @@ namespace Google.Cloud.PubSub.V1
                 clients[i] = PublisherClient.Create(channel, clientCreationsettings?.PublisherSettings);
                 shutdowns[i] = channel.ShutdownAsync;
             }
-            Task Shutdown() => Task.WhenAll(shutdowns.Select(x => x()));
-            return new HiPerfPublisherImpl(topicName, clients, settings, Shutdown);
+            Func<Task> shutdown = () => Task.WhenAll(shutdowns.Select(x => x()));
+            return new HiPerfPublisherImpl(topicName, clients, settings, shutdown);
         }
 
         /// <summary>

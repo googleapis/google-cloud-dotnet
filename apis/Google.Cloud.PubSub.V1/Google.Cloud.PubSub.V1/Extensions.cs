@@ -21,7 +21,7 @@ namespace Google.Cloud.PubSub.V1
 {
     internal static class Extensions
     {
-        public static void Locked<TLock>(this TLock o, Action action) where TLock : class
+        internal static void Locked<TLock>(this TLock o, Action action) where TLock : class
         {
             lock (o)
             {
@@ -29,7 +29,7 @@ namespace Google.Cloud.PubSub.V1
             }
         }
 
-        public static T Locked<TLock, T>(this TLock o, Func<T> fn) where TLock : class
+        internal static T Locked<TLock, T>(this TLock o, Func<T> fn) where TLock : class
         {
             lock (o)
             {
@@ -37,7 +37,7 @@ namespace Google.Cloud.PubSub.V1
             }
         }
 
-        public static void EnqueueAll<T>(this Queue<T> queue, IEnumerable<T> items)
+        internal static void EnqueueAll<T>(this Queue<T> queue, IEnumerable<T> items)
         {
             foreach (var item in items)
             {
@@ -45,17 +45,17 @@ namespace Google.Cloud.PubSub.V1
             }
         }
 
-        public static bool Is<T>(this Exception e) where T : Exception =>
+        internal static bool Is<T>(this Exception e) where T : Exception =>
             e is T || (e is AggregateException ae && ae.Flatten().InnerException is T);
 
-        public static bool IsCancellation(this Exception e) => e.Is<OperationCanceledException>();
+        internal static bool IsCancellation(this Exception e) => e.Is<OperationCanceledException>();
 
-        public static T As<T>(this Exception e) where T : Exception =>
+        internal static T As<T>(this Exception e) where T : Exception =>
             (e as T) ?? ((e as AggregateException)?.Flatten()?.InnerException as T);
 
-        public static bool IsRpcCancellation(this Exception e) => e.As<RpcException>()?.Status.StatusCode == StatusCode.Cancelled;
+        internal static bool IsRpcCancellation(this Exception e) => e.As<RpcException>()?.Status.StatusCode == StatusCode.Cancelled;
 
-        public static bool IsRecoverable(this RpcException e)
+        internal static bool IsRecoverable(this RpcException e)
         {
             switch (e.Status.StatusCode)
             {
