@@ -46,6 +46,13 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public WriteDisposition? WriteDisposition { get; set; }
 
+        /// <summary>
+        /// Specifies whether or not the options (including schema) should automatically be inferred.
+        /// If not set, this is effectively false.
+        /// </summary>
+        public bool? Autodetect { get; set; }
+
+
         internal void ModifyConfiguration(JobConfigurationLoad loadRequest)
         {
             if (AllowUnknownFields != null)
@@ -63,6 +70,10 @@ namespace Google.Cloud.BigQuery.V2
             if (WriteDisposition != null)
             {
                 loadRequest.WriteDisposition = EnumMap.ToApiValue(WriteDisposition.Value);
+            }
+            if (Autodetect != null)
+            {
+                loadRequest.Autodetect = Autodetect;
             }
         }
     }

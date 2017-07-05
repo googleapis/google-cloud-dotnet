@@ -75,6 +75,12 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public WriteDisposition? WriteDisposition { get; set; }
 
+        /// <summary>
+        /// Specifies whether or not the options (including schema) should automatically be inferred.
+        /// If not set, this is effectively false.
+        /// </summary>
+        public bool? Autodetect { get; set; }
+
         internal void ModifyConfiguration(JobConfigurationLoad loadRequest)
         {
             if (SkipLeadingRows != null)
@@ -112,6 +118,10 @@ namespace Google.Cloud.BigQuery.V2
             if (WriteDisposition != null)
             {
                 loadRequest.WriteDisposition = EnumMap.ToApiValue(WriteDisposition.Value);
+            }
+            if (Autodetect != null)
+            {
+                loadRequest.Autodetect = Autodetect;
             }
             // TODO: Encoding? Only UTF-8 and ISO-8859-1 are supported... unsure what to do with this.
         }
