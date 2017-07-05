@@ -428,7 +428,8 @@ namespace Google.Cloud.PubSub.V1
                 _globalSoftStopCts.Cancel();
             }
             var registration = hardStopToken.Register(() => _globalHardStopCts.Cancel());
-            // Do not register this Task, it completes *after* _mainTcs, and all registered tasks must complete before _mainTcs
+            // Do not register this Task to be awaited on at shutdown.
+            // It completes *after* _mainTcs, and all registered tasks must complete before _mainTcs
             _taskHelper.Run(async () => await _taskHelper.ConfigureAwaitWithFinally(_mainTcs.Task, () => registration.Dispose()));
             return _mainTcs.Task;
         }
@@ -465,7 +466,7 @@ namespace Google.Cloud.PubSub.V1
 
             /// <summary>
             /// Call <paramref name="fn"/> when allowed to do so by the flow-control limits.
-            /// This wil alter the current byte-count (by <paramref name="byteCount"/>) and
+            /// This will alter the current byte-count (by <paramref name="byteCount"/>) and
             /// element-count (by 1), and only call <paramref name="fn"/> once flow-control is
             /// within the limits.
             /// The returned Task will complete once <paramref name="fn"/> has been scheduled
@@ -490,7 +491,7 @@ namespace Google.Cloud.PubSub.V1
                             _elementCount += 1;
                             break;
                         }
-                        // FLow not OK, prepare to wait until a previous fn completes.
+                        // Flow not OK, prepare to wait until a previous fn completes.
                         eventTask = _event.Task;
                     }
                     prevEventTask = eventTask;
