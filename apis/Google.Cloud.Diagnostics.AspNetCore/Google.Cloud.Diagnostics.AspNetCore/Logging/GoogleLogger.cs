@@ -66,14 +66,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             _clock = clock ?? SystemClock.Instance;
         }
 
-        /// <summary>
-        /// Currently unsupported, always return null.
-        /// </summary>
-        public IDisposable BeginScope<TState>(TState state)
-        {
-            // TODO(talarico): Implement.
-            return null;
-        }
+        /// <inheritdoc />
+        public IDisposable BeginScope<TState>(TState state) => new GoogleLoggerScope(state);
 
         /// <inheritdoc />
         public bool IsEnabled(LogLevel logLevel) => logLevel >= _loggerOptions.LogLevel;
@@ -94,6 +88,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 return;
             }
 
+            // TODO(talarico): GET AND FORMAT SCOPE AND ADD TO MESSAGE
+
             LogEntry entry = new LogEntry
             {
                 Resource = _loggerOptions.MonitoredResource,
@@ -103,6 +99,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 TextPayload = message,
                 Labels = { _loggerOptions.Labels },
             };
+
+            var currentScope = GoogleLoggerScope.Current;
+            if (currentScope != null)
+            {
+                entry.TextPayload = currentScope.ToString() + entry.TextPayload;  //Labels.Add("scope", currentScope.ToString());
+            }
 
             _consumer.Receive(new[] { entry });
         }
