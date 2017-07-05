@@ -333,7 +333,8 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             // This example uploads data to an existing table. If the upload will create a new table
             // or if the schema in the CSV isn't identical to the schema in the table (for example if the
-            // columns are in a different order), create a schema to pass into the call.
+            // columns are in a different order), create a schema to pass into the call, or set
+            // options.Autodetect to true.
             TableSchema schema = null;
             BigQueryJob job = client.UploadCsv(datasetId, tableId, schema, stream,
                 // Our sample data has a header row, so we need to skip it.
@@ -381,7 +382,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             // This example uploads data to an existing table. If the upload will create a new table
             // or if the schema in the JSON isn't identical to the schema in the table,
-            // create a schema to pass into the call.
+            // create a schema to pass into the call, or set options.Autodetect to true.
             TableSchema schema = null;
             BigQueryJob job = client.UploadJson(datasetId, tableId, schema, stream);
             // Use the job to find out when the data has finished being inserted into the table,

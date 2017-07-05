@@ -28,10 +28,18 @@ namespace Google.Cloud.BigQuery.V2
         /// Uploads a stream of CSV data to a table specified by project ID, dataset ID and table ID.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadCsv(TableReference, TableSchema, Stream, UploadCsvOptions)"/>.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
+        /// </remarks>
         /// <param name="projectId">The project ID. Must not be null.</param>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A data upload job.</returns>
@@ -43,9 +51,17 @@ namespace Google.Cloud.BigQuery.V2
         /// Uploads a stream of CSV data to a table in this project specified by dataset ID and table ID.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadCsv(TableReference, TableSchema, Stream, UploadCsvOptions)"/>.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
+        /// </remarks>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A data upload job.</returns>
@@ -56,8 +72,16 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Uploads a stream of CSV data to a table.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
+        /// </remarks>
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A data upload job.</returns>
@@ -70,10 +94,18 @@ namespace Google.Cloud.BigQuery.V2
         /// Uploads a stream of JSON data to a table specified by project ID, dataset ID and table ID.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadJson(TableReference, TableSchema, Stream, UploadJsonOptions)"/>.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
+        /// </remarks>
         /// <param name="projectId">The project ID. Must not be null.</param>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A data upload job.</returns>
@@ -85,9 +117,17 @@ namespace Google.Cloud.BigQuery.V2
         /// Uploads a stream of JSON data to a table in this client's project specified by dataset ID and table ID.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadJson(TableReference, TableSchema, Stream, UploadJsonOptions)"/>.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
+        /// </remarks>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A data upload job.</returns>
@@ -98,8 +138,16 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Uploads a stream of JSON data to a table.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
+        /// </remarks>
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A data upload job.</returns>
@@ -114,14 +162,22 @@ namespace Google.Cloud.BigQuery.V2
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadJson(TableReference, TableSchema, IEnumerable{String}, UploadJsonOptions)"/>.
         /// </summary>
         /// <remarks>
+        /// <para>
         /// Each element of <paramref name="rows"/> is converted into a single line of text by replacing carriage returns and line
         /// feeds with spaces. This is safe as they cannot exist within well-formed JSON keys or values, and simply means that the
         /// original JSON can be formatted however you choose.
+        /// </para>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
         /// </remarks>
         /// <param name="projectId">The project ID. Must not be null.</param>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
         /// <param name="rows">The sequence of JSON strings to upload. Must not be null, and must not contain null elements.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A data upload job.</returns>
@@ -134,13 +190,21 @@ namespace Google.Cloud.BigQuery.V2
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadJson(TableReference, TableSchema, IEnumerable{String}, UploadJsonOptions)"/>.
         /// </summary>
         /// <remarks>
+        /// <para>
         /// Each element of <paramref name="rows"/> is converted into a single line of text by replacing carriage returns and line
         /// feeds with spaces. This is safe as they cannot exist within well-formed JSON keys or values, and simply means that the
         /// original JSON can be formatted however you choose.
+        /// </para>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
         /// </remarks>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
         /// <param name="rows">The sequence of JSON strings to upload. Must not be null, and must not contain null elements.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A data upload job.</returns>
@@ -152,12 +216,20 @@ namespace Google.Cloud.BigQuery.V2
         /// Uploads a sequence of JSON rows to a table.
         /// </summary>
         /// <remarks>
+        /// <para>
         /// Each element of <paramref name="rows"/> is converted into a single line of text by replacing carriage returns and line
         /// feeds with spaces. This is safe as they cannot exist within well-formed JSON keys or values, and simply means that the
         /// original JSON can be formatted however you choose.
+        /// </para>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
         /// </remarks>
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
         /// <param name="rows">The sequence of JSON strings to upload. Must not be null, and must not contain null elements.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A data upload job.</returns>
@@ -322,10 +394,18 @@ namespace Google.Cloud.BigQuery.V2
         /// Asynchronously uploads a stream of CSV data to a table specified by project ID, dataset ID and table ID.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadCsvAsync(TableReference, TableSchema, Stream, UploadCsvOptions,CancellationToken)"/>.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
+        /// </remarks>
         /// <param name="projectId">The project ID. Must not be null.</param>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
@@ -339,9 +419,17 @@ namespace Google.Cloud.BigQuery.V2
         /// Asynchronously uploads a stream of CSV data to a table in this project specified by dataset ID and table ID.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadCsvAsync(TableReference, TableSchema, Stream, UploadCsvOptions,CancellationToken)"/>.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
+        /// </remarks>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
@@ -354,8 +442,16 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Asynchronously uploads a stream of CSV data to a table.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
+        /// </remarks>
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
@@ -418,10 +514,18 @@ namespace Google.Cloud.BigQuery.V2
         /// Asynchronously uploads a stream of JSON data to a table specified by project ID, dataset ID and table ID.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadJsonAsync(TableReference, TableSchema, Stream, UploadJsonOptions,CancellationToken)"/>.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
+        /// </remarks>
         /// <param name="projectId">The project ID. Must not be null.</param>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
@@ -435,9 +539,17 @@ namespace Google.Cloud.BigQuery.V2
         /// Asynchronously uploads a stream of JSON data to a table in this client's project specified by dataset ID and table ID.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadJsonAsync(TableReference, TableSchema, Stream, UploadJsonOptions,CancellationToken)"/>.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
+        /// </remarks>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
@@ -450,8 +562,16 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Asynchronously uploads a stream of JSON data to a table.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
+        /// </remarks>
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
@@ -468,14 +588,22 @@ namespace Google.Cloud.BigQuery.V2
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadJsonAsync(TableReference, TableSchema, IEnumerable{String}, UploadJsonOptions, CancellationToken)"/>.
         /// </summary>
         /// <remarks>
+        /// <para>
         /// Each element of <paramref name="rows"/> is converted into a single line of text by replacing carriage returns and line
         /// feeds with spaces. This is safe as they cannot exist within well-formed JSON keys or values, and simply means that the
         /// original JSON can be formatted however you choose.
+        /// </para>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
         /// </remarks>
         /// <param name="projectId">The project ID. Must not be null.</param>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
         /// <param name="rows">The sequence of JSON strings to upload. Must not be null, and must not contain null elements.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
@@ -490,13 +618,21 @@ namespace Google.Cloud.BigQuery.V2
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadJsonAsync(TableReference, TableSchema, IEnumerable{String}, UploadJsonOptions, CancellationToken)"/>.
         /// </summary>
         /// <remarks>
+        /// <para>
         /// Each element of <paramref name="rows"/> is converted into a single line of text by replacing carriage returns and line
         /// feeds with spaces. This is safe as they cannot exist within well-formed JSON keys or values, and simply means that the
         /// original JSON can be formatted however you choose.
+        /// </para>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
         /// </remarks>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
         /// <param name="rows">The sequence of JSON strings to upload. Must not be null, and must not contain null elements.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
@@ -510,12 +646,20 @@ namespace Google.Cloud.BigQuery.V2
         /// Uploads a sequence of JSON rows to a table.
         /// </summary>
         /// <remarks>
+        /// <para>
         /// Each element of <paramref name="rows"/> is converted into a single line of text by replacing carriage returns and line
         /// feeds with spaces. This is safe as they cannot exist within well-formed JSON keys or values, and simply means that the
         /// original JSON can be formatted however you choose.
+        /// </para>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
         /// </remarks>
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
         /// <param name="rows">The sequence of JSON strings to upload. Must not be null, and must not contain null elements.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>

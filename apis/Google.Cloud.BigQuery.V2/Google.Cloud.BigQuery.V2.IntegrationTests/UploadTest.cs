@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Bigquery.v2.Data;
 using System;
 using System.IO;
 using System.Linq;
@@ -46,7 +47,6 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             };
 
             var bytes = Encoding.UTF8.GetBytes(string.Join("\n", csvRows));
-            
             var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
             var beforeRowCount = table.ListRows().Count();
 
@@ -60,6 +60,36 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var ben = afterRows.Single(row => (string)row["player"] == "Ben");
             Assert.Equal(85, (long)ben["score"]);
             Assert.Equal(new DateTime(2014, 8, 19, 12, 41, 35, 220, DateTimeKind.Utc), (DateTime)ben["gameStarted"]);
+        }
+
+        [Fact]
+        public void UploadCsv_Autodetect()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+
+            string tableId = _fixture.CreateTableId();
+
+            string[] csvRows =
+            {
+                "Name,GameStarted,Score",
+                "Ben,2014-08-19T12:41:35.220Z,85",
+                "Lucy,2014-08-20T12:41:35.220Z,130",
+                "Rohit,2014-08-21T12:41:35.220Z,90"
+            };
+
+            var bytes = Encoding.UTF8.GetBytes(string.Join("\n", csvRows));
+
+            TableSchema schema = null;
+            var job = client.UploadCsv(_fixture.DatasetId, tableId, schema, new MemoryStream(bytes), new UploadCsvOptions { Autodetect = true });
+            var result = job.PollUntilCompleted();
+            Assert.Null(result.Status.ErrorResult);
+
+            var table = client.GetTable(_fixture.DatasetId, tableId);
+            Assert.Equal(3, table.ListRows().Count());
+            var fields = table.Schema.Fields.Select(f => new { f.Name, f.Type, f.Mode }).OrderBy(f => f.Name).ToList();
+            Assert.Equal(fields[0], new { Name = "GameStarted", Type = "TIMESTAMP", Mode = "NULLABLE" });
+            Assert.Equal(fields[1], new { Name = "Name", Type = "STRING", Mode = "NULLABLE" });
+            Assert.Equal(fields[2], new { Name = "Score", Type = "INTEGER", Mode = "NULLABLE" });
         }
 
         [Fact]
@@ -141,6 +171,31 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal("UploadJsonStreamTest2", (string)rows[1]["player"]);
             Assert.Equal(90L, (long)rows[0]["score"]);
             Assert.Equal(100L, (long)rows[1]["score"]);
+        }
+
+        [Fact]
+        public void UploadJson_Autodetect()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string tableId = _fixture.CreateTableId();
+            // We use ' instead of " in the JSON to make it easier to write the string literals, then fix it up.
+            var jsonRows = new[]
+            {
+                "{ 'player': 'UploadJsonStringsTest1', \r\n 'score': 90, 'GameStarted': '2015-01-01T00:00:00.000Z' }",
+                "{ 'player': 'UploadJsonStringsTest2', \n 'score': 100, 'GameStarted': '2014-01-01T01:00:00.000Z' }"
+            }.Select(x => x.Replace('\'', '"'));
+
+            TableSchema schema = null;
+            var job = client.UploadJson(_fixture.DatasetId, tableId, schema, jsonRows, new UploadJsonOptions { Autodetect = true });
+            var result = job.PollUntilCompleted();
+            Assert.Null(result.Status.ErrorResult);
+
+            var table = client.GetTable(_fixture.DatasetId, tableId);
+            Assert.Equal(2, table.ListRows().Count());
+            var fields = table.Schema.Fields.Select(f => new { f.Name, f.Type, f.Mode }).OrderBy(f => f.Name).ToList();
+            Assert.Equal(fields[0], new { Name = "GameStarted", Type = "TIMESTAMP", Mode = "NULLABLE" });
+            Assert.Equal(fields[1], new { Name = "player", Type = "STRING", Mode = "NULLABLE" });
+            Assert.Equal(fields[2], new { Name = "score", Type = "INTEGER", Mode = "NULLABLE" });
         }
 
         [Fact]
