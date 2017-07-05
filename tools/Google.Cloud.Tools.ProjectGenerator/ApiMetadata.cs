@@ -197,9 +197,9 @@ namespace Google.Cloud.Tools.ProjectGenerator
                         new XAttribute("Version", d.Value),
                         // Make references to Grpc.Core deploy native dependencies
                         // See https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1066
-                        d.Key == "Grpc.Core" ? new XElement("PrivateAssets", "None") : null,
+                        d.Key == "Grpc.Core" ? new XAttribute("PrivateAssets", "None") : null,
                         // Make references to ConfigureAwaitChecker effectively private
-                        d.Key == "ConfigureAwaitChecker.Analyzer" ? new XElement("PrivateAssets", "All") : null)
+                        d.Key == "ConfigureAwaitChecker.Analyzer" ? new XAttribute("PrivateAssets", "All") : null)
                     ),
                 includeAnalyzers ?
                     new XElement("Analyzer",
