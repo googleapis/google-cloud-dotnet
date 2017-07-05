@@ -57,6 +57,41 @@ namespace Google.Api.Gax
             argument.HasValue ? CheckArgumentRange(argument.Value, paramName, minInclusive, maxInclusive) : argument;
 
         /// <summary>
+        /// Checks that the given argument value is valid.
+        /// </summary>
+        /// <remarks>
+        /// Note that the upper bound (<paramref name="maxInclusive"/>) is inclusive,
+        /// not exclusive. This is deliberate, to allow the specification of ranges which include
+        /// <see cref="Int64.MaxValue"/>.
+        /// </remarks>
+        /// <param name="argument">The value of the argument passed to the calling method.</param>
+        /// <param name="paramName">The name of the parameter in the calling method.</param>
+        /// <param name="minInclusive">The smallest valid value.</param>
+        /// <param name="maxInclusive">The largest valid value.</param>
+        /// <returns><paramref name="argument"/> if it was in range</returns>
+        /// <exception cref="ArgumentOutOfRangeException">The argument was outside the specified range.</exception>
+        public static T CheckArgumentRange<T>(T argument, string paramName, T minInclusive, T maxInclusive) where T : IComparable<T> =>
+            argument.CompareTo(minInclusive) < 0 || argument.CompareTo(maxInclusive) > 0 ?
+            throw new ArgumentOutOfRangeException(paramName, $"Value {argument} should be in range [{minInclusive}, {maxInclusive}]") : argument;
+
+        /// <summary>
+        /// Checks that the given argument value, if not <c>null</c>, is valid.
+        /// </summary>
+        /// <remarks>
+        /// Note that the upper bound (<paramref name="maxInclusive"/>) is inclusive,
+        /// not exclusive. This is deliberate, to allow the specification of ranges which include
+        /// <see cref="Int32.MaxValue"/>.
+        /// </remarks>
+        /// <param name="argument">The value of the argument passed to the calling method.</param>
+        /// <param name="paramName">The name of the parameter in the calling method.</param>
+        /// <param name="minInclusive">The smallest valid value.</param>
+        /// <param name="maxInclusive">The largest valid value.</param>
+        /// <returns><paramref name="argument"/> if it was in range, or <c>null</c>.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">The argument was outside the specified range.</exception>
+        public static T? CheckArgumentRange<T>(T? argument, string paramName, T minInclusive, T maxInclusive) where T : struct, IComparable<T> =>
+            argument is T arg ? CheckArgumentRange(arg, paramName, minInclusive, maxInclusive) : argument;
+
+        /// <summary>
         /// Check that the given argument is non-negative.
         /// </summary>
         /// <param name="argument">The value of the argument passed to the calling method.</param>
@@ -119,12 +154,12 @@ namespace Google.Api.Gax
         /// Create a new instance with the specified settings.
         /// </summary>
         /// <param name="elementCountThreshold">The element count above which further processing of a batch will occur.</param>
-        /// <param name="requestByteThreshold">The byte count above which further processing of a batch will occur.</param>
+        /// <param name="byteCountThreshold">The byte count above which further processing of a batch will occur.</param>
         /// <param name="delayThreshold">The batch lifetime above which further processing of a batch will occur.</param>
-        public BatchingSettings(long? elementCountThreshold, long? requestByteThreshold, TimeSpan? delayThreshold)
+        public BatchingSettings(long? elementCountThreshold, long? byteCountThreshold, TimeSpan? delayThreshold)
         {
             ElementCountThreshold = GaxPreconditions2.CheckNonNegative(elementCountThreshold, nameof(elementCountThreshold));
-            RequestByteThreshold = GaxPreconditions2.CheckNonNegative(requestByteThreshold, nameof(requestByteThreshold));
+            this.ByteCountThreshold = GaxPreconditions2.CheckNonNegative(byteCountThreshold, nameof(byteCountThreshold));
             GaxPreconditions2.CheckNonNegative(delayThreshold?.TotalSeconds, nameof(delayThreshold));
             DelayThreshold = delayThreshold;
         }
@@ -137,11 +172,38 @@ namespace Google.Api.Gax
         /// <summary>
         /// The byte count above which further processing of a batch will occur.
         /// </summary>
-        public long? RequestByteThreshold { get; }
+        public long? ByteCountThreshold { get; }
 
         /// <summary>
         /// The batch lifetime above which further processing of a batch will occur.
         /// </summary>
         public TimeSpan? DelayThreshold { get; }
+    }
+
+    /// <summary>
+    /// TODO
+    /// </summary>
+    public sealed class FlowControlSettings
+    {
+        /// <summary>
+        /// TODO
+        /// </summary>
+        /// <param name="maxOutstandingElementCount"></param>
+        /// <param name="maxOutstandardByteCount"></param>
+        public FlowControlSettings(long? maxOutstandingElementCount, long? maxOutstandardByteCount)
+        {
+            MaxOutstandingElementCount = GaxPreconditions2.CheckNonNegative(maxOutstandingElementCount, nameof(maxOutstandingElementCount));
+            MaxOutstandingByteCount = GaxPreconditions2.CheckNonNegative(maxOutstandardByteCount, nameof(maxOutstandardByteCount));
+        }
+
+        /// <summary>
+        /// TODO
+        /// </summary>
+        public long? MaxOutstandingElementCount { get; }
+
+        /// <summary>
+        /// TODO
+        /// </summary>
+        public long? MaxOutstandingByteCount { get; }
     }
 }

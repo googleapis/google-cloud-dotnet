@@ -236,6 +236,9 @@
     "dependencies": {
       "Google.Cloud.Iam.V1": ""
     },
+    "testDependencies": {
+      "System.ValueTuple": "4.3.1"
+    },
     "tags": [ "PubSub" ],
   },
 

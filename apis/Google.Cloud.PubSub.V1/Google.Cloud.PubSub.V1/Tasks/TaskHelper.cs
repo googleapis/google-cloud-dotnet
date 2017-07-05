@@ -36,6 +36,7 @@ namespace Google.Cloud.PubSub.V1.Tasks
             public override TaskAwaitable<T> ConfigureAwait<T>(Task<T> task) =>
                 new TaskAwaitable<T>(new ForwardingAwaiter<T>(task.ConfigureAwait(false).GetAwaiter()));
             public override Task WhenAll(IEnumerable<Task> tasks) => Task.WhenAll(tasks);
+            public override Task<Task> WhenAny(IEnumerable<Task> tasks) => Task.WhenAny(tasks);
         }
 
         public static TaskHelper Default { get; } = new DefaultTaskHelper();
@@ -46,6 +47,7 @@ namespace Google.Cloud.PubSub.V1.Tasks
         public virtual TaskAwaitable ConfigureAwait(Task task) => throw new NotImplementedException();
         public virtual TaskAwaitable<T> ConfigureAwait<T>(Task<T> task) => throw new NotImplementedException();
         public virtual Task WhenAll(IEnumerable<Task> tasks) => throw new NotImplementedException();
+        public virtual Task<Task> WhenAny(IEnumerable<Task> tasks) => throw new NotImplementedException();
 
         public virtual Task Run(Func<Task> function) => Run(async () =>
         {
@@ -62,6 +64,13 @@ namespace Google.Cloud.PubSub.V1.Tasks
         }
 
         public virtual Task<T[]> WhenAll<T>(params Task<T>[] tasks) => WhenAll((IEnumerable<Task<T>>)tasks);
+
+        public virtual Task<Task> WhenAny(params Task[] tasks) => WhenAny((IEnumerable<Task>)tasks);
+
+        public virtual async Task<Task<T>> WhenAny<T>(IEnumerable<Task<T>> tasks) =>
+            (Task<T>)(await ConfigureAwait(WhenAny((IEnumerable<Task>)tasks)));
+
+        public virtual Task<Task<T>> WhenAny<T>(params Task<T>[] tasks) => WhenAny((IEnumerable<Task<T>>)tasks);
     }
 
     internal static class Extensions
@@ -131,13 +140,13 @@ namespace Google.Cloud.PubSub.V1.Tasks
             return taskHelper.ConfigureAwait(Inner());
         }
 
-        public static TaskAwaitable<Exception> ConfigureAwaitHideErrors(this TaskHelper taskHelper, Task task)
+        public static TaskAwaitable<Exception> ConfigureAwaitHideErrors(this TaskHelper taskHelper, Func<Task> task)
         {
             async Task<Exception> Inner()
             {
                 try
                 {
-                    await taskHelper.ConfigureAwait(task);
+                    await taskHelper.ConfigureAwait(task());
                     return null;
                 }
                 catch (Exception e)
@@ -147,6 +156,9 @@ namespace Google.Cloud.PubSub.V1.Tasks
             }
             return taskHelper.ConfigureAwait(Inner());
         }
+
+        public static TaskAwaitable<Exception> ConfigureAwaitHideErrors(this TaskHelper taskHelper, Task task) =>
+            taskHelper.ConfigureAwaitHideErrors(() => task);
 
         public static TaskAwaitable<T> ConfigureAwaitHideErrors<T>(this TaskHelper taskHelper, Task<T> task, T resultOnError)
         {
