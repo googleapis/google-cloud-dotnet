@@ -229,7 +229,29 @@ namespace Google.Cloud.Spanner.Data
                     channelCredentials);
                 Logger.LogPerformanceCounterFn("SpannerClient.RawCreateCount", x => x + 1);
 
-                return SpannerClient.Create(channel);
+                //Pull the timeout from spanner options.
+                //The option must be set before OpenAsync is called.
+                var callSettings = CallSettings.FromCallTiming(
+                    CallTiming.FromRetry(
+                        new RetrySettings(
+                            SpannerSettings.GetDefaultRetryBackoff(),
+                            SpannerSettings.GetDefaultTimeoutBackoff(),
+                            Expiration.FromTimeout(SpannerOptions.Instance.Timeout),
+                            SpannerSettings.NonIdempotentRetryFilter
+                        )));
+
+                return SpannerClient.Create(
+                    channel, new SpannerSettings
+                    {
+                        CreateSessionSettings = callSettings,
+                        GetSessionSettings = callSettings,
+                        DeleteSessionSettings = callSettings,
+                        ExecuteSqlSettings = callSettings,
+                        ReadSettings = callSettings,
+                        BeginTransactionSettings = callSettings,
+                        CommitSettings = callSettings,
+                        RollbackSettings = callSettings
+                    });
             }
 
             public async Task<SpannerClient> AcquireClientAsync()

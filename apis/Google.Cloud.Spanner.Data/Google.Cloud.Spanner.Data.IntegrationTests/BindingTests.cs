@@ -15,6 +15,7 @@
 #region
 
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xunit;
 using Xunit.Abstractions;
@@ -104,6 +105,24 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public Task BindByteArray() => TestBind(
             SpannerDbType.Bytes,
             new byte[] {1, 2, 3});
+
+        [Fact]
+        public Task BindByteArrayList() => TestBind(
+            SpannerDbType.ArrayOf(SpannerDbType.Bytes),
+            new List<byte[]> {
+                new byte[] { 1, 2, 3 },
+                new byte[] { 4, 5, 6 },
+                null
+            });
+
+        [Fact]
+        public Task BindEmptyByteArrayList() => TestBind(
+            SpannerDbType.ArrayOf(SpannerDbType.Bytes),
+            new List<byte[]>());
+
+        [Fact]
+        public Task BindNullByteArrayList() => TestBind<List<byte[]>>(
+            SpannerDbType.ArrayOf(SpannerDbType.Bytes), null);
 
         [Fact]
         public Task BindByteArrayNull() => TestBind<byte[]>(SpannerDbType.Bytes, null);

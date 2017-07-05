@@ -80,7 +80,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         [Fact]
-        public async Task RunStress()
+        public async Task RunWriteStress()
         {
             //prewarm
             // The maximum roundtrip time for spanner (and mysql) is about 200ms per

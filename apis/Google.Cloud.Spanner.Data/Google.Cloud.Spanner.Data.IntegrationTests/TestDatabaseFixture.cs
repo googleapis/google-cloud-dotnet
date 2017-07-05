@@ -54,6 +54,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public string DataAdapterTestTable { get; } = "DataTestTable";
 
         public string StressTestTable { get; } = "bookTable";
+        public string ChunkingTestTable { get; } = "chunkTable";
 
         public TestDatabaseFixture() => _creationTask = new Lazy<Task>(EnsureTestDatabaseImplAsync);
 
@@ -152,6 +153,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                                             ID           STRING(MAX) NOT NULL,
                                             Title        STRING(MAX),
                                           ) PRIMARY KEY (ID)";
+            string createChunkingTableStatement = $@"CREATE TABLE {ChunkingTestTable} ( 
+                                            K                   STRING(MAX) NOT NULL,
+                                            StringValue         STRING(MAX),
+                                            BytesValue          BYTES(MAX),
+                                            StringArrayValue    ARRAY<STRING(MAX)>,
+                                            BytesArrayValue     ARRAY<BYTES(MAX)>,
+                                          ) PRIMARY KEY (K)";
 
             var index1 = "CREATE INDEX TestTableByValue ON TestTable(StringValue)";
             var index2 = "CREATE INDEX TestTableByValueDesc ON TestTable(StringValue DESC)";
@@ -159,7 +167,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             await Task.WhenAll(
                 ExecuteDdlAsync(createTableStatement),
                 ExecuteDdlAsync(createDataTableStatement),
-                ExecuteDdlAsync(createStressTableStatement));
+                ExecuteDdlAsync(createStressTableStatement),
+                ExecuteDdlAsync(createChunkingTableStatement));
             await ExecuteDdlAsync(index1);
             await ExecuteDdlAsync(index2);
         }
