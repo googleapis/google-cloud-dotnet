@@ -36,8 +36,8 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public int MaximumPooledSessions
         {
-            get => SessionPool.MaximumPooledSessions;
-            set => SessionPool.MaximumPooledSessions = value;
+            get => SessionPool.Default.Options.MaximumPooledSessions;
+            set => SessionPool.Default.Options.MaximumPooledSessions = value;
         }
 
         /// <summary>
@@ -59,14 +59,14 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public int MaximumActiveSessions
         {
-            get => SessionPool.MaximumActiveSessions;
-            set => SessionPool.MaximumActiveSessions = value;
+            get => SessionPool.Default.Options.MaximumActiveSessions;
+            set => SessionPool.Default.Options.MaximumActiveSessions = value;
         }
 
         /// <summary>
         /// The maximum number of grpc channels used per credential.
-        /// Grpc channels are used in round robin fashion and can be used for multiple
-        /// <see cref="SpannerConnection"/> instances.
+        /// Grpc channels are used in round robin fashion and are assigned to
+        /// <see cref="SpannerConnection"/> instances on creation.
         /// </summary>
         public int MaximumGrpcChannels { get; set; } = 4;
 
@@ -125,8 +125,8 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public TimeSpan PoolEvictionDelay
         {
-            get => SessionPool.PoolEvictionDelay;
-            set => SessionPool.PoolEvictionDelay = value;
+            get => SessionPool.Default.Options.PoolEvictionDelay;
+            set => SessionPool.Default.Options.PoolEvictionDelay = value;
         }
 
         internal bool ResetPerformanceTracesEachInterval
@@ -150,10 +150,10 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public ResourcesExhaustedBehavior ResourcesExhaustedBehavior
         {
-            get => SessionPool.WaitOnResourcesExhausted
+            get => SessionPool.Default.Options.WaitOnResourcesExhausted
                 ? ResourcesExhaustedBehavior.Block
                 : ResourcesExhaustedBehavior.Fail;
-            set => SessionPool.WaitOnResourcesExhausted = value == ResourcesExhaustedBehavior.Block;
+            set => SessionPool.Default.Options.WaitOnResourcesExhausted = value == ResourcesExhaustedBehavior.Block;
         }
 
         /// <summary>
@@ -163,8 +163,8 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public TimeSpan Timeout
         {
-            get => SessionPool.Timeout;
-            set => SessionPool.Timeout = value;
+            get => SessionPool.Default.Options.Timeout;
+            set => SessionPool.Default.Options.Timeout = value;
         }
 
         private SpannerOptions() { }

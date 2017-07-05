@@ -16,7 +16,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.LongRunning", "..\Go
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Iam.V1", "..\Google.Cloud.Iam.V1\Google.Cloud.Iam.V1\Google.Cloud.Iam.V1.csproj", "{188EB2ED-9C99-41BD-948C-79604EDBE68C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Spanner.Data.Tests", "Google.Cloud.Spanner.Data.Tests\Google.Cloud.Spanner.Data.Tests.csproj", "{27CBB26A-6F78-4247-9E3C-7A80C4FD965A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Data.Tests", "Google.Cloud.Spanner.Data.Tests\Google.Cloud.Spanner.Data.Tests.csproj", "{27CBB26A-6F78-4247-9E3C-7A80C4FD965A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

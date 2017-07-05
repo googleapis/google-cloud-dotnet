@@ -85,11 +85,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         protected static void ValidatePoolInfo()
         {
             StringBuilder s = new StringBuilder();
-            Assert.InRange(SessionPool.GetPoolInfo(s), 0, 1);
+            Assert.InRange(SessionPool.Default.GetPoolInfo(s), 0, 1);
             Logger.Instance.Info(s.ToString());
 
             s.Clear();
-            Assert.Equal(0, ClientPool.GetPoolInfo(s));
+            Assert.Equal(0, ClientPool.Default.GetPoolInfo(s));
             Logger.Instance.Info(s.ToString());
         }
     }

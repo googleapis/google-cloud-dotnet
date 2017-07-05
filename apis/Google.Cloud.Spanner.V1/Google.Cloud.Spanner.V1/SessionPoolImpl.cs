@@ -19,12 +19,15 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Google.Api.Gax;
 using Google.Cloud.Spanner.V1.Logging;
 
 namespace Google.Cloud.Spanner.V1
 {
     internal class SessionPoolImpl : IPriorityListItem<SessionPoolImpl>
     {
+        private readonly SessionPoolOptions _options;
+
         //This is the maximum we will search for a matching transaction option session.
         //We'll normally not hit this, but this is to stop abnormal cases where almost all
         //cached sessions are of one type, but another type is requested.
@@ -38,10 +41,12 @@ namespace Google.Cloud.Spanner.V1
 
         public SessionPoolKey Key { get; }
 
-        internal SessionPoolImpl(SessionPoolKey key)
+        internal SessionPoolImpl(SessionPoolKey key, SessionPoolOptions options)
         {
+            _options = GaxPreconditions.CheckNotNull(options, nameof(options));
             Key = key;
         }
+
         internal int DumpSessionPoolContents(StringBuilder stringBuilder)
         {
             lock (_sessionMruStack)
@@ -52,6 +57,14 @@ namespace Google.Cloud.Spanner.V1
                     stringBuilder.AppendLine($"  {i}:{entry.Session?.GetHashCode()}");
                     i++;
                 }
+                return _sessionMruStack.Count;
+            }
+        }
+
+        internal int GetPoolSize()
+        {
+            lock (_sessionMruStack)
+            {
                 return _sessionMruStack.Count;
             }
         }
@@ -68,7 +81,7 @@ namespace Google.Cloud.Spanner.V1
 
         private Task EvictSessionPoolEntry(Session session, CancellationToken cancellationToken)
         {
-            var task = Task.Delay(SessionPool.PoolEvictionDelay, cancellationToken);
+            var task = Task.Delay(_options.PoolEvictionDelay, cancellationToken);
             return task.ContinueWith(async (delayTask, o) => 
             {
                 Logger.Debug(() => "Evict timer triggered.");
@@ -109,7 +122,7 @@ namespace Google.Cloud.Spanner.V1
             }
         }
 
-        private bool TryPop(TransactionOptions options, out SessionPoolEntry entry)
+        private bool TryPop(TransactionOptions transactionOptions, out SessionPoolEntry entry)
         {
             try
             {
@@ -126,11 +139,11 @@ namespace Google.Cloud.Spanner.V1
                             i++)
                         {
                             entry = _sessionMruStack[i];
-                            if (Equals(entry.Session.GetLastUsedTransactionOptions(), options))
+                            if (Equals(entry.Session.GetLastUsedTransactionOptions(), transactionOptions))
                             {
                                 Logger.Debug(() => "found a session with matching transaction semantics.");
                                 indexToUse = i;
-                                if (options.ModeCase == TransactionOptions.ModeOneofCase.ReadOnly
+                                if (transactionOptions?.ModeCase != TransactionOptions.ModeOneofCase.ReadWrite
                                     || entry.Session.IsPreWarmedTransactionReady())
                                 {
                                     //if our prewarmed tx is ready, we can jump out immediately.
@@ -247,7 +260,7 @@ namespace Google.Cloud.Spanner.V1
             //start evict timer.
             SessionPoolEntry entry = new SessionPoolEntry(session, new CancellationTokenSource());
 
-            if (SessionPool.UseTransactionWarming)
+            if (_options.UseTransactionWarming)
             {
                 client.StartPreWarmTransaction(entry.Session);
             }
