@@ -443,6 +443,5 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             Assert.False(e.IsTransientSpannerFault());
             Assert.Equal(0, rowsWritten);
         }
-
     }
 }
