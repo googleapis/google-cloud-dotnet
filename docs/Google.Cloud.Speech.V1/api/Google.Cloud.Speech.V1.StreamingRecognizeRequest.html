@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class StreamingRecognizeRequest
    | Google.Cloud.Speech.V1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,49 +67,49 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Speech_V1_StreamingRecognizeRequest" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeRequest">Class StreamingRecognizeRequest
-              </h1>
-              <div class="markdown level0 summary"><p>The top-level message sent by the client for the <code>StreamingRecognize</code> method.
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeRequest">
+  
+  
+  <h1 id="Google_Cloud_Speech_V1_StreamingRecognizeRequest" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeRequest">Class StreamingRecognizeRequest
+  </h1>
+  <div class="markdown level0 summary"><p>The top-level message sent by the client for the <code>StreamingRecognize</code> method.
 Multiple <code>StreamingRecognizeRequest</code> messages are sent. The first message
 must contain a <code>streaming_config</code> message and must not contain <code>audio</code> data.
 All subsequent messages must contain <code>audio</code> data and must not contain a
 <code>streaming_config</code> message.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">StreamingRecognizeRequest</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Speech.V1</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Speech.V1.dll</h6>
-              <h5 id="Google_Cloud_Speech_V1_StreamingRecognizeRequest_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class StreamingRecognizeRequest : IMessage&lt;StreamingRecognizeRequest&gt;, IMessage, IEquatable&lt;StreamingRecognizeRequest&gt;, IDeepCloneable&lt;StreamingRecognizeRequest&gt;</code></pre>
-              </div>
-              <h3 id="properties">Properties
-              </h3>
-              <a id="Google_Cloud_Speech_V1_StreamingRecognizeRequest_AudioContent_" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeRequest.AudioContent*"></a>
-              <h4 id="Google_Cloud_Speech_V1_StreamingRecognizeRequest_AudioContent" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeRequest.AudioContent">AudioContent</h4>
-              <div class="markdown level1 summary"><p>The audio data to be recognized. Sequential chunks of audio data are sent
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">StreamingRecognizeRequest</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Speech.V1.html">Google.Cloud.Speech.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Speech.V1.dll</h6>
+  <h5 id="Google_Cloud_Speech_V1_StreamingRecognizeRequest_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class StreamingRecognizeRequest : IMessage&lt;StreamingRecognizeRequest&gt;, IMessage, IEquatable&lt;StreamingRecognizeRequest&gt;, IDeepCloneable&lt;StreamingRecognizeRequest&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Speech_V1_StreamingRecognizeRequest_AudioContent_" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeRequest.AudioContent*"></a>
+  <h4 id="Google_Cloud_Speech_V1_StreamingRecognizeRequest_AudioContent" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeRequest.AudioContent">AudioContent</h4>
+  <div class="markdown level1 summary"><p>The audio data to be recognized. Sequential chunks of audio data are sent
 in sequential <code>StreamingRecognizeRequest</code> messages. The first
 <code>StreamingRecognizeRequest</code> message must not contain <code>audio_content</code> data
 and all subsequent <code>StreamingRecognizeRequest</code> messages must contain
@@ -118,76 +118,76 @@ and all subsequent <code>StreamingRecognizeRequest</code> messages must contain
 pure binary representation (not base64). See
 <a href="https://cloud.google.com/speech/limits#content">audio limits</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ByteString AudioContent { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Speech_V1_StreamingRecognizeRequest_StreamingConfig_" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeRequest.StreamingConfig*"></a>
-              <h4 id="Google_Cloud_Speech_V1_StreamingRecognizeRequest_StreamingConfig" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeRequest.StreamingConfig">StreamingConfig</h4>
-              <div class="markdown level1 summary"><p>Provides information to the recognizer that specifies how to process the
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ByteString AudioContent { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Speech_V1_StreamingRecognizeRequest_StreamingConfig_" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeRequest.StreamingConfig*"></a>
+  <h4 id="Google_Cloud_Speech_V1_StreamingRecognizeRequest_StreamingConfig" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeRequest.StreamingConfig">StreamingConfig</h4>
+  <div class="markdown level1 summary"><p>Provides information to the recognizer that specifies how to process the
 request. The first <code>StreamingRecognizeRequest</code> message must contain a
 <code>streaming_config</code>  message.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public StreamingRecognitionConfig StreamingConfig { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Speech.V1.StreamingRecognitionConfig.html">StreamingRecognitionConfig</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Speech_V1_StreamingRecognizeRequest_StreamingRequestCase_" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeRequest.StreamingRequestCase*"></a>
-              <h4 id="Google_Cloud_Speech_V1_StreamingRecognizeRequest_StreamingRequestCase" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeRequest.StreamingRequestCase">StreamingRequestCase</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public StreamingRecognizeRequest.StreamingRequestOneofCase StreamingRequestCase { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Speech.V1.StreamingRecognizeRequest.StreamingRequestOneofCase.html">StreamingRecognizeRequest.StreamingRequestOneofCase</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamingRecognitionConfig StreamingConfig { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Speech.V1.StreamingRecognitionConfig.html">StreamingRecognitionConfig</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Speech_V1_StreamingRecognizeRequest_StreamingRequestCase_" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeRequest.StreamingRequestCase*"></a>
+  <h4 id="Google_Cloud_Speech_V1_StreamingRecognizeRequest_StreamingRequestCase" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeRequest.StreamingRequestCase">StreamingRequestCase</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamingRecognizeRequest.StreamingRequestOneofCase StreamingRequestCase { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Speech.V1.StreamingRecognizeRequest.StreamingRequestOneofCase.html">StreamingRecognizeRequest.StreamingRequestOneofCase</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

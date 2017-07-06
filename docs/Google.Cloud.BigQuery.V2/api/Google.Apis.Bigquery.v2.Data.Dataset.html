@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Dataset
    | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,133 +67,133 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Apis_Bigquery_v2_Data_Dataset" data-uid="Google.Apis.Bigquery.v2.Data.Dataset">Class Dataset
-              </h1>
-              <div class="markdown level0 summary"></div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">Dataset</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Apis.Bigquery.v2.Data</h6>
-              <h6><strong>Assembly</strong>:Google.Apis.Bigquery.v2.dll</h6>
-              <h5 id="Google_Apis_Bigquery_v2_Data_Dataset_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class Dataset : IDirectResponseSchema</code></pre>
-              </div>
-              <h3 id="properties">Properties
-              </h3>
-              <a id="Google_Apis_Bigquery_v2_Data_Dataset_Access_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Access*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_Access" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Access">Access</h4>
-              <div class="markdown level1 summary"><p>[Optional] An array of objects that define dataset access for one or more entities. You can set
+            <article class="content wrap" id="_content" data-uid="Google.Apis.Bigquery.v2.Data.Dataset">
+  
+  
+  <h1 id="Google_Apis_Bigquery_v2_Data_Dataset" data-uid="Google.Apis.Bigquery.v2.Data.Dataset">Class Dataset
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Dataset</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Apis.Bigquery.v2.Data.html">Google.Apis.Bigquery.v2.Data</a></h6>
+  <h6><strong>Assembly</strong>: Google.Apis.Bigquery.v2.dll</h6>
+  <h5 id="Google_Apis_Bigquery_v2_Data_Dataset_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Dataset : IDirectResponseSchema</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Apis_Bigquery_v2_Data_Dataset_Access_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Access*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_Access" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Access">Access</h4>
+  <div class="markdown level1 summary"><p>[Optional] An array of objects that define dataset access for one or more entities. You can set
 this property when inserting or updating a dataset in order to control who is allowed to access the data. If
 unspecified at dataset creation time, BigQuery adds default dataset access for the following entities:
 access.specialGroup: projectReaders; access.role: READER; access.specialGroup: projectWriters; access.role:
 WRITER; access.specialGroup: projectOwners; access.role: OWNER; access.userByEmail: [dataset creator email];
 access.role: OWNER;</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;access&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;access&quot;)]
 public virtual IList&lt;Dataset.AccessData&gt; Access { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.Dataset.AccessData.html">Dataset.AccessData</a>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_Dataset_CreationTime_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.CreationTime*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_CreationTime" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.CreationTime">CreationTime</h4>
-              <div class="markdown level1 summary"><p>[Output-only] The time when this dataset was created, in milliseconds since the epoch.</p>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.Dataset.AccessData.html">Dataset.AccessData</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_Dataset_CreationTime_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.CreationTime*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_CreationTime" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.CreationTime">CreationTime</h4>
+  <div class="markdown level1 summary"><p>[Output-only] The time when this dataset was created, in milliseconds since the epoch.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;creationTime&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;creationTime&quot;)]
 public virtual long ? CreationTime { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_Dataset_DatasetReference_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.DatasetReference*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_DatasetReference" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.DatasetReference">DatasetReference</h4>
-              <div class="markdown level1 summary"><p>[Required] A reference that identifies the dataset.</p>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_Dataset_DatasetReference_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.DatasetReference*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_DatasetReference" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.DatasetReference">DatasetReference</h4>
+  <div class="markdown level1 summary"><p>[Required] A reference that identifies the dataset.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;datasetReference&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;datasetReference&quot;)]
 public virtual DatasetReference DatasetReference { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html">DatasetReference</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_Dataset_DefaultTableExpirationMs_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.DefaultTableExpirationMs*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_DefaultTableExpirationMs" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.DefaultTableExpirationMs">DefaultTableExpirationMs</h4>
-              <div class="markdown level1 summary"><p>[Optional] The default lifetime of all tables in the dataset, in milliseconds. The minimum value is
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html">DatasetReference</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_Dataset_DefaultTableExpirationMs_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.DefaultTableExpirationMs*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_DefaultTableExpirationMs" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.DefaultTableExpirationMs">DefaultTableExpirationMs</h4>
+  <div class="markdown level1 summary"><p>[Optional] The default lifetime of all tables in the dataset, in milliseconds. The minimum value is
 3600000 milliseconds (one hour). Once this property is set, all newly-created tables in the dataset will
 have an expirationTime property set to the creation time plus the value in this property, and changing the
 value will only affect new tables, not existing ones. When the expirationTime for a given table is reached,
@@ -201,262 +201,262 @@ that table will be deleted automatically. If a table&#39;s expirationTime is mod
 table expires, or if you provide an explicit expirationTime when creating a table, that value takes
 precedence over the default expiration time indicated by this property.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;defaultTableExpirationMs&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;defaultTableExpirationMs&quot;)]
 public virtual long ? DefaultTableExpirationMs { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_Dataset_Description_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Description*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_Description" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Description">Description</h4>
-              <div class="markdown level1 summary"><p>[Optional] A user-friendly description of the dataset.</p>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_Dataset_Description_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Description*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_Description" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Description">Description</h4>
+  <div class="markdown level1 summary"><p>[Optional] A user-friendly description of the dataset.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;description&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;description&quot;)]
 public virtual string Description { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_Dataset_ETag_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.ETag*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_ETag" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.ETag">ETag</h4>
-              <div class="markdown level1 summary"><p>[Output-only] A hash of the resource.</p>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_Dataset_ETag_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.ETag*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_ETag" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.ETag">ETag</h4>
+  <div class="markdown level1 summary"><p>[Output-only] A hash of the resource.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;etag&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;etag&quot;)]
 public virtual string ETag { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
-              <a id="Google_Apis_Bigquery_v2_Data_Dataset_FriendlyName_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.FriendlyName*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_FriendlyName" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.FriendlyName">FriendlyName</h4>
-              <div class="markdown level1 summary"><p>[Optional] A descriptive name for the dataset.</p>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
+  <a id="Google_Apis_Bigquery_v2_Data_Dataset_FriendlyName_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.FriendlyName*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_FriendlyName" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.FriendlyName">FriendlyName</h4>
+  <div class="markdown level1 summary"><p>[Optional] A descriptive name for the dataset.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;friendlyName&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;friendlyName&quot;)]
 public virtual string FriendlyName { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_Dataset_Id_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Id*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_Id" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Id">Id</h4>
-              <div class="markdown level1 summary"><p>[Output-only] The fully-qualified unique name of the dataset in the format projectId:datasetId. The
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_Dataset_Id_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Id*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_Id" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Id">Id</h4>
+  <div class="markdown level1 summary"><p>[Output-only] The fully-qualified unique name of the dataset in the format projectId:datasetId. The
 dataset name without the project name is given in the datasetId field. When creating a new dataset, leave
 this field blank, and instead specify the datasetId field.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;id&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;id&quot;)]
 public virtual string Id { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_Dataset_Kind_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Kind*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_Kind" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Kind">Kind</h4>
-              <div class="markdown level1 summary"><p>[Output-only] The resource type.</p>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_Dataset_Kind_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Kind*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_Kind" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Kind">Kind</h4>
+  <div class="markdown level1 summary"><p>[Output-only] The resource type.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;kind&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;kind&quot;)]
 public virtual string Kind { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_Dataset_Labels_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Labels*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_Labels" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Labels">Labels</h4>
-              <div class="markdown level1 summary"><p>The labels associated with this dataset. You can use these to organize and group your datasets. You
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_Dataset_Labels_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Labels*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_Labels" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Labels">Labels</h4>
+  <div class="markdown level1 summary"><p>The labels associated with this dataset. You can use these to organize and group your datasets. You
 can set this property when inserting or updating a dataset. See Labeling Datasets for more
 information.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;labels&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;labels&quot;)]
 public virtual IDictionary&lt;string, string&gt; Labels { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_Dataset_LastModifiedTime_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.LastModifiedTime*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_LastModifiedTime" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.LastModifiedTime">LastModifiedTime</h4>
-              <div class="markdown level1 summary"><p>[Output-only] The date when this dataset or any of its tables was last modified, in milliseconds
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_Dataset_LastModifiedTime_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.LastModifiedTime*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_LastModifiedTime" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.LastModifiedTime">LastModifiedTime</h4>
+  <div class="markdown level1 summary"><p>[Output-only] The date when this dataset or any of its tables was last modified, in milliseconds
 since the epoch.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;lastModifiedTime&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;lastModifiedTime&quot;)]
 public virtual long ? LastModifiedTime { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_Dataset_Location_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Location*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_Location" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Location">Location</h4>
-              <div class="markdown level1 summary"><p>The geographic location where the dataset should reside. Possible values include EU and US. The
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_Dataset_Location_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Location*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_Location" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.Location">Location</h4>
+  <div class="markdown level1 summary"><p>The geographic location where the dataset should reside. Possible values include EU and US. The
 default value is US.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;location&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;location&quot;)]
 public virtual string Location { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_Dataset_SelfLink_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.SelfLink*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_SelfLink" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.SelfLink">SelfLink</h4>
-              <div class="markdown level1 summary"><p>[Output-only] A URL that can be used to access the resource again. You can use this URL in Get or
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_Dataset_SelfLink_" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.SelfLink*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_Dataset_SelfLink" data-uid="Google.Apis.Bigquery.v2.Data.Dataset.SelfLink">SelfLink</h4>
+  <div class="markdown level1 summary"><p>[Output-only] A URL that can be used to access the resource again. You can use this URL in Get or
 Update requests to the resource.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;selfLink&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;selfLink&quot;)]
 public virtual string SelfLink { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

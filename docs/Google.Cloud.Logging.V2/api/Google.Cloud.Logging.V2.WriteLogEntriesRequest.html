@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class WriteLogEntriesRequest
    | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,45 +67,45 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest">Class WriteLogEntriesRequest
-              </h1>
-              <div class="markdown level0 summary"><p>The parameters to WriteLogEntries.</p>
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest">
+  
+  
+  <h1 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest">Class WriteLogEntriesRequest
+  </h1>
+  <div class="markdown level0 summary"><p>The parameters to WriteLogEntries.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">WriteLogEntriesRequest</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Logging.V2</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Logging.V2.dll</h6>
-              <h5 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&gt;, IMessage, IEquatable&lt;WriteLogEntriesRequest&gt;, IDeepCloneable&lt;WriteLogEntriesRequest&gt;</code></pre>
-              </div>
-              <h3 id="properties">Properties
-              </h3>
-              <a id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_Entries_" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.Entries*"></a>
-              <h4 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_Entries" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.Entries">Entries</h4>
-              <div class="markdown level1 summary"><p>Required.  The log entries to write. Values supplied for the fields
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">WriteLogEntriesRequest</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Logging.V2.html">Google.Cloud.Logging.V2</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Logging.V2.dll</h6>
+  <h5 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&gt;, IMessage, IEquatable&lt;WriteLogEntriesRequest&gt;, IDeepCloneable&lt;WriteLogEntriesRequest&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_Entries_" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.Entries*"></a>
+  <h4 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_Entries" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.Entries">Entries</h4>
+  <div class="markdown level1 summary"><p>Required.  The log entries to write. Values supplied for the fields
 <code>log_name</code>, <code>resource</code>, and <code>labels</code> in this <code>entries.write</code> request are
 inserted into those log entries in this list that do not provide their own
 values.</p>
@@ -119,56 +119,56 @@ not matter.</p>
 you should write multiple log entries at once rather than
 calling this method for each individual log entry.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RepeatedField&lt;LogEntry&gt; Entries { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogEntry.html">LogEntry</a>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_Labels_" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.Labels*"></a>
-              <h4 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_Labels" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.Labels">Labels</h4>
-              <div class="markdown level1 summary"><p>Optional. Default labels that are added to the <code>labels</code> field of all log
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;LogEntry&gt; Entries { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogEntry.html">LogEntry</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_Labels_" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.Labels*"></a>
+  <h4 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_Labels" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.Labels">Labels</h4>
+  <div class="markdown level1 summary"><p>Optional. Default labels that are added to the <code>labels</code> field of all log
 entries in <code>entries</code>. If a log entry already has a label with the same key
 as a label in this parameter, then the log entry&#39;s label is not changed.
 See [LogEntry][google.logging.v2.LogEntry].</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public MapField&lt;string, string&gt; Labels { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.MapField-2.html">MapField</a>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_LogName_" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.LogName*"></a>
-              <h4 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_LogName" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.LogName">LogName</h4>
-              <div class="markdown level1 summary"><p>Optional. A default log resource name that is assigned to all log entries
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapField&lt;string, string&gt; Labels { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.MapField-2.html">MapField</a>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_LogName_" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.LogName*"></a>
+  <h4 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_LogName" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.LogName">LogName</h4>
+  <div class="markdown level1 summary"><p>Optional. A default log resource name that is assigned to all log entries
 in <code>entries</code> that do not specify a value for <code>log_name</code>:</p>
 <p>&quot;projects/[PROJECT_ID]/logs/[LOG_ID]&quot;
 &quot;organizations/[ORGANIZATION_ID]/logs/[LOG_ID]&quot;
@@ -180,108 +180,108 @@ in <code>entries</code> that do not specify a value for <code>log_name</code>:</
 For more information about log names, see
 [LogEntry][google.logging.v2.LogEntry].</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string LogName { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_LogNameAsLogNameOneof_" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.LogNameAsLogNameOneof*"></a>
-              <h4 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_LogNameAsLogNameOneof" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.LogNameAsLogNameOneof">LogNameAsLogNameOneof</h4>
-              <div class="markdown level1 summary"><p><a class="xref" href="Google.Cloud.Logging.V2.LogNameOneof.html">LogNameOneof</a>-typed view over the <a class="xref" href="Google.Cloud.Logging.V2.WriteLogEntriesRequest.html#Google_Cloud_Logging_V2_WriteLogEntriesRequest_LogName">LogName</a> resource name property.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LogName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_LogNameAsLogNameOneof_" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.LogNameAsLogNameOneof*"></a>
+  <h4 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_LogNameAsLogNameOneof" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.LogNameAsLogNameOneof">LogNameAsLogNameOneof</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="Google.Cloud.Logging.V2.LogNameOneof.html">LogNameOneof</a>-typed view over the <a class="xref" href="Google.Cloud.Logging.V2.WriteLogEntriesRequest.html#Google_Cloud_Logging_V2_WriteLogEntriesRequest_LogName">LogName</a> resource name property.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public LogNameOneof LogNameAsLogNameOneof { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Logging.V2.LogNameOneof.html">LogNameOneof</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_PartialSuccess_" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.PartialSuccess*"></a>
-              <h4 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_PartialSuccess" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.PartialSuccess">PartialSuccess</h4>
-              <div class="markdown level1 summary"><p>Optional. Whether valid entries should be written even if some other
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LogNameOneof LogNameAsLogNameOneof { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.LogNameOneof.html">LogNameOneof</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_PartialSuccess_" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.PartialSuccess*"></a>
+  <h4 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_PartialSuccess" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.PartialSuccess">PartialSuccess</h4>
+  <div class="markdown level1 summary"><p>Optional. Whether valid entries should be written even if some other
 entries fail due to INVALID_ARGUMENT or PERMISSION_DENIED errors. If any
 entry is not written, then the response status is the error associated
 with one of the failed entries and the response includes error details
 keyed by the entries&#39; zero-based index in the <code>entries.write</code> method.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public bool PartialSuccess { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Boolean</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_Resource_" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.Resource*"></a>
-              <h4 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_Resource" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.Resource">Resource</h4>
-              <div class="markdown level1 summary"><p>Optional. A default monitored resource object that is assigned to all log
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PartialSuccess { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_Resource_" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.Resource*"></a>
+  <h4 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_Resource" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.Resource">Resource</h4>
+  <div class="markdown level1 summary"><p>Optional. A default monitored resource object that is assigned to all log
 entries in <code>entries</code> that do not specify a value for <code>resource</code>. Example:</p>
 <p>{ &quot;type&quot;: &quot;gce_instance&quot;,
  &quot;labels&quot;: {
    &quot;zone&quot;: &quot;us-central1-a&quot;, &quot;instance_id&quot;: &quot;00000000000000000000&quot; }}</p>
 <p>See [LogEntry][google.logging.v2.LogEntry].</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public MonitoredResource Resource { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.MonitoredResource.html">MonitoredResource</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MonitoredResource Resource { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.MonitoredResource.html">MonitoredResource</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

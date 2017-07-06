@@ -260,6 +260,24 @@ references:
   commentId: Overload:Google.Api.Gax.GaxPreconditions.CheckArgumentRange
   fullName: Google.Api.Gax.GaxPreconditions.CheckArgumentRange
   nameWithType: GaxPreconditions.CheckArgumentRange
+- uid: Google.Api.Gax.GaxPreconditions.CheckArgumentRange``1(``0,System.String,``0,``0)
+  name: CheckArgumentRange<T>(T, String, T, T)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckArgumentRange__1___0_System_String___0___0_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckArgumentRange``1(``0,System.String,``0,``0)
+  name.vb: CheckArgumentRange(Of T)(T, String, T, T)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckArgumentRange<T>(T, System.String, T, T)
+  fullName.vb: Google.Api.Gax.GaxPreconditions.CheckArgumentRange(Of T)(T, System.String, T, T)
+  nameWithType: GaxPreconditions.CheckArgumentRange<T>(T, String, T, T)
+  nameWithType.vb: GaxPreconditions.CheckArgumentRange(Of T)(T, String, T, T)
+- uid: Google.Api.Gax.GaxPreconditions.CheckArgumentRange``1(System.Nullable{``0},System.String,``0,``0)
+  name: CheckArgumentRange<T>(Nullable<T>, String, T, T)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckArgumentRange__1_System_Nullable___0__System_String___0___0_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckArgumentRange``1(System.Nullable{``0},System.String,``0,``0)
+  name.vb: CheckArgumentRange(Of T)(Nullable(Of T), String, T, T)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckArgumentRange<T>(System.Nullable<T>, System.String, T, T)
+  fullName.vb: Google.Api.Gax.GaxPreconditions.CheckArgumentRange(Of T)(System.Nullable(Of T), System.String, T, T)
+  nameWithType: GaxPreconditions.CheckArgumentRange<T>(Nullable<T>, String, T, T)
+  nameWithType.vb: GaxPreconditions.CheckArgumentRange(Of T)(Nullable(Of T), String, T, T)
 - uid: Google.Api.Gax.GaxPreconditions.CheckEnumValue*
   name: CheckEnumValue
   href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckEnumValue_
@@ -275,6 +293,57 @@ references:
   fullName.vb: Google.Api.Gax.GaxPreconditions.CheckEnumValue(Of T)(T, System.String)
   nameWithType: GaxPreconditions.CheckEnumValue<T>(T, String)
   nameWithType.vb: GaxPreconditions.CheckEnumValue(Of T)(T, String)
+- uid: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Double,System.String)
+  name: CheckNonNegative(Double, String)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckNonNegative_System_Double_System_String_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Double,System.String)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Double, System.String)
+  nameWithType: GaxPreconditions.CheckNonNegative(Double, String)
+- uid: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Int32,System.String)
+  name: CheckNonNegative(Int32, String)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckNonNegative_System_Int32_System_String_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Int32,System.String)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Int32, System.String)
+  nameWithType: GaxPreconditions.CheckNonNegative(Int32, String)
+- uid: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Int64,System.String)
+  name: CheckNonNegative(Int64, String)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckNonNegative_System_Int64_System_String_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Int64,System.String)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Int64, System.String)
+  nameWithType: GaxPreconditions.CheckNonNegative(Int64, String)
+- uid: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable{System.Double},System.String)
+  name: CheckNonNegative(Nullable<Double>, String)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckNonNegative_System_Nullable_System_Double__System_String_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable{System.Double},System.String)
+  name.vb: CheckNonNegative(Nullable(Of Double), String)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable<System.Double>, System.String)
+  fullName.vb: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable(Of System.Double), System.String)
+  nameWithType: GaxPreconditions.CheckNonNegative(Nullable<Double>, String)
+  nameWithType.vb: GaxPreconditions.CheckNonNegative(Nullable(Of Double), String)
+- uid: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable{System.Int32},System.String)
+  name: CheckNonNegative(Nullable<Int32>, String)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckNonNegative_System_Nullable_System_Int32__System_String_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable{System.Int32},System.String)
+  name.vb: CheckNonNegative(Nullable(Of Int32), String)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable<System.Int32>, System.String)
+  fullName.vb: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable(Of System.Int32), System.String)
+  nameWithType: GaxPreconditions.CheckNonNegative(Nullable<Int32>, String)
+  nameWithType.vb: GaxPreconditions.CheckNonNegative(Nullable(Of Int32), String)
+- uid: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable{System.Int64},System.String)
+  name: CheckNonNegative(Nullable<Int64>, String)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckNonNegative_System_Nullable_System_Int64__System_String_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable{System.Int64},System.String)
+  name.vb: CheckNonNegative(Nullable(Of Int64), String)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable<System.Int64>, System.String)
+  fullName.vb: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable(Of System.Int64), System.String)
+  nameWithType: GaxPreconditions.CheckNonNegative(Nullable<Int64>, String)
+  nameWithType.vb: GaxPreconditions.CheckNonNegative(Nullable(Of Int64), String)
+- uid: Google.Api.Gax.GaxPreconditions.CheckNonNegative*
+  name: CheckNonNegative
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckNonNegative_
+  commentId: Overload:Google.Api.Gax.GaxPreconditions.CheckNonNegative
+  fullName: Google.Api.Gax.GaxPreconditions.CheckNonNegative
+  nameWithType: GaxPreconditions.CheckNonNegative
 - uid: Google.Api.Gax.GaxPreconditions.CheckNotNull*
   name: CheckNotNull
   href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckNotNull_

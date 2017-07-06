@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IAsyncStreamReader&lt;T&gt;
    | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,12 +67,12 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Grpc_Core_IAsyncStreamReader_1" data-uid="Grpc.Core.IAsyncStreamReader`1">Interface IAsyncStreamReader&lt;T&gt;
-              </h1>
-              <div class="markdown level0 summary"><p>A stream of messages to be read.
+            <article class="content wrap" id="_content" data-uid="Grpc.Core.IAsyncStreamReader`1">
+  
+  
+  <h1 id="Grpc_Core_IAsyncStreamReader_1" data-uid="Grpc.Core.IAsyncStreamReader`1">Interface IAsyncStreamReader&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>A stream of messages to be read.
 Messages can be awaited <code>await reader.MoveNext()</code>, that returns <code>true</code>
 if there is a message available and <code>false</code> if there are no more messages
 (i.e. the stream has been closed).
@@ -89,42 +89,42 @@ In case of a failure, the request stream will appear to be finished
 associated with the call will be cancelled to signal the failure.
 </p></p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Collections.Generic.IAsyncEnumerator&lt;T&gt;.MoveNext(System.Threading.CancellationToken)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Collections.Generic.IAsyncEnumerator&lt;T&gt;.Current</span>
-                </div>
-                <div>
-                  <span class="xref">System.IDisposable.Dispose()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Grpc.Core</h6>
-              <h6><strong>Assembly</strong>:Grpc.Core.dll</h6>
-              <h5 id="Grpc_Core_IAsyncStreamReader_1_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public interface IAsyncStreamReader&lt;T&gt; : IAsyncEnumerator&lt;T&gt;, IDisposable</code></pre>
-              </div>
-              <h5 class="typeParameters">Type Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="parametername">T</span></td>
-                    <td><p>The message type.</p>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Collections.Generic.IAsyncEnumerator&lt;T&gt;.MoveNext(System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.Generic.IAsyncEnumerator&lt;T&gt;.Current</span>
+    </div>
+    <div>
+      <span class="xref">System.IDisposable.Dispose()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Grpc.Core.html">Grpc.Core</a></h6>
+  <h6><strong>Assembly</strong>: Grpc.Core.dll</h6>
+  <h5 id="Grpc_Core_IAsyncStreamReader_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IAsyncStreamReader&lt;T&gt; : IAsyncEnumerator&lt;T&gt;, IDisposable</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The message type.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

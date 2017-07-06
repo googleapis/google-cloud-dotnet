@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Enum TimedCountAlignment
    | Google.Cloud.ErrorReporting.V1Beta1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,41 +67,41 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_ErrorReporting_V1Beta1_TimedCountAlignment" data-uid="Google.Cloud.ErrorReporting.V1Beta1.TimedCountAlignment">Enum TimedCountAlignment
-              </h1>
-              <div class="markdown level0 summary"><p>Specifies how the time periods of error group counts are aligned.</p>
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.ErrorReporting.V1Beta1.TimedCountAlignment">
+  
+  
+  <h1 id="Google_Cloud_ErrorReporting_V1Beta1_TimedCountAlignment" data-uid="Google.Cloud.ErrorReporting.V1Beta1.TimedCountAlignment">Enum TimedCountAlignment
+  </h1>
+  <div class="markdown level0 summary"><p>Specifies how the time periods of error group counts are aligned.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <h6><strong>Namespace</strong>:Google.Cloud.ErrorReporting.V1Beta1</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.ErrorReporting.V1Beta1.dll</h6>
-              <h5 id="Google_Cloud_ErrorReporting_V1Beta1_TimedCountAlignment_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public enum TimedCountAlignment</code></pre>
-              </div>
-              <h3 id="fields">Fields
-              </h3>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                <thead>
-                <tbody>
-                  <tr>
-                    <td id="Google_Cloud_ErrorReporting_V1Beta1_TimedCountAlignment_AlignmentEqualAtEnd">AlignmentEqualAtEnd</td>
-                    <td><p>The time periods shall be consecutive, have width equal to the
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.ErrorReporting.V1Beta1.html">Google.Cloud.ErrorReporting.V1Beta1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.ErrorReporting.V1Beta1.dll</h6>
+  <h5 id="Google_Cloud_ErrorReporting_V1Beta1_TimedCountAlignment_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum TimedCountAlignment</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    <thead>
+    <tbody>
+      <tr>
+        <td id="Google_Cloud_ErrorReporting_V1Beta1_TimedCountAlignment_AlignmentEqualAtEnd">AlignmentEqualAtEnd</td>
+        <td><p>The time periods shall be consecutive, have width equal to the
 requested duration, and be aligned at the end of the requested time
 period. This can result in a different size of the
 first time period.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_ErrorReporting_V1Beta1_TimedCountAlignment_AlignmentEqualRounded">AlignmentEqualRounded</td>
-                    <td><p>The time periods shall be consecutive, have width equal to the
+      </tr>
+      <tr>
+        <td id="Google_Cloud_ErrorReporting_V1Beta1_TimedCountAlignment_AlignmentEqualRounded">AlignmentEqualRounded</td>
+        <td><p>The time periods shall be consecutive, have width equal to the
 requested duration, and be aligned at the <code>alignment_time</code> provided in
 the request.
 The <code>alignment_time</code> does not have to be inside the query period but
@@ -110,15 +110,15 @@ with the query period.
 A rounded alignment will typically result in a
 different size of the first or the last time period.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_ErrorReporting_V1Beta1_TimedCountAlignment_ErrorCountAlignmentUnspecified">ErrorCountAlignmentUnspecified</td>
-                    <td><p>No alignment specified.</p>
+      </tr>
+      <tr>
+        <td id="Google_Cloud_ErrorReporting_V1Beta1_TimedCountAlignment_ErrorCountAlignmentUnspecified">ErrorCountAlignmentUnspecified</td>
+        <td><p>No alignment specified.</p>
 </td>
-                  </tr>
-                </tbody>
-              </thead></thead></table>
-                        </article>
+      </tr>
+    </tbody>
+  </thead></thead></table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

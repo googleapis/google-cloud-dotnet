@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Google.Cloud.Diagnostics.AspNetCore
    | Google.Cloud.Diagnostics.AspNetCore ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,50 +67,50 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              <h1 id="Google_Cloud_Diagnostics_AspNetCore" data-uid="Google.Cloud.Diagnostics.AspNetCore">Namespace Google.Cloud.Diagnostics.AspNetCore
-              </h1>
-              <div class="markdown level0 summary"></div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="markdown level0 remarks"></div>
-                <h3 id="classes">Classes
-              </h3>
-                  <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html">CloudTraceExtension</a></h4>
-                  <section><p>Uses the Google Cloud Trace Middleware.
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Diagnostics.AspNetCore">
+  
+  <h1 id="Google_Cloud_Diagnostics_AspNetCore" data-uid="Google.Cloud.Diagnostics.AspNetCore">Namespace Google.Cloud.Diagnostics.AspNetCore
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html">CloudTraceExtension</a></h4>
+      <section><p>Uses the Google Cloud Trace Middleware.
 Traces the time taken for all subsequent delegates to run.  The time taken
 and metadata will be sent to the Stackdriver Trace API.  Also allows for more
 finely grained manual tracing.</p>
 </section>
-                  <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.html">ErrorReportingExceptionLoggerExtension</a></h4>
-                  <section><p>Uses the Google Cloud Error Reporting Exception Logger Middleware.
+      <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.html">ErrorReportingExceptionLoggerExtension</a></h4>
+      <section><p>Uses the Google Cloud Error Reporting Exception Logger Middleware.
 To ensure all unhandled exceptions are reported, this should be
 the first piece of middleware used.</p>
 </section>
-                  <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.html">ErrorReportingExceptionLoggerMiddleware</a></h4>
-                  <section><p>Middleware that will, when invoked, call the next <see cref="!:RequestDelegate"></see>,
+      <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.html">ErrorReportingExceptionLoggerMiddleware</a></h4>
+      <section><p>Middleware that will, when invoked, call the next <see cref="!:RequestDelegate"></see>,
 catch any exception that it may throw, send that exception to the
 Stackdriver Error Reporting API and rethrow the given exception.</p>
 </section>
-                  <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.html">ErrorReportingServiceOptions</a></h4>
-                  <section><p>Configuration for initializing error reporting.</p>
+      <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions.html">ErrorReportingServiceOptions</a></h4>
+      <section><p>Configuration for initializing error reporting.</p>
 </section>
-                  <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.html">GoogleLogger</a></h4>
-                  <section><p><see cref="!:ILogger"></see> for Google Stackdriver Logging.</p>
+      <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.html">GoogleLogger</a></h4>
+      <section><p><see cref="!:ILogger"></see> for Google Stackdriver Logging.</p>
 </section>
-                  <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.html">GoogleLoggerFactoryExtensions</a></h4>
-                  <section><p>Extensions to add <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerProvider.html">GoogleLoggerProvider</a>s to an <see cref="!:ILoggerFactory"></see>.</p>
+      <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.html">GoogleLoggerFactoryExtensions</a></h4>
+      <section><p>Extensions to add <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerProvider.html">GoogleLoggerProvider</a>s to an <see cref="!:ILoggerFactory"></see>.</p>
 </section>
-                  <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerProvider.html">GoogleLoggerProvider</a></h4>
-                  <section><p><see cref="!:ILoggerProvider"></see> for Google Stackdriver Logging.</p>
+      <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerProvider.html">GoogleLoggerProvider</a></h4>
+      <section><p><see cref="!:ILoggerProvider"></see> for Google Stackdriver Logging.</p>
 </section>
-                  <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.html">LoggerOptions</a></h4>
-                  <section><p>Options for a <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.html">GoogleLogger</a>.</p>
+      <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.html">LoggerOptions</a></h4>
+      <section><p>Options for a <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.html">GoogleLogger</a>.</p>
 </section>
-                  <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.html">TraceServiceOptions</a></h4>
-                  <section><p>Configuration for initializing tracing.</p>
+      <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.html">TraceServiceOptions</a></h4>
+      <section><p>Configuration for initializing tracing.</p>
 </section>
-                        </article>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

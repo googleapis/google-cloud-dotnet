@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class MetricService.MetricServiceBase
    | Google.Cloud.Monitoring.V3 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,441 +67,441 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase">Class MetricService.MetricServiceBase
-              </h1>
-              <div class="markdown level0 summary"><p>Base class for server-side implementations of MetricService</p>
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase">
+  
+  
+  <h1 id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase">Class MetricService.MetricServiceBase
+  </h1>
+  <div class="markdown level0 summary"><p>Base class for server-side implementations of MetricService</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">MetricService.MetricServiceBase</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Monitoring.V3</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Monitoring.V3.dll</h6>
-              <h5 id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public abstract class MetricServiceBase</code></pre>
-              </div>
-              <h3 id="methods">Methods
-              </h3>
-              <a id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_CreateMetricDescriptor_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.CreateMetricDescriptor*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_CreateMetricDescriptor_Google_Cloud_Monitoring_V3_CreateMetricDescriptorRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.CreateMetricDescriptor(Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest,Grpc.Core.ServerCallContext)">CreateMetricDescriptor(CreateMetricDescriptorRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p>Creates a new metric descriptor.
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">MetricService.MetricServiceBase</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Monitoring.V3.html">Google.Cloud.Monitoring.V3</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Monitoring.V3.dll</h6>
+  <h5 id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class MetricServiceBase</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_CreateMetricDescriptor_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.CreateMetricDescriptor*"></a>
+  <h4 id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_CreateMetricDescriptor_Google_Cloud_Monitoring_V3_CreateMetricDescriptorRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.CreateMetricDescriptor(Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest,Grpc.Core.ServerCallContext)">CreateMetricDescriptor(CreateMetricDescriptorRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Creates a new metric descriptor.
 User-created metric descriptors define
 <a href="/monitoring/custom-metrics">custom metrics</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;MetricDescriptor&gt; CreateMetricDescriptor(CreateMetricDescriptorRequest request, ServerCallContext context)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.html">CreateMetricDescriptorRequest</a></td>
-                    <td><span class="parametername">request</span></td>
-                    <td><p>The request received from the client.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;MetricDescriptor&gt; CreateMetricDescriptor(CreateMetricDescriptorRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.html">CreateMetricDescriptorRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
-                    <td><span class="parametername">context</span></td>
-                    <td><p>The context of the server-side call handler being invoked.</p>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Api.MetricDescriptor.html">MetricDescriptor</a>&gt;</td>
-                    <td><p>The response to send back to the client (wrapped by a task).</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Api.MetricDescriptor.html">MetricDescriptor</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_CreateTimeSeries_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.CreateTimeSeries*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_CreateTimeSeries_Google_Cloud_Monitoring_V3_CreateTimeSeriesRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.CreateTimeSeries(Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest,Grpc.Core.ServerCallContext)">CreateTimeSeries(CreateTimeSeriesRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p>Creates or adds data to one or more time series.
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_CreateTimeSeries_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.CreateTimeSeries*"></a>
+  <h4 id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_CreateTimeSeries_Google_Cloud_Monitoring_V3_CreateTimeSeriesRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.CreateTimeSeries(Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest,Grpc.Core.ServerCallContext)">CreateTimeSeries(CreateTimeSeriesRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Creates or adds data to one or more time series.
 The response is empty if all time series in the request were written.
 If any time series could not be written, a corresponding failure message is
 included in the error response.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;Empty&gt; CreateTimeSeries(CreateTimeSeriesRequest request, ServerCallContext context)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.html">CreateTimeSeriesRequest</a></td>
-                    <td><span class="parametername">request</span></td>
-                    <td><p>The request received from the client.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Empty&gt; CreateTimeSeries(CreateTimeSeriesRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.html">CreateTimeSeriesRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
-                    <td><span class="parametername">context</span></td>
-                    <td><p>The context of the server-side call handler being invoked.</p>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>&gt;</td>
-                    <td><p>The response to send back to the client (wrapped by a task).</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_DeleteMetricDescriptor_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.DeleteMetricDescriptor*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_DeleteMetricDescriptor_Google_Cloud_Monitoring_V3_DeleteMetricDescriptorRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.DeleteMetricDescriptor(Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest,Grpc.Core.ServerCallContext)">DeleteMetricDescriptor(DeleteMetricDescriptorRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p>Deletes a metric descriptor. Only user-created
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_DeleteMetricDescriptor_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.DeleteMetricDescriptor*"></a>
+  <h4 id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_DeleteMetricDescriptor_Google_Cloud_Monitoring_V3_DeleteMetricDescriptorRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.DeleteMetricDescriptor(Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest,Grpc.Core.ServerCallContext)">DeleteMetricDescriptor(DeleteMetricDescriptorRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Deletes a metric descriptor. Only user-created
 <a href="/monitoring/custom-metrics">custom metrics</a> can be deleted.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;Empty&gt; DeleteMetricDescriptor(DeleteMetricDescriptorRequest request, ServerCallContext context)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.html">DeleteMetricDescriptorRequest</a></td>
-                    <td><span class="parametername">request</span></td>
-                    <td><p>The request received from the client.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Empty&gt; DeleteMetricDescriptor(DeleteMetricDescriptorRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.html">DeleteMetricDescriptorRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
-                    <td><span class="parametername">context</span></td>
-                    <td><p>The context of the server-side call handler being invoked.</p>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>&gt;</td>
-                    <td><p>The response to send back to the client (wrapped by a task).</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_GetMetricDescriptor_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.GetMetricDescriptor*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_GetMetricDescriptor_Google_Cloud_Monitoring_V3_GetMetricDescriptorRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.GetMetricDescriptor(Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest,Grpc.Core.ServerCallContext)">GetMetricDescriptor(GetMetricDescriptorRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p>Gets a single metric descriptor. This method does not require a Stackdriver account.</p>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_GetMetricDescriptor_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.GetMetricDescriptor*"></a>
+  <h4 id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_GetMetricDescriptor_Google_Cloud_Monitoring_V3_GetMetricDescriptorRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.GetMetricDescriptor(Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest,Grpc.Core.ServerCallContext)">GetMetricDescriptor(GetMetricDescriptorRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Gets a single metric descriptor. This method does not require a Stackdriver account.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;MetricDescriptor&gt; GetMetricDescriptor(GetMetricDescriptorRequest request, ServerCallContext context)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.html">GetMetricDescriptorRequest</a></td>
-                    <td><span class="parametername">request</span></td>
-                    <td><p>The request received from the client.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;MetricDescriptor&gt; GetMetricDescriptor(GetMetricDescriptorRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.html">GetMetricDescriptorRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
-                    <td><span class="parametername">context</span></td>
-                    <td><p>The context of the server-side call handler being invoked.</p>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Api.MetricDescriptor.html">MetricDescriptor</a>&gt;</td>
-                    <td><p>The response to send back to the client (wrapped by a task).</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Api.MetricDescriptor.html">MetricDescriptor</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_GetMonitoredResourceDescriptor_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.GetMonitoredResourceDescriptor*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_GetMonitoredResourceDescriptor_Google_Cloud_Monitoring_V3_GetMonitoredResourceDescriptorRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.GetMonitoredResourceDescriptor(Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest,Grpc.Core.ServerCallContext)">GetMonitoredResourceDescriptor(GetMonitoredResourceDescriptorRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p>Gets a single monitored resource descriptor. This method does not require a Stackdriver account.</p>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_GetMonitoredResourceDescriptor_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.GetMonitoredResourceDescriptor*"></a>
+  <h4 id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_GetMonitoredResourceDescriptor_Google_Cloud_Monitoring_V3_GetMonitoredResourceDescriptorRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.GetMonitoredResourceDescriptor(Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest,Grpc.Core.ServerCallContext)">GetMonitoredResourceDescriptor(GetMonitoredResourceDescriptorRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Gets a single monitored resource descriptor. This method does not require a Stackdriver account.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;MonitoredResourceDescriptor&gt; GetMonitoredResourceDescriptor(GetMonitoredResourceDescriptorRequest request, ServerCallContext context)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.html">GetMonitoredResourceDescriptorRequest</a></td>
-                    <td><span class="parametername">request</span></td>
-                    <td><p>The request received from the client.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;MonitoredResourceDescriptor&gt; GetMonitoredResourceDescriptor(GetMonitoredResourceDescriptorRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.html">GetMonitoredResourceDescriptorRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
-                    <td><span class="parametername">context</span></td>
-                    <td><p>The context of the server-side call handler being invoked.</p>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Api.MonitoredResourceDescriptor.html">MonitoredResourceDescriptor</a>&gt;</td>
-                    <td><p>The response to send back to the client (wrapped by a task).</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Api.MonitoredResourceDescriptor.html">MonitoredResourceDescriptor</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_ListMetricDescriptors_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.ListMetricDescriptors*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_ListMetricDescriptors_Google_Cloud_Monitoring_V3_ListMetricDescriptorsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.ListMetricDescriptors(Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest,Grpc.Core.ServerCallContext)">ListMetricDescriptors(ListMetricDescriptorsRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p>Lists metric descriptors that match a filter. This method does not require a Stackdriver account.</p>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_ListMetricDescriptors_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.ListMetricDescriptors*"></a>
+  <h4 id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_ListMetricDescriptors_Google_Cloud_Monitoring_V3_ListMetricDescriptorsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.ListMetricDescriptors(Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest,Grpc.Core.ServerCallContext)">ListMetricDescriptors(ListMetricDescriptorsRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Lists metric descriptors that match a filter. This method does not require a Stackdriver account.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;ListMetricDescriptorsResponse&gt; ListMetricDescriptors(ListMetricDescriptorsRequest request, ServerCallContext context)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.html">ListMetricDescriptorsRequest</a></td>
-                    <td><span class="parametername">request</span></td>
-                    <td><p>The request received from the client.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ListMetricDescriptorsResponse&gt; ListMetricDescriptors(ListMetricDescriptorsRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.html">ListMetricDescriptorsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
-                    <td><span class="parametername">context</span></td>
-                    <td><p>The context of the server-side call handler being invoked.</p>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse.html">ListMetricDescriptorsResponse</a>&gt;</td>
-                    <td><p>The response to send back to the client (wrapped by a task).</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse.html">ListMetricDescriptorsResponse</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_ListMonitoredResourceDescriptors_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.ListMonitoredResourceDescriptors*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_ListMonitoredResourceDescriptors_Google_Cloud_Monitoring_V3_ListMonitoredResourceDescriptorsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.ListMonitoredResourceDescriptors(Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest,Grpc.Core.ServerCallContext)">ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p>Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.</p>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_ListMonitoredResourceDescriptors_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.ListMonitoredResourceDescriptors*"></a>
+  <h4 id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_ListMonitoredResourceDescriptors_Google_Cloud_Monitoring_V3_ListMonitoredResourceDescriptorsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.ListMonitoredResourceDescriptors(Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest,Grpc.Core.ServerCallContext)">ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;ListMonitoredResourceDescriptorsResponse&gt; ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest request, ServerCallContext context)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.html">ListMonitoredResourceDescriptorsRequest</a></td>
-                    <td><span class="parametername">request</span></td>
-                    <td><p>The request received from the client.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ListMonitoredResourceDescriptorsResponse&gt; ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.html">ListMonitoredResourceDescriptorsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
-                    <td><span class="parametername">context</span></td>
-                    <td><p>The context of the server-side call handler being invoked.</p>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse.html">ListMonitoredResourceDescriptorsResponse</a>&gt;</td>
-                    <td><p>The response to send back to the client (wrapped by a task).</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse.html">ListMonitoredResourceDescriptorsResponse</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_ListTimeSeries_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.ListTimeSeries*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_ListTimeSeries_Google_Cloud_Monitoring_V3_ListTimeSeriesRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.ListTimeSeries(Google.Cloud.Monitoring.V3.ListTimeSeriesRequest,Grpc.Core.ServerCallContext)">ListTimeSeries(ListTimeSeriesRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p>Lists time series that match a filter. This method does not require a Stackdriver account.</p>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_ListTimeSeries_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.ListTimeSeries*"></a>
+  <h4 id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceBase_ListTimeSeries_Google_Cloud_Monitoring_V3_ListTimeSeriesRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceBase.ListTimeSeries(Google.Cloud.Monitoring.V3.ListTimeSeriesRequest,Grpc.Core.ServerCallContext)">ListTimeSeries(ListTimeSeriesRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Lists time series that match a filter. This method does not require a Stackdriver account.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;ListTimeSeriesResponse&gt; ListTimeSeries(ListTimeSeriesRequest request, ServerCallContext context)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.html">ListTimeSeriesRequest</a></td>
-                    <td><span class="parametername">request</span></td>
-                    <td><p>The request received from the client.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ListTimeSeriesResponse&gt; ListTimeSeries(ListTimeSeriesRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.html">ListTimeSeriesRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
-                    <td><span class="parametername">context</span></td>
-                    <td><p>The context of the server-side call handler being invoked.</p>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Monitoring.V3.ListTimeSeriesResponse.html">ListTimeSeriesResponse</a>&gt;</td>
-                    <td><p>The response to send back to the client (wrapped by a task).</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Monitoring.V3.ListTimeSeriesResponse.html">ListTimeSeriesResponse</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

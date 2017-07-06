@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Enum StreamingRecognizeResponse.Types.SpeechEventType
    | Google.Cloud.Speech.V1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,33 +67,33 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Speech_V1_StreamingRecognizeResponse_Types_SpeechEventType" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType">Enum StreamingRecognizeResponse.Types.SpeechEventType
-              </h1>
-              <div class="markdown level0 summary"><p>Indicates the type of speech event.</p>
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType">
+  
+  
+  <h1 id="Google_Cloud_Speech_V1_StreamingRecognizeResponse_Types_SpeechEventType" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType">Enum StreamingRecognizeResponse.Types.SpeechEventType
+  </h1>
+  <div class="markdown level0 summary"><p>Indicates the type of speech event.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Speech.V1</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Speech.V1.dll</h6>
-              <h5 id="Google_Cloud_Speech_V1_StreamingRecognizeResponse_Types_SpeechEventType_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public enum SpeechEventType</code></pre>
-              </div>
-              <h3 id="fields">Fields
-              </h3>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                <thead>
-                <tbody>
-                  <tr>
-                    <td id="Google_Cloud_Speech_V1_StreamingRecognizeResponse_Types_SpeechEventType_EndOfSingleUtterance">EndOfSingleUtterance</td>
-                    <td><p>This event indicates that the server has detected the end of the user&#39;s
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Speech.V1.html">Google.Cloud.Speech.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Speech.V1.dll</h6>
+  <h5 id="Google_Cloud_Speech_V1_StreamingRecognizeResponse_Types_SpeechEventType_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum SpeechEventType</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    <thead>
+    <tbody>
+      <tr>
+        <td id="Google_Cloud_Speech_V1_StreamingRecognizeResponse_Types_SpeechEventType_EndOfSingleUtterance">EndOfSingleUtterance</td>
+        <td><p>This event indicates that the server has detected the end of the user&#39;s
 speech utterance and expects no additional speech. Therefore, the server
 will not process additional audio (although it may subsequently return
 additional results). The client should stop sending additional audio
@@ -101,15 +101,15 @@ data, half-close the gRPC connection, and wait for any additional results
 until the server closes the gRPC connection. This event is only sent if
 <code>single_utterance</code> was set to <code>true</code>, and is not used otherwise.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Speech_V1_StreamingRecognizeResponse_Types_SpeechEventType_SpeechEventUnspecified">SpeechEventUnspecified</td>
-                    <td><p>No speech event specified.</p>
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Speech_V1_StreamingRecognizeResponse_Types_SpeechEventType_SpeechEventUnspecified">SpeechEventUnspecified</td>
+        <td><p>No speech event specified.</p>
 </td>
-                  </tr>
-                </tbody>
-              </thead></thead></table>
-                        </article>
+      </tr>
+    </tbody>
+  </thead></thead></table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class StreamingRecognizeResponse
    | Google.Cloud.Speech.V1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,12 +67,12 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Speech_V1_StreamingRecognizeResponse" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeResponse">Class StreamingRecognizeResponse
-              </h1>
-              <div class="markdown level0 summary"><p><code>StreamingRecognizeResponse</code> is the only message returned to the client by
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeResponse">
+  
+  
+  <h1 id="Google_Cloud_Speech_V1_StreamingRecognizeResponse" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeResponse">Class StreamingRecognizeResponse
+  </h1>
+  <div class="markdown level0 summary"><p><code>StreamingRecognizeResponse</code> is the only message returned to the client by
 <code>StreamingRecognize</code>. A series of one or more <code>StreamingRecognizeResponse</code>
 messages are streamed back to the client.</p>
 <p>Here&#39;s an example of a series of ten <code>StreamingRecognizeResponse</code>s that might
@@ -124,112 +124,112 @@ one or more (repeated) <code>results</code>.</p>
 </li>
 </ul>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">StreamingRecognizeResponse</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Speech.V1</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Speech.V1.dll</h6>
-              <h5 id="Google_Cloud_Speech_V1_StreamingRecognizeResponse_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class StreamingRecognizeResponse : IMessage&lt;StreamingRecognizeResponse&gt;, IMessage, IEquatable&lt;StreamingRecognizeResponse&gt;, IDeepCloneable&lt;StreamingRecognizeResponse&gt;</code></pre>
-              </div>
-              <h3 id="properties">Properties
-              </h3>
-              <a id="Google_Cloud_Speech_V1_StreamingRecognizeResponse_Error_" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeResponse.Error*"></a>
-              <h4 id="Google_Cloud_Speech_V1_StreamingRecognizeResponse_Error" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeResponse.Error">Error</h4>
-              <div class="markdown level1 summary"><p><em>Output-only</em> If set, returns a [google.rpc.Status][] message that
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">StreamingRecognizeResponse</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Speech.V1.html">Google.Cloud.Speech.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Speech.V1.dll</h6>
+  <h5 id="Google_Cloud_Speech_V1_StreamingRecognizeResponse_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class StreamingRecognizeResponse : IMessage&lt;StreamingRecognizeResponse&gt;, IMessage, IEquatable&lt;StreamingRecognizeResponse&gt;, IDeepCloneable&lt;StreamingRecognizeResponse&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Speech_V1_StreamingRecognizeResponse_Error_" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeResponse.Error*"></a>
+  <h4 id="Google_Cloud_Speech_V1_StreamingRecognizeResponse_Error" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeResponse.Error">Error</h4>
+  <div class="markdown level1 summary"><p><em>Output-only</em> If set, returns a [google.rpc.Status][] message that
 specifies the error for the operation.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Status Error { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Rpc.Status.html">Status</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Speech_V1_StreamingRecognizeResponse_Results_" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeResponse.Results*"></a>
-              <h4 id="Google_Cloud_Speech_V1_StreamingRecognizeResponse_Results" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeResponse.Results">Results</h4>
-              <div class="markdown level1 summary"><p><em>Output-only</em> This repeated list contains zero or more results that
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Status Error { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Rpc.Status.html">Status</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Speech_V1_StreamingRecognizeResponse_Results_" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeResponse.Results*"></a>
+  <h4 id="Google_Cloud_Speech_V1_StreamingRecognizeResponse_Results" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeResponse.Results">Results</h4>
+  <div class="markdown level1 summary"><p><em>Output-only</em> This repeated list contains zero or more results that
 correspond to consecutive portions of the audio currently being processed.
 It contains zero or one <code>is_final=true</code> result (the newly settled portion),
 followed by zero or more <code>is_final=false</code> results.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RepeatedField&lt;StreamingRecognitionResult&gt; Results { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1.StreamingRecognitionResult.html">StreamingRecognitionResult</a>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Speech_V1_StreamingRecognizeResponse_SpeechEventType_" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeResponse.SpeechEventType*"></a>
-              <h4 id="Google_Cloud_Speech_V1_StreamingRecognizeResponse_SpeechEventType" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeResponse.SpeechEventType">SpeechEventType</h4>
-              <div class="markdown level1 summary"><p><em>Output-only</em> Indicates the type of speech event.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;StreamingRecognitionResult&gt; Results { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1.StreamingRecognitionResult.html">StreamingRecognitionResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Speech_V1_StreamingRecognizeResponse_SpeechEventType_" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeResponse.SpeechEventType*"></a>
+  <h4 id="Google_Cloud_Speech_V1_StreamingRecognizeResponse_SpeechEventType" data-uid="Google.Cloud.Speech.V1.StreamingRecognizeResponse.SpeechEventType">SpeechEventType</h4>
+  <div class="markdown level1 summary"><p><em>Output-only</em> Indicates the type of speech event.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public StreamingRecognizeResponse.Types.SpeechEventType SpeechEventType { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType.html">StreamingRecognizeResponse.Types.SpeechEventType</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamingRecognizeResponse.Types.SpeechEventType SpeechEventType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType.html">StreamingRecognizeResponse.Types.SpeechEventType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class UrlSigner
    | Google.Cloud.Storage.V1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,316 +67,316 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Storage_V1_UrlSigner" data-uid="Google.Cloud.Storage.V1.UrlSigner">Class UrlSigner
-              </h1>
-              <div class="markdown level0 summary"><p>Class which helps create signed URLs which can be used to provide limited access to specific buckets and objects
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Storage.V1.UrlSigner">
+  
+  
+  <h1 id="Google_Cloud_Storage_V1_UrlSigner" data-uid="Google.Cloud.Storage.V1.UrlSigner">Class UrlSigner
+  </h1>
+  <div class="markdown level0 summary"><p>Class which helps create signed URLs which can be used to provide limited access to specific buckets and objects
 to anyone in possession of the URL, regardless of whether they have a Google account.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">UrlSigner</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Storage.V1</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Storage.V1.dll</h6>
-              <h5 id="Google_Cloud_Storage_V1_UrlSigner_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class UrlSigner</code></pre>
-              </div>
-              <h5 id="Google_Cloud_Storage_V1_UrlSigner_remarks"><strong>Remarks</strong></h5>
-              <div class="markdown level0 remarks"><p>See <a href="https://cloud.google.com/storage/docs/access-control/signed-urls">https://cloud.google.com/storage/docs/access-control/signed-urls</a> for more information on signed URLs.</p>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">UrlSigner</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Storage.V1.html">Google.Cloud.Storage.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Storage.V1.dll</h6>
+  <h5 id="Google_Cloud_Storage_V1_UrlSigner_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class UrlSigner</code></pre>
+  </div>
+  <h5 id="Google_Cloud_Storage_V1_UrlSigner_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>See <a href="https://cloud.google.com/storage/docs/access-control/signed-urls">https://cloud.google.com/storage/docs/access-control/signed-urls</a> for more information on signed URLs.</p>
 </div>
-              <h3 id="properties">Properties
-              </h3>
-              <a id="Google_Cloud_Storage_V1_UrlSigner_ResumableHttpMethod_" data-uid="Google.Cloud.Storage.V1.UrlSigner.ResumableHttpMethod*"></a>
-              <h4 id="Google_Cloud_Storage_V1_UrlSigner_ResumableHttpMethod" data-uid="Google.Cloud.Storage.V1.UrlSigner.ResumableHttpMethod">ResumableHttpMethod</h4>
-              <div class="markdown level1 summary"><p>Gets a special HTTP method which can be used to create a signed URL for initiating a resumable upload.
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Storage_V1_UrlSigner_ResumableHttpMethod_" data-uid="Google.Cloud.Storage.V1.UrlSigner.ResumableHttpMethod*"></a>
+  <h4 id="Google_Cloud_Storage_V1_UrlSigner_ResumableHttpMethod" data-uid="Google.Cloud.Storage.V1.UrlSigner.ResumableHttpMethod">ResumableHttpMethod</h4>
+  <div class="markdown level1 summary"><p>Gets a special HTTP method which can be used to create a signed URL for initiating a resumable upload.
 See <a href="https://cloud.google.com/storage/docs/access-control/signed-urls#signing-resumable">https://cloud.google.com/storage/docs/access-control/signed-urls#signing-resumable</a> for more information.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static HttpMethod ResumableHttpMethod { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Net.Http.HttpMethod</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 id="Google_Cloud_Storage_V1_UrlSigner_ResumableHttpMethod_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>Note: When using the RESUMABLE method to create a signed URL, a URL will actually be signed for the POST method with a header of
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HttpMethod ResumableHttpMethod { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.Http.HttpMethod</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Storage_V1_UrlSigner_ResumableHttpMethod_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Note: When using the RESUMABLE method to create a signed URL, a URL will actually be signed for the POST method with a header of
 &#39;x-goog-resumable:start&#39;. The caller must perform a POST request with this URL and specify the &#39;x-goog-resumable:start&#39; header as
 well or signature validation will fail.</p>
 </div>
-              <h3 id="methods">Methods
-              </h3>
-              <a id="Google_Cloud_Storage_V1_UrlSigner_FromServiceAccountCredential_" data-uid="Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountCredential*"></a>
-              <h4 id="Google_Cloud_Storage_V1_UrlSigner_FromServiceAccountCredential_Google_Apis_Auth_OAuth2_ServiceAccountCredential_" data-uid="Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountCredential(Google.Apis.Auth.OAuth2.ServiceAccountCredential)">FromServiceAccountCredential(ServiceAccountCredential)</h4>
-              <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html">UrlSigner</a> instance for a service account.</p>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Storage_V1_UrlSigner_FromServiceAccountCredential_" data-uid="Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountCredential*"></a>
+  <h4 id="Google_Cloud_Storage_V1_UrlSigner_FromServiceAccountCredential_Google_Apis_Auth_OAuth2_ServiceAccountCredential_" data-uid="Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountCredential(Google.Apis.Auth.OAuth2.ServiceAccountCredential)">FromServiceAccountCredential(ServiceAccountCredential)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html">UrlSigner</a> instance for a service account.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static UrlSigner FromServiceAccountCredential(ServiceAccountCredential credential)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Apis.Auth.OAuth2.ServiceAccountCredential</span></td>
-                    <td><span class="parametername">credential</span></td>
-                    <td><p>The credential for the a service account. Must not be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UrlSigner FromServiceAccountCredential(ServiceAccountCredential credential)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Apis.Auth.OAuth2.ServiceAccountCredential</span></td>
+        <td><span class="parametername">credential</span></td>
+        <td><p>The credential for the a service account. Must not be null.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html">UrlSigner</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Storage_V1_UrlSigner_FromServiceAccountData_" data-uid="Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountData*"></a>
-              <h4 id="Google_Cloud_Storage_V1_UrlSigner_FromServiceAccountData_System_IO_Stream_" data-uid="Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountData(System.IO.Stream)">FromServiceAccountData(Stream)</h4>
-              <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html">UrlSigner</a> instance for a service account.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html">UrlSigner</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Storage_V1_UrlSigner_FromServiceAccountData_" data-uid="Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountData*"></a>
+  <h4 id="Google_Cloud_Storage_V1_UrlSigner_FromServiceAccountData_System_IO_Stream_" data-uid="Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountData(System.IO.Stream)">FromServiceAccountData(Stream)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html">UrlSigner</a> instance for a service account.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static UrlSigner FromServiceAccountData(Stream credentialData)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.IO.Stream</span></td>
-                    <td><span class="parametername">credentialData</span></td>
-                    <td><p>The stream from which to read the JSON key data for a service account. Must not be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UrlSigner FromServiceAccountData(Stream credentialData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">credentialData</span></td>
+        <td><p>The stream from which to read the JSON key data for a service account. Must not be null.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html">UrlSigner</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="exceptions">Exceptions</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Condition</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.InvalidOperationException</span></td>
-                    <td><p>The <span class="paramref">credentialData</span> does not contain valid JSON service account key data.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html">UrlSigner</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>The <span class="paramref">credentialData</span> does not contain valid JSON service account key data.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Storage_V1_UrlSigner_FromServiceAccountPath_" data-uid="Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountPath*"></a>
-              <h4 id="Google_Cloud_Storage_V1_UrlSigner_FromServiceAccountPath_System_String_" data-uid="Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountPath(System.String)">FromServiceAccountPath(String)</h4>
-              <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html">UrlSigner</a> instance for a service account.</p>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Storage_V1_UrlSigner_FromServiceAccountPath_" data-uid="Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountPath*"></a>
+  <h4 id="Google_Cloud_Storage_V1_UrlSigner_FromServiceAccountPath_System_String_" data-uid="Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountPath(System.String)">FromServiceAccountPath(String)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html">UrlSigner</a> instance for a service account.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static UrlSigner FromServiceAccountPath(string credentialFilePath)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">credentialFilePath</span></td>
-                    <td><p>The path to the JSON key file for a service account. Must not be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UrlSigner FromServiceAccountPath(string credentialFilePath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">credentialFilePath</span></td>
+        <td><p>The path to the JSON key file for a service account. Must not be null.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html">UrlSigner</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="exceptions">Exceptions</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Condition</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.InvalidOperationException</span></td>
-                    <td><p>The <span class="paramref">credentialFilePath</span> does not refer to a valid JSON service account key file.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html">UrlSigner</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>The <span class="paramref">credentialFilePath</span> does not refer to a valid JSON service account key file.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Storage_V1_UrlSigner_Sign_" data-uid="Google.Cloud.Storage.V1.UrlSigner.Sign*"></a>
-              <h4 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_Nullable_System_DateTimeOffset__System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___" data-uid="Google.Cloud.Storage.V1.UrlSigner.Sign(System.String,System.String,System.Nullable{System.DateTimeOffset},System.Net.Http.HttpMethod,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.IEnumerable{System.String}},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.IEnumerable{System.String}})">Sign(String, String, Nullable&lt;DateTimeOffset&gt;, HttpMethod, Dictionary&lt;String, IEnumerable&lt;String&gt;&gt;, Dictionary&lt;String, IEnumerable&lt;String&gt;&gt;)</h4>
-              <div class="markdown level1 summary"><p>Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Storage_V1_UrlSigner_Sign_" data-uid="Google.Cloud.Storage.V1.UrlSigner.Sign*"></a>
+  <h4 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_Nullable_System_DateTimeOffset__System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___" data-uid="Google.Cloud.Storage.V1.UrlSigner.Sign(System.String,System.String,System.Nullable{System.DateTimeOffset},System.Net.Http.HttpMethod,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.IEnumerable{System.String}},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.IEnumerable{System.String}})">Sign(String, String, Nullable&lt;DateTimeOffset&gt;, HttpMethod, Dictionary&lt;String, IEnumerable&lt;String&gt;&gt;, Dictionary&lt;String, IEnumerable&lt;String&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
 in possession of the URL, regardless of whether they have a Google account.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string Sign(string bucket, string objectName, DateTimeOffset? expiration, HttpMethod requestMethod = null, Dictionary&lt;string, IEnumerable&lt;string&gt;&gt; requestHeaders = null, Dictionary&lt;string, IEnumerable&lt;string&gt;&gt; contentHeaders = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">bucket</span></td>
-                    <td><p>The name of the bucket. Must not be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Sign(string bucket, string objectName, DateTimeOffset? expiration, HttpMethod requestMethod = null, Dictionary&lt;string, IEnumerable&lt;string&gt;&gt; requestHeaders = null, Dictionary&lt;string, IEnumerable&lt;string&gt;&gt; contentHeaders = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bucket</span></td>
+        <td><p>The name of the bucket. Must not be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">objectName</span></td>
-                    <td><p>The name of the object within the bucket. May be null, in which case the signed URL
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">objectName</span></td>
+        <td><p>The name of the object within the bucket. May be null, in which case the signed URL
 will refer to the bucket instead of an object.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
-                    <td><span class="parametername">expiration</span></td>
-                    <td><p>The point in time after which the signed URL will be invalid. May be null, in which
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><span class="parametername">expiration</span></td>
+        <td><p>The point in time after which the signed URL will be invalid. May be null, in which
 case the signed URL never expires.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Net.Http.HttpMethod</span></td>
-                    <td><span class="parametername">requestMethod</span></td>
-                    <td><p>The HTTP request method for which the signed URL is allowed to be used. May be null,
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.Http.HttpMethod</span></td>
+        <td><span class="parametername">requestMethod</span></td>
+        <td><p>The HTTP request method for which the signed URL is allowed to be used. May be null,
 in which case GET will be used.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
-                    <td><span class="parametername">requestHeaders</span></td>
-                    <td><p>The headers which will be included with the request. May be null.</p>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="parametername">requestHeaders</span></td>
+        <td><p>The headers which will be included with the request. May be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
-                    <td><span class="parametername">contentHeaders</span></td>
-                    <td><p>The headers for the content which will be included with the request.
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="parametername">contentHeaders</span></td>
+        <td><p>The headers for the content which will be included with the request.
 May be null.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><p>The signed URL which can be used to provide access to a bucket or object for a limited amount of time.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The signed URL which can be used to provide access to a bucket or object for a limited amount of time.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_Nullable_System_DateTimeOffset__System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String____remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_Nullable_System_DateTimeOffset__System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
 When either of the headers collections are specified, there are certain headers which will be included in the
 signed URL&#39;s signature, and therefore must be included in requests made with the created URL. These are the
 Content-MD5 and Content-Type content headers as well as any content or request header with a name starting
@@ -402,77 +402,77 @@ used), both GET and HEAD requests can be made with the created signed URL.
 See <a href="https://cloud.google.com/storage/docs/access-control/signed-urls">https://cloud.google.com/storage/docs/access-control/signed-urls</a> for more information on signed URLs.
 </p>
 </div>
-              <div>
-              <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_Nullable_System_DateTimeOffset__System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String____snippet">Sample code</h5>
-              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___">Sign</a> for an example using an alternative overload.</p>
+  <div>
+  <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_Nullable_System_DateTimeOffset__System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String____snippet">Sample code</h5>
+  <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___">Sign</a> for an example using an alternative overload.</p>
 </div>
-              </div>
-              <a id="Google_Cloud_Storage_V1_UrlSigner_Sign_" data-uid="Google.Cloud.Storage.V1.UrlSigner.Sign*"></a>
-              <h4 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_Nullable_System_DateTimeOffset__System_Net_Http_HttpRequestMessage_" data-uid="Google.Cloud.Storage.V1.UrlSigner.Sign(System.String,System.String,System.Nullable{System.DateTimeOffset},System.Net.Http.HttpRequestMessage)">Sign(String, String, Nullable&lt;DateTimeOffset&gt;, HttpRequestMessage)</h4>
-              <div class="markdown level1 summary"><p>Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
+  </div>
+  <a id="Google_Cloud_Storage_V1_UrlSigner_Sign_" data-uid="Google.Cloud.Storage.V1.UrlSigner.Sign*"></a>
+  <h4 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_Nullable_System_DateTimeOffset__System_Net_Http_HttpRequestMessage_" data-uid="Google.Cloud.Storage.V1.UrlSigner.Sign(System.String,System.String,System.Nullable{System.DateTimeOffset},System.Net.Http.HttpRequestMessage)">Sign(String, String, Nullable&lt;DateTimeOffset&gt;, HttpRequestMessage)</h4>
+  <div class="markdown level1 summary"><p>Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
 in possession of the URL, regardless of whether they have a Google account.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string Sign(string bucket, string objectName, DateTimeOffset? expiration, HttpRequestMessage request)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">bucket</span></td>
-                    <td><p>The name of the bucket. Must not be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Sign(string bucket, string objectName, DateTimeOffset? expiration, HttpRequestMessage request)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bucket</span></td>
+        <td><p>The name of the bucket. Must not be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">objectName</span></td>
-                    <td><p>The name of the object within the bucket. May be null, in which case the signed URL
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">objectName</span></td>
+        <td><p>The name of the object within the bucket. May be null, in which case the signed URL
 will refer to the bucket instead of an object.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
-                    <td><span class="parametername">expiration</span></td>
-                    <td><p>The point in time after which the signed URL will be invalid. May be null, in which
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><span class="parametername">expiration</span></td>
+        <td><p>The point in time after which the signed URL will be invalid. May be null, in which
 case the signed URL never expires.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Net.Http.HttpRequestMessage</span></td>
-                    <td><span class="parametername">request</span></td>
-                    <td><p>A sample request for which the signed URL might be used. May be null.</p>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.Http.HttpRequestMessage</span></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>A sample request for which the signed URL might be used. May be null.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><p>The signed URL which can be used to provide access to a bucket or object for a limited amount of time.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The signed URL which can be used to provide access to a bucket or object for a limited amount of time.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_Nullable_System_DateTimeOffset__System_Net_Http_HttpRequestMessage__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_Nullable_System_DateTimeOffset__System_Net_Http_HttpRequestMessage__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
 When the <span class="paramref">request</span> is specified, some of its headers will be included in the signed URL&#39;s
 signature, and therefore must be included in requests made with the created URL. These are the Content-MD5 and
 Content-Type content headers as well as any content or request header with a name starting with &quot;x-goog-&quot;.
@@ -497,90 +497,90 @@ the created signed URL.
 See <a href="https://cloud.google.com/storage/docs/access-control/signed-urls">https://cloud.google.com/storage/docs/access-control/signed-urls</a> for more information on signed URLs.
 </p>
 </div>
-              <div>
-              <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_Nullable_System_DateTimeOffset__System_Net_Http_HttpRequestMessage__snippet">Sample code</h5>
-              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___">Sign</a> for an example using an alternative overload.</p>
+  <div>
+  <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_Nullable_System_DateTimeOffset__System_Net_Http_HttpRequestMessage__snippet">Sample code</h5>
+  <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___">Sign</a> for an example using an alternative overload.</p>
 </div>
-              </div>
-              <a id="Google_Cloud_Storage_V1_UrlSigner_Sign_" data-uid="Google.Cloud.Storage.V1.UrlSigner.Sign*"></a>
-              <h4 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___" data-uid="Google.Cloud.Storage.V1.UrlSigner.Sign(System.String,System.String,System.TimeSpan,System.Net.Http.HttpMethod,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.IEnumerable{System.String}},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.IEnumerable{System.String}})">Sign(String, String, TimeSpan, HttpMethod, Dictionary&lt;String, IEnumerable&lt;String&gt;&gt;, Dictionary&lt;String, IEnumerable&lt;String&gt;&gt;)</h4>
-              <div class="markdown level1 summary"><p>Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
+  </div>
+  <a id="Google_Cloud_Storage_V1_UrlSigner_Sign_" data-uid="Google.Cloud.Storage.V1.UrlSigner.Sign*"></a>
+  <h4 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___" data-uid="Google.Cloud.Storage.V1.UrlSigner.Sign(System.String,System.String,System.TimeSpan,System.Net.Http.HttpMethod,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.IEnumerable{System.String}},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.IEnumerable{System.String}})">Sign(String, String, TimeSpan, HttpMethod, Dictionary&lt;String, IEnumerable&lt;String&gt;&gt;, Dictionary&lt;String, IEnumerable&lt;String&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
 in possession of the URL, regardless of whether they have a Google account.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string Sign(string bucket, string objectName, TimeSpan duration, HttpMethod requestMethod = null, Dictionary&lt;string, IEnumerable&lt;string&gt;&gt; requestHeaders = null, Dictionary&lt;string, IEnumerable&lt;string&gt;&gt; contentHeaders = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">bucket</span></td>
-                    <td><p>The name of the bucket. Must not be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Sign(string bucket, string objectName, TimeSpan duration, HttpMethod requestMethod = null, Dictionary&lt;string, IEnumerable&lt;string&gt;&gt; requestHeaders = null, Dictionary&lt;string, IEnumerable&lt;string&gt;&gt; contentHeaders = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bucket</span></td>
+        <td><p>The name of the bucket. Must not be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">objectName</span></td>
-                    <td><p>The name of the object within the bucket. May be null, in which case the signed URL
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">objectName</span></td>
+        <td><p>The name of the object within the bucket. May be null, in which case the signed URL
 will refer to the bucket instead of an object.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.TimeSpan</span></td>
-                    <td><span class="parametername">duration</span></td>
-                    <td><p>The length of time for which the signed URL should remain usable.</p>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">duration</span></td>
+        <td><p>The length of time for which the signed URL should remain usable.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Net.Http.HttpMethod</span></td>
-                    <td><span class="parametername">requestMethod</span></td>
-                    <td><p>The HTTP request method for which the signed URL is allowed to be used. May be null,
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.Http.HttpMethod</span></td>
+        <td><span class="parametername">requestMethod</span></td>
+        <td><p>The HTTP request method for which the signed URL is allowed to be used. May be null,
 in which case GET will be used.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
-                    <td><span class="parametername">requestHeaders</span></td>
-                    <td><p>The headers which will be included with the request. May be null.</p>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="parametername">requestHeaders</span></td>
+        <td><p>The headers which will be included with the request. May be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
-                    <td><span class="parametername">contentHeaders</span></td>
-                    <td><p>The headers for the content which will be included with the request.
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="parametername">contentHeaders</span></td>
+        <td><p>The headers for the content which will be included with the request.
 May be null.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><p>The signed URL which can be used to provide access to a bucket or object for a limited amount of time.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The signed URL which can be used to provide access to a bucket or object for a limited amount of time.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String____remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
 When either of the headers collections are specified, there are certain headers which will be included in the
 signed URL&#39;s signature, and therefore must be included in requests made with the created URL. These are the
 Content-MD5 and Content-Type content headers as well as any content or request header with a name starting
@@ -606,9 +606,9 @@ used), both GET and HEAD requests can be made with the created signed URL.
 See <a href="https://cloud.google.com/storage/docs/access-control/signed-urls">https://cloud.google.com/storage/docs/access-control/signed-urls</a> for more information on signed URLs.
 </p>
 </div>
-              <div>
-              <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String____snippet">Sample code</h5>
-              <div class="markdown level1"><pre><code class="lang-cs">// Create a signed URL which can be used to get a specific object for one hour.
+  <div>
+  <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String____snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create a signed URL which can be used to get a specific object for one hour.
 UrlSigner urlSigner = UrlSigner.FromServiceAccountCredential(credential);
 string url = urlSigner.Sign(
     bucketName,
@@ -620,72 +620,72 @@ string url = urlSigner.Sign(
 HttpResponseMessage response = await httpClient.GetAsync(url);
 string content = await response.Content.ReadAsStringAsync();
 </code></pre></div>
-              </div>
-              <a id="Google_Cloud_Storage_V1_UrlSigner_Sign_" data-uid="Google.Cloud.Storage.V1.UrlSigner.Sign*"></a>
-              <h4 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpRequestMessage_" data-uid="Google.Cloud.Storage.V1.UrlSigner.Sign(System.String,System.String,System.TimeSpan,System.Net.Http.HttpRequestMessage)">Sign(String, String, TimeSpan, HttpRequestMessage)</h4>
-              <div class="markdown level1 summary"><p>Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
+  </div>
+  <a id="Google_Cloud_Storage_V1_UrlSigner_Sign_" data-uid="Google.Cloud.Storage.V1.UrlSigner.Sign*"></a>
+  <h4 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpRequestMessage_" data-uid="Google.Cloud.Storage.V1.UrlSigner.Sign(System.String,System.String,System.TimeSpan,System.Net.Http.HttpRequestMessage)">Sign(String, String, TimeSpan, HttpRequestMessage)</h4>
+  <div class="markdown level1 summary"><p>Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
 in possession of the URL, regardless of whether they have a Google account.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string Sign(string bucket, string objectName, TimeSpan duration, HttpRequestMessage request)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">bucket</span></td>
-                    <td><p>The name of the bucket. Must not be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Sign(string bucket, string objectName, TimeSpan duration, HttpRequestMessage request)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bucket</span></td>
+        <td><p>The name of the bucket. Must not be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">objectName</span></td>
-                    <td><p>The name of the object within the bucket. May be null, in which case the signed URL
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">objectName</span></td>
+        <td><p>The name of the object within the bucket. May be null, in which case the signed URL
 will refer to the bucket instead of an object.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.TimeSpan</span></td>
-                    <td><span class="parametername">duration</span></td>
-                    <td><p>The length of time for which the signed URL should remain usable.</p>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">duration</span></td>
+        <td><p>The length of time for which the signed URL should remain usable.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Net.Http.HttpRequestMessage</span></td>
-                    <td><span class="parametername">request</span></td>
-                    <td><p>A sample request for which the signed URL might be used. May be null.</p>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.Http.HttpRequestMessage</span></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>A sample request for which the signed URL might be used. May be null.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><p>The signed URL which can be used to provide access to a bucket or object for a limited amount of time.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The signed URL which can be used to provide access to a bucket or object for a limited amount of time.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpRequestMessage__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpRequestMessage__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
 When the <span class="paramref">request</span> is specified, some of its headers will be included in the signed URL&#39;s
 signature, and therefore must be included in requests made with the created URL. These are the Content-MD5 and
 Content-Type content headers as well as any content or request header with a name starting with &quot;x-goog-&quot;.
@@ -710,12 +710,12 @@ the created signed URL.
 See <a href="https://cloud.google.com/storage/docs/access-control/signed-urls">https://cloud.google.com/storage/docs/access-control/signed-urls</a> for more information on signed URLs.
 </p>
 </div>
-              <div>
-              <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpRequestMessage__snippet">Sample code</h5>
-              <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___">Sign</a> for an example using an alternative overload.</p>
+  <div>
+  <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpRequestMessage__snippet">Sample code</h5>
+  <div class="markdown level1"><p>See <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___">Sign</a> for an example using an alternative overload.</p>
 </div>
-              </div>
-                        </article>
+  </div>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

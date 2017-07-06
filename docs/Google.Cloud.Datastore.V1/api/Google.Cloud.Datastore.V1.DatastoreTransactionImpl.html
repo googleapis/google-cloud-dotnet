@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DatastoreTransactionImpl
    | Google.Cloud.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,692 +67,692 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl">Class DatastoreTransactionImpl
-              </h1>
-              <div class="markdown level0 summary"><p>Production implementation of <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a>, using a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html">DatastoreClient</a>
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl">
+  
+  
+  <h1 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl">Class DatastoreTransactionImpl
+  </h1>
+  <div class="markdown level0 summary"><p>Production implementation of <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a>, using a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html">DatastoreClient</a>
 to implement the operations.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a></div>
-                  <div class="level2"><span class="xref">DatastoreTransactionImpl</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Create_Google_Cloud_Datastore_V1_DatastoreClient_System_String_System_String_Google_Protobuf_ByteString_">DatastoreTransaction.Create(DatastoreClient, String, String, ByteString)</a>
-                </div>
-                <div>
-                  <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_RunQuery_Google_Cloud_Datastore_V1_Query_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.RunQuery(Query, CallSettings)</a>
-                </div>
-                <div>
-                  <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_RunQueryAsync_Google_Cloud_Datastore_V1_Query_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.RunQueryAsync(Query, CallSettings)</a>
-                </div>
-                <div>
-                  <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_RunQuery_Google_Cloud_Datastore_V1_GqlQuery_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.RunQuery(GqlQuery, CallSettings)</a>
-                </div>
-                <div>
-                  <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_RunQueryAsync_Google_Cloud_Datastore_V1_GqlQuery_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.RunQueryAsync(GqlQuery, CallSettings)</a>
-                </div>
-                <div>
-                  <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Lookup_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.Lookup(Key, CallSettings)</a>
-                </div>
-                <div>
-                  <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Lookup_Google_Cloud_Datastore_V1_Key___">DatastoreTransaction.Lookup(Key[])</a>
-                </div>
-                <div>
-                  <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_LookupAsync_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.LookupAsync(Key, CallSettings)</a>
-                </div>
-                <div>
-                  <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_LookupAsync_Google_Cloud_Datastore_V1_Key___">DatastoreTransaction.LookupAsync(Key[])</a>
-                </div>
-                <div>
-                  <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Upsert_Google_Cloud_Datastore_V1_Entity___">DatastoreTransaction.Upsert(Entity[])</a>
-                </div>
-                <div>
-                  <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Update_Google_Cloud_Datastore_V1_Entity___">DatastoreTransaction.Update(Entity[])</a>
-                </div>
-                <div>
-                  <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Insert_Google_Cloud_Datastore_V1_Entity___">DatastoreTransaction.Insert(Entity[])</a>
-                </div>
-                <div>
-                  <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Delete_Google_Cloud_Datastore_V1_Entity___">DatastoreTransaction.Delete(Entity[])</a>
-                </div>
-                <div>
-                  <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Delete_Google_Cloud_Datastore_V1_Key___">DatastoreTransaction.Delete(Key[])</a>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Datastore.V1</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Datastore.V1.dll</h6>
-              <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class DatastoreTransactionImpl : DatastoreTransaction, IDisposable</code></pre>
-              </div>
-              <h3 id="constructors">Constructors
-              </h3>
-              <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl__ctor_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.#ctor*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl__ctor_Google_Cloud_Datastore_V1_DatastoreClient_System_String_System_String_Google_Protobuf_ByteString_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.#ctor(Google.Cloud.Datastore.V1.DatastoreClient,System.String,System.String,Google.Protobuf.ByteString)">DatastoreTransactionImpl(DatastoreClient, String, String, ByteString)</h4>
-              <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.html">DatastoreTransactionImpl</a> from a client, project ID and transaction ID.</p>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a></div>
+    <div class="level2"><span class="xref">DatastoreTransactionImpl</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Create_Google_Cloud_Datastore_V1_DatastoreClient_System_String_System_String_Google_Protobuf_ByteString_">DatastoreTransaction.Create(DatastoreClient, String, String, ByteString)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_RunQuery_Google_Cloud_Datastore_V1_Query_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.RunQuery(Query, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_RunQueryAsync_Google_Cloud_Datastore_V1_Query_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.RunQueryAsync(Query, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_RunQuery_Google_Cloud_Datastore_V1_GqlQuery_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.RunQuery(GqlQuery, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_RunQueryAsync_Google_Cloud_Datastore_V1_GqlQuery_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.RunQueryAsync(GqlQuery, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Lookup_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.Lookup(Key, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Lookup_Google_Cloud_Datastore_V1_Key___">DatastoreTransaction.Lookup(Key[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_LookupAsync_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.LookupAsync(Key, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_LookupAsync_Google_Cloud_Datastore_V1_Key___">DatastoreTransaction.LookupAsync(Key[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Upsert_Google_Cloud_Datastore_V1_Entity___">DatastoreTransaction.Upsert(Entity[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Update_Google_Cloud_Datastore_V1_Entity___">DatastoreTransaction.Update(Entity[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Insert_Google_Cloud_Datastore_V1_Entity___">DatastoreTransaction.Insert(Entity[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Delete_Google_Cloud_Datastore_V1_Entity___">DatastoreTransaction.Delete(Entity[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Delete_Google_Cloud_Datastore_V1_Key___">DatastoreTransaction.Delete(Key[])</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Datastore.V1.html">Google.Cloud.Datastore.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Datastore.V1.dll</h6>
+  <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class DatastoreTransactionImpl : DatastoreTransaction, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl__ctor_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.#ctor*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl__ctor_Google_Cloud_Datastore_V1_DatastoreClient_System_String_System_String_Google_Protobuf_ByteString_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.#ctor(Google.Cloud.Datastore.V1.DatastoreClient,System.String,System.String,Google.Protobuf.ByteString)">DatastoreTransactionImpl(DatastoreClient, String, String, ByteString)</h4>
+  <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.html">DatastoreTransactionImpl</a> from a client, project ID and transaction ID.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public DatastoreTransactionImpl(DatastoreClient client, string projectId, string namespaceId, ByteString transactionId)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html">DatastoreClient</a></td>
-                    <td><span class="parametername">client</span></td>
-                    <td><p>The client to use for Datastore operations. Must not be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DatastoreTransactionImpl(DatastoreClient client, string projectId, string namespaceId, ByteString transactionId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html">DatastoreClient</a></td>
+        <td><span class="parametername">client</span></td>
+        <td><p>The client to use for Datastore operations. Must not be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">projectId</span></td>
-                    <td><p>The ID of the project of the Datastore operations. Must not be null.</p>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">projectId</span></td>
+        <td><p>The ID of the project of the Datastore operations. Must not be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">namespaceId</span></td>
-                    <td><p>The ID of the namespace which is combined with <span class="paramref">projectId</span> to form a partition ID
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">namespaceId</span></td>
+        <td><p>The ID of the namespace which is combined with <span class="paramref">projectId</span> to form a partition ID
 to use in query operations. May be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
-                    <td><span class="parametername">transactionId</span></td>
-                    <td><p>The transaction obtained by an earlier <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html#Google_Cloud_Datastore_V1_DatastoreClient_BeginTransaction_System_String_Google_Api_Gax_Grpc_CallSettings_">BeginTransaction(String, CallSettings)</a>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td><span class="parametername">transactionId</span></td>
+        <td><p>The transaction obtained by an earlier <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html#Google_Cloud_Datastore_V1_DatastoreClient_BeginTransaction_System_String_Google_Api_Gax_Grpc_CallSettings_">BeginTransaction(String, CallSettings)</a>
 or the asynchronous equivalent. Must not be null</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl__ctor_Google_Cloud_Datastore_V1_DatastoreClient_System_String_System_String_Google_Protobuf_ByteString__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>While this can be constructed manually, the expectation is that instances of this class are obtained via
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl__ctor_Google_Cloud_Datastore_V1_DatastoreClient_System_String_System_String_Google_Protobuf_ByteString__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>While this can be constructed manually, the expectation is that instances of this class are obtained via
 <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_BeginTransaction_Google_Api_Gax_Grpc_CallSettings_">BeginTransaction(CallSettings)</a> or <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_BeginTransactionAsync_Google_Api_Gax_Grpc_CallSettings_">BeginTransactionAsync(CallSettings)</a>.</p>
 </div>
-              <h3 id="properties">Properties
-              </h3>
-              <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_TransactionId_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.TransactionId*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_TransactionId" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.TransactionId">TransactionId</h4>
-              <div class="markdown level1 summary"><p>The ID of the transaction, used implicitly in operations performed with this object.</p>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_TransactionId_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.TransactionId*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_TransactionId" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.TransactionId">TransactionId</h4>
+  <div class="markdown level1 summary"><p>The ID of the transaction, used implicitly in operations performed with this object.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override ByteString TransactionId { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_TransactionId">DatastoreTransaction.TransactionId</a></div>
-              <h3 id="methods">Methods
-              </h3>
-              <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Commit_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Commit*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Commit_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Commit(Google.Api.Gax.Grpc.CallSettings)">Commit(CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Commits all mutations in this transaction.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ByteString TransactionId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_TransactionId">DatastoreTransaction.TransactionId</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Commit_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Commit*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Commit_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Commit(Google.Api.Gax.Grpc.CallSettings)">Commit(CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Commits all mutations in this transaction.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override CommitResponse Commit(CallSettings callSettings = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
-                    <td><span class="parametername">callSettings</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html">CommitResponse</a></td>
-                    <td><p>The response from the commit operation. This can be used to determine server-allocated keys.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override CommitResponse Commit(CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html">CommitResponse</a></td>
+        <td><p>The response from the commit operation. This can be used to determine server-allocated keys.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Commit_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.Commit(CallSettings)</a></div>
-              <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Commit_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>Any entities with incomplete keys that are assigned keys by this operation will be updated in memory
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Commit_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.Commit(CallSettings)</a></div>
+  <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Commit_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Any entities with incomplete keys that are assigned keys by this operation will be updated in memory
 with the server-allocated keys.</p>
 <p>Datastore limits the number of entities that can be modified in a Commit operation, and therefore one transaction. When modifying a large
 number of entities, partition the changes into multiple transactions. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
-              <h5 class="exceptions">Exceptions</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Condition</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.InvalidOperationException</span></td>
-                    <td><p>The transaction has already been committed or rolled back.</p>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>The transaction has already been committed or rolled back.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_CommitAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.CommitAsync*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_CommitAsync_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.CommitAsync(Google.Api.Gax.Grpc.CallSettings)">CommitAsync(CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Commits all mutations in this transaction asynchronously.</p>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_CommitAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.CommitAsync*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_CommitAsync_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.CommitAsync(Google.Api.Gax.Grpc.CallSettings)">CommitAsync(CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Commits all mutations in this transaction asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override Task&lt;CommitResponse&gt; CommitAsync(CallSettings callSettings = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
-                    <td><span class="parametername">callSettings</span></td>
-                    <td><p>If not null, applies overrides to RPC calls.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;CommitResponse&gt; CommitAsync(CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html">CommitResponse</a>&gt;</td>
-                    <td><p>The response from the commit operation. This can be used to determine server-allocated keys.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html">CommitResponse</a>&gt;</td>
+        <td><p>The response from the commit operation. This can be used to determine server-allocated keys.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_CommitAsync_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.CommitAsync(CallSettings)</a></div>
-              <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_CommitAsync_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>Any entities with incomplete keys that are assigned keys by this operation will be updated in memory
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_CommitAsync_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.CommitAsync(CallSettings)</a></div>
+  <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_CommitAsync_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Any entities with incomplete keys that are assigned keys by this operation will be updated in memory
 with the server-allocated keys.</p>
 <p>Datastore limits the number of entities that can be modified in a Commit operation, and therefore one transaction. When modifying a large
 number of entities, partition the changes into multiple transactions. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
-              <h5 class="exceptions">Exceptions</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Condition</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.InvalidOperationException</span></td>
-                    <td><p>The transaction has already been committed or rolled back.</p>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>The transaction has already been committed or rolled back.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Delete_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Delete*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Delete(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity})">Delete(IEnumerable&lt;Entity&gt;)</h4>
-              <div class="markdown level1 summary"><p>Adds delete operations for all the specified keys to this transaction.</p>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Delete_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Delete*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Delete(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity})">Delete(IEnumerable&lt;Entity&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds delete operations for all the specified keys to this transaction.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override void Delete(IEnumerable&lt;Entity&gt; entities)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
-                    <td><span class="parametername">entities</span></td>
-                    <td><p>The entities to delete. Must not be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Delete(IEnumerable&lt;Entity&gt; entities)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
+        <td><span class="parametername">entities</span></td>
+        <td><p>The entities to delete. Must not be null.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__">DatastoreTransaction.Delete(IEnumerable&lt;Entity&gt;)</a></div>
-              <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Delete_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Delete*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Delete(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key})">Delete(IEnumerable&lt;Key&gt;)</h4>
-              <div class="markdown level1 summary"><p>Adds deletion operations for all the specified keys to this transaction.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__">DatastoreTransaction.Delete(IEnumerable&lt;Entity&gt;)</a></div>
+  <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Delete_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Delete*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Delete(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key})">Delete(IEnumerable&lt;Key&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds deletion operations for all the specified keys to this transaction.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override void Delete(IEnumerable&lt;Key&gt; keys)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
-                    <td><span class="parametername">keys</span></td>
-                    <td><p>The keys to delete. Must not be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Delete(IEnumerable&lt;Key&gt; keys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The keys to delete. Must not be null.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__">DatastoreTransaction.Delete(IEnumerable&lt;Key&gt;)</a></div>
-              <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Dispose_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Dispose*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Dispose" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Dispose">Dispose()</h4>
-              <div class="markdown level1 summary"><p>If the transaction has already been committed, this operation is a no-op.
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__">DatastoreTransaction.Delete(IEnumerable&lt;Key&gt;)</a></div>
+  <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Dispose_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Dispose*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Dispose" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>If the transaction has already been committed, this operation is a no-op.
 Otherwise, it rolls back the transaction.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override void Dispose()</code></pre>
-              </div>
-              <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Dispose">DatastoreTransaction.Dispose()</a></div>
-              <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Insert_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Insert*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Insert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Insert(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity})">Insert(IEnumerable&lt;Entity&gt;)</h4>
-              <div class="markdown level1 summary"><p>Adds insert operations for all the specified keys to this transaction.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Dispose()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Dispose">DatastoreTransaction.Dispose()</a></div>
+  <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Insert_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Insert*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Insert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Insert(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity})">Insert(IEnumerable&lt;Entity&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds insert operations for all the specified keys to this transaction.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override void Insert(IEnumerable&lt;Entity&gt; entities)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
-                    <td><span class="parametername">entities</span></td>
-                    <td><p>The entities to insert. Must not be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Insert(IEnumerable&lt;Entity&gt; entities)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
+        <td><span class="parametername">entities</span></td>
+        <td><p>The entities to insert. Must not be null.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Insert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__">DatastoreTransaction.Insert(IEnumerable&lt;Entity&gt;)</a></div>
-              <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Lookup_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Lookup*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Lookup_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Lookup(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">Lookup(IEnumerable&lt;Key&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Looks up a collection of entities by key.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Insert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__">DatastoreTransaction.Insert(IEnumerable&lt;Entity&gt;)</a></div>
+  <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Lookup_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Lookup*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Lookup_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Lookup(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">Lookup(IEnumerable&lt;Key&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Looks up a collection of entities by key.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override IReadOnlyList&lt;Entity&gt; Lookup(IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
-                    <td><span class="parametername">keys</span></td>
-                    <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IReadOnlyList&lt;Entity&gt; Lookup(IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
-                    <td><span class="parametername">callSettings</span></td>
-                    <td><p>If not null, applies overrides to RPC calls.</p>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
-                    <td><p>A collection of entities with the same size as <span class="paramref">keys</span>, containing corresponding entity
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
+        <td><p>A collection of entities with the same size as <span class="paramref">keys</span>, containing corresponding entity
 references, or <code>null</code> where the key was not found.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Lookup_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.Lookup(IEnumerable&lt;Key&gt;, CallSettings)</a></div>
-              <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Lookup_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This call may perform multiple RPC operations in order to look up all keys.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Lookup_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.Lookup(IEnumerable&lt;Key&gt;, CallSettings)</a></div>
+  <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Lookup_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This call may perform multiple RPC operations in order to look up all keys.</p>
 </div>
-              <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_LookupAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.LookupAsync*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_LookupAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.LookupAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">LookupAsync(IEnumerable&lt;Key&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Looks up a collection of entities by key asynchronously.</p>
+  <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_LookupAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.LookupAsync*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_LookupAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.LookupAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">LookupAsync(IEnumerable&lt;Key&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Looks up a collection of entities by key asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override Task&lt;IReadOnlyList&lt;Entity&gt;&gt; LookupAsync(IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
-                    <td><span class="parametername">keys</span></td>
-                    <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;IReadOnlyList&lt;Entity&gt;&gt; LookupAsync(IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
-                    <td><span class="parametername">callSettings</span></td>
-                    <td><p>If not null, applies overrides to RPC calls.</p>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;&gt;</td>
-                    <td><p>A collection of entities with the same size as <span class="paramref">keys</span>, containing corresponding entity
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;&gt;</td>
+        <td><p>A collection of entities with the same size as <span class="paramref">keys</span>, containing corresponding entity
 references, or <code>null</code> where the key was not found.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_LookupAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.LookupAsync(IEnumerable&lt;Key&gt;, CallSettings)</a></div>
-              <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_LookupAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This call may perform multiple RPC operations in order to look up all keys.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_LookupAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.LookupAsync(IEnumerable&lt;Key&gt;, CallSettings)</a></div>
+  <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_LookupAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This call may perform multiple RPC operations in order to look up all keys.</p>
 </div>
-              <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Rollback_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Rollback*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Rollback_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Rollback(Google.Api.Gax.Grpc.CallSettings)">Rollback(CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Rolls back this transaction.</p>
+  <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Rollback_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Rollback*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Rollback_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Rollback(Google.Api.Gax.Grpc.CallSettings)">Rollback(CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Rolls back this transaction.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override RollbackResponse Rollback(CallSettings callSettings = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
-                    <td><span class="parametername">callSettings</span></td>
-                    <td><p>If not null, applies overrides to RPC calls.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override RollbackResponse Rollback(CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.RollbackResponse.html">RollbackResponse</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Rollback_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.Rollback(CallSettings)</a></div>
-              <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Rollback_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method is rarely useful explicitly; the <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Dispose">Dispose()</a> method rolls back the transaction if it
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.RollbackResponse.html">RollbackResponse</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Rollback_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.Rollback(CallSettings)</a></div>
+  <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Rollback_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method is rarely useful explicitly; the <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Dispose">Dispose()</a> method rolls back the transaction if it
 is still active, so a <code>using</code> statement is normally preferable to this.</p>
 </div>
-              <h5 class="exceptions">Exceptions</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Condition</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.InvalidOperationException</span></td>
-                    <td><p>The transaction has already been committed or rolled back.</p>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>The transaction has already been committed or rolled back.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RollbackAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.RollbackAsync*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RollbackAsync_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.RollbackAsync(Google.Api.Gax.Grpc.CallSettings)">RollbackAsync(CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Rolls back this transaction asynchronously.</p>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RollbackAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.RollbackAsync*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RollbackAsync_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.RollbackAsync(Google.Api.Gax.Grpc.CallSettings)">RollbackAsync(CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Rolls back this transaction asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override Task&lt;RollbackResponse&gt; RollbackAsync(CallSettings callSettings = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
-                    <td><span class="parametername">callSettings</span></td>
-                    <td><p>If not null, applies overrides to RPC calls.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;RollbackResponse&gt; RollbackAsync(CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.RollbackResponse.html">RollbackResponse</a>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_RollbackAsync_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.RollbackAsync(CallSettings)</a></div>
-              <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RollbackAsync_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method is rarely useful explicitly; the <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Dispose">Dispose()</a> method rolls back the transaction if it
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.RollbackResponse.html">RollbackResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_RollbackAsync_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.RollbackAsync(CallSettings)</a></div>
+  <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RollbackAsync_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method is rarely useful explicitly; the <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Dispose">Dispose()</a> method rolls back the transaction if it
 is still active, so a <code>using</code> statement is normally preferable to this.</p>
 </div>
-              <h5 class="exceptions">Exceptions</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Condition</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.InvalidOperationException</span></td>
-                    <td><p>The transaction has already been committed or rolled back.</p>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>The transaction has already been committed or rolled back.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazily_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.RunQueryLazily*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazily_Google_Cloud_Datastore_V1_GqlQuery_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.RunQueryLazily(Google.Cloud.Datastore.V1.GqlQuery,Google.Api.Gax.Grpc.CallSettings)">RunQueryLazily(GqlQuery, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lazily executes the given GQL query in this transaction.</p>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazily_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.RunQueryLazily*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazily_Google_Cloud_Datastore_V1_GqlQuery_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.RunQueryLazily(Google.Cloud.Datastore.V1.GqlQuery,Google.Api.Gax.Grpc.CallSettings)">RunQueryLazily(GqlQuery, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lazily executes the given GQL query in this transaction.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override LazyDatastoreQuery RunQueryLazily(GqlQuery gqlQuery, CallSettings callSettings = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.GqlQuery.html">GqlQuery</a></td>
-                    <td><span class="parametername">gqlQuery</span></td>
-                    <td><p>The query to execute. Must not be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override LazyDatastoreQuery RunQueryLazily(GqlQuery gqlQuery, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.GqlQuery.html">GqlQuery</a></td>
+        <td><span class="parametername">gqlQuery</span></td>
+        <td><p>The query to execute. Must not be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
-                    <td><span class="parametername">callSettings</span></td>
-                    <td><p>If not null, applies overrides to RPC calls.</p>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a></td>
-                    <td><p>A <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a> representing the result of the query.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a></td>
+        <td><p>A <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a> representing the result of the query.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_RunQueryLazily_Google_Cloud_Datastore_V1_GqlQuery_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.RunQueryLazily(GqlQuery, CallSettings)</a></div>
-              <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazily_Google_Cloud_Datastore_V1_GqlQuery_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_RunQueryLazily_Google_Cloud_Datastore_V1_GqlQuery_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.RunQueryLazily(GqlQuery, CallSettings)</a></div>
+  <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazily_Google_Cloud_Datastore_V1_GqlQuery_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
 Using a transaction ensures that a commit operation will fail if any of the entities returned
 by this query have been modified while the transaction is active. Note that modifications performed
 as part of this operation are not reflected in the query results.
@@ -763,59 +763,59 @@ iterating over the results. Iterating over the same <a class="xref" href="Google
 multiple times will execute the query again, potentially returning different results.
 </p>
 </div>
-              <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazily_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.RunQueryLazily*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazily_Google_Cloud_Datastore_V1_Query_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.RunQueryLazily(Google.Cloud.Datastore.V1.Query,Google.Api.Gax.Grpc.CallSettings)">RunQueryLazily(Query, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lazily executes the given structured query in this transaction.</p>
+  <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazily_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.RunQueryLazily*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazily_Google_Cloud_Datastore_V1_Query_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.RunQueryLazily(Google.Cloud.Datastore.V1.Query,Google.Api.Gax.Grpc.CallSettings)">RunQueryLazily(Query, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lazily executes the given structured query in this transaction.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override LazyDatastoreQuery RunQueryLazily(Query query, CallSettings callSettings = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Query.html">Query</a></td>
-                    <td><span class="parametername">query</span></td>
-                    <td><p>The query to execute. Must not be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override LazyDatastoreQuery RunQueryLazily(Query query, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.Query.html">Query</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>The query to execute. Must not be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
-                    <td><span class="parametername">callSettings</span></td>
-                    <td><p>If not null, applies overrides to RPC calls.</p>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a></td>
-                    <td><p>A <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a> representing the the lazy query results.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a></td>
+        <td><p>A <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a> representing the the lazy query results.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_RunQueryLazily_Google_Cloud_Datastore_V1_Query_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.RunQueryLazily(Query, CallSettings)</a></div>
-              <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazily_Google_Cloud_Datastore_V1_Query_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_RunQueryLazily_Google_Cloud_Datastore_V1_Query_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.RunQueryLazily(Query, CallSettings)</a></div>
+  <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazily_Google_Cloud_Datastore_V1_Query_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
 Using a transaction ensures that a commit operation will fail if any of the entities returned
 by this query have been modified while the transaction is active. Note that modifications performed
 as part of this operation are not reflected in the query results.
@@ -826,59 +826,59 @@ iterating over the results. Iterating over the same <a class="xref" href="Google
 multiple times will execute the query again, potentially returning different results.
 </p>
 </div>
-              <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazilyAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.RunQueryLazilyAsync*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazilyAsync_Google_Cloud_Datastore_V1_GqlQuery_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.RunQueryLazilyAsync(Google.Cloud.Datastore.V1.GqlQuery,Google.Api.Gax.Grpc.CallSettings)">RunQueryLazilyAsync(GqlQuery, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lazily executes the given structured query in this transaction for asynchronous consumption.</p>
+  <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazilyAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.RunQueryLazilyAsync*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazilyAsync_Google_Cloud_Datastore_V1_GqlQuery_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.RunQueryLazilyAsync(Google.Cloud.Datastore.V1.GqlQuery,Google.Api.Gax.Grpc.CallSettings)">RunQueryLazilyAsync(GqlQuery, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lazily executes the given structured query in this transaction for asynchronous consumption.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override AsyncLazyDatastoreQuery RunQueryLazilyAsync(GqlQuery gqlQuery, CallSettings callSettings = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.GqlQuery.html">GqlQuery</a></td>
-                    <td><span class="parametername">gqlQuery</span></td>
-                    <td><p>The query to execute. Must not be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override AsyncLazyDatastoreQuery RunQueryLazilyAsync(GqlQuery gqlQuery, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.GqlQuery.html">GqlQuery</a></td>
+        <td><span class="parametername">gqlQuery</span></td>
+        <td><p>The query to execute. Must not be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
-                    <td><span class="parametername">callSettings</span></td>
-                    <td><p>If not null, applies overrides to RPC calls.</p>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.AsyncLazyDatastoreQuery.html">AsyncLazyDatastoreQuery</a></td>
-                    <td><p>An <a class="xref" href="Google.Cloud.Datastore.V1.AsyncLazyDatastoreQuery.html">AsyncLazyDatastoreQuery</a> representing the result of the query.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.AsyncLazyDatastoreQuery.html">AsyncLazyDatastoreQuery</a></td>
+        <td><p>An <a class="xref" href="Google.Cloud.Datastore.V1.AsyncLazyDatastoreQuery.html">AsyncLazyDatastoreQuery</a> representing the result of the query.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_RunQueryLazilyAsync_Google_Cloud_Datastore_V1_GqlQuery_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.RunQueryLazilyAsync(GqlQuery, CallSettings)</a></div>
-              <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazilyAsync_Google_Cloud_Datastore_V1_GqlQuery_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_RunQueryLazilyAsync_Google_Cloud_Datastore_V1_GqlQuery_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.RunQueryLazilyAsync(GqlQuery, CallSettings)</a></div>
+  <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazilyAsync_Google_Cloud_Datastore_V1_GqlQuery_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
 Using a transaction ensures that a commit operation will fail if any of the entities returned
 by this query have been modified while the transaction is active. Note that modifications performed
 as part of this operation are not reflected in the query results.
@@ -889,59 +889,59 @@ iterating over the results. Iterating over the same <a class="xref" href="Google
 multiple times will execute the query again, potentially returning different results.
 </p>
 </div>
-              <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazilyAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.RunQueryLazilyAsync*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazilyAsync_Google_Cloud_Datastore_V1_Query_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.RunQueryLazilyAsync(Google.Cloud.Datastore.V1.Query,Google.Api.Gax.Grpc.CallSettings)">RunQueryLazilyAsync(Query, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lazily executes the given structured query in this transaction for asynchronous consumption.</p>
+  <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazilyAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.RunQueryLazilyAsync*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazilyAsync_Google_Cloud_Datastore_V1_Query_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.RunQueryLazilyAsync(Google.Cloud.Datastore.V1.Query,Google.Api.Gax.Grpc.CallSettings)">RunQueryLazilyAsync(Query, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lazily executes the given structured query in this transaction for asynchronous consumption.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override AsyncLazyDatastoreQuery RunQueryLazilyAsync(Query query, CallSettings callSettings = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Query.html">Query</a></td>
-                    <td><span class="parametername">query</span></td>
-                    <td><p>The query to execute. Must not be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override AsyncLazyDatastoreQuery RunQueryLazilyAsync(Query query, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.Query.html">Query</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>The query to execute. Must not be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
-                    <td><span class="parametername">callSettings</span></td>
-                    <td><p>If not null, applies overrides to RPC calls.</p>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.AsyncLazyDatastoreQuery.html">AsyncLazyDatastoreQuery</a></td>
-                    <td><p>An <a class="xref" href="Google.Cloud.Datastore.V1.AsyncLazyDatastoreQuery.html">AsyncLazyDatastoreQuery</a> representing the result of the query.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Datastore.V1.AsyncLazyDatastoreQuery.html">AsyncLazyDatastoreQuery</a></td>
+        <td><p>An <a class="xref" href="Google.Cloud.Datastore.V1.AsyncLazyDatastoreQuery.html">AsyncLazyDatastoreQuery</a> representing the result of the query.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_RunQueryLazilyAsync_Google_Cloud_Datastore_V1_Query_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.RunQueryLazilyAsync(Query, CallSettings)</a></div>
-              <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazilyAsync_Google_Cloud_Datastore_V1_Query_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_RunQueryLazilyAsync_Google_Cloud_Datastore_V1_Query_Google_Api_Gax_Grpc_CallSettings_">DatastoreTransaction.RunQueryLazilyAsync(Query, CallSettings)</a></div>
+  <h5 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_RunQueryLazilyAsync_Google_Cloud_Datastore_V1_Query_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
 Using a transaction ensures that a commit operation will fail if any of the entities returned
 by this query have been modified while the transaction is active. Note that modifications performed
 as part of this operation are not reflected in the query results.
@@ -952,65 +952,65 @@ iterating over the results. Iterating over the same <a class="xref" href="Google
 multiple times will execute the query again, potentially returning different results.
 </p>
 </div>
-              <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Update_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Update*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Update_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Update(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity})">Update(IEnumerable&lt;Entity&gt;)</h4>
-              <div class="markdown level1 summary"><p>Adds update operations for all the specified keys to this transaction.</p>
+  <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Update_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Update*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Update_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Update(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity})">Update(IEnumerable&lt;Entity&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds update operations for all the specified keys to this transaction.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override void Update(IEnumerable&lt;Entity&gt; entities)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
-                    <td><span class="parametername">entities</span></td>
-                    <td><p>The entities to update. Must not be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Update(IEnumerable&lt;Entity&gt; entities)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
+        <td><span class="parametername">entities</span></td>
+        <td><p>The entities to update. Must not be null.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Update_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__">DatastoreTransaction.Update(IEnumerable&lt;Entity&gt;)</a></div>
-              <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Upsert_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Upsert*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Upsert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Upsert(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity})">Upsert(IEnumerable&lt;Entity&gt;)</h4>
-              <div class="markdown level1 summary"><p>Adds upsert operations for all the specified keys to this transaction.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Update_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__">DatastoreTransaction.Update(IEnumerable&lt;Entity&gt;)</a></div>
+  <a id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Upsert_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Upsert*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_DatastoreTransactionImpl_Upsert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__" data-uid="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.Upsert(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity})">Upsert(IEnumerable&lt;Entity&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds upsert operations for all the specified keys to this transaction.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override void Upsert(IEnumerable&lt;Entity&gt; entities)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
-                    <td><span class="parametername">entities</span></td>
-                    <td><p>The entities to upsert. Must not be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Upsert(IEnumerable&lt;Entity&gt; entities)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
+        <td><span class="parametername">entities</span></td>
+        <td><p>The entities to upsert. Must not be null.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Upsert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__">DatastoreTransaction.Upsert(IEnumerable&lt;Entity&gt;)</a></div>
-                        </article>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Upsert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__">DatastoreTransaction.Upsert(IEnumerable&lt;Entity&gt;)</a></div>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

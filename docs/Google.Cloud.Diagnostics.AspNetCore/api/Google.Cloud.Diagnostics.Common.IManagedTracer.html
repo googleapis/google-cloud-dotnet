@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IManagedTracer
    | Google.Cloud.Diagnostics.AspNetCore ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,366 +67,366 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Diagnostics_Common_IManagedTracer" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer">Interface IManagedTracer
-              </h1>
-              <div class="markdown level0 summary"><p>Manages creating spans for a trace as well as adding meta data to them.</p>
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer">
+  
+  
+  <h1 id="Google_Cloud_Diagnostics_Common_IManagedTracer" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer">Interface IManagedTracer
+  </h1>
+  <div class="markdown level0 summary"><p>Manages creating spans for a trace as well as adding meta data to them.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Diagnostics.Common</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Diagnostics.Common.dll</h6>
-              <h5 id="Google_Cloud_Diagnostics_Common_IManagedTracer_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public interface IManagedTracer</code></pre>
-              </div>
-              <h3 id="methods">Methods
-              </h3>
-              <a id="Google_Cloud_Diagnostics_Common_IManagedTracer_AnnotateSpan_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.AnnotateSpan*"></a>
-              <h4 id="Google_Cloud_Diagnostics_Common_IManagedTracer_AnnotateSpan_System_Collections_Generic_Dictionary_System_String_System_String__" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.AnnotateSpan(System.Collections.Generic.Dictionary{System.String,System.String})">AnnotateSpan(Dictionary&lt;String, String&gt;)</h4>
-              <div class="markdown level1 summary"><p>Annotates the current span with the given labels. </p>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Diagnostics.Common.html">Google.Cloud.Diagnostics.Common</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Diagnostics.Common.dll</h6>
+  <h5 id="Google_Cloud_Diagnostics_Common_IManagedTracer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IManagedTracer</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Diagnostics_Common_IManagedTracer_AnnotateSpan_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.AnnotateSpan*"></a>
+  <h4 id="Google_Cloud_Diagnostics_Common_IManagedTracer_AnnotateSpan_System_Collections_Generic_Dictionary_System_String_System_String__" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.AnnotateSpan(System.Collections.Generic.Dictionary{System.String,System.String})">AnnotateSpan(Dictionary&lt;String, String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Annotates the current span with the given labels. </p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">void AnnotateSpan(Dictionary&lt;string, string&gt; labels)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-                    <td><span class="parametername">labels</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Diagnostics_Common_IManagedTracer_EndSpan_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.EndSpan*"></a>
-              <h4 id="Google_Cloud_Diagnostics_Common_IManagedTracer_EndSpan" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.EndSpan">EndSpan()</h4>
-              <div class="markdown level1 summary"><p>Ends the current span if not ended by the <span class="xref">System.IDisposable</span> from
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AnnotateSpan(Dictionary&lt;string, string&gt; labels)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">labels</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Diagnostics_Common_IManagedTracer_EndSpan_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.EndSpan*"></a>
+  <h4 id="Google_Cloud_Diagnostics_Common_IManagedTracer_EndSpan" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.EndSpan">EndSpan()</h4>
+  <div class="markdown level1 summary"><p>Ends the current span if not ended by the <span class="xref">System.IDisposable</span> from
 <a class="xref" href="Google.Cloud.Diagnostics.Common.IManagedTracer.html#Google_Cloud_Diagnostics_Common_IManagedTracer_StartSpan_System_String_Google_Cloud_Diagnostics_Common_StartSpanOptions_">StartSpan(String, StartSpanOptions)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">void EndSpan()</code></pre>
-              </div>
-              <a id="Google_Cloud_Diagnostics_Common_IManagedTracer_GetCurrentSpanId_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.GetCurrentSpanId*"></a>
-              <h4 id="Google_Cloud_Diagnostics_Common_IManagedTracer_GetCurrentSpanId" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.GetCurrentSpanId">GetCurrentSpanId()</h4>
-              <div class="markdown level1 summary"><p>Gets the current span id or null if none exists.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void EndSpan()</code></pre>
+  </div>
+  <a id="Google_Cloud_Diagnostics_Common_IManagedTracer_GetCurrentSpanId_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.GetCurrentSpanId*"></a>
+  <h4 id="Google_Cloud_Diagnostics_Common_IManagedTracer_GetCurrentSpanId" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.GetCurrentSpanId">GetCurrentSpanId()</h4>
+  <div class="markdown level1 summary"><p>Gets the current span id or null if none exists.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">ulong ? GetCurrentSpanId()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Diagnostics_Common_IManagedTracer_GetCurrentTraceId_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.GetCurrentTraceId*"></a>
-              <h4 id="Google_Cloud_Diagnostics_Common_IManagedTracer_GetCurrentTraceId" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.GetCurrentTraceId">GetCurrentTraceId()</h4>
-              <div class="markdown level1 summary"><p>Gets the current trace id or null if none exists.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ulong ? GetCurrentSpanId()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Diagnostics_Common_IManagedTracer_GetCurrentTraceId_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.GetCurrentTraceId*"></a>
+  <h4 id="Google_Cloud_Diagnostics_Common_IManagedTracer_GetCurrentTraceId" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.GetCurrentTraceId">GetCurrentTraceId()</h4>
+  <div class="markdown level1 summary"><p>Gets the current trace id or null if none exists.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">string GetCurrentTraceId()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Diagnostics_Common_IManagedTracer_RunInSpan_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.RunInSpan*"></a>
-              <h4 id="Google_Cloud_Diagnostics_Common_IManagedTracer_RunInSpan_System_Action_System_String_Google_Cloud_Diagnostics_Common_StartSpanOptions_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.RunInSpan(System.Action,System.String,Google.Cloud.Diagnostics.Common.StartSpanOptions)">RunInSpan(Action, String, StartSpanOptions)</h4>
-              <div class="markdown level1 summary"><p>Runs the function in a span and will add a stacktrace from a thrown
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetCurrentTraceId()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Diagnostics_Common_IManagedTracer_RunInSpan_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.RunInSpan*"></a>
+  <h4 id="Google_Cloud_Diagnostics_Common_IManagedTracer_RunInSpan_System_Action_System_String_Google_Cloud_Diagnostics_Common_StartSpanOptions_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.RunInSpan(System.Action,System.String,Google.Cloud.Diagnostics.Common.StartSpanOptions)">RunInSpan(Action, String, StartSpanOptions)</h4>
+  <div class="markdown level1 summary"><p>Runs the function in a span and will add a stacktrace from a thrown
 exception (the exception will be re-thrown) to the span.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">void RunInSpan(Action action, string name, StartSpanOptions options = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Action</span></td>
-                    <td><span class="parametername">action</span></td>
-                    <td><p>The action to run in a span.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RunInSpan(Action action, string name, StartSpanOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>The action to run in a span.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">name</span></td>
-                    <td><p>The name of the span, cannot be null.</p>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the span, cannot be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Diagnostics.Common.StartSpanOptions.html">StartSpanOptions</a></td>
-                    <td><span class="parametername">options</span></td>
-                    <td><p>The span options to override default values.</p>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.Common.StartSpanOptions.html">StartSpanOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The span options to override default values.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Diagnostics_Common_IManagedTracer_RunInSpan_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.RunInSpan*"></a>
-              <h4 id="Google_Cloud_Diagnostics_Common_IManagedTracer_RunInSpan__1_System_Func___0__System_String_Google_Cloud_Diagnostics_Common_StartSpanOptions_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.RunInSpan``1(System.Func{``0},System.String,Google.Cloud.Diagnostics.Common.StartSpanOptions)">RunInSpan&lt;T&gt;(Func&lt;T&gt;, String, StartSpanOptions)</h4>
-              <div class="markdown level1 summary"><p>Runs the function in a span and will add a stacktrace from a thrown
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Diagnostics_Common_IManagedTracer_RunInSpan_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.RunInSpan*"></a>
+  <h4 id="Google_Cloud_Diagnostics_Common_IManagedTracer_RunInSpan__1_System_Func___0__System_String_Google_Cloud_Diagnostics_Common_StartSpanOptions_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.RunInSpan``1(System.Func{``0},System.String,Google.Cloud.Diagnostics.Common.StartSpanOptions)">RunInSpan&lt;T&gt;(Func&lt;T&gt;, String, StartSpanOptions)</h4>
+  <div class="markdown level1 summary"><p>Runs the function in a span and will add a stacktrace from a thrown
 exception (the exception will be re-thrown) to the span.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">T RunInSpan&lt;T&gt;(Func&lt;T&gt; func, string name, StartSpanOptions options = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Func</span>&lt;T&gt;</td>
-                    <td><span class="parametername">func</span></td>
-                    <td><p>The function to run in a span.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">T RunInSpan&lt;T&gt;(Func&lt;T&gt; func, string name, StartSpanOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td><p>The function to run in a span.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">name</span></td>
-                    <td><p>The name of the span, cannot be null.</p>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the span, cannot be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Diagnostics.Common.StartSpanOptions.html">StartSpanOptions</a></td>
-                    <td><span class="parametername">options</span></td>
-                    <td><p>The span options to override default values.</p>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.Common.StartSpanOptions.html">StartSpanOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The span options to override default values.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">T</span></td>
-                    <td><p>The result from the call to <span class="paramref">func</span></p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>The result from the call to <span class="paramref">func</span></p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="typeParameters">Type Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="parametername">T</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Diagnostics_Common_IManagedTracer_RunInSpanAsync_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.RunInSpanAsync*"></a>
-              <h4 id="Google_Cloud_Diagnostics_Common_IManagedTracer_RunInSpanAsync__1_System_Func_System_Threading_Tasks_Task___0___System_String_Google_Cloud_Diagnostics_Common_StartSpanOptions_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.RunInSpanAsync``1(System.Func{System.Threading.Tasks.Task{``0}},System.String,Google.Cloud.Diagnostics.Common.StartSpanOptions)">RunInSpanAsync&lt;T&gt;(Func&lt;Task&lt;T&gt;&gt;, String, StartSpanOptions)</h4>
-              <div class="markdown level1 summary"><p>Runs the function asynchronously in a span and will add a stacktrace
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Diagnostics_Common_IManagedTracer_RunInSpanAsync_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.RunInSpanAsync*"></a>
+  <h4 id="Google_Cloud_Diagnostics_Common_IManagedTracer_RunInSpanAsync__1_System_Func_System_Threading_Tasks_Task___0___System_String_Google_Cloud_Diagnostics_Common_StartSpanOptions_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.RunInSpanAsync``1(System.Func{System.Threading.Tasks.Task{``0}},System.String,Google.Cloud.Diagnostics.Common.StartSpanOptions)">RunInSpanAsync&lt;T&gt;(Func&lt;Task&lt;T&gt;&gt;, String, StartSpanOptions)</h4>
+  <div class="markdown level1 summary"><p>Runs the function asynchronously in a span and will add a stacktrace
 from a thrown exception (the exception will be re-thrown) to the span.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">Task&lt;T&gt; RunInSpanAsync&lt;T&gt;(Func&lt;Task&lt;T&gt;&gt; func, string name, StartSpanOptions options = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;&gt;</td>
-                    <td><span class="parametername">func</span></td>
-                    <td><p>The function to run in a span.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;T&gt; RunInSpanAsync&lt;T&gt;(Func&lt;Task&lt;T&gt;&gt; func, string name, StartSpanOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td><p>The function to run in a span.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">name</span></td>
-                    <td><p>The name of the span, cannot be null.</p>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the span, cannot be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Diagnostics.Common.StartSpanOptions.html">StartSpanOptions</a></td>
-                    <td><span class="parametername">options</span></td>
-                    <td><p>The span options to override default values.</p>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.Common.StartSpanOptions.html">StartSpanOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The span options to override default values.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;</td>
-                    <td><p>The result from the call to <span class="paramref">func</span></p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;</td>
+        <td><p>The result from the call to <span class="paramref">func</span></p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="typeParameters">Type Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="parametername">T</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Diagnostics_Common_IManagedTracer_SetStackTrace_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.SetStackTrace*"></a>
-              <h4 id="Google_Cloud_Diagnostics_Common_IManagedTracer_SetStackTrace_System_Diagnostics_StackTrace_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.SetStackTrace(System.Diagnostics.StackTrace)">SetStackTrace(StackTrace)</h4>
-              <div class="markdown level1 summary"><p>Adds the given StackTrace to the current span.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Diagnostics_Common_IManagedTracer_SetStackTrace_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.SetStackTrace*"></a>
+  <h4 id="Google_Cloud_Diagnostics_Common_IManagedTracer_SetStackTrace_System_Diagnostics_StackTrace_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.SetStackTrace(System.Diagnostics.StackTrace)">SetStackTrace(StackTrace)</h4>
+  <div class="markdown level1 summary"><p>Adds the given StackTrace to the current span.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">void SetStackTrace(StackTrace stackTrace)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Diagnostics.StackTrace</span></td>
-                    <td><span class="parametername">stackTrace</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Diagnostics_Common_IManagedTracer_StartSpan_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.StartSpan*"></a>
-              <h4 id="Google_Cloud_Diagnostics_Common_IManagedTracer_StartSpan_System_String_Google_Cloud_Diagnostics_Common_StartSpanOptions_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.StartSpan(System.String,Google.Cloud.Diagnostics.Common.StartSpanOptions)">StartSpan(String, StartSpanOptions)</h4>
-              <div class="markdown level1 summary"><p>Starts a new span using the most recent (if any) unfinished span as the parent.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetStackTrace(StackTrace stackTrace)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Diagnostics.StackTrace</span></td>
+        <td><span class="parametername">stackTrace</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Diagnostics_Common_IManagedTracer_StartSpan_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.StartSpan*"></a>
+  <h4 id="Google_Cloud_Diagnostics_Common_IManagedTracer_StartSpan_System_String_Google_Cloud_Diagnostics_Common_StartSpanOptions_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.StartSpan(System.String,Google.Cloud.Diagnostics.Common.StartSpanOptions)">StartSpan(String, StartSpanOptions)</h4>
+  <div class="markdown level1 summary"><p>Starts a new span using the most recent (if any) unfinished span as the parent.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">IDisposable StartSpan(string name, StartSpanOptions options = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">name</span></td>
-                    <td><p>The name of the span, cannot be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDisposable StartSpan(string name, StartSpanOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the span, cannot be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Diagnostics.Common.StartSpanOptions.html">StartSpanOptions</a></td>
-                    <td><span class="parametername">options</span></td>
-                    <td><p>The span options to override default values.</p>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.Common.StartSpanOptions.html">StartSpanOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The span options to override default values.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.IDisposable</span></td>
-                    <td><p>An <span class="xref">System.IDisposable</span> that will end the current span when disposed.  If the span
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IDisposable</span></td>
+        <td><p>An <span class="xref">System.IDisposable</span> that will end the current span when disposed.  If the span
 cannot end in the current scope, disposal can be skipped and <a class="xref" href="Google.Cloud.Diagnostics.Common.IManagedTracer.html#Google_Cloud_Diagnostics_Common_IManagedTracer_EndSpan">EndSpan()</a> can
 be called at a later time (this is not recommended and should be avoided if possible).</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

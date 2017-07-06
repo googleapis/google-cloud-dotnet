@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IPageManager&lt;TRequest, TResponse, TResource&gt;
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,202 +67,202 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Api_Gax_Rest_IPageManager_3" data-uid="Google.Api.Gax.Rest.IPageManager`3">Interface IPageManager&lt;TRequest, TResponse, TResource&gt;
-              </h1>
-              <div class="markdown level0 summary"><p>Interface describing the relationship between requests, responses and resources for
+            <article class="content wrap" id="_content" data-uid="Google.Api.Gax.Rest.IPageManager`3">
+  
+  
+  <h1 id="Google_Api_Gax_Rest_IPageManager_3" data-uid="Google.Api.Gax.Rest.IPageManager`3">Interface IPageManager&lt;TRequest, TResponse, TResource&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Interface describing the relationship between requests, responses and resources for
 page streaming.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <h6><strong>Namespace</strong>:Google.Api.Gax.Rest</h6>
-              <h6><strong>Assembly</strong>:Google.Api.Gax.Rest.dll</h6>
-              <h5 id="Google_Api_Gax_Rest_IPageManager_3_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public interface IPageManager&lt;TRequest, TResponse, TResource&gt;</code></pre>
-              </div>
-              <h5 class="typeParameters">Type Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="parametername">TRequest</span></td>
-                    <td><p>The request type.</p>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Api.Gax.Rest.html">Google.Api.Gax.Rest</a></h6>
+  <h6><strong>Assembly</strong>: Google.Api.Gax.Rest.dll</h6>
+  <h5 id="Google_Api_Gax_Rest_IPageManager_3_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IPageManager&lt;TRequest, TResponse, TResource&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TRequest</span></td>
+        <td><p>The request type.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="parametername">TResponse</span></td>
-                    <td><p>The response type.</p>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResponse</span></td>
+        <td><p>The response type.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="parametername">TResource</span></td>
-                    <td><p>The resource type.</p>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResource</span></td>
+        <td><p>The resource type.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h3 id="methods">Methods
-              </h3>
-              <a id="Google_Api_Gax_Rest_IPageManager_3_GetNextPageToken_" data-uid="Google.Api.Gax.Rest.IPageManager`3.GetNextPageToken*"></a>
-              <h4 id="Google_Api_Gax_Rest_IPageManager_3_GetNextPageToken__1_" data-uid="Google.Api.Gax.Rest.IPageManager`3.GetNextPageToken(`1)">GetNextPageToken(TResponse)</h4>
-              <div class="markdown level1 summary"><p>Extracts the next page token from a response.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Api_Gax_Rest_IPageManager_3_GetNextPageToken_" data-uid="Google.Api.Gax.Rest.IPageManager`3.GetNextPageToken*"></a>
+  <h4 id="Google_Api_Gax_Rest_IPageManager_3_GetNextPageToken__1_" data-uid="Google.Api.Gax.Rest.IPageManager`3.GetNextPageToken(`1)">GetNextPageToken(TResponse)</h4>
+  <div class="markdown level1 summary"><p>Extracts the next page token from a response.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">string GetNextPageToken(TResponse response)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">TResponse</span></td>
-                    <td><span class="parametername">response</span></td>
-                    <td><p>The response to extract the next page token from.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetNextPageToken(TResponse response)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TResponse</span></td>
+        <td><span class="parametername">response</span></td>
+        <td><p>The response to extract the next page token from.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><p>The next page token, or <code>null</code> if this is the final page of results.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The next page token, or <code>null</code> if this is the final page of results.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Api_Gax_Rest_IPageManager_3_GetResources_" data-uid="Google.Api.Gax.Rest.IPageManager`3.GetResources*"></a>
-              <h4 id="Google_Api_Gax_Rest_IPageManager_3_GetResources__1_" data-uid="Google.Api.Gax.Rest.IPageManager`3.GetResources(`1)">GetResources(TResponse)</h4>
-              <div class="markdown level1 summary"><p>Extracts resources from a response.</p>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Gax_Rest_IPageManager_3_GetResources_" data-uid="Google.Api.Gax.Rest.IPageManager`3.GetResources*"></a>
+  <h4 id="Google_Api_Gax_Rest_IPageManager_3_GetResources__1_" data-uid="Google.Api.Gax.Rest.IPageManager`3.GetResources(`1)">GetResources(TResponse)</h4>
+  <div class="markdown level1 summary"><p>Extracts resources from a response.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">IEnumerable&lt;TResource&gt; GetResources(TResponse response)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">TResponse</span></td>
-                    <td><span class="parametername">response</span></td>
-                    <td><p>The response containing the resources.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;TResource&gt; GetResources(TResponse response)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TResponse</span></td>
+        <td><span class="parametername">response</span></td>
+        <td><p>The response containing the resources.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TResource&gt;</td>
-                    <td><p>The resources in the response, or <code>null</code> if it contains no resources.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TResource&gt;</td>
+        <td><p>The resources in the response, or <code>null</code> if it contains no resources.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Api_Gax_Rest_IPageManager_3_SetPageSize_" data-uid="Google.Api.Gax.Rest.IPageManager`3.SetPageSize*"></a>
-              <h4 id="Google_Api_Gax_Rest_IPageManager_3_SetPageSize__0_System_Int32_" data-uid="Google.Api.Gax.Rest.IPageManager`3.SetPageSize(`0,System.Int32)">SetPageSize(TRequest, Int32)</h4>
-              <div class="markdown level1 summary"><p>Applies the given page size to the given request.</p>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Gax_Rest_IPageManager_3_SetPageSize_" data-uid="Google.Api.Gax.Rest.IPageManager`3.SetPageSize*"></a>
+  <h4 id="Google_Api_Gax_Rest_IPageManager_3_SetPageSize__0_System_Int32_" data-uid="Google.Api.Gax.Rest.IPageManager`3.SetPageSize(`0,System.Int32)">SetPageSize(TRequest, Int32)</h4>
+  <div class="markdown level1 summary"><p>Applies the given page size to the given request.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">void SetPageSize(TRequest request, int pageSize)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">TRequest</span></td>
-                    <td><span class="parametername">request</span></td>
-                    <td><p>The request to modify.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetPageSize(TRequest request, int pageSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TRequest</span></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to modify.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td><span class="parametername">pageSize</span></td>
-                    <td><p>The page size for the next remote call.</p>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">pageSize</span></td>
+        <td><p>The page size for the next remote call.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Api_Gax_Rest_IPageManager_3_SetPageToken_" data-uid="Google.Api.Gax.Rest.IPageManager`3.SetPageToken*"></a>
-              <h4 id="Google_Api_Gax_Rest_IPageManager_3_SetPageToken__0_System_String_" data-uid="Google.Api.Gax.Rest.IPageManager`3.SetPageToken(`0,System.String)">SetPageToken(TRequest, String)</h4>
-              <div class="markdown level1 summary"><p>Applies the given page token to the given request.</p>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Gax_Rest_IPageManager_3_SetPageToken_" data-uid="Google.Api.Gax.Rest.IPageManager`3.SetPageToken*"></a>
+  <h4 id="Google_Api_Gax_Rest_IPageManager_3_SetPageToken__0_System_String_" data-uid="Google.Api.Gax.Rest.IPageManager`3.SetPageToken(`0,System.String)">SetPageToken(TRequest, String)</h4>
+  <div class="markdown level1 summary"><p>Applies the given page token to the given request.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">void SetPageToken(TRequest request, string pageToken)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">TRequest</span></td>
-                    <td><span class="parametername">request</span></td>
-                    <td><p>The request to modify.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetPageToken(TRequest request, string pageToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TRequest</span></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to modify.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">pageToken</span></td>
-                    <td><p>The page token for the next remote call.</p>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">pageToken</span></td>
+        <td><p>The page token for the next remote call.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Enum Aggregation.Types.Reducer
    | Google.Cloud.Monitoring.V3 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,138 +67,138 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer" data-uid="Google.Cloud.Monitoring.V3.Aggregation.Types.Reducer">Enum Aggregation.Types.Reducer
-              </h1>
-              <div class="markdown level0 summary"><p>A Reducer describes how to aggregate data points from multiple
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Monitoring.V3.Aggregation.Types.Reducer">
+  
+  
+  <h1 id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer" data-uid="Google.Cloud.Monitoring.V3.Aggregation.Types.Reducer">Enum Aggregation.Types.Reducer
+  </h1>
+  <div class="markdown level0 summary"><p>A Reducer describes how to aggregate data points from multiple
 time series into a single time series.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Monitoring.V3</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Monitoring.V3.dll</h6>
-              <h5 id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public enum Reducer</code></pre>
-              </div>
-              <h3 id="fields">Fields
-              </h3>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                <thead>
-                <tbody>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReduceCount">ReduceCount</td>
-                    <td><p>Reduce by computing the count of data points across time series
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Monitoring.V3.html">Google.Cloud.Monitoring.V3</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Monitoring.V3.dll</h6>
+  <h5 id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum Reducer</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    <thead>
+    <tbody>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReduceCount">ReduceCount</td>
+        <td><p>Reduce by computing the count of data points across time series
 for each alignment period. This reducer is valid for delta
 and gauge metrics of numeric, Boolean, distribution, and string value
 type. The value type of the output is
 [INT64][google.api.MetricDescriptor.ValueType.INT64].</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReduceCountTrue">ReduceCountTrue</td>
-                    <td><p>Reduce by computing the count of True-valued data points across time
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReduceCountTrue">ReduceCountTrue</td>
+        <td><p>Reduce by computing the count of True-valued data points across time
 series for each alignment period. This reducer is valid for delta
 and gauge metrics of Boolean value type. The value type of
 the output is [INT64][google.api.MetricDescriptor.ValueType.INT64].</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReduceFractionTrue">ReduceFractionTrue</td>
-                    <td><p>Reduce by computing the fraction of True-valued data points across time
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReduceFractionTrue">ReduceFractionTrue</td>
+        <td><p>Reduce by computing the fraction of True-valued data points across time
 series for each alignment period. This reducer is valid for delta
 and gauge metrics of Boolean value type. The output value is in the
 range [0, 1] and has value type
 [DOUBLE][google.api.MetricDescriptor.ValueType.DOUBLE].</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReduceMax">ReduceMax</td>
-                    <td><p>Reduce by computing the maximum across time series for each
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReduceMax">ReduceMax</td>
+        <td><p>Reduce by computing the maximum across time series for each
 alignment period. This reducer is valid for delta and
 gauge metrics with numeric values. The value type of the output
 is the same as the value type of the input.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReduceMean">ReduceMean</td>
-                    <td><p>Reduce by computing the mean across time series for each
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReduceMean">ReduceMean</td>
+        <td><p>Reduce by computing the mean across time series for each
 alignment period. This reducer is valid for delta and
 gauge metrics with numeric or distribution values. The value type of the
 output is [DOUBLE][google.api.MetricDescriptor.ValueType.DOUBLE].</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReduceMin">ReduceMin</td>
-                    <td><p>Reduce by computing the minimum across time series for each
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReduceMin">ReduceMin</td>
+        <td><p>Reduce by computing the minimum across time series for each
 alignment period. This reducer is valid for delta and
 gauge metrics with numeric values. The value type of the output
 is the same as the value type of the input.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReduceNone">ReduceNone</td>
-                    <td><p>No cross-time series reduction. The output of the aligner is
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReduceNone">ReduceNone</td>
+        <td><p>No cross-time series reduction. The output of the aligner is
 returned.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReducePercentile05">ReducePercentile05</td>
-                    <td><p>Reduce by computing 5th percentile of data points across time series
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReducePercentile05">ReducePercentile05</td>
+        <td><p>Reduce by computing 5th percentile of data points across time series
 for each alignment period. This reducer is valid for gauge and delta
 metrics of numeric and distribution type. The value of the output is
 [DOUBLE][google.api.MetricDescriptor.ValueType.DOUBLE]</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReducePercentile50">ReducePercentile50</td>
-                    <td><p>Reduce by computing 50th percentile of data points across time series
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReducePercentile50">ReducePercentile50</td>
+        <td><p>Reduce by computing 50th percentile of data points across time series
 for each alignment period. This reducer is valid for gauge and delta
 metrics of numeric and distribution type. The value of the output is
 [DOUBLE][google.api.MetricDescriptor.ValueType.DOUBLE]</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReducePercentile95">ReducePercentile95</td>
-                    <td><p>Reduce by computing 95th percentile of data points across time series
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReducePercentile95">ReducePercentile95</td>
+        <td><p>Reduce by computing 95th percentile of data points across time series
 for each alignment period. This reducer is valid for gauge and delta
 metrics of numeric and distribution type. The value of the output is
 [DOUBLE][google.api.MetricDescriptor.ValueType.DOUBLE]</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReducePercentile99">ReducePercentile99</td>
-                    <td><p>Reduce by computing 99th percentile of data points across time series
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReducePercentile99">ReducePercentile99</td>
+        <td><p>Reduce by computing 99th percentile of data points across time series
 for each alignment period. This reducer is valid for gauge and delta
 metrics of numeric and distribution type. The value of the output is
 [DOUBLE][google.api.MetricDescriptor.ValueType.DOUBLE]</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReduceStddev">ReduceStddev</td>
-                    <td><p>Reduce by computing the standard deviation across time series
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReduceStddev">ReduceStddev</td>
+        <td><p>Reduce by computing the standard deviation across time series
 for each alignment period. This reducer is valid for delta
 and gauge metrics with numeric or distribution values. The value type of
 the output is [DOUBLE][google.api.MetricDescriptor.ValueType.DOUBLE].</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReduceSum">ReduceSum</td>
-                    <td><p>Reduce by computing the sum across time series for each
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Reducer_ReduceSum">ReduceSum</td>
+        <td><p>Reduce by computing the sum across time series for each
 alignment period. This reducer is valid for delta and
 gauge metrics with numeric and distribution values. The value type of
 the output is the same as the value type of the input.</p>
 </td>
-                  </tr>
-                </tbody>
-              </thead></thead></table>
-                        </article>
+      </tr>
+    </tbody>
+  </thead></thead></table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class JobConfigurationQuery
    | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,559 +67,561 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery">Class JobConfigurationQuery
-              </h1>
-              <div class="markdown level0 summary"></div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">JobConfigurationQuery</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Apis.Bigquery.v2.Data</h6>
-              <h6><strong>Assembly</strong>:Google.Apis.Bigquery.v2.dll</h6>
-              <h5 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class JobConfigurationQuery : IDirectResponseSchema</code></pre>
-              </div>
-              <h3 id="properties">Properties
-              </h3>
-              <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_AllowLargeResults_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.AllowLargeResults*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_AllowLargeResults" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.AllowLargeResults">AllowLargeResults</h4>
-              <div class="markdown level1 summary"><p>[Optional] If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large
+            <article class="content wrap" id="_content" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery">
+  
+  
+  <h1 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery">Class JobConfigurationQuery
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">JobConfigurationQuery</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Apis.Bigquery.v2.Data.html">Google.Apis.Bigquery.v2.Data</a></h6>
+  <h6><strong>Assembly</strong>: Google.Apis.Bigquery.v2.dll</h6>
+  <h5 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class JobConfigurationQuery : IDirectResponseSchema</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_AllowLargeResults_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.AllowLargeResults*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_AllowLargeResults" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.AllowLargeResults">AllowLargeResults</h4>
+  <div class="markdown level1 summary"><p>[Optional] If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large
 result tables at a slight cost in performance. Requires destinationTable to be set. For standard SQL
-queries, this flag is ignored and large results are always allowed.</p>
+queries, this flag is ignored and large results are always allowed. However, you must still set
+destinationTable when result size exceeds the allowed maximum response size.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;allowLargeResults&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;allowLargeResults&quot;)]
 public virtual bool ? AllowLargeResults { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_CreateDisposition_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.CreateDisposition*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_CreateDisposition" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.CreateDisposition">CreateDisposition</h4>
-              <div class="markdown level1 summary"><p>[Optional] Specifies whether the job is allowed to create new tables. The following values are
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_CreateDisposition_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.CreateDisposition*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_CreateDisposition" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.CreateDisposition">CreateDisposition</h4>
+  <div class="markdown level1 summary"><p>[Optional] Specifies whether the job is allowed to create new tables. The following values are
 supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The
 table must already exist. If it does not, a &#39;notFound&#39; error is returned in the job result. The default
 value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job
 completion.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;createDisposition&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;createDisposition&quot;)]
 public virtual string CreateDisposition { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_DefaultDataset_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.DefaultDataset*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_DefaultDataset" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.DefaultDataset">DefaultDataset</h4>
-              <div class="markdown level1 summary"><p>[Optional] Specifies the default dataset to use for unqualified table names in the query.</p>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_DefaultDataset_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.DefaultDataset*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_DefaultDataset" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.DefaultDataset">DefaultDataset</h4>
+  <div class="markdown level1 summary"><p>[Optional] Specifies the default dataset to use for unqualified table names in the query.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;defaultDataset&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;defaultDataset&quot;)]
 public virtual DatasetReference DefaultDataset { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html">DatasetReference</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_DestinationTable_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.DestinationTable*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_DestinationTable" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.DestinationTable">DestinationTable</h4>
-              <div class="markdown level1 summary"><p>[Optional] Describes the table where the query results should be stored. If not present, a new
-table will be created to store the results.</p>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html">DatasetReference</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_DestinationTable_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.DestinationTable*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_DestinationTable" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.DestinationTable">DestinationTable</h4>
+  <div class="markdown level1 summary"><p>[Optional] Describes the table where the query results should be stored. If not present, a new
+table will be created to store the results. This property must be set for large results that exceed the
+maximum response size.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;destinationTable&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;destinationTable&quot;)]
 public virtual TableReference DestinationTable { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_ETag_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.ETag*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_ETag" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.ETag">ETag</h4>
-              <div class="markdown level1 summary"><p>The ETag of the item.</p>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_ETag_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.ETag*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_ETag" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.ETag">ETag</h4>
+  <div class="markdown level1 summary"><p>The ETag of the item.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string ETag { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
-              <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_FlattenResults_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.FlattenResults*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_FlattenResults" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.FlattenResults">FlattenResults</h4>
-              <div class="markdown level1 summary"><p>[Optional] If true and query uses legacy SQL dialect, flattens all nested and repeated fields in
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ETag { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
+  <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_FlattenResults_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.FlattenResults*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_FlattenResults" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.FlattenResults">FlattenResults</h4>
+  <div class="markdown level1 summary"><p>[Optional] If true and query uses legacy SQL dialect, flattens all nested and repeated fields in
 the query results. allowLargeResults must be true if this is set to false. For standard SQL queries, this
 flag is ignored and results are never flattened.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;flattenResults&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;flattenResults&quot;)]
 public virtual bool ? FlattenResults { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_MaximumBillingTier_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.MaximumBillingTier*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_MaximumBillingTier" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.MaximumBillingTier">MaximumBillingTier</h4>
-              <div class="markdown level1 summary"><p>[Optional] Limits the billing tier for this job. Queries that have resource usage beyond this tier
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_MaximumBillingTier_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.MaximumBillingTier*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_MaximumBillingTier" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.MaximumBillingTier">MaximumBillingTier</h4>
+  <div class="markdown level1 summary"><p>[Optional] Limits the billing tier for this job. Queries that have resource usage beyond this tier
 will fail (without incurring a charge). If unspecified, this will be set to your project default.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;maximumBillingTier&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;maximumBillingTier&quot;)]
 public virtual int ? MaximumBillingTier { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_MaximumBytesBilled_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.MaximumBytesBilled*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_MaximumBytesBilled" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.MaximumBytesBilled">MaximumBytesBilled</h4>
-              <div class="markdown level1 summary"><p>[Optional] Limits the bytes billed for this job. Queries that will have bytes billed beyond this
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_MaximumBytesBilled_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.MaximumBytesBilled*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_MaximumBytesBilled" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.MaximumBytesBilled">MaximumBytesBilled</h4>
+  <div class="markdown level1 summary"><p>[Optional] Limits the bytes billed for this job. Queries that will have bytes billed beyond this
 limit will fail (without incurring a charge). If unspecified, this will be set to your project
 default.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;maximumBytesBilled&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;maximumBytesBilled&quot;)]
 public virtual long ? MaximumBytesBilled { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_ParameterMode_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.ParameterMode*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_ParameterMode" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.ParameterMode">ParameterMode</h4>
-              <div class="markdown level1 summary"><p>Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_ParameterMode_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.ParameterMode*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_ParameterMode" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.ParameterMode">ParameterMode</h4>
+  <div class="markdown level1 summary"><p>Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use
 named (@myparam) query parameters in this query.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;parameterMode&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;parameterMode&quot;)]
 public virtual string ParameterMode { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_PreserveNulls_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.PreserveNulls*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_PreserveNulls" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.PreserveNulls">PreserveNulls</h4>
-              <div class="markdown level1 summary"><p>[Deprecated] This property is deprecated.</p>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_PreserveNulls_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.PreserveNulls*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_PreserveNulls" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.PreserveNulls">PreserveNulls</h4>
+  <div class="markdown level1 summary"><p>[Deprecated] This property is deprecated.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;preserveNulls&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;preserveNulls&quot;)]
 public virtual bool ? PreserveNulls { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_Priority_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.Priority*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_Priority" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.Priority">Priority</h4>
-              <div class="markdown level1 summary"><p>[Optional] Specifies a priority for the query. Possible values include INTERACTIVE and BATCH. The
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_Priority_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.Priority*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_Priority" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.Priority">Priority</h4>
+  <div class="markdown level1 summary"><p>[Optional] Specifies a priority for the query. Possible values include INTERACTIVE and BATCH. The
 default value is INTERACTIVE.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;priority&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;priority&quot;)]
 public virtual string Priority { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_Query_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.Query*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_Query" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.Query">Query</h4>
-              <div class="markdown level1 summary"><p>[Required] SQL query text to execute. The useLegacySql field can be used to indicate whether the
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_Query_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.Query*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_Query" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.Query">Query</h4>
+  <div class="markdown level1 summary"><p>[Required] SQL query text to execute. The useLegacySql field can be used to indicate whether the
 query uses legacy SQL or standard SQL.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;query&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;query&quot;)]
 public virtual string Query { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_QueryParameters_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.QueryParameters*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_QueryParameters" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.QueryParameters">QueryParameters</h4>
-              <div class="markdown level1 summary"><p>Query parameters for standard SQL queries.</p>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_QueryParameters_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.QueryParameters*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_QueryParameters" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.QueryParameters">QueryParameters</h4>
+  <div class="markdown level1 summary"><p>Query parameters for standard SQL queries.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;queryParameters&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;queryParameters&quot;)]
 public virtual IList&lt;QueryParameter&gt; QueryParameters { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.QueryParameter.html">QueryParameter</a>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_SchemaUpdateOptions_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.SchemaUpdateOptions*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_SchemaUpdateOptions" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.SchemaUpdateOptions">SchemaUpdateOptions</h4>
-              <div class="markdown level1 summary"><p>[Experimental] Allows the schema of the destination table to be updated as a side effect of the
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.QueryParameter.html">QueryParameter</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_SchemaUpdateOptions_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.SchemaUpdateOptions*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_SchemaUpdateOptions" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.SchemaUpdateOptions">SchemaUpdateOptions</h4>
+  <div class="markdown level1 summary"><p>[Experimental] Allows the schema of the destination table to be updated as a side effect of the
 query job. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND; when
 writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table, specified by
 partition decorators. For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the
 following values are specified: ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
 ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;schemaUpdateOptions&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;schemaUpdateOptions&quot;)]
 public virtual IList&lt;string&gt; SchemaUpdateOptions { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_TableDefinitions_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.TableDefinitions*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_TableDefinitions" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.TableDefinitions">TableDefinitions</h4>
-              <div class="markdown level1 summary"><p>[Optional] If querying an external data source outside of BigQuery, describes the data format,
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_TableDefinitions_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.TableDefinitions*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_TableDefinitions" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.TableDefinitions">TableDefinitions</h4>
+  <div class="markdown level1 summary"><p>[Optional] If querying an external data source outside of BigQuery, describes the data format,
 location and other properties of the data source. By defining these properties, the data source can then be
 queried as if it were a standard BigQuery table.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;tableDefinitions&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;tableDefinitions&quot;)]
 public virtual IDictionary&lt;string, ExternalDataConfiguration&gt; TableDefinitions { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="Google.Apis.Bigquery.v2.Data.ExternalDataConfiguration.html">ExternalDataConfiguration</a>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_UseLegacySql_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.UseLegacySql*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_UseLegacySql" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.UseLegacySql">UseLegacySql</h4>
-              <div class="markdown level1 summary"><p>Specifies whether to use BigQuery&#39;s legacy SQL dialect for this query. The default value is true.
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="Google.Apis.Bigquery.v2.Data.ExternalDataConfiguration.html">ExternalDataConfiguration</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_UseLegacySql_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.UseLegacySql*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_UseLegacySql" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.UseLegacySql">UseLegacySql</h4>
+  <div class="markdown level1 summary"><p>Specifies whether to use BigQuery&#39;s legacy SQL dialect for this query. The default value is true.
 If set to false, the query will use BigQuery&#39;s standard SQL: <a href="https://cloud.google.com/bigquery/sql-">https://cloud.google.com/bigquery/sql-</a>
 reference/ When useLegacySql is set to false, the values of allowLargeResults and flattenResults are
 ignored; query will be run as if allowLargeResults is true and flattenResults is false.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;useLegacySql&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;useLegacySql&quot;)]
 public virtual bool ? UseLegacySql { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_UseQueryCache_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.UseQueryCache*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_UseQueryCache" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.UseQueryCache">UseQueryCache</h4>
-              <div class="markdown level1 summary"><p>[Optional] Whether to look for the result in the query cache. The query cache is a best-effort
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_UseQueryCache_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.UseQueryCache*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_UseQueryCache" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.UseQueryCache">UseQueryCache</h4>
+  <div class="markdown level1 summary"><p>[Optional] Whether to look for the result in the query cache. The query cache is a best-effort
 cache that will be flushed whenever tables in the query are modified. Moreover, the query cache is only
 available when a query does not have a destination table specified. The default value is true.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;useQueryCache&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;useQueryCache&quot;)]
 public virtual bool ? UseQueryCache { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_UserDefinedFunctionResources_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.UserDefinedFunctionResources*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_UserDefinedFunctionResources" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.UserDefinedFunctionResources">UserDefinedFunctionResources</h4>
-              <div class="markdown level1 summary"><p>Describes user-defined function resources used in the query.</p>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_UserDefinedFunctionResources_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.UserDefinedFunctionResources*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_UserDefinedFunctionResources" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.UserDefinedFunctionResources">UserDefinedFunctionResources</h4>
+  <div class="markdown level1 summary"><p>Describes user-defined function resources used in the query.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;userDefinedFunctionResources&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;userDefinedFunctionResources&quot;)]
 public virtual IList&lt;UserDefinedFunctionResource&gt; UserDefinedFunctionResources { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.UserDefinedFunctionResource.html">UserDefinedFunctionResource</a>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_WriteDisposition_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.WriteDisposition*"></a>
-              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_WriteDisposition" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.WriteDisposition">WriteDisposition</h4>
-              <div class="markdown level1 summary"><p>[Optional] Specifies the action that occurs if the destination table already exists. The following
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.UserDefinedFunctionResource.html">UserDefinedFunctionResource</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_WriteDisposition_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.WriteDisposition*"></a>
+  <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_WriteDisposition" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.WriteDisposition">WriteDisposition</h4>
+  <div class="markdown level1 summary"><p>[Optional] Specifies the action that occurs if the destination table already exists. The following
 values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table
 already exists and contains data, a &#39;duplicate&#39; error is returned in the job result. The default value is
 WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;writeDisposition&quot;)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;writeDisposition&quot;)]
 public virtual string WriteDisposition { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BackoffSettings
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,177 +67,177 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Api_Gax_Grpc_BackoffSettings" data-uid="Google.Api.Gax.Grpc.BackoffSettings">Class BackoffSettings
-              </h1>
-              <div class="markdown level0 summary"><p>Backoff settings used within <a class="xref" href="Google.Api.Gax.Grpc.RetrySettings.html">RetrySettings</a> to implement
+            <article class="content wrap" id="_content" data-uid="Google.Api.Gax.Grpc.BackoffSettings">
+  
+  
+  <h1 id="Google_Api_Gax_Grpc_BackoffSettings" data-uid="Google.Api.Gax.Grpc.BackoffSettings">Class BackoffSettings
+  </h1>
+  <div class="markdown level0 summary"><p>Backoff settings used within <a class="xref" href="Google.Api.Gax.Grpc.RetrySettings.html">RetrySettings</a> to implement
 exponential backoff.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">BackoffSettings</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Api.Gax.Grpc</h6>
-              <h6><strong>Assembly</strong>:Google.Api.Gax.Grpc.dll</h6>
-              <h5 id="Google_Api_Gax_Grpc_BackoffSettings_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class BackoffSettings</code></pre>
-              </div>
-              <h3 id="constructors">Constructors
-              </h3>
-              <a id="Google_Api_Gax_Grpc_BackoffSettings__ctor_" data-uid="Google.Api.Gax.Grpc.BackoffSettings.#ctor*"></a>
-              <h4 id="Google_Api_Gax_Grpc_BackoffSettings__ctor_System_TimeSpan_System_TimeSpan_System_Double_" data-uid="Google.Api.Gax.Grpc.BackoffSettings.#ctor(System.TimeSpan,System.TimeSpan,System.Double)">BackoffSettings(TimeSpan, TimeSpan, Double)</h4>
-              <div class="markdown level1 summary"><p>Creates a new instance with the specified settings.</p>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">BackoffSettings</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Api.Gax.Grpc.html">Google.Api.Gax.Grpc</a></h6>
+  <h6><strong>Assembly</strong>: Google.Api.Gax.Grpc.dll</h6>
+  <h5 id="Google_Api_Gax_Grpc_BackoffSettings_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class BackoffSettings</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Google_Api_Gax_Grpc_BackoffSettings__ctor_" data-uid="Google.Api.Gax.Grpc.BackoffSettings.#ctor*"></a>
+  <h4 id="Google_Api_Gax_Grpc_BackoffSettings__ctor_System_TimeSpan_System_TimeSpan_System_Double_" data-uid="Google.Api.Gax.Grpc.BackoffSettings.#ctor(System.TimeSpan,System.TimeSpan,System.Double)">BackoffSettings(TimeSpan, TimeSpan, Double)</h4>
+  <div class="markdown level1 summary"><p>Creates a new instance with the specified settings.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public BackoffSettings(TimeSpan delay, TimeSpan maxDelay, double delayMultiplier = 1)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.TimeSpan</span></td>
-                    <td><span class="parametername">delay</span></td>
-                    <td><p>The initial delay, either for the first retry or as the initial RPC timeout.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BackoffSettings(TimeSpan delay, TimeSpan maxDelay, double delayMultiplier = 1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">delay</span></td>
+        <td><p>The initial delay, either for the first retry or as the initial RPC timeout.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.TimeSpan</span></td>
-                    <td><span class="parametername">maxDelay</span></td>
-                    <td><p>The maximum delay to use. If the increasing delay due to the delay multiplier exceeds this,
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">maxDelay</span></td>
+        <td><p>The maximum delay to use. If the increasing delay due to the delay multiplier exceeds this,
 this maximum is used instead.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Double</span></td>
-                    <td><span class="parametername">delayMultiplier</span></td>
-                    <td><p>The multiplier to apply to the delay on each iteration; must be greater than or equal to 1.0.
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">delayMultiplier</span></td>
+        <td><p>The multiplier to apply to the delay on each iteration; must be greater than or equal to 1.0.
 Defaults to 1.0.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h3 id="properties">Properties
-              </h3>
-              <a id="Google_Api_Gax_Grpc_BackoffSettings_Delay_" data-uid="Google.Api.Gax.Grpc.BackoffSettings.Delay*"></a>
-              <h4 id="Google_Api_Gax_Grpc_BackoffSettings_Delay" data-uid="Google.Api.Gax.Grpc.BackoffSettings.Delay">Delay</h4>
-              <div class="markdown level1 summary"><p>The initial delay, either for the first retry or as the initial RPC timeout.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Api_Gax_Grpc_BackoffSettings_Delay_" data-uid="Google.Api.Gax.Grpc.BackoffSettings.Delay*"></a>
+  <h4 id="Google_Api_Gax_Grpc_BackoffSettings_Delay" data-uid="Google.Api.Gax.Grpc.BackoffSettings.Delay">Delay</h4>
+  <div class="markdown level1 summary"><p>The initial delay, either for the first retry or as the initial RPC timeout.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public TimeSpan Delay { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.TimeSpan</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Api_Gax_Grpc_BackoffSettings_DelayMultiplier_" data-uid="Google.Api.Gax.Grpc.BackoffSettings.DelayMultiplier*"></a>
-              <h4 id="Google_Api_Gax_Grpc_BackoffSettings_DelayMultiplier" data-uid="Google.Api.Gax.Grpc.BackoffSettings.DelayMultiplier">DelayMultiplier</h4>
-              <div class="markdown level1 summary"><p>The multiplier to apply to the delay on each iteration; must be greater than or equal to 1.0.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan Delay { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Gax_Grpc_BackoffSettings_DelayMultiplier_" data-uid="Google.Api.Gax.Grpc.BackoffSettings.DelayMultiplier*"></a>
+  <h4 id="Google_Api_Gax_Grpc_BackoffSettings_DelayMultiplier" data-uid="Google.Api.Gax.Grpc.BackoffSettings.DelayMultiplier">DelayMultiplier</h4>
+  <div class="markdown level1 summary"><p>The multiplier to apply to the delay on each iteration; must be greater than or equal to 1.0.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public double DelayMultiplier { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Double</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 id="Google_Api_Gax_Grpc_BackoffSettings_DelayMultiplier_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double DelayMultiplier { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Api_Gax_Grpc_BackoffSettings_DelayMultiplier_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
 As an example, a multiplier of 2.0 with a delay of 0.1s on an RPC which fails three times before
 succeeding would lead to an initial delay between the first response and the second request
 of 0.1s; a delay between the second response and the third request of 0.2s, and a delay
 between the third response and the fourth request.
 </p>
 </div>
-              <a id="Google_Api_Gax_Grpc_BackoffSettings_MaxDelay_" data-uid="Google.Api.Gax.Grpc.BackoffSettings.MaxDelay*"></a>
-              <h4 id="Google_Api_Gax_Grpc_BackoffSettings_MaxDelay" data-uid="Google.Api.Gax.Grpc.BackoffSettings.MaxDelay">MaxDelay</h4>
-              <div class="markdown level1 summary"><p>The maximum delay to use. If the increasing delay due to the delay multiplier exceeds this,
+  <a id="Google_Api_Gax_Grpc_BackoffSettings_MaxDelay_" data-uid="Google.Api.Gax.Grpc.BackoffSettings.MaxDelay*"></a>
+  <h4 id="Google_Api_Gax_Grpc_BackoffSettings_MaxDelay" data-uid="Google.Api.Gax.Grpc.BackoffSettings.MaxDelay">MaxDelay</h4>
+  <div class="markdown level1 summary"><p>The maximum delay to use. If the increasing delay due to the delay multiplier exceeds this,
 this maximum is used instead.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public TimeSpan MaxDelay { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.TimeSpan</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan MaxDelay { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

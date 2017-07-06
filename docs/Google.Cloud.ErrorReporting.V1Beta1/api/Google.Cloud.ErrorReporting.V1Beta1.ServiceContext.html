@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ServiceContext
    | Google.Cloud.ErrorReporting.V1Beta1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,125 +67,125 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_ErrorReporting_V1Beta1_ServiceContext" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ServiceContext">Class ServiceContext
-              </h1>
-              <div class="markdown level0 summary"><p>Describes a running service that sends errors.
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ServiceContext">
+  
+  
+  <h1 id="Google_Cloud_ErrorReporting_V1Beta1_ServiceContext" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ServiceContext">Class ServiceContext
+  </h1>
+  <div class="markdown level0 summary"><p>Describes a running service that sends errors.
 Its version changes over time and multiple versions can run in parallel.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">ServiceContext</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Cloud.ErrorReporting.V1Beta1</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.ErrorReporting.V1Beta1.dll</h6>
-              <h5 id="Google_Cloud_ErrorReporting_V1Beta1_ServiceContext_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class ServiceContext : IMessage&lt;ServiceContext&gt;, IMessage, IEquatable&lt;ServiceContext&gt;, IDeepCloneable&lt;ServiceContext&gt;</code></pre>
-              </div>
-              <h3 id="properties">Properties
-              </h3>
-              <a id="Google_Cloud_ErrorReporting_V1Beta1_ServiceContext_ResourceType_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ServiceContext.ResourceType*"></a>
-              <h4 id="Google_Cloud_ErrorReporting_V1Beta1_ServiceContext_ResourceType" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ServiceContext.ResourceType">ResourceType</h4>
-              <div class="markdown level1 summary"><p>Type of the MonitoredResource. List of possible values:
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ServiceContext</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.ErrorReporting.V1Beta1.html">Google.Cloud.ErrorReporting.V1Beta1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.ErrorReporting.V1Beta1.dll</h6>
+  <h5 id="Google_Cloud_ErrorReporting_V1Beta1_ServiceContext_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ServiceContext : IMessage&lt;ServiceContext&gt;, IMessage, IEquatable&lt;ServiceContext&gt;, IDeepCloneable&lt;ServiceContext&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_ErrorReporting_V1Beta1_ServiceContext_ResourceType_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ServiceContext.ResourceType*"></a>
+  <h4 id="Google_Cloud_ErrorReporting_V1Beta1_ServiceContext_ResourceType" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ServiceContext.ResourceType">ResourceType</h4>
+  <div class="markdown level1 summary"><p>Type of the MonitoredResource. List of possible values:
 <a href="https://cloud.google.com/monitoring/api/resources">https://cloud.google.com/monitoring/api/resources</a></p>
 <p>Value is set automatically for incoming errors and must not be set when
 reporting errors.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string ResourceType { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_ErrorReporting_V1Beta1_ServiceContext_Service_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ServiceContext.Service*"></a>
-              <h4 id="Google_Cloud_ErrorReporting_V1Beta1_ServiceContext_Service" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ServiceContext.Service">Service</h4>
-              <div class="markdown level1 summary"><p>An identifier of the service, such as the name of the
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ResourceType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_ErrorReporting_V1Beta1_ServiceContext_Service_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ServiceContext.Service*"></a>
+  <h4 id="Google_Cloud_ErrorReporting_V1Beta1_ServiceContext_Service" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ServiceContext.Service">Service</h4>
+  <div class="markdown level1 summary"><p>An identifier of the service, such as the name of the
 executable, job, or Google App Engine service name. This field is expected
 to have a low number of values that are relatively stable over time, as
 opposed to <code>version</code>, which can be changed whenever new code is deployed.</p>
 <p>Contains the service name for error reports extracted from Google
 App Engine logs or <code>default</code> if the App Engine default service is used.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string Service { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_ErrorReporting_V1Beta1_ServiceContext_Version_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ServiceContext.Version*"></a>
-              <h4 id="Google_Cloud_ErrorReporting_V1Beta1_ServiceContext_Version" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ServiceContext.Version">Version</h4>
-              <div class="markdown level1 summary"><p>Represents the source code version that the developer provided,
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Service { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_ErrorReporting_V1Beta1_ServiceContext_Version_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ServiceContext.Version*"></a>
+  <h4 id="Google_Cloud_ErrorReporting_V1Beta1_ServiceContext_Version" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ServiceContext.Version">Version</h4>
+  <div class="markdown level1 summary"><p>Represents the source code version that the developer provided,
 which could represent a version label or a Git SHA-1 hash, for example.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string Version { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Version { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

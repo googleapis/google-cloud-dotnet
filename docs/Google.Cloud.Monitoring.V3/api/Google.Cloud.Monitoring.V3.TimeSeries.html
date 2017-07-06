@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TimeSeries
    | Google.Cloud.Monitoring.V3 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,73 +67,73 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Monitoring_V3_TimeSeries" data-uid="Google.Cloud.Monitoring.V3.TimeSeries">Class TimeSeries
-              </h1>
-              <div class="markdown level0 summary"><p>A collection of data points that describes the time-varying values
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Monitoring.V3.TimeSeries">
+  
+  
+  <h1 id="Google_Cloud_Monitoring_V3_TimeSeries" data-uid="Google.Cloud.Monitoring.V3.TimeSeries">Class TimeSeries
+  </h1>
+  <div class="markdown level0 summary"><p>A collection of data points that describes the time-varying values
 of a metric. A time series is identified by a combination of a
 fully-specified monitored resource and a fully-specified metric.
 This type is used for both listing and creating time series.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">TimeSeries</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Monitoring.V3</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Monitoring.V3.dll</h6>
-              <h5 id="Google_Cloud_Monitoring_V3_TimeSeries_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class TimeSeries : IMessage&lt;TimeSeries&gt;, IMessage, IEquatable&lt;TimeSeries&gt;, IDeepCloneable&lt;TimeSeries&gt;</code></pre>
-              </div>
-              <h3 id="properties">Properties
-              </h3>
-              <a id="Google_Cloud_Monitoring_V3_TimeSeries_Metric_" data-uid="Google.Cloud.Monitoring.V3.TimeSeries.Metric*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_TimeSeries_Metric" data-uid="Google.Cloud.Monitoring.V3.TimeSeries.Metric">Metric</h4>
-              <div class="markdown level1 summary"><p>The associated metric. A fully-specified metric used to identify the time
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">TimeSeries</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Monitoring.V3.html">Google.Cloud.Monitoring.V3</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Monitoring.V3.dll</h6>
+  <h5 id="Google_Cloud_Monitoring_V3_TimeSeries_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class TimeSeries : IMessage&lt;TimeSeries&gt;, IMessage, IEquatable&lt;TimeSeries&gt;, IDeepCloneable&lt;TimeSeries&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Monitoring_V3_TimeSeries_Metric_" data-uid="Google.Cloud.Monitoring.V3.TimeSeries.Metric*"></a>
+  <h4 id="Google_Cloud_Monitoring_V3_TimeSeries_Metric" data-uid="Google.Cloud.Monitoring.V3.TimeSeries.Metric">Metric</h4>
+  <div class="markdown level1 summary"><p>The associated metric. A fully-specified metric used to identify the time
 series.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Metric Metric { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.Metric.html">Metric</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Monitoring_V3_TimeSeries_MetricKind_" data-uid="Google.Cloud.Monitoring.V3.TimeSeries.MetricKind*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_TimeSeries_MetricKind" data-uid="Google.Cloud.Monitoring.V3.TimeSeries.MetricKind">MetricKind</h4>
-              <div class="markdown level1 summary"><p>The metric kind of the time series. When listing time series, this metric
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Metric Metric { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Metric.html">Metric</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Monitoring_V3_TimeSeries_MetricKind_" data-uid="Google.Cloud.Monitoring.V3.TimeSeries.MetricKind*"></a>
+  <h4 id="Google_Cloud_Monitoring_V3_TimeSeries_MetricKind" data-uid="Google.Cloud.Monitoring.V3.TimeSeries.MetricKind">MetricKind</h4>
+  <div class="markdown level1 summary"><p>The metric kind of the time series. When listing time series, this metric
 kind might be different from the metric kind of the associated metric if
 this time series is an alignment or reduction of other time series.</p>
 <p>When creating a time series, this field is optional. If present, it must be
@@ -142,29 +142,29 @@ metric&#39;s descriptor must be auto-created, then this field specifies the
 metric kind of the new descriptor and must be either <code>GAUGE</code> (the default)
 or <code>CUMULATIVE</code>.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public MetricDescriptor.Types.MetricKind MetricKind { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.MetricDescriptor.Types.MetricKind.html">MetricDescriptor.Types.MetricKind</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Monitoring_V3_TimeSeries_Points_" data-uid="Google.Cloud.Monitoring.V3.TimeSeries.Points*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_TimeSeries_Points" data-uid="Google.Cloud.Monitoring.V3.TimeSeries.Points">Points</h4>
-              <div class="markdown level1 summary"><p>The data points of this time series. When listing time series, the order of
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MetricDescriptor.Types.MetricKind MetricKind { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.MetricDescriptor.Types.MetricKind.html">MetricDescriptor.Types.MetricKind</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Monitoring_V3_TimeSeries_Points_" data-uid="Google.Cloud.Monitoring.V3.TimeSeries.Points*"></a>
+  <h4 id="Google_Cloud_Monitoring_V3_TimeSeries_Points" data-uid="Google.Cloud.Monitoring.V3.TimeSeries.Points">Points</h4>
+  <div class="markdown level1 summary"><p>The data points of this time series. When listing time series, the order of
 the points is specified by the list method.</p>
 <p>When creating a time series, this field must contain exactly one point and
 the point&#39;s type must be the same as the value type of the associated
@@ -172,80 +172,80 @@ metric. If the associated metric&#39;s descriptor must be auto-created, then
 the value type of the descriptor is determined by the point&#39;s type, which
 must be <code>BOOL</code>, <code>INT64</code>, <code>DOUBLE</code>, or <code>DISTRIBUTION</code>.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RepeatedField&lt;Point&gt; Points { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Monitoring.V3.Point.html">Point</a>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Monitoring_V3_TimeSeries_Resource_" data-uid="Google.Cloud.Monitoring.V3.TimeSeries.Resource*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_TimeSeries_Resource" data-uid="Google.Cloud.Monitoring.V3.TimeSeries.Resource">Resource</h4>
-              <div class="markdown level1 summary"><p>The associated resource. A fully-specified monitored resource used to
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;Point&gt; Points { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Monitoring.V3.Point.html">Point</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Monitoring_V3_TimeSeries_Resource_" data-uid="Google.Cloud.Monitoring.V3.TimeSeries.Resource*"></a>
+  <h4 id="Google_Cloud_Monitoring_V3_TimeSeries_Resource" data-uid="Google.Cloud.Monitoring.V3.TimeSeries.Resource">Resource</h4>
+  <div class="markdown level1 summary"><p>The associated resource. A fully-specified monitored resource used to
 identify the time series.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public MonitoredResource Resource { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.MonitoredResource.html">MonitoredResource</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Monitoring_V3_TimeSeries_ValueType_" data-uid="Google.Cloud.Monitoring.V3.TimeSeries.ValueType*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_TimeSeries_ValueType" data-uid="Google.Cloud.Monitoring.V3.TimeSeries.ValueType">ValueType</h4>
-              <div class="markdown level1 summary"><p>The value type of the time series. When listing time series, this value
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MonitoredResource Resource { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.MonitoredResource.html">MonitoredResource</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Monitoring_V3_TimeSeries_ValueType_" data-uid="Google.Cloud.Monitoring.V3.TimeSeries.ValueType*"></a>
+  <h4 id="Google_Cloud_Monitoring_V3_TimeSeries_ValueType" data-uid="Google.Cloud.Monitoring.V3.TimeSeries.ValueType">ValueType</h4>
+  <div class="markdown level1 summary"><p>The value type of the time series. When listing time series, this value
 type might be different from the value type of the associated metric if
 this time series is an alignment or reduction of other time series.</p>
 <p>When creating a time series, this field is optional. If present, it must be
 the same as the type of the data in the <code>points</code> field.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public MetricDescriptor.Types.ValueType ValueType { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.MetricDescriptor.Types.ValueType.html">MetricDescriptor.Types.ValueType</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MetricDescriptor.Types.ValueType ValueType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.MetricDescriptor.Types.ValueType.html">MetricDescriptor.Types.ValueType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

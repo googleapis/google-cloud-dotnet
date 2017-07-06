@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class CloudTrace
    | Google.Cloud.Diagnostics.AspNet ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,48 +67,48 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Diagnostics_AspNet_CloudTrace" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace">Class CloudTrace
-              </h1>
-              <div class="markdown level0 summary"><p>Google Trace for ASP.NET Applications.</p>
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace">
+  
+  
+  <h1 id="Google_Cloud_Diagnostics_AspNet_CloudTrace" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace">Class CloudTrace
+  </h1>
+  <div class="markdown level0 summary"><p>Google Trace for ASP.NET Applications.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">CloudTrace</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Diagnostics.AspNet</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Diagnostics.AspNet.dll</h6>
-              <h5 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class CloudTrace : IDisposable</code></pre>
-              </div>
-              <h5 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_remarks"><strong>Remarks</strong></h5>
-              <div class="markdown level0 remarks"><p>Handles tracing for ASP.NET applications and sends data to the Stackdriver Trace API Reporting.</p>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">CloudTrace</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Diagnostics.AspNet.html">Google.Cloud.Diagnostics.AspNet</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Diagnostics.AspNet.dll</h6>
+  <h5 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class CloudTrace : IDisposable</code></pre>
+  </div>
+  <h5 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Handles tracing for ASP.NET applications and sends data to the Stackdriver Trace API Reporting.</p>
 <p>By default when initialized a small sampling of http requests will automatically be traced.  Additional
 trace data can be collected manually.</p>
 <p>Docs: <a href="https://cloud.google.com/trace/docs/">https://cloud.google.com/trace/docs/</a></p>
 </div>
-              <h5 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_examples"><strong>Examples</strong></h5>
-              <pre><code> public class Global : HttpApplication
+  <h5 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_examples"><strong>Examples</strong></h5>
+  <pre><code> public class Global : HttpApplication
  { 
       public override void Init()
       {
@@ -117,7 +117,7 @@ trace data can be collected manually.</p>
       }
  }</code></pre>
 
-              <pre><code>public void MakeHttpRequest()
+  <pre><code>public void MakeHttpRequest()
 {
     var traceHeaderHandler = CloudTrace.CreateTracingHttpMessageHandler();
     using (var httpClient = HttpClientFactory.Create(traceHeaderHandler))
@@ -126,45 +126,45 @@ trace data can be collected manually.</p>
     }
 }</code></pre>
 
-              <pre><code>public void DoSomething()
+  <pre><code>public void DoSomething()
 {
     CloudTrace.Tracer.StartSpan("DoSomething");
     ...
     CloudTrace.Tracer.EndSpan();
 }</code></pre>
 
-              <h3 id="fields">Fields
-              </h3>
-              <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Tracer" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Tracer">Tracer</h4>
-              <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Google.Cloud.Diagnostics.Common.IManagedTracer.html">IManagedTracer</a> for tracing. It can be used
+  <h3 id="fields">Fields
+  </h3>
+  <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Tracer" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Tracer">Tracer</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Google.Cloud.Diagnostics.Common.IManagedTracer.html">IManagedTracer</a> for tracing. It can be used
 for creating spans for a trace as well as adding meta data to them.
 This <a class="xref" href="Google.Cloud.Diagnostics.Common.IManagedTracer.html">IManagedTracer</a> is a singleton.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static readonly IManagedTracer Tracer</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Diagnostics.Common.IManagedTracer.html">IManagedTracer</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h3 id="methods">Methods
-              </h3>
-              <a id="Google_Cloud_Diagnostics_AspNet_CloudTrace_CreateTracingHttpMessageHandler_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.CreateTracingHttpMessageHandler*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_CreateTracingHttpMessageHandler" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.CreateTracingHttpMessageHandler">CreateTracingHttpMessageHandler()</h4>
-              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.html">TraceHeaderPropagatingHandler</a> to propagate trace headers
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly IManagedTracer Tracer</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.Common.IManagedTracer.html">IManagedTracer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Diagnostics_AspNet_CloudTrace_CreateTracingHttpMessageHandler_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.CreateTracingHttpMessageHandler*"></a>
+  <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_CreateTracingHttpMessageHandler" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.CreateTracingHttpMessageHandler">CreateTracingHttpMessageHandler()</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.html">TraceHeaderPropagatingHandler</a> to propagate trace headers
 in Http requests.
 <example>
 <pre><code>public void DoSomething()
@@ -177,92 +177,92 @@ in Http requests.
 }</code></pre>
 </example></p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static TraceHeaderPropagatingHandler CreateTracingHttpMessageHandler()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.html">TraceHeaderPropagatingHandler</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Dispose_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Dispose*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Dispose" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Dispose">Dispose()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
-              </div>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">System.IDisposable.Dispose()</span></div>
-              <a id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Initialize_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Initialize_System_Web_HttpApplication_System_String_Google_Cloud_Diagnostics_Common_TraceOptions_Google_Cloud_Trace_V1_TraceServiceClient_Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize(System.Web.HttpApplication,System.String,Google.Cloud.Diagnostics.Common.TraceOptions,Google.Cloud.Trace.V1.TraceServiceClient,Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)">Initialize(HttpApplication, String, TraceOptions, TraceServiceClient, TraceDecisionPredicate)</h4>
-              <div class="markdown level1 summary"><p>Initialize tracing for this application.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TraceHeaderPropagatingHandler CreateTracingHttpMessageHandler()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.html">TraceHeaderPropagatingHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Dispose_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Dispose*"></a>
+  <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Dispose" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.IDisposable.Dispose()</span></div>
+  <a id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Initialize_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize*"></a>
+  <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Initialize_System_Web_HttpApplication_System_String_Google_Cloud_Diagnostics_Common_TraceOptions_Google_Cloud_Trace_V1_TraceServiceClient_Google_Cloud_Diagnostics_Common_TraceDecisionPredicate_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize(System.Web.HttpApplication,System.String,Google.Cloud.Diagnostics.Common.TraceOptions,Google.Cloud.Trace.V1.TraceServiceClient,Google.Cloud.Diagnostics.Common.TraceDecisionPredicate)">Initialize(HttpApplication, String, TraceOptions, TraceServiceClient, TraceDecisionPredicate)</h4>
+  <div class="markdown level1 summary"><p>Initialize tracing for this application.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static void Initialize(HttpApplication application, string projectId = null, TraceOptions options = null, TraceServiceClient client = null, TraceDecisionPredicate traceFallbackPredicate = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Web.HttpApplication</span></td>
-                    <td><span class="parametername">application</span></td>
-                    <td><p>The Http application.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Initialize(HttpApplication application, string projectId = null, TraceOptions options = null, TraceServiceClient client = null, TraceDecisionPredicate traceFallbackPredicate = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Web.HttpApplication</span></td>
+        <td><span class="parametername">application</span></td>
+        <td><p>The Http application.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">projectId</span></td>
-                    <td><p>Optional if running on Google App Engine or Google Compute Engine.
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">projectId</span></td>
+        <td><p>Optional if running on Google App Engine or Google Compute Engine.
     The Google Cloud Platform project ID. If unspecified and running on GAE or GCE the project ID will be
     detected from the platform.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Diagnostics.Common.TraceOptions.html">TraceOptions</a></td>
-                    <td><span class="parametername">options</span></td>
-                    <td><p>Optional trace options, if unset the default will be used.</p>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.Common.TraceOptions.html">TraceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Optional trace options, if unset the default will be used.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">Google.Cloud.Trace.V1.TraceServiceClient</span></td>
-                    <td><span class="parametername">client</span></td>
-                    <td><p>Optional trace client, if unset the default will be used.</p>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Cloud.Trace.V1.TraceServiceClient</span></td>
+        <td><span class="parametername">client</span></td>
+        <td><p>Optional trace client, if unset the default will be used.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html">TraceDecisionPredicate</a></td>
-                    <td><span class="parametername">traceFallbackPredicate</span></td>
-                    <td><p>Optional function to trace requests. If the trace header is not set
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.html">TraceDecisionPredicate</a></td>
+        <td><span class="parametername">traceFallbackPredicate</span></td>
+        <td><p>Optional function to trace requests. If the trace header is not set
     then this function will be called to determine if a given request should be traced.  This will
     not override trace headers.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

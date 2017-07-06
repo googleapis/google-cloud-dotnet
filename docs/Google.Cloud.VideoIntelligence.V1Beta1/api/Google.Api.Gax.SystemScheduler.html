@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SystemScheduler
    | Google.Cloud.VideoIntelligence.V1Beta1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,134 +67,134 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Api_Gax_SystemScheduler" data-uid="Google.Api.Gax.SystemScheduler">Class SystemScheduler
-              </h1>
-              <div class="markdown level0 summary"><p>Singleton implementation of <a class="xref" href="Google.Api.Gax.IScheduler.html">IScheduler</a> which uses <span class="xref">System.Threading.Tasks.Task.Delay(System.TimeSpan,System.Threading.CancellationToken)</span>.</p>
+            <article class="content wrap" id="_content" data-uid="Google.Api.Gax.SystemScheduler">
+  
+  
+  <h1 id="Google_Api_Gax_SystemScheduler" data-uid="Google.Api.Gax.SystemScheduler">Class SystemScheduler
+  </h1>
+  <div class="markdown level0 summary"><p>Singleton implementation of <a class="xref" href="Google.Api.Gax.IScheduler.html">IScheduler</a> which uses <span class="xref">System.Threading.Tasks.Task.Delay(System.TimeSpan,System.Threading.CancellationToken)</span>.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">SystemScheduler</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Api.Gax</h6>
-              <h6><strong>Assembly</strong>:Google.Api.Gax.dll</h6>
-              <h5 id="Google_Api_Gax_SystemScheduler_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class SystemScheduler : IScheduler</code></pre>
-              </div>
-              <h3 id="properties">Properties
-              </h3>
-              <a id="Google_Api_Gax_SystemScheduler_Instance_" data-uid="Google.Api.Gax.SystemScheduler.Instance*"></a>
-              <h4 id="Google_Api_Gax_SystemScheduler_Instance" data-uid="Google.Api.Gax.SystemScheduler.Instance">Instance</h4>
-              <div class="markdown level1 summary"><p>Retrieves the singleton instance.</p>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SystemScheduler</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Api.Gax.html">Google.Api.Gax</a></h6>
+  <h6><strong>Assembly</strong>: Google.Api.Gax.dll</h6>
+  <h5 id="Google_Api_Gax_SystemScheduler_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class SystemScheduler : IScheduler</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Api_Gax_SystemScheduler_Instance_" data-uid="Google.Api.Gax.SystemScheduler.Instance*"></a>
+  <h4 id="Google_Api_Gax_SystemScheduler_Instance" data-uid="Google.Api.Gax.SystemScheduler.Instance">Instance</h4>
+  <div class="markdown level1 summary"><p>Retrieves the singleton instance.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static SystemScheduler Instance { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.Gax.SystemScheduler.html">SystemScheduler</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h3 id="methods">Methods
-              </h3>
-              <a id="Google_Api_Gax_SystemScheduler_Delay_" data-uid="Google.Api.Gax.SystemScheduler.Delay*"></a>
-              <h4 id="Google_Api_Gax_SystemScheduler_Delay_System_TimeSpan_System_Threading_CancellationToken_" data-uid="Google.Api.Gax.SystemScheduler.Delay(System.TimeSpan,System.Threading.CancellationToken)">Delay(TimeSpan, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Returns a task which will complete after the given delay. Whether the returned
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SystemScheduler Instance { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.SystemScheduler.html">SystemScheduler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Api_Gax_SystemScheduler_Delay_" data-uid="Google.Api.Gax.SystemScheduler.Delay*"></a>
+  <h4 id="Google_Api_Gax_SystemScheduler_Delay_System_TimeSpan_System_Threading_CancellationToken_" data-uid="Google.Api.Gax.SystemScheduler.Delay(System.TimeSpan,System.Threading.CancellationToken)">Delay(TimeSpan, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Returns a task which will complete after the given delay. Whether the returned
 awaitable is configured to capture the current context or not is implementation-specific.
 (A test implementation may capture the current context to enable reliable testing.)</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task Delay(TimeSpan timeSpan, CancellationToken cancellationToken)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.TimeSpan</span></td>
-                    <td><span class="parametername">timeSpan</span></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><span class="parametername">cancellationToken</span></td>
-                    <td><p>The cancellation token that will be checked prior to completing the returned task.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task Delay(TimeSpan timeSpan, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">timeSpan</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token that will be checked prior to completing the returned task.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td><p>A task which will complete after the given delay.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task which will complete after the given delay.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Api.Gax.IScheduler.html#Google_Api_Gax_IScheduler_Delay_System_TimeSpan_System_Threading_CancellationToken_">IScheduler.Delay(TimeSpan, CancellationToken)</a></div>
-              <h3 id="extensionmethods">Extension Methods</h3>
-              <div>
-                  <a class="xref" href="Google.Api.Gax.SchedulerExtensions.html#Google_Api_Gax_SchedulerExtensions_Sleep_Google_Api_Gax_IScheduler_System_TimeSpan_System_Threading_CancellationToken_">SchedulerExtensions.Sleep(IScheduler, TimeSpan, CancellationToken)</a>
-              </div>
-                        </article>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Google.Api.Gax.IScheduler.html#Google_Api_Gax_IScheduler_Delay_System_TimeSpan_System_Threading_CancellationToken_">IScheduler.Delay(TimeSpan, CancellationToken)</a></div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Google.Api.Gax.SchedulerExtensions.html#Google_Api_Gax_SchedulerExtensions_Sleep_Google_Api_Gax_IScheduler_System_TimeSpan_System_Threading_CancellationToken_">SchedulerExtensions.Sleep(IScheduler, TimeSpan, CancellationToken)</a>
+  </div>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class CropHintsParams
    | Google.Cloud.Vision.V1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,72 +67,72 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Vision_V1_CropHintsParams" data-uid="Google.Cloud.Vision.V1.CropHintsParams">Class CropHintsParams
-              </h1>
-              <div class="markdown level0 summary"><p>Parameters for crop hints annotation request.</p>
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Vision.V1.CropHintsParams">
+  
+  
+  <h1 id="Google_Cloud_Vision_V1_CropHintsParams" data-uid="Google.Cloud.Vision.V1.CropHintsParams">Class CropHintsParams
+  </h1>
+  <div class="markdown level0 summary"><p>Parameters for crop hints annotation request.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">CropHintsParams</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Vision.V1</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Vision.V1.dll</h6>
-              <h5 id="Google_Cloud_Vision_V1_CropHintsParams_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class CropHintsParams : IMessage&lt;CropHintsParams&gt;, IMessage, IEquatable&lt;CropHintsParams&gt;, IDeepCloneable&lt;CropHintsParams&gt;</code></pre>
-              </div>
-              <h3 id="properties">Properties
-              </h3>
-              <a id="Google_Cloud_Vision_V1_CropHintsParams_AspectRatios_" data-uid="Google.Cloud.Vision.V1.CropHintsParams.AspectRatios*"></a>
-              <h4 id="Google_Cloud_Vision_V1_CropHintsParams_AspectRatios" data-uid="Google.Cloud.Vision.V1.CropHintsParams.AspectRatios">AspectRatios</h4>
-              <div class="markdown level1 summary"><p>Aspect ratios in floats, representing the ratio of the width to the height
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">CropHintsParams</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Vision.V1.html">Google.Cloud.Vision.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Vision.V1.dll</h6>
+  <h5 id="Google_Cloud_Vision_V1_CropHintsParams_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class CropHintsParams : IMessage&lt;CropHintsParams&gt;, IMessage, IEquatable&lt;CropHintsParams&gt;, IDeepCloneable&lt;CropHintsParams&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Vision_V1_CropHintsParams_AspectRatios_" data-uid="Google.Cloud.Vision.V1.CropHintsParams.AspectRatios*"></a>
+  <h4 id="Google_Cloud_Vision_V1_CropHintsParams_AspectRatios" data-uid="Google.Cloud.Vision.V1.CropHintsParams.AspectRatios">AspectRatios</h4>
+  <div class="markdown level1 summary"><p>Aspect ratios in floats, representing the ratio of the width to the height
 of the image. For example, if the desired aspect ratio is 4/3, the
 corresponding float value should be 1.33333.  If not specified, the
 best possible crop is returned. The number of provided aspect ratios is
 limited to a maximum of 16; any aspect ratios provided after the 16th are
 ignored.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RepeatedField&lt;float&gt; AspectRatios { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<span class="xref">System.Single</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;float&gt; AspectRatios { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<span class="xref">System.Single</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

@@ -8,7 +8,7 @@
     <title>Google.Cloud.Speech.V1 | Google.Cloud.Speech.V1 </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google.Cloud.Speech.V1 | Google.Cloud.Speech.V1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -59,8 +59,8 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="googlecloudspeechv1">Google.Cloud.Speech.V1</h1>
-              
+<h1 id="googlecloudspeechv1">Google.Cloud.Speech.V1</h1>
+
 <p><code>Google.Cloud.Speech.V1</code> is a .NET client library for the <a href="https://cloud.google.com/speech">Google
 Cloud Speech API</a>.</p>
 <h1 id="installation">Installation</h1>
@@ -116,7 +116,7 @@ Console.WriteLine(response);
 request, and get a single response with the result of the analysis.</p>
 <p>The LongRunningRecognize method still requires all of the audio data to be
 passed in a single request, but the response from the RPC is a
-Google.Longrunning.Operation, representing an operation which could
+Google.LongRunning.Operation, representing an operation which could
 take some time to complete. It contains a token which can be used to
 retrieve the results later - you can think of it as a more
 persistent and remote <code>Task&lt;T&gt;</code> to a first approximation.</p>
@@ -126,8 +126,7 @@ and the server emits a number of responses. This enables a
 conversation to be transcribed in near real time, for example,
 without the client needing to split it into chunks for single
 operations.</p>
-
-            </article>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

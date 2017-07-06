@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class EntityAnnotation
    | Google.Cloud.Vision.V1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,276 +67,276 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Vision_V1_EntityAnnotation" data-uid="Google.Cloud.Vision.V1.EntityAnnotation">Class EntityAnnotation
-              </h1>
-              <div class="markdown level0 summary"><p>Set of detected entity features.</p>
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Vision.V1.EntityAnnotation">
+  
+  
+  <h1 id="Google_Cloud_Vision_V1_EntityAnnotation" data-uid="Google.Cloud.Vision.V1.EntityAnnotation">Class EntityAnnotation
+  </h1>
+  <div class="markdown level0 summary"><p>Set of detected entity features.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">EntityAnnotation</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Vision.V1</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Vision.V1.dll</h6>
-              <h5 id="Google_Cloud_Vision_V1_EntityAnnotation_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class EntityAnnotation : IMessage&lt;EntityAnnotation&gt;, IMessage, IEquatable&lt;EntityAnnotation&gt;, IDeepCloneable&lt;EntityAnnotation&gt;</code></pre>
-              </div>
-              <h3 id="properties">Properties
-              </h3>
-              <a id="Google_Cloud_Vision_V1_EntityAnnotation_BoundingPoly_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.BoundingPoly*"></a>
-              <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_BoundingPoly" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.BoundingPoly">BoundingPoly</h4>
-              <div class="markdown level1 summary"><p>Image region to which this entity belongs. Currently not produced
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">EntityAnnotation</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Vision.V1.html">Google.Cloud.Vision.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Vision.V1.dll</h6>
+  <h5 id="Google_Cloud_Vision_V1_EntityAnnotation_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class EntityAnnotation : IMessage&lt;EntityAnnotation&gt;, IMessage, IEquatable&lt;EntityAnnotation&gt;, IDeepCloneable&lt;EntityAnnotation&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Vision_V1_EntityAnnotation_BoundingPoly_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.BoundingPoly*"></a>
+  <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_BoundingPoly" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.BoundingPoly">BoundingPoly</h4>
+  <div class="markdown level1 summary"><p>Image region to which this entity belongs. Currently not produced
 for <code>LABEL_DETECTION</code> features. For <code>TEXT_DETECTION</code> (OCR), <code>boundingPoly</code>s
 are produced for the entire text detected in an image region, followed by
 <code>boundingPoly</code>s for each word within the detected text.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public BoundingPoly BoundingPoly { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.BoundingPoly.html">BoundingPoly</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Vision_V1_EntityAnnotation_Confidence_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Confidence*"></a>
-              <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_Confidence" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Confidence">Confidence</h4>
-              <div class="markdown level1 summary"><p>The accuracy of the entity detection in an image.
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BoundingPoly BoundingPoly { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Vision.V1.BoundingPoly.html">BoundingPoly</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Vision_V1_EntityAnnotation_Confidence_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Confidence*"></a>
+  <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_Confidence" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Confidence">Confidence</h4>
+  <div class="markdown level1 summary"><p>The accuracy of the entity detection in an image.
 For example, for an image in which the &quot;Eiffel Tower&quot; entity is detected,
 this field represents the confidence that there is a tower in the query
 image. Range [0, 1].</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public float Confidence { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Single</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Vision_V1_EntityAnnotation_Description_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Description*"></a>
-              <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_Description" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Description">Description</h4>
-              <div class="markdown level1 summary"><p>Entity textual description, expressed in its <code>locale</code> language.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Confidence { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Vision_V1_EntityAnnotation_Description_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Description*"></a>
+  <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_Description" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Entity textual description, expressed in its <code>locale</code> language.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string Description { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Vision_V1_EntityAnnotation_Locale_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Locale*"></a>
-              <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_Locale" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Locale">Locale</h4>
-              <div class="markdown level1 summary"><p>The language code for the locale in which the entity textual
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Description { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Vision_V1_EntityAnnotation_Locale_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Locale*"></a>
+  <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_Locale" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Locale">Locale</h4>
+  <div class="markdown level1 summary"><p>The language code for the locale in which the entity textual
 <code>description</code> is expressed.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string Locale { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Vision_V1_EntityAnnotation_Locations_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Locations*"></a>
-              <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_Locations" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Locations">Locations</h4>
-              <div class="markdown level1 summary"><p>The location information for the detected entity. Multiple
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Locale { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Vision_V1_EntityAnnotation_Locations_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Locations*"></a>
+  <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_Locations" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Locations">Locations</h4>
+  <div class="markdown level1 summary"><p>The location information for the detected entity. Multiple
 <code>LocationInfo</code> elements can be present because one location may
 indicate the location of the scene in the image, and another location
 may indicate the location of the place where the image was taken.
 Location information is usually present for landmarks.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RepeatedField&lt;LocationInfo&gt; Locations { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Vision.V1.LocationInfo.html">LocationInfo</a>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Vision_V1_EntityAnnotation_Mid_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Mid*"></a>
-              <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_Mid" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Mid">Mid</h4>
-              <div class="markdown level1 summary"><p>Opaque entity ID. Some IDs may be available in
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;LocationInfo&gt; Locations { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Vision.V1.LocationInfo.html">LocationInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Vision_V1_EntityAnnotation_Mid_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Mid*"></a>
+  <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_Mid" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Mid">Mid</h4>
+  <div class="markdown level1 summary"><p>Opaque entity ID. Some IDs may be available in
 <a href="https://developers.google.com/knowledge-graph/">Google Knowledge Graph Search API</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string Mid { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Vision_V1_EntityAnnotation_Properties_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Properties*"></a>
-              <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_Properties" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Properties">Properties</h4>
-              <div class="markdown level1 summary"><p>Some entities may have optional user-supplied <code>Property</code> (name/value)
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Mid { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Vision_V1_EntityAnnotation_Properties_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Properties*"></a>
+  <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_Properties" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Properties">Properties</h4>
+  <div class="markdown level1 summary"><p>Some entities may have optional user-supplied <code>Property</code> (name/value)
 fields, such a score or string that qualifies the entity.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RepeatedField&lt;Property&gt; Properties { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Vision.V1.Property.html">Property</a>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Vision_V1_EntityAnnotation_Score_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Score*"></a>
-              <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_Score" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Score">Score</h4>
-              <div class="markdown level1 summary"><p>Overall score of the result. Range [0, 1].</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;Property&gt; Properties { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Vision.V1.Property.html">Property</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Vision_V1_EntityAnnotation_Score_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Score*"></a>
+  <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_Score" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Score">Score</h4>
+  <div class="markdown level1 summary"><p>Overall score of the result. Range [0, 1].</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public float Score { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Single</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Vision_V1_EntityAnnotation_Topicality_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Topicality*"></a>
-              <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_Topicality" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Topicality">Topicality</h4>
-              <div class="markdown level1 summary"><p>The relevancy of the ICA (Image Content Annotation) label to the
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Score { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Vision_V1_EntityAnnotation_Topicality_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Topicality*"></a>
+  <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_Topicality" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Topicality">Topicality</h4>
+  <div class="markdown level1 summary"><p>The relevancy of the ICA (Image Content Annotation) label to the
 image. For example, the relevancy of &quot;tower&quot; is likely higher to an image
 containing the detected &quot;Eiffel Tower&quot; than to an image containing a
 detected distant towering building, even though the confidence that
 there is a tower in each image may be the same. Range [0, 1].</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public float Topicality { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Single</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Topicality { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class LogSink
    | Google.Cloud.Logging.Log4Net ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,49 +67,49 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Logging_V2_LogSink" data-uid="Google.Cloud.Logging.V2.LogSink">Class LogSink
-              </h1>
-              <div class="markdown level0 summary"><p>Describes a sink used to export log entries to one of the following
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Logging.V2.LogSink">
+  
+  
+  <h1 id="Google_Cloud_Logging_V2_LogSink" data-uid="Google.Cloud.Logging.V2.LogSink">Class LogSink
+  </h1>
+  <div class="markdown level0 summary"><p>Describes a sink used to export log entries to one of the following
 destinations in any project: a Cloud Storage bucket, a BigQuery dataset, or a
 Cloud Pub/Sub topic.  A logs filter controls which log entries are
 exported. The sink must be created within a project, organization, billing
 account, or folder.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">LogSink</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Logging.V2</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Logging.V2.dll</h6>
-              <h5 id="Google_Cloud_Logging_V2_LogSink_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class LogSink : IMessage&lt;LogSink&gt;, IMessage, IEquatable&lt;LogSink&gt;, IDeepCloneable&lt;LogSink&gt;</code></pre>
-              </div>
-              <h3 id="properties">Properties
-              </h3>
-              <a id="Google_Cloud_Logging_V2_LogSink_Destination_" data-uid="Google.Cloud.Logging.V2.LogSink.Destination*"></a>
-              <h4 id="Google_Cloud_Logging_V2_LogSink_Destination" data-uid="Google.Cloud.Logging.V2.LogSink.Destination">Destination</h4>
-              <div class="markdown level1 summary"><p>Required. The export destination:</p>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">LogSink</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Logging.V2.html">Google.Cloud.Logging.V2</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Logging.V2.dll</h6>
+  <h5 id="Google_Cloud_Logging_V2_LogSink_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class LogSink : IMessage&lt;LogSink&gt;, IMessage, IEquatable&lt;LogSink&gt;, IDeepCloneable&lt;LogSink&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Logging_V2_LogSink_Destination_" data-uid="Google.Cloud.Logging.V2.LogSink.Destination*"></a>
+  <h4 id="Google_Cloud_Logging_V2_LogSink_Destination" data-uid="Google.Cloud.Logging.V2.LogSink.Destination">Destination</h4>
+  <div class="markdown level1 summary"><p>Required. The export destination:</p>
 <p>&quot;storage.googleapis.com/[GCS_BUCKET]&quot;
 &quot;bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]&quot;
 &quot;pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]&quot;</p>
@@ -118,110 +118,110 @@ have permission to write to the destination or else the log
 entries are not exported.  For more information, see
 <a href="/logging/docs/api/tasks/exporting-logs">Exporting Logs With Sinks</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string Destination { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Logging_V2_LogSink_DestinationAsResourceName_" data-uid="Google.Cloud.Logging.V2.LogSink.DestinationAsResourceName*"></a>
-              <h4 id="Google_Cloud_Logging_V2_LogSink_DestinationAsResourceName" data-uid="Google.Cloud.Logging.V2.LogSink.DestinationAsResourceName">DestinationAsResourceName</h4>
-              <div class="markdown level1 summary"><p><span class="xref">Google.Api.Gax.IResourceName</span>-typed view over the <a class="xref" href="Google.Cloud.Logging.V2.LogSink.html#Google_Cloud_Logging_V2_LogSink_Destination">Destination</a> resource name property.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Destination { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_LogSink_DestinationAsResourceName_" data-uid="Google.Cloud.Logging.V2.LogSink.DestinationAsResourceName*"></a>
+  <h4 id="Google_Cloud_Logging_V2_LogSink_DestinationAsResourceName" data-uid="Google.Cloud.Logging.V2.LogSink.DestinationAsResourceName">DestinationAsResourceName</h4>
+  <div class="markdown level1 summary"><p><span class="xref">Google.Api.Gax.IResourceName</span>-typed view over the <a class="xref" href="Google.Cloud.Logging.V2.LogSink.html#Google_Cloud_Logging_V2_LogSink_Destination">Destination</a> resource name property.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public IResourceName DestinationAsResourceName { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Api.Gax.IResourceName</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Logging_V2_LogSink_EndTime_" data-uid="Google.Cloud.Logging.V2.LogSink.EndTime*"></a>
-              <h4 id="Google_Cloud_Logging_V2_LogSink_EndTime" data-uid="Google.Cloud.Logging.V2.LogSink.EndTime">EndTime</h4>
-              <div class="markdown level1 summary"><p>Optional. The time at which this sink will stop exporting log entries.  Log
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IResourceName DestinationAsResourceName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.IResourceName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_LogSink_EndTime_" data-uid="Google.Cloud.Logging.V2.LogSink.EndTime*"></a>
+  <h4 id="Google_Cloud_Logging_V2_LogSink_EndTime" data-uid="Google.Cloud.Logging.V2.LogSink.EndTime">EndTime</h4>
+  <div class="markdown level1 summary"><p>Optional. The time at which this sink will stop exporting log entries.  Log
 entries are exported only if their timestamp is earlier than the end time.
 If this field is not supplied, there is no end time.  If both a start time
 and an end time are provided, then the end time must be later than the
 start time.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Timestamp EndTime { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Protobuf.WellKnownTypes.Timestamp</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Logging_V2_LogSink_Filter_" data-uid="Google.Cloud.Logging.V2.LogSink.Filter*"></a>
-              <h4 id="Google_Cloud_Logging_V2_LogSink_Filter" data-uid="Google.Cloud.Logging.V2.LogSink.Filter">Filter</h4>
-              <div class="markdown level1 summary"><p>Optional.
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Timestamp EndTime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Protobuf.WellKnownTypes.Timestamp</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_LogSink_Filter_" data-uid="Google.Cloud.Logging.V2.LogSink.Filter*"></a>
+  <h4 id="Google_Cloud_Logging_V2_LogSink_Filter" data-uid="Google.Cloud.Logging.V2.LogSink.Filter">Filter</h4>
+  <div class="markdown level1 summary"><p>Optional.
 An <a href="/logging/docs/view/advanced_filters">advanced logs filter</a>.  The only
 exported log entries are those that are in the resource owning the sink and
 that match the filter. The filter must use the log entry format specified
 by the <code>output_version_format</code> parameter.  For example, in the v2 format:</p>
 <p>logName=&quot;projects/[PROJECT_ID]/logs/[LOG_ID]&quot; AND severity&gt;=ERROR</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string Filter { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Logging_V2_LogSink_IncludeChildren_" data-uid="Google.Cloud.Logging.V2.LogSink.IncludeChildren*"></a>
-              <h4 id="Google_Cloud_Logging_V2_LogSink_IncludeChildren" data-uid="Google.Cloud.Logging.V2.LogSink.IncludeChildren">IncludeChildren</h4>
-              <div class="markdown level1 summary"><p>Optional. This field applies only to sinks owned by organizations and
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Filter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_LogSink_IncludeChildren_" data-uid="Google.Cloud.Logging.V2.LogSink.IncludeChildren*"></a>
+  <h4 id="Google_Cloud_Logging_V2_LogSink_IncludeChildren" data-uid="Google.Cloud.Logging.V2.LogSink.IncludeChildren">IncludeChildren</h4>
+  <div class="markdown level1 summary"><p>Optional. This field applies only to sinks owned by organizations and
 folders. If the field is false, the default, only the logs owned by the
 sink&#39;s parent resource are available for export. If the field is true, then
 logs from all the projects, folders, and billing accounts contained in the
@@ -234,112 +234,112 @@ from certain child projects, filter on the project part of the log name:</p>
 <p>logName:(&quot;projects/test-project1/&quot; OR &quot;projects/test-project2/&quot;) AND
 resource.type=gce_instance</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public bool IncludeChildren { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Boolean</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Logging_V2_LogSink_Name_" data-uid="Google.Cloud.Logging.V2.LogSink.Name*"></a>
-              <h4 id="Google_Cloud_Logging_V2_LogSink_Name" data-uid="Google.Cloud.Logging.V2.LogSink.Name">Name</h4>
-              <div class="markdown level1 summary"><p>Required. The client-assigned sink identifier, unique within the
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IncludeChildren { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_LogSink_Name_" data-uid="Google.Cloud.Logging.V2.LogSink.Name*"></a>
+  <h4 id="Google_Cloud_Logging_V2_LogSink_Name" data-uid="Google.Cloud.Logging.V2.LogSink.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Required. The client-assigned sink identifier, unique within the
 project. Example: <code>&quot;my-syslog-errors-to-pubsub&quot;</code>.  Sink identifiers are
 limited to 100 characters and can include only the following characters:
 upper and lower-case alphanumeric characters, underscores, hyphens, and
 periods.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Logging_V2_LogSink_OutputVersionFormat_" data-uid="Google.Cloud.Logging.V2.LogSink.OutputVersionFormat*"></a>
-              <h4 id="Google_Cloud_Logging_V2_LogSink_OutputVersionFormat" data-uid="Google.Cloud.Logging.V2.LogSink.OutputVersionFormat">OutputVersionFormat</h4>
-              <div class="markdown level1 summary"><p>Optional. The log entry format to use for this sink&#39;s exported log
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_LogSink_OutputVersionFormat_" data-uid="Google.Cloud.Logging.V2.LogSink.OutputVersionFormat*"></a>
+  <h4 id="Google_Cloud_Logging_V2_LogSink_OutputVersionFormat" data-uid="Google.Cloud.Logging.V2.LogSink.OutputVersionFormat">OutputVersionFormat</h4>
+  <div class="markdown level1 summary"><p>Optional. The log entry format to use for this sink&#39;s exported log
 entries.  The v2 format is used by default.
 <strong>The v1 format is deprecated</strong> and should be used only as part of a
 migration effort to v2.
 See <a href="/logging/docs/api/v2/migration-to-v2">Migration to the v2 API</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public LogSink.Types.VersionFormat OutputVersionFormat { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Logging.V2.LogSink.Types.VersionFormat.html">LogSink.Types.VersionFormat</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Logging_V2_LogSink_StartTime_" data-uid="Google.Cloud.Logging.V2.LogSink.StartTime*"></a>
-              <h4 id="Google_Cloud_Logging_V2_LogSink_StartTime" data-uid="Google.Cloud.Logging.V2.LogSink.StartTime">StartTime</h4>
-              <div class="markdown level1 summary"><p>Optional. The time at which this sink will begin exporting log entries.
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LogSink.Types.VersionFormat OutputVersionFormat { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Logging.V2.LogSink.Types.VersionFormat.html">LogSink.Types.VersionFormat</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_LogSink_StartTime_" data-uid="Google.Cloud.Logging.V2.LogSink.StartTime*"></a>
+  <h4 id="Google_Cloud_Logging_V2_LogSink_StartTime" data-uid="Google.Cloud.Logging.V2.LogSink.StartTime">StartTime</h4>
+  <div class="markdown level1 summary"><p>Optional. The time at which this sink will begin exporting log entries.
 Log entries are exported only if their timestamp is not earlier than the
 start time.  The default value of this field is the time the sink is
 created or updated.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Timestamp StartTime { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Protobuf.WellKnownTypes.Timestamp</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Logging_V2_LogSink_WriterIdentity_" data-uid="Google.Cloud.Logging.V2.LogSink.WriterIdentity*"></a>
-              <h4 id="Google_Cloud_Logging_V2_LogSink_WriterIdentity" data-uid="Google.Cloud.Logging.V2.LogSink.WriterIdentity">WriterIdentity</h4>
-              <div class="markdown level1 summary"><p>Output only. An IAM identity&amp;mdash;a service account or group&amp;mdash;under
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Timestamp StartTime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Protobuf.WellKnownTypes.Timestamp</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Logging_V2_LogSink_WriterIdentity_" data-uid="Google.Cloud.Logging.V2.LogSink.WriterIdentity*"></a>
+  <h4 id="Google_Cloud_Logging_V2_LogSink_WriterIdentity" data-uid="Google.Cloud.Logging.V2.LogSink.WriterIdentity">WriterIdentity</h4>
+  <div class="markdown level1 summary"><p>Output only. An IAM identity&amp;mdash;a service account or group&amp;mdash;under
 which Stackdriver Logging writes the exported log entries to the sink&#39;s
 destination.  This field is set by
 <a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>
@@ -353,27 +353,27 @@ resource</a>.
 Consult the destination service&#39;s documentation to determine the
 appropriate IAM roles to assign to the identity.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string WriterIdentity { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string WriterIdentity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

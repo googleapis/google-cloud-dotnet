@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ChannelPool
    | Google.Cloud.PubSub.V1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,198 +67,198 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Api_Gax_Grpc_ChannelPool" data-uid="Google.Api.Gax.Grpc.ChannelPool">Class ChannelPool
-              </h1>
-              <div class="markdown level0 summary"><p>A pool of channels for the same service, but with potentially different endpoints. Each endpoint
+            <article class="content wrap" id="_content" data-uid="Google.Api.Gax.Grpc.ChannelPool">
+  
+  
+  <h1 id="Google_Api_Gax_Grpc_ChannelPool" data-uid="Google.Api.Gax.Grpc.ChannelPool">Class ChannelPool
+  </h1>
+  <div class="markdown level0 summary"><p>A pool of channels for the same service, but with potentially different endpoints. Each endpoint
 has a single channel. All channels created by this pool use default application credentials.
 This class is thread-safe.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">ChannelPool</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Api.Gax.Grpc</h6>
-              <h6><strong>Assembly</strong>:Google.Api.Gax.Grpc.dll</h6>
-              <h5 id="Google_Api_Gax_Grpc_ChannelPool_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class ChannelPool</code></pre>
-              </div>
-              <h3 id="constructors">Constructors
-              </h3>
-              <a id="Google_Api_Gax_Grpc_ChannelPool__ctor_" data-uid="Google.Api.Gax.Grpc.ChannelPool.#ctor*"></a>
-              <h4 id="Google_Api_Gax_Grpc_ChannelPool__ctor_System_Collections_Generic_IEnumerable_System_String__" data-uid="Google.Api.Gax.Grpc.ChannelPool.#ctor(System.Collections.Generic.IEnumerable{System.String})">ChannelPool(IEnumerable&lt;String&gt;)</h4>
-              <div class="markdown level1 summary"><p>Creates a channel pool which will apply the specified scopes to the default application credentials
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ChannelPool</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Api.Gax.Grpc.html">Google.Api.Gax.Grpc</a></h6>
+  <h6><strong>Assembly</strong>: Google.Api.Gax.Grpc.dll</h6>
+  <h5 id="Google_Api_Gax_Grpc_ChannelPool_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ChannelPool</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Google_Api_Gax_Grpc_ChannelPool__ctor_" data-uid="Google.Api.Gax.Grpc.ChannelPool.#ctor*"></a>
+  <h4 id="Google_Api_Gax_Grpc_ChannelPool__ctor_System_Collections_Generic_IEnumerable_System_String__" data-uid="Google.Api.Gax.Grpc.ChannelPool.#ctor(System.Collections.Generic.IEnumerable{System.String})">ChannelPool(IEnumerable&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a channel pool which will apply the specified scopes to the default application credentials
 if they require any.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ChannelPool(IEnumerable&lt;string&gt; scopes)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
-                    <td><span class="parametername">scopes</span></td>
-                    <td><p>The scopes to apply. Must not be null, and must not contain null references. May be empty.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ChannelPool(IEnumerable&lt;string&gt; scopes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">scopes</span></td>
+        <td><p>The scopes to apply. Must not be null, and must not contain null references. May be empty.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h3 id="methods">Methods
-              </h3>
-              <a id="Google_Api_Gax_Grpc_ChannelPool_GetChannel_" data-uid="Google.Api.Gax.Grpc.ChannelPool.GetChannel*"></a>
-              <h4 id="Google_Api_Gax_Grpc_ChannelPool_GetChannel_Google_Api_Gax_Grpc_ServiceEndpoint_" data-uid="Google.Api.Gax.Grpc.ChannelPool.GetChannel(Google.Api.Gax.Grpc.ServiceEndpoint)">GetChannel(ServiceEndpoint)</h4>
-              <div class="markdown level1 summary"><p>Returns a channel from this pool, creating a new one if there is no channel
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Api_Gax_Grpc_ChannelPool_GetChannel_" data-uid="Google.Api.Gax.Grpc.ChannelPool.GetChannel*"></a>
+  <h4 id="Google_Api_Gax_Grpc_ChannelPool_GetChannel_Google_Api_Gax_Grpc_ServiceEndpoint_" data-uid="Google.Api.Gax.Grpc.ChannelPool.GetChannel(Google.Api.Gax.Grpc.ServiceEndpoint)">GetChannel(ServiceEndpoint)</h4>
+  <div class="markdown level1 summary"><p>Returns a channel from this pool, creating a new one if there is no channel
 already associated with <span class="paramref">endpoint</span>.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Channel GetChannel(ServiceEndpoint endpoint)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a></td>
-                    <td><span class="parametername">endpoint</span></td>
-                    <td><p>The endpoint to connect to. Must not be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Channel GetChannel(ServiceEndpoint endpoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a></td>
+        <td><span class="parametername">endpoint</span></td>
+        <td><p>The endpoint to connect to. Must not be null.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Grpc.Core.Channel.html">Channel</a></td>
-                    <td><p>A channel for the specified endpoint.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Channel.html">Channel</a></td>
+        <td><p>A channel for the specified endpoint.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Api_Gax_Grpc_ChannelPool_GetChannelAsync_" data-uid="Google.Api.Gax.Grpc.ChannelPool.GetChannelAsync*"></a>
-              <h4 id="Google_Api_Gax_Grpc_ChannelPool_GetChannelAsync_Google_Api_Gax_Grpc_ServiceEndpoint_" data-uid="Google.Api.Gax.Grpc.ChannelPool.GetChannelAsync(Google.Api.Gax.Grpc.ServiceEndpoint)">GetChannelAsync(ServiceEndpoint)</h4>
-              <div class="markdown level1 summary"><p>Asynchronously returns a channel from this pool, creating a new one if there is no channel
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Gax_Grpc_ChannelPool_GetChannelAsync_" data-uid="Google.Api.Gax.Grpc.ChannelPool.GetChannelAsync*"></a>
+  <h4 id="Google_Api_Gax_Grpc_ChannelPool_GetChannelAsync_Google_Api_Gax_Grpc_ServiceEndpoint_" data-uid="Google.Api.Gax.Grpc.ChannelPool.GetChannelAsync(Google.Api.Gax.Grpc.ServiceEndpoint)">GetChannelAsync(ServiceEndpoint)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously returns a channel from this pool, creating a new one if there is no channel
 already associated with <span class="paramref">endpoint</span>.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task&lt;Channel&gt; GetChannelAsync(ServiceEndpoint endpoint)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a></td>
-                    <td><span class="parametername">endpoint</span></td>
-                    <td><p>The endpoint to connect to. Must not be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Channel&gt; GetChannelAsync(ServiceEndpoint endpoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a></td>
+        <td><span class="parametername">endpoint</span></td>
+        <td><p>The endpoint to connect to. Must not be null.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Grpc.Core.Channel.html">Channel</a>&gt;</td>
-                    <td><p>A task representing the asynchronous operation. The value of the completed
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Grpc.Core.Channel.html">Channel</a>&gt;</td>
+        <td><p>A task representing the asynchronous operation. The value of the completed
 task will be channel for the specified endpoint.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Api_Gax_Grpc_ChannelPool_ShutdownChannelsAsync_" data-uid="Google.Api.Gax.Grpc.ChannelPool.ShutdownChannelsAsync*"></a>
-              <h4 id="Google_Api_Gax_Grpc_ChannelPool_ShutdownChannelsAsync" data-uid="Google.Api.Gax.Grpc.ChannelPool.ShutdownChannelsAsync">ShutdownChannelsAsync()</h4>
-              <div class="markdown level1 summary"><p>Shuts down all the currently-allocated channels asynchronously. This does not prevent the channel
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Gax_Grpc_ChannelPool_ShutdownChannelsAsync_" data-uid="Google.Api.Gax.Grpc.ChannelPool.ShutdownChannelsAsync*"></a>
+  <h4 id="Google_Api_Gax_Grpc_ChannelPool_ShutdownChannelsAsync" data-uid="Google.Api.Gax.Grpc.ChannelPool.ShutdownChannelsAsync">ShutdownChannelsAsync()</h4>
+  <div class="markdown level1 summary"><p>Shuts down all the currently-allocated channels asynchronously. This does not prevent the channel
 pool from being used later on, but the currently-allocated channels will not be reused.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task ShutdownChannelsAsync()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task ShutdownChannelsAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

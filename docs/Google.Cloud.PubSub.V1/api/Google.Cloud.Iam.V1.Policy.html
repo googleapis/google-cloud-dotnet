@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Policy
    | Google.Cloud.PubSub.V1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,12 +67,12 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Iam_V1_Policy" data-uid="Google.Cloud.Iam.V1.Policy">Class Policy
-              </h1>
-              <div class="markdown level0 summary"><p>Defines an Identity and Access Management (IAM) policy. It is used to
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Iam.V1.Policy">
+  
+  
+  <h1 id="Google_Cloud_Iam_V1_Policy" data-uid="Google.Cloud.Iam.V1.Policy">Class Policy
+  </h1>
+  <div class="markdown level0 summary"><p>Defines an Identity and Access Management (IAM) policy. It is used to
 specify access control policies for Cloud Platform resources.</p>
 <p>A <code>Policy</code> consists of a list of <code>bindings</code>. A <code>Binding</code> binds a list of
 <code>members</code> to a <code>role</code>, where the members can be user accounts, Google groups,
@@ -99,64 +99,64 @@ defined by IAM.</p>
 <p>For a description of IAM and its features, see the
 <a href="https://cloud.google.com/iam">IAM developer&#39;s guide</a>.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">Policy</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Iam.V1</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Iam.V1.dll</h6>
-              <h5 id="Google_Cloud_Iam_V1_Policy_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class Policy : IMessage&lt;Policy&gt;, IMessage, IEquatable&lt;Policy&gt;, IDeepCloneable&lt;Policy&gt;</code></pre>
-              </div>
-              <h3 id="properties">Properties
-              </h3>
-              <a id="Google_Cloud_Iam_V1_Policy_Bindings_" data-uid="Google.Cloud.Iam.V1.Policy.Bindings*"></a>
-              <h4 id="Google_Cloud_Iam_V1_Policy_Bindings" data-uid="Google.Cloud.Iam.V1.Policy.Bindings">Bindings</h4>
-              <div class="markdown level1 summary"><p>Associates a list of <code>members</code> to a <code>role</code>.
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Policy</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Iam.V1.html">Google.Cloud.Iam.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Iam.V1.dll</h6>
+  <h5 id="Google_Cloud_Iam_V1_Policy_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class Policy : IMessage&lt;Policy&gt;, IMessage, IEquatable&lt;Policy&gt;, IDeepCloneable&lt;Policy&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Iam_V1_Policy_Bindings_" data-uid="Google.Cloud.Iam.V1.Policy.Bindings*"></a>
+  <h4 id="Google_Cloud_Iam_V1_Policy_Bindings" data-uid="Google.Cloud.Iam.V1.Policy.Bindings">Bindings</h4>
+  <div class="markdown level1 summary"><p>Associates a list of <code>members</code> to a <code>role</code>.
 Multiple <code>bindings</code> must not be specified for the same <code>role</code>.
 <code>bindings</code> with no members will result in an error.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RepeatedField&lt;Binding&gt; Bindings { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Iam.V1.Binding.html">Binding</a>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Iam_V1_Policy_Etag_" data-uid="Google.Cloud.Iam.V1.Policy.Etag*"></a>
-              <h4 id="Google_Cloud_Iam_V1_Policy_Etag" data-uid="Google.Cloud.Iam.V1.Policy.Etag">Etag</h4>
-              <div class="markdown level1 summary"><p><code>etag</code> is used for optimistic concurrency control as a way to help
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;Binding&gt; Bindings { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Iam.V1.Binding.html">Binding</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Iam_V1_Policy_Etag_" data-uid="Google.Cloud.Iam.V1.Policy.Etag*"></a>
+  <h4 id="Google_Cloud_Iam_V1_Policy_Etag" data-uid="Google.Cloud.Iam.V1.Policy.Etag">Etag</h4>
+  <div class="markdown level1 summary"><p><code>etag</code> is used for optimistic concurrency control as a way to help
 prevent simultaneous updates of a policy from overwriting each other.
 It is strongly suggested that systems make use of the <code>etag</code> in the
 read-modify-write cycle to perform policy updates in order to avoid race
@@ -166,51 +166,51 @@ ensure that their change will be applied to the same version of the policy.</p>
 <p>If no <code>etag</code> is provided in the call to <code>setIamPolicy</code>, then the existing
 policy is overwritten blindly.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ByteString Etag { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Iam_V1_Policy_Version_" data-uid="Google.Cloud.Iam.V1.Policy.Version*"></a>
-              <h4 id="Google_Cloud_Iam_V1_Policy_Version" data-uid="Google.Cloud.Iam.V1.Policy.Version">Version</h4>
-              <div class="markdown level1 summary"><p>Version of the <code>Policy</code>. The default version is 0.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ByteString Etag { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Iam_V1_Policy_Version_" data-uid="Google.Cloud.Iam.V1.Policy.Version*"></a>
+  <h4 id="Google_Cloud_Iam_V1_Policy_Version" data-uid="Google.Cloud.Iam.V1.Policy.Version">Version</h4>
+  <div class="markdown level1 summary"><p>Version of the <code>Policy</code>. The default version is 0.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public int Version { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Version { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

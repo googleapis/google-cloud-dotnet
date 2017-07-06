@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Delegate AsyncAuthInterceptor
    | Google.Cloud.PubSub.V1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,60 +67,60 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Grpc_Core_AsyncAuthInterceptor" data-uid="Grpc.Core.AsyncAuthInterceptor">Delegate AsyncAuthInterceptor
-              </h1>
-              <div class="markdown level0 summary"><p>Asynchronous authentication interceptor for <a class="xref" href="Grpc.Core.CallCredentials.html">CallCredentials</a>.</p>
+            <article class="content wrap" id="_content" data-uid="Grpc.Core.AsyncAuthInterceptor">
+  
+  
+  <h1 id="Grpc_Core_AsyncAuthInterceptor" data-uid="Grpc.Core.AsyncAuthInterceptor">Delegate AsyncAuthInterceptor
+  </h1>
+  <div class="markdown level0 summary"><p>Asynchronous authentication interceptor for <a class="xref" href="Grpc.Core.CallCredentials.html">CallCredentials</a>.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <h6><strong>Namespace</strong>:Grpc.Core</h6>
-              <h6><strong>Assembly</strong>:Grpc.Core.dll</h6>
-              <h5 id="Grpc_Core_AsyncAuthInterceptor_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public delegate Task AsyncAuthInterceptor(AuthInterceptorContext context, Metadata metadata);</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Grpc.Core.AuthInterceptorContext.html">AuthInterceptorContext</a></td>
-                    <td><span class="parametername">context</span></td>
-                    <td><p>The interceptor context.</p>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Grpc.Core.html">Grpc.Core</a></h6>
+  <h6><strong>Assembly</strong>: Grpc.Core.dll</h6>
+  <h5 id="Grpc_Core_AsyncAuthInterceptor_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate Task AsyncAuthInterceptor(AuthInterceptorContext context, Metadata metadata);</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AuthInterceptorContext.html">AuthInterceptorContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The interceptor context.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
-                    <td><span class="parametername">metadata</span></td>
-                    <td><p>Metadata to populate with entries that will be added to outgoing call&#39;s headers.</p>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">metadata</span></td>
+        <td><p>Metadata to populate with entries that will be added to outgoing call&#39;s headers.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

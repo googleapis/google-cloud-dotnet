@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AnnotateTextResponse
    | Google.Cloud.Language.V1.Experimental ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,171 +67,171 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Language_V1_AnnotateTextResponse" data-uid="Google.Cloud.Language.V1.AnnotateTextResponse">Class AnnotateTextResponse
-              </h1>
-              <div class="markdown level0 summary"><p>The text annotations response message.</p>
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Language.V1.AnnotateTextResponse">
+  
+  
+  <h1 id="Google_Cloud_Language_V1_AnnotateTextResponse" data-uid="Google.Cloud.Language.V1.AnnotateTextResponse">Class AnnotateTextResponse
+  </h1>
+  <div class="markdown level0 summary"><p>The text annotations response message.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">AnnotateTextResponse</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Language.V1</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Language.V1.Experimental.dll</h6>
-              <h5 id="Google_Cloud_Language_V1_AnnotateTextResponse_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class AnnotateTextResponse : IMessage&lt;AnnotateTextResponse&gt;, IMessage, IEquatable&lt;AnnotateTextResponse&gt;, IDeepCloneable&lt;AnnotateTextResponse&gt;</code></pre>
-              </div>
-              <h3 id="properties">Properties
-              </h3>
-              <a id="Google_Cloud_Language_V1_AnnotateTextResponse_DocumentSentiment_" data-uid="Google.Cloud.Language.V1.AnnotateTextResponse.DocumentSentiment*"></a>
-              <h4 id="Google_Cloud_Language_V1_AnnotateTextResponse_DocumentSentiment" data-uid="Google.Cloud.Language.V1.AnnotateTextResponse.DocumentSentiment">DocumentSentiment</h4>
-              <div class="markdown level1 summary"><p>The overall sentiment for the document. Populated if the user enables
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">AnnotateTextResponse</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Language.V1.html">Google.Cloud.Language.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Language.V1.Experimental.dll</h6>
+  <h5 id="Google_Cloud_Language_V1_AnnotateTextResponse_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class AnnotateTextResponse : IMessage&lt;AnnotateTextResponse&gt;, IMessage, IEquatable&lt;AnnotateTextResponse&gt;, IDeepCloneable&lt;AnnotateTextResponse&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Language_V1_AnnotateTextResponse_DocumentSentiment_" data-uid="Google.Cloud.Language.V1.AnnotateTextResponse.DocumentSentiment*"></a>
+  <h4 id="Google_Cloud_Language_V1_AnnotateTextResponse_DocumentSentiment" data-uid="Google.Cloud.Language.V1.AnnotateTextResponse.DocumentSentiment">DocumentSentiment</h4>
+  <div class="markdown level1 summary"><p>The overall sentiment for the document. Populated if the user enables
 [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_document_sentiment].</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Sentiment DocumentSentiment { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.Sentiment.html">Sentiment</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Language_V1_AnnotateTextResponse_Entities_" data-uid="Google.Cloud.Language.V1.AnnotateTextResponse.Entities*"></a>
-              <h4 id="Google_Cloud_Language_V1_AnnotateTextResponse_Entities" data-uid="Google.Cloud.Language.V1.AnnotateTextResponse.Entities">Entities</h4>
-              <div class="markdown level1 summary"><p>Entities, along with their semantic information, in the input document.
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Sentiment DocumentSentiment { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Language.V1.Sentiment.html">Sentiment</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Language_V1_AnnotateTextResponse_Entities_" data-uid="Google.Cloud.Language.V1.AnnotateTextResponse.Entities*"></a>
+  <h4 id="Google_Cloud_Language_V1_AnnotateTextResponse_Entities" data-uid="Google.Cloud.Language.V1.AnnotateTextResponse.Entities">Entities</h4>
+  <div class="markdown level1 summary"><p>Entities, along with their semantic information, in the input document.
 Populated if the user enables
 [AnnotateTextRequest.Features.extract_entities][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entities].</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RepeatedField&lt;Entity&gt; Entities { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Language.V1.Entity.html">Entity</a>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Language_V1_AnnotateTextResponse_Language_" data-uid="Google.Cloud.Language.V1.AnnotateTextResponse.Language*"></a>
-              <h4 id="Google_Cloud_Language_V1_AnnotateTextResponse_Language" data-uid="Google.Cloud.Language.V1.AnnotateTextResponse.Language">Language</h4>
-              <div class="markdown level1 summary"><p>The language of the text, which will be the same as the language specified
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;Entity&gt; Entities { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Language.V1.Entity.html">Entity</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Language_V1_AnnotateTextResponse_Language_" data-uid="Google.Cloud.Language.V1.AnnotateTextResponse.Language*"></a>
+  <h4 id="Google_Cloud_Language_V1_AnnotateTextResponse_Language" data-uid="Google.Cloud.Language.V1.AnnotateTextResponse.Language">Language</h4>
+  <div class="markdown level1 summary"><p>The language of the text, which will be the same as the language specified
 in the request or, if not specified, the automatically-detected language.
 See [Document.language][google.cloud.language.v1beta2.Document.language] field for more details.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string Language { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Language_V1_AnnotateTextResponse_Sentences_" data-uid="Google.Cloud.Language.V1.AnnotateTextResponse.Sentences*"></a>
-              <h4 id="Google_Cloud_Language_V1_AnnotateTextResponse_Sentences" data-uid="Google.Cloud.Language.V1.AnnotateTextResponse.Sentences">Sentences</h4>
-              <div class="markdown level1 summary"><p>Sentences in the input document. Populated if the user enables
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Language { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Language_V1_AnnotateTextResponse_Sentences_" data-uid="Google.Cloud.Language.V1.AnnotateTextResponse.Sentences*"></a>
+  <h4 id="Google_Cloud_Language_V1_AnnotateTextResponse_Sentences" data-uid="Google.Cloud.Language.V1.AnnotateTextResponse.Sentences">Sentences</h4>
+  <div class="markdown level1 summary"><p>Sentences in the input document. Populated if the user enables
 [AnnotateTextRequest.Features.extract_syntax][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_syntax].</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RepeatedField&lt;Sentence&gt; Sentences { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Language.V1.Sentence.html">Sentence</a>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Language_V1_AnnotateTextResponse_Tokens_" data-uid="Google.Cloud.Language.V1.AnnotateTextResponse.Tokens*"></a>
-              <h4 id="Google_Cloud_Language_V1_AnnotateTextResponse_Tokens" data-uid="Google.Cloud.Language.V1.AnnotateTextResponse.Tokens">Tokens</h4>
-              <div class="markdown level1 summary"><p>Tokens, along with their syntactic information, in the input document.
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;Sentence&gt; Sentences { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Language.V1.Sentence.html">Sentence</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Language_V1_AnnotateTextResponse_Tokens_" data-uid="Google.Cloud.Language.V1.AnnotateTextResponse.Tokens*"></a>
+  <h4 id="Google_Cloud_Language_V1_AnnotateTextResponse_Tokens" data-uid="Google.Cloud.Language.V1.AnnotateTextResponse.Tokens">Tokens</h4>
+  <div class="markdown level1 summary"><p>Tokens, along with their syntactic information, in the input document.
 Populated if the user enables
 [AnnotateTextRequest.Features.extract_syntax][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_syntax].</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RepeatedField&lt;Token&gt; Tokens { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Language.V1.Token.html">Token</a>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;Token&gt; Tokens { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Language.V1.Token.html">Token</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

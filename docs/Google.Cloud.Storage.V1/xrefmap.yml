@@ -260,6 +260,24 @@ references:
   commentId: Overload:Google.Api.Gax.GaxPreconditions.CheckArgumentRange
   fullName: Google.Api.Gax.GaxPreconditions.CheckArgumentRange
   nameWithType: GaxPreconditions.CheckArgumentRange
+- uid: Google.Api.Gax.GaxPreconditions.CheckArgumentRange``1(``0,System.String,``0,``0)
+  name: CheckArgumentRange<T>(T, String, T, T)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckArgumentRange__1___0_System_String___0___0_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckArgumentRange``1(``0,System.String,``0,``0)
+  name.vb: CheckArgumentRange(Of T)(T, String, T, T)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckArgumentRange<T>(T, System.String, T, T)
+  fullName.vb: Google.Api.Gax.GaxPreconditions.CheckArgumentRange(Of T)(T, System.String, T, T)
+  nameWithType: GaxPreconditions.CheckArgumentRange<T>(T, String, T, T)
+  nameWithType.vb: GaxPreconditions.CheckArgumentRange(Of T)(T, String, T, T)
+- uid: Google.Api.Gax.GaxPreconditions.CheckArgumentRange``1(System.Nullable{``0},System.String,``0,``0)
+  name: CheckArgumentRange<T>(Nullable<T>, String, T, T)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckArgumentRange__1_System_Nullable___0__System_String___0___0_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckArgumentRange``1(System.Nullable{``0},System.String,``0,``0)
+  name.vb: CheckArgumentRange(Of T)(Nullable(Of T), String, T, T)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckArgumentRange<T>(System.Nullable<T>, System.String, T, T)
+  fullName.vb: Google.Api.Gax.GaxPreconditions.CheckArgumentRange(Of T)(System.Nullable(Of T), System.String, T, T)
+  nameWithType: GaxPreconditions.CheckArgumentRange<T>(Nullable<T>, String, T, T)
+  nameWithType.vb: GaxPreconditions.CheckArgumentRange(Of T)(Nullable(Of T), String, T, T)
 - uid: Google.Api.Gax.GaxPreconditions.CheckEnumValue*
   name: CheckEnumValue
   href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckEnumValue_
@@ -275,6 +293,57 @@ references:
   fullName.vb: Google.Api.Gax.GaxPreconditions.CheckEnumValue(Of T)(T, System.String)
   nameWithType: GaxPreconditions.CheckEnumValue<T>(T, String)
   nameWithType.vb: GaxPreconditions.CheckEnumValue(Of T)(T, String)
+- uid: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Double,System.String)
+  name: CheckNonNegative(Double, String)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckNonNegative_System_Double_System_String_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Double,System.String)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Double, System.String)
+  nameWithType: GaxPreconditions.CheckNonNegative(Double, String)
+- uid: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Int32,System.String)
+  name: CheckNonNegative(Int32, String)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckNonNegative_System_Int32_System_String_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Int32,System.String)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Int32, System.String)
+  nameWithType: GaxPreconditions.CheckNonNegative(Int32, String)
+- uid: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Int64,System.String)
+  name: CheckNonNegative(Int64, String)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckNonNegative_System_Int64_System_String_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Int64,System.String)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Int64, System.String)
+  nameWithType: GaxPreconditions.CheckNonNegative(Int64, String)
+- uid: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable{System.Double},System.String)
+  name: CheckNonNegative(Nullable<Double>, String)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckNonNegative_System_Nullable_System_Double__System_String_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable{System.Double},System.String)
+  name.vb: CheckNonNegative(Nullable(Of Double), String)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable<System.Double>, System.String)
+  fullName.vb: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable(Of System.Double), System.String)
+  nameWithType: GaxPreconditions.CheckNonNegative(Nullable<Double>, String)
+  nameWithType.vb: GaxPreconditions.CheckNonNegative(Nullable(Of Double), String)
+- uid: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable{System.Int32},System.String)
+  name: CheckNonNegative(Nullable<Int32>, String)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckNonNegative_System_Nullable_System_Int32__System_String_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable{System.Int32},System.String)
+  name.vb: CheckNonNegative(Nullable(Of Int32), String)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable<System.Int32>, System.String)
+  fullName.vb: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable(Of System.Int32), System.String)
+  nameWithType: GaxPreconditions.CheckNonNegative(Nullable<Int32>, String)
+  nameWithType.vb: GaxPreconditions.CheckNonNegative(Nullable(Of Int32), String)
+- uid: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable{System.Int64},System.String)
+  name: CheckNonNegative(Nullable<Int64>, String)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckNonNegative_System_Nullable_System_Int64__System_String_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable{System.Int64},System.String)
+  name.vb: CheckNonNegative(Nullable(Of Int64), String)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable<System.Int64>, System.String)
+  fullName.vb: Google.Api.Gax.GaxPreconditions.CheckNonNegative(System.Nullable(Of System.Int64), System.String)
+  nameWithType: GaxPreconditions.CheckNonNegative(Nullable<Int64>, String)
+  nameWithType.vb: GaxPreconditions.CheckNonNegative(Nullable(Of Int64), String)
+- uid: Google.Api.Gax.GaxPreconditions.CheckNonNegative*
+  name: CheckNonNegative
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckNonNegative_
+  commentId: Overload:Google.Api.Gax.GaxPreconditions.CheckNonNegative
+  fullName: Google.Api.Gax.GaxPreconditions.CheckNonNegative
+  nameWithType: GaxPreconditions.CheckNonNegative
 - uid: Google.Api.Gax.GaxPreconditions.CheckNotNull*
   name: CheckNotNull
   href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckNotNull_
@@ -4671,6 +4740,36 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.Data.Bucket.DefaultObjectAcl
   fullName: Google.Apis.Storage.v1.Data.Bucket.DefaultObjectAcl
   nameWithType: Bucket.DefaultObjectAcl
+- uid: Google.Apis.Storage.v1.Data.Bucket.Encryption
+  name: Encryption
+  href: api/Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket_Encryption
+  commentId: P:Google.Apis.Storage.v1.Data.Bucket.Encryption
+  fullName: Google.Apis.Storage.v1.Data.Bucket.Encryption
+  nameWithType: Bucket.Encryption
+- uid: Google.Apis.Storage.v1.Data.Bucket.Encryption*
+  name: Encryption
+  href: api/Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket_Encryption_
+  commentId: Overload:Google.Apis.Storage.v1.Data.Bucket.Encryption
+  fullName: Google.Apis.Storage.v1.Data.Bucket.Encryption
+  nameWithType: Bucket.Encryption
+- uid: Google.Apis.Storage.v1.Data.Bucket.EncryptionData
+  name: Bucket.EncryptionData
+  href: api/Google.Apis.Storage.v1.Data.Bucket.EncryptionData.html
+  commentId: T:Google.Apis.Storage.v1.Data.Bucket.EncryptionData
+  fullName: Google.Apis.Storage.v1.Data.Bucket.EncryptionData
+  nameWithType: Bucket.EncryptionData
+- uid: Google.Apis.Storage.v1.Data.Bucket.EncryptionData.DefaultKmsKeyName
+  name: DefaultKmsKeyName
+  href: api/Google.Apis.Storage.v1.Data.Bucket.EncryptionData.html#Google_Apis_Storage_v1_Data_Bucket_EncryptionData_DefaultKmsKeyName
+  commentId: P:Google.Apis.Storage.v1.Data.Bucket.EncryptionData.DefaultKmsKeyName
+  fullName: Google.Apis.Storage.v1.Data.Bucket.EncryptionData.DefaultKmsKeyName
+  nameWithType: Bucket.EncryptionData.DefaultKmsKeyName
+- uid: Google.Apis.Storage.v1.Data.Bucket.EncryptionData.DefaultKmsKeyName*
+  name: DefaultKmsKeyName
+  href: api/Google.Apis.Storage.v1.Data.Bucket.EncryptionData.html#Google_Apis_Storage_v1_Data_Bucket_EncryptionData_DefaultKmsKeyName_
+  commentId: Overload:Google.Apis.Storage.v1.Data.Bucket.EncryptionData.DefaultKmsKeyName
+  fullName: Google.Apis.Storage.v1.Data.Bucket.EncryptionData.DefaultKmsKeyName
+  nameWithType: Bucket.EncryptionData.DefaultKmsKeyName
 - uid: Google.Apis.Storage.v1.Data.Bucket.ETag
   name: ETag
   href: api/Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket_ETag
@@ -6027,6 +6126,18 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.Data.Object.Kind
   fullName: Google.Apis.Storage.v1.Data.Object.Kind
   nameWithType: Object.Kind
+- uid: Google.Apis.Storage.v1.Data.Object.KmsKeyName
+  name: KmsKeyName
+  href: api/Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object_KmsKeyName
+  commentId: P:Google.Apis.Storage.v1.Data.Object.KmsKeyName
+  fullName: Google.Apis.Storage.v1.Data.Object.KmsKeyName
+  nameWithType: Object.KmsKeyName
+- uid: Google.Apis.Storage.v1.Data.Object.KmsKeyName*
+  name: KmsKeyName
+  href: api/Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object_KmsKeyName_
+  commentId: Overload:Google.Apis.Storage.v1.Data.Object.KmsKeyName
+  fullName: Google.Apis.Storage.v1.Data.Object.KmsKeyName
+  nameWithType: Object.KmsKeyName
 - uid: Google.Apis.Storage.v1.Data.Object.Md5Hash
   name: Md5Hash
   href: api/Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object_Md5Hash
@@ -9033,6 +9144,42 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadAsync
   fullName: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadAsync
   nameWithType: ObjectsResource.ComposeRequest.DownloadAsync
+- uid: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadRange(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue)
+  name: DownloadRange(Stream, RangeHeaderValue)
+  href: api/Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.html#Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadRange_System_IO_Stream_System_Net_Http_Headers_RangeHeaderValue_
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadRange(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue)
+  fullName: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadRange(System.IO.Stream, System.Net.Http.Headers.RangeHeaderValue)
+  nameWithType: ObjectsResource.ComposeRequest.DownloadRange(Stream, RangeHeaderValue)
+- uid: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadRange*
+  name: DownloadRange
+  href: api/Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.html#Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadRange_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadRange
+  fullName: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadRange
+  nameWithType: ObjectsResource.ComposeRequest.DownloadRange
+- uid: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadRangeAsync(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue,System.Threading.CancellationToken)
+  name: DownloadRangeAsync(Stream, RangeHeaderValue, CancellationToken)
+  href: api/Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.html#Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadRangeAsync_System_IO_Stream_System_Net_Http_Headers_RangeHeaderValue_System_Threading_CancellationToken_
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadRangeAsync(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue,System.Threading.CancellationToken)
+  fullName: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadRangeAsync(System.IO.Stream, System.Net.Http.Headers.RangeHeaderValue, System.Threading.CancellationToken)
+  nameWithType: ObjectsResource.ComposeRequest.DownloadRangeAsync(Stream, RangeHeaderValue, CancellationToken)
+- uid: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadRangeAsync*
+  name: DownloadRangeAsync
+  href: api/Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.html#Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadRangeAsync_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadRangeAsync
+  fullName: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadRangeAsync
+  nameWithType: ObjectsResource.ComposeRequest.DownloadRangeAsync
+- uid: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadWithStatus(System.IO.Stream)
+  name: DownloadWithStatus(Stream)
+  href: api/Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.html#Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadWithStatus_System_IO_Stream_
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadWithStatus(System.IO.Stream)
+  fullName: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadWithStatus(System.IO.Stream)
+  nameWithType: ObjectsResource.ComposeRequest.DownloadWithStatus(Stream)
+- uid: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadWithStatus*
+  name: DownloadWithStatus
+  href: api/Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.html#Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadWithStatus_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadWithStatus
+  fullName: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadWithStatus
+  nameWithType: ObjectsResource.ComposeRequest.DownloadWithStatus
 - uid: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.GetBody
   name: GetBody()
   href: api/Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.html#Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_GetBody
@@ -9093,6 +9240,18 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.InitParameters
   fullName: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.InitParameters
   nameWithType: ObjectsResource.ComposeRequest.InitParameters
+- uid: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.KmsKeyName
+  name: KmsKeyName
+  href: api/Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.html#Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_KmsKeyName
+  commentId: P:Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.KmsKeyName
+  fullName: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.KmsKeyName
+  nameWithType: ObjectsResource.ComposeRequest.KmsKeyName
+- uid: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.KmsKeyName*
+  name: KmsKeyName
+  href: api/Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.html#Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_KmsKeyName_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.KmsKeyName
+  fullName: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.KmsKeyName
+  nameWithType: ObjectsResource.ComposeRequest.KmsKeyName
 - uid: Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.MediaDownloader
   name: MediaDownloader
   href: api/Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.html#Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_MediaDownloader
@@ -9279,6 +9438,42 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadAsync
   fullName: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadAsync
   nameWithType: ObjectsResource.CopyRequest.DownloadAsync
+- uid: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadRange(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue)
+  name: DownloadRange(Stream, RangeHeaderValue)
+  href: api/Google.Apis.Storage.v1.ObjectsResource.CopyRequest.html#Google_Apis_Storage_v1_ObjectsResource_CopyRequest_DownloadRange_System_IO_Stream_System_Net_Http_Headers_RangeHeaderValue_
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadRange(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue)
+  fullName: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadRange(System.IO.Stream, System.Net.Http.Headers.RangeHeaderValue)
+  nameWithType: ObjectsResource.CopyRequest.DownloadRange(Stream, RangeHeaderValue)
+- uid: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadRange*
+  name: DownloadRange
+  href: api/Google.Apis.Storage.v1.ObjectsResource.CopyRequest.html#Google_Apis_Storage_v1_ObjectsResource_CopyRequest_DownloadRange_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadRange
+  fullName: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadRange
+  nameWithType: ObjectsResource.CopyRequest.DownloadRange
+- uid: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadRangeAsync(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue,System.Threading.CancellationToken)
+  name: DownloadRangeAsync(Stream, RangeHeaderValue, CancellationToken)
+  href: api/Google.Apis.Storage.v1.ObjectsResource.CopyRequest.html#Google_Apis_Storage_v1_ObjectsResource_CopyRequest_DownloadRangeAsync_System_IO_Stream_System_Net_Http_Headers_RangeHeaderValue_System_Threading_CancellationToken_
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadRangeAsync(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue,System.Threading.CancellationToken)
+  fullName: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadRangeAsync(System.IO.Stream, System.Net.Http.Headers.RangeHeaderValue, System.Threading.CancellationToken)
+  nameWithType: ObjectsResource.CopyRequest.DownloadRangeAsync(Stream, RangeHeaderValue, CancellationToken)
+- uid: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadRangeAsync*
+  name: DownloadRangeAsync
+  href: api/Google.Apis.Storage.v1.ObjectsResource.CopyRequest.html#Google_Apis_Storage_v1_ObjectsResource_CopyRequest_DownloadRangeAsync_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadRangeAsync
+  fullName: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadRangeAsync
+  nameWithType: ObjectsResource.CopyRequest.DownloadRangeAsync
+- uid: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadWithStatus(System.IO.Stream)
+  name: DownloadWithStatus(Stream)
+  href: api/Google.Apis.Storage.v1.ObjectsResource.CopyRequest.html#Google_Apis_Storage_v1_ObjectsResource_CopyRequest_DownloadWithStatus_System_IO_Stream_
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadWithStatus(System.IO.Stream)
+  fullName: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadWithStatus(System.IO.Stream)
+  nameWithType: ObjectsResource.CopyRequest.DownloadWithStatus(Stream)
+- uid: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadWithStatus*
+  name: DownloadWithStatus
+  href: api/Google.Apis.Storage.v1.ObjectsResource.CopyRequest.html#Google_Apis_Storage_v1_ObjectsResource_CopyRequest_DownloadWithStatus_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadWithStatus
+  fullName: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.DownloadWithStatus
+  nameWithType: ObjectsResource.CopyRequest.DownloadWithStatus
 - uid: Google.Apis.Storage.v1.ObjectsResource.CopyRequest.GetBody
   name: GetBody()
   href: api/Google.Apis.Storage.v1.ObjectsResource.CopyRequest.html#Google_Apis_Storage_v1_ObjectsResource_CopyRequest_GetBody
@@ -9897,6 +10092,42 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadAsync
   fullName: Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadAsync
   nameWithType: ObjectsResource.GetRequest.DownloadAsync
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadRange(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue)
+  name: DownloadRange(Stream, RangeHeaderValue)
+  href: api/Google.Apis.Storage.v1.ObjectsResource.GetRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetRequest_DownloadRange_System_IO_Stream_System_Net_Http_Headers_RangeHeaderValue_
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadRange(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue)
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadRange(System.IO.Stream, System.Net.Http.Headers.RangeHeaderValue)
+  nameWithType: ObjectsResource.GetRequest.DownloadRange(Stream, RangeHeaderValue)
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadRange*
+  name: DownloadRange
+  href: api/Google.Apis.Storage.v1.ObjectsResource.GetRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetRequest_DownloadRange_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadRange
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadRange
+  nameWithType: ObjectsResource.GetRequest.DownloadRange
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadRangeAsync(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue,System.Threading.CancellationToken)
+  name: DownloadRangeAsync(Stream, RangeHeaderValue, CancellationToken)
+  href: api/Google.Apis.Storage.v1.ObjectsResource.GetRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetRequest_DownloadRangeAsync_System_IO_Stream_System_Net_Http_Headers_RangeHeaderValue_System_Threading_CancellationToken_
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadRangeAsync(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue,System.Threading.CancellationToken)
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadRangeAsync(System.IO.Stream, System.Net.Http.Headers.RangeHeaderValue, System.Threading.CancellationToken)
+  nameWithType: ObjectsResource.GetRequest.DownloadRangeAsync(Stream, RangeHeaderValue, CancellationToken)
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadRangeAsync*
+  name: DownloadRangeAsync
+  href: api/Google.Apis.Storage.v1.ObjectsResource.GetRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetRequest_DownloadRangeAsync_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadRangeAsync
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadRangeAsync
+  nameWithType: ObjectsResource.GetRequest.DownloadRangeAsync
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadWithStatus(System.IO.Stream)
+  name: DownloadWithStatus(Stream)
+  href: api/Google.Apis.Storage.v1.ObjectsResource.GetRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetRequest_DownloadWithStatus_System_IO_Stream_
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadWithStatus(System.IO.Stream)
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadWithStatus(System.IO.Stream)
+  nameWithType: ObjectsResource.GetRequest.DownloadWithStatus(Stream)
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadWithStatus*
+  name: DownloadWithStatus
+  href: api/Google.Apis.Storage.v1.ObjectsResource.GetRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetRequest_DownloadWithStatus_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadWithStatus
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetRequest.DownloadWithStatus
+  nameWithType: ObjectsResource.GetRequest.DownloadWithStatus
 - uid: Google.Apis.Storage.v1.ObjectsResource.GetRequest.Generation
   name: Generation
   href: api/Google.Apis.Storage.v1.ObjectsResource.GetRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetRequest_Generation
@@ -10227,6 +10458,18 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Key
   fullName: Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Key
   nameWithType: ObjectsResource.InsertMediaUpload.Key
+- uid: Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.KmsKeyName
+  name: KmsKeyName
+  href: api/Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.html#Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_KmsKeyName
+  commentId: P:Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.KmsKeyName
+  fullName: Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.KmsKeyName
+  nameWithType: ObjectsResource.InsertMediaUpload.KmsKeyName
+- uid: Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.KmsKeyName*
+  name: KmsKeyName
+  href: api/Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.html#Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_KmsKeyName_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.KmsKeyName
+  fullName: Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.KmsKeyName
+  nameWithType: ObjectsResource.InsertMediaUpload.KmsKeyName
 - uid: Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Name
   name: Name
   href: api/Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.html#Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Name
@@ -10455,6 +10698,42 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadAsync
   fullName: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadAsync
   nameWithType: ObjectsResource.InsertRequest.DownloadAsync
+- uid: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadRange(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue)
+  name: DownloadRange(Stream, RangeHeaderValue)
+  href: api/Google.Apis.Storage.v1.ObjectsResource.InsertRequest.html#Google_Apis_Storage_v1_ObjectsResource_InsertRequest_DownloadRange_System_IO_Stream_System_Net_Http_Headers_RangeHeaderValue_
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadRange(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue)
+  fullName: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadRange(System.IO.Stream, System.Net.Http.Headers.RangeHeaderValue)
+  nameWithType: ObjectsResource.InsertRequest.DownloadRange(Stream, RangeHeaderValue)
+- uid: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadRange*
+  name: DownloadRange
+  href: api/Google.Apis.Storage.v1.ObjectsResource.InsertRequest.html#Google_Apis_Storage_v1_ObjectsResource_InsertRequest_DownloadRange_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadRange
+  fullName: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadRange
+  nameWithType: ObjectsResource.InsertRequest.DownloadRange
+- uid: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadRangeAsync(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue,System.Threading.CancellationToken)
+  name: DownloadRangeAsync(Stream, RangeHeaderValue, CancellationToken)
+  href: api/Google.Apis.Storage.v1.ObjectsResource.InsertRequest.html#Google_Apis_Storage_v1_ObjectsResource_InsertRequest_DownloadRangeAsync_System_IO_Stream_System_Net_Http_Headers_RangeHeaderValue_System_Threading_CancellationToken_
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadRangeAsync(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue,System.Threading.CancellationToken)
+  fullName: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadRangeAsync(System.IO.Stream, System.Net.Http.Headers.RangeHeaderValue, System.Threading.CancellationToken)
+  nameWithType: ObjectsResource.InsertRequest.DownloadRangeAsync(Stream, RangeHeaderValue, CancellationToken)
+- uid: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadRangeAsync*
+  name: DownloadRangeAsync
+  href: api/Google.Apis.Storage.v1.ObjectsResource.InsertRequest.html#Google_Apis_Storage_v1_ObjectsResource_InsertRequest_DownloadRangeAsync_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadRangeAsync
+  fullName: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadRangeAsync
+  nameWithType: ObjectsResource.InsertRequest.DownloadRangeAsync
+- uid: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadWithStatus(System.IO.Stream)
+  name: DownloadWithStatus(Stream)
+  href: api/Google.Apis.Storage.v1.ObjectsResource.InsertRequest.html#Google_Apis_Storage_v1_ObjectsResource_InsertRequest_DownloadWithStatus_System_IO_Stream_
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadWithStatus(System.IO.Stream)
+  fullName: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadWithStatus(System.IO.Stream)
+  nameWithType: ObjectsResource.InsertRequest.DownloadWithStatus(Stream)
+- uid: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadWithStatus*
+  name: DownloadWithStatus
+  href: api/Google.Apis.Storage.v1.ObjectsResource.InsertRequest.html#Google_Apis_Storage_v1_ObjectsResource_InsertRequest_DownloadWithStatus_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadWithStatus
+  fullName: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.DownloadWithStatus
+  nameWithType: ObjectsResource.InsertRequest.DownloadWithStatus
 - uid: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.GetBody
   name: GetBody()
   href: api/Google.Apis.Storage.v1.ObjectsResource.InsertRequest.html#Google_Apis_Storage_v1_ObjectsResource_InsertRequest_GetBody
@@ -10539,6 +10818,18 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.InsertRequest.InitParameters
   fullName: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.InitParameters
   nameWithType: ObjectsResource.InsertRequest.InitParameters
+- uid: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.KmsKeyName
+  name: KmsKeyName
+  href: api/Google.Apis.Storage.v1.ObjectsResource.InsertRequest.html#Google_Apis_Storage_v1_ObjectsResource_InsertRequest_KmsKeyName
+  commentId: P:Google.Apis.Storage.v1.ObjectsResource.InsertRequest.KmsKeyName
+  fullName: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.KmsKeyName
+  nameWithType: ObjectsResource.InsertRequest.KmsKeyName
+- uid: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.KmsKeyName*
+  name: KmsKeyName
+  href: api/Google.Apis.Storage.v1.ObjectsResource.InsertRequest.html#Google_Apis_Storage_v1_ObjectsResource_InsertRequest_KmsKeyName_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.InsertRequest.KmsKeyName
+  fullName: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.KmsKeyName
+  nameWithType: ObjectsResource.InsertRequest.KmsKeyName
 - uid: Google.Apis.Storage.v1.ObjectsResource.InsertRequest.MediaDownloader
   name: MediaDownloader
   href: api/Google.Apis.Storage.v1.ObjectsResource.InsertRequest.html#Google_Apis_Storage_v1_ObjectsResource_InsertRequest_MediaDownloader
@@ -11187,6 +11478,18 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.DestinationBucket
   fullName: Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.DestinationBucket
   nameWithType: ObjectsResource.RewriteRequest.DestinationBucket
+- uid: Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.DestinationKmsKeyName
+  name: DestinationKmsKeyName
+  href: api/Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.html#Google_Apis_Storage_v1_ObjectsResource_RewriteRequest_DestinationKmsKeyName
+  commentId: P:Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.DestinationKmsKeyName
+  fullName: Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.DestinationKmsKeyName
+  nameWithType: ObjectsResource.RewriteRequest.DestinationKmsKeyName
+- uid: Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.DestinationKmsKeyName*
+  name: DestinationKmsKeyName
+  href: api/Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.html#Google_Apis_Storage_v1_ObjectsResource_RewriteRequest_DestinationKmsKeyName_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.DestinationKmsKeyName
+  fullName: Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.DestinationKmsKeyName
+  nameWithType: ObjectsResource.RewriteRequest.DestinationKmsKeyName
 - uid: Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.DestinationObject
   name: DestinationObject
   href: api/Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.html#Google_Apis_Storage_v1_ObjectsResource_RewriteRequest_DestinationObject
@@ -11865,6 +12168,42 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadAsync
   fullName: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadAsync
   nameWithType: ObjectsResource.UpdateRequest.DownloadAsync
+- uid: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadRange(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue)
+  name: DownloadRange(Stream, RangeHeaderValue)
+  href: api/Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.html#Google_Apis_Storage_v1_ObjectsResource_UpdateRequest_DownloadRange_System_IO_Stream_System_Net_Http_Headers_RangeHeaderValue_
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadRange(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue)
+  fullName: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadRange(System.IO.Stream, System.Net.Http.Headers.RangeHeaderValue)
+  nameWithType: ObjectsResource.UpdateRequest.DownloadRange(Stream, RangeHeaderValue)
+- uid: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadRange*
+  name: DownloadRange
+  href: api/Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.html#Google_Apis_Storage_v1_ObjectsResource_UpdateRequest_DownloadRange_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadRange
+  fullName: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadRange
+  nameWithType: ObjectsResource.UpdateRequest.DownloadRange
+- uid: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadRangeAsync(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue,System.Threading.CancellationToken)
+  name: DownloadRangeAsync(Stream, RangeHeaderValue, CancellationToken)
+  href: api/Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.html#Google_Apis_Storage_v1_ObjectsResource_UpdateRequest_DownloadRangeAsync_System_IO_Stream_System_Net_Http_Headers_RangeHeaderValue_System_Threading_CancellationToken_
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadRangeAsync(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue,System.Threading.CancellationToken)
+  fullName: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadRangeAsync(System.IO.Stream, System.Net.Http.Headers.RangeHeaderValue, System.Threading.CancellationToken)
+  nameWithType: ObjectsResource.UpdateRequest.DownloadRangeAsync(Stream, RangeHeaderValue, CancellationToken)
+- uid: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadRangeAsync*
+  name: DownloadRangeAsync
+  href: api/Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.html#Google_Apis_Storage_v1_ObjectsResource_UpdateRequest_DownloadRangeAsync_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadRangeAsync
+  fullName: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadRangeAsync
+  nameWithType: ObjectsResource.UpdateRequest.DownloadRangeAsync
+- uid: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadWithStatus(System.IO.Stream)
+  name: DownloadWithStatus(Stream)
+  href: api/Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.html#Google_Apis_Storage_v1_ObjectsResource_UpdateRequest_DownloadWithStatus_System_IO_Stream_
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadWithStatus(System.IO.Stream)
+  fullName: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadWithStatus(System.IO.Stream)
+  nameWithType: ObjectsResource.UpdateRequest.DownloadWithStatus(Stream)
+- uid: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadWithStatus*
+  name: DownloadWithStatus
+  href: api/Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.html#Google_Apis_Storage_v1_ObjectsResource_UpdateRequest_DownloadWithStatus_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadWithStatus
+  fullName: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.DownloadWithStatus
+  nameWithType: ObjectsResource.UpdateRequest.DownloadWithStatus
 - uid: Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.Generation
   name: Generation
   href: api/Google.Apis.Storage.v1.ObjectsResource.UpdateRequest.html#Google_Apis_Storage_v1_ObjectsResource_UpdateRequest_Generation

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class LongRunningRecognizeResponse
    | Google.Cloud.Speech.V1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,72 +67,72 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Speech_V1_LongRunningRecognizeResponse" data-uid="Google.Cloud.Speech.V1.LongRunningRecognizeResponse">Class LongRunningRecognizeResponse
-              </h1>
-              <div class="markdown level0 summary"><p>The only message returned to the client by the <code>LongRunningRecognize</code> method.
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Speech.V1.LongRunningRecognizeResponse">
+  
+  
+  <h1 id="Google_Cloud_Speech_V1_LongRunningRecognizeResponse" data-uid="Google.Cloud.Speech.V1.LongRunningRecognizeResponse">Class LongRunningRecognizeResponse
+  </h1>
+  <div class="markdown level0 summary"><p>The only message returned to the client by the <code>LongRunningRecognize</code> method.
 It contains the result as zero or more sequential <code>SpeechRecognitionResult</code>
 messages. It is included in the <code>result.response</code> field of the <code>Operation</code>
 returned by the <code>GetOperation</code> call of the <code>google::longrunning::Operations</code>
 service.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">LongRunningRecognizeResponse</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Speech.V1</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Speech.V1.dll</h6>
-              <h5 id="Google_Cloud_Speech_V1_LongRunningRecognizeResponse_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class LongRunningRecognizeResponse : IMessage&lt;LongRunningRecognizeResponse&gt;, IMessage, IEquatable&lt;LongRunningRecognizeResponse&gt;, IDeepCloneable&lt;LongRunningRecognizeResponse&gt;</code></pre>
-              </div>
-              <h3 id="properties">Properties
-              </h3>
-              <a id="Google_Cloud_Speech_V1_LongRunningRecognizeResponse_Results_" data-uid="Google.Cloud.Speech.V1.LongRunningRecognizeResponse.Results*"></a>
-              <h4 id="Google_Cloud_Speech_V1_LongRunningRecognizeResponse_Results" data-uid="Google.Cloud.Speech.V1.LongRunningRecognizeResponse.Results">Results</h4>
-              <div class="markdown level1 summary"><p><em>Output-only</em> Sequential list of transcription results corresponding to
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">LongRunningRecognizeResponse</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Speech.V1.html">Google.Cloud.Speech.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Speech.V1.dll</h6>
+  <h5 id="Google_Cloud_Speech_V1_LongRunningRecognizeResponse_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class LongRunningRecognizeResponse : IMessage&lt;LongRunningRecognizeResponse&gt;, IMessage, IEquatable&lt;LongRunningRecognizeResponse&gt;, IDeepCloneable&lt;LongRunningRecognizeResponse&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Speech_V1_LongRunningRecognizeResponse_Results_" data-uid="Google.Cloud.Speech.V1.LongRunningRecognizeResponse.Results*"></a>
+  <h4 id="Google_Cloud_Speech_V1_LongRunningRecognizeResponse_Results" data-uid="Google.Cloud.Speech.V1.LongRunningRecognizeResponse.Results">Results</h4>
+  <div class="markdown level1 summary"><p><em>Output-only</em> Sequential list of transcription results corresponding to
 sequential portions of audio.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RepeatedField&lt;SpeechRecognitionResult&gt; Results { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1.SpeechRecognitionResult.html">SpeechRecognitionResult</a>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;SpeechRecognitionResult&gt; Results { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1.SpeechRecognitionResult.html">SpeechRecognitionResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

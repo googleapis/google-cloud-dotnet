@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Enum EncodingType
    | Google.Cloud.Language.V1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,64 +67,64 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Language_V1_EncodingType" data-uid="Google.Cloud.Language.V1.EncodingType">Enum EncodingType
-              </h1>
-              <div class="markdown level0 summary"><p>Represents the text encoding that the caller uses to process the output.
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Language.V1.EncodingType">
+  
+  
+  <h1 id="Google_Cloud_Language_V1_EncodingType" data-uid="Google.Cloud.Language.V1.EncodingType">Enum EncodingType
+  </h1>
+  <div class="markdown level0 summary"><p>Represents the text encoding that the caller uses to process the output.
 Providing an <code>EncodingType</code> is recommended because the API provides the
 beginning offsets for various outputs, such as tokens and mentions, and
 languages that natively use different text encodings may access offsets
 differently.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Language.V1</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Language.V1.dll</h6>
-              <h5 id="Google_Cloud_Language_V1_EncodingType_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public enum EncodingType</code></pre>
-              </div>
-              <h3 id="fields">Fields
-              </h3>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                <thead>
-                <tbody>
-                  <tr>
-                    <td id="Google_Cloud_Language_V1_EncodingType_None">None</td>
-                    <td><p>If <code>EncodingType</code> is not specified, encoding-dependent information (such as
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Language.V1.html">Google.Cloud.Language.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Language.V1.dll</h6>
+  <h5 id="Google_Cloud_Language_V1_EncodingType_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum EncodingType</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    <thead>
+    <tbody>
+      <tr>
+        <td id="Google_Cloud_Language_V1_EncodingType_None">None</td>
+        <td><p>If <code>EncodingType</code> is not specified, encoding-dependent information (such as
 <code>begin_offset</code>) will be set at <code>-1</code>.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Language_V1_EncodingType_Utf16">Utf16</td>
-                    <td><p>Encoding-dependent information (such as <code>begin_offset</code>) is calculated based
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Language_V1_EncodingType_Utf16">Utf16</td>
+        <td><p>Encoding-dependent information (such as <code>begin_offset</code>) is calculated based
 on the UTF-16 encoding of the input. Java and Javascript are examples of
 languages that use this encoding natively.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Language_V1_EncodingType_Utf32">Utf32</td>
-                    <td><p>Encoding-dependent information (such as <code>begin_offset</code>) is calculated based
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Language_V1_EncodingType_Utf32">Utf32</td>
+        <td><p>Encoding-dependent information (such as <code>begin_offset</code>) is calculated based
 on the UTF-32 encoding of the input. Python is an example of a language
 that uses this encoding natively.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Language_V1_EncodingType_Utf8">Utf8</td>
-                    <td><p>Encoding-dependent information (such as <code>begin_offset</code>) is calculated based
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Language_V1_EncodingType_Utf8">Utf8</td>
+        <td><p>Encoding-dependent information (such as <code>begin_offset</code>) is calculated based
 on the UTF-8 encoding of the input. C++ and Go are examples of languages
 that use this encoding natively.</p>
 </td>
-                  </tr>
-                </tbody>
-              </thead></thead></table>
-                        </article>
+      </tr>
+    </tbody>
+  </thead></thead></table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

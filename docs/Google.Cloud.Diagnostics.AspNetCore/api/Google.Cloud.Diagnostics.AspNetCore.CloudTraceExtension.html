@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class CloudTraceExtension
    | Google.Cloud.Diagnostics.AspNetCore ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,56 +67,56 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension">Class CloudTraceExtension
-              </h1>
-              <div class="markdown level0 summary"><p>Uses the Google Cloud Trace Middleware.
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension">
+  
+  
+  <h1 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension">Class CloudTraceExtension
+  </h1>
+  <div class="markdown level0 summary"><p>Uses the Google Cloud Trace Middleware.
 Traces the time taken for all subsequent delegates to run.  The time taken
 and metadata will be sent to the Stackdriver Trace API.  Also allows for more
 finely grained manual tracing.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">CloudTraceExtension</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Diagnostics.AspNetCore</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Diagnostics.AspNetCore.dll</h6>
-              <h5 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static class CloudTraceExtension</code></pre>
-              </div>
-              <h5 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_remarks"><strong>Remarks</strong></h5>
-              <div class="markdown level0 remarks"><p>Traces requests and reports them to Google Cloud Trace.
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">CloudTraceExtension</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.html">Google.Cloud.Diagnostics.AspNetCore</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Diagnostics.AspNetCore.dll</h6>
+  <h5 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class CloudTraceExtension</code></pre>
+  </div>
+  <h5 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Traces requests and reports them to Google Cloud Trace.
 Docs: <a href="https://cloud.google.com/trace/docs/">https://cloud.google.com/trace/docs/</a></p>
 </div>
-              <h5 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_examples"><strong>Examples</strong></h5>
-              <pre><code>public void ConfigureServices(IServiceCollection services)
+  <h5 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_examples"><strong>Examples</strong></h5>
+  <pre><code>public void ConfigureServices(IServiceCollection services)
 {
     string projectId = "[Google Cloud Platform project ID]";
     services.AddGoogleTrace(projectId);
     ...
 }</code></pre>
 
-              <pre><code>public void Configure(IApplicationBuilder app)
+  <pre><code>public void Configure(IApplicationBuilder app)
 {
     // Use at the start of the request pipeline to ensure the entire
     // request is traced.
@@ -124,7 +124,7 @@ Docs: <a href="https://cloud.google.com/trace/docs/">https://cloud.google.com/tr
     ...
 }</code></pre>
 
-              <pre><code>public void SomeFunction(IManagedTracer tracer)
+  <pre><code>public void SomeFunction(IManagedTracer tracer)
 {
     tracer.StartSpan(nameof(SomeFunction));
     ...
@@ -133,70 +133,70 @@ Docs: <a href="https://cloud.google.com/trace/docs/">https://cloud.google.com/tr
     tracer.EndSpan();
 }</code></pre>
 
-              <h3 id="methods">Methods
-              </h3>
-              <a id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_IServiceCollection_System_Action_Google_Cloud_Diagnostics_AspNetCore_TraceServiceOptions__" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(IServiceCollection,System.Action{Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions})">AddGoogleTrace(IServiceCollection, Action&lt;TraceServiceOptions&gt;)</h4>
-              <div class="markdown level1 summary"><p>Adds the needed services for Google Cloud Tracing. Used with <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_UseGoogleTrace_IApplicationBuilder_">UseGoogleTrace(IApplicationBuilder)</a>.</p>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace*"></a>
+  <h4 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_IServiceCollection_System_Action_Google_Cloud_Diagnostics_AspNetCore_TraceServiceOptions__" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(IServiceCollection,System.Action{Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions})">AddGoogleTrace(IServiceCollection, Action&lt;TraceServiceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds the needed services for Google Cloud Tracing. Used with <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_UseGoogleTrace_IApplicationBuilder_">UseGoogleTrace(IApplicationBuilder)</a>.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static void AddGoogleTrace(this IServiceCollection services, Action&lt;TraceServiceOptions&gt; setupAction)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">IServiceCollection</span></td>
-                    <td><span class="parametername">services</span></td>
-                    <td><p>The service collection. Cannot be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddGoogleTrace(this IServiceCollection services, Action&lt;TraceServiceOptions&gt; setupAction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IServiceCollection</span></td>
+        <td><span class="parametername">services</span></td>
+        <td><p>The service collection. Cannot be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.html">TraceServiceOptions</a>&gt;</td>
-                    <td><span class="parametername">setupAction</span></td>
-                    <td><p>Action to set up options. Cannot be null.</p>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions.html">TraceServiceOptions</a>&gt;</td>
+        <td><span class="parametername">setupAction</span></td>
+        <td><p>Action to set up options. Cannot be null.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_UseGoogleTrace_" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.UseGoogleTrace*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_UseGoogleTrace_IApplicationBuilder_" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.UseGoogleTrace(IApplicationBuilder)">UseGoogleTrace(IApplicationBuilder)</h4>
-              <div class="markdown level1 summary"><p>Uses middleware that will trace time taken for all subsequent delegates to run.
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_UseGoogleTrace_" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.UseGoogleTrace*"></a>
+  <h4 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_UseGoogleTrace_IApplicationBuilder_" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.UseGoogleTrace(IApplicationBuilder)">UseGoogleTrace(IApplicationBuilder)</h4>
+  <div class="markdown level1 summary"><p>Uses middleware that will trace time taken for all subsequent delegates to run.
 The time taken and metadata will be sent to the Stackdriver Trace API. To be
 used with <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_IServiceCollection_System_Action_Google_Cloud_Diagnostics_AspNetCore_TraceServiceOptions__">AddGoogleTrace(IServiceCollection, Action&lt;TraceServiceOptions&gt;)</a>,</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static void UseGoogleTrace(this IApplicationBuilder app)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">IApplicationBuilder</span></td>
-                    <td><span class="parametername">app</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UseGoogleTrace(this IApplicationBuilder app)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IApplicationBuilder</span></td>
+        <td><span class="parametername">app</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

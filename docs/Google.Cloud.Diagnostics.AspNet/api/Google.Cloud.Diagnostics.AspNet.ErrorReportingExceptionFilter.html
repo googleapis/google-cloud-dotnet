@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ErrorReportingExceptionFilter
    | Google.Cloud.Diagnostics.AspNet ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,49 +67,49 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter">Class ErrorReportingExceptionFilter
-              </h1>
-              <div class="markdown level0 summary"><p>Google Cloud Error Reporting <span class="xref">System.Web.Mvc.IExceptionFilter</span>.</p>
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter">
+  
+  
+  <h1 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter">Class ErrorReportingExceptionFilter
+  </h1>
+  <div class="markdown level0 summary"><p>Google Cloud Error Reporting <span class="xref">System.Web.Mvc.IExceptionFilter</span>.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">ErrorReportingExceptionFilter</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Diagnostics.AspNet</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Diagnostics.AspNet.dll</h6>
-              <h5 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class ErrorReportingExceptionFilter : IExceptionFilter, IDisposable</code></pre>
-              </div>
-              <h5 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_remarks"><strong>Remarks</strong></h5>
-              <div class="markdown level0 remarks"><p>Reports unhandled exceptions to Google Cloud Error Reporting.
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ErrorReportingExceptionFilter</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Diagnostics.AspNet.html">Google.Cloud.Diagnostics.AspNet</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Diagnostics.AspNet.dll</h6>
+  <h5 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ErrorReportingExceptionFilter : IExceptionFilter, IDisposable</code></pre>
+  </div>
+  <h5 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Reports unhandled exceptions to Google Cloud Error Reporting.
 The filter should be registered first in ASP.NET MVC versions 1 and 2 and last
 in ASP.NET MVC versions 3 and higher. See:
 <a href="https://msdn.microsoft.com/en-us/library/system.web.mvc.iexceptionfilter.onexception(v=vs.118).aspx">https://msdn.microsoft.com/en-us/library/system.web.mvc.iexceptionfilter.onexception(v=vs.118).aspx</a>
 Docs: <a href="https://cloud.google.com/error-reporting/docs/">https://cloud.google.com/error-reporting/docs/</a></p>
 </div>
-              <h5 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_examples"><strong>Examples</strong></h5>
-              <pre><code>public static void RegisterGlobalFilters(GlobalFilterCollection filters)
+  <h5 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_examples"><strong>Examples</strong></h5>
+  <pre><code>public static void RegisterGlobalFilters(GlobalFilterCollection filters)
 {
   // Add a catch all for the uncaught exceptions.
   string projectId = "[Google Cloud Platform project ID]";
@@ -119,11 +119,11 @@ Docs: <a href="https://cloud.google.com/error-reporting/docs/">https://cloud.goo
   filters.Add(ErrorReportingExceptionFilter.Create(projectId, serviceName, version));
 }</code></pre>
 
-              <h3 id="methods">Methods
-              </h3>
-              <a id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_Create_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.Create*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_Create_System_String_System_String_Google_Cloud_Diagnostics_Common_ErrorReportingOptions_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.Create(System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)">Create(String, String, ErrorReportingOptions)</h4>
-              <div class="markdown level1 summary"><p>Creates an instance of <a class="xref" href="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.html">ErrorReportingExceptionFilter</a> using credentials as
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_Create_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.Create*"></a>
+  <h4 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_Create_System_String_System_String_Google_Cloud_Diagnostics_Common_ErrorReportingOptions_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.Create(System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)">Create(String, String, ErrorReportingOptions)</h4>
+  <div class="markdown level1 summary"><p>Creates an instance of <a class="xref" href="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.html">ErrorReportingExceptionFilter</a> using credentials as
 defined by <span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential.GetApplicationDefaultAsync</span>.
 <p>
 Can be used when running on Google App Engine or Google Compute Engine.
@@ -131,159 +131,159 @@ The Google Cloud Platform project to report errors to will detected from the
 current platform.
 </p></p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static ErrorReportingExceptionFilter Create(string serviceName, string version, ErrorReportingOptions options = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">serviceName</span></td>
-                    <td><p>An identifier of the service, such as the name of the executable or job.
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ErrorReportingExceptionFilter Create(string serviceName, string version, ErrorReportingOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">serviceName</span></td>
+        <td><p>An identifier of the service, such as the name of the executable or job.
     Cannot be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">version</span></td>
-                    <td><p>Represents the source code version that the developer provided. 
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">version</span></td>
+        <td><p>Represents the source code version that the developer provided. 
     Cannot be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Diagnostics.Common.ErrorReportingOptions.html">ErrorReportingOptions</a></td>
-                    <td><span class="parametername">options</span></td>
-                    <td><p>Optional, error reporting options.</p>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.Common.ErrorReportingOptions.html">ErrorReportingOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Optional, error reporting options.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.html">ErrorReportingExceptionFilter</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_Create_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.Create*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_Create_System_String_System_String_System_String_Google_Cloud_Diagnostics_Common_ErrorReportingOptions_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.Create(System.String,System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)">Create(String, String, String, ErrorReportingOptions)</h4>
-              <div class="markdown level1 summary"><p>Creates an instance of <a class="xref" href="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.html">ErrorReportingExceptionFilter</a> using credentials as
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.html">ErrorReportingExceptionFilter</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_Create_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.Create*"></a>
+  <h4 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_Create_System_String_System_String_System_String_Google_Cloud_Diagnostics_Common_ErrorReportingOptions_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.Create(System.String,System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)">Create(String, String, String, ErrorReportingOptions)</h4>
+  <div class="markdown level1 summary"><p>Creates an instance of <a class="xref" href="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.html">ErrorReportingExceptionFilter</a> using credentials as
 defined by <span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential.GetApplicationDefaultAsync</span>.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static ErrorReportingExceptionFilter Create(string projectId, string serviceName, string version, ErrorReportingOptions options = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">projectId</span></td>
-                    <td><p>The Google Cloud Platform project ID. Cannot be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ErrorReportingExceptionFilter Create(string projectId, string serviceName, string version, ErrorReportingOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">projectId</span></td>
+        <td><p>The Google Cloud Platform project ID. Cannot be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">serviceName</span></td>
-                    <td><p>An identifier of the service, such as the name of the executable or job.
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">serviceName</span></td>
+        <td><p>An identifier of the service, such as the name of the executable or job.
     Cannot be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">version</span></td>
-                    <td><p>Represents the source code version that the developer provided. 
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">version</span></td>
+        <td><p>Represents the source code version that the developer provided. 
     Cannot be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Diagnostics.Common.ErrorReportingOptions.html">ErrorReportingOptions</a></td>
-                    <td><span class="parametername">options</span></td>
-                    <td><p>Optional, error reporting options.</p>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.Common.ErrorReportingOptions.html">ErrorReportingOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Optional, error reporting options.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.html">ErrorReportingExceptionFilter</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_Dispose_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.Dispose*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_Dispose" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.Dispose">Dispose()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
-              </div>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">System.IDisposable.Dispose()</span></div>
-              <a id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_OnException_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.OnException*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_OnException_System_Web_Mvc_ExceptionContext_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.OnException(System.Web.Mvc.ExceptionContext)">OnException(ExceptionContext)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void OnException(ExceptionContext context)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Web.Mvc.ExceptionContext</span></td>
-                    <td><span class="parametername">context</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">System.Web.Mvc.IExceptionFilter.OnException(System.Web.Mvc.ExceptionContext)</span></div>
-                        </article>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.html">ErrorReportingExceptionFilter</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_Dispose_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.Dispose*"></a>
+  <h4 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_Dispose" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.IDisposable.Dispose()</span></div>
+  <a id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_OnException_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.OnException*"></a>
+  <h4 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_OnException_System_Web_Mvc_ExceptionContext_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.OnException(System.Web.Mvc.ExceptionContext)">OnException(ExceptionContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnException(ExceptionContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Web.Mvc.ExceptionContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Web.Mvc.IExceptionFilter.OnException(System.Web.Mvc.ExceptionContext)</span></div>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

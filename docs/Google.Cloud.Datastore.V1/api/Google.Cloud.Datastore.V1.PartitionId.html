@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PartitionId
    | Google.Cloud.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,12 +67,12 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Datastore_V1_PartitionId" data-uid="Google.Cloud.Datastore.V1.PartitionId">Class PartitionId
-              </h1>
-              <div class="markdown level0 summary"><p>A partition ID identifies a grouping of entities. The grouping is always
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Datastore.V1.PartitionId">
+  
+  
+  <h1 id="Google_Cloud_Datastore_V1_PartitionId" data-uid="Google.Cloud.Datastore.V1.PartitionId">Class PartitionId
+  </h1>
+  <div class="markdown level0 summary"><p>A partition ID identifies a grouping of entities. The grouping is always
 by project and namespace, however the namespace ID may be empty.</p>
 <p>A partition ID contains several dimensions:
 project ID and namespace ID.</p>
@@ -90,119 +90,119 @@ contexts.</li>
 not match the context project ID ) are discouraged.
 Reads and writes of foreign partition IDs may fail if the project is not in an active state.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">PartitionId</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Datastore.V1</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Datastore.V1.dll</h6>
-              <h5 id="Google_Cloud_Datastore_V1_PartitionId_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class PartitionId : IMessage&lt;PartitionId&gt;, IMessage, IEquatable&lt;PartitionId&gt;, IDeepCloneable&lt;PartitionId&gt;</code></pre>
-              </div>
-              <h3 id="constructors">Constructors
-              </h3>
-              <a id="Google_Cloud_Datastore_V1_PartitionId__ctor_" data-uid="Google.Cloud.Datastore.V1.PartitionId.#ctor*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_PartitionId__ctor_System_String_System_String_" data-uid="Google.Cloud.Datastore.V1.PartitionId.#ctor(System.String,System.String)">PartitionId(String, String)</h4>
-              <div class="markdown level1 summary"><p>Creates a partition ID from the given project ID and namespace ID.</p>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">PartitionId</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Datastore.V1.html">Google.Cloud.Datastore.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Datastore.V1.dll</h6>
+  <h5 id="Google_Cloud_Datastore_V1_PartitionId_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class PartitionId : IMessage&lt;PartitionId&gt;, IMessage, IEquatable&lt;PartitionId&gt;, IDeepCloneable&lt;PartitionId&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Google_Cloud_Datastore_V1_PartitionId__ctor_" data-uid="Google.Cloud.Datastore.V1.PartitionId.#ctor*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_PartitionId__ctor_System_String_System_String_" data-uid="Google.Cloud.Datastore.V1.PartitionId.#ctor(System.String,System.String)">PartitionId(String, String)</h4>
+  <div class="markdown level1 summary"><p>Creates a partition ID from the given project ID and namespace ID.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public PartitionId(string projectId, string namespaceId = &quot;&quot;)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">projectId</span></td>
-                    <td><p>The project ID of the partition. Must not be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PartitionId(string projectId, string namespaceId = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">projectId</span></td>
+        <td><p>The project ID of the partition. Must not be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">namespaceId</span></td>
-                    <td><p>The namespace ID of the partition. Must not be null.</p>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">namespaceId</span></td>
+        <td><p>The namespace ID of the partition. Must not be null.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h3 id="properties">Properties
-              </h3>
-              <a id="Google_Cloud_Datastore_V1_PartitionId_NamespaceId_" data-uid="Google.Cloud.Datastore.V1.PartitionId.NamespaceId*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_PartitionId_NamespaceId" data-uid="Google.Cloud.Datastore.V1.PartitionId.NamespaceId">NamespaceId</h4>
-              <div class="markdown level1 summary"><p>If not empty, the ID of the namespace to which the entities belong.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Datastore_V1_PartitionId_NamespaceId_" data-uid="Google.Cloud.Datastore.V1.PartitionId.NamespaceId*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_PartitionId_NamespaceId" data-uid="Google.Cloud.Datastore.V1.PartitionId.NamespaceId">NamespaceId</h4>
+  <div class="markdown level1 summary"><p>If not empty, the ID of the namespace to which the entities belong.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string NamespaceId { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Datastore_V1_PartitionId_ProjectId_" data-uid="Google.Cloud.Datastore.V1.PartitionId.ProjectId*"></a>
-              <h4 id="Google_Cloud_Datastore_V1_PartitionId_ProjectId" data-uid="Google.Cloud.Datastore.V1.PartitionId.ProjectId">ProjectId</h4>
-              <div class="markdown level1 summary"><p>The ID of the project to which the entities belong.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string NamespaceId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Datastore_V1_PartitionId_ProjectId_" data-uid="Google.Cloud.Datastore.V1.PartitionId.ProjectId*"></a>
+  <h4 id="Google_Cloud_Datastore_V1_PartitionId_ProjectId" data-uid="Google.Cloud.Datastore.V1.PartitionId.ProjectId">ProjectId</h4>
+  <div class="markdown level1 summary"><p>The ID of the project to which the entities belong.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string ProjectId { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ProjectId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ObjectsResource.InsertMediaUpload
    | Google.Cloud.Storage.V1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,636 +67,663 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload">Class ObjectsResource.InsertMediaUpload
-              </h1>
-              <div class="markdown level0 summary"><p>Insert media upload which supports resumable upload.</p>
+            <article class="content wrap" id="_content" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload">
+  
+  
+  <h1 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload">Class ObjectsResource.InsertMediaUpload
+  </h1>
+  <div class="markdown level0 summary"><p>Insert media upload which supports resumable upload.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">Google.Apis.Upload.ResumableUpload</span></div>
-                  <div class="level2"><span class="xref">Google.Apis.Upload.ResumableUpload</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</div>
-                  <div class="level3"><span class="xref">Google.Apis.Upload.ResumableUpload</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>, <a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</div>
-                  <div class="level4"><span class="xref">ObjectsResource.InsertMediaUpload</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload&lt;Google.Apis.Storage.v1.Data.Object, Google.Apis.Storage.v1.Data.Object&gt;.ProcessResponse(System.Net.Http.HttpResponseMessage)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload&lt;Google.Apis.Storage.v1.Data.Object, Google.Apis.Storage.v1.Data.Object&gt;.ResponseBody</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload&lt;Google.Apis.Storage.v1.Data.Object, Google.Apis.Storage.v1.Data.Object&gt;.ResponseReceived</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload&lt;Google.Apis.Storage.v1.Data.Object&gt;.InitiateSessionAsync(System.Threading.CancellationToken)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload&lt;Google.Apis.Storage.v1.Data.Object&gt;.Service</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload&lt;Google.Apis.Storage.v1.Data.Object&gt;.Path</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload&lt;Google.Apis.Storage.v1.Data.Object&gt;.HttpMethod</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload&lt;Google.Apis.Storage.v1.Data.Object&gt;.ContentType</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload&lt;Google.Apis.Storage.v1.Data.Object&gt;.Body</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.MinimumChunkSize</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.DefaultChunkSize</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.chunkSize</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.CreateFromUploadUri(System.Uri, System.IO.Stream, Google.Apis.Upload.ResumableUploadOptions)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.GetProgress()</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.Upload()</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.UploadAsync()</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.UploadAsync(System.Threading.CancellationToken)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.Resume()</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.Resume(System.Uri)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.ResumeAsync()</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.ResumeAsync(System.Threading.CancellationToken)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.ResumeAsync(System.Uri)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.ResumeAsync(System.Uri, System.Threading.CancellationToken)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.ProcessResponse(System.Net.Http.HttpResponseMessage)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.SendNextChunkAsync(System.IO.Stream, System.Threading.CancellationToken)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.ExceptionForResponseAsync(System.Net.Http.HttpResponseMessage)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.Options</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.ContentStream</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.ChunkSize</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.ProgressChanged</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.UploadSessionData</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Apis.Storage.v1</h6>
-              <h6><strong>Assembly</strong>:Google.Apis.Storage.v1.dll</h6>
-              <h5 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class InsertMediaUpload : ResumableUpload&lt;Object, Object&gt;</code></pre>
-              </div>
-              <h3 id="constructors">Constructors
-              </h3>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload__ctor_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.#ctor*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Object_System_String_System_IO_Stream_System_String_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Object,System.String,System.IO.Stream,System.String)">InsertMediaUpload(IClientService, Object, String, Stream, String)</h4>
-              <div class="markdown level1 summary"><p>Constructs a new Insert media upload instance.</p>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Google.Apis.Upload.ResumableUpload</span></div>
+    <div class="level2"><span class="xref">Google.Apis.Upload.ResumableUpload</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</div>
+    <div class="level3"><span class="xref">Google.Apis.Upload.ResumableUpload</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>, <a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</div>
+    <div class="level4"><span class="xref">ObjectsResource.InsertMediaUpload</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload&lt;Google.Apis.Storage.v1.Data.Object, Google.Apis.Storage.v1.Data.Object&gt;.ProcessResponse(System.Net.Http.HttpResponseMessage)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload&lt;Google.Apis.Storage.v1.Data.Object, Google.Apis.Storage.v1.Data.Object&gt;.ResponseBody</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload&lt;Google.Apis.Storage.v1.Data.Object, Google.Apis.Storage.v1.Data.Object&gt;.ResponseReceived</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload&lt;Google.Apis.Storage.v1.Data.Object&gt;.InitiateSessionAsync(System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload&lt;Google.Apis.Storage.v1.Data.Object&gt;.Service</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload&lt;Google.Apis.Storage.v1.Data.Object&gt;.Path</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload&lt;Google.Apis.Storage.v1.Data.Object&gt;.HttpMethod</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload&lt;Google.Apis.Storage.v1.Data.Object&gt;.ContentType</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload&lt;Google.Apis.Storage.v1.Data.Object&gt;.Body</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.MinimumChunkSize</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.DefaultChunkSize</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.chunkSize</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.CreateFromUploadUri(System.Uri, System.IO.Stream, Google.Apis.Upload.ResumableUploadOptions)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.GetProgress()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.Upload()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.UploadAsync()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.UploadAsync(System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.Resume()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.Resume(System.Uri)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.ResumeAsync()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.ResumeAsync(System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.ResumeAsync(System.Uri)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.ResumeAsync(System.Uri, System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.ProcessResponse(System.Net.Http.HttpResponseMessage)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.SendNextChunkAsync(System.IO.Stream, System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.ExceptionForResponseAsync(System.Net.Http.HttpResponseMessage)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.Options</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.ContentStream</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.ChunkSize</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.ProgressChanged</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.UploadSessionData</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Apis.Storage.v1.html">Google.Apis.Storage.v1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Apis.Storage.v1.dll</h6>
+  <h5 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class InsertMediaUpload : ResumableUpload&lt;Object, Object&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload__ctor_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.#ctor*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Object_System_String_System_IO_Stream_System_String_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Object,System.String,System.IO.Stream,System.String)">InsertMediaUpload(IClientService, Object, String, Stream, String)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new Insert media upload instance.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public InsertMediaUpload(IClientService service, Object body, string bucket, Stream stream, string contentType)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Apis.Services.IClientService</span></td>
-                    <td><span class="parametername">service</span></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
-                    <td><span class="parametername">body</span></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">bucket</span></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.IO.Stream</span></td>
-                    <td><span class="parametername">stream</span></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">contentType</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h3 id="properties">Properties
-              </h3>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Alt_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Alt*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Alt" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Alt">Alt</h4>
-              <div class="markdown level1 summary"><p>Data format for the response.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InsertMediaUpload(IClientService service, Object body, string bucket, Stream stream, string contentType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Apis.Services.IClientService</span></td>
+        <td><span class="parametername">service</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
+        <td><span class="parametername">body</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bucket</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">contentType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Alt_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Alt*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Alt" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Alt">Alt</h4>
+  <div class="markdown level1 summary"><p>Data format for the response.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;alt&quot;, RequestParameterType.Query)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;alt&quot;, RequestParameterType.Query)]
 public virtual ObjectsResource.InsertMediaUpload.AltEnum? Alt { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.AltEnum.html">ObjectsResource.InsertMediaUpload.AltEnum</a>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Bucket_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Bucket*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Bucket" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Bucket">Bucket</h4>
-              <div class="markdown level1 summary"><p>Name of the bucket in which to store the new object. Overrides the provided object metadata&#39;s
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.AltEnum.html">ObjectsResource.InsertMediaUpload.AltEnum</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Bucket_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Bucket*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Bucket" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Bucket">Bucket</h4>
+  <div class="markdown level1 summary"><p>Name of the bucket in which to store the new object. Overrides the provided object metadata&#39;s
 bucket value, if any.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;bucket&quot;, RequestParameterType.Path)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;bucket&quot;, RequestParameterType.Path)]
 public virtual string Bucket { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_ContentEncoding_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.ContentEncoding*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_ContentEncoding" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.ContentEncoding">ContentEncoding</h4>
-              <div class="markdown level1 summary"><p>If set, sets the contentEncoding property of the final object to this value. Setting this
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_ContentEncoding_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.ContentEncoding*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_ContentEncoding" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.ContentEncoding">ContentEncoding</h4>
+  <div class="markdown level1 summary"><p>If set, sets the contentEncoding property of the final object to this value. Setting this
 parameter is equivalent to setting the contentEncoding metadata property. This can be useful when
 uploading an object with uploadType=media to indicate the encoding of the content being
 uploaded.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;contentEncoding&quot;, RequestParameterType.Query)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;contentEncoding&quot;, RequestParameterType.Query)]
 public virtual string ContentEncoding { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Fields_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Fields*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Fields" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Fields">Fields</h4>
-              <div class="markdown level1 summary"><p>Selector specifying which fields to include in a partial response.</p>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Fields_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Fields*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Fields" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Fields">Fields</h4>
+  <div class="markdown level1 summary"><p>Selector specifying which fields to include in a partial response.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;fields&quot;, RequestParameterType.Query)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;fields&quot;, RequestParameterType.Query)]
 public virtual string Fields { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_IfGenerationMatch_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.IfGenerationMatch*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_IfGenerationMatch" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.IfGenerationMatch">IfGenerationMatch</h4>
-              <div class="markdown level1 summary"><p>Makes the operation conditional on whether the object&#39;s current generation matches the given
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_IfGenerationMatch_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.IfGenerationMatch*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_IfGenerationMatch" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.IfGenerationMatch">IfGenerationMatch</h4>
+  <div class="markdown level1 summary"><p>Makes the operation conditional on whether the object&#39;s current generation matches the given
 value.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifGenerationMatch&quot;, RequestParameterType.Query)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifGenerationMatch&quot;, RequestParameterType.Query)]
 public virtual long ? IfGenerationMatch { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_IfGenerationNotMatch_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.IfGenerationNotMatch*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_IfGenerationNotMatch" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.IfGenerationNotMatch">IfGenerationNotMatch</h4>
-              <div class="markdown level1 summary"><p>Makes the operation conditional on whether the object&#39;s current generation does not match the
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_IfGenerationNotMatch_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.IfGenerationNotMatch*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_IfGenerationNotMatch" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.IfGenerationNotMatch">IfGenerationNotMatch</h4>
+  <div class="markdown level1 summary"><p>Makes the operation conditional on whether the object&#39;s current generation does not match the
 given value.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifGenerationNotMatch&quot;, RequestParameterType.Query)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifGenerationNotMatch&quot;, RequestParameterType.Query)]
 public virtual long ? IfGenerationNotMatch { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_IfMetagenerationMatch_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.IfMetagenerationMatch*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_IfMetagenerationMatch" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.IfMetagenerationMatch">IfMetagenerationMatch</h4>
-              <div class="markdown level1 summary"><p>Makes the operation conditional on whether the object&#39;s current metageneration matches the
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_IfMetagenerationMatch_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.IfMetagenerationMatch*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_IfMetagenerationMatch" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.IfMetagenerationMatch">IfMetagenerationMatch</h4>
+  <div class="markdown level1 summary"><p>Makes the operation conditional on whether the object&#39;s current metageneration matches the
 given value.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifMetagenerationMatch&quot;, RequestParameterType.Query)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifMetagenerationMatch&quot;, RequestParameterType.Query)]
 public virtual long ? IfMetagenerationMatch { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_IfMetagenerationNotMatch_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.IfMetagenerationNotMatch*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_IfMetagenerationNotMatch" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.IfMetagenerationNotMatch">IfMetagenerationNotMatch</h4>
-              <div class="markdown level1 summary"><p>Makes the operation conditional on whether the object&#39;s current metageneration does not match
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_IfMetagenerationNotMatch_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.IfMetagenerationNotMatch*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_IfMetagenerationNotMatch" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.IfMetagenerationNotMatch">IfMetagenerationNotMatch</h4>
+  <div class="markdown level1 summary"><p>Makes the operation conditional on whether the object&#39;s current metageneration does not match
 the given value.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifMetagenerationNotMatch&quot;, RequestParameterType.Query)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifMetagenerationNotMatch&quot;, RequestParameterType.Query)]
 public virtual long ? IfMetagenerationNotMatch { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Key_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Key*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Key" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Key">Key</h4>
-              <div class="markdown level1 summary"><p>API key. Your API key identifies your project and provides you with API access, quota, and
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Key_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Key*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Key" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Key">Key</h4>
+  <div class="markdown level1 summary"><p>API key. Your API key identifies your project and provides you with API access, quota, and
 reports. Required unless you provide an OAuth 2.0 token.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;key&quot;, RequestParameterType.Query)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;key&quot;, RequestParameterType.Query)]
 public virtual string Key { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Name_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Name*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Name" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Name">Name</h4>
-              <div class="markdown level1 summary"><p>Name of the object. Required when the object metadata is not otherwise provided. Overrides the
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_KmsKeyName_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.KmsKeyName*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_KmsKeyName" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.KmsKeyName">KmsKeyName</h4>
+  <div class="markdown level1 summary"><p>Resource name of the Cloud KMS key, of the form projects/my-project/locations/global/keyRings
+/my-kr/cryptoKeys/my-key, that will be used to encrypt the object. Overrides the object metadata&#39;s
+kms_key_name value, if any.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;kmsKeyName&quot;, RequestParameterType.Query)]
+public virtual string KmsKeyName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Name_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Name*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Name" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Name of the object. Required when the object metadata is not otherwise provided. Overrides the
 object metadata&#39;s name value, if any. For information about how to URL encode object names to be path
 safe, see Encoding URI Path Parts.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;name&quot;, RequestParameterType.Query)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;name&quot;, RequestParameterType.Query)]
 public virtual string Name { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_OauthToken_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.OauthToken*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_OauthToken" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.OauthToken">OauthToken</h4>
-              <div class="markdown level1 summary"><p>OAuth 2.0 token for the current user.</p>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_OauthToken_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.OauthToken*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_OauthToken" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.OauthToken">OauthToken</h4>
+  <div class="markdown level1 summary"><p>OAuth 2.0 token for the current user.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;oauth_token&quot;, RequestParameterType.Query)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;oauth_token&quot;, RequestParameterType.Query)]
 public virtual string OauthToken { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_PredefinedAcl_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.PredefinedAcl*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_PredefinedAcl" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.PredefinedAcl">PredefinedAcl</h4>
-              <div class="markdown level1 summary"><p>Apply a predefined set of access controls to this object.</p>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_PredefinedAcl_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.PredefinedAcl*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_PredefinedAcl" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.PredefinedAcl">PredefinedAcl</h4>
+  <div class="markdown level1 summary"><p>Apply a predefined set of access controls to this object.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;predefinedAcl&quot;, RequestParameterType.Query)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;predefinedAcl&quot;, RequestParameterType.Query)]
 public virtual ObjectsResource.InsertMediaUpload.PredefinedAclEnum? PredefinedAcl { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.PredefinedAclEnum.html">ObjectsResource.InsertMediaUpload.PredefinedAclEnum</a>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_PrettyPrint_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.PrettyPrint*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_PrettyPrint" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.PrettyPrint">PrettyPrint</h4>
-              <div class="markdown level1 summary"><p>Returns response with indentations and line breaks.</p>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.PredefinedAclEnum.html">ObjectsResource.InsertMediaUpload.PredefinedAclEnum</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_PrettyPrint_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.PrettyPrint*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_PrettyPrint" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.PrettyPrint">PrettyPrint</h4>
+  <div class="markdown level1 summary"><p>Returns response with indentations and line breaks.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;prettyPrint&quot;, RequestParameterType.Query)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;prettyPrint&quot;, RequestParameterType.Query)]
 public virtual bool ? PrettyPrint { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Projection_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Projection*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Projection" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Projection">Projection</h4>
-              <div class="markdown level1 summary"><p>Set of properties to return. Defaults to noAcl, unless the object resource specifies the acl
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Projection_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Projection*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_Projection" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.Projection">Projection</h4>
+  <div class="markdown level1 summary"><p>Set of properties to return. Defaults to noAcl, unless the object resource specifies the acl
 property, when it defaults to full.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;projection&quot;, RequestParameterType.Query)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;projection&quot;, RequestParameterType.Query)]
 public virtual ObjectsResource.InsertMediaUpload.ProjectionEnum? Projection { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.ProjectionEnum.html">ObjectsResource.InsertMediaUpload.ProjectionEnum</a>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_QuotaUser_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.QuotaUser*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_QuotaUser" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.QuotaUser">QuotaUser</h4>
-              <div class="markdown level1 summary"><p>Available to use for quota purposes for server-side applications. Can be any arbitrary string
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.ProjectionEnum.html">ObjectsResource.InsertMediaUpload.ProjectionEnum</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_QuotaUser_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.QuotaUser*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_QuotaUser" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.QuotaUser">QuotaUser</h4>
+  <div class="markdown level1 summary"><p>Available to use for quota purposes for server-side applications. Can be any arbitrary string
 assigned to a user, but should not exceed 40 characters. Overrides userIp if both are
 provided.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;quotaUser&quot;, RequestParameterType.Query)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;quotaUser&quot;, RequestParameterType.Query)]
 public virtual string QuotaUser { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_UserIp_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.UserIp*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_UserIp" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.UserIp">UserIp</h4>
-              <div class="markdown level1 summary"><p>IP address of the site where the request originates. Use this if you want to enforce per-user
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_UserIp_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.UserIp*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_UserIp" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.UserIp">UserIp</h4>
+  <div class="markdown level1 summary"><p>IP address of the site where the request originates. Use this if you want to enforce per-user
 limits.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;userIp&quot;, RequestParameterType.Query)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;userIp&quot;, RequestParameterType.Query)]
 public virtual string UserIp { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_UserProject_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.UserProject*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_UserProject" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.UserProject">UserProject</h4>
-              <div class="markdown level1 summary"><p>The project number to be billed for this request, for Requester Pays buckets.</p>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_UserProject_" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.UserProject*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_InsertMediaUpload_UserProject" data-uid="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.UserProject">UserProject</h4>
+  <div class="markdown level1 summary"><p>The project to be billed for this request, for Requester Pays buckets.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;userProject&quot;, RequestParameterType.Query)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;userProject&quot;, RequestParameterType.Query)]
 public virtual string UserProject { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

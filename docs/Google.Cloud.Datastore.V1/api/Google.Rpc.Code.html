@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Enum Code
    | Google.Cloud.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,75 +67,75 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Rpc_Code" data-uid="Google.Rpc.Code">Enum Code
-              </h1>
-              <div class="markdown level0 summary"><p>The canonical error codes for Google APIs.</p>
+            <article class="content wrap" id="_content" data-uid="Google.Rpc.Code">
+  
+  
+  <h1 id="Google_Rpc_Code" data-uid="Google.Rpc.Code">Enum Code
+  </h1>
+  <div class="markdown level0 summary"><p>The canonical error codes for Google APIs.</p>
 <p>Sometimes multiple error codes may apply.  Services should return
 the most specific error code that applies.  For example, prefer
 <code>OUT_OF_RANGE</code> over <code>FAILED_PRECONDITION</code> if both codes apply.
 Similarly prefer <code>NOT_FOUND</code> or <code>ALREADY_EXISTS</code> over <code>FAILED_PRECONDITION</code>.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <h6><strong>Namespace</strong>:Google.Rpc</h6>
-              <h6><strong>Assembly</strong>:Google.Api.CommonProtos.dll</h6>
-              <h5 id="Google_Rpc_Code_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public enum Code</code></pre>
-              </div>
-              <h3 id="fields">Fields
-              </h3>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                <thead>
-                <tbody>
-                  <tr>
-                    <td id="Google_Rpc_Code_Aborted">Aborted</td>
-                    <td><p>The operation was aborted, typically due to a concurrency issue such as
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Rpc.html">Google.Rpc</a></h6>
+  <h6><strong>Assembly</strong>: Google.Api.CommonProtos.dll</h6>
+  <h5 id="Google_Rpc_Code_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum Code</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    <thead>
+    <tbody>
+      <tr>
+        <td id="Google_Rpc_Code_Aborted">Aborted</td>
+        <td><p>The operation was aborted, typically due to a concurrency issue such as
 a sequencer check failure or transaction abort.</p>
 <p>See the guidelines above for deciding between <code>FAILED_PRECONDITION</code>,
 <code>ABORTED</code>, and <code>UNAVAILABLE</code>.</p>
 <p>HTTP Mapping: 409 Conflict</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Rpc_Code_AlreadyExists">AlreadyExists</td>
-                    <td><p>The entity that a client attempted to create (e.g., file or directory)
+      </tr>
+      <tr>
+        <td id="Google_Rpc_Code_AlreadyExists">AlreadyExists</td>
+        <td><p>The entity that a client attempted to create (e.g., file or directory)
 already exists.</p>
 <p>HTTP Mapping: 409 Conflict</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Rpc_Code_Cancelled">Cancelled</td>
-                    <td><p>The operation was cancelled, typically by the caller.</p>
+      </tr>
+      <tr>
+        <td id="Google_Rpc_Code_Cancelled">Cancelled</td>
+        <td><p>The operation was cancelled, typically by the caller.</p>
 <p>HTTP Mapping: 499 Client Closed Request</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Rpc_Code_DataLoss">DataLoss</td>
-                    <td><p>Unrecoverable data loss or corruption.</p>
+      </tr>
+      <tr>
+        <td id="Google_Rpc_Code_DataLoss">DataLoss</td>
+        <td><p>Unrecoverable data loss or corruption.</p>
 <p>HTTP Mapping: 500 Internal Server Error</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Rpc_Code_DeadlineExceeded">DeadlineExceeded</td>
-                    <td><p>The deadline expired before the operation could complete. For operations
+      </tr>
+      <tr>
+        <td id="Google_Rpc_Code_DeadlineExceeded">DeadlineExceeded</td>
+        <td><p>The deadline expired before the operation could complete. For operations
 that change the state of the system, this error may be returned
 even if the operation has completed successfully.  For example, a
 successful response from a server could have been delayed long
 enough for the deadline to expire.</p>
 <p>HTTP Mapping: 504 Gateway Timeout</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Rpc_Code_FailedPrecondition">FailedPrecondition</td>
-                    <td><p>The operation was rejected because the system is not in a state
+      </tr>
+      <tr>
+        <td id="Google_Rpc_Code_FailedPrecondition">FailedPrecondition</td>
+        <td><p>The operation was rejected because the system is not in a state
 required for the operation&#39;s execution.  For example, the directory
 to be deleted is non-empty, an rmdir operation is applied to
 a non-directory, etc.</p>
@@ -151,42 +151,42 @@ should be returned since the client should not retry unless
 the files are deleted from the directory.</p>
 <p>HTTP Mapping: 400 Bad Request</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Rpc_Code_Internal">Internal</td>
-                    <td><p>Internal errors.  This means that some invariants expected by the
+      </tr>
+      <tr>
+        <td id="Google_Rpc_Code_Internal">Internal</td>
+        <td><p>Internal errors.  This means that some invariants expected by the
 underlying system have been broken.  This error code is reserved
 for serious errors.</p>
 <p>HTTP Mapping: 500 Internal Server Error</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Rpc_Code_InvalidArgument">InvalidArgument</td>
-                    <td><p>The client specified an invalid argument.  Note that this differs
+      </tr>
+      <tr>
+        <td id="Google_Rpc_Code_InvalidArgument">InvalidArgument</td>
+        <td><p>The client specified an invalid argument.  Note that this differs
 from <code>FAILED_PRECONDITION</code>.  <code>INVALID_ARGUMENT</code> indicates arguments
 that are problematic regardless of the state of the system
 (e.g., a malformed file name).</p>
 <p>HTTP Mapping: 400 Bad Request</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Rpc_Code_NotFound">NotFound</td>
-                    <td><p>Some requested entity (e.g., file or directory) was not found.
+      </tr>
+      <tr>
+        <td id="Google_Rpc_Code_NotFound">NotFound</td>
+        <td><p>Some requested entity (e.g., file or directory) was not found.
 For privacy reasons, this code <em>may</em> be returned when the client
 does not have the access rights to the entity, though such usage is
 discouraged.</p>
 <p>HTTP Mapping: 404 Not Found</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Rpc_Code_Ok">Ok</td>
-                    <td><p>Not an error; returned on success</p>
+      </tr>
+      <tr>
+        <td id="Google_Rpc_Code_Ok">Ok</td>
+        <td><p>Not an error; returned on success</p>
 <p>HTTP Mapping: 200 OK</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Rpc_Code_OutOfRange">OutOfRange</td>
-                    <td><p>The operation was attempted past the valid range.  E.g., seeking or
+      </tr>
+      <tr>
+        <td id="Google_Rpc_Code_OutOfRange">OutOfRange</td>
+        <td><p>The operation was attempted past the valid range.  E.g., seeking or
 reading past end-of-file.</p>
 <p>Unlike <code>INVALID_ARGUMENT</code>, this error indicates a problem that may
 be fixed if the system state changes. For example, a 32-bit file
@@ -201,10 +201,10 @@ a space can easily look for an <code>OUT_OF_RANGE</code> error to detect when
 they are done.</p>
 <p>HTTP Mapping: 400 Bad Request</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Rpc_Code_PermissionDenied">PermissionDenied</td>
-                    <td><p>The caller does not have permission to execute the specified
+      </tr>
+      <tr>
+        <td id="Google_Rpc_Code_PermissionDenied">PermissionDenied</td>
+        <td><p>The caller does not have permission to execute the specified
 operation. <code>PERMISSION_DENIED</code> must not be used for rejections
 caused by exhausting some resource (use <code>RESOURCE_EXHAUSTED</code>
 instead for those errors). <code>PERMISSION_DENIED</code> must not be
@@ -212,51 +212,51 @@ used if the caller can not be identified (use <code>UNAUTHENTICATED</code>
 instead for those errors).</p>
 <p>HTTP Mapping: 403 Forbidden</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Rpc_Code_ResourceExhausted">ResourceExhausted</td>
-                    <td><p>Some resource has been exhausted, perhaps a per-user quota, or
+      </tr>
+      <tr>
+        <td id="Google_Rpc_Code_ResourceExhausted">ResourceExhausted</td>
+        <td><p>Some resource has been exhausted, perhaps a per-user quota, or
 perhaps the entire file system is out of space.</p>
 <p>HTTP Mapping: 429 Too Many Requests</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Rpc_Code_Unauthenticated">Unauthenticated</td>
-                    <td><p>The request does not have valid authentication credentials for the
+      </tr>
+      <tr>
+        <td id="Google_Rpc_Code_Unauthenticated">Unauthenticated</td>
+        <td><p>The request does not have valid authentication credentials for the
 operation.</p>
 <p>HTTP Mapping: 401 Unauthorized</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Rpc_Code_Unavailable">Unavailable</td>
-                    <td><p>The service is currently unavailable.  This is most likely a
+      </tr>
+      <tr>
+        <td id="Google_Rpc_Code_Unavailable">Unavailable</td>
+        <td><p>The service is currently unavailable.  This is most likely a
 transient condition, which can be corrected by retrying with
 a backoff.</p>
 <p>See the guidelines above for deciding between <code>FAILED_PRECONDITION</code>,
 <code>ABORTED</code>, and <code>UNAVAILABLE</code>.</p>
 <p>HTTP Mapping: 503 Service Unavailable</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Rpc_Code_Unimplemented">Unimplemented</td>
-                    <td><p>The operation is not implemented or is not supported/enabled in this
+      </tr>
+      <tr>
+        <td id="Google_Rpc_Code_Unimplemented">Unimplemented</td>
+        <td><p>The operation is not implemented or is not supported/enabled in this
 service.</p>
 <p>HTTP Mapping: 501 Not Implemented</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Rpc_Code_Unknown">Unknown</td>
-                    <td><p>Unknown error.  For example, this error may be returned when
+      </tr>
+      <tr>
+        <td id="Google_Rpc_Code_Unknown">Unknown</td>
+        <td><p>Unknown error.  For example, this error may be returned when
 a <code>Status</code> value received from another address space belongs to
 an error space that is not known in this address space.  Also
 errors raised by APIs that do not return enough error information
 may be converted to this error.</p>
 <p>HTTP Mapping: 500 Internal Server Error</p>
 </td>
-                  </tr>
-                </tbody>
-              </thead></thead></table>
-                        </article>
+      </tr>
+    </tbody>
+  </thead></thead></table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

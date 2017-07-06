@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Enum RecognitionConfig.Types.AudioEncoding
    | Google.Cloud.Speech.V1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,12 +67,12 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding" data-uid="Google.Cloud.Speech.V1.RecognitionConfig.Types.AudioEncoding">Enum RecognitionConfig.Types.AudioEncoding
-              </h1>
-              <div class="markdown level0 summary"><p>Audio encoding of the data sent in the audio message. All encodings support
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Speech.V1.RecognitionConfig.Types.AudioEncoding">
+  
+  
+  <h1 id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding" data-uid="Google.Cloud.Speech.V1.RecognitionConfig.Types.AudioEncoding">Enum RecognitionConfig.Types.AudioEncoding
+  </h1>
+  <div class="markdown level0 summary"><p>Audio encoding of the data sent in the audio message. All encodings support
 only 1 channel (mono) audio. Only <code>FLAC</code> includes a header that describes
 the bytes of audio that follow the header. The other encodings are raw
 audio bytes with no header.</p>
@@ -82,68 +82,68 @@ reduced if lossy codecs, which include the other codecs listed in
 this section, are used to capture or transmit the audio, particularly if
 background noise is present.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Speech.V1</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Speech.V1.dll</h6>
-              <h5 id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public enum AudioEncoding</code></pre>
-              </div>
-              <h3 id="fields">Fields
-              </h3>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                <thead>
-                <tbody>
-                  <tr>
-                    <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_Amr">Amr</td>
-                    <td><p>Adaptive Multi-Rate Narrowband codec. <code>sample_rate_hertz</code> must be 8000.</p>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Speech.V1.html">Google.Cloud.Speech.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Speech.V1.dll</h6>
+  <h5 id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum AudioEncoding</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    <thead>
+    <tbody>
+      <tr>
+        <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_Amr">Amr</td>
+        <td><p>Adaptive Multi-Rate Narrowband codec. <code>sample_rate_hertz</code> must be 8000.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_AmrWb">AmrWb</td>
-                    <td><p>Adaptive Multi-Rate Wideband codec. <code>sample_rate_hertz</code> must be 16000.</p>
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_AmrWb">AmrWb</td>
+        <td><p>Adaptive Multi-Rate Wideband codec. <code>sample_rate_hertz</code> must be 16000.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_EncodingUnspecified">EncodingUnspecified</td>
-                    <td><p>Not specified. Will return result [google.rpc.Code.INVALID_ARGUMENT][].</p>
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_EncodingUnspecified">EncodingUnspecified</td>
+        <td><p>Not specified. Will return result [google.rpc.Code.INVALID_ARGUMENT][].</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_Flac">Flac</td>
-                    <td><p><a href="https://xiph.org/flac/documentation.html"><code>FLAC</code></a> (Free Lossless Audio
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_Flac">Flac</td>
+        <td><p><a href="https://xiph.org/flac/documentation.html"><code>FLAC</code></a> (Free Lossless Audio
 Codec) is the recommended encoding because it is
 lossless--therefore recognition is not compromised--and
 requires only about half the bandwidth of <code>LINEAR16</code>. <code>FLAC</code> stream
 encoding supports 16-bit and 24-bit samples, however, not all fields in
 <code>STREAMINFO</code> are supported.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_Linear16">Linear16</td>
-                    <td><p>Uncompressed 16-bit signed little-endian samples (Linear PCM).</p>
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_Linear16">Linear16</td>
+        <td><p>Uncompressed 16-bit signed little-endian samples (Linear PCM).</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_Mulaw">Mulaw</td>
-                    <td><p>8-bit samples that compand 14-bit audio samples using G.711 PCMU/mu-law.</p>
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_Mulaw">Mulaw</td>
+        <td><p>8-bit samples that compand 14-bit audio samples using G.711 PCMU/mu-law.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_OggOpus">OggOpus</td>
-                    <td><p>Opus encoded audio frames in Ogg container
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_OggOpus">OggOpus</td>
+        <td><p>Opus encoded audio frames in Ogg container
 (<a href="https://wiki.xiph.org/OggOpus">OggOpus</a>).
 <code>sample_rate_hertz</code> must be 16000.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_SpeexWithHeaderByte">SpeexWithHeaderByte</td>
-                    <td><p>Although the use of lossy encodings is not recommended, if a very low
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_SpeexWithHeaderByte">SpeexWithHeaderByte</td>
+        <td><p>Although the use of lossy encodings is not recommended, if a very low
 bitrate encoding is required, <code>OGG_OPUS</code> is highly preferred over
 Speex encoding. The <a href="https://speex.org/">Speex</a>  encoding supported by
 Cloud Speech API has a header byte in each block, as in MIME type
@@ -157,10 +157,10 @@ bytes (octets) as specified in RFC 5574. In other words, each RTP header
 is replaced with a single byte containing the block length. Only Speex
 wideband is supported. <code>sample_rate_hertz</code> must be 16000.</p>
 </td>
-                  </tr>
-                </tbody>
-              </thead></thead></table>
-                        </article>
+      </tr>
+    </tbody>
+  </thead></thead></table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

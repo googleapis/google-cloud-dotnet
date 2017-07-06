@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class StreamingPullRequest
    | Google.Cloud.PubSub.V1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,103 +67,103 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_PubSub_V1_StreamingPullRequest" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest">Class StreamingPullRequest
-              </h1>
-              <div class="markdown level0 summary"><p>Request for the <code>StreamingPull</code> streaming RPC method. This request is used to
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest">
+  
+  
+  <h1 id="Google_Cloud_PubSub_V1_StreamingPullRequest" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest">Class StreamingPullRequest
+  </h1>
+  <div class="markdown level0 summary"><p>Request for the <code>StreamingPull</code> streaming RPC method. This request is used to
 establish the initial stream as well as to stream acknowledgements and ack
 deadline modifications from the client to the server.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">StreamingPullRequest</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Cloud.PubSub.V1</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.PubSub.V1.dll</h6>
-              <h5 id="Google_Cloud_PubSub_V1_StreamingPullRequest_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class StreamingPullRequest : IMessage&lt;StreamingPullRequest&gt;, IMessage, IEquatable&lt;StreamingPullRequest&gt;, IDeepCloneable&lt;StreamingPullRequest&gt;</code></pre>
-              </div>
-              <h3 id="properties">Properties
-              </h3>
-              <a id="Google_Cloud_PubSub_V1_StreamingPullRequest_AckIds_" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.AckIds*"></a>
-              <h4 id="Google_Cloud_PubSub_V1_StreamingPullRequest_AckIds" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.AckIds">AckIds</h4>
-              <div class="markdown level1 summary"><p>List of acknowledgement IDs for acknowledging previously received messages
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">StreamingPullRequest</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.PubSub.V1.html">Google.Cloud.PubSub.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.PubSub.V1.dll</h6>
+  <h5 id="Google_Cloud_PubSub_V1_StreamingPullRequest_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class StreamingPullRequest : IMessage&lt;StreamingPullRequest&gt;, IMessage, IEquatable&lt;StreamingPullRequest&gt;, IDeepCloneable&lt;StreamingPullRequest&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_PubSub_V1_StreamingPullRequest_AckIds_" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.AckIds*"></a>
+  <h4 id="Google_Cloud_PubSub_V1_StreamingPullRequest_AckIds" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.AckIds">AckIds</h4>
+  <div class="markdown level1 summary"><p>List of acknowledgement IDs for acknowledging previously received messages
 (received on this stream or a different stream). If an ack ID has expired,
 the corresponding message may be redelivered later. Acknowledging a message
 more than once will not result in an error. If the acknowledgement ID is
 malformed, the stream will be aborted with status <code>INVALID_ARGUMENT</code>.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RepeatedField&lt;string&gt; AckIds { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<span class="xref">System.String</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_PubSub_V1_StreamingPullRequest_ModifyDeadlineAckIds_" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.ModifyDeadlineAckIds*"></a>
-              <h4 id="Google_Cloud_PubSub_V1_StreamingPullRequest_ModifyDeadlineAckIds" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.ModifyDeadlineAckIds">ModifyDeadlineAckIds</h4>
-              <div class="markdown level1 summary"><p>List of acknowledgement IDs whose deadline will be modified based on the
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;string&gt; AckIds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_PubSub_V1_StreamingPullRequest_ModifyDeadlineAckIds_" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.ModifyDeadlineAckIds*"></a>
+  <h4 id="Google_Cloud_PubSub_V1_StreamingPullRequest_ModifyDeadlineAckIds" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.ModifyDeadlineAckIds">ModifyDeadlineAckIds</h4>
+  <div class="markdown level1 summary"><p>List of acknowledgement IDs whose deadline will be modified based on the
 corresponding element in <code>modify_deadline_seconds</code>. This field can be used
 to indicate that more time is needed to process a message by the
 subscriber, or to make the message available for redelivery if the
 processing was interrupted.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RepeatedField&lt;string&gt; ModifyDeadlineAckIds { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<span class="xref">System.String</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_PubSub_V1_StreamingPullRequest_ModifyDeadlineSeconds_" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.ModifyDeadlineSeconds*"></a>
-              <h4 id="Google_Cloud_PubSub_V1_StreamingPullRequest_ModifyDeadlineSeconds" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.ModifyDeadlineSeconds">ModifyDeadlineSeconds</h4>
-              <div class="markdown level1 summary"><p>The list of new ack deadlines for the IDs listed in
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;string&gt; ModifyDeadlineAckIds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_PubSub_V1_StreamingPullRequest_ModifyDeadlineSeconds_" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.ModifyDeadlineSeconds*"></a>
+  <h4 id="Google_Cloud_PubSub_V1_StreamingPullRequest_ModifyDeadlineSeconds" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.ModifyDeadlineSeconds">ModifyDeadlineSeconds</h4>
+  <div class="markdown level1 summary"><p>The list of new ack deadlines for the IDs listed in
 <code>modify_deadline_ack_ids</code>. The size of this list must be the same as the
 size of <code>modify_deadline_ack_ids</code>. If it differs the stream will be aborted
 with <code>INVALID_ARGUMENT</code>. Each element in this list is applied to the
@@ -175,105 +175,105 @@ the message is immediately made available for another streaming or
 non-streaming pull request. If the value is &lt; 0 (an error), the stream will
 be aborted with status <code>INVALID_ARGUMENT</code>.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RepeatedField&lt;int&gt; ModifyDeadlineSeconds { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_PubSub_V1_StreamingPullRequest_StreamAckDeadlineSeconds_" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.StreamAckDeadlineSeconds*"></a>
-              <h4 id="Google_Cloud_PubSub_V1_StreamingPullRequest_StreamAckDeadlineSeconds" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.StreamAckDeadlineSeconds">StreamAckDeadlineSeconds</h4>
-              <div class="markdown level1 summary"><p>The ack deadline to use for the stream. This must be provided in the
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;int&gt; ModifyDeadlineSeconds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_PubSub_V1_StreamingPullRequest_StreamAckDeadlineSeconds_" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.StreamAckDeadlineSeconds*"></a>
+  <h4 id="Google_Cloud_PubSub_V1_StreamingPullRequest_StreamAckDeadlineSeconds" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.StreamAckDeadlineSeconds">StreamAckDeadlineSeconds</h4>
+  <div class="markdown level1 summary"><p>The ack deadline to use for the stream. This must be provided in the
 first request on the stream, but it can also be updated on subsequent
 requests from client to server. The minimum deadline you can specify is 10
 seconds. The maximum deadline you can specify is 600 seconds (10 minutes).</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public int StreamAckDeadlineSeconds { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_PubSub_V1_StreamingPullRequest_Subscription_" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.Subscription*"></a>
-              <h4 id="Google_Cloud_PubSub_V1_StreamingPullRequest_Subscription" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.Subscription">Subscription</h4>
-              <div class="markdown level1 summary"><p>The subscription for which to initialize the new stream. This must be
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int StreamAckDeadlineSeconds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_PubSub_V1_StreamingPullRequest_Subscription_" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.Subscription*"></a>
+  <h4 id="Google_Cloud_PubSub_V1_StreamingPullRequest_Subscription" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.Subscription">Subscription</h4>
+  <div class="markdown level1 summary"><p>The subscription for which to initialize the new stream. This must be
 provided in the first request on the stream, and must not be set in
 subsequent requests from client to server.
 Format is <code>projects/{project}/subscriptions/{sub}</code>.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string Subscription { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_PubSub_V1_StreamingPullRequest_SubscriptionAsSubscriptionName_" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.SubscriptionAsSubscriptionName*"></a>
-              <h4 id="Google_Cloud_PubSub_V1_StreamingPullRequest_SubscriptionAsSubscriptionName" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.SubscriptionAsSubscriptionName">SubscriptionAsSubscriptionName</h4>
-              <div class="markdown level1 summary"><p><a class="xref" href="Google.Cloud.PubSub.V1.SubscriptionName.html">SubscriptionName</a>-typed view over the <a class="xref" href="Google.Cloud.PubSub.V1.StreamingPullRequest.html#Google_Cloud_PubSub_V1_StreamingPullRequest_Subscription">Subscription</a> resource name property.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Subscription { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_PubSub_V1_StreamingPullRequest_SubscriptionAsSubscriptionName_" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.SubscriptionAsSubscriptionName*"></a>
+  <h4 id="Google_Cloud_PubSub_V1_StreamingPullRequest_SubscriptionAsSubscriptionName" data-uid="Google.Cloud.PubSub.V1.StreamingPullRequest.SubscriptionAsSubscriptionName">SubscriptionAsSubscriptionName</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="Google.Cloud.PubSub.V1.SubscriptionName.html">SubscriptionName</a>-typed view over the <a class="xref" href="Google.Cloud.PubSub.V1.StreamingPullRequest.html#Google_Cloud_PubSub_V1_StreamingPullRequest_Subscription">Subscription</a> resource name property.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public SubscriptionName SubscriptionAsSubscriptionName { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.SubscriptionName.html">SubscriptionName</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SubscriptionName SubscriptionAsSubscriptionName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.PubSub.V1.SubscriptionName.html">SubscriptionName</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

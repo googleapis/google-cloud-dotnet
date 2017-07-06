@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SignedUrlResumableUpload
    | Google.Cloud.Storage.V1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,318 +67,318 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Storage_V1_SignedUrlResumableUpload" data-uid="Google.Cloud.Storage.V1.SignedUrlResumableUpload">Class SignedUrlResumableUpload
-              </h1>
-              <div class="markdown level0 summary"><p>Class which can perform a resumable upload using a signed URL to initiate the session.</p>
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Storage.V1.SignedUrlResumableUpload">
+  
+  
+  <h1 id="Google_Cloud_Storage_V1_SignedUrlResumableUpload" data-uid="Google.Cloud.Storage.V1.SignedUrlResumableUpload">Class SignedUrlResumableUpload
+  </h1>
+  <div class="markdown level0 summary"><p>Class which can perform a resumable upload using a signed URL to initiate the session.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">Google.Apis.Upload.ResumableUpload</span></div>
-                  <div class="level2"><span class="xref">SignedUrlResumableUpload</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.MinimumChunkSize</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.DefaultChunkSize</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.chunkSize</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.CreateFromUploadUri(System.Uri, System.IO.Stream, Google.Apis.Upload.ResumableUploadOptions)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.GetProgress()</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.Upload()</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.UploadAsync()</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.UploadAsync(System.Threading.CancellationToken)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.Resume()</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.Resume(System.Uri)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.ResumeAsync()</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.ResumeAsync(System.Threading.CancellationToken)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.ResumeAsync(System.Uri)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.ResumeAsync(System.Uri, System.Threading.CancellationToken)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.ProcessResponse(System.Net.Http.HttpResponseMessage)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.SendNextChunkAsync(System.IO.Stream, System.Threading.CancellationToken)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.ExceptionForResponseAsync(System.Net.Http.HttpResponseMessage)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.Options</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.ContentStream</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.ChunkSize</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.ProgressChanged</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Upload.ResumableUpload.UploadSessionData</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Storage.V1</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Storage.V1.dll</h6>
-              <h5 id="Google_Cloud_Storage_V1_SignedUrlResumableUpload_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class SignedUrlResumableUpload : ResumableUpload</code></pre>
-              </div>
-              <h3 id="methods">Methods
-              </h3>
-              <a id="Google_Cloud_Storage_V1_SignedUrlResumableUpload_Create_" data-uid="Google.Cloud.Storage.V1.SignedUrlResumableUpload.Create*"></a>
-              <h4 id="Google_Cloud_Storage_V1_SignedUrlResumableUpload_Create_System_String_System_IO_Stream_Google_Apis_Upload_ResumableUploadOptions_" data-uid="Google.Cloud.Storage.V1.SignedUrlResumableUpload.Create(System.String,System.IO.Stream,Google.Apis.Upload.ResumableUploadOptions)">Create(String, Stream, ResumableUploadOptions)</h4>
-              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Storage.V1.SignedUrlResumableUpload.html">SignedUrlResumableUpload</a> instance.</p>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Google.Apis.Upload.ResumableUpload</span></div>
+    <div class="level2"><span class="xref">SignedUrlResumableUpload</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.MinimumChunkSize</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.DefaultChunkSize</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.chunkSize</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.CreateFromUploadUri(System.Uri, System.IO.Stream, Google.Apis.Upload.ResumableUploadOptions)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.GetProgress()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.Upload()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.UploadAsync()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.UploadAsync(System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.Resume()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.Resume(System.Uri)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.ResumeAsync()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.ResumeAsync(System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.ResumeAsync(System.Uri)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.ResumeAsync(System.Uri, System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.ProcessResponse(System.Net.Http.HttpResponseMessage)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.SendNextChunkAsync(System.IO.Stream, System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.ExceptionForResponseAsync(System.Net.Http.HttpResponseMessage)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.Options</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.ContentStream</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.ChunkSize</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.ProgressChanged</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Upload.ResumableUpload.UploadSessionData</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Storage.V1.html">Google.Cloud.Storage.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Storage.V1.dll</h6>
+  <h5 id="Google_Cloud_Storage_V1_SignedUrlResumableUpload_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class SignedUrlResumableUpload : ResumableUpload</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Storage_V1_SignedUrlResumableUpload_Create_" data-uid="Google.Cloud.Storage.V1.SignedUrlResumableUpload.Create*"></a>
+  <h4 id="Google_Cloud_Storage_V1_SignedUrlResumableUpload_Create_System_String_System_IO_Stream_Google_Apis_Upload_ResumableUploadOptions_" data-uid="Google.Cloud.Storage.V1.SignedUrlResumableUpload.Create(System.String,System.IO.Stream,Google.Apis.Upload.ResumableUploadOptions)">Create(String, Stream, ResumableUploadOptions)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Storage.V1.SignedUrlResumableUpload.html">SignedUrlResumableUpload</a> instance.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static SignedUrlResumableUpload Create(string signedUrl, Stream contentStream, ResumableUploadOptions options = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">signedUrl</span></td>
-                    <td><p>The signed URL which can be used to initiate a resumable upload session. See
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SignedUrlResumableUpload Create(string signedUrl, Stream contentStream, ResumableUploadOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">signedUrl</span></td>
+        <td><p>The signed URL which can be used to initiate a resumable upload session. See
 <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner_ResumableHttpMethod">ResumableHttpMethod</a> for more information.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.IO.Stream</span></td>
-                    <td><span class="parametername">contentStream</span></td>
-                    <td><p>The data to be uploaded.</p>
+      </tr>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">contentStream</span></td>
+        <td><p>The data to be uploaded.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">Google.Apis.Upload.ResumableUploadOptions</span></td>
-                    <td><span class="parametername">options</span></td>
-                    <td><p>The options for the upload operation.</p>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Apis.Upload.ResumableUploadOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the upload operation.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.SignedUrlResumableUpload.html">SignedUrlResumableUpload</a></td>
-                    <td><p>The instance which can be used to upload the specified content.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Storage.V1.SignedUrlResumableUpload.html">SignedUrlResumableUpload</a></td>
+        <td><p>The instance which can be used to upload the specified content.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Storage_V1_SignedUrlResumableUpload_InitiateSession_" data-uid="Google.Cloud.Storage.V1.SignedUrlResumableUpload.InitiateSession*"></a>
-              <h4 id="Google_Cloud_Storage_V1_SignedUrlResumableUpload_InitiateSession_System_String_Google_Apis_Upload_ResumableUploadOptions_" data-uid="Google.Cloud.Storage.V1.SignedUrlResumableUpload.InitiateSession(System.String,Google.Apis.Upload.ResumableUploadOptions)">InitiateSession(String, ResumableUploadOptions)</h4>
-              <div class="markdown level1 summary"><p>Initiates the resumable upload session by posting to the signed URL and returns the session URI.</p>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Storage_V1_SignedUrlResumableUpload_InitiateSession_" data-uid="Google.Cloud.Storage.V1.SignedUrlResumableUpload.InitiateSession*"></a>
+  <h4 id="Google_Cloud_Storage_V1_SignedUrlResumableUpload_InitiateSession_System_String_Google_Apis_Upload_ResumableUploadOptions_" data-uid="Google.Cloud.Storage.V1.SignedUrlResumableUpload.InitiateSession(System.String,Google.Apis.Upload.ResumableUploadOptions)">InitiateSession(String, ResumableUploadOptions)</h4>
+  <div class="markdown level1 summary"><p>Initiates the resumable upload session by posting to the signed URL and returns the session URI.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Uri InitiateSession(string signedUrl, ResumableUploadOptions options = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">signedUrl</span></td>
-                    <td><p>The signed URL which can be used to initiate a resumable upload session. See
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Uri InitiateSession(string signedUrl, ResumableUploadOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">signedUrl</span></td>
+        <td><p>The signed URL which can be used to initiate a resumable upload session. See
 <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner_ResumableHttpMethod">ResumableHttpMethod</a> for more information.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">Google.Apis.Upload.ResumableUploadOptions</span></td>
-                    <td><span class="parametername">options</span></td>
-                    <td><p>The options for the upload operation.</p>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Apis.Upload.ResumableUploadOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the upload operation.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Uri</span></td>
-                    <td><p>The session URI to use for the resumable upload.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Uri</span></td>
+        <td><p>The session URI to use for the resumable upload.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Storage_V1_SignedUrlResumableUpload_InitiateSessionAsync_" data-uid="Google.Cloud.Storage.V1.SignedUrlResumableUpload.InitiateSessionAsync*"></a>
-              <h4 id="Google_Cloud_Storage_V1_SignedUrlResumableUpload_InitiateSessionAsync_System_String_Google_Apis_Upload_ResumableUploadOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.SignedUrlResumableUpload.InitiateSessionAsync(System.String,Google.Apis.Upload.ResumableUploadOptions,System.Threading.CancellationToken)">InitiateSessionAsync(String, ResumableUploadOptions, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Initiates the resumable upload session by posting to the signed URL and returns the session URI.</p>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Storage_V1_SignedUrlResumableUpload_InitiateSessionAsync_" data-uid="Google.Cloud.Storage.V1.SignedUrlResumableUpload.InitiateSessionAsync*"></a>
+  <h4 id="Google_Cloud_Storage_V1_SignedUrlResumableUpload_InitiateSessionAsync_System_String_Google_Apis_Upload_ResumableUploadOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.SignedUrlResumableUpload.InitiateSessionAsync(System.String,Google.Apis.Upload.ResumableUploadOptions,System.Threading.CancellationToken)">InitiateSessionAsync(String, ResumableUploadOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Initiates the resumable upload session by posting to the signed URL and returns the session URI.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Task&lt;Uri&gt; InitiateSessionAsync(string signedUrl, ResumableUploadOptions options = null, CancellationToken cancellationToken = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">signedUrl</span></td>
-                    <td><p>The signed URL which can be used to initiate a resumable upload session. See
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Uri&gt; InitiateSessionAsync(string signedUrl, ResumableUploadOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">signedUrl</span></td>
+        <td><p>The signed URL which can be used to initiate a resumable upload session. See
 <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner_ResumableHttpMethod">ResumableHttpMethod</a> for more information.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">Google.Apis.Upload.ResumableUploadOptions</span></td>
-                    <td><span class="parametername">options</span></td>
-                    <td><p>The options for the upload operation.</p>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Apis.Upload.ResumableUploadOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the upload operation.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><span class="parametername">cancellationToken</span></td>
-                    <td><p>The token to monitor for cancellation requests.</p>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The token to monitor for cancellation requests.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Uri</span>&gt;</td>
-                    <td><p>A task containing the session URI to use for the resumable upload.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Uri</span>&gt;</td>
+        <td><p>A task containing the session URI to use for the resumable upload.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Storage_V1_SignedUrlResumableUpload_InitiateSessionAsync_" data-uid="Google.Cloud.Storage.V1.SignedUrlResumableUpload.InitiateSessionAsync*"></a>
-              <h4 id="Google_Cloud_Storage_V1_SignedUrlResumableUpload_InitiateSessionAsync_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.SignedUrlResumableUpload.InitiateSessionAsync(System.Threading.CancellationToken)">InitiateSessionAsync(CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override Task&lt;Uri&gt; InitiateSessionAsync(CancellationToken cancellationToken)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><span class="parametername">cancellationToken</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Uri</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><span class="xref">Google.Apis.Upload.ResumableUpload.InitiateSessionAsync(System.Threading.CancellationToken)</span></div>
-              <h3 id="seealso">See Also</h3>
-              <div class="seealso">
-                  <div><a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html">UrlSigner</a></div>
-              </div>
-                        </article>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Storage_V1_SignedUrlResumableUpload_InitiateSessionAsync_" data-uid="Google.Cloud.Storage.V1.SignedUrlResumableUpload.InitiateSessionAsync*"></a>
+  <h4 id="Google_Cloud_Storage_V1_SignedUrlResumableUpload_InitiateSessionAsync_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.SignedUrlResumableUpload.InitiateSessionAsync(System.Threading.CancellationToken)">InitiateSessionAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Uri&gt; InitiateSessionAsync(CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Uri</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Google.Apis.Upload.ResumableUpload.InitiateSessionAsync(System.Threading.CancellationToken)</span></div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html">UrlSigner</a></div>
+  </div>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

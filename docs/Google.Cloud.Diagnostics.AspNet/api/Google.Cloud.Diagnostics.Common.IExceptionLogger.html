@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IExceptionLogger
    | Google.Cloud.Diagnostics.AspNet ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,113 +67,113 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Diagnostics_Common_IExceptionLogger" data-uid="Google.Cloud.Diagnostics.Common.IExceptionLogger">Interface IExceptionLogger
-              </h1>
-              <div class="markdown level0 summary"><p>A generic exception logger.</p>
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Diagnostics.Common.IExceptionLogger">
+  
+  
+  <h1 id="Google_Cloud_Diagnostics_Common_IExceptionLogger" data-uid="Google.Cloud.Diagnostics.Common.IExceptionLogger">Interface IExceptionLogger
+  </h1>
+  <div class="markdown level0 summary"><p>A generic exception logger.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Diagnostics.Common</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Diagnostics.Common.dll</h6>
-              <h5 id="Google_Cloud_Diagnostics_Common_IExceptionLogger_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public interface IExceptionLogger</code></pre>
-              </div>
-              <h3 id="methods">Methods
-              </h3>
-              <a id="Google_Cloud_Diagnostics_Common_IExceptionLogger_Log_" data-uid="Google.Cloud.Diagnostics.Common.IExceptionLogger.Log*"></a>
-              <h4 id="Google_Cloud_Diagnostics_Common_IExceptionLogger_Log_System_Exception_System_Web_HttpContext_" data-uid="Google.Cloud.Diagnostics.Common.IExceptionLogger.Log(System.Exception,System.Web.HttpContext)">Log(Exception, HttpContext)</h4>
-              <div class="markdown level1 summary"><p>Logs an exception that occurred.</p>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Diagnostics.Common.html">Google.Cloud.Diagnostics.Common</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Diagnostics.Common.dll</h6>
+  <h5 id="Google_Cloud_Diagnostics_Common_IExceptionLogger_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IExceptionLogger</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Diagnostics_Common_IExceptionLogger_Log_" data-uid="Google.Cloud.Diagnostics.Common.IExceptionLogger.Log*"></a>
+  <h4 id="Google_Cloud_Diagnostics_Common_IExceptionLogger_Log_System_Exception_System_Web_HttpContext_" data-uid="Google.Cloud.Diagnostics.Common.IExceptionLogger.Log(System.Exception,System.Web.HttpContext)">Log(Exception, HttpContext)</h4>
+  <div class="markdown level1 summary"><p>Logs an exception that occurred.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">void Log(Exception exception, HttpContext context = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Exception</span></td>
-                    <td><span class="parametername">exception</span></td>
-                    <td><p>The exception to log. Cannot be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Log(Exception exception, HttpContext context = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><span class="parametername">exception</span></td>
+        <td><p>The exception to log. Cannot be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Web.HttpContext</span></td>
-                    <td><span class="parametername">context</span></td>
-                    <td><p>Optional, the current HTTP context. If unset the
+      </tr>
+      <tr>
+        <td><span class="xref">System.Web.HttpContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>Optional, the current HTTP context. If unset the
     current context will be retrieved automatically.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Diagnostics_Common_IExceptionLogger_LogAsync_" data-uid="Google.Cloud.Diagnostics.Common.IExceptionLogger.LogAsync*"></a>
-              <h4 id="Google_Cloud_Diagnostics_Common_IExceptionLogger_LogAsync_System_Exception_System_Web_HttpContext_System_Threading_CancellationToken_" data-uid="Google.Cloud.Diagnostics.Common.IExceptionLogger.LogAsync(System.Exception,System.Web.HttpContext,System.Threading.CancellationToken)">LogAsync(Exception, HttpContext, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Asynchronously logs an exception that occurred.</p>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Diagnostics_Common_IExceptionLogger_LogAsync_" data-uid="Google.Cloud.Diagnostics.Common.IExceptionLogger.LogAsync*"></a>
+  <h4 id="Google_Cloud_Diagnostics_Common_IExceptionLogger_LogAsync_System_Exception_System_Web_HttpContext_System_Threading_CancellationToken_" data-uid="Google.Cloud.Diagnostics.Common.IExceptionLogger.LogAsync(System.Exception,System.Web.HttpContext,System.Threading.CancellationToken)">LogAsync(Exception, HttpContext, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously logs an exception that occurred.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">Task LogAsync(Exception exception, HttpContext context = null, CancellationToken cancellationToken = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Exception</span></td>
-                    <td><span class="parametername">exception</span></td>
-                    <td><p>The exception to log. Cannot be null.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task LogAsync(Exception exception, HttpContext context = null, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><span class="parametername">exception</span></td>
+        <td><p>The exception to log. Cannot be null.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Web.HttpContext</span></td>
-                    <td><span class="parametername">context</span></td>
-                    <td><p>Optional, the current HTTP context. If unset the
+      </tr>
+      <tr>
+        <td><span class="xref">System.Web.HttpContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>Optional, the current HTTP context. If unset the
     current context will be retrieved automatically.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><span class="parametername">cancellationToken</span></td>
-                    <td><p>Optional, The token to monitor for cancellation requests.</p>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>Optional, The token to monitor for cancellation requests.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td><p>A task representing the asynchronous operation.</p>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task representing the asynchronous operation.</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

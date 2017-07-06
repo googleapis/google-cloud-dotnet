@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TraceSpan
    | Google.Cloud.Trace.V1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,223 +67,223 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Trace_V1_TraceSpan" data-uid="Google.Cloud.Trace.V1.TraceSpan">Class TraceSpan
-              </h1>
-              <div class="markdown level0 summary"><p>A span represents a single timed event within a trace. Spans can be nested
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Trace.V1.TraceSpan">
+  
+  
+  <h1 id="Google_Cloud_Trace_V1_TraceSpan" data-uid="Google.Cloud.Trace.V1.TraceSpan">Class TraceSpan
+  </h1>
+  <div class="markdown level0 summary"><p>A span represents a single timed event within a trace. Spans can be nested
 and form a trace tree. Often, a trace contains a root span that describes the
 end-to-end latency of an operation and, optionally, one or more subspans for
 its suboperations. Spans do not need to be contiguous. There may be gaps
 between spans in a trace.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">TraceSpan</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Trace.V1</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Trace.V1.dll</h6>
-              <h5 id="Google_Cloud_Trace_V1_TraceSpan_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class TraceSpan : IMessage&lt;TraceSpan&gt;, IMessage, IEquatable&lt;TraceSpan&gt;, IDeepCloneable&lt;TraceSpan&gt;</code></pre>
-              </div>
-              <h3 id="properties">Properties
-              </h3>
-              <a id="Google_Cloud_Trace_V1_TraceSpan_EndTime_" data-uid="Google.Cloud.Trace.V1.TraceSpan.EndTime*"></a>
-              <h4 id="Google_Cloud_Trace_V1_TraceSpan_EndTime" data-uid="Google.Cloud.Trace.V1.TraceSpan.EndTime">EndTime</h4>
-              <div class="markdown level1 summary"><p>End time of the span in nanoseconds from the UNIX epoch.</p>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">TraceSpan</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Trace.V1.html">Google.Cloud.Trace.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Trace.V1.dll</h6>
+  <h5 id="Google_Cloud_Trace_V1_TraceSpan_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class TraceSpan : IMessage&lt;TraceSpan&gt;, IMessage, IEquatable&lt;TraceSpan&gt;, IDeepCloneable&lt;TraceSpan&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Trace_V1_TraceSpan_EndTime_" data-uid="Google.Cloud.Trace.V1.TraceSpan.EndTime*"></a>
+  <h4 id="Google_Cloud_Trace_V1_TraceSpan_EndTime" data-uid="Google.Cloud.Trace.V1.TraceSpan.EndTime">EndTime</h4>
+  <div class="markdown level1 summary"><p>End time of the span in nanoseconds from the UNIX epoch.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Timestamp EndTime { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html">Timestamp</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Trace_V1_TraceSpan_Kind_" data-uid="Google.Cloud.Trace.V1.TraceSpan.Kind*"></a>
-              <h4 id="Google_Cloud_Trace_V1_TraceSpan_Kind" data-uid="Google.Cloud.Trace.V1.TraceSpan.Kind">Kind</h4>
-              <div class="markdown level1 summary"><p>Distinguishes between spans generated in a particular context. For example,
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Timestamp EndTime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html">Timestamp</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Trace_V1_TraceSpan_Kind_" data-uid="Google.Cloud.Trace.V1.TraceSpan.Kind*"></a>
+  <h4 id="Google_Cloud_Trace_V1_TraceSpan_Kind" data-uid="Google.Cloud.Trace.V1.TraceSpan.Kind">Kind</h4>
+  <div class="markdown level1 summary"><p>Distinguishes between spans generated in a particular context. For example,
 two spans with the same name may be distinguished using <code>RPC_CLIENT</code>
 and <code>RPC_SERVER</code> to identify queueing latency associated with the span.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public TraceSpan.Types.SpanKind Kind { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Trace.V1.TraceSpan.Types.SpanKind.html">TraceSpan.Types.SpanKind</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Trace_V1_TraceSpan_Labels_" data-uid="Google.Cloud.Trace.V1.TraceSpan.Labels*"></a>
-              <h4 id="Google_Cloud_Trace_V1_TraceSpan_Labels" data-uid="Google.Cloud.Trace.V1.TraceSpan.Labels">Labels</h4>
-              <div class="markdown level1 summary"><p>Collection of labels associated with the span.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TraceSpan.Types.SpanKind Kind { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Trace.V1.TraceSpan.Types.SpanKind.html">TraceSpan.Types.SpanKind</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Trace_V1_TraceSpan_Labels_" data-uid="Google.Cloud.Trace.V1.TraceSpan.Labels*"></a>
+  <h4 id="Google_Cloud_Trace_V1_TraceSpan_Labels" data-uid="Google.Cloud.Trace.V1.TraceSpan.Labels">Labels</h4>
+  <div class="markdown level1 summary"><p>Collection of labels associated with the span.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public MapField&lt;string, string&gt; Labels { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.MapField-2.html">MapField</a>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Trace_V1_TraceSpan_Name_" data-uid="Google.Cloud.Trace.V1.TraceSpan.Name*"></a>
-              <h4 id="Google_Cloud_Trace_V1_TraceSpan_Name" data-uid="Google.Cloud.Trace.V1.TraceSpan.Name">Name</h4>
-              <div class="markdown level1 summary"><p>Name of the trace. The trace name is sanitized and displayed in the
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapField&lt;string, string&gt; Labels { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.MapField-2.html">MapField</a>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Trace_V1_TraceSpan_Name_" data-uid="Google.Cloud.Trace.V1.TraceSpan.Name*"></a>
+  <h4 id="Google_Cloud_Trace_V1_TraceSpan_Name" data-uid="Google.Cloud.Trace.V1.TraceSpan.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Name of the trace. The trace name is sanitized and displayed in the
 Stackdriver Trace tool in the Google Developers Console.
 The name may be a method name or some other per-call site name.
 For the same executable and the same call point, a best practice is
 to use a consistent name, which makes it easier to correlate
 cross-trace spans.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Trace_V1_TraceSpan_ParentSpanId_" data-uid="Google.Cloud.Trace.V1.TraceSpan.ParentSpanId*"></a>
-              <h4 id="Google_Cloud_Trace_V1_TraceSpan_ParentSpanId" data-uid="Google.Cloud.Trace.V1.TraceSpan.ParentSpanId">ParentSpanId</h4>
-              <div class="markdown level1 summary"><p>ID of the parent span, if any. Optional.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Trace_V1_TraceSpan_ParentSpanId_" data-uid="Google.Cloud.Trace.V1.TraceSpan.ParentSpanId*"></a>
+  <h4 id="Google_Cloud_Trace_V1_TraceSpan_ParentSpanId" data-uid="Google.Cloud.Trace.V1.TraceSpan.ParentSpanId">ParentSpanId</h4>
+  <div class="markdown level1 summary"><p>ID of the parent span, if any. Optional.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ulong ParentSpanId { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.UInt64</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Trace_V1_TraceSpan_SpanId_" data-uid="Google.Cloud.Trace.V1.TraceSpan.SpanId*"></a>
-              <h4 id="Google_Cloud_Trace_V1_TraceSpan_SpanId" data-uid="Google.Cloud.Trace.V1.TraceSpan.SpanId">SpanId</h4>
-              <div class="markdown level1 summary"><p>Identifier for the span. Must be a 64-bit integer other than 0 and
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong ParentSpanId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Trace_V1_TraceSpan_SpanId_" data-uid="Google.Cloud.Trace.V1.TraceSpan.SpanId*"></a>
+  <h4 id="Google_Cloud_Trace_V1_TraceSpan_SpanId" data-uid="Google.Cloud.Trace.V1.TraceSpan.SpanId">SpanId</h4>
+  <div class="markdown level1 summary"><p>Identifier for the span. Must be a 64-bit integer other than 0 and
 unique within a trace.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ulong SpanId { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.UInt64</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Trace_V1_TraceSpan_StartTime_" data-uid="Google.Cloud.Trace.V1.TraceSpan.StartTime*"></a>
-              <h4 id="Google_Cloud_Trace_V1_TraceSpan_StartTime" data-uid="Google.Cloud.Trace.V1.TraceSpan.StartTime">StartTime</h4>
-              <div class="markdown level1 summary"><p>Start time of the span in nanoseconds from the UNIX epoch.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong SpanId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Trace_V1_TraceSpan_StartTime_" data-uid="Google.Cloud.Trace.V1.TraceSpan.StartTime*"></a>
+  <h4 id="Google_Cloud_Trace_V1_TraceSpan_StartTime" data-uid="Google.Cloud.Trace.V1.TraceSpan.StartTime">StartTime</h4>
+  <div class="markdown level1 summary"><p>Start time of the span in nanoseconds from the UNIX epoch.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Timestamp StartTime { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html">Timestamp</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-                        </article>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Timestamp StartTime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html">Timestamp</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

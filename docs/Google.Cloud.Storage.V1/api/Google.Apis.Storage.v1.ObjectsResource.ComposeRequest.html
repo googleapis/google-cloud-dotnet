@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ObjectsResource.ComposeRequest
    | Google.Cloud.Storage.V1 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,564 +67,731 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest">Class ObjectsResource.ComposeRequest
-              </h1>
-              <div class="markdown level0 summary"><p>Concatenates a list of existing objects into a new object in the same bucket.</p>
+            <article class="content wrap" id="_content" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest">
+  
+  
+  <h1 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest">Class ObjectsResource.ComposeRequest
+  </h1>
+  <div class="markdown level0 summary"><p>Concatenates a list of existing objects into a new object in the same bucket.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">Google.Apis.Requests.ClientServiceRequest</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</div>
-                  <div class="level2"><a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html">StorageBaseServiceRequest</a>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</div>
-                  <div class="level3"><span class="xref">ObjectsResource.ComposeRequest</span></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html#Google_Apis_Storage_v1_StorageBaseServiceRequest_1_Alt">StorageBaseServiceRequest&lt;Object&gt;.Alt</a>
-                </div>
-                <div>
-                  <a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html#Google_Apis_Storage_v1_StorageBaseServiceRequest_1_Fields">StorageBaseServiceRequest&lt;Object&gt;.Fields</a>
-                </div>
-                <div>
-                  <a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html#Google_Apis_Storage_v1_StorageBaseServiceRequest_1_Key">StorageBaseServiceRequest&lt;Object&gt;.Key</a>
-                </div>
-                <div>
-                  <a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html#Google_Apis_Storage_v1_StorageBaseServiceRequest_1_OauthToken">StorageBaseServiceRequest&lt;Object&gt;.OauthToken</a>
-                </div>
-                <div>
-                  <a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html#Google_Apis_Storage_v1_StorageBaseServiceRequest_1_PrettyPrint">StorageBaseServiceRequest&lt;Object&gt;.PrettyPrint</a>
-                </div>
-                <div>
-                  <a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html#Google_Apis_Storage_v1_StorageBaseServiceRequest_1_QuotaUser">StorageBaseServiceRequest&lt;Object&gt;.QuotaUser</a>
-                </div>
-                <div>
-                  <a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html#Google_Apis_Storage_v1_StorageBaseServiceRequest_1_UserIp">StorageBaseServiceRequest&lt;Object&gt;.UserIp</a>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.Execute()</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.ExecuteAsStream()</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.ExecuteAsync()</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.ExecuteAsync(System.Threading.CancellationToken)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.ExecuteAsStreamAsync()</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.ExecuteAsStreamAsync(System.Threading.CancellationToken)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.CreateRequest(System.Nullable&lt;System.Boolean&gt;)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.GenerateRequestUri()</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.GetDefaultETagAction(System.String)</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.ETagAction</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.ModifyRequest</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.RequestParameters</span>
-                </div>
-                <div>
-                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.Service</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
-              <h6><strong>Namespace</strong>:Google.Apis.Storage.v1</h6>
-              <h6><strong>Assembly</strong>:Google.Apis.Storage.v1.dll</h6>
-              <h5 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class ComposeRequest : StorageBaseServiceRequest&lt;Object&gt;, IClientServiceRequest&lt;Object&gt;, IClientServiceRequest</code></pre>
-              </div>
-              <h3 id="constructors">Constructors
-              </h3>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest__ctor_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.#ctor*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_ComposeRequest_System_String_System_String_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.ComposeRequest,System.String,System.String)">ComposeRequest(IClientService, ComposeRequest, String, String)</h4>
-              <div class="markdown level1 summary"><p>Constructs a new Compose request.</p>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Google.Apis.Requests.ClientServiceRequest</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</div>
+    <div class="level2"><a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html">StorageBaseServiceRequest</a>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</div>
+    <div class="level3"><span class="xref">ObjectsResource.ComposeRequest</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html#Google_Apis_Storage_v1_StorageBaseServiceRequest_1_Alt">StorageBaseServiceRequest&lt;Object&gt;.Alt</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html#Google_Apis_Storage_v1_StorageBaseServiceRequest_1_Fields">StorageBaseServiceRequest&lt;Object&gt;.Fields</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html#Google_Apis_Storage_v1_StorageBaseServiceRequest_1_Key">StorageBaseServiceRequest&lt;Object&gt;.Key</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html#Google_Apis_Storage_v1_StorageBaseServiceRequest_1_OauthToken">StorageBaseServiceRequest&lt;Object&gt;.OauthToken</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html#Google_Apis_Storage_v1_StorageBaseServiceRequest_1_PrettyPrint">StorageBaseServiceRequest&lt;Object&gt;.PrettyPrint</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html#Google_Apis_Storage_v1_StorageBaseServiceRequest_1_QuotaUser">StorageBaseServiceRequest&lt;Object&gt;.QuotaUser</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html#Google_Apis_Storage_v1_StorageBaseServiceRequest_1_UserIp">StorageBaseServiceRequest&lt;Object&gt;.UserIp</a>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.Execute()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.ExecuteAsStream()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.ExecuteAsync()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.ExecuteAsync(System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.ExecuteAsStreamAsync()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.ExecuteAsStreamAsync(System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.CreateRequest(System.Nullable&lt;System.Boolean&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.GenerateRequestUri()</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.GetDefaultETagAction(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.ETagAction</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.ModifyRequest</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.RequestParameters</span>
+    </div>
+    <div>
+      <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.Service</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Apis.Storage.v1.html">Google.Apis.Storage.v1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Apis.Storage.v1.dll</h6>
+  <h5 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ComposeRequest : StorageBaseServiceRequest&lt;Object&gt;, IClientServiceRequest&lt;Object&gt;, IClientServiceRequest</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest__ctor_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.#ctor*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_ComposeRequest_System_String_System_String_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.ComposeRequest,System.String,System.String)">ComposeRequest(IClientService, ComposeRequest, String, String)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new Compose request.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ComposeRequest(IClientService service, ComposeRequest body, string destinationBucket, string destinationObject)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Apis.Services.IClientService</span></td>
-                    <td><span class="parametername">service</span></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.ComposeRequest.html">ComposeRequest</a></td>
-                    <td><span class="parametername">body</span></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">destinationBucket</span></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">destinationObject</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h3 id="properties">Properties
-              </h3>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DestinationBucket_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DestinationBucket*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DestinationBucket" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DestinationBucket">DestinationBucket</h4>
-              <div class="markdown level1 summary"><p>Name of the bucket in which to store the new object.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComposeRequest(IClientService service, ComposeRequest body, string destinationBucket, string destinationObject)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Apis.Services.IClientService</span></td>
+        <td><span class="parametername">service</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Apis.Storage.v1.Data.ComposeRequest.html">ComposeRequest</a></td>
+        <td><span class="parametername">body</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">destinationBucket</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">destinationObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DestinationBucket_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DestinationBucket*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DestinationBucket" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DestinationBucket">DestinationBucket</h4>
+  <div class="markdown level1 summary"><p>Name of the bucket in which to store the new object.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;destinationBucket&quot;, RequestParameterType.Path)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;destinationBucket&quot;, RequestParameterType.Path)]
 public virtual string DestinationBucket { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DestinationObject_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DestinationObject*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DestinationObject" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DestinationObject">DestinationObject</h4>
-              <div class="markdown level1 summary"><p>Name of the new object. For information about how to URL encode object names to be path safe,
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DestinationObject_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DestinationObject*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DestinationObject" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DestinationObject">DestinationObject</h4>
+  <div class="markdown level1 summary"><p>Name of the new object. For information about how to URL encode object names to be path safe,
 see Encoding URI Path Parts.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;destinationObject&quot;, RequestParameterType.Path)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;destinationObject&quot;, RequestParameterType.Path)]
 public virtual string DestinationObject { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DestinationPredefinedAcl_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DestinationPredefinedAcl*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DestinationPredefinedAcl" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DestinationPredefinedAcl">DestinationPredefinedAcl</h4>
-              <div class="markdown level1 summary"><p>Apply a predefined set of access controls to the destination object.</p>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DestinationPredefinedAcl_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DestinationPredefinedAcl*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DestinationPredefinedAcl" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DestinationPredefinedAcl">DestinationPredefinedAcl</h4>
+  <div class="markdown level1 summary"><p>Apply a predefined set of access controls to the destination object.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;destinationPredefinedAcl&quot;, RequestParameterType.Query)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;destinationPredefinedAcl&quot;, RequestParameterType.Query)]
 public virtual ObjectsResource.ComposeRequest.DestinationPredefinedAclEnum? DestinationPredefinedAcl { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DestinationPredefinedAclEnum.html">ObjectsResource.ComposeRequest.DestinationPredefinedAclEnum</a>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_HttpMethod_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.HttpMethod*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_HttpMethod" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.HttpMethod">HttpMethod</h4>
-              <div class="markdown level1 summary"><p>Gets the HTTP method.</p>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DestinationPredefinedAclEnum.html">ObjectsResource.ComposeRequest.DestinationPredefinedAclEnum</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_HttpMethod_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.HttpMethod*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_HttpMethod" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.HttpMethod">HttpMethod</h4>
+  <div class="markdown level1 summary"><p>Gets the HTTP method.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override string HttpMethod { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.HttpMethod</span></div>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_IfGenerationMatch_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.IfGenerationMatch*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_IfGenerationMatch" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.IfGenerationMatch">IfGenerationMatch</h4>
-              <div class="markdown level1 summary"><p>Makes the operation conditional on whether the object&#39;s current generation matches the given
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string HttpMethod { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.HttpMethod</span></div>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_IfGenerationMatch_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.IfGenerationMatch*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_IfGenerationMatch" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.IfGenerationMatch">IfGenerationMatch</h4>
+  <div class="markdown level1 summary"><p>Makes the operation conditional on whether the object&#39;s current generation matches the given
 value.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifGenerationMatch&quot;, RequestParameterType.Query)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifGenerationMatch&quot;, RequestParameterType.Query)]
 public virtual long ? IfGenerationMatch { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_IfMetagenerationMatch_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.IfMetagenerationMatch*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_IfMetagenerationMatch" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.IfMetagenerationMatch">IfMetagenerationMatch</h4>
-              <div class="markdown level1 summary"><p>Makes the operation conditional on whether the object&#39;s current metageneration matches the
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_IfMetagenerationMatch_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.IfMetagenerationMatch*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_IfMetagenerationMatch" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.IfMetagenerationMatch">IfMetagenerationMatch</h4>
+  <div class="markdown level1 summary"><p>Makes the operation conditional on whether the object&#39;s current metageneration matches the
 given value.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifMetagenerationMatch&quot;, RequestParameterType.Query)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;ifMetagenerationMatch&quot;, RequestParameterType.Query)]
 public virtual long ? IfMetagenerationMatch { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_MediaDownloader_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.MediaDownloader*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_MediaDownloader" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.MediaDownloader">MediaDownloader</h4>
-              <div class="markdown level1 summary"><p>Gets the media downloader.</p>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_KmsKeyName_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.KmsKeyName*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_KmsKeyName" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.KmsKeyName">KmsKeyName</h4>
+  <div class="markdown level1 summary"><p>Resource name of the Cloud KMS key, of the form projects/my-project/locations/global/keyRings
+/my-kr/cryptoKeys/my-key, that will be used to encrypt the object. Overrides the object metadata&#39;s
+kms_key_name value, if any.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public IMediaDownloader MediaDownloader { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Apis.Download.IMediaDownloader</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_MethodName_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.MethodName*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_MethodName" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.MethodName">MethodName</h4>
-              <div class="markdown level1 summary"><p>Gets the method name.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;kmsKeyName&quot;, RequestParameterType.Query)]
+public virtual string KmsKeyName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_MediaDownloader_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.MediaDownloader*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_MediaDownloader" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.MediaDownloader">MediaDownloader</h4>
+  <div class="markdown level1 summary"><p>Gets the media downloader.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override string MethodName { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.MethodName</span></div>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_RestPath_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.RestPath*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_RestPath" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.RestPath">RestPath</h4>
-              <div class="markdown level1 summary"><p>Gets the REST path.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMediaDownloader MediaDownloader { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Apis.Download.IMediaDownloader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_MethodName_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.MethodName*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_MethodName" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.MethodName">MethodName</h4>
+  <div class="markdown level1 summary"><p>Gets the method name.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override string RestPath { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.RestPath</span></div>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_UserProject_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.UserProject*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_UserProject" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.UserProject">UserProject</h4>
-              <div class="markdown level1 summary"><p>The project number to be billed for this request, for Requester Pays buckets.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string MethodName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.MethodName</span></div>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_RestPath_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.RestPath*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_RestPath" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.RestPath">RestPath</h4>
+  <div class="markdown level1 summary"><p>Gets the REST path.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;userProject&quot;, RequestParameterType.Query)]
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string RestPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.RestPath</span></div>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_UserProject_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.UserProject*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_UserProject" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.UserProject">UserProject</h4>
+  <div class="markdown level1 summary"><p>The project to be billed for this request, for Requester Pays buckets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequestParameter(&quot;userProject&quot;, RequestParameterType.Query)]
 public virtual string UserProject { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h3 id="methods">Methods
-              </h3>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_Download_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.Download*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_Download_System_IO_Stream_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.Download(System.IO.Stream)">Download(Stream)</h4>
-              <div class="markdown level1 summary"><p>Synchronously download the media into the given stream.</p>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_Download_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.Download*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_Download_System_IO_Stream_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.Download(System.IO.Stream)">Download(Stream)</h4>
+  <div class="markdown level1 summary"><p>Synchronously download the media into the given stream.</p>
+<p>Warning: This method hides download errors; use <a class="xref" href="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.html#Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadWithStatus_System_IO_Stream_">DownloadWithStatus(Stream)</a> instead.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual void Download(Stream stream)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.IO.Stream</span></td>
-                    <td><span class="parametername">stream</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadAsync_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadAsync*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadAsync_System_IO_Stream_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadAsync(System.IO.Stream)">DownloadAsync(Stream)</h4>
-              <div class="markdown level1 summary"><p>Asynchronously download the media into the given stream.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Download(Stream stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadAsync_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadAsync*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadAsync_System_IO_Stream_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadAsync(System.IO.Stream)">DownloadAsync(Stream)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously download the media into the given stream.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;IDownloadProgress&gt; DownloadAsync(Stream stream)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.IO.Stream</span></td>
-                    <td><span class="parametername">stream</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Apis.Download.IDownloadProgress</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadAsync_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadAsync*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadAsync_System_IO_Stream_System_Threading_CancellationToken_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadAsync(System.IO.Stream,System.Threading.CancellationToken)">DownloadAsync(Stream, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Asynchronously download the media into the given stream.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IDownloadProgress&gt; DownloadAsync(Stream stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Apis.Download.IDownloadProgress</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadAsync_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadAsync*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadAsync_System_IO_Stream_System_Threading_CancellationToken_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadAsync(System.IO.Stream,System.Threading.CancellationToken)">DownloadAsync(Stream, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously download the media into the given stream.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;IDownloadProgress&gt; DownloadAsync(Stream stream, CancellationToken cancellationToken)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.IO.Stream</span></td>
-                    <td><span class="parametername">stream</span></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><span class="parametername">cancellationToken</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Apis.Download.IDownloadProgress</span>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_GetBody_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.GetBody*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_GetBody" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.GetBody">GetBody()</h4>
-              <div class="markdown level1 summary"><p>Returns the body of the request.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IDownloadProgress&gt; DownloadAsync(Stream stream, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Apis.Download.IDownloadProgress</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadRange_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadRange*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadRange_System_IO_Stream_System_Net_Http_Headers_RangeHeaderValue_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadRange(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue)">DownloadRange(Stream, RangeHeaderValue)</h4>
+  <div class="markdown level1 summary"><p>Synchronously download a range of the media into the given stream.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">protected override object GetBody()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Object</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.GetBody()</span></div>
-              <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_InitParameters_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.InitParameters*"></a>
-              <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_InitParameters" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.InitParameters">InitParameters()</h4>
-              <div class="markdown level1 summary"><p>Initializes Compose parameter list.</p>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IDownloadProgress DownloadRange(Stream stream, RangeHeaderValue range)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.Http.Headers.RangeHeaderValue</span></td>
+        <td><span class="parametername">range</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Apis.Download.IDownloadProgress</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadRangeAsync_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadRangeAsync*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadRangeAsync_System_IO_Stream_System_Net_Http_Headers_RangeHeaderValue_System_Threading_CancellationToken_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadRangeAsync(System.IO.Stream,System.Net.Http.Headers.RangeHeaderValue,System.Threading.CancellationToken)">DownloadRangeAsync(Stream, RangeHeaderValue, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously download a range of the media into the given stream.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">protected override void InitParameters()</code></pre>
-              </div>
-              <h5 class="overrides">Overrides</h5>
-              <div><span class="xref">Google.Apis.Storage.v1.StorageBaseServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.InitParameters()</span></div>
-                        </article>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IDownloadProgress&gt; DownloadRangeAsync(Stream stream, RangeHeaderValue range, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.Http.Headers.RangeHeaderValue</span></td>
+        <td><span class="parametername">range</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Apis.Download.IDownloadProgress</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadWithStatus_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadWithStatus*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_DownloadWithStatus_System_IO_Stream_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.DownloadWithStatus(System.IO.Stream)">DownloadWithStatus(Stream)</h4>
+  <div class="markdown level1 summary"><p>Synchronously download the media into the given stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IDownloadProgress DownloadWithStatus(Stream stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Apis.Download.IDownloadProgress</span></td>
+        <td><p>The final status of the download; including whether the download succeeded or failed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_GetBody_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.GetBody*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_GetBody" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.GetBody">GetBody()</h4>
+  <div class="markdown level1 summary"><p>Returns the body of the request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override object GetBody()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.GetBody()</span></div>
+  <a id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_InitParameters_" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.InitParameters*"></a>
+  <h4 id="Google_Apis_Storage_v1_ObjectsResource_ComposeRequest_InitParameters" data-uid="Google.Apis.Storage.v1.ObjectsResource.ComposeRequest.InitParameters">InitParameters()</h4>
+  <div class="markdown level1 summary"><p>Initializes Compose parameter list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void InitParameters()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Google.Apis.Storage.v1.StorageBaseServiceRequest&lt;Google.Apis.Storage.v1.Data.Object&gt;.InitParameters()</span></div>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

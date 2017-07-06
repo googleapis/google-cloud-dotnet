@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Enum Aggregation.Types.Aligner
    | Google.Cloud.Monitoring.V3 ">
-    <meta name="generator" content="docfx 2.16.0.499">
+    <meta name="generator" content="docfx 2.18.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,182 +67,182 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content">
-              
-              
-              <h1 id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner" data-uid="Google.Cloud.Monitoring.V3.Aggregation.Types.Aligner">Enum Aggregation.Types.Aligner
-              </h1>
-              <div class="markdown level0 summary"><p>The Aligner describes how to bring the data points in a single
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Monitoring.V3.Aggregation.Types.Aligner">
+  
+  
+  <h1 id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner" data-uid="Google.Cloud.Monitoring.V3.Aggregation.Types.Aligner">Enum Aggregation.Types.Aligner
+  </h1>
+  <div class="markdown level0 summary"><p>The Aligner describes how to bring the data points in a single
 time series into temporal alignment.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
-              <h6><strong>Namespace</strong>:Google.Cloud.Monitoring.V3</h6>
-              <h6><strong>Assembly</strong>:Google.Cloud.Monitoring.V3.dll</h6>
-              <h5 id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_syntax">Syntax</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public enum Aligner</code></pre>
-              </div>
-              <h3 id="fields">Fields
-              </h3>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                <thead>
-                <tbody>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignCount">AlignCount</td>
-                    <td><p>Align time series via aggregation. The resulting data point in
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Monitoring.V3.html">Google.Cloud.Monitoring.V3</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Monitoring.V3.dll</h6>
+  <h5 id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum Aligner</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    <thead>
+    <tbody>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignCount">AlignCount</td>
+        <td><p>Align time series via aggregation. The resulting data point in
 the alignment period is the count of all data points in the
 period. This alignment is valid for gauge and delta metrics with numeric
 or Boolean values. The value type of the output is
 [INT64][google.api.MetricDescriptor.ValueType.INT64].</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignCountTrue">AlignCountTrue</td>
-                    <td><p>Align time series via aggregation. The resulting data point in
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignCountTrue">AlignCountTrue</td>
+        <td><p>Align time series via aggregation. The resulting data point in
 the alignment period is the count of True-valued data points in the
 period. This alignment is valid for gauge metrics with
 Boolean values. The value type of the output is
 [INT64][google.api.MetricDescriptor.ValueType.INT64].</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignDelta">AlignDelta</td>
-                    <td><p>Align and convert to delta metric type. This alignment is valid
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignDelta">AlignDelta</td>
+        <td><p>Align and convert to delta metric type. This alignment is valid
 for cumulative metrics and delta metrics. Aligning an existing
 delta metric to a delta metric requires that the alignment
 period be increased. The value type of the result is the same
 as the value type of the input.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignFractionTrue">AlignFractionTrue</td>
-                    <td><p>Align time series via aggregation. The resulting data point in
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignFractionTrue">AlignFractionTrue</td>
+        <td><p>Align time series via aggregation. The resulting data point in
 the alignment period is the fraction of True-valued data points in the
 period. This alignment is valid for gauge metrics with Boolean values.
 The output value is in the range [0, 1] and has value type
 [DOUBLE][google.api.MetricDescriptor.ValueType.DOUBLE].</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignInterpolate">AlignInterpolate</td>
-                    <td><p>Align by interpolating between adjacent points around the
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignInterpolate">AlignInterpolate</td>
+        <td><p>Align by interpolating between adjacent points around the
 period boundary. This alignment is valid for gauge
 metrics with numeric values. The value type of the result is the same
 as the value type of the input.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignMax">AlignMax</td>
-                    <td><p>Align time series via aggregation. The resulting data point in
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignMax">AlignMax</td>
+        <td><p>Align time series via aggregation. The resulting data point in
 the alignment period is the maximum of all data points in the
 period. This alignment is valid for gauge and delta metrics with numeric
 values. The value type of the result is the same as the value
 type of the input.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignMean">AlignMean</td>
-                    <td><p>Align time series via aggregation. The resulting data point in
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignMean">AlignMean</td>
+        <td><p>Align time series via aggregation. The resulting data point in
 the alignment period is the average or arithmetic mean of all
 data points in the period. This alignment is valid for gauge and delta
 metrics with numeric values. The value type of the output is
 [DOUBLE][google.api.MetricDescriptor.ValueType.DOUBLE].</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignMin">AlignMin</td>
-                    <td><p>Align time series via aggregation. The resulting data point in
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignMin">AlignMin</td>
+        <td><p>Align time series via aggregation. The resulting data point in
 the alignment period is the minimum of all data points in the
 period. This alignment is valid for gauge and delta metrics with numeric
 values. The value type of the result is the same as the value
 type of the input.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignNextOlder">AlignNextOlder</td>
-                    <td><p>Align by shifting the oldest data point before the period
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignNextOlder">AlignNextOlder</td>
+        <td><p>Align by shifting the oldest data point before the period
 boundary to the boundary. This alignment is valid for gauge
 metrics. The value type of the result is the same as the
 value type of the input.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignNone">AlignNone</td>
-                    <td><p>No alignment. Raw data is returned. Not valid if cross-time
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignNone">AlignNone</td>
+        <td><p>No alignment. Raw data is returned. Not valid if cross-time
 series reduction is requested. The value type of the result is
 the same as the value type of the input.</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignPercentile05">AlignPercentile05</td>
-                    <td><p>Align time series via aggregation. The resulting data point in
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignPercentile05">AlignPercentile05</td>
+        <td><p>Align time series via aggregation. The resulting data point in
 the alignment period is the 5th percentile of all data
 points in the period. This alignment is valid for gauge and delta metrics
 with distribution values. The output is a gauge metric with value type
 [DOUBLE][google.api.MetricDescriptor.ValueType.DOUBLE].</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignPercentile50">AlignPercentile50</td>
-                    <td><p>Align time series via aggregation. The resulting data point in
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignPercentile50">AlignPercentile50</td>
+        <td><p>Align time series via aggregation. The resulting data point in
 the alignment period is the 50th percentile of all data
 points in the period. This alignment is valid for gauge and delta metrics
 with distribution values. The output is a gauge metric with value type
 [DOUBLE][google.api.MetricDescriptor.ValueType.DOUBLE].</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignPercentile95">AlignPercentile95</td>
-                    <td><p>Align time series via aggregation. The resulting data point in
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignPercentile95">AlignPercentile95</td>
+        <td><p>Align time series via aggregation. The resulting data point in
 the alignment period is the 95th percentile of all data
 points in the period. This alignment is valid for gauge and delta metrics
 with distribution values. The output is a gauge metric with value type
 [DOUBLE][google.api.MetricDescriptor.ValueType.DOUBLE].</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignPercentile99">AlignPercentile99</td>
-                    <td><p>Align time series via aggregation. The resulting data point in
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignPercentile99">AlignPercentile99</td>
+        <td><p>Align time series via aggregation. The resulting data point in
 the alignment period is the 99th percentile of all data
 points in the period. This alignment is valid for gauge and delta metrics
 with distribution values. The output is a gauge metric with value type
 [DOUBLE][google.api.MetricDescriptor.ValueType.DOUBLE].</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignRate">AlignRate</td>
-                    <td><p>Align and convert to a rate. This alignment is valid for
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignRate">AlignRate</td>
+        <td><p>Align and convert to a rate. This alignment is valid for
 cumulative metrics and delta metrics with numeric values. The output is a
 gauge metric with value type
 [DOUBLE][google.api.MetricDescriptor.ValueType.DOUBLE].</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignStddev">AlignStddev</td>
-                    <td><p>Align time series via aggregation. The resulting data point in
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignStddev">AlignStddev</td>
+        <td><p>Align time series via aggregation. The resulting data point in
 the alignment period is the standard deviation of all data
 points in the period. This alignment is valid for gauge and delta metrics
 with numeric values. The value type of the output is
 [DOUBLE][google.api.MetricDescriptor.ValueType.DOUBLE].</p>
 </td>
-                  </tr>
-                  <tr>
-                    <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignSum">AlignSum</td>
-                    <td><p>Align time series via aggregation. The resulting data point in
+      </tr>
+      <tr>
+        <td id="Google_Cloud_Monitoring_V3_Aggregation_Types_Aligner_AlignSum">AlignSum</td>
+        <td><p>Align time series via aggregation. The resulting data point in
 the alignment period is the sum of all data points in the
 period. This alignment is valid for gauge and delta metrics with numeric
 and distribution values. The value type of the output is the
 same as the value type of the input.</p>
 </td>
-                  </tr>
-                </tbody>
-              </thead></thead></table>
-                        </article>
+      </tr>
+    </tbody>
+  </thead></thead></table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
