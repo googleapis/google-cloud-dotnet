@@ -1,4 +1,18 @@
-﻿using System;
+﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+//     http://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Google.Cloud.Spanner.V1;
@@ -8,10 +22,69 @@ namespace Google.Cloud.Spanner.Data.Tests
 {
     public class PriorityListTests
     {
+        private void AssertExist(PriorityList<TestItem> priorityList, params TestItem[] testItems)
+        {
+            foreach (var testItem in testItems)
+            {
+                Assert.True(priorityList.TryFindLinear(x => ReferenceEquals(x, testItem), out _));
+            }
+        }
+
+        private void AssertNotExist(PriorityList<TestItem> priorityList, params TestItem[] testItems)
+        {
+            foreach (var testItem in testItems)
+            {
+                Assert.False(priorityList.TryFindLinear(x => ReferenceEquals(x, testItem), out _));
+            }
+        }
+
+        private static void AssertSorted(PriorityList<TestItem> priorityList) => Assert.True(IsSorted(priorityList));
+
+        private static void AssertNotSorted(PriorityList<TestItem> priorityList) =>
+            Assert.False(IsSorted(priorityList));
+
+        private static bool IsSorted(PriorityList<TestItem> priorityList)
+        {
+            var lastPriority = 0;
+            foreach (var testItem in priorityList.GetSnapshot())
+            {
+                if (lastPriority > testItem.Priority)
+                {
+                    return false;
+                }
+                lastPriority = testItem.Priority;
+            }
+            return true;
+        }
+
+        private class TestItem : IPriorityListItem<TestItem>
+        {
+            public int Priority { get; set; }
+
+            public bool HasEventHooks => PriorityChanged != null;
+
+            public TestItem(int priority) => Priority = priority;
+
+            /// <inheritdoc />
+            public int CompareTo(TestItem other) => Comparer<int>.Default.Compare(Priority, other.Priority);
+
+            /// <inheritdoc />
+            public event EventHandler<EventArgs> PriorityChanged;
+
+            //For test purposes, we do this manually.
+            //Normally this is done automatically, but we do it manually
+            //to test prioritylist behavior when the item is temporarily
+            //in a transition state.
+            public void FirePriorityChanged()
+            {
+                PriorityChanged?.Invoke(this, EventArgs.Empty);
+            }
+        }
+
         [Fact]
         public void CanAddMultipleOfSamePriority()
         {
-            PriorityList<TestItem> priorityList = new PriorityList<TestItem>();
+            var priorityList = new PriorityList<TestItem>();
             TestItem item1, item2;
             priorityList.Add(item1 = new TestItem(5));
             priorityList.Add(item2 = new TestItem(5));
@@ -20,21 +93,47 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public void DeleteNonExistentItemNoops()
+        {
+            var priorityList = new PriorityList<TestItem>();
+            priorityList.Add(new TestItem(1));
+            priorityList.Add(new TestItem(2));
+            priorityList.Remove(new TestItem(1));
+
+            Assert.Equal(2, priorityList.Count);
+        }
+
+        [Fact]
         public void DeleteRemovesCorrectItem()
         {
-            PriorityList<TestItem> priorityList = new PriorityList<TestItem>();
+            var priorityList = new PriorityList<TestItem>();
             TestItem toRemove;
             priorityList.Add(toRemove = new TestItem(5));
             priorityList.Add(new TestItem(5));
             priorityList.Remove(toRemove);
-            Assert.Equal(1, priorityList.Count);
+            priorityList.Add(new TestItem(5));
+            Assert.Equal(2, priorityList.Count);
             AssertNotExist(priorityList, toRemove);
+        }
+
+        [Fact]
+        public void DeleteRemovesEventHook()
+        {
+            var priorityList = new PriorityList<TestItem>();
+            TestItem toRemove, toKeep;
+            priorityList.Add(toRemove = new TestItem(5));
+            priorityList.Add(toKeep = new TestItem(5));
+
+            Assert.True(toRemove.HasEventHooks);
+            priorityList.Remove(toRemove);
+            Assert.False(toRemove.HasEventHooks);
+            Assert.True(toKeep.HasEventHooks);
         }
 
         [Fact]
         public void DeleteRemovesOutOfSyncItem()
         {
-            PriorityList<TestItem> priorityList = new PriorityList<TestItem>();
+            var priorityList = new PriorityList<TestItem>();
             TestItem toRemove;
             priorityList.Add(toRemove = new TestItem(5));
             priorityList.Add(new TestItem(5));
@@ -46,33 +145,9 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
-        public void DeleteNonExistentItemNoops()
-        {
-            PriorityList<TestItem> priorityList = new PriorityList<TestItem>();
-            priorityList.Add(new TestItem(1));
-            priorityList.Add(new TestItem(2));
-            priorityList.Remove(new TestItem(1));
-
-            Assert.Equal(2, priorityList.Count);
-        }
-
-        [Fact]
-        public void DeleteRemovesEventHook()
-        {
-            PriorityList<TestItem> priorityList = new PriorityList<TestItem>();
-            TestItem toRemove;
-            priorityList.Add(toRemove = new TestItem(5));
-            priorityList.Add(new TestItem(5));
-
-            Assert.True(toRemove.HasEventHooks);
-            priorityList.Remove(toRemove);
-            Assert.False(toRemove.HasEventHooks);
-        }
-
-        [Fact]
         public void DoubleAddNoops()
         {
-            PriorityList<TestItem> priorityList = new PriorityList<TestItem>();
+            var priorityList = new PriorityList<TestItem>();
             TestItem itemToAdd;
             priorityList.Add(itemToAdd = new TestItem(1));
             priorityList.Add(itemToAdd);
@@ -84,9 +159,25 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public void GetTop()
+        {
+            var priorityList = new PriorityList<TestItem>();
+
+            priorityList.Add(new TestItem(3));
+            priorityList.Add(new TestItem(11));
+            priorityList.Add(new TestItem(2));
+            priorityList.Add(new TestItem(0));
+            priorityList.Add(new TestItem(6));
+
+            AssertSorted(priorityList);
+
+            Assert.Equal(0, priorityList.GetTop().Priority);
+        }
+
+        [Fact]
         public void MultipleAddRemovesStaySorted()
         {
-            PriorityList<TestItem> priorityList = new PriorityList<TestItem>();
+            var priorityList = new PriorityList<TestItem>();
             TestItem item1, item2, item3, item4, item5;
 
             priorityList.Add(item1 = new TestItem(1));
@@ -114,42 +205,9 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
-        public void GetTop()
-        {
-            PriorityList<TestItem> priorityList = new PriorityList<TestItem>();
-
-            priorityList.Add(new TestItem(3));
-            priorityList.Add(new TestItem(11));
-            priorityList.Add(new TestItem(2));
-            priorityList.Add(new TestItem(0));
-            priorityList.Add(new TestItem(6));
-
-            AssertSorted(priorityList);
-
-            Assert.Equal(0, priorityList.GetTop().Priority);
-        }
-
-        [Fact]
-        public void RemoveLast()
-        {
-            PriorityList<TestItem> priorityList = new PriorityList<TestItem>();
-            TestItem itemToRemove;
-
-            priorityList.Add(new TestItem(3));
-            priorityList.Add(itemToRemove = new TestItem(11));
-            priorityList.Add(new TestItem(2));
-            priorityList.Add(new TestItem(0));
-            priorityList.Add(new TestItem(6));
-
-            priorityList.RemoveLast();
-            AssertSorted(priorityList);
-            AssertNotExist(priorityList, itemToRemove);
-        }
-
-        [Fact]
         public void PriorityChangeResortsList()
         {
-            PriorityList<TestItem> priorityList = new PriorityList<TestItem>();
+            var priorityList = new PriorityList<TestItem>();
             TestItem changingItem;
 
             priorityList.Add(new TestItem(3));
@@ -164,72 +222,59 @@ namespace Google.Cloud.Spanner.Data.Tests
             AssertSorted(priorityList);
         }
 
-        private void AssertExist(PriorityList<TestItem> priorityList, params TestItem[] testItems)
+        [Fact]
+        public void RemoveAfterPriorityChange()
         {
-            foreach (var testItem in testItems)
-            {
-                Assert.True(priorityList.TryFindLinear(x => ReferenceEquals(x, testItem), out _));
-            }
+            var priorityList = new PriorityList<TestItem>();
+            TestItem changingItem, toRemoveItem;
+
+            priorityList.Add(new TestItem(3));
+            priorityList.Add(changingItem = new TestItem(2));
+            priorityList.Add(toRemoveItem = new TestItem(6));
+
+            changingItem.Priority = 6;
+            changingItem.FirePriorityChanged();
+            priorityList.Remove(toRemoveItem);
+
+            AssertExist(priorityList, changingItem);
+            AssertNotExist(priorityList, toRemoveItem);
+            Assert.Equal(2, priorityList.Count);
         }
 
-        private void AssertNotExist(PriorityList<TestItem> priorityList, params TestItem[] testItems)
+        [Fact]
+        public void RemoveBeforePriorityChange()
         {
-            foreach (var testItem in testItems)
-            {
-                Assert.False(priorityList.TryFindLinear(x => ReferenceEquals(x, testItem), out _));
-            }
+            var priorityList = new PriorityList<TestItem>();
+            TestItem changingItem;
+
+            priorityList.Add(new TestItem(3));
+            priorityList.Add(changingItem = new TestItem(2));
+            priorityList.Add(new TestItem(6));
+
+            changingItem.Priority = 6;
+            priorityList.Remove(changingItem);
+            changingItem.FirePriorityChanged();
+
+            AssertNotExist(priorityList, changingItem);
+            Assert.Equal(2, priorityList.Count);
         }
 
-        private void AssertSorted(PriorityList<TestItem> priorityList)
+        [Fact]
+        public void RemoveLast()
         {
-            Assert.True(IsSorted(priorityList));
-        }
-        private void AssertNotSorted(PriorityList<TestItem> priorityList)
-        {
-            Assert.False(IsSorted(priorityList));
-        }
-        private bool IsSorted(PriorityList<TestItem> priorityList)
-        {
-            int lastPriority = 0;
-            foreach (var testItem in priorityList.GetSnapshot())
-            {
-                if (lastPriority > testItem.Priority)
-                {
-                    return false;
-                }
-                lastPriority = testItem.Priority;
-            }
-            return true;
-        }
+            var priorityList = new PriorityList<TestItem>();
+            TestItem itemToRemove;
 
-        private class TestItem : IPriorityListItem<TestItem>
-        {
-            public TestItem(int priority)
-            {
-                Priority = priority;
-            }
+            priorityList.Add(new TestItem(3));
+            priorityList.Add(itemToRemove = new TestItem(11));
+            priorityList.Add(new TestItem(2));
+            priorityList.Add(new TestItem(0));
+            priorityList.Add(new TestItem(6));
 
-            public int Priority { get; set; }
-
-            //For test purposes, we do this manually.
-            //Normally this is done automatically, but we do it manually
-            //to test prioritylist behavior when the item is temporarily
-            //in a transition state.
-            public void FirePriorityChanged()
-            {
-                PriorityChanged?.Invoke(this, EventArgs.Empty);
-            }
-
-            /// <inheritdoc />
-            public int CompareTo(TestItem other)
-            {
-                return Comparer<int>.Default.Compare(Priority, other.Priority);
-            }
-
-            public bool HasEventHooks => PriorityChanged?.GetInvocationList().Any() ?? false;
-
-            /// <inheritdoc />
-            public event EventHandler<EventArgs> PriorityChanged;
+            priorityList.RemoveLast();
+            AssertSorted(priorityList);
+            AssertNotExist(priorityList, itemToRemove);
+            Assert.Equal(4, priorityList.Count);
         }
     }
 }
