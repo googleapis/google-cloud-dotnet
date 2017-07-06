@@ -35,17 +35,21 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>The buffer options for the logger.</summary>
         public BufferOptions BufferOptions { get; }
 
+        /// <summary>The retry options for the logger.</summary>
+        public RetryOptions RetryOptions { get; }
+
         /// <summary>Custom labels for log entries.</summary>
         public Dictionary<string, string> Labels { get; }
 
         private LoggerOptions(
             LogLevel logLevel, Dictionary<string, string> labels,
-            MonitoredResource monitoredResource, BufferOptions bufferOptions)
+            MonitoredResource monitoredResource, BufferOptions bufferOptions, RetryOptions retryOptions)
         {
             LogLevel = GaxPreconditions.CheckEnumValue(logLevel, nameof(logLevel));
             Labels = labels;
             MonitoredResource = monitoredResource;
             BufferOptions = bufferOptions;
+            RetryOptions = retryOptions;
         }
 
         /// <summary>
@@ -57,14 +61,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         ///     be automatically detected if it is not set and will default to the global resource if the detection fails.
         ///     See: https://cloud.google.com/logging/docs/api/v2/resource-list </param>
         /// <param name="bufferOptions">Optional, the buffer options.  Defaults to a <see cref="BufferType.Timed"/></param>
+        /// <param name="retryOptions">Optional, the retry options.  Defaults to a <see cref="RetryType.None"/></param>
         public static LoggerOptions Create(LogLevel logLevel = LogLevel.Information,
             Dictionary<string, string> labels = null,
-            MonitoredResource monitoredResource = null, BufferOptions bufferOptions = null)
+            MonitoredResource monitoredResource = null, BufferOptions bufferOptions = null, RetryOptions retryOptions = null)
         {
             labels = labels ?? new Dictionary<string, string>();
             monitoredResource = monitoredResource ?? MonitoredResourceBuilder.FromPlatform();
             bufferOptions = bufferOptions ?? BufferOptions.TimedBuffer();
-            return new LoggerOptions(logLevel, labels, monitoredResource, bufferOptions);
+            retryOptions = retryOptions ?? RetryOptions.NoRetry();
+            return new LoggerOptions(logLevel, labels, monitoredResource, bufferOptions, retryOptions);
         }
     }
 }

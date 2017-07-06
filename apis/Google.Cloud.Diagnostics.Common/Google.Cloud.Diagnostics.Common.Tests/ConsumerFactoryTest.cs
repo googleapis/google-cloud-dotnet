@@ -23,33 +23,39 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void GetConsumer_None()
         {
-            BufferOptions options = BufferOptions.NoBuffer();
-            IConsumer<int> consumer = ConsumerFactory<int>.GetConsumer(new IntConsumer(), null, options);
-            Assert.IsType<IntConsumer>(consumer);
+            BufferOptions bufferOptions = BufferOptions.NoBuffer();
+            RetryOptions retryOptions = RetryOptions.NoRetry();
+            IConsumer<int> consumer = ConsumerFactory<int>.GetConsumer(new IntConsumer(), ConstantSizer<int>.GetSize, bufferOptions, retryOptions);
+            Assert.IsType<RpcRetryConsumer<int>>(consumer);
+            var retryConsumer = (RpcRetryConsumer<int>)consumer;
+            Assert.IsType<IntConsumer>(retryConsumer._consumer);
         }
 
         [Fact]
         public void GetConsumer_Sized()
         {
-            BufferOptions options = BufferOptions.SizedBuffer();
-            IConsumer<int> consumer = ConsumerFactory<int>.GetConsumer(new IntConsumer(), ConstantSizer<int>.GetSize, options);
+            BufferOptions bufferOptions = BufferOptions.SizedBuffer();
+            RetryOptions retryOptions = RetryOptions.NoRetry();
+            IConsumer<int> consumer = ConsumerFactory<int>.GetConsumer(new IntConsumer(), ConstantSizer<int>.GetSize, bufferOptions, retryOptions);
             Assert.IsType<SizedBufferingConsumer<int>>(consumer);
         }
 
         [Fact]
         public void GetConsumer_Timed()
         {
-            BufferOptions options = BufferOptions.TimedBuffer();
-            IConsumer<int> consumer = ConsumerFactory<int>.GetConsumer(new IntConsumer(), null, options);
+            BufferOptions bufferOptions = BufferOptions.TimedBuffer();
+            RetryOptions retryOptions = RetryOptions.NoRetry();
+            IConsumer<int> consumer = ConsumerFactory<int>.GetConsumer(new IntConsumer(), ConstantSizer<int>.GetSize, bufferOptions, retryOptions);
             Assert.IsType<TimedBufferingConsumer<int>>(consumer);
         }
 
         [Fact]
         public void GetConsumer_InvalidOptions()
         {
-            BufferOptions options = new BufferOptions((BufferType)5);
+            BufferOptions bufferOptions = new BufferOptions((BufferType)5);
+            RetryOptions retryOptions = RetryOptions.NoRetry();
             Assert.Throws<ArgumentException>(
-                () => ConsumerFactory<int>.GetConsumer(new IntConsumer(), null, options));
+                () => ConsumerFactory<int>.GetConsumer(new IntConsumer(), ConstantSizer<int>.GetSize, bufferOptions, retryOptions));
         }
 
 
@@ -57,21 +63,21 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void GetConsumer_InvalidOptions_Null()
         {
             Assert.Throws<ArgumentNullException>(
-                () => ConsumerFactory<int>.GetConsumer(new IntConsumer(), null, null));
+                () => ConsumerFactory<int>.GetConsumer(new IntConsumer(), ConstantSizer<int>.GetSize, null, RetryOptions.NoRetry()));
         }
 
         [Fact]
         public void GetConsumer_InvalidConsumer_Null()
         {
             Assert.Throws<ArgumentNullException>(
-                () => ConsumerFactory<int>.GetConsumer(null, null, BufferOptions.TimedBuffer()));
+                () => ConsumerFactory<int>.GetConsumer(null, ConstantSizer<int>.GetSize, BufferOptions.TimedBuffer(), RetryOptions.NoRetry()));
         }
 
         [Fact]
         public void GetConsumer_InvalidSizer_Null()
         {
             Assert.Throws<ArgumentNullException>(
-                () => ConsumerFactory<int>.GetConsumer(new IntConsumer(), null, BufferOptions.SizedBuffer()));
+                () => ConsumerFactory<int>.GetConsumer(new IntConsumer(), null, BufferOptions.SizedBuffer(), RetryOptions.NoRetry()));
         }
     }
 }
