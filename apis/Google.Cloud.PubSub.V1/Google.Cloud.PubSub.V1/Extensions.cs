@@ -15,7 +15,6 @@
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
-using System.Threading;
 
 namespace Google.Cloud.PubSub.V1
 {

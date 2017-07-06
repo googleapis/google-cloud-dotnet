@@ -241,9 +241,15 @@ namespace Google.Cloud.PubSub.V1
             var endpoint = clientCreationsettings?.ServiceEndpoint ?? SubscriberClient.DefaultEndpoint;
             var clients = new SubscriberClient[clientCount];
             var shutdowns = new Func<Task>[clientCount];
+            // Set channel send/recv message size to unlimited. It defaults to ~4Mb which causes failures.
+            var channelOptions = new[]
+            {
+                new ChannelOption(ChannelOptions.MaxSendMessageLength, -1),
+                new ChannelOption(ChannelOptions.MaxReceiveMessageLength, -1),
+            };
             for (int i = 0; i < clientCount; i++)
             {
-                var channel = new Channel(endpoint.Host, endpoint.Port, channelCredentials);
+                var channel = new Channel(endpoint.Host, endpoint.Port, channelCredentials, channelOptions);
                 clients[i] = SubscriberClient.Create(channel, clientCreationsettings?.SubscriberSettings);
                 shutdowns[i] = channel.ShutdownAsync;
             }
@@ -252,7 +258,10 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Create a <see cref="HiPerfSubscriber"/> instance associated with the specified <see cref="SubscriptionName"/>,
+        /// Create a <see cref="HiPerfSubscriber"/> instance associated with the specified <see cref="SubscriptionName"/>.
+        /// The gRPC <see cref="Channel"/>s underlying the provided <see cref="SubscriberClient"/>s must have their
+        /// maximum send and maximum receive sizes set to unlimited, otherwise performance will be severly affected,
+        /// possibly causing a deadlock.
         /// </summary>
         /// <param name="subscriptionName">The <see cref="SubscriptionName"/> to receive messages from.</param>
         /// <param name="clients">The <see cref="SubscriberClient"/>s to use in a <see cref="HiPerfSubscriber"/>.
