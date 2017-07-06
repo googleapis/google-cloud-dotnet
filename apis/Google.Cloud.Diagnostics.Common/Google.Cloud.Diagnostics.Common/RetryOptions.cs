@@ -42,7 +42,7 @@ namespace Google.Cloud.Diagnostics.Common
     {
         /// <summary>
         /// Let the errors propagate up after they have been retried if they continually fail.
-        /// This may kill the running process.
+        /// This may kill the running process, if an exception occurs when the retry limit has been reached.
         /// </summary>
         Propagate,
 
