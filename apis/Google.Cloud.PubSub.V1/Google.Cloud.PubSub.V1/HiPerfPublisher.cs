@@ -202,9 +202,9 @@ namespace Google.Cloud.PubSub.V1
         /// The absolute maximum <see cref="BatchingSettings"/> supported by the service.
         /// Maximum values are:
         /// <see cref="BatchingSettings.ElementCountThreshold"/> = 1,000;
-        /// <see cref="BatchingSettings.ByteCountThreshold"/> = 10,000,000;
+        /// <see cref="BatchingSettings.ByteCountThreshold"/> = 9,500,000;
         /// </summary>
-        public static BatchingSettings ApiMaxBatchingSettings { get; } = new BatchingSettings(1000L, 10_000_000L, null);
+        public static BatchingSettings ApiMaxBatchingSettings { get; } = new BatchingSettings(1000L, 9_500_000L, null);
 
         /// <summary>
         /// Create a <see cref="HiPerfPublisher"/> instance associated with the specified <see cref="TopicName"/>,
