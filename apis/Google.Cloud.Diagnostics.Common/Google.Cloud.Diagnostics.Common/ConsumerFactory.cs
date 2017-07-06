@@ -24,23 +24,35 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         /// <param name="consumer">The consumer to buffer into.</param>
         /// <param name="sizer">A function to obtain the size of an item in bytes.</param>
-        /// <param name="options">Buffer options for the buffered consumer</param>
-        internal static IConsumer<T> GetConsumer(IConsumer<T> consumer, Func<T, int> sizer, BufferOptions options)
+        /// <param name="bufferOptions">Buffer options for the buffered consumer.</param>
+        /// <param name="retryOptions">Retry options for all consumer types.</param>
+        internal static IConsumer<T> GetConsumer(IConsumer<T> consumer, Func<T, int> sizer,
+            BufferOptions bufferOptions, RetryOptions retryOptions)
         {
             GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
-            GaxPreconditions.CheckNotNull(options, nameof(options));
+            GaxPreconditions.CheckNotNull(sizer, nameof(sizer));
+            GaxPreconditions.CheckNotNull(bufferOptions, nameof(bufferOptions));
+            GaxPreconditions.CheckNotNull(retryOptions, nameof(retryOptions));
 
-            switch (options.BufferType)
+            Func<Action, RetryOptions, ISequentialThreadingTimer> timerFactory = 
+                (callback, options) => 
+                {
+                    ISequentialThreadingTimer timer = new SequentialThreadingTimer();
+                    timer.Initialize(callback, options.RetryInterval);
+                    return timer;
+                };
+            var retryConsumer = new RpcRetryConsumer<T>(consumer, retryOptions, sizer, timerFactory); 
+
+            switch (bufferOptions.BufferType)
             {
                 case BufferType.Sized:
-                    GaxPreconditions.CheckNotNull(sizer, nameof(sizer));
-                    return SizedBufferingConsumer<T>.Create(consumer, sizer, options.BufferSizeBytes);
+                    return SizedBufferingConsumer<T>.Create(retryConsumer, sizer, bufferOptions.BufferSizeBytes);
                 case BufferType.Timed:
-                    return TimedBufferingConsumer<T>.Create(consumer, options.BufferWaitTime);
+                    return TimedBufferingConsumer<T>.Create(retryConsumer, bufferOptions.BufferWaitTime);
                 case BufferType.None:
-                    return consumer;
+                    return retryConsumer;
                 default:
-                    throw new ArgumentException($"Invalid BufferType: {options.BufferType}");
+                    throw new ArgumentException($"Invalid BufferType: {bufferOptions.BufferType}");
             }
         }
     }

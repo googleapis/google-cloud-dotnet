@@ -42,7 +42,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var eventTarget = EventTarget.ForErrorReporting(_projectId, _errorClient);
             var options = ErrorReportingOptions.Create(eventTarget);
             var consumer = options.CreateConsumer();
-            Assert.IsType<GrpcErrorEventConsumer>(consumer);
+            Assert.IsType<RpcRetryConsumer<ReportedErrorEvent>>(consumer);
+            var retryConsumer = (RpcRetryConsumer<ReportedErrorEvent>) consumer;
+            Assert.IsType<GrpcErrorEventConsumer>(retryConsumer._consumer);
         }
 
         [Fact]
@@ -51,7 +53,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var eventTarget = EventTarget.ForLogging(_projectId, "test-log", _loggingClient);
             var options = ErrorReportingOptions.Create(eventTarget);
             var consumer = options.CreateConsumer();
-            Assert.IsType<ErrorEventToLogEntryConsumer>(consumer);
+            Assert.IsType<RpcRetryConsumer<ReportedErrorEvent>>(consumer);
+            var retryConsumer = (RpcRetryConsumer<ReportedErrorEvent>) consumer;
+            Assert.IsType<ErrorEventToLogEntryConsumer>(retryConsumer._consumer);
         }
 
         [Fact]

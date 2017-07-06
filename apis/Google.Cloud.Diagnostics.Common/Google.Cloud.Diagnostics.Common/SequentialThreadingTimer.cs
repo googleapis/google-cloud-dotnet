@@ -14,22 +14,31 @@
 
 using System;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// A simple <see cref="IThreadingTimer"/> based on a <see cref="Timer"/>.
+    /// A simple <see cref="ISequentialThreadingTimer"/>.
     /// </summary>
-    internal class SimpleThreadingTimer : IThreadingTimer
+    internal class SequentialThreadingTimer : ISequentialThreadingTimer
     {
-        /// <summary>The underlying timer.</summary>
-        private Timer _timer;
+        private readonly CancellationTokenSource _source = new CancellationTokenSource();
 
         /// <inheritdoc />
-        public void Initialize(TimerCallback callback, TimeSpan waitTime)
-            => _timer = new Timer(callback, null, waitTime, waitTime);
+        public void Initialize(Action callback, TimeSpan waitTime)
+        {
+            Task.Run(async () =>
+            {
+                while (!_source.Token.IsCancellationRequested)
+                {
+                    await Task.Delay(waitTime).ConfigureAwait(false);
+                    callback();
+                }
+            });
+        }
 
         /// <inheritdoc />
-        public void Dispose() => _timer.Dispose();
+        public void Dispose() => _source.Cancel();
     }
 }
