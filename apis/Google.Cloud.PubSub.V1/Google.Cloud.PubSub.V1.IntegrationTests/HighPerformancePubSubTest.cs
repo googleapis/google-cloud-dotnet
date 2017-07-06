@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,7 +42,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             var subscriptionId = _fixture.CreateSubscriptionId();
 
             Console.WriteLine("BulkMessaging test");
-            Console.WriteLine($"{messageCount} messages; of size [{minMessagesize}, {maxMessageSize}]; max in-flight: {maxMessagesInFlight}");
+            Console.WriteLine($"{messageCount} messages; of size [{minMessagesize}, {maxMessageSize}]; max in-flight: {maxMessagesInFlight}, initialNacks: {initialNackCount}");
 
             // Create topic
             var topicName = new TopicName(_fixture.ProjectId, topicId);
@@ -92,6 +93,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             {
                 int prevSentCount = -1;
                 int prevRecvCount = -1;
+                int noProgressCount = 0;
                 while (!watchdogCts.IsCancellationRequested)
                 {
                     await Task.Delay(TimeSpan.FromSeconds(1), watchdogCts.Token).ConfigureAwait(false);
@@ -99,10 +101,19 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                     var localRecvCount = Interlocked.Add(ref recvCount, 0);
                     if (prevSentCount == localSentCount && prevRecvCount == localRecvCount)
                     {
-                        // Deadlock, shutdown subscriber, and cancel
-                        Console.WriteLine("Deadlock detected. Cancelling test");
-                        bulkSubscriber.StopAsync(new CancellationToken(true));
-                        watchdogCts.Cancel();
+                        if (noProgressCount > 10)
+                        {
+                            // Deadlock, shutdown subscriber, and cancel
+                            Console.WriteLine("Deadlock detected. Cancelling test");
+                            bulkSubscriber.StopAsync(new CancellationToken(true));
+                            watchdogCts.Cancel();
+                            break;
+                        }
+                        noProgressCount += 1;
+                    }
+                    else
+                    {
+                        noProgressCount = 0;
                     }
                     prevSentCount = localSentCount;
                     prevRecvCount = localRecvCount;
@@ -152,13 +163,43 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
         [Fact]
         public async Task BulkMessagingAcksOnly()
         {
-            await RunBulkMessaging(100_000, 1, 20_000, 10_000, 0);
+            await RunBulkMessaging(100_000, 1, 10_000, 10_000, 0);
         }
 
         [Fact]
         public async Task BulkMessagingWithNacks()
         {
-            await RunBulkMessaging(100_000, 1, 20_000, 10_000, 10_000);
+            await RunBulkMessaging(100_000, 1, 10_000, 10_000, 10_000);
+        }
+
+        [Fact]
+        public async Task MaximumSizedMessages()
+        {
+            await RunBulkMessaging(50, 9_900_000, 9_990_000, 20, 0);
+        }
+
+        [Fact]
+        public async Task OversizedMessage()
+        {
+            var topicId = _fixture.CreateTopicId();
+            // Create topic
+            var topicName = new TopicName(_fixture.ProjectId, topicId);
+            var publisher = await PublisherClient.CreateAsync().ConfigureAwait(false);
+            await publisher.CreateTopicAsync(topicName).ConfigureAwait(false);
+            // Create high-performance Publisher
+            var bulkPublisher = await HiPerfPublisher.CreateAsync(topicName).ConfigureAwait(false);
+            // Create oversized message
+            Random rnd = new Random(1234);
+            byte[] msg = new byte[10_000_001];
+            rnd.NextBytes(msg);
+            // Publish a few messages. They should all throw an exception due to size
+            for (int i = 0; i < 5; i++)
+            {
+                var ex = await Assert.ThrowsAsync<RpcException>(() => bulkPublisher.PublishAsync(msg)).ConfigureAwait(false);
+                Assert.Equal(StatusCode.InvalidArgument, ex.Status.StatusCode);
+                Assert.Contains("too large", ex.Status.Detail);
+            }
+            await bulkPublisher.ShutdownAsync(TimeSpan.FromSeconds(15)).ConfigureAwait(false);
         }
     }
 }
