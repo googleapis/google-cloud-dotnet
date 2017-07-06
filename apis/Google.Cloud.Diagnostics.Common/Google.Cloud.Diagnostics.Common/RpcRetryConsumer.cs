@@ -185,7 +185,11 @@ namespace Google.Cloud.Diagnostics.Common
             {
                 if (_retries >= _options.RetryAttempts)
                 {
-                    Interlocked.Exchange(ref _retries, 0);
+                    lock (_mutex)
+                    {
+                        _retries = 0;
+                        _sizeInBytes -= toSendSize;
+                    }
                     if (_options.ExceptionHandling == ExceptionHandling.Propagate)
                     {
                         throw;
