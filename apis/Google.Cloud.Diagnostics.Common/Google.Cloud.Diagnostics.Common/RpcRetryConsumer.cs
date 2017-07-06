@@ -125,7 +125,7 @@ namespace Google.Cloud.Diagnostics.Common
             }
             
             // Get the size of items to be buffered and retried.
-            int size = items.Sum(item => _sizer(item));
+            int size = items.Sum(_sizer);
 
             // Lock the semaphore and add the new items to the buffer.
             lock (_mutex)
@@ -157,12 +157,6 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         private void FlushBuffer()
         {
-            // If the buffer is empty do nothing.
-            if (_buffer.Count() == 0)
-            {
-                return;
-            }
-
             // Move the current buffer into a new buffer to send.
             List<T> toSend;
             int toSendSize;
@@ -174,21 +168,24 @@ namespace Google.Cloud.Diagnostics.Common
                 }
                 toSend = _buffer;
                 toSendSize = _sizeInBytes;
-                _sizeInBytes = 0;
                 _buffer = new List<T>();
+                _retries++;
             }
-            Interlocked.Increment(ref _retries);
 
             try
             {
                 _consumer.Receive(toSend);
-                _retries = 0;
+                lock (_mutex)
+                {
+                    _retries = 0;
+                    _sizeInBytes -= toSendSize;
+                }
             }
             catch (RpcException) 
             {
                 if (_retries >= _options.RetryAttempts)
                 {
-                    _retries = 0;
+                    Interlocked.Exchange(ref _retries, 0);
                     if (_options.ExceptionHandling == ExceptionHandling.Propagate)
                     {
                         throw;
@@ -200,7 +197,6 @@ namespace Google.Cloud.Diagnostics.Common
                     lock (_mutex)
                     {
                         _buffer.AddRange(toSend);
-                        _sizeInBytes += toSendSize;
                     }
                 }
             }

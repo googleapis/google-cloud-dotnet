@@ -56,13 +56,13 @@ namespace Google.Cloud.Diagnostics.Common
     public sealed class RetryOptions
     {
         /// <summary>The default buffer size in bytes. 2^18 = 262144.</summary>
-        private const int DefaultBufferSize = 262144;
+        public static readonly int DefaultBufferSize = 262144;
 
         /// <summary>The default number of retry attempts.</summary>
-        private const int DefaultRetryAttempts = 10;
+        public static readonly int DefaultRetryAttempts = 10;
 
         /// <summary>The default wait time between retries.</summary>
-        private static readonly TimeSpan DefaultRetryInterval = TimeSpan.FromSeconds(2);
+        public static readonly TimeSpan DefaultRetryInterval = TimeSpan.FromSeconds(2);
 
         /// <summary>The type of retry to make.</summary>
         public RetryType RetryType { get; }
@@ -113,15 +113,15 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="bufferOverflow">Optional, how a buffer overflow should be handled.
         ///     Defaults to <see cref="BufferOverflow.IgnoreNewEntries"/>.</param>
         /// <param name="bufferSizeBytes">Optional, the size of the buffer to be used in bytes.
-        ///     Defaults to 2^18 = 262144.</param>
-        /// <param name="retryInterval">Optional, the time between retries. Default to 2 seconds.</param>
-        /// <param name="retryAttempts">Optional, the number of retry attempts. Defaults to 10.</param>
+        ///     Defaults to <see cref="DefaultBufferSize"/>.</param>
+        /// <param name="retryInterval">Optional, the time between retries. Default to <see cref="DefaultRetryInterval"/>.</param>
+        /// <param name="retryAttempts">Optional, the number of retry attempts. Defaults to <see cref="DefaultRetryAttempts"/>.</param>
         public static RetryOptions Retry(
             ExceptionHandling exceptionHandling = ExceptionHandling.Ignore,
             BufferOverflow bufferOverflow = BufferOverflow.IgnoreNewEntries,
-            int bufferSizeBytes = DefaultBufferSize,
-            TimeSpan? retryInterval = null, int retryAttempts = DefaultRetryAttempts)
+            int? bufferSizeBytes = null, TimeSpan? retryInterval = null, int? retryAttempts = null)
                 => new RetryOptions(RetryType.Retry, exceptionHandling, bufferOverflow,
-                    bufferSizeBytes, retryAttempts, retryInterval ?? DefaultRetryInterval);
+                    bufferSizeBytes ?? DefaultBufferSize, retryAttempts ?? DefaultRetryAttempts,
+                    retryInterval ?? DefaultRetryInterval);
     }
 }
