@@ -36,6 +36,12 @@
     <Reference Include="System.Transactions" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="SpannerCommand.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="SpannerConnection.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="SpannerDataAdapter.cs">
       <SubType>Component</SubType>
     </Compile>
