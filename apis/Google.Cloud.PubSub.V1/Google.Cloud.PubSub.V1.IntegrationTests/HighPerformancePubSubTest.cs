@@ -143,7 +143,8 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             Console.WriteLine("Subscriber finished shutdown");
             Console.WriteLine($"Sent: {sentCount}; Recv: {recvCount}");
 
-            // Check that all messages are correctly received (probably)
+            // Check that all messages are correctly received.
+            // This isn't foolproof (we can get to the right sum with wrong values) but it's a pretty strong indicator.
             Assert.Equal(messageCount + initialNackCount, recvCount);
             Assert.Equal(sentSum, recvSum);
         }
