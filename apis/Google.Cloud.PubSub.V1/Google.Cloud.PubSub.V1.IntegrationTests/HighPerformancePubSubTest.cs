@@ -21,10 +21,14 @@ using Xunit;
 
 namespace Google.Cloud.PubSub.V1.IntegrationTests
 {
+    // Notes:
+    // * These tests output progress to the console, as they can take minutes to run.
+    // * These send/recv considerable amounts of network data.
+    //   Only test with a machine and cloud account that can handle this.
     [Collection(nameof(PubsubFixture))]
-    public class HighPerformancePubsub
+    public class HighPerformancePubSubTest
     {
-        public HighPerformancePubsub(PubsubFixture fixture)
+        public HighPerformancePubSubTest(PubsubFixture fixture)
         {
             _fixture = fixture;
         }
@@ -83,12 +87,12 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             long sentSum = 0L; // Sum of bytes of sent messages
 
             // Watchdog to report progress and fail test on deadlock
-            int prevSentCount = -1;
-            int prevRecvCount = -1;
             CancellationTokenSource watchdogCts = new CancellationTokenSource();
             Task.Run(async () =>
             {
-                while (true)
+                int prevSentCount = -1;
+                int prevRecvCount = -1;
+                while (!watchdogCts.IsCancellationRequested)
                 {
                     await Task.Delay(TimeSpan.FromSeconds(1), watchdogCts.Token).ConfigureAwait(false);
                     var localSentCount = Interlocked.Add(ref sentCount, 0);
@@ -119,13 +123,9 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                 // Send message, and record Task
                 var pubTask = bulkPublisher.PublishAsync(msg);
                 Interlocked.Increment(ref sentCount);
-                lock (activePubs) activePubs.Add(pubTask);
+                activePubs.Locked(() => activePubs.Add(pubTask));
                 // Remove Task from active when the message has been sent to server
-                Task unused = Task.Run(async () =>
-                {
-                    await pubTask.ConfigureAwait(false);
-                    lock (activePubs) activePubs.Remove(pubTask);
-                });
+                pubTask.ContinueWith(t => activePubs.Locked(() => activePubs.Remove(pubTask)));
                 // If too many messages are currently in flight, wait a bit
                 while (activePubs.Locked(() => activePubs.Count) >= maxMessagesInFlight)
                 {
