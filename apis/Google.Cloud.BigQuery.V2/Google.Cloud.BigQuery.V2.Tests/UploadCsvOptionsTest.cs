@@ -33,7 +33,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 Quote = "'",
                 SkipLeadingRows = 5,
                 WriteDisposition = WriteDisposition.WriteAppend,
-                Autodetect = true
+                Autodetect = true,
+                NullMarker = "custom-null"
             };
 
             JobConfigurationLoad config = new JobConfigurationLoad();
@@ -48,6 +49,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(5, config.SkipLeadingRows);
             Assert.Equal("WRITE_APPEND", config.WriteDisposition);
             Assert.True(config.Autodetect);
+            Assert.Equal("custom-null", config.NullMarker);
         }
     }
 }
