@@ -108,9 +108,10 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
             // Publish a message to the topic using SimplePublisher.
             SimplePublisher simplePublisher = await SimplePublisher.CreateAsync(topicName);
-            // The data can be any arbitrary ByteString.Here, we're using the string overload.
+            // PublishAsync() has various overloads. Here we're using the string overload.
             string messageId = await simplePublisher.PublishAsync("Hello, Pubsub");
             // SimplePublisher should be shutdown after use.
+            // The TimeSpan specifies for how long to attempt to publish locally queued messages.
             await simplePublisher.ShutdownAsync(TimeSpan.FromSeconds(15));
 
             // Pull messages from the subscription using SimpleSubscriber.
@@ -123,7 +124,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 Console.WriteLine($"Received message {msg.MessageId} published at {msg.PublishTime.ToDateTime()}");
                 Console.WriteLine($"Text: '{msg.Data.ToStringUtf8()}'");
                 // Stop this subscriber after one message is received.
-                // This is non-blocking, and the returned Task may be awaited on.
+                // This is non-blocking, and the returned Task may be awaited.
                 simpleSubscriber.StopAsync(TimeSpan.FromSeconds(15));
                 // Return Reply.Ack to indicate this message has been handled.
                 return Task.FromResult(SimpleSubscriber.Reply.Ack);
