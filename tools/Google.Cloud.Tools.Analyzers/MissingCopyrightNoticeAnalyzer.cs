@@ -32,7 +32,7 @@ namespace Google.Cloud.Tools.Analyzers
         public const string DiagnosticId = "GCP0002";
         private const string Category = "Usage";
 
-        private static readonly LocalizableString Title = "Missing copyright notice";
+        private static readonly LocalizableString Title = "Missing copyright notice : {0}";
         private static readonly LocalizableString MessageFormat = "The Google copyright notice is missing";
         private static readonly LocalizableString Description = "Every code file should contain a Google copyright notice.";
         private static DiagnosticDescriptor Rule =
@@ -95,7 +95,8 @@ namespace Google.Cloud.Tools.Analyzers
                 context.ReportDiagnostic(
                     Diagnostic.Create(
                         Rule,
-                        context.Tree.GetLocation(new TextSpan(0, 1))));
+                        context.Tree.GetLocation(new TextSpan(0, 1)),
+                        rootNode.ToFullString().Replace("\r\n", "****").Replace("\n", "^^^^")));
             }
         }
 
