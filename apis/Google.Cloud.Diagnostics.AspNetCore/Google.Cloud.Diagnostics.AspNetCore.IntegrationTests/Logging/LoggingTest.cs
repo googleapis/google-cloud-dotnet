@@ -193,12 +193,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<NoBufferResourceLoggerTestApplication>();
-            using (TestServer server = new TestServer(builder))
+            using (var server = new TestServer(builder))
             using (var client = server.CreateClient())
             {
                 await client.GetAsync($"/Main/Scope/{testId}");
                 var results = _polling.GetEntries(startTime, testId, 1);
-                Assert.Single(results);
                 var message = MainController.GetMessage(nameof(MainController.Scope), testId);
                 Assert.Contains($"Scope => {message}", results.Single().TextPayload);
             }
@@ -356,7 +355,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         public string Scope(string id)
         {
-            using (_logger.BeginScope(nameof(Scope))) {
+            using (_logger.BeginScope(nameof(Scope)))
+            {
                 string message = GetMessage(nameof(Scope), id);
                 _logger.LogCritical(message);
                 return message;

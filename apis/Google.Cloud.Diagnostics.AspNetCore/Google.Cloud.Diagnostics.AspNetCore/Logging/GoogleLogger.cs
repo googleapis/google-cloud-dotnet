@@ -94,7 +94,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 LogName = _logName,
                 Severity = logLevel.ToLogSeverity(),
                 Timestamp = Timestamp.FromDateTime(_clock.GetCurrentDateTimeUtc()),
-                TextPayload = (GoogleLoggerScope.Current?.ToString() ?? "") + message,
+                TextPayload = string.Concat(GoogleLoggerScope.Current, message),
                 Labels = { _loggerOptions.Labels },
             };
 

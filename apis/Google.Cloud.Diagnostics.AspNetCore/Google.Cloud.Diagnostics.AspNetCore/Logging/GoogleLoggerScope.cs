@@ -26,7 +26,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>
         /// The current scope, can be null.
         /// </summary>
-        public static GoogleLoggerScope Current {
+        public static GoogleLoggerScope Current
+        {
             get
             {
                 return _current.Value;
@@ -54,10 +55,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         public void Dispose() => Current = Current?.Parent;
 
         /// <summary>
-        /// Gets the scope (and parents) as a string. It is in the format:
+        /// Gets the scope (and parents') as a string. It is in the format:
         /// "grandparent => parent => child => " where the scope
-        /// values are all strings values "grandparent", "parent" and "child.
+        /// value is "child", its parent is "parent" and its grandparent is "grandparent".
         /// </summary>
-        public override string ToString() => $"{Parent?.ToString() ?? ""}{State.ToString()} => ";
+        public override string ToString() => $"{Parent}{State} => ";
     }
 }

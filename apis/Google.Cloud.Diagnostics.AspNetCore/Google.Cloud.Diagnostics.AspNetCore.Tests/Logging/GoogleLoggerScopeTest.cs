@@ -70,7 +70,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                 Assert.Null(GoogleLoggerScope.Current);
                 using (new GoogleLoggerScope(grandparent))
                 {
-                    Assert.Equal($"{ grandparent} => ", GoogleLoggerScope.Current.ToString());
+                    Assert.Equal($"{grandparent} => ", GoogleLoggerScope.Current.ToString());
                     await Task.Yield();
                     using (new GoogleLoggerScope(parent))
                     {
@@ -85,7 +85,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                         Assert.Equal($"{grandparent} => {parent} => ", GoogleLoggerScope.Current.ToString());
                     }
                     await Task.Yield();
-                    Assert.Equal($"{ grandparent} => ", GoogleLoggerScope.Current.ToString());
+                    Assert.Equal($"{grandparent} => ", GoogleLoggerScope.Current.ToString());
                 }
                 Assert.Null(GoogleLoggerScope.Current);
             };
