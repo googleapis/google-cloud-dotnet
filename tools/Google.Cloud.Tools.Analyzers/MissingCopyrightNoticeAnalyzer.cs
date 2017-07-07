@@ -32,8 +32,8 @@ namespace Google.Cloud.Tools.Analyzers
         public const string DiagnosticId = "GCP0002";
         private const string Category = "Usage";
 
-        private static readonly LocalizableString Title = "Missing copyright notice : {0}";
-        private static readonly LocalizableString MessageFormat = "The Google copyright notice is missing";
+        private static readonly LocalizableString Title = "Missing copyright notice";
+        private static readonly LocalizableString MessageFormat = "The Google copyright notice is missing : {0}";
         private static readonly LocalizableString Description = "Every code file should contain a Google copyright notice.";
         private static DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(
@@ -128,7 +128,7 @@ namespace Google.Cloud.Tools.Analyzers
         private static Regex CreateCopyrightRegex(string copyrightTemplate)
         {
             var pattern = Regex.Escape(copyrightTemplate).Replace("____", @"\d{4}\,?");
-            pattern = Regex.Replace(pattern, @"(\\r\\n|\\n)", @"\ *$1");
+            pattern = Regex.Replace(pattern, @"(\\r\\n|\\n)", @"\ *\r?\n");
             return new Regex(@"\A\s*" + pattern, RegexOptions.Compiled | RegexOptions.IgnoreCase);
         }
     }
