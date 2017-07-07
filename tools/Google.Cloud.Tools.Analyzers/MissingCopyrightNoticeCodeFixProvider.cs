@@ -80,6 +80,6 @@ namespace Google.Cloud.Tools.Analyzers
                     SyntaxFactory.ParseLeadingTrivia(CreateCopyrightNotice(copyrightTemplate)))));
 
         private string CreateCopyrightNotice(string copyrightTemplate) =>
-            copyrightTemplate.Replace("____", YearString) + "\r\n\r\n";
+            copyrightTemplate.Replace("____", YearString) + Environment.NewLine + Environment.NewLine;
     }
 }
