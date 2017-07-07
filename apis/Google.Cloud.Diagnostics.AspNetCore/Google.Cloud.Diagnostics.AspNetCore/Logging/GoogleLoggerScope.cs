@@ -18,6 +18,7 @@ using System.Threading;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
+    /// <summary>Scope for the <see cref="GoogleLogger"/>.</summary>
     internal class GoogleLoggerScope : IDisposable
     {
         private static AsyncLocal<GoogleLoggerScope> _current = new AsyncLocal<GoogleLoggerScope>();
@@ -49,9 +50,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             Current = this;
         }
 
-        /// <summary>
-        /// Disposes of the current scope.
-        /// </summary>
+        /// <summary>Disposes of the current scope.</summary>
         public void Dispose() => Current = Current?.Parent;
 
         /// <summary>
