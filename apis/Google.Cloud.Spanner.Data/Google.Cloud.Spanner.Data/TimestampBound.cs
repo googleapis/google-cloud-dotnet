@@ -22,6 +22,23 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     public sealed class TimestampBound
     {
+        private TimestampBound(TimestampBoundMode mode)
+        {
+            Mode = mode;
+        }
+
+        private TimestampBound(TimestampBoundMode mode, TimeSpan staleness)
+        {
+            Mode = mode;
+            Staleness = staleness;
+        }
+
+        private TimestampBound(TimestampBoundMode mode, DateTime timestamp)
+        {
+            Mode = mode;
+            Timestamp = timestamp;
+        }
+
         /// <summary>
         /// The type of timestamp bound.
         /// The types of timestamp bounds are:
@@ -29,26 +46,26 @@ namespace Google.Cloud.Spanner.Data
         ///  Bounded staleness: read a version of the data that's no staler than a bound.
         ///  Exact staleness: read the version of the data at an exact timestamp.
         /// </summary>
-        public TimestampBoundMode Mode { get; private set; }
+        public TimestampBoundMode Mode { get; }
 
         /// <summary>
         /// If <see cref="Mode"/> is <see cref="TimestampBoundMode.ExactStaleness"/> or
         /// <see cref="TimestampBoundMode.MaxStaleness"/>, this indicates the duration of time
         /// for the staleness.
         /// </summary>
-        public TimeSpan Staleness { get; private set; }
+        public TimeSpan Staleness { get; }
 
         /// <summary>
         /// If <see cref="Mode"/> is <see cref="TimestampBoundMode.ReadTimestamp"/> or
         /// <see cref="TimestampBoundMode.MinReadTimestamp"/>, this indicates the timestamp to use.
         /// </summary>
-        public DateTime Timestamp { get; private set; }
+        public DateTime Timestamp { get; }
 
         /// <summary>
         /// Read at a timestamp where all previously committed transactions
         /// are visible.
         /// </summary>
-        public static TimestampBound Strong { get; } = new TimestampBound {Mode = TimestampBoundMode.Strong};
+        public static TimestampBound Strong { get; } = new TimestampBound(TimestampBoundMode.Strong);
 
         /// <summary>
         /// Executes all reads at a timestamp that is <paramref name="duration"/>
@@ -65,11 +82,8 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="duration">The exact staleness to use.</param>
         /// <returns>A created <see cref="TimestampBound"/>.</returns>
-        public static TimestampBound OfExactStaleness(TimeSpan duration) => new TimestampBound
-        {
-            Mode = TimestampBoundMode.ExactStaleness,
-            Staleness = duration
-        };
+        public static TimestampBound OfExactStaleness(TimeSpan duration) => new TimestampBound(
+            TimestampBoundMode.ExactStaleness, duration);
 
         /// <summary>
         /// Read data at a timestamp >= `NOW - <paramref name="duration"/>`. Guarantees that all
@@ -88,11 +102,8 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="duration">The maximum duration of staleness to use.</param>
         /// <returns>A created <see cref="TimestampBound"/>.</returns>
-        public static TimestampBound OfMaxStaleness(TimeSpan duration) => new TimestampBound
-        {
-            Mode = TimestampBoundMode.MaxStaleness,
-            Staleness = duration
-        };
+        public static TimestampBound OfMaxStaleness(TimeSpan duration) => new TimestampBound(
+            TimestampBoundMode.MaxStaleness, duration);
 
         /// <summary>
         /// Executes all reads at a timestamp >= <paramref name="minReadTimestamp"/>.
@@ -105,11 +116,8 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="minReadTimestamp">The earliest timestamp to read from.</param>
         /// <returns>A created <see cref="TimestampBound"/>.</returns>
-        public static TimestampBound OfMinReadTimestamp(DateTime minReadTimestamp) => new TimestampBound
-        {
-            Mode = TimestampBoundMode.MinReadTimestamp,
-            Timestamp = minReadTimestamp
-        };
+        public static TimestampBound OfMinReadTimestamp(DateTime minReadTimestamp) => new TimestampBound(
+            TimestampBoundMode.MinReadTimestamp, minReadTimestamp);
 
         /// <summary>
         /// Executes all reads at the given timestamp. Unlike other modes,
@@ -124,10 +132,7 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="timestamp">The timestamp to read from.</param>
         /// <returns>A created <see cref="TimestampBound"/>.</returns>
-        public static TimestampBound OfReadTimestamp(DateTime timestamp) => new TimestampBound
-        {
-            Mode = TimestampBoundMode.ReadTimestamp,
-            Timestamp = timestamp
-        };
+        public static TimestampBound OfReadTimestamp(DateTime timestamp) => new TimestampBound(
+            TimestampBoundMode.ReadTimestamp, timestamp);
     }
 }

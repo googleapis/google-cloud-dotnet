@@ -7,7 +7,7 @@ set -e
 OS=linux
 [[ ${OS} = "windows" ]] && EXE_SUFFIX=.exe || EXE_SUFFIX=
 
-GRPC_VERSION=1.3.0
+GRPC_VERSION=1.4.0
 PROTOBUF_VERSION=3.3.0
 PROTOC=packages/Grpc.Tools.$GRPC_VERSION/tools/${OS}_x64/protoc${EXE_SUFFIX}
 GRPC_PLUGIN=packages/Grpc.Tools.$GRPC_VERSION/tools/${OS}_x64/grpc_csharp_plugin${EXE_SUFFIX}
@@ -147,7 +147,12 @@ generate_api Google.Cloud.PubSub.V1 google/pubsub/v1 pubsub.yaml
 generate_api Google.Cloud.Datastore.V1 google/datastore/v1 datastore.yaml
 generate_api Google.Cloud.Monitoring.V3 google/monitoring/v3 monitoring.yaml
 generate_api Google.Cloud.VideoIntelligence.V1Beta1 google/cloud/videointelligence/v1beta1 videointelligence.yaml
+generate_api Google.Cloud.Dlp.V2Beta1 google/privacy/dlp/v2beta1 dlp.yaml
 
 generate_api Google.Cloud.Spanner.V1 google/spanner/v1 spanner.yaml
 generate_api Google.Cloud.Spanner.Admin.Database.V1 google/spanner/admin/database/v1 spanner_admin_database.yaml
 generate_api Google.Cloud.Spanner.Admin.Instance.V1 google/spanner/admin/instance/v1 spanner_admin_instance.yaml
+
+# Cleanup for the logging API's version-agnostic protos (in their own top-level directory)
+mv apis/Google.Cloud.Logging.V2/Google.Cloud.Logging.Type/*.cs apis/Google.Cloud.Logging.Type/Google.Cloud.Logging.Type
+rmdir apis/Google.Cloud.Logging.V2/Google.Cloud.Logging.Type

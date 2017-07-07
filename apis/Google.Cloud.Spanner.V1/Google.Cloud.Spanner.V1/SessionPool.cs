@@ -14,10 +14,11 @@
 
 using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Google.Api.Gax;
 using Google.Apis.Util;
 using Google.Cloud.Spanner.V1.Logging;
 using Grpc.Core;
@@ -52,9 +53,7 @@ namespace Google.Cloud.Spanner.V1
 
         private static readonly ConcurrentDictionary<SessionPoolKey, SessionPoolImpl>
             s_poolByClientAndDatabase = new ConcurrentDictionary<SessionPoolKey, SessionPoolImpl>();
-        private static readonly object s_priorityListSync = new object();
-        private static readonly SortedList<SessionPoolImpl, SessionPoolImpl> s_priorityList =
-            new SortedList<SessionPoolImpl, SessionPoolImpl>();
+        private static readonly PriorityList<SessionPoolImpl> s_priorityList = new PriorityList<SessionPoolImpl>();
 
         private static readonly ConcurrentDictionary<string, bool> s_blackListedSessions = new ConcurrentDictionary<string, bool>();
 
@@ -67,6 +66,41 @@ namespace Google.Cloud.Spanner.V1
             System.Runtime.Loader.AssemblyLoadContext.Default.Unloading += context =>
 #endif
                     Task.Run(ReleaseAll).Wait(s_shutDownTimeout);
+        }
+
+        // ReSharper disable once UnusedMember.Global
+        // returns the maximum difference in size between the smallest and largest pool.
+        // For test purposes only.
+        // poolcontents will be filled with the contents of the pool and may not be null.
+        internal static int GetPoolInfo(StringBuilder poolContents)
+        {
+            GaxPreconditions.CheckNotNull(poolContents, nameof(poolContents));
+            var maxSize = 0;
+            var minSize = int.MaxValue;
+            poolContents.AppendLine("SessionPool.Contents (by priority):");
+            var i = 0;
+            foreach (var priorityListEntry in s_priorityList.GetSnapshot())
+            {
+                poolContents.AppendLine($"SessionPool({i}) Key:${priorityListEntry.Key}"
+                    + $" HashCode_of_Pool:{priorityListEntry.GetHashCode()}");
+                i++;
+            }
+            poolContents.AppendLine("SessionPool.Contents (by client):");
+            var byClientIndex = 0;
+            foreach (var byClientEntry in s_poolByClientAndDatabase)
+            {
+                poolContents.AppendLine($"SessionPool({byClientIndex}) Key:${byClientEntry.Key}"
+                    + $" HashCode_of_Pool:{byClientEntry.Value.GetHashCode()}");
+                var size = byClientEntry.Value.DumpSessionPoolContents(poolContents);
+                if (size > 0)
+                {
+                    minSize = Math.Min(size, minSize);
+                    maxSize = Math.Max(size, maxSize);
+                }
+                byClientIndex++;
+            }
+
+            return maxSize - minSize;
         }
 
         private static Task WhenCanceled(this CancellationToken cancellationToken)
@@ -197,7 +231,6 @@ namespace Google.Cloud.Spanner.V1
                 sessionResult = await targetPool.AcquireSessionAsync(options, cancellationToken).ConfigureAwait(false);
                 //refresh the mru list which tells us what sessions need to be trimmed from the pool when we want
                 // to add another poolEntry.
-                ReSortMru(targetPool);
                 return sessionResult;
             } finally
             {
@@ -250,26 +283,18 @@ namespace Google.Cloud.Spanner.V1
                 SessionPoolImpl targetPool = s_poolByClientAndDatabase.GetOrAdd(poolKey,
                                              key => new SessionPoolImpl(key));
 
-
-                SpannerClient evictionClient = poolKey.Client;
-                Session evictionSession = null;
-
                 //Figure out if we want to pool this released session.
-                lock (s_priorityListSync)
+                targetPool.ReleaseSessionToPool(client, session);
+                s_priorityList.Add(targetPool);
+                if (CurrentPooledSessions > MaximumPooledSessions)
                 {
-                    targetPool.ReleaseSessionToPool(client, session);
-                    if (CurrentPooledSessions > MaximumPooledSessions)
+                    var evictionPool = s_priorityList.GetTop();
+                    var evictionClient = evictionPool?.Key.Client;
+                    var evictionSession = evictionPool?.AcquireEvictionCandidate();
+                    if (evictionSession != null)
                     {
-                        var evictionPool = s_priorityList.First().Value;
-                        evictionClient = evictionPool.Key.Client;
-                        evictionSession = evictionPool.AcquireEvictionCandidate();
-                        ReSortMru(evictionPool);
+                        Task.Run(() => EvictSessionAsync(evictionClient, evictionSession));
                     }
-                    ReSortMru(targetPool);
-                }
-                if (evictionSession != null)
-                {
-                    Task.Run(() => EvictSessionAsync(evictionClient, evictionSession));
                 }
             } else
             {
@@ -308,18 +333,6 @@ namespace Google.Cloud.Spanner.V1
                 "Close Session was not able to locate the provided session.");
         }
 
-        private static void ReSortMru(SessionPoolImpl targetPool)
-        {
-            lock (s_priorityListSync)
-            {
-                if (s_priorityList.Count > 1)
-                {
-                    s_priorityList.Remove(targetPool);
-                    s_priorityList.Add(targetPool, targetPool);
-                }
-            }
-        }
-
         /// <summary>
         /// Releases all pooled sessions and frees resources on the server.
         /// </summary>
@@ -354,12 +367,12 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Maximum number of active sessions that can be in use by the application at any one time.
         /// </summary>
-        public static int MaximumActiveSessions { get; set; } = int.MaxValue;
+        public static int MaximumActiveSessions { get; set; } = 400;
 
         /// <summary>
         /// The maximum number of sessions that can be held in the session pool.
         /// </summary>
-        public static int MaximumPooledSessions { get; set; } = int.MaxValue;
+        public static int MaximumPooledSessions { get; set; } = 400;
 
         /// <summary>
         /// If true, then CreateSessionFromPoolAsync will block until CurrentActiveSessions is less than MaximumActiveSessions

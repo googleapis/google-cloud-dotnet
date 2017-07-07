@@ -40,6 +40,8 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
     public sealed class StorageFixture : IDisposable, ICollectionFixture<StorageFixture>
     {
         private const string ProjectEnvironmentVariable = "TEST_PROJECT";
+        private const string RequesterPaysProjectEnvironmentVariable = "REQUESTER_PAYS_TEST_PROJECT";
+        private const string RequesterPaysCredentialsEnvironmentVariable = "REQUESTER_PAYS_CREDENTIALS";
         public const string DelayTestSuffix = "_InitDelayTest";
 
         private static TypeInfo _delayTestsTypeBeingRegistered;
@@ -70,6 +72,20 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         /// Bucket with versioning enabled, which tests can write to.
         /// </summary>
         public string MultiVersionBucket => BucketPrefix + "multi";
+
+        /// <summary>
+        /// Bucket to be used for requester-pays testing, or null if requester-pays is not configured.
+        /// </summary>
+        public string RequesterPaysBucket { get; }
+        /// <summary>
+        /// Project ID of the requester-pays bucket, or null if requester-pays is not configured.
+        /// (This may be removable later, when we don't need to specify it in options.)
+        /// </summary>
+        private string RequesterPaysProjectId { get; }
+        /// <summary>
+        /// Storage client set up with requester-pays credentials, or null if requester-pays is not configured.
+        /// </summary>
+        private StorageClient RequesterPaysClient { get; }
 
         /// <summary>
         /// Bucket which tests should *not* write to, so that tests can
@@ -114,6 +130,8 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         /// </summary>
         public string BucketBeginningWithZ => BucketPrefix + "zbucketname";
 
+        public string LabelsTestBucket => BucketPrefix + "labels";
+
         /// <summary>
         /// Returns all the known buckets that have been created for this test run.
         /// (This includes any buckets created by <see cref="CreateBucket"/> or registered
@@ -139,12 +157,50 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 throw new InvalidOperationException(
                     $"Please set the {ProjectEnvironmentVariable} environment variable before running tests");
             }
-            BucketPrefix = "tests-" + Guid.NewGuid().ToString().ToLowerInvariant() + "-";
+            BucketPrefix = "tests-" + Guid.NewGuid().ToString().ToLowerInvariant().Replace("-", "") + "-";
             LargeContent = Encoding.UTF8.GetBytes(string.Join("\n", Enumerable.Repeat("All work and no play makes Jack a dull boy.", 500)));
             CreateBucket(SingleVersionBucket, false);
             CreateBucket(MultiVersionBucket, true);
             CreateAndPopulateReadBucket();
             CreateBucket(BucketBeginningWithZ, false);
+            CreateBucket(LabelsTestBucket, false);
+
+            RequesterPaysClient = CreateRequesterPaysClient();
+            if (RequesterPaysClient != null)
+            {
+                RequesterPaysProjectId = Environment.GetEnvironmentVariable(RequesterPaysProjectEnvironmentVariable);
+                if (string.IsNullOrEmpty(RequesterPaysProjectId))
+                {
+                    throw new Exception($"{RequesterPaysCredentialsEnvironmentVariable} set, but not {RequesterPaysProjectEnvironmentVariable}");
+                }
+
+                RequesterPaysBucket = CreateRequesterPaysBucket();
+            }
+        }
+
+        private static StorageClient CreateRequesterPaysClient()
+        {
+            string file = Environment.GetEnvironmentVariable(RequesterPaysCredentialsEnvironmentVariable);
+            if (string.IsNullOrEmpty(file))
+            {
+                return null;
+            }
+            using (var stream = File.OpenRead(file))
+            {
+                var credential = GoogleCredential.FromStream(stream);
+                return StorageClient.Create(credential);
+            }
+        }
+
+        private string CreateRequesterPaysBucket()
+        {
+            string name = "dotnet-requesterpays-" + Guid.NewGuid().ToString().ToLowerInvariant();
+            RequesterPaysClient.CreateBucket(RequesterPaysProjectId, new Bucket { Name = name, Billing = new Bucket.BillingData { RequesterPays = true } },
+                new CreateBucketOptions { PredefinedAcl = PredefinedBucketAcl.PublicReadWrite, PredefinedDefaultObjectAcl = PredefinedObjectAcl.PublicRead });
+            // TODO: We shouldn't need the project ID here.
+            RequesterPaysClient.UploadObject(name, SmallObject, "text/plain", new MemoryStream(SmallContent),
+                new UploadObjectOptions { UserProject = RequesterPaysProjectId });
+            return name;
         }
 
         internal void CreateBucket(string name, bool multiVersion)
@@ -245,13 +301,39 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var client = StorageClient.Create();
             foreach (var bucket in _bucketsToDelete)
             {
-                var objects = client.ListObjects(bucket, null, new ListObjectsOptions { Versions = true }).ToList();
-                foreach (var obj in objects)
-                {
-                    client.DeleteObject(obj, new DeleteObjectOptions { Generation = obj.Generation });
-                }
-                client.DeleteBucket(bucket);
+                DeleteBucket(client, bucket, null);
             }
+            if (RequesterPaysBucket != null)
+            {
+                DeleteBucket(RequesterPaysClient, RequesterPaysBucket, RequesterPaysProjectId);
+            }
+        }
+
+        private void DeleteBucket(StorageClient client, string bucket, string userProject)
+        {
+            // TODO: We shouldn't need the project ID here.
+            var objects = client.ListObjects(bucket, null, new ListObjectsOptions { Versions = true, UserProject = userProject }).ToList();
+            foreach (var obj in objects)
+            {
+                client.DeleteObject(obj, new DeleteObjectOptions { Generation = obj.Generation, UserProject = userProject });
+            }
+            client.DeleteBucket(bucket, new DeleteBucketOptions { UserProject = userProject });
+        }
+
+        /// <summary>
+        /// Sets the labels on <see cref="LabelsTestBucket"/> without using any of the client *Labels methods.
+        /// Any old labels are wiped.
+        /// </summary>
+        public void SetUpLabels(Dictionary<string, string> labels)
+        {
+            // Just avoid mutating the parameter...
+            labels = new Dictionary<string, string>(labels);
+            var oldLabels = Client.GetBucket(LabelsTestBucket).Labels ?? new Dictionary<string, string>();
+            foreach (var key in oldLabels.Keys.Except(labels.Keys))
+            {
+                labels[key] = null;
+            }
+            Client.PatchBucket(new Bucket { Name = LabelsTestBucket, Labels = labels });
         }
 
         private class DelayTestInfo

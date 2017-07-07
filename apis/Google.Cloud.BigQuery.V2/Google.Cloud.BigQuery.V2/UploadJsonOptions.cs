@@ -41,10 +41,17 @@ namespace Google.Cloud.BigQuery.V2
         public CreateDisposition? CreateDisposition { get; set; }
 
         /// <summary>
-        /// Specifies the behavior if the destination table exists and is non-empty.
+        /// Specifies the behavior if the destination table exists.
         /// If not set, this is effectively <see cref="WriteDisposition.WriteAppend"/>.
         /// </summary>
         public WriteDisposition? WriteDisposition { get; set; }
+
+        /// <summary>
+        /// Specifies whether or not the options (including schema) should automatically be inferred.
+        /// If not set, this is effectively false.
+        /// </summary>
+        public bool? Autodetect { get; set; }
+
 
         internal void ModifyConfiguration(JobConfigurationLoad loadRequest)
         {
@@ -63,6 +70,10 @@ namespace Google.Cloud.BigQuery.V2
             if (WriteDisposition != null)
             {
                 loadRequest.WriteDisposition = EnumMap.ToApiValue(WriteDisposition.Value);
+            }
+            if (Autodetect != null)
+            {
+                loadRequest.Autodetect = Autodetect;
             }
         }
     }

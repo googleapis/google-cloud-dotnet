@@ -28,8 +28,8 @@ namespace Google.Cloud.BigQuery.V2
         public CreateDisposition? CreateDisposition { get; set; }
 
         /// <summary>
-        /// The behavior if the destination table already exists. If this
-        /// is unspecified, the default is for the job to fail.
+        /// Specifies the behavior if the destination table exists.
+        /// If not set, this is effectively <see cref="WriteDisposition.WriteIfEmpty"/>.
         /// </summary>
         public WriteDisposition? WriteDisposition { get; set; }
 

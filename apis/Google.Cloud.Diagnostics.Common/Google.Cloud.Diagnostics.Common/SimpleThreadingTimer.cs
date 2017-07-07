@@ -26,9 +26,9 @@ namespace Google.Cloud.Diagnostics.Common
         private Timer _timer;
 
         /// <inheritdoc />
-        void IThreadingTimer.Initialize(TimerCallback callback, TimeSpan waitTime)
+        public void Initialize(TimerCallback callback, TimeSpan waitTime)
             => _timer = new Timer(callback, null, waitTime, waitTime);
-        
+
         /// <inheritdoc />
         public void Dispose() => _timer.Dispose();
     }

@@ -117,7 +117,7 @@ namespace Google.Cloud.Diagnostics.AspNet
             _traceFallbackPredicate = traceFallbackPredicate ?? TraceDecisionPredicate.Default;
 
             _consumer = ConsumerFactory<TraceProto>.GetConsumer(
-                new GrpcTraceConsumer(client), MessageSizer<TraceProto>.GetSize, options.BufferOptions);
+                new GrpcTraceConsumer(client), MessageSizer<TraceProto>.GetSize, options.BufferOptions, options.RetryOptions);
 
             _tracerFactory = new ManagedTracerFactory(projectId, _consumer,
                 RateLimitingTraceOptionsFactory.Create(options), TraceIdFactory.Create());

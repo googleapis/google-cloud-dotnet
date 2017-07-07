@@ -26,7 +26,8 @@ using Xunit.Abstractions;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
-    public class WriteTests : IClassFixture<TestDatabaseFixture>
+    [Collection(nameof(TestDatabaseFixture))]
+    public class WriteTests
     {
         // ReSharper disable once UnusedParameter.Local
         public WriteTests(TestDatabaseFixture testFixture, ITestOutputHelper outputHelper)

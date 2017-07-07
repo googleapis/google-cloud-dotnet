@@ -22,10 +22,11 @@ namespace Google.Cloud.Tools.ProjectGenerator
 {
     public class ApiMetadata
     {
-        const string GrpcVersion = "1.3.6";
-        const string GaxVersion = "2.0.0-beta02";
+        private const string GrpcVersion = "1.4.0";
+        private const string GaxVersion = "2.0.0";
 
-        const string StripDesktopOnNonWindows = @"..\..\..\StripDesktopOnNonWindows.xml";
+        private const string AnalyzersPath = @"..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll";
+        private const string StripDesktopOnNonWindows = @"..\..\..\StripDesktopOnNonWindows.xml";
 
         public string Version { get; set; }
         public string Id { get; set; }
@@ -47,8 +48,10 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 throw new Exception($"No version specified for {Id}");
             }
             string targetFrameworks = TargetFrameworks;
-            var dependencies = new SortedList<string, string>(Dependencies);
-            dependencies.Add("ConfigureAwaitChecker.Analyzer", "1.0.0-beta4");
+            var dependencies = new SortedList<string, string>(Dependencies)
+            {
+                { "ConfigureAwaitChecker.Analyzer", "1.0.0-beta4" }
+            };
             switch (Type)
             {
                 case "rest":
@@ -66,9 +69,11 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 // Build-related properties
                 new XElement("Version", Version), // TODO: Version, or VersionPrefix/VersionSuffix?
                 new XElement("TargetFrameworks", targetFrameworks),
+                new XElement("Features", "IOperation"),
                 new XElement("GenerateDocumentationFile", true),
                 new XElement("AssemblyOriginatorKeyFile", "../../GoogleApis.snk"),
                 new XElement("SignAssembly", true),
+                new XElement("Deterministic", true),
                 new XElement("PublicSign", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), true),
                 new XElement("TreatWarningsAsErrors", true),
                 // Package-related properties
@@ -84,8 +89,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 new XElement("RepositoryType", "git"),
                 new XElement("RepositoryUrl", "https://github.com/GoogleCloudPlatform/google-cloud-dotnet")
             );
-            var itemGroup = CreateDependenciesElement(dependencies);
-            WriteProjectFile(directory, propertyGroup, itemGroup);
+            WriteProjectFile(directory, propertyGroup,
+                CreateDependenciesElement(dependencies, includeAnalyzers: true));
         }
 
         public void GenerateTestProject(string directory)
@@ -111,15 +116,18 @@ namespace Google.Cloud.Tools.ProjectGenerator
                     // See https://github.com/googleapis/toolkit/issues/1271 - when that's fixed, we can remove this.
                     new XElement("NoWarn", "1701;1702;1705;4014")
                 );
-            var itemGroup = CreateDependenciesElement(dependencies);
+            var itemGroup = CreateDependenciesElement(dependencies, includeAnalyzers: false);
             // Allow test projects to use dynamic...
             itemGroup.Add(new XElement("Reference",
                 new XAttribute("Condition", "'$(TargetFramework)' == 'net452'"),
                 new XAttribute("Include", "Microsoft.CSharp")));
+            // Test service... it keeps on getting added by Visual Studio, so let's just include it everywhere.
+            itemGroup.Add(new XElement("Service", new XAttribute("Include", "{82a7f48d-3b50-4b1e-b82e-3ada8210c358}")));
             WriteProjectFile(directory, propertyGroup, itemGroup);
         }
 
-        private static void WriteProjectFile(string directory, XElement propertyGroup, XElement itemGroup)
+        private static void WriteProjectFile(
+            string directory, XElement propertyGroup, XElement dependenciesItemGroup)
         {
             var file = Path.Combine(directory, $"{Path.GetFileName(directory)}.csproj");
             XElement doc;
@@ -130,7 +138,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 doc = XElement.Load(file);
                 doc.Elements("Import").Where(x => (string)x.Attribute("Project") == @"..\..\StripDesktopOnNonWindows.xml").Remove();
                 doc.Elements("PropertyGroup").First().ReplaceWith(propertyGroup);
-                doc.Elements("ItemGroup").First().ReplaceWith(itemGroup);
+                doc.Elements("ItemGroup").First().ReplaceWith(dependenciesItemGroup);
+
                 if (!doc.Elements("Import").Any(x => (string) x.Attribute("Project") == StripDesktopOnNonWindows))
                 {
                     doc.Add(new XElement("Import", new XAttribute("Project", StripDesktopOnNonWindows)));
@@ -142,7 +151,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 doc = new XElement("Project",
                     new XAttribute("Sdk", "Microsoft.NET.Sdk"),
                     propertyGroup,
-                    itemGroup,
+                    dependenciesItemGroup,
                     new XElement("Import", new XAttribute("Project", StripDesktopOnNonWindows))
                 );
             }
@@ -163,7 +172,6 @@ namespace Google.Cloud.Tools.ProjectGenerator
             switch (key)
             {
                 case "Google.Cloud.ClientTesting": return @"..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj";
-                case "Google.Cloud.Logging.Type": return @"..\..\Google.Cloud.Logging.V2\Google.Cloud.Logging.Type\Google.Cloud.Logging.Type.csproj";
                 case var _ when !key.Contains(".csproj"): return $@"..\..\{key}\{key}\{key}.csproj";
                 default: return key;
             }
@@ -171,7 +179,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
 
         // Dependencies with an empty value will be treated as project dependencies;
         // dependencies with a value will be treated as package dependencies with the value as the version.
-        private static XElement CreateDependenciesElement(IDictionary<string, string> dependencies) =>
+        private static XElement CreateDependenciesElement(IDictionary<string, string> dependencies, bool includeAnalyzers) =>
             new XElement("ItemGroup",
                 // Use the GAX version for all otherwise-unversioned GAX dependencies
                 dependencies
@@ -189,10 +197,15 @@ namespace Google.Cloud.Tools.ProjectGenerator
                         new XAttribute("Version", d.Value),
                         // Make references to Grpc.Core deploy native dependencies
                         // See https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1066
-                        d.Key == "Grpc.Core" ? new XElement("PrivateAssets", "None") : null,
+                        d.Key == "Grpc.Core" ? new XAttribute("PrivateAssets", "None") : null,
                         // Make references to ConfigureAwaitChecker effectively private
-                        d.Key == "ConfigureAwaitChecker.Analyzer" ? new XElement("PrivateAssets", "All") : null)
-                    )
+                        d.Key == "ConfigureAwaitChecker.Analyzer" ? new XAttribute("PrivateAssets", "All") : null)
+                    ),
+                includeAnalyzers ?
+                    new XElement("Analyzer",
+                        new XAttribute("Condition", $"Exists('{AnalyzersPath}')"),
+                        new XAttribute("Include", AnalyzersPath)) :
+                    null
             );
     }
 }

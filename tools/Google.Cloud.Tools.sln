@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.3
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.GenerateSnippetMarkdown", "Google.Cloud.Tools.GenerateSnippetMarkdown\Google.Cloud.Tools.GenerateSnippetMarkdown.csproj", "{656E050F-D24B-4CBE-9771-B3EF472342C0}"
 EndProject
@@ -28,6 +28,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.DownloadDependencyInfo", "Google.Cloud.Tools.DownloadDependencyInfo\Google.Cloud.Tools.DownloadDependencyInfo.csproj", "{2B180E4B-DEC6-42BB-823E-73225C5DDF58}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.ProjectGenerator", "Google.Cloud.Tools.ProjectGenerator\Google.Cloud.Tools.ProjectGenerator.csproj", "{C2943C3B-D4A9-42F2-AA02-C37BB1F3273E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.TagReleases", "Google.Cloud.Tools.TagReleases\Google.Cloud.Tools.TagReleases.csproj", "{91F88A94-6503-4BA2-BCF1-A692EB1A846E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.Analyzers", "Google.Cloud.Tools.Analyzers\Google.Cloud.Tools.Analyzers.csproj", "{7C8D38DD-253A-4244-916D-018C945BED72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.Analyzers.Tests", "Google.Cloud.Tools.Analyzers.Tests\Google.Cloud.Tools.Analyzers.Tests.csproj", "{C358096D-F0B9-494E-BF49-90856BF00CE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +93,18 @@ Global
 		{C2943C3B-D4A9-42F2-AA02-C37BB1F3273E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2943C3B-D4A9-42F2-AA02-C37BB1F3273E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2943C3B-D4A9-42F2-AA02-C37BB1F3273E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91F88A94-6503-4BA2-BCF1-A692EB1A846E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91F88A94-6503-4BA2-BCF1-A692EB1A846E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91F88A94-6503-4BA2-BCF1-A692EB1A846E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91F88A94-6503-4BA2-BCF1-A692EB1A846E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C8D38DD-253A-4244-916D-018C945BED72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C8D38DD-253A-4244-916D-018C945BED72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C8D38DD-253A-4244-916D-018C945BED72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C8D38DD-253A-4244-916D-018C945BED72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C358096D-F0B9-494E-BF49-90856BF00CE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C358096D-F0B9-494E-BF49-90856BF00CE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C358096D-F0B9-494E-BF49-90856BF00CE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C358096D-F0B9-494E-BF49-90856BF00CE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -41,6 +41,12 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public Projection? Projection { get; set; }
 
+        /// <summary>
+        /// If set, this is the ID of the project which will be billed for the request, for requester-pays buckets.
+        /// The caller must have suitable permissions for the project being billed.
+        /// </summary>
+        public string UserProject { get; set; }
+
         internal void ModifyRequest(GetRequest request)
         {
             if (IfMetagenerationMatch != null && IfMetagenerationNotMatch != null)
@@ -59,6 +65,10 @@ namespace Google.Cloud.Storage.V1
             if (IfMetagenerationNotMatch != null)
             {
                 request.IfMetagenerationNotMatch = IfMetagenerationNotMatch;
+            }
+            if (UserProject != null)
+            {
+                request.UserProject = UserProject;
             }
         }
     }

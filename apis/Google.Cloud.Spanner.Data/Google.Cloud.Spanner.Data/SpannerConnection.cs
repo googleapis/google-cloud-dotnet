@@ -279,22 +279,32 @@ namespace Google.Cloud.Spanner.Data
             {
                 SpannerClient.ReleaseToPool(session);
             }
+            ReleaseClient(SpannerClient);
+            SpannerClient = null;
+        }
+
+        private void ReleaseClient(SpannerClient client)
+        {
+            if (client != null)
+            {
+                ClientPool.ReleaseClient(
+                    client,
+                    _connectionStringBuilder.Credential,
+                    _connectionStringBuilder.EndPoint);
+            }
         }
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand"/> to delete rows from a Spanner database table.
         /// </summary>
         /// <param name="databaseTable">The name of the table from which to delete rows. Must not be null.</param>
-        /// <param name="deleteFilterParameters">Filter criteria to control what rows get deleted.
-        /// The name of each <see cref="SpannerParameter"/> should match the column name from the Spanner Table.
-        /// The value of the parameter should be the value to filter for the delete operation.
-        /// May be null.</param>
+        /// <param name="primaryKeys">The set of columns that form the primary key of the table.</param>
         /// <returns>A configured <see cref="SpannerCommand"/></returns>
         public SpannerCommand CreateDeleteCommand(
             string databaseTable,
-            SpannerParameterCollection deleteFilterParameters = null) => new SpannerCommand(
+            SpannerParameterCollection primaryKeys = null) => new SpannerCommand(
             SpannerCommandTextBuilder.CreateDeleteTextBuilder(databaseTable), this, null,
-            deleteFilterParameters);
+            primaryKeys);
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand"/> to insert rows into a Spanner database table.
@@ -408,13 +418,14 @@ namespace Google.Cloud.Spanner.Data
 
                         _state = ConnectionState.Connecting;
                     }
+                    SpannerClient localClient = null;
                     try
                     {
-                        SpannerClient = await ClientPool.AcquireClientAsync(
+                        localClient = await ClientPool.AcquireClientAsync(
                                 _connectionStringBuilder.Credential,
                                 _connectionStringBuilder.EndPoint)
                             .ConfigureAwait(false);
-                        _sharedSession = await SpannerClient.CreateSessionFromPoolAsync(
+                        _sharedSession = await localClient.CreateSessionFromPoolAsync(
                                 _connectionStringBuilder.Project,
                                 _connectionStringBuilder.SpannerInstance,
                                 _connectionStringBuilder.SpannerDatabase,
@@ -430,6 +441,14 @@ namespace Google.Cloud.Spanner.Data
                     finally
                     {
                         _state = _sharedSession != null ? ConnectionState.Open : ConnectionState.Broken;
+                        if (IsOpen)
+                        {
+                            SpannerClient = localClient;
+                        }
+                        else
+                        {
+                            ReleaseClient(localClient);
+                        }
 #if NET45 || NET451
                         if (IsOpen && currentTransaction != null)
                         {

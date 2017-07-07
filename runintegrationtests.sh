@@ -27,7 +27,7 @@ done
 PROGRESS_FILE=`realpath integrationprogress.txt`
 FIND=/usr/bin/find
 
-[[ "$CONTINUE_ARG" == "yes" ]] || rm $PROGRESS_FILE
+[[ "$CONTINUE_ARG" == "yes" ]] || rm -f $PROGRESS_FILE
 touch $PROGRESS_FILE
 
 cd apis

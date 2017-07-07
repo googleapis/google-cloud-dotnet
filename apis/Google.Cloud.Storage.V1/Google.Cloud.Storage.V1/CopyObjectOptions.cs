@@ -110,6 +110,13 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public EncryptionKey SourceEncryptionKey { get; set; }
 
+
+        /// <summary>
+        /// If set, this is the ID of the project which will be billed for the request, for requester-pays buckets.
+        /// The caller must have suitable permissions for the project being billed.
+        /// </summary>
+        public string UserProject { get; set; }
+
         internal void ModifyRequest(RewriteRequest request)
         {
             // Note the use of ArgumentException here, as this will basically be the result of invalid
@@ -177,6 +184,10 @@ namespace Google.Cloud.Storage.V1
             if (IfSourceMetagenerationNotMatch != null)
             {
                 request.IfSourceMetagenerationNotMatch = IfSourceMetagenerationNotMatch;
+            }
+            if (UserProject != null)
+            {
+                request.UserProject = UserProject;
             }
         }
     }

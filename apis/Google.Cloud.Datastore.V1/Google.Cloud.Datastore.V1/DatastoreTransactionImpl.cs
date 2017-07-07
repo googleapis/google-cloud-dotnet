@@ -161,7 +161,7 @@ namespace Google.Cloud.Datastore.V1
         {
             // TODO: What if there are no mutations? Just rollback?
             CheckActive();
-            var response = _client.Commit(_projectId, Mode.Transactional, TransactionId, _mutations);
+            var response = _client.Commit(_projectId, Mode.Transactional, TransactionId, _mutations, callSettings);
             PropagateKeys(response);
             _active = false;
             return response;
