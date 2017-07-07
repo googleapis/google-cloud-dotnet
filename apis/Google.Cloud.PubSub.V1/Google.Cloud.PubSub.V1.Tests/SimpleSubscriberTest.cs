@@ -27,7 +27,7 @@ using Xunit;
 
 namespace Google.Cloud.PubSub.V1.Tests
 {
-    public class HiPerfSubscriberTest
+    public class SimpleSubscriberTest
     {
         private struct TimedId
         {
@@ -217,7 +217,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             public TaskHelper TaskHelper { get; set; }
             public List<FakeSubscriber> Subscribers { get; set; }
             public List<DateTime> ClientShutdowns { get; set; }
-            public HiPerfSubscriberImpl Subscriber { get; set; }
+            public SimpleSubscriberImpl Subscriber { get; set; }
 
             public static Fake Create(IList<IEnumerable<ServerAction>> msgs,
                 TimeSpan? ackDeadline = null, TimeSpan? ackExtendWindow = null,
@@ -229,7 +229,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 List<DateTime> clientShutdowns = new List<DateTime>();
                 var msgEn = msgs.GetEnumerator();
                 var clients = Enumerable.Range(0, clientCount).Select(_ => new FakeSubscriber(msgEn, scheduler, scheduler.Clock, taskHelper)).ToList();
-                var settings = new HiPerfSubscriber.Settings
+                var settings = new SimpleSubscriber.Settings
                 {
                     Scheduler = scheduler,
                     StreamAckDeadline = ackDeadline,
@@ -241,7 +241,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     clientShutdowns.Locked(() => clientShutdowns.Add(scheduler.Clock.GetCurrentDateTimeUtc()));
                     return Task.FromResult(0);
                 }
-                var subs = new HiPerfSubscriberImpl(new SubscriptionName("projectid", "subscriptionid"), clients, settings, Shutdown, taskHelper);
+                var subs = new SimpleSubscriberImpl(new SubscriptionName("projectid", "subscriptionid"), clients, settings, Shutdown, taskHelper);
                 return new Fake
                 {
                     Scheduler = scheduler,
@@ -319,7 +319,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                         {
                             handledMsgs.Add(msg.Data.ToStringUtf8());
                         }
-                        return HiPerfSubscriber.Reply.Ack;
+                        return SimpleSubscriber.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(stopAfterSeconds) + TimeSpan.FromSeconds(0.5), CancellationToken.None));
                     var isCancelled = await fake.TaskHelper.ConfigureAwaitHideCancellation(fake.Subscriber.StopAsync(new CancellationToken(hardStop)));
@@ -359,7 +359,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                         {
                             handledMsgs.Add(msg.Data.ToStringUtf8());
                         }
-                        return HiPerfSubscriber.Reply.Ack;
+                        return SimpleSubscriber.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(stopAfterSeconds) + TimeSpan.FromSeconds(0.5), CancellationToken.None));
                     await fake.TaskHelper.ConfigureAwaitHideCancellation(fake.Subscriber.StopAsync(new CancellationToken(hardStop)));
@@ -386,7 +386,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                         }
                         await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), ct));
                         handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
-                        return HiPerfSubscriber.Reply.Ack;
+                        return SimpleSubscriber.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), CancellationToken.None));
                     await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
@@ -416,7 +416,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     {
                         handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
                         await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), ct));
-                        return HiPerfSubscriber.Reply.Ack;
+                        return SimpleSubscriber.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), CancellationToken.None));
                     await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
@@ -449,7 +449,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     {
                         handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
                         await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), ct));
-                        return HiPerfSubscriber.Reply.Ack;
+                        return SimpleSubscriber.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), CancellationToken.None));
                     Exception ex = await fake.TaskHelper.ConfigureAwaitHideErrors(fake.Subscriber.StopAsync(CancellationToken.None));
@@ -469,7 +469,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 fake.Scheduler.Run(() =>
                 {
                     fake.Subscriber.StartAsync((msg, ct) => throw new Exception());
-                    // Only allowed to start a HiPerfSubscriber once.
+                    // Only allowed to start a SimpleSubscriber once.
                     Assert.Throws<InvalidOperationException>((Action)(() => fake.Subscriber.StartAsync((msg, ct) => throw new Exception())));
                 });
             }
@@ -486,7 +486,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     // Cannot stop before start
                     Assert.Throws<InvalidOperationException>((Action)(() => fake.Subscriber.StopAsync(CancellationToken.None)));
                     fake.Subscriber.StartAsync((msg, ct) => throw new Exception());
-                    // Only allowed to stop a HiPerfSubscriber once.
+                    // Only allowed to stop a SimpleSubscriber once.
                     fake.Subscriber.StopAsync(CancellationToken.None);
                     Assert.Throws<InvalidOperationException>((Action)(() => fake.Subscriber.StopAsync(CancellationToken.None)));
                 });
@@ -513,7 +513,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                             Task unusedTask = fake.Subscriber.StopAsync(CancellationToken.None);
                         }
                         catch { }
-                        return HiPerfSubscriber.Reply.Ack;
+                        return SimpleSubscriber.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(doneTask);
                     var t0 = fake.Time0;

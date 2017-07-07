@@ -26,7 +26,7 @@ using Xunit;
 
 namespace Google.Cloud.PubSub.V1.Tests
 {
-    public class HiPerfPublisherTest
+    public class SimplePublisherTest
     {
         private class FakePublisher : PublisherClient
         {
@@ -68,9 +68,9 @@ namespace Google.Cloud.PubSub.V1.Tests
             }
         }
 
-        private HiPerfPublisher.Settings MakeSettings(IScheduler scheduler, int batchElementCountThreshold = 1, int batchRequestByteThreshold = 1)
+        private SimplePublisher.Settings MakeSettings(IScheduler scheduler, int batchElementCountThreshold = 1, int batchRequestByteThreshold = 1)
         {
-            return new HiPerfPublisher.Settings
+            return new SimplePublisher.Settings
             {
                 Scheduler = scheduler,
                 BatchingSettings = new BatchingSettings(batchElementCountThreshold, batchRequestByteThreshold, TimeSpan.FromSeconds(10)),
@@ -88,7 +88,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             var client = new FakePublisher(scheduler, taskHelper);
             var settings = MakeSettings(scheduler);
             int shutdownCount = 0;
-            var pub = new HiPerfPublisherImpl(topicName, new[] { client }, settings, () =>
+            var pub = new SimplePublisherImpl(topicName, new[] { client }, settings, () =>
             {
                 Interlocked.Increment(ref shutdownCount);
                 return Task.FromResult(0);
@@ -117,7 +117,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             var clients = Enumerable.Range(0, clientCount).Select(_ => new FakePublisher(scheduler, taskHelper)).ToArray();
             var settings = MakeSettings(scheduler, batchElementCountThreshold: batchElementCountThreshold, batchRequestByteThreshold: 10000);
             int shutdownCount = 0;
-            var pub = new HiPerfPublisherImpl(topicName, clients, settings, () =>
+            var pub = new SimplePublisherImpl(topicName, clients, settings, () =>
             {
                 Interlocked.Increment(ref shutdownCount);
                 return Task.FromResult(0);
@@ -144,7 +144,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             var client = new FakePublisher(scheduler, taskHelper, TimeSpan.FromSeconds(1));
             var settings = MakeSettings(scheduler, batchElementCountThreshold: 2, batchRequestByteThreshold: 1000);
             int shutdownCount = 0;
-            var pub = new HiPerfPublisherImpl(topicName, new[] { client }, settings, () =>
+            var pub = new SimplePublisherImpl(topicName, new[] { client }, settings, () =>
             {
                 Interlocked.Increment(ref shutdownCount);
                 return Task.FromResult(0);
@@ -170,7 +170,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             TaskHelper taskHelper = scheduler.TaskHelper;
             var client = new FakePublisher(scheduler, taskHelper, TimeSpan.FromSeconds(1));
             var settings = MakeSettings(scheduler);
-            var pub = new HiPerfPublisherImpl(topicName, new[] { client }, settings, null, taskHelper);
+            var pub = new SimplePublisherImpl(topicName, new[] { client }, settings, null, taskHelper);
             var msgSize = new PubsubMessage { Data = ByteString.CopyFromUtf8("1") }.CalculateSize();
             scheduler.Run(async () =>
             {
@@ -187,31 +187,31 @@ namespace Google.Cloud.PubSub.V1.Tests
         [Fact]
         public void SettingsValidation()
         {
-            new HiPerfPublisher.Settings().Validate();
+            new SimplePublisher.Settings().Validate();
 
-            Assert.ThrowsAny<ArgumentException>(() => new HiPerfPublisher.Settings { BatchingSettings = new BatchingSettings(null, null, TimeSpan.Zero) }.Validate());
-            Assert.ThrowsAny<ArgumentException>(() => new HiPerfPublisher.Settings { BatchingSettings = new BatchingSettings(null, null, TimeSpan.FromSeconds(-1)) }.Validate());
-            new HiPerfPublisher.Settings { BatchingSettings = new BatchingSettings(null, null, TimeSpan.FromMilliseconds(1)) }.Validate();
-            Assert.ThrowsAny<ArgumentException>(() => new HiPerfPublisher.Settings { BatchingSettings = new BatchingSettings(0, null, null) }.Validate());
-            Assert.ThrowsAny<ArgumentException>(() => new HiPerfPublisher.Settings { BatchingSettings = new BatchingSettings(HiPerfPublisher.ApiMaxBatchingSettings.ElementCountThreshold.Value + 1, null, null) }.Validate());
-            new HiPerfPublisher.Settings { BatchingSettings = new BatchingSettings(1, null, null) }.Validate();
-            new HiPerfPublisher.Settings { BatchingSettings = new BatchingSettings(HiPerfPublisher.ApiMaxBatchingSettings.ElementCountThreshold, null, null) }.Validate();
-            Assert.ThrowsAny<ArgumentException>(() => new HiPerfPublisher.Settings { BatchingSettings = new BatchingSettings(null, 0, null) }.Validate());
-            Assert.ThrowsAny<ArgumentException>(() => new HiPerfPublisher.Settings { BatchingSettings = new BatchingSettings(null, HiPerfPublisher.ApiMaxBatchingSettings.ByteCountThreshold + 1, null) }.Validate());
-            new HiPerfPublisher.Settings { BatchingSettings = new BatchingSettings(null, 1, null) }.Validate();
-            new HiPerfPublisher.Settings { BatchingSettings = new BatchingSettings(null, HiPerfPublisher.ApiMaxBatchingSettings.ByteCountThreshold, null) }.Validate();
+            Assert.ThrowsAny<ArgumentException>(() => new SimplePublisher.Settings { BatchingSettings = new BatchingSettings(null, null, TimeSpan.Zero) }.Validate());
+            Assert.ThrowsAny<ArgumentException>(() => new SimplePublisher.Settings { BatchingSettings = new BatchingSettings(null, null, TimeSpan.FromSeconds(-1)) }.Validate());
+            new SimplePublisher.Settings { BatchingSettings = new BatchingSettings(null, null, TimeSpan.FromMilliseconds(1)) }.Validate();
+            Assert.ThrowsAny<ArgumentException>(() => new SimplePublisher.Settings { BatchingSettings = new BatchingSettings(0, null, null) }.Validate());
+            Assert.ThrowsAny<ArgumentException>(() => new SimplePublisher.Settings { BatchingSettings = new BatchingSettings(SimplePublisher.ApiMaxBatchingSettings.ElementCountThreshold.Value + 1, null, null) }.Validate());
+            new SimplePublisher.Settings { BatchingSettings = new BatchingSettings(1, null, null) }.Validate();
+            new SimplePublisher.Settings { BatchingSettings = new BatchingSettings(SimplePublisher.ApiMaxBatchingSettings.ElementCountThreshold, null, null) }.Validate();
+            Assert.ThrowsAny<ArgumentException>(() => new SimplePublisher.Settings { BatchingSettings = new BatchingSettings(null, 0, null) }.Validate());
+            Assert.ThrowsAny<ArgumentException>(() => new SimplePublisher.Settings { BatchingSettings = new BatchingSettings(null, SimplePublisher.ApiMaxBatchingSettings.ByteCountThreshold + 1, null) }.Validate());
+            new SimplePublisher.Settings { BatchingSettings = new BatchingSettings(null, 1, null) }.Validate();
+            new SimplePublisher.Settings { BatchingSettings = new BatchingSettings(null, SimplePublisher.ApiMaxBatchingSettings.ByteCountThreshold, null) }.Validate();
 
-            Assert.ThrowsAny<ArgumentException>(() => new HiPerfPublisher.Settings { MaxBatchingSettings = new BatchingSettings(null, null, TimeSpan.Zero) }.Validate());
-            Assert.ThrowsAny<ArgumentException>(() => new HiPerfPublisher.Settings { MaxBatchingSettings = new BatchingSettings(null, null, TimeSpan.FromSeconds(-1)) }.Validate());
-            new HiPerfPublisher.Settings { MaxBatchingSettings = new BatchingSettings(null, null, TimeSpan.FromMilliseconds(1)) }.Validate();
-            Assert.ThrowsAny<ArgumentException>(() => new HiPerfPublisher.Settings { MaxBatchingSettings = new BatchingSettings(0, null, null) }.Validate());
-            Assert.ThrowsAny<ArgumentException>(() => new HiPerfPublisher.Settings { MaxBatchingSettings = new BatchingSettings(HiPerfPublisher.ApiMaxBatchingSettings.ElementCountThreshold.Value + 1, null, null) }.Validate());
-            new HiPerfPublisher.Settings { MaxBatchingSettings = new BatchingSettings(1, null, null) }.Validate();
-            new HiPerfPublisher.Settings { MaxBatchingSettings = new BatchingSettings(HiPerfPublisher.ApiMaxBatchingSettings.ElementCountThreshold, null, null) }.Validate();
-            Assert.ThrowsAny<ArgumentException>(() => new HiPerfPublisher.Settings { MaxBatchingSettings = new BatchingSettings(null, 0, null) }.Validate());
-            Assert.ThrowsAny<ArgumentException>(() => new HiPerfPublisher.Settings { MaxBatchingSettings = new BatchingSettings(null, HiPerfPublisher.ApiMaxBatchingSettings.ByteCountThreshold + 1, null) }.Validate());
-            new HiPerfPublisher.Settings { MaxBatchingSettings = new BatchingSettings(null, 1, null) }.Validate();
-            new HiPerfPublisher.Settings { MaxBatchingSettings = new BatchingSettings(null, HiPerfPublisher.ApiMaxBatchingSettings.ByteCountThreshold, null) }.Validate();
+            Assert.ThrowsAny<ArgumentException>(() => new SimplePublisher.Settings { MaxBatchingSettings = new BatchingSettings(null, null, TimeSpan.Zero) }.Validate());
+            Assert.ThrowsAny<ArgumentException>(() => new SimplePublisher.Settings { MaxBatchingSettings = new BatchingSettings(null, null, TimeSpan.FromSeconds(-1)) }.Validate());
+            new SimplePublisher.Settings { MaxBatchingSettings = new BatchingSettings(null, null, TimeSpan.FromMilliseconds(1)) }.Validate();
+            Assert.ThrowsAny<ArgumentException>(() => new SimplePublisher.Settings { MaxBatchingSettings = new BatchingSettings(0, null, null) }.Validate());
+            Assert.ThrowsAny<ArgumentException>(() => new SimplePublisher.Settings { MaxBatchingSettings = new BatchingSettings(SimplePublisher.ApiMaxBatchingSettings.ElementCountThreshold.Value + 1, null, null) }.Validate());
+            new SimplePublisher.Settings { MaxBatchingSettings = new BatchingSettings(1, null, null) }.Validate();
+            new SimplePublisher.Settings { MaxBatchingSettings = new BatchingSettings(SimplePublisher.ApiMaxBatchingSettings.ElementCountThreshold, null, null) }.Validate();
+            Assert.ThrowsAny<ArgumentException>(() => new SimplePublisher.Settings { MaxBatchingSettings = new BatchingSettings(null, 0, null) }.Validate());
+            Assert.ThrowsAny<ArgumentException>(() => new SimplePublisher.Settings { MaxBatchingSettings = new BatchingSettings(null, SimplePublisher.ApiMaxBatchingSettings.ByteCountThreshold + 1, null) }.Validate());
+            new SimplePublisher.Settings { MaxBatchingSettings = new BatchingSettings(null, 1, null) }.Validate();
+            new SimplePublisher.Settings { MaxBatchingSettings = new BatchingSettings(null, SimplePublisher.ApiMaxBatchingSettings.ByteCountThreshold, null) }.Validate();
         }
     }
 }
