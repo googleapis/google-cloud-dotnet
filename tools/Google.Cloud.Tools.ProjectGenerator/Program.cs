@@ -130,8 +130,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 new XElement("RepositoryType", "git"),
                 new XElement("RepositoryUrl", "https://github.com/GoogleCloudPlatform/google-cloud-dotnet")
             );
-            WriteProjectFile(api, directory, propertyGroup,
-                CreateDependenciesElement(dependencies, includeAnalyzers: true));
+            WriteProjectFile(api, directory, propertyGroup, CreateDependenciesElement(dependencies));
         }
 
         private static void GenerateTestProject(ApiMetadata api, string directory)
@@ -147,6 +146,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
             var propertyGroup =
                 new XElement("PropertyGroup",
                     new XElement("TargetFrameworks", api.TestTargetFrameworks ?? api.TargetFrameworks ?? "netcoreapp1.0;net452"),
+                    new XElement("Features", "IOperation"),
                     new XElement("IsPackable", false),
                     new XElement("AssemblyOriginatorKeyFile", "../../GoogleApis.snk"),
                     new XElement("SignAssembly", true),
@@ -157,7 +157,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                     // See https://github.com/googleapis/toolkit/issues/1271 - when that's fixed, we can remove this.
                     new XElement("NoWarn", "1701;1702;1705;4014")
                 );
-            var itemGroup = CreateDependenciesElement(dependencies, includeAnalyzers: false);
+            var itemGroup = CreateDependenciesElement(dependencies);
             // Allow test projects to use dynamic...
             itemGroup.Add(new XElement("Reference",
                 new XAttribute("Condition", "'$(TargetFramework)' == 'net452'"),
@@ -221,7 +221,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
 
         // Dependencies with an empty value will be treated as project dependencies;
         // dependencies with a value will be treated as package dependencies with the value as the version.
-        private static XElement CreateDependenciesElement(IDictionary<string, string> dependencies, bool includeAnalyzers) =>
+        private static XElement CreateDependenciesElement(IDictionary<string, string> dependencies) =>
             new XElement("ItemGroup",
                 // Use the GAX version for all otherwise-unversioned GAX dependencies
                 dependencies
@@ -243,11 +243,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
                         // Make references to ConfigureAwaitChecker effectively private
                         d.Key == "ConfigureAwaitChecker.Analyzer" ? new XAttribute("PrivateAssets", "All") : null)
                     ),
-                includeAnalyzers ?
-                    new XElement("Analyzer",
-                        new XAttribute("Condition", $"Exists('{AnalyzersPath}')"),
-                        new XAttribute("Include", AnalyzersPath)) :
-                    null
-            );
+                new XElement("Analyzer",
+                    new XAttribute("Condition", $"Exists('{AnalyzersPath}')"),
+                    new XAttribute("Include", AnalyzersPath)));
     }
 }
