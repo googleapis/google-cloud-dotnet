@@ -431,13 +431,13 @@ namespace Google.Cloud.PubSub.V1
         //Internal state
         private readonly Queue<PublisherClient> _idleClients;
         private readonly Queue<Batch> _batchesReady;
+        private readonly CancellationTokenSource _softStopCts;
+        private readonly CancellationTokenSource _hardStopCts;
+        private readonly TaskCompletionSource<int> _shutdownTcs;
         private Batch _currentBatch;
         private long _queueElementCount;
         private long _queueByteCount;
         private int _batchesInFlightCount;
-        private CancellationTokenSource _softStopCts;
-        private CancellationTokenSource _hardStopCts;
-        private TaskCompletionSource<int> _shutdownTcs;
         private bool _shutdownStarted;
 
         /// <inheritdoc/>
