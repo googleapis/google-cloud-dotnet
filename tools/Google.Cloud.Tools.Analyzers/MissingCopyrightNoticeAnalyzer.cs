@@ -103,7 +103,7 @@ namespace Google.Cloud.Tools.Analyzers
         {
             if (rootNode.FullSpan.Length == 0)
             {
-                // Ignore empty files. Temporaries files for the build process are sometimes empty.
+                // Ignore empty files. Temporary files for the build process are sometimes empty.
                 return false;
             }
 
