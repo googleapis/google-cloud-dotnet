@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Grpc.Core;
 using System;
 using System.Linq;
 using Xunit;
@@ -60,7 +61,17 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 .ToList();
             foreach (var sub in subscriptions)
             {
-                subscriber.DeleteSubscription(sub.SubscriptionName);
+                try
+                {
+                    subscriber.DeleteSubscription(sub.SubscriptionName);
+                }
+                catch (RpcException e) when (e.Status.StatusCode == StatusCode.NotFound)
+                {
+                    // There is a race condition such that if the test itself deletes a subscription
+                    // it can still be returned from ListSubscriptions(), but be gone by the time
+                    // DeleteSubscription() here is called.
+                }
+
             }
 
             var publisher = PublisherClient.Create();
@@ -69,7 +80,16 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 .ToList();
             foreach (var topic in topics)
             {
-                publisher.DeleteTopic(topic.TopicName);
+                try
+                {
+                    publisher.DeleteTopic(topic.TopicName);
+                }
+                catch (RpcException e) when (e.Status.StatusCode == StatusCode.NotFound)
+                {
+                    // There is a race condition such that if the test itself deletes a topic
+                    // it can still be returned from ListTopics(), but be gone by the time
+                    // DeleteTopic() here is called.
+                }
             }
         }
     }
