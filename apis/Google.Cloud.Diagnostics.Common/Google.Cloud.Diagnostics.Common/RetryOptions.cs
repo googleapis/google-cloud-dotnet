@@ -70,7 +70,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>How exceptions are handled.</summary>
         public ExceptionHandling ExceptionHandling { get; }
 
-        /// <summary>How to handle a full buffer.</summary>
+        /// <summary>How to handle a full buffer, only used for <see cref="RetryType.Retry"/>.</summary>
         public BufferOverflow BufferOverflow { get; }
 
         /// <summary>The size of the buffer in bytes, only used for <see cref="RetryType.Retry"/>.</summary>
@@ -93,7 +93,7 @@ namespace Google.Cloud.Diagnostics.Common
             RetryAttempts = GaxPreconditions.CheckArgumentRange(
                 retryAttempts ?? 0, nameof(retryAttempts), 0, int.MaxValue);
             RetryInterval = retryInterval ?? TimeSpan.Zero;
-            GaxPreconditions.CheckArgument(RetryInterval >= TimeSpan.Zero, nameof(retryInterval), 
+            GaxPreconditions.CheckArgument(RetryInterval >= TimeSpan.Zero, nameof(retryInterval),
                 $"{nameof(retryInterval)} must be greater than 0");
         }
 

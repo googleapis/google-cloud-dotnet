@@ -61,9 +61,9 @@ namespace Google.Cloud.Diagnostics.Common
         private int _sizeInBytes = 0;
 
         /// <summary>The number of sequential unsuccessful retries.</summary>
-        private int _retries = 0;        
+        private int _retries = 0;
 
-        internal RpcRetryConsumer(IConsumer<T> consumer, RetryOptions options, 
+        internal RpcRetryConsumer(IConsumer<T> consumer, RetryOptions options,
             Func<T, int> sizer, Func<Action, RetryOptions, ISequentialThreadingTimer> timerFactory)
         {
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
@@ -83,7 +83,13 @@ namespace Google.Cloud.Diagnostics.Common
             {
                 _consumer.Receive(items);
             }
-            catch (RpcException e) when (HandleException(items, e)) { }
+            catch (RpcException e)
+            {
+                if (!HandleException(items, e))
+                {
+                    throw;
+                }
+            }
         }
 
         /// <inheritdoc />
@@ -94,7 +100,13 @@ namespace Google.Cloud.Diagnostics.Common
             {
                 return _consumer.ReceiveAsync(items, cancellationToken);
             }
-            catch (RpcException e) when (HandleException(items, e)) { }
+            catch (RpcException e)
+            {
+                if (!HandleException(items, e))
+                {
+                    throw;
+                }
+            }
 
             return CommonUtils.CompletedTask;
         }
@@ -123,7 +135,7 @@ namespace Google.Cloud.Diagnostics.Common
                         return true;
                 }
             }
-            
+
             // Get the size of items to be buffered and retried.
             int size = items.Sum(_sizer);
 
@@ -131,7 +143,7 @@ namespace Google.Cloud.Diagnostics.Common
             lock (_mutex)
             {
                 // If the new items would be greater than the size of the buffer drop them or throw.
-                if (size + _sizeInBytes > _options.BufferSizeBytes) 
+                if (size + _sizeInBytes > _options.BufferSizeBytes)
                 {
                     switch (_options.BufferOverflow)
                     {
@@ -145,7 +157,7 @@ namespace Google.Cloud.Diagnostics.Common
                             return true;
                     }
                 }
-            
+
                 _sizeInBytes += size;
                 _buffer.AddRange(items);
             }
@@ -181,7 +193,7 @@ namespace Google.Cloud.Diagnostics.Common
                     _sizeInBytes -= toSendSize;
                 }
             }
-            catch (RpcException) 
+            catch (RpcException e)
             {
                 if (_retries >= _options.RetryAttempts)
                 {
@@ -192,7 +204,7 @@ namespace Google.Cloud.Diagnostics.Common
                     }
                     if (_options.ExceptionHandling == ExceptionHandling.Propagate)
                     {
-                        throw;
+                        throw new InvalidOperationException("Max retries reached", e);
                     }
                 }
                 else
