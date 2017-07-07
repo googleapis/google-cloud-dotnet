@@ -47,13 +47,13 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void Retry_Invalid_Parameters()
         {
             RetryOptions.Retry(bufferSizeBytes: 0);
-            Assert.Throws<ArgumentOutOfRangeException>(() => { RetryOptions.Retry(bufferSizeBytes: -1); });
+            Assert.Throws<ArgumentOutOfRangeException>(() => RetryOptions.Retry(bufferSizeBytes: -1));
 
             RetryOptions.Retry(retryAttempts: 0);
-            Assert.Throws<ArgumentOutOfRangeException>(() => { RetryOptions.Retry(retryAttempts: -1); });
+            Assert.Throws<ArgumentOutOfRangeException>(() => RetryOptions.Retry(retryAttempts: -1));
 
             RetryOptions.Retry(retryInterval: TimeSpan.Zero);
-            Assert.Throws<ArgumentException>(() => { RetryOptions.Retry(retryInterval: TimeSpan.FromSeconds(-1)); });
+            Assert.Throws<ArgumentException>(() => RetryOptions.Retry(retryInterval: TimeSpan.FromSeconds(-1)));
         }
     }
 }

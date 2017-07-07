@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
 using Grpc.Core;
 using Moq;
 using System;
@@ -215,7 +214,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             public void Initialize(Action callback, TimeSpan waitTime) => _callback = callback;
 
-            public void Call() => GaxPreconditions.CheckNotNull(_callback, nameof(_callback))();
+            public void Call() => _callback();
 
             public void Dispose() { }
         }
