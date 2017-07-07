@@ -33,6 +33,9 @@ namespace Google.Cloud.PubSub.V1
 {
     /// <summary>
     /// A PubSub subscriber that is associated with a specific <see cref="SubscriptionName"/>.
+    /// The name "<see cref="SimpleSubscriber"/>" is likely to change before the GA release.
+    /// See <a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1188">
+    /// https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1188</a>.
     /// </summary>
     /// <remarks>
     /// <para>To receive messages, the <see cref="StartAsync"/> method must be called,
@@ -42,7 +45,7 @@ namespace Google.Cloud.PubSub.V1
     /// <para>But note that it is always possible to receive duplicate messages. This services
     /// guarantees "at least once" delivery, not "only once" delivery.</para>
     /// </remarks>
-    public abstract class HiPerfSubscriber
+    public abstract class SimpleSubscriber
     {
         /// <summary>
         /// Reply from a message handler; whether to <see cref="Ack"/>
@@ -62,7 +65,7 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Settings for <see cref="HiPerfSubscriber"/>.
+        /// Settings for <see cref="SimpleSubscriber"/>.
         /// Defaults will be used for <c>null</c> properties.
         /// </summary>
         public sealed class Settings
@@ -130,7 +133,7 @@ namespace Google.Cloud.PubSub.V1
             /// Instantiate with the specified settings.
             /// </summary>
             /// <param name="clientCount">Optional.
-            /// The number of <see cref="SubscriberClient"/>s to create and use within a <see cref="HiPerfSubscriber"/> instance.</param>
+            /// The number of <see cref="SubscriberClient"/>s to create and use within a <see cref="SimpleSubscriber"/> instance.</param>
             /// <param name="subscriberSettings">Optional. The settings to use when creating <see cref="SubscriberClient"/> instances.</param>
             /// <param name="credentials">Optional. Credentials to use when creating <see cref="SubscriberClient"/> instances.</param>
             /// <param name="serviceEndpoint">Optional.
@@ -148,7 +151,7 @@ namespace Google.Cloud.PubSub.V1
             }
 
             /// <summary>
-            /// The number of <see cref="SubscriberClient"/>s to create and use within a <see cref="HiPerfSubscriber"/> instance.
+            /// The number of <see cref="SubscriberClient"/>s to create and use within a <see cref="SimpleSubscriber"/> instance.
             /// If set, must be in the range 1 to 256 (inclusive).
             /// If <c>null</c>, defaults to the CPU count on the machine this is being executed on.
             /// </summary>
@@ -180,10 +183,10 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Default <see cref="FlowControlSettings"/> for <see cref="HiPerfSubscriber"/>.
+        /// Default <see cref="FlowControlSettings"/> for <see cref="SimpleSubscriber"/>.
         /// Allows 10,000 outstanding messages; and 20Mb outstanding bytes.
         /// </summary>
-        /// <returns>Default <see cref="FlowControlSettings"/> for <see cref="HiPerfSubscriber"/>.</returns>
+        /// <returns>Default <see cref="FlowControlSettings"/> for <see cref="SimpleSubscriber"/>.</returns>
         public static FlowControlSettings DefaultFlowControlSettings { get; } = new FlowControlSettings(10_000, 20_000_000);
 
         /// <summary>
@@ -212,14 +215,14 @@ namespace Google.Cloud.PubSub.V1
         public static TimeSpan DefaultAckExtensionWindow { get; } = TimeSpan.FromSeconds(2);
 
         /// <summary>
-        /// Create a <see cref="HiPerfSubscriber"/> instance associated with the specified <see cref="SubscriptionName"/>,
+        /// Create a <see cref="SimpleSubscriber"/> instance associated with the specified <see cref="SubscriptionName"/>,
         /// </summary>
         /// <param name="subscriptionName">The <see cref="SubscriptionName"/> to receive messages from.</param>
         /// <param name="clientCreationsettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
         /// <see cref="SubscriberClient"/>s.</param>
-        /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="HiPerfSubscriber"/>.</param>
-        /// <returns>A <see cref="HiPerfSubscriber"/> instance associated with the specified <see cref="SubscriptionName"/>.</returns>
-        public static async Task<HiPerfSubscriber> CreateAsync(SubscriptionName subscriptionName, ClientCreationSettings clientCreationsettings = null, Settings settings = null)
+        /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="SimpleSubscriber"/>.</param>
+        /// <returns>A <see cref="SimpleSubscriber"/> instance associated with the specified <see cref="SubscriptionName"/>.</returns>
+        public static async Task<SimpleSubscriber> CreateAsync(SubscriptionName subscriptionName, ClientCreationSettings clientCreationsettings = null, Settings settings = null)
         {
             GaxPreconditions.CheckNotNull(subscriptionName, nameof(subscriptionName));
             clientCreationsettings?.Validate();
@@ -254,22 +257,22 @@ namespace Google.Cloud.PubSub.V1
                 shutdowns[i] = channel.ShutdownAsync;
             }
             Task Shutdown() => Task.WhenAll(shutdowns.Select(x => x()));
-            return new HiPerfSubscriberImpl(subscriptionName, clients, settings, Shutdown);
+            return new SimpleSubscriberImpl(subscriptionName, clients, settings, Shutdown);
         }
 
         /// <summary>
-        /// Create a <see cref="HiPerfSubscriber"/> instance associated with the specified <see cref="SubscriptionName"/>.
+        /// Create a <see cref="SimpleSubscriber"/> instance associated with the specified <see cref="SubscriptionName"/>.
         /// The gRPC <see cref="Channel"/>s underlying the provided <see cref="SubscriberClient"/>s must have their
         /// maximum send and maximum receive sizes set to unlimited, otherwise performance will be severly affected,
         /// possibly causing a deadlock.
         /// </summary>
         /// <param name="subscriptionName">The <see cref="SubscriptionName"/> to receive messages from.</param>
-        /// <param name="clients">The <see cref="SubscriberClient"/>s to use in a <see cref="HiPerfSubscriber"/>.
+        /// <param name="clients">The <see cref="SubscriberClient"/>s to use in a <see cref="SimpleSubscriber"/>.
         /// For high performance, these should all use distinct <see cref="Channel"/>s.</param>
-        /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="HiPerfSubscriber"/>.</param>
-        /// <returns>A <see cref="HiPerfSubscriber"/> instance associated with the specified <see cref="SubscriptionName"/>.</returns>
-        public static HiPerfSubscriber Create(SubscriptionName subscriptionName, IEnumerable<SubscriberClient> clients, Settings settings = null) =>
-            new HiPerfSubscriberImpl(subscriptionName, clients, settings?.Clone() ?? new Settings(), null);
+        /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="SimpleSubscriber"/>.</param>
+        /// <returns>A <see cref="SimpleSubscriber"/> instance associated with the specified <see cref="SubscriptionName"/>.</returns>
+        public static SimpleSubscriber Create(SubscriptionName subscriptionName, IEnumerable<SubscriberClient> clients, Settings settings = null) =>
+            new SimpleSubscriberImpl(subscriptionName, clients, settings?.Clone() ?? new Settings(), null);
 
         /// <summary>
         /// The associated <see cref="SubscriptionName"/>.
@@ -279,7 +282,7 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Starts receiving messages. The returned <see cref="Task"/> completes when either <see cref="StopAsync(CancellationToken)"/> is called
         /// or if an unrecoverable fault occurs. See <see cref="StopAsync(CancellationToken)"/> for more details.
-        /// This method cannot be called more than once per <see cref="HiPerfSubscriber"/> instance.
+        /// This method cannot be called more than once per <see cref="SimpleSubscriber"/> instance.
         /// </summary>
         /// <param name="handlerAsync">The handler function that is passed all received messages.
         /// This function may be called on multiple threads concurrently. Return <see cref="Reply.Ack"/> from this function
@@ -290,7 +293,7 @@ namespace Google.Cloud.PubSub.V1
         public virtual Task StartAsync(Func<PubsubMessage, CancellationToken, Task<Reply>> handlerAsync) => throw new NotImplementedException();
 
         /// <summary>
-        /// Stop this <see cref="HiPerfSubscriber"/>. Cancelling <paramref name="hardStopToken"/> aborts the
+        /// Stop this <see cref="SimpleSubscriber"/>. Cancelling <paramref name="hardStopToken"/> aborts the
         /// clean stop process, and may leave some handled messages un-ACKnowledged.
         /// The returned <see cref="Task"/> completes when all handled messages have been ACKnowledged.
         /// The returned <see cref="Task"/> faults if there is an unrecoverable error with the underlying service.
@@ -302,7 +305,7 @@ namespace Google.Cloud.PubSub.V1
         public virtual Task StopAsync(CancellationToken hardStopToken) => throw new NotImplementedException();
 
         /// <summary>
-        /// Stop this <see cref="HiPerfSubscriber"/>. If <paramref name="timeout"/> expires, the
+        /// Stop this <see cref="SimpleSubscriber"/>. If <paramref name="timeout"/> expires, the
         /// clean stop process will be aborted, and may leave some handled messages un-ACKnowledged.
         /// The returned <see cref="Task"/> completes when all handled messages have been ACKnowledged.
         /// The returned <see cref="Task"/> faults if there is an unrecoverable error with the underlying service.
@@ -315,24 +318,24 @@ namespace Google.Cloud.PubSub.V1
     }
 
     /// <summary>
-    /// Implementation of <see cref="HiPerfSubscriber"/>. 
+    /// Implementation of <see cref="SimpleSubscriber"/>. 
     /// </summary>
-    public sealed class HiPerfSubscriberImpl : HiPerfSubscriber
+    public sealed class SimpleSubscriberImpl : SimpleSubscriber
     {
         // TODO: Logging
 
         /// <summary>
-        /// Instantiate a <see cref="HiPerfSubscriberImpl"/> associated with the specified <see cref="SubscriptionName"/>.
+        /// Instantiate a <see cref="SimpleSubscriberImpl"/> associated with the specified <see cref="SubscriptionName"/>.
         /// </summary>
         /// <param name="subscriptionName">The <see cref="SubscriptionName"/> to receive messages from.</param>
-        /// <param name="clients">The <see cref="SubscriberClient"/>s to use in a <see cref="HiPerfSubscriber"/>.
+        /// <param name="clients">The <see cref="SubscriberClient"/>s to use in a <see cref="SimpleSubscriber"/>.
         /// For high performance, these should all use distinct <see cref="Channel"/>s.</param>
-        /// <param name="settings"><see cref="HiPerfSubscriber.Settings"/> for creating a <see cref="HiPerfSubscriber"/>.</param>
-        /// <param name="shutdown">Function to call on this <see cref="HiPerfSubscriberImpl"/> shutdown.</param>
-        public HiPerfSubscriberImpl(SubscriptionName subscriptionName, IEnumerable<SubscriberClient> clients, Settings settings, Func<Task> shutdown)
+        /// <param name="settings"><see cref="SimpleSubscriber.Settings"/> for creating a <see cref="SimpleSubscriber"/>.</param>
+        /// <param name="shutdown">Function to call on this <see cref="SimpleSubscriberImpl"/> shutdown.</param>
+        public SimpleSubscriberImpl(SubscriptionName subscriptionName, IEnumerable<SubscriberClient> clients, Settings settings, Func<Task> shutdown)
             : this(subscriptionName, clients, settings, shutdown, TaskHelper.Default) { }
 
-        internal HiPerfSubscriberImpl(SubscriptionName subscriptionName, IEnumerable<SubscriberClient> clients, Settings settings, Func<Task> shutdown, TaskHelper taskHelper)
+        internal SimpleSubscriberImpl(SubscriptionName subscriptionName, IEnumerable<SubscriberClient> clients, Settings settings, Func<Task> shutdown, TaskHelper taskHelper)
         {
             SubscriptionName = GaxPreconditions.CheckNotNull(subscriptionName, nameof(subscriptionName));
             GaxPreconditions.CheckNotNull(clients, nameof(clients));
@@ -533,14 +536,14 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Controls a single <see cref="Channel"/>/<see cref="SubscriberClient"/> within this
-        /// <see cref="HiPerfSubscriberImpl"/>. This class controls the pulling of messages, and
+        /// <see cref="SimpleSubscriberImpl"/>. This class controls the pulling of messages, and
         /// the pushing of message acks and lease-extensions back to the server.
         /// It also manages error conditions within the channel, restarting the StreamingPull()
         /// RPC as required.
         /// </summary>
         private class SingleChannel
         {
-            public SingleChannel(HiPerfSubscriberImpl subscriber,
+            public SingleChannel(SimpleSubscriberImpl subscriber,
                 SubscriberClient client, Func<PubsubMessage, CancellationToken, Task<Reply>> handlerAsync,
                 Flow flow,
                 Action<Task> registerTaskFn)

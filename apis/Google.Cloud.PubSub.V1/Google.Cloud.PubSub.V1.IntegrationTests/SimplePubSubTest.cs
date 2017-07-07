@@ -27,9 +27,9 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
     // * These send/recv considerable amounts of network data.
     //   Only test with a machine and cloud account that can handle this.
     [Collection(nameof(PubsubFixture))]
-    public class HighPerformancePubSubTest
+    public class SimplePubSubTest
     {
-        public HighPerformancePubSubTest(PubsubFixture fixture)
+        public SimplePubSubTest(PubsubFixture fixture)
         {
             _fixture = fixture;
         }
@@ -54,31 +54,31 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             var subscriptionName = new SubscriptionName(_fixture.ProjectId, subscriptionId);
             await subscriber.CreateSubscriptionAsync(subscriptionName, topicName, null, 60).ConfigureAwait(false);
 
-            // Create high-performance Publisher and Subscriber
-            var bulkPublisher = await HiPerfPublisher.CreateAsync(topicName).ConfigureAwait(false);
-            var bulkSubscriber = await HiPerfSubscriber.CreateAsync(subscriptionName).ConfigureAwait(false);
+            // Create SimplePublisher and SimpleSubscriber
+            var simplePublisher = await SimplePublisher.CreateAsync(topicName).ConfigureAwait(false);
+            var simpleSubscriber = await SimpleSubscriber.CreateAsync(subscriptionName).ConfigureAwait(false);
 
-            Console.WriteLine("Topic, Subscription, High-performance Publisher and Subscriber all created");
+            Console.WriteLine("Topic, Subscription, SimplePublisher and SimpleSubscriber all created");
 
             // Subscribe
             object recvLock = new object();
             int recvCount = 0; // Count of received messages
             long recvSum = 0L; // Sum of bytes of received messages
-            Task subTask = bulkSubscriber.StartAsync((msg, ct) =>
+            Task subTask = simpleSubscriber.StartAsync((msg, ct) =>
             {
                 var localRecvCount = Interlocked.Increment(ref recvCount);
                 if (localRecvCount <= initialNackCount)
                 {
-                    return Task.FromResult(HiPerfSubscriber.Reply.Nack);
+                    return Task.FromResult(SimpleSubscriber.Reply.Nack);
                 }
                 Interlocked.Add(ref recvSum, msg.Data.Sum(x => (long)x));
                 if (localRecvCount >= messageCount + initialNackCount)
                 {
                     // Test finished, so stop subscriber
-                    Task unused = bulkSubscriber.StopAsync(TimeSpan.FromSeconds(15));
+                    Task unused = simpleSubscriber.StopAsync(TimeSpan.FromSeconds(15));
                 }
                 // ACK all messages
-                return Task.FromResult(HiPerfSubscriber.Reply.Ack);
+                return Task.FromResult(SimpleSubscriber.Reply.Ack);
             });
 
             // Publish
@@ -105,7 +105,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                         {
                             // Deadlock, shutdown subscriber, and cancel
                             Console.WriteLine("Deadlock detected. Cancelling test");
-                            bulkSubscriber.StopAsync(new CancellationToken(true));
+                            simpleSubscriber.StopAsync(new CancellationToken(true));
                             watchdogCts.Cancel();
                             break;
                         }
@@ -132,7 +132,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                 rnd.NextBytes(msg);
                 sentSum += msg.Sum(x => (long)x);
                 // Send message, and record Task
-                var pubTask = bulkPublisher.PublishAsync(msg);
+                var pubTask = simplePublisher.PublishAsync(msg);
                 Interlocked.Increment(ref sentCount);
                 activePubs.Locked(() => activePubs.Add(pubTask));
                 // Remove Task from active when the message has been sent to server
@@ -186,8 +186,8 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             var topicName = new TopicName(_fixture.ProjectId, topicId);
             var publisher = await PublisherClient.CreateAsync().ConfigureAwait(false);
             await publisher.CreateTopicAsync(topicName).ConfigureAwait(false);
-            // Create high-performance Publisher
-            var bulkPublisher = await HiPerfPublisher.CreateAsync(topicName).ConfigureAwait(false);
+            // Create SimplePublisher
+            var simplePublisher = await SimplePublisher.CreateAsync(topicName).ConfigureAwait(false);
             // Create oversized message
             Random rnd = new Random(1234);
             byte[] msg = new byte[10_000_001];
@@ -195,11 +195,11 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             // Publish a few messages. They should all throw an exception due to size
             for (int i = 0; i < 5; i++)
             {
-                var ex = await Assert.ThrowsAsync<RpcException>(() => bulkPublisher.PublishAsync(msg)).ConfigureAwait(false);
+                var ex = await Assert.ThrowsAsync<RpcException>(() => simplePublisher.PublishAsync(msg)).ConfigureAwait(false);
                 Assert.Equal(StatusCode.InvalidArgument, ex.Status.StatusCode);
                 Assert.Contains("too large", ex.Status.Detail);
             }
-            await bulkPublisher.ShutdownAsync(TimeSpan.FromSeconds(15)).ConfigureAwait(false);
+            await simplePublisher.ShutdownAsync(TimeSpan.FromSeconds(15)).ConfigureAwait(false);
         }
     }
 }
