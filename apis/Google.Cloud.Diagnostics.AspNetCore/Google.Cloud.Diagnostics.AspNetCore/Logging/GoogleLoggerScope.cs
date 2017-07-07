@@ -21,6 +21,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     internal class GoogleLoggerScope : IDisposable
     {
         private static AsyncLocal<GoogleLoggerScope> _current = new AsyncLocal<GoogleLoggerScope>();
+
+        /// <summary>
+        /// The current scope, can be null.
+        /// </summary>
         public static GoogleLoggerScope Current {
             get
             {
@@ -32,7 +36,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             }
         }
 
+        /// <summary>The state associated with the this scope.</summary>
         public object State { get; }
+
+        /// <summary>The parent scope, can be null.</summary>
         public GoogleLoggerScope Parent { get; }
 
         public GoogleLoggerScope(object state)
@@ -42,6 +49,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             Current = this;
         }
 
+        /// <summary>
+        /// Disposes of the current scope.
+        /// </summary>
         public void Dispose() => Current = Current?.Parent;
+
+        /// <summary>
+        /// Gets the scope (and parents) as a string. It is in the format:
+        /// "grandparent => parent => child => " where the scope
+        /// values are all strings values "grandparent", "parent" and "child.
+        /// </summary>
+        public override string ToString() => $"{Parent?.ToString() ?? ""}{State.ToString()} => ";
     }
 }

@@ -88,23 +88,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 return;
             }
 
-            // TODO(talarico): GET AND FORMAT SCOPE AND ADD TO MESSAGE
-
             LogEntry entry = new LogEntry
             {
                 Resource = _loggerOptions.MonitoredResource,
                 LogName = _logName,
                 Severity = logLevel.ToLogSeverity(),
                 Timestamp = Timestamp.FromDateTime(_clock.GetCurrentDateTimeUtc()),
-                TextPayload = message,
+                TextPayload = (GoogleLoggerScope.Current?.ToString() ?? "") + message,
                 Labels = { _loggerOptions.Labels },
             };
-
-            var currentScope = GoogleLoggerScope.Current;
-            if (currentScope != null)
-            {
-                entry.TextPayload = currentScope.ToString() + entry.TextPayload;  //Labels.Add("scope", currentScope.ToString());
-            }
 
             _consumer.Receive(new[] { entry });
         }

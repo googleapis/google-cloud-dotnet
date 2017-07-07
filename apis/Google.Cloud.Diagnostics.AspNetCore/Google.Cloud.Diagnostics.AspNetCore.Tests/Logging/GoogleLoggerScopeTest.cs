@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -33,7 +32,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             Assert.Null(GoogleLoggerScope.Current);
             using (new GoogleLoggerScope("message"))
             {
-                VerifyAncestry(GoogleLoggerScope.Current, new[] { "message" });
+                Assert.Equal("message => ", GoogleLoggerScope.Current.ToString());
             }
             Assert.Null(GoogleLoggerScope.Current);
         }
@@ -44,21 +43,21 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             Assert.Null(GoogleLoggerScope.Current);
             using (new GoogleLoggerScope("grandparent"))
             {
-                Assert.Equal("grandparent", GoogleLoggerScope.Current.ToString());
+                Assert.Equal("grandparent => ", GoogleLoggerScope.Current.ToString());
                 using (new GoogleLoggerScope("parent"))
                 {
-                    Assert.Equal("grandparent parent", GoogleLoggerScope.Current.ToString());
+                    Assert.Equal("grandparent => parent => ", GoogleLoggerScope.Current.ToString());
                     using (new GoogleLoggerScope("child"))
                     {
-                        Assert.Equal("grandparent parent child", GoogleLoggerScope.Current.ToString());
+                        Assert.Equal("grandparent => parent => child => ", GoogleLoggerScope.Current.ToString());
                     }
                 }
-                Assert.Equal("grandparent", GoogleLoggerScope.Current.ToString());
+                Assert.Equal("grandparent => ", GoogleLoggerScope.Current.ToString());
                 using (new GoogleLoggerScope("other_parent"))
                 {
-                    Assert.Equal("grandparent other_parent", GoogleLoggerScope.Current.ToString());
+                    Assert.Equal("grandparent => other_parent => ", GoogleLoggerScope.Current.ToString());
                 }
-                Assert.Equal("grandparent", GoogleLoggerScope.Current.ToString());
+                Assert.Equal("grandparent => ", GoogleLoggerScope.Current.ToString());
             }
             Assert.Null(GoogleLoggerScope.Current);
         }
@@ -71,22 +70,22 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                 Assert.Null(GoogleLoggerScope.Current);
                 using (new GoogleLoggerScope(grandparent))
                 {
-                    Assert.Equal(grandparent, GoogleLoggerScope.Current.ToString());
+                    Assert.Equal($"{ grandparent} => ", GoogleLoggerScope.Current.ToString());
                     await Task.Yield();
                     using (new GoogleLoggerScope(parent))
                     {
-                        Assert.Equal($"{grandparent} {parent}", GoogleLoggerScope.Current.ToString());
+                        Assert.Equal($"{grandparent} => {parent} => ", GoogleLoggerScope.Current.ToString());
                         await Task.Yield();
                         using (new GoogleLoggerScope(child))
                         {
-                            Assert.Equal($"{grandparent} {parent} {child}", GoogleLoggerScope.Current.ToString());
+                            Assert.Equal($"{grandparent} => {parent} => {child} => ", GoogleLoggerScope.Current.ToString());
                             await Task.Yield();
                         }
                         await Task.Yield();
-                        Assert.Equal($"{grandparent} {parent}", GoogleLoggerScope.Current.ToString());
+                        Assert.Equal($"{grandparent} => {parent} => ", GoogleLoggerScope.Current.ToString());
                     }
                     await Task.Yield();
-                    Assert.Equal(grandparent, GoogleLoggerScope.Current.ToString());
+                    Assert.Equal($"{ grandparent} => ", GoogleLoggerScope.Current.ToString());
                 }
                 Assert.Null(GoogleLoggerScope.Current);
             };
@@ -97,17 +96,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                     Task.Run(() => func("grandparent-three", "parent-three", "child-three")),
                     Task.Run(() => func("grandparent-four", "parent-four", "child-four")),
                     Task.Run(() => func("grandparent-five", "parent-five", "child-five")));
-        }
-
-        private void VerifyAncestry(GoogleLoggerScope scope, object[] ancestors)
-        {
-            foreach (var ancestor in ancestors)
-            {
-                Assert.NotNull(scope);
-                Assert.Equal(ancestor, scope.State);
-                scope = scope.Parent;
-            }
-            Assert.Null(scope);
         }
     }
 }
