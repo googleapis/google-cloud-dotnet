@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+﻿// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,32 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-namespace Google.Cloud.Spanner.V1.Logging
+using System;
+
+namespace Google.Cloud.PubSub.V1.IntegrationTests
 {
-    /// <summary>
-    /// 
-    /// </summary>
-    internal enum LogLevel
+    internal static class Extensions
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        None = 0,
-        /// <summary>
-        /// 
-        /// </summary>
-        Error = 1,
-        /// <summary>
-        /// 
-        /// </summary>
-        Warn = 2,
-        /// <summary>
-        /// 
-        /// </summary>
-        Info = 3,
-        /// <summary>
-        /// 
-        /// </summary>
-        Debug = 4
+        public static T Locked<TLock, T>(this TLock o, Func<T> fn) where TLock : class
+        {
+            lock (o)
+            {
+                return fn();
+            }
+        }
     }
 }

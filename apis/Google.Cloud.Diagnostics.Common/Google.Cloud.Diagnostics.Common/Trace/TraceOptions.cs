@@ -29,12 +29,16 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The buffer options for the tracer.</summary>
         public BufferOptions BufferOptions { get; }
 
-        private TraceOptions(double qpsSampleRate, BufferOptions bufferOptions)
+        /// <summary>The retry options for the tracer.</summary>
+        public RetryOptions RetryOptions { get; }
+
+        private TraceOptions(double qpsSampleRate, BufferOptions bufferOptions, RetryOptions retryOptions)
         {
             GaxPreconditions.CheckArgument(
                 qpsSampleRate > 0, nameof(qpsSampleRate), "qpsSampleRate must be greater than 0.");
             QpsSampleRate = qpsSampleRate;
             BufferOptions = GaxPreconditions.CheckNotNull(bufferOptions, nameof(bufferOptions));
+            RetryOptions = GaxPreconditions.CheckNotNull(retryOptions, nameof(retryOptions));
         }
 
         /// <summary>
@@ -44,10 +48,12 @@ namespace Google.Cloud.Diagnostics.Common
         ///     how often requests are automatically traced. Defaults to <see cref="DefaultQpsSampleRate"/>.
         /// </param>
         /// <param name="bufferOptions">Optional, the buffer options.  Defaults to a <see cref="BufferType.Timed"/>.</param>
+        /// <param name="retryOptions">Optional, the retry options.  Defaults to a <see cref="RetryType.None"/>.</param>
         public static TraceOptions Create(
-            double qpsSampleRate = DefaultQpsSampleRate, BufferOptions bufferOptions = null)
+            double qpsSampleRate = DefaultQpsSampleRate, BufferOptions bufferOptions = null, RetryOptions retryOptions = null)
         {
-            return new TraceOptions(qpsSampleRate, bufferOptions ?? BufferOptions.TimedBuffer());
+            return new TraceOptions(
+                qpsSampleRate, bufferOptions ?? BufferOptions.TimedBuffer(), retryOptions ?? RetryOptions.NoRetry());
         }
     }
 }

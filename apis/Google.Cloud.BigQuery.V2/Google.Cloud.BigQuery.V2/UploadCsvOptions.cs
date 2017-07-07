@@ -81,6 +81,12 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public bool? Autodetect { get; set; }
 
+        /// <summary>
+        /// Specifies a string that represents a null value in a CSV file.
+        /// If not set, this is effectively the empty string.
+        /// </summary>
+        public string NullMarker { get; set; }
+
         internal void ModifyConfiguration(JobConfigurationLoad loadRequest)
         {
             if (SkipLeadingRows != null)
@@ -122,6 +128,10 @@ namespace Google.Cloud.BigQuery.V2
             if (Autodetect != null)
             {
                 loadRequest.Autodetect = Autodetect;
+            }
+            if (NullMarker != null)
+            {
+                loadRequest.NullMarker = NullMarker;
             }
             // TODO: Encoding? Only UTF-8 and ISO-8859-1 are supported... unsure what to do with this.
         }

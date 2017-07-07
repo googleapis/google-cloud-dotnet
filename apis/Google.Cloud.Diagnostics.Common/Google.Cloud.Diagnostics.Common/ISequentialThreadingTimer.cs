@@ -13,23 +13,20 @@
 // limitations under the License.
 
 using System;
-using System.Threading;
 
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// A simple <see cref="IThreadingTimer"/> based on a <see cref="Timer"/>.
+    /// A timer that will automatically call a callback after the previous call has finished and an
+    /// additional time interval has passed.
     /// </summary>
-    internal class SimpleThreadingTimer : IThreadingTimer
+    internal interface ISequentialThreadingTimer : IDisposable
     {
-        /// <summary>The underlying timer.</summary>
-        private Timer _timer;
-
-        /// <inheritdoc />
-        public void Initialize(TimerCallback callback, TimeSpan waitTime)
-            => _timer = new Timer(callback, null, waitTime, waitTime);
-
-        /// <inheritdoc />
-        public void Dispose() => _timer.Dispose();
+        /// <summary>
+        /// Initialize the timer.
+        /// </summary>
+        /// <param name="callback">The callback to be called after every wait time interval.</param>
+        /// <param name="waitTime">The amount of time between calls to the callback.</param>
+        void Initialize(Action callback, TimeSpan waitTime);
     }
 }

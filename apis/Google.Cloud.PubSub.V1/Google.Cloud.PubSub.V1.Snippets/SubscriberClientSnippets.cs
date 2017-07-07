@@ -89,6 +89,57 @@ namespace Google.Cloud.PubSub.V1.Snippets
         }
 
         [Fact]
+        public async Task SimpleOverview()
+        {
+            string projectId = _fixture.ProjectId;
+            string topicId = _fixture.CreateTopicId();
+            string subscriptionId = _fixture.CreateSubscriptionId();
+
+            // Sample: SimpleOverview
+            // First create a topic.
+            PublisherClient publisher = await PublisherClient.CreateAsync();
+            TopicName topicName = new TopicName(projectId, topicId);
+            publisher.CreateTopic(topicName);
+
+            // Subscribe to the topic.
+            SubscriberClient subscriber = await SubscriberClient.CreateAsync();
+            SubscriptionName subscriptionName = new SubscriptionName(projectId, subscriptionId);
+            subscriber.CreateSubscription(subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 60);
+
+            // Publish a message to the topic using SimplePublisher.
+            SimplePublisher simplePublisher = await SimplePublisher.CreateAsync(topicName);
+            // PublishAsync() has various overloads. Here we're using the string overload.
+            string messageId = await simplePublisher.PublishAsync("Hello, Pubsub");
+            // SimplePublisher should be shutdown after use.
+            // The TimeSpan specifies for how long to attempt to publish locally queued messages.
+            await simplePublisher.ShutdownAsync(TimeSpan.FromSeconds(15));
+
+            // Pull messages from the subscription using SimpleSubscriber.
+            SimpleSubscriber simpleSubscriber = await SimpleSubscriber.CreateAsync(subscriptionName);
+            List<PubsubMessage> receivedMessages = new List<PubsubMessage>();
+            // Start the subscriber listening for messages.
+            await simpleSubscriber.StartAsync((msg, cancellationToken) =>
+            {
+                receivedMessages.Add(msg);
+                Console.WriteLine($"Received message {msg.MessageId} published at {msg.PublishTime.ToDateTime()}");
+                Console.WriteLine($"Text: '{msg.Data.ToStringUtf8()}'");
+                // Stop this subscriber after one message is received.
+                // This is non-blocking, and the returned Task may be awaited.
+                simpleSubscriber.StopAsync(TimeSpan.FromSeconds(15));
+                // Return Reply.Ack to indicate this message has been handled.
+                return Task.FromResult(SimpleSubscriber.Reply.Ack);
+            });
+
+            // Tidy up by deleting the subscription and the topic.
+            subscriber.DeleteSubscription(subscriptionName);
+            publisher.DeleteTopic(topicName);
+            // End sample
+
+            Assert.Equal(1, receivedMessages.Count);
+            Assert.Equal("Hello, Pubsub", receivedMessages[0].Data.ToStringUtf8());
+        }
+
+        [Fact]
         public void ListSubscriptions()
         {
             string projectId = _fixture.ProjectId;

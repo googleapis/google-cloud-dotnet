@@ -34,12 +34,9 @@ namespace Google.Cloud.Tools.Analyzers
         public const string DiagnosticId = "GCP0001";
         private const string Category = "Usage";
 
-        private static readonly LocalizableString Title =
-            new LocalizableResourceString(nameof(Resources.InternalOptionalParametersRequiredTitle), Resources.ResourceManager, typeof(Resources));
-        private static readonly LocalizableString MessageFormat =
-            new LocalizableResourceString(nameof(Resources.InternalOptionalParametersRequiredMessageFormat), Resources.ResourceManager, typeof(Resources));
-        private static readonly LocalizableString Description =
-            new LocalizableResourceString(nameof(Resources.InternalOptionalParametersRequiredDescription), Resources.ResourceManager, typeof(Resources));
+        private static readonly LocalizableString Title = "Publicly optional parameter omitted in internal call";
+        private static readonly LocalizableString MessageFormat = "The parameter '{0}' should be specified, possibly with the local '{1}'";
+        private static readonly LocalizableString Description = "Publicly optional parameters should be specified on internal calls.";
         private static DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Warning, isEnabledByDefault: true, description: Description);
 
