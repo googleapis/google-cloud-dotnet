@@ -564,8 +564,8 @@ namespace Google.Cloud.PubSub.V1
                 subscriber._globalHardStopCts.Token.Register(() => _qLock.Locked(() => _qEvent).TrySetResult(0));
             }
 
-            private SubscriptionName _subscriptionName;
-            private SubscriberClient _client;
+            private readonly SubscriptionName _subscriptionName;
+            private readonly SubscriberClient _client;
             private readonly Func<PubsubMessage, CancellationToken, Task<Reply>> _handlerAsync;
             private readonly TimeSpan _autoExtendInterval;
             private readonly int _modifyDeadlineSeconds;
