@@ -77,5 +77,21 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var rows = table.ListRows().ToList();
             Assert.Empty(rows);
         }
+
+        [Fact]
+        public void ImplicitPagingWithStartIndex()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
+            
+            // Get them all in one go, skipping the first row
+            var rows1 = table.ListRows(new ListRowsOptions { PageSize = 100, StartIndex = 1 }).ToList();
+
+            // Now get them one row at a time, again skipping the first row
+            var rows2 = table.ListRows(new ListRowsOptions { PageSize = 1, StartIndex = 1 }).ToList();
+
+            Func<BigQueryRow, string> projection = r => $"{r["gameStarted"]:o} {r["player"]} {r["score"]}";
+            Assert.Equal(rows1.Select(projection), rows2.Select(projection));
+        }
     }
 }
