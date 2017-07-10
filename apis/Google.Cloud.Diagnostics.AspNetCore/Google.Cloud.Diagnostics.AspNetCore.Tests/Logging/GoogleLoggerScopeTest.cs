@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -38,7 +39,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         }
 
         [Fact]
-        public void Scope_Nested()
+        public void MultipleScopes_Nested()
         {
             Assert.Null(GoogleLoggerScope.Current);
             using (new GoogleLoggerScope("grandparent"))
@@ -63,7 +64,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         }
 
         [Fact]
-        public async Task Multiple_Tasks()
+        public async Task MultipleScopes_Threads_Running_During_Scope()
         {
             string rootScope = "root";
             Func<string, string, string, Task> func = async (grandparent, parent, child) =>
@@ -100,6 +101,81 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                         Task.Run(() => func("grandparent-four", "parent-four", "child-four")),
                         Task.Run(() => func("grandparent-five", "parent-five", "child-five")));
             }
+        }
+
+        [Fact]
+        public async Task MultipleScopes_Threads_Started_Before_Scope()
+        {
+            var childThreadsReleased = new ManualResetEventSlim(initialState: false);
+
+            Func<string, string, Task> op = async (parent, child) =>
+            {
+                childThreadsReleased.Wait();
+
+                Assert.Null(GoogleLoggerScope.Current);
+                using (new GoogleLoggerScope(parent))
+                {
+                    Assert.Equal($"{parent} => ", GoogleLoggerScope.Current.ToString());
+                    await Task.Yield();
+                    using (new GoogleLoggerScope(child))
+                    {
+                        Assert.Equal($"{parent} => {child} => ", GoogleLoggerScope.Current.ToString());
+                        await Task.Yield();
+                    }
+                    await Task.Yield();
+                    Assert.Equal($"{parent} => ", GoogleLoggerScope.Current.ToString());
+                }
+                await Task.Yield();
+                Assert.Null(GoogleLoggerScope.Current);
+            };
+
+            var t1 = Task.Run(() => op("parent-one", "child-one").Wait());
+            var t2 = Task.Run(() => op("parent-two", "child-two").Wait());
+
+            using (new GoogleLoggerScope("root"))
+            {
+                childThreadsReleased.Set();
+                await Task.WhenAll(t1, t2);
+            }
+        }
+
+        [Fact]
+        public async Task MultipleScopes_Threads_Started_During_Scope()
+        {
+            string rootScope = "root";
+            var childThreadsReleased = new ManualResetEventSlim(initialState: false);
+
+            Func<string, string, Task> op = async (parent, child) =>
+            {
+                childThreadsReleased.Wait();
+
+                Assert.Equal($"{rootScope} => ", GoogleLoggerScope.Current.ToString());
+                using (new GoogleLoggerScope(parent))
+                {
+                    Assert.Equal($"{rootScope} => {parent} => ", GoogleLoggerScope.Current.ToString());
+                    await Task.Yield();
+                    using (new GoogleLoggerScope(child))
+                    {
+                        Assert.Equal($"{rootScope} => {parent} => {child} => ", GoogleLoggerScope.Current.ToString());
+                        await Task.Yield();
+                    }
+                    await Task.Yield();
+                    Assert.Equal($"{rootScope} => {parent} => ", GoogleLoggerScope.Current.ToString());
+                }
+                await Task.Yield();
+                Assert.Equal($"{rootScope} => ", GoogleLoggerScope.Current.ToString());
+            };
+
+            Task t1;
+            Task t2;
+            using (new GoogleLoggerScope(rootScope))
+            {
+                t1 = Task.Run(() => op("parent-one", "child-one").Wait());
+                t2 = Task.Run(() => op("parent-two", "child-two").Wait());
+            }
+
+            childThreadsReleased.Set();
+            await Task.WhenAll(t1, t2);
         }
     }
 }
