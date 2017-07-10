@@ -22,19 +22,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
     public class GetQueryResultsOptionsTest
     {
         [Fact]
-        public void ModifyRequest_NoneSet()
-        {
-            var options = new GetQueryResultsOptions();
-            GetQueryResultsRequest request = new GetQueryResultsRequest(new BigqueryService(), "project", "job");
-            options.ModifyRequest(request);
-            Assert.Equal(null, request.StartIndex);
-            Assert.Equal(null, request.PageToken);
-            Assert.Equal(null, request.MaxResults);
-            Assert.Equal(null, request.TimeoutMs);
-        }
-
-        [Fact]
-        public void ModifyRequest_AllSetExceptStartIndex()
+        public void ModifyRequest_NoOp()
         {
             var options = new GetQueryResultsOptions
             {
@@ -44,37 +32,48 @@ namespace Google.Cloud.BigQuery.V2.Tests
             };
             GetQueryResultsRequest request = new GetQueryResultsRequest(new BigqueryService(), "project", "job");
             options.ModifyRequest(request);
-            Assert.Equal("foo", request.PageToken);
-            Assert.Equal(25, request.MaxResults);
-            Assert.Equal(5 * 1000, request.TimeoutMs);
-        }
+            Assert.Null(request.PageToken);
+            Assert.Null(request.MaxResults);
+            Assert.Null(request.TimeoutMs);
+        }        
 
         [Fact]
-        public void ModifyRequest_AllSetExceptPageToken()
-        {
-            var options = new GetQueryResultsOptions
-            {
-                StartIndex = 10,
-                PageSize = 25,
-                Timeout = TimeSpan.FromSeconds(5),
-            };
-            GetQueryResultsRequest request = new GetQueryResultsRequest(new BigqueryService(), "project", "job");
-            options.ModifyRequest(request);
-            Assert.Equal(10UL, request.StartIndex);
-            Assert.Equal(25, request.MaxResults);
-            Assert.Equal(5 * 1000, request.TimeoutMs);
-        }
-
-        [Fact]
-        public void ModifyRequest_BothPageTokenAndStartIndexSet()
+        public void ToListRowsOptions_BothPageTokenAndStartIndexSet()
         {
             var options = new GetQueryResultsOptions
             {
                 StartIndex = 10,
                 PageToken = "foo"
             };
-            GetQueryResultsRequest request = new GetQueryResultsRequest(new BigqueryService(), "project", "job");
-            Assert.Throws<ArgumentException>(() => options.ModifyRequest(request));
+            Assert.Throws<ArgumentException>(() => options.ToListRowsOptions());
+        }
+
+        [Fact]
+        public void ToListRowsOptions_StartIndex()
+        {
+            var options = new GetQueryResultsOptions
+            {
+                StartIndex = 10,
+                PageSize = 25,
+            };
+            var listOptions = options.ToListRowsOptions();
+            Assert.Equal(10UL, listOptions.StartIndex);
+            Assert.Equal(25, listOptions.PageSize);
+            Assert.Null(listOptions.PageToken);
+        }
+
+        [Fact]
+        public void ToListRowsOptions_PageToken()
+        {
+            var options = new GetQueryResultsOptions
+            {
+                PageSize = 25,
+                PageToken = "token"
+            };
+            var listOptions = options.ToListRowsOptions();
+            Assert.Equal(25, listOptions.PageSize);
+            Assert.Equal("token", listOptions.PageToken);
+            Assert.Null(listOptions.StartIndex);
         }
     }
 }

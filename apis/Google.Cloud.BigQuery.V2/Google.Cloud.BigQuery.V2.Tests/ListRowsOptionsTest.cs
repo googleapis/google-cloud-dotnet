@@ -29,7 +29,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 PageSize = 25,
                 PageToken = "token"
             };
-            ListRequest request = new ListRequest(new BigqueryService(), "project", "dataset", "table");
+            var request = new ListRequest(new BigqueryService(), "project", "dataset", "table");
             options.ModifyRequest(request);
             Assert.Equal(25, request.MaxResults);
             Assert.Equal("token", request.PageToken);
@@ -43,7 +43,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 PageSize = 25,
                 StartIndex = 10
             };
-            ListRequest request = new ListRequest(new BigqueryService(), "project", "dataset", "table");
+            var request = new ListRequest(new BigqueryService(), "project", "dataset", "table");
             options.ModifyRequest(request);
             Assert.Equal(25, request.MaxResults);
             Assert.Equal(10UL, request.StartIndex);
@@ -58,7 +58,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 StartIndex = 10,
                 PageToken = "token"
             };
-            ListRequest request = new ListRequest(new BigqueryService(), "project", "dataset", "table");
+            var request = new ListRequest(new BigqueryService(), "project", "dataset", "table");
             Assert.Throws<ArgumentException>(() => options.ModifyRequest(request));
         }
     }

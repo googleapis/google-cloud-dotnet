@@ -65,7 +65,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = client.GetTable("bigquery-public-data", "samples", "shakespeare");
 
             string sql = $"SELECT TOP(corpus, 10) AS title, COUNT(*) AS unique_words FROM {table:legacy}";
-            BigQueryResults results = client.ExecuteQuery(sql, new ExecuteQueryOptions { UseLegacySql = true });
+            BigQueryResults results = client.ExecuteQuery(sql, new QueryOptions { UseLegacySql = true });
 
             foreach (BigQueryRow row in results.GetRows())
             {
@@ -152,7 +152,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string datasetId = _fixture.GameDatasetId;
             string historyTableId = _fixture.HistoryTableId;
 
-            // Snippet: ExecuteQuery(string,*)
+            // Snippet: ExecuteQuery(string,*,*)
             BigQueryClient client = BigQueryClient.Create(projectId);
             BigQueryTable table = client.GetTable(datasetId, historyTableId);
             BigQueryResults result = client.ExecuteQuery(
@@ -466,7 +466,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
                    FROM {table}
                    GROUP BY player
                    ORDER BY score DESC",
-                new CreateQueryJobOptions { DestinationTable = destination });
+                new QueryOptions { DestinationTable = destination });
 
             // Wait for the job to complete.
             job.PollUntilCompleted();
@@ -683,7 +683,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string tableId = _fixture.HistoryTableId;
 
             // Sample: ParameterizedQueryNamedParameters
-            // Additional: ExecuteQuery(BigQueryCommand,*)
+            // Additional: ExecuteQuery(BigQueryCommand,*,*)
             BigQueryClient client = BigQueryClient.Create(projectId);
             BigQueryTable table = client.GetTable(datasetId, tableId);
             BigQueryCommand command = new BigQueryCommand($"SELECT player, score, level FROM {table} WHERE score >= @score AND level >= @level");
@@ -772,7 +772,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = await client.GetTableAsync("bigquery-public-data", "samples", "shakespeare");
 
             string sql = $"SELECT TOP(corpus, 10) AS title, COUNT(*) AS unique_words FROM {table:legacy}";
-            BigQueryResults query = await client.ExecuteQueryAsync(sql, new ExecuteQueryOptions { UseLegacySql = true });
+            BigQueryResults query = await client.ExecuteQueryAsync(sql, new QueryOptions { UseLegacySql = true });
 
             await query.GetRowsAsync().ForEachAsync(row =>
             {
@@ -818,7 +818,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string datasetId = _fixture.GameDatasetId;
             string historyTableId = _fixture.HistoryTableId;
 
-            // Snippet: ExecuteQueryAsync(string,*,*)
+            // Snippet: ExecuteQueryAsync(string,*,*,*)
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
             BigQueryTable table = await client.GetTableAsync(datasetId, historyTableId);
             BigQueryResults result = await client.ExecuteQueryAsync(
@@ -1130,7 +1130,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
                    FROM {table}
                    GROUP BY player
                    ORDER BY score DESC",
-                new CreateQueryJobOptions { DestinationTable = destination });
+                new QueryOptions { DestinationTable = destination });
 
             // Wait for the job to complete.
             await job.PollUntilCompletedAsync();
@@ -1350,7 +1350,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string tableId = _fixture.HistoryTableId;
 
             // Sample: ParameterizedQueryNamedParametersAsync
-            // Additional: ExecuteQueryAsync(BigQueryCommand,*,*)
+            // Additional: ExecuteQueryAsync(BigQueryCommand,*,*,*)
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
             BigQueryTable table = await client.GetTableAsync(datasetId, tableId);
             BigQueryCommand command = new BigQueryCommand($"SELECT player, score, level FROM {table} WHERE score >= @score AND level >= @level");
@@ -1438,7 +1438,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // Sample: DryRunValidQuery
             BigQueryClient client = BigQueryClient.Create(projectId);
             BigQueryTable table = client.GetTable(projectId, datasetId, tableId);
-            CreateQueryJobOptions options = new CreateQueryJobOptions { DryRun = true };
+            QueryOptions options = new QueryOptions { DryRun = true };
             BigQueryJob job = client.CreateQueryJob($"SELECT player, game_started FROM {table}", options);
             // There are no rows in the result, but we do have the schema as if we'd run the query.
             TableSchema schema = job.Resource.Statistics.Query.Schema;
@@ -1463,7 +1463,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // Sample: DryRunInvalidQuery
             BigQueryClient client = BigQueryClient.Create(projectId);
             BigQueryTable table = client.GetTable(projectId, datasetId, tableId);
-            CreateQueryJobOptions options = new CreateQueryJobOptions { DryRun = true };
+            QueryOptions options = new QueryOptions { DryRun = true };
             // Note deliberate typo in field name
             try
             {

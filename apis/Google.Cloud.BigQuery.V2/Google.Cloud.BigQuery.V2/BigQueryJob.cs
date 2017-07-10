@@ -126,24 +126,20 @@ namespace Google.Cloud.BigQuery.V2
         public BigQueryJob PollUntilCompleted(GetJobOptions options = null, PollSettings pollSettings = null) =>
             _client.PollJobUntilCompleted(Reference, options, pollSettings);
 
-        /// <summary>
-        /// Polls this job for completion, which must be a query job.
-        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="BigQueryClient.PollQueryUntilCompleted(JobReference, GetQueryResultsOptions, PollSettings)"/>.
-        /// </summary>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
-        /// May be null, in which case defaults will be supplied.</param>
-        /// <returns>The completed job.</returns>
-        public BigQueryResults PollQueryUntilCompleted(GetQueryResultsOptions options = null, PollSettings pollSettings = null) =>
-            _client.PollQueryUntilCompleted(Reference, options, pollSettings);
+        // FIXME: The documentation isn't really correct here...
 
         /// <summary>
         /// Retrieves the result of this job, which must be a query job.
         /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="BigQueryClient.GetQueryResults(JobReference, GetQueryResultsOptions)"/>.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method will only return when the query has completed.
+        /// </para>
+        /// </remarks>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The result of the query.</returns>
-        public BigQueryResults GetQueryResults(GetQueryResultsOptions options = null) => _client.GetQueryResults(Reference, options);
+        public BigQueryResults GetQueryResults(GetQueryResultsOptions options = null) => _client.GetQueryResults(Reference, GetQueryTableReference(), options);
 
         /// <summary>
         /// Cancels this job.
@@ -167,28 +163,20 @@ namespace Google.Cloud.BigQuery.V2
             _client.PollJobUntilCompletedAsync(Reference, options, pollSettings, cancellationToken);
 
         /// <summary>
-        /// Asynchronously polls this job for completion, which must be a query job.
-        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="BigQueryClient.PollQueryUntilCompletedAsync(JobReference, GetQueryResultsOptions, PollSettings, CancellationToken)"/>.
-        /// </summary>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
-        /// May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// the completed job.</returns>
-        public Task<BigQueryResults> PollQueryUntilCompletedAsync(GetQueryResultsOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken)) =>
-            _client.PollQueryUntilCompletedAsync(Reference, options, pollSettings, cancellationToken);
-
-        /// <summary>
         /// Asynchronously retrieves the result of this job, which must be a query job.
         /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="BigQueryClient.GetQueryResultsAsync(JobReference, GetQueryResultsOptions, CancellationToken)"/>.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The task returned by this method will only complete when the query has completed.
+        /// </para>
+        /// </remarks>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// a <see cref="BigQueryResults"/> representation of the query.</returns>
         public Task<BigQueryResults> GetQueryResultsAsync(GetQueryResultsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
-            _client.GetQueryResultsAsync(Reference, options, cancellationToken);
+            _client.GetQueryResultsAsync(Reference, GetQueryTableReference(), options, cancellationToken);
 
         /// <summary>
         /// Asynchronously cancels this job.
@@ -200,6 +188,23 @@ namespace Google.Cloud.BigQuery.V2
         /// the final state of the job.</returns>
         public Task<BigQueryJob> CancelAsync(CancelJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             _client.CancelJobAsync(Reference, options, cancellationToken);
+
+        private TableReference GetQueryTableReference()
+        {
+            var query = Resource?.Configuration?.Query;
+            if (query == null)
+            {
+                throw new InvalidOperationException("Job doesn't represent a query");
+            }
+            ThrowOnAnyError();
+            var reference = query.DestinationTable;
+            if (reference == null)
+            {
+                // TODO: Work out when this could happen.
+                throw new InvalidOperationException("Query doesn't have a destination table");
+            }
+            return reference;
+        }
 
         // TODO: Refresh? Could easily call GetJob, but can't easily modify *this* job...
     }

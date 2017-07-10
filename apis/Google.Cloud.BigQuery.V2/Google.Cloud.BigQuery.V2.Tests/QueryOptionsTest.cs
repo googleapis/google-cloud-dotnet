@@ -17,12 +17,12 @@ using Xunit;
 
 namespace Google.Cloud.BigQuery.V2.Tests
 {
-    public class CreateQueryJobOptionsTest
+    public class QueryOptionsTest
     {
         [Fact]
         public void PropertiesSetOnRequest()
         {
-            var options = new CreateQueryJobOptions
+            var options = new QueryOptions
             {
                 AllowLargeResults = true,
                 CreateDisposition = CreateDisposition.CreateNever,
