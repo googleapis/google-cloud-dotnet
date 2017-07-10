@@ -65,37 +65,41 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         [Fact]
         public async Task Multiple_Tasks()
         {
+            string rootScope = "root";
             Func<string, string, string, Task> func = async (grandparent, parent, child) =>
             {
-                Assert.Null(GoogleLoggerScope.Current);
+                Assert.Equal($"{rootScope} => ", GoogleLoggerScope.Current.ToString());
                 using (new GoogleLoggerScope(grandparent))
                 {
-                    Assert.Equal($"{grandparent} => ", GoogleLoggerScope.Current.ToString());
+                    Assert.Equal($"{rootScope} => {grandparent} => ", GoogleLoggerScope.Current.ToString());
                     await Task.Yield();
                     using (new GoogleLoggerScope(parent))
                     {
-                        Assert.Equal($"{grandparent} => {parent} => ", GoogleLoggerScope.Current.ToString());
+                        Assert.Equal($"{rootScope} => {grandparent} => {parent} => ", GoogleLoggerScope.Current.ToString());
                         await Task.Yield();
                         using (new GoogleLoggerScope(child))
                         {
-                            Assert.Equal($"{grandparent} => {parent} => {child} => ", GoogleLoggerScope.Current.ToString());
+                            Assert.Equal($"{rootScope} => {grandparent} => {parent} => {child} => ", GoogleLoggerScope.Current.ToString());
                             await Task.Yield();
                         }
                         await Task.Yield();
-                        Assert.Equal($"{grandparent} => {parent} => ", GoogleLoggerScope.Current.ToString());
+                        Assert.Equal($"{rootScope} => {grandparent} => {parent} => ", GoogleLoggerScope.Current.ToString());
                     }
                     await Task.Yield();
-                    Assert.Equal($"{grandparent} => ", GoogleLoggerScope.Current.ToString());
+                    Assert.Equal($"{rootScope} => {grandparent} => ", GoogleLoggerScope.Current.ToString());
                 }
-                Assert.Null(GoogleLoggerScope.Current);
+                Assert.Equal($"{rootScope} => ", GoogleLoggerScope.Current.ToString());
             };
 
-            await Task.WhenAll(
-                    Task.Run(() => func("grandparent-one", "parent-one", "child-one")),
-                    Task.Run(() => func("grandparent-two", "parent-two", "child-two")),
-                    Task.Run(() => func("grandparent-three", "parent-three", "child-three")),
-                    Task.Run(() => func("grandparent-four", "parent-four", "child-four")),
-                    Task.Run(() => func("grandparent-five", "parent-five", "child-five")));
+            using (new GoogleLoggerScope(rootScope))
+            {
+                await Task.WhenAll(
+                        Task.Run(() => func("grandparent-one", "parent-one", "child-one")),
+                        Task.Run(() => func("grandparent-two", "parent-two", "child-two")),
+                        Task.Run(() => func("grandparent-three", "parent-three", "child-three")),
+                        Task.Run(() => func("grandparent-four", "parent-four", "child-four")),
+                        Task.Run(() => func("grandparent-five", "parent-five", "child-five")));
+            }
         }
     }
 }
