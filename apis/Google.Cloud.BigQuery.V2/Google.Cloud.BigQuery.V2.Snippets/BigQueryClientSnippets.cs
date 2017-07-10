@@ -48,7 +48,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string sql = $"SELECT corpus AS title, COUNT(word) AS unique_words FROM {table} GROUP BY title ORDER BY unique_words DESC LIMIT 10";
             BigQueryResults results = client.ExecuteQuery(sql);
 
-            foreach (BigQueryRow row in results.GetRows())
+            foreach (BigQueryRow row in results)
             {
                 Console.WriteLine($"{row["title"]}: {row["unique_words"]}");
             }
@@ -67,7 +67,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string sql = $"SELECT TOP(corpus, 10) AS title, COUNT(*) AS unique_words FROM {table:legacy}";
             BigQueryResults results = client.ExecuteQuery(sql, new QueryOptions { UseLegacySql = true });
 
-            foreach (BigQueryRow row in results.GetRows())
+            foreach (BigQueryRow row in results)
             {
                 Console.WriteLine($"{row["title"]}: {row["unique_words"]}");
             }
@@ -104,7 +104,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
                 }
             };
             BigQueryTable table = client.CreateTable(datasetId, tableId, schema, options);
-            List<BigQueryRow> rows = client.ExecuteQuery($"SELECT name, score FROM {table} ORDER BY score").GetRows().ToList();
+            List<BigQueryRow> rows = client.ExecuteQuery($"SELECT name, score FROM {table} ORDER BY score").ToList();
             foreach (BigQueryRow row in rows)
             {
                 Console.WriteLine($"{row["name"]} - {row["score"]}");
@@ -160,13 +160,13 @@ namespace Google.Cloud.BigQuery.V2.Snippets
                    FROM {table}
                    GROUP BY player
                    ORDER BY score DESC");
-            foreach (BigQueryRow row in result.GetRows())
+            foreach (BigQueryRow row in result)
             {
                 Console.WriteLine($"{row["player"]}: {row["score"]}");
             }
             // End snippet
 
-            List<string> players = result.GetRows().Select(r => (string) r["player"]).ToList();
+            List<string> players = result.Select(r => (string) r["player"]).ToList();
             Assert.Contains("Ben", players);
             Assert.Contains("Nadia", players);
             Assert.Contains("Tim", players);
@@ -474,13 +474,13 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // Then we can fetch the results, either via the job or by accessing
             // the destination table.
             BigQueryResults result = client.GetQueryResults(job.Reference);
-            foreach (BigQueryRow row in result.GetRows())
+            foreach (BigQueryRow row in result)
             {
                 Console.WriteLine($"{row["player"]}: {row["score"]}");
             }
             // End snippet
 
-            List<string> players = result.GetRows().Select(r => (string) r["player"]).ToList();
+            List<string> players = result.Select(r => (string) r["player"]).ToList();
             Assert.Contains("Ben", players);
             Assert.Contains("Nadia", players);
             Assert.Contains("Tim", players);
@@ -690,15 +690,14 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // Note: could also use a collection initializer to populate the parameters.
             command.Parameters.Add("level", BigQueryDbType.Int64).Value = 2;
             command.Parameters.Add("score", BigQueryDbType.Int64).Value = 1500;
-            IEnumerable<BigQueryRow> resultRows = client.ExecuteQuery(command).GetRows();
-            foreach (BigQueryRow row in resultRows)
+            BigQueryResults results = client.ExecuteQuery(command);
+            foreach (BigQueryRow row in results)
             {
                 Console.WriteLine($"Name: {row["player"]}; Score: {row["score"]}; Level: {row["level"]}");
             }
             // End sample
 
             var resultsList = client.ExecuteQuery(command)
-                 .GetRows()
                  .Select(row => new { Name = (string) row["player"], Score = (long) row["score"], Level = (long) row["level"] })
                  .ToList();
 
@@ -723,8 +722,8 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             command.ParameterMode = BigQueryParameterMode.Positional;
             command.Parameters.Add(BigQueryDbType.Int64, 1500); // For score
             command.Parameters.Add(BigQueryDbType.Int64, 2); // For level
-            IEnumerable<BigQueryRow> resultRows = client.ExecuteQuery(command).GetRows();
-            foreach (BigQueryRow row in resultRows)
+            BigQueryResults results = client.ExecuteQuery(command);
+            foreach (BigQueryRow row in results)
             {
                 Console.WriteLine($"Name: {row["player"]}; Score: {row["score"]}; Level: {row["level"]}");
             }
@@ -732,7 +731,6 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             // Execute the same command again for validation.
             var resultsList = client.ExecuteQuery(command)
-                .GetRows()
                 .Select(row => new { Name = (string) row["player"], Score = (long) row["score"], Level = (long) row["level"] })
                 .ToList();
 
@@ -832,7 +830,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             });
             // End snippet
 
-            List<string> players = result.GetRows().Select(r => (string) r["player"]).ToList();
+            List<string> players = result.Select(r => (string) r["player"]).ToList();
             Assert.Contains("Ben", players);
             Assert.Contains("Nadia", players);
             Assert.Contains("Tim", players);
@@ -1144,7 +1142,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             });
             // End snippet
 
-            List<string> players = result.GetRows().Select(r => (string) r["player"]).ToList();
+            List<string> players = result.Select(r => (string) r["player"]).ToList();
             Assert.Contains("Ben", players);
             Assert.Contains("Nadia", players);
             Assert.Contains("Tim", players);
@@ -1410,7 +1408,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             table.UploadJson(new[] { "{ \"message\": \"Sample message\" }" }).PollUntilCompleted();
             
             BigQueryResults results = client.ExecuteQuery($"SELECT message, _PARTITIONTIME AS pt FROM {table}");
-            List<BigQueryRow> rows = results.GetRows().ToList();
+            List<BigQueryRow> rows = results.ToList();
             foreach (BigQueryRow row in rows)
             {
                 string message = (string) row["message"];

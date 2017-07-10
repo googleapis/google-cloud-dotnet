@@ -63,11 +63,6 @@ namespace Google.Cloud.BigQuery.V2
         public IAsyncEnumerable<BigQueryRow> GetRowsAsync() => _client.ListRowsAsync(TableReference, Schema, _options);
 
         /// <summary>
-        /// Temporary measure to allow smaller test churn in first commit.
-        /// </summary>
-        public IEnumerable<BigQueryRow> GetRows() => this;
-
-        /// <summary>
         /// Returns an iterator over the query results.
         /// </summary>
         /// <returns>An iterator over the query results.</returns>
