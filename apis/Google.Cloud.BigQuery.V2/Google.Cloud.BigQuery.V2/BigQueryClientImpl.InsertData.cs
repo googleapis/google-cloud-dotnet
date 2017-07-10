@@ -32,7 +32,7 @@ namespace Google.Cloud.BigQuery.V2
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             GaxPreconditions.CheckNotNull(input, nameof(input));
-            schema = schema ?? (options.Autodetect == true ? null : GetSchema(tableReference));
+            schema = schema ?? (options?.Autodetect == true ? null : GetSchema(tableReference));
 
             var configuration = new JobConfigurationLoad
             {
@@ -72,7 +72,7 @@ namespace Google.Cloud.BigQuery.V2
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             GaxPreconditions.CheckNotNull(input, nameof(input));
-            schema = schema ?? (options.Autodetect == true ? null : GetSchema(tableReference));
+            schema = schema ?? (options?.Autodetect == true ? null : GetSchema(tableReference));
 
             var configuration = new JobConfigurationLoad
             {
@@ -154,7 +154,7 @@ namespace Google.Cloud.BigQuery.V2
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             GaxPreconditions.CheckNotNull(input, nameof(input));
-            schema = schema ?? (options.Autodetect == true ? null : await GetSchemaAsync(tableReference, cancellationToken).ConfigureAwait(false));
+            schema = schema ?? (options?.Autodetect == true ? null : await GetSchemaAsync(tableReference, cancellationToken).ConfigureAwait(false));
 
             var configuration = new JobConfigurationLoad
             {
@@ -196,7 +196,7 @@ namespace Google.Cloud.BigQuery.V2
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             GaxPreconditions.CheckNotNull(input, nameof(input));
-            schema = schema ?? (options.Autodetect == true ? null : await GetSchemaAsync(tableReference, cancellationToken).ConfigureAwait(false));
+            schema = schema ?? (options?.Autodetect == true ? null : await GetSchemaAsync(tableReference, cancellationToken).ConfigureAwait(false));
 
             var configuration = new JobConfigurationLoad
             {
