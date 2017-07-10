@@ -460,5 +460,58 @@ namespace Google.Cloud.Spanner.Data.Tests
                 Assert.Same(session, session2);
             }
         }
+
+        [Fact]
+        public async Task SessionCreateIsThrottled()
+        {
+            using (var pool = new SessionPool())
+            {
+                pool.Options.MaximumConcurrentSessionCreates = 2;
+
+                //we use a specially designed mock that records simultaneous create calls.
+                //Moq actually does internal synchronization that disallows parallel calls.
+                var mockClient = new ParallelSpannerClient();
+
+                var sessionList = Enumerable.Range(0, 100).Select(
+                    x => pool.CreateSessionFromPoolAsync(
+                        mockClient, s_defaultName.ProjectId,
+                        s_defaultName.InstanceId, s_defaultName.DatabaseId, null, CancellationToken.None)).ToList();
+
+                await Task.WhenAll(sessionList).ConfigureAwait(false);
+                Assert.True(mockClient.MaxConcurrentRequests <= pool.Options.MaximumConcurrentSessionCreates);
+            }
+        }
+
+        private class ParallelSpannerClient : SpannerClient
+        {
+            private int _concurrentRequests = 0;
+            private readonly object _sync = new object();
+
+            public int MaxConcurrentRequests { get; private set; } = 0;
+
+            /// <inheritdoc />
+            public override async Task<Session> CreateSessionAsync(DatabaseName database, CancellationToken cancellationToken)
+            {
+                Interlocked.Increment(ref _concurrentRequests);
+                lock (_sync)
+                {
+                    MaxConcurrentRequests = Math.Max(MaxConcurrentRequests, _concurrentRequests);
+                }
+                try
+                {
+                    await Task.Delay(TimeSpan.FromMilliseconds(10), cancellationToken);
+                    var mockSession = new Session
+                    {
+                        Name = $"{s_defaultName}/sessions/{Guid.NewGuid()}"
+                    };
+                    return mockSession;
+                }
+                finally
+                {
+                    Interlocked.Decrement(ref _concurrentRequests);
+                }
+            }
+        }
+
     }
 }

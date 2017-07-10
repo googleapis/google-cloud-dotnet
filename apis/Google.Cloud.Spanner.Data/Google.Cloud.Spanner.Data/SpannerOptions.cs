@@ -167,6 +167,17 @@ namespace Google.Cloud.Spanner.Data
             set => SessionPool.Default.Options.Timeout = value;
         }
 
+        /// <summary>
+        /// The maximum number of session create operations allowed to occur simultaneously.
+        /// Spanner has limits on the number of sessions that can be created concurrently without affecting performance.
+        /// This value is not typically changed.
+        /// </summary>
+        public int MaximumConcurrentSessionCreates
+        {
+            get => SessionPool.Default.Options.MaximumConcurrentSessionCreates;
+            set => SessionPool.Default.Options.MaximumConcurrentSessionCreates = value;
+        }
+
         private SpannerOptions() { }
     }
 }

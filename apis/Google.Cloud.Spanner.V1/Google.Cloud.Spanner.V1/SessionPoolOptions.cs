@@ -57,5 +57,12 @@ namespace Google.Cloud.Spanner.V1
         /// The total time allowed for a network call to the Cloud Spanner server, including retries.
         /// </summary>
         public TimeSpan Timeout { get; set; } = TimeSpan.FromSeconds(60);
+
+        /// <summary>
+        /// The maximum number of session create operations allowed to occur simultaneously.
+        /// Spanner has limits on the number of sessions that can be created concurrently without affecting performance.
+        /// This value is not typically changed.
+        /// </summary>
+        public int MaximumConcurrentSessionCreates { get; set; } = 10;
     }
 }
