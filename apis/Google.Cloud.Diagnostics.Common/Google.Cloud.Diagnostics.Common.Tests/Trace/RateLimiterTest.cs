@@ -68,11 +68,11 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void CanTrace_StressTest()
         {
-            // Create a rate limiter that allows 1 QPS
-            var rateLimiter = new RateLimiter(1, StopwatchTimer.Create());
+            // Create a rate limiter that allows .5 QPS
+            var rateLimiter = new RateLimiter(.5, StopwatchTimer.Create());
             int canTraceCounter = 0;
             DateTime start = DateTime.UtcNow;
-            DateTime end = start.AddSeconds(2.5);
+            DateTime end = start.AddSeconds(5.5);
             // Create 10 threads to run for a little over two seconds.
             var threads = Enumerable.Range(0, 10)
                 .Select(_ => new Thread(() =>
@@ -91,7 +91,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             threads.ForEach(t => t.Start());
             threads.ForEach(t => t.Join());
 
-            // We should have exactly 3 traces: one at t~=0, one at t~=1, one at t~=2.
+            // We should have exactly 3 traces: one at t~=0, one at t~=2, one at t~=4.
             // (The test machine would have to be very highly loaded to take half a second between
             // the check in the while loop and the increment leading to an over-count, and it would have
             // to take half a second to start the threads to lead to an under-count.)
