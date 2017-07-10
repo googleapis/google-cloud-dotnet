@@ -15,6 +15,7 @@
 using Google.Apis.Bigquery.v2.Data;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using Xunit;
@@ -61,7 +62,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
             var sql = $"SELECT corpus as title, COUNT(word) as unique_words FROM {table} GROUP BY title ORDER BY unique_words DESC LIMIT 10";
             var job = client.CreateQueryJob(sql);
-            var rows = job.PollQueryUntilCompleted().GetRows().ToList();
+            var rows = job.GetQueryResults().GetRows().ToList();
             Assert.Equal(10, rows.Count);
             Assert.Equal("hamlet", (string)rows[0]["title"]);
             Assert.Equal(5318, (long)rows[0]["unique_words"]);
@@ -79,8 +80,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
             var sql = $"SELECT corpus as title, COUNT(word) as unique_words FROM {table} GROUP BY title ORDER BY unique_words DESC LIMIT 10";
             var destinationTable = userDataset.GetTableReference(_fixture.CreateTableId());
-            var job = client.CreateQueryJob(sql, new CreateQueryJobOptions { DestinationTable = destinationTable });
-            var rows = job.PollQueryUntilCompleted().GetRows().ToList();
+            var job = client.CreateQueryJob(sql, new QueryOptions { DestinationTable = destinationTable });
+            var rows = job.GetQueryResults().GetRows().ToList();
             Assert.Equal(10, rows.Count);
             Assert.Equal("hamlet", (string)rows[0][0]);
             Assert.Equal(5318, (long)rows[0][1]);
@@ -155,7 +156,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
-            var resultRows = client.ExecuteQuery($"SELECT * FROM {table}", new ExecuteQueryOptions { PageSize = 1 })                
+            var resultRows = client.ExecuteQuery($"SELECT * FROM {table}", resultsOptions: new GetQueryResultsOptions { PageSize = 1 })
                 .GetRows()
                 .ToList();
             Assert.True(resultRows.Count >= 2);
@@ -178,7 +179,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
             var resultRows = client.CreateQueryJob($"SELECT * FROM {table} WHERE score < 0")
-                .PollQueryUntilCompleted()
+                .GetQueryResults()
                 .GetRows()
                 .ToList();
             Assert.Empty(resultRows);
@@ -191,7 +192,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
             // Deliberately overfetch
             var queryJob = client.CreateQueryJob($"SELECT * FROM {table} WHERE score < 0")
-                .PollQueryUntilCompleted(new GetQueryResultsOptions { PageSize = 100 });
+                .GetQueryResults(new GetQueryResultsOptions { PageSize = 100 });
             var resultSet = queryJob.ReadPage(10);
             Assert.Empty(resultSet.Rows);
         }
@@ -200,7 +201,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         public void SimpleTypes()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
-            var row = client.CreateQueryJob($@"SELECT
+            var row = client.ExecuteQuery($@"SELECT
                 'Hello' AS String,
                 b'Hello' AS Bytes,
                 TRUE AS Boolean,
@@ -210,7 +211,6 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 TIME '12:34:56.123456' AS Time,
                 DATETIME '2016-11-29 12:34:56.123456' AS DateTime,
                 TIMESTAMP '2016-11-29 12:34:56.123456' AS Timestamp")
-                .PollQueryUntilCompleted()
                 .GetRows()
                 .Single();
 
@@ -234,7 +234,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         public void ArrayTypes()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
-            var row = client.CreateQueryJob($@"SELECT
+            var row = client.ExecuteQuery($@"SELECT
                 ['Hello'] AS String,
                 [b'Hello'] AS Bytes,
                 [TRUE] AS Boolean,
@@ -244,7 +244,6 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 [TIME '12:34:56.123456'] AS Time,
                 [DATETIME '2016-11-29 12:34:56.123456'] AS DateTime,
                 [TIMESTAMP '2016-11-29 12:34:56.123456'] AS Timestamp")
-                .PollQueryUntilCompleted()
                 .GetRows()
                 .Single();
 
@@ -268,11 +267,10 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         public void StructTypes()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
-            var row = client.CreateQueryJob($@"
+            var row = client.ExecuteQuery($@"
                 SELECT ('Hello', b'Hello', TRUE, 1234567890, 1.234567, DATE '2016-11-29',
                         TIME '12:34:56.123456', DATETIME '2016-11-29 12:34:56.123456',
                         TIMESTAMP '2016-11-29 12:34:56.123456') AS value")
-                .PollQueryUntilCompleted()
                 .GetRows()
                 .Single();
 
@@ -307,8 +305,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         public void StringValueThatLooksLikeADate()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
-            var row = client.CreateQueryJob("SELECT '2017-05-04T15:01:00Z' AS value")
-                .PollQueryUntilCompleted()
+            var row = client.ExecuteQuery("SELECT '2017-05-04T15:01:00Z' AS value")
                 .GetRows()
                 .Single();
 
@@ -334,10 +331,101 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             // This is how a client can check that a BigQueryTable is a view.
             Assert.NotNull(view.Resource.View);
 
-            var queryResults = client.CreateQueryJob($"SELECT * FROM {view} WHERE player = 'Bob'").GetQueryResults().GetRows().ToList();
+            var queryResults = client.ExecuteQuery($"SELECT * FROM {view} WHERE player = 'Bob'").GetRows().ToList();
             Assert.Equal(1, queryResults.Count);
             // The earlier game is not present in the view
             Assert.Equal(85L, (long) queryResults[0]["score"]);
+        }
+
+        [Fact]
+        public void BrokenQuery()
+        {
+            BigQueryClient client = BigQueryClient.Create(_fixture.ProjectId);
+
+            string sql = $"This is a broken query";
+            var job = client.CreateQueryJob(sql);
+            Assert.Throws<GoogleApiException>(() => job.GetQueryResults());
+        }
+
+        [Fact]
+        public void NonQueryJob()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string tableId = _fixture.CreateTableId();
+
+            string[] csvRows =
+            {
+                "Name,GameStarted,Score",
+                "Ben,2014-08-19T12:41:35.220Z,85",
+                "Lucy,2014-08-20T12:41:35.220Z,130",
+                "Rohit,2014-08-21T12:41:35.220Z,90"
+            };
+
+            var bytes = Encoding.UTF8.GetBytes(string.Join("\n", csvRows));
+
+            TableSchema schema = null;
+            var job = client.UploadCsv(_fixture.DatasetId, tableId, schema, new MemoryStream(bytes), new UploadCsvOptions { Autodetect = true });
+
+            Assert.Throws<InvalidOperationException>(() => job.GetQueryResults());
+            Assert.Throws<InvalidOperationException>(() => client.GetQueryResults(job.Reference));
+        }
+
+        [Fact]
+        public void ExecuteQuery_Timeout()
+        {
+            // SQL that I happen to know takes over 10 seconds to query.
+            string sql = "SELECT id FROM [bigquery-public-data:github_repos.contents] where content contains 'NodaTime' AND content contains '2.0.2' LIMIT 1000";
+            BigQueryClient client = BigQueryClient.Create(_fixture.ProjectId);
+            var queryOptions = new QueryOptions { UseLegacySql = true, UseQueryCache = false };
+            var resultsOptions = new GetQueryResultsOptions { Timeout = TimeSpan.FromSeconds(2) };
+            Assert.Throws<TimeoutException>(() => client.ExecuteQuery(sql, queryOptions, resultsOptions));                
+        }
+
+        [Fact]
+        public void GetQueryResults_Timeout()
+        {
+            // SQL that I happen to know takes over 10 seconds to query.
+            string sql = "SELECT id FROM [bigquery-public-data:github_repos.contents] where content contains 'NodaTime' AND content contains '2.0.2' LIMIT 1000";
+            BigQueryClient client = BigQueryClient.Create(_fixture.ProjectId);
+            var queryOptions = new QueryOptions { UseLegacySql = true, UseQueryCache = false };
+            var job = client.CreateQueryJob(sql, queryOptions);
+            var resultsOptions = new GetQueryResultsOptions { Timeout = TimeSpan.FromSeconds(2) };
+            Assert.Throws<TimeoutException>(() => job.GetQueryResults(resultsOptions));
+        }
+
+        [Fact]
+        public void MultiplePagesWithStartIndex()
+        {
+            // We create the client using our user, but then access a dataset in a public data
+            // project. We can't run a query "as" the public data project.
+            var projectId = _fixture.ProjectId;
+            var client = BigQueryClient.Create(projectId);
+            var table = client.GetTable(PublicDatasetsProject, PublicDatasetsDataset, ShakespeareTable);
+
+            var sql = $"SELECT corpus as title, COUNT(word) as unique_words FROM {table} GROUP BY title ORDER BY unique_words DESC LIMIT 20";
+            var results = client.ExecuteQuery(sql, resultsOptions: new GetQueryResultsOptions { PageSize = 5, StartIndex = 7 });
+            // Iterate over multiple pages automatically to get all results. The query has 20 results, but
+            // we're asking to start at index 7, so we actually see 13.
+            var rows = results.ToList();
+            Assert.Equal(13, rows.Count);
+
+            // Now try getting one page at a time, in the same way we would if we were in a web application.
+            var page1 = results.ReadPage(5);
+            var page2 = client.GetQueryResults(results.JobReference, new GetQueryResultsOptions { PageToken = page1.NextPageToken }).ReadPage(5);
+            var page3 = client.GetQueryResults(results.JobReference, new GetQueryResultsOptions { PageToken = page2.NextPageToken }).ReadPage(5);
+
+            var titleComparer = new TitleComparer();
+            Assert.Equal(rows.Take(5), page1.Rows, titleComparer);
+            Assert.Equal(rows.Skip(5).Take(5), page2.Rows, titleComparer);
+            Assert.Equal(rows.Skip(10).Take(5), page3.Rows, titleComparer);
+            Assert.Null(page3.NextPageToken);
+        }
+
+        private class TitleComparer : IEqualityComparer<BigQueryRow>
+        {
+            public bool Equals(BigQueryRow x, BigQueryRow y) => (string)x["title"] == (string)y["title"];
+
+            public int GetHashCode(BigQueryRow obj) => obj["title"]?.GetHashCode() ?? 0;
         }
     }
 }

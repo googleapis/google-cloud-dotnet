@@ -23,6 +23,22 @@ namespace Google.Cloud.BigQuery.V2
     public sealed class GetQueryResultsOptions
     {
         /// <summary>
+        /// Default overall timeout - if this is changed, modify the <see cref="Timeout"/> documentation
+        /// accordingly.
+        /// </summary>
+        internal static readonly TimeSpan DefaultTimeout = TimeSpan.FromMinutes(5);
+
+        // Properties used when making GetQueryResults service requests
+
+        /// <summary>
+        /// How long to wait for the query to complete before failing.
+        /// If not set, this is effectively 5 minutes.
+        /// </summary>
+        public TimeSpan? Timeout { get; set; }
+
+        // Properties used to construct a ListRowsOptions later...
+
+        /// <summary>
         /// The number of results to return per page. (This modifies the per-request page size;
         /// it does not affect the total number of results returned.)
         /// </summary>
@@ -35,12 +51,6 @@ namespace Google.Cloud.BigQuery.V2
         public ulong? StartIndex { get; set; }
 
         /// <summary>
-        /// How long to wait for the query to complete before returning.
-        /// If not set, this is effectively 10 seconds.
-        /// </summary>
-        public TimeSpan? Timeout { get; set; }
-
-        /// <summary>
         /// The page token to use continue retrieving results after a previous request.
         /// If this property is non-null, <see cref="StartIndex"/> must be null.
         /// </summary>
@@ -48,34 +58,22 @@ namespace Google.Cloud.BigQuery.V2
 
         internal void ModifyRequest(GetQueryResultsRequest request)
         {
+            // Nothing to do? We may have something later...
+        }
+
+        internal ListRowsOptions ToListRowsOptions()
+        {
             if (PageToken != null && StartIndex != null)
             {
                 throw new ArgumentException($"Cannot specify both {nameof(PageToken)} and {nameof(StartIndex)}");
             }
-            if (PageSize != null)
-            {
-                request.MaxResults = PageSize;
-            }
-            if (PageToken != null)
-            {
-                request.PageToken = PageToken;
-            }
-            if (StartIndex != null)
-            {
-                request.StartIndex = StartIndex;
-            }
-            if (Timeout != null)
-            {
-                request.TimeoutMs = (long) Timeout.Value.TotalMilliseconds;
-            }
-        }
 
-        internal GetQueryResultsOptions Clone() =>
-            new GetQueryResultsOptions
+            return new ListRowsOptions
             {
                 PageSize = PageSize,
-                StartIndex = StartIndex, 
-                Timeout = Timeout
+                StartIndex = StartIndex,
+                PageToken = PageToken
             };
+        }
     }
 }

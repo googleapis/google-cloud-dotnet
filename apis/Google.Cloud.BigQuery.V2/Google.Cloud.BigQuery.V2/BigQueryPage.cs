@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Google.Cloud.BigQuery.V2
 {
@@ -28,6 +29,11 @@ namespace Google.Cloud.BigQuery.V2
         /// Reference to the job this result set was fetched from.
         /// </summary>
         public JobReference JobReference { get; }
+
+        /// <summary>
+        /// Reference to the table this result set was fetched from.
+        /// </summary>
+        public TableReference TableReference { get; }
 
         /// <summary>
         /// The rows returned in the query.
@@ -48,18 +54,33 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Constructs a result set with the given rows and schema, retrieved from the specified job.
+        /// This constructor exists for the sake of testing.
         /// </summary>
         /// <param name="rows">The rows returned in the query. Must not be null.</param>
         /// <param name="schema">The schema of the results. Must not be null.</param>
         /// <param name="jobReference">Reference to the job this result set was fetched from. Must not be null.</param>
+        /// <param name="tableReference">Reference to the table this result set was fetched from. Must not be null.</param>
         /// <param name="nextPageToken">The page token to use to fetch further results. May be null, indicating
         /// that there are no more results.</param>
-        public BigQueryPage(List<BigQueryRow> rows, TableSchema schema, JobReference jobReference, string nextPageToken)
+        public BigQueryPage(List<BigQueryRow> rows, TableSchema schema, JobReference jobReference, TableReference tableReference, string nextPageToken)
         {
             Rows = GaxPreconditions.CheckNotNull(rows, nameof(rows));
             Schema = GaxPreconditions.CheckNotNull(schema, nameof(schema));
             JobReference = GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
+            TableReference = GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             NextPageToken = nextPageToken;
+        }
+
+        internal BigQueryPage(Page<BigQueryRow> page, TableSchema schema, JobReference jobReference, TableReference tableReference)
+        {
+            GaxPreconditions.CheckNotNull(page, nameof(page));
+            // This feels unnecessarily inefficient, as page._resources will be a list already, but never mind.
+            // (Page<T> should probably expose an IList<T>...)
+            Rows = page.ToList();
+            Schema = GaxPreconditions.CheckNotNull(schema, nameof(schema));
+            JobReference = GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
+            TableReference = GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            NextPageToken = page.NextPageToken;
         }
     }
 }
