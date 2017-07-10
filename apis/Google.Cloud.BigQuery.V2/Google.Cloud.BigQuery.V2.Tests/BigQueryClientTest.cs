@@ -873,8 +873,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             foreach (var call in equivalentCalls)
             {
-                var mock = new Mock<DerivedBigQueryClient>();
-                mock.CallBase = true;
+                var mock = new Mock<DerivedBigQueryClient>() { CallBase = true };
                 mock.Setup(underlyingCall).Returns(result);
                 Assert.Same(result, call(mock.Object));
                 mock.VerifyAll();
@@ -887,8 +886,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             foreach (var call in equivalentCalls)
             {
-                var mock = new Mock<DerivedBigQueryClient>();
-                mock.CallBase = true;
+                var mock = new Mock<DerivedBigQueryClient>() { CallBase = true };
                 mock.Setup(underlyingCall);
                 call(mock.Object);
                 mock.VerifyAll();
@@ -903,8 +901,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var taskResult = Task.FromResult(result);
             foreach (var call in equivalentCalls)
             {
-                var mock = new Mock<DerivedBigQueryClient>();
-                mock.CallBase = true;
+                var mock = new Mock<DerivedBigQueryClient>() { CallBase = true };
                 mock.Setup(underlyingCall).Returns(taskResult);
                 Assert.Same(taskResult, call(mock.Object));
                 mock.VerifyAll();
@@ -918,8 +915,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var taskResult = Task.FromResult(0);
             foreach (var call in equivalentCalls)
             {
-                var mock = new Mock<DerivedBigQueryClient>();
-                mock.CallBase = true;
+                var mock = new Mock<DerivedBigQueryClient>() { CallBase = true };
                 mock.Setup(underlyingCall).Returns(taskResult);
                 Assert.Same(taskResult, call(mock.Object));
                 mock.VerifyAll();
