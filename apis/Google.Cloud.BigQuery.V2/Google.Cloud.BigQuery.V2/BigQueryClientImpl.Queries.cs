@@ -40,7 +40,12 @@ namespace Google.Cloud.BigQuery.V2
             public string GetNextPageToken(TableDataList response) => response.PageToken;
             public IEnumerable<BigQueryRow> GetResources(TableDataList response) => response.Rows?.Select(row => new BigQueryRow(row, _schema));
             public void SetPageSize(TabledataResource.ListRequest request, int pageSize) => request.MaxResults = pageSize;
-            public void SetPageToken(TabledataResource.ListRequest request, string pageToken) => request.PageToken = pageToken;
+            public void SetPageToken(TabledataResource.ListRequest request, string pageToken)
+            {
+                // If there's a non-null StartIndex, the page token is ignored, so we'd get the same page again.
+                request.StartIndex = null;
+                request.PageToken = pageToken;
+            }
         }
 
         /// <inheritdoc />
