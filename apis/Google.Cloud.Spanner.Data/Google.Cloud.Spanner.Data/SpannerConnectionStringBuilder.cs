@@ -31,6 +31,7 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     public sealed class SpannerConnectionStringBuilder : DbConnectionStringBuilder
     {
+        private const string DataSourceKeyword = "Data Source";
         private InstanceName _instanceName;
         private DatabaseName _databaseName;
 
@@ -47,8 +48,8 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public string DataSource
         {
-            get => GetValueOrDefault("Data Source");
-            private set => this["Data Source"] = ValidatedDataSource(value);
+            get => GetValueOrDefault(DataSourceKeyword);
+            set => this[DataSourceKeyword] = ValidatedDataSource(value);
         }
 
         private bool ParseCurrentDataSource()
@@ -66,7 +67,8 @@ namespace Google.Cloud.Spanner.Data
         {
             if (!ParseDataSource(dataSource))
             {
-                throw new ArgumentException($"'{dataSource}' is not a valid value for ${nameof(DataSource)}. It should be of the form "
+                throw new ArgumentException(
+                    $"'{dataSource}' is not a valid value for ${nameof(DataSource)}. It should be of the form "
                     + "projects/<project>/instances/<instance>/databases/<database>.", nameof(DataSource));
             }
 
@@ -87,7 +89,7 @@ namespace Google.Cloud.Spanner.Data
         public string Host
         {
             get => GetValueOrDefault(nameof(Host), SpannerClient.DefaultEndpoint.Host);
-            private set => this[nameof(Host)] = value;
+            set => this[nameof(Host)] = value;
         }
 
         /// <summary>
@@ -111,7 +113,7 @@ namespace Google.Cloud.Spanner.Data
 
                 return result;
             }
-            private set => this[nameof(Port)] = value.ToString();
+            set => this[nameof(Port)] = value.ToString();
         }
 
         /// <summary>
@@ -193,6 +195,20 @@ namespace Google.Cloud.Spanner.Data
             }
 
             return defaultValue;
+        }
+
+        /// <inheritdoc />
+        public override object this[string keyword]
+        {
+            get => base[keyword];
+            set
+            {
+                if (string.Equals(keyword, DataSourceKeyword, StringComparison.OrdinalIgnoreCase))
+                {
+                    value = ValidatedDataSource((string)value);
+                }
+                base[keyword] = value;
+            }
         }
     }
 }
