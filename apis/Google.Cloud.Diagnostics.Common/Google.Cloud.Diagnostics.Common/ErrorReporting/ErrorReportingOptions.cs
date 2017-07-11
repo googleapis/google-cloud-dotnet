@@ -14,7 +14,6 @@
 
 using Google.Api.Gax;
 using Google.Cloud.ErrorReporting.V1Beta1;
-using System.Diagnostics;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -24,7 +23,7 @@ namespace Google.Cloud.Diagnostics.Common
     public sealed class ErrorReportingOptions
     {
         /// <summary>
-        /// Where the error events should be sent, such as the Stackdriver Logging or Error Reporting API.
+        /// Where the error events should be sent.
         /// </summary>
         public EventTarget EventTarget { get; }
 
@@ -44,8 +43,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Creates an <see cref="ErrorReportingOptions"/>.
         /// </summary>
-        /// <param name="eventTarget">Where the error events should be sent, such as the Stackdriver 
-        ///     Logging or Error Reporting API. Cannot be null.</param>
+        /// <param name="eventTarget">Where the error events should be sent. Cannot be null.</param>
         /// <param name="bufferOptions">The buffer options for the error reporter. Defaults to no buffer.</param>
         /// <param name="retryOptions">The retry options for the error reporter. Defaults to no retry.</param>
         public static ErrorReportingOptions Create(
@@ -54,8 +52,7 @@ namespace Google.Cloud.Diagnostics.Common
                 bufferOptions ?? BufferOptions.NoBuffer(), retryOptions ?? RetryOptions.NoRetry());
 
         /// <summary>
-        /// Creates an <see cref="ErrorReportingOptions"/> that will send error events to the
-        /// Stackdriver Logging API.
+        /// Creates an <see cref="ErrorReportingOptions"/>.
         /// </summary>
         /// <param name="projectId">Optional if running on Google App Engine or Google Compute Engine.
         ///     The Google Cloud Platform project ID. If running on GAE or GCE the project ID will be
@@ -64,30 +61,15 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="retryOptions">The retry options for the error reporter. Defaults to no retry.</param>
         public static ErrorReportingOptions Create(
             string projectId = null, BufferOptions bufferOptions = null, RetryOptions retryOptions = null) =>
-                Create(EventTarget.ForLogging(projectId), bufferOptions, retryOptions);
+                Create(EventTarget.Create(projectId), bufferOptions, retryOptions);
 
         /// <summary>
         /// Gets a <see cref="IConsumer{ReportedErrorEvent}"/>.
         /// </summary>
         internal IConsumer<ReportedErrorEvent> CreateConsumer()
         {
-
-            IConsumer<ReportedErrorEvent> consumer;
-            switch (EventTarget.Kind)
-            {
-                case EventTargetKind.Logging:
-                    consumer = new ErrorEventToLogEntryConsumer(EventTarget.LogName, EventTarget.LogTarget,
-                        new GrpcLogConsumer(EventTarget.LoggingClient), EventTarget.MonitoredResource);
-                    break;
-                case EventTargetKind.ErrorReporting:
-                    consumer = new GrpcErrorEventConsumer(
-                        EventTarget.ErrorReportingClient, EventTarget.ProjectId);
-                    break;
-                default:
-                    Debug.Fail($"Unsupported location {EventTarget.Kind}");
-                    return null;
-            }
-
+            var consumer = new ErrorEventToLogEntryConsumer(EventTarget.LogName, EventTarget.LogTarget,
+                new GrpcLogConsumer(EventTarget.LoggingClient), EventTarget.MonitoredResource);
             return ConsumerFactory<ReportedErrorEvent>.GetConsumer(
                 consumer, MessageSizer<ReportedErrorEvent>.GetSize, BufferOptions, RetryOptions);
         }

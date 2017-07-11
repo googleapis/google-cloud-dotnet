@@ -23,8 +23,7 @@ using System.Threading.Tasks;
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    ///  Google Cloud Error Reporting Logger.  Used to report exceptions to the
-    ///  Stackdriver Error Reporting API.
+    ///  Google Cloud Error Reporting Logger.
     /// </summary>
     internal class ErrorReportingContextExceptionLogger : IContextExceptionLogger
     {

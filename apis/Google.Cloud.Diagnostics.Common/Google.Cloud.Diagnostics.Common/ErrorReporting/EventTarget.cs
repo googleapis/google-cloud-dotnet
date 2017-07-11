@@ -15,36 +15,17 @@
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Cloud.ErrorReporting.V1Beta1;
 using Google.Cloud.Logging.V2;
 
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// The location error events will be sent to.
-    /// </summary>
-    public enum EventTargetKind
-    {
-        /// <summary>Stackdriver Error Reporting API.</summary>
-        ErrorReporting,
-
-        /// <summary>Stackdriver Error Logging API.</summary>
-        Logging
-    }
-
-    /// <summary>
-    /// Represents the location error events will be sent, such as the Stackdriver Logging or Error Reporting API.
+    /// Represents the location error events will be sent.
     /// </summary>
     public sealed class EventTarget
     {
         /// <summary>The default log name, this is the log that error events will be written to.</summary>
         internal const string LogNameDefault = "stackdriver-error-reporting";
-
-        /// <summary>The location to send error events to.</summary>
-        public EventTargetKind Kind { get; private set; }
-
-        /// <summary>The error reporting client.</summary>
-        public ReportErrorsServiceClient ErrorReportingClient { get; private set; }
 
         /// <summary>The logging client.</summary>
         public LoggingServiceV2Client LoggingClient { get; private set; }
@@ -54,9 +35,6 @@ namespace Google.Cloud.Diagnostics.Common
 
         /// <summary>The name of the log.</summary>
         public string LogName { get; private set; }
-
-        /// <summary>The Google Cloud Platform project Id.</summary>
-        public string ProjectId { get; private set; }
 
         /// <summary>The resource being monitored.</summary>
         public MonitoredResource MonitoredResource { get; private set; }
@@ -78,12 +56,12 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="monitoredResource">Optional, the monitored resource.  The monitored resource will
         ///     be automatically detected if it is not set and will default to the global resource if the detection fails.
         ///     See: https://cloud.google.com/logging/docs/api/v2/resource-list </param>
-        public static EventTarget ForLogging(string projectId = null, string logName = LogNameDefault,
+        public static EventTarget Create(string projectId = null, string logName = LogNameDefault,
             LoggingServiceV2Client loggingClient = null, MonitoredResource monitoredResource = null)
         {
             projectId = CommonUtils.GetAndCheckProjectId(projectId, monitoredResource);
             var logTarget = LogTarget.ForProject(projectId);
-            return ForLogging(logTarget, logName, loggingClient, monitoredResource);
+            return Create(logTarget, logName, loggingClient, monitoredResource);
         }
 
         /// <summary>
@@ -101,36 +79,15 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="monitoredResource">Optional, the monitored resource.  The monitored resource will
         ///     be automatically detected if it is not set and will default to the global resource if the detection fails.
         ///     See: https://cloud.google.com/logging/docs/api/v2/resource-list </param>
-        public static EventTarget ForLogging(LogTarget logTarget, string logName = LogNameDefault,
+        public static EventTarget Create(LogTarget logTarget, string logName = LogNameDefault,
             LoggingServiceV2Client loggingClient = null, MonitoredResource monitoredResource = null)
         {
             return new EventTarget
             {
-                Kind = EventTargetKind.Logging,
                 LoggingClient = loggingClient ?? LoggingServiceV2Client.Create(),
                 LogTarget = GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget)),
                 LogName = GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName)),
                 MonitoredResource = monitoredResource ?? MonitoredResourceBuilder.FromPlatform(),
-                ProjectId = logTarget.ProjectId,
-            };
-        }
-
-        /// <summary>
-        /// Creates a new <see cref="EventTarget"/> instance that will report to the Stackdriver Error Reporting API.
-        /// To use this option you must enable the Stackdriver Error Reporting API
-        /// (https://console.cloud.google.com/apis/api/clouderrorreporting.googleapis.com/overview).
-        /// </summary>
-        /// <param name="projectId">Optional if running on Google App Engine or Google Compute Engine.
-        ///     The Google Cloud Platform project ID. If running on GAE or GCE the project ID will be
-        ///     detected from the platform.</param>
-        /// <param name="errorReportingClient">The error reporting client.</param>
-        public static EventTarget ForErrorReporting(string projectId = null, ReportErrorsServiceClient errorReportingClient = null)
-        {
-            return new EventTarget
-            {
-                ProjectId = CommonUtils.GetAndCheckProjectId(projectId),
-                Kind = EventTargetKind.ErrorReporting,
-                ErrorReportingClient = errorReportingClient ?? ReportErrorsServiceClient.Create(),
             };
         }
     }
