@@ -182,7 +182,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 {
                     var cmd = connection.CreateInsertCommand(
                         testTable,
-                        new SpannerParameterCollection
+                        new SpannerColumnCollection
                         {
                             {"Key", SpannerDbType.String},
                             {"StringValue", SpannerDbType.String}

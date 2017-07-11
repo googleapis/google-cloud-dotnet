@@ -65,10 +65,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     {
                         insupdate = connection.CreateInsertOrUpdateCommand(
                             "TX",
-                            new SpannerParameterCollection
+                            new SpannerColumnCollection
                             {
-                                {"K", _key, SpannerDbType.String},
-                                {"StringValue", Guid.NewGuid().ToString(), SpannerDbType.String}
+                                {"K", SpannerDbType.String, _key},
+                                {"StringValue", SpannerDbType.String, Guid.NewGuid().ToString()}
                             });
                         insupdate.Transaction = tx;
                         await insupdate.ExecuteNonQueryAsync();
@@ -134,7 +134,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         using (var cmd =
                             connection.CreateSelectCommand(
                                 "SELECT Int64Value FROM TX WHERE K=@k",
-                                new SpannerParameterCollection {{"k", _key, SpannerDbType.String}}))
+                                new SpannerParameterCollection {{"k", SpannerDbType.String, _key}}))
                         {
                             cmd.Transaction = transaction;
                             current = await cmd.ExecuteScalarAsync<long>().ConfigureAwait(false);
@@ -142,10 +142,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
                         using (var cmd = connection.CreateUpdateCommand(
                             "TX",
-                            new SpannerParameterCollection
+                            new SpannerColumnCollection
                             {
-                                {"k", _key, SpannerDbType.String},
-                                {"Int64Value", current + 1, SpannerDbType.Int64}
+                                {"k", SpannerDbType.String, _key},
+                                {"Int64Value", SpannerDbType.Int64, current + 1}
                             }))
                         {
                             cmd.Transaction = transaction;
@@ -186,7 +186,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             // TX1 READ
             using (var cmd = connection1.CreateSelectCommand(
                 "SELECT * FROM TX WHERE K=@k",
-                new SpannerParameterCollection {{"k", _key, SpannerDbType.String}}))
+                new SpannerParameterCollection {{"k", SpannerDbType.String, _key}}))
             {
                 cmd.Transaction = tx1;
                 using (var reader = await cmd.ExecuteReaderAsync())
@@ -201,7 +201,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             // TX2 READ
             using (var cmd = connection2.CreateSelectCommand(
                 "SELECT * FROM TX WHERE K=@k",
-                new SpannerParameterCollection {{"k", _key, SpannerDbType.String}}))
+                new SpannerParameterCollection {{"k", SpannerDbType.String, _key}}))
             {
                 cmd.Transaction = tx2;
                 using (var reader = await cmd.ExecuteReaderAsync())
@@ -213,10 +213,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             // TX1 WRITE/COMMIT
             using (var cmd = connection1.CreateUpdateCommand(
                 "TX",
-                new SpannerParameterCollection
+                new SpannerColumnCollection
                 {
-                    {"k", _key, SpannerDbType.String},
-                    {"Int64Value", 0, SpannerDbType.Int64}
+                    {"k", SpannerDbType.String, _key},
+                    {"Int64Value", SpannerDbType.Int64, 0}
                 }))
             {
                 cmd.Transaction = tx1;
@@ -232,7 +232,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 {
                     using (var cmd = connection2.CreateSelectCommand(
                         "SELECT * FROM TX WHERE K=@k",
-                        new SpannerParameterCollection {{"k", _key, SpannerDbType.String}}))
+                        new SpannerParameterCollection {{"k", SpannerDbType.String, _key}}))
                     {
                         cmd.Transaction = tx2;
                         using (var reader = await cmd.ExecuteReaderAsync())
@@ -271,7 +271,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var cmd =
                 connections[0].CreateSelectCommand(
                     "SELECT Int64Value FROM TX WHERE K=@k",
-                    new SpannerParameterCollection {{"k", _key, SpannerDbType.String}}))
+                    new SpannerParameterCollection {{"k", SpannerDbType.String, _key}}))
             {
                 Assert.Equal(5, await cmd.ExecuteScalarAsync<long>().ConfigureAwait(false));
             }
@@ -299,7 +299,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
                     var cmd = connection.CreateSelectCommand(
                         "SELECT * FROM TX WHERE K=@k",
-                        new SpannerParameterCollection {{"k", _key, SpannerDbType.String}});
+                        new SpannerParameterCollection {{"k", SpannerDbType.String, _key}});
                     cmd.Transaction = tx;
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
@@ -321,7 +321,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 await connection.OpenAsync();
                 var cmd = connection.CreateSelectCommand(
                     "SELECT * FROM TX WHERE K=@k",
-                    new SpannerParameterCollection {{"k", _key, SpannerDbType.String}});
+                    new SpannerParameterCollection {{"k", SpannerDbType.String, _key}});
                 using (var reader = await cmd.ExecuteReaderAsync(TimestampBound.OfReadTimestamp(_history[0].Timestamp)))
                 {
                     if (await reader.ReadAsync())
@@ -349,7 +349,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
                 var cmd = connection.CreateSelectCommand(
                     "SELECT * FROM TX WHERE K=@k",
-                    new SpannerParameterCollection {{"k", _key, SpannerDbType.String}});
+                    new SpannerParameterCollection {{"k", SpannerDbType.String, _key}});
                 using (var reader =
                     await cmd.ExecuteReaderAsync(
                         TimestampBound.OfMinReadTimestamp(_history[2].Timestamp)))
@@ -378,7 +378,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
                     var cmd = connection.CreateSelectCommand(
                         "SELECT * FROM TX WHERE K=@k",
-                        new SpannerParameterCollection {{"k", _key, SpannerDbType.String}});
+                        new SpannerParameterCollection {{"k", SpannerDbType.String, _key}});
                     cmd.Transaction = tx;
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
@@ -397,7 +397,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 await connection.OpenAsync();
                 var cmd = connection.CreateSelectCommand(
                     "SELECT * FROM TX WHERE K=@k",
-                    new SpannerParameterCollection {{"k", _key, SpannerDbType.String}});
+                    new SpannerParameterCollection {{"k", SpannerDbType.String, _key}});
                 using (var reader =
                     await cmd.ExecuteReaderAsync(TimestampBound.OfExactStaleness(TimeSpan.FromSeconds(50))))
                 {
@@ -424,7 +424,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
                 var cmd = connection.CreateSelectCommand(
                     "SELECT * FROM TX WHERE K=@k",
-                    new SpannerParameterCollection {{"k", _key, SpannerDbType.String}});
+                    new SpannerParameterCollection {{"k", SpannerDbType.String, _key}});
                 using (var reader =
                     await cmd.ExecuteReaderAsync(
                         TimestampBound.OfMaxStaleness(TimeSpan.FromMilliseconds(5))))
@@ -449,7 +449,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 {
                     var cmd = connection.CreateSelectCommand(
                         "SELECT * FROM TX WHERE K=@k",
-                        new SpannerParameterCollection {{"k", _key, SpannerDbType.String}});
+                        new SpannerParameterCollection {{"k", SpannerDbType.String, _key}});
                     cmd.Transaction = tx;
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
@@ -472,7 +472,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 await connection.OpenAsync();
                 var cmd = connection.CreateSelectCommand(
                     "SELECT * FROM TX WHERE K=@k",
-                    new SpannerParameterCollection {{"k", _key, SpannerDbType.String}});
+                    new SpannerParameterCollection {{"k", SpannerDbType.String, _key}});
                 using (var reader = await cmd.ExecuteReaderAsync(TimestampBound.Strong))
                 {
                     if (await reader.ReadAsync())

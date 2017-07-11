@@ -46,7 +46,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 var localCounter = Interlocked.Increment(ref s_rowCounter);
                 var insertCommand = connection.CreateInsertCommand(
-                    _testFixture.StressTestTable, new SpannerParameterCollection
+                    _testFixture.StressTestTable, new SpannerColumnCollection
                     {
                         {"ID", SpannerDbType.String},
                         {"Title", SpannerDbType.String}
@@ -54,7 +54,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 insertCommand.Parameters["ID"].Value = $"{s_guid}{localCounter}";
                 insertCommand.Parameters["Title"].Value = "Title";
 
-                bool retry = true;
+                var retry = true;
                 long delay = 0;
                 while (retry)
                 {
@@ -91,8 +91,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerOptions.Instance.MaximumPooledSessions = Math.Max(countToPreWarm + 50, 400);
             SpannerOptions.Instance.MaximumGrpcChannels = Math.Max(4, 8 * TargetQps / 2000);
 
-            Logger.Instance.Info($"SpannerOptions.Instance.MaximumActiveSessions:{SpannerOptions.Instance.MaximumActiveSessions}");
-            Logger.Instance.Info($"SpannerOptions.Instance.MaximumGrpcChannels:{SpannerOptions.Instance.MaximumGrpcChannels}");
+            Logger.Instance.Info(
+                $"SpannerOptions.Instance.MaximumActiveSessions:{SpannerOptions.Instance.MaximumActiveSessions}");
+            Logger.Instance.Info(
+                $"SpannerOptions.Instance.MaximumGrpcChannels:{SpannerOptions.Instance.MaximumGrpcChannels}");
 
             //prewarm step.
             using (await _testFixture.GetTestDatabaseConnectionAsync())
