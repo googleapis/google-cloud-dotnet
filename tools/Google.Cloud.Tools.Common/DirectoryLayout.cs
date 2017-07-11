@@ -22,37 +22,46 @@ namespace Google.Cloud.Tools.Common
     public class DirectoryLayout
     {
         /// <summary>
-        /// Special name to be used when we want to generate snippets for non-API-specific documentation.
-        /// This is only a partially-valid layout, as there aren't any production projects etc.
-        /// This name matches the directory under docs, for convenience.
+        /// Root of all source for this API, including production code, tests, snippets etc.
         /// </summary>
-        private const string RootDocsApi = "root";
+        public string SourceDirectory { get; }
+        public string DocsOutputDirectory { get; }
+        public string DocfxMetadataDirectory { get; }
+        public string SnippetOutputDirectory { get; }
+        public string DocsSourceDirectory { get; } 
 
-        private string _api;
-
-        public bool IsRootDocsApi => _api == RootDocsApi;
-        public string RootDirectory { get; }
-
-        // Bit of a hack to find the snippets for root docs... we may want to add a GetSnippetDirectories() method or something here.
-        public string ApiSourceDirectory => IsRootDocsApi ? Path.Combine(RootDirectory, "tools") : Path.Combine(RootDirectory, "apis", _api);
-        public string DocsOutputDirectory => Path.Combine(RootDirectory, "docs", "output", _api);
-        public string ApiMetadataDirectory => IsRootDocsApi ? null : Path.Combine(DocsOutputDirectory, "obj", "api");
-        public string SnippetOutputDirectory => Path.Combine(DocsOutputDirectory, "obj", "snippets");
-        public string ApiDocsSourceDirectory => IsRootDocsApi ? Path.Combine(RootDirectory, "docs", "root") : Path.Combine(ApiSourceDirectory, "docs");
-
-        private DirectoryLayout(string root, string api)
+        private DirectoryLayout(string source, string docsOutput, string metadata, string snippetOutput, string docsSource)
         {
-            RootDirectory = root;
-            _api = api;
+            SourceDirectory = source;
+            DocsOutputDirectory = docsOutput;
+            DocfxMetadataDirectory = metadata;
+            SnippetOutputDirectory = snippetOutput;
+            DocsSourceDirectory = docsSource;
         }
 
-        public static DirectoryLayout FromApi(string api)
+        public static DirectoryLayout ForRootDocs()
+        {
+            string root = DetermineRootDirectory();
+            return new DirectoryLayout(
+                source: Path.Combine(root, "tools"),
+                docsOutput: Path.Combine(root, "docs", "output", "root"),
+                metadata: null,
+                snippetOutput: Path.Combine(root, "docs", "output", "root", "obj", "snippets"),
+                docsSource: Path.Combine(root, "docs", "root")
+                );
+        }
+
+        public static DirectoryLayout ForApi(string api)
         {
             var root = DetermineRootDirectory();
-            return new DirectoryLayout(root, api);
+            return new DirectoryLayout(
+                source: Path.Combine(root, "apis", api),
+                docsOutput: Path.Combine(root, "docs", "output", api),
+                metadata: Path.Combine(root, "docs", "output", api, "obj", "api"),
+                snippetOutput: Path.Combine(root, "docs", "output", api, "obj", "snippets"),
+                docsSource: Path.Combine(root, "apis", api, "docs")
+                );
         }
-
-        // TODO: Make this a regular class, and move all the logic that's currently in GenerateSnippetMarkdown etc here instead.
 
         /// <summary>
         /// Find the root directory of the project. We expect this to contain "apis" and "LICENSE".

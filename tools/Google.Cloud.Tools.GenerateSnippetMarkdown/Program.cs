@@ -129,8 +129,9 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
                     reportFile = reportArg.Substring("--report=".Length);
                 }
             }
-            var layout = DirectoryLayout.FromApi(api);
-            string snippetsSource = Directory.GetDirectories(layout.ApiSourceDirectory, "*.Snippets").FirstOrDefault();
+
+            DirectoryLayout layout = api == "root" ? DirectoryLayout.ForRootDocs() : DirectoryLayout.ForApi(api);
+            string snippetsSource = Directory.GetDirectories(layout.SourceDirectory, "*.Snippets").FirstOrDefault();
             if (snippetsSource == null)
             {
                 throw new UserErrorException($"Unable to find snippets within API. Aborting.");
@@ -149,7 +150,7 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
                 }
             }
 
-            var memberLookup = LoadMembersByType(layout.ApiMetadataDirectory);
+            var memberLookup = LoadMembersByType(layout.DocfxMetadataDirectory);
             Console.WriteLine($"Loaded {memberLookup.Count} types with {memberLookup.Sum(x => x.Count())} members");
             List<string> errors = new List<string>();
             var snippets = LoadAllSnippets(snippetsSource, errors);
