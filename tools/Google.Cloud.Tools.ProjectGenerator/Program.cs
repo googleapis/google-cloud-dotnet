@@ -93,6 +93,12 @@ namespace Google.Cloud.Tools.ProjectGenerator
             {
                 { "ConfigureAwaitChecker.Analyzer", "1.0.0-beta4" }
             };
+            // If Grpc.Core is ever specified explicitly (e.g. for "other" projects),
+            // but without a version number, fill it in.
+            if (dependencies.ContainsKey("Grpc.Core") && dependencies["Grpc.Core"] == "")
+            {
+                dependencies["Grpc.Core"] = GrpcVersion;
+            }
             switch (api.Type)
             {
                 case "rest":
