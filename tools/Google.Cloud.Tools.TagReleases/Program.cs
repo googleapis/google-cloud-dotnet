@@ -63,7 +63,7 @@ namespace Google.Cloud.Tools.TagReleases
             };
             var tags = (await client.Repository.GetAllTags(RepositoryOwner, RepositoryName)).Select(tag => tag.Name);
 
-            var apis = LoadApis();
+            var apis = ApiMetadata.LoadApis();
             var noChange = apis.Where(api => tags.Contains($"{api.Id}-{api.Version}") || api.Version.EndsWith("00")).ToList();
             var changed = apis.Except(noChange).ToList();
 
@@ -91,7 +91,7 @@ namespace Google.Cloud.Tools.TagReleases
             foreach (var api in changed)
             {
                 // We could parallelize, but there's very little point.
-                await client.Repository.Release.Create(RepositoryOwner, RepositoryName, api.CreateNewRelease());
+                await client.Repository.Release.Create(RepositoryOwner, RepositoryName, CreateNewRelease(api));
                 Console.WriteLine($"Created release for {api.Id}");
             }
         }
@@ -103,22 +103,11 @@ namespace Google.Cloud.Tools.TagReleases
             var json = File.ReadAllText(Path.Combine(root, "apis", "apis.json"));
             return JsonConvert.DeserializeObject<List<ApiMetadata>>(json).OrderBy(api => api.Id).ToList();
         }
-    }
 
-    // This is all the metadata we need for the moment...
-    public class ApiMetadata
-    {
-        private static readonly Regex ReleaseVersion = new Regex(@"^[1-9]\d*\.\d+\.\d+$");
-
-        public string Id { get; set; }
-        public string Version { get; set; }
-
-        public override string ToString() => $"{Id,-50} v{Version}";
-
-        public NewRelease CreateNewRelease() => new NewRelease($"{Id}-{Version}")
+        private static NewRelease CreateNewRelease(ApiMetadata api) => new NewRelease($"{api.Id}-{api.Version}")
         {
-            Prerelease = !ReleaseVersion.IsMatch(Version),
-            Name = $"{Version} release of {Id}",
+            Prerelease = !api.IsReleaseVersion,
+            Name = $"{api.Version} release of {api.Id}",
             // Default TargetCommitish is master, which is fine for now.
         };
     }

@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <PackageReference Include="Octokit" Version="0.24.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
   </ItemGroup>
 
   <ItemGroup>
