@@ -66,14 +66,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             _clock = clock ?? SystemClock.Instance;
         }
 
-        /// <summary>
-        /// Currently unsupported, always return null.
-        /// </summary>
-        public IDisposable BeginScope<TState>(TState state)
-        {
-            // TODO(talarico): Implement.
-            return null;
-        }
+        /// <inheritdoc />
+        public IDisposable BeginScope<TState>(TState state) => new GoogleLoggerScope(state);
 
         /// <inheritdoc />
         public bool IsEnabled(LogLevel logLevel) => logLevel >= _loggerOptions.LogLevel;
@@ -100,7 +94,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 LogName = _logName,
                 Severity = logLevel.ToLogSeverity(),
                 Timestamp = Timestamp.FromDateTime(_clock.GetCurrentDateTimeUtc()),
-                TextPayload = message,
+                TextPayload = string.Concat(GoogleLoggerScope.Current, message),
                 Labels = { _loggerOptions.Labels },
             };
 

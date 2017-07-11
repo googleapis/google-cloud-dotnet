@@ -185,6 +185,23 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 Assert.Equal(3, buildResources.Count());
             }
         }
+
+        [Fact]
+        public async Task Logging_Scope()
+        {
+            string testId = Utils.GetTestId();
+            DateTime startTime = DateTime.UtcNow;
+
+            var builder = new WebHostBuilder().UseStartup<NoBufferResourceLoggerTestApplication>();
+            using (var server = new TestServer(builder))
+            using (var client = server.CreateClient())
+            {
+                await client.GetAsync($"/Main/Scope/{testId}");
+                var results = _polling.GetEntries(startTime, testId, 1);
+                var message = MainController.GetMessage(nameof(MainController.Scope), testId);
+                Assert.Contains($"Scope => {message}", results.Single().TextPayload);
+            }
+        }
     }
 
     /// <summary>
@@ -336,6 +353,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             return message;
         }
 
+        public string Scope(string id)
+        {
+            using (_logger.BeginScope(nameof(Scope)))
+            {
+                string message = GetMessage(nameof(Scope), id);
+                _logger.LogCritical(message);
+                return message;
+            }
+        }
+
         public string Exception(string id)
         {
             string message = GetMessage(nameof(Exception), id);
@@ -350,6 +377,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             return message;
         }
 
-        private string GetMessage(string message, string id) => $"{message} - {id}";
+        public static string GetMessage(string message, string id) => $"{message} - {id}";
     }
 }

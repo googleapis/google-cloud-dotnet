@@ -17,7 +17,6 @@ using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Testing;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Logging.V2;
-using Google.Protobuf.Collections;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.Extensions.Logging;
 using Moq;
@@ -55,9 +54,34 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         [Fact]
         public void BeginScope()
         {
-            var logger = GetLogger(new Mock<IConsumer<LogEntry>>().Object);
-            // This will return null as the function is not implemented yet.
-            Assert.Null(logger.BeginScope("state"));
+            var expectedMessage = $"scope => {_logMessage}";
+            Predicate<IEnumerable<LogEntry>> matcher = (l) => l.Single().TextPayload == expectedMessage;
+            var mockConsumer = new Mock<IConsumer<LogEntry>>();
+            mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information);
+            using (logger.BeginScope("scope"))
+            {
+                logger.Log(LogLevel.Error, 0, _logMessage, null, Formatter);
+            }
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
+        public void BeginScope_Nested()
+        {
+            var expectedMessage = $"parent => child => {_logMessage}";
+            Predicate<IEnumerable<LogEntry>> matcher = (l) => l.Single().TextPayload == expectedMessage;
+            var mockConsumer = new Mock<IConsumer<LogEntry>>();
+            mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information);
+            using (logger.BeginScope("parent"))
+            {
+                using (logger.BeginScope("child"))
+                {
+                    logger.Log(LogLevel.Error, 0, _logMessage, null, Formatter);
+                }
+            }
+            mockConsumer.VerifyAll();
         }
 
         [Fact]
