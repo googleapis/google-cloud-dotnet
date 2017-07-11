@@ -46,6 +46,11 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
             }
             string api = args[0];
             var layout = DirectoryLayout.ForApi(api);
+            var apiMetadata = ApiMetadata.LoadApis().FirstOrDefault(x => x.Id == api);
+            if (apiMetadata == null)
+            {
+                throw new UserErrorException($"Unable to load API metadata from apis.json for {api}");
+            }
 
             string output = layout.DocsOutputDirectory;
             if (Directory.Exists(output))
@@ -58,7 +63,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
             var projects = Project.LoadProjects(apiDirectory).ToList();
 
             CreateDocfxJson(api, projects, output);
-            CopyAndGenerateArticles(api, layout.DocsSourceDirectory, output);
+            CopyAndGenerateArticles(apiMetadata, layout.DocsSourceDirectory, output);
             CreateToc(api, output);
             return 0;
         }
@@ -139,8 +144,15 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
             File.WriteAllText(Path.Combine(outputDirectory, "dependencies"), string.Join(" ", externalDependencies));
         }
 
-        private static void CopyAndGenerateArticles(string api, string inputDirectory, string outputDirectory)
+        private static void CopyAndGenerateArticles(ApiMetadata api, string inputDirectory, string outputDirectory)
         {
+            // Make sure there's a landing page.
+            var index = Path.Combine(inputDirectory, "index.md");
+            if (!File.Exists(index))
+            {
+                throw new UserErrorException($"No index.md file for {api.Id}. Please add one!");
+            }
+
             // TODO: Do this properly, with templating etc.
             // TODO: Other resources, such as images?
 
@@ -149,24 +161,53 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
             {
                 foreach (var file in Directory.GetFiles(inputDirectory, "*.md"))
                 {
-                    File.Copy(file, Path.Combine(outputDirectory, Path.GetFileName(file)));
+                    string text = File.ReadAllText(file);
+                    text = TransformDocTemplate(api, text);
+                    File.WriteAllText(Path.Combine(outputDirectory, Path.GetFileName(file)), text);                    
                 }
+            }
+        }
+
+        /// <summary>
+        /// Extremely crude templating, but just enough for now... it replaces the following tokens:
+        /// {{title}}: Markdown for the page title with the API ID
+        /// {{description}}: Markdown for the API description
+        /// {{installation}}: Markdown for the installation section
+        /// {{auth}}: Markdown for authentication instructions
+        /// </summary>
+        private static string TransformDocTemplate(ApiMetadata api, string text)
+        {
+            string title = $"# {api.Id}";
+            string description = $"`{api.Id}` is a.NET client library for the [{api.ProductName} API]({api.ProductUrl}).";
+            string installation =
+$@"# Installation
+
+Install the `{api.Id}` package from NuGet. Add it to
+your project in the normal way (for example by right-clicking on the
+project in Visual Studio and choosing ""Manage NuGet Packages..."").";
+            if (!api.IsReleaseVersion)
+            {
+                installation += @"
+Please ensure you enable pre-release packages(for example, in the
+Visual Studio NuGet user interface, check the ""Include prerelease""
+box).";
             }
 
-            // Generate a landing page if it doesn't exist
-            var index = Path.Combine(outputDirectory, "index.md");
-            if (!File.Exists(index))
-            {
-                using (var writer = File.CreateText(index))
-                {
-                    writer.WriteLine($"Getting started with {api}");
-                    writer.WriteLine("---");
-                    writer.WriteLine("Authentication");
-                    writer.WriteLine("---");
-                    writer.WriteLine("Examples");
-                    writer.WriteLine("---");
-                }
-            }
+            string auth =
+@"# Authentication
+
+When running on Google Cloud Platform, no action needs to be taken to authenticate.
+
+Otherwise, the simplest way of authenticating your API calls is to
+[download a service account JSON file](https://developers.google.com/identity/protocols/OAuth2ServiceAccount),
+then set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable to refer to it. The
+credentials will automatically be used to authenticate.";
+
+            return text
+                .Replace("{{title}}", title)
+                .Replace("{{description}}", description)
+                .Replace("{{installation}}", installation)
+                .Replace("{{auth}}", auth);
         }
 
         private static void CreateToc(string api, string outputDirectory)
