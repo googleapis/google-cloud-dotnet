@@ -26,9 +26,31 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         private static readonly ReportErrorsServiceClient _errorClient = new Mock<ReportErrorsServiceClient>().Object;
 
         [Fact]
+        public void ErrorReportingOptions_EventTarget()
+        {
+            var eventTarget = EventTarget.ForErrorReporting(_projectId, _errorClient);
+            var bufferOptions = BufferOptions.SizedBuffer();
+
+            var options = ErrorReportingOptions.Create(eventTarget, bufferOptions);
+            Assert.Equal(eventTarget, options.EventTarget);
+            Assert.Equal(bufferOptions, options.BufferOptions);
+        }
+
+        [Fact]
+        public void CreateConsumer_ErrorConsumer()
+        {
+            var eventTarget = EventTarget.ForErrorReporting(_projectId, _errorClient);
+            var options = ErrorReportingOptions.Create(eventTarget);
+            var consumer = options.CreateConsumer();
+            Assert.IsType<RpcRetryConsumer<ReportedErrorEvent>>(consumer);
+            var retryConsumer = (RpcRetryConsumer<ReportedErrorEvent>) consumer;
+            Assert.IsType<GrpcErrorEventConsumer>(retryConsumer._consumer);
+        }
+
+        [Fact]
         public void CreateConsumer_ErrorToLogsConsumer()
         {
-            var eventTarget = EventTarget.Create(_projectId, "test-log", _loggingClient);
+            var eventTarget = EventTarget.ForLogging(_projectId, "test-log", _loggingClient);
             var options = ErrorReportingOptions.Create(eventTarget);
             var consumer = options.CreateConsumer();
             Assert.IsType<RpcRetryConsumer<ReportedErrorEvent>>(consumer);
@@ -40,7 +62,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void CreateConsumer_BufferdConsumer()
         {
             var bufferOptions = BufferOptions.SizedBuffer();
-            var eventTarget = EventTarget.Create(_projectId, "test-log", _loggingClient);
+            var eventTarget = EventTarget.ForLogging(_projectId, "test-log", _loggingClient);
             var options = ErrorReportingOptions.Create(eventTarget, bufferOptions);
             var consumer = options.CreateConsumer();
             Assert.IsType<SizedBufferingConsumer<ReportedErrorEvent>>(consumer);
