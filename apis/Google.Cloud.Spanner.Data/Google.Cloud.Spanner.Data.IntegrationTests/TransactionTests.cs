@@ -227,30 +227,22 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             connection1.Dispose();
 
             // TX2 READ AGAIN/THROWS
-            SpannerException thrownException = null;
-            try
-            {
-                using (var cmd = connection2.CreateSelectCommand(
-                    "SELECT * FROM TX WHERE K=@k",
-                    new SpannerParameterCollection {{"k", _key, SpannerDbType.String}}))
+            var thrownException = await Assert.ThrowsAsync<SpannerException>(
+                async () =>
                 {
-                    cmd.Transaction = tx2;
-                    using (var reader = await cmd.ExecuteReaderAsync())
+                    using (var cmd = connection2.CreateSelectCommand(
+                        "SELECT * FROM TX WHERE K=@k",
+                        new SpannerParameterCollection {{"k", _key, SpannerDbType.String}}))
                     {
-                        Assert.True(await reader.ReadAsync());
+                        cmd.Transaction = tx2;
+                        using (var reader = await cmd.ExecuteReaderAsync())
+                        {
+                            Assert.True(await reader.ReadAsync());
+                        }
                     }
-                }
-            }
-            catch (SpannerException ex)
-            {
-                thrownException = ex;
-            }
-            finally
-            {
-                tx2.Dispose();
-                connection2.Dispose();
-            }
-
+                }).ConfigureAwait(false);
+            tx2.Dispose();
+            connection2.Dispose();
             Assert.True(thrownException?.IsRetryable ?? false);
         }
 
@@ -343,21 +335,17 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task ReadMin()
         {
-            ArgumentException caughtException = null;
-
             await WriteSampleRowsAsync();
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
                 await connection.OpenAsync();
-                try
-                {
-                    await connection.BeginReadOnlyTransactionAsync(
-                        TimestampBound.OfMinReadTimestamp(_history[2].Timestamp));
-                }
-                catch (ArgumentException ex)
-                {
-                    caughtException = ex;
-                }
+                await Assert.ThrowsAsync<ArgumentException>(
+                    async () =>
+                    {
+                        await connection.BeginReadOnlyTransactionAsync(
+                            TimestampBound.OfMinReadTimestamp(_history[2].Timestamp));
+
+                    }).ConfigureAwait(false);
 
                 var cmd = connection.CreateSelectCommand(
                     "SELECT * FROM TX WHERE K=@k",
@@ -372,7 +360,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     }
                 }
             }
-            Assert.NotNull(caughtException);
         }
 
         [Fact]
@@ -422,22 +409,18 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task ReadStaleMax()
         {
-            ArgumentException caughtException = null;
-
             await WriteSampleRowsAsync();
             await Task.Delay(6);
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
                 await connection.OpenAsync();
-                try
-                {
-                    await connection.BeginReadOnlyTransactionAsync(
-                        TimestampBound.OfMaxStaleness(TimeSpan.FromSeconds(50)));
-                }
-                catch (ArgumentException ex)
-                {
-                    caughtException = ex;
-                }
+                await Assert.ThrowsAsync<ArgumentException>(
+                    async () =>
+                    {
+                        await connection.BeginReadOnlyTransactionAsync(
+                            TimestampBound.OfMaxStaleness(TimeSpan.FromSeconds(50)));
+
+                    }).ConfigureAwait(false);
 
                 var cmd = connection.CreateSelectCommand(
                     "SELECT * FROM TX WHERE K=@k",
@@ -452,7 +435,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     }
                 }
             }
-            Assert.NotNull(caughtException);
         }
 
         [Fact]

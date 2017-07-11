@@ -19,6 +19,8 @@ using System.Collections;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
+using Google.Apis.Auth.OAuth2;
+using Google.Cloud.Spanner.V1;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -44,28 +46,21 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         private readonly TestDatabaseFixture _testFixture;
 
-        //[Fact]
-        //public async Task TestReadDeadlineExceeded()
-        //{
-        //    Exception exceptionCaught = null;
-        //    long result = 0;
-        //    try
-        //    {
-        //        using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
-        //        {
-        //            var cmd =
-        //                connection.CreateSelectCommand("SELECT 1");
-        //            result = await cmd.ExecuteScalarAsync<long>();
-        //        }
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        exceptionCaught = e;
-        //    }
+        /// <summary>
+        /// This class ensures that the credential in TestDeadlineExceeded is seen as a new instance.
+        /// </summary>
+        private class CredentialWrapper : ITokenAccess
+        {
+            private readonly ITokenAccess _original;
 
-        //    Assert.NotNull(exceptionCaught);
-        //    Assert.Equal(0, result);
-        //}
+            public CredentialWrapper(ITokenAccess original) => _original = original;
+
+            /// <inheritdoc />
+            public Task<string> GetAccessTokenForRequestAsync(
+                string authUri = null,
+                CancellationToken cancellationToken = new CancellationToken()) => _original
+                .GetAccessTokenForRequestAsync(authUri, cancellationToken);
+        }
 
         private async Task<T> ExecuteAsync<T>(string sql)
         {
@@ -82,33 +77,26 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             // ReSharper disable once RedundantAssignment
             int rowsRead = -1;
-            var exceptionCaught = false;
-
-            try
-            {
-                using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            var e = await Assert.ThrowsAsync<SpannerException>(
+                async () =>
                 {
-                    var cmd = connection.CreateSelectCommand(
-                        "SELECT badjuju FROM " + _testFixture.TestTable);
-                    using (var reader = await cmd.ExecuteReaderAsync())
+                    using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
                     {
-                        rowsRead = 0;
-                        while (await reader.ReadAsync())
+                        var cmd = connection.CreateSelectCommand(
+                            "SELECT badjuju FROM " + _testFixture.TestTable);
+                        using (var reader = await cmd.ExecuteReaderAsync())
                         {
-                            rowsRead++;
+                            rowsRead = 0;
+                            while (await reader.ReadAsync())
+                            {
+                                rowsRead++;
+                            }
                         }
                     }
-                }
-            }
-            catch (SpannerException e)
-            {
-                exceptionCaught = true;
-                Debug.WriteLine($"TestBadColumnName: Caught error code:{e.ErrorCode}");
-                Assert.Equal(ErrorCode.InvalidArgument, e.ErrorCode);
-                Assert.False(e.IsTransientSpannerFault());
-            }
+                }).ConfigureAwait(false);
 
-            Assert.True(exceptionCaught);
+            Assert.Equal(ErrorCode.InvalidArgument, e.ErrorCode);
+            Assert.False(e.IsTransientSpannerFault());
             Assert.True(rowsRead < 1);
         }
 
@@ -119,32 +107,27 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 + $"{_testFixture.TestInstanceName}/databases/badjuju";
             // ReSharper disable once RedundantAssignment
             int rowsRead = -1;
-            var exceptionCaught = false;
 
-            try
-            {
-                using (var connection = new SpannerConnection(connectionString))
+            var e = await Assert.ThrowsAsync<SpannerException>(
+                async () =>
                 {
-                    var cmd = connection.CreateSelectCommand(
-                        $"SELECT * FROM {_testFixture.TestTable} WHERE Key = 'k1'");
-                    using (var reader = await cmd.ExecuteReaderAsync())
+                    using (var connection = new SpannerConnection(connectionString))
                     {
-                        rowsRead = 0;
-                        while (await reader.ReadAsync())
+                        var cmd = connection.CreateSelectCommand(
+                            $"SELECT * FROM {_testFixture.TestTable} WHERE Key = 'k1'");
+                        using (var reader = await cmd.ExecuteReaderAsync())
                         {
-                            rowsRead++;
+                            rowsRead = 0;
+                            while (await reader.ReadAsync())
+                            {
+                                rowsRead++;
+                            }
                         }
                     }
-                }
-            }
-            catch (SpannerException e)
-            {
-                exceptionCaught = true;
-                Assert.Equal(ErrorCode.NotFound, e.ErrorCode);
-                Assert.False(e.IsTransientSpannerFault());
-            }
+                }).ConfigureAwait(false);
 
-            Assert.True(exceptionCaught);
+            Assert.Equal(ErrorCode.NotFound, e.ErrorCode);
+            Assert.False(e.IsTransientSpannerFault());
             Assert.Equal(-1, rowsRead);
         }
 
@@ -153,64 +136,53 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             // ReSharper disable once RedundantAssignment
             int rowsRead = -1;
-            var exceptionCaught = false;
 
-            try
-            {
-                using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            var e = await Assert.ThrowsAsync<SpannerException>(
+                async () =>
                 {
-                    var cmd = connection.CreateSelectCommand(
-                        "SELECT * FROM badjuju WHERE Key = 'k99'");
-                    using (var reader = await cmd.ExecuteReaderAsync())
+                    using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
                     {
-                        rowsRead = 0;
-                        while (await reader.ReadAsync())
+                        var cmd = connection.CreateSelectCommand(
+                            "SELECT * FROM badjuju WHERE Key = 'k99'");
+                        using (var reader = await cmd.ExecuteReaderAsync())
                         {
-                            rowsRead++;
+                            rowsRead = 0;
+                            while (await reader.ReadAsync())
+                            {
+                                rowsRead++;
+                            }
                         }
                     }
-                }
-            }
-            catch (SpannerException e)
-            {
-                exceptionCaught = true;
-                Assert.Equal(ErrorCode.InvalidArgument, e.ErrorCode);
-                Assert.False(e.IsTransientSpannerFault());
-            }
+                }).ConfigureAwait(false);
 
-            Assert.True(exceptionCaught);
+            Assert.Equal(ErrorCode.InvalidArgument, e.ErrorCode);
+            Assert.False(e.IsTransientSpannerFault());
             Assert.Equal(0, rowsRead);
         }
 
         [Fact]
         public async Task CancelRead()
         {
-            // ReSharper disable once RedundantAssignment
-            var exceptionCaught = false;
-            try
-            {
-                using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            var e = await Assert.ThrowsAsync<OperationCanceledException>(
+                async () =>
                 {
-                    var cmd = connection.CreateSelectCommand(
-                        $"SELECT * FROM {_testFixture.TestTable}");
-
-                    using (var reader = await cmd.ExecuteReaderAsync())
+                    using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
                     {
-                        var cancellationTokenSource =
-                            new CancellationTokenSource();
-                        var task = reader.ReadAsync(cancellationTokenSource.Token);
-                        cancellationTokenSource.Cancel();
-                        await task;
-                    }
-                }
-            }
-            catch (OperationCanceledException e)
-            {
-                exceptionCaught = true;
-                Assert.False(e.IsTransientSpannerFault());
-            }
+                        var cmd = connection.CreateSelectCommand(
+                            $"SELECT * FROM {_testFixture.TestTable}");
 
-            Assert.True(exceptionCaught);
+                        using (var reader = await cmd.ExecuteReaderAsync())
+                        {
+                            var cancellationTokenSource =
+                                new CancellationTokenSource();
+                            var task = reader.ReadAsync(cancellationTokenSource.Token);
+                            cancellationTokenSource.Cancel();
+                            await task;
+                        }
+                    }
+                }).ConfigureAwait(false);
+
+            Assert.False(e.IsTransientSpannerFault());
         }
 
         [Fact]
@@ -305,33 +277,26 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             // ReSharper disable once RedundantAssignment
             int rowsRead = -1;
-            var exceptionCaught = false;
-
-            try
-            {
-                using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            var e = await Assert.ThrowsAsync<SpannerException>(
+                async () =>
                 {
-                    var cmd = connection.CreateSelectCommand(
-                        $"SLECT * FROM {_testFixture.TestTable}");
-                    using (var reader = await cmd.ExecuteReaderAsync())
+                    using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
                     {
-                        rowsRead = 0;
-                        while (await reader.ReadAsync())
+                        var cmd = connection.CreateSelectCommand(
+                            $"SLECT * FROM {_testFixture.TestTable}");
+                        using (var reader = await cmd.ExecuteReaderAsync())
                         {
-                            rowsRead++;
+                            rowsRead = 0;
+                            while (await reader.ReadAsync())
+                            {
+                                rowsRead++;
+                            }
                         }
                     }
-                }
-            }
-            catch (SpannerException e)
-            {
-                exceptionCaught = true;
-                Debug.WriteLine("TestBadColumnName: Caught error code:" + e.ErrorCode);
-                Assert.Equal(ErrorCode.InvalidArgument, e.ErrorCode);
-                Assert.False(e.IsTransientSpannerFault());
-            }
+                }).ConfigureAwait(false);
 
-            Assert.True(exceptionCaught);
+            Assert.Equal(ErrorCode.InvalidArgument, e.ErrorCode);
+            Assert.False(e.IsTransientSpannerFault());
             Assert.True(rowsRead < 1);
         }
 
@@ -380,6 +345,52 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             s1 = result[1] as IDictionary;
             Assert.Equal("b", (string) s1["C1"]);
             Assert.Equal(2, (long) s1["C2"]);
+        }
+
+        [Fact]
+        public async Task TestDeadlineExceeded()
+        {
+            var oldTimeout = SpannerOptions.Instance.Timeout;
+            SpannerOptions.Instance.Timeout = TimeSpan.FromTicks(1);
+
+            try
+            {
+                //we use a new instance of a credential to force create a new spannerclient,
+                //which will cause the new options to be respected (ie timeout).
+                //normally setting timeout is only supported before creation of any client and cannot
+                //be changed due to the fact we pool clients.
+                var appDefaultCredentials = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
+                if (appDefaultCredentials.IsCreateScopedRequired)
+                {
+                    appDefaultCredentials = appDefaultCredentials.CreateScoped(SpannerClient.DefaultScopes);
+                }
+
+                long result = 0;
+                var e = await Assert.ThrowsAsync<SpannerException>(
+                    async () =>
+                    {
+                        using (await _testFixture.GetTestDatabaseConnectionAsync())
+                        {
+                            using (var connection =
+                                new SpannerConnection(
+                                    _testFixture.ConnectionString,
+                                    new CredentialWrapper(appDefaultCredentials)))
+                            {
+                                var cmd =
+                                    connection.CreateSelectCommand("SELECT 1");
+                                result = await cmd.ExecuteScalarAsync<long>();
+                            }
+                        }
+                    }).ConfigureAwait(false);
+
+                Assert.Equal(ErrorCode.DeadlineExceeded, e.ErrorCode);
+                Assert.True(e.IsTransientSpannerFault());
+                Assert.Equal(0, result);
+            }
+            finally
+            {
+                SpannerOptions.Instance.Timeout = oldTimeout;
+            }
         }
     }
 }

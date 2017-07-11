@@ -15,8 +15,10 @@
 #region
 
 using System;
-using System.Data.Common;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using Google.Cloud.Spanner.V1.Logging;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -37,8 +39,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerConnection.ConnectionPoolOptions.LogLevel = LogLevel.Debug;
             SpannerConnection.ConnectionPoolOptions.LogPerformanceTraces = true;
             SpannerConnection.ConnectionPoolOptions.PerformanceTraceLogInterval = 1000;
-            TestLogger.TestOutputHelper = outputHelper;
 #endif
+            TestLogger.TestOutputHelper = outputHelper;
         }
 
         private readonly TestDatabaseFixture _testFixture;
@@ -57,14 +59,27 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        private async Task<DbDataReader> GetLastRowAsync()
+        private async Task InsertAndRecordBytesAsync(byte[] bytes,
+            IDictionary<string, byte[]> record)
+        {
+            Assert.Equal(
+                1, await InsertAsync(
+                    new SpannerParameterCollection
+                    {
+                        new SpannerParameter("BytesValue", SpannerDbType.Bytes, bytes)
+                    }));
+            record[_lastKey] = bytes;
+        }
+
+
+        private async Task<SpannerDataReader> GetLastRowAsync()
         {
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
                 var cmd = connection.CreateSelectCommand(
                     "SELECT * FROM T WHERE K=@k",
                     new SpannerParameterCollection {{"K", _lastKey, SpannerDbType.String}});
-                var reader = await cmd.ExecuteReaderAsync();
+                var reader = (SpannerDataReader) await cmd.ExecuteReaderAsync();
                 await reader.ReadAsync();
                 return reader;
             }
@@ -127,6 +142,54 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Null(reader.GetValue(reader.GetOrdinal("BytesArrayValue")));
                 Assert.Null(reader.GetValue(reader.GetOrdinal("TimestampArrayValue")));
                 Assert.Null(reader.GetValue(reader.GetOrdinal("DateArrayValue")));
+            }
+        }
+
+        [Fact]
+        public async Task WriteEmpties()
+        {
+            Assert.Equal(
+                1, await InsertAsync(
+                    new SpannerParameterCollection
+                    {
+                        new SpannerParameter(
+                            "BoolArrayValue",
+                            SpannerDbType.ArrayOf(SpannerDbType.Bool),
+                            new bool[0]),
+                        new SpannerParameter(
+                            "Int64ArrayValue",
+                            SpannerDbType.ArrayOf(SpannerDbType.Int64),
+                            new long[0]),
+                        new SpannerParameter(
+                            "Float64ArrayValue",
+                            SpannerDbType.ArrayOf(SpannerDbType.Float64),
+                            new double[0]),
+                        new SpannerParameter(
+                            "StringArrayValue",
+                            SpannerDbType.ArrayOf(SpannerDbType.String),
+                            new string[0]),
+                        new SpannerParameter(
+                            "BytesArrayValue",
+                            SpannerDbType.ArrayOf(SpannerDbType.Bytes),
+                            new byte[0][]),
+                        new SpannerParameter(
+                            "TimestampArrayValue",
+                            SpannerDbType.ArrayOf(SpannerDbType.Timestamp),
+                            new DateTime[0]),
+                        new SpannerParameter(
+                            "DateArrayValue",
+                            SpannerDbType.ArrayOf(SpannerDbType.Date),
+                            new DateTime[0])
+                    }));
+            using (var reader = await GetLastRowAsync())
+            {
+                Assert.Equal(new bool[] {}, reader.GetFieldValue<bool[]>(reader.GetOrdinal("BoolArrayValue")));
+                Assert.Equal(new long[] { }, reader.GetFieldValue<long[]>(reader.GetOrdinal("Int64ArrayValue")));
+                Assert.Equal(new double[] { }, reader.GetFieldValue<double[]>(reader.GetOrdinal("Float64ArrayValue")));
+                Assert.Equal(new string[] { }, reader.GetFieldValue<string[]>(reader.GetOrdinal("StringArrayValue")));
+                Assert.Equal(new byte[][] { }, reader.GetFieldValue<byte[][]>(reader.GetOrdinal("BytesArrayValue")));
+                Assert.Equal(new DateTime[] { }, reader.GetFieldValue<DateTime[]>(reader.GetOrdinal("TimestampArrayValue")));
+                Assert.Equal(new DateTime[] { }, reader.GetFieldValue<DateTime[]>(reader.GetOrdinal("DateArrayValue")));
             }
         }
 
@@ -219,5 +282,167 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     reader.GetFieldValue<DateTime?[]>(reader.GetOrdinal("DateArrayValue")));
             }
         }
+
+        [Fact]
+        public async Task WriteNanValue()
+        {
+            Assert.Equal(
+                1, await InsertAsync(
+                    new SpannerParameterCollection
+                    {
+                        new SpannerParameter("Float64Value", SpannerDbType.Float64, double.NaN)
+                    }));
+            using (var reader = await GetLastRowAsync())
+            {
+                Assert.True(double.IsNaN(reader.GetFieldValue<double>("Float64Value")));
+            }
+        }
+
+        [Fact]
+        public async Task WriteInfinity()
+        {
+            Assert.Equal(
+                1, await InsertAsync(
+                    new SpannerParameterCollection
+                    {
+                        new SpannerParameter("Float64Value", SpannerDbType.Float64, double.PositiveInfinity)
+                    }));
+            using (var reader = await GetLastRowAsync())
+            {
+                Assert.True(double.IsPositiveInfinity(reader.GetFieldValue<double>("Float64Value")));
+            }
+        }
+
+        [Fact]
+        public async Task WriteNegativeInfinity()
+        {
+            Assert.Equal(
+                1, await InsertAsync(
+                    new SpannerParameterCollection
+                    {
+                        new SpannerParameter("Float64Value", SpannerDbType.Float64, double.NegativeInfinity)
+                    }));
+            using (var reader = await GetLastRowAsync())
+            {
+                Assert.True(double.IsNegativeInfinity(reader.GetFieldValue<double>("Float64Value")));
+            }
+        }
+
+        [Fact]
+        public async Task WriteRandomBytes()
+        {
+            var seedByte = (byte)(Environment.TickCount % 256);
+            var rnd = new Random(seedByte);
+
+            //we write 1-50 rows where each row contains a bytearray of size 1-50
+            //whose bytes are randomly generated with the given seed.
+            //The seed itself is written as the first row in an array of size=1.
+            var recordedValues = new Dictionary<string, byte[]>();
+
+            await InsertAndRecordBytesAsync(new[] {seedByte}, recordedValues);
+
+            var numRows = rnd.Next(50);
+            for (var i = 0; i < numRows; i++)
+            {
+                var byteArray = new byte[rnd.Next(50)];
+                rnd.NextBytes(byteArray);
+                await InsertAndRecordBytesAsync(byteArray, recordedValues);
+            }
+
+            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            {
+                string sqlQuery = $@"SELECT K,BytesValue
+                                FROM T
+                                WHERE K IN ({string.Join(", ", recordedValues.Keys.Select(x => $"'{x}'"))})";
+
+                var cmd = connection.CreateSelectCommand(sqlQuery);
+                using (var reader = (SpannerDataReader) await cmd.ExecuteReaderAsync())
+                {
+                    while (await reader.ReadAsync())
+                    {
+                        var key = reader.GetFieldValue<string>("K");
+                        var value = reader.GetFieldValue<byte[]>("BytesValue");
+                        Assert.Equal(recordedValues[key], value);
+                        recordedValues.Remove(key);
+                    }
+                }
+                Assert.Equal(0, recordedValues.Count);
+            }
+        }
+
+        [Fact]
+        public async Task BadTableName()
+        {
+            var rowsWritten = 0;
+            var e = await Assert.ThrowsAsync<SpannerException>(
+                async () =>
+                {
+                    using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+                    {
+                        var cmd = connection.CreateInsertCommand("badjuju", new SpannerParameterCollection
+                        {
+                            new SpannerParameter("K", SpannerDbType.String, UniqueString())
+                        });
+
+                        rowsWritten = await cmd.ExecuteNonQueryAsync();
+                    }
+                }).ConfigureAwait(false);
+
+            Logger.Instance.Debug($"BadTableName: Caught error code:{e.ErrorCode}");
+            Assert.Equal(ErrorCode.NotFound, e.ErrorCode);
+            Assert.False(e.IsTransientSpannerFault());
+            Assert.Equal(0, rowsWritten);
+        }
+
+
+        [Fact]
+        public async Task BadColumnName()
+        {
+            var rowsWritten = 0;
+            var e = await Assert.ThrowsAsync<SpannerException>(
+                async () =>
+                {
+                    using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+                    {
+                        var cmd = connection.CreateInsertCommand("T", new SpannerParameterCollection
+                        {
+                            new SpannerParameter("badjuju", SpannerDbType.String, UniqueString())
+                        });
+
+                        rowsWritten = await cmd.ExecuteNonQueryAsync();
+                    }
+                }).ConfigureAwait(false);
+
+            Logger.Instance.Debug($"BadColumnName: Caught error code:{e.ErrorCode}");
+            Assert.Equal(ErrorCode.NotFound, e.ErrorCode);
+            Assert.False(e.IsTransientSpannerFault());
+            Assert.Equal(0, rowsWritten);
+        }
+
+
+        [Fact]
+        public async Task BadColumnType()
+        {
+            int rowsWritten = 0;
+            var e = await Assert.ThrowsAsync<SpannerException>(
+                async () =>
+                {
+                    using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+                    {
+                        var cmd = connection.CreateInsertCommand("T", new SpannerParameterCollection
+                        {
+                            new SpannerParameter("K", SpannerDbType.Float64, 0.1)
+                        });
+
+                        rowsWritten = await cmd.ExecuteNonQueryAsync();
+                    }
+                }).ConfigureAwait(false);
+
+            Logger.Instance.Debug($"BadColumnType: Caught error code:{e.ErrorCode}");
+            Assert.Equal(ErrorCode.FailedPrecondition, e.ErrorCode);
+            Assert.False(e.IsTransientSpannerFault());
+            Assert.Equal(0, rowsWritten);
+        }
+
     }
 }
