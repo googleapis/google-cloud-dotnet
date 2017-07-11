@@ -1,16 +1,8 @@
-# Google.Cloud.Metadata.V1
+{{title}}
 
-`Google.Cloud.Metadata.V1` is a .NET client library for the [Google
-Compute Engine Metadata Server](https://cloud.google.com/compute/docs/storing-retrieving-metadata).
+{{description}}
 
-# Installation
-
-Install the `Google.Cloud.Metadata.V1` package from NuGet. Add it to
-your project in the normal way (for example by right-clicking on the
-project in Visual Studio and choosing "Manage NuGet Packages...").
-Please ensure you enable pre-release packages (for example, in the
-Visual Studio NuGet user interface, check the "Include prerelease"
-box).
+{{installation}}
 
 # Authentication
 

@@ -1,25 +1,11 @@
-# Google.Cloud.Storage.V1
+{{title}}
 
-`Google.Cloud.Storage.V1` is a .NET client library for [Google
-Cloud Storage](https://cloud.google.com/storage/). It wraps the
-`Google.Apis.Storage.v1` generated library, providing a
-higher-level API to make it easier to use.
+{{description}}
+It wraps the `Google.Apis.Storage.v1` generated library, providing a higher-level API to make it easier to use.
 
-# Installation
+{{installation}}
 
-Install the `Google.Cloud.Storage.V1` package from NuGet. Add it to
-your project in the normal way (for example by right-clicking on the
-project in Visual Studio and choosing "Manage NuGet Packages...").
-
-# Authentication
-
-To authenticate all your API calls, first install and setup the
-[Google Cloud SDK](https://cloud.google.com/sdk/). After that is
-installed, run the following command in a Google Cloud SDK Shell:
-
-```sh
-> gcloud auth application-default login
-```
+{{auth}}
 
 # Getting started
 

@@ -1,23 +1,10 @@
-# Google.Cloud.Datastore.V1
+{{title}}
 
-`Google.Cloud.Datastore.V1` is a .NET client library for [Google
-Cloud Datastore](https://cloud.google.com/datastore/docs/concepts/overview).
+{{description}}
 
-# Installation
+{{installation}}
 
-Install the `Google.Cloud.Datastore.V1` package from NuGet. Add it to
-your project in the normal way (for example by right-clicking on the
-project in Visual Studio and choosing "Manage NuGet Packages...").
-
-# Authentication
-
-To authenticate all your API calls, first install and setup the
-[Google Cloud SDK](https://cloud.google.com/sdk/). After that is
-installed, run the following command in a Google Cloud SDK Shell:
-
-```sh
-> gcloud auth application-default login
-```
+{{auth}}
 
 # Getting started
 
