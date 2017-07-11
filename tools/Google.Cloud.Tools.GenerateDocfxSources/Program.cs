@@ -45,7 +45,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                 throw new UserErrorException("Please specify the API name");
             }
             string api = args[0];
-            var layout = DirectoryLayout.FromApi(api);
+            var layout = DirectoryLayout.ForApi(api);
 
             string output = layout.DocsOutputDirectory;
             if (Directory.Exists(output))
@@ -54,11 +54,11 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
             }
             Directory.CreateDirectory(output);
 
-            var apiDirectory = layout.ApiSourceDirectory;
+            var apiDirectory = layout.SourceDirectory;
             var projects = Project.LoadProjects(apiDirectory).ToList();
 
             CreateDocfxJson(api, projects, output);
-            CopyAndGenerateArticles(api, layout.ApiDocsSourceDirectory, output);
+            CopyAndGenerateArticles(api, layout.DocsSourceDirectory, output);
             CreateToc(api, output);
             return 0;
         }
