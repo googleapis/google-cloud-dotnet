@@ -360,7 +360,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Throws<InvalidOperationException>(() => client.GetQueryResults(job.Reference));
         }
 
-        [Fact]
+        [Fact(Skip = "Processes 2TB - costs money!")]
         public void ExecuteQuery_Timeout()
         {
             // SQL that I happen to know takes over 10 seconds to query.
@@ -371,7 +371,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Throws<TimeoutException>(() => client.ExecuteQuery(sql, queryOptions, resultsOptions));                
         }
 
-        [Fact]
+        [Fact(Skip = "Processes 2TB - costs money!")]
         public void GetQueryResults_Timeout()
         {
             // SQL that I happen to know takes over 10 seconds to query.
