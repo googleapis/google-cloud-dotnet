@@ -34,7 +34,6 @@ namespace Google.Cloud.Spanner.V1 {
     internal sealed class ReliableStreamReader : IDisposable
     {
         private AsyncServerStreamingCall<PartialResultSet> _currentCall;
-        private readonly object _sync = new object();
         private readonly SpannerClient _spannerClient;
         private readonly IClock _clock;
         private readonly ExecuteSqlRequest _request;
