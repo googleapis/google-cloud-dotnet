@@ -29,6 +29,16 @@ namespace Google.Cloud.Tools.Common
         public string TargetFrameworks { get; set; }
         public string TestTargetFrameworks { get; set; }
 
+        /// <summary>
+        /// API name to include in documentation, e.g. "Google Monitoring"
+        /// </summary>
+        public string ProductName { get; set; }
+
+        /// <summary>
+        /// API URL to include in documentation, e.g. "https://cloud.google.com/monitoring/api/v3/"
+        /// </summary>
+        public string ProductUrl { get; set; }
+
         public string Description { get; set; }
 
         public List<string> Tags { get; set; } = new List<string>();
