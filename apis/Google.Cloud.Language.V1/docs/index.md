@@ -1,29 +1,10 @@
-# Google.Cloud.Language.V1
+{{title}}
 
-`Google.Cloud.Language.V1` is a .NET client library for the [Google
-Cloud Natural Language API](https://cloud.google.com/natural-language).
+{{description}}
 
-# Installation
+{{installation}}
 
-Install the `Google.Cloud.Language.V1` package from NuGet. Add it to
-your project in the normal way (for example by right-clicking on the
-project in Visual Studio and choosing "Manage NuGet Packages...").
-Please ensure you enable pre-release packages (for example, in the
-Visual Studio NuGet user interface, check the "Include prerelease"
-box).
-
-# Authentication
-
-When running on Google Cloud Platform, no action needs to be taken to authenticate.
-
-Otherwise, the simplest way of authenticating your API calls is to
-[download a service account JSON file](https://developers.google.com/identity/protocols/OAuth2ServiceAccount),
-then set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable to refer to it. The
-credentials will automatically be used to authenticate.
-
-Note that the default credentials obtained by running `gcloud auth application-default login` from the Cloud SDK
-are not suitable for use with this API. (They will work initially, but implicitly have a very
-small request quota.)
+{{auth}}
 
 # Getting started
 

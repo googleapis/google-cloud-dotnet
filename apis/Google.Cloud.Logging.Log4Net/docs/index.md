@@ -1,10 +1,10 @@
-# Google.Cloud.Logging.Log4Net
+{{title}}
 
 `Google.Cloud.Logging.Log4Net` is a .NET client library to integrate  [Google Stackdriver
 Logging](https://cloud.google.com/logging/) with
 [log4net](https://logging.apache.org/log4net/).
 
-# Installation
+{{installation}}
 
 Install the `Google.Cloud.Logging.Log4Net` package from NuGet. Add it to
 your project in the normal way (for example by right-clicking on the
@@ -13,15 +13,7 @@ Please ensure you enable pre-release packages (for example, in the
 Visual Studio NuGet user interface, check the "Include prerelease"
 box).
 
-# Authentication
-
-To authenticate all your API calls, first install and setup the
-[Google Cloud SDK](https://cloud.google.com/sdk/). After that is
-installed, run the following command in a Google Cloud SDK Shell:
-
-```sh
-> gcloud auth application-default login
-```
+{{auth}}
 
 # Getting started
 
