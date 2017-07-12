@@ -252,10 +252,16 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
                     _waitingTasks.Add(t_currentTask, task);
                 }
                 _runEvent.Set();
-                task.Wait(_disposedCts.Token);
-                lock (_lock)
+                try
                 {
-                    _waitingTasks.Remove(t_currentTask);
+                    task.Wait(_disposedCts.Token);
+                }
+                finally
+                {
+                    lock (_lock)
+                    {
+                        _waitingTasks.Remove(t_currentTask);
+                    }
                 }
             }
 

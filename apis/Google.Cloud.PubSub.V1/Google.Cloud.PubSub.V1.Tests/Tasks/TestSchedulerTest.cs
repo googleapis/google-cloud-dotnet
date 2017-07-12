@@ -103,5 +103,37 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
                 });
             }
         }
+
+        [Fact]
+        public void WaitCancelled()
+        {
+            using (var scheduler = new TestScheduler(threadCount: 2))
+            {
+                TaskHelper taskHelper = scheduler.TaskHelper;
+                scheduler.Run(() =>
+                {
+                    var task = scheduler.Delay(TimeSpan.FromSeconds(10), new CancellationToken(true));
+                    var ae = Assert.Throws<AggregateException>(() => taskHelper.Wait(task));
+                    Assert.IsAssignableFrom<OperationCanceledException>(ae.InnerException);
+                    Assert.True(task.IsCanceled);
+                });
+            }
+        }
+
+        [Fact]
+        public void WaitException()
+        {
+            using (var scheduler = new TestScheduler(threadCount: 2))
+            {
+                TaskHelper taskHelper = scheduler.TaskHelper;
+                scheduler.Run(() =>
+                {
+                    var task = taskHelper.Run(() => throw new NotImplementedException());
+                    var ae = Assert.Throws<AggregateException>(() => taskHelper.Wait(task));
+                    Assert.IsAssignableFrom<NotImplementedException>(ae.InnerException);
+                    Assert.True(task.IsFaulted);
+                });
+            }
+        }
     }
 }
