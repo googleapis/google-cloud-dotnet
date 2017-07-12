@@ -218,18 +218,18 @@ namespace Google.Cloud.PubSub.V1
         /// Create a <see cref="SimpleSubscriber"/> instance associated with the specified <see cref="SubscriptionName"/>,
         /// </summary>
         /// <param name="subscriptionName">The <see cref="SubscriptionName"/> to receive messages from.</param>
-        /// <param name="clientCreationsettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
+        /// <param name="clientCreationSettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
         /// <see cref="SubscriberClient"/>s.</param>
         /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="SimpleSubscriber"/>.</param>
         /// <returns>A <see cref="SimpleSubscriber"/> instance associated with the specified <see cref="SubscriptionName"/>.</returns>
-        public static async Task<SimpleSubscriber> CreateAsync(SubscriptionName subscriptionName, ClientCreationSettings clientCreationsettings = null, Settings settings = null)
+        public static async Task<SimpleSubscriber> CreateAsync(SubscriptionName subscriptionName, ClientCreationSettings clientCreationSettings = null, Settings settings = null)
         {
             GaxPreconditions.CheckNotNull(subscriptionName, nameof(subscriptionName));
-            clientCreationsettings?.Validate();
+            clientCreationSettings?.Validate();
             // Clone settings, just in case user modifies them and an await happens in this method
             settings = settings?.Clone() ?? new Settings();
-            var clientCount = clientCreationsettings?.ClientCount ?? Environment.ProcessorCount;
-            var channelCredentials = clientCreationsettings?.Credentials;
+            var clientCount = clientCreationSettings?.ClientCount ?? Environment.ProcessorCount;
+            var channelCredentials = clientCreationSettings?.Credentials;
             // Use default credentials if none given.
             if (channelCredentials == null)
             {
@@ -241,7 +241,7 @@ namespace Google.Cloud.PubSub.V1
                 channelCredentials = credentials.ToChannelCredentials();
             }
             // Create the channels and clients, and register shutdown functions for each channel
-            var endpoint = clientCreationsettings?.ServiceEndpoint ?? SubscriberClient.DefaultEndpoint;
+            var endpoint = clientCreationSettings?.ServiceEndpoint ?? SubscriberClient.DefaultEndpoint;
             var clients = new SubscriberClient[clientCount];
             var shutdowns = new Func<Task>[clientCount];
             // Set channel send/recv message size to unlimited. It defaults to ~4Mb which causes failures.
@@ -253,7 +253,7 @@ namespace Google.Cloud.PubSub.V1
             for (int i = 0; i < clientCount; i++)
             {
                 var channel = new Channel(endpoint.Host, endpoint.Port, channelCredentials, channelOptions);
-                clients[i] = SubscriberClient.Create(channel, clientCreationsettings?.SubscriberSettings);
+                clients[i] = SubscriberClient.Create(channel, clientCreationSettings?.SubscriberSettings);
                 shutdowns[i] = channel.ShutdownAsync;
             }
             Task Shutdown() => Task.WhenAll(shutdowns.Select(x => x()));
