@@ -163,18 +163,21 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
         [Fact]
         public async Task BulkMessagingAcksOnly()
         {
+            // Approx data: 500MB
             await RunBulkMessaging(100_000, 1, 10_000, 10_000, 0);
         }
 
         [Fact]
         public async Task BulkMessagingWithNacks()
         {
+            // Approx data: 500MB
             await RunBulkMessaging(100_000, 1, 10_000, 10_000, 10_000);
         }
 
         [Fact]
         public async Task MaximumSizedMessages()
         {
+            // Approx data: 500MB
             await RunBulkMessaging(50, 9_900_000, 9_990_000, 20, 0);
         }
 

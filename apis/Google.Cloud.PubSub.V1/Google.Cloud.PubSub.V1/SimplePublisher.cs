@@ -237,9 +237,15 @@ namespace Google.Cloud.PubSub.V1
             var endpoint = clientCreationsettings?.ServiceEndpoint ?? PublisherClient.DefaultEndpoint;
             var clients = new PublisherClient[clientCount];
             var shutdowns = new Func<Task>[clientCount];
+            // Set channel send/recv message size to unlimited. It defaults to ~4Mb which causes failures.
+            var channelOptions = new[]
+            {
+                new ChannelOption(ChannelOptions.MaxSendMessageLength, -1),
+                new ChannelOption(ChannelOptions.MaxReceiveMessageLength, -1),
+            };
             for (int i = 0; i < clientCount; i++)
             {
-                var channel = new Channel(endpoint.Host, endpoint.Port, channelCredentials);
+                var channel = new Channel(endpoint.Host, endpoint.Port, channelCredentials, channelOptions);
                 clients[i] = PublisherClient.Create(channel, clientCreationsettings?.PublisherSettings);
                 shutdowns[i] = channel.ShutdownAsync;
             }
@@ -248,7 +254,10 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Create a <see cref="SimplePublisher"/> instance associated with the specified <see cref="TopicName"/>,
+        /// Create a <see cref="SimplePublisher"/> instance associated with the specified <see cref="TopicName"/>.
+        /// The gRPC <see cref="Channel"/>s underlying the provided <see cref="SubscriberClient"/>s must have their
+        /// maximum send and maximum receive sizes set to unlimited, otherwise performance will be severly affected,
+        /// possibly causing a deadlock.
         /// </summary>
         /// <param name="topicName">The <see cref="TopicName"/> to publish messages to.</param>
         /// <param name="clients">The <see cref="PublisherClient"/>s to use in a <see cref="SimplePublisher"/>.
