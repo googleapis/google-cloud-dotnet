@@ -28,7 +28,7 @@ namespace Google.Cloud.Spanner.V1
     /// When requesting a pooled session, the request can include TransactionOptions which
     /// is then used as a key in the SessionPool.
     /// </summary>
-    internal static class TransactionPool
+    public static class TransactionPool
     {
         // Holds transaction state on sessions, including the last created transaction and options used.
         static readonly ConcurrentDictionary<Session, SessionInfo> s_sessionInfoTable = new ConcurrentDictionary<Session, SessionInfo>();
@@ -108,7 +108,7 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         /// <param name="session"></param>
         /// <returns></returns>
-        public static TransactionOptions GetLastUsedTransactionOptions(this Session session)
+        internal static TransactionOptions GetLastUsedTransactionOptions(this Session session)
         {
             SessionInfo info;
             if (s_sessionInfoTable.TryGetValue(session, out info))
@@ -118,7 +118,7 @@ namespace Google.Cloud.Spanner.V1
             return null;
         }
 
-        public static bool IsPreWarmedTransactionReady(this Session session)
+        internal static bool IsPreWarmedTransactionReady(this Session session)
         {
             SessionInfo info;
             if (s_sessionInfoTable.TryGetValue(session, out info))
@@ -135,7 +135,7 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         /// <param name="session"></param>
         /// <param name="client"></param>
-        public static void StartPreWarmTransaction(this SpannerClient client, Session session)
+        internal static void StartPreWarmTransaction(this SpannerClient client, Session session)
         {
             TransactionOptions options = session.GetLastUsedTransactionOptions();
             var info = s_sessionInfoTable.GetOrAdd(session, s => new SessionInfo(client));

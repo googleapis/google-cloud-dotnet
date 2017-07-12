@@ -14,14 +14,18 @@
 
 using Grpc.Core;
 using System;
-using System.Linq;
 using System.Threading.Tasks;
-using Google.Api.Gax;
 
 namespace Google.Cloud.Spanner.V1
 {
-    internal static class ExecuteHelper
+    /// <summary>
+    /// Helper class to wrap operations.
+    /// </summary>
+    public static class ExecuteHelper
     {
+        /// <summary>
+        /// Waits for <paramref name="task"/> to complete, handling session expiry by marking the session appropriately.
+        /// </summary>
         public static async Task<T> WithSessionChecking<T>(this Task<T> task, Func<Session> sessionFunc)
         {
             try
@@ -34,6 +38,9 @@ namespace Google.Cloud.Spanner.V1
             }
         }
 
+        /// <summary>
+        /// Waits for <paramref name="task"/> to complete, handling session expiry by marking the session appropriately.
+        /// </summary>
         public static async Task WithSessionChecking(this Task task, Func<Session> sessionFunc)
         {
             try
@@ -46,7 +53,7 @@ namespace Google.Cloud.Spanner.V1
             }
         }
 
-        internal static bool CheckForSessionExpiredError(this RpcException rpcException, Func<Session> sessionFunc)
+        private static bool CheckForSessionExpiredError(this RpcException rpcException, Func<Session> sessionFunc)
         {
             if (rpcException.IsSessionExpiredError())
             {
@@ -55,7 +62,10 @@ namespace Google.Cloud.Spanner.V1
             return false;
         }
 
-        internal static bool IsSessionExpiredError(this RpcException rpcException)
+        /// <summary>
+        /// Determines whether <paramref name="rpcException"/> is due to a session expiry.
+        /// </summary>
+        public static bool IsSessionExpiredError(this RpcException rpcException)
         {
             return rpcException != null && rpcException.Status.StatusCode == StatusCode.NotFound &&
                    rpcException.Message.Contains("Session not found");
