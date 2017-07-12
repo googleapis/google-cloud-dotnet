@@ -75,8 +75,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 Match.Create<IEnumerable<TraceProto>>(
                     t => IsValidSpan(t.Single().Spans.Single(), "span-name"))));
 
-            tracer.StartSpan("span-name");
-            tracer.EndSpan();
+            tracer.StartSpan("span-name").Dispose();
             mockConsumer.VerifyAll();
         }
 
@@ -90,7 +89,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 Match.Create<IEnumerable<TraceProto>>(
                     t => IsValidSpan(t.Single().Spans.Single(), "span-name"))));
 
-            using (tracer.StartSpan("span-name")) { }
+            tracer.StartSpan("span-name").Dispose();
             mockConsumer.VerifyAll();
         }
 
@@ -104,8 +103,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 Match.Create<IEnumerable<TraceProto>>(
                     t => IsValidSpan(t.Single().Spans.Single(), "span-name", 123))));
 
-            tracer.StartSpan("span-name");
-            tracer.EndSpan();
+            tracer.StartSpan("span-name").Dispose();
             mockConsumer.VerifyAll();
         }
 
@@ -124,8 +122,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                         && TraceUtils.IsValidAnnotation(t.ElementAt(0).Spans[0], annotation))));
 
             var options = StartSpanOptions.Create(SpanKind.RpcClient, annotation);
-            tracer.StartSpan("span-name", options);
-            tracer.EndSpan();
+            tracer.StartSpan("span-name", options).Dispose();
             mockConsumer.VerifyAll();
         }
 
@@ -143,9 +140,10 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                     t => IsValidSpan(t.Single().Spans.Single(), "span-name") &&
                         TraceUtils.IsValidAnnotation(t.ElementAt(0).Spans[0], annotation))));
 
-            tracer.StartSpan("span-name");
-            tracer.AnnotateSpan(annotation);
-            tracer.EndSpan();
+            using (tracer.StartSpan("span-name"))
+            {
+                tracer.AnnotateSpan(annotation);
+            }               
             mockConsumer.VerifyAll();
         }
 
@@ -163,9 +161,10 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                     t => IsValidSpan(t.Single().Spans.Single(), "span-name") &&
                         !string.IsNullOrWhiteSpace(t.ElementAt(0).Spans[0].Labels[TraceLabels.StackTrace]))));
 
-            tracer.StartSpan("span-name");
-            tracer.SetStackTrace(FilledStackTrace);
-            tracer.EndSpan();
+            using (tracer.StartSpan("span-name"))
+            {
+                tracer.SetStackTrace(FilledStackTrace);
+            }                
             mockConsumer.VerifyAll();
         }
 
@@ -240,18 +239,21 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             };
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
 
-            tracer.StartSpan("root");
-            tracer.StartSpan("child-one");
-            tracer.SetStackTrace(FilledStackTrace);
-            tracer.EndSpan();
-            tracer.StartSpan("child-two");
-            tracer.StartSpan("grandchild-one", StartSpanOptions.Create(SpanKind.RpcClient));
-            tracer.EndSpan();
-            tracer.StartSpan("grandchild-two");
-            tracer.AnnotateSpan(annotation);
-            tracer.EndSpan();
-            tracer.EndSpan();
-            tracer.EndSpan();
+            using (tracer.StartSpan("root"))
+            {
+                using (tracer.StartSpan("child-one"))
+                {
+                    tracer.SetStackTrace(FilledStackTrace);
+                }
+                using (tracer.StartSpan("child-two"))
+                {
+                    using (tracer.StartSpan("grandchild-one", StartSpanOptions.Create(SpanKind.RpcClient))) { }
+                    using (tracer.StartSpan("grandchild-two"))
+                    {
+                        tracer.AnnotateSpan(annotation);
+                    }
+                }
+            }
             mockConsumer.VerifyAll();
         }
 
@@ -496,16 +498,178 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         }
 
         [Fact]
+        public async Task DisjointThreads()
+        {
+            var mockConsumer = new Mock<IConsumer<TraceProto>>();
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
+            mockConsumer.Setup(c => c.Receive(
+                Match.Create<IEnumerable<TraceProto>>(
+                    tProto => IsValidSpan(tProto.Single().Spans.Single(), "span-name"))));
+
+            ISpan span = null;
+            await RunInDisjointThreads(() => span = tracer.StartSpan("span-name"), () => span.Dispose());
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
+        public async Task DisjointThreads_Annotate()
+        {
+            var mockConsumer = new Mock<IConsumer<TraceProto>>();
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
+            mockConsumer.Setup(c => c.Receive(
+                Match.Create<IEnumerable<TraceProto>>(
+                    tProto => IsValidSpan(tProto.Single().Spans.Single(), "span-name"))));
+
+            var annotation = new Dictionary<string, string> { { "new", "label" } };
+
+            Predicate<IEnumerable<TraceProto>> matcher = t =>
+            {
+                var singleSpan = t.Single().Spans.Single();
+                return IsValidSpan(singleSpan, "span-name") &&
+                    string.IsNullOrWhiteSpace(singleSpan.Labels[TraceLabels.StackTrace]) &&
+                    TraceUtils.IsValidAnnotation(singleSpan, annotation);
+            };
+            mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
+
+            ISpan span = null;
+            await RunInDisjointThreads(() => span = tracer.StartSpan("span-name"), 
+                () =>
+                {
+                    span.SetStackTrace(FilledStackTrace);
+                    span.AnnotateSpan(annotation);
+                    span.Dispose();
+                });
+            mockConsumer.Verify();
+        }
+
+        [Fact]
+        public async Task DisjointThreads_Annotate_Fail()
+        {
+            var mockConsumer = new Mock<IConsumer<TraceProto>>();
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
+
+            ISpan span = null;
+            await RunInDisjointThreads(() => span = tracer.StartSpan("span-name"), () =>
+            {
+                tracer.SetStackTrace(FilledStackTrace);
+                span.Dispose();
+            }, new InvalidOperationException());
+            mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<TraceProto>>()), Times.Never);
+        }
+
+        [Fact]
+        public async Task DisjointThreads_MultipleSpans()
+        {
+            var mockConsumer = new Mock<IConsumer<TraceProto>>();
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
+
+            ISpan span = null;
+
+            Predicate<IEnumerable<TraceProto>> singleChild = t =>
+            {
+                var singleSpan = t.Single().Spans.Single();
+                return IsValidSpan(singleSpan, "child-two", span.SpanId());
+            };
+            Predicate<IEnumerable<TraceProto>> childParent = t =>
+            {
+                var spans = t.Single().Spans;
+                return spans.Count == 2 &&
+                    IsValidSpan(spans[0], "child-one", spans[1].SpanId) &&
+                    IsValidSpan(spans[1], "parent");
+            };
+            mockConsumer.Setup(c => c.Receive(Match.Create(singleChild)));
+            mockConsumer.Setup(c => c.Receive(Match.Create(childParent)));
+
+            await RunInDisjointThreads(() =>
+            {
+                span = tracer.StartSpan("parent");
+                tracer.StartSpan("child-one").Dispose();
+            }, () =>
+            {
+                var tracer2 = span.CreateManagedTracer();
+                tracer2.StartSpan("child-two").Dispose();
+                span.Dispose();
+            });
+
+            mockConsumer.VerifyAll();
+        }
+
+        /// <summary>
+        /// Runs two actions in separate disjoint threads.  The first thread will always finish before
+        /// the second.
+        /// </summary>
+        /// <param name="actionOne">The first action to run.</param>
+        /// <param name="actionTwo">The second action to run.  If expectedException is not null, this action
+        ///     is expected to throw an exception with the type of expectedException.</param>
+        /// <param name="expectedException">Optional, an exception excepted to be thrown in actionTwo.</param>
+        private async Task RunInDisjointThreads(Action actionOne, Action actionTwo, Exception expectedException = null)
+        {
+            var tcs1 = new TaskCompletionSource<bool>();
+            var tcs2 = new TaskCompletionSource<bool>();
+            Exception ex = null;
+            Thread t = new Thread(() =>
+            {
+                try
+                {
+                    actionOne();
+                }
+                catch (Exception e)
+                {
+                    ex = e;
+                    throw;
+                }
+                finally
+                {
+                    tcs1.SetResult(true);
+                }
+            });
+            Thread t2 = new Thread(() =>
+            {
+                try
+                {
+                    if (expectedException == null)
+                    {
+                        var temp = tcs1.Task.Result;
+                        actionTwo();
+                    }
+                    else
+                    {
+                        Assert.Throws(expectedException.GetType(), actionTwo);
+                    }
+                }
+                catch (Exception e)
+                {
+                    ex = e;
+                    throw;
+                }
+                finally
+                {
+                    tcs2.SetResult(true);
+                }
+            });
+
+            t.Start();
+            Thread.Sleep(TimeSpan.FromSeconds(2));
+            t2.Start();
+
+            await Task.WhenAll(tcs1.Task, tcs2.Task);
+            if (expectedException == null)
+            {
+                Assert.Null(ex);
+            }
+        }
+
+        [Fact]
         public void IncompleteSpans()
         {
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
             var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
 
-            tracer.StartSpan("span-name-0");
-            tracer.StartSpan("span-name-1");
-            tracer.StartSpan("span-name-2");
-            tracer.EndSpan();
-            tracer.EndSpan();
+            var one = tracer.StartSpan("span-name-0");
+            var two = tracer.StartSpan("span-name-1");
+            var three = tracer.StartSpan("span-name-2");
+            three.Dispose();
+            two.Dispose();
             mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<TraceProto>>()), Times.Never());
         }
 
@@ -519,8 +683,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                  Match.Create<IEnumerable<TraceProto>>(
                      t => IsValidSpan(t.Single().Spans.Single(), "span-name-0"))));
 
-            tracer.StartSpan("span-name-0");
-            tracer.EndSpan();
+            tracer.StartSpan("span-name-0").Dispose();
 
             mockConsumer.VerifyAll();
 
@@ -528,17 +691,18 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 Match.Create<IEnumerable<TraceProto>>(
                     t => IsValidSpan(t.Single().Spans.Single(), "span-name-1"))));
 
-            tracer.StartSpan("span-name-1");
-            tracer.EndSpan();
+            tracer.StartSpan("span-name-1").Dispose();
 
             mockConsumer.VerifyAll();
         }
 
         [Fact]
-        public void EndSpan_NoAvailableSpan()
+        public void Dispose_Twice_NoAvailableSpan()
         {
             var tracer = SimpleManagedTracer.Create(UnusedConsumer, ProjectId, TraceId);
-            Assert.Throws<InvalidOperationException>(() => tracer.EndSpan());
+            var span = tracer.StartSpan("span");
+            span.Dispose();
+            Assert.Throws<InvalidOperationException>(() => span.Dispose());
         }
 
         [Fact]

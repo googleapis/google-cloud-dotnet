@@ -30,17 +30,9 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="name">The name of the span, cannot be null.</param>
         /// <param name="options">The span options to override default values.</param>
         /// <returns>
-        /// An <see cref="IDisposable"/> that will end the current span when disposed.  If the span
-        /// cannot end in the current scope, disposal can be skipped and <see cref="EndSpan"/> can
-        /// be called at a later time (this is not recommended and should be avoided if possible).
+        /// An <see cref="ISpan"/> that will end the current span when disposed.
         /// </returns>
-        IDisposable StartSpan(string name, StartSpanOptions options = null);
-
-        /// <summary>
-        /// Ends the current span if not ended by the <see cref="IDisposable"/> from
-        /// <see cref="StartSpan(string, StartSpanOptions)"/>.
-        /// </summary>
-        void EndSpan();
+        ISpan StartSpan(string name, StartSpanOptions options = null);
 
         /// <summary>
         /// Runs the function in a span and will add a stacktrace from a thrown
@@ -70,7 +62,6 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="options">The span options to override default values.</param>
         /// <returns>The result from the call to <paramref name="func"/></returns>
         Task<T> RunInSpanAsync<T>(Func<Task<T>> func, string name, StartSpanOptions options = null);
-
 
         /// <summary>
         /// Annotates the current span with the given labels. 

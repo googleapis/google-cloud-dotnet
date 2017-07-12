@@ -27,9 +27,39 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// A disposable class that does nothing when disposed.
         /// </summary>
-        private class NullDisposable : IDisposable
+        internal class Span : ISpan
         {
-            public void Dispose() { }
+            private bool _disposed = false;
+
+            /// <summary>
+            /// Does nothing.
+            /// </summary>
+            public void AnnotateSpan(Dictionary<string, string> labels) { }
+
+            /// <summary>
+            /// Returns a <see cref="NullManagedTracer"/>.
+            /// </summary>
+            public IManagedTracer CreateManagedTracer() => NullManagedTracer.Instance;
+
+            /// <summary>
+            /// Will cause <see cref="Disposed"/> to return 'true'.
+            /// </summary>
+            public void Dispose() => _disposed = true;
+
+            /// <summary>
+            /// Does nothing.
+            /// </summary>
+            public void SetStackTrace(StackTrace stackTrace) {}
+
+            /// <summary>
+            /// Always returns 0.
+            /// </summary>
+            public ulong SpanId() => 0;
+
+            /// <summary>
+            /// Returns true if <see cref="Dispose"/> has been called.
+            /// </summary>
+            public bool Disposed() => _disposed;
         }
 
         /// <summary>
@@ -41,12 +71,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// Does nothing.
         /// </summary>
         /// <returns>Returns an <see cref="IDisposable"/> that does nothing when disposed.</returns>
-        public IDisposable StartSpan(string name, StartSpanOptions options = null) => new NullDisposable();
-
-        /// <summary>
-        /// Does nothing.
-        /// </summary>
-        public void EndSpan() { }
+        public ISpan StartSpan(string name, StartSpanOptions options = null) => new Span();
 
         /// <summary>
         /// Calls <paramref name="action"/>.

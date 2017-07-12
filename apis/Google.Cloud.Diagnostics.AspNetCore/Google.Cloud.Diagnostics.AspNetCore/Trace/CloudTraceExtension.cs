@@ -58,11 +58,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <code>
     /// public void SomeFunction(IManagedTracer tracer)
     /// {
-    ///     tracer.StartSpan(nameof(SomeFunction));
-    ///     ...
-    ///     // Do work.
-    ///     ...
-    ///     tracer.EndSpan();
+    ///     using(tracer.StartSpan(nameof(SomeFunction)))
+    ///     {
+    ///         ...
+    ///         // Do work.
+    ///         ...
+    ///     }
     /// }
     /// </code>
     /// </example>

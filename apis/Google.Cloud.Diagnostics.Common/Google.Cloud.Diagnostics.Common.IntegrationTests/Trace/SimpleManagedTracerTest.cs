@@ -85,9 +85,10 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
             var consumer = CreateGrpcTraceConsumer();
             var tracer = CreateSimpleManagedTracer(consumer);
 
-            tracer.StartSpan(rootSpanName);
-            BlockUntilClockTick();
-            tracer.EndSpan();
+            using (tracer.StartSpan(rootSpanName))
+            {
+                BlockUntilClockTick();
+            }
 
             TraceProto trace = _polling.GetTrace(rootSpanName, _startTime);
             Assert.NotNull(trace);
@@ -113,10 +114,11 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                 { "key-five", label },
             };
 
-            tracer.StartSpan(rootSpanName);
-            BlockUntilClockTick();
-            tracer.AnnotateSpan(annotation);
-            tracer.EndSpan();
+            using (tracer.StartSpan(rootSpanName))
+            {
+                BlockUntilClockTick();
+                tracer.AnnotateSpan(annotation);
+            }
 
             TraceProto trace = _polling.GetTrace(rootSpanName, _startTime);
             Assert.NotNull(trace);
@@ -131,9 +133,10 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                 CreateGrpcTraceConsumer(), MessageSizer<TraceProto>.GetSize, BufferOptions.DefaultBufferSize);
             var tracer = CreateSimpleManagedTracer(consumer);
 
-            tracer.StartSpan(rootSpanName);
-            BlockUntilClockTick();
-            tracer.EndSpan();
+            using (tracer.StartSpan(rootSpanName))
+            {
+                BlockUntilClockTick();
+            }
 
             TraceProto trace = _polling.GetTrace(rootSpanName, _startTime, false);
             Assert.Null(trace);
@@ -152,10 +155,11 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                 { "some-key", "some-value" }
             };
 
-            tracer.StartSpan(rootSpanName);
-            BlockUntilClockTick();
-            tracer.AnnotateSpan(annotation);
-            tracer.EndSpan();
+            using (tracer.StartSpan(rootSpanName))
+            {
+                BlockUntilClockTick();
+                tracer.AnnotateSpan(annotation);
+            }
 
             TraceProto trace = _polling.GetTrace(rootSpanName, _startTime);
             Assert.NotNull(trace);
@@ -170,10 +174,11 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
             var consumer = CreateGrpcTraceConsumer();
             var tracer = CreateSimpleManagedTracer(consumer);
 
-            tracer.StartSpan(rootSpanName);
-            BlockUntilClockTick();
-            tracer.SetStackTrace(new StackTrace(CreateException(), true));
-            tracer.EndSpan();
+            using (tracer.StartSpan(rootSpanName))
+            {
+                BlockUntilClockTick();
+                tracer.SetStackTrace(new StackTrace(CreateException(), true));
+            }
 
             TraceProto trace = _polling.GetTrace(rootSpanName, _startTime);
             Assert.NotNull(trace);
@@ -197,23 +202,27 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                 { "annotation-key", "annotation-value" }
             };
 
-            tracer.StartSpan(rootSpanName);
-            BlockUntilClockTick();
-            tracer.StartSpan("child-one");
-            tracer.SetStackTrace(new StackTrace(CreateException(), true));
-            BlockUntilClockTick();
-            tracer.EndSpan();
-            tracer.StartSpan("child-two");
-            BlockUntilClockTick();
-            tracer.StartSpan("grandchild-one", StartSpanOptions.Create(SpanKind.RpcClient));
-            BlockUntilClockTick();
-            tracer.EndSpan();
-            tracer.StartSpan("grandchild-two");
-            BlockUntilClockTick();
-            tracer.AnnotateSpan(annotation);
-            tracer.EndSpan();
-            tracer.EndSpan();
-            tracer.EndSpan();
+            using (tracer.StartSpan(rootSpanName))
+            {
+                BlockUntilClockTick();
+                using (tracer.StartSpan("child-one"))
+                {
+                    tracer.SetStackTrace(new StackTrace(CreateException(), true));
+                    BlockUntilClockTick();
+                }
+                using (tracer.StartSpan("child-two")) { 
+                    BlockUntilClockTick();
+                    using (tracer.StartSpan("grandchild-one", StartSpanOptions.Create(SpanKind.RpcClient)))
+                    {
+                        BlockUntilClockTick();
+                    }
+                    using (tracer.StartSpan("grandchild-two"))
+                    {
+                        BlockUntilClockTick();
+                        tracer.AnnotateSpan(annotation);
+                    }
+                }
+            }
 
             TraceProto trace = _polling.GetTrace(rootSpanName, _startTime);
             Assert.NotNull(trace);
@@ -248,13 +257,13 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
             var consumer = CreateGrpcTraceConsumer();
             var tracer = CreateSimpleManagedTracer(consumer);
 
-            tracer.StartSpan(rootSpanName);
-            tracer.StartSpan("span-name-1");
+            var one = tracer.StartSpan(rootSpanName);
+            var two = tracer.StartSpan("span-name-1");
             BlockUntilClockTick();
-            tracer.StartSpan("span-name-2");
+            var three = tracer.StartSpan("span-name-2");
             BlockUntilClockTick();
-            tracer.EndSpan();
-            tracer.EndSpan();
+            three.Dispose();
+            two.Dispose();
 
             TraceProto trace = _polling.GetTrace(rootSpanName, _startTime, false);
             Assert.Null(trace);

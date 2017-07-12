@@ -51,7 +51,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             }
 
             mockTracer.Verify(t => t.StartSpan(It.IsAny<string>(), null), Times.Never());
-            mockTracer.Verify(t => t.EndSpan(), Times.Never());
         }
 
         [Fact]
