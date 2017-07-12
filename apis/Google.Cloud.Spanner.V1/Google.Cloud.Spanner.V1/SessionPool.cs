@@ -38,7 +38,7 @@ namespace Google.Cloud.Spanner.V1
     /// and it will incur a penalty on other Spanner processes because it will be an hour before the server frees the session if 
     /// it's not properly deleted.
     /// </summary>
-    internal sealed class SessionPool : IDisposable
+    public sealed class SessionPool : IDisposable
     {
         public static SessionPool Default { get; } = new SessionPool();
 

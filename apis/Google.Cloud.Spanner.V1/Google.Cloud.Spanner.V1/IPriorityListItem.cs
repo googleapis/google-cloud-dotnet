@@ -16,8 +16,15 @@ using System;
 
 namespace Google.Cloud.Spanner.V1
 {
-    internal interface IPriorityListItem<in T> : IComparable<T>
+    /// <summary>
+    /// An item in a <see cref="PriorityList{T}"/>.
+    /// </summary>
+    /// <typeparam name="T">The item type; generally the same as the type implementing the interface.</typeparam>
+    public interface IPriorityListItem<in T> : IComparable<T>
     {
+        /// <summary>
+        /// Raised when the priority of the item has changed.
+        /// </summary>
         event EventHandler<EventArgs> PriorityChanged;
     }
 }

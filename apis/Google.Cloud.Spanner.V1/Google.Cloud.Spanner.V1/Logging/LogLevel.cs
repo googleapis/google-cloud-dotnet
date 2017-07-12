@@ -15,9 +15,9 @@
 namespace Google.Cloud.Spanner.V1.Logging
 {
     /// <summary>
-    /// 
+    /// Log levels for Spanner client internal logging.
     /// </summary>
-    internal enum LogLevel
+    public enum LogLevel
     {
         /// <summary>
         /// 

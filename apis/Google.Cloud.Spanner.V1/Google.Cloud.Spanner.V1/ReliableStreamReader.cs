@@ -31,7 +31,7 @@ namespace Google.Cloud.Spanner.V1 {
     ///     Provides streaming access to a Spanner SQL query that automatically retries, handles
     ///     chunking and recoverable errors.
     /// </summary>
-    internal sealed class ReliableStreamReader : IDisposable
+    public sealed class ReliableStreamReader : IDisposable
     {
         private AsyncServerStreamingCall<PartialResultSet> _currentCall;
         private readonly SpannerClient _spannerClient;
@@ -67,6 +67,7 @@ namespace Google.Cloud.Spanner.V1 {
         /// </summary>
         public Session Session => _session;
 
+        /// <inheritdoc />
         public void Dispose() {
             Close();
             GC.SuppressFinalize(this);
