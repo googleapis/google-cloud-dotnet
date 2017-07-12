@@ -199,9 +199,9 @@ box).";
 When running on Google Cloud Platform, no action needs to be taken to authenticate.
 
 Otherwise, the simplest way of authenticating your API calls is to
-[download a service account JSON file](https://developers.google.com/identity/protocols/OAuth2ServiceAccount),
-then set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable to refer to it. The
-credentials will automatically be used to authenticate.";
+download a service account JSON file then set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable to refer to it.
+The credentials will automatically be used to authenticate. See the [Getting Started With
+Authentication](https://cloud.google.com/docs/authentication/getting-started) guide for more details.";
 
             return text
                 .Replace("{{title}}", title)
