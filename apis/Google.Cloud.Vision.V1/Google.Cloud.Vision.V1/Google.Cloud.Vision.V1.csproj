@@ -28,9 +28,5 @@
     <PackageReference Include="Grpc.Core" Version="1.4.0" PrivateAssets="None" />
     <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="*.jpg" />
-    <EmbeddedResource Include="*.png" />
-  </ItemGroup>
   <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
 </Project>
