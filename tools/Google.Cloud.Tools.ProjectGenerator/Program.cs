@@ -24,7 +24,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
     public class Program
     {
         private const string GrpcVersion = "1.4.0";
-        private const string GaxVersion = "2.0.0";
+        private const string StableGaxVersion = "2.0.0";
+        private const string PrereleaseGaxVersion = "2.1.0-beta01";
 
         private const string AnalyzersPath = @"..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll";
         private const string StripDesktopOnNonWindows = @"..\..\..\StripDesktopOnNonWindows.xml";
@@ -102,11 +103,11 @@ namespace Google.Cloud.Tools.ProjectGenerator
             switch (api.Type)
             {
                 case "rest":
-                    dependencies.Add("Google.Api.Gax.Rest", GaxVersion);
+                    dependencies.Add("Google.Api.Gax.Rest", api.IsReleaseVersion ? StableGaxVersion : PrereleaseGaxVersion);
                     targetFrameworks = targetFrameworks ?? "netstandard1.3;net45";
                     break;
                 case "grpc":
-                    dependencies.Add("Google.Api.Gax.Grpc", GaxVersion);
+                    dependencies.Add("Google.Api.Gax.Grpc", api.IsReleaseVersion ? StableGaxVersion : PrereleaseGaxVersion);
                     dependencies.Add("Grpc.Core", GrpcVersion);
                     targetFrameworks = targetFrameworks ?? "netstandard1.5;net45";
                     break;
@@ -136,7 +137,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 new XElement("RepositoryType", "git"),
                 new XElement("RepositoryUrl", "https://github.com/GoogleCloudPlatform/google-cloud-dotnet")
             );
-            WriteProjectFile(api, directory, propertyGroup, CreateDependenciesElement(dependencies));
+            WriteProjectFile(api, directory, propertyGroup, CreateDependenciesElement(dependencies, api.IsReleaseVersion));
         }
 
         private static void GenerateTestProject(ApiMetadata api, string directory)
@@ -163,7 +164,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                     // See https://github.com/googleapis/toolkit/issues/1271 - when that's fixed, we can remove this.
                     new XElement("NoWarn", "1701;1702;1705;4014")
                 );
-            var itemGroup = CreateDependenciesElement(dependencies);
+            var itemGroup = CreateDependenciesElement(dependencies, api.IsReleaseVersion);
             // Allow test projects to use dynamic...
             itemGroup.Add(new XElement("Reference",
                 new XAttribute("Condition", "'$(TargetFramework)' == 'net452'"),
@@ -227,14 +228,14 @@ namespace Google.Cloud.Tools.ProjectGenerator
 
         // Dependencies with an empty value will be treated as project dependencies;
         // dependencies with a value will be treated as package dependencies with the value as the version.
-        private static XElement CreateDependenciesElement(IDictionary<string, string> dependencies) =>
+        private static XElement CreateDependenciesElement(IDictionary<string, string> dependencies, bool stableRelease) =>
             new XElement("ItemGroup",
                 // Use the GAX version for all otherwise-unversioned GAX dependencies
                 dependencies
                     .Where(d => d.Value == "" && d.Key.StartsWith("Google.Api.Gax"))
                     .Select(d => new XElement("PackageReference",
                         new XAttribute("Include", d.Key),
-                        new XAttribute("Version", GaxVersion))),
+                        new XAttribute("Version", stableRelease ? StableGaxVersion : PrereleaseGaxVersion))),
                 dependencies
                     .Where(d => d.Value == "" && !d.Key.StartsWith("Google.Api.Gax"))
                     .Select(d => new XElement("ProjectReference", new XAttribute("Include", GenerateProjectReference(d.Key)))),
