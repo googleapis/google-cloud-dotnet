@@ -215,7 +215,10 @@ namespace Google.Cloud.PubSub.V1
         public static TimeSpan DefaultAckExtensionWindow { get; } = TimeSpan.FromSeconds(2);
 
         /// <summary>
-        /// Create a <see cref="SimpleSubscriber"/> instance associated with the specified <see cref="SubscriptionName"/>,
+        /// Create a <see cref="SimpleSubscriber"/> instance associated with the specified <see cref="SubscriptionName"/>.
+        /// The default <paramref name="settings"/> and <paramref name="clientCreationSettings"/> are suitable for machines with
+        /// high network bandwidth (e.g. Google Compute Engine instances). If running with more limited network bandwidth, some
+        /// settings may need changing; especially <see cref="Settings.StreamAckDeadline"/>.
         /// </summary>
         /// <param name="subscriptionName">The <see cref="SubscriptionName"/> to receive messages from.</param>
         /// <param name="clientCreationSettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
@@ -265,6 +268,9 @@ namespace Google.Cloud.PubSub.V1
         /// The gRPC <see cref="Channel"/>s underlying the provided <see cref="SubscriberClient"/>s must have their
         /// maximum send and maximum receive sizes set to unlimited, otherwise performance will be severly affected,
         /// possibly causing a deadlock.
+        /// The default <paramref name="settings"/> are suitable for machines with high network bandwidth (e.g. Google
+        /// Compute Engine instances). If running with more limited network bandwidth, some settings may need changing;
+        /// especially <see cref="Settings.StreamAckDeadline"/>.
         /// </summary>
         /// <param name="subscriptionName">The <see cref="SubscriptionName"/> to receive messages from.</param>
         /// <param name="clients">The <see cref="SubscriberClient"/>s to use in a <see cref="SimpleSubscriber"/>.
