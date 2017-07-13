@@ -8,7 +8,7 @@
     <title>Google.Cloud.Logging.V2 | Google.Cloud.Logging.V2 </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google.Cloud.Logging.V2 | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -61,9 +61,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="googlecloudloggingv2">Google.Cloud.Logging.V2</h1>
 
-<p><code>Google.Cloud.Logging.V2</code> is a .NET client library for <a href="https://cloud.google.com/logging/">Google Stackdriver
-Logging</a>. Integration with
-<a href="https://logging.apache.org/log4net/">log4net</a> is provided by
+<p><code>Google.Cloud.Logging.V2</code> is a.NET client library for the <a href="https://cloud.google.com/logging/">Stackdriver Logging API</a>.
+Integration with <a href="https://logging.apache.org/log4net/">log4net</a> is provided by
 the <a href="../Google.Cloud.Logging.Log4Net/index.html">Google.Cloud.Logging.Log4Net</a> package.</p>
 <h1 id="installation">Installation</h1>
 <p>Install the <code>Google.Cloud.Logging.V2</code> package from NuGet. Add it to
@@ -72,11 +71,12 @@ project in Visual Studio and choosing &quot;Manage NuGet Packages...&quot;).</p>
 <p>If you wish to use the log4net integration, install the
 <code>Google.Cloud.Logging.Log4Net</code> package in the same way.</p>
 <h1 id="authentication">Authentication</h1>
-<p>To authenticate all your API calls, first install and setup the
-<a href="https://cloud.google.com/sdk/">Google Cloud SDK</a>. After that is
-installed, run the following command in a Google Cloud SDK Shell:</p>
-<pre><code class="lang-sh">&gt; gcloud auth application-default login
-</code></pre><h1 id="support-from-third-party-libraries">Support from third party libraries</h1>
+<p>When running on Google Cloud Platform, no action needs to be taken to authenticate.</p>
+<p>Otherwise, the simplest way of authenticating your API calls is to
+download a service account JSON file then set the <code>GOOGLE_APPLICATION_CREDENTIALS</code> environment variable to refer to it.
+The credentials will automatically be used to authenticate. See the <a href="https://cloud.google.com/docs/authentication/getting-started">Getting Started With
+Authentication</a> guide for more details.</p>
+<h1 id="support-from-third-party-libraries">Support from third party libraries</h1>
 <p>The <a href="https://github.com/logary/logary">Logary</a> logging library has a target
 supporting Google Stackdriver logging. Install the <a href="https://www.nuget.org/packages/Logary.Targets.Stackdriver">NuGet
 package</a>

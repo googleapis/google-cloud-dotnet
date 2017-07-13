@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DatastoreDb
    | Google.Cloud.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Cloud.Datastore.V1.DatastoreDb">
   
   
-  <h1 id="Google_Cloud_Datastore_V1_DatastoreDb" data-uid="Google.Cloud.Datastore.V1.DatastoreDb">Class DatastoreDb
+  <h1 id="Google_Cloud_Datastore_V1_DatastoreDb" data-uid="Google.Cloud.Datastore.V1.DatastoreDb" class="text-break">Class DatastoreDb
   </h1>
   <div class="markdown level0 summary"><p>An abstraction over <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html">DatastoreClient</a> to simplify operations. Use the <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Create_System_String_System_String_Google_Cloud_Datastore_V1_DatastoreClient_">Create(String, String, DatastoreClient)</a>
 method to obtain an instance of this class.</p>
@@ -589,7 +589,7 @@ number of keys, partition the allocations into batches. See
     <tbody>
       <tr>
         <td><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a></td>
-        <td><p>A new <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a> for this object&#39;s project.</p>
+        <td><p>A new <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a> for this object&apos;s project.</p>
 </td>
       </tr>
     </tbody>
@@ -650,7 +650,7 @@ using (DatastoreTransaction transaction = db.BeginTransaction())
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a>&gt;</td>
-        <td><p>A new <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a> for this object&#39;s project.</p>
+        <td><p>A new <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a> for this object&apos;s project.</p>
 </td>
       </tr>
     </tbody>
@@ -719,7 +719,7 @@ using default settings.</p>
   </table>
   <a id="Google_Cloud_Datastore_V1_DatastoreDb_CreateKeyFactory_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.CreateKeyFactory*"></a>
   <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_CreateKeyFactory_System_String_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.CreateKeyFactory(System.String)">CreateKeyFactory(String)</h4>
-  <div class="markdown level1 summary"><p>Creates a key factory for root entities in this objects&#39;s partition.</p>
+  <div class="markdown level1 summary"><p>Creates a key factory for root entities in this objects&apos;s partition.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -755,7 +755,7 @@ using default settings.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Google.Cloud.Datastore.V1.KeyFactory.html">KeyFactory</a></td>
-        <td><p>A key factory with the specified kind and this object&#39;s partition.</p>
+        <td><p>A key factory with the specified kind and this object&apos;s partition.</p>
 </td>
       </tr>
     </tbody>
@@ -2212,7 +2212,7 @@ number of entities, partition the look-ups into batches. See
   <a id="Google_Cloud_Datastore_V1_DatastoreDb_RunQuery_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQuery*"></a>
   <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQuery_Google_Cloud_Datastore_V1_GqlQuery_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQuery(Google.Cloud.Datastore.V1.GqlQuery,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQuery(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Runs the given query eagerly, retrieving all results in memory and indicating whether more
-results may be available beyond the query&#39;s limit. Use this method when your query has a limited
+results may be available beyond the query&apos;s limit. Use this method when your query has a limited
 number of results, for example to build a web application which fetches results in pages.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -2291,7 +2291,7 @@ foreach (Entity entity in results.Entities)
   <a id="Google_Cloud_Datastore_V1_DatastoreDb_RunQuery_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQuery*"></a>
   <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQuery_Google_Cloud_Datastore_V1_Query_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQuery(Google.Cloud.Datastore.V1.Query,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQuery(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Runs the given query eagerly, retrieving all results in memory and indicating whether more
-results may be available beyond the query&#39;s limit. Use this method when your query has a limited
+results may be available beyond the query&apos;s limit. Use this method when your query has a limited
 number of results, for example to build a web application which fetches results in pages.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -2367,7 +2367,7 @@ foreach (Entity entity in results.Entities)
   <a id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryAsync*"></a>
   <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryAsync_Google_Cloud_Datastore_V1_GqlQuery_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryAsync(Google.Cloud.Datastore.V1.GqlQuery,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQueryAsync(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Runs the given query eagerly and asynchronously, retrieving all results in memory and indicating whether more
-results may be available beyond the query&#39;s limit. Use this method when your query has a limited
+results may be available beyond the query&apos;s limit. Use this method when your query has a limited
 number of results, for example to build a web application which fetches results in pages.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -2443,7 +2443,7 @@ foreach (Entity entity in results.Entities)
   <a id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryAsync*"></a>
   <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQueryAsync_Google_Cloud_Datastore_V1_Query_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQueryAsync(Google.Cloud.Datastore.V1.Query,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQueryAsync(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Runs the given query eagerly and asynchronously, retrieving all results in memory and indicating whether more
-results may be available beyond the query&#39;s limit. Use this method when your query has a limited
+results may be available beyond the query&apos;s limit. Use this method when your query has a limited
 number of results, for example to build a web application which fetches results in pages.</p>
 </div>
   <div class="markdown level1 conceptual"></div>

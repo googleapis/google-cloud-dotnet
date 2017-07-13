@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Any
    | Google.Cloud.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Protobuf.WellKnownTypes.Any">
   
   
-  <h1 id="Google_Protobuf_WellKnownTypes_Any" data-uid="Google.Protobuf.WellKnownTypes.Any">Class Any
+  <h1 id="Google_Protobuf_WellKnownTypes_Any" data-uid="Google.Protobuf.WellKnownTypes.Any" class="text-break">Class Any
   </h1>
   <div class="markdown level0 summary"><p><code>Any</code> contains an arbitrary serialized protocol buffer message along with a
 URL that describes the type of the serialized message.</p>
@@ -100,8 +100,8 @@ if any.Is(Foo.DESCRIPTOR):
  any.Unpack(foo)
  ...</p>
 <p>The pack methods provided by protobuf library will by default use
-&#39;type.googleapis.com/full.type.name&#39; as the type URL and the unpack
-methods only use the fully qualified type name after the last &#39;/&#39;
+&apos;type.googleapis.com/full.type.name&apos; as the type URL and the unpack
+methods only use the fully qualified type name after the last &apos;/&apos;
 in the type URL, for example &quot;foo.bar.com/x/y.z&quot; will yield type
 name &quot;y.z&quot;.</p>
 <h1 id="json">JSON</h1>
@@ -114,7 +114,7 @@ message Person {
  string last_name = 2;
 }</p>
 <p>{
- &quot;@type&quot;: &quot;type.googleapis.com/google.profile.Person&quot;,
+ &amp;quot;@type&amp;quot;: &quot;type.googleapis.com/google.profile.Person&quot;,
  &quot;firstName&quot;: &lt;string&gt;,
  &quot;lastName&quot;: &lt;string&gt;
 }</p>
@@ -123,7 +123,7 @@ representation, that representation will be embedded adding a field
 <code>value</code> which holds the custom JSON in addition to the <code>@type</code>
 field. Example (for message [google.protobuf.Duration][]):</p>
 <p>{
- &quot;@type&quot;: &quot;type.googleapis.com/google.protobuf.Duration&quot;,
+ &amp;quot;@type&amp;quot;: &quot;type.googleapis.com/google.protobuf.Duration&quot;,
  &quot;value&quot;: &quot;1.212s&quot;
 }</p>
 </div>
@@ -293,7 +293,7 @@ serialized protocol buffer message.</p>
 following restrictions and interpretations apply:</p>
 <ul>
 <li>If no scheme is provided, <code>https</code> is assumed.</li>
-<li>The last segment of the URL&#39;s path must represent the fully
+<li>The last segment of the URL&apos;s path must represent the fully
 qualified name of the type (as in <code>path/google.protobuf.Duration</code>).
 The name should be in a canonical form (e.g., leading &quot;.&quot; is
 not accepted).</li>
@@ -737,7 +737,7 @@ which must match the type URL within this Any message.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Google.Protobuf.InvalidProtocolBufferException.html">InvalidProtocolBufferException</a></td>
-        <td><p>The target message type doesn&#39;t match the type URL in this message</p>
+        <td><p>The target message type doesn&apos;t match the type URL in this message</p>
 </td>
       </tr>
     </tbody>

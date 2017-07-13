@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SubscriberClient
    | Google.Cloud.PubSub.V1 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Cloud.PubSub.V1.SubscriberClient">
   
   
-  <h1 id="Google_Cloud_PubSub_V1_SubscriberClient" data-uid="Google.Cloud.PubSub.V1.SubscriberClient">Class SubscriberClient
+  <h1 id="Google_Cloud_PubSub_V1_SubscriberClient" data-uid="Google.Cloud.PubSub.V1.SubscriberClient" class="text-break">Class SubscriberClient
   </h1>
   <div class="markdown level0 summary"><p>Subscriber client wrapper, for convenient use.</p>
 </div>
@@ -154,7 +154,7 @@
   </table>
   <h5 id="Google_Cloud_PubSub_V1_SubscriberClient_DefaultScopes_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>The default Subscriber scopes are:
-<ul><li>&quot;<a href="https://www.googleapis.com/auth/cloud-platform">https://www.googleapis.com/auth/cloud-platform</a>&quot;</li><li>&quot;<a href="https://www.googleapis.com/auth/pubsub">https://www.googleapis.com/auth/pubsub</a>&quot;</li></ul></p>
+<ul><li>&quot;<a href="https://www.googleapis.com/auth/cloud-platform&amp;quot">https://www.googleapis.com/auth/cloud-platform&quot</a>;</li><li>&quot;<a href="https://www.googleapis.com/auth/pubsub&amp;quot">https://www.googleapis.com/auth/pubsub&quot</a>;</li></ul></p>
 </div>
   <a id="Google_Cloud_PubSub_V1_SubscriberClient_GrpcClient_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.GrpcClient*"></a>
   <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_GrpcClient" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.GrpcClient">GrpcClient</h4>
@@ -660,7 +660,7 @@ necessary.</p>
   <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSnapshot_Google_Cloud_PubSub_V1_CreateSnapshotRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshot(Google.Cloud.PubSub.V1.CreateSnapshotRequest,Google.Api.Gax.Grpc.CallSettings)">CreateSnapshot(CreateSnapshotRequest, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Creates a snapshot from the requested subscription.
 If the snapshot already exists, returns <code>ALREADY_EXISTS</code>.
-If the requested subscription doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
+If the requested subscription doesn&apos;t exist, returns <code>NOT_FOUND</code>.</p>
 <p>If the name is not provided in the request, the server will assign a random
 name for this snapshot on the same project as the subscription, conforming
 to the
@@ -731,7 +731,7 @@ Snapshot response = subscriberClient.CreateSnapshot(request);
   <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSnapshot_Google_Cloud_PubSub_V1_SnapshotName_Google_Cloud_PubSub_V1_SubscriptionName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshot(Google.Cloud.PubSub.V1.SnapshotName,Google.Cloud.PubSub.V1.SubscriptionName,Google.Api.Gax.Grpc.CallSettings)">CreateSnapshot(SnapshotName, SubscriptionName, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Creates a snapshot from the requested subscription.
 If the snapshot already exists, returns <code>ALREADY_EXISTS</code>.
-If the requested subscription doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
+If the requested subscription doesn&apos;t exist, returns <code>NOT_FOUND</code>.</p>
 <p>If the name is not provided in the request, the server will assign a random
 name for this snapshot on the same project as the subscription, conforming
 to the
@@ -770,10 +770,10 @@ Format is <code>projects/{project}/snapshots/{snap}</code>.</p>
         <td><p>The subscription whose backlog the snapshot retains.
 Specifically, the created snapshot is guaranteed to retain:
 (a) The existing backlog on the subscription. More precisely, this is
-defined as the messages in the subscription&#39;s backlog that are
+defined as the messages in the subscription&apos;s backlog that are
 unacknowledged upon the successful completion of the
 <code>CreateSnapshot</code> request; as well as:
-(b) Any messages published to the subscription&#39;s topic following the
+(b) Any messages published to the subscription&apos;s topic following the
 successful completion of the CreateSnapshot request.
 Format is <code>projects/{project}/subscriptions/{sub}</code>.</p>
 </td>
@@ -817,7 +817,7 @@ Snapshot response = subscriberClient.CreateSnapshot(name, subscription);
   <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSnapshotAsync_Google_Cloud_PubSub_V1_CreateSnapshotRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync(Google.Cloud.PubSub.V1.CreateSnapshotRequest,Google.Api.Gax.Grpc.CallSettings)">CreateSnapshotAsync(CreateSnapshotRequest, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Creates a snapshot from the requested subscription.
 If the snapshot already exists, returns <code>ALREADY_EXISTS</code>.
-If the requested subscription doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
+If the requested subscription doesn&apos;t exist, returns <code>NOT_FOUND</code>.</p>
 <p>If the name is not provided in the request, the server will assign a random
 name for this snapshot on the same project as the subscription, conforming
 to the
@@ -888,7 +888,7 @@ Snapshot response = await subscriberClient.CreateSnapshotAsync(request);
   <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSnapshotAsync_Google_Cloud_PubSub_V1_SnapshotName_Google_Cloud_PubSub_V1_SubscriptionName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync(Google.Cloud.PubSub.V1.SnapshotName,Google.Cloud.PubSub.V1.SubscriptionName,Google.Api.Gax.Grpc.CallSettings)">CreateSnapshotAsync(SnapshotName, SubscriptionName, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Creates a snapshot from the requested subscription.
 If the snapshot already exists, returns <code>ALREADY_EXISTS</code>.
-If the requested subscription doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
+If the requested subscription doesn&apos;t exist, returns <code>NOT_FOUND</code>.</p>
 <p>If the name is not provided in the request, the server will assign a random
 name for this snapshot on the same project as the subscription, conforming
 to the
@@ -927,10 +927,10 @@ Format is <code>projects/{project}/snapshots/{snap}</code>.</p>
         <td><p>The subscription whose backlog the snapshot retains.
 Specifically, the created snapshot is guaranteed to retain:
 (a) The existing backlog on the subscription. More precisely, this is
-defined as the messages in the subscription&#39;s backlog that are
+defined as the messages in the subscription&apos;s backlog that are
 unacknowledged upon the successful completion of the
 <code>CreateSnapshot</code> request; as well as:
-(b) Any messages published to the subscription&#39;s topic following the
+(b) Any messages published to the subscription&apos;s topic following the
 successful completion of the CreateSnapshot request.
 Format is <code>projects/{project}/subscriptions/{sub}</code>.</p>
 </td>
@@ -974,7 +974,7 @@ Snapshot response = await subscriberClient.CreateSnapshotAsync(name, subscriptio
   <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSnapshotAsync_Google_Cloud_PubSub_V1_SnapshotName_Google_Cloud_PubSub_V1_SubscriptionName_System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync(Google.Cloud.PubSub.V1.SnapshotName,Google.Cloud.PubSub.V1.SubscriptionName,System.Threading.CancellationToken)">CreateSnapshotAsync(SnapshotName, SubscriptionName, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Creates a snapshot from the requested subscription.
 If the snapshot already exists, returns <code>ALREADY_EXISTS</code>.
-If the requested subscription doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
+If the requested subscription doesn&apos;t exist, returns <code>NOT_FOUND</code>.</p>
 <p>If the name is not provided in the request, the server will assign a random
 name for this snapshot on the same project as the subscription, conforming
 to the
@@ -1013,10 +1013,10 @@ Format is <code>projects/{project}/snapshots/{snap}</code>.</p>
         <td><p>The subscription whose backlog the snapshot retains.
 Specifically, the created snapshot is guaranteed to retain:
 (a) The existing backlog on the subscription. More precisely, this is
-defined as the messages in the subscription&#39;s backlog that are
+defined as the messages in the subscription&apos;s backlog that are
 unacknowledged upon the successful completion of the
 <code>CreateSnapshot</code> request; as well as:
-(b) Any messages published to the subscription&#39;s topic following the
+(b) Any messages published to the subscription&apos;s topic following the
 successful completion of the CreateSnapshot request.
 Format is <code>projects/{project}/subscriptions/{sub}</code>.</p>
 </td>
@@ -1060,7 +1060,7 @@ Snapshot response = await subscriberClient.CreateSnapshotAsync(name, subscriptio
   <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSubscription_Google_Cloud_PubSub_V1_Subscription_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscription(Google.Cloud.PubSub.V1.Subscription,Google.Api.Gax.Grpc.CallSettings)">CreateSubscription(Subscription, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Creates a subscription to a given topic.
 If the subscription already exists, returns <code>ALREADY_EXISTS</code>.
-If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
+If the corresponding topic doesn&apos;t exist, returns <code>NOT_FOUND</code>.</p>
 <p>If the name is not provided in the request, the server will assign a random
 name for this subscription on the same project as the topic, conforming
 to the
@@ -1131,7 +1131,7 @@ Subscription response = subscriberClient.CreateSubscription(request);
   <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSubscription_Google_Cloud_PubSub_V1_SubscriptionName_Google_Cloud_PubSub_V1_TopicName_Google_Cloud_PubSub_V1_PushConfig_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscription(Google.Cloud.PubSub.V1.SubscriptionName,Google.Cloud.PubSub.V1.TopicName,Google.Cloud.PubSub.V1.PushConfig,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">CreateSubscription(SubscriptionName, TopicName, PushConfig, Nullable&lt;Int32&gt;, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Creates a subscription to a given topic.
 If the subscription already exists, returns <code>ALREADY_EXISTS</code>.
-If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
+If the corresponding topic doesn&apos;t exist, returns <code>NOT_FOUND</code>.</p>
 <p>If the name is not provided in the request, the server will assign a random
 name for this subscription on the same project as the topic, conforming
 to the
@@ -1158,11 +1158,11 @@ Note that for REST API requests, you must specify a name in the request.</p>
         <td><a class="xref" href="Google.Cloud.PubSub.V1.SubscriptionName.html">SubscriptionName</a></td>
         <td><span class="parametername">name</span></td>
         <td><p>The name of the subscription. It must have the format
-<code>&quot;projects/{project}/subscriptions/{subscription}&quot;</code>. <code>{subscription}</code> must
+<code>&amp;quot;projects/{project}/subscriptions/{subscription}&amp;quot;</code>. <code>{subscription}</code> must
 start with a letter, and contain only letters (<code>[A-Za-z]</code>), numbers
 (<code>[0-9]</code>), dashes (<code>-</code>), underscores (<code>_</code>), periods (<code>.</code>), tildes (<code>~</code>),
 plus (<code>+</code>) or percent signs (<code>%</code>). It must be between 3 and 255 characters
-in length, and it must not start with <code>&quot;goog&quot;</code>.</p>
+in length, and it must not start with <code>&amp;quot;goog&amp;quot;</code>.</p>
 </td>
       </tr>
       <tr>
@@ -1242,7 +1242,7 @@ Console.WriteLine($&quot;Created {subscription.Name} subscribed to {subscription
   <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSubscriptionAsync_Google_Cloud_PubSub_V1_Subscription_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync(Google.Cloud.PubSub.V1.Subscription,Google.Api.Gax.Grpc.CallSettings)">CreateSubscriptionAsync(Subscription, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Creates a subscription to a given topic.
 If the subscription already exists, returns <code>ALREADY_EXISTS</code>.
-If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
+If the corresponding topic doesn&apos;t exist, returns <code>NOT_FOUND</code>.</p>
 <p>If the name is not provided in the request, the server will assign a random
 name for this subscription on the same project as the topic, conforming
 to the
@@ -1313,7 +1313,7 @@ Subscription response = await subscriberClient.CreateSubscriptionAsync(request);
   <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSubscriptionAsync_Google_Cloud_PubSub_V1_SubscriptionName_Google_Cloud_PubSub_V1_TopicName_Google_Cloud_PubSub_V1_PushConfig_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync(Google.Cloud.PubSub.V1.SubscriptionName,Google.Cloud.PubSub.V1.TopicName,Google.Cloud.PubSub.V1.PushConfig,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">CreateSubscriptionAsync(SubscriptionName, TopicName, PushConfig, Nullable&lt;Int32&gt;, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Creates a subscription to a given topic.
 If the subscription already exists, returns <code>ALREADY_EXISTS</code>.
-If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
+If the corresponding topic doesn&apos;t exist, returns <code>NOT_FOUND</code>.</p>
 <p>If the name is not provided in the request, the server will assign a random
 name for this subscription on the same project as the topic, conforming
 to the
@@ -1340,11 +1340,11 @@ Note that for REST API requests, you must specify a name in the request.</p>
         <td><a class="xref" href="Google.Cloud.PubSub.V1.SubscriptionName.html">SubscriptionName</a></td>
         <td><span class="parametername">name</span></td>
         <td><p>The name of the subscription. It must have the format
-<code>&quot;projects/{project}/subscriptions/{subscription}&quot;</code>. <code>{subscription}</code> must
+<code>&amp;quot;projects/{project}/subscriptions/{subscription}&amp;quot;</code>. <code>{subscription}</code> must
 start with a letter, and contain only letters (<code>[A-Za-z]</code>), numbers
 (<code>[0-9]</code>), dashes (<code>-</code>), underscores (<code>_</code>), periods (<code>.</code>), tildes (<code>~</code>),
 plus (<code>+</code>) or percent signs (<code>%</code>). It must be between 3 and 255 characters
-in length, and it must not start with <code>&quot;goog&quot;</code>.</p>
+in length, and it must not start with <code>&amp;quot;goog&amp;quot;</code>.</p>
 </td>
       </tr>
       <tr>
@@ -1424,7 +1424,7 @@ Console.WriteLine($&quot;Created {subscription.Name} subscribed to {subscription
   <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSubscriptionAsync_Google_Cloud_PubSub_V1_SubscriptionName_Google_Cloud_PubSub_V1_TopicName_Google_Cloud_PubSub_V1_PushConfig_System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync(Google.Cloud.PubSub.V1.SubscriptionName,Google.Cloud.PubSub.V1.TopicName,Google.Cloud.PubSub.V1.PushConfig,System.Nullable{System.Int32},System.Threading.CancellationToken)">CreateSubscriptionAsync(SubscriptionName, TopicName, PushConfig, Nullable&lt;Int32&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Creates a subscription to a given topic.
 If the subscription already exists, returns <code>ALREADY_EXISTS</code>.
-If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
+If the corresponding topic doesn&apos;t exist, returns <code>NOT_FOUND</code>.</p>
 <p>If the name is not provided in the request, the server will assign a random
 name for this subscription on the same project as the topic, conforming
 to the
@@ -1451,11 +1451,11 @@ Note that for REST API requests, you must specify a name in the request.</p>
         <td><a class="xref" href="Google.Cloud.PubSub.V1.SubscriptionName.html">SubscriptionName</a></td>
         <td><span class="parametername">name</span></td>
         <td><p>The name of the subscription. It must have the format
-<code>&quot;projects/{project}/subscriptions/{subscription}&quot;</code>. <code>{subscription}</code> must
+<code>&amp;quot;projects/{project}/subscriptions/{subscription}&amp;quot;</code>. <code>{subscription}</code> must
 start with a letter, and contain only letters (<code>[A-Za-z]</code>), numbers
 (<code>[0-9]</code>), dashes (<code>-</code>), underscores (<code>_</code>), periods (<code>.</code>), tildes (<code>~</code>),
 plus (<code>+</code>) or percent signs (<code>%</code>). It must be between 3 and 255 characters
-in length, and it must not start with <code>&quot;goog&quot;</code>.</p>
+in length, and it must not start with <code>&amp;quot;goog&amp;quot;</code>.</p>
 </td>
       </tr>
       <tr>
@@ -5031,7 +5031,7 @@ Policy response = await subscriberClient.SetIamPolicyAsync(formattedResource, po
   <a id="Google_Cloud_PubSub_V1_SubscriberClient_ShutdownDefaultChannelsAsync_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.ShutdownDefaultChannelsAsync*"></a>
   <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_ShutdownDefaultChannelsAsync" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.ShutdownDefaultChannelsAsync">ShutdownDefaultChannelsAsync()</h4>
   <div class="markdown level1 summary"><p>Shuts down any channels automatically created by <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_PubSub_V1_SubscriberSettings_">Create(ServiceEndpoint, SubscriberSettings)</a>
-and <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_PubSub_V1_SubscriberSettings_">CreateAsync(ServiceEndpoint, SubscriberSettings)</a>. Channels which weren&#39;t automatically
+and <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_PubSub_V1_SubscriberSettings_">CreateAsync(ServiceEndpoint, SubscriberSettings)</a>. Channels which weren&apos;t automatically
 created are not affected.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -5270,7 +5270,7 @@ resource is specified as <code>projects/{project}</code>.</p>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">permissions</span></td>
         <td><p>The set of permissions to check for the <code>resource</code>. Permissions with
-wildcards (such as &#39;<em>&#39; or &#39;storage.</em>&#39;) are not allowed. For more
+wildcards (such as &apos;<em>&apos; or &apos;storage.</em>&apos;) are not allowed. For more
 information see
 <a href="https://cloud.google.com/iam/docs/overview#permissions">IAM Overview</a>.</p>
 </td>
@@ -5408,7 +5408,7 @@ resource is specified as <code>projects/{project}</code>.</p>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">permissions</span></td>
         <td><p>The set of permissions to check for the <code>resource</code>. Permissions with
-wildcards (such as &#39;<em>&#39; or &#39;storage.</em>&#39;) are not allowed. For more
+wildcards (such as &apos;<em>&apos; or &apos;storage.</em>&apos;) are not allowed. For more
 information see
 <a href="https://cloud.google.com/iam/docs/overview#permissions">IAM Overview</a>.</p>
 </td>
@@ -5481,7 +5481,7 @@ resource is specified as <code>projects/{project}</code>.</p>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">permissions</span></td>
         <td><p>The set of permissions to check for the <code>resource</code>. Permissions with
-wildcards (such as &#39;<em>&#39; or &#39;storage.</em>&#39;) are not allowed. For more
+wildcards (such as &apos;<em>&apos; or &apos;storage.</em>&apos;) are not allowed. For more
 information see
 <a href="https://cloud.google.com/iam/docs/overview#permissions">IAM Overview</a>.</p>
 </td>

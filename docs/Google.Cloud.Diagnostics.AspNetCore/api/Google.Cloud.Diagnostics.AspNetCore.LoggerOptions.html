@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class LoggerOptions
    | Google.Cloud.Diagnostics.AspNetCore ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Cloud.Diagnostics.AspNetCore.LoggerOptions">
   
   
-  <h1 id="Google_Cloud_Diagnostics_AspNetCore_LoggerOptions" data-uid="Google.Cloud.Diagnostics.AspNetCore.LoggerOptions">Class LoggerOptions
+  <h1 id="Google_Cloud_Diagnostics_AspNetCore_LoggerOptions" data-uid="Google.Cloud.Diagnostics.AspNetCore.LoggerOptions" class="text-break">Class LoggerOptions
   </h1>
   <div class="markdown level0 summary"><p>Options for a <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.html">GoogleLogger</a>.</p>
 </div>
@@ -199,16 +199,40 @@
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_Diagnostics_AspNetCore_LoggerOptions_RetryOptions_" data-uid="Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.RetryOptions*"></a>
+  <h4 id="Google_Cloud_Diagnostics_AspNetCore_LoggerOptions_RetryOptions" data-uid="Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.RetryOptions">RetryOptions</h4>
+  <div class="markdown level1 summary"><p>The retry options for the logger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RetryOptions RetryOptions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.Common.RetryOptions.html">RetryOptions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   <a id="Google_Cloud_Diagnostics_AspNetCore_LoggerOptions_Create_" data-uid="Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create*"></a>
-  <h4 id="Google_Cloud_Diagnostics_AspNetCore_LoggerOptions_Create_LogLevel_System_Collections_Generic_Dictionary_System_String_System_String__MonitoredResource_Google_Cloud_Diagnostics_Common_BufferOptions_" data-uid="Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create(LogLevel,System.Collections.Generic.Dictionary{System.String,System.String},MonitoredResource,Google.Cloud.Diagnostics.Common.BufferOptions)">Create(LogLevel, Dictionary&lt;String, String&gt;, MonitoredResource, BufferOptions)</h4>
+  <h4 id="Google_Cloud_Diagnostics_AspNetCore_LoggerOptions_Create_LogLevel_System_Collections_Generic_Dictionary_System_String_System_String__MonitoredResource_Google_Cloud_Diagnostics_Common_BufferOptions_Google_Cloud_Diagnostics_Common_RetryOptions_" data-uid="Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create(LogLevel,System.Collections.Generic.Dictionary{System.String,System.String},MonitoredResource,Google.Cloud.Diagnostics.Common.BufferOptions,Google.Cloud.Diagnostics.Common.RetryOptions)">Create(LogLevel, Dictionary&lt;String, String&gt;, MonitoredResource, BufferOptions, RetryOptions)</h4>
   <div class="markdown level1 summary"><p>Create a new instance of <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.html">LoggerOptions</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static LoggerOptions Create(LogLevel logLevel = null, Dictionary&lt;string, string&gt; labels = null, MonitoredResource monitoredResource = null, BufferOptions bufferOptions = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static LoggerOptions Create(LogLevel logLevel = null, Dictionary&lt;string, string&gt; labels = null, MonitoredResource monitoredResource = null, BufferOptions bufferOptions = null, RetryOptions retryOptions = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -244,6 +268,12 @@
         <td><a class="xref" href="Google.Cloud.Diagnostics.Common.BufferOptions.html">BufferOptions</a></td>
         <td><span class="parametername">bufferOptions</span></td>
         <td><p>Optional, the buffer options.  Defaults to a <a class="xref" href="Google.Cloud.Diagnostics.Common.BufferType.html#Google_Cloud_Diagnostics_Common_BufferType_Timed">Timed</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.Common.RetryOptions.html">RetryOptions</a></td>
+        <td><span class="parametername">retryOptions</span></td>
+        <td><p>Optional, the retry options.  Defaults to a <a class="xref" href="Google.Cloud.Diagnostics.Common.RetryType.html#Google_Cloud_Diagnostics_Common_RetryType_None">None</a></p>
 </td>
       </tr>
     </tbody>

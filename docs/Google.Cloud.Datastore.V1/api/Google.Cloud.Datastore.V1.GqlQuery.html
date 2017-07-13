@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GqlQuery
    | Google.Cloud.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Cloud.Datastore.V1.GqlQuery">
   
   
-  <h1 id="Google_Cloud_Datastore_V1_GqlQuery" data-uid="Google.Cloud.Datastore.V1.GqlQuery">Class GqlQuery
+  <h1 id="Google_Cloud_Datastore_V1_GqlQuery" data-uid="Google.Cloud.Datastore.V1.GqlQuery" class="text-break">Class GqlQuery
   </h1>
   <div class="markdown level0 summary"><p>A <a href="https://cloud.google.com/datastore/docs/apis/gql/gql_reference">GQL query</a>.</p>
 </div>
@@ -107,7 +107,7 @@
   <h4 id="Google_Cloud_Datastore_V1_GqlQuery_AllowLiterals" data-uid="Google.Cloud.Datastore.V1.GqlQuery.AllowLiterals">AllowLiterals</h4>
   <div class="markdown level1 summary"><p>When false, the query string must not contain any literals and instead must
 bind all values. For example,
-<code>SELECT * FROM Kind WHERE a = &#39;string literal&#39;</code> is not allowed, while
+<code>SELECT * FROM Kind WHERE a = &amp;apos;string literal&amp;apos;</code> is not allowed, while
 <code>SELECT * FROM Kind WHERE a = @value</code> is.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -135,7 +135,7 @@ bind all values. For example,
   <div class="markdown level1 summary"><p>For each non-reserved named binding site in the query string, there must be
 a named parameter with that name, but not necessarily the inverse.</p>
 <p>Key must match regex <code>[A-Za-z_$][A-Za-z_$0-9]*</code>, must not match regex
-<code>__.*__</code>, and must not be <code>&quot;&quot;</code>.</p>
+<code>__.*__</code>, and must not be <code>&amp;quot;&amp;quot;</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ErrorReportingExceptionFilter
    | Google.Cloud.Diagnostics.AspNet ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter">
   
   
-  <h1 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter">Class ErrorReportingExceptionFilter
+  <h1 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter" class="text-break">Class ErrorReportingExceptionFilter
   </h1>
   <div class="markdown level0 summary"><p>Google Cloud Error Reporting <span class="xref">System.Web.Mvc.IExceptionFilter</span>.</p>
 </div>
@@ -112,9 +112,9 @@ Docs: <a href="https://cloud.google.com/error-reporting/docs/">https://cloud.goo
   <pre><code>public static void RegisterGlobalFilters(GlobalFilterCollection filters)
 {
   // Add a catch all for the uncaught exceptions.
-  string projectId = "[Google Cloud Platform project ID]";
-  string serviceName = "[Name of service]";
-  string version = "[Version of service]";
+  string projectId = &quot;[Google Cloud Platform project ID]&quot;;
+  string serviceName = &quot;[Name of service]&quot;;
+  string version = &quot;[Version of service]&quot;;
   // Add a catch all for the uncaught exceptions.
   filters.Add(ErrorReportingExceptionFilter.Create(projectId, serviceName, version));
 }</code></pre>

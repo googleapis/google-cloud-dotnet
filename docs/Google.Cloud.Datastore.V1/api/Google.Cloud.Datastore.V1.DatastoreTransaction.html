@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DatastoreTransaction
    | Google.Cloud.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,20 +70,20 @@
             <article class="content wrap" id="_content" data-uid="Google.Cloud.Datastore.V1.DatastoreTransaction">
   
   
-  <h1 id="Google_Cloud_Datastore_V1_DatastoreTransaction" data-uid="Google.Cloud.Datastore.V1.DatastoreTransaction">Class DatastoreTransaction
+  <h1 id="Google_Cloud_Datastore_V1_DatastoreTransaction" data-uid="Google.Cloud.Datastore.V1.DatastoreTransaction" class="text-break">Class DatastoreTransaction
   </h1>
   <div class="markdown level0 summary"><p>
 Convenience wrapper around a Datastore transaction. All mutation operations (<a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Insert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__">Insert(IEnumerable&lt;Entity&gt;)</a>,
 <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__">Delete(IEnumerable&lt;Key&gt;)</a>, <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Update_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__">Update(IEnumerable&lt;Entity&gt;)</a> and <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Upsert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__">Upsert(IEnumerable&lt;Entity&gt;)</a>)
 merely add to a list of mutations which are performed in a single <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Commit_Google_Api_Gax_Grpc_CallSettings_">Commit(CallSettings)</a> or <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_CommitAsync_Google_Api_Gax_Grpc_CallSettings_">CommitAsync(CallSettings)</a>
-operation. This means the mutation methods are all synchronous and do not take call settings, as they don&#39;t perform any
+operation. This means the mutation methods are all synchronous and do not take call settings, as they don&apos;t perform any
 API operations.
 </p>
 <p>Datastore limits the number of entities that can be modified in a Commit operation, and therefore one transaction. When modifying a large
 number of entities, partition the changes into multiple transactions. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 <p>
-Even though transactions aren&#39;t inherently related to a specific partition ID, the expected usage is that queries run inside
+Even though transactions aren&apos;t inherently related to a specific partition ID, the expected usage is that queries run inside
 a transaction are likely to be in a single partition, specified in a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html">DatastoreDb</a> used to create the transaction.
 </p>
 <p>
@@ -1199,7 +1199,7 @@ finally
   <a id="Google_Cloud_Datastore_V1_DatastoreTransaction_RunQuery_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransaction.RunQuery*"></a>
   <h4 id="Google_Cloud_Datastore_V1_DatastoreTransaction_RunQuery_Google_Cloud_Datastore_V1_GqlQuery_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransaction.RunQuery(Google.Cloud.Datastore.V1.GqlQuery,Google.Api.Gax.Grpc.CallSettings)">RunQuery(GqlQuery, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Runs the given query eagerly in this transaction, retrieving all results in memory and indicating whether more
-results may be available beyond the query&#39;s limit. Use this method when your query has a limited
+results may be available beyond the query&apos;s limit. Use this method when your query has a limited
 number of results, for example to build a web application which fetches results in pages.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1309,7 +1309,7 @@ using (DatastoreTransaction transaction = db.BeginTransaction())
   <a id="Google_Cloud_Datastore_V1_DatastoreTransaction_RunQuery_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransaction.RunQuery*"></a>
   <h4 id="Google_Cloud_Datastore_V1_DatastoreTransaction_RunQuery_Google_Cloud_Datastore_V1_Query_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransaction.RunQuery(Google.Cloud.Datastore.V1.Query,Google.Api.Gax.Grpc.CallSettings)">RunQuery(Query, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Runs the given query eagerly in this transaction, retrieving all results in memory and indicating whether more
-results may be available beyond the query&#39;s limit. Use this method when your query has a limited
+results may be available beyond the query&apos;s limit. Use this method when your query has a limited
 number of results, for example to build a web application which fetches results in pages.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1416,7 +1416,7 @@ using (DatastoreTransaction transaction = db.BeginTransaction())
   <a id="Google_Cloud_Datastore_V1_DatastoreTransaction_RunQueryAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransaction.RunQueryAsync*"></a>
   <h4 id="Google_Cloud_Datastore_V1_DatastoreTransaction_RunQueryAsync_Google_Cloud_Datastore_V1_GqlQuery_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransaction.RunQueryAsync(Google.Cloud.Datastore.V1.GqlQuery,Google.Api.Gax.Grpc.CallSettings)">RunQueryAsync(GqlQuery, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Runs the given query eagerly and asynchronously in this transaction, retrieving all results in memory and indicating whether more
-results may be available beyond the query&#39;s limit. Use this method when your query has a limited
+results may be available beyond the query&apos;s limit. Use this method when your query has a limited
 number of results, for example to build a web application which fetches results in pages.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1481,7 +1481,7 @@ and calls <a class="xref" href="Google.Cloud.Datastore.V1.AsyncLazyDatastoreQuer
   <a id="Google_Cloud_Datastore_V1_DatastoreTransaction_RunQueryAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransaction.RunQueryAsync*"></a>
   <h4 id="Google_Cloud_Datastore_V1_DatastoreTransaction_RunQueryAsync_Google_Cloud_Datastore_V1_Query_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransaction.RunQueryAsync(Google.Cloud.Datastore.V1.Query,Google.Api.Gax.Grpc.CallSettings)">RunQueryAsync(Query, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Runs the given query eagerly and asynchronously in this transaction, retrieving all results in memory
-and indicating whether more results may be available beyond the query&#39;s limit. Use this method when your query has a limited
+and indicating whether more results may be available beyond the query&apos;s limit. Use this method when your query has a limited
 number of results, for example to build a web application which fetches results in pages.</p>
 </div>
   <div class="markdown level1 conceptual"></div>

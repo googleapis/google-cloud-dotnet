@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Google.Rpc
    | Google.Cloud.Language.V1.Experimental ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -69,7 +69,7 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="Google.Rpc">
   
-  <h1 id="Google_Rpc" data-uid="Google.Rpc">Namespace Google.Rpc
+  <h1 id="Google_Rpc" data-uid="Google.Rpc" class="text-break">Namespace Google.Rpc
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
@@ -98,7 +98,7 @@ syntactic aspects of the request.</p>
       <h4><a class="xref" href="Google.Rpc.Help.html">Help</a></h4>
       <section><p>Provides links to documentation or for performing an out of band action.</p>
 <p>For example, if a quota check failed with an error indicating the calling
-project hasn&#39;t enabled the accessed service, this can contain a URL pointing
+project hasn&apos;t enabled the accessed service, this can contain a URL pointing
 directly to the right place in the developer console to flip the bit.</p>
 </section>
       <h4><a class="xref" href="Google.Rpc.Help.Types.html">Help.Types</a></h4>
@@ -116,7 +116,7 @@ which can be attached to an RPC error.</p>
 <p>For example if a daily limit was exceeded for the calling project,
 a service could respond with a QuotaFailure detail containing the project
 id and the description of the quota limit that was exceeded.  If the
-calling project hasn&#39;t enabled the service in the developer console, then
+calling project hasn&apos;t enabled the service in the developer console, then
 a service could respond with the project id and set <code>service_disabled</code>
 to true.</p>
 <p>Also see RetryDetail and Help types for other details about handling a
@@ -140,7 +140,7 @@ or providing other forms of feedback.</p>
       <section><p>Describes when the clients can retry a failed request. Clients could ignore
 the recommendation here or retry when this information is missing from error
 responses.</p>
-<p>It&#39;s always recommended that clients should use exponential backoff when
+<p>It&apos;s always recommended that clients should use exponential backoff when
 retrying.</p>
 <p>Clients should wait until <code>retry_delay</code> amount of time has passed since
 receiving the error response before retrying.  If retrying requests also

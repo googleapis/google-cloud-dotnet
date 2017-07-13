@@ -1,0 +1,466 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RetryOptions
+   | Google.Cloud.Diagnostics.AspNetCore </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RetryOptions
+   | Google.Cloud.Diagnostics.AspNetCore ">
+    <meta name="generator" content="docfx 2.20.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Diagnostics.Common.RetryOptions">
+  
+  
+  <h1 id="Google_Cloud_Diagnostics_Common_RetryOptions" data-uid="Google.Cloud.Diagnostics.Common.RetryOptions" class="text-break">Class RetryOptions
+  </h1>
+  <div class="markdown level0 summary"><p>Options that define retry logic for requests that failed.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">RetryOptions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Diagnostics.Common.html">Google.Cloud.Diagnostics.Common</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Diagnostics.Common.dll</h6>
+  <h5 id="Google_Cloud_Diagnostics_Common_RetryOptions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class RetryOptions</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <h4 id="Google_Cloud_Diagnostics_Common_RetryOptions_DefaultBufferSize" data-uid="Google.Cloud.Diagnostics.Common.RetryOptions.DefaultBufferSize">DefaultBufferSize</h4>
+  <div class="markdown level1 summary"><p>The default buffer size in bytes. 2^18 = 262144.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly int DefaultBufferSize</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Google_Cloud_Diagnostics_Common_RetryOptions_DefaultRetryAttempts" data-uid="Google.Cloud.Diagnostics.Common.RetryOptions.DefaultRetryAttempts">DefaultRetryAttempts</h4>
+  <div class="markdown level1 summary"><p>The default number of retry attempts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly int DefaultRetryAttempts</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Google_Cloud_Diagnostics_Common_RetryOptions_DefaultRetryInterval" data-uid="Google.Cloud.Diagnostics.Common.RetryOptions.DefaultRetryInterval">DefaultRetryInterval</h4>
+  <div class="markdown level1 summary"><p>The default wait time between retries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly TimeSpan DefaultRetryInterval</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Diagnostics_Common_RetryOptions_BufferOverflow_" data-uid="Google.Cloud.Diagnostics.Common.RetryOptions.BufferOverflow*"></a>
+  <h4 id="Google_Cloud_Diagnostics_Common_RetryOptions_BufferOverflow" data-uid="Google.Cloud.Diagnostics.Common.RetryOptions.BufferOverflow">BufferOverflow</h4>
+  <div class="markdown level1 summary"><p>How to handle a full buffer, only used for <a class="xref" href="Google.Cloud.Diagnostics.Common.RetryType.html#Google_Cloud_Diagnostics_Common_RetryType_Retry">Retry</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BufferOverflow BufferOverflow { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.Common.BufferOverflow.html">BufferOverflow</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Diagnostics_Common_RetryOptions_BufferSizeBytes_" data-uid="Google.Cloud.Diagnostics.Common.RetryOptions.BufferSizeBytes*"></a>
+  <h4 id="Google_Cloud_Diagnostics_Common_RetryOptions_BufferSizeBytes" data-uid="Google.Cloud.Diagnostics.Common.RetryOptions.BufferSizeBytes">BufferSizeBytes</h4>
+  <div class="markdown level1 summary"><p>The size of the buffer in bytes, only used for <a class="xref" href="Google.Cloud.Diagnostics.Common.RetryType.html#Google_Cloud_Diagnostics_Common_RetryType_Retry">Retry</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int BufferSizeBytes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Diagnostics_Common_RetryOptions_ExceptionHandling_" data-uid="Google.Cloud.Diagnostics.Common.RetryOptions.ExceptionHandling*"></a>
+  <h4 id="Google_Cloud_Diagnostics_Common_RetryOptions_ExceptionHandling" data-uid="Google.Cloud.Diagnostics.Common.RetryOptions.ExceptionHandling">ExceptionHandling</h4>
+  <div class="markdown level1 summary"><p>How exceptions are handled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExceptionHandling ExceptionHandling { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.Common.ExceptionHandling.html">ExceptionHandling</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Diagnostics_Common_RetryOptions_RetryAttempts_" data-uid="Google.Cloud.Diagnostics.Common.RetryOptions.RetryAttempts*"></a>
+  <h4 id="Google_Cloud_Diagnostics_Common_RetryOptions_RetryAttempts" data-uid="Google.Cloud.Diagnostics.Common.RetryOptions.RetryAttempts">RetryAttempts</h4>
+  <div class="markdown level1 summary"><p>The number of attempts to retry sending information, only used for <a class="xref" href="Google.Cloud.Diagnostics.Common.RetryType.html#Google_Cloud_Diagnostics_Common_RetryType_Retry">Retry</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RetryAttempts { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Diagnostics_Common_RetryOptions_RetryInterval_" data-uid="Google.Cloud.Diagnostics.Common.RetryOptions.RetryInterval*"></a>
+  <h4 id="Google_Cloud_Diagnostics_Common_RetryOptions_RetryInterval" data-uid="Google.Cloud.Diagnostics.Common.RetryOptions.RetryInterval">RetryInterval</h4>
+  <div class="markdown level1 summary"><p>The amount of time to wait between retries, only used for <a class="xref" href="Google.Cloud.Diagnostics.Common.RetryType.html#Google_Cloud_Diagnostics_Common_RetryType_Retry">Retry</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan RetryInterval { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Diagnostics_Common_RetryOptions_RetryType_" data-uid="Google.Cloud.Diagnostics.Common.RetryOptions.RetryType*"></a>
+  <h4 id="Google_Cloud_Diagnostics_Common_RetryOptions_RetryType" data-uid="Google.Cloud.Diagnostics.Common.RetryOptions.RetryType">RetryType</h4>
+  <div class="markdown level1 summary"><p>The type of retry to make.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RetryType RetryType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.Common.RetryType.html">RetryType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Diagnostics_Common_RetryOptions_NoRetry_" data-uid="Google.Cloud.Diagnostics.Common.RetryOptions.NoRetry*"></a>
+  <h4 id="Google_Cloud_Diagnostics_Common_RetryOptions_NoRetry_Google_Cloud_Diagnostics_Common_ExceptionHandling_" data-uid="Google.Cloud.Diagnostics.Common.RetryOptions.NoRetry(Google.Cloud.Diagnostics.Common.ExceptionHandling)">NoRetry(ExceptionHandling)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Diagnostics.Common.RetryOptions.html">RetryOptions</a> for <a class="xref" href="Google.Cloud.Diagnostics.Common.RetryType.html#Google_Cloud_Diagnostics_Common_RetryType_None">None</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RetryOptions NoRetry(ExceptionHandling exceptionHandling = ExceptionHandling.Ignore)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.Common.ExceptionHandling.html">ExceptionHandling</a></td>
+        <td><span class="parametername">exceptionHandling</span></td>
+        <td><p>Optional, how exceptions should be handled.
+    Defaults to <a class="xref" href="Google.Cloud.Diagnostics.Common.ExceptionHandling.html#Google_Cloud_Diagnostics_Common_ExceptionHandling_Ignore">Ignore</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.Common.RetryOptions.html">RetryOptions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Diagnostics_Common_RetryOptions_Retry_" data-uid="Google.Cloud.Diagnostics.Common.RetryOptions.Retry*"></a>
+  <h4 id="Google_Cloud_Diagnostics_Common_RetryOptions_Retry_Google_Cloud_Diagnostics_Common_ExceptionHandling_Google_Cloud_Diagnostics_Common_BufferOverflow_System_Nullable_System_Int32__System_Nullable_System_TimeSpan__System_Nullable_System_Int32__" data-uid="Google.Cloud.Diagnostics.Common.RetryOptions.Retry(Google.Cloud.Diagnostics.Common.ExceptionHandling,Google.Cloud.Diagnostics.Common.BufferOverflow,System.Nullable{System.Int32},System.Nullable{System.TimeSpan},System.Nullable{System.Int32})">Retry(ExceptionHandling, BufferOverflow, Nullable&lt;Int32&gt;, Nullable&lt;TimeSpan&gt;, Nullable&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Diagnostics.Common.RetryOptions.html">RetryOptions</a> for <a class="xref" href="Google.Cloud.Diagnostics.Common.RetryType.html#Google_Cloud_Diagnostics_Common_RetryType_Retry">Retry</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RetryOptions Retry(ExceptionHandling exceptionHandling = ExceptionHandling.Ignore, BufferOverflow bufferOverflow = BufferOverflow.IgnoreNewEntries, int ? bufferSizeBytes = null, TimeSpan? retryInterval = null, int ? retryAttempts = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.Common.ExceptionHandling.html">ExceptionHandling</a></td>
+        <td><span class="parametername">exceptionHandling</span></td>
+        <td><p>Optional, how exceptions should be handled.
+    Defaults to <a class="xref" href="Google.Cloud.Diagnostics.Common.ExceptionHandling.html#Google_Cloud_Diagnostics_Common_ExceptionHandling_Ignore">Ignore</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.Common.BufferOverflow.html">BufferOverflow</a></td>
+        <td><span class="parametername">bufferOverflow</span></td>
+        <td><p>Optional, how a buffer overflow should be handled.
+    Defaults to <a class="xref" href="Google.Cloud.Diagnostics.Common.BufferOverflow.html#Google_Cloud_Diagnostics_Common_BufferOverflow_IgnoreNewEntries">IgnoreNewEntries</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">bufferSizeBytes</span></td>
+        <td><p>Optional, the size of the buffer to be used in bytes.
+    Defaults to <a class="xref" href="Google.Cloud.Diagnostics.Common.RetryOptions.html#Google_Cloud_Diagnostics_Common_RetryOptions_DefaultBufferSize">DefaultBufferSize</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.TimeSpan</span>&gt;</td>
+        <td><span class="parametername">retryInterval</span></td>
+        <td><p>Optional, the time between retries. Default to <a class="xref" href="Google.Cloud.Diagnostics.Common.RetryOptions.html#Google_Cloud_Diagnostics_Common_RetryOptions_DefaultRetryInterval">DefaultRetryInterval</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">retryAttempts</span></td>
+        <td><p>Optional, the number of retry attempts. Defaults to <a class="xref" href="Google.Cloud.Diagnostics.Common.RetryOptions.html#Google_Cloud_Diagnostics_Common_RetryOptions_DefaultRetryAttempts">DefaultRetryAttempts</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.Common.RetryOptions.html">RetryOptions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

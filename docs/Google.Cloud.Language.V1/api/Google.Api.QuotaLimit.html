@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class QuotaLimit
    | Google.Cloud.Language.V1 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Api.QuotaLimit">
   
   
-  <h1 id="Google_Api_QuotaLimit" data-uid="Google.Api.QuotaLimit">Class QuotaLimit
+  <h1 id="Google_Api_QuotaLimit" data-uid="Google.Api.QuotaLimit" class="text-break">Class QuotaLimit
   </h1>
   <div class="markdown level0 summary"><p><code>QuotaLimit</code> defines a specific limit that applies over a specified duration
 for a limit type. There can be at most one limit for a duration and limit
@@ -407,7 +407,7 @@ negative values are allowed.</p>
   <h4 id="Google_Api_QuotaLimit_Description" data-uid="Google.Api.QuotaLimit.Description">Description</h4>
   <div class="markdown level1 summary"><p>Optional. User-visible, extended description for this quota limit.
 Should be used only when more context is needed to understand this limit
-than provided by the limit&#39;s display name (see: <code>display_name</code>).</p>
+than provided by the limit&apos;s display name (see: <code>display_name</code>).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -603,7 +603,7 @@ group. If a name is not provided, it will be generated from the limit_by
 and duration fields.</p>
 <p>For metric-based quota limits, the name must be provided, and it must be
 unique within the service. The name can only include alphanumeric
-characters as well as &#39;-&#39;.</p>
+characters as well as &apos;-&apos;.</p>
 <p>The maximum length of the limit name is 64 characters.</p>
 <p>The name of a limit is used as a unique identifier for this limit.
 Therefore, once a limit has been put into use, its name should be
@@ -665,7 +665,7 @@ supports the following unit components:</p>
 <li>One of the time intevals:</li>
 <li>&quot;/min&quot;  for quota every minute.</li>
 <li>&quot;/d&quot;  for quota every 24 hours, starting 00:00 US Pacific Time.</li>
-<li>Otherwise the quota won&#39;t be reset by time, such as storage limit.</li>
+<li>Otherwise the quota won&apos;t be reset by time, such as storage limit.</li>
 <li>One and only one of the granted containers:</li>
 <li>&quot;/{organization}&quot; quota for an organization.</li>
 <li>&quot;/{project}&quot; quota for a project.</li>

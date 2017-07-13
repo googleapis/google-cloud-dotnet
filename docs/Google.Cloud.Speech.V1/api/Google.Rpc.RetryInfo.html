@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RetryInfo
    | Google.Cloud.Speech.V1 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,12 +70,12 @@
             <article class="content wrap" id="_content" data-uid="Google.Rpc.RetryInfo">
   
   
-  <h1 id="Google_Rpc_RetryInfo" data-uid="Google.Rpc.RetryInfo">Class RetryInfo
+  <h1 id="Google_Rpc_RetryInfo" data-uid="Google.Rpc.RetryInfo" class="text-break">Class RetryInfo
   </h1>
   <div class="markdown level0 summary"><p>Describes when the clients can retry a failed request. Clients could ignore
 the recommendation here or retry when this information is missing from error
 responses.</p>
-<p>It&#39;s always recommended that clients should use exponential backoff when
+<p>It&apos;s always recommended that clients should use exponential backoff when
 retrying.</p>
 <p>Clients should wait until <code>retry_delay</code> amount of time has passed since
 receiving the error response before retrying.  If retrying requests also

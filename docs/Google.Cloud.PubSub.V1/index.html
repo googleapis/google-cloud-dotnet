@@ -8,7 +8,7 @@
     <title>Google.Cloud.PubSub.V1 | Google.Cloud.PubSub.V1 </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google.Cloud.PubSub.V1 | Google.Cloud.PubSub.V1 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -61,40 +61,68 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="googlecloudpubsubv1">Google.Cloud.PubSub.V1</h1>
 
-<p><code>Google.Cloud.PubSub.V1</code> is a .NET client library for <a href="https://cloud.google.com/pubsub/">Cloud
-Pub/Sub</a>.</p>
+<p><code>Google.Cloud.PubSub.V1</code> is a.NET client library for the <a href="https://cloud.google.com/pubsub/">Cloud Pub/Sub API</a>.</p>
 <h1 id="installation">Installation</h1>
 <p>Install the <code>Google.Cloud.PubSub.V1</code> package from NuGet. Add it to
 your project in the normal way (for example by right-clicking on the
 project in Visual Studio and choosing &quot;Manage NuGet Packages...&quot;).
-Please ensure you enable pre-release packages (for example, in the
+Please ensure you enable pre-release packages(for example, in the
 Visual Studio NuGet user interface, check the &quot;Include prerelease&quot;
 box).</p>
 <h1 id="authentication">Authentication</h1>
-<p>To authenticate all your API calls, first install and setup the
-<a href="https://cloud.google.com/sdk/">Google Cloud SDK</a>. After that is
-installed, to get started you can run the following command in a
-Google Cloud SDK Shell:</p>
-<pre><code class="lang-sh">&gt; gcloud auth application-default login
-</code></pre><p>That will provide <a href="https://developers.google.com/identity/protocols/application-default-credentials">application default
-credentials</a>
-in your local environment. Be aware however that these credentials
-will have a low default quota.</p>
-<p>To move beyond initial prototyping, we encourage you to use a <a href="https://cloud.google.com/compute/docs/access/service-accounts">service
-account</a>.
-After downloading the JSON file for the service account, set the
-<code>GOOGLE_APPLICATION_CREDENTIALS</code> environment variable to the file&#39;s
-location, and it will be picked up by default. This is only needed
-when running outside Google Cloud Platform; code running on Google
-Cloud Platform will use the appropriate service account for its
-hosting environment automatically.</p>
+<p>When running on Google Cloud Platform, no action needs to be taken to authenticate.</p>
+<p>Otherwise, the simplest way of authenticating your API calls is to
+download a service account JSON file then set the <code>GOOGLE_APPLICATION_CREDENTIALS</code> environment variable to refer to it.
+The credentials will automatically be used to authenticate. See the <a href="https://cloud.google.com/docs/authentication/getting-started">Getting Started With
+Authentication</a> guide for more details.</p>
 <h1 id="getting-started">Getting started</h1>
 <p><a href="api/Google.Cloud.PubSub.V1.PublisherClient.html">PublisherClient</a> and
 <a href="api/Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a>
 provide a general-purpose abstraction over raw the RPC API, providing
 features such as page streaming to make client code cleaner and
 simpler.</p>
+<p><a href="api/Google.Cloud.PubSub.V1.SimplePublisher.html">SimplePublisher</a> and <a href="api/Google.Cloud.PubSub.V1.SimpleSubscriber.html">SimpleSubscriber</a> provide simpler APIs for message publishing and subscribing. These classes offer considerably higher performance and simplicity, especially when working with higher message throughput.</p>
 <h1 id="sample-code">Sample code</h1>
+<p>Using <a href="api/Google.Cloud.PubSub.V1.SimplePublisher.html">SimplePublisher</a> and <a href="api/Google.Cloud.PubSub.V1.SimpleSubscriber.html">SimpleSubscriber</a> for message publishing and subscribing:</p>
+<pre><code class="lang-cs">// First create a topic.
+PublisherClient publisher = await PublisherClient.CreateAsync();
+TopicName topicName = new TopicName(projectId, topicId);
+publisher.CreateTopic(topicName);
+
+// Subscribe to the topic.
+SubscriberClient subscriber = await SubscriberClient.CreateAsync();
+SubscriptionName subscriptionName = new SubscriptionName(projectId, subscriptionId);
+subscriber.CreateSubscription(subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 60);
+
+// Publish a message to the topic using SimplePublisher.
+SimplePublisher simplePublisher = await SimplePublisher.CreateAsync(topicName);
+// PublishAsync() has various overloads. Here we&#39;re using the string overload.
+string messageId = await simplePublisher.PublishAsync(&quot;Hello, Pubsub&quot;);
+// SimplePublisher should be shutdown after use.
+// The TimeSpan specifies for how long to attempt to publish locally queued messages.
+await simplePublisher.ShutdownAsync(TimeSpan.FromSeconds(15));
+
+// Pull messages from the subscription using SimpleSubscriber.
+SimpleSubscriber simpleSubscriber = await SimpleSubscriber.CreateAsync(subscriptionName);
+List&lt;PubsubMessage&gt; receivedMessages = new List&lt;PubsubMessage&gt;();
+// Start the subscriber listening for messages.
+await simpleSubscriber.StartAsync((msg, cancellationToken) =&gt;
+{
+    receivedMessages.Add(msg);
+    Console.WriteLine($&quot;Received message {msg.MessageId} published at {msg.PublishTime.ToDateTime()}&quot;);
+    Console.WriteLine($&quot;Text: &#39;{msg.Data.ToStringUtf8()}&#39;&quot;);
+    // Stop this subscriber after one message is received.
+    // This is non-blocking, and the returned Task may be awaited.
+    simpleSubscriber.StopAsync(TimeSpan.FromSeconds(15));
+    // Return Reply.Ack to indicate this message has been handled.
+    return Task.FromResult(SimpleSubscriber.Reply.Ack);
+});
+
+// Tidy up by deleting the subscription and the topic.
+subscriber.DeleteSubscription(subscriptionName);
+publisher.DeleteTopic(topicName);
+</code></pre><p>Using <a href="api/Google.Cloud.PubSub.V1.PublisherClient.html">PublisherClient</a> and
+<a href="api/Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a> only:</p>
 <pre><code class="lang-cs">// First create a topic.
 PublisherClient publisher = PublisherClient.Create();
 TopicName topicName = new TopicName(projectId, topicId);

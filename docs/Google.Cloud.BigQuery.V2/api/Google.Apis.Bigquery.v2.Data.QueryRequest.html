@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class QueryRequest
    | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Apis.Bigquery.v2.Data.QueryRequest">
   
   
-  <h1 id="Google_Apis_Bigquery_v2_Data_QueryRequest" data-uid="Google.Apis.Bigquery.v2.Data.QueryRequest">Class QueryRequest
+  <h1 id="Google_Apis_Bigquery_v2_Data_QueryRequest" data-uid="Google.Apis.Bigquery.v2.Data.QueryRequest" class="text-break">Class QueryRequest
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
@@ -115,7 +115,7 @@
   <h4 id="Google_Apis_Bigquery_v2_Data_QueryRequest_DefaultDataset" data-uid="Google.Apis.Bigquery.v2.Data.QueryRequest.DefaultDataset">DefaultDataset</h4>
   <div class="markdown level1 summary"><p>[Optional] Specifies the default datasetId and projectId to assume for any unqualified table names
 in the query. If not set, all table names in the query string must be qualified in the format
-&#39;datasetId.tableId&#39;.</p>
+&apos;datasetId.tableId&apos;.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -140,7 +140,7 @@ public virtual DatasetReference DefaultDataset { get; set; }</code></pre>
   </table>
   <a id="Google_Apis_Bigquery_v2_Data_QueryRequest_DryRun_" data-uid="Google.Apis.Bigquery.v2.Data.QueryRequest.DryRun*"></a>
   <h4 id="Google_Apis_Bigquery_v2_Data_QueryRequest_DryRun" data-uid="Google.Apis.Bigquery.v2.Data.QueryRequest.DryRun">DryRun</h4>
-  <div class="markdown level1 summary"><p>[Optional] If set to true, BigQuery doesn&#39;t run the job. Instead, if the query is valid, BigQuery
+  <div class="markdown level1 summary"><p>[Optional] If set to true, BigQuery doesn&apos;t run the job. Instead, if the query is valid, BigQuery
 returns statistics about the job such as how many bytes would be processed. If the query is invalid, an
 error returns. The default value is false.</p>
 </div>
@@ -350,7 +350,7 @@ public virtual IList&lt;QueryParameter&gt; QueryParameters { get; set; }</code><
   <h4 id="Google_Apis_Bigquery_v2_Data_QueryRequest_TimeoutMs" data-uid="Google.Apis.Bigquery.v2.Data.QueryRequest.TimeoutMs">TimeoutMs</h4>
   <div class="markdown level1 summary"><p>[Optional] How long to wait for the query to complete, in milliseconds, before the request times
 out and returns. Note that this is only a timeout for the request, not the query. If the query takes longer
-to run than the timeout value, the call returns without any results and with the &#39;jobComplete&#39; flag set to
+to run than the timeout value, the call returns without any results and with the &apos;jobComplete&apos; flag set to
 false. You can call GetQueryResults() to wait for the query to complete and read the results. The default
 value is 10000 milliseconds (10 seconds).</p>
 </div>
@@ -377,8 +377,8 @@ public virtual long ? TimeoutMs { get; set; }</code></pre>
   </table>
   <a id="Google_Apis_Bigquery_v2_Data_QueryRequest_UseLegacySql_" data-uid="Google.Apis.Bigquery.v2.Data.QueryRequest.UseLegacySql*"></a>
   <h4 id="Google_Apis_Bigquery_v2_Data_QueryRequest_UseLegacySql" data-uid="Google.Apis.Bigquery.v2.Data.QueryRequest.UseLegacySql">UseLegacySql</h4>
-  <div class="markdown level1 summary"><p>Specifies whether to use BigQuery&#39;s legacy SQL dialect for this query. The default value is true.
-If set to false, the query will use BigQuery&#39;s standard SQL: <a href="https://cloud.google.com/bigquery/sql-">https://cloud.google.com/bigquery/sql-</a>
+  <div class="markdown level1 summary"><p>Specifies whether to use BigQuery&apos;s legacy SQL dialect for this query. The default value is true.
+If set to false, the query will use BigQuery&apos;s standard SQL: <a href="https://cloud.google.com/bigquery/sql-">https://cloud.google.com/bigquery/sql-</a>
 reference/ When useLegacySql is set to false, the values of allowLargeResults and flattenResults are
 ignored; query will be run as if allowLargeResults is true and flattenResults is false.</p>
 </div>

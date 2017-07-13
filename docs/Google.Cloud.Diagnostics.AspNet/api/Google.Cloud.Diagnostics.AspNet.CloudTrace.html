@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class CloudTrace
    | Google.Cloud.Diagnostics.AspNet ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace">
   
   
-  <h1 id="Google_Cloud_Diagnostics_AspNet_CloudTrace" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace">Class CloudTrace
+  <h1 id="Google_Cloud_Diagnostics_AspNet_CloudTrace" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace" class="text-break">Class CloudTrace
   </h1>
   <div class="markdown level0 summary"><p>Google Trace for ASP.NET Applications.</p>
 </div>
@@ -113,7 +113,7 @@ trace data can be collected manually.</p>
       public override void Init()
       {
           base.Init();
-          CloudTrace.Initialize(this, "some-project-id");
+          CloudTrace.Initialize(this, &quot;some-project-id&quot;);
       }
  }</code></pre>
 
@@ -128,7 +128,7 @@ trace data can be collected manually.</p>
 
   <pre><code>public void DoSomething()
 {
-    CloudTrace.Tracer.StartSpan("DoSomething");
+    CloudTrace.Tracer.StartSpan(&quot;DoSomething&quot;);
     ...
     CloudTrace.Tracer.EndSpan();
 }</code></pre>
@@ -166,7 +166,7 @@ This <a class="xref" href="Google.Cloud.Diagnostics.Common.IManagedTracer.html">
   <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_CreateTracingHttpMessageHandler" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.CreateTracingHttpMessageHandler">CreateTracingHttpMessageHandler()</h4>
   <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.html">TraceHeaderPropagatingHandler</a> to propagate trace headers
 in Http requests.
-<example>
+<example><p>
 <pre><code>public void DoSomething()
 {
     var traceHeaderHandler = CloudTrace.CreateTracingHttpMessageHandler();
@@ -175,7 +175,7 @@ in Http requests.
         ...
     }
 }</code></pre>
-</example></p>
+<p></example></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

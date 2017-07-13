@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Group
    | Google.Cloud.Monitoring.V3 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,25 +70,25 @@
             <article class="content wrap" id="_content" data-uid="Google.Cloud.Monitoring.V3.Group">
   
   
-  <h1 id="Google_Cloud_Monitoring_V3_Group" data-uid="Google.Cloud.Monitoring.V3.Group">Class Group
+  <h1 id="Google_Cloud_Monitoring_V3_Group" data-uid="Google.Cloud.Monitoring.V3.Group" class="text-break">Class Group
   </h1>
   <div class="markdown level0 summary"><p>The description of a dynamic collection of monitored resources. Each group
 has a filter that is matched against monitored resources and their associated
-metadata. If a group&#39;s filter matches an available monitored resource, then
+metadata. If a group&apos;s filter matches an available monitored resource, then
 that resource is a member of that group.  Groups can contain any number of
 monitored resources, and each monitored resource can be a member of any
 number of groups.</p>
 <p>Groups can be nested in parent-child hierarchies. The <code>parentName</code> field
 identifies an optional parent for each group.  If a group has a parent, then
-the only monitored resources available to be matched by the group&#39;s filter
+the only monitored resources available to be matched by the group&apos;s filter
 are the resources contained in the parent group.  In other words, a group
 contains the monitored resources that match its filter and the filters of all
-the group&#39;s ancestors.  A group without a parent can contain any monitored
+the group&apos;s ancestors.  A group without a parent can contain any monitored
 resource.</p>
 <p>For example, consider an infrastructure running a set of instances with two
-user-defined tags: <code>&quot;environment&quot;</code> and <code>&quot;role&quot;</code>. A parent group has a filter,
-<code>environment=&quot;production&quot;</code>.  A child of that parent group has a filter,
-<code>role=&quot;transcoder&quot;</code>.  The parent group contains all instances in the
+user-defined tags: <code>&amp;quot;environment&amp;quot;</code> and <code>&amp;quot;role&amp;quot;</code>. A parent group has a filter,
+<code>environment=&amp;quot;production&amp;quot;</code>.  A child of that parent group has a filter,
+<code>role=&amp;quot;transcoder&amp;quot;</code>.  The parent group contains all instances in the
 production environment, regardless of their roles.  The child group contains
 instances that have the transcoder role <em>and</em> are in the production
 environment.</p>
@@ -225,7 +225,7 @@ The system can perform additional analysis on groups that are clusters.</p>
   <a id="Google_Cloud_Monitoring_V3_Group_Name_" data-uid="Google.Cloud.Monitoring.V3.Group.Name*"></a>
   <h4 id="Google_Cloud_Monitoring_V3_Group_Name" data-uid="Google.Cloud.Monitoring.V3.Group.Name">Name</h4>
   <div class="markdown level1 summary"><p>Output only. The name of this group. The format is
-<code>&quot;projects/{project_id_or_number}/groups/{group_id}&quot;</code>.
+<code>&amp;quot;projects/{project_id_or_number}/groups/{group_id}&amp;quot;</code>.
 When creating a group, this field is ignored and a new name is created
 consisting of the project specified in the call to <code>CreateGroup</code>
 and a unique <code>{group_id}</code> that is generated automatically.</p>
@@ -252,9 +252,9 @@ and a unique <code>{group_id}</code> that is generated automatically.</p>
   </table>
   <a id="Google_Cloud_Monitoring_V3_Group_ParentName_" data-uid="Google.Cloud.Monitoring.V3.Group.ParentName*"></a>
   <h4 id="Google_Cloud_Monitoring_V3_Group_ParentName" data-uid="Google.Cloud.Monitoring.V3.Group.ParentName">ParentName</h4>
-  <div class="markdown level1 summary"><p>The name of the group&#39;s parent, if it has one.
-The format is <code>&quot;projects/{project_id_or_number}/groups/{group_id}&quot;</code>.
-For groups with no parent, <code>parentName</code> is the empty string, <code>&quot;&quot;</code>.</p>
+  <div class="markdown level1 summary"><p>The name of the group&apos;s parent, if it has one.
+The format is <code>&amp;quot;projects/{project_id_or_number}/groups/{group_id}&amp;quot;</code>.
+For groups with no parent, <code>parentName</code> is the empty string, <code>&amp;quot;&amp;quot;</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TraceHeaderPropagatingHandler
    | Google.Cloud.Diagnostics.AspNetCore ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler">
   
   
-  <h1 id="Google_Cloud_Diagnostics_Common_TraceHeaderPropagatingHandler" data-uid="Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler">Class TraceHeaderPropagatingHandler
+  <h1 id="Google_Cloud_Diagnostics_Common_TraceHeaderPropagatingHandler" data-uid="Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler" class="text-break">Class TraceHeaderPropagatingHandler
   </h1>
   <div class="markdown level0 summary"><p>Traces outgoing HTTP requests and propagates the trace header.</p>
 </div>
@@ -120,7 +120,7 @@ and tracing is enabled for the request current request.</p>
   <h5 id="Google_Cloud_Diagnostics_Common_TraceHeaderPropagatingHandler_examples"><strong>Examples</strong></h5>
   <pre><code>public void DoSomething(IManagedTracer tracer)
 {
-    var traceHeaderHandler = new TraceHeaderPropagatingHandler(() =&gt; tracer);
+    var traceHeaderHandler = new TraceHeaderPropagatingHandler(() => tracer);
     using (var httpClient = new HttpClient(traceHeaderHandler))
     {
         ...

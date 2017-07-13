@@ -17505,6 +17505,38 @@ references:
   fullName.vb: Google.LongRunning.Operation(Of TResponse, TMetadata).Exception
   nameWithType: Operation<TResponse, TMetadata>.Exception
   nameWithType.vb: Operation(Of TResponse, TMetadata).Exception
+- uid: Google.LongRunning.Operation`2.GetMetadataOrNull
+  name: GetMetadataOrNull()
+  href: api/Google.LongRunning.Operation-2.html#Google_LongRunning_Operation_2_GetMetadataOrNull
+  commentId: M:Google.LongRunning.Operation`2.GetMetadataOrNull
+  fullName: Google.LongRunning.Operation<TResponse, TMetadata>.GetMetadataOrNull()
+  fullName.vb: Google.LongRunning.Operation(Of TResponse, TMetadata).GetMetadataOrNull()
+  nameWithType: Operation<TResponse, TMetadata>.GetMetadataOrNull()
+  nameWithType.vb: Operation(Of TResponse, TMetadata).GetMetadataOrNull()
+- uid: Google.LongRunning.Operation`2.GetMetadataOrNull*
+  name: GetMetadataOrNull
+  href: api/Google.LongRunning.Operation-2.html#Google_LongRunning_Operation_2_GetMetadataOrNull_
+  commentId: Overload:Google.LongRunning.Operation`2.GetMetadataOrNull
+  fullName: Google.LongRunning.Operation<TResponse, TMetadata>.GetMetadataOrNull
+  fullName.vb: Google.LongRunning.Operation(Of TResponse, TMetadata).GetMetadataOrNull
+  nameWithType: Operation<TResponse, TMetadata>.GetMetadataOrNull
+  nameWithType.vb: Operation(Of TResponse, TMetadata).GetMetadataOrNull
+- uid: Google.LongRunning.Operation`2.GetResultOrNull
+  name: GetResultOrNull()
+  href: api/Google.LongRunning.Operation-2.html#Google_LongRunning_Operation_2_GetResultOrNull
+  commentId: M:Google.LongRunning.Operation`2.GetResultOrNull
+  fullName: Google.LongRunning.Operation<TResponse, TMetadata>.GetResultOrNull()
+  fullName.vb: Google.LongRunning.Operation(Of TResponse, TMetadata).GetResultOrNull()
+  nameWithType: Operation<TResponse, TMetadata>.GetResultOrNull()
+  nameWithType.vb: Operation(Of TResponse, TMetadata).GetResultOrNull()
+- uid: Google.LongRunning.Operation`2.GetResultOrNull*
+  name: GetResultOrNull
+  href: api/Google.LongRunning.Operation-2.html#Google_LongRunning_Operation_2_GetResultOrNull_
+  commentId: Overload:Google.LongRunning.Operation`2.GetResultOrNull
+  fullName: Google.LongRunning.Operation<TResponse, TMetadata>.GetResultOrNull
+  fullName.vb: Google.LongRunning.Operation(Of TResponse, TMetadata).GetResultOrNull
+  nameWithType: Operation<TResponse, TMetadata>.GetResultOrNull
+  nameWithType.vb: Operation(Of TResponse, TMetadata).GetResultOrNull
 - uid: Google.LongRunning.Operation`2.IsCompleted
   name: IsCompleted
   href: api/Google.LongRunning.Operation-2.html#Google_LongRunning_Operation_2_IsCompleted

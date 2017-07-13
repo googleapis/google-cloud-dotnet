@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class CodedOutputStream
    | Google.Cloud.Trace.V1 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Protobuf.CodedOutputStream">
   
   
-  <h1 id="Google_Protobuf_CodedOutputStream" data-uid="Google.Protobuf.CodedOutputStream">Class CodedOutputStream
+  <h1 id="Google_Protobuf_CodedOutputStream" data-uid="Google.Protobuf.CodedOutputStream" class="text-break">Class CodedOutputStream
   </h1>
   <div class="markdown level0 summary"><p>Encodes and writes protocol message fields.</p>
 </div>
@@ -116,8 +116,8 @@ This class is generally used by generated code to write appropriate
 primitives to the stream. It effectively encapsulates the lowest
 levels of protocol buffer format. Unlike some other implementations,
 this does not include combined &quot;write tag and value&quot; methods. Generated
-code knows the exact byte representations of the tags they&#39;re going to write,
-so there&#39;s no need to re-encode them each time. Manually-written code calling
+code knows the exact byte representations of the tags they&apos;re going to write,
+so there&apos;s no need to re-encode them each time. Manually-written code calling
 this class should just call one of the <code>WriteTag</code> overloads before each value.
 </p>
 <p>
@@ -372,7 +372,7 @@ throws an InvalidOperationException.</p>
   </h3>
   <a id="Google_Protobuf_CodedOutputStream_CheckNoSpaceLeft_" data-uid="Google.Protobuf.CodedOutputStream.CheckNoSpaceLeft*"></a>
   <h4 id="Google_Protobuf_CodedOutputStream_CheckNoSpaceLeft" data-uid="Google.Protobuf.CodedOutputStream.CheckNoSpaceLeft">CheckNoSpaceLeft()</h4>
-  <div class="markdown level1 summary"><p>Verifies that SpaceLeft returns zero. It&#39;s common to create a byte array
+  <div class="markdown level1 summary"><p>Verifies that SpaceLeft returns zero. It&apos;s common to create a byte array
 that is exactly big enough to hold a message, then write to it with
 a CodedOutputStream. Calling CheckNoSpaceLeft after writing verifies that
 the message was actually as big as expected, which can help bugs.</p>

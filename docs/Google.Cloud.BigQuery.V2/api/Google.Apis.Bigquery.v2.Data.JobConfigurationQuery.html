@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class JobConfigurationQuery
    | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery">
   
   
-  <h1 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery">Class JobConfigurationQuery
+  <h1 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery" class="text-break">Class JobConfigurationQuery
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
@@ -143,7 +143,7 @@ public virtual bool ? AllowLargeResults { get; set; }</code></pre>
   <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_CreateDisposition" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.CreateDisposition">CreateDisposition</h4>
   <div class="markdown level1 summary"><p>[Optional] Specifies whether the job is allowed to create new tables. The following values are
 supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The
-table must already exist. If it does not, a &#39;notFound&#39; error is returned in the job result. The default
+table must already exist. If it does not, a &apos;notFound&apos; error is returned in the job result. The default
 value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job
 completion.</p>
 </div>
@@ -513,8 +513,8 @@ public virtual IDictionary&lt;string, ExternalDataConfiguration&gt; TableDefinit
   </table>
   <a id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_UseLegacySql_" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.UseLegacySql*"></a>
   <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationQuery_UseLegacySql" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationQuery.UseLegacySql">UseLegacySql</h4>
-  <div class="markdown level1 summary"><p>Specifies whether to use BigQuery&#39;s legacy SQL dialect for this query. The default value is true.
-If set to false, the query will use BigQuery&#39;s standard SQL: <a href="https://cloud.google.com/bigquery/sql-">https://cloud.google.com/bigquery/sql-</a>
+  <div class="markdown level1 summary"><p>Specifies whether to use BigQuery&apos;s legacy SQL dialect for this query. The default value is true.
+If set to false, the query will use BigQuery&apos;s standard SQL: <a href="https://cloud.google.com/bigquery/sql-">https://cloud.google.com/bigquery/sql-</a>
 reference/ When useLegacySql is set to false, the values of allowLargeResults and flattenResults are
 ignored; query will be run as if allowLargeResults is true and flattenResults is false.</p>
 </div>
@@ -596,7 +596,7 @@ public virtual IList&lt;UserDefinedFunctionResource&gt; UserDefinedFunctionResou
   <div class="markdown level1 summary"><p>[Optional] Specifies the action that occurs if the destination table already exists. The following
 values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data.
 WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table
-already exists and contains data, a &#39;duplicate&#39; error is returned in the job result. The default value is
+already exists and contains data, a &apos;duplicate&apos; error is returned in the job result. The default value is
 WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.</p>
 </div>

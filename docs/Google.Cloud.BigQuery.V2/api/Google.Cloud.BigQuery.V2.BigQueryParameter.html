@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BigQueryParameter
    | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Cloud.BigQuery.V2.BigQueryParameter">
   
   
-  <h1 id="Google_Cloud_BigQuery_V2_BigQueryParameter" data-uid="Google.Cloud.BigQuery.V2.BigQueryParameter">Class BigQueryParameter
+  <h1 id="Google_Cloud_BigQuery_V2_BigQueryParameter" data-uid="Google.Cloud.BigQuery.V2.BigQueryParameter" class="text-break">Class BigQueryParameter
   </h1>
   <div class="markdown level0 summary"><p>A parameter within the <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryParameterCollection.html">BigQueryParameterCollection</a> of a <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryCommand.html">BigQueryCommand</a>.</p>
 </div>
@@ -114,7 +114,7 @@ but passed to the API as-is.
 </p>
 <ul><li><code>Bool</code>: <code>System.Boolean</code></li><li><code>Int64</code>: <code>System.Int16</code>, <code>System.Int32</code>, <code>System.Int64</code>, <code>System.UInt16</code>, <code>System.UInt32</code>,
 <code>System.UInt64</code></li><li><code>Float64</code>: Any type valid for <code>Int64</code>, as well as <code>System.Single</code> and <code>System.Double</code></li><li><code>String</code>: <code>System.String</code></li><li><code>Bytes</code>: <code>System.Byte[]</code></li><li><code>Date</code>: <code>System.DateTime</code>, <code>System.DateTimeOffset</code></li><li><code>DateTime</code>: <code>System.DateTime</code>, <code>System.DateTimeOffset</code></li><li><code>Time</code>: <code>System.DateTime</code>, <code>System.DateTimeOffset</code>, <code>System.TimeSpan</code></li><li><code>Timestamp</code>: <code>System.DateTime</code>, <code>System.DateTimeOffset</code></li><li><code>Array</code>: An <code>IReadOnlyList&lt;T&gt;</code> of any of the above types corresponding to the <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryParameter.html#Google_Cloud_BigQuery_V2_BigQueryParameter_ArrayType">ArrayType</a>,
-which will be inferred from the value&#39;s element type if not otherwise specified.</li></ul>
+which will be inferred from the value&apos;s element type if not otherwise specified.</li></ul>
 <p>
 If the parameter type is null, it is inferred from the value. A <span class="xref">System.TimeSpan</span> value is
 always assumed to be a <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryDbType.html#Google_Cloud_BigQuery_V2_BigQueryDbType_Time">Time</a>, a <span class="xref">System.DateTimeOffset</span> value is
@@ -122,7 +122,7 @@ always assumed to be a <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryDb
 to be <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryDbType.html#Google_Cloud_BigQuery_V2_BigQueryDbType_DateTime">DateTime</a> regardless of its <span class="xref">System.DateTime.Kind</span>.
 </p>
 <p>
-If an array parameter doesn&#39;t specify the array type, the type is inferred from the type of the value.
+If an array parameter doesn&apos;t specify the array type, the type is inferred from the type of the value.
 </p>
 <p>
 Array parameters must not have a value of null, and all the elements must be non-null as well.

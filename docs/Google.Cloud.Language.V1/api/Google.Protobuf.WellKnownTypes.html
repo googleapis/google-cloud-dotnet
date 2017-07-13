@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Google.Protobuf.WellKnownTypes
    | Google.Cloud.Language.V1 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -69,7 +69,7 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="Google.Protobuf.WellKnownTypes">
   
-  <h1 id="Google_Protobuf_WellKnownTypes" data-uid="Google.Protobuf.WellKnownTypes">Namespace Google.Protobuf.WellKnownTypes
+  <h1 id="Google_Protobuf_WellKnownTypes" data-uid="Google.Protobuf.WellKnownTypes" class="text-break">Namespace Google.Protobuf.WellKnownTypes
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
@@ -105,8 +105,8 @@ if any.Is(Foo.DESCRIPTOR):
  any.Unpack(foo)
  ...</p>
 <p>The pack methods provided by protobuf library will by default use
-&#39;type.googleapis.com/full.type.name&#39; as the type URL and the unpack
-methods only use the fully qualified type name after the last &#39;/&#39;
+&apos;type.googleapis.com/full.type.name&apos; as the type URL and the unpack
+methods only use the fully qualified type name after the last &apos;/&apos;
 in the type URL, for example &quot;foo.bar.com/x/y.z&quot; will yield type
 name &quot;y.z&quot;.</p>
 <h1 id="json">JSON</h1>
@@ -119,7 +119,7 @@ message Person {
  string last_name = 2;
 }</p>
 <p>{
- &quot;@type&quot;: &quot;type.googleapis.com/google.profile.Person&quot;,
+ &amp;quot;@type&amp;quot;: &quot;type.googleapis.com/google.profile.Person&quot;,
  &quot;firstName&quot;: &lt;string&gt;,
  &quot;lastName&quot;: &lt;string&gt;
 }</p>
@@ -128,7 +128,7 @@ representation, that representation will be embedded adding a field
 <code>value</code> which holds the custom JSON in addition to the <code>@type</code>
 field. Example (for message [google.protobuf.Duration][]):</p>
 <p>{
- &quot;@type&quot;: &quot;type.googleapis.com/google.protobuf.Duration&quot;,
+ &amp;quot;@type&amp;quot;: &quot;type.googleapis.com/google.protobuf.Duration&quot;,
  &quot;value&quot;: &quot;1.212s&quot;
 }</p>
 </section>
@@ -320,7 +320,7 @@ overwritten. Given the target message:</p>
  }
  c : 1
 }</p>
-<p>In order to reset a field&#39;s value to the default, the field must
+<p>In order to reset a field&apos;s value to the default, the field must
 be in the mask and set to the default value in the provided resource.
 Hence, in order to reset all fields of a resource, provide a default
 instance of the resource and set all fields in the mask, or do
@@ -564,8 +564,8 @@ is required, though only UTC (as indicated by &quot;Z&quot;) is presently suppor
 standard [toISOString()](<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString</a>]
 method. In Python, a standard <code>datetime.datetime</code> object can be converted
 to this format using <a href="https://docs.python.org/2/library/time.html#time.strftime"><code>strftime</code></a>
-with the time format spec &#39;%Y-%m-%dT%H:%M:%S.%fZ&#39;. Likewise, in Java, one
-can use the Joda Time&#39;s <a href="http://joda-time.sourceforge.net/apidocs/org/joda/time/format/ISODateTimeFormat.html#dateTime()"><code>ISODateTimeFormat.dateTime()</code></a>
+with the time format spec &apos;%Y-%m-%dT%H:%M:%S.%fZ&apos;. Likewise, in Java, one
+can use the Joda Time&apos;s <a href="http://joda-time.sourceforge.net/apidocs/org/joda/time/format/ISODateTimeFormat.html#dateTime()"><code>ISODateTimeFormat.dateTime()</code></a>
 to obtain a formatter capable of generating timestamps in this format.</p>
 </section>
       <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.TimestampReflection.html">TimestampReflection</a></h4>

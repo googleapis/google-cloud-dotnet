@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class LogMetric
    | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Cloud.Logging.V2.LogMetric">
   
   
-  <h1 id="Google_Cloud_Logging_V2_LogMetric" data-uid="Google.Cloud.Logging.V2.LogMetric">Class LogMetric
+  <h1 id="Google_Cloud_Logging_V2_LogMetric" data-uid="Google.Cloud.Logging.V2.LogMetric" class="text-break">Class LogMetric
   </h1>
   <div class="markdown level0 summary"><p>Describes a logs-based metric.  The value of the metric is the
 number of log entries that match a logs filter in a given time interval.</p>
@@ -159,10 +159,10 @@ Example:</p>
   <a id="Google_Cloud_Logging_V2_LogMetric_Name_" data-uid="Google.Cloud.Logging.V2.LogMetric.Name*"></a>
   <h4 id="Google_Cloud_Logging_V2_LogMetric_Name" data-uid="Google.Cloud.Logging.V2.LogMetric.Name">Name</h4>
   <div class="markdown level1 summary"><p>Required. The client-assigned metric identifier.
-Examples: <code>&quot;error_count&quot;</code>, <code>&quot;nginx/requests&quot;</code>.</p>
+Examples: <code>&amp;quot;error_count&amp;quot;</code>, <code>&amp;quot;nginx/requests&amp;quot;</code>.</p>
 <p>Metric identifiers are limited to 100 characters and can include
 only the following characters: <code>A-Z</code>, <code>a-z</code>, <code>0-9</code>, and the
-special characters <code>_-.,+!*&#39;,()%/</code>.  The forward-slash character
+special characters <code>_-.,+!*&amp;apos;,()%/</code>.  The forward-slash character
 (<code>/</code>) denotes a hierarchy of name pieces, and it cannot be the
 first character of the name.</p>
 <p>The metric identifier in this field must not be
@@ -170,7 +170,7 @@ first character of the name.</p>
 However, when the metric identifier appears as the <code>[METRIC_ID]</code>
 part of a <code>metric_name</code> API parameter, then the metric identifier
 must be URL-encoded. Example:
-<code>&quot;projects/my-project/metrics/nginx%2Frequests&quot;</code>.</p>
+<code>&amp;quot;projects/my-project/metrics/nginx%2Frequests&amp;quot;</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

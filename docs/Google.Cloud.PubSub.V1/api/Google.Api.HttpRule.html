@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class HttpRule
    | Google.Cloud.PubSub.V1 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Api.HttpRule">
   
   
-  <h1 id="Google_Api_HttpRule" data-uid="Google.Api.HttpRule">Class HttpRule
+  <h1 id="Google_Api_HttpRule" data-uid="Google.Api.HttpRule" class="text-break">Class HttpRule
   </h1>
   <div class="markdown level0 summary"><p><code>HttpRule</code> defines the mapping of an RPC method to one or more HTTP
 REST APIs.  The mapping determines what portions of the request
@@ -117,7 +117,7 @@ JSON to RPC. Example:</p>
 <tbody>
 <tr>
 <td><code>GET /v1/messages/123456/foo</code></td>
-<td><code>GetMessage(message_id: &quot;123456&quot; sub: SubMessage(subfield: &quot;foo&quot;))</code></td>
+<td><code>GetMessage(message_id: &amp;quot;123456&amp;quot; sub: SubMessage(subfield: &amp;quot;foo&amp;quot;))</code></td>
 </tr>
 </tbody>
 </table>
@@ -146,7 +146,7 @@ parameters. Assume the following definition of the request message:</p>
 <tbody>
 <tr>
 <td><code>GET /v1/messages/123456?revision=2&amp;amp;sub.subfield=foo</code></td>
-<td><code>GetMessage(message_id: &quot;123456&quot; revision: 2 sub: SubMessage(subfield: &quot;foo&quot;))</code></td>
+<td><code>GetMessage(message_id: &amp;quot;123456&amp;quot; revision: 2 sub: SubMessage(subfield: &amp;quot;foo&amp;quot;))</code></td>
 </tr>
 </tbody>
 </table>
@@ -181,8 +181,8 @@ protos JSON encoding:</p>
 </thead>
 <tbody>
 <tr>
-<td><code>PUT /v1/messages/123456 { &quot;text&quot;: &quot;Hi!&quot; }</code></td>
-<td><code>UpdateMessage(message_id: &quot;123456&quot; message { text: &quot;Hi!&quot; })</code></td>
+<td><code>PUT /v1/messages/123456 { &amp;quot;text&amp;quot;: &amp;quot;Hi!&amp;quot; }</code></td>
+<td><code>UpdateMessage(message_id: &amp;quot;123456&amp;quot; message { text: &amp;quot;Hi!&amp;quot; })</code></td>
 </tr>
 </tbody>
 </table>
@@ -212,8 +212,8 @@ message Message {
 </thead>
 <tbody>
 <tr>
-<td><code>PUT /v1/messages/123456 { &quot;text&quot;: &quot;Hi!&quot; }</code></td>
-<td><code>UpdateMessage(message_id: &quot;123456&quot; text: &quot;Hi!&quot;)</code></td>
+<td><code>PUT /v1/messages/123456 { &amp;quot;text&amp;quot;: &amp;quot;Hi!&amp;quot; }</code></td>
+<td><code>UpdateMessage(message_id: &amp;quot;123456&amp;quot; text: &amp;quot;Hi!&amp;quot;)</code></td>
 </tr>
 </tbody>
 </table>
@@ -221,7 +221,7 @@ message Message {
 have HTTP parameters, as all fields not bound by the path end in
 the body. This makes this option more rarely used in practice of
 defining REST APIs. The common usage of <code>*</code> is in custom methods
-which don&#39;t use the URL at all for transferring data.</p>
+which don&apos;t use the URL at all for transferring data.</p>
 <p>It is possible to define multiple HTTP methods for one RPC by using
 the <code>additional_bindings</code> option. Example:</p>
 <p>service Messaging {
@@ -250,11 +250,11 @@ mappings:</p>
 <tbody>
 <tr>
 <td><code>GET /v1/messages/123456</code></td>
-<td><code>GetMessage(message_id: &quot;123456&quot;)</code></td>
+<td><code>GetMessage(message_id: &amp;quot;123456&amp;quot;)</code></td>
 </tr>
 <tr>
 <td><code>GET /v1/users/me/messages/123456</code></td>
-<td><code>GetMessage(user_id: &quot;me&quot; message_id: &quot;123456&quot;)</code></td>
+<td><code>GetMessage(user_id: &amp;quot;me&amp;quot; message_id: &amp;quot;123456&amp;quot;)</code></td>
 </tr>
 </tbody>
 </table>

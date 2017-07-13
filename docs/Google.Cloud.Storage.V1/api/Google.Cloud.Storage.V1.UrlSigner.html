@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class UrlSigner
    | Google.Cloud.Storage.V1 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Cloud.Storage.V1.UrlSigner">
   
   
-  <h1 id="Google_Cloud_Storage_V1_UrlSigner" data-uid="Google.Cloud.Storage.V1.UrlSigner">Class UrlSigner
+  <h1 id="Google_Cloud_Storage_V1_UrlSigner" data-uid="Google.Cloud.Storage.V1.UrlSigner" class="text-break">Class UrlSigner
   </h1>
   <div class="markdown level0 summary"><p>Class which helps create signed URLs which can be used to provide limited access to specific buckets and objects
 to anyone in possession of the URL, regardless of whether they have a Google account.</p>
@@ -134,7 +134,7 @@ See <a href="https://cloud.google.com/storage/docs/access-control/signed-urls#si
   </table>
   <h5 id="Google_Cloud_Storage_V1_UrlSigner_ResumableHttpMethod_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Note: When using the RESUMABLE method to create a signed URL, a URL will actually be signed for the POST method with a header of
-&#39;x-goog-resumable:start&#39;. The caller must perform a POST request with this URL and specify the &#39;x-goog-resumable:start&#39; header as
+&apos;x-goog-resumable:start&apos;. The caller must perform a POST request with this URL and specify the &apos;x-goog-resumable:start&apos; header as
 well or signature validation will fail.</p>
 </div>
   <h3 id="methods">Methods
@@ -378,12 +378,12 @@ May be null.</p>
   <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_Nullable_System_DateTimeOffset__System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String____remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
 When either of the headers collections are specified, there are certain headers which will be included in the
-signed URL&#39;s signature, and therefore must be included in requests made with the created URL. These are the
+signed URL&apos;s signature, and therefore must be included in requests made with the created URL. These are the
 Content-MD5 and Content-Type content headers as well as any content or request header with a name starting
 with &quot;x-goog-&quot;.
 </p>
 <p>
-If the headers collections are null or empty, no headers are included in the signed URL&#39;s signature, so any
+If the headers collections are null or empty, no headers are included in the signed URL&apos;s signature, so any
 requests made with the created URL must not contain Content-MD5, Content-Type, or any header starting with &quot;x-goog-&quot;.
 </p>
 <p>
@@ -473,12 +473,12 @@ case the signed URL never expires.</p>
   </table>
   <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_Nullable_System_DateTimeOffset__System_Net_Http_HttpRequestMessage__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-When the <span class="paramref">request</span> is specified, some of its headers will be included in the signed URL&#39;s
+When the <span class="paramref">request</span> is specified, some of its headers will be included in the signed URL&apos;s
 signature, and therefore must be included in requests made with the created URL. These are the Content-MD5 and
 Content-Type content headers as well as any content or request header with a name starting with &quot;x-goog-&quot;.
 </p>
 <p>
-If <span class="paramref">request</span> is null, no headers are included in the signed URL&#39;s signature, so any requests
+If <span class="paramref">request</span> is null, no headers are included in the signed URL&apos;s signature, so any requests
 made with the created URL must not contain Content-MD5, Content-Type, or any header starting with &quot;x-goog-&quot;.
 </p>
 <p>
@@ -582,12 +582,12 @@ May be null.</p>
   <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String____remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
 When either of the headers collections are specified, there are certain headers which will be included in the
-signed URL&#39;s signature, and therefore must be included in requests made with the created URL. These are the
+signed URL&apos;s signature, and therefore must be included in requests made with the created URL. These are the
 Content-MD5 and Content-Type content headers as well as any content or request header with a name starting
 with &quot;x-goog-&quot;.
 </p>
 <p>
-If the headers collections are null or empty, no headers are included in the signed URL&#39;s signature, so any
+If the headers collections are null or empty, no headers are included in the signed URL&apos;s signature, so any
 requests made with the created URL must not contain Content-MD5, Content-Type, or any header starting with &quot;x-goog-&quot;.
 </p>
 <p>
@@ -686,12 +686,12 @@ will refer to the bucket instead of an object.</p>
   </table>
   <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpRequestMessage__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-When the <span class="paramref">request</span> is specified, some of its headers will be included in the signed URL&#39;s
+When the <span class="paramref">request</span> is specified, some of its headers will be included in the signed URL&apos;s
 signature, and therefore must be included in requests made with the created URL. These are the Content-MD5 and
 Content-Type content headers as well as any content or request header with a name starting with &quot;x-goog-&quot;.
 </p>
 <p>
-If <span class="paramref">request</span> is null, no headers are included in the signed URL&#39;s signature, so any requests
+If <span class="paramref">request</span> is null, no headers are included in the signed URL&apos;s signature, so any requests
 made with the created URL must not contain Content-MD5, Content-Type, or any header starting with &quot;x-goog-&quot;.
 </p>
 <p>

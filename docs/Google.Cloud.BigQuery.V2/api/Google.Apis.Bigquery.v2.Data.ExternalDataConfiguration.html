@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ExternalDataConfiguration
    | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Apis.Bigquery.v2.Data.ExternalDataConfiguration">
   
   
-  <h1 id="Google_Apis_Bigquery_v2_Data_ExternalDataConfiguration" data-uid="Google.Apis.Bigquery.v2.Data.ExternalDataConfiguration">Class ExternalDataConfiguration
+  <h1 id="Google_Apis_Bigquery_v2_Data_ExternalDataConfiguration" data-uid="Google.Apis.Bigquery.v2.Data.ExternalDataConfiguration" class="text-break">Class ExternalDataConfiguration
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
@@ -271,7 +271,7 @@ public virtual GoogleSheetsOptions GoogleSheetsOptions { get; set; }</code></pre
 schema. If true, the extra values are ignored. If false, records with extra columns are treated as bad
 records, and if there are too many bad records, an invalid error is returned in the job result. The default
 value is false. The sourceFormat property determines what BigQuery treats as an extra value: CSV: Trailing
-columns JSON: Named values that don&#39;t match any column names Google Cloud Bigtable: This setting is ignored.
+columns JSON: Named values that don&apos;t match any column names Google Cloud Bigtable: This setting is ignored.
 Google Cloud Datastore backups: This setting is ignored. Avro: This setting is ignored.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -380,11 +380,11 @@ public virtual string SourceFormat { get; set; }</code></pre>
   <a id="Google_Apis_Bigquery_v2_Data_ExternalDataConfiguration_SourceUris_" data-uid="Google.Apis.Bigquery.v2.Data.ExternalDataConfiguration.SourceUris*"></a>
   <h4 id="Google_Apis_Bigquery_v2_Data_ExternalDataConfiguration_SourceUris" data-uid="Google.Apis.Bigquery.v2.Data.ExternalDataConfiguration.SourceUris">SourceUris</h4>
   <div class="markdown level1 summary"><p>[Required] The fully-qualified URIs that point to your data in Google Cloud. For Google Cloud
-Storage URIs: Each URI can contain one &#39;<em>&#39; wildcard character and it must come after the &#39;bucket&#39; name. Size
+Storage URIs: Each URI can contain one &apos;<em>&apos; wildcard character and it must come after the &apos;bucket&apos; name. Size
 limits related to load jobs apply to external data sources. For Google Cloud Bigtable URIs: Exactly one URI
 can be specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table. For
-Google Cloud Datastore backups, exactly one URI can be specified, and it must end with &#39;.backup_info&#39;. Also,
-the &#39;</em>&#39; wildcard character is not allowed.</p>
+Google Cloud Datastore backups, exactly one URI can be specified, and it must end with &apos;.backup_info&apos;. Also,
+the &apos;</em>&apos; wildcard character is not allowed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

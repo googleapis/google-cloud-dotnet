@@ -8,7 +8,7 @@
     <title>Google.Cloud.Translation.V2 | Google.Cloud.Translation.V2 </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google.Cloud.Translation.V2 | Google.Cloud.Translation.V2 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -61,23 +61,19 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="googlecloudtranslationv2">Google.Cloud.Translation.V2</h1>
 
-<p><code>Google.Cloud.Translation.V2</code> is a .NET client library for <a href="https://cloud.google.com/translate/">Google
-Cloud Translation</a>. It wraps the
-<code>Google.Apis.Translate.v2</code> generated library, providing a
-higher-level API to make it easier to use.</p>
+<p><code>Google.Cloud.Translation.V2</code> is a.NET client library for the <a href="https://cloud.google.com/translate/">Google Cloud Translation API</a>.
+It wraps the <code>Google.Apis.Translate.v2</code> generated library, providing a higher-level API to make it easier to use.</p>
 <h1 id="installation">Installation</h1>
 <p>Install the <code>Google.Cloud.Translation.V2</code> package from NuGet. Add it to
 your project in the normal way (for example by right-clicking on the
-project in Visual Studio and choosing &quot;Manage NuGet Packages...&quot;).
-Please ensure you enable pre-release packages (for example, in the
-Visual Studio NuGet user interface, check the &quot;Include prerelease&quot;
-box).</p>
+project in Visual Studio and choosing &quot;Manage NuGet Packages...&quot;).</p>
 <h1 id="authentication">Authentication</h1>
-<p>To authenticate all your API calls, first install and setup the
-<a href="https://cloud.google.com/sdk/">Google Cloud SDK</a>. After that is
-installed, run the following command in a Google Cloud SDK Shell:</p>
-<pre><code class="lang-sh">&gt; gcloud auth application-default login
-</code></pre><p>Alternatively, you can create a client using an API key. This is primarily
+<p>When running on Google Cloud Platform, no action needs to be taken to authenticate.</p>
+<p>Otherwise, the simplest way of authenticating your API calls is to
+download a service account JSON file then set the <code>GOOGLE_APPLICATION_CREDENTIALS</code> environment variable to refer to it.
+The credentials will automatically be used to authenticate. See the <a href="https://cloud.google.com/docs/authentication/getting-started">Getting Started With
+Authentication</a> guide for more details.</p>
+<p>Alternatively, you can create a client using an API key. This is primarily
 supported to enable smooth migration from earlier client libraries; using
 OAuth2 as above is the preferred authentication mechanism.</p>
 <h1 id="getting-started">Getting started</h1>

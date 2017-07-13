@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class LogSink
    | Google.Cloud.Logging.Log4Net ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Cloud.Logging.V2.LogSink">
   
   
-  <h1 id="Google_Cloud_Logging_V2_LogSink" data-uid="Google.Cloud.Logging.V2.LogSink">Class LogSink
+  <h1 id="Google_Cloud_Logging_V2_LogSink" data-uid="Google.Cloud.Logging.V2.LogSink" class="text-break">Class LogSink
   </h1>
   <div class="markdown level0 summary"><p>Describes a sink used to export log entries to one of the following
 destinations in any project: a Cloud Storage bucket, a BigQuery dataset, or a
@@ -113,7 +113,7 @@ account, or folder.</p>
 <p>&quot;storage.googleapis.com/[GCS_BUCKET]&quot;
 &quot;bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]&quot;
 &quot;pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]&quot;</p>
-<p>The sink&#39;s <code>writer_identity</code>, set when the sink is created, must
+<p>The sink&apos;s <code>writer_identity</code>, set when the sink is created, must
 have permission to write to the destination or else the log
 entries are not exported.  For more information, see
 <a href="/logging/docs/api/tasks/exporting-logs">Exporting Logs With Sinks</a>.</p>
@@ -223,13 +223,13 @@ by the <code>output_version_format</code> parameter.  For example, in the v2 for
   <h4 id="Google_Cloud_Logging_V2_LogSink_IncludeChildren" data-uid="Google.Cloud.Logging.V2.LogSink.IncludeChildren">IncludeChildren</h4>
   <div class="markdown level1 summary"><p>Optional. This field applies only to sinks owned by organizations and
 folders. If the field is false, the default, only the logs owned by the
-sink&#39;s parent resource are available for export. If the field is true, then
+sink&apos;s parent resource are available for export. If the field is true, then
 logs from all the projects, folders, and billing accounts contained in the
-sink&#39;s parent resource are also available for export. Whether a particular
-log entry from the children is exported depends on the sink&#39;s filter
+sink&apos;s parent resource are also available for export. Whether a particular
+log entry from the children is exported depends on the sink&apos;s filter
 expression. For example, if this field is true, then the filter
 <code>resource.type=gce_instance</code> would export all Compute Engine VM instance
-log entries from all projects in the sink&#39;s parent. To only export entries
+log entries from all projects in the sink&apos;s parent. To only export entries
 from certain child projects, filter on the project part of the log name:</p>
 <p>logName:(&quot;projects/test-project1/&quot; OR &quot;projects/test-project2/&quot;) AND
 resource.type=gce_instance</p>
@@ -257,7 +257,7 @@ resource.type=gce_instance</p>
   <a id="Google_Cloud_Logging_V2_LogSink_Name_" data-uid="Google.Cloud.Logging.V2.LogSink.Name*"></a>
   <h4 id="Google_Cloud_Logging_V2_LogSink_Name" data-uid="Google.Cloud.Logging.V2.LogSink.Name">Name</h4>
   <div class="markdown level1 summary"><p>Required. The client-assigned sink identifier, unique within the
-project. Example: <code>&quot;my-syslog-errors-to-pubsub&quot;</code>.  Sink identifiers are
+project. Example: <code>&amp;quot;my-syslog-errors-to-pubsub&amp;quot;</code>.  Sink identifiers are
 limited to 100 characters and can include only the following characters:
 upper and lower-case alphanumeric characters, underscores, hyphens, and
 periods.</p>
@@ -284,7 +284,7 @@ periods.</p>
   </table>
   <a id="Google_Cloud_Logging_V2_LogSink_OutputVersionFormat_" data-uid="Google.Cloud.Logging.V2.LogSink.OutputVersionFormat*"></a>
   <h4 id="Google_Cloud_Logging_V2_LogSink_OutputVersionFormat" data-uid="Google.Cloud.Logging.V2.LogSink.OutputVersionFormat">OutputVersionFormat</h4>
-  <div class="markdown level1 summary"><p>Optional. The log entry format to use for this sink&#39;s exported log
+  <div class="markdown level1 summary"><p>Optional. The log entry format to use for this sink&apos;s exported log
 entries.  The v2 format is used by default.
 <strong>The v1 format is deprecated</strong> and should be used only as part of a
 migration effort to v2.
@@ -340,7 +340,7 @@ created or updated.</p>
   <a id="Google_Cloud_Logging_V2_LogSink_WriterIdentity_" data-uid="Google.Cloud.Logging.V2.LogSink.WriterIdentity*"></a>
   <h4 id="Google_Cloud_Logging_V2_LogSink_WriterIdentity" data-uid="Google.Cloud.Logging.V2.LogSink.WriterIdentity">WriterIdentity</h4>
   <div class="markdown level1 summary"><p>Output only. An IAM identity&amp;mdash;a service account or group&amp;mdash;under
-which Stackdriver Logging writes the exported log entries to the sink&#39;s
+which Stackdriver Logging writes the exported log entries to the sink&apos;s
 destination.  This field is set by
 <a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>
 and
@@ -350,7 +350,7 @@ based on the setting of <code>unique_writer_identity</code> in those methods.</p
 exports from this sink will fail. For more information,
 see <a href="/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource">Granting access for a
 resource</a>.
-Consult the destination service&#39;s documentation to determine the
+Consult the destination service&apos;s documentation to determine the
 appropriate IAM roles to assign to the identity.</p>
 </div>
   <div class="markdown level1 conceptual"></div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class QueryResultBatch
    | Google.Cloud.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Cloud.Datastore.V1.QueryResultBatch">
   
   
-  <h1 id="Google_Cloud_Datastore_V1_QueryResultBatch" data-uid="Google.Cloud.Datastore.V1.QueryResultBatch">Class QueryResultBatch
+  <h1 id="Google_Cloud_Datastore_V1_QueryResultBatch" data-uid="Google.Cloud.Datastore.V1.QueryResultBatch" class="text-break">Class QueryResultBatch
   </h1>
   <div class="markdown level0 summary"><p>A batch of results produced by a query.</p>
 </div>
@@ -251,11 +251,11 @@ Will be set when <code>skipped_results</code> != 0.</p>
   <a id="Google_Cloud_Datastore_V1_QueryResultBatch_SnapshotVersion_" data-uid="Google.Cloud.Datastore.V1.QueryResultBatch.SnapshotVersion*"></a>
   <h4 id="Google_Cloud_Datastore_V1_QueryResultBatch_SnapshotVersion" data-uid="Google.Cloud.Datastore.V1.QueryResultBatch.SnapshotVersion">SnapshotVersion</h4>
   <div class="markdown level1 summary"><p>The version number of the snapshot this batch was returned from.
-This applies to the range of results from the query&#39;s <code>start_cursor</code> (or
-the beginning of the query if no cursor was given) to this batch&#39;s
-<code>end_cursor</code> (not the query&#39;s <code>end_cursor</code>).</p>
+This applies to the range of results from the query&apos;s <code>start_cursor</code> (or
+the beginning of the query if no cursor was given) to this batch&apos;s
+<code>end_cursor</code> (not the query&apos;s <code>end_cursor</code>).</p>
 <p>In a single transaction, subsequent query result batches for the same query
-can have a greater snapshot version number. Each batch&#39;s snapshot version
+can have a greater snapshot version number. Each batch&apos;s snapshot version
 is valid for all preceding batches.
 The value will be zero for eventually consistent queries.</p>
 </div>

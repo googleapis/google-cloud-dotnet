@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ErrorReportingExceptionLogger
    | Google.Cloud.Diagnostics.AspNet ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionLogger">
   
   
-  <h1 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionLogger" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionLogger">Class ErrorReportingExceptionLogger
+  <h1 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionLogger" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionLogger" class="text-break">Class ErrorReportingExceptionLogger
   </h1>
   <div class="markdown level0 summary"><p>Google Cloud Error Reporting <span class="xref">System.Web.Http.ExceptionHandling.ExceptionLogger</span>.</p>
 </div>
@@ -113,9 +113,9 @@ Docs: <a href="https://cloud.google.com/error-reporting/docs/">https://cloud.goo
   <pre><code>public static void Register(HttpConfiguration config)
 {
   // Add a catch all for the uncaught exceptions.
-  string projectId = "[Google Cloud Platform project ID]";
-  string serviceName = "[Name of service]";
-  string version = "[Version of service]";
+  string projectId = &quot;[Google Cloud Platform project ID]&quot;;
+  string serviceName = &quot;[Name of service]&quot;;
+  string version = &quot;[Version of service]&quot;;
   // Add a catch all for the uncaught exceptions.
   config.Services.Add(typeof(IExceptionLogger),
       ErrorReportingExceptionLogger.Create(projectId, serviceName, version));

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Google.Type
    | Google.Cloud.VideoIntelligence.V1Beta1 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -69,7 +69,7 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="Google.Type">
   
-  <h1 id="Google_Type" data-uid="Google.Type">Namespace Google.Type
+  <h1 id="Google_Type" data-uid="Google.Type" class="text-break">Namespace Google.Type
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
@@ -81,7 +81,7 @@
 for simplicity of conversion to/from color representations in various
 languages over compactness; for example, the fields of this representation
 can be trivially provided to the constructor of &quot;java.awt.Color&quot; in Java; it
-can also be trivially provided to UIColor&#39;s &quot;+colorWithRed:green:blue:alpha&quot;
+can also be trivially provided to UIColor&apos;s &quot;+colorWithRed:green:blue:alpha&quot;
 method in iOS; and, with just a little work, it can be easily formatted into
 a CSS &quot;rgba()&quot; string in JavaScript, as well. Here are some examples:</p>
 <p>Example (Java):</p>
@@ -157,23 +157,23 @@ static UIColor* fromProto(Color* protocolor) {
   var red = Math.floor(redFrac * 255);
   var green = Math.floor(greenFrac * 255);
   var blue = Math.floor(blueFrac * 255);</p>
-<p>  if (!(&#39;alpha&#39; in rgb_color)) {
+<p>  if (!(&apos;alpha&apos; in rgb_color)) {
      return rgbToCssColor_(red, green, blue);
   }</p>
 <p>  var alphaFrac = rgb_color.alpha.value || 0.0;
-  var rgbParams = [red, green, blue].join(&#39;,&#39;);
-  return [&#39;rgba(&#39;, rgbParams, &#39;,&#39;, alphaFrac, &#39;)&#39;].join(&#39;&#39;);
+  var rgbParams = [red, green, blue].join(&apos;,&apos;);
+  return [&apos;rgba(&apos;, rgbParams, &apos;,&apos;, alphaFrac, &apos;)&apos;].join(&apos;&apos;);
 };</p>
 <p>var rgbToCssColor_ = function(red, green, blue) {
  var rgbNumber = new Number((red &lt;&lt; 16) | (green &lt;&lt; 8) | blue);
  var hexString = rgbNumber.toString(16);
  var missingZeros = 6 - hexString.length;
- var resultBuilder = [&#39;#&#39;];
+ var resultBuilder = [&apos;#&apos;];
  for (var i = 0; i &lt; missingZeros; i++) {
-    resultBuilder.push(&#39;0&#39;);
+    resultBuilder.push(&apos;0&apos;);
  }
  resultBuilder.push(hexString);
- return resultBuilder.join(&#39;&#39;);
+ return resultBuilder.join(&apos;&apos;);
 };</p>
 <p>// ...</p>
 </section>
@@ -199,7 +199,7 @@ and <code>google.protobuf.Timestamp</code>.</p>
       <section><p>An object representing a latitude/longitude pair. This is expressed as a pair
 of doubles representing degrees latitude and degrees longitude. Unless
 specified otherwise, this must conform to the
-&lt;a href=&quot;<a href="http://www.unoosa.org/pdf/icg/2012/template/WGS_84.pdf&quot;&gt;WGS84">http://www.unoosa.org/pdf/icg/2012/template/WGS_84.pdf"&gt;WGS84</a>
+&lt;a href=&quot;<a href="http://www.unoosa.org/pdf/icg/2012/template/WGS_84.pdf&quot;&gt;WGS84">http://www.unoosa.org/pdf/icg/2012/template/WGS_84.pdf&quot;>WGS84</a>
 standard&lt;/a&gt;. Values must be within normalized ranges.</p>
 <p>Example of normalization code in Python:</p>
 <p>def NormalizeLongitude(longitude):

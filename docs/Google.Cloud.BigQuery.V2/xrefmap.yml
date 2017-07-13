@@ -15152,6 +15152,18 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.UploadCsvOptions.MaxBadRecords
   fullName: Google.Cloud.BigQuery.V2.UploadCsvOptions.MaxBadRecords
   nameWithType: UploadCsvOptions.MaxBadRecords
+- uid: Google.Cloud.BigQuery.V2.UploadCsvOptions.NullMarker
+  name: NullMarker
+  href: api/Google.Cloud.BigQuery.V2.UploadCsvOptions.html#Google_Cloud_BigQuery_V2_UploadCsvOptions_NullMarker
+  commentId: P:Google.Cloud.BigQuery.V2.UploadCsvOptions.NullMarker
+  fullName: Google.Cloud.BigQuery.V2.UploadCsvOptions.NullMarker
+  nameWithType: UploadCsvOptions.NullMarker
+- uid: Google.Cloud.BigQuery.V2.UploadCsvOptions.NullMarker*
+  name: NullMarker
+  href: api/Google.Cloud.BigQuery.V2.UploadCsvOptions.html#Google_Cloud_BigQuery_V2_UploadCsvOptions_NullMarker_
+  commentId: Overload:Google.Cloud.BigQuery.V2.UploadCsvOptions.NullMarker
+  fullName: Google.Cloud.BigQuery.V2.UploadCsvOptions.NullMarker
+  nameWithType: UploadCsvOptions.NullMarker
 - uid: Google.Cloud.BigQuery.V2.UploadCsvOptions.Quote
   name: Quote
   href: api/Google.Cloud.BigQuery.V2.UploadCsvOptions.html#Google_Cloud_BigQuery_V2_UploadCsvOptions_Quote

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class CreateSinkRequest
    | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Cloud.Logging.V2.CreateSinkRequest">
   
   
-  <h1 id="Google_Cloud_Logging_V2_CreateSinkRequest" data-uid="Google.Cloud.Logging.V2.CreateSinkRequest">Class CreateSinkRequest
+  <h1 id="Google_Cloud_Logging_V2_CreateSinkRequest" data-uid="Google.Cloud.Logging.V2.CreateSinkRequest" class="text-break">Class CreateSinkRequest
   </h1>
   <div class="markdown level0 summary"><p>The parameters to <code>CreateSink</code>.</p>
 </div>
@@ -110,7 +110,7 @@
 &quot;organizations/[ORGANIZATION_ID]&quot;
 &quot;billingAccounts/[BILLING_ACCOUNT_ID]&quot;
 &quot;folders/[FOLDER_ID]&quot;</p>
-<p>Examples: <code>&quot;projects/my-logging-project&quot;</code>, <code>&quot;organizations/123456789&quot;</code>.</p>
+<p>Examples: <code>&amp;quot;projects/my-logging-project&amp;quot;</code>, <code>&amp;quot;organizations/123456789&amp;quot;</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -185,9 +185,9 @@ is not already in use.</p>
   <h4 id="Google_Cloud_Logging_V2_CreateSinkRequest_UniqueWriterIdentity" data-uid="Google.Cloud.Logging.V2.CreateSinkRequest.UniqueWriterIdentity">UniqueWriterIdentity</h4>
   <div class="markdown level1 summary"><p>Optional. Determines the kind of IAM identity returned as <code>writer_identity</code>
 in the new sink.  If this value is omitted or set to false, and if the
-sink&#39;s parent is a project, then the value returned as <code>writer_identity</code> is
+sink&apos;s parent is a project, then the value returned as <code>writer_identity</code> is
 the same group or service account used by Stackdriver Logging before the
-addition of writer identities to this API. The sink&#39;s destination must be
+addition of writer identities to this API. The sink&apos;s destination must be
 in the same project as the sink itself.</p>
 <p>If this field is set to true, or if the sink is owned by a non-project
 resource such as an organization, then the value of <code>writer_identity</code> will

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ConfigServiceV2.ConfigServiceV2Client
    | Google.Cloud.Logging.Log4Net ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client">
   
   
-  <h1 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client">Class ConfigServiceV2.ConfigServiceV2Client
+  <h1 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client" class="text-break">Class ConfigServiceV2.ConfigServiceV2Client
   </h1>
   <div class="markdown level0 summary"><p>Client for ConfigServiceV2</p>
 </div>
@@ -78,17 +78,17 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Grpc.Core.ClientBase</span></div>
-    <div class="level2"><span class="xref">Grpc.Core.ClientBase</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html">ConfigServiceV2.ConfigServiceV2Client</a>&gt;</div>
+    <div class="level1"><a class="xref" href="Grpc.Core.ClientBase.html">ClientBase</a></div>
+    <div class="level2"><a class="xref" href="Grpc.Core.ClientBase-1.html">ClientBase</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html">ConfigServiceV2.ConfigServiceV2Client</a>&gt;</div>
     <div class="level3"><span class="xref">ConfigServiceV2.ConfigServiceV2Client</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">Grpc.Core.ClientBase&lt;Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client&gt;.WithHost(System.String)</span>
+      <a class="xref" href="Grpc.Core.ClientBase-1.html#Grpc_Core_ClientBase_1_WithHost_System_String_">ClientBase&lt;ConfigServiceV2.ConfigServiceV2Client&gt;.WithHost(String)</a>
     </div>
     <div>
-      <span class="xref">Grpc.Core.ClientBase.CallInvoker</span>
+      <a class="xref" href="Grpc.Core.ClientBase.html#Grpc_Core_ClientBase_CallInvoker">ClientBase.CallInvoker</a>
     </div>
     <div>
       <span class="xref">System.Object.ToString()</span>
@@ -140,7 +140,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Grpc.Core.CallInvoker</span></td>
+        <td><a class="xref" href="Grpc.Core.CallInvoker.html">CallInvoker</a></td>
         <td><span class="parametername">callInvoker</span></td>
         <td><p>The callInvoker to use to make remote calls.</p>
 </td>
@@ -167,7 +167,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Grpc.Core.Channel</span></td>
+        <td><a class="xref" href="Grpc.Core.Channel.html">Channel</a></td>
         <td><span class="parametername">channel</span></td>
         <td><p>The channel to use to make remote calls.</p>
 </td>
@@ -194,7 +194,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Grpc.Core.ClientBase.ClientBaseConfiguration</span></td>
+        <td><a class="xref" href="Grpc.Core.ClientBase.ClientBaseConfiguration.html">ClientBase.ClientBaseConfiguration</a></td>
         <td><span class="parametername">configuration</span></td>
         <td><p>The client configuration.</p>
 </td>
@@ -207,7 +207,7 @@
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateSink_Google_Cloud_Logging_V2_CreateSinkRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateSink(Google.Cloud.Logging.V2.CreateSinkRequest,Grpc.Core.CallOptions)">CreateSink(CreateSinkRequest, CallOptions)</h4>
   <div class="markdown level1 summary"><p>Creates a sink that exports specified log entries to a destination.  The
 export of newly-ingested log entries begins immediately, unless the current
-time is outside the sink&#39;s start and end times or the sink&#39;s
+time is outside the sink&apos;s start and end times or the sink&apos;s
 <code>writer_identity</code> is not permitted to write to the destination.  A sink can
 export log entries only from the resource owning the sink.</p>
 </div>
@@ -233,7 +233,7 @@ export log entries only from the resource owning the sink.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Grpc.Core.CallOptions</span></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -260,7 +260,7 @@ export log entries only from the resource owning the sink.</p>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateSink_Google_Cloud_Logging_V2_CreateSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateSink(Google.Cloud.Logging.V2.CreateSinkRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateSink(CreateSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Creates a sink that exports specified log entries to a destination.  The
 export of newly-ingested log entries begins immediately, unless the current
-time is outside the sink&#39;s start and end times or the sink&#39;s
+time is outside the sink&apos;s start and end times or the sink&apos;s
 <code>writer_identity</code> is not permitted to write to the destination.  A sink can
 export log entries only from the resource owning the sink.</p>
 </div>
@@ -286,7 +286,7 @@ export log entries only from the resource owning the sink.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Grpc.Core.Metadata</span></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -325,7 +325,7 @@ export log entries only from the resource owning the sink.</p>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateSinkAsync_Google_Cloud_Logging_V2_CreateSinkRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateSinkAsync(Google.Cloud.Logging.V2.CreateSinkRequest,Grpc.Core.CallOptions)">CreateSinkAsync(CreateSinkRequest, CallOptions)</h4>
   <div class="markdown level1 summary"><p>Creates a sink that exports specified log entries to a destination.  The
 export of newly-ingested log entries begins immediately, unless the current
-time is outside the sink&#39;s start and end times or the sink&#39;s
+time is outside the sink&apos;s start and end times or the sink&apos;s
 <code>writer_identity</code> is not permitted to write to the destination.  A sink can
 export log entries only from the resource owning the sink.</p>
 </div>
@@ -351,7 +351,7 @@ export log entries only from the resource owning the sink.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Grpc.Core.CallOptions</span></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -368,7 +368,7 @@ export log entries only from the resource owning the sink.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
@@ -378,7 +378,7 @@ export log entries only from the resource owning the sink.</p>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateSinkAsync_Google_Cloud_Logging_V2_CreateSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateSinkAsync(Google.Cloud.Logging.V2.CreateSinkRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateSinkAsync(CreateSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Creates a sink that exports specified log entries to a destination.  The
 export of newly-ingested log entries begins immediately, unless the current
-time is outside the sink&#39;s start and end times or the sink&#39;s
+time is outside the sink&apos;s start and end times or the sink&apos;s
 <code>writer_identity</code> is not permitted to write to the destination.  A sink can
 export log entries only from the resource owning the sink.</p>
 </div>
@@ -404,7 +404,7 @@ export log entries only from the resource owning the sink.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Grpc.Core.Metadata</span></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -433,7 +433,7 @@ export log entries only from the resource owning the sink.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
@@ -466,7 +466,7 @@ service account is also deleted.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Grpc.Core.CallOptions</span></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -516,7 +516,7 @@ service account is also deleted.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Grpc.Core.Metadata</span></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -578,7 +578,7 @@ service account is also deleted.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Grpc.Core.CallOptions</span></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -595,7 +595,7 @@ service account is also deleted.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
@@ -628,7 +628,7 @@ service account is also deleted.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Grpc.Core.Metadata</span></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -657,7 +657,7 @@ service account is also deleted.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
@@ -689,7 +689,7 @@ service account is also deleted.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Grpc.Core.CallOptions</span></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -738,7 +738,7 @@ service account is also deleted.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Grpc.Core.Metadata</span></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -799,7 +799,7 @@ service account is also deleted.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Grpc.Core.CallOptions</span></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -816,7 +816,7 @@ service account is also deleted.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
@@ -848,7 +848,7 @@ service account is also deleted.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Grpc.Core.Metadata</span></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -877,7 +877,7 @@ service account is also deleted.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
@@ -909,7 +909,7 @@ service account is also deleted.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Grpc.Core.CallOptions</span></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -958,7 +958,7 @@ service account is also deleted.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Grpc.Core.Metadata</span></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -1019,7 +1019,7 @@ service account is also deleted.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Grpc.Core.CallOptions</span></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -1036,7 +1036,7 @@ service account is also deleted.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListSinksResponse.html">ListSinksResponse</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListSinksResponse.html">ListSinksResponse</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
@@ -1068,7 +1068,7 @@ service account is also deleted.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Grpc.Core.Metadata</span></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -1097,7 +1097,7 @@ service account is also deleted.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListSinksResponse.html">ListSinksResponse</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListSinksResponse.html">ListSinksResponse</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
@@ -1123,7 +1123,7 @@ service account is also deleted.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Grpc.Core.ClientBase.ClientBaseConfiguration</span></td>
+        <td><a class="xref" href="Grpc.Core.ClientBase.ClientBaseConfiguration.html">ClientBase.ClientBaseConfiguration</a></td>
         <td><span class="parametername">configuration</span></td>
         <td></td>
       </tr>
@@ -1148,7 +1148,7 @@ service account is also deleted.</p>
   <div><span class="xref">Grpc.Core.ClientBase&lt;Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client&gt;.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)</span></div>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateSink*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateSink_Google_Cloud_Logging_V2_UpdateSinkRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateSink(Google.Cloud.Logging.V2.UpdateSinkRequest,Grpc.Core.CallOptions)">UpdateSink(UpdateSinkRequest, CallOptions)</h4>
-  <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&#39;t exist, then this method is
+  <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&apos;t exist, then this method is
 identical to
 <a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>.
 If the named sink does exist, then this method replaces the following
@@ -1179,7 +1179,7 @@ The updated filter might also have a new <code>writer_identity</code>; see the
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Grpc.Core.CallOptions</span></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -1204,7 +1204,7 @@ The updated filter might also have a new <code>writer_identity</code>; see the
   </table>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateSink*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateSink_Google_Cloud_Logging_V2_UpdateSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateSink(Google.Cloud.Logging.V2.UpdateSinkRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">UpdateSink(UpdateSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&#39;t exist, then this method is
+  <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&apos;t exist, then this method is
 identical to
 <a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>.
 If the named sink does exist, then this method replaces the following
@@ -1235,7 +1235,7 @@ The updated filter might also have a new <code>writer_identity</code>; see the
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Grpc.Core.Metadata</span></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -1272,7 +1272,7 @@ The updated filter might also have a new <code>writer_identity</code>; see the
   </table>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateSinkAsync*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateSinkAsync_Google_Cloud_Logging_V2_UpdateSinkRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateSinkAsync(Google.Cloud.Logging.V2.UpdateSinkRequest,Grpc.Core.CallOptions)">UpdateSinkAsync(UpdateSinkRequest, CallOptions)</h4>
-  <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&#39;t exist, then this method is
+  <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&apos;t exist, then this method is
 identical to
 <a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>.
 If the named sink does exist, then this method replaces the following
@@ -1303,7 +1303,7 @@ The updated filter might also have a new <code>writer_identity</code>; see the
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Grpc.Core.CallOptions</span></td>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options for the call.</p>
 </td>
@@ -1320,7 +1320,7 @@ The updated filter might also have a new <code>writer_identity</code>; see the
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>
@@ -1328,7 +1328,7 @@ The updated filter might also have a new <code>writer_identity</code>; see the
   </table>
   <a id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateSinkAsync*"></a>
   <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateSinkAsync_Google_Cloud_Logging_V2_UpdateSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateSinkAsync(Google.Cloud.Logging.V2.UpdateSinkRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">UpdateSinkAsync(UpdateSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&#39;t exist, then this method is
+  <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&apos;t exist, then this method is
 identical to
 <a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>.
 If the named sink does exist, then this method replaces the following
@@ -1359,7 +1359,7 @@ The updated filter might also have a new <code>writer_identity</code>; see the
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Grpc.Core.Metadata</span></td>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
         <td><span class="parametername">headers</span></td>
         <td><p>The initial metadata to send with the call. This parameter is optional.</p>
 </td>
@@ -1388,7 +1388,7 @@ The updated filter might also have a new <code>writer_identity</code>; see the
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a>&gt;</td>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogSink.html">LogSink</a>&gt;</td>
         <td><p>The call object.</p>
 </td>
       </tr>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Google.Cloud.Datastore.V1
    | Google.Cloud.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -69,7 +69,7 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="Google.Cloud.Datastore.V1">
   
-  <h1 id="Google_Cloud_Datastore_V1" data-uid="Google.Cloud.Datastore.V1">Namespace Google.Cloud.Datastore.V1
+  <h1 id="Google_Cloud_Datastore_V1" data-uid="Google.Cloud.Datastore.V1" class="text-break">Namespace Google.Cloud.Datastore.V1
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
@@ -156,14 +156,14 @@ until the query-specified limit or end cursor is reached, or no more results are
 Convenience wrapper around a Datastore transaction. All mutation operations (<a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Insert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__">Insert(IEnumerable&lt;Entity&gt;)</a>,
 <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__">Delete(IEnumerable&lt;Key&gt;)</a>, <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Update_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__">Update(IEnumerable&lt;Entity&gt;)</a> and <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Upsert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__">Upsert(IEnumerable&lt;Entity&gt;)</a>)
 merely add to a list of mutations which are performed in a single <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Commit_Google_Api_Gax_Grpc_CallSettings_">Commit(CallSettings)</a> or <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_CommitAsync_Google_Api_Gax_Grpc_CallSettings_">CommitAsync(CallSettings)</a>
-operation. This means the mutation methods are all synchronous and do not take call settings, as they don&#39;t perform any
+operation. This means the mutation methods are all synchronous and do not take call settings, as they don&apos;t perform any
 API operations.
 </p>
 <p>Datastore limits the number of entities that can be modified in a Commit operation, and therefore one transaction. When modifying a large
 number of entities, partition the changes into multiple transactions. See
 <a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 <p>
-Even though transactions aren&#39;t inherently related to a specific partition ID, the expected usage is that queries run inside
+Even though transactions aren&apos;t inherently related to a specific partition ID, the expected usage is that queries run inside
 a transaction are likely to be in a single partition, specified in a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html">DatastoreDb</a> used to create the transaction.
 </p>
 <p>
@@ -203,7 +203,7 @@ message.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a></h4>
       <section><p>A unique identifier for an entity.
-If a key&#39;s partition ID or any of its path kinds or names are
+If a key&apos;s partition ID or any of its path kinds or names are
 reserved/read-only, the key is reserved/read-only.
 A reserved/read-only key is forbidden in certain documented contexts.</p>
 </section>
@@ -248,7 +248,7 @@ by project and namespace, however the namespace ID may be empty.</p>
 project ID and namespace ID.</p>
 <p>Partition dimensions:</p>
 <ul>
-<li>May be <code>&quot;&quot;</code>.</li>
+<li>May be <code>&amp;quot;&amp;quot;</code>.</li>
 <li>Must be valid UTF-8 bytes.</li>
 <li>Must have values that match regex <code>[A-Za-z\d\.\-_]{1,100}</code>
 If the value of any dimension matches regex <code>__.*__</code>, the partition is
@@ -328,7 +328,7 @@ metadata.</p>
       <section><p>A composite filter operator.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Datastore.V1.EntityResult.Types.ResultType.html">EntityResult.Types.ResultType</a></h4>
-      <section><p>Specifies what data the &#39;entity&#39; field contains.
+      <section><p>Specifies what data the &apos;entity&apos; field contains.
 A <code>ResultType</code> is either implied (for example, in <code>LookupResponse.missing</code>
 from <code>datastore.proto</code>, it is always <code>KEY_ONLY</code>) or specified by context
 (for example, in message <code>QueryResultBatch</code>, field <code>entity_result_type</code>

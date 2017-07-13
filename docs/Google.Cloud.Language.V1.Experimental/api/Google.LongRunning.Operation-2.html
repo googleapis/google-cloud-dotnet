@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Operation&lt;TResponse, TMetadata&gt;
    | Google.Cloud.Language.V1.Experimental ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.LongRunning.Operation`2">
   
   
-  <h1 id="Google_LongRunning_Operation_2" data-uid="Google.LongRunning.Operation`2">Class Operation&lt;TResponse, TMetadata&gt;
+  <h1 id="Google_LongRunning_Operation_2" data-uid="Google.LongRunning.Operation`2" class="text-break">Class Operation&lt;TResponse, TMetadata&gt;
   </h1>
   <div class="markdown level0 summary"><p>A long-running operation with an associated client, and which knows the expected response type.</p>
 </div>
@@ -100,7 +100,7 @@
   <h5 id="Google_LongRunning_Operation_2_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public sealed class Operation&lt;TResponse, TMetadata&gt;
-    where TResponse : IMessage&lt;TResponse&gt;, new ()where TMetadata : class, IMessage&lt;TMetadata&gt;, new ()</code></pre>
+    where TResponse : class, IMessage&lt;TResponse&gt;, new ()where TMetadata : class, IMessage&lt;TMetadata&gt;, new ()</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -124,8 +124,18 @@
     </tbody>
   </table>
   <h5 id="Google_LongRunning_Operation_2_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>For simplicity, no methods on this type modify the proto message. Instead, to get up-to-date
-information you can use Refresh to obtain a new instance.</p>
+  <div class="markdown level0 remarks"><p>
+For simplicity, no methods on this type modify the proto message. Instead, to get up-to-date
+information you can use Refresh to obtain a new instance.
+</p>
+<p>
+If the operation was created with a different major version of the service API than expected,
+the metadata and response values may not be of the expected type. There are three approaches to handling this:
+<ul><li>To fail with an exception if an unexpected type of value is present, use the <a class="xref" href="Google.LongRunning.Operation-2.html#Google_LongRunning_Operation_2_Result">Result</a>
+    and <a class="xref" href="Google.LongRunning.Operation-2.html#Google_LongRunning_Operation_2_Metadata">Metadata</a> properties.</li><li>To receive a null reference if an unexpected type of value is present, use the <a class="xref" href="Google.LongRunning.Operation-2.html#Google_LongRunning_Operation_2_GetResultOrNull">GetResultOrNull()</a>
+    and <a class="xref" href="Google.LongRunning.Operation-2.html#Google_LongRunning_Operation_2_GetMetadataOrNull">GetMetadataOrNull()</a> methods. You can then check the returned value and ignore nulls.</li><li>To handle multiple types, use the <a class="xref" href="Google.LongRunning.Operation-2.html#Google_LongRunning_Operation_2_RpcMessage">RpcMessage</a> property and its <a class="xref" href="Google.LongRunning.Operation.html#Google_LongRunning_Operation_Response">Response</a> and <a class="xref" href="Google.LongRunning.Operation.html#Google_LongRunning_Operation_Metadata">Metadata</a>
+    properties, of type <a class="xref" href="Google.Protobuf.WellKnownTypes.Any.html">Any</a>. You can then use <a class="xref" href="Google.Protobuf.WellKnownTypes.Any.html#Google_Protobuf_WellKnownTypes_Any_TypeUrl">TypeUrl</a> to determine the type of the value to unpack.</li></ul>
+</p>
 </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -293,6 +303,26 @@ metadata in the underlying response message.</p>
       </tr>
     </tbody>
   </table>
+  <h5 id="Google_LongRunning_Operation_2_Metadata_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only the in-memory representation of the operation (this object) is consulted for its state.
+See the <a class="xref" href="Google.LongRunning.Operation.html">Operation</a> documentation for information about dealing with different metadata type versions.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>Metadata is present, but is not of the expected type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_LongRunning_Operation_2_Name_" data-uid="Google.LongRunning.Operation`2.Name*"></a>
   <h4 id="Google_LongRunning_Operation_2_Name" data-uid="Google.LongRunning.Operation`2.Name">Name</h4>
   <div class="markdown level1 summary"><p>Returns the name of the operation, which can be persisted and used to poll for the latest
@@ -323,8 +353,10 @@ results at a later time or in a different program.</p>
 </div>
   <a id="Google_LongRunning_Operation_2_Result_" data-uid="Google.LongRunning.Operation`2.Result*"></a>
   <h4 id="Google_LongRunning_Operation_2_Result" data-uid="Google.LongRunning.Operation`2.Result">Result</h4>
-  <div class="markdown level1 summary"><p>Retrieves the result of the operation, throwing an exception if the operation failed or hasn&#39;t completed.
-Unlike <span class="xref">System.Threading.Tasks.Task`1.Result</span>, this does not block.</p>
+  <div class="markdown level1 summary"><p>Retrieves the result of the operation, throwing an exception if the operation failed, hasn&apos;t completed,
+or has an unexpected result type. Unlike <span class="xref">System.Threading.Tasks.Task`1.Result</span>, this does not block.
+If the operation has completed but the result is not present (for example due to being excluded by
+a field mask) this returns null.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -347,7 +379,8 @@ Unlike <span class="xref">System.Threading.Tasks.Task`1.Result</span>, this does
     </tbody>
   </table>
   <h5 id="Google_LongRunning_Operation_2_Result_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Only the in-memory representation of the operation (this object) is consulted for its state.</p>
+  <div class="markdown level1 remarks"><p>Only the in-memory representation of the operation (this object) is consulted for its state.
+See the <a class="xref" href="Google.LongRunning.Operation.html">Operation</a> documentation for information about dealing with different response type versions.</p>
 </div>
   <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -365,7 +398,8 @@ Unlike <span class="xref">System.Threading.Tasks.Task`1.Result</span>, this does
       </tr>
       <tr>
         <td><span class="xref">System.InvalidOperationException</span></td>
-        <td><p>The operation has not completed yet.</p>
+        <td><p>The operation has not completed yet, or the result is present but
+not of the expected result type.</p>
 </td>
       </tr>
     </tbody>
@@ -628,6 +662,66 @@ Note that this is not a cancellation token for the long-running operation itself
       </tr>
     </tbody>
   </table>
+  <a id="Google_LongRunning_Operation_2_GetMetadataOrNull_" data-uid="Google.LongRunning.Operation`2.GetMetadataOrNull*"></a>
+  <h4 id="Google_LongRunning_Operation_2_GetMetadataOrNull" data-uid="Google.LongRunning.Operation`2.GetMetadataOrNull">GetMetadataOrNull()</h4>
+  <div class="markdown level1 summary"><p>Retrieves the metadata associated with this operation, or <code>null</code> if either there is no
+metadata in the underlying response message, or it does not have the expected type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TMetadata GetMetadataOrNull()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TMetadata</span></td>
+        <td><p>The metadata of the operation if possible, or null otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_LongRunning_Operation_2_GetMetadataOrNull_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only the in-memory representation of the operation (this object) is consulted for its state.
+See the <a class="xref" href="Google.LongRunning.Operation.html">Operation</a> documentation for information about dealing with different metadata type versions.</p>
+</div>
+  <a id="Google_LongRunning_Operation_2_GetResultOrNull_" data-uid="Google.LongRunning.Operation`2.GetResultOrNull*"></a>
+  <h4 id="Google_LongRunning_Operation_2_GetResultOrNull" data-uid="Google.LongRunning.Operation`2.GetResultOrNull">GetResultOrNull()</h4>
+  <div class="markdown level1 summary"><p>Retrieves the result of the operation, or null if the operation failed, hasn&apos;t completed, has an
+unexpected result type, or didn&apos;t contain a result at all.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TResponse GetResultOrNull()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TResponse</span></td>
+        <td><p>The result of the operation if possible, or null otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_LongRunning_Operation_2_GetResultOrNull_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only the in-memory representation of the operation (this object) is consulted for its state.
+See the <a class="xref" href="Google.LongRunning.Operation.html">Operation</a> documentation for information about dealing with different response type versions.</p>
+</div>
   <a id="Google_LongRunning_Operation_2_PollOnce_" data-uid="Google.LongRunning.Operation`2.PollOnce*"></a>
   <h4 id="Google_LongRunning_Operation_2_PollOnce_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.LongRunning.Operation`2.PollOnce(Google.Api.Gax.Grpc.CallSettings)">PollOnce(CallSettings)</h4>
   <div class="markdown level1 summary"><p>Returns a new instance reflecting the most recent state of the operation.</p>

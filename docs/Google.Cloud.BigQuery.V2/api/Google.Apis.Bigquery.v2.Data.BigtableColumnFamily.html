@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BigtableColumnFamily
    | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Apis.Bigquery.v2.Data.BigtableColumnFamily">
   
   
-  <h1 id="Google_Apis_Bigquery_v2_Data_BigtableColumnFamily" data-uid="Google.Apis.Bigquery.v2.Data.BigtableColumnFamily">Class BigtableColumnFamily
+  <h1 id="Google_Apis_Bigquery_v2_Data_BigtableColumnFamily" data-uid="Google.Apis.Bigquery.v2.Data.BigtableColumnFamily" class="text-break">Class BigtableColumnFamily
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
@@ -143,7 +143,7 @@ public virtual IList&lt;BigtableColumn&gt; Columns { get; set; }</code></pre>
   <div class="markdown level1 summary"><p>[Optional] The encoding of the values when the type is not STRING. Acceptable encoding values are:
 TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are encoded using HBase
 Bytes.toBytes family of functions. This can be overridden for a specific column by listing that column in
-&#39;columns&#39; and specifying an encoding for it.</p>
+&apos;columns&apos; and specifying an encoding for it.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -220,7 +220,7 @@ public virtual string FamilyId { get; set; }</code></pre>
   <a id="Google_Apis_Bigquery_v2_Data_BigtableColumnFamily_OnlyReadLatest_" data-uid="Google.Apis.Bigquery.v2.Data.BigtableColumnFamily.OnlyReadLatest*"></a>
   <h4 id="Google_Apis_Bigquery_v2_Data_BigtableColumnFamily_OnlyReadLatest" data-uid="Google.Apis.Bigquery.v2.Data.BigtableColumnFamily.OnlyReadLatest">OnlyReadLatest</h4>
   <div class="markdown level1 summary"><p>[Optional] If this is set only the latest version of value are exposed for all columns in this
-column family. This can be overridden for a specific column by listing that column in &#39;columns&#39; and
+column family. This can be overridden for a specific column by listing that column in &apos;columns&apos; and
 specifying a different setting for that column.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -249,7 +249,7 @@ public virtual bool ? OnlyReadLatest { get; set; }</code></pre>
   <div class="markdown level1 summary"><p>[Optional] The type to convert the value in cells of this column family. The values are expected to
 be encoded using HBase Bytes.toBytes function when using the BINARY encoding value. Following BigQuery types
 are allowed (case-sensitive) - BYTES STRING INTEGER FLOAT BOOLEAN Default type is BYTES. This can be
-overridden for a specific column by listing that column in &#39;columns&#39; and specifying a type for it.</p>
+overridden for a specific column by listing that column in &apos;columns&apos; and specifying a type for it.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

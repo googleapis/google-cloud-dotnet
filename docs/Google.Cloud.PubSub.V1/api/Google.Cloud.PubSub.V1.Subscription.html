@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Subscription
    | Google.Cloud.PubSub.V1 ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.20.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="Google.Cloud.PubSub.V1.Subscription">
   
   
-  <h1 id="Google_Cloud_PubSub_V1_Subscription" data-uid="Google.Cloud.PubSub.V1.Subscription">Class Subscription
+  <h1 id="Google_Cloud_PubSub_V1_Subscription" data-uid="Google.Cloud.PubSub.V1.Subscription" class="text-break">Class Subscription
   </h1>
   <div class="markdown level0 summary"><p>A subscription resource.</p>
 </div>
@@ -144,7 +144,7 @@ system will eventually redeliver the message.</p>
   </table>
   <a id="Google_Cloud_PubSub_V1_Subscription_MessageRetentionDuration_" data-uid="Google.Cloud.PubSub.V1.Subscription.MessageRetentionDuration*"></a>
   <h4 id="Google_Cloud_PubSub_V1_Subscription_MessageRetentionDuration" data-uid="Google.Cloud.PubSub.V1.Subscription.MessageRetentionDuration">MessageRetentionDuration</h4>
-  <div class="markdown level1 summary"><p>How long to retain unacknowledged messages in the subscription&#39;s backlog,
+  <div class="markdown level1 summary"><p>How long to retain unacknowledged messages in the subscription&apos;s backlog,
 from the moment a message is published.
 If <code>retain_acked_messages</code> is true, then this also configures the retention
 of acknowledged messages, and thus configures how far back in time a <code>Seek</code>
@@ -174,11 +174,11 @@ minutes.</p>
   <a id="Google_Cloud_PubSub_V1_Subscription_Name_" data-uid="Google.Cloud.PubSub.V1.Subscription.Name*"></a>
   <h4 id="Google_Cloud_PubSub_V1_Subscription_Name" data-uid="Google.Cloud.PubSub.V1.Subscription.Name">Name</h4>
   <div class="markdown level1 summary"><p>The name of the subscription. It must have the format
-<code>&quot;projects/{project}/subscriptions/{subscription}&quot;</code>. <code>{subscription}</code> must
+<code>&amp;quot;projects/{project}/subscriptions/{subscription}&amp;quot;</code>. <code>{subscription}</code> must
 start with a letter, and contain only letters (<code>[A-Za-z]</code>), numbers
 (<code>[0-9]</code>), dashes (<code>-</code>), underscores (<code>_</code>), periods (<code>.</code>), tildes (<code>~</code>),
 plus (<code>+</code>) or percent signs (<code>%</code>). It must be between 3 and 255 characters
-in length, and it must not start with <code>&quot;goog&quot;</code>.</p>
+in length, and it must not start with <code>&amp;quot;goog&amp;quot;</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -229,7 +229,7 @@ will pull and ack messages using API methods.</p>
   <a id="Google_Cloud_PubSub_V1_Subscription_RetainAckedMessages_" data-uid="Google.Cloud.PubSub.V1.Subscription.RetainAckedMessages*"></a>
   <h4 id="Google_Cloud_PubSub_V1_Subscription_RetainAckedMessages" data-uid="Google.Cloud.PubSub.V1.Subscription.RetainAckedMessages">RetainAckedMessages</h4>
   <div class="markdown level1 summary"><p>Indicates whether to retain acknowledged messages. If true, then
-messages are not expunged from the subscription&#39;s backlog, even if they are
+messages are not expunged from the subscription&apos;s backlog, even if they are
 acknowledged, until they fall out of the <code>message_retention_duration</code>
 window.</p>
 </div>
