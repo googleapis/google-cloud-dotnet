@@ -16,7 +16,7 @@ using System;
 using Google.Cloud.Spanner.V1.Logging;
 using Xunit.Abstractions;
 
-namespace Google.Cloud.Spanner.Data.IntegrationTests
+namespace Google.Cloud.Spanner.Data.Tests
 {
     internal class TestLogger : DefaultLogger
     {

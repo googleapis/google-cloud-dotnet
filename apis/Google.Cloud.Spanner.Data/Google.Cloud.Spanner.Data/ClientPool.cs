@@ -22,25 +22,32 @@ using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Logging;
-using Grpc.Auth;
-using Grpc.Core;
 
 namespace Google.Cloud.Spanner.Data
 {
 
-    internal static class ClientPool
+    internal class ClientPool
     {
-        private static readonly ConcurrentDictionary<ClientCredentialKey, CredentialClientPool> s_clientPoolByCredential =
-            new ConcurrentDictionary<ClientCredentialKey, CredentialClientPool>();
+        public static ClientPool Default { get; } = new ClientPool();
 
-        public static async Task<SpannerClient> AcquireClientAsync(
+        private readonly ConcurrentDictionary<ClientCredentialKey, CredentialClientPool> _clientPoolByCredential =
+            new ConcurrentDictionary<ClientCredentialKey, CredentialClientPool>();
+        private readonly ISpannerClientFactory _clientFactory;
+
+        // ReSharper disable once MemberCanBePrivate.Global
+        internal ClientPool(ISpannerClientFactory clientFactory = null)
+        {
+            _clientFactory = clientFactory ?? SpannerClientFactory.Default;
+        }
+
+        public async Task<SpannerClient> AcquireClientAsync(
             ITokenAccess credentials = null,
             ServiceEndpoint endpoint = null)
         {
             var key = new ClientCredentialKey(credentials, endpoint);
-            var poolEntry = s_clientPoolByCredential.GetOrAdd(key, k => new CredentialClientPool(k));
-            var result = await poolEntry.AcquireClientAsync().ConfigureAwait(false);
-            Logger.LogPerformanceCounter("SpannerClient.TotalCount", () => s_clientPoolByCredential.Count);
+            var poolEntry = _clientPoolByCredential.GetOrAdd(key, k => new CredentialClientPool(k));
+            var result = await poolEntry.AcquireClientAsync(_clientFactory).ConfigureAwait(false);
+            Logger.LogPerformanceCounter("SpannerClient.TotalCount", () => _clientPoolByCredential.Count);
             return result;
         }
 
@@ -48,13 +55,13 @@ namespace Google.Cloud.Spanner.Data
         //Returns the total of all reference counts.
         //For test purposes only.
         // poolContents will be filled with the current contents of the pool and may not be null.
-        internal static int GetPoolInfo(StringBuilder poolContents)
+        internal int GetPoolInfo(StringBuilder poolContents)
         {
             GaxPreconditions.CheckNotNull(poolContents, nameof(poolContents));
             int referenceCountTotal = 0;
             poolContents.AppendLine("ClientPool.Contents:");
             int i = 0;
-            foreach (var kvp in s_clientPoolByCredential)
+            foreach (var kvp in _clientPoolByCredential)
             {
                 poolContents.AppendLine($"s_clientPoolByCredential({i}) Key:${kvp.Key}");
                 referenceCountTotal += kvp.Value.DumpCredentialPoolContents(poolContents);
@@ -63,7 +70,7 @@ namespace Google.Cloud.Spanner.Data
             return referenceCountTotal;
         }
 
-        public static void ReleaseClient(SpannerClient spannerClient,
+        public void ReleaseClient(SpannerClient spannerClient,
             ITokenAccess credentials = null,
             ServiceEndpoint endpoint = null)
         {
@@ -71,7 +78,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 var key = new ClientCredentialKey(credentials, endpoint);
                 CredentialClientPool poolEntry;
-                if (s_clientPoolByCredential.TryGetValue(key, out poolEntry))
+                if (_clientPoolByCredential.TryGetValue(key, out poolEntry))
                 {
                     poolEntry.ReleaseClient(spannerClient);
                 }
@@ -142,7 +149,7 @@ namespace Google.Cloud.Spanner.Data
                 }
             }
 
-            public Task<SpannerClient> AcquireClientAsync()
+            public Task<SpannerClient> AcquireClientAsync(ISpannerClientFactory clientFactory)
             {
                 Task<SpannerClient> result;
 
@@ -163,7 +170,7 @@ namespace Google.Cloud.Spanner.Data
                     //now grab the first item in the sorted list, increment refcnt, re-sort and return.
                     //The re-sorting will happen as a consequence of AcquireClientAsync changing its
                     //state and firing an event the prioritylist listens to.
-                    result = _clientPriorityList.GetTop().AcquireClientAsync();
+                    result = _clientPriorityList.GetTop().AcquireClientAsync(clientFactory);
                 }
                 return result;
             }
@@ -186,80 +193,27 @@ namespace Google.Cloud.Spanner.Data
             private Lazy<Task<SpannerClient>> _creationTask;
             private int _refCount = 0;
             private readonly ClientCredentialKey _parentKey;
+            // ReSharper disable once InconsistentNaming
 
             public SpannerClientCreator(ClientCredentialKey parentKey)
             {
                 _parentKey = parentKey;
-                _creationTask = new Lazy<Task<SpannerClient>>(AcquireClientImplAsync);
             }
 
             internal int RefCount => _refCount;
 
-            public bool MatchesClient(SpannerClient client) => _creationTask.IsValueCreated &&
-                !_creationTask.Value.IsFaulted &&
-                ReferenceEquals(_creationTask.Value.ResultWithUnwrappedExceptions(), client);
+            public bool MatchesClient(SpannerClient client) => _creationTask != null
+                && _creationTask.IsValueCreated
+                && !_creationTask.Value.IsFaulted
+                && ReferenceEquals(_creationTask.Value.ResultWithUnwrappedExceptions(), client);
 
-            private async Task<ChannelCredentials> CreateDefaultChannelCredentialsAsync()
+            public async Task<SpannerClient> AcquireClientAsync(ISpannerClientFactory clientFactory)
             {
-                var appDefaultCredentials = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
-                if (appDefaultCredentials.IsCreateScopedRequired)
-                {
-                    appDefaultCredentials = appDefaultCredentials.CreateScoped(SpannerClient.DefaultScopes);
-                }
-                return appDefaultCredentials.ToChannelCredentials();
-            }
-
-            private async Task<SpannerClient> AcquireClientImplAsync()
-            {
-                var endpoint = _parentKey.Endpoint;
-                ChannelCredentials channelCredentials;
-
-                if (_parentKey.Credential == null)
-                {
-                    channelCredentials = await CreateDefaultChannelCredentialsAsync().ConfigureAwait(false);
-                }
-                else
-                {
-                    channelCredentials = _parentKey.Credential.ToChannelCredentials();
-                }
-
-                var channel = new Channel(
-                    endpoint.Host,
-                    endpoint.Port,
-                    channelCredentials);
-                Logger.LogPerformanceCounterFn("SpannerClient.RawCreateCount", x => x + 1);
-
-                //Pull the timeout from spanner options.
-                //The option must be set before OpenAsync is called.
-                var callSettings = CallSettings.FromCallTiming(
-                    CallTiming.FromRetry(
-                        new RetrySettings(
-                            SpannerSettings.GetDefaultRetryBackoff(),
-                            SpannerSettings.GetDefaultTimeoutBackoff(),
-                            Expiration.FromTimeout(SpannerOptions.Instance.Timeout),
-                            SpannerSettings.NonIdempotentRetryFilter
-                        )));
-
-                return SpannerClient.Create(
-                    channel, new SpannerSettings
-                    {
-                        CreateSessionSettings = callSettings,
-                        GetSessionSettings = callSettings,
-                        DeleteSessionSettings = callSettings,
-                        ExecuteSqlSettings = callSettings,
-                        ReadSettings = callSettings,
-                        BeginTransactionSettings = callSettings,
-                        CommitSettings = callSettings,
-                        RollbackSettings = callSettings
-                    });
-            }
-
-            public async Task<SpannerClient> AcquireClientAsync()
-            {
-                if (_creationTask.Value.IsFaulted)
+                if (_creationTask == null || _creationTask.Value.IsFaulted)
                 {
                     //retry an already failed task.
-                    _creationTask = new Lazy<Task<SpannerClient>>(AcquireClientImplAsync);
+                    _creationTask = new Lazy<Task<SpannerClient>>(
+                        () => clientFactory.CreateClientAsync(_parentKey.Endpoint, _parentKey.Credential));
                 }
 
                 var spannerClient = await _creationTask.Value.ConfigureAwait(false);
@@ -291,8 +245,15 @@ namespace Google.Cloud.Spanner.Data
                 {
                     return refCountComparison;
                 }
-                // This has a chance of returning 0 even if the object is different.
+                // This has a chance of returning 0 even if the object is not the same instance.
                 // That is fine and is handled by the PriorityHeap.
+
+                // Note: SpannerClients if created sequentially should only use a single channel.
+                // This is to faciliate good session pool hits (which is per channel).  If we always
+                // round robin'd clients, then we would get hard cache misses until we populated all
+                // of the caches per channel.
+                // We accomplish this by having a specified sort order based on hash if there is
+                // a tie based on refcnt.
                 return GetHashCode().CompareTo(other.GetHashCode());
             }
 
