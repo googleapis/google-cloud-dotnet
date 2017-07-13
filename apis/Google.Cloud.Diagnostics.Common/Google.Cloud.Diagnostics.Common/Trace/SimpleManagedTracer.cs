@@ -35,15 +35,20 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         internal sealed class Span : ISpan
         {
+            internal int StartThreadId { get; private set; }
 
             internal TraceSpan TraceSpan { get; private set; }
+
+             private ImmutableStack<Span> _parentStack;
 
             private readonly SimpleManagedTracer _tracer;
 
             private double _ticks;
 
-            internal Span(SimpleManagedTracer tracer, TraceSpan traceSpan)
+            internal Span(SimpleManagedTracer tracer, TraceSpan traceSpan, ImmutableStack<Span> parentStack)
             {
+                StartThreadId = Thread.CurrentThread.ManagedThreadId;
+                _parentStack = GaxPreconditions.CheckNotNull(parentStack, nameof(parentStack));
                 _tracer = GaxPreconditions.CheckNotNull(tracer, nameof(tracer));
                 TraceSpan = GaxPreconditions.CheckNotNull(traceSpan, nameof(traceSpan));
             }
@@ -78,8 +83,12 @@ namespace Google.Cloud.Diagnostics.Common
             public ulong SpanId() => TraceSpan.SpanId;
 
             /// <inheritdoc />
-            public IManagedTracer CreateManagedTracer() =>
-                Create(_tracer._consumer, _tracer._projectId, _tracer.GetCurrentTraceId(), TraceSpan.SpanId);
+            public IManagedTracer CreateManagedTracer()
+            {
+                var prevParentSpanId = _parentStack.IsEmpty ? _tracer._rootSpanParentId : _parentStack.Peek().TraceSpan.SpanId;
+                var spanId = Disposed() ? prevParentSpanId : TraceSpan.SpanId;
+                return Create(_tracer._consumer, _tracer._projectId, _tracer.GetCurrentTraceId(), spanId);
+            }
         }
 
         /// <summary>The trace consumer to push the trace to when completed.</summary>
@@ -132,18 +141,18 @@ namespace Google.Cloud.Diagnostics.Common
             GaxPreconditions.CheckNotNull(name, nameof(name));
             options = options ?? StartSpanOptions.Create();
 
-            var currentStack = TraceStack;
+            var currentStack = GetUpdatedStack(TraceStack);
             var traceSpan = new TraceSpan
             {
                 SpanId = _spanIdFactory.NextId(),
                 Kind = options.SpanKind.Convert(),
                 Name = name,
                 StartTime = Timestamp.FromDateTime(DateTime.UtcNow),
-                ParentSpanId = currentStack.IsEmpty ? _rootSpanParentId.GetValueOrDefault() : currentStack.Peek().TraceSpan.SpanId
+                ParentSpanId = GetCurrentSpanId(currentStack).GetValueOrDefault()
             };
             AnnotateSpan(traceSpan, options.Labels);
 
-            var span = new Span(this, traceSpan);
+            var span = new Span(this, traceSpan, TraceStack);
             TraceStack = currentStack.Push(span);
 
             Interlocked.Increment(ref _openSpanCount);
@@ -226,6 +235,7 @@ namespace Google.Cloud.Diagnostics.Common
             GaxPreconditions.CheckNotNull(labels, nameof(labels));
 
             var currentStack = GetUpdatedStack(TraceStack);
+            TraceStack = currentStack;
             CheckStackNotEmpty(currentStack);
 
             AnnotateSpan(currentStack.Peek().TraceSpan, labels);
@@ -251,19 +261,19 @@ namespace Google.Cloud.Diagnostics.Common
 
         /// <inheritdoc />
         public string GetCurrentTraceId() => _trace.TraceId;
-        
+
         /// <inheritdoc />
-        public ulong? GetCurrentSpanId() => GetCurrentSpanId(TraceStack);
+        public ulong? GetCurrentSpanId() {
+            var currentStack = GetUpdatedStack(TraceStack);
+            TraceStack = currentStack;
+            return GetCurrentSpanId(TraceStack);
+        }
 
         /// <summary>
         /// Gets the current span id of the specified stack or null if none exists.
         /// </summary>
-        private ulong? GetCurrentSpanId(ImmutableStack<Span> traceStack)
-        {
-            traceStack = GetUpdatedStack(traceStack);
-            return traceStack.IsEmpty? _rootSpanParentId : traceStack.Peek().TraceSpan.SpanId;
-        }
-            
+        private ulong? GetCurrentSpanId(ImmutableStack<Span> traceStack) =>
+            traceStack.IsEmpty? _rootSpanParentId : traceStack.Peek().TraceSpan.SpanId;
 
         /// <summary>
         /// Sets a <see cref="StackTrace"/> on the current span for the given exception and
@@ -293,7 +303,9 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         private ImmutableStack<Span> GetUpdatedStack(ImmutableStack<Span> traceStack)
         {
-            while (!traceStack.IsEmpty && traceStack.Peek().Disposed())
+            var threadId = Thread.CurrentThread.ManagedThreadId;
+            while (!traceStack.IsEmpty && traceStack.Peek().Disposed() && 
+                traceStack.Peek().StartThreadId == threadId)
             {
                 traceStack = traceStack.Pop(out _);
             }
@@ -341,7 +353,7 @@ namespace Google.Cloud.Diagnostics.Common
         }
 #endif
 
-        private sealed class ImmutableStack<T>
+        internal sealed class ImmutableStack<T>
         {
             public static readonly ImmutableStack<T> Empty = new ImmutableStack<T>(default(T), null);
 
