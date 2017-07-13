@@ -112,9 +112,9 @@ namespace Google.Cloud.PubSub.V1
 
             internal void Validate()
             {
-                GaxPreconditions2.CheckArgumentRange(StreamAckDeadline, nameof(StreamAckDeadline), MinimumStreamAckDeadline, MaximumStreamAckDeadline);
+                GaxPreconditions.CheckArgumentRange(StreamAckDeadline, nameof(StreamAckDeadline), MinimumStreamAckDeadline, MaximumStreamAckDeadline);
                 var maxAckExtension = TimeSpan.FromTicks((StreamAckDeadline ?? DefaultStreamAckDeadline).Ticks / 2);
-                GaxPreconditions2.CheckArgumentRange(AckExtensionWindow, nameof(AckExtensionWindow), MinimumAckExtensionWindow, maxAckExtension);
+                GaxPreconditions.CheckArgumentRange(AckExtensionWindow, nameof(AckExtensionWindow), MinimumAckExtensionWindow, maxAckExtension);
             }
 
             /// <summary>
@@ -611,7 +611,7 @@ namespace Google.Cloud.PubSub.V1
                         // This is cancelled once the StreamingPull() RPC has an error.
                         var streamingPullCts = CancellationTokenSource.CreateLinkedTokenSource(_hardStopCts.Token);
                         pull = _client.StreamingPull(CallSettings.FromCancellationToken(streamingPullCts.Token),
-                            new BidirectionalStreamingSettings(10));// TODO: Put back to 1 once bug #188 released in v2.1.0
+                            new BidirectionalStreamingSettings(1));
                         // Initial call to start subscribe messages arriving.
                         await _taskHelper.ConfigureAwait(pull.WriteAsync(new StreamingPullRequest
                         {
