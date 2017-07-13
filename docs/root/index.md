@@ -37,8 +37,6 @@ Beta:
 - [Google.Cloud.ErrorReporting.V1Beta1](Google.Cloud.ErrorReporting.V1Beta1/index.html)
 - [Google.Cloud.Monitoring.V3](Google.Cloud.Monitoring.V3/index.html)
 - [Google.Cloud.PubSub.V1](Google.Cloud.PubSub.V1/index.html)
-  - Although this library works as-is, a hand-written abstraction layer is being worked on, which
-    is expected to be the main way of interacting with Pub/Sub.
 - [Google.Cloud.Trace.V1](Google.Cloud.Trace.V1/index.html)
 
 Alpha:
