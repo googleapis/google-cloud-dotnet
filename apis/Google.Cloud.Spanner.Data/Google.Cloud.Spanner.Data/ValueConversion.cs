@@ -176,37 +176,30 @@ namespace Google.Cloud.Spanner.Data
                 case TypeCode.Bool:
                     return new Value {BoolValue = Convert.ToBoolean(value)};
                 case TypeCode.String:
-                    if (value is DateTime)
+                    if (value is DateTime dateTime)
                     {
                         // If the value is a DateTime, we always convert using XmlConvert.
                         // This allows us to convert back to a datetime reliably from the
                         // resulting string (so roundtrip works properly if the developer uses
                         // a string as a backing field for a datetime for whatever reason).
-                        return new Value { StringValue = XmlConvert.ToString((DateTime)value, XmlDateTimeSerializationMode.Utc) };
+                        return new Value { StringValue = XmlConvert.ToString(dateTime, XmlDateTimeSerializationMode.Utc) };
                     }
                     return new Value { StringValue = Convert.ToString(value, CultureInfo.InvariantCulture) };
                 case TypeCode.Int64:
-                    if (value is string stringValue)
-                    {
-                        return new Value { StringValue = Convert.ToInt64(stringValue, CultureInfo.InvariantCulture)
+                        return new Value { StringValue = Convert.ToInt64(value, CultureInfo.InvariantCulture)
                             .ToString(CultureInfo.InvariantCulture) };
-                    }
-                    else
-                    {
-                        return new Value { StringValue = Convert.ToInt64(value).ToString(CultureInfo.InvariantCulture) };
-                    }
                 case TypeCode.Float64:
-                    return new Value {NumberValue = Convert.ToDouble(value)};
+                    return new Value {NumberValue = Convert.ToDouble(value, CultureInfo.InvariantCulture)};
                 case TypeCode.Timestamp:
                     return new Value
                     {
-                        StringValue = XmlConvert.ToString(Convert.ToDateTime(value), XmlDateTimeSerializationMode.Utc)
+                        StringValue = XmlConvert.ToString(Convert.ToDateTime(value, CultureInfo.InvariantCulture), XmlDateTimeSerializationMode.Utc)
                     };
                 case TypeCode.Date:
                     return new Value
                     {
                         StringValue = StripTimePart(
-                            XmlConvert.ToString(Convert.ToDateTime(value), XmlDateTimeSerializationMode.Utc))
+                            XmlConvert.ToString(Convert.ToDateTime(value, CultureInfo.InvariantCulture), XmlDateTimeSerializationMode.Utc))
                     };
                 case TypeCode.Array:
                     if (value is IEnumerable enumerable)
@@ -264,7 +257,7 @@ namespace Google.Cloud.Spanner.Data
                         {
                             return Convert.ToBoolean(Convert.ToInt64(wireValue.StringValue, CultureInfo.InvariantCulture));
                         }
-                        return Convert.ToBoolean(wireValue.StringValue, CultureInfo.InvariantCulture);
+                        return Convert.ToBoolean(wireValue.StringValue);
                     case Value.KindOneofCase.BoolValue:
                         return wireValue.BoolValue;
                     case Value.KindOneofCase.NumberValue:
@@ -290,7 +283,7 @@ namespace Google.Cloud.Spanner.Data
                         {
                             return Convert.ToChar(Convert.ToInt64(wireValue.StringValue, CultureInfo.InvariantCulture));
                         }
-                        return Convert.ToChar(wireValue.StringValue, CultureInfo.InvariantCulture);
+                        return Convert.ToChar(wireValue.StringValue);
                     default:
                         throw new InvalidOperationException(
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
@@ -419,7 +412,7 @@ namespace Google.Cloud.Spanner.Data
                     case Value.KindOneofCase.NullValue:
                         return null;
                     case Value.KindOneofCase.NumberValue:
-                        return wireValue.NumberValue.ToString(CultureInfo.CurrentCulture);
+                        return wireValue.NumberValue.ToString(CultureInfo.InvariantCulture);
                     case Value.KindOneofCase.StringValue:
                         return wireValue.StringValue;
                     case Value.KindOneofCase.BoolValue:
