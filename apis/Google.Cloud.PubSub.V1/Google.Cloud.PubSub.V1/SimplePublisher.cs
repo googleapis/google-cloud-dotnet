@@ -86,9 +86,9 @@ namespace Google.Cloud.PubSub.V1
                 {
                     if (batchingSettings != null)
                     {
-                        GaxPreconditions2.CheckArgumentRange(batchingSettings.ElementCountThreshold,
+                        GaxPreconditions.CheckArgumentRange(batchingSettings.ElementCountThreshold,
                             $"{name}.{nameof(BatchingSettings.ElementCountThreshold)}", 1, ApiMaxBatchingSettings.ElementCountThreshold.Value);
-                        GaxPreconditions2.CheckArgumentRange(batchingSettings.ByteCountThreshold,
+                        GaxPreconditions.CheckArgumentRange(batchingSettings.ByteCountThreshold,
                             $"{name}.{nameof(BatchingSettings.ByteCountThreshold)}", 1, ApiMaxBatchingSettings.ByteCountThreshold.Value);
                         GaxPreconditions.CheckArgument((batchingSettings.DelayThreshold ?? TimeSpan.FromSeconds(1)) > TimeSpan.Zero,
                             $"{name}.{nameof(BatchingSettings.DelayThreshold)}", "Must be positive");
