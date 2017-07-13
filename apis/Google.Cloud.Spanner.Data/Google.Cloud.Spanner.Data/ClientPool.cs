@@ -21,7 +21,10 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.Logging;
+using Google.Cloud.Spanner.V1.Internal;
+using Google.Cloud.Spanner.V1.Internal.Logging;
+using Grpc.Auth;
+using Grpc.Core;
 
 namespace Google.Cloud.Spanner.Data
 {

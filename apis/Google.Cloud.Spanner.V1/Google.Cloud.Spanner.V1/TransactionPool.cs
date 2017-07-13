@@ -17,7 +17,8 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using Google.Cloud.Spanner.V1.Logging;
+using Google.Cloud.Spanner.V1.Internal;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
 
 namespace Google.Cloud.Spanner.V1

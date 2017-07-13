@@ -15,7 +15,7 @@
 using System;
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.Logging;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -92,7 +92,7 @@ namespace Google.Cloud.Spanner.Data
             set
             {
                 var underlyingLevel = (int) value;
-                Logger.LogLevel = GaxPreconditions.CheckEnumValue((V1.Logging.LogLevel) underlyingLevel,
+                Logger.LogLevel = GaxPreconditions.CheckEnumValue((V1.Internal.Logging.LogLevel) underlyingLevel,
                     nameof(LogLevel));
             }
         }
