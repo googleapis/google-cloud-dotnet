@@ -29,9 +29,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     {
         private readonly Lazy<Task> _creationTask;
 
-        public string TestInstanceName => "myspanner";
+        public string TestInstanceName => "spannerintegration";
 
-        public string TestProjectName => "spanneref";
+        public string TestProjectName => Environment.GetEnvironmentVariable("TEST_PROJECT") ?? "cloud-sharp-jenkins";
 
         public string ConnectionString => "Data Source=projects/" + TestProjectName + "/instances/" + TestInstanceName
             + "/databases/" + DatabaseName;
