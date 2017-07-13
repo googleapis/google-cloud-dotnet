@@ -68,10 +68,10 @@ namespace Google.Cloud.Tools.TagReleases
             var changed = apis.Except(noChange).ToList();
 
             Console.WriteLine("APIs already tagged at current version (or not ready for release):");
-            noChange.ForEach(Console.WriteLine);
+            noChange.ForEach(api => Console.WriteLine($"{api.Id,-50} v{api.Version}"));
             Console.WriteLine();
             Console.WriteLine("APIs requiring a new release:");
-            changed.ForEach(Console.WriteLine);
+            changed.ForEach(api => Console.WriteLine($"{api.Id,-50} v{api.Version}"));
 
             Console.WriteLine();
 
