@@ -57,7 +57,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             await subscriber.CreateSubscriptionAsync(subscriptionName, topicName, null, 60).ConfigureAwait(false);
 
             // Create SimplePublisher and SimpleSubscriber
-            var simplePublisher = await SimplePublisher.CreateAsync(topicName, clientCreationsettings: timeouts == null ? null :
+            var simplePublisher = await SimplePublisher.CreateAsync(topicName, clientCreationSettings: timeouts == null ? null :
                 new SimplePublisher.ClientCreationSettings(
                     publisherSettings: new PublisherSettings
                     {
