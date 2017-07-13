@@ -23,46 +23,13 @@ using TypeCode = Google.Cloud.Spanner.V1.TypeCode;
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
-    /// Represents a parameter to a <see cref="SpannerCommand"/> and optionally its mapping to DataSet columns.
+    /// Represents a parameter to a <see cref="SpannerCommand" /> and optionally its mapping to DataSet columns.
     /// </summary>
     public sealed class SpannerParameter : DbParameter
 #if NET45 || NET451
         , ICloneable
 #endif
     {
-        /// <summary>
-        /// Initializes a new instance of the SpannerParameter class.
-        /// </summary>
-        public SpannerParameter() { }
-
-        /// <summary>
-        /// Initializes a new instance of the SpannerParameter class.
-        /// </summary>
-        /// <param name="parameterName">The name of the parameter. For Insert, Update and Delete commands, this name should
-        /// be the name of a valid column in a Spanner table. In Select commands, this name should be the name of a parameter
-        /// used in the SQL Query. This value is case sensitive. Must not be null.</param>
-        /// <param name="type">One of the <see cref="SpannerDbType"/> values that indicates the type of the parameter.
-        /// Must not be null.</param>
-        /// <param name="value">An object that is the value of the SpannerParameter. May be null.</param>
-        /// <param name="sourceColumn">The name of the DataTable source column (SourceColumn) if this SpannerParameter is
-        /// used in a call to Update. May be null.</param>
-        /// <param name="size">The length of the parameter. The value is for informational purposes only.</param>
-        public SpannerParameter(
-            string parameterName,
-            SpannerDbType type,
-            object value = null,
-            string sourceColumn = null,
-            int size = 0)
-        {
-            GaxPreconditions.CheckNotNull(parameterName, nameof(parameterName));
-            GaxPreconditions.CheckNotNull(type, nameof(type));
-            ParameterName = parameterName;
-            SpannerDbType = type;
-            Value = value;
-            SourceColumn = sourceColumn;
-            Size = size;
-        }
-
         /// <inheritdoc />
         public override DbType DbType
         {
@@ -137,10 +104,52 @@ namespace Google.Cloud.Spanner.Data
 #endif
 
         /// <summary>
-        /// The <see cref="SpannerDbType"/> of the parameter or column. This should match the type as defined in Spanner
+        /// The <see cref="SpannerDbType" /> of the parameter or column. This should match the type as defined in Spanner
         /// or as defined by the result of a SQL Query.
         /// </summary>
         public SpannerDbType SpannerDbType { get; set; }
+
+        /// <inheritdoc />
+        public override object Value { get; set; }
+
+        /// <summary>
+        /// Initializes a new instance of the SpannerParameter class.
+        /// </summary>
+        public SpannerParameter() { }
+
+        /// <summary>
+        /// Initializes a new instance of the SpannerParameter class.
+        /// </summary>
+        /// <param name="parameterName">
+        /// The name of the parameter. For Insert, Update and Delete commands, this name should
+        /// be the name of a valid column in a Spanner table. In Select commands, this name should be the name of a parameter
+        /// used in the SQL Query. This value is case sensitive. Must not be null.
+        /// </param>
+        /// <param name="type">
+        /// One of the <see cref="SpannerDbType" /> values that indicates the type of the parameter.
+        /// Must not be null.
+        /// </param>
+        /// <param name="value">An object that is the value of the SpannerParameter. May be null.</param>
+        /// <param name="sourceColumn">
+        /// The name of the DataTable source column (SourceColumn) if this SpannerParameter is
+        /// used in a call to Update. May be null.
+        /// </param>
+        public SpannerParameter(
+            string parameterName,
+            SpannerDbType type,
+            object value = null,
+            string sourceColumn = null)
+        {
+            GaxPreconditions.CheckNotNull(parameterName, nameof(parameterName));
+            GaxPreconditions.CheckNotNull(type, nameof(type));
+            ParameterName = parameterName;
+            SpannerDbType = type;
+            Value = value;
+            SourceColumn = sourceColumn;
+        }
+
+        /// <inheritdoc />
+        public object Clone() => (SpannerParameter) MemberwiseClone();
 
         internal object GetValidatedValue()
         {
@@ -154,12 +163,6 @@ namespace Google.Cloud.Spanner.Data
             }
             return Value;
         }
-
-        /// <inheritdoc />
-        public override object Value { get; set; }
-
-        /// <inheritdoc />
-        public object Clone() => (SpannerParameter) MemberwiseClone();
 
         /// <inheritdoc />
         public override void ResetDbType()
