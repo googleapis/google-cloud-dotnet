@@ -17,7 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.Logging;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 
 namespace Google.Cloud.Spanner.Data
 {

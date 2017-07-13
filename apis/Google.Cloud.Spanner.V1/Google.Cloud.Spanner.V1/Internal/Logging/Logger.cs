@@ -14,7 +14,7 @@
 
 using System;
 
-namespace Google.Cloud.Spanner.V1.Logging
+namespace Google.Cloud.Spanner.V1.Internal.Logging
 {
     /// <summary>
     /// Provides diagnostic information on Cloud Spanner.

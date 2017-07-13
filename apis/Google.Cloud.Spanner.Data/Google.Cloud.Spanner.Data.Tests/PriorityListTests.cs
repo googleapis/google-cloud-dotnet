@@ -15,7 +15,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Google.Cloud.Spanner.V1;
+using Google.Cloud.Spanner.V1.Internal;
 using Xunit;
 
 namespace Google.Cloud.Spanner.Data.Tests

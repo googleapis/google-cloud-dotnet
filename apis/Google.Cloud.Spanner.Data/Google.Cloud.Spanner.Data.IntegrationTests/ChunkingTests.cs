@@ -19,7 +19,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Google.Cloud.Spanner.V1.Logging;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 using Xunit;
 using Xunit.Abstractions;
 

@@ -16,7 +16,7 @@ using Grpc.Core;
 using System;
 using System.Threading.Tasks;
 
-namespace Google.Cloud.Spanner.V1
+namespace Google.Cloud.Spanner.V1.Internal
 {
     /// <summary>
     /// Helper class to wrap operations.

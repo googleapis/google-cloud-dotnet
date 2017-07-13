@@ -16,7 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Google.Cloud.Spanner.V1
+namespace Google.Cloud.Spanner.V1.Internal
 {
     /// <summary>
     /// A simple sorted list that sorts based on the result of CompareTo,

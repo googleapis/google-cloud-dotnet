@@ -14,7 +14,7 @@
 
 using System;
 
-namespace Google.Cloud.Spanner.V1
+namespace Google.Cloud.Spanner.V1.Internal
 {
     /// <summary>
     /// An item in a <see cref="PriorityList{T}"/>.

@@ -13,7 +13,7 @@
 // limitations under the License.
 
 using System.Reflection;
-using Google.Cloud.Spanner.V1.Logging;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 using Xunit.Sdk;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests {
