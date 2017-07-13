@@ -58,7 +58,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <code>
     /// public void SomeFunction(IManagedTracer tracer)
     /// {
-    ///     using(tracer.StartSpan(nameof(SomeFunction)))
+    ///     using (tracer.StartSpan(nameof(SomeFunction)))
     ///     {
     ///         ...
     ///         // Do work.

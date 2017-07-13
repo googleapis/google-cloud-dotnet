@@ -56,7 +56,7 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// <code>
     /// public void DoSomething()
     /// {
-    ///     using(CloudTrace.Tracer.StartSpan("DoSomething"))
+    ///     using (CloudTrace.Tracer.StartSpan("DoSomething"))
     ///     {
     ///         ...
     ///     }

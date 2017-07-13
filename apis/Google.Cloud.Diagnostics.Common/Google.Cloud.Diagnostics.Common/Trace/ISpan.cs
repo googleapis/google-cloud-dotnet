@@ -20,9 +20,10 @@ namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
     /// A trace span.
-    /// <remark>
+    /// </summary>
+    /// <remarks>
     /// The functions here, aside from <see cref="IDisposable.Dispose"/>, do not need to be used in most cases. 
-    /// They need to be used when updating the current span or starting a new span when the current span in a
+    /// They need to be used when updating the current span or starting a new span when the current span is in a
     /// disjoint thread. For example:
     /// <code>
     /// public void DoSomething(IManagedTracer tracer)
@@ -36,7 +37,7 @@ namespace Google.Cloud.Diagnostics.Common
     ///     });
     ///     Thread t2 = new Thread(() =>
     ///     {
-    ///         var temp = tcs1.Task.Result;
+    ///         tcs1.Task.Wait();
     ///         var tracer2 = span1.CreateManagedTracer();
     ///         // This span ('span2') will be a child of 'span1'.
     ///         using (tracer2.StartSpan("thread"))
@@ -51,8 +52,7 @@ namespace Google.Cloud.Diagnostics.Common
     ///     t2.Start();
     /// }
     /// </code>
-    /// </remark>
-    /// </summary>
+    /// </remarks>
     public interface ISpan : IDisposable
     {
         /// <summary>

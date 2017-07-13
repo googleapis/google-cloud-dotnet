@@ -629,7 +629,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 {
                     if (expectedException == null)
                     {
-                        var temp = tcs1.Task.Result;
+                        tcs1.Task.Wait();
                         actionTwo();
                     }
                     else
@@ -665,11 +665,11 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
             var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
 
-            var one = tracer.StartSpan("span-name-0");
-            var two = tracer.StartSpan("span-name-1");
-            var three = tracer.StartSpan("span-name-2");
-            three.Dispose();
-            two.Dispose();
+            tracer.StartSpan("span-name-0");
+            using (tracer.StartSpan("span-name-1"))
+            {
+                using (tracer.StartSpan("span-name-2")) { }
+            }
             mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<TraceProto>>()), Times.Never());
         }
 

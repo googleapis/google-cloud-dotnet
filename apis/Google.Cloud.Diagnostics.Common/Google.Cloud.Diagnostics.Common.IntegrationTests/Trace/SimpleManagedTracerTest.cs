@@ -210,7 +210,8 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                     tracer.SetStackTrace(new StackTrace(CreateException(), true));
                     BlockUntilClockTick();
                 }
-                using (tracer.StartSpan("child-two")) { 
+                using (tracer.StartSpan("child-two"))
+                {
                     BlockUntilClockTick();
                     using (tracer.StartSpan("grandchild-one", StartSpanOptions.Create(SpanKind.RpcClient)))
                     {
@@ -257,13 +258,15 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
             var consumer = CreateGrpcTraceConsumer();
             var tracer = CreateSimpleManagedTracer(consumer);
 
-            var one = tracer.StartSpan(rootSpanName);
-            var two = tracer.StartSpan("span-name-1");
-            BlockUntilClockTick();
-            var three = tracer.StartSpan("span-name-2");
-            BlockUntilClockTick();
-            three.Dispose();
-            two.Dispose();
+            tracer.StartSpan(rootSpanName);
+            using (tracer.StartSpan("span-name-1"))
+            {
+                BlockUntilClockTick();
+                using (tracer.StartSpan("span-name-2"))
+                {
+                    BlockUntilClockTick();
+                }
+            }
 
             TraceProto trace = _polling.GetTrace(rootSpanName, _startTime, false);
             Assert.Null(trace);

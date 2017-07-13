@@ -29,7 +29,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         internal class Span : ISpan
         {
-            private bool _disposed = false;
+            private bool _disposed;
 
             /// <summary>
             /// Does nothing.
