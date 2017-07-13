@@ -73,7 +73,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         private string[] GetLargeStringArray() =>
             Enumerable.Range(0, _random.Next(10, 20)).Select(_ => GetLargeString(100000, 200000)).ToArray();
 
-
         private byte[] GetLargeBytes(int minSize, int maxSize)
         {
             int size = _random.Next(minSize, maxSize);
@@ -113,13 +112,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 using (var tx = await connection.BeginTransactionAsync())
                 {
                     using (var cmd = connection.CreateInsertCommand(
-                        _testFixture.ChunkingTestTable, new SpannerParameterCollection
+                        _testFixture.ChunkingTestTable, new SpannerColumnCollection
                         {
-                            new SpannerParameter("K", SpannerDbType.String),
-                            new SpannerParameter("StringValue", SpannerDbType.String),
-                            new SpannerParameter("StringArrayValue", SpannerDbType.ArrayOf(SpannerDbType.String)),
-                            new SpannerParameter("BytesValue", SpannerDbType.Bytes),
-                            new SpannerParameter("BytesArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bytes))
+                            new SpannerColumn("K", SpannerDbType.String),
+                            new SpannerColumn("StringValue", SpannerDbType.String),
+                            new SpannerColumn("StringArrayValue", SpannerDbType.ArrayOf(SpannerDbType.String)),
+                            new SpannerColumn("BytesValue", SpannerDbType.Bytes),
+                            new SpannerColumn("BytesArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bytes))
                         }))
                     {
                         cmd.Transaction = tx;
@@ -138,7 +137,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 {
                     using (var reader = (SpannerDataReader) await readCmd.ExecuteReaderAsync())
                     {
-                        HashSet<string> keySet = new HashSet<string>();
+                        var keySet = new HashSet<string>();
                         while (await reader.ReadAsync())
                         {
                             rowsRead++;

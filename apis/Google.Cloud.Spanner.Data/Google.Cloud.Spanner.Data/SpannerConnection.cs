@@ -35,15 +35,18 @@ namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
     /// Represents a connection to a single Spanner database.
-    /// When opened, <see cref="SpannerConnection"/> will acquire and maintain a session
+    /// When opened, <see cref="SpannerConnection" /> will acquire and maintain a session
     /// with the target Spanner database.
-    /// <see cref="SpannerCommand"/> instances using this <see cref="SpannerConnection"/>
+    /// <see cref="SpannerCommand" /> instances using this <see cref="SpannerConnection" />
     /// will use this session to execute their operation. Concurrent read operations can
     /// share this session, but concurrent write operations may cause additional sessions
     /// to be opened to the database.
     /// Underlying sessions with the Spanner database are pooled and are closed after a
-    /// configurable <see>
-    /// <cref>SpannerOptions.PoolEvictionDelay</cref></see>.
+    /// configurable
+    /// <see>
+    /// <cref>SpannerOptions.PoolEvictionDelay</cref>
+    /// </see>
+    /// .
     /// </summary>
     public sealed class SpannerConnection : DbConnection
     {
@@ -71,39 +74,6 @@ namespace Google.Cloud.Spanner.Data
         private volatile Task<Session> _sharedSessionAllocator;
         private ConnectionState _state = ConnectionState.Closed;
         private readonly HashSet<string> _staleSessions = new HashSet<string>();
-
-#if NET45 || NET451
-        private TimestampBound _timestampBound;
-        private VolatileResourceManager _volatileResourceManager;
-#endif
-
-        /// <summary>
-        /// Creates a SpannerConnection with no datasource or credential specified.
-        /// </summary>
-        public SpannerConnection() { }
-
-        /// <summary>
-        /// Creates a SpannerConnection with a datasource contained in connectionString
-        /// and optional credential information supplied in connectionString or the credential
-        /// argument.
-        /// </summary>
-        /// <param name="connectionString">A Spanner formatted connection string. This is usually of the form 
-        /// `Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={hostname};][Port={portnumber}]`</param>
-        /// <param name="credential">An optional credential for operations to be performed on the Spanner database.  May be null.</param>
-        public SpannerConnection(string connectionString, ITokenAccess credential = null)
-            : this(new SpannerConnectionStringBuilder(connectionString, credential)) { }
-
-        /// <summary>
-        /// Creates a SpannerConnection with a datasource contained in connectionString.
-        /// </summary>
-        /// <param name="connectionStringBuilder">
-        /// A SpannerConnectionStringBuilder containing a formatted connection string.  Must not be null.
-        /// </param>
-        public SpannerConnection(SpannerConnectionStringBuilder connectionStringBuilder)
-        {
-            GaxPreconditions.CheckNotNull(connectionStringBuilder, nameof(connectionStringBuilder));
-            TrySetNewConnectionInfo(connectionStringBuilder);
-        }
 
         /// <summary>
         /// Provides options to customize how connections to Spanner are created
@@ -157,19 +127,49 @@ namespace Google.Cloud.Spanner.Data
         internal SpannerClient SpannerClient { get; private set; }
 
         /// <summary>
-        /// Begins a readonly transaction using the optionally provided <see cref="CancellationToken"/>
+        /// Creates a SpannerConnection with no datasource or credential specified.
+        /// </summary>
+        public SpannerConnection() { }
+
+        /// <summary>
+        /// Creates a SpannerConnection with a datasource contained in connectionString
+        /// and optional credential information supplied in connectionString or the credential
+        /// argument.
+        /// </summary>
+        /// <param name="connectionString">
+        /// A Spanner formatted connection string. This is usually of the form
+        /// `Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={hostname};][Port={portnumber}]`
+        /// </param>
+        /// <param name="credential">An optional credential for operations to be performed on the Spanner database.  May be null.</param>
+        public SpannerConnection(string connectionString, ITokenAccess credential = null)
+            : this(new SpannerConnectionStringBuilder(connectionString, credential)) { }
+
+        /// <summary>
+        /// Creates a SpannerConnection with a datasource contained in connectionString.
+        /// </summary>
+        /// <param name="connectionStringBuilder">
+        /// A SpannerConnectionStringBuilder containing a formatted connection string.  Must not be null.
+        /// </param>
+        public SpannerConnection(SpannerConnectionStringBuilder connectionStringBuilder)
+        {
+            GaxPreconditions.CheckNotNull(connectionStringBuilder, nameof(connectionStringBuilder));
+            TrySetNewConnectionInfo(connectionStringBuilder);
+        }
+
+        /// <summary>
+        /// Begins a readonly transaction using the optionally provided <see cref="CancellationToken" />
         /// Read transactions are preferred if possible because they do not impose locks internally.
         /// ReadOnly transactions run with strong consistency and return the latest copy of data.
         /// </summary>
         /// <param name="cancellationToken">An optional token for canceling the call. May be null.</param>
-        /// <returns>a new <see cref="SpannerTransaction"/></returns>
+        /// <returns>a new <see cref="SpannerTransaction" /></returns>
         public Task<SpannerTransaction> BeginReadOnlyTransactionAsync(
             CancellationToken cancellationToken = default(CancellationToken)) => BeginReadOnlyTransactionAsync(
             TimestampBound.Strong, cancellationToken);
 
         /// <summary>
-        /// Begins a readonly transaction using the optionally provided <see cref="CancellationToken"/>
-        /// and provided <see cref="TimestampBound"/> to control the read timestamp and/or staleness
+        /// Begins a readonly transaction using the optionally provided <see cref="CancellationToken" />
+        /// and provided <see cref="TimestampBound" /> to control the read timestamp and/or staleness
         /// of data.
         /// Read transactions are preferred if possible because they do not impose locks internally.
         /// Stale read-only transactions can execute more quickly than strong or read-write transactions,.
@@ -234,7 +234,7 @@ namespace Google.Cloud.Spanner.Data
         /// Begins a new read/write transaction.
         /// </summary>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
-        /// <returns>A new <see cref="SpannerTransaction"/></returns>
+        /// <returns>A new <see cref="SpannerTransaction" /></returns>
         public Task<SpannerTransaction> BeginTransactionAsync(
             CancellationToken cancellationToken = default(CancellationToken)) => BeginTransactionImplAsync(
             new TransactionOptions
@@ -295,55 +295,61 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// Creates a new <see cref="SpannerCommand"/> to delete rows from a Spanner database table.
+        /// Creates a new <see cref="SpannerCommand" /> to delete rows from a Spanner database table.
         /// </summary>
         /// <param name="databaseTable">The name of the table from which to delete rows. Must not be null.</param>
         /// <param name="primaryKeys">The set of columns that form the primary key of the table.</param>
-        /// <returns>A configured <see cref="SpannerCommand"/></returns>
+        /// <returns>A configured <see cref="SpannerCommand" /></returns>
         public SpannerCommand CreateDeleteCommand(
             string databaseTable,
-            SpannerParameterCollection primaryKeys = null) => new SpannerCommand(
+            SpannerColumnCollection primaryKeys = null) => new SpannerCommand(
             SpannerCommandTextBuilder.CreateDeleteTextBuilder(databaseTable), this, null,
             primaryKeys);
 
         /// <summary>
-        /// Creates a new <see cref="SpannerCommand"/> to insert rows into a Spanner database table.
+        /// Creates a new <see cref="SpannerCommand" /> to insert rows into a Spanner database table.
         /// </summary>
         /// <param name="databaseTable">The name of the table to insert rows into. Must not be null.</param>
-        /// <param name="insertParameters">A collection of <see cref="SpannerParameter"/>
+        /// <param name="insertedColumns">
+        /// A collection of <see cref="SpannerColumn" />
         /// where each instance represents a column in the Spanner database table being set.
-        /// The name of the parameter must match the column name in Spanner. The value
-        /// should be the value of the new row. May be null.</param>
-        /// <returns>A configured <see cref="SpannerCommand"/></returns>
+        /// May be null.
+        /// </param>
+        /// <returns>A configured <see cref="SpannerCommand" /></returns>
         public SpannerCommand CreateInsertCommand(
             string databaseTable,
-            SpannerParameterCollection insertParameters = null) => new SpannerCommand(
+            SpannerColumnCollection insertedColumns = null) => new SpannerCommand(
             SpannerCommandTextBuilder.CreateInsertTextBuilder(databaseTable), this, null,
-            insertParameters);
+            insertedColumns);
 
         /// <summary>
-        /// Creates a new <see cref="SpannerCommand"/> to insert or update rows into a Spanner database table.
+        /// Creates a new <see cref="SpannerCommand" /> to insert or update rows into a Spanner database table.
         /// </summary>
         /// <param name="databaseTable">The name of the table to insert or updates rows. Must not be null.</param>
-        /// <param name="insertUpdateParameters">A collection of <see cref="SpannerParameter"/>
+        /// <param name="insertUpdateColumns">
+        /// A collection of <see cref="SpannerColumn" />
         /// where each instance represents a column in the Spanner database table being set.
-        /// The name of the parameter must match the column name in Spanner. The value
-        /// should be the value of the new or updated row. May be null</param>
-        /// <returns>A configured <see cref="SpannerCommand"/></returns>
+        /// May be null
+        /// </param>
+        /// <returns>A configured <see cref="SpannerCommand" /></returns>
         public SpannerCommand CreateInsertOrUpdateCommand(
             string databaseTable,
-            SpannerParameterCollection insertUpdateParameters = null) => new SpannerCommand(
+            SpannerColumnCollection insertUpdateColumns = null) => new SpannerCommand(
             SpannerCommandTextBuilder.CreateInsertOrUpdateTextBuilder(databaseTable), this,
-            null, insertUpdateParameters);
+            null, insertUpdateColumns);
 
         /// <summary>
-        /// Creates a new <see cref="SpannerCommand"/> to select rows using a SQL query statement.
+        /// Creates a new <see cref="SpannerCommand" /> to select rows using a SQL query statement.
         /// </summary>
-        /// <param name="sqlQueryStatement">A full SQL query statement that may optionally have
-        /// replacement parameters. Must not be null.</param>
-        /// <param name="selectParameters">Optionally supplied set of <see cref="SpannerParameter"/>
-        /// that correspond to the parameters used in the SQL query. May be null.</param>
-        /// <returns>A configured <see cref="SpannerCommand"/></returns>
+        /// <param name="sqlQueryStatement">
+        /// A full SQL query statement that may optionally have
+        /// replacement parameters. Must not be null.
+        /// </param>
+        /// <param name="selectParameters">
+        /// Optionally supplied set of <see cref="SpannerParameter" />
+        /// that correspond to the parameters used in the SQL query. May be null.
+        /// </param>
+        /// <returns>A configured <see cref="SpannerCommand" /></returns>
         public SpannerCommand CreateSelectCommand(
             string sqlQueryStatement,
             SpannerParameterCollection selectParameters = null) => new SpannerCommand(
@@ -351,25 +357,27 @@ namespace Google.Cloud.Spanner.Data
             selectParameters);
 
         /// <summary>
-        /// Creates a new <see cref="SpannerCommand"/> to update rows in a Spanner database table.
+        /// Creates a new <see cref="SpannerCommand" /> to update rows in a Spanner database table.
         /// </summary>
         /// <param name="databaseTable">The name of the table to update rows. Must not be null.</param>
-        /// <param name="updateParameters">A collection of <see cref="SpannerParameter"/>
+        /// <param name="updateColumns">
+        /// A collection of <see cref="SpannerColumn" />
         /// where each instance represents a column in the Spanner database table being set.
-        /// The name of the parameter must match the column name in Spanner. The value
-        /// should be the value of the updated row. May be null.</param>
-        /// <returns>A configured <see cref="SpannerCommand"/></returns>
+        /// Primary keys of the rows to be updated must also be included.
+        /// May be null.
+        /// </param>
+        /// <returns>A configured <see cref="SpannerCommand" /></returns>
         public SpannerCommand CreateUpdateCommand(
             string databaseTable,
-            SpannerParameterCollection updateParameters = null) => new SpannerCommand(
+            SpannerColumnCollection updateColumns = null) => new SpannerCommand(
             SpannerCommandTextBuilder.CreateUpdateTextBuilder(databaseTable), this, null,
-            updateParameters);
+            updateColumns);
 
         /// <summary>
-        /// Creates a new <see cref="SpannerCommand"/> to execute a DDL (CREATE/DROP TABLE, etc) statement.
+        /// Creates a new <see cref="SpannerCommand" /> to execute a DDL (CREATE/DROP TABLE, etc) statement.
         /// </summary>
         /// <param name="ddlStatement">The DDL statement (eg 'CREATE TABLE MYTABLE ...').  Must not be null.</param>
-        /// <returns>A configured <see cref="SpannerCommand"/></returns>
+        /// <returns>A configured <see cref="SpannerCommand" /></returns>
         public SpannerCommand CreateDdlCommand(
             string ddlStatement) => new SpannerCommand(
             SpannerCommandTextBuilder.CreateDdlTextBuilder(ddlStatement), this);
@@ -458,36 +466,6 @@ namespace Google.Cloud.Spanner.Data
                     }
                 }, "SpannerConnection.OpenAsync");
         }
-
-#if NET45 || NET451
-
-        /// <summary>
-        /// Opens and establishes a session with the Spanner database with the given
-        /// <see cref="TimestampBound"/> settings that control the implicit transaction created
-        /// from the active <see cref="System.Transactions.TransactionScope"/>
-        /// </summary>
-        /// <param name="timestampBound">Specifies the timestamp or maximum staleness of a
-        /// read operation. Must not be null.</param>
-        public void OpenWithTimeBoundSettings(TimestampBound timestampBound)
-        {
-            _timestampBound = timestampBound;
-            Open();
-        }
-
-        /// <summary>
-        /// Opens and establishes a session with the Spanner database asynchronously with the given
-        /// <see cref="TimestampBound"/> settings that control the implicit transaction created
-        /// from the active <see cref="System.Transactions.TransactionScope"/>
-        /// </summary>
-        /// <param name="timestampBound">Specifies the timestamp or maximum staleness of a
-        /// read operation. Must not be null.</param>
-        /// <param name="cancellationToken">An optional token for canceling the call.</param>
-        public Task OpenWithTimeBoundSettingsAsync(TimestampBound timestampBound, CancellationToken cancellationToken)
-        {
-            _timestampBound = timestampBound;
-            return OpenAsync(cancellationToken);
-        }
-#endif
 
         /// <inheritdoc />
         protected override DbTransaction BeginDbTransaction(IsolationLevel isolationLevel)
@@ -812,9 +790,48 @@ namespace Google.Cloud.Spanner.Data
         }
 
 #if NET45 || NET451
+        private TimestampBound _timestampBound;
+        private VolatileResourceManager _volatileResourceManager;
+#endif
+
+#if NET45 || NET451
 
         /// <summary>
-        /// Gets or Sets whether to participate in the active <see cref="System.Transactions.TransactionScope"/>
+        /// Opens and establishes a session with the Spanner database with the given
+        /// <see cref="TimestampBound" /> settings that control the implicit transaction created
+        /// from the active <see cref="System.Transactions.TransactionScope" />
+        /// </summary>
+        /// <param name="timestampBound">
+        /// Specifies the timestamp or maximum staleness of a
+        /// read operation. Must not be null.
+        /// </param>
+        public void OpenWithTimeBoundSettings(TimestampBound timestampBound)
+        {
+            _timestampBound = timestampBound;
+            Open();
+        }
+
+        /// <summary>
+        /// Opens and establishes a session with the Spanner database asynchronously with the given
+        /// <see cref="TimestampBound" /> settings that control the implicit transaction created
+        /// from the active <see cref="System.Transactions.TransactionScope" />
+        /// </summary>
+        /// <param name="timestampBound">
+        /// Specifies the timestamp or maximum staleness of a
+        /// read operation. Must not be null.
+        /// </param>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        public Task OpenWithTimeBoundSettingsAsync(TimestampBound timestampBound, CancellationToken cancellationToken)
+        {
+            _timestampBound = timestampBound;
+            return OpenAsync(cancellationToken);
+        }
+#endif
+
+#if NET45 || NET451
+
+        /// <summary>
+        /// Gets or Sets whether to participate in the active <see cref="System.Transactions.TransactionScope" />
         /// </summary>
         // ReSharper disable once AutoPropertyCanBeMadeGetOnly.Global
         // ReSharper disable once MemberCanBePrivate.Global

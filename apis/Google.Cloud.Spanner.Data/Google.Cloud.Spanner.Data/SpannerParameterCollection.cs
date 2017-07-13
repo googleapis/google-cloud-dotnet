@@ -20,71 +20,89 @@ using System.Linq;
 using Google.Api.Gax;
 using Google.Protobuf.Collections;
 using Google.Protobuf.WellKnownTypes;
+// ReSharper disable RedundantArgumentDefaultValue
 
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
-    /// Represents a collection of parameters associated with a <see cref="SpannerCommand"/> and their
+    /// Represents a collection of parameters associated with a <see cref="SpannerCommand" /> and their
     /// respective mappings to columns in a DataSet.
     /// </summary>
-    public sealed class SpannerParameterCollection : DbParameterCollection, IEnumerable<SpannerParameter>
+    public class SpannerParameterCollection : DbParameterCollection, IEnumerable<SpannerParameter>
     {
+        private readonly List<SpannerParameter> _innerList = new List<SpannerParameter>();
+
         /// <inheritdoc />
         public override int Count => _innerList.Count;
 
         /// <inheritdoc />
         public override object SyncRoot => _innerList;
 
-        private readonly List<SpannerParameter> _innerList = new List<SpannerParameter>();
+        /// <summary>
+        /// Returns the wrapped collection.
+        /// </summary>
+        protected IEnumerable<SpannerParameter> InnerList => _innerList;
 
         /// <summary>
-        /// Adds a new <see cref="SpannerParameter"/> to the <see cref="SpannerParameterCollection"/>.
+        /// Creates a new <see cref="SpannerParameterCollection" />
         /// </summary>
-        /// <param name="parameterName">The name of the parameter. For Insert, Update and Delete commands, this name should
+        public SpannerParameterCollection() { }
+
+        /// <summary>
+        /// Creates a new <see cref="SpannerParameterCollection" />
+        /// </summary>
+        /// <param name="parameters">The initial collection of parameters</param>
+        public SpannerParameterCollection(IEnumerable<SpannerParameter> parameters)
+        {
+            _innerList.AddRange(parameters);
+        }
+
+        /// <inheritdoc />
+        IEnumerator<SpannerParameter> IEnumerable<SpannerParameter>.GetEnumerator() => _innerList.GetEnumerator();
+
+        /// <inheritdoc />
+        public override IEnumerator GetEnumerator() => _innerList.GetEnumerator();
+
+        /// <summary>
+        /// Adds a new <see cref="SpannerParameter" /> to the <see cref="SpannerParameterCollection" />.
+        /// </summary>
+        /// <param name="parameterName">
+        /// The name of the parameter. For Insert, Update and Delete commands, this name should
         /// be the name of a valid Column in a Spanner table. In Select commands, this name should be the name of a parameter
-        /// used in the SQL Query. Must not be null</param>
-        /// <param name="dbType">One of the <see cref="SpannerDbType"/> values that indicates the type of the parameter.
-        /// Must not be null.</param>
+        /// used in the SQL Query. Must not be null
+        /// </param>
+        /// <param name="dbType">
+        /// One of the <see cref="SpannerDbType" /> values that indicates the type of the parameter.
+        /// Must not be null.
+        /// </param>
         public void Add(string parameterName, SpannerDbType dbType)
         {
             GaxPreconditions.CheckNotNull(parameterName, nameof(parameterName));
             GaxPreconditions.CheckNotNull(dbType, nameof(dbType));
-            _innerList.Add(new SpannerParameter(parameterName, dbType));
+            _innerList.Add(CreateParameter(parameterName, dbType, null, null));
         }
 
         /// <summary>
-        /// Adds a new <see cref="SpannerParameter"/> to the <see cref="SpannerParameterCollection"/>
+        /// Adds a new <see cref="SpannerParameter" /> to the <see cref="SpannerParameterCollection" />
         /// </summary>
-        /// <param name="parameterName">The name of the parameter. For Insert, Update and Delete commands, this name should
+        /// <param name="parameterName">
+        /// The name of the parameter. For Insert, Update and Delete commands, this name should
         /// be the name of a valid Column in a Spanner table. In Select commands, this name should be the name of a parameter
-        /// used in the SQL Query. Must not be null.</param>
+        /// used in the SQL Query. Must not be null.
+        /// </param>
+        /// <param name="dbType">
+        /// One of the <see cref="SpannerDbType" /> values that indicates the type of the parameter.
+        /// Must not be null.
+        /// </param>
         /// <param name="value">An object that is the value of the SpannerParameter. May be null.</param>
-        /// <param name="dbType">One of the <see cref="SpannerDbType"/> values that indicates the type of the parameter.
-        /// Must not be null.</param>
-        public void Add(string parameterName, object value, SpannerDbType dbType)
+        public void Add(string parameterName, SpannerDbType dbType, object value)
         {
             GaxPreconditions.CheckNotNull(parameterName, nameof(parameterName));
             GaxPreconditions.CheckNotNull(dbType, nameof(dbType));
 
-            _innerList.Add(new SpannerParameter(parameterName, dbType) {Value = value});
-        }
-
-        /// <summary>
-        /// Adds a new <see cref="SpannerParameter"/> to the <see cref="SpannerParameterCollection"/>
-        /// </summary>
-        /// <param name="parameterName">The name of the parameter. For Insert, Update and Delete commands, this name should
-        /// be the name of a valid Column in a Spanner table. In Select commands, this name should be the name of a parameter
-        /// used in the SQL Query. Must not be null.</param>
-        /// <param name="dbType">One of the <see cref="SpannerDbType"/> values that indicates the type of the parameter.
-        /// Must not be null.</param>
-        /// <param name="sourceColumn">The name of the DataTable source column (SourceColumn) if this SpannerParameter is used
-        /// in a call to Update. Must not be null.</param>
-        public void Add(string parameterName, SpannerDbType dbType, string sourceColumn)
-        {
-            GaxPreconditions.CheckNotNull(parameterName, nameof(parameterName));
-            GaxPreconditions.CheckNotNull(dbType, nameof(dbType));
-            GaxPreconditions.CheckNotNull(sourceColumn, nameof(sourceColumn));
-            _innerList.Add(new SpannerParameter(parameterName, dbType, sourceColumn));
+            var parameter = CreateParameter(parameterName, dbType, null, null);
+            parameter.Value = value;
+            _innerList.Add(parameter);
         }
 
         /// <inheritdoc />
@@ -140,15 +158,6 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <inheritdoc />
-        IEnumerator<SpannerParameter> IEnumerable<SpannerParameter>.GetEnumerator()
-        {
-            return _innerList.GetEnumerator();
-        }
-
-        /// <inheritdoc />
-        public override IEnumerator GetEnumerator() => _innerList.GetEnumerator();
-
-        /// <inheritdoc />
         public override int IndexOf(object value) => _innerList.IndexOf(value as SpannerParameter);
 
         /// <inheritdoc />
@@ -195,6 +204,15 @@ namespace Google.Cloud.Spanner.Data
 
             return _innerList[index];
         }
+
+        /// <summary>
+        /// Creates a new <see cref="SpannerParameter" />
+        /// </summary>
+        protected virtual SpannerParameter CreateParameter(
+            string parameterName,
+            SpannerDbType type,
+            object value = null,
+            string sourceColumn = null) => new SpannerParameter(parameterName, type, value, sourceColumn);
 
         /// <inheritdoc />
         protected override void SetParameter(int index, DbParameter value)
@@ -245,10 +263,12 @@ namespace Google.Cloud.Spanner.Data
 // between the reference assemblies and real assemblies. See
 // https://stackoverflow.com/questions/44197176 for details.
 // Fortunately the real implementations all just return false too.
-/// <inheritdoc />
+        /// <inheritdoc />
         public override bool IsFixedSize => false;
+
         /// <inheritdoc />
         public override bool IsSynchronized => false;
+
         /// <inheritdoc />
         public override bool IsReadOnly => false;
 #endif
