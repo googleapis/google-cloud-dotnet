@@ -8,6 +8,8 @@ cd $(dirname $0)
 # match anything, e.g. when looking for tests.
 shopt -s nullglob
 
+echo "$(date +%T) Build started"
+
 # First build the analyzers, for use in everything else.
 dotnet restore tools/Google.Cloud.Tools.Analyzers/Google.Cloud.Tools.Analyzers.csproj
 dotnet publish -c Release -f netstandard1.3 tools/Google.Cloud.Tools.Analyzers/Google.Cloud.Tools.Analyzers.csproj
@@ -66,12 +68,14 @@ else
 fi
 
 # Restore, build, test.
+echo "$(date +%T) Restoring solution"
 dotnet restore AllProjects.sln
+echo "$(date +%T) Building solution"
 dotnet build -c Release AllProjects.sln
 
 # Could use xargs, but this is more flexible
 while read testproject
 do  
-  echo "Testing $testproject"
+  echo "$(date +%T) Testing $testproject"
   dotnet test -c Release $testproject
 done < AllTests.txt
