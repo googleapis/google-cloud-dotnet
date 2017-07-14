@@ -3,7 +3,7 @@
 set -e
 
 build_api_docs() {
-  echo Building docs for $1
+  echo "$(date +%T) Building docs for $1"
   local api=$1
 
   # Special case "root" where we don't need to generate the sources
