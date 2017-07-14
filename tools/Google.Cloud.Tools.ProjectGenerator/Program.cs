@@ -15,6 +15,7 @@
 using Google.Cloud.Tools.Common;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Xml.Linq;
@@ -38,6 +39,10 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 foreach (var api in ApiMetadata.LoadApis())
                 {
                     GenerateProjects(Path.Combine(root, "apis", api.Id), api);
+                }
+                foreach (var api in ApiMetadata.LoadApis())
+                {
+                    GenerateSolutionFiles(Path.Combine(root, "apis", api.Id), api);
                 }
                 return 0;
             }
@@ -79,8 +84,68 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 }
             }
 
-            // TODO: Solution file
             // TODO: Updates for unknown project types? Tricky...
+        }
+
+        static void GenerateSolutionFiles(string apiRoot, ApiMetadata api)
+        {
+            Console.WriteLine($"Generating solution file for {api.Id}");
+            var projectDirectories = Directory.GetDirectories(apiRoot)
+                .Where(pd => Path.GetFileName(pd).StartsWith(api.Id))
+                .ToList();
+
+            HashSet<string> projects = new HashSet<string>();
+            // We want to include all the project files, and all the project references
+            // from those project files, being aware that the solution file is already one directory
+            // higher than the project file...
+            foreach (var dir in projectDirectories)
+            {
+                string projectName = Path.GetFileName(dir);
+                string projectFile = Path.Combine(dir, $"{projectName}.csproj");
+                if (File.Exists(projectFile))
+                {
+                    projects.Add($"{projectName}\\{projectName}.csproj");
+                    XDocument doc = XDocument.Load(projectFile);
+                    var projectReferences = doc.Descendants("ProjectReference")
+                        .Select(x => x.Attribute("Include").Value.Replace("/", "\\"))
+                        .Select(x => x.StartsWith("..\\") ? x.Substring(3) : x);
+                    foreach (var reference in projectReferences)
+                    {
+                        projects.Add(reference);
+                    }
+                }
+            }
+
+            var solutionFile = $"{api.Id}.sln";
+            if (!File.Exists(Path.Combine(apiRoot, solutionFile)))
+            {
+                RunDotnet(apiRoot, "new", "sln", "-n", api.Id);
+            }
+            // It's much faster to run a single process than to run it once per project.
+            RunDotnet(apiRoot, new[] { "sln", solutionFile, "add" }.Concat(projects).ToArray());
+        }
+
+        private static void RunDotnet(string root, params string[] args)
+        {
+            string joinedArguments = string.Join(" ", args);
+            var psi = new ProcessStartInfo
+            {
+                FileName = "dotnet",
+                Arguments = joinedArguments,
+                WorkingDirectory = root,
+                RedirectStandardOutput = true,
+                RedirectStandardError = true
+            };
+            var process = Process.Start(psi);
+            // We assume there isn't so much output that this will block. Otherwise we'd have to read it in a different thread etc.
+            // 10s limit stops us from hanging forever...
+            process.WaitForExit(10000);
+            if (process.ExitCode != 0)
+            {
+                var output = process.StandardOutput.ReadToEnd();
+                var error = process.StandardError.ReadToEnd();
+                throw new Exception($"dotnet exit code {process.ExitCode}. Directory: {root}. Args: {joinedArguments}. Output: {output}. Error: {error}");
+            }
         }
 
         private static void GenerateMainProject(ApiMetadata api, string directory)
