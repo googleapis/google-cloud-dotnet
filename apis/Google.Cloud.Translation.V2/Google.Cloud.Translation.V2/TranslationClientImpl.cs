@@ -34,9 +34,9 @@ namespace Google.Cloud.Translation.V2
     /// <remarks>
     /// This is the "default" implementation of <see cref="TranslationClient"/>. Most client code
     /// should refer to <see cref="TranslationClient"/>, creating instances with
-    /// <see cref="TranslationClient.Create(Apis.Auth.OAuth2.GoogleCredential, TranslationModel)"/>,
-    /// <see cref="TranslationClient.CreateAsync(Apis.Auth.OAuth2.GoogleCredential, TranslationModel)"/> and
-    /// <see cref="TranslationClient.CreateFromApiKey(string, TranslationModel)"/>.
+    /// <see cref="TranslationClient.Create(Apis.Auth.OAuth2.GoogleCredential, string)"/>,
+    /// <see cref="TranslationClient.CreateAsync(Apis.Auth.OAuth2.GoogleCredential, string)"/> and
+    /// <see cref="TranslationClient.CreateFromApiKey(string, string)"/>.
     /// The constructor of this class is public for the sake of constructor-based dependency injection.
     /// </remarks>
     public sealed class TranslationClientImpl : TranslationClient
@@ -76,22 +76,21 @@ namespace Google.Cloud.Translation.V2
         public override TranslateService Service { get; }
 
         /// <inheritdoc />
-        public override TranslationModel DefaultModel { get; }
+        public override string DefaultModel { get; }
 
         /// <summary>
         /// Constructs a new client wrapping the given <see cref="TranslateService"/>.
         /// </summary>
         /// <param name="service">The service to wrap. Must not be null.</param>
-        /// <param name="model">The default translation model to use. Defaults to <see cref="TranslationModel.ServiceDefault"/>.</param>
-        public TranslationClientImpl(TranslateService service, TranslationModel model = TranslationModel.ServiceDefault)
+        /// <param name="model">The default translation model to use. Defaults to null, indicating that by default no model is specified in requests.</param>
+        public TranslationClientImpl(TranslateService service, string model = null)
         {
             Service = GaxPreconditions.CheckNotNull(service, nameof(service));
-            TranslationModels.ValidateModel(model);
             DefaultModel = model;
         }
 
         /// <inheritdoc />
-        public override IList<TranslationResult> TranslateText(IEnumerable<string> textItems, string targetLanguage, string sourceLanguage = null, TranslationModel? model = null)
+        public override IList<TranslationResult> TranslateText(IEnumerable<string> textItems, string targetLanguage, string sourceLanguage = null, string model = null)
         {
             var items = ConvertToListAndCheckNoNullElements(textItems, nameof(textItems));
             GaxPreconditions.CheckNotNull(targetLanguage, nameof(targetLanguage));
@@ -101,7 +100,7 @@ namespace Google.Cloud.Translation.V2
         }
 
         /// <inheritdoc />
-        public override IList<TranslationResult> TranslateHtml(IEnumerable<string> htmlItems, string targetLanguage, string sourceLanguage = null, TranslationModel? model = null)
+        public override IList<TranslationResult> TranslateHtml(IEnumerable<string> htmlItems, string targetLanguage, string sourceLanguage = null, string model = null)
         {
             var items = ConvertToListAndCheckNoNullElements(htmlItems, nameof(htmlItems));
             GaxPreconditions.CheckNotNull(targetLanguage, nameof(targetLanguage));
@@ -120,7 +119,7 @@ namespace Google.Cloud.Translation.V2
         }
 
         /// <inheritdoc />
-        public override IList<Language> ListLanguages(string target = null, TranslationModel? model = null)
+        public override IList<Language> ListLanguages(string target = null, string model = null)
         {
             var request = Service.Languages.List();
             request.ModifyRequest += _versionHeaderAction;
@@ -131,7 +130,7 @@ namespace Google.Cloud.Translation.V2
 
         /// <inheritdoc />
         public override async Task<IList<TranslationResult>> TranslateTextAsync(IEnumerable<string> textItems, string targetLanguage, string sourceLanguage = null,
-            TranslationModel? model = null, CancellationToken cancellationToken = default(CancellationToken))
+            string model = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             var items = ConvertToListAndCheckNoNullElements(textItems, nameof(textItems));
             GaxPreconditions.CheckNotNull(targetLanguage, nameof(targetLanguage));
@@ -143,7 +142,7 @@ namespace Google.Cloud.Translation.V2
 
         /// <inheritdoc />
         public override async Task<IList<TranslationResult>> TranslateHtmlAsync(IEnumerable<string> htmlItems, string targetLanguage, string sourceLanguage = null,
-            TranslationModel? model = null, CancellationToken cancellationToken = default(CancellationToken))
+            string model = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             var items = ConvertToListAndCheckNoNullElements(htmlItems, nameof(htmlItems));
             GaxPreconditions.CheckNotNull(targetLanguage, nameof(targetLanguage));
@@ -164,7 +163,7 @@ namespace Google.Cloud.Translation.V2
         }
 
         /// <inheritdoc />
-        public override async Task<IList<Language>> ListLanguagesAsync(string target = null, TranslationModel? model = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<IList<Language>> ListLanguagesAsync(string target = null, string model = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             var request = Service.Languages.List();
             request.ModifyRequest += _versionHeaderAction;
@@ -209,7 +208,7 @@ namespace Google.Cloud.Translation.V2
                 .ToList();
         }
 
-        private void ModifyRequest(ListRequest request, string sourceLanguage, FormatEnum format, TranslationModel? model)
+        private void ModifyRequest(ListRequest request, string sourceLanguage, FormatEnum format, string model)
         {
             request.ModifyRequest += _versionHeaderAction;
             request.Source = sourceLanguage;
@@ -217,11 +216,15 @@ namespace Google.Cloud.Translation.V2
             request.Model = GetEffectiveModelName(model);
         }
 
-        private string GetEffectiveModelName(TranslationModel? model)
+        private string GetEffectiveModelName(string model)
         {
             var effectiveModel = model ?? DefaultModel;
-            TranslationModels.ValidateModel(effectiveModel);
-            return effectiveModel.ToApiName();
+            // Allow callers to specify "" to override the DefaultModel.
+            if (effectiveModel == "")
+            {
+                effectiveModel = null;
+            }
+            return effectiveModel;
         }
     }
 }

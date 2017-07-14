@@ -43,7 +43,7 @@ namespace Google.Cloud.Translation.V2.IntegrationTests
         public void Translate_ModelInResult()
         {
             var client = TranslationClient.Create();
-            var model = TranslationModel.NeuralMachineTranslation;
+            var model = "nmt";
             var translation = client.TranslateText("Please translate this", LanguageCodes.French, model: model);
             Assert.Equal(model, translation.Model);
         }

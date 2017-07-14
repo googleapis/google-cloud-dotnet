@@ -51,7 +51,7 @@ namespace Google.Cloud.Translation.V2
         /// <summary>
         /// The model used to perform the translation, if known.
         /// </summary>
-        public TranslationModel? Model { get; }
+        public string Model { get; }
 
         /// <summary>
         /// Constructs an instance.
@@ -65,7 +65,7 @@ namespace Google.Cloud.Translation.V2
         /// <param name="targetLanguage">The target language code.</param>
         /// <param name="model">The model used to perform the translation, if known.</param>
         public TranslationResult(string originalText, string translatedText, string detectedSourceLanguage, string specifiedSourceLanguage,
-            string targetLanguage, TranslationModel? model)
+            string targetLanguage, string model)
         {
             OriginalText = originalText;
             TranslatedText = translatedText;
@@ -80,7 +80,7 @@ namespace Google.Cloud.Translation.V2
         /// </summary>
         internal TranslationResult(TranslationsResource resource, string originalText, string specifiedSourceLanguage, string targetLanguage)
             : this(originalText, resource.TranslatedText, resource.DetectedSourceLanguage, 
-                  specifiedSourceLanguage, targetLanguage, TranslationModels.GetModel(resource.Model))
+                  specifiedSourceLanguage, targetLanguage, resource.Model)
         {
         }
     }
