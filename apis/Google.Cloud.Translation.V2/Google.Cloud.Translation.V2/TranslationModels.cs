@@ -49,18 +49,11 @@ namespace Google.Cloud.Translation.V2
 
         internal static TranslationModel? GetModel(string name)
         {
-            if (name == null)
-            {
-                return null;
-            }
-            // Note: the response only contains a translation model if it was explicitly requested,
-            // so if a new model comes out and is used by default, it's fine that we wouldn't recognize its
-            // API name - we won't see that anyway.
             switch (name)
             {
                 case BaseApiName: return TranslationModel.Base;
                 case NeuralMachineTranslationApiName: return TranslationModel.NeuralMachineTranslation;
-                default: throw new InvalidOperationException($"Unknown translation model {name}");
+                default: return null;
             }
         }
     }
