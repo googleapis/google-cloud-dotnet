@@ -35,6 +35,7 @@ namespace Google.Cloud.Spanner.V1
         private const int MaximumLinearSearchDepth = 50;
 
         private readonly List<SessionPoolEntry> _sessionMruStack = new List<SessionPoolEntry>();
+        private readonly SemaphoreSlim _sessionCreateThrottle;
         private int _lastAccessTime;
         private static int s_activeSessionsPooled;
 
@@ -45,6 +46,7 @@ namespace Google.Cloud.Spanner.V1
         internal SessionPoolImpl(SessionPoolKey key, SessionPoolOptions options)
         {
             _options = GaxPreconditions.CheckNotNull(options, nameof(options));
+            _sessionCreateThrottle = new SemaphoreSlim(_options.MaximumConcurrentSessionCreates, _options.MaximumConcurrentSessionCreates);
             Key = key;
         }
 
@@ -198,20 +200,37 @@ namespace Google.Cloud.Spanner.V1
             SessionPoolEntry sessionEntry;
             if (!TryPop(options, out sessionEntry))
             {
-                Logger.Debug(() => "Attempting to acquire a session from the pool failed - creating a new instance.");
-                Stopwatch sw = null;
-                if (Logger.LogPerformanceTraces)
-                {
-                    sw = new Stopwatch();
-                    sw.Start();
-                }
                 //create a new session, blocking or throwing if at the limit.
-                var result = await Key.Client.CreateSessionAsync(new DatabaseName(Key.Project, Key.Instance, Key.Database), cancellationToken).ConfigureAwait(false);
-                if (sw != null)
+                await _sessionCreateThrottle.WaitAsync(cancellationToken).ConfigureAwait(false);
+                try
                 {
-                    Logger.LogPerformanceCounterFn("Session.CreateTime", x => sw.ElapsedMilliseconds);
+                    // Try to pop a session again after acquiring a throttle semaphore.
+                    // we may have waited for quite a while and the pool may now have entries.
+                    if (!TryPop(options, out sessionEntry))
+                    {
+                        Logger.Debug(
+                            () => "Attempting to acquire a session from the pool failed - creating a new instance.");
+                        Stopwatch sw = null;
+                        if (Logger.LogPerformanceTraces)
+                        {
+                            sw = new Stopwatch();
+                            sw.Start();
+                        }
+
+                        var result = await Key.Client.CreateSessionAsync(
+                                new DatabaseName(Key.Project, Key.Instance, Key.Database), cancellationToken)
+                            .ConfigureAwait(false);
+                        if (sw != null)
+                        {
+                            Logger.LogPerformanceCounterFn("Session.CreateTime", x => sw.ElapsedMilliseconds);
+                        }
+                        return result;
+                    }
                 }
-                return result;
+                finally
+                {
+                    _sessionCreateThrottle.Release();
+                }
             }
             MarkUsed();
             //note that the evict task will only actually delete the session if it was able to remove it from the pool.
