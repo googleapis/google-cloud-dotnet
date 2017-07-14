@@ -31,9 +31,13 @@ namespace Google.Cloud.Spanner.V1
     /// It performs pooling of sessions with an evict timer along with configurable settings to control the maximum
     /// number of pooled and active sessions.
     /// To create a session using the sessionpool, use the extension method on SpannerClient.
-    ///   var session = await SpannerClient.CreateSessionFromPoolAsync(project, spannerInstance, database, cancellationtoken);
+    /// 
+    ///     var session = await SpannerClient.CreateSessionFromPoolAsync(project, spannerInstance, database, cancellationtoken);
+    ///     
     /// To release a session back to the sessionpool:
-    ///   session.ReleaseToPool();
+    /// 
+    ///     session.ReleaseToPool();
+    ///   
     /// If you use the SessionPool, you must make sure sessions are properly released back into the pool and are not simply GC'd.
     /// Allowing a session to GC will incur penalties on the current process as the session will count towards the maximum allowed
     /// and it will incur a penalty on other Spanner processes because it will be an hour before the server frees the session if 
@@ -41,6 +45,9 @@ namespace Google.Cloud.Spanner.V1
     /// </summary>
     public sealed class SessionPool : IDisposable
     {
+        /// <summary>
+        /// The default session pool, used in almost all cases other than testing.
+        /// </summary>
         public static SessionPool Default { get; } = new SessionPool();
 
         private readonly TimeSpan _shutDownTimeout = TimeSpan.FromSeconds(60);
@@ -395,6 +402,9 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public int CurrentPooledSessions => SessionPoolImpl.ActiveSessionsPooled;
 
+        /// <summary>
+        /// The options for this session pool.
+        /// </summary>
         public SessionPoolOptions Options { get; } = new SessionPoolOptions();
 
         /// <inheritdoc />

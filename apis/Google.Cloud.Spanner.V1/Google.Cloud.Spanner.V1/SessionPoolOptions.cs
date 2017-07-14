@@ -16,7 +16,10 @@ using System;
 
 namespace Google.Cloud.Spanner.V1
 {
-    internal sealed class SessionPoolOptions
+    /// <summary>
+    /// Options for session pools.
+    /// </summary>
+    public sealed class SessionPoolOptions
     {
         /// <summary>
         /// Maximum number of active sessions that can be in use by the application at any one time.
