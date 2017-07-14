@@ -11,6 +11,7 @@
     <NoWarn>1701;1702;1705;4014</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Google.Cloud.ErrorReporting.V1Beta1\Google.Cloud.ErrorReporting.V1Beta1\Google.Cloud.ErrorReporting.V1Beta1.csproj" />
     <ProjectReference Include="..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="1.1.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />

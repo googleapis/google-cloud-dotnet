@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using System;
-using Google.Cloud.ErrorReporting.V1Beta1;
 using Moq;
 using Xunit;
 using System.Collections.Generic;
@@ -21,6 +20,7 @@ using System.Linq;
 using Google.Protobuf.WellKnownTypes;
 using System.Threading;
 using System.Threading.Tasks;
+using Google.Cloud.Logging.V2;
 
 namespace Google.Cloud.Diagnostics.Common.Tests
 {
@@ -39,11 +39,12 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void Log()
         {
-            var mockConsumer = new Mock<IConsumer<ReportedErrorEvent>>();
-            mockConsumer.Setup(c => c.Receive(IsContext(_method, _uri, _userAgent, _statusCode)));
+            var options = ErrorReportingOptions.Create("pid");
+            var mockConsumer = new Mock<IConsumer<LogEntry>>();
+            mockConsumer.Setup(c => c.Receive(IsContext(_method, _uri, _userAgent, _statusCode, options)));
 
-            IContextExceptionLogger logger =
-                new ErrorReportingContextExceptionLogger(mockConsumer.Object, _service, _version);
+            IContextExceptionLogger logger = new ErrorReportingContextExceptionLogger(
+                mockConsumer.Object, _service, _version, options);
 
             logger.Log(CreateException(), new FakeContextWrapper());
 
@@ -53,11 +54,12 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void Log_Simple()
         {
-            var mockConsumer = new Mock<IConsumer<ReportedErrorEvent>>();
-            mockConsumer.Setup(c => c.Receive(IsContext("", "", "", 0)));
+            var options = ErrorReportingOptions.Create("pid");
+            var mockConsumer = new Mock<IConsumer<LogEntry>>();
+            mockConsumer.Setup(c => c.Receive(IsContext("", "", "", 0, options)));
 
-            IContextExceptionLogger logger =
-                new ErrorReportingContextExceptionLogger(mockConsumer.Object, _service, _version);
+            IContextExceptionLogger logger = new ErrorReportingContextExceptionLogger(
+                 mockConsumer.Object, _service, _version, options);
 
             logger.Log(CreateException(), new EmptyContextWrapper());
 
@@ -67,34 +69,57 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public async Task LogAsync()
         {
-            var mockConsumer = new Mock<IConsumer<ReportedErrorEvent>>();
+            var options = ErrorReportingOptions.Create("pid");
+            var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.ReceiveAsync(
-                IsContext(_method, _uri, _userAgent, _statusCode), It.IsAny<CancellationToken>()))
+                IsContext(_method, _uri, _userAgent, _statusCode, options), It.IsAny<CancellationToken>()))
                 .Returns(Task.FromResult(true));
 
-            IContextExceptionLogger logger =
-                new ErrorReportingContextExceptionLogger(mockConsumer.Object, _service, _version);
+            IContextExceptionLogger logger = new ErrorReportingContextExceptionLogger(
+                mockConsumer.Object, _service, _version, options);
 
             await logger.LogAsync(CreateException(), new FakeContextWrapper());
 
             mockConsumer.VerifyAll();
         }
 
-        internal IEnumerable<ReportedErrorEvent> IsContext(string method, string uri, string userAgent, int statusCode)
+        internal IEnumerable<LogEntry> IsContext(
+            string method, string uri, string userAgent, int statusCode, ErrorReportingOptions options)
         {
-            return Match.Create<IEnumerable<ReportedErrorEvent>>(enumerable => {
+            return Match.Create<IEnumerable<LogEntry>>(enumerable => {
                 var e = enumerable.Single();
-                return e.Message.Contains(_exceptionMessage) &&
-                    e.EventTime.Seconds <= Timestamp.FromDateTime(DateTime.UtcNow).Seconds &&
-                    e.Context.HttpRequest.Method.Equals(method) &&
-                    e.Context.HttpRequest.Url.Contains(uri) &&
-                    e.Context.HttpRequest.UserAgent.Equals(userAgent) &&
-                    e.Context.HttpRequest.ResponseStatusCode == statusCode &&
-                    (!_isWindows || e.Context.ReportLocation.LineNumber > 0) &&
-                    (!_isWindows || !string.IsNullOrEmpty(e.Context.ReportLocation.FilePath)) &&
-                    e.Context.ReportLocation.FunctionName.Equals(nameof(CreateException)) &&
-                    e.ServiceContext.Service.Equals(_service) &&
-                    e.ServiceContext.Version.Equals(_version);
+                var eventTarget = options.EventTarget;
+                
+                var json = e.JsonPayload?.Fields;
+                var message = json["message"].StringValue;
+                var context = json["context"]?.StructValue?.Fields;
+                var httpRequest = context["httpRequest"]?.StructValue?.Fields;
+                var methodVal = httpRequest["method"].StringValue;
+                var urlVal = httpRequest["url"].StringValue;
+                var userAgentVal = httpRequest["userAgent"].StringValue;
+                var responseStatusCodeVal = httpRequest["responseStatusCode"].NumberValue;
+                var reportLocation = context["reportLocation"]?.StructValue?.Fields;
+                var filePathVal = reportLocation["filePath"].StringValue;
+                var lineNumberVal = reportLocation["lineNumber"].NumberValue;
+                var functionNameVal = reportLocation["functionName"].StringValue;
+                var serviceContext = json["serviceContext"]?.StructValue?.Fields;
+                var serviceVal = serviceContext["service"].StringValue;
+                var versionVal = serviceContext["version"].StringValue;
+
+                return e.LogName == eventTarget.LogTarget.GetFullLogName(eventTarget.LogName) &&
+                    e.Timestamp.Seconds <= Timestamp.FromDateTime(DateTime.UtcNow).Seconds &&
+                    e.Resource == eventTarget.MonitoredResource &&
+                    e.Severity == Logging.Type.LogSeverity.Error &&
+                    message.Contains(_exceptionMessage) &&
+                    method.Equals(methodVal) &&
+                    uri.Equals(urlVal) &&
+                    userAgent.Equals(userAgentVal) &&
+                    statusCode  == responseStatusCodeVal &&
+                    (!_isWindows || lineNumberVal > 0) &&
+                    (!_isWindows || !string.IsNullOrEmpty(filePathVal)) &&
+                    nameof(CreateException).Equals(functionNameVal) &&
+                    _service.Equals(serviceVal) &&
+                    _version.Equals(versionVal);
             });
         }
 

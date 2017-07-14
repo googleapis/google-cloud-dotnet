@@ -13,7 +13,8 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Cloud.ErrorReporting.V1Beta1;
+using Google.Cloud.Logging.Type;
+using Google.Cloud.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Diagnostics;
@@ -23,25 +24,32 @@ using System.Threading.Tasks;
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    ///  Google Cloud Error Reporting Logger.  Used to report exceptions to the
-    ///  Stackdriver Error Reporting API.
+    ///  Google Cloud Error Reporting Logger.
     /// </summary>
     internal class ErrorReportingContextExceptionLogger : IContextExceptionLogger
     {
         // The service context in which this error has occurred.
         // See: https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.events#ServiceContext
-        private readonly ServiceContext _serviceContext;
+        private readonly Struct _serviceContext;
 
-        private readonly IConsumer<ReportedErrorEvent> _consumer;
+        private readonly string _logName;
 
-        internal ErrorReportingContextExceptionLogger(IConsumer<ReportedErrorEvent> consumer, string serviceName, string version)
+        private readonly IConsumer<LogEntry> _consumer;
+
+        private readonly ErrorReportingOptions _options;
+
+        internal ErrorReportingContextExceptionLogger(
+            IConsumer<LogEntry> consumer, string serviceName, string version, ErrorReportingOptions options)
         {
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
-            _serviceContext = new ServiceContext
-            {
-                Service = GaxPreconditions.CheckNotNull(serviceName, nameof(serviceName)),
-                Version = GaxPreconditions.CheckNotNull(version, nameof(version)),
-            };
+            _options = GaxPreconditions.CheckNotNull(options, nameof(options));
+            var eventTarget = options.EventTarget;
+            GaxPreconditions.CheckState(eventTarget.Kind == EventTargetKind.Logging, $"Invalid {nameof(EventTarget)}");
+            _logName = GaxPreconditions.CheckNotNull(eventTarget.LogTarget, nameof(eventTarget.LogTarget)).GetFullLogName(eventTarget.LogName);
+
+            _serviceContext = new Struct();
+            _serviceContext.Fields.Add("service", Value.ForString(GaxPreconditions.CheckNotNull(serviceName, nameof(serviceName))));
+            _serviceContext.Fields.Add("version", Value.ForString(GaxPreconditions.CheckNotNull(version, nameof(version))));
         }
 
         /// <summary>
@@ -61,9 +69,9 @@ namespace Google.Cloud.Diagnostics.Common
 
             options = options ?? ErrorReportingOptions.Create(projectId);
             var consumer = options.CreateConsumer();
-            return new ErrorReportingContextExceptionLogger(consumer, serviceName, version);
+            return new ErrorReportingContextExceptionLogger(consumer, serviceName, version, options);
         }
-        
+
         /// <inheritdoc />
         Task IContextExceptionLogger.LogAsync(Exception exception, IContextWrapper context, CancellationToken cancellationToken)
         {
@@ -83,64 +91,69 @@ namespace Google.Cloud.Diagnostics.Common
 
         /// <summary>
         /// Gets information about the HTTP request and response when the exception occurred 
-        /// and populates a <see cref="HttpRequestContext"/> object.
+        /// and populates a <see cref="Struct"/>.
         /// </summary>
-        private HttpRequestContext CreateHttpRequestContext(IContextWrapper context)
+        private Struct CreateHttpRequestContext(IContextWrapper context)
         {
-            return new HttpRequestContext()
-            {
-                Method = context?.GetHttpMethod() ?? "",
-                Url = context?.GetUri() ?? "",
-                UserAgent = context?.GetUserAgent() ?? "",
-                ResponseStatusCode = context?.GetStatusCode() ?? 0,
-            };
+            Struct httpRequestContext = new Struct();
+            httpRequestContext.Fields.Add("method", Value.ForString(context?.GetHttpMethod() ?? ""));
+            httpRequestContext.Fields.Add("url", Value.ForString(context?.GetUri() ?? ""));
+            httpRequestContext.Fields.Add("userAgent", Value.ForString(context?.GetUserAgent() ?? ""));
+            httpRequestContext.Fields.Add("responseStatusCode", Value.ForNumber(context?.GetStatusCode() ?? 0));
+            return httpRequestContext;
         }
 
         /// <summary>
         /// Gets information about the source location where the exception occurred 
-        /// and populates a <see cref="SourceLocation"/> object.
+        /// and populates a <see cref="Struct"/>.
         /// </summary>
-        private static SourceLocation CreateSourceLocation(Exception exception)
+        private static Struct CreateSourceLocation(Exception exception)
         {
             if (exception == null)
             {
-                return new SourceLocation();
+                return new Struct();
             }
 
             StackTrace stackTrace = new StackTrace(exception, true);
             StackFrame[] frames = stackTrace.GetFrames();
             if (frames == null || frames.Length == 0)
             {
-                return new SourceLocation();
+                return new Struct();
             }
 
             StackFrame frame = frames[0];
-            return new SourceLocation
-            {
-                FilePath = frame.GetFileName() ?? "",
-                LineNumber = frame.GetFileLineNumber(),
-                FunctionName = frame.GetMethod()?.Name ?? "",
-            };
+            Struct sourceLocation = new Struct();
+            sourceLocation.Fields.Add("filePath", Value.ForString(frame.GetFileName() ?? ""));
+            sourceLocation.Fields.Add("lineNumber", Value.ForNumber(frame.GetFileLineNumber()));
+            sourceLocation.Fields.Add("functionName", Value.ForString(frame.GetMethod()?.Name ?? ""));
+            return sourceLocation;
         }
 
         /// <summary>
         /// Gets information about the exception that occurred and populates
-        /// a <see cref="ReportedErrorEvent"/> object.
+        /// a <see cref="LogEntry"/>.
         /// </summary>
-        private ReportedErrorEvent CreateReportRequest(Exception exception, IContextWrapper context)
+        private LogEntry CreateReportRequest(Exception exception, IContextWrapper context)
         {
-            ErrorContext errorContext = new ErrorContext()
-            {
-                HttpRequest = CreateHttpRequestContext(context),
-                ReportLocation = CreateSourceLocation(exception)
-            };
+            var timestamp = Timestamp.FromDateTime(DateTime.UtcNow);
 
-            return new ReportedErrorEvent()
+            Struct errorContext = new Struct();
+            errorContext.Fields.Add("httpRequest", Value.ForStruct(CreateHttpRequestContext(context)));
+            errorContext.Fields.Add("reportLocation", Value.ForStruct(CreateSourceLocation(exception)));
+
+            Struct errorEvent = new Struct();
+            errorEvent.Fields.Add("message", Value.ForString(exception?.ToString() ?? ""));
+            errorEvent.Fields.Add("context", Value.ForStruct(errorContext));
+            errorEvent.Fields.Add("serviceContext", Value.ForStruct(_serviceContext));
+            errorEvent.Fields.Add("eventTime", Value.ForString(timestamp.ToString()));
+
+            return new LogEntry
             {
-                Message = exception?.ToString() ?? "",
-                Context = errorContext,
-                ServiceContext = _serviceContext,
-                EventTime = Timestamp.FromDateTime(DateTime.UtcNow),
+                Resource = _options.EventTarget.MonitoredResource,
+                LogName = _logName,
+                Severity = LogSeverity.Error,
+                Timestamp = timestamp,
+                JsonPayload = errorEvent
             };
         }
     }
