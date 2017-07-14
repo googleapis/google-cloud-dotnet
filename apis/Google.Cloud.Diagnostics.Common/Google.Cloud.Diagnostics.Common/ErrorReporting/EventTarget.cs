@@ -120,11 +120,14 @@ namespace Google.Cloud.Diagnostics.Common
         /// To use this option you must enable the Stackdriver Error Reporting API
         /// (https://console.cloud.google.com/apis/api/clouderrorreporting.googleapis.com/overview).
         /// </summary>
+        /// <remarks>
+        /// This is internal as the Stackdriver Error Reporting API is not GA yet.
+        /// </remarks>
         /// <param name="projectId">Optional if running on Google App Engine or Google Compute Engine.
         ///     The Google Cloud Platform project ID. If running on GAE or GCE the project ID will be
         ///     detected from the platform.</param>
         /// <param name="errorReportingClient">The error reporting client.</param>
-        public static EventTarget ForErrorReporting(string projectId = null, ReportErrorsServiceClient errorReportingClient = null)
+        internal static EventTarget ForErrorReporting(string projectId = null, ReportErrorsServiceClient errorReportingClient = null)
         {
             return new EventTarget
             {
