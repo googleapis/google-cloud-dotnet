@@ -17,7 +17,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.Logging;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 using Moq;
 using Xunit;
 using Xunit.Abstractions;
@@ -30,7 +30,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             TestLogger.TestOutputHelper = outputHelper;
             TestLogger.Install();
-            Logger.LogLevel = V1.Logging.LogLevel.Debug;
+            Logger.LogLevel = V1.Internal.Logging.LogLevel.Debug;
         }
 
         private static MockClientFactory SetupMockClientFactory(Mock<SpannerClient> firstClient = null)

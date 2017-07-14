@@ -13,7 +13,7 @@
 // limitations under the License.
 
 using System;
-using Google.Cloud.Spanner.V1.Logging;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 using Xunit.Abstractions;
 
 namespace Google.Cloud.Spanner.Data.Tests
