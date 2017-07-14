@@ -39,6 +39,15 @@ namespace Google.Cloud.Translation.V2.IntegrationTests
             Assert.StartsWith("Lorsque, au cours des", translation.TranslatedText);
         }
 
+        [Fact]
+        public void Translate_ModelInResult()
+        {
+            var client = TranslationClient.Create();
+            var model = TranslationModel.NeuralMachineTranslation;
+            var translation = client.TranslateText("Please translate this", LanguageCodes.French, model: model);
+            Assert.Equal(model, translation.Model);
+        }
+
         private static string LoadResource(string name)
         {
             var type = typeof(TranslationClientTest);
