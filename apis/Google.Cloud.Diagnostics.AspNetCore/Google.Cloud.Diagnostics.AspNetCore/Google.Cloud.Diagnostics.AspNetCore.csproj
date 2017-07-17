@@ -12,8 +12,6 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Description>Google Stackdriver Instrumentation Libraries for ASP.NET Core.</Description>
     <PackageTags>Error;Reporting;Stackdriver;ExceptionLogger;Trace;Diagnostics;Google;Cloud</PackageTags>
-    <IncludeSymbols>true</IncludeSymbols>
-    <IncludeSource>true</IncludeSource>
     <Copyright>Copyright 2017 Google Inc.</Copyright>
     <Authors>Google Inc.</Authors>
     <IconUrl>https://cloud.google.com/images/gcp-icon-64x64.png</IconUrl>
@@ -32,7 +30,14 @@
     <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="1.1.0" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="1.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.0.0" />
+    <PackageReference Include="SourceLink.Create.CommandLine" Version="2.1.2" PrivateAssets="All" />
     <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup Label="dotnet pack instructions">
+    <Content Include="$(OutputPath)netstandard1.5\$(PackageId).pdb">
+      <Pack>true</Pack>
+      <PackagePath>lib/netstandard1.5</PackagePath>
+    </Content>
   </ItemGroup>
   <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
 </Project>
