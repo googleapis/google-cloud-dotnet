@@ -37,11 +37,6 @@ namespace Google.Cloud.Diagnostics.Common
             public void AnnotateSpan(Dictionary<string, string> labels) { }
 
             /// <summary>
-            /// Returns a <see cref="NullManagedTracer"/>.
-            /// </summary>
-            public IManagedTracer CreateManagedTracer() => NullManagedTracer.Instance;
-
-            /// <summary>
             /// Will cause <see cref="Disposed"/> to return 'true'.
             /// </summary>
             public void Dispose() => _disposed = true;

@@ -23,35 +23,30 @@ namespace Google.Cloud.Diagnostics.Common
     /// </summary>
     /// <remarks>
     /// The functions here, aside from <see cref="IDisposable.Dispose"/>, do not need to be used in most cases. 
-    /// They need to be used when updating the current span or starting a new span when the current span is in a
-    /// disjoint thread. For example:
+    /// They need to be used when updating the current span in a disjoint thread. For example:
     /// <code>
     /// public void DoSomething(IManagedTracer tracer)
     /// {
     ///     var tcs = new TaskCompletionSource&lt;bool&gt;();
-    ///     ISpan span1 = null;
+    ///     ISpan span = null;
     ///     Thread t = new Thread(() => 
     ///     {
-    ///         span1 = tracer.StartSpan(nameof(DoSomething));
+    ///         span = tracer.StartSpan(nameof(DoSomething));
     ///         tcs.SetResult(true);
     ///     });
     ///     Thread t2 = new Thread(() =>
     ///     {
-    ///         tcs1.Task.Wait();
-    ///         var tracer2 = span1.CreateManagedTracer();
-    ///         // This span ('span2') will be a child of 'span1'.
-    ///         using (tracer2.StartSpan("thread"))
-    ///         {
-    ///             ...
-    ///         }
-    ///         span1.AnnotateSpan(new Dictionary&lt;string, string&gt; { { "new", "label"} });
-    ///         span1.Dispose();
+    ///         tcs.Task.Wait();
+    ///         span.AnnotateSpan(new Dictionary&lt;string, string&gt; { { "new", "label"} });
+    ///         span.Dispose();
     ///     });
     ///     
     ///     t.Start();
     ///     t2.Start();
     /// }
     /// </code>
+    /// NOTE: While it is possible to end a span in another thread any new spans after this may be in
+    /// a poor state.
     /// </remarks>
     public interface ISpan : IDisposable
     {
@@ -74,10 +69,5 @@ namespace Google.Cloud.Diagnostics.Common
         /// Gets span's id.
         /// </summary>
         ulong SpanId();
-
-        /// <summary>
-        /// Creates an <see cref="IManagedTracer"/> where the parent of all root spans is this <see cref="ISpan"/>.
-        /// </summary>
-        IManagedTracer CreateManagedTracer();
     }
 }

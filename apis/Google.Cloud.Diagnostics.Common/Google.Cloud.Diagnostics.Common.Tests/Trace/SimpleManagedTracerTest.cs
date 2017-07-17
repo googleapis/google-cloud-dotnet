@@ -557,43 +557,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<TraceProto>>()), Times.Never);
         }
 
-        [Fact]
-        public async Task DisjointThreads_MultipleSpans()
-        {
-            var mockConsumer = new Mock<IConsumer<TraceProto>>();
-            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
-
-            ISpan span = null;
-
-            Predicate<IEnumerable<TraceProto>> singleChild = t =>
-            {
-                var singleSpan = t.Single().Spans.Single();
-                return IsValidSpan(singleSpan, "child-two", span.SpanId());
-            };
-            Predicate<IEnumerable<TraceProto>> childParent = t =>
-            {
-                var spans = t.Single().Spans;
-                return spans.Count == 2 &&
-                    IsValidSpan(spans[0], "child-one", spans[1].SpanId) &&
-                    IsValidSpan(spans[1], "parent");
-            };
-            mockConsumer.Setup(c => c.Receive(Match.Create(singleChild)));
-            mockConsumer.Setup(c => c.Receive(Match.Create(childParent)));
-
-            await RunInDisjointThreads(() =>
-            {
-                span = tracer.StartSpan("parent");
-                tracer.StartSpan("child-one").Dispose();
-            }, () =>
-            {
-                var tracer2 = span.CreateManagedTracer();
-                tracer2.StartSpan("child-two").Dispose();
-                span.Dispose();
-            });
-
-            mockConsumer.VerifyAll();
-        }
-
         /// <summary>
         /// Runs two actions in separate disjoint threads.  The first thread will always finish before
         /// the second.
