@@ -17,9 +17,9 @@ using Google.Apis.Bigquery.v2.Data;
 namespace Google.Cloud.BigQuery.V2
 {
     /// <summary>
-    /// Options for <c>CreateQueryJob</c> operations.
+    /// Options for <c>CreateQueryJob</c> and <c>ExecuteQuery</c> operations.
     /// </summary>
-    public sealed class QueryOptions
+    public sealed class QueryOptions : JobCreationOptions
     {
         /// <summary>
         /// A destination table to write the results into.
@@ -99,12 +99,6 @@ namespace Google.Cloud.BigQuery.V2
         /// contains all the information returned by the server.
         /// </summary>
         public bool? DryRun { get; set; }
-
-        /// <summary>
-        /// The ID of the project in which to create the job. If this is not set,
-        /// it defaults to the project ID of the client.
-        /// </summary>
-        public string ProjectId { get; set; }
 
         internal void ModifyRequest(JobConfigurationQuery query)
         {

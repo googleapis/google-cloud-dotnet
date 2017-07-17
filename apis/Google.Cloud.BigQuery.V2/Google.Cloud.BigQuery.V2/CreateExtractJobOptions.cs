@@ -14,16 +14,13 @@
 
 using Google.Apis.Bigquery.v2.Data;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Google.Cloud.BigQuery.V2
 {
     /// <summary>
     /// Options for <c>CreateExtractJob</c> operations.
     /// </summary>
-    public sealed class CreateExtractJobOptions
+    public sealed class CreateExtractJobOptions : JobCreationOptions
     {
         /// <summary>
         /// The file format to use for output. If this is unspecified,
@@ -48,12 +45,6 @@ namespace Google.Cloud.BigQuery.V2
         /// is unspecified, the default is true.
         /// </summary>
         public bool? PrintHeader { get; set; }
-
-        /// <summary>
-        /// The ID of the project in which to create the job. If this is not set,
-        /// it defaults to the project ID of the client.
-        /// </summary>
-        public string ProjectId { get; set; }
 
         internal void ModifyRequest(JobConfigurationExtract extract)
         {
