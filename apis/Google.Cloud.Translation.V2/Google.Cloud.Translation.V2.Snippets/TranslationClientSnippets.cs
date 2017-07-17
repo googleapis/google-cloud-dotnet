@@ -25,7 +25,7 @@ namespace Google.Cloud.Translation.V2.Snippets
         public void TranslateTextBaseDefaultModel()
         {
             // Sample: TranslateTextBaseDefaultModel
-            TranslationClient client = TranslationClient.Create(model: TranslationModel.Base);
+            TranslationClient client = TranslationClient.Create(model: "base");
             TranslationResult result = client.TranslateText("It is raining.", LanguageCodes.French);
             Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
             // End sample
@@ -35,8 +35,7 @@ namespace Google.Cloud.Translation.V2.Snippets
         {
             // Sample: TranslateTextBaseOverrideModel
             TranslationClient client = TranslationClient.Create();
-            TranslationResult result = client.TranslateText("It is raining.", LanguageCodes.French,
-                model: TranslationModel.Base);
+            TranslationResult result = client.TranslateText("It is raining.", LanguageCodes.French, model: "base");
             Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
             // End sample
         }
