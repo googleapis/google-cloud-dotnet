@@ -12,20 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System.IO;
-using System.Reflection;
 using Xunit;
 
 namespace Google.Cloud.Translation.V2.IntegrationTests
 {
-    public class TranslationClientTest
+    public class AdvancedTranslationClientTest
     {
-        private static readonly string LargeText = LoadResource("independence.txt");
+        private static readonly string LargeText = TranslationClientTest.LoadResource("independence.txt");
 
         [Fact]
         public void DetectLanguage_LargeText()
         {
-            var client = TranslationClient.Create();
+            var client = AdvancedTranslationClient.Create();
             var detection = client.DetectLanguage(LargeText);
             Assert.Equal("en", detection.Language);
         }
@@ -33,7 +31,7 @@ namespace Google.Cloud.Translation.V2.IntegrationTests
         [Fact]
         public void Translate_LargeText()
         {
-            var client = TranslationClient.Create();
+            var client = AdvancedTranslationClient.Create();
             var translation = client.TranslateText(LargeText, LanguageCodes.French);
             Assert.StartsWith("Lorsque, au cours des", translation.TranslatedText);
         }
@@ -41,19 +39,10 @@ namespace Google.Cloud.Translation.V2.IntegrationTests
         [Fact]
         public void Translate_ModelInResult()
         {
-            var client = TranslationClient.Create();
-            var model = TranslationModel.NeuralMachineTranslation;
-            var translation = client.TranslateText("Please translate this", LanguageCodes.French, model: model);
-            Assert.Equal(model, translation.Model);
-        }
-
-        internal static string LoadResource(string name)
-        {
-            var type = typeof(TranslationClientTest);
-            using (var stream = type.GetTypeInfo().Assembly.GetManifestResourceStream($"{type.Namespace}.{name}"))
-            {
-                return new StreamReader(stream).ReadToEnd();
-            }
-        }
+            var client = AdvancedTranslationClient.Create();
+            string modelName = "nmt";
+            var translation = client.TranslateText("Please translate this", LanguageCodes.French, model: modelName);
+            Assert.Equal(modelName, translation.ModelName);
+        }        
     }
 }
