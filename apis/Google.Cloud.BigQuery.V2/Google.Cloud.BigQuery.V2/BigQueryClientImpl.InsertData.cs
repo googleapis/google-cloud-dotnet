@@ -42,7 +42,7 @@ namespace Google.Cloud.BigQuery.V2
             };
             options?.ModifyConfiguration(configuration);
 
-            return UploadData(configuration, input, "text/csv");
+            return UploadData(configuration, input, "text/csv", options?.ProjectId ?? ProjectId);
         }
 
         /// <inheritdoc />
@@ -60,7 +60,7 @@ namespace Google.Cloud.BigQuery.V2
             };
             options?.ModifyConfiguration(configuration);
 
-            return UploadData(configuration, input, "application/vnd.apache.avro+binary");
+            return UploadData(configuration, input, "application/vnd.apache.avro+binary", options?.ProjectId ?? ProjectId);
         }
 
         /// <inheritdoc />
@@ -82,7 +82,7 @@ namespace Google.Cloud.BigQuery.V2
             };
             options?.ModifyConfiguration(configuration);
 
-            return UploadData(configuration, input, "text/json");
+            return UploadData(configuration, input, "text/json", options?.ProjectId ?? ProjectId);
         }
 
         private TableSchema GetSchema(TableReference tableReference)
@@ -92,10 +92,10 @@ namespace Google.Cloud.BigQuery.V2
             return table.Schema;
         }
 
-        private BigQueryJob UploadData(JobConfigurationLoad loadConfiguration, Stream input, string contentType)
+        private BigQueryJob UploadData(JobConfigurationLoad loadConfiguration, Stream input, string contentType, string projectId)
         {
             var job = new Job { Configuration = new JobConfiguration { Load = loadConfiguration } };
-            var mediaUpload = new CustomMediaUpload(Service, job, ProjectId, input, contentType);
+            var mediaUpload = new CustomMediaUpload(Service, job, projectId, input, contentType);
             mediaUpload.Options.ModifySessionInitiationRequest += _versionHeaderAction;
             var finalProgress = mediaUpload.Upload();
             if (finalProgress.Exception != null)
@@ -164,7 +164,7 @@ namespace Google.Cloud.BigQuery.V2
             };
             options?.ModifyConfiguration(configuration);
 
-            return await UploadDataAsync(configuration, input, "text/csv", cancellationToken).ConfigureAwait(false);
+            return await UploadDataAsync(configuration, input, "text/csv", options?.ProjectId ?? ProjectId, cancellationToken).ConfigureAwait(false);
         }
 
         /// <inheritdoc />
@@ -182,7 +182,7 @@ namespace Google.Cloud.BigQuery.V2
             };
             options?.ModifyConfiguration(configuration);
 
-            return await UploadDataAsync(configuration, input, "application/vnd.apache.avro+binary", cancellationToken).ConfigureAwait(false);
+            return await UploadDataAsync(configuration, input, "application/vnd.apache.avro+binary", options?.ProjectId ?? ProjectId, cancellationToken).ConfigureAwait(false);
         }
 
         /// <inheritdoc />
@@ -206,7 +206,7 @@ namespace Google.Cloud.BigQuery.V2
             };
             options?.ModifyConfiguration(configuration);
 
-            return await UploadDataAsync(configuration, input, "text/json", cancellationToken).ConfigureAwait(false);
+            return await UploadDataAsync(configuration, input, "text/json", options?.ProjectId ?? ProjectId, cancellationToken).ConfigureAwait(false);
         }
 
         private async Task<TableSchema> GetSchemaAsync(TableReference tableReference, CancellationToken cancellationToken)
@@ -216,10 +216,10 @@ namespace Google.Cloud.BigQuery.V2
             return table.Schema;
         }
 
-        private async Task<BigQueryJob> UploadDataAsync(JobConfigurationLoad loadConfiguration, Stream input, string contentType, CancellationToken cancellationToken)
+        private async Task<BigQueryJob> UploadDataAsync(JobConfigurationLoad loadConfiguration, Stream input, string contentType, string projectId, CancellationToken cancellationToken)
         {
             var job = new Job { Configuration = new JobConfiguration { Load = loadConfiguration } };
-            var mediaUpload = new CustomMediaUpload(Service, job, ProjectId, input, contentType);
+            var mediaUpload = new CustomMediaUpload(Service, job, projectId, input, contentType);
             mediaUpload.Options.ModifySessionInitiationRequest += _versionHeaderAction;
             var finalProgress = await mediaUpload.UploadAsync(cancellationToken).ConfigureAwait(false);
             if (finalProgress.Exception != null)

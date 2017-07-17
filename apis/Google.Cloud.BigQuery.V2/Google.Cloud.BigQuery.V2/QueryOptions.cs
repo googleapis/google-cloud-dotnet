@@ -100,6 +100,12 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// The ID of the project in which to create the job. If this is not set,
+        /// it defaults to the project ID of the client.
+        /// </summary>
+        public string ProjectId { get; set; }
+
         internal void ModifyRequest(JobConfigurationQuery query)
         {
             // Note: no validation of combinations (flatten results etc). Leave this to the server,
