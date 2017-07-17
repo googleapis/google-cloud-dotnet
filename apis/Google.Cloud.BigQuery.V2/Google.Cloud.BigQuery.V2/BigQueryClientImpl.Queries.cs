@@ -40,36 +40,16 @@ namespace Google.Cloud.BigQuery.V2
             public string GetNextPageToken(TableDataList response) => response.PageToken;
             public IEnumerable<BigQueryRow> GetResources(TableDataList response) => response.Rows?.Select(row => new BigQueryRow(row, _schema));
             public void SetPageSize(TabledataResource.ListRequest request, int pageSize) => request.MaxResults = pageSize;
-            public void SetPageToken(TabledataResource.ListRequest request, string pageToken) => request.PageToken = pageToken;
+            public void SetPageToken(TabledataResource.ListRequest request, string pageToken)
+            {
+                // If there's a non-null StartIndex, the page token is ignored, so we'd get the same page again.
+                request.StartIndex = null;
+                request.PageToken = pageToken;
+            }
         }
 
         /// <inheritdoc />
-        public override BigQueryResults ExecuteQuery(string sql, ExecuteQueryOptions options = null)
-        {
-            GaxPreconditions.CheckNotNull(sql, nameof(sql));
-            var queryRequest = new QueryRequest { Query = sql, UseLegacySql = false };
-            options?.ModifyRequest(queryRequest);
-            var request = Service.Jobs.Query(queryRequest, ProjectId);
-            request.ModifyRequest += _versionHeaderAction;
-            var queryResponse = request.Execute();
-            return new BigQueryResults(this, queryResponse, options);
-        }
-
-        /// <inheritdoc />
-        public override BigQueryResults ExecuteQuery(BigQueryCommand command, ExecuteQueryOptions options = null)
-        {
-            GaxPreconditions.CheckNotNull(command, nameof(command));
-            var queryRequest = new QueryRequest { UseLegacySql = false };
-            command.PopulateQueryRequest(queryRequest);
-            options?.ModifyRequest(queryRequest);
-            var request = Service.Jobs.Query(queryRequest, ProjectId);
-            request.ModifyRequest += _versionHeaderAction;
-            var queryResponse = request.Execute();
-            return new BigQueryResults(this, queryResponse, options);
-        }
-
-        /// <inheritdoc />
-        public override BigQueryJob CreateQueryJob(string sql, CreateQueryJobOptions options = null)
+        public override BigQueryJob CreateQueryJob(string sql, QueryOptions options = null)
         {
             GaxPreconditions.CheckNotNull(sql, nameof(sql));
             var query = new JobConfigurationQuery { Query = sql, UseLegacySql = false };
@@ -78,7 +58,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override BigQueryJob CreateQueryJob(BigQueryCommand command, CreateQueryJobOptions options = null)
+        public override BigQueryJob CreateQueryJob(BigQueryCommand command, QueryOptions options = null)
         {
             GaxPreconditions.CheckNotNull(command, nameof(command));
             var query = new JobConfigurationQuery { UseLegacySql = false };
@@ -88,23 +68,31 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override BigQueryResults PollQueryUntilCompleted(JobReference jobReference, GetQueryResultsOptions options = null, PollSettings pollSettings = null)
-        {
-            GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
-            return Polling.PollRepeatedly(ignoredDeadline => GetQueryResults(jobReference, options),
-                job => job.Completed, Clock, Scheduler, pollSettings ?? s_defaultPollSettings, CancellationToken.None);
-        }
-
-        /// <inheritdoc />
         public override BigQueryResults GetQueryResults(JobReference jobReference, GetQueryResultsOptions options = null)
         {
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
+            var job = GetJob(jobReference);
+            return job.GetQueryResults(options);
+        }
 
-            var request = Service.Jobs.GetQueryResults(jobReference.ProjectId, jobReference.JobId);
-            request.ModifyRequest += _versionHeaderAction;
-            options?.ModifyRequest(request);
-            var firstResponse = request.Execute();
-            return new BigQueryResults(this, firstResponse, options);
+        internal override BigQueryResults GetQueryResults(JobReference jobReference, TableReference tableReference, GetQueryResultsOptions options)
+        {
+            GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            // This validates the options before we make any RPCs
+            var listRowsOptions = options?.ToListRowsOptions();
+
+            DateTime start = Clock.GetCurrentDateTimeUtc();
+            while (true)
+            {
+                // This will throw if the query has timed out.
+                var request = CreateGetQueryResultsRequest(jobReference, options, start);
+                var response = request.Execute();
+                if (response.JobComplete == true)
+                {
+                    return new BigQueryResults(this, response, tableReference, listRowsOptions);
+                }
+            }
         }
 
         /// <inheritdoc />
@@ -128,32 +116,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task<BigQueryResults> ExecuteQueryAsync(string sql, ExecuteQueryOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            GaxPreconditions.CheckNotNull(sql, nameof(sql));
-            var queryRequest = new QueryRequest { Query = sql, UseLegacySql = false };
-            options?.ModifyRequest(queryRequest);
-            var request = Service.Jobs.Query(queryRequest, ProjectId);
-            request.ModifyRequest += _versionHeaderAction;
-            var queryResponse = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
-            return new BigQueryResults(this, queryResponse, options);
-        }
-
-        /// <inheritdoc />
-        public override async Task<BigQueryResults> ExecuteQueryAsync(BigQueryCommand command, ExecuteQueryOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            GaxPreconditions.CheckNotNull(command, nameof(command));
-            var queryRequest = new QueryRequest { UseLegacySql = false };
-            command.PopulateQueryRequest(queryRequest);
-            options?.ModifyRequest(queryRequest);
-            var request = Service.Jobs.Query(queryRequest, ProjectId);
-            request.ModifyRequest += _versionHeaderAction;
-            var queryResponse = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
-            return new BigQueryResults(this, queryResponse, options);
-        }
-
-        /// <inheritdoc />
-        public override async Task<BigQueryJob> CreateQueryJobAsync(string sql, CreateQueryJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<BigQueryJob> CreateQueryJobAsync(string sql, QueryOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             GaxPreconditions.CheckNotNull(sql, nameof(sql));
             var query = new JobConfigurationQuery { Query = sql, UseLegacySql = false };
@@ -162,7 +125,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task<BigQueryJob> CreateQueryJobAsync(BigQueryCommand command, CreateQueryJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<BigQueryJob> CreateQueryJobAsync(BigQueryCommand command, QueryOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             GaxPreconditions.CheckNotNull(command, nameof(command));
             var query = new JobConfigurationQuery { UseLegacySql = false };
@@ -172,23 +135,31 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override Task<BigQueryResults> PollQueryUntilCompletedAsync(JobReference jobReference, GetQueryResultsOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
-            return Polling.PollRepeatedlyAsync(ignoredDeadline => GetQueryResultsAsync(jobReference, options, cancellationToken),
-                job => job.Completed, Clock, Scheduler, pollSettings ?? s_defaultPollSettings, cancellationToken);
-        }
-
-        /// <inheritdoc />
         public override async Task<BigQueryResults> GetQueryResultsAsync(JobReference jobReference, GetQueryResultsOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
+            var job = await GetJobAsync(jobReference, cancellationToken: cancellationToken).ConfigureAwait(false);
+            return await job.GetQueryResultsAsync(options, cancellationToken).ConfigureAwait(false);
+        }
 
-            var request = Service.Jobs.GetQueryResults(jobReference.ProjectId, jobReference.JobId);
-            request.ModifyRequest += _versionHeaderAction;
-            options?.ModifyRequest(request);
-            var firstResponse = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
-            return new BigQueryResults(this, firstResponse, options);
+        internal override async Task<BigQueryResults> GetQueryResultsAsync(JobReference jobReference, TableReference tableReference, GetQueryResultsOptions options, CancellationToken cancellationToken)
+        {
+            GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            // This validates the options before we make any RPCs
+            var listRowsOptions = options?.ToListRowsOptions();
+
+            DateTime start = Clock.GetCurrentDateTimeUtc();
+            while (true)
+            {
+                // This will throw if the query has timed out.
+                var request = CreateGetQueryResultsRequest(jobReference, options, start);
+                var response = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
+                if (response.JobComplete == true)
+                {
+                    return new BigQueryResults(this, response, tableReference, listRowsOptions);
+                }
+            }
         }
 
         /// <inheritdoc />
@@ -211,7 +182,7 @@ namespace Google.Cloud.BigQuery.V2
                 pageManager);
         }
 
-        private JobsResource.InsertRequest CreateInsertQueryJobRequest(JobConfigurationQuery query, CreateQueryJobOptions options)
+        private JobsResource.InsertRequest CreateInsertQueryJobRequest(JobConfigurationQuery query, QueryOptions options)
         {
             options?.ModifyRequest(query);
             var request = Service.Jobs.Insert(new Job
@@ -222,8 +193,30 @@ namespace Google.Cloud.BigQuery.V2
                     // It's slightly annoying that this is set here rather than in ModifyRequest, but at least it's in a single place.
                     DryRun = options?.DryRun
                 },
-            }, ProjectId);
+            }, options?.ProjectId ?? ProjectId);
             request.ModifyRequest += _versionHeaderAction;
+            return request;
+        }
+
+        private static readonly long s_maxGetQueryResultsRequestTimeout = (long) TimeSpan.FromMinutes(1).TotalMilliseconds;
+        private JobsResource.GetQueryResultsRequest CreateGetQueryResultsRequest(JobReference jobReference, GetQueryResultsOptions options, DateTime loopStart)
+        {
+            var timeSoFar = Clock.GetCurrentDateTimeUtc() - loopStart;
+            var timeout = options?.Timeout ?? GetQueryResultsOptions.DefaultTimeout;
+            var timeRemainingMs = (long) (timeout - timeSoFar).TotalMilliseconds;
+            if (timeRemainingMs < 1)
+            {
+                // TODO: Check this is correct
+                throw new TimeoutException("Query timed out");
+            }
+            var requestTimeoutMs = Math.Min(timeRemainingMs, s_maxGetQueryResultsRequestTimeout);
+            var request = Service.Jobs.GetQueryResults(jobReference.ProjectId, jobReference.JobId);
+            // We never use the results within the first response; instead, we're just checking that the job has
+            // completed and using the statistics and schema from it.
+            request.MaxResults = 0;
+            request.ModifyRequest += _versionHeaderAction;
+            request.TimeoutMs = requestTimeoutMs;
+            options?.ModifyRequest(request);
             return request;
         }
     }

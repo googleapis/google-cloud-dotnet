@@ -306,22 +306,6 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
-        public void PollQueryUntilCompletedEquivalents()
-        {
-            var jobId = "job";
-            var reference = GetJobReference(jobId);
-            var getQueryResultsOptions = new GetQueryResultsOptions();
-            var pollSettings = new PollSettings(Expiration.None, TimeSpan.Zero);
-            VerifyEquivalent(
-                new BigQueryResults(new DerivedBigQueryClient(), new GetQueryResultsResponse { JobReference = reference }, getQueryResultsOptions),
-                client => client.PollQueryUntilCompleted(MatchesWhenSerialized(reference), getQueryResultsOptions, pollSettings),
-                client => client.PollQueryUntilCompleted(jobId, getQueryResultsOptions, pollSettings),
-                client => client.PollQueryUntilCompleted(ProjectId, jobId, getQueryResultsOptions, pollSettings),
-                client => new BigQueryJob(client, GetJob(reference)).PollQueryUntilCompleted(getQueryResultsOptions, pollSettings),
-                client => new BigQueryResults(client, new GetQueryResultsResponse { JobReference = reference }, getQueryResultsOptions).PollUntilCompleted(pollSettings));
-        }
-
-        [Fact]
         public void ListJobsEquivalents()
         {
             var reference = new ProjectReference { ProjectId = ProjectId };
@@ -671,23 +655,6 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
-        public void PollQueryUntilCompletedAsyncEquivalents()
-        {
-            var jobId = "job";
-            var reference = GetJobReference(jobId);
-            var getQueryResultsOptions = new GetQueryResultsOptions();
-            var pollSettings = new PollSettings(Expiration.None, TimeSpan.Zero);
-            var token = new CancellationTokenSource().Token;
-            VerifyEquivalentAsync(
-                new BigQueryResults(new DerivedBigQueryClient(), new GetQueryResultsResponse { JobReference = reference }, getQueryResultsOptions),
-                client => client.PollQueryUntilCompletedAsync(MatchesWhenSerialized(reference), getQueryResultsOptions, pollSettings, token),
-                client => client.PollQueryUntilCompletedAsync(jobId, getQueryResultsOptions, pollSettings, token),
-                client => client.PollQueryUntilCompletedAsync(ProjectId, jobId, getQueryResultsOptions, pollSettings, token),
-                client => new BigQueryJob(client, GetJob(reference)).PollQueryUntilCompletedAsync(getQueryResultsOptions, pollSettings, token),
-                client => new BigQueryResults(client, new GetQueryResultsResponse { JobReference = reference }, getQueryResultsOptions).PollUntilCompletedAsync(pollSettings, token));
-        }
-
-        [Fact]
         public void ListJobsAsyncEquivalents()
         {
             var reference = new ProjectReference { ProjectId = ProjectId };
@@ -873,8 +840,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             foreach (var call in equivalentCalls)
             {
-                var mock = new Mock<DerivedBigQueryClient>();
-                mock.CallBase = true;
+                var mock = new Mock<DerivedBigQueryClient>() { CallBase = true };
                 mock.Setup(underlyingCall).Returns(result);
                 Assert.Same(result, call(mock.Object));
                 mock.VerifyAll();
@@ -887,8 +853,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             foreach (var call in equivalentCalls)
             {
-                var mock = new Mock<DerivedBigQueryClient>();
-                mock.CallBase = true;
+                var mock = new Mock<DerivedBigQueryClient>() { CallBase = true };
                 mock.Setup(underlyingCall);
                 call(mock.Object);
                 mock.VerifyAll();
@@ -903,8 +868,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var taskResult = Task.FromResult(result);
             foreach (var call in equivalentCalls)
             {
-                var mock = new Mock<DerivedBigQueryClient>();
-                mock.CallBase = true;
+                var mock = new Mock<DerivedBigQueryClient>() { CallBase = true };
                 mock.Setup(underlyingCall).Returns(taskResult);
                 Assert.Same(taskResult, call(mock.Object));
                 mock.VerifyAll();
@@ -918,8 +882,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var taskResult = Task.FromResult(0);
             foreach (var call in equivalentCalls)
             {
-                var mock = new Mock<DerivedBigQueryClient>();
-                mock.CallBase = true;
+                var mock = new Mock<DerivedBigQueryClient>() { CallBase = true };
                 mock.Setup(underlyingCall).Returns(taskResult);
                 Assert.Same(taskResult, call(mock.Object));
                 mock.VerifyAll();

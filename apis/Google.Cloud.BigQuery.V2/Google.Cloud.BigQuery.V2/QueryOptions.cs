@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using static Google.Apis.Bigquery.v2.JobsResource;
-using System;
 using Google.Apis.Bigquery.v2.Data;
 
 namespace Google.Cloud.BigQuery.V2
@@ -21,7 +19,7 @@ namespace Google.Cloud.BigQuery.V2
     /// <summary>
     /// Options for <c>CreateQueryJob</c> operations.
     /// </summary>
-    public sealed class CreateQueryJobOptions
+    public sealed class QueryOptions
     {
         /// <summary>
         /// A destination table to write the results into.
@@ -101,6 +99,12 @@ namespace Google.Cloud.BigQuery.V2
         /// contains all the information returned by the server.
         /// </summary>
         public bool? DryRun { get; set; }
+
+        /// <summary>
+        /// The ID of the project in which to create the job. If this is not set,
+        /// it defaults to the project ID of the client.
+        /// </summary>
+        public string ProjectId { get; set; }
 
         internal void ModifyRequest(JobConfigurationQuery query)
         {

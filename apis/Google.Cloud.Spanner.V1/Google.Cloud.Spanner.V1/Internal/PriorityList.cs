@@ -16,16 +16,20 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Google.Cloud.Spanner.V1
+namespace Google.Cloud.Spanner.V1.Internal
 {
     /// <summary>
     /// A simple sorted list that sorts based on the result of CompareTo,
     /// but also allows duplicate entries based on CompareTo.
     /// </summary>
-    internal class PriorityList<T> where T : IPriorityListItem<T>
+    /// <remarks>This is not intended for general purpose use; it is designed for use with Spanner clients.</remarks>
+    public class PriorityList<T> where T : IPriorityListItem<T>
     {
         private readonly List<T> _innerList = new List<T>();
 
+        /// <summary>
+        /// The number of elements in the list.
+        /// </summary>
         public int Count
         {
             get
@@ -37,6 +41,10 @@ namespace Google.Cloud.Spanner.V1
             }
         }
 
+        /// <summary>
+        /// Returns a snapshot of the list.
+        /// </summary>
+        /// <returns>A snapshot of the list.</returns>
         public IEnumerable<T> GetSnapshot()
         {
             lock (_innerList)
@@ -45,6 +53,10 @@ namespace Google.Cloud.Spanner.V1
             }
         }
 
+        /// <summary>
+        /// Adds an item to the list.
+        /// </summary>
+        /// <param name="item">The item to add to the list.</param>
         public void Add(T item)
         {
             lock (_innerList)
@@ -67,6 +79,10 @@ namespace Google.Cloud.Spanner.V1
             }
         }
 
+        /// <summary>
+        /// Removes an item from the list.
+        /// </summary>
+        /// <param name="item">The item to remove.</param>
         public void Remove(T item)
         {
             lock (_innerList)
@@ -90,6 +106,9 @@ namespace Google.Cloud.Spanner.V1
             }
         }
 
+        /// <summary>
+        /// Removes the last (in terms of priority) element from the list.
+        /// </summary>
         public void RemoveLast()
         {
             lock (_innerList)
@@ -117,6 +136,10 @@ namespace Google.Cloud.Spanner.V1
             }
         }
 
+        /// <summary>
+        /// Returns the item with the top priority in the list, without removing it.
+        /// </summary>
+        /// <returns>The top item.</returns>
         public T GetTop()
         {
             lock (_innerList)
@@ -125,6 +148,12 @@ namespace Google.Cloud.Spanner.V1
             }
         }
 
+        /// <summary>
+        /// Attempts to find an item in the list that matches the given predicate.
+        /// </summary>
+        /// <param name="testPredicate">The predicate to match on.</param>
+        /// <param name="result">The out parameter where the result will be stored.</param>
+        /// <returns>true if the item was found; false otherwise.</returns>
         public bool TryFindLinear(Predicate<T> testPredicate, out T result)
         {
             lock (_innerList)

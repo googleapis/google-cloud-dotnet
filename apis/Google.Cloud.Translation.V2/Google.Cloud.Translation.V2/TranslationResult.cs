@@ -72,6 +72,7 @@ namespace Google.Cloud.Translation.V2
             SpecifiedSourceLanguage = specifiedSourceLanguage;
             DetectedSourceLanguage = detectedSourceLanguage;
             TargetLanguage = targetLanguage;
+            Model = model;
         }
 
         /// <summary>

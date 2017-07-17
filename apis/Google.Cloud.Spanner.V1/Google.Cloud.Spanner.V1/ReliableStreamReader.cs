@@ -17,7 +17,8 @@ using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Api.Gax;
-using Google.Cloud.Spanner.V1.Logging;
+using Google.Cloud.Spanner.V1.Internal;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -31,7 +32,7 @@ namespace Google.Cloud.Spanner.V1 {
     ///     Provides streaming access to a Spanner SQL query that automatically retries, handles
     ///     chunking and recoverable errors.
     /// </summary>
-    internal sealed class ReliableStreamReader : IDisposable
+    public sealed class ReliableStreamReader : IDisposable
     {
         private AsyncServerStreamingCall<PartialResultSet> _currentCall;
         private readonly SpannerClient _spannerClient;
@@ -67,6 +68,7 @@ namespace Google.Cloud.Spanner.V1 {
         /// </summary>
         public Session Session => _session;
 
+        /// <inheritdoc />
         public void Dispose() {
             Close();
             GC.SuppressFinalize(this);

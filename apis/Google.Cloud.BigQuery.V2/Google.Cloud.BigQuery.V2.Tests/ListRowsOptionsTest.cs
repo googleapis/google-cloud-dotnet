@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2;
+using System;
 using Xunit;
 using static Google.Apis.Bigquery.v2.TabledataResource;
 
@@ -21,15 +22,44 @@ namespace Google.Cloud.BigQuery.V2.Tests
     public class ListRowsOptionsTest
     {
         [Fact]
-        public void ModifyRequest()
+        public void ModifyRequest_PageToken()
         {
             var options = new ListRowsOptions
             {
-                PageSize = 25                
+                PageSize = 25,
+                PageToken = "token"
             };
-            ListRequest request = new ListRequest(new BigqueryService(), "project", "dataset", "table");
+            var request = new ListRequest(new BigqueryService(), "project", "dataset", "table");
             options.ModifyRequest(request);
             Assert.Equal(25, request.MaxResults);
+            Assert.Equal("token", request.PageToken);
+        }
+
+        [Fact]
+        public void ModifyRequest_StartIndex()
+        {
+            var options = new ListRowsOptions
+            {
+                PageSize = 25,
+                StartIndex = 10
+            };
+            var request = new ListRequest(new BigqueryService(), "project", "dataset", "table");
+            options.ModifyRequest(request);
+            Assert.Equal(25, request.MaxResults);
+            Assert.Equal(10UL, request.StartIndex);
+        }
+
+        [Fact]
+        public void ModifyRequest_StartIndexAndPageToken()
+        {
+            var options = new ListRowsOptions
+            {
+                PageSize = 25,
+                StartIndex = 10,
+                PageToken = "token"
+            };
+            var request = new ListRequest(new BigqueryService(), "project", "dataset", "table");
+            Assert.Throws<ArgumentException>(() => options.ModifyRequest(request));
         }
     }
 }

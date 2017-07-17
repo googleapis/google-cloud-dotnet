@@ -14,7 +14,7 @@
 
 using System;
 
-namespace Google.Cloud.Spanner.V1.Logging
+namespace Google.Cloud.Spanner.V1.Internal.Logging
 {
     /// <summary>
     /// Provides diagnostic information on Cloud Spanner.
@@ -25,7 +25,7 @@ namespace Google.Cloud.Spanner.V1.Logging
     /// TODO: examine https://github.com/grpc/grpc/tree/master/src/csharp/Grpc.Core/Logging
     /// to determine if it should be used instead.
     /// </summary>
-    internal abstract class Logger
+    public abstract class Logger
     {
         private static Logger s_instance;
 
@@ -93,6 +93,9 @@ namespace Google.Cloud.Spanner.V1.Logging
         /// </summary>
         public static TimeSpan PerformanceTraceLogInterval { get; set; } = TimeSpan.Zero;
 
+        /// <summary>
+        /// Logs performance data if performance logging is enabled.
+        /// </summary>
         public static void LogPerformanceData()
         {
             if (LogPerformanceTraces)
@@ -101,6 +104,9 @@ namespace Google.Cloud.Spanner.V1.Logging
             }
         }
 
+        /// <summary>
+        /// Performs the real performance logging.
+        /// </summary>
         protected virtual void LogPerformanceDataImpl()
         {
         }
@@ -110,7 +116,10 @@ namespace Google.Cloud.Spanner.V1.Logging
         /// </summary>
         public static bool ResetPerformanceTracesEachInterval { get; set; } = true;
 
-        internal static void Debug(Func<string> messageFunc)
+        /// <summary>
+        /// Logs a debug message.
+        /// </summary>
+        public static void Debug(Func<string> messageFunc)
         {
             if (LogLevel >= LogLevel.Debug)
             {
@@ -118,7 +127,10 @@ namespace Google.Cloud.Spanner.V1.Logging
             }
         }
 
-        internal static void Info(Func<string> messageFunc)
+        /// <summary>
+        /// Logs an information message.
+        /// </summary>
+        public static void Info(Func<string> messageFunc)
         {
             if (LogLevel >= LogLevel.Info)
             {
@@ -126,7 +138,10 @@ namespace Google.Cloud.Spanner.V1.Logging
             }
         }
 
-        internal static void Warn(Func<string> messageFunc)
+        /// <summary>
+        /// Logs a warning.
+        /// </summary>
+        public static void Warn(Func<string> messageFunc)
         {
             if (LogLevel >= LogLevel.Warn)
             {
@@ -134,7 +149,10 @@ namespace Google.Cloud.Spanner.V1.Logging
             }
         }
 
-        internal static void Error(Func<string> messageFunc, Exception exception = null)
+        /// <summary>
+        /// Logs an error.
+        /// </summary>
+        public static void Error(Func<string> messageFunc, Exception exception = null)
         {
             if (LogLevel >= LogLevel.Error)
             {
@@ -142,7 +160,10 @@ namespace Google.Cloud.Spanner.V1.Logging
             }
         }
 
-        internal static void LogPerformanceCounter(string name, Func<double> valueFunc)
+        /// <summary>
+        /// Logs a performance counter.
+        /// </summary>
+        public static void LogPerformanceCounter(string name, Func<double> valueFunc)
         {
             if (LogPerformanceTraces)
             {
@@ -150,7 +171,10 @@ namespace Google.Cloud.Spanner.V1.Logging
             }
         }
 
-        internal static void LogPerformanceCounterFn(string name, Func<double, double> valueFunc)
+        /// <summary>
+        /// Logs a performance counter.
+        /// </summary>
+        public static void LogPerformanceCounterFn(string name, Func<double, double> valueFunc)
         {
             if (LogPerformanceTraces)
             {

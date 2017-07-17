@@ -33,6 +33,12 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public WriteDisposition? WriteDisposition { get; set; }
 
+        /// <summary>
+        /// The ID of the project in which to create the job. If this is not set,
+        /// it defaults to the project ID of the client.
+        /// </summary>
+        public string ProjectId { get; set; }
+
         internal void ModifyRequest(JobConfigurationTableCopy copy)
         {
             if (CreateDisposition != null)

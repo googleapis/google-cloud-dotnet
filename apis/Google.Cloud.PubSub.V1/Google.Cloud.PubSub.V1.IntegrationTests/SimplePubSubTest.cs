@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
@@ -36,7 +38,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
 
         private readonly PubsubFixture _fixture;
 
-        private async Task RunBulkMessaging(int messageCount, int minMessagesize, int maxMessageSize, int maxMessagesInFlight, int initialNackCount)
+        private async Task RunBulkMessaging(int messageCount, int minMessagesize, int maxMessageSize, int maxMessagesInFlight, int initialNackCount, TimeSpan? timeouts = null)
         {
             var topicId = _fixture.CreateTopicId();
             var subscriptionId = _fixture.CreateSubscriptionId();
@@ -55,8 +57,23 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             await subscriber.CreateSubscriptionAsync(subscriptionName, topicName, null, 60).ConfigureAwait(false);
 
             // Create SimplePublisher and SimpleSubscriber
-            var simplePublisher = await SimplePublisher.CreateAsync(topicName).ConfigureAwait(false);
-            var simpleSubscriber = await SimpleSubscriber.CreateAsync(subscriptionName).ConfigureAwait(false);
+            var simplePublisher = await SimplePublisher.CreateAsync(topicName, clientCreationSettings: timeouts == null ? null :
+                new SimplePublisher.ClientCreationSettings(
+                    publisherSettings: new PublisherSettings
+                    {
+                        PublishSettings = CallSettings.FromCallTiming(CallTiming.FromRetry(new RetrySettings(
+                            retryBackoff: PublisherSettings.GetMessagingRetryBackoff(),
+                            timeoutBackoff: new BackoffSettings(timeouts.Value, timeouts.Value, 1.0),
+                            totalExpiration: Expiration.FromTimeout(timeouts.Value),
+                            retryFilter: PublisherSettings.NonIdempotentRetryFilter
+                        )))
+                    }
+                )).ConfigureAwait(false);
+            var simpleSubscriber = await SimpleSubscriber.CreateAsync(subscriptionName,
+                settings: timeouts == null ? null : new SimpleSubscriber.Settings
+                {
+                    StreamAckDeadline = timeouts.Value
+                }).ConfigureAwait(false);
 
             Console.WriteLine("Topic, Subscription, SimplePublisher and SimpleSubscriber all created");
 
@@ -101,7 +118,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                     var localRecvCount = Interlocked.Add(ref recvCount, 0);
                     if (prevSentCount == localSentCount && prevRecvCount == localRecvCount)
                     {
-                        if (noProgressCount > 10)
+                        if (noProgressCount > 100)
                         {
                             // Deadlock, shutdown subscriber, and cancel
                             Console.WriteLine("Deadlock detected. Cancelling test");
@@ -117,7 +134,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                     }
                     prevSentCount = localSentCount;
                     prevRecvCount = localRecvCount;
-                    Console.WriteLine($"Sent: {localSentCount}; Recv: {localRecvCount}");
+                    Console.WriteLine($"Sent: {localSentCount} (in-flight: {activePubs.Locked(() => activePubs.Count)}); Recv: {localRecvCount}");
                 }
             });
 
@@ -163,19 +180,22 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
         [Fact]
         public async Task BulkMessagingAcksOnly()
         {
+            // Approx data: 500MB
             await RunBulkMessaging(100_000, 1, 10_000, 10_000, 0);
         }
 
         [Fact]
         public async Task BulkMessagingWithNacks()
         {
+            // Approx data: 500MB
             await RunBulkMessaging(100_000, 1, 10_000, 10_000, 10_000);
         }
 
         [Fact]
         public async Task MaximumSizedMessages()
         {
-            await RunBulkMessaging(50, 9_900_000, 9_990_000, 20, 0);
+            // Approx data: 500MB
+            await RunBulkMessaging(50, 9_900_000, 9_990_000, 20, 0, timeouts: TimeSpan.FromMinutes(10));
         }
 
         [Fact]

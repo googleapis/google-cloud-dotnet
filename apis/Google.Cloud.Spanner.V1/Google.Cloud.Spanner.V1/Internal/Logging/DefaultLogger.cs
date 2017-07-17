@@ -20,7 +20,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Cloud.Spanner.V1.Logging
+namespace Google.Cloud.Spanner.V1.Internal.Logging
 {
     internal class DefaultLogger : Logger
     {

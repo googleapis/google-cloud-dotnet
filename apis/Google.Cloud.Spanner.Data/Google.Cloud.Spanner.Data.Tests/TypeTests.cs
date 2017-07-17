@@ -19,6 +19,8 @@ using System.Linq;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Xunit;
+using System.Globalization;
+using System.Threading;
 
 namespace Google.Cloud.Spanner.Data.Tests
 {
@@ -104,6 +106,24 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new DateTime(2017, 1, 31, 3, 15, 30, 500);
             yield return new DateTime(2016, 2, 15, 13, 15, 30, 000);
             yield return new DateTime(2015, 3, 31, 3, 15, 30, 250);
+        }
+
+        private static void WithCulture(CultureInfo culture, Action action)
+        {
+            // TODO: investigate how to change the current thread's culture in .NET Core.
+            // (There may be code in Noda Time to do it.)
+#if NET452
+            var originalCulture = Thread.CurrentThread.CurrentCulture;
+            try
+            {
+                Thread.CurrentThread.CurrentCulture = culture;
+                action();
+            }
+            finally
+            {
+                Thread.CurrentThread.CurrentCulture = originalCulture;
+            }
+#endif
         }
 
         // This data serves as inputs to converting from CLR types that a developer
@@ -375,6 +395,22 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] {"badjuju", SpannerDbType.Date, ""};
         }
 
+        private static readonly CultureInfo[] s_cultures = new[]
+        {
+            CultureInfo.InvariantCulture,
+            // Under .NET Core we don't change the culture anyway, so let's not run the same
+            // test multiple times...
+#if NET452
+            new CultureInfo("fr-FR"),
+            new CultureInfo("en-US")
+#endif
+        };
+
+        public static IEnumerable<object[]> GetValidValueConversionsWithCulture() =>
+            from culture in s_cultures
+            from parameters in GetValidValueConversions()
+            select new object[] { culture }.Concat(parameters).ToArray();
+
         private void AssertJsonEqual<T>(string expected, string actual) where T: IMessage, new()
         {
             var expectedObject = JsonParser.Default.Parse<T>(expected);
@@ -385,8 +421,9 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Theory]
-        [MemberData(nameof(GetValidValueConversions))]
+        [MemberData(nameof(GetValidValueConversionsWithCulture))]
         public void TestSerializeToValue(
+            CultureInfo culture,
             object clrValue,
             SpannerDbType spannerDbType,
             string expectedJsonValue,
@@ -396,36 +433,40 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 return;
             }
-            string infoAddendum = $", type:{clrValue?.GetType().Name}, spannerType:{spannerDbType} ";
-            try
+            WithCulture(culture, () =>
             {
-                string expected = expectedJsonValue;
-                var jsonValue = ValueConversion.ToValue(clrValue, spannerDbType);
-                string actual = jsonValue.ToString();
-                if (expected != actual)
+                string infoAddendum = $", type:{clrValue?.GetType().Name}, spannerType:{spannerDbType} ";
+                try
                 {
-                    if (jsonValue.KindCase == Value.KindOneofCase.StructValue)
+                    string expected = expectedJsonValue;
+                    var jsonValue = ValueConversion.ToValue(clrValue, spannerDbType);
+                    string actual = jsonValue.ToString();
+                    if (expected != actual)
                     {
-                        AssertJsonEqual<Struct>(expected, actual);
-                    }
-                    else
-                    {
-                        //our error message contains an informational addendum
-                        //which tells us which theory test case failed.
-                        Assert.Equal(expected + infoAddendum, actual + infoAddendum);
+                        if (jsonValue.KindCase == Value.KindOneofCase.StructValue)
+                        {
+                            AssertJsonEqual<Struct>(expected, actual);
+                        }
+                        else
+                        {
+                            //our error message contains an informational addendum
+                            //which tells us which theory test case failed.
+                            Assert.Equal(expected + infoAddendum, actual + infoAddendum);
+                        }
                     }
                 }
-            }
-            catch (Exception e)
-            {
-                Assert.True(false, infoAddendum + e.Message);
-                throw;
-            }
+                catch (Exception e)
+                {
+                    Assert.True(false, infoAddendum + e.Message);
+                    throw;
+                }
+            });
         }
 
         [Theory]
-        [MemberData(nameof(GetValidValueConversions))]
+        [MemberData(nameof(GetValidValueConversionsWithCulture))]
         public void TestDeSerializeFromValue(
+            CultureInfo culture,
             object expected,
             SpannerDbType spannerDbType,
             string inputJson,
@@ -435,19 +476,22 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 return;
             }
-            string infoAddendum = $"type:{expected?.GetType().Name}, spannerType:{spannerDbType}, input:{inputJson} ";
-            try
+            WithCulture(culture, () =>
             {
-                var wireValue = JsonParser.Default.Parse<Value>(inputJson);
-                var targetClrType = expected?.GetType() ?? typeof(object);
-                var actual = wireValue.ConvertToClrType(spannerDbType.ToProtobufType(), targetClrType);
-                Assert.Equal(expected, actual);
-            }
-            catch (Exception e)
-            {
-                Assert.True(false, infoAddendum + e);
-                throw;
-            }
+                string infoAddendum = $"type:{expected?.GetType().Name}, spannerType:{spannerDbType}, input:{inputJson} ";
+                try
+                {
+                    var wireValue = JsonParser.Default.Parse<Value>(inputJson);
+                    var targetClrType = expected?.GetType() ?? typeof(object);
+                    var actual = wireValue.ConvertToClrType(spannerDbType.ToProtobufType(), targetClrType);
+                    Assert.Equal(expected, actual);
+                }
+                catch (Exception e)
+                {
+                    Assert.True(false, infoAddendum + e);
+                    throw;
+                }
+            });
         }
 
         [Theory]

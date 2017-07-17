@@ -165,7 +165,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(beforeRowCount + 2, afterRows.Count);
 
             var sql = $"SELECT player, score FROM {table} WHERE STARTS_WITH(player, 'UploadJsonStreamTest') ORDER BY player";
-            var rows = client.ExecuteQuery(sql).GetRows().ToList();
+            var rows = client.ExecuteQuery(sql).ToList();
             Assert.Equal(2, rows.Count);
             Assert.Equal("UploadJsonStreamTest1", (string)rows[0]["player"]);
             Assert.Equal("UploadJsonStreamTest2", (string)rows[1]["player"]);
@@ -222,7 +222,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(beforeRowCount + 2, afterRows.Count);
 
             var sql = $"SELECT player, score FROM {table} WHERE STARTS_WITH(player, 'UploadJsonStringsTest') ORDER BY player";
-            var rows = client.ExecuteQuery(sql).GetRows().ToList();
+            var rows = client.ExecuteQuery(sql).ToList();
             Assert.Equal(2, rows.Count);
             Assert.Equal("UploadJsonStringsTest1", (string) rows[0]["player"]);
             Assert.Equal("UploadJsonStringsTest2", (string) rows[1]["player"]);

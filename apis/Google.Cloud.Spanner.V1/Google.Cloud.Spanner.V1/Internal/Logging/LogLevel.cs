@@ -12,12 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-namespace Google.Cloud.Spanner.V1.Logging
+namespace Google.Cloud.Spanner.V1.Internal.Logging
 {
     /// <summary>
-    /// 
+    /// Log levels for Spanner client internal logging.
     /// </summary>
-    internal enum LogLevel
+    public enum LogLevel
     {
         /// <summary>
         /// 

@@ -22,7 +22,8 @@ using System.Threading.Tasks;
 using Google.Api.Gax;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.Logging;
+using Google.Cloud.Spanner.V1.Internal;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf.WellKnownTypes;
 
 #if NET45 || NET451
@@ -277,7 +278,7 @@ namespace Google.Cloud.Spanner.Data
             }
             if (session != null && !primarySessionInUse)
             {
-                SpannerClient.ReleaseToPool(session);
+                SessionPool.Default.ReleaseToPool(SpannerClient, session);
             }
             ReleaseClient(SpannerClient);
             SpannerClient = null;
@@ -287,7 +288,7 @@ namespace Google.Cloud.Spanner.Data
         {
             if (client != null)
             {
-                ClientPool.ReleaseClient(
+                ClientPool.Default.ReleaseClient(
                     client,
                     _connectionStringBuilder.Credential,
                     _connectionStringBuilder.EndPoint);
@@ -421,12 +422,12 @@ namespace Google.Cloud.Spanner.Data
                     SpannerClient localClient = null;
                     try
                     {
-                        localClient = await ClientPool.AcquireClientAsync(
+                        localClient = await ClientPool.Default.AcquireClientAsync(
                                 _connectionStringBuilder.Credential,
                                 _connectionStringBuilder.EndPoint)
                             .ConfigureAwait(false);
-                        _sharedSession = await localClient.CreateSessionFromPoolAsync(
-                                _connectionStringBuilder.Project,
+                        _sharedSession = await SessionPool.Default.CreateSessionFromPoolAsync(
+                                localClient, _connectionStringBuilder.Project,
                                 _connectionStringBuilder.SpannerInstance,
                                 _connectionStringBuilder.SpannerDatabase,
                                 s_defaultTransactionOptions,
@@ -543,7 +544,7 @@ namespace Google.Cloud.Spanner.Data
                 }
                 else if (!_staleSessions.Contains(session.Name))
                 {
-                    if (SessionPool.IsSessionExpired(session))
+                    if (SessionPool.Default.IsSessionExpired(session))
                     {
                         //_staleSessions ensures we only release bad sessions once because
                         //we are clobbering its refcount that it would otherwise use for this purpose.
@@ -554,7 +555,7 @@ namespace Google.Cloud.Spanner.Data
             }
             if (sessionToRelease != null)
             {
-                SpannerClient.ReleaseToPool(sessionToRelease);
+                SessionPool.Default.ReleaseToPool(SpannerClient, sessionToRelease);
             }
         }
 
@@ -575,7 +576,7 @@ namespace Google.Cloud.Spanner.Data
                     lock (_sync)
                     {
                         //first we ensure _sharedSession hasn't been invalidated/expired.
-                        if (SessionPool.IsSessionExpired(_sharedSession))
+                        if (SessionPool.Default.IsSessionExpired(_sharedSession))
                         {
                             _sharedSession = null;
                             _sessionRefCount = 0; //any existing references will fail out and release them.
@@ -608,8 +609,8 @@ namespace Google.Cloud.Spanner.Data
                             // hook onto the first creation task.
                             if (_sharedSessionAllocator == null)
                             {
-                                _sharedSessionAllocator = SpannerClient.CreateSessionFromPoolAsync(
-                                    _connectionStringBuilder.Project, _connectionStringBuilder.SpannerInstance,
+                                _sharedSessionAllocator = SessionPool.Default.CreateSessionFromPoolAsync(
+                                    SpannerClient, _connectionStringBuilder.Project, _connectionStringBuilder.SpannerInstance,
                                     _connectionStringBuilder.SpannerDatabase, options, CancellationToken.None);
                                 result = Task.Run(
                                     async () =>
@@ -653,8 +654,8 @@ namespace Google.Cloud.Spanner.Data
                         {
                             //In this case, its a transaction and the shared session is also in use.
                             //so, we'll just create a new session (from the pool).
-                            result = SpannerClient.CreateSessionFromPoolAsync(
-                                _connectionStringBuilder.Project, _connectionStringBuilder.SpannerInstance,
+                            result = SessionPool.Default.CreateSessionFromPoolAsync(
+                                SpannerClient, _connectionStringBuilder.Project, _connectionStringBuilder.SpannerInstance,
                                 _connectionStringBuilder.SpannerDatabase, options, cancellationToken);
                         }
                     }

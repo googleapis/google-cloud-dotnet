@@ -41,7 +41,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         {
             var table = GetTable();
             var client = BigQueryClient.Create(_fixture.ProjectId);
-            var rows = client.ExecuteQuery($"SELECT * FROM {table}").GetRows().ToList();
+            var rows = client.ExecuteQuery($"SELECT * FROM {table}").ToList();
             ValidateRows(rows);
         }
 
@@ -144,7 +144,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 Parameters = { parameter },
                 ParameterMode = BigQueryParameterMode.Positional
             };
-            var results = client.ExecuteQuery(command).GetRows().ToList();
+            var results = client.ExecuteQuery(command).ToList();
             Assert.Equal(1, results.Count);
             Assert.Equal(parameter.Value, results[0]["value"]);
             if (parameter.Value is DateTime)

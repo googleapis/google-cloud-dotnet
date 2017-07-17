@@ -22,26 +22,26 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Debug and higher level messages will be logged.
         /// </summary>
-        Debug = V1.Logging.LogLevel.Debug,
+        Debug = V1.Internal.Logging.LogLevel.Debug,
 
         /// <summary>
         /// Info and higher level messages will be logged.
         /// </summary>
-        Info = V1.Logging.LogLevel.Info,
+        Info = V1.Internal.Logging.LogLevel.Info,
 
         /// <summary>
         /// Warn and higher level messages will be logged.
         /// </summary>
-        Warn = V1.Logging.LogLevel.Warn,
+        Warn = V1.Internal.Logging.LogLevel.Warn,
 
         /// <summary>
         /// Error messages will be logged.
         /// </summary>
-        Error = V1.Logging.LogLevel.Error,
+        Error = V1.Internal.Logging.LogLevel.Error,
 
         /// <summary>
         /// Logging is turned off.
         /// </summary>
-        None = V1.Logging.LogLevel.None
+        None = V1.Internal.Logging.LogLevel.None
     }
 }
