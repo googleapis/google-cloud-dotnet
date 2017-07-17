@@ -87,6 +87,12 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public string NullMarker { get; set; }
 
+        /// <summary>
+        /// The ID of the project in which to create the job. If this is not set,
+        /// it defaults to the project ID of the client.
+        /// </summary>
+        public string ProjectId { get; set; }
+
         internal void ModifyConfiguration(JobConfigurationLoad loadRequest)
         {
             if (SkipLeadingRows != null)

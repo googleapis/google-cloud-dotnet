@@ -170,7 +170,7 @@ namespace Google.Cloud.BigQuery.V2
                 {
                     Extract = extract
                 },
-            }, ProjectId);
+            }, options?.ProjectId ?? ProjectId);
             request.ModifyRequest += _versionHeaderAction;
             return request;
         }
@@ -204,7 +204,7 @@ namespace Google.Cloud.BigQuery.V2
                 {
                     Copy = copy
                 }
-            }, ProjectId);
+            }, options?.ProjectId ?? ProjectId);
             request.ModifyRequest += _versionHeaderAction;
             return request;
         }
@@ -238,7 +238,7 @@ namespace Google.Cloud.BigQuery.V2
                 {
                     Load = load
                 }
-            }, ProjectId);
+            }, options?.ProjectId ?? ProjectId);
             request.ModifyRequest += _versionHeaderAction;
             return request;
         }

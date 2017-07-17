@@ -105,6 +105,12 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public FileFormat? SourceFormat { get; set; }
 
+        /// <summary>
+        /// The ID of the project in which to create the job. If this is not set,
+        /// it defaults to the project ID of the client.
+        /// </summary>
+        public string ProjectId { get; set; }
+
         internal void ModifyRequest(JobConfigurationLoad load)
         {
             if (SkipLeadingRows != null)

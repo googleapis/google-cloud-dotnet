@@ -193,7 +193,7 @@ namespace Google.Cloud.BigQuery.V2
                     // It's slightly annoying that this is set here rather than in ModifyRequest, but at least it's in a single place.
                     DryRun = options?.DryRun
                 },
-            }, ProjectId);
+            }, options?.ProjectId ?? ProjectId);
             request.ModifyRequest += _versionHeaderAction;
             return request;
         }

@@ -41,6 +41,12 @@ namespace Google.Cloud.BigQuery.V2
         public CreateDisposition? CreateDisposition { get; set; }
 
         /// <summary>
+        /// The ID of the project in which to create the job. If this is not set,
+        /// it defaults to the project ID of the client.
+        /// </summary>
+        public string ProjectId { get; set; }
+
+        /// <summary>
         /// Specifies the behavior if the destination table exists.
         /// If not set, this is effectively <see cref="WriteDisposition.WriteAppend"/>.
         /// </summary>
