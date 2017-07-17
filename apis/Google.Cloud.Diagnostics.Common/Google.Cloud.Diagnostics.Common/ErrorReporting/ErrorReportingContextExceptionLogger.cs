@@ -47,9 +47,14 @@ namespace Google.Cloud.Diagnostics.Common
             GaxPreconditions.CheckState(eventTarget.Kind == EventTargetKind.Logging, $"Invalid {nameof(EventTarget)}");
             _logName = GaxPreconditions.CheckNotNull(eventTarget.LogTarget, nameof(eventTarget.LogTarget)).GetFullLogName(eventTarget.LogName);
 
-            _serviceContext = new Struct();
-            _serviceContext.Fields.Add("service", Value.ForString(GaxPreconditions.CheckNotNull(serviceName, nameof(serviceName))));
-            _serviceContext.Fields.Add("version", Value.ForString(GaxPreconditions.CheckNotNull(version, nameof(version))));
+            _serviceContext = new Struct
+            {
+                Fields =
+                {
+                    { "service", Value.ForString(GaxPreconditions.CheckNotNull(serviceName, nameof(serviceName))) },
+                    { "version", Value.ForString(GaxPreconditions.CheckNotNull(version, nameof(version))) }
+                }
+            };
         }
 
         /// <summary>
@@ -95,12 +100,16 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         private Struct CreateHttpRequestContext(IContextWrapper context)
         {
-            Struct httpRequestContext = new Struct();
-            httpRequestContext.Fields.Add("method", Value.ForString(context?.GetHttpMethod() ?? ""));
-            httpRequestContext.Fields.Add("url", Value.ForString(context?.GetUri() ?? ""));
-            httpRequestContext.Fields.Add("userAgent", Value.ForString(context?.GetUserAgent() ?? ""));
-            httpRequestContext.Fields.Add("responseStatusCode", Value.ForNumber(context?.GetStatusCode() ?? 0));
-            return httpRequestContext;
+            return new Struct
+            {
+                Fields =
+                {
+                    { "method", Value.ForString(context?.GetHttpMethod() ?? "") },
+                    { "url", Value.ForString(context?.GetUri() ?? "") },
+                    { "userAgent", Value.ForString(context?.GetUserAgent() ?? "") },
+                    { "responseStatusCode", Value.ForNumber(context?.GetStatusCode() ?? 0) }
+                }
+            };
         }
 
         /// <summary>
@@ -122,11 +131,15 @@ namespace Google.Cloud.Diagnostics.Common
             }
 
             StackFrame frame = frames[0];
-            Struct sourceLocation = new Struct();
-            sourceLocation.Fields.Add("filePath", Value.ForString(frame.GetFileName() ?? ""));
-            sourceLocation.Fields.Add("lineNumber", Value.ForNumber(frame.GetFileLineNumber()));
-            sourceLocation.Fields.Add("functionName", Value.ForString(frame.GetMethod()?.Name ?? ""));
-            return sourceLocation;
+            return new Struct
+            {
+                Fields =
+                {
+                    { "filePath", Value.ForString(frame.GetFileName() ?? "") },
+                    { "lineNumber", Value.ForNumber(frame.GetFileLineNumber()) },
+                    { "functionName", Value.ForString(frame.GetMethod()?.Name ?? "") }
+                }
+            };
         }
 
         /// <summary>
@@ -137,15 +150,25 @@ namespace Google.Cloud.Diagnostics.Common
         {
             var timestamp = Timestamp.FromDateTime(DateTime.UtcNow);
 
-            Struct errorContext = new Struct();
-            errorContext.Fields.Add("httpRequest", Value.ForStruct(CreateHttpRequestContext(context)));
-            errorContext.Fields.Add("reportLocation", Value.ForStruct(CreateSourceLocation(exception)));
+            Struct errorContext = new Struct
+            {
+                Fields =
+                {
+                    { "httpRequest", Value.ForStruct(CreateHttpRequestContext(context)) },
+                    { "reportLocation", Value.ForStruct(CreateSourceLocation(exception)) }
+                }
+            };
 
-            Struct errorEvent = new Struct();
-            errorEvent.Fields.Add("message", Value.ForString(exception?.ToString() ?? ""));
-            errorEvent.Fields.Add("context", Value.ForStruct(errorContext));
-            errorEvent.Fields.Add("serviceContext", Value.ForStruct(_serviceContext));
-            errorEvent.Fields.Add("eventTime", Value.ForString(timestamp.ToString()));
+            Struct errorEvent = new Struct
+            {
+                Fields =
+                {
+                    { "message", Value.ForString(exception?.ToString() ?? "") },
+                    { "context", Value.ForStruct(errorContext) },
+                    { "serviceContext", Value.ForStruct(_serviceContext) },
+                    { "eventTime", Value.ForString(timestamp.ToString()) }
+                }
+            };
 
             return new LogEntry
             {
