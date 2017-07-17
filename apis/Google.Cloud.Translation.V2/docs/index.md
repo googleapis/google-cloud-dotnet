@@ -14,7 +14,8 @@ OAuth2 as above is the preferred authentication mechanism.
 # Getting started
 
 Common operations are exposed via the
-[TranslationClient](obj/api/Google.Cloud.Translation.V2.TranslationClient.yml) class.
+[TranslationClient](obj/api/Google.Cloud.Translation.V2.TranslationClient.yml) and 
+[AdvancedTranslationClient](obj/api/Google.Cloud.Translation.V2.AdvancedTranslationClient.yml) classes.
 
 # Sample code
 
@@ -42,10 +43,22 @@ If you don't explicitly specify a model to use, the service will pick one.
 
 See the [API release notes](https://cloud.google.com/translate/release-notes) for on-going changes and new models.
 
-When specifying a model, it can either be selected as the model to use for all requests for that `TranslationClient` instance.
+Both client classes allow models to be specified, but in different ways. In each case, the model can be specified
+when creating the client, or on a per-request basis. The difference is that `TranslationClient` uses the `TranslationModel`
+enum, making it simple to specify commonly-used models, whereas `AdvancedTranslationClient` just uses strings for the models.
+
+For example, using a `TranslationClient`-wide model:
 
 [!code-cs[](obj/snippets/Google.Cloud.Translation.V2.TranslationClient.txt#TranslateTextBaseDefaultModel)]
 
-... or it can be specified on a per-request basis:
+`TranslationClient` specifying a model for a single operation:
 
 [!code-cs[](obj/snippets/Google.Cloud.Translation.V2.TranslationClient.txt#TranslateTextBaseOverrideModel)]
+
+Using an `AdvancedTranslationClient`-wide model:
+
+[!code-cs[](obj/snippets/Google.Cloud.Translation.V2.AdvancedTranslationClient.txt#TranslateTextBaseDefaultModel)]
+
+`AdvancedTranslationClient` specifying a model for a single operation:
+
+[!code-cs[](obj/snippets/Google.Cloud.Translation.V2.AdvancedTranslationClient.txt#TranslateTextBaseOverrideModel)]
