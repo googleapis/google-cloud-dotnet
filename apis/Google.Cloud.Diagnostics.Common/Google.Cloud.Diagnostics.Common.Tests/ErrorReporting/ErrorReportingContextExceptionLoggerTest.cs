@@ -39,7 +39,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void Log()
         {
-            var options = ErrorReportingOptions.Create("pid");
+            var options = ErrorReportingOptions.Create(
+                EventTarget.ForLogging("pid", loggingClient: new Mock<LoggingServiceV2Client>().Object));
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(IsContext(_method, _uri, _userAgent, _statusCode, options)));
 
@@ -54,7 +55,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void Log_Simple()
         {
-            var options = ErrorReportingOptions.Create("pid");
+            var options = ErrorReportingOptions.Create(
+                EventTarget.ForLogging("pid", loggingClient: new Mock<LoggingServiceV2Client>().Object));
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(IsContext("", "", "", 0, options)));
 
@@ -69,7 +71,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public async Task LogAsync()
         {
-            var options = ErrorReportingOptions.Create("pid");
+            var options = ErrorReportingOptions.Create(
+                EventTarget.ForLogging("pid", loggingClient: new Mock<LoggingServiceV2Client>().Object));
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.ReceiveAsync(
                 IsContext(_method, _uri, _userAgent, _statusCode, options), It.IsAny<CancellationToken>()))

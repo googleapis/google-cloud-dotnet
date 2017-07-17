@@ -131,7 +131,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         /// <param name="errorEvent">The event to check.</param>
         /// <param name="testId">The id of the test.</param>
         /// <param name="functionName">The name of the function the error occurred in.</param>
-        public void VerifyErrorEvent(ErrorEvent errorEvent, string testId, string functionName)
+        private void VerifyErrorEvent(ErrorEvent errorEvent, string testId, string functionName)
         {
             Assert.Equal(ErrorReportingTestApplication.Service, errorEvent.ServiceContext.Service);
             Assert.Equal(ErrorReportingTestApplication.Version, errorEvent.ServiceContext.Version);
