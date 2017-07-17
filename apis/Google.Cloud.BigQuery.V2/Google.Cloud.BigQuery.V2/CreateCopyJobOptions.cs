@@ -19,7 +19,7 @@ namespace Google.Cloud.BigQuery.V2
     /// <summary>
     /// Options for <c>CreateCopyJob</c> operations.
     /// </summary>
-    public sealed class CreateCopyJobOptions
+    public sealed class CreateCopyJobOptions : JobCreationOptions
     {
         /// <summary>
         /// The behavior if the destination table doesn't exist. If this
@@ -32,12 +32,6 @@ namespace Google.Cloud.BigQuery.V2
         /// If not set, this is effectively <see cref="WriteDisposition.WriteIfEmpty"/>.
         /// </summary>
         public WriteDisposition? WriteDisposition { get; set; }
-
-        /// <summary>
-        /// The ID of the project in which to create the job. If this is not set,
-        /// it defaults to the project ID of the client.
-        /// </summary>
-        public string ProjectId { get; set; }
 
         internal void ModifyRequest(JobConfigurationTableCopy copy)
         {

@@ -19,7 +19,7 @@ namespace Google.Cloud.BigQuery.V2
     /// <summary>
     /// Options for <c>UploadAvro</c> operations.
     /// </summary>
-    public sealed class UploadAvroOptions
+    public sealed class UploadAvroOptions : JobCreationOptions
     {
         /// <summary>
         /// Whether or not to accept rows with fields that are not specified in the schema,
@@ -39,12 +39,6 @@ namespace Google.Cloud.BigQuery.V2
         /// If not set, this is effectively <see cref="CreateDisposition.CreateIfNeeded"/>.
         /// </summary>
         public CreateDisposition? CreateDisposition { get; set; }
-
-        /// <summary>
-        /// The ID of the project in which to create the job. If this is not set,
-        /// it defaults to the project ID of the client.
-        /// </summary>
-        public string ProjectId { get; set; }
 
         /// <summary>
         /// Specifies the behavior if the destination table exists.

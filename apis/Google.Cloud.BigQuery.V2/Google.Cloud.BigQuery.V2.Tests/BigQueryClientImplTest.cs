@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2.Data;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
@@ -386,6 +387,64 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var result = await client.CancelJobAsync(reference);
             Assert.Equal(projectId, result.Reference.ProjectId);
             Assert.Equal(jobId, result.Reference.JobId);
+        }
+
+        private Job CreateJobWithSampleConfiguration(JobCreationOptions options)
+        {
+            var projectId = "project";
+            var service = new FakeBigqueryService();
+            var client = new BigQueryClientImpl(projectId, service);
+            return client.CreateJob(new JobConfiguration(), options);
+        }
+
+        [Fact]
+        public void CreateJob_NoOptions()
+        {
+            var job = CreateJobWithSampleConfiguration(null);
+            Assert.Equal("project", job.JobReference.ProjectId);
+            Assert.StartsWith(BigQueryClientImpl.DefaultJobIdPrefix, job.JobReference.JobId);
+            Assert.NotEqual(BigQueryClientImpl.DefaultJobIdPrefix, job.JobReference.JobId);
+        }
+
+        [Fact]
+        public void CreateJob_DefaultProjectId()
+        {
+            var job = CreateJobWithSampleConfiguration(new UploadCsvOptions());
+            Assert.Equal("project", job.JobReference.ProjectId);
+            Assert.StartsWith(BigQueryClientImpl.DefaultJobIdPrefix, job.JobReference.JobId);
+        }
+
+        [Fact]
+        public void CreateJob_CustomProjectId()
+        {
+            var job = CreateJobWithSampleConfiguration(new UploadCsvOptions { ProjectId = "custom_project" });
+            Assert.Equal("custom_project", job.JobReference.ProjectId);
+            Assert.StartsWith(BigQueryClientImpl.DefaultJobIdPrefix, job.JobReference.JobId);
+        }
+
+        [Fact]
+        public void CreateJob_CustomJobIdPrefix()
+        {
+            var job = CreateJobWithSampleConfiguration(new UploadCsvOptions { JobIdPrefix = "custom_prefix" });
+            Assert.Equal("project", job.JobReference.ProjectId);
+            Assert.StartsWith("custom_prefix", job.JobReference.JobId);
+            // Check that it's only a prefix...
+            Assert.NotEqual("custom_prefix", job.JobReference.JobId);
+        }
+
+        [Fact]
+        public void CreateJob_CustomJobId()
+        {
+            var job = CreateJobWithSampleConfiguration(new UploadCsvOptions { JobId = "custom_job_id" });
+            Assert.Equal("project", job.JobReference.ProjectId);
+            Assert.Equal("custom_job_id", job.JobReference.JobId);
+        }
+
+        [Fact]
+        public void CreateJob_BothJobIdAndPrefix()
+        {
+            var options = new UploadCsvOptions { JobIdPrefix = "prefix", JobId = "id" };
+            Assert.Throws<ArgumentException>(() => CreateJobWithSampleConfiguration(options));
         }
     }
 }
