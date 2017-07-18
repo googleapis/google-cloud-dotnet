@@ -13,6 +13,8 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2.Data;
+using Google.Cloud.Storage.V1;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -409,6 +411,55 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(rows.Skip(5).Take(5), page2.Rows, titleComparer);
             Assert.Equal(rows.Skip(10).Take(5), page3.Rows, titleComparer);
             Assert.Null(page3.NextPageToken);
+        }
+
+        /// <summary>
+        /// Creates a table associated with a CSV file on Google Cloud Storage, which has some invalid data.
+        /// A query on that table can provide the valid data but still have errors.
+        /// </summary>
+        [Fact]
+        public void PartiallyBrokenQuery()
+        {
+            string[] csvRows =
+            {
+                "First,Last,Age,Gender",
+                "Victor,Mota,23,M",
+                "v,m,break,M", // Not a valid age
+                "\"\",Blank,23,F",
+                "foo,bar,32,M"
+            };
+
+            // Create the object in GCS
+            byte[] bytes = Encoding.UTF8.GetBytes(string.Join("\n", csvRows));
+            StorageClient storage = StorageClient.Create();
+            string bucketName = "bigquerytests-" + Guid.NewGuid().ToString().ToLowerInvariant();
+            string objectName = "file-" + Guid.NewGuid().ToString();
+            storage.CreateBucket(_fixture.ProjectId, bucketName);
+            storage.UploadObject(bucketName, objectName, "text/csv", new MemoryStream(bytes));
+
+            // Create the table associated with it
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var schema = new TableSchemaBuilder
+            {
+                { "First", BigQueryDbType.String },
+                { "Last", BigQueryDbType.String },
+                { "Age", BigQueryDbType.Int64 },
+                { "Gender", BigQueryDbType.String },
+            }.Build();
+            var configuration = new ExternalDataConfiguration
+            {
+                SourceFormat = "CSV",
+                CsvOptions = new CsvOptions { SkipLeadingRows = 1 },
+                MaxBadRecords = 1,
+                SourceUris = new[] { $"gs://{bucketName}/{objectName}" },                
+            };
+            var table = client.CreateTable(_fixture.DatasetId, _fixture.CreateTableId(),
+                schema, new CreateTableOptions { ExternalDataConfiguration = configuration });
+
+            // Run a query
+            var results = client.ExecuteQuery($"SELECT * FROM {table:legacy}", new QueryOptions { UseLegacySql = true });
+            Assert.Equal(3, results.Count());
+            Assert.Throws<GoogleApiException>(() => results.ThrowOnAnyError());
         }
 
         private class TitleComparer : IEqualityComparer<BigQueryRow>

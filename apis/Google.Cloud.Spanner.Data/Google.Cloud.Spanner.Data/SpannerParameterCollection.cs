@@ -24,67 +24,65 @@ using Google.Protobuf.WellKnownTypes;
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
-    /// Represents a collection of parameters associated with a <see cref="SpannerCommand"/> and their
+    /// Represents a collection of parameters associated with a <see cref="SpannerCommand" /> and their
     /// respective mappings to columns in a DataSet.
     /// </summary>
     public sealed class SpannerParameterCollection : DbParameterCollection, IEnumerable<SpannerParameter>
     {
+        private readonly List<SpannerParameter> _innerList = new List<SpannerParameter>();
+
         /// <inheritdoc />
         public override int Count => _innerList.Count;
 
         /// <inheritdoc />
         public override object SyncRoot => _innerList;
 
-        private readonly List<SpannerParameter> _innerList = new List<SpannerParameter>();
+        /// <inheritdoc />
+        IEnumerator<SpannerParameter> IEnumerable<SpannerParameter>.GetEnumerator() => _innerList.GetEnumerator();
+
+        /// <inheritdoc />
+        public override IEnumerator GetEnumerator() => _innerList.GetEnumerator();
 
         /// <summary>
-        /// Adds a new <see cref="SpannerParameter"/> to the <see cref="SpannerParameterCollection"/>.
+        /// Adds a new <see cref="SpannerParameter" /> to the <see cref="SpannerParameterCollection" />.
         /// </summary>
-        /// <param name="parameterName">The name of the parameter. For Insert, Update and Delete commands, this name should
+        /// <param name="parameterName">
+        /// The name of the parameter. For Insert, Update and Delete commands, this name should
         /// be the name of a valid Column in a Spanner table. In Select commands, this name should be the name of a parameter
-        /// used in the SQL Query. Must not be null</param>
-        /// <param name="dbType">One of the <see cref="SpannerDbType"/> values that indicates the type of the parameter.
-        /// Must not be null.</param>
+        /// used in the SQL Query. Must not be null
+        /// </param>
+        /// <param name="dbType">
+        /// One of the <see cref="SpannerDbType" /> values that indicates the type of the parameter.
+        /// Must not be null.
+        /// </param>
         public void Add(string parameterName, SpannerDbType dbType)
         {
             GaxPreconditions.CheckNotNull(parameterName, nameof(parameterName));
             GaxPreconditions.CheckNotNull(dbType, nameof(dbType));
+
             _innerList.Add(new SpannerParameter(parameterName, dbType));
         }
 
         /// <summary>
-        /// Adds a new <see cref="SpannerParameter"/> to the <see cref="SpannerParameterCollection"/>
+        /// Adds a new <see cref="SpannerParameter" /> to the <see cref="SpannerParameterCollection" />
         /// </summary>
-        /// <param name="parameterName">The name of the parameter. For Insert, Update and Delete commands, this name should
+        /// <param name="parameterName">
+        /// The name of the parameter. For Insert, Update and Delete commands, this name should
         /// be the name of a valid Column in a Spanner table. In Select commands, this name should be the name of a parameter
-        /// used in the SQL Query. Must not be null.</param>
+        /// used in the SQL Query. Must not be null.
+        /// </param>
+        /// <param name="dbType">
+        /// One of the <see cref="SpannerDbType" /> values that indicates the type of the parameter.
+        /// Must not be null.
+        /// </param>
         /// <param name="value">An object that is the value of the SpannerParameter. May be null.</param>
-        /// <param name="dbType">One of the <see cref="SpannerDbType"/> values that indicates the type of the parameter.
-        /// Must not be null.</param>
-        public void Add(string parameterName, object value, SpannerDbType dbType)
+        public void Add(string parameterName, SpannerDbType dbType, object value)
         {
             GaxPreconditions.CheckNotNull(parameterName, nameof(parameterName));
             GaxPreconditions.CheckNotNull(dbType, nameof(dbType));
 
-            _innerList.Add(new SpannerParameter(parameterName, dbType) {Value = value});
-        }
-
-        /// <summary>
-        /// Adds a new <see cref="SpannerParameter"/> to the <see cref="SpannerParameterCollection"/>
-        /// </summary>
-        /// <param name="parameterName">The name of the parameter. For Insert, Update and Delete commands, this name should
-        /// be the name of a valid Column in a Spanner table. In Select commands, this name should be the name of a parameter
-        /// used in the SQL Query. Must not be null.</param>
-        /// <param name="dbType">One of the <see cref="SpannerDbType"/> values that indicates the type of the parameter.
-        /// Must not be null.</param>
-        /// <param name="sourceColumn">The name of the DataTable source column (SourceColumn) if this SpannerParameter is used
-        /// in a call to Update. Must not be null.</param>
-        public void Add(string parameterName, SpannerDbType dbType, string sourceColumn)
-        {
-            GaxPreconditions.CheckNotNull(parameterName, nameof(parameterName));
-            GaxPreconditions.CheckNotNull(dbType, nameof(dbType));
-            GaxPreconditions.CheckNotNull(sourceColumn, nameof(sourceColumn));
-            _innerList.Add(new SpannerParameter(parameterName, dbType, sourceColumn));
+            var parameter = new SpannerParameter(parameterName, dbType) {Value = value};
+            _innerList.Add(parameter);
         }
 
         /// <inheritdoc />
@@ -138,15 +136,6 @@ namespace Google.Cloud.Spanner.Data
                 index++;
             }
         }
-
-        /// <inheritdoc />
-        IEnumerator<SpannerParameter> IEnumerable<SpannerParameter>.GetEnumerator()
-        {
-            return _innerList.GetEnumerator();
-        }
-
-        /// <inheritdoc />
-        public override IEnumerator GetEnumerator() => _innerList.GetEnumerator();
 
         /// <inheritdoc />
         public override int IndexOf(object value) => _innerList.IndexOf(value as SpannerParameter);
@@ -247,8 +236,10 @@ namespace Google.Cloud.Spanner.Data
 // Fortunately the real implementations all just return false too.
 /// <inheritdoc />
         public override bool IsFixedSize => false;
+
         /// <inheritdoc />
         public override bool IsSynchronized => false;
+
         /// <inheritdoc />
         public override bool IsReadOnly => false;
 #endif

@@ -164,15 +164,7 @@ namespace Google.Cloud.BigQuery.V2
 
             var extract = new JobConfigurationExtract { DestinationUris = destinationUriList, SourceTable = tableReference };
             options?.ModifyRequest(extract);
-            var request = Service.Jobs.Insert(new Job
-            {
-                Configuration = new JobConfiguration
-                {
-                    Extract = extract
-                },
-            }, options?.ProjectId ?? ProjectId);
-            request.ModifyRequest += _versionHeaderAction;
-            return request;
+            return CreateInsertJobRequest(new JobConfiguration { Extract = extract }, options);
         }
         
         /// <inheritdoc />
@@ -198,15 +190,7 @@ namespace Google.Cloud.BigQuery.V2
 
             var copy = new JobConfigurationTableCopy { SourceTables = sourceList, DestinationTable = destination };
             options?.ModifyRequest(copy);
-            var request = Service.Jobs.Insert(new Job
-            {
-                Configuration = new JobConfiguration
-                {
-                    Copy = copy
-                }
-            }, options?.ProjectId ?? ProjectId);
-            request.ModifyRequest += _versionHeaderAction;
-            return request;
+            return CreateInsertJobRequest(new JobConfiguration { Copy = copy }, options);
         }
 
         /// <inheritdoc />
@@ -232,15 +216,44 @@ namespace Google.Cloud.BigQuery.V2
 
             var load = new JobConfigurationLoad { SourceUris = sourceList, DestinationTable = destination, Schema = schema };
             options?.ModifyRequest(load);
-            var request = Service.Jobs.Insert(new Job
-            {
-                Configuration = new JobConfiguration
-                {
-                    Load = load
-                }
-            }, options?.ProjectId ?? ProjectId);
+            var request = CreateInsertJobRequest(new JobConfiguration { Load = load }, options);
+            return request;
+        }
+
+        private InsertRequest CreateInsertJobRequest(JobConfiguration configuration, JobCreationOptions options)
+        {
+            var job = CreateJob(configuration, options);
+            var request = Service.Jobs.Insert(job, job.JobReference.ProjectId);
             request.ModifyRequest += _versionHeaderAction;
             return request;
+        }
+
+        internal const string DefaultJobIdPrefix = "job_";
+
+        /// <summary>
+        /// Creates a <see cref="Job"/> with a client-generated <see cref="JobReference"/> based on
+        /// <paramref name="options"/> and containing the given job configuration.
+        /// </summary>
+        /// <remarks>This method is internal for test purposes.</remarks>
+        /// <param name="configuration">Configuration for the job. Must not be null.</param>
+        /// <param name="options">Options for job creation. May be null.</param>
+        internal Job CreateJob(JobConfiguration configuration, JobCreationOptions options)
+        {
+            GaxPreconditions.CheckNotNull(configuration, nameof(configuration));
+
+            string projectId = options?.ProjectId ?? ProjectId;
+            string jobId = options?.JobId;
+            string jobIdPrefix = options?.JobIdPrefix;
+            if (jobId != null && jobIdPrefix != null)
+            {
+                throw new ArgumentException("Only one of JobId or JobIdPrefix can be specified for a single operation.");
+            }
+            if (jobId == null)
+            {
+                var prefix = jobIdPrefix ?? DefaultJobIdPrefix;
+                jobId = prefix + Guid.NewGuid().ToString().Replace("-", "_");
+            }
+            return new Job { Configuration = configuration, JobReference = GetJobReference(projectId, jobId) };
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Google.Cloud.BigQuery.V2
     /// <summary>
     /// Options for <c>UploadJson</c> operations.
     /// </summary>
-    public sealed class UploadJsonOptions
+    public sealed class UploadJsonOptions : JobCreationOptions
     {
         /// <summary>
         /// Whether or not to accept rows with fields that are not specified in the schema,
@@ -51,12 +51,6 @@ namespace Google.Cloud.BigQuery.V2
         /// If not set, this is effectively false.
         /// </summary>
         public bool? Autodetect { get; set; }
-
-        /// <summary>
-        /// The ID of the project in which to create the job. If this is not set,
-        /// it defaults to the project ID of the client.
-        /// </summary>
-        public string ProjectId { get; set; }
 
         internal void ModifyConfiguration(JobConfigurationLoad loadRequest)
         {

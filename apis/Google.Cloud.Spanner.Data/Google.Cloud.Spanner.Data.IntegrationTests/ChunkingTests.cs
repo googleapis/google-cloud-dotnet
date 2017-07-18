@@ -73,7 +73,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         private string[] GetLargeStringArray() =>
             Enumerable.Range(0, _random.Next(10, 20)).Select(_ => GetLargeString(100000, 200000)).ToArray();
 
-
         private byte[] GetLargeBytes(int minSize, int maxSize)
         {
             int size = _random.Next(minSize, maxSize);
@@ -138,7 +137,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 {
                     using (var reader = (SpannerDataReader) await readCmd.ExecuteReaderAsync())
                     {
-                        HashSet<string> keySet = new HashSet<string>();
+                        var keySet = new HashSet<string>();
                         while (await reader.ReadAsync())
                         {
                             rowsRead++;

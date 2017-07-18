@@ -185,17 +185,7 @@ namespace Google.Cloud.BigQuery.V2
         private JobsResource.InsertRequest CreateInsertQueryJobRequest(JobConfigurationQuery query, QueryOptions options)
         {
             options?.ModifyRequest(query);
-            var request = Service.Jobs.Insert(new Job
-            {
-                Configuration = new JobConfiguration
-                {
-                    Query = query,
-                    // It's slightly annoying that this is set here rather than in ModifyRequest, but at least it's in a single place.
-                    DryRun = options?.DryRun
-                },
-            }, options?.ProjectId ?? ProjectId);
-            request.ModifyRequest += _versionHeaderAction;
-            return request;
+            return CreateInsertJobRequest(new JobConfiguration { Query = query, DryRun = options?.DryRun }, options);
         }
 
         private static readonly long s_maxGetQueryResultsRequestTimeout = (long) TimeSpan.FromMinutes(1).TotalMilliseconds;
