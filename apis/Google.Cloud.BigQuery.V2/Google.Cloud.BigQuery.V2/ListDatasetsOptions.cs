@@ -12,7 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Apis.Bigquery.v2;
+using System.Collections.Generic;
 
 namespace Google.Cloud.BigQuery.V2
 {
@@ -27,11 +29,31 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The filter to apply when listing datasets. See https://cloud.google.com/bigquery/docs/labeling-datasets#filtering_datasets_using_labels
+        /// for more details. Filters for labels can be created easily using the <see cref="Filters"/> class.
+        /// </summary>
+        public string Filter { get; set; }
+
+        /// <summary>
+        /// Whether to include hidden datasets, equivalent to the "all" parameter of
+        /// the REST API. By default, hidden datasets will not be included.
+        /// </summary>
+        public bool? IncludeHidden { get; set; }
+
         internal void ModifyRequest(DatasetsResource.ListRequest request)
         {
             if (PageSize != null)
             {
                 request.MaxResults = PageSize;
+            }
+            if (Filter != null)
+            {
+                request.Filter = Filter;
+            }
+            if (IncludeHidden != null)
+            {
+                request.All = IncludeHidden;
             }
         }
     }
