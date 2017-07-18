@@ -52,7 +52,7 @@ namespace Google.Cloud.Diagnostics.Common
             {
                 if (Interlocked.CompareExchange(ref _ticks, DateTime.UtcNow.Ticks, 0) == 0)
                 {
-                    TraceSpan.EndTime = Timestamp.FromDateTime(new DateTime((long)_ticks).ToUniversalTime());
+                    TraceSpan.EndTime = Timestamp.FromDateTime(new DateTime((long)_ticks, DateTimeKind.Utc));
                     _tracer.EndSpan(this);
                 }
                 else
