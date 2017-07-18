@@ -37,10 +37,14 @@ install:
 build_script:
   - dotnet --info
   - echo "Regenerating projects: if this fails, run generateprojects.sh and commit changes"
+  - echo "Current Time is %time%"
   - generateprojects.sh && git diff --exit-code
+  - echo "Current Time is %time%"
   - bash build.sh
+  - echo "Current Time is %time%"
   - cd docs
   - bash builddocs.sh
+  - echo "Current Time is %time%"
 
 # TODO: Reinstate these...
 #  - bash runcoverage.sh
