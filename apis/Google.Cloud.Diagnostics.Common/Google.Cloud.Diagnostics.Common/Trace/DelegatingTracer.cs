@@ -34,7 +34,7 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <inheritdoc />
-        public IDisposable StartSpan(string name, StartSpanOptions options = null) =>
+        public ISpan StartSpan(string name, StartSpanOptions options = null) =>
            _managedTracerGetter().StartSpan(name, options);
 
         /// <inheritdoc />
@@ -48,9 +48,6 @@ namespace Google.Cloud.Diagnostics.Common
         /// <inheritdoc />
         public Task<T> RunInSpanAsync<T>(Func<Task<T>> func, string name, StartSpanOptions options = null) =>
             _managedTracerGetter().RunInSpan(func, name, options);
-
-        /// <inheritdoc />
-        public void EndSpan() => _managedTracerGetter().EndSpan();
 
         /// <inheritdoc />
         public void AnnotateSpan(Dictionary<string, string> labels) => _managedTracerGetter().AnnotateSpan(labels);

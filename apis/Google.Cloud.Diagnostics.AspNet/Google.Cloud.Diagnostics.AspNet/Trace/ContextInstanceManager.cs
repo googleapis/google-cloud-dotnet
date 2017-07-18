@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+﻿// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,27 +18,19 @@ using System.Web;
 namespace Google.Cloud.Diagnostics.AspNet
 {
     /// <summary>
-    /// Manages access to the current <see cref="IManagedTracer"/>.
+    /// Manages storage of instances of types for the current <see cref="HttpContext"/>.
     /// </summary>
-    internal static class TracerManager
+    internal static class ContextInstanceManager
     {
-        // The key to save the tracer under.
-        private const string TraceKey = "Google.Cloud.Diagnostics.AspNet.Trace";
+        /// <summary>
+        /// Sets the current value for a type.
+        /// </summary>
+        public static void Set<T>(T obj) => 
+            HttpContext.Current.Items[typeof(T)] = obj;
 
         /// <summary>
-        /// Sets the current <see cref="IManagedTracer"/>
+        /// Gets the current value for a type.
         /// </summary>
-        public static void SetCurrentTracer(IManagedTracer tracer)
-        {
-            HttpContext.Current.Items[TraceKey] = tracer;
-        }
-
-        /// <summary>
-        /// Gets the current <see cref="IManagedTracer"/> or null if non exists.
-        /// </summary>
-        public static IManagedTracer GetCurrentTracer()
-        {
-            return (IManagedTracer) HttpContext.Current.Items[TraceKey];
-        }
+        public static T Get<T>() => (T)HttpContext.Current.Items[typeof(T)];
     }
 }

@@ -363,9 +363,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public string Trace(string id, [FromServices] IManagedTracer tracer)
         {
             string message = GetMessage(nameof(Trace), id);
-            tracer.StartSpan(message);
-            Thread.Sleep(10);
-            tracer.EndSpan();
+            using (tracer.StartSpan(message))
+            {
+                Thread.Sleep(10);
+            }
             return message;
         }
 
@@ -385,10 +386,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public string TraceStackTrace(string id, [FromServices] IManagedTracer tracer)
         {
             string message = GetMessage(nameof(TraceStackTrace), id);
-            tracer.StartSpan(message);
-            Thread.Sleep(10);
-            tracer.SetStackTrace(CreateStackTrace());
-            tracer.EndSpan();
+            using (tracer.StartSpan(message))
+            {
+                Thread.Sleep(10);
+                tracer.SetStackTrace(CreateStackTrace());
+            }
             return message;
         }
 

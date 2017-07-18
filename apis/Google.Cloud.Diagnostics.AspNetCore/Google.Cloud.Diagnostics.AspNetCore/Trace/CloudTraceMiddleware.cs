@@ -79,7 +79,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
                 // Trace the delegate and annotate it with information from the current
                 // HTTP context.
-                tracer.StartSpan(httpContext.Request.Path);
+                var span = tracer.StartSpan(httpContext.Request.Path);
                 try
                 {
                     await _next(httpContext).ConfigureAwait(false);
@@ -94,7 +94,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 {
                     tracer.AnnotateSpan(Labels.AgentLabel);
                     tracer.AnnotateSpan(Labels.FromHttpContext(httpContext));
-                    tracer.EndSpan();
+                    span.Dispose();
                 }
             }
         }

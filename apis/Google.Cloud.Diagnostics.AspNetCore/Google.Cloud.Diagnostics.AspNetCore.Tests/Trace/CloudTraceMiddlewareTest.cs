@@ -38,9 +38,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         {
             var tracerMock = new Mock<IManagedTracer>();
             tracerMock.Setup(t => t.GetCurrentTraceId()).Returns(_traceHeaderContext.TraceId);
-            tracerMock.Setup(t => t.StartSpan(context.Request.Path, null));
+            tracerMock.Setup(t => t.StartSpan(context.Request.Path, null)).Returns(new NullManagedTracer.Span());
             tracerMock.Setup(t => t.AnnotateSpan(It.IsAny<Dictionary<string, string>>()));
-            tracerMock.Setup(t => t.EndSpan());
             return tracerMock;
         }
 
@@ -126,7 +125,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
             delegateMock.Verify(d => d(context), Times.Once());
             tracerMock.Verify(t => t.StartSpan(It.IsAny<string>(), null), Times.Never());
-            tracerMock.Verify(t => t.EndSpan(), Times.Never());
         }
     }
 }

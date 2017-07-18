@@ -56,9 +56,10 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// <code>
     /// public void DoSomething()
     /// {
-    ///     CloudTrace.Tracer.StartSpan("DoSomething");
-    ///     ...
-    ///     CloudTrace.Tracer.EndSpan();
+    ///     using (CloudTrace.Tracer.StartSpan("DoSomething"))
+    ///     {
+    ///         ...
+    ///     }
     /// }
     /// </code>
     /// </example>
@@ -85,7 +86,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// This <see cref="IManagedTracer"/> is a singleton.
         /// </summary>
         public static readonly IManagedTracer Tracer =
-            new DelegatingTracer(() => TracerManager.GetCurrentTracer() ?? NullManagedTracer.Instance);
+            new DelegatingTracer(() => ContextInstanceManager.Get<IManagedTracer>() ?? NullManagedTracer.Instance);
 
         /// <summary>
         /// Creates a <see cref="TraceHeaderPropagatingHandler"/> to propagate trace headers
@@ -166,7 +167,7 @@ namespace Google.Cloud.Diagnostics.AspNet
                 return;
             }
 
-            TracerManager.SetCurrentTracer(tracer);
+            ContextInstanceManager.Set(tracer);
 
             if (headerContext.TraceId != null)
             {
@@ -178,21 +179,22 @@ namespace Google.Cloud.Diagnostics.AspNet
             }
 
             // Start the span and annotate it with information from the current request.
-            tracer.StartSpan(HttpContext.Current.Request.Path);
+            var span = tracer.StartSpan(HttpContext.Current.Request.Path);
+            ContextInstanceManager.Set(span);
             tracer.AnnotateSpan(Labels.FromHttpRequest(HttpContext.Current.Request));
             tracer.AnnotateSpan(Labels.AgentLabel);
         }
 
         private void EndRequest(object sender, EventArgs e)
         {
-            IManagedTracer tracer = Tracer;
-            if (tracer.GetCurrentTraceId() == null)
+            ISpan span = ContextInstanceManager.Get<ISpan>();
+            if (span == null)
             {
                 return;
             }
             // End the span and annotate it with information from the current response.
-            tracer.AnnotateSpan(Labels.FromHttpResponse(HttpContext.Current.Response));
-            tracer.EndSpan();
+            span.AnnotateSpan(Labels.FromHttpResponse(HttpContext.Current.Response));
+            span.Dispose();
         }
     }
 }
