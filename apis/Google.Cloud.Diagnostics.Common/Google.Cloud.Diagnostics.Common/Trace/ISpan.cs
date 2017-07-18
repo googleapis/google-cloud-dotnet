@@ -22,8 +22,10 @@ namespace Google.Cloud.Diagnostics.Common
     /// A trace span.
     /// </summary>
     /// <remarks>
+    /// <para>
     /// The functions here, aside from <see cref="IDisposable.Dispose"/>, do not need to be used in most cases. 
     /// They need to be used when updating the current span in a disjoint thread. For example:
+    /// </para>
     /// <code>
     /// public void DoSomething(IManagedTracer tracer)
     /// {
@@ -45,8 +47,10 @@ namespace Google.Cloud.Diagnostics.Common
     ///     t2.Start();
     /// }
     /// </code>
+    /// <para>
     /// NOTE: While it is possible to end a span in another thread any new spans after this may be in
     /// a poor state.
+    /// </para>
     /// </remarks>
     public interface ISpan : IDisposable
     {

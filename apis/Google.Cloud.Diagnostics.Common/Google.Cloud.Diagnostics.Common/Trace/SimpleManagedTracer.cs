@@ -33,7 +33,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// A class that represents a trace span.
         /// </summary>
-        internal sealed class Span : ISpan
+        private sealed class Span : ISpan
         {
             internal TraceSpan TraceSpan { get; private set; }
 
@@ -50,7 +50,6 @@ namespace Google.Cloud.Diagnostics.Common
             /// <summary> Ends the current span.</summary>
             public void Dispose()
             {
-                GaxPreconditions.CheckState(!Disposed(), "Span cannot be disposed twice.");
                 if (Interlocked.CompareExchange(ref _ticks, DateTime.UtcNow.Ticks, 0) == 0)
                 {
                     TraceSpan.EndTime = Timestamp.FromDateTime(new DateTime((long)_ticks).ToUniversalTime());
@@ -197,7 +196,7 @@ namespace Google.Cloud.Diagnostics.Common
         private void EndSpan(Span span)
         {
             var currentStack = TraceStack;
-            if (!currentStack.IsEmpty && span.SpanId() == currentStack.Peek().SpanId())
+            if (!currentStack.IsEmpty && span == currentStack.Peek())
             {
                 TraceStack = currentStack.Pop(out _);
             }
@@ -320,7 +319,7 @@ namespace Google.Cloud.Diagnostics.Common
         }
 #endif
 
-        internal sealed class ImmutableStack<T>
+        private sealed class ImmutableStack<T>
         {
             public static readonly ImmutableStack<T> Empty = new ImmutableStack<T>(default(T), null);
 
