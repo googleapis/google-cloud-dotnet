@@ -42,23 +42,12 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         }
 
         [Fact]
-        public Task ErrorReportingTest_ErrorReporting() => ErrorReportingTest<ReportToErrorReportingApplication>();
-
-        [Fact]
-        public Task ErrorReportingTest_Logging() => ErrorReportingTest<ReportToLoggingApplication>();
-
-        /// <summary>
-        /// Test helper that will run a <see cref="TestServer"/> with a start up class,
-        /// send a request to the server and ensure an error event was reported from 
-        /// the test server to the error reporting api.
-        /// </summary>
-        /// <typeparam name="T">The type of the start up class for the test server.</typeparam>
-        private async Task ErrorReportingTest<T>()
+        public async Task ErrorReportingTest()
         {
             DateTime startTime = DateTime.UtcNow;
 
             // Create a test server and make an http.
-            using (TestServer server = TestServer.Create<T>())
+            using (TestServer server = TestServer.Create<ErrorReportingApplication>())
             {
                 await server.HttpClient.GetAsync("");
 
@@ -81,37 +70,16 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         };
 
         /// <summary>
-        /// A <see cref="BaseErrorReportingApplication"/> that will report events through the
-        /// error reporting api.
-        /// </summary>
-        private class ReportToErrorReportingApplication : BaseErrorReportingApplication
-        {
-            public override ErrorReportingOptions GetOptions() =>
-                ErrorReportingOptions.Create(EventTarget.ForErrorReporting(_projectId));
-        }
-
-        /// <summary>
-        /// A <see cref="BaseErrorReportingApplication"/> that will report events through the
-        /// logging api.
-        /// </summary>
-        private class ReportToLoggingApplication : BaseErrorReportingApplication
-        {
-            public override ErrorReportingOptions GetOptions() => null;
-        }
-
-        /// <summary>
         /// A simple <see cref="HttpApplication"/> that registers a <see cref="ErrorReportingExceptionLogger"/>
         /// </summary>
-        private abstract class BaseErrorReportingApplication : HttpApplication
+        private class ErrorReportingApplication : HttpApplication
         {
-            public abstract ErrorReportingOptions GetOptions();
-
             public void Configuration(IAppBuilder app)
             {
                 HttpConfiguration config = new HttpConfiguration();
                 config.Routes.MapHttpRoute("", "", null, null, new ThrowErrorHandler());
                 config.Services.Add(typeof(System.Web.Http.ExceptionHandling.IExceptionLogger),
-                    ErrorReportingExceptionLogger.Create(_projectId, _testId, _testId, GetOptions()));
+                    ErrorReportingExceptionLogger.Create(_projectId, _testId, _testId));
                 app.UseWebApi(config);
             }
         }
