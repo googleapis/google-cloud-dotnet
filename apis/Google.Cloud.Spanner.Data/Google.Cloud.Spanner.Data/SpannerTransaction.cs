@@ -16,6 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Api.Gax;
@@ -70,7 +71,16 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         protected override DbConnection DbConnection => _connection;
 
-        internal IEnumerable<Mutation> Mutations => _mutations;
+        internal bool HasMutations
+        {
+            get
+            {
+                lock (_mutations)
+                {
+                    return _mutations.Any();
+                }
+            }
+        }
 
         private Transaction WireTransaction { get; }
 
@@ -107,7 +117,10 @@ namespace Google.Cloud.Spanner.Data
                 {
                     var taskCompletionSource = new TaskCompletionSource<int>();
                     cancellationToken.ThrowIfCancellationRequested();
-                    _mutations.AddRange(mutations);
+                    lock (_mutations)
+                    {
+                        _mutations.AddRange(mutations);
+                    }
                     taskCompletionSource.SetResult(mutations.Count);
                     return taskCompletionSource.Task;
                 }, "SpannerTransaction.ExecuteMutations");
@@ -150,7 +163,9 @@ namespace Google.Cloud.Spanner.Data
                 {
                     GaxPreconditions.CheckState(
                         Mode != TransactionMode.ReadOnly, "You cannot commit a readonly transaction.");
-                    var response = await WireTransaction.CommitAsync(Session, Mutations).ConfigureAwait(false);
+                    // We allow access to _mutations outside of a lock here because multithreaded
+                    // access at this point should be done and only one caller can call commit.
+                    var response = await WireTransaction.CommitAsync(Session, _mutations).ConfigureAwait(false);
                     return response.CommitTimestamp?.ToDateTime();
                 }, "SpannerTransaction.Commit");
         }
