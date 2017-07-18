@@ -123,6 +123,7 @@
       "Grpc.Core": ""
     },
     "testDependencies": {
+      "Google.Cloud.ErrorReporting.V1Beta1": "",
       "Microsoft.AspNetCore.Http": "1.1.1"
     }
   },
