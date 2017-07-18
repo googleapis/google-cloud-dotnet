@@ -39,7 +39,7 @@ namespace Google.Cloud.Diagnostics.Common
 
             private readonly SimpleManagedTracer _tracer;
 
-            private readonly object _mutex = new object();
+            private double _ticks;
 
             internal Span(SimpleManagedTracer tracer, TraceSpan traceSpan)
             {
@@ -50,12 +50,15 @@ namespace Google.Cloud.Diagnostics.Common
             /// <summary> Ends the current span.</summary>
             public void Dispose()
             {
-                lock (_mutex)
+                if (Interlocked.CompareExchange(ref _ticks, DateTime.UtcNow.Ticks, 0) == 0)
                 {
-                    GaxPreconditions.CheckState(!Disposed(), "Span cannot be disposed twice.");
-                    TraceSpan.EndTime = Timestamp.FromDateTime(DateTime.UtcNow);
+                    TraceSpan.EndTime = Timestamp.FromDateTime(new DateTime((long)_ticks, DateTimeKind.Utc));
+                    _tracer.EndSpan(this);
                 }
-                _tracer.EndSpan(this);
+                else
+                {
+                    GaxPreconditions.CheckState(false, "Span cannot be disposed twice.");
+                }
             }
 
             /// <inheritdoc />
