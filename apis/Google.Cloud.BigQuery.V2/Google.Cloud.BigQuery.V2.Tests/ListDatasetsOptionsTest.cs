@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2;
+using System.Collections.Generic;
 using Xunit;
 using static Google.Apis.Bigquery.v2.DatasetsResource;
 
@@ -25,11 +26,15 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var options = new ListDatasetsOptions
             {
-                PageSize = 25
+                PageSize = 25,
+                Filter = Filters.FromLabel("x", "y"),
+                IncludeHidden = true
             };
             ListRequest request = new ListRequest(new BigqueryService(), "project");
             options.ModifyRequest(request);
             Assert.Equal(25, request.MaxResults);
+            Assert.Equal("labels.x:y", request.Filter);
+            Assert.True(request.All);
         }
     }
 }
