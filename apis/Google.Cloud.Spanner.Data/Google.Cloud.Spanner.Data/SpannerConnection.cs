@@ -807,33 +807,49 @@ namespace Google.Cloud.Spanner.Data
 #if NET45 || NET451
 
         /// <summary>
-        /// Opens and establishes a session with the Spanner database with the given
-        /// <see cref="TimestampBound" /> settings that control the implicit transaction created
-        /// from the active <see cref="System.Transactions.TransactionScope" />.
+        /// If this connection is being opened within a <see cref="System.Transactions.TransactionScope" />, this forces
+        /// the created Cloud Spanner transaction to be a read-only transaction with the given
+        /// <see cref="TimestampBound" /> settings.
         /// </summary>
         /// <param name="timestampBound">
         /// Specifies the timestamp or maximum staleness of a
         /// read operation. Must not be null.
         /// </param>
-        public void OpenWithTimeBoundSettings(TimestampBound timestampBound)
+        public void OpenAsReadOnly(TimestampBound timestampBound = null)
         {
-            _timestampBound = timestampBound;
+            if (Transaction.Current == null)
+            {
+                throw new InvalidOperationException($"{nameof(OpenAsReadOnly)} should only be called within a TransactionScope.");
+            }
+            if (!EnlistInTransaction)
+            {
+                throw new InvalidOperationException($"{nameof(OpenAsReadOnly)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
+            }
+            _timestampBound = timestampBound ?? TimestampBound.Strong;
             Open();
         }
 
         /// <summary>
-        /// Opens and establishes a session with the Spanner database asynchronously with the given
-        /// <see cref="TimestampBound" /> settings that control the implicit transaction created
-        /// from the active <see cref="System.Transactions.TransactionScope" />.
+        /// If this connection is being opened within a <see cref="System.Transactions.TransactionScope" />, this forces
+        /// the created Cloud Spanner transaction to be a read-only transaction with the given
+        /// <see cref="TimestampBound" /> settings.
         /// </summary>
         /// <param name="timestampBound">
         /// Specifies the timestamp or maximum staleness of a
         /// read operation. Must not be null.
         /// </param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
-        public Task OpenWithTimeBoundSettingsAsync(TimestampBound timestampBound, CancellationToken cancellationToken)
+        public Task OpenAsReadOnlyAsync(TimestampBound timestampBound = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            _timestampBound = timestampBound;
+            if (Transaction.Current == null)
+            {
+                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called within a TransactionScope.");
+            }
+            if (!EnlistInTransaction)
+            {
+                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
+            }
+            _timestampBound = timestampBound ?? TimestampBound.Strong;
             return OpenAsync(cancellationToken);
         }
 #endif
