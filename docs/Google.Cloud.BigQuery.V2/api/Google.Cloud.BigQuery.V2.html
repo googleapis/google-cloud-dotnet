@@ -109,8 +109,7 @@ A page token may be present to indicate that more results are available.</p>
       <section><p>A collection of <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryParameter.html">BigQueryParameter</a> elements, as part of a <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryCommand.html">BigQueryCommand</a>.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryResults.html">BigQueryResults</a></h4>
-      <section><p>A job known to be running a query. The job may not have completed yet. This class provides
-the mean to retrieve result rows from the job.</p>
+      <section><p>The results of a completed query.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryRow.html">BigQueryRow</a></h4>
       <section><p>A row in a result set, which may be from a query or from listing the rows in a table.</p>
@@ -137,9 +136,6 @@ available, but this class exists to provide consistency and extensibility.</p>
       <h4><a class="xref" href="Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html">CreateLoadJobOptions</a></h4>
       <section><p>Options for <code>CreateLoadJob</code> operations.</p>
 </section>
-      <h4><a class="xref" href="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html">CreateQueryJobOptions</a></h4>
-      <section><p>Options for <code>CreateQueryJob</code> operations.</p>
-</section>
       <h4><a class="xref" href="Google.Cloud.BigQuery.V2.CreateTableOptions.html">CreateTableOptions</a></h4>
       <section><p>Options for <code>CreateTable</code> operations.</p>
 </section>
@@ -149,9 +145,6 @@ available, but this class exists to provide consistency and extensibility.</p>
       <h4><a class="xref" href="Google.Cloud.BigQuery.V2.DeleteTableOptions.html">DeleteTableOptions</a></h4>
       <section><p>Options for <code>DeleteTable</code> operations. Currently no options are
 available, but this class exists to provide consistency and extensibility.</p>
-</section>
-      <h4><a class="xref" href="Google.Cloud.BigQuery.V2.ExecuteQueryOptions.html">ExecuteQueryOptions</a></h4>
-      <section><p>Options for <code>ExecuteQuery</code> operations.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.BigQuery.V2.GetDatasetOptions.html">GetDatasetOptions</a></h4>
       <section><p>Options for <code>GetDataset</code> operations. Currently no options are
@@ -171,6 +164,9 @@ available, but this class exists to provide consistency and extensibility.</p>
       <h4><a class="xref" href="Google.Cloud.BigQuery.V2.InsertOptions.html">InsertOptions</a></h4>
       <section><p>Options for <code>Insert</code> operations.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.V2.JobCreationOptions.html">JobCreationOptions</a></h4>
+      <section><p>Base class for options for operations that create jobs.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.BigQuery.V2.ListDatasetsOptions.html">ListDatasetsOptions</a></h4>
       <section><p>Options used when listing datasets. Details TBD.</p>
 </section>
@@ -185,6 +181,9 @@ available, but this class exists to provide consistency and extensibility.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.BigQuery.V2.ListTablesOptions.html">ListTablesOptions</a></h4>
       <section><p>Options for <code>ListTables</code> operations.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.BigQuery.V2.QueryOptions.html">QueryOptions</a></h4>
+      <section><p>Options for <code>CreateQueryJob</code> and <code>ExecuteQuery</code> operations.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.BigQuery.V2.TableSchemaBuilder.html">TableSchemaBuilder</a></h4>
       <section><p>Class making it simple to create a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a>.</p>

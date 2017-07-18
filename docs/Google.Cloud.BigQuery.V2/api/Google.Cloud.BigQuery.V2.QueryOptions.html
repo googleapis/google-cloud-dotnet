@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class CreateQueryJobOptions
+    <title>Class QueryOptions
    | Google.Cloud.BigQuery.V2 </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class CreateQueryJobOptions
+    <meta name="title" content="Class QueryOptions
    | Google.Cloud.BigQuery.V2 ">
     <meta name="generator" content="docfx 2.20.0.0">
     
@@ -67,21 +67,31 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.BigQuery.V2.QueryOptions">
   
   
-  <h1 id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions" class="text-break">Class CreateQueryJobOptions
+  <h1 id="Google_Cloud_BigQuery_V2_QueryOptions" data-uid="Google.Cloud.BigQuery.V2.QueryOptions" class="text-break">Class QueryOptions
   </h1>
-  <div class="markdown level0 summary"><p>Options for <code>CreateQueryJob</code> operations.</p>
+  <div class="markdown level0 summary"><p>Options for <code>CreateQueryJob</code> and <code>ExecuteQuery</code> operations.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">CreateQueryJobOptions</span></div>
+    <div class="level1"><a class="xref" href="Google.Cloud.BigQuery.V2.JobCreationOptions.html">JobCreationOptions</a></div>
+    <div class="level2"><span class="xref">QueryOptions</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.V2.JobCreationOptions.html#Google_Cloud_BigQuery_V2_JobCreationOptions_ProjectId">JobCreationOptions.ProjectId</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.V2.JobCreationOptions.html#Google_Cloud_BigQuery_V2_JobCreationOptions_JobIdPrefix">JobCreationOptions.JobIdPrefix</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.BigQuery.V2.JobCreationOptions.html#Google_Cloud_BigQuery_V2_JobCreationOptions_JobId">JobCreationOptions.JobId</a>
+    </div>
     <div>
       <span class="xref">System.Object.ToString()</span>
     </div>
@@ -97,16 +107,16 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.BigQuery.V2.html">Google.Cloud.BigQuery.V2</a></h6>
   <h6><strong>Assembly</strong>: Google.Cloud.BigQuery.V2.dll</h6>
-  <h5 id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_syntax">Syntax</h5>
+  <h5 id="Google_Cloud_BigQuery_V2_QueryOptions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class CreateQueryJobOptions</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class QueryOptions : JobCreationOptions</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
-  <a id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_AllowLargeResults_" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.AllowLargeResults*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_AllowLargeResults" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.AllowLargeResults">AllowLargeResults</h4>
+  <a id="Google_Cloud_BigQuery_V2_QueryOptions_AllowLargeResults_" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.AllowLargeResults*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_QueryOptions_AllowLargeResults" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.AllowLargeResults">AllowLargeResults</h4>
   <div class="markdown level1 summary"><p>If true, allows the query to produce arbitrarily large result sets at a slight cost
-in performance. <a class="xref" href="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_DestinationTable">DestinationTable</a> must be set in order to use this option.</p>
+in performance. <a class="xref" href="Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_DestinationTable">DestinationTable</a> must be set in order to use this option.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -128,8 +138,8 @@ in performance. <a class="xref" href="Google.Cloud.BigQuery.V2.CreateQueryJobOpt
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_CreateDisposition_" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.CreateDisposition*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_CreateDisposition" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.CreateDisposition">CreateDisposition</h4>
+  <a id="Google_Cloud_BigQuery_V2_QueryOptions_CreateDisposition_" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.CreateDisposition*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_QueryOptions_CreateDisposition" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.CreateDisposition">CreateDisposition</h4>
   <div class="markdown level1 summary"><p>Specifies whether the operation is allowed to create new tables.
 If not set, this is effectively <a class="xref" href="Google.Cloud.BigQuery.V2.CreateDisposition.html#Google_Cloud_BigQuery_V2_CreateDisposition_CreateIfNeeded">CreateIfNeeded</a>.</p>
 </div>
@@ -153,8 +163,8 @@ If not set, this is effectively <a class="xref" href="Google.Cloud.BigQuery.V2.C
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_DefaultDataset_" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DefaultDataset*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_DefaultDataset" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DefaultDataset">DefaultDataset</h4>
+  <a id="Google_Cloud_BigQuery_V2_QueryOptions_DefaultDataset_" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.DefaultDataset*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_QueryOptions_DefaultDataset" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.DefaultDataset">DefaultDataset</h4>
   <div class="markdown level1 summary"><p>The default dataset to assume for any unqualified table names in the query.
 If this is not set, all table names must be fully qualified.</p>
 </div>
@@ -178,8 +188,8 @@ If this is not set, all table names must be fully qualified.</p>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_DestinationTable_" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DestinationTable*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_DestinationTable" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DestinationTable">DestinationTable</h4>
+  <a id="Google_Cloud_BigQuery_V2_QueryOptions_DestinationTable_" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.DestinationTable*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_QueryOptions_DestinationTable" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.DestinationTable">DestinationTable</h4>
   <div class="markdown level1 summary"><p>A destination table to write the results into.
 If this is not specified, the results will be stored in a temporary table.</p>
 </div>
@@ -203,8 +213,8 @@ If this is not specified, the results will be stored in a temporary table.</p>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_DryRun_" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DryRun*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_DryRun" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DryRun">DryRun</h4>
+  <a id="Google_Cloud_BigQuery_V2_QueryOptions_DryRun_" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.DryRun*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_QueryOptions_DryRun" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.DryRun">DryRun</h4>
   <div class="markdown level1 summary"><p>If set to true, don&apos;t actually run this job. A valid query will return a mostly empty response
 with some processing statistics, while an invalid query will return the same error it would if it wasn&apos;t a dry run.
 This option can be used to determine the schema of the query without running it. The resulting
@@ -231,11 +241,11 @@ contains all the information returned by the server.</p>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_FlattenResults_" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.FlattenResults*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_FlattenResults" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.FlattenResults">FlattenResults</h4>
+  <a id="Google_Cloud_BigQuery_V2_QueryOptions_FlattenResults_" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.FlattenResults*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_QueryOptions_FlattenResults" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.FlattenResults">FlattenResults</h4>
   <div class="markdown level1 summary"><p>Flattens all nested and repeated fields in the query results.
 If not set, this is effectively true. If this is set to false,
-<a class="xref" href="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_DestinationTable">DestinationTable</a> must be specified and <a class="xref" href="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_AllowLargeResults">AllowLargeResults</a>
+<a class="xref" href="Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_DestinationTable">DestinationTable</a> must be specified and <a class="xref" href="Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_AllowLargeResults">AllowLargeResults</a>
 must be set to true.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -258,8 +268,8 @@ must be set to true.</p>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_MaximumBillingTier_" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.MaximumBillingTier*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_MaximumBillingTier" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.MaximumBillingTier">MaximumBillingTier</h4>
+  <a id="Google_Cloud_BigQuery_V2_QueryOptions_MaximumBillingTier_" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.MaximumBillingTier*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_QueryOptions_MaximumBillingTier" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.MaximumBillingTier">MaximumBillingTier</h4>
   <div class="markdown level1 summary"><p>Limits the billing tier of the job. If the query uses resources beyond this tier,
 it will fail.
 If not set, this is effectively the project default.</p>
@@ -284,8 +294,8 @@ If not set, this is effectively the project default.</p>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_MaximumBytesBilled_" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.MaximumBytesBilled*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_MaximumBytesBilled" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.MaximumBytesBilled">MaximumBytesBilled</h4>
+  <a id="Google_Cloud_BigQuery_V2_QueryOptions_MaximumBytesBilled_" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.MaximumBytesBilled*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_QueryOptions_MaximumBytesBilled" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.MaximumBytesBilled">MaximumBytesBilled</h4>
   <div class="markdown level1 summary"><p>Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit will fail (without incurring a charge).
 If not set, this is effectively the project default.</p>
 </div>
@@ -309,8 +319,8 @@ If not set, this is effectively the project default.</p>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_Priority_" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.Priority*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_Priority" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.Priority">Priority</h4>
+  <a id="Google_Cloud_BigQuery_V2_QueryOptions_Priority_" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.Priority*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_QueryOptions_Priority" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.Priority">Priority</h4>
   <div class="markdown level1 summary"><p>The priority of the query.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -333,8 +343,8 @@ If not set, this is effectively the project default.</p>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_UseLegacySql_" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.UseLegacySql*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_UseLegacySql" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.UseLegacySql">UseLegacySql</h4>
+  <a id="Google_Cloud_BigQuery_V2_QueryOptions_UseLegacySql_" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.UseLegacySql*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_QueryOptions_UseLegacySql" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.UseLegacySql">UseLegacySql</h4>
   <div class="markdown level1 summary"><p>Set to true to use legacy SQL instead of standard SQL.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -357,8 +367,8 @@ If not set, this is effectively the project default.</p>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_UseQueryCache_" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.UseQueryCache*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_UseQueryCache" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.UseQueryCache">UseQueryCache</h4>
+  <a id="Google_Cloud_BigQuery_V2_QueryOptions_UseQueryCache_" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.UseQueryCache*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_QueryOptions_UseQueryCache" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.UseQueryCache">UseQueryCache</h4>
   <div class="markdown level1 summary"><p>Whether to look for the result in the query cache.
 If not set, this is effectively true.</p>
 </div>
@@ -382,8 +392,8 @@ If not set, this is effectively true.</p>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_WriteDisposition_" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.WriteDisposition*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_CreateQueryJobOptions_WriteDisposition" data-uid="Google.Cloud.BigQuery.V2.CreateQueryJobOptions.WriteDisposition">WriteDisposition</h4>
+  <a id="Google_Cloud_BigQuery_V2_QueryOptions_WriteDisposition_" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.WriteDisposition*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_QueryOptions_WriteDisposition" data-uid="Google.Cloud.BigQuery.V2.QueryOptions.WriteDisposition">WriteDisposition</h4>
   <div class="markdown level1 summary"><p>Specifies the behavior if the destination table exists.
 If not set, this is effectively <a class="xref" href="Google.Cloud.BigQuery.V2.WriteDisposition.html#Google_Cloud_BigQuery_V2_WriteDisposition_WriteIfEmpty">WriteIfEmpty</a>.</p>
 </div>

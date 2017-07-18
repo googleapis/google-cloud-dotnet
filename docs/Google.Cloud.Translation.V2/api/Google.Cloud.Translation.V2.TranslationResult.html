@@ -164,6 +164,73 @@
   <div class="markdown level1 remarks"><p>This constructor is for the benefit of testability, in case you wish to provide your own
 fake implementation of <a class="xref" href="Google.Cloud.Translation.V2.TranslationClient.html">TranslationClient</a>.</p>
 </div>
+  <a id="Google_Cloud_Translation_V2_TranslationResult__ctor_" data-uid="Google.Cloud.Translation.V2.TranslationResult.#ctor*"></a>
+  <h4 id="Google_Cloud_Translation_V2_TranslationResult__ctor_System_String_System_String_System_String_System_String_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__System_String_" data-uid="Google.Cloud.Translation.V2.TranslationResult.#ctor(System.String,System.String,System.String,System.String,System.String,System.Nullable{Google.Cloud.Translation.V2.TranslationModel},System.String)">TranslationResult(String, String, String, String, String, Nullable&lt;TranslationModel&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Constructs an instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TranslationResult(string originalText, string translatedText, string detectedSourceLanguage, string specifiedSourceLanguage, string targetLanguage, TranslationModel? model, string modelName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">originalText</span></td>
+        <td><p>The original text.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">translatedText</span></td>
+        <td><p>The translated text.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">detectedSourceLanguage</span></td>
+        <td><p>The source language code detected by the server, if any.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">specifiedSourceLanguage</span></td>
+        <td><p>The source language code specified by the API caller.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetLanguage</span></td>
+        <td><p>The target language code.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.TranslationModel.html">TranslationModel</a>&gt;</td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The model used to perform the translation, if known.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">modelName</span></td>
+        <td><p>The name of the model used to perform the translation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Translation_V2_TranslationResult__ctor_System_String_System_String_System_String_System_String_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This constructor is for the benefit of testability, in case you wish to provide your own
+fake implementation of <a class="xref" href="Google.Cloud.Translation.V2.TranslationClient.html">TranslationClient</a>.</p>
+</div>
   <h3 id="properties">Properties
   </h3>
   <a id="Google_Cloud_Translation_V2_TranslationResult_DetectedSourceLanguage_" data-uid="Google.Cloud.Translation.V2.TranslationResult.DetectedSourceLanguage*"></a>
@@ -194,7 +261,8 @@ by the caller.</p>
   </table>
   <a id="Google_Cloud_Translation_V2_TranslationResult_Model_" data-uid="Google.Cloud.Translation.V2.TranslationResult.Model*"></a>
   <h4 id="Google_Cloud_Translation_V2_TranslationResult_Model" data-uid="Google.Cloud.Translation.V2.TranslationResult.Model">Model</h4>
-  <div class="markdown level1 summary"><p>The model used to perform the translation, if known.</p>
+  <div class="markdown level1 summary"><p>The model used to perform the translation, if known and available
+as one of the values in <a class="xref" href="Google.Cloud.Translation.V2.TranslationModel.html">TranslationModel</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -212,6 +280,32 @@ by the caller.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.TranslationModel.html">TranslationModel</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Translation_V2_TranslationResult_ModelName_" data-uid="Google.Cloud.Translation.V2.TranslationResult.ModelName*"></a>
+  <h4 id="Google_Cloud_Translation_V2_TranslationResult_ModelName" data-uid="Google.Cloud.Translation.V2.TranslationResult.ModelName">ModelName</h4>
+  <div class="markdown level1 summary"><p>The name of the model used to perform the translation. This may be present
+even if <a class="xref" href="Google.Cloud.Translation.V2.TranslationResult.html#Google_Cloud_Translation_V2_TranslationResult_Model">Model</a> is null, if a custom model name has been specified
+via <a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html">AdvancedTranslationClient</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ModelName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>

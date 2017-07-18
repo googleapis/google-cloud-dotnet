@@ -375,6 +375,11 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Jo
       </tr>
     </tbody>
   </table>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryJob_GetQueryResults_Google_Cloud_BigQuery_V2_GetQueryResultsOptions__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+This method will only return when the query has completed.
+</p>
+</div>
   <a id="Google_Cloud_BigQuery_V2_BigQueryJob_GetQueryResultsAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryJob.GetQueryResultsAsync*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryJob_GetQueryResultsAsync_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryJob.GetQueryResultsAsync(Google.Cloud.BigQuery.V2.GetQueryResultsOptions,System.Threading.CancellationToken)">GetQueryResultsAsync(GetQueryResultsOptions, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Asynchronously retrieves the result of this job, which must be a query job.
@@ -426,115 +431,11 @@ a <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryResults.html">BigQueryR
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_BigQuery_V2_BigQueryJob_PollQueryUntilCompleted_" data-uid="Google.Cloud.BigQuery.V2.BigQueryJob.PollQueryUntilCompleted*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_BigQueryJob_PollQueryUntilCompleted_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_Google_Api_Gax_PollSettings_" data-uid="Google.Cloud.BigQuery.V2.BigQueryJob.PollQueryUntilCompleted(Google.Cloud.BigQuery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings)">PollQueryUntilCompleted(GetQueryResultsOptions, PollSettings)</h4>
-  <div class="markdown level1 summary"><p>Polls this job for completion, which must be a query job.
-This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html">JobReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PollQueryUntilCompleted_Google_Apis_Bigquery_v2_Data_JobReference_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_Google_Api_Gax_PollSettings_">PollQueryUntilCompleted(JobReference, GetQueryResultsOptions, PollSettings)</a>.</p>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryJob_GetQueryResultsAsync_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+The task returned by this method will only complete when the query has completed.
+</p>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BigQueryResults PollQueryUntilCompleted(GetQueryResultsOptions options = null, PollSettings pollSettings = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Google.Cloud.BigQuery.V2.GetQueryResultsOptions.html">GetQueryResultsOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Google.Api.Gax.PollSettings.html">PollSettings</a></td>
-        <td><span class="parametername">pollSettings</span></td>
-        <td><p>The settings to control how often and long the job is fetched before timing out if it is still incomplete.
-May be null, in which case defaults will be supplied.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryResults.html">BigQueryResults</a></td>
-        <td><p>The completed job.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Google_Cloud_BigQuery_V2_BigQueryJob_PollQueryUntilCompletedAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryJob.PollQueryUntilCompletedAsync*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_BigQueryJob_PollQueryUntilCompletedAsync_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryJob.PollQueryUntilCompletedAsync(Google.Cloud.BigQuery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings,System.Threading.CancellationToken)">PollQueryUntilCompletedAsync(GetQueryResultsOptions, PollSettings, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Asynchronously polls this job for completion, which must be a query job.
-This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html">JobReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PollQueryUntilCompletedAsync_Google_Apis_Bigquery_v2_Data_JobReference_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_">PollQueryUntilCompletedAsync(JobReference, GetQueryResultsOptions, PollSettings, CancellationToken)</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryResults&gt; PollQueryUntilCompletedAsync(GetQueryResultsOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Google.Cloud.BigQuery.V2.GetQueryResultsOptions.html">GetQueryResultsOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Google.Api.Gax.PollSettings.html">PollSettings</a></td>
-        <td><span class="parametername">pollSettings</span></td>
-        <td><p>The settings to control how often and long the job is fetched before timing out if it is still incomplete.
-May be null, in which case defaults will be supplied.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>The token to monitor for cancellation requests.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryResults.html">BigQueryResults</a>&gt;</td>
-        <td><p>A task representing the asynchronous operation. When complete, the result is
-the completed job.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <a id="Google_Cloud_BigQuery_V2_BigQueryJob_PollUntilCompleted_" data-uid="Google.Cloud.BigQuery.V2.BigQueryJob.PollUntilCompleted*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryJob_PollUntilCompleted_Google_Cloud_BigQuery_V2_GetJobOptions_Google_Api_Gax_PollSettings_" data-uid="Google.Cloud.BigQuery.V2.BigQueryJob.PollUntilCompleted(Google.Cloud.BigQuery.V2.GetJobOptions,Google.Api.Gax.PollSettings)">PollUntilCompleted(GetJobOptions, PollSettings)</h4>
   <div class="markdown level1 summary"><p>Polls this job for completion.

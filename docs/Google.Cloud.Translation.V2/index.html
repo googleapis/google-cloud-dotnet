@@ -66,7 +66,10 @@ It wraps the <code>Google.Apis.Translate.v2</code> generated library, providing 
 <h1 id="installation">Installation</h1>
 <p>Install the <code>Google.Cloud.Translation.V2</code> package from NuGet. Add it to
 your project in the normal way (for example by right-clicking on the
-project in Visual Studio and choosing &quot;Manage NuGet Packages...&quot;).</p>
+project in Visual Studio and choosing &quot;Manage NuGet Packages...&quot;).
+Please ensure you enable pre-release packages(for example, in the
+Visual Studio NuGet user interface, check the &quot;Include prerelease&quot;
+box).</p>
 <h1 id="authentication">Authentication</h1>
 <p>When running on Google Cloud Platform, no action needs to be taken to authenticate.</p>
 <p>Otherwise, the simplest way of authenticating your API calls is to
@@ -78,7 +81,8 @@ supported to enable smooth migration from earlier client libraries; using
 OAuth2 as above is the preferred authentication mechanism.</p>
 <h1 id="getting-started">Getting started</h1>
 <p>Common operations are exposed via the
-<a href="api/Google.Cloud.Translation.V2.TranslationClient.html">TranslationClient</a> class.</p>
+<a href="api/Google.Cloud.Translation.V2.TranslationClient.html">TranslationClient</a> and 
+<a href="api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html">AdvancedTranslationClient</a> classes.</p>
 <h1 id="sample-code">Sample code</h1>
 <h2 id="translating-a-single-item-of-text">Translating a single item of text</h2>
 <pre><code class="lang-cs">TranslationClient client = TranslationClient.Create();
@@ -111,14 +115,25 @@ foreach (TranslationResult result in results)
 At the time of writing, one model is available in addition to &quot;base&quot;: Neural Machine Translation (NMT).
 If you don&#39;t explicitly specify a model to use, the service will pick one.</p>
 <p>See the <a href="https://cloud.google.com/translate/release-notes">API release notes</a> for on-going changes and new models.</p>
-<p>When specifying a model, it can either be selected as the model to use for all requests for that <code>TranslationClient</code> instance.</p>
+<p>Both client classes allow models to be specified, but in different ways. In each case, the model can be specified
+when creating the client, or on a per-request basis. The difference is that <code>TranslationClient</code> uses the <code>TranslationModel</code>
+enum, making it simple to specify commonly-used models, whereas <code>AdvancedTranslationClient</code> just uses strings for the models.</p>
+<p>For example, using a <code>TranslationClient</code>-wide model:</p>
 <pre><code class="lang-cs">TranslationClient client = TranslationClient.Create(model: TranslationModel.Base);
 TranslationResult result = client.TranslateText(&quot;It is raining.&quot;, LanguageCodes.French);
 Console.WriteLine($&quot;Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}&quot;);
-</code></pre><p>... or it can be specified on a per-request basis:</p>
+</code></pre><p><code>TranslationClient</code> specifying a model for a single operation:</p>
 <pre><code class="lang-cs">TranslationClient client = TranslationClient.Create();
 TranslationResult result = client.TranslateText(&quot;It is raining.&quot;, LanguageCodes.French,
     model: TranslationModel.Base);
+Console.WriteLine($&quot;Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}&quot;);
+</code></pre><p>Using an <code>AdvancedTranslationClient</code>-wide model:</p>
+<pre><code class="lang-cs">AdvancedTranslationClient client = AdvancedTranslationClient.Create(model: &quot;base&quot;);
+TranslationResult result = client.TranslateText(&quot;It is raining.&quot;, LanguageCodes.French);
+Console.WriteLine($&quot;Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}&quot;);
+</code></pre><p><code>AdvancedTranslationClient</code> specifying a model for a single operation:</p>
+<pre><code class="lang-cs">AdvancedTranslationClient client = AdvancedTranslationClient.Create();
+TranslationResult result = client.TranslateText(&quot;It is raining.&quot;, LanguageCodes.French, model: &quot;base&quot;);
 Console.WriteLine($&quot;Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}&quot;);
 </code></pre></article>
           </div>

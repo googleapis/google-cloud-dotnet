@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ExecuteQueryOptions
+    <title>Class JobCreationOptions
    | Google.Cloud.BigQuery.V2 </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ExecuteQueryOptions
+    <meta name="title" content="Class JobCreationOptions
    | Google.Cloud.BigQuery.V2 ">
     <meta name="generator" content="docfx 2.20.0.0">
     
@@ -67,19 +67,26 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Google.Cloud.BigQuery.V2.ExecuteQueryOptions">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.BigQuery.V2.JobCreationOptions">
   
   
-  <h1 id="Google_Cloud_BigQuery_V2_ExecuteQueryOptions" data-uid="Google.Cloud.BigQuery.V2.ExecuteQueryOptions" class="text-break">Class ExecuteQueryOptions
+  <h1 id="Google_Cloud_BigQuery_V2_JobCreationOptions" data-uid="Google.Cloud.BigQuery.V2.JobCreationOptions" class="text-break">Class JobCreationOptions
   </h1>
-  <div class="markdown level0 summary"><p>Options for <code>ExecuteQuery</code> operations.</p>
+  <div class="markdown level0 summary"><p>Base class for options for operations that create jobs.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ExecuteQueryOptions</span></div>
+    <div class="level1"><span class="xref">JobCreationOptions</span></div>
   </div>
+      <div class="level2"><a class="xref" href="Google.Cloud.BigQuery.V2.CreateCopyJobOptions.html">CreateCopyJobOptions</a></div>
+      <div class="level2"><a class="xref" href="Google.Cloud.BigQuery.V2.CreateExtractJobOptions.html">CreateExtractJobOptions</a></div>
+      <div class="level2"><a class="xref" href="Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html">CreateLoadJobOptions</a></div>
+      <div class="level2"><a class="xref" href="Google.Cloud.BigQuery.V2.QueryOptions.html">QueryOptions</a></div>
+      <div class="level2"><a class="xref" href="Google.Cloud.BigQuery.V2.UploadAvroOptions.html">UploadAvroOptions</a></div>
+      <div class="level2"><a class="xref" href="Google.Cloud.BigQuery.V2.UploadCsvOptions.html">UploadCsvOptions</a></div>
+      <div class="level2"><a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html">UploadJsonOptions</a></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -97,21 +104,21 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.BigQuery.V2.html">Google.Cloud.BigQuery.V2</a></h6>
   <h6><strong>Assembly</strong>: Google.Cloud.BigQuery.V2.dll</h6>
-  <h5 id="Google_Cloud_BigQuery_V2_ExecuteQueryOptions_syntax">Syntax</h5>
+  <h5 id="Google_Cloud_BigQuery_V2_JobCreationOptions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ExecuteQueryOptions</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class JobCreationOptions</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
-  <a id="Google_Cloud_BigQuery_V2_ExecuteQueryOptions_DefaultDataset_" data-uid="Google.Cloud.BigQuery.V2.ExecuteQueryOptions.DefaultDataset*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_ExecuteQueryOptions_DefaultDataset" data-uid="Google.Cloud.BigQuery.V2.ExecuteQueryOptions.DefaultDataset">DefaultDataset</h4>
-  <div class="markdown level1 summary"><p>The default dataset to assume for any unqualified table names in the query.
-If this is not set, all table names must be fully qualified.</p>
+  <a id="Google_Cloud_BigQuery_V2_JobCreationOptions_JobId_" data-uid="Google.Cloud.BigQuery.V2.JobCreationOptions.JobId*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_JobCreationOptions_JobId" data-uid="Google.Cloud.BigQuery.V2.JobCreationOptions.JobId">JobId</h4>
+  <div class="markdown level1 summary"><p>If specified, this ID will be used to create the job. It is an error to set both this property
+and <a class="xref" href="Google.Cloud.BigQuery.V2.JobCreationOptions.html#Google_Cloud_BigQuery_V2_JobCreationOptions_JobIdPrefix">JobIdPrefix</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DatasetReference DefaultDataset { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string JobId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,20 +130,21 @@ If this is not set, all table names must be fully qualified.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html">DatasetReference</a></td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_BigQuery_V2_ExecuteQueryOptions_PageSize_" data-uid="Google.Cloud.BigQuery.V2.ExecuteQueryOptions.PageSize*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_ExecuteQueryOptions_PageSize" data-uid="Google.Cloud.BigQuery.V2.ExecuteQueryOptions.PageSize">PageSize</h4>
-  <div class="markdown level1 summary"><p>The number of results to return per page. (This modifies the per-request page size;
-it does not affect the total number of results returned.)</p>
+  <a id="Google_Cloud_BigQuery_V2_JobCreationOptions_JobIdPrefix_" data-uid="Google.Cloud.BigQuery.V2.JobCreationOptions.JobIdPrefix*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_JobCreationOptions_JobIdPrefix" data-uid="Google.Cloud.BigQuery.V2.JobCreationOptions.JobIdPrefix">JobIdPrefix</h4>
+  <div class="markdown level1 summary"><p>If specified, use this prefix when generating a job ID. (Job IDs are always generated client-side
+by this library, to allow insertion to be retried where necessary.) It is an error to set both this
+property and <a class="xref" href="Google.Cloud.BigQuery.V2.JobCreationOptions.html#Google_Cloud_BigQuery_V2_JobCreationOptions_JobId">JobId</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ? PageSize { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string JobIdPrefix { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,19 +156,20 @@ it does not affect the total number of results returned.)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_BigQuery_V2_ExecuteQueryOptions_UseLegacySql_" data-uid="Google.Cloud.BigQuery.V2.ExecuteQueryOptions.UseLegacySql*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_ExecuteQueryOptions_UseLegacySql" data-uid="Google.Cloud.BigQuery.V2.ExecuteQueryOptions.UseLegacySql">UseLegacySql</h4>
-  <div class="markdown level1 summary"><p>Set to true to use legacy SQL instead of standard SQL.</p>
+  <a id="Google_Cloud_BigQuery_V2_JobCreationOptions_ProjectId_" data-uid="Google.Cloud.BigQuery.V2.JobCreationOptions.ProjectId*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_JobCreationOptions_ProjectId" data-uid="Google.Cloud.BigQuery.V2.JobCreationOptions.ProjectId">ProjectId</h4>
+  <div class="markdown level1 summary"><p>The ID of the project in which to create the job. If this is not set,
+it defaults to the project ID of the client.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool ? UseLegacySql { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string ProjectId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -172,32 +181,7 @@ it does not affect the total number of results returned.)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Google_Cloud_BigQuery_V2_ExecuteQueryOptions_UseQueryCache_" data-uid="Google.Cloud.BigQuery.V2.ExecuteQueryOptions.UseQueryCache*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_ExecuteQueryOptions_UseQueryCache" data-uid="Google.Cloud.BigQuery.V2.ExecuteQueryOptions.UseQueryCache">UseQueryCache</h4>
-  <div class="markdown level1 summary"><p>Whether to look for the result in the query cache.
-If not set, this is effectively true.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool ? UseQueryCache { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>

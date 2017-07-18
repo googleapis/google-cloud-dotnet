@@ -1,0 +1,788 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AdvancedTranslationClientImpl
+   | Google.Cloud.Translation.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AdvancedTranslationClientImpl
+   | Google.Cloud.Translation.V2 ">
+    <meta name="generator" content="docfx 2.20.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl">
+  
+  
+  <h1 id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl" class="text-break">Class AdvancedTranslationClientImpl
+  </h1>
+  <div class="markdown level0 summary"><p>Wrapper around <span class="xref">Google.Apis.Translate.v2.TranslateService</span> to provide simpler operations.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html">AdvancedTranslationClient</a></div>
+    <div class="level2"><span class="xref">AdvancedTranslationClientImpl</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_TranslateText_System_String_System_String_System_String_System_String_">AdvancedTranslationClient.TranslateText(String, String, String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_TranslateHtml_System_String_System_String_System_String_System_String_">AdvancedTranslationClient.TranslateHtml(String, String, String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_DetectLanguage_System_String_">AdvancedTranslationClient.DetectLanguage(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_TranslateTextAsync_System_String_System_String_System_String_System_String_System_Threading_CancellationToken_">AdvancedTranslationClient.TranslateTextAsync(String, String, String, String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_TranslateHtmlAsync_System_String_System_String_System_String_System_String_System_Threading_CancellationToken_">AdvancedTranslationClient.TranslateHtmlAsync(String, String, String, String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_DetectLanguageAsync_System_String_System_Threading_CancellationToken_">AdvancedTranslationClient.DetectLanguageAsync(String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_CreateAsync_Google_Apis_Auth_OAuth2_GoogleCredential_System_String_">AdvancedTranslationClient.CreateAsync(GoogleCredential, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_CreateFromApiKey_System_String_System_String_">AdvancedTranslationClient.CreateFromApiKey(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_Create_Google_Apis_Auth_OAuth2_GoogleCredential_System_String_">AdvancedTranslationClient.Create(GoogleCredential, String)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Translation.V2.html">Google.Cloud.Translation.V2</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Translation.V2.dll</h6>
+  <h5 id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class AdvancedTranslationClientImpl : AdvancedTranslationClient</code></pre>
+  </div>
+  <h5 id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This is the &quot;default&quot; implementation of <a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html">AdvancedTranslationClient</a>. Most client code
+should refer to <a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html">AdvancedTranslationClient</a>, creating instances with
+<a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_Create_Google_Apis_Auth_OAuth2_GoogleCredential_System_String_">Create(GoogleCredential, String)</a>,
+<a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_CreateAsync_Google_Apis_Auth_OAuth2_GoogleCredential_System_String_">CreateAsync(GoogleCredential, String)</a> and
+<a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_CreateFromApiKey_System_String_System_String_">CreateFromApiKey(String, String)</a>.
+The constructor of this class is public for the sake of constructor-based dependency injection.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl__ctor_" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.#ctor*"></a>
+  <h4 id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl__ctor_Google_Apis_Translate_v2_TranslateService_System_String_" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.#ctor(Google.Apis.Translate.v2.TranslateService,System.String)">AdvancedTranslationClientImpl(TranslateService, String)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new client wrapping the given <span class="xref">Google.Apis.Translate.v2.TranslateService</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AdvancedTranslationClientImpl(TranslateService service, string model = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Apis.Translate.v2.TranslateService</span></td>
+        <td><span class="parametername">service</span></td>
+        <td><p>The service to wrap. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The default translation model to use. Defaults to null, indicating that by default no model is specified in requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_ApplicationName_" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ApplicationName*"></a>
+  <h4 id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_ApplicationName" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ApplicationName">ApplicationName</h4>
+  <div class="markdown level1 summary"><p>The default application name used when creating a <span class="xref">Google.Apis.Translate.v2.TranslateService</span>.
+Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ApplicationName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_ApplicationName_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Most applications will never want to set this, which is why it&apos;s in this class rather than
+<a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html">AdvancedTranslationClient</a>.</p>
+</div>
+  <a id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_DefaultModel_" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DefaultModel*"></a>
+  <h4 id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_DefaultModel" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DefaultModel">DefaultModel</h4>
+  <div class="markdown level1 summary"><p>The default translation model used by this client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string DefaultModel { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_DefaultModel">AdvancedTranslationClient.DefaultModel</a></div>
+  <h5 id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_DefaultModel_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Each <code>Translate</code> method has an optional parameter to override this.</p>
+</div>
+  <a id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_Service_" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.Service*"></a>
+  <h4 id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_Service" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.Service">Service</h4>
+  <div class="markdown level1 summary"><p>The underlying translation service object used by this client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override TranslateService Service { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Apis.Translate.v2.TranslateService</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_Service">AdvancedTranslationClient.Service</a></div>
+  <h5 id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_Service_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The <a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html">AdvancedTranslationClient</a> class only provides convenience operations built on top of
+an existing service object. Any more complex operations which are not supported by this wrapper may wish
+to use the same service object as the wrapper, in order to take advantage of its configuration (for authentication,
+application naming etc).</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_DetectLanguages_" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DetectLanguages*"></a>
+  <h4 id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_DetectLanguages_System_Collections_Generic_IEnumerable_System_String__" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DetectLanguages(System.Collections.Generic.IEnumerable{System.String})">DetectLanguages(IEnumerable&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Detects the languages of the specified text items synchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IList&lt;Detection&gt; DetectLanguages(IEnumerable&lt;string&gt; textItems)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">textItems</span></td>
+        <td><p>The text items to detect the language of. Must not be null or contain null elements.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.Detection.html">Detection</a>&gt;</td>
+        <td><p>A list of detected languages. This will be the same size as <span class="paramref">textItems</span>, in the same order.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_DetectLanguages_System_Collections_Generic_IEnumerable_System_String__">AdvancedTranslationClient.DetectLanguages(IEnumerable&lt;String&gt;)</a></div>
+  <a id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_DetectLanguagesAsync_" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DetectLanguagesAsync*"></a>
+  <h4 id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_DetectLanguagesAsync_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DetectLanguagesAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">DetectLanguagesAsync(IEnumerable&lt;String&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Detects the languages of the specified text items asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;IList&lt;Detection&gt;&gt; DetectLanguagesAsync(IEnumerable&lt;string&gt; textItems, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">textItems</span></td>
+        <td><p>The text items to detect the language of. Must not be null or contain null elements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The token to monitor for cancellation requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.Detection.html">Detection</a>&gt;&gt;</td>
+        <td><p>A list of detected languages. This will be the same size as <span class="paramref">textItems</span>, in the same order.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_DetectLanguagesAsync_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_">AdvancedTranslationClient.DetectLanguagesAsync(IEnumerable&lt;String&gt;, CancellationToken)</a></div>
+  <a id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_ListLanguages_" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ListLanguages*"></a>
+  <h4 id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_ListLanguages_System_String_System_String_" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ListLanguages(System.String,System.String)">ListLanguages(String, String)</h4>
+  <div class="markdown level1 summary"><p>Lists the language supported by the Translate API synchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IList&lt;Language&gt; ListLanguages(string target = null, string model = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The target language in which to return the language names in the results,
+for display purposes. May be null, in which case only the language codes are returned.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The model to request languages for. May be null, in which case <a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_DefaultModel">DefaultModel</a> is
+used. If the empty string is specified, no model is requested, allowing the server to choose.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.Language.html">Language</a>&gt;</td>
+        <td><p>A list of supported languages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_ListLanguages_System_String_System_String_">AdvancedTranslationClient.ListLanguages(String, String)</a></div>
+  <a id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_ListLanguagesAsync_" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ListLanguagesAsync*"></a>
+  <h4 id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_ListLanguagesAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ListLanguagesAsync(System.String,System.String,System.Threading.CancellationToken)">ListLanguagesAsync(String, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Lists the language supported by the Translate API asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;IList&lt;Language&gt;&gt; ListLanguagesAsync(string target = null, string model = null, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The target language in which to return the language names in the results,
+for display purposes. May be null, in which case only the language codes are returned.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The model to request languages for. May be null, in which case <a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_DefaultModel">DefaultModel</a> is
+used. If the empty string is specified, no model is requested, allowing the server to choose.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The token to monitor for cancellation requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.Language.html">Language</a>&gt;&gt;</td>
+        <td><p>A list of supported languages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_ListLanguagesAsync_System_String_System_String_System_Threading_CancellationToken_">AdvancedTranslationClient.ListLanguagesAsync(String, String, CancellationToken)</a></div>
+  <a id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_TranslateHtml_" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateHtml*"></a>
+  <h4 id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_TranslateHtml_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateHtml(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String)">TranslateHtml(IEnumerable&lt;String&gt;, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Translates multiple items of HTML synchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IList&lt;TranslationResult&gt; TranslateHtml(IEnumerable&lt;string&gt; htmlItems, string targetLanguage, string sourceLanguage = null, string model = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">htmlItems</span></td>
+        <td><p>The HTML strings to translate. Must not be null or contain null elements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetLanguage</span></td>
+        <td><p>The code for the language to translate into. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceLanguage</span></td>
+        <td><p>The code for the language to translate from. May be null, in which case the server
+will detect the source language.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The model to request for translation. May be null, in which case <a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_DefaultModel">DefaultModel</a> is
+used. If the empty string is specified, no model is requested, allowing the server to choose.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.TranslationResult.html">TranslationResult</a>&gt;</td>
+        <td><p>A list of translations. This will be the same size as <span class="paramref">htmlItems</span>, in the same order.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_TranslateHtml_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_">AdvancedTranslationClient.TranslateHtml(IEnumerable&lt;String&gt;, String, String, String)</a></div>
+  <h5 id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_TranslateHtml_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>See the <a href="https://cloud.google.com/translate/markup">Translation API documentation</a> for more details
+on how to translate HTML and the terms of service.</p>
+</div>
+  <a id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_TranslateHtmlAsync_" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateHtmlAsync*"></a>
+  <h4 id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_TranslateHtmlAsync_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateHtmlAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Threading.CancellationToken)">TranslateHtmlAsync(IEnumerable&lt;String&gt;, String, String, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Translates multiple items of HTML asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;IList&lt;TranslationResult&gt;&gt; TranslateHtmlAsync(IEnumerable&lt;string&gt; htmlItems, string targetLanguage, string sourceLanguage = null, string model = null, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">htmlItems</span></td>
+        <td><p>The HTML strings to translate. Must not be null or contain null elements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetLanguage</span></td>
+        <td><p>The code for the language to translate into. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceLanguage</span></td>
+        <td><p>The code for the language to translate from. May be null, in which case the server
+will detect the source language.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The model to request for translation. May be null, in which case <a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_DefaultModel">DefaultModel</a> is
+used. If the empty string is specified, no model is requested, allowing the server to choose.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The token to monitor for cancellation requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.TranslationResult.html">TranslationResult</a>&gt;&gt;</td>
+        <td><p>A list of translations. This will be the same size as <span class="paramref">htmlItems</span>, in the same order.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_TranslateHtmlAsync_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_System_Threading_CancellationToken_">AdvancedTranslationClient.TranslateHtmlAsync(IEnumerable&lt;String&gt;, String, String, String, CancellationToken)</a></div>
+  <h5 id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_TranslateHtmlAsync_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_System_Threading_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>See the <a href="https://cloud.google.com/translate/markup">Translation API documentation</a> for more details
+on how to translate HTML and the terms of service.</p>
+</div>
+  <a id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_TranslateText_" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateText*"></a>
+  <h4 id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_TranslateText_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateText(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String)">TranslateText(IEnumerable&lt;String&gt;, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Translates multiple items of text synchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IList&lt;TranslationResult&gt; TranslateText(IEnumerable&lt;string&gt; textItems, string targetLanguage, string sourceLanguage = null, string model = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">textItems</span></td>
+        <td><p>The text strings to translate. Must not be null or contain null elements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetLanguage</span></td>
+        <td><p>The code for the language to translate into. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceLanguage</span></td>
+        <td><p>The code for the language to translate from. May be null, in which case the server
+will detect the source language.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The model to request for translation. May be null, in which case <a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_DefaultModel">DefaultModel</a> is
+used. If the empty string is specified, no model is requested, allowing the server to choose.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.TranslationResult.html">TranslationResult</a>&gt;</td>
+        <td><p>A list of translations. This will be the same size as <span class="paramref">textItems</span>, in the same order.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_TranslateText_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_">AdvancedTranslationClient.TranslateText(IEnumerable&lt;String&gt;, String, String, String)</a></div>
+  <a id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_TranslateTextAsync_" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateTextAsync*"></a>
+  <h4 id="Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_TranslateTextAsync_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateTextAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Threading.CancellationToken)">TranslateTextAsync(IEnumerable&lt;String&gt;, String, String, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Translates multiple items of text asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;IList&lt;TranslationResult&gt;&gt; TranslateTextAsync(IEnumerable&lt;string&gt; textItems, string targetLanguage, string sourceLanguage = null, string model = null, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">textItems</span></td>
+        <td><p>The text strings to translate. Must not be null or contain null elements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetLanguage</span></td>
+        <td><p>The code for the language to translate into. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceLanguage</span></td>
+        <td><p>The code for the language to translate from. May be null, in which case the server
+will detect the source language.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The model to request for translation. May be null, in which case <a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_DefaultModel">DefaultModel</a> is
+used. If the empty string is specified, no model is requested, allowing the server to choose.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The token to monitor for cancellation requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.TranslationResult.html">TranslationResult</a>&gt;&gt;</td>
+        <td><p>A list of translations. This will be the same size as <span class="paramref">textItems</span>, in the same order.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_TranslateTextAsync_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_System_Threading_CancellationToken_">AdvancedTranslationClient.TranslateTextAsync(IEnumerable&lt;String&gt;, String, String, String, CancellationToken)</a></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

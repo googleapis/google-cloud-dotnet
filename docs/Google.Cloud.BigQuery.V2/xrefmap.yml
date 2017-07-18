@@ -10322,36 +10322,36 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJobAsync
   fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJobAsync
   nameWithType: BigQueryClient.CreateLoadJobAsync
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.CreateQueryJobOptions)
-  name: CreateQueryJob(BigQueryCommand, CreateQueryJobOptions)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJob_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_CreateQueryJobOptions_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.CreateQueryJobOptions)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob(Google.Cloud.BigQuery.V2.BigQueryCommand, Google.Cloud.BigQuery.V2.CreateQueryJobOptions)
-  nameWithType: BigQueryClient.CreateQueryJob(BigQueryCommand, CreateQueryJobOptions)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob(System.String,Google.Cloud.BigQuery.V2.CreateQueryJobOptions)
-  name: CreateQueryJob(String, CreateQueryJobOptions)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJob_System_String_Google_Cloud_BigQuery_V2_CreateQueryJobOptions_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob(System.String,Google.Cloud.BigQuery.V2.CreateQueryJobOptions)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob(System.String, Google.Cloud.BigQuery.V2.CreateQueryJobOptions)
-  nameWithType: BigQueryClient.CreateQueryJob(String, CreateQueryJobOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.QueryOptions)
+  name: CreateQueryJob(BigQueryCommand, QueryOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJob_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_QueryOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.QueryOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob(Google.Cloud.BigQuery.V2.BigQueryCommand, Google.Cloud.BigQuery.V2.QueryOptions)
+  nameWithType: BigQueryClient.CreateQueryJob(BigQueryCommand, QueryOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob(System.String,Google.Cloud.BigQuery.V2.QueryOptions)
+  name: CreateQueryJob(String, QueryOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJob_System_String_Google_Cloud_BigQuery_V2_QueryOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob(System.String,Google.Cloud.BigQuery.V2.QueryOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob(System.String, Google.Cloud.BigQuery.V2.QueryOptions)
+  nameWithType: BigQueryClient.CreateQueryJob(String, QueryOptions)
 - uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob*
   name: CreateQueryJob
   href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJob_
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob
   fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob
   nameWithType: BigQueryClient.CreateQueryJob
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.CreateQueryJobOptions,System.Threading.CancellationToken)
-  name: CreateQueryJobAsync(BigQueryCommand, CreateQueryJobOptions, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJobAsync_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_CreateQueryJobOptions_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.CreateQueryJobOptions,System.Threading.CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync(Google.Cloud.BigQuery.V2.BigQueryCommand, Google.Cloud.BigQuery.V2.CreateQueryJobOptions, System.Threading.CancellationToken)
-  nameWithType: BigQueryClient.CreateQueryJobAsync(BigQueryCommand, CreateQueryJobOptions, CancellationToken)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync(System.String,Google.Cloud.BigQuery.V2.CreateQueryJobOptions,System.Threading.CancellationToken)
-  name: CreateQueryJobAsync(String, CreateQueryJobOptions, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJobAsync_System_String_Google_Cloud_BigQuery_V2_CreateQueryJobOptions_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync(System.String,Google.Cloud.BigQuery.V2.CreateQueryJobOptions,System.Threading.CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync(System.String, Google.Cloud.BigQuery.V2.CreateQueryJobOptions, System.Threading.CancellationToken)
-  nameWithType: BigQueryClient.CreateQueryJobAsync(String, CreateQueryJobOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.QueryOptions,System.Threading.CancellationToken)
+  name: CreateQueryJobAsync(BigQueryCommand, QueryOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJobAsync_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_QueryOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.QueryOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync(Google.Cloud.BigQuery.V2.BigQueryCommand, Google.Cloud.BigQuery.V2.QueryOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.CreateQueryJobAsync(BigQueryCommand, QueryOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync(System.String,Google.Cloud.BigQuery.V2.QueryOptions,System.Threading.CancellationToken)
+  name: CreateQueryJobAsync(String, QueryOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJobAsync_System_String_Google_Cloud_BigQuery_V2_QueryOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync(System.String,Google.Cloud.BigQuery.V2.QueryOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync(System.String, Google.Cloud.BigQuery.V2.QueryOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.CreateQueryJobAsync(String, QueryOptions, CancellationToken)
 - uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJobAsync*
   name: CreateQueryJobAsync
   href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJobAsync_
@@ -10502,36 +10502,36 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.DeleteTableAsync
   fullName: Google.Cloud.BigQuery.V2.BigQueryClient.DeleteTableAsync
   nameWithType: BigQueryClient.DeleteTableAsync
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.ExecuteQueryOptions)
-  name: ExecuteQuery(BigQueryCommand, ExecuteQueryOptions)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_ExecuteQueryOptions_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.ExecuteQueryOptions)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery(Google.Cloud.BigQuery.V2.BigQueryCommand, Google.Cloud.BigQuery.V2.ExecuteQueryOptions)
-  nameWithType: BigQueryClient.ExecuteQuery(BigQueryCommand, ExecuteQueryOptions)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery(System.String,Google.Cloud.BigQuery.V2.ExecuteQueryOptions)
-  name: ExecuteQuery(String, ExecuteQueryOptions)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_System_String_Google_Cloud_BigQuery_V2_ExecuteQueryOptions_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery(System.String,Google.Cloud.BigQuery.V2.ExecuteQueryOptions)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery(System.String, Google.Cloud.BigQuery.V2.ExecuteQueryOptions)
-  nameWithType: BigQueryClient.ExecuteQuery(String, ExecuteQueryOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.QueryOptions,Google.Cloud.BigQuery.V2.GetQueryResultsOptions)
+  name: ExecuteQuery(BigQueryCommand, QueryOptions, GetQueryResultsOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.QueryOptions,Google.Cloud.BigQuery.V2.GetQueryResultsOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery(Google.Cloud.BigQuery.V2.BigQueryCommand, Google.Cloud.BigQuery.V2.QueryOptions, Google.Cloud.BigQuery.V2.GetQueryResultsOptions)
+  nameWithType: BigQueryClient.ExecuteQuery(BigQueryCommand, QueryOptions, GetQueryResultsOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery(System.String,Google.Cloud.BigQuery.V2.QueryOptions,Google.Cloud.BigQuery.V2.GetQueryResultsOptions)
+  name: ExecuteQuery(String, QueryOptions, GetQueryResultsOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_System_String_Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery(System.String,Google.Cloud.BigQuery.V2.QueryOptions,Google.Cloud.BigQuery.V2.GetQueryResultsOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery(System.String, Google.Cloud.BigQuery.V2.QueryOptions, Google.Cloud.BigQuery.V2.GetQueryResultsOptions)
+  nameWithType: BigQueryClient.ExecuteQuery(String, QueryOptions, GetQueryResultsOptions)
 - uid: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery*
   name: ExecuteQuery
   href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery
   fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQuery
   nameWithType: BigQueryClient.ExecuteQuery
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.ExecuteQueryOptions,System.Threading.CancellationToken)
-  name: ExecuteQueryAsync(BigQueryCommand, ExecuteQueryOptions, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_ExecuteQueryOptions_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.ExecuteQueryOptions,System.Threading.CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync(Google.Cloud.BigQuery.V2.BigQueryCommand, Google.Cloud.BigQuery.V2.ExecuteQueryOptions, System.Threading.CancellationToken)
-  nameWithType: BigQueryClient.ExecuteQueryAsync(BigQueryCommand, ExecuteQueryOptions, CancellationToken)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync(System.String,Google.Cloud.BigQuery.V2.ExecuteQueryOptions,System.Threading.CancellationToken)
-  name: ExecuteQueryAsync(String, ExecuteQueryOptions, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_System_String_Google_Cloud_BigQuery_V2_ExecuteQueryOptions_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync(System.String,Google.Cloud.BigQuery.V2.ExecuteQueryOptions,System.Threading.CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync(System.String, Google.Cloud.BigQuery.V2.ExecuteQueryOptions, System.Threading.CancellationToken)
-  nameWithType: BigQueryClient.ExecuteQueryAsync(String, ExecuteQueryOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.QueryOptions,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,System.Threading.CancellationToken)
+  name: ExecuteQueryAsync(BigQueryCommand, QueryOptions, GetQueryResultsOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.QueryOptions,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync(Google.Cloud.BigQuery.V2.BigQueryCommand, Google.Cloud.BigQuery.V2.QueryOptions, Google.Cloud.BigQuery.V2.GetQueryResultsOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.ExecuteQueryAsync(BigQueryCommand, QueryOptions, GetQueryResultsOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync(System.String,Google.Cloud.BigQuery.V2.QueryOptions,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,System.Threading.CancellationToken)
+  name: ExecuteQueryAsync(String, QueryOptions, GetQueryResultsOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_System_String_Google_Cloud_BigQuery_V2_QueryOptions_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync(System.String,Google.Cloud.BigQuery.V2.QueryOptions,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync(System.String, Google.Cloud.BigQuery.V2.QueryOptions, Google.Cloud.BigQuery.V2.GetQueryResultsOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.ExecuteQueryAsync(String, QueryOptions, GetQueryResultsOptions, CancellationToken)
 - uid: Google.Cloud.BigQuery.V2.BigQueryClient.ExecuteQueryAsync*
   name: ExecuteQueryAsync
   href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_
@@ -11324,54 +11324,6 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.PollJobUntilCompletedAsync
   fullName: Google.Cloud.BigQuery.V2.BigQueryClient.PollJobUntilCompletedAsync
   nameWithType: BigQueryClient.PollJobUntilCompletedAsync
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompleted(Google.Apis.Bigquery.v2.Data.JobReference,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings)
-  name: PollQueryUntilCompleted(JobReference, GetQueryResultsOptions, PollSettings)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PollQueryUntilCompleted_Google_Apis_Bigquery_v2_Data_JobReference_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_Google_Api_Gax_PollSettings_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompleted(Google.Apis.Bigquery.v2.Data.JobReference,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompleted(Google.Apis.Bigquery.v2.Data.JobReference, Google.Cloud.BigQuery.V2.GetQueryResultsOptions, Google.Api.Gax.PollSettings)
-  nameWithType: BigQueryClient.PollQueryUntilCompleted(JobReference, GetQueryResultsOptions, PollSettings)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompleted(System.String,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings)
-  name: PollQueryUntilCompleted(String, GetQueryResultsOptions, PollSettings)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PollQueryUntilCompleted_System_String_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_Google_Api_Gax_PollSettings_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompleted(System.String,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompleted(System.String, Google.Cloud.BigQuery.V2.GetQueryResultsOptions, Google.Api.Gax.PollSettings)
-  nameWithType: BigQueryClient.PollQueryUntilCompleted(String, GetQueryResultsOptions, PollSettings)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompleted(System.String,System.String,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings)
-  name: PollQueryUntilCompleted(String, String, GetQueryResultsOptions, PollSettings)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PollQueryUntilCompleted_System_String_System_String_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_Google_Api_Gax_PollSettings_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompleted(System.String,System.String,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompleted(System.String, System.String, Google.Cloud.BigQuery.V2.GetQueryResultsOptions, Google.Api.Gax.PollSettings)
-  nameWithType: BigQueryClient.PollQueryUntilCompleted(String, String, GetQueryResultsOptions, PollSettings)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompleted*
-  name: PollQueryUntilCompleted
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PollQueryUntilCompleted_
-  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompleted
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompleted
-  nameWithType: BigQueryClient.PollQueryUntilCompleted
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompletedAsync(Google.Apis.Bigquery.v2.Data.JobReference,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings,System.Threading.CancellationToken)
-  name: PollQueryUntilCompletedAsync(JobReference, GetQueryResultsOptions, PollSettings, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PollQueryUntilCompletedAsync_Google_Apis_Bigquery_v2_Data_JobReference_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompletedAsync(Google.Apis.Bigquery.v2.Data.JobReference,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings,System.Threading.CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompletedAsync(Google.Apis.Bigquery.v2.Data.JobReference, Google.Cloud.BigQuery.V2.GetQueryResultsOptions, Google.Api.Gax.PollSettings, System.Threading.CancellationToken)
-  nameWithType: BigQueryClient.PollQueryUntilCompletedAsync(JobReference, GetQueryResultsOptions, PollSettings, CancellationToken)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompletedAsync(System.String,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings,System.Threading.CancellationToken)
-  name: PollQueryUntilCompletedAsync(String, GetQueryResultsOptions, PollSettings, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PollQueryUntilCompletedAsync_System_String_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompletedAsync(System.String,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings,System.Threading.CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompletedAsync(System.String, Google.Cloud.BigQuery.V2.GetQueryResultsOptions, Google.Api.Gax.PollSettings, System.Threading.CancellationToken)
-  nameWithType: BigQueryClient.PollQueryUntilCompletedAsync(String, GetQueryResultsOptions, PollSettings, CancellationToken)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompletedAsync(System.String,System.String,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings,System.Threading.CancellationToken)
-  name: PollQueryUntilCompletedAsync(String, String, GetQueryResultsOptions, PollSettings, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PollQueryUntilCompletedAsync_System_String_System_String_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompletedAsync(System.String,System.String,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings,System.Threading.CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompletedAsync(System.String, System.String, Google.Cloud.BigQuery.V2.GetQueryResultsOptions, Google.Api.Gax.PollSettings, System.Threading.CancellationToken)
-  nameWithType: BigQueryClient.PollQueryUntilCompletedAsync(String, String, GetQueryResultsOptions, PollSettings, CancellationToken)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompletedAsync*
-  name: PollQueryUntilCompletedAsync
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PollQueryUntilCompletedAsync_
-  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompletedAsync
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.PollQueryUntilCompletedAsync
-  nameWithType: BigQueryClient.PollQueryUntilCompletedAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryClient.ProjectId
   name: ProjectId
   href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ProjectId
@@ -11768,36 +11720,36 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateLoadJobAsync
   fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateLoadJobAsync
   nameWithType: BigQueryClientImpl.CreateLoadJobAsync
-- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.CreateQueryJobOptions)
-  name: CreateQueryJob(BigQueryCommand, CreateQueryJobOptions)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJob_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_CreateQueryJobOptions_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.CreateQueryJobOptions)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob(Google.Cloud.BigQuery.V2.BigQueryCommand, Google.Cloud.BigQuery.V2.CreateQueryJobOptions)
-  nameWithType: BigQueryClientImpl.CreateQueryJob(BigQueryCommand, CreateQueryJobOptions)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob(System.String,Google.Cloud.BigQuery.V2.CreateQueryJobOptions)
-  name: CreateQueryJob(String, CreateQueryJobOptions)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJob_System_String_Google_Cloud_BigQuery_V2_CreateQueryJobOptions_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob(System.String,Google.Cloud.BigQuery.V2.CreateQueryJobOptions)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob(System.String, Google.Cloud.BigQuery.V2.CreateQueryJobOptions)
-  nameWithType: BigQueryClientImpl.CreateQueryJob(String, CreateQueryJobOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.QueryOptions)
+  name: CreateQueryJob(BigQueryCommand, QueryOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJob_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_QueryOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.QueryOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob(Google.Cloud.BigQuery.V2.BigQueryCommand, Google.Cloud.BigQuery.V2.QueryOptions)
+  nameWithType: BigQueryClientImpl.CreateQueryJob(BigQueryCommand, QueryOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob(System.String,Google.Cloud.BigQuery.V2.QueryOptions)
+  name: CreateQueryJob(String, QueryOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJob_System_String_Google_Cloud_BigQuery_V2_QueryOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob(System.String,Google.Cloud.BigQuery.V2.QueryOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob(System.String, Google.Cloud.BigQuery.V2.QueryOptions)
+  nameWithType: BigQueryClientImpl.CreateQueryJob(String, QueryOptions)
 - uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob*
   name: CreateQueryJob
   href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJob_
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob
   fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob
   nameWithType: BigQueryClientImpl.CreateQueryJob
-- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.CreateQueryJobOptions,System.Threading.CancellationToken)
-  name: CreateQueryJobAsync(BigQueryCommand, CreateQueryJobOptions, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJobAsync_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_CreateQueryJobOptions_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.CreateQueryJobOptions,System.Threading.CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync(Google.Cloud.BigQuery.V2.BigQueryCommand, Google.Cloud.BigQuery.V2.CreateQueryJobOptions, System.Threading.CancellationToken)
-  nameWithType: BigQueryClientImpl.CreateQueryJobAsync(BigQueryCommand, CreateQueryJobOptions, CancellationToken)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync(System.String,Google.Cloud.BigQuery.V2.CreateQueryJobOptions,System.Threading.CancellationToken)
-  name: CreateQueryJobAsync(String, CreateQueryJobOptions, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJobAsync_System_String_Google_Cloud_BigQuery_V2_CreateQueryJobOptions_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync(System.String,Google.Cloud.BigQuery.V2.CreateQueryJobOptions,System.Threading.CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync(System.String, Google.Cloud.BigQuery.V2.CreateQueryJobOptions, System.Threading.CancellationToken)
-  nameWithType: BigQueryClientImpl.CreateQueryJobAsync(String, CreateQueryJobOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.QueryOptions,System.Threading.CancellationToken)
+  name: CreateQueryJobAsync(BigQueryCommand, QueryOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJobAsync_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_QueryOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.QueryOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync(Google.Cloud.BigQuery.V2.BigQueryCommand, Google.Cloud.BigQuery.V2.QueryOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClientImpl.CreateQueryJobAsync(BigQueryCommand, QueryOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync(System.String,Google.Cloud.BigQuery.V2.QueryOptions,System.Threading.CancellationToken)
+  name: CreateQueryJobAsync(String, QueryOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJobAsync_System_String_Google_Cloud_BigQuery_V2_QueryOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync(System.String,Google.Cloud.BigQuery.V2.QueryOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync(System.String, Google.Cloud.BigQuery.V2.QueryOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClientImpl.CreateQueryJobAsync(String, QueryOptions, CancellationToken)
 - uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJobAsync*
   name: CreateQueryJobAsync
   href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJobAsync_
@@ -11876,42 +11828,6 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.DeleteTableAsync
   fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.DeleteTableAsync
   nameWithType: BigQueryClientImpl.DeleteTableAsync
-- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ExecuteQuery(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.ExecuteQueryOptions)
-  name: ExecuteQuery(BigQueryCommand, ExecuteQueryOptions)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_ExecuteQuery_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_ExecuteQueryOptions_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.ExecuteQuery(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.ExecuteQueryOptions)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ExecuteQuery(Google.Cloud.BigQuery.V2.BigQueryCommand, Google.Cloud.BigQuery.V2.ExecuteQueryOptions)
-  nameWithType: BigQueryClientImpl.ExecuteQuery(BigQueryCommand, ExecuteQueryOptions)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ExecuteQuery(System.String,Google.Cloud.BigQuery.V2.ExecuteQueryOptions)
-  name: ExecuteQuery(String, ExecuteQueryOptions)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_ExecuteQuery_System_String_Google_Cloud_BigQuery_V2_ExecuteQueryOptions_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.ExecuteQuery(System.String,Google.Cloud.BigQuery.V2.ExecuteQueryOptions)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ExecuteQuery(System.String, Google.Cloud.BigQuery.V2.ExecuteQueryOptions)
-  nameWithType: BigQueryClientImpl.ExecuteQuery(String, ExecuteQueryOptions)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ExecuteQuery*
-  name: ExecuteQuery
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_ExecuteQuery_
-  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.ExecuteQuery
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ExecuteQuery
-  nameWithType: BigQueryClientImpl.ExecuteQuery
-- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ExecuteQueryAsync(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.ExecuteQueryOptions,System.Threading.CancellationToken)
-  name: ExecuteQueryAsync(BigQueryCommand, ExecuteQueryOptions, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_ExecuteQueryAsync_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_ExecuteQueryOptions_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.ExecuteQueryAsync(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.ExecuteQueryOptions,System.Threading.CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ExecuteQueryAsync(Google.Cloud.BigQuery.V2.BigQueryCommand, Google.Cloud.BigQuery.V2.ExecuteQueryOptions, System.Threading.CancellationToken)
-  nameWithType: BigQueryClientImpl.ExecuteQueryAsync(BigQueryCommand, ExecuteQueryOptions, CancellationToken)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ExecuteQueryAsync(System.String,Google.Cloud.BigQuery.V2.ExecuteQueryOptions,System.Threading.CancellationToken)
-  name: ExecuteQueryAsync(String, ExecuteQueryOptions, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_ExecuteQueryAsync_System_String_Google_Cloud_BigQuery_V2_ExecuteQueryOptions_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.ExecuteQueryAsync(System.String,Google.Cloud.BigQuery.V2.ExecuteQueryOptions,System.Threading.CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ExecuteQueryAsync(System.String, Google.Cloud.BigQuery.V2.ExecuteQueryOptions, System.Threading.CancellationToken)
-  nameWithType: BigQueryClientImpl.ExecuteQueryAsync(String, ExecuteQueryOptions, CancellationToken)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ExecuteQueryAsync*
-  name: ExecuteQueryAsync
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_ExecuteQueryAsync_
-  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.ExecuteQueryAsync
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ExecuteQueryAsync
-  nameWithType: BigQueryClientImpl.ExecuteQueryAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.GetDataset(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Cloud.BigQuery.V2.GetDatasetOptions)
   name: GetDataset(DatasetReference, GetDatasetOptions)
   href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_GetDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Cloud_BigQuery_V2_GetDatasetOptions_
@@ -12230,30 +12146,6 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.PollJobUntilCompletedAsync
   fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.PollJobUntilCompletedAsync
   nameWithType: BigQueryClientImpl.PollJobUntilCompletedAsync
-- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.PollQueryUntilCompleted(Google.Apis.Bigquery.v2.Data.JobReference,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings)
-  name: PollQueryUntilCompleted(JobReference, GetQueryResultsOptions, PollSettings)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_PollQueryUntilCompleted_Google_Apis_Bigquery_v2_Data_JobReference_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_Google_Api_Gax_PollSettings_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.PollQueryUntilCompleted(Google.Apis.Bigquery.v2.Data.JobReference,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.PollQueryUntilCompleted(Google.Apis.Bigquery.v2.Data.JobReference, Google.Cloud.BigQuery.V2.GetQueryResultsOptions, Google.Api.Gax.PollSettings)
-  nameWithType: BigQueryClientImpl.PollQueryUntilCompleted(JobReference, GetQueryResultsOptions, PollSettings)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.PollQueryUntilCompleted*
-  name: PollQueryUntilCompleted
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_PollQueryUntilCompleted_
-  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.PollQueryUntilCompleted
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.PollQueryUntilCompleted
-  nameWithType: BigQueryClientImpl.PollQueryUntilCompleted
-- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.PollQueryUntilCompletedAsync(Google.Apis.Bigquery.v2.Data.JobReference,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings,System.Threading.CancellationToken)
-  name: PollQueryUntilCompletedAsync(JobReference, GetQueryResultsOptions, PollSettings, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_PollQueryUntilCompletedAsync_Google_Apis_Bigquery_v2_Data_JobReference_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.PollQueryUntilCompletedAsync(Google.Apis.Bigquery.v2.Data.JobReference,Google.Cloud.BigQuery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings,System.Threading.CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.PollQueryUntilCompletedAsync(Google.Apis.Bigquery.v2.Data.JobReference, Google.Cloud.BigQuery.V2.GetQueryResultsOptions, Google.Api.Gax.PollSettings, System.Threading.CancellationToken)
-  nameWithType: BigQueryClientImpl.PollQueryUntilCompletedAsync(JobReference, GetQueryResultsOptions, PollSettings, CancellationToken)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.PollQueryUntilCompletedAsync*
-  name: PollQueryUntilCompletedAsync
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_PollQueryUntilCompletedAsync_
-  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.PollQueryUntilCompletedAsync
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.PollQueryUntilCompletedAsync
-  nameWithType: BigQueryClientImpl.PollQueryUntilCompletedAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ProjectId
   name: ProjectId
   href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_ProjectId
@@ -12936,30 +12828,6 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryJob.GetQueryResultsAsync
   fullName: Google.Cloud.BigQuery.V2.BigQueryJob.GetQueryResultsAsync
   nameWithType: BigQueryJob.GetQueryResultsAsync
-- uid: Google.Cloud.BigQuery.V2.BigQueryJob.PollQueryUntilCompleted(Google.Cloud.BigQuery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings)
-  name: PollQueryUntilCompleted(GetQueryResultsOptions, PollSettings)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryJob.html#Google_Cloud_BigQuery_V2_BigQueryJob_PollQueryUntilCompleted_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_Google_Api_Gax_PollSettings_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryJob.PollQueryUntilCompleted(Google.Cloud.BigQuery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryJob.PollQueryUntilCompleted(Google.Cloud.BigQuery.V2.GetQueryResultsOptions, Google.Api.Gax.PollSettings)
-  nameWithType: BigQueryJob.PollQueryUntilCompleted(GetQueryResultsOptions, PollSettings)
-- uid: Google.Cloud.BigQuery.V2.BigQueryJob.PollQueryUntilCompleted*
-  name: PollQueryUntilCompleted
-  href: api/Google.Cloud.BigQuery.V2.BigQueryJob.html#Google_Cloud_BigQuery_V2_BigQueryJob_PollQueryUntilCompleted_
-  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryJob.PollQueryUntilCompleted
-  fullName: Google.Cloud.BigQuery.V2.BigQueryJob.PollQueryUntilCompleted
-  nameWithType: BigQueryJob.PollQueryUntilCompleted
-- uid: Google.Cloud.BigQuery.V2.BigQueryJob.PollQueryUntilCompletedAsync(Google.Cloud.BigQuery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings,System.Threading.CancellationToken)
-  name: PollQueryUntilCompletedAsync(GetQueryResultsOptions, PollSettings, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryJob.html#Google_Cloud_BigQuery_V2_BigQueryJob_PollQueryUntilCompletedAsync_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryJob.PollQueryUntilCompletedAsync(Google.Cloud.BigQuery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings,System.Threading.CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryJob.PollQueryUntilCompletedAsync(Google.Cloud.BigQuery.V2.GetQueryResultsOptions, Google.Api.Gax.PollSettings, System.Threading.CancellationToken)
-  nameWithType: BigQueryJob.PollQueryUntilCompletedAsync(GetQueryResultsOptions, PollSettings, CancellationToken)
-- uid: Google.Cloud.BigQuery.V2.BigQueryJob.PollQueryUntilCompletedAsync*
-  name: PollQueryUntilCompletedAsync
-  href: api/Google.Cloud.BigQuery.V2.BigQueryJob.html#Google_Cloud_BigQuery_V2_BigQueryJob_PollQueryUntilCompletedAsync_
-  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryJob.PollQueryUntilCompletedAsync
-  fullName: Google.Cloud.BigQuery.V2.BigQueryJob.PollQueryUntilCompletedAsync
-  nameWithType: BigQueryJob.PollQueryUntilCompletedAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryJob.PollUntilCompleted(Google.Cloud.BigQuery.V2.GetJobOptions,Google.Api.Gax.PollSettings)
   name: PollUntilCompleted(GetJobOptions, PollSettings)
   href: api/Google.Cloud.BigQuery.V2.BigQueryJob.html#Google_Cloud_BigQuery_V2_BigQueryJob_PollUntilCompleted_Google_Cloud_BigQuery_V2_GetJobOptions_Google_Api_Gax_PollSettings_
@@ -13062,15 +12930,15 @@ references:
   commentId: T:Google.Cloud.BigQuery.V2.BigQueryPage
   fullName: Google.Cloud.BigQuery.V2.BigQueryPage
   nameWithType: BigQueryPage
-- uid: Google.Cloud.BigQuery.V2.BigQueryPage.#ctor(System.Collections.Generic.List{Google.Cloud.BigQuery.V2.BigQueryRow},Google.Apis.Bigquery.v2.Data.TableSchema,Google.Apis.Bigquery.v2.Data.JobReference,System.String)
-  name: BigQueryPage(List<BigQueryRow>, TableSchema, JobReference, String)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryPage.html#Google_Cloud_BigQuery_V2_BigQueryPage__ctor_System_Collections_Generic_List_Google_Cloud_BigQuery_V2_BigQueryRow__Google_Apis_Bigquery_v2_Data_TableSchema_Google_Apis_Bigquery_v2_Data_JobReference_System_String_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryPage.#ctor(System.Collections.Generic.List{Google.Cloud.BigQuery.V2.BigQueryRow},Google.Apis.Bigquery.v2.Data.TableSchema,Google.Apis.Bigquery.v2.Data.JobReference,System.String)
-  name.vb: BigQueryPage(List(Of BigQueryRow), TableSchema, JobReference, String)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryPage.BigQueryPage(System.Collections.Generic.List<Google.Cloud.BigQuery.V2.BigQueryRow>, Google.Apis.Bigquery.v2.Data.TableSchema, Google.Apis.Bigquery.v2.Data.JobReference, System.String)
-  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryPage.BigQueryPage(System.Collections.Generic.List(Of Google.Cloud.BigQuery.V2.BigQueryRow), Google.Apis.Bigquery.v2.Data.TableSchema, Google.Apis.Bigquery.v2.Data.JobReference, System.String)
-  nameWithType: BigQueryPage.BigQueryPage(List<BigQueryRow>, TableSchema, JobReference, String)
-  nameWithType.vb: BigQueryPage.BigQueryPage(List(Of BigQueryRow), TableSchema, JobReference, String)
+- uid: Google.Cloud.BigQuery.V2.BigQueryPage.#ctor(System.Collections.Generic.List{Google.Cloud.BigQuery.V2.BigQueryRow},Google.Apis.Bigquery.v2.Data.TableSchema,Google.Apis.Bigquery.v2.Data.JobReference,Google.Apis.Bigquery.v2.Data.TableReference,System.String)
+  name: BigQueryPage(List<BigQueryRow>, TableSchema, JobReference, TableReference, String)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryPage.html#Google_Cloud_BigQuery_V2_BigQueryPage__ctor_System_Collections_Generic_List_Google_Cloud_BigQuery_V2_BigQueryRow__Google_Apis_Bigquery_v2_Data_TableSchema_Google_Apis_Bigquery_v2_Data_JobReference_Google_Apis_Bigquery_v2_Data_TableReference_System_String_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryPage.#ctor(System.Collections.Generic.List{Google.Cloud.BigQuery.V2.BigQueryRow},Google.Apis.Bigquery.v2.Data.TableSchema,Google.Apis.Bigquery.v2.Data.JobReference,Google.Apis.Bigquery.v2.Data.TableReference,System.String)
+  name.vb: BigQueryPage(List(Of BigQueryRow), TableSchema, JobReference, TableReference, String)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryPage.BigQueryPage(System.Collections.Generic.List<Google.Cloud.BigQuery.V2.BigQueryRow>, Google.Apis.Bigquery.v2.Data.TableSchema, Google.Apis.Bigquery.v2.Data.JobReference, Google.Apis.Bigquery.v2.Data.TableReference, System.String)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryPage.BigQueryPage(System.Collections.Generic.List(Of Google.Cloud.BigQuery.V2.BigQueryRow), Google.Apis.Bigquery.v2.Data.TableSchema, Google.Apis.Bigquery.v2.Data.JobReference, Google.Apis.Bigquery.v2.Data.TableReference, System.String)
+  nameWithType: BigQueryPage.BigQueryPage(List<BigQueryRow>, TableSchema, JobReference, TableReference, String)
+  nameWithType.vb: BigQueryPage.BigQueryPage(List(Of BigQueryRow), TableSchema, JobReference, TableReference, String)
 - uid: Google.Cloud.BigQuery.V2.BigQueryPage.#ctor*
   name: BigQueryPage
   href: api/Google.Cloud.BigQuery.V2.BigQueryPage.html#Google_Cloud_BigQuery_V2_BigQueryPage__ctor_
@@ -13125,6 +12993,18 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryPage.Schema
   fullName: Google.Cloud.BigQuery.V2.BigQueryPage.Schema
   nameWithType: BigQueryPage.Schema
+- uid: Google.Cloud.BigQuery.V2.BigQueryPage.TableReference
+  name: TableReference
+  href: api/Google.Cloud.BigQuery.V2.BigQueryPage.html#Google_Cloud_BigQuery_V2_BigQueryPage_TableReference
+  commentId: P:Google.Cloud.BigQuery.V2.BigQueryPage.TableReference
+  fullName: Google.Cloud.BigQuery.V2.BigQueryPage.TableReference
+  nameWithType: BigQueryPage.TableReference
+- uid: Google.Cloud.BigQuery.V2.BigQueryPage.TableReference*
+  name: TableReference
+  href: api/Google.Cloud.BigQuery.V2.BigQueryPage.html#Google_Cloud_BigQuery_V2_BigQueryPage_TableReference_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryPage.TableReference
+  fullName: Google.Cloud.BigQuery.V2.BigQueryPage.TableReference
+  nameWithType: BigQueryPage.TableReference
 - uid: Google.Cloud.BigQuery.V2.BigQueryParameter
   name: BigQueryParameter
   href: api/Google.Cloud.BigQuery.V2.BigQueryParameter.html
@@ -13372,36 +13252,24 @@ references:
   commentId: T:Google.Cloud.BigQuery.V2.BigQueryResults
   fullName: Google.Cloud.BigQuery.V2.BigQueryResults
   nameWithType: BigQueryResults
-- uid: Google.Cloud.BigQuery.V2.BigQueryResults.Completed
-  name: Completed
-  href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_Completed
-  commentId: P:Google.Cloud.BigQuery.V2.BigQueryResults.Completed
-  fullName: Google.Cloud.BigQuery.V2.BigQueryResults.Completed
-  nameWithType: BigQueryResults.Completed
-- uid: Google.Cloud.BigQuery.V2.BigQueryResults.Completed*
-  name: Completed
-  href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_Completed_
-  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryResults.Completed
-  fullName: Google.Cloud.BigQuery.V2.BigQueryResults.Completed
-  nameWithType: BigQueryResults.Completed
-- uid: Google.Cloud.BigQuery.V2.BigQueryResults.GetRows(Google.Api.Gax.PollSettings)
-  name: GetRows(PollSettings)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_GetRows_Google_Api_Gax_PollSettings_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryResults.GetRows(Google.Api.Gax.PollSettings)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryResults.GetRows(Google.Api.Gax.PollSettings)
-  nameWithType: BigQueryResults.GetRows(PollSettings)
-- uid: Google.Cloud.BigQuery.V2.BigQueryResults.GetRows*
-  name: GetRows
-  href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_GetRows_
-  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryResults.GetRows
-  fullName: Google.Cloud.BigQuery.V2.BigQueryResults.GetRows
-  nameWithType: BigQueryResults.GetRows
-- uid: Google.Cloud.BigQuery.V2.BigQueryResults.GetRowsAsync(Google.Api.Gax.PollSettings)
-  name: GetRowsAsync(PollSettings)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_GetRowsAsync_Google_Api_Gax_PollSettings_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryResults.GetRowsAsync(Google.Api.Gax.PollSettings)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryResults.GetRowsAsync(Google.Api.Gax.PollSettings)
-  nameWithType: BigQueryResults.GetRowsAsync(PollSettings)
+- uid: Google.Cloud.BigQuery.V2.BigQueryResults.GetEnumerator
+  name: GetEnumerator()
+  href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_GetEnumerator
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryResults.GetEnumerator
+  fullName: Google.Cloud.BigQuery.V2.BigQueryResults.GetEnumerator()
+  nameWithType: BigQueryResults.GetEnumerator()
+- uid: Google.Cloud.BigQuery.V2.BigQueryResults.GetEnumerator*
+  name: GetEnumerator
+  href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_GetEnumerator_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryResults.GetEnumerator
+  fullName: Google.Cloud.BigQuery.V2.BigQueryResults.GetEnumerator
+  nameWithType: BigQueryResults.GetEnumerator
+- uid: Google.Cloud.BigQuery.V2.BigQueryResults.GetRowsAsync
+  name: GetRowsAsync()
+  href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_GetRowsAsync
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryResults.GetRowsAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryResults.GetRowsAsync()
+  nameWithType: BigQueryResults.GetRowsAsync()
 - uid: Google.Cloud.BigQuery.V2.BigQueryResults.GetRowsAsync*
   name: GetRowsAsync
   href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_GetRowsAsync_
@@ -13420,48 +13288,24 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryResults.JobReference
   fullName: Google.Cloud.BigQuery.V2.BigQueryResults.JobReference
   nameWithType: BigQueryResults.JobReference
-- uid: Google.Cloud.BigQuery.V2.BigQueryResults.PollUntilCompleted(Google.Api.Gax.PollSettings)
-  name: PollUntilCompleted(PollSettings)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_PollUntilCompleted_Google_Api_Gax_PollSettings_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryResults.PollUntilCompleted(Google.Api.Gax.PollSettings)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryResults.PollUntilCompleted(Google.Api.Gax.PollSettings)
-  nameWithType: BigQueryResults.PollUntilCompleted(PollSettings)
-- uid: Google.Cloud.BigQuery.V2.BigQueryResults.PollUntilCompleted*
-  name: PollUntilCompleted
-  href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_PollUntilCompleted_
-  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryResults.PollUntilCompleted
-  fullName: Google.Cloud.BigQuery.V2.BigQueryResults.PollUntilCompleted
-  nameWithType: BigQueryResults.PollUntilCompleted
-- uid: Google.Cloud.BigQuery.V2.BigQueryResults.PollUntilCompletedAsync(Google.Api.Gax.PollSettings,System.Threading.CancellationToken)
-  name: PollUntilCompletedAsync(PollSettings, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_PollUntilCompletedAsync_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryResults.PollUntilCompletedAsync(Google.Api.Gax.PollSettings,System.Threading.CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryResults.PollUntilCompletedAsync(Google.Api.Gax.PollSettings, System.Threading.CancellationToken)
-  nameWithType: BigQueryResults.PollUntilCompletedAsync(PollSettings, CancellationToken)
-- uid: Google.Cloud.BigQuery.V2.BigQueryResults.PollUntilCompletedAsync*
-  name: PollUntilCompletedAsync
-  href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_PollUntilCompletedAsync_
-  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryResults.PollUntilCompletedAsync
-  fullName: Google.Cloud.BigQuery.V2.BigQueryResults.PollUntilCompletedAsync
-  nameWithType: BigQueryResults.PollUntilCompletedAsync
-- uid: Google.Cloud.BigQuery.V2.BigQueryResults.ReadPage(System.Int32,Google.Api.Gax.PollSettings)
-  name: ReadPage(Int32, PollSettings)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_ReadPage_System_Int32_Google_Api_Gax_PollSettings_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryResults.ReadPage(System.Int32,Google.Api.Gax.PollSettings)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryResults.ReadPage(System.Int32, Google.Api.Gax.PollSettings)
-  nameWithType: BigQueryResults.ReadPage(Int32, PollSettings)
+- uid: Google.Cloud.BigQuery.V2.BigQueryResults.ReadPage(System.Int32)
+  name: ReadPage(Int32)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_ReadPage_System_Int32_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryResults.ReadPage(System.Int32)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryResults.ReadPage(System.Int32)
+  nameWithType: BigQueryResults.ReadPage(Int32)
 - uid: Google.Cloud.BigQuery.V2.BigQueryResults.ReadPage*
   name: ReadPage
   href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_ReadPage_
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryResults.ReadPage
   fullName: Google.Cloud.BigQuery.V2.BigQueryResults.ReadPage
   nameWithType: BigQueryResults.ReadPage
-- uid: Google.Cloud.BigQuery.V2.BigQueryResults.ReadPageAsync(System.Int32,Google.Api.Gax.PollSettings,System.Threading.CancellationToken)
-  name: ReadPageAsync(Int32, PollSettings, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_ReadPageAsync_System_Int32_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryResults.ReadPageAsync(System.Int32,Google.Api.Gax.PollSettings,System.Threading.CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryResults.ReadPageAsync(System.Int32, Google.Api.Gax.PollSettings, System.Threading.CancellationToken)
-  nameWithType: BigQueryResults.ReadPageAsync(Int32, PollSettings, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryResults.ReadPageAsync(System.Int32,System.Threading.CancellationToken)
+  name: ReadPageAsync(Int32, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_ReadPageAsync_System_Int32_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryResults.ReadPageAsync(System.Int32,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryResults.ReadPageAsync(System.Int32, System.Threading.CancellationToken)
+  nameWithType: BigQueryResults.ReadPageAsync(Int32, CancellationToken)
 - uid: Google.Cloud.BigQuery.V2.BigQueryResults.ReadPageAsync*
   name: ReadPageAsync
   href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_ReadPageAsync_
@@ -13480,6 +13324,34 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryResults.Schema
   fullName: Google.Cloud.BigQuery.V2.BigQueryResults.Schema
   nameWithType: BigQueryResults.Schema
+- uid: Google.Cloud.BigQuery.V2.BigQueryResults.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryResults.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Google.Cloud.BigQuery.V2.BigQueryResults.System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: BigQueryResults.IEnumerable.GetEnumerator()
+  nameWithType.vb: BigQueryResults.System.Collections.IEnumerable.GetEnumerator()
+- uid: Google.Cloud.BigQuery.V2.BigQueryResults.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryResults.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: Google.Cloud.BigQuery.V2.BigQueryResults.System.Collections.IEnumerable.GetEnumerator
+  nameWithType: BigQueryResults.IEnumerable.GetEnumerator
+  nameWithType.vb: BigQueryResults.System.Collections.IEnumerable.GetEnumerator
+- uid: Google.Cloud.BigQuery.V2.BigQueryResults.TableReference
+  name: TableReference
+  href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_TableReference
+  commentId: P:Google.Cloud.BigQuery.V2.BigQueryResults.TableReference
+  fullName: Google.Cloud.BigQuery.V2.BigQueryResults.TableReference
+  nameWithType: BigQueryResults.TableReference
+- uid: Google.Cloud.BigQuery.V2.BigQueryResults.TableReference*
+  name: TableReference
+  href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_TableReference_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryResults.TableReference
+  fullName: Google.Cloud.BigQuery.V2.BigQueryResults.TableReference
+  nameWithType: BigQueryResults.TableReference
 - uid: Google.Cloud.BigQuery.V2.BigQueryResults.ThrowOnAnyError
   name: ThrowOnAnyError()
   href: api/Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_ThrowOnAnyError
@@ -14314,156 +14186,6 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.WriteDisposition
   fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.WriteDisposition
   nameWithType: CreateLoadJobOptions.WriteDisposition
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions
-  name: CreateQueryJobOptions
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html
-  commentId: T:Google.Cloud.BigQuery.V2.CreateQueryJobOptions
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions
-  nameWithType: CreateQueryJobOptions
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.AllowLargeResults
-  name: AllowLargeResults
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_AllowLargeResults
-  commentId: P:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.AllowLargeResults
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.AllowLargeResults
-  nameWithType: CreateQueryJobOptions.AllowLargeResults
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.AllowLargeResults*
-  name: AllowLargeResults
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_AllowLargeResults_
-  commentId: Overload:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.AllowLargeResults
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.AllowLargeResults
-  nameWithType: CreateQueryJobOptions.AllowLargeResults
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.CreateDisposition
-  name: CreateDisposition
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_CreateDisposition
-  commentId: P:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.CreateDisposition
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.CreateDisposition
-  nameWithType: CreateQueryJobOptions.CreateDisposition
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.CreateDisposition*
-  name: CreateDisposition
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_CreateDisposition_
-  commentId: Overload:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.CreateDisposition
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.CreateDisposition
-  nameWithType: CreateQueryJobOptions.CreateDisposition
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DefaultDataset
-  name: DefaultDataset
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_DefaultDataset
-  commentId: P:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DefaultDataset
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DefaultDataset
-  nameWithType: CreateQueryJobOptions.DefaultDataset
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DefaultDataset*
-  name: DefaultDataset
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_DefaultDataset_
-  commentId: Overload:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DefaultDataset
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DefaultDataset
-  nameWithType: CreateQueryJobOptions.DefaultDataset
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DestinationTable
-  name: DestinationTable
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_DestinationTable
-  commentId: P:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DestinationTable
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DestinationTable
-  nameWithType: CreateQueryJobOptions.DestinationTable
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DestinationTable*
-  name: DestinationTable
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_DestinationTable_
-  commentId: Overload:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DestinationTable
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DestinationTable
-  nameWithType: CreateQueryJobOptions.DestinationTable
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DryRun
-  name: DryRun
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_DryRun
-  commentId: P:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DryRun
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DryRun
-  nameWithType: CreateQueryJobOptions.DryRun
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DryRun*
-  name: DryRun
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_DryRun_
-  commentId: Overload:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DryRun
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.DryRun
-  nameWithType: CreateQueryJobOptions.DryRun
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.FlattenResults
-  name: FlattenResults
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_FlattenResults
-  commentId: P:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.FlattenResults
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.FlattenResults
-  nameWithType: CreateQueryJobOptions.FlattenResults
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.FlattenResults*
-  name: FlattenResults
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_FlattenResults_
-  commentId: Overload:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.FlattenResults
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.FlattenResults
-  nameWithType: CreateQueryJobOptions.FlattenResults
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.MaximumBillingTier
-  name: MaximumBillingTier
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_MaximumBillingTier
-  commentId: P:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.MaximumBillingTier
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.MaximumBillingTier
-  nameWithType: CreateQueryJobOptions.MaximumBillingTier
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.MaximumBillingTier*
-  name: MaximumBillingTier
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_MaximumBillingTier_
-  commentId: Overload:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.MaximumBillingTier
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.MaximumBillingTier
-  nameWithType: CreateQueryJobOptions.MaximumBillingTier
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.MaximumBytesBilled
-  name: MaximumBytesBilled
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_MaximumBytesBilled
-  commentId: P:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.MaximumBytesBilled
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.MaximumBytesBilled
-  nameWithType: CreateQueryJobOptions.MaximumBytesBilled
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.MaximumBytesBilled*
-  name: MaximumBytesBilled
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_MaximumBytesBilled_
-  commentId: Overload:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.MaximumBytesBilled
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.MaximumBytesBilled
-  nameWithType: CreateQueryJobOptions.MaximumBytesBilled
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.Priority
-  name: Priority
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_Priority
-  commentId: P:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.Priority
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.Priority
-  nameWithType: CreateQueryJobOptions.Priority
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.Priority*
-  name: Priority
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_Priority_
-  commentId: Overload:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.Priority
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.Priority
-  nameWithType: CreateQueryJobOptions.Priority
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.UseLegacySql
-  name: UseLegacySql
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_UseLegacySql
-  commentId: P:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.UseLegacySql
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.UseLegacySql
-  nameWithType: CreateQueryJobOptions.UseLegacySql
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.UseLegacySql*
-  name: UseLegacySql
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_UseLegacySql_
-  commentId: Overload:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.UseLegacySql
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.UseLegacySql
-  nameWithType: CreateQueryJobOptions.UseLegacySql
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.UseQueryCache
-  name: UseQueryCache
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_UseQueryCache
-  commentId: P:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.UseQueryCache
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.UseQueryCache
-  nameWithType: CreateQueryJobOptions.UseQueryCache
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.UseQueryCache*
-  name: UseQueryCache
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_UseQueryCache_
-  commentId: Overload:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.UseQueryCache
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.UseQueryCache
-  nameWithType: CreateQueryJobOptions.UseQueryCache
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.WriteDisposition
-  name: WriteDisposition
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_WriteDisposition
-  commentId: P:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.WriteDisposition
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.WriteDisposition
-  nameWithType: CreateQueryJobOptions.WriteDisposition
-- uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.WriteDisposition*
-  name: WriteDisposition
-  href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html#Google_Cloud_BigQuery_V2_CreateQueryJobOptions_WriteDisposition_
-  commentId: Overload:Google.Cloud.BigQuery.V2.CreateQueryJobOptions.WriteDisposition
-  fullName: Google.Cloud.BigQuery.V2.CreateQueryJobOptions.WriteDisposition
-  nameWithType: CreateQueryJobOptions.WriteDisposition
 - uid: Google.Cloud.BigQuery.V2.CreateTableOptions
   name: CreateTableOptions
   href: api/Google.Cloud.BigQuery.V2.CreateTableOptions.html
@@ -14578,60 +14300,6 @@ references:
   commentId: T:Google.Cloud.BigQuery.V2.DeleteTableOptions
   fullName: Google.Cloud.BigQuery.V2.DeleteTableOptions
   nameWithType: DeleteTableOptions
-- uid: Google.Cloud.BigQuery.V2.ExecuteQueryOptions
-  name: ExecuteQueryOptions
-  href: api/Google.Cloud.BigQuery.V2.ExecuteQueryOptions.html
-  commentId: T:Google.Cloud.BigQuery.V2.ExecuteQueryOptions
-  fullName: Google.Cloud.BigQuery.V2.ExecuteQueryOptions
-  nameWithType: ExecuteQueryOptions
-- uid: Google.Cloud.BigQuery.V2.ExecuteQueryOptions.DefaultDataset
-  name: DefaultDataset
-  href: api/Google.Cloud.BigQuery.V2.ExecuteQueryOptions.html#Google_Cloud_BigQuery_V2_ExecuteQueryOptions_DefaultDataset
-  commentId: P:Google.Cloud.BigQuery.V2.ExecuteQueryOptions.DefaultDataset
-  fullName: Google.Cloud.BigQuery.V2.ExecuteQueryOptions.DefaultDataset
-  nameWithType: ExecuteQueryOptions.DefaultDataset
-- uid: Google.Cloud.BigQuery.V2.ExecuteQueryOptions.DefaultDataset*
-  name: DefaultDataset
-  href: api/Google.Cloud.BigQuery.V2.ExecuteQueryOptions.html#Google_Cloud_BigQuery_V2_ExecuteQueryOptions_DefaultDataset_
-  commentId: Overload:Google.Cloud.BigQuery.V2.ExecuteQueryOptions.DefaultDataset
-  fullName: Google.Cloud.BigQuery.V2.ExecuteQueryOptions.DefaultDataset
-  nameWithType: ExecuteQueryOptions.DefaultDataset
-- uid: Google.Cloud.BigQuery.V2.ExecuteQueryOptions.PageSize
-  name: PageSize
-  href: api/Google.Cloud.BigQuery.V2.ExecuteQueryOptions.html#Google_Cloud_BigQuery_V2_ExecuteQueryOptions_PageSize
-  commentId: P:Google.Cloud.BigQuery.V2.ExecuteQueryOptions.PageSize
-  fullName: Google.Cloud.BigQuery.V2.ExecuteQueryOptions.PageSize
-  nameWithType: ExecuteQueryOptions.PageSize
-- uid: Google.Cloud.BigQuery.V2.ExecuteQueryOptions.PageSize*
-  name: PageSize
-  href: api/Google.Cloud.BigQuery.V2.ExecuteQueryOptions.html#Google_Cloud_BigQuery_V2_ExecuteQueryOptions_PageSize_
-  commentId: Overload:Google.Cloud.BigQuery.V2.ExecuteQueryOptions.PageSize
-  fullName: Google.Cloud.BigQuery.V2.ExecuteQueryOptions.PageSize
-  nameWithType: ExecuteQueryOptions.PageSize
-- uid: Google.Cloud.BigQuery.V2.ExecuteQueryOptions.UseLegacySql
-  name: UseLegacySql
-  href: api/Google.Cloud.BigQuery.V2.ExecuteQueryOptions.html#Google_Cloud_BigQuery_V2_ExecuteQueryOptions_UseLegacySql
-  commentId: P:Google.Cloud.BigQuery.V2.ExecuteQueryOptions.UseLegacySql
-  fullName: Google.Cloud.BigQuery.V2.ExecuteQueryOptions.UseLegacySql
-  nameWithType: ExecuteQueryOptions.UseLegacySql
-- uid: Google.Cloud.BigQuery.V2.ExecuteQueryOptions.UseLegacySql*
-  name: UseLegacySql
-  href: api/Google.Cloud.BigQuery.V2.ExecuteQueryOptions.html#Google_Cloud_BigQuery_V2_ExecuteQueryOptions_UseLegacySql_
-  commentId: Overload:Google.Cloud.BigQuery.V2.ExecuteQueryOptions.UseLegacySql
-  fullName: Google.Cloud.BigQuery.V2.ExecuteQueryOptions.UseLegacySql
-  nameWithType: ExecuteQueryOptions.UseLegacySql
-- uid: Google.Cloud.BigQuery.V2.ExecuteQueryOptions.UseQueryCache
-  name: UseQueryCache
-  href: api/Google.Cloud.BigQuery.V2.ExecuteQueryOptions.html#Google_Cloud_BigQuery_V2_ExecuteQueryOptions_UseQueryCache
-  commentId: P:Google.Cloud.BigQuery.V2.ExecuteQueryOptions.UseQueryCache
-  fullName: Google.Cloud.BigQuery.V2.ExecuteQueryOptions.UseQueryCache
-  nameWithType: ExecuteQueryOptions.UseQueryCache
-- uid: Google.Cloud.BigQuery.V2.ExecuteQueryOptions.UseQueryCache*
-  name: UseQueryCache
-  href: api/Google.Cloud.BigQuery.V2.ExecuteQueryOptions.html#Google_Cloud_BigQuery_V2_ExecuteQueryOptions_UseQueryCache_
-  commentId: Overload:Google.Cloud.BigQuery.V2.ExecuteQueryOptions.UseQueryCache
-  fullName: Google.Cloud.BigQuery.V2.ExecuteQueryOptions.UseQueryCache
-  nameWithType: ExecuteQueryOptions.UseQueryCache
 - uid: Google.Cloud.BigQuery.V2.FileFormat
   name: FileFormat
   href: api/Google.Cloud.BigQuery.V2.FileFormat.html
@@ -14752,6 +14420,48 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.InsertOptions.AllowUnknownFields
   fullName: Google.Cloud.BigQuery.V2.InsertOptions.AllowUnknownFields
   nameWithType: InsertOptions.AllowUnknownFields
+- uid: Google.Cloud.BigQuery.V2.JobCreationOptions
+  name: JobCreationOptions
+  href: api/Google.Cloud.BigQuery.V2.JobCreationOptions.html
+  commentId: T:Google.Cloud.BigQuery.V2.JobCreationOptions
+  fullName: Google.Cloud.BigQuery.V2.JobCreationOptions
+  nameWithType: JobCreationOptions
+- uid: Google.Cloud.BigQuery.V2.JobCreationOptions.JobId
+  name: JobId
+  href: api/Google.Cloud.BigQuery.V2.JobCreationOptions.html#Google_Cloud_BigQuery_V2_JobCreationOptions_JobId
+  commentId: P:Google.Cloud.BigQuery.V2.JobCreationOptions.JobId
+  fullName: Google.Cloud.BigQuery.V2.JobCreationOptions.JobId
+  nameWithType: JobCreationOptions.JobId
+- uid: Google.Cloud.BigQuery.V2.JobCreationOptions.JobId*
+  name: JobId
+  href: api/Google.Cloud.BigQuery.V2.JobCreationOptions.html#Google_Cloud_BigQuery_V2_JobCreationOptions_JobId_
+  commentId: Overload:Google.Cloud.BigQuery.V2.JobCreationOptions.JobId
+  fullName: Google.Cloud.BigQuery.V2.JobCreationOptions.JobId
+  nameWithType: JobCreationOptions.JobId
+- uid: Google.Cloud.BigQuery.V2.JobCreationOptions.JobIdPrefix
+  name: JobIdPrefix
+  href: api/Google.Cloud.BigQuery.V2.JobCreationOptions.html#Google_Cloud_BigQuery_V2_JobCreationOptions_JobIdPrefix
+  commentId: P:Google.Cloud.BigQuery.V2.JobCreationOptions.JobIdPrefix
+  fullName: Google.Cloud.BigQuery.V2.JobCreationOptions.JobIdPrefix
+  nameWithType: JobCreationOptions.JobIdPrefix
+- uid: Google.Cloud.BigQuery.V2.JobCreationOptions.JobIdPrefix*
+  name: JobIdPrefix
+  href: api/Google.Cloud.BigQuery.V2.JobCreationOptions.html#Google_Cloud_BigQuery_V2_JobCreationOptions_JobIdPrefix_
+  commentId: Overload:Google.Cloud.BigQuery.V2.JobCreationOptions.JobIdPrefix
+  fullName: Google.Cloud.BigQuery.V2.JobCreationOptions.JobIdPrefix
+  nameWithType: JobCreationOptions.JobIdPrefix
+- uid: Google.Cloud.BigQuery.V2.JobCreationOptions.ProjectId
+  name: ProjectId
+  href: api/Google.Cloud.BigQuery.V2.JobCreationOptions.html#Google_Cloud_BigQuery_V2_JobCreationOptions_ProjectId
+  commentId: P:Google.Cloud.BigQuery.V2.JobCreationOptions.ProjectId
+  fullName: Google.Cloud.BigQuery.V2.JobCreationOptions.ProjectId
+  nameWithType: JobCreationOptions.ProjectId
+- uid: Google.Cloud.BigQuery.V2.JobCreationOptions.ProjectId*
+  name: ProjectId
+  href: api/Google.Cloud.BigQuery.V2.JobCreationOptions.html#Google_Cloud_BigQuery_V2_JobCreationOptions_ProjectId_
+  commentId: Overload:Google.Cloud.BigQuery.V2.JobCreationOptions.ProjectId
+  fullName: Google.Cloud.BigQuery.V2.JobCreationOptions.ProjectId
+  nameWithType: JobCreationOptions.ProjectId
 - uid: Google.Cloud.BigQuery.V2.JobState
   name: JobState
   href: api/Google.Cloud.BigQuery.V2.JobState.html
@@ -14872,6 +14582,30 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.ListRowsOptions.PageSize
   fullName: Google.Cloud.BigQuery.V2.ListRowsOptions.PageSize
   nameWithType: ListRowsOptions.PageSize
+- uid: Google.Cloud.BigQuery.V2.ListRowsOptions.PageToken
+  name: PageToken
+  href: api/Google.Cloud.BigQuery.V2.ListRowsOptions.html#Google_Cloud_BigQuery_V2_ListRowsOptions_PageToken
+  commentId: P:Google.Cloud.BigQuery.V2.ListRowsOptions.PageToken
+  fullName: Google.Cloud.BigQuery.V2.ListRowsOptions.PageToken
+  nameWithType: ListRowsOptions.PageToken
+- uid: Google.Cloud.BigQuery.V2.ListRowsOptions.PageToken*
+  name: PageToken
+  href: api/Google.Cloud.BigQuery.V2.ListRowsOptions.html#Google_Cloud_BigQuery_V2_ListRowsOptions_PageToken_
+  commentId: Overload:Google.Cloud.BigQuery.V2.ListRowsOptions.PageToken
+  fullName: Google.Cloud.BigQuery.V2.ListRowsOptions.PageToken
+  nameWithType: ListRowsOptions.PageToken
+- uid: Google.Cloud.BigQuery.V2.ListRowsOptions.StartIndex
+  name: StartIndex
+  href: api/Google.Cloud.BigQuery.V2.ListRowsOptions.html#Google_Cloud_BigQuery_V2_ListRowsOptions_StartIndex
+  commentId: P:Google.Cloud.BigQuery.V2.ListRowsOptions.StartIndex
+  fullName: Google.Cloud.BigQuery.V2.ListRowsOptions.StartIndex
+  nameWithType: ListRowsOptions.StartIndex
+- uid: Google.Cloud.BigQuery.V2.ListRowsOptions.StartIndex*
+  name: StartIndex
+  href: api/Google.Cloud.BigQuery.V2.ListRowsOptions.html#Google_Cloud_BigQuery_V2_ListRowsOptions_StartIndex_
+  commentId: Overload:Google.Cloud.BigQuery.V2.ListRowsOptions.StartIndex
+  fullName: Google.Cloud.BigQuery.V2.ListRowsOptions.StartIndex
+  nameWithType: ListRowsOptions.StartIndex
 - uid: Google.Cloud.BigQuery.V2.ListTablesOptions
   name: ListTablesOptions
   href: api/Google.Cloud.BigQuery.V2.ListTablesOptions.html
@@ -14890,6 +14624,156 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.ListTablesOptions.PageSize
   fullName: Google.Cloud.BigQuery.V2.ListTablesOptions.PageSize
   nameWithType: ListTablesOptions.PageSize
+- uid: Google.Cloud.BigQuery.V2.QueryOptions
+  name: QueryOptions
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html
+  commentId: T:Google.Cloud.BigQuery.V2.QueryOptions
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions
+  nameWithType: QueryOptions
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.AllowLargeResults
+  name: AllowLargeResults
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_AllowLargeResults
+  commentId: P:Google.Cloud.BigQuery.V2.QueryOptions.AllowLargeResults
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.AllowLargeResults
+  nameWithType: QueryOptions.AllowLargeResults
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.AllowLargeResults*
+  name: AllowLargeResults
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_AllowLargeResults_
+  commentId: Overload:Google.Cloud.BigQuery.V2.QueryOptions.AllowLargeResults
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.AllowLargeResults
+  nameWithType: QueryOptions.AllowLargeResults
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.CreateDisposition
+  name: CreateDisposition
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_CreateDisposition
+  commentId: P:Google.Cloud.BigQuery.V2.QueryOptions.CreateDisposition
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.CreateDisposition
+  nameWithType: QueryOptions.CreateDisposition
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.CreateDisposition*
+  name: CreateDisposition
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_CreateDisposition_
+  commentId: Overload:Google.Cloud.BigQuery.V2.QueryOptions.CreateDisposition
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.CreateDisposition
+  nameWithType: QueryOptions.CreateDisposition
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.DefaultDataset
+  name: DefaultDataset
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_DefaultDataset
+  commentId: P:Google.Cloud.BigQuery.V2.QueryOptions.DefaultDataset
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.DefaultDataset
+  nameWithType: QueryOptions.DefaultDataset
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.DefaultDataset*
+  name: DefaultDataset
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_DefaultDataset_
+  commentId: Overload:Google.Cloud.BigQuery.V2.QueryOptions.DefaultDataset
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.DefaultDataset
+  nameWithType: QueryOptions.DefaultDataset
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.DestinationTable
+  name: DestinationTable
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_DestinationTable
+  commentId: P:Google.Cloud.BigQuery.V2.QueryOptions.DestinationTable
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.DestinationTable
+  nameWithType: QueryOptions.DestinationTable
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.DestinationTable*
+  name: DestinationTable
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_DestinationTable_
+  commentId: Overload:Google.Cloud.BigQuery.V2.QueryOptions.DestinationTable
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.DestinationTable
+  nameWithType: QueryOptions.DestinationTable
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.DryRun
+  name: DryRun
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_DryRun
+  commentId: P:Google.Cloud.BigQuery.V2.QueryOptions.DryRun
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.DryRun
+  nameWithType: QueryOptions.DryRun
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.DryRun*
+  name: DryRun
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_DryRun_
+  commentId: Overload:Google.Cloud.BigQuery.V2.QueryOptions.DryRun
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.DryRun
+  nameWithType: QueryOptions.DryRun
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.FlattenResults
+  name: FlattenResults
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_FlattenResults
+  commentId: P:Google.Cloud.BigQuery.V2.QueryOptions.FlattenResults
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.FlattenResults
+  nameWithType: QueryOptions.FlattenResults
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.FlattenResults*
+  name: FlattenResults
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_FlattenResults_
+  commentId: Overload:Google.Cloud.BigQuery.V2.QueryOptions.FlattenResults
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.FlattenResults
+  nameWithType: QueryOptions.FlattenResults
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.MaximumBillingTier
+  name: MaximumBillingTier
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_MaximumBillingTier
+  commentId: P:Google.Cloud.BigQuery.V2.QueryOptions.MaximumBillingTier
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.MaximumBillingTier
+  nameWithType: QueryOptions.MaximumBillingTier
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.MaximumBillingTier*
+  name: MaximumBillingTier
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_MaximumBillingTier_
+  commentId: Overload:Google.Cloud.BigQuery.V2.QueryOptions.MaximumBillingTier
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.MaximumBillingTier
+  nameWithType: QueryOptions.MaximumBillingTier
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.MaximumBytesBilled
+  name: MaximumBytesBilled
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_MaximumBytesBilled
+  commentId: P:Google.Cloud.BigQuery.V2.QueryOptions.MaximumBytesBilled
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.MaximumBytesBilled
+  nameWithType: QueryOptions.MaximumBytesBilled
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.MaximumBytesBilled*
+  name: MaximumBytesBilled
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_MaximumBytesBilled_
+  commentId: Overload:Google.Cloud.BigQuery.V2.QueryOptions.MaximumBytesBilled
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.MaximumBytesBilled
+  nameWithType: QueryOptions.MaximumBytesBilled
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.Priority
+  name: Priority
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_Priority
+  commentId: P:Google.Cloud.BigQuery.V2.QueryOptions.Priority
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.Priority
+  nameWithType: QueryOptions.Priority
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.Priority*
+  name: Priority
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_Priority_
+  commentId: Overload:Google.Cloud.BigQuery.V2.QueryOptions.Priority
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.Priority
+  nameWithType: QueryOptions.Priority
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.UseLegacySql
+  name: UseLegacySql
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_UseLegacySql
+  commentId: P:Google.Cloud.BigQuery.V2.QueryOptions.UseLegacySql
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.UseLegacySql
+  nameWithType: QueryOptions.UseLegacySql
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.UseLegacySql*
+  name: UseLegacySql
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_UseLegacySql_
+  commentId: Overload:Google.Cloud.BigQuery.V2.QueryOptions.UseLegacySql
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.UseLegacySql
+  nameWithType: QueryOptions.UseLegacySql
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.UseQueryCache
+  name: UseQueryCache
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_UseQueryCache
+  commentId: P:Google.Cloud.BigQuery.V2.QueryOptions.UseQueryCache
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.UseQueryCache
+  nameWithType: QueryOptions.UseQueryCache
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.UseQueryCache*
+  name: UseQueryCache
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_UseQueryCache_
+  commentId: Overload:Google.Cloud.BigQuery.V2.QueryOptions.UseQueryCache
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.UseQueryCache
+  nameWithType: QueryOptions.UseQueryCache
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.WriteDisposition
+  name: WriteDisposition
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_WriteDisposition
+  commentId: P:Google.Cloud.BigQuery.V2.QueryOptions.WriteDisposition
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.WriteDisposition
+  nameWithType: QueryOptions.WriteDisposition
+- uid: Google.Cloud.BigQuery.V2.QueryOptions.WriteDisposition*
+  name: WriteDisposition
+  href: api/Google.Cloud.BigQuery.V2.QueryOptions.html#Google_Cloud_BigQuery_V2_QueryOptions_WriteDisposition_
+  commentId: Overload:Google.Cloud.BigQuery.V2.QueryOptions.WriteDisposition
+  fullName: Google.Cloud.BigQuery.V2.QueryOptions.WriteDisposition
+  nameWithType: QueryOptions.WriteDisposition
 - uid: Google.Cloud.BigQuery.V2.QueryPriority
   name: QueryPriority
   href: api/Google.Cloud.BigQuery.V2.QueryPriority.html

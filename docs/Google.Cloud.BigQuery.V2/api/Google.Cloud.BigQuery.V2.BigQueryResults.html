@@ -72,8 +72,7 @@
   
   <h1 id="Google_Cloud_BigQuery_V2_BigQueryResults" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults" class="text-break">Class BigQueryResults
   </h1>
-  <div class="markdown level0 summary"><p>A job known to be running a query. The job may not have completed yet. This class provides
-the mean to retrieve result rows from the job.</p>
+  <div class="markdown level0 summary"><p>The results of a completed query.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -100,45 +99,13 @@ the mean to retrieve result rows from the job.</p>
   <h6><strong>Assembly</strong>: Google.Cloud.BigQuery.V2.dll</h6>
   <h5 id="Google_Cloud_BigQuery_V2_BigQueryResults_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class BigQueryResults</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class BigQueryResults : IEnumerable&lt;BigQueryRow&gt;, IEnumerable</code></pre>
   </div>
-  <h5 id="Google_Cloud_BigQuery_V2_BigQueryResults_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>The methods to return data from the query (<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_ReadPage_System_Int32_Google_Api_Gax_PollSettings_">ReadPage(Int32, PollSettings)</a>,
-<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_ReadPageAsync_System_Int32_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_">ReadPageAsync(Int32, PollSettings, CancellationToken)</a>,
-<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_GetRows_Google_Api_Gax_PollSettings_">GetRows(PollSettings)</a> and <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_GetRowsAsync_Google_Api_Gax_PollSettings_">GetRowsAsync(PollSettings)</a>)
-all poll automatically if they are called
-on incomplete jobs. To poll manually, use <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_PollUntilCompleted_Google_Api_Gax_PollSettings_">PollUntilCompleted(PollSettings)</a> or
-<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_PollUntilCompletedAsync_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_">PollUntilCompletedAsync(PollSettings, CancellationToken)</a>.</p>
-</div>
   <h3 id="properties">Properties
   </h3>
-  <a id="Google_Cloud_BigQuery_V2_BigQueryResults_Completed_" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.Completed*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_BigQueryResults_Completed" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.Completed">Completed</h4>
-  <div class="markdown level1 summary"><p>Whether or not the query has completed or not.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Completed { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="Google_Cloud_BigQuery_V2_BigQueryResults_JobReference_" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.JobReference*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryResults_JobReference" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.JobReference">JobReference</h4>
-  <div class="markdown level1 summary"><p>The reference to the job.</p>
+  <div class="markdown level1 summary"><p>The reference to the query job.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -184,14 +151,14 @@ on incomplete jobs. To poll manually, use <a class="xref" href="Google.Cloud.Big
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_BigQuery_V2_BigQueryResults_TotalRows_" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.TotalRows*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_BigQueryResults_TotalRows" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.TotalRows">TotalRows</h4>
-  <div class="markdown level1 summary"><p>The total number of rows in the results, if known.</p>
+  <a id="Google_Cloud_BigQuery_V2_BigQueryResults_TableReference_" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.TableReference*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryResults_TableReference" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.TableReference">TableReference</h4>
+  <div class="markdown level1 summary"><p>The reference to the table containing the query results.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong ? TotalRows { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public TableReference TableReference { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -203,43 +170,46 @@ on incomplete jobs. To poll manually, use <a class="xref" href="Google.Cloud.Big
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_BigQuery_V2_BigQueryResults_TotalRows_" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.TotalRows*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryResults_TotalRows" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.TotalRows">TotalRows</h4>
+  <div class="markdown level1 summary"><p>The total number of rows in the results.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong TotalRows { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <a id="Google_Cloud_BigQuery_V2_BigQueryResults_GetRows_" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.GetRows*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_BigQueryResults_GetRows_Google_Api_Gax_PollSettings_" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.GetRows(Google.Api.Gax.PollSettings)">GetRows(PollSettings)</h4>
-  <div class="markdown level1 summary"><p>Returns a lazy enumeration of all the rows in the query (from any originally-specified page token onwards),
-making server calls as required. If the job has not completed already, it is polled until it has completed
-using <span class="paramref">pollSettings</span>.</p>
+  <a id="Google_Cloud_BigQuery_V2_BigQueryResults_GetEnumerator_" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.GetEnumerator*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryResults_GetEnumerator" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"><p>Returns an iterator over the query results.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;BigQueryRow&gt; GetRows(PollSettings pollSettings = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;BigQueryRow&gt; GetEnumerator()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Google.Api.Gax.PollSettings.html">PollSettings</a></td>
-        <td><span class="parametername">pollSettings</span></td>
-        <td><p>The settings to control how often and long the job is fetched before timing out if it is still incomplete.
-May be null, in which case defaults will be supplied.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -250,45 +220,23 @@ May be null, in which case defaults will be supplied.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryRow.html">BigQueryRow</a>&gt;</td>
-        <td><p>A sequence of rows from the query results.</p>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryRow.html">BigQueryRow</a>&gt;</td>
+        <td><p>An iterator over the query results.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="Google_Cloud_BigQuery_V2_BigQueryResults_GetRows_Google_Api_Gax_PollSettings__seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_PollUntilCompleted_Google_Api_Gax_PollSettings_">PollUntilCompleted(PollSettings)</a></div>
-  </div>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()</span></div>
   <a id="Google_Cloud_BigQuery_V2_BigQueryResults_GetRowsAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.GetRowsAsync*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_BigQueryResults_GetRowsAsync_Google_Api_Gax_PollSettings_" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.GetRowsAsync(Google.Api.Gax.PollSettings)">GetRowsAsync(PollSettings)</h4>
-  <div class="markdown level1 summary"><p>Returns a lazy asynchronous enumeration of all the rows in the query (from any originally-specified page token onwards),
-making server calls as required. If the job is not already completed, it will be polled with the given <span class="paramref">pollSettings</span>.</p>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryResults_GetRowsAsync" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.GetRowsAsync">GetRowsAsync()</h4>
+  <div class="markdown level1 summary"><p>Returns an asynchronous sequence of rows from this set of results.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;BigQueryRow&gt; GetRowsAsync(PollSettings pollSettings = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;BigQueryRow&gt; GetRowsAsync()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Google.Api.Gax.PollSettings.html">PollSettings</a></td>
-        <td><span class="parametername">pollSettings</span></td>
-        <td><p>The settings to control how often and long the job is fetched before timing out if it is still incomplete.
-May be null, in which case defaults will be supplied.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -300,123 +248,25 @@ May be null, in which case defaults will be supplied.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IAsyncEnumerable</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryRow.html">BigQueryRow</a>&gt;</td>
-        <td><p>An asynchronous sequence of rows from the query results.</p>
+        <td><p>An asynchronous sequence of rows from this set of results.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="Google_Cloud_BigQuery_V2_BigQueryResults_GetRowsAsync_Google_Api_Gax_PollSettings__seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryResults.html#Google_Cloud_BigQuery_V2_BigQueryResults_PollUntilCompletedAsync_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_">PollUntilCompletedAsync(PollSettings, CancellationToken)</a></div>
-  </div>
-  <a id="Google_Cloud_BigQuery_V2_BigQueryResults_PollUntilCompleted_" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.PollUntilCompleted*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_BigQueryResults_PollUntilCompleted_Google_Api_Gax_PollSettings_" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.PollUntilCompleted(Google.Api.Gax.PollSettings)">PollUntilCompleted(PollSettings)</h4>
-  <div class="markdown level1 summary"><p>Polls this query job until it has completed.</p>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryResults_GetRowsAsync_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method exists rather than making the class implement <span class="xref">System.Collections.Generic.IAsyncEnumerable&lt;T&gt;</span> to avoid
+ambiguity.</p>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BigQueryResults PollUntilCompleted(PollSettings pollSettings = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Google.Api.Gax.PollSettings.html">PollSettings</a></td>
-        <td><span class="parametername">pollSettings</span></td>
-        <td><p>The settings to control how often and long the job is fetched before timing out if it is still incomplete.
-May be null, in which case defaults will be supplied.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryResults.html">BigQueryResults</a></td>
-        <td><p>This object, if it has already completed, or the results of polling repeatedly until
-the job has completed.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Google_Cloud_BigQuery_V2_BigQueryResults_PollUntilCompletedAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.PollUntilCompletedAsync*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_BigQueryResults_PollUntilCompletedAsync_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.PollUntilCompletedAsync(Google.Api.Gax.PollSettings,System.Threading.CancellationToken)">PollUntilCompletedAsync(PollSettings, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Polls this query job until it has completed.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryResults&gt; PollUntilCompletedAsync(PollSettings pollSettings = null, CancellationToken cancellationToken = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Google.Api.Gax.PollSettings.html">PollSettings</a></td>
-        <td><span class="parametername">pollSettings</span></td>
-        <td><p>The settings to control how often and long the job is fetched before timing out if it is still incomplete.
-May be null, in which case defaults will be supplied.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>The token to monitor for cancellation requests.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryResults.html">BigQueryResults</a>&gt;</td>
-        <td><p>A task representing the asynchronous operation. When complete, the result is
-this object, if it has already completed, or the results of polling repeatedly until
-the job has completed.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <a id="Google_Cloud_BigQuery_V2_BigQueryResults_ReadPage_" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.ReadPage*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_BigQueryResults_ReadPage_System_Int32_Google_Api_Gax_PollSettings_" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.ReadPage(System.Int32,Google.Api.Gax.PollSettings)">ReadPage(Int32, PollSettings)</h4>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryResults_ReadPage_System_Int32_" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.ReadPage(System.Int32)">ReadPage(Int32)</h4>
   <div class="markdown level1 summary"><p>Eagerly fetches a set of rows, up to the specified count, providing a page of results with a next page token
 if more results are available. This is typically used within web applications, where the next page token
-is propagated to the client along with the results, so that the next page can be retrieved in another request.
-If the job is still incompleted, it is polled until it has completed.</p>
+is propagated to the client along with the results, so that the next page can be retrieved in another request.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BigQueryPage ReadPage(int pageSize, PollSettings pollSettings = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public BigQueryPage ReadPage(int pageSize)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -432,13 +282,6 @@ If the job is still incompleted, it is polled until it has completed.</p>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">pageSize</span></td>
         <td><p>The maximum number of rows to retrieve. Must be positive.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Google.Api.Gax.PollSettings.html">PollSettings</a></td>
-        <td><span class="parametername">pollSettings</span></td>
-        <td><p>The settings to control how often and long the job is fetched before timing out if it is still incomplete.
-May be null, in which case defaults will be supplied.</p>
 </td>
       </tr>
     </tbody>
@@ -459,23 +302,16 @@ May be null, in which case defaults will be supplied.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="Google_Cloud_BigQuery_V2_BigQueryResults_ReadPage_System_Int32_Google_Api_Gax_PollSettings__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If <span class="paramref">pageSize</span> is smaller than the number of rows originally requested,
-this may require another server call to retrieve an appropriate page token. When working
-in pages, always specify a maximum per-request number of rows less than or equal to the
-page size you want.</p>
-</div>
   <a id="Google_Cloud_BigQuery_V2_BigQueryResults_ReadPageAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.ReadPageAsync*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_BigQueryResults_ReadPageAsync_System_Int32_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.ReadPageAsync(System.Int32,Google.Api.Gax.PollSettings,System.Threading.CancellationToken)">ReadPageAsync(Int32, PollSettings, CancellationToken)</h4>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryResults_ReadPageAsync_System_Int32_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.ReadPageAsync(System.Int32,System.Threading.CancellationToken)">ReadPageAsync(Int32, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Asynchronously but eagerly fetches a set of rows, up to the specified count, providing a page of results with a next page token
 if more results are available. This is typically used within web applications, where the next page token
-is propagated to the client along with the results, so that the next page can be retrieved in another request.
-If the job is still incompleted, it is polled until it has completed.</p>
+is propagated to the client along with the results, so that the next page can be retrieved in another request.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryPage&gt; ReadPageAsync(int pageSize, PollSettings pollSettings = null, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryPage&gt; ReadPageAsync(int pageSize, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -491,13 +327,6 @@ If the job is still incompleted, it is polled until it has completed.</p>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">pageSize</span></td>
         <td><p>The maximum number of rows to retrieve. Must be positive.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Google.Api.Gax.PollSettings.html">PollSettings</a></td>
-        <td><span class="parametername">pollSettings</span></td>
-        <td><p>The settings to control how often and long the job is fetched before timing out if it is still incomplete.
-May be null, in which case defaults will be supplied.</p>
 </td>
       </tr>
       <tr>
@@ -525,17 +354,10 @@ an in-memory result set of at most the given number of rows.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="Google_Cloud_BigQuery_V2_BigQueryResults_ReadPageAsync_System_Int32_Google_Api_Gax_PollSettings_System_Threading_CancellationToken__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If <span class="paramref">pageSize</span> is smaller than the number of rows originally requested,
-this may require another server call to retrieve an appropriate page token. When working
-in pages, always specify a maximum per-request number of rows less than or equal to the
-page size you want.</p>
-</div>
   <a id="Google_Cloud_BigQuery_V2_BigQueryResults_ThrowOnAnyError_" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.ThrowOnAnyError*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryResults_ThrowOnAnyError" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.ThrowOnAnyError">ThrowOnAnyError()</h4>
   <div class="markdown level1 summary"><p>Returns <code>this</code> if the job has no errors, or throws an exception containing the
-errors. A job may have errors but still contain useful information, and may also contain
-errors before completing.</p>
+errors. A job may have errors but still contain useful information.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -574,6 +396,35 @@ errors before completing.</p>
       </tr>
     </tbody>
   </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <a id="Google_Cloud_BigQuery_V2_BigQueryResults_System_Collections_IEnumerable_GetEnumerator_" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.System#Collections#IEnumerable#GetEnumerator*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryResults_System_Collections_IEnumerable_GetEnumerator" data-uid="Google.Cloud.BigQuery.V2.BigQueryResults.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+  <div class="markdown level1 summary"><p>Returns an iterator over the query results.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td><p>An iterator over the query results.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.IEnumerable.GetEnumerator()</span></div>
 </article>
           </div>
           

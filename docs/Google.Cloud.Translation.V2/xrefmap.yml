@@ -2220,6 +2220,402 @@ references:
   commentId: N:Google.Cloud.Translation.V2
   fullName: Google.Cloud.Translation.V2
   nameWithType: Google.Cloud.Translation.V2
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient
+  name: AdvancedTranslationClient
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html
+  commentId: T:Google.Cloud.Translation.V2.AdvancedTranslationClient
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient
+  nameWithType: AdvancedTranslationClient
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.Create(Google.Apis.Auth.OAuth2.GoogleCredential,System.String)
+  name: Create(GoogleCredential, String)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_Create_Google_Apis_Auth_OAuth2_GoogleCredential_System_String_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClient.Create(Google.Apis.Auth.OAuth2.GoogleCredential,System.String)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.Create(Google.Apis.Auth.OAuth2.GoogleCredential, System.String)
+  nameWithType: AdvancedTranslationClient.Create(GoogleCredential, String)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.Create*
+  name: Create
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_Create_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClient.Create
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.Create
+  nameWithType: AdvancedTranslationClient.Create
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.CreateAsync(Google.Apis.Auth.OAuth2.GoogleCredential,System.String)
+  name: CreateAsync(GoogleCredential, String)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_CreateAsync_Google_Apis_Auth_OAuth2_GoogleCredential_System_String_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClient.CreateAsync(Google.Apis.Auth.OAuth2.GoogleCredential,System.String)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.CreateAsync(Google.Apis.Auth.OAuth2.GoogleCredential, System.String)
+  nameWithType: AdvancedTranslationClient.CreateAsync(GoogleCredential, String)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.CreateAsync*
+  name: CreateAsync
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_CreateAsync_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClient.CreateAsync
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.CreateAsync
+  nameWithType: AdvancedTranslationClient.CreateAsync
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.CreateFromApiKey(System.String,System.String)
+  name: CreateFromApiKey(String, String)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_CreateFromApiKey_System_String_System_String_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClient.CreateFromApiKey(System.String,System.String)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.CreateFromApiKey(System.String, System.String)
+  nameWithType: AdvancedTranslationClient.CreateFromApiKey(String, String)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.CreateFromApiKey*
+  name: CreateFromApiKey
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_CreateFromApiKey_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClient.CreateFromApiKey
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.CreateFromApiKey
+  nameWithType: AdvancedTranslationClient.CreateFromApiKey
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.DefaultModel
+  name: DefaultModel
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_DefaultModel
+  commentId: P:Google.Cloud.Translation.V2.AdvancedTranslationClient.DefaultModel
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.DefaultModel
+  nameWithType: AdvancedTranslationClient.DefaultModel
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.DefaultModel*
+  name: DefaultModel
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_DefaultModel_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClient.DefaultModel
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.DefaultModel
+  nameWithType: AdvancedTranslationClient.DefaultModel
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguage(System.String)
+  name: DetectLanguage(String)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_DetectLanguage_System_String_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguage(System.String)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguage(System.String)
+  nameWithType: AdvancedTranslationClient.DetectLanguage(String)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguage*
+  name: DetectLanguage
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_DetectLanguage_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguage
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguage
+  nameWithType: AdvancedTranslationClient.DetectLanguage
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguageAsync(System.String,System.Threading.CancellationToken)
+  name: DetectLanguageAsync(String, CancellationToken)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_DetectLanguageAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguageAsync(System.String,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguageAsync(System.String, System.Threading.CancellationToken)
+  nameWithType: AdvancedTranslationClient.DetectLanguageAsync(String, CancellationToken)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguageAsync*
+  name: DetectLanguageAsync
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_DetectLanguageAsync_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguageAsync
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguageAsync
+  nameWithType: AdvancedTranslationClient.DetectLanguageAsync
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguages(System.Collections.Generic.IEnumerable{System.String})
+  name: DetectLanguages(IEnumerable<String>)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_DetectLanguages_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguages(System.Collections.Generic.IEnumerable{System.String})
+  name.vb: DetectLanguages(IEnumerable(Of String))
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguages(System.Collections.Generic.IEnumerable<System.String>)
+  fullName.vb: Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguages(System.Collections.Generic.IEnumerable(Of System.String))
+  nameWithType: AdvancedTranslationClient.DetectLanguages(IEnumerable<String>)
+  nameWithType.vb: AdvancedTranslationClient.DetectLanguages(IEnumerable(Of String))
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguages*
+  name: DetectLanguages
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_DetectLanguages_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguages
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguages
+  nameWithType: AdvancedTranslationClient.DetectLanguages
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguagesAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
+  name: DetectLanguagesAsync(IEnumerable<String>, CancellationToken)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_DetectLanguagesAsync_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguagesAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
+  name.vb: DetectLanguagesAsync(IEnumerable(Of String), CancellationToken)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguagesAsync(System.Collections.Generic.IEnumerable<System.String>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguagesAsync(System.Collections.Generic.IEnumerable(Of System.String), System.Threading.CancellationToken)
+  nameWithType: AdvancedTranslationClient.DetectLanguagesAsync(IEnumerable<String>, CancellationToken)
+  nameWithType.vb: AdvancedTranslationClient.DetectLanguagesAsync(IEnumerable(Of String), CancellationToken)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguagesAsync*
+  name: DetectLanguagesAsync
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_DetectLanguagesAsync_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguagesAsync
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.DetectLanguagesAsync
+  nameWithType: AdvancedTranslationClient.DetectLanguagesAsync
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.ListLanguages(System.String,System.String)
+  name: ListLanguages(String, String)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_ListLanguages_System_String_System_String_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClient.ListLanguages(System.String,System.String)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.ListLanguages(System.String, System.String)
+  nameWithType: AdvancedTranslationClient.ListLanguages(String, String)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.ListLanguages*
+  name: ListLanguages
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_ListLanguages_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClient.ListLanguages
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.ListLanguages
+  nameWithType: AdvancedTranslationClient.ListLanguages
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.ListLanguagesAsync(System.String,System.String,System.Threading.CancellationToken)
+  name: ListLanguagesAsync(String, String, CancellationToken)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_ListLanguagesAsync_System_String_System_String_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClient.ListLanguagesAsync(System.String,System.String,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.ListLanguagesAsync(System.String, System.String, System.Threading.CancellationToken)
+  nameWithType: AdvancedTranslationClient.ListLanguagesAsync(String, String, CancellationToken)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.ListLanguagesAsync*
+  name: ListLanguagesAsync
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_ListLanguagesAsync_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClient.ListLanguagesAsync
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.ListLanguagesAsync
+  nameWithType: AdvancedTranslationClient.ListLanguagesAsync
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.Service
+  name: Service
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_Service
+  commentId: P:Google.Cloud.Translation.V2.AdvancedTranslationClient.Service
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.Service
+  nameWithType: AdvancedTranslationClient.Service
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.Service*
+  name: Service
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_Service_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClient.Service
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.Service
+  nameWithType: AdvancedTranslationClient.Service
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateHtml(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String)
+  name: TranslateHtml(IEnumerable<String>, String, String, String)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_TranslateHtml_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateHtml(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String)
+  name.vb: TranslateHtml(IEnumerable(Of String), String, String, String)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateHtml(System.Collections.Generic.IEnumerable<System.String>, System.String, System.String, System.String)
+  fullName.vb: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateHtml(System.Collections.Generic.IEnumerable(Of System.String), System.String, System.String, System.String)
+  nameWithType: AdvancedTranslationClient.TranslateHtml(IEnumerable<String>, String, String, String)
+  nameWithType.vb: AdvancedTranslationClient.TranslateHtml(IEnumerable(Of String), String, String, String)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateHtml(System.String,System.String,System.String,System.String)
+  name: TranslateHtml(String, String, String, String)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_TranslateHtml_System_String_System_String_System_String_System_String_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateHtml(System.String,System.String,System.String,System.String)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateHtml(System.String, System.String, System.String, System.String)
+  nameWithType: AdvancedTranslationClient.TranslateHtml(String, String, String, String)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateHtml*
+  name: TranslateHtml
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_TranslateHtml_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateHtml
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateHtml
+  nameWithType: AdvancedTranslationClient.TranslateHtml
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateHtmlAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Threading.CancellationToken)
+  name: TranslateHtmlAsync(IEnumerable<String>, String, String, String, CancellationToken)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_TranslateHtmlAsync_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateHtmlAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Threading.CancellationToken)
+  name.vb: TranslateHtmlAsync(IEnumerable(Of String), String, String, String, CancellationToken)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateHtmlAsync(System.Collections.Generic.IEnumerable<System.String>, System.String, System.String, System.String, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateHtmlAsync(System.Collections.Generic.IEnumerable(Of System.String), System.String, System.String, System.String, System.Threading.CancellationToken)
+  nameWithType: AdvancedTranslationClient.TranslateHtmlAsync(IEnumerable<String>, String, String, String, CancellationToken)
+  nameWithType.vb: AdvancedTranslationClient.TranslateHtmlAsync(IEnumerable(Of String), String, String, String, CancellationToken)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateHtmlAsync(System.String,System.String,System.String,System.String,System.Threading.CancellationToken)
+  name: TranslateHtmlAsync(String, String, String, String, CancellationToken)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_TranslateHtmlAsync_System_String_System_String_System_String_System_String_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateHtmlAsync(System.String,System.String,System.String,System.String,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateHtmlAsync(System.String, System.String, System.String, System.String, System.Threading.CancellationToken)
+  nameWithType: AdvancedTranslationClient.TranslateHtmlAsync(String, String, String, String, CancellationToken)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateHtmlAsync*
+  name: TranslateHtmlAsync
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_TranslateHtmlAsync_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateHtmlAsync
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateHtmlAsync
+  nameWithType: AdvancedTranslationClient.TranslateHtmlAsync
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateText(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String)
+  name: TranslateText(IEnumerable<String>, String, String, String)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_TranslateText_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateText(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String)
+  name.vb: TranslateText(IEnumerable(Of String), String, String, String)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateText(System.Collections.Generic.IEnumerable<System.String>, System.String, System.String, System.String)
+  fullName.vb: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateText(System.Collections.Generic.IEnumerable(Of System.String), System.String, System.String, System.String)
+  nameWithType: AdvancedTranslationClient.TranslateText(IEnumerable<String>, String, String, String)
+  nameWithType.vb: AdvancedTranslationClient.TranslateText(IEnumerable(Of String), String, String, String)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateText(System.String,System.String,System.String,System.String)
+  name: TranslateText(String, String, String, String)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_TranslateText_System_String_System_String_System_String_System_String_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateText(System.String,System.String,System.String,System.String)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateText(System.String, System.String, System.String, System.String)
+  nameWithType: AdvancedTranslationClient.TranslateText(String, String, String, String)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateText*
+  name: TranslateText
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_TranslateText_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateText
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateText
+  nameWithType: AdvancedTranslationClient.TranslateText
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateTextAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Threading.CancellationToken)
+  name: TranslateTextAsync(IEnumerable<String>, String, String, String, CancellationToken)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_TranslateTextAsync_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateTextAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Threading.CancellationToken)
+  name.vb: TranslateTextAsync(IEnumerable(Of String), String, String, String, CancellationToken)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateTextAsync(System.Collections.Generic.IEnumerable<System.String>, System.String, System.String, System.String, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateTextAsync(System.Collections.Generic.IEnumerable(Of System.String), System.String, System.String, System.String, System.Threading.CancellationToken)
+  nameWithType: AdvancedTranslationClient.TranslateTextAsync(IEnumerable<String>, String, String, String, CancellationToken)
+  nameWithType.vb: AdvancedTranslationClient.TranslateTextAsync(IEnumerable(Of String), String, String, String, CancellationToken)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateTextAsync(System.String,System.String,System.String,System.String,System.Threading.CancellationToken)
+  name: TranslateTextAsync(String, String, String, String, CancellationToken)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_TranslateTextAsync_System_String_System_String_System_String_System_String_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateTextAsync(System.String,System.String,System.String,System.String,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateTextAsync(System.String, System.String, System.String, System.String, System.Threading.CancellationToken)
+  nameWithType: AdvancedTranslationClient.TranslateTextAsync(String, String, String, String, CancellationToken)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateTextAsync*
+  name: TranslateTextAsync
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClient.html#Google_Cloud_Translation_V2_AdvancedTranslationClient_TranslateTextAsync_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateTextAsync
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClient.TranslateTextAsync
+  nameWithType: AdvancedTranslationClient.TranslateTextAsync
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl
+  name: AdvancedTranslationClientImpl
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html
+  commentId: T:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl
+  nameWithType: AdvancedTranslationClientImpl
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.#ctor(Google.Apis.Translate.v2.TranslateService,System.String)
+  name: AdvancedTranslationClientImpl(TranslateService, String)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl__ctor_Google_Apis_Translate_v2_TranslateService_System_String_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.#ctor(Google.Apis.Translate.v2.TranslateService,System.String)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.AdvancedTranslationClientImpl(Google.Apis.Translate.v2.TranslateService, System.String)
+  nameWithType: AdvancedTranslationClientImpl.AdvancedTranslationClientImpl(TranslateService, String)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.#ctor*
+  name: AdvancedTranslationClientImpl
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl__ctor_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.#ctor
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.AdvancedTranslationClientImpl
+  nameWithType: AdvancedTranslationClientImpl.AdvancedTranslationClientImpl
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ApplicationName
+  name: ApplicationName
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_ApplicationName
+  commentId: P:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ApplicationName
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ApplicationName
+  nameWithType: AdvancedTranslationClientImpl.ApplicationName
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ApplicationName*
+  name: ApplicationName
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_ApplicationName_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ApplicationName
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ApplicationName
+  nameWithType: AdvancedTranslationClientImpl.ApplicationName
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DefaultModel
+  name: DefaultModel
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_DefaultModel
+  commentId: P:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DefaultModel
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DefaultModel
+  nameWithType: AdvancedTranslationClientImpl.DefaultModel
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DefaultModel*
+  name: DefaultModel
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_DefaultModel_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DefaultModel
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DefaultModel
+  nameWithType: AdvancedTranslationClientImpl.DefaultModel
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DetectLanguages(System.Collections.Generic.IEnumerable{System.String})
+  name: DetectLanguages(IEnumerable<String>)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_DetectLanguages_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DetectLanguages(System.Collections.Generic.IEnumerable{System.String})
+  name.vb: DetectLanguages(IEnumerable(Of String))
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DetectLanguages(System.Collections.Generic.IEnumerable<System.String>)
+  fullName.vb: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DetectLanguages(System.Collections.Generic.IEnumerable(Of System.String))
+  nameWithType: AdvancedTranslationClientImpl.DetectLanguages(IEnumerable<String>)
+  nameWithType.vb: AdvancedTranslationClientImpl.DetectLanguages(IEnumerable(Of String))
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DetectLanguages*
+  name: DetectLanguages
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_DetectLanguages_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DetectLanguages
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DetectLanguages
+  nameWithType: AdvancedTranslationClientImpl.DetectLanguages
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DetectLanguagesAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
+  name: DetectLanguagesAsync(IEnumerable<String>, CancellationToken)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_DetectLanguagesAsync_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DetectLanguagesAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
+  name.vb: DetectLanguagesAsync(IEnumerable(Of String), CancellationToken)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DetectLanguagesAsync(System.Collections.Generic.IEnumerable<System.String>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DetectLanguagesAsync(System.Collections.Generic.IEnumerable(Of System.String), System.Threading.CancellationToken)
+  nameWithType: AdvancedTranslationClientImpl.DetectLanguagesAsync(IEnumerable<String>, CancellationToken)
+  nameWithType.vb: AdvancedTranslationClientImpl.DetectLanguagesAsync(IEnumerable(Of String), CancellationToken)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DetectLanguagesAsync*
+  name: DetectLanguagesAsync
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_DetectLanguagesAsync_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DetectLanguagesAsync
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.DetectLanguagesAsync
+  nameWithType: AdvancedTranslationClientImpl.DetectLanguagesAsync
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ListLanguages(System.String,System.String)
+  name: ListLanguages(String, String)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_ListLanguages_System_String_System_String_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ListLanguages(System.String,System.String)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ListLanguages(System.String, System.String)
+  nameWithType: AdvancedTranslationClientImpl.ListLanguages(String, String)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ListLanguages*
+  name: ListLanguages
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_ListLanguages_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ListLanguages
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ListLanguages
+  nameWithType: AdvancedTranslationClientImpl.ListLanguages
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ListLanguagesAsync(System.String,System.String,System.Threading.CancellationToken)
+  name: ListLanguagesAsync(String, String, CancellationToken)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_ListLanguagesAsync_System_String_System_String_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ListLanguagesAsync(System.String,System.String,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ListLanguagesAsync(System.String, System.String, System.Threading.CancellationToken)
+  nameWithType: AdvancedTranslationClientImpl.ListLanguagesAsync(String, String, CancellationToken)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ListLanguagesAsync*
+  name: ListLanguagesAsync
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_ListLanguagesAsync_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ListLanguagesAsync
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.ListLanguagesAsync
+  nameWithType: AdvancedTranslationClientImpl.ListLanguagesAsync
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.Service
+  name: Service
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_Service
+  commentId: P:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.Service
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.Service
+  nameWithType: AdvancedTranslationClientImpl.Service
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.Service*
+  name: Service
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_Service_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.Service
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.Service
+  nameWithType: AdvancedTranslationClientImpl.Service
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateHtml(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String)
+  name: TranslateHtml(IEnumerable<String>, String, String, String)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_TranslateHtml_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateHtml(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String)
+  name.vb: TranslateHtml(IEnumerable(Of String), String, String, String)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateHtml(System.Collections.Generic.IEnumerable<System.String>, System.String, System.String, System.String)
+  fullName.vb: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateHtml(System.Collections.Generic.IEnumerable(Of System.String), System.String, System.String, System.String)
+  nameWithType: AdvancedTranslationClientImpl.TranslateHtml(IEnumerable<String>, String, String, String)
+  nameWithType.vb: AdvancedTranslationClientImpl.TranslateHtml(IEnumerable(Of String), String, String, String)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateHtml*
+  name: TranslateHtml
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_TranslateHtml_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateHtml
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateHtml
+  nameWithType: AdvancedTranslationClientImpl.TranslateHtml
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateHtmlAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Threading.CancellationToken)
+  name: TranslateHtmlAsync(IEnumerable<String>, String, String, String, CancellationToken)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_TranslateHtmlAsync_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateHtmlAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Threading.CancellationToken)
+  name.vb: TranslateHtmlAsync(IEnumerable(Of String), String, String, String, CancellationToken)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateHtmlAsync(System.Collections.Generic.IEnumerable<System.String>, System.String, System.String, System.String, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateHtmlAsync(System.Collections.Generic.IEnumerable(Of System.String), System.String, System.String, System.String, System.Threading.CancellationToken)
+  nameWithType: AdvancedTranslationClientImpl.TranslateHtmlAsync(IEnumerable<String>, String, String, String, CancellationToken)
+  nameWithType.vb: AdvancedTranslationClientImpl.TranslateHtmlAsync(IEnumerable(Of String), String, String, String, CancellationToken)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateHtmlAsync*
+  name: TranslateHtmlAsync
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_TranslateHtmlAsync_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateHtmlAsync
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateHtmlAsync
+  nameWithType: AdvancedTranslationClientImpl.TranslateHtmlAsync
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateText(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String)
+  name: TranslateText(IEnumerable<String>, String, String, String)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_TranslateText_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateText(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String)
+  name.vb: TranslateText(IEnumerable(Of String), String, String, String)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateText(System.Collections.Generic.IEnumerable<System.String>, System.String, System.String, System.String)
+  fullName.vb: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateText(System.Collections.Generic.IEnumerable(Of System.String), System.String, System.String, System.String)
+  nameWithType: AdvancedTranslationClientImpl.TranslateText(IEnumerable<String>, String, String, String)
+  nameWithType.vb: AdvancedTranslationClientImpl.TranslateText(IEnumerable(Of String), String, String, String)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateText*
+  name: TranslateText
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_TranslateText_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateText
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateText
+  nameWithType: AdvancedTranslationClientImpl.TranslateText
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateTextAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Threading.CancellationToken)
+  name: TranslateTextAsync(IEnumerable<String>, String, String, String, CancellationToken)
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_TranslateTextAsync_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateTextAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Threading.CancellationToken)
+  name.vb: TranslateTextAsync(IEnumerable(Of String), String, String, String, CancellationToken)
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateTextAsync(System.Collections.Generic.IEnumerable<System.String>, System.String, System.String, System.String, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateTextAsync(System.Collections.Generic.IEnumerable(Of System.String), System.String, System.String, System.String, System.Threading.CancellationToken)
+  nameWithType: AdvancedTranslationClientImpl.TranslateTextAsync(IEnumerable<String>, String, String, String, CancellationToken)
+  nameWithType.vb: AdvancedTranslationClientImpl.TranslateTextAsync(IEnumerable(Of String), String, String, String, CancellationToken)
+- uid: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateTextAsync*
+  name: TranslateTextAsync
+  href: api/Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.html#Google_Cloud_Translation_V2_AdvancedTranslationClientImpl_TranslateTextAsync_
+  commentId: Overload:Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateTextAsync
+  fullName: Google.Cloud.Translation.V2.AdvancedTranslationClientImpl.TranslateTextAsync
+  nameWithType: AdvancedTranslationClientImpl.TranslateTextAsync
 - uid: Google.Cloud.Translation.V2.Detection
   name: Detection
   href: api/Google.Cloud.Translation.V2.Detection.html
@@ -3417,6 +3813,15 @@ references:
   fullName.vb: Google.Cloud.Translation.V2.TranslationResult.TranslationResult(System.String, System.String, System.String, System.String, System.String, System.Nullable(Of Google.Cloud.Translation.V2.TranslationModel))
   nameWithType: TranslationResult.TranslationResult(String, String, String, String, String, Nullable<TranslationModel>)
   nameWithType.vb: TranslationResult.TranslationResult(String, String, String, String, String, Nullable(Of TranslationModel))
+- uid: Google.Cloud.Translation.V2.TranslationResult.#ctor(System.String,System.String,System.String,System.String,System.String,System.Nullable{Google.Cloud.Translation.V2.TranslationModel},System.String)
+  name: TranslationResult(String, String, String, String, String, Nullable<TranslationModel>, String)
+  href: api/Google.Cloud.Translation.V2.TranslationResult.html#Google_Cloud_Translation_V2_TranslationResult__ctor_System_String_System_String_System_String_System_String_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__System_String_
+  commentId: M:Google.Cloud.Translation.V2.TranslationResult.#ctor(System.String,System.String,System.String,System.String,System.String,System.Nullable{Google.Cloud.Translation.V2.TranslationModel},System.String)
+  name.vb: TranslationResult(String, String, String, String, String, Nullable(Of TranslationModel), String)
+  fullName: Google.Cloud.Translation.V2.TranslationResult.TranslationResult(System.String, System.String, System.String, System.String, System.String, System.Nullable<Google.Cloud.Translation.V2.TranslationModel>, System.String)
+  fullName.vb: Google.Cloud.Translation.V2.TranslationResult.TranslationResult(System.String, System.String, System.String, System.String, System.String, System.Nullable(Of Google.Cloud.Translation.V2.TranslationModel), System.String)
+  nameWithType: TranslationResult.TranslationResult(String, String, String, String, String, Nullable<TranslationModel>, String)
+  nameWithType.vb: TranslationResult.TranslationResult(String, String, String, String, String, Nullable(Of TranslationModel), String)
 - uid: Google.Cloud.Translation.V2.TranslationResult.#ctor*
   name: TranslationResult
   href: api/Google.Cloud.Translation.V2.TranslationResult.html#Google_Cloud_Translation_V2_TranslationResult__ctor_
@@ -3447,6 +3852,18 @@ references:
   commentId: Overload:Google.Cloud.Translation.V2.TranslationResult.Model
   fullName: Google.Cloud.Translation.V2.TranslationResult.Model
   nameWithType: TranslationResult.Model
+- uid: Google.Cloud.Translation.V2.TranslationResult.ModelName
+  name: ModelName
+  href: api/Google.Cloud.Translation.V2.TranslationResult.html#Google_Cloud_Translation_V2_TranslationResult_ModelName
+  commentId: P:Google.Cloud.Translation.V2.TranslationResult.ModelName
+  fullName: Google.Cloud.Translation.V2.TranslationResult.ModelName
+  nameWithType: TranslationResult.ModelName
+- uid: Google.Cloud.Translation.V2.TranslationResult.ModelName*
+  name: ModelName
+  href: api/Google.Cloud.Translation.V2.TranslationResult.html#Google_Cloud_Translation_V2_TranslationResult_ModelName_
+  commentId: Overload:Google.Cloud.Translation.V2.TranslationResult.ModelName
+  fullName: Google.Cloud.Translation.V2.TranslationResult.ModelName
+  nameWithType: TranslationResult.ModelName
 - uid: Google.Cloud.Translation.V2.TranslationResult.OriginalText
   name: OriginalText
   href: api/Google.Cloud.Translation.V2.TranslationResult.html#Google_Cloud_Translation_V2_TranslationResult_OriginalText

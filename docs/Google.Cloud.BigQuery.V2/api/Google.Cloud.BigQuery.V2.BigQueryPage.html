@@ -105,13 +105,14 @@ A page token may be present to indicate that more results are available.</p>
   <h3 id="constructors">Constructors
   </h3>
   <a id="Google_Cloud_BigQuery_V2_BigQueryPage__ctor_" data-uid="Google.Cloud.BigQuery.V2.BigQueryPage.#ctor*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_BigQueryPage__ctor_System_Collections_Generic_List_Google_Cloud_BigQuery_V2_BigQueryRow__Google_Apis_Bigquery_v2_Data_TableSchema_Google_Apis_Bigquery_v2_Data_JobReference_System_String_" data-uid="Google.Cloud.BigQuery.V2.BigQueryPage.#ctor(System.Collections.Generic.List{Google.Cloud.BigQuery.V2.BigQueryRow},Google.Apis.Bigquery.v2.Data.TableSchema,Google.Apis.Bigquery.v2.Data.JobReference,System.String)">BigQueryPage(List&lt;BigQueryRow&gt;, TableSchema, JobReference, String)</h4>
-  <div class="markdown level1 summary"><p>Constructs a result set with the given rows and schema, retrieved from the specified job.</p>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryPage__ctor_System_Collections_Generic_List_Google_Cloud_BigQuery_V2_BigQueryRow__Google_Apis_Bigquery_v2_Data_TableSchema_Google_Apis_Bigquery_v2_Data_JobReference_Google_Apis_Bigquery_v2_Data_TableReference_System_String_" data-uid="Google.Cloud.BigQuery.V2.BigQueryPage.#ctor(System.Collections.Generic.List{Google.Cloud.BigQuery.V2.BigQueryRow},Google.Apis.Bigquery.v2.Data.TableSchema,Google.Apis.Bigquery.v2.Data.JobReference,Google.Apis.Bigquery.v2.Data.TableReference,System.String)">BigQueryPage(List&lt;BigQueryRow&gt;, TableSchema, JobReference, TableReference, String)</h4>
+  <div class="markdown level1 summary"><p>Constructs a result set with the given rows and schema, retrieved from the specified job.
+This constructor exists for the sake of testing.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BigQueryPage(List&lt;BigQueryRow&gt; rows, TableSchema schema, JobReference jobReference, string nextPageToken)</code></pre>
+    <pre><code class="lang-csharp hljs">public BigQueryPage(List&lt;BigQueryRow&gt; rows, TableSchema schema, JobReference jobReference, TableReference tableReference, string nextPageToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -139,6 +140,12 @@ A page token may be present to indicate that more results are available.</p>
         <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html">JobReference</a></td>
         <td><span class="parametername">jobReference</span></td>
         <td><p>Reference to the job this result set was fetched from. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a></td>
+        <td><span class="parametername">tableReference</span></td>
+        <td><p>Reference to the table this result set was fetched from. Must not be null.</p>
 </td>
       </tr>
       <tr>
@@ -246,6 +253,30 @@ are returned than were requested, and will never be empty.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_BigQuery_V2_BigQueryPage_TableReference_" data-uid="Google.Cloud.BigQuery.V2.BigQueryPage.TableReference*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryPage_TableReference" data-uid="Google.Cloud.BigQuery.V2.BigQueryPage.TableReference">TableReference</h4>
+  <div class="markdown level1 summary"><p>Reference to the table this result set was fetched from.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TableReference TableReference { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a></td>
         <td></td>
       </tr>
     </tbody>
