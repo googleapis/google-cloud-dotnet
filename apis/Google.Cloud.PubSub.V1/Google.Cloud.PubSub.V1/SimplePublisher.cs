@@ -86,9 +86,9 @@ namespace Google.Cloud.PubSub.V1
                 {
                     if (batchingSettings != null)
                     {
-                        GaxPreconditions2.CheckArgumentRange(batchingSettings.ElementCountThreshold,
+                        GaxPreconditions.CheckArgumentRange(batchingSettings.ElementCountThreshold,
                             $"{name}.{nameof(BatchingSettings.ElementCountThreshold)}", 1, ApiMaxBatchingSettings.ElementCountThreshold.Value);
-                        GaxPreconditions2.CheckArgumentRange(batchingSettings.ByteCountThreshold,
+                        GaxPreconditions.CheckArgumentRange(batchingSettings.ByteCountThreshold,
                             $"{name}.{nameof(BatchingSettings.ByteCountThreshold)}", 1, ApiMaxBatchingSettings.ByteCountThreshold.Value);
                         GaxPreconditions.CheckArgument((batchingSettings.DelayThreshold ?? TimeSpan.FromSeconds(1)) > TimeSpan.Zero,
                             $"{name}.{nameof(BatchingSettings.DelayThreshold)}", "Must be positive");
@@ -209,20 +209,24 @@ namespace Google.Cloud.PubSub.V1
         public static BatchingSettings ApiMaxBatchingSettings { get; } = new BatchingSettings(1000L, 9_500_000L, null);
 
         /// <summary>
-        /// Create a <see cref="SimplePublisher"/> instance associated with the specified <see cref="TopicName"/>,
+        /// Create a <see cref="SimplePublisher"/> instance associated with the specified <see cref="TopicName"/>.
+        /// The default <paramref name="settings"/> and <paramref name="clientCreationSettings"/> are suitable for machines with
+        /// high network bandwidth (e.g. Google Compute Engine instances). If running with more limited network bandwidth, some
+        /// settings may need changing; especially
+        /// <see cref="ClientCreationSettings.PublisherSettings"/>.<see cref="PublisherSettings.PublishSettings"/>.<see cref="CallSettings.Timing"/>.<see cref="CallTiming.Retry"/>.<see cref="RetrySettings.TimeoutBackoff"/>.
         /// </summary>
         /// <param name="topicName">The <see cref="TopicName"/> to publish messages to.</param>
-        /// <param name="clientCreationsettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
+        /// <param name="clientCreationSettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
         /// <see cref="PublisherClient"/>s.</param>
         /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="SimplePublisher"/>.</param>
         /// <returns>A <see cref="SimplePublisher"/> instance associated with the specified <see cref="TopicName"/>.</returns>
-        public static async Task<SimplePublisher> CreateAsync(TopicName topicName, ClientCreationSettings clientCreationsettings = null, Settings settings = null)
+        public static async Task<SimplePublisher> CreateAsync(TopicName topicName, ClientCreationSettings clientCreationSettings = null, Settings settings = null)
         {
-            clientCreationsettings?.Validate();
+            clientCreationSettings?.Validate();
             // Clone settings, just in case user modifies them and an await happens in this method
             settings = settings?.Clone() ?? new Settings();
-            var clientCount = clientCreationsettings?.ClientCount ?? Environment.ProcessorCount;
-            var channelCredentials = clientCreationsettings?.Credentials;
+            var clientCount = clientCreationSettings?.ClientCount ?? Environment.ProcessorCount;
+            var channelCredentials = clientCreationSettings?.Credentials;
             // Use default credentials if none given.
             if (channelCredentials == null)
             {
@@ -234,13 +238,19 @@ namespace Google.Cloud.PubSub.V1
                 channelCredentials = credentials.ToChannelCredentials();
             }
             // Create the channels and clients, and register shutdown functions for each channel
-            var endpoint = clientCreationsettings?.ServiceEndpoint ?? PublisherClient.DefaultEndpoint;
+            var endpoint = clientCreationSettings?.ServiceEndpoint ?? PublisherClient.DefaultEndpoint;
             var clients = new PublisherClient[clientCount];
             var shutdowns = new Func<Task>[clientCount];
+            // Set channel send/recv message size to unlimited. It defaults to ~4Mb which causes failures.
+            var channelOptions = new[]
+            {
+                new ChannelOption(ChannelOptions.MaxSendMessageLength, -1),
+                new ChannelOption(ChannelOptions.MaxReceiveMessageLength, -1),
+            };
             for (int i = 0; i < clientCount; i++)
             {
-                var channel = new Channel(endpoint.Host, endpoint.Port, channelCredentials);
-                clients[i] = PublisherClient.Create(channel, clientCreationsettings?.PublisherSettings);
+                var channel = new Channel(endpoint.Host, endpoint.Port, channelCredentials, channelOptions);
+                clients[i] = PublisherClient.Create(channel, clientCreationSettings?.PublisherSettings);
                 shutdowns[i] = channel.ShutdownAsync;
             }
             Func<Task> shutdown = () => Task.WhenAll(shutdowns.Select(x => x()));
@@ -248,7 +258,13 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Create a <see cref="SimplePublisher"/> instance associated with the specified <see cref="TopicName"/>,
+        /// Create a <see cref="SimplePublisher"/> instance associated with the specified <see cref="TopicName"/>.
+        /// The gRPC <see cref="Channel"/>s underlying the provided <see cref="SubscriberClient"/>s must have their
+        /// maximum send and maximum receive sizes set to unlimited, otherwise performance will be severly affected,
+        /// possibly causing a deadlock.
+        /// The default <paramref name="settings"/> are suitable for machines with high network bandwidth
+        /// (e.g. Google Compute Engine instances). If running with more limited network bandwidth, some
+        /// settings may need changing.
         /// </summary>
         /// <param name="topicName">The <see cref="TopicName"/> to publish messages to.</param>
         /// <param name="clients">The <see cref="PublisherClient"/>s to use in a <see cref="SimplePublisher"/>.

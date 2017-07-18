@@ -28,7 +28,7 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="request"></param>
         /// <param name="callSettings"></param>
         /// <returns></returns>
-        internal virtual AsyncServerStreamingCall<PartialResultSet> ExecuteSqlStream(ExecuteSqlRequest request, CallSettings callSettings = null)
+        public virtual AsyncServerStreamingCall<PartialResultSet> ExecuteSqlStream(ExecuteSqlRequest request, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -39,7 +39,7 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="request"></param>
         /// <param name="session"></param>
         /// <returns></returns>
-        internal virtual ReliableStreamReader GetSqlStreamReader(ExecuteSqlRequest request, Session session)
+        public virtual ReliableStreamReader GetSqlStreamReader(ExecuteSqlRequest request, Session session)
         {
             throw new NotImplementedException();
         }
@@ -64,7 +64,7 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="request"></param>
         /// <param name="callSettings"></param>
         /// <returns></returns>
-        internal override AsyncServerStreamingCall<PartialResultSet> ExecuteSqlStream(ExecuteSqlRequest request, CallSettings callSettings = null)
+        public override AsyncServerStreamingCall<PartialResultSet> ExecuteSqlStream(ExecuteSqlRequest request, CallSettings callSettings = null)
         {
             Modify_ExecuteSqlRequest(ref request, ref callSettings);
             return _callExecuteSqlStream.Call(request, callSettings);
@@ -76,7 +76,7 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="request"></param>
         /// <param name="session"></param>
         /// <returns></returns>
-        internal override ReliableStreamReader GetSqlStreamReader(ExecuteSqlRequest request, Session session)
+        public override ReliableStreamReader GetSqlStreamReader(ExecuteSqlRequest request, Session session)
         {
             return new ReliableStreamReader(this, request, session);
         }

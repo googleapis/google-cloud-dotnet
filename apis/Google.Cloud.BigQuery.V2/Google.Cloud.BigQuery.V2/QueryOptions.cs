@@ -12,16 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using static Google.Apis.Bigquery.v2.JobsResource;
-using System;
 using Google.Apis.Bigquery.v2.Data;
 
 namespace Google.Cloud.BigQuery.V2
 {
     /// <summary>
-    /// Options for <c>CreateQueryJob</c> operations.
+    /// Options for <c>CreateQueryJob</c> and <c>ExecuteQuery</c> operations.
     /// </summary>
-    public sealed class CreateQueryJobOptions
+    public sealed class QueryOptions : JobCreationOptions
     {
         /// <summary>
         /// A destination table to write the results into.

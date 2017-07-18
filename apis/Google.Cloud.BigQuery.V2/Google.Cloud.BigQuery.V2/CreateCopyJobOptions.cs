@@ -19,7 +19,7 @@ namespace Google.Cloud.BigQuery.V2
     /// <summary>
     /// Options for <c>CreateCopyJob</c> operations.
     /// </summary>
-    public sealed class CreateCopyJobOptions
+    public sealed class CreateCopyJobOptions : JobCreationOptions
     {
         /// <summary>
         /// The behavior if the destination table doesn't exist. If this

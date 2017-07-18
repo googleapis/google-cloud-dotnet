@@ -19,7 +19,7 @@ namespace Google.Cloud.BigQuery.V2
     /// <summary>
     /// Options for <c>UploadAvro</c> operations.
     /// </summary>
-    public sealed class UploadAvroOptions
+    public sealed class UploadAvroOptions : JobCreationOptions
     {
         /// <summary>
         /// Whether or not to accept rows with fields that are not specified in the schema,

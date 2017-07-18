@@ -18,7 +18,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Google.Cloud.Spanner.V1.Logging;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -52,25 +52,25 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
-                values.Add("K", _lastKey = UniqueString(), SpannerDbType.String);
+                values.Add("K", SpannerDbType.String, _lastKey = UniqueString());
                 var cmd = connection.CreateInsertCommand("T", values);
 
                 return await cmd.ExecuteNonQueryAsync();
             }
         }
 
-        private async Task InsertAndRecordBytesAsync(byte[] bytes,
+        private async Task InsertAndRecordBytesAsync(
+            byte[] bytes,
             IDictionary<string, byte[]> record)
         {
             Assert.Equal(
                 1, await InsertAsync(
                     new SpannerParameterCollection
                     {
-                        new SpannerParameter("BytesValue", SpannerDbType.Bytes, bytes)
+                        new SpannerParameter("BytesValue", SpannerDbType.Bytes) {Value = bytes}
                     }));
             record[_lastKey] = bytes;
         }
-
 
         private async Task<SpannerDataReader> GetLastRowAsync()
         {
@@ -78,122 +78,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 var cmd = connection.CreateSelectCommand(
                     "SELECT * FROM T WHERE K=@k",
-                    new SpannerParameterCollection {{"K", _lastKey, SpannerDbType.String}});
+                    new SpannerParameterCollection {{"K", SpannerDbType.String, _lastKey}});
                 var reader = (SpannerDataReader) await cmd.ExecuteReaderAsync();
                 await reader.ReadAsync();
                 return reader;
             }
         }
 
-        [Fact]
-        public async Task WriteNulls()
-        {
-            Assert.Equal(
-                1, await InsertAsync(
-                    new SpannerParameterCollection
-                    {
-                        new SpannerParameter("BoolValue", SpannerDbType.Bool, null),
-                        new SpannerParameter("Int64Value", SpannerDbType.Int64, null),
-                        new SpannerParameter("Float64Value", SpannerDbType.Float64, null),
-                        new SpannerParameter("StringValue", SpannerDbType.String, null),
-                        new SpannerParameter("TimestampValue", SpannerDbType.Timestamp, null),
-                        new SpannerParameter("DateValue", SpannerDbType.Date, null),
-                        new SpannerParameter(
-                            "BoolArrayValue",
-                            SpannerDbType.ArrayOf(SpannerDbType.Bool),
-                            null),
-                        new SpannerParameter(
-                            "Int64ArrayValue",
-                            SpannerDbType.ArrayOf(SpannerDbType.Int64),
-                            null),
-                        new SpannerParameter(
-                            "Float64ArrayValue",
-                            SpannerDbType.ArrayOf(SpannerDbType.Float64),
-                            null),
-                        new SpannerParameter(
-                            "StringArrayValue",
-                            SpannerDbType.ArrayOf(SpannerDbType.String),
-                            null),
-                        new SpannerParameter(
-                            "BytesArrayValue",
-                            SpannerDbType.ArrayOf(SpannerDbType.Bytes),
-                            null),
-                        new SpannerParameter(
-                            "TimestampArrayValue",
-                            SpannerDbType.ArrayOf(SpannerDbType.Timestamp),
-                            null),
-                        new SpannerParameter(
-                            "DateArrayValue",
-                            SpannerDbType.ArrayOf(SpannerDbType.Date),
-                            null)
-                    }));
-            using (var reader = await GetLastRowAsync())
-            {
-                Assert.Null(reader.GetValue(reader.GetOrdinal("BoolValue")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("Int64Value")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("Float64Value")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("StringValue")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("TimestampValue")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("DateValue")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("BoolArrayValue")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("Int64ArrayValue")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("Float64ArrayValue")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("StringArrayValue")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("BytesArrayValue")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("TimestampArrayValue")));
-                Assert.Null(reader.GetValue(reader.GetOrdinal("DateArrayValue")));
-            }
-        }
-
-        [Fact]
-        public async Task WriteEmpties()
-        {
-            Assert.Equal(
-                1, await InsertAsync(
-                    new SpannerParameterCollection
-                    {
-                        new SpannerParameter(
-                            "BoolArrayValue",
-                            SpannerDbType.ArrayOf(SpannerDbType.Bool),
-                            new bool[0]),
-                        new SpannerParameter(
-                            "Int64ArrayValue",
-                            SpannerDbType.ArrayOf(SpannerDbType.Int64),
-                            new long[0]),
-                        new SpannerParameter(
-                            "Float64ArrayValue",
-                            SpannerDbType.ArrayOf(SpannerDbType.Float64),
-                            new double[0]),
-                        new SpannerParameter(
-                            "StringArrayValue",
-                            SpannerDbType.ArrayOf(SpannerDbType.String),
-                            new string[0]),
-                        new SpannerParameter(
-                            "BytesArrayValue",
-                            SpannerDbType.ArrayOf(SpannerDbType.Bytes),
-                            new byte[0][]),
-                        new SpannerParameter(
-                            "TimestampArrayValue",
-                            SpannerDbType.ArrayOf(SpannerDbType.Timestamp),
-                            new DateTime[0]),
-                        new SpannerParameter(
-                            "DateArrayValue",
-                            SpannerDbType.ArrayOf(SpannerDbType.Date),
-                            new DateTime[0])
-                    }));
-            using (var reader = await GetLastRowAsync())
-            {
-                Assert.Equal(new bool[] {}, reader.GetFieldValue<bool[]>(reader.GetOrdinal("BoolArrayValue")));
-                Assert.Equal(new long[] { }, reader.GetFieldValue<long[]>(reader.GetOrdinal("Int64ArrayValue")));
-                Assert.Equal(new double[] { }, reader.GetFieldValue<double[]>(reader.GetOrdinal("Float64ArrayValue")));
-                Assert.Equal(new string[] { }, reader.GetFieldValue<string[]>(reader.GetOrdinal("StringArrayValue")));
-                Assert.Equal(new byte[][] { }, reader.GetFieldValue<byte[][]>(reader.GetOrdinal("BytesArrayValue")));
-                Assert.Equal(new DateTime[] { }, reader.GetFieldValue<DateTime[]>(reader.GetOrdinal("TimestampArrayValue")));
-                Assert.Equal(new DateTime[] { }, reader.GetFieldValue<DateTime[]>(reader.GetOrdinal("DateArrayValue")));
-            }
-        }
-
-        [Fact]
         public async Task WriteValues()
         {
             var testTimestamp = new DateTime(2017, 3, 17, 15, 30, 0);
@@ -214,40 +105,47 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 1, await InsertAsync(
                     new SpannerParameterCollection
                     {
-                        new SpannerParameter("BoolValue", SpannerDbType.Bool, true),
-                        new SpannerParameter("Int64Value", SpannerDbType.Int64, 1),
-                        new SpannerParameter("Float64Value", SpannerDbType.Float64, 2.0),
-                        new SpannerParameter("StringValue", SpannerDbType.String, "abc"),
-                        new SpannerParameter("TimestampValue", SpannerDbType.Timestamp, testTimestamp),
-                        new SpannerParameter("DateValue", SpannerDbType.Date, testDate),
-                        new SpannerParameter(
+                        {"BoolValue", SpannerDbType.Bool, true},
+                        {"Int64Value", SpannerDbType.Int64, 1},
+                        {"Float64Value", SpannerDbType.Float64, 2.0},
+                        {"StringValue", SpannerDbType.String, "abc"},
+                        {"TimestampValue", SpannerDbType.Timestamp, testTimestamp},
+                        {"DateValue", SpannerDbType.Date, testDate},
+                        {
                             "BoolArrayValue",
                             SpannerDbType.ArrayOf(SpannerDbType.Bool),
-                            bArray),
-                        new SpannerParameter(
+                            bArray
+                        },
+                        {
                             "Int64ArrayValue",
                             SpannerDbType.ArrayOf(SpannerDbType.Int64),
-                            lArray),
-                        new SpannerParameter(
+                            lArray
+                        },
+                        {
                             "Float64ArrayValue",
                             SpannerDbType.ArrayOf(SpannerDbType.Float64),
-                            dArray),
-                        new SpannerParameter(
+                            dArray
+                        },
+                        {
                             "StringArrayValue",
                             SpannerDbType.ArrayOf(SpannerDbType.String),
-                            sArray),
-                        new SpannerParameter(
+                            sArray
+                        },
+                        {
                             "BytesArrayValue",
                             SpannerDbType.ArrayOf(SpannerDbType.Bytes),
-                            bArrayArray),
-                        new SpannerParameter(
+                            bArrayArray
+                        },
+                        {
                             "TimestampArrayValue",
                             SpannerDbType.ArrayOf(SpannerDbType.Timestamp),
-                            tmArray),
-                        new SpannerParameter(
+                            tmArray
+                        },
+                        {
                             "DateArrayValue",
                             SpannerDbType.ArrayOf(SpannerDbType.Date),
-                            dtArray)
+                            dtArray
+                        }
                     }));
             using (var reader = await GetLastRowAsync())
             {
@@ -284,17 +182,133 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         [Fact]
-        public async Task WriteNanValue()
+        public async Task BadColumnName()
+        {
+            var rowsWritten = 0;
+            var e = await Assert.ThrowsAsync<SpannerException>(
+                async () =>
+                {
+                    using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+                    {
+                        var cmd = connection.CreateInsertCommand(
+                            "T", new SpannerParameterCollection
+                            {
+                                {"badjuju", SpannerDbType.String, UniqueString()}
+                            });
+
+                        rowsWritten = await cmd.ExecuteNonQueryAsync();
+                    }
+                }).ConfigureAwait(false);
+
+            Logger.Instance.Debug($"BadColumnName: Caught error code:{e.ErrorCode}");
+            Assert.Equal(ErrorCode.NotFound, e.ErrorCode);
+            Assert.False(e.IsTransientSpannerFault());
+            Assert.Equal(0, rowsWritten);
+        }
+
+        [Fact]
+        public async Task BadColumnType()
+        {
+            var rowsWritten = 0;
+            var e = await Assert.ThrowsAsync<SpannerException>(
+                async () =>
+                {
+                    using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+                    {
+                        var cmd = connection.CreateInsertCommand(
+                            "T", new SpannerParameterCollection
+                            {
+                                {"K", SpannerDbType.Float64, 0.1}
+                            });
+
+                        rowsWritten = await cmd.ExecuteNonQueryAsync();
+                    }
+                }).ConfigureAwait(false);
+
+            Logger.Instance.Debug($"BadColumnType: Caught error code:{e.ErrorCode}");
+            Assert.Equal(ErrorCode.FailedPrecondition, e.ErrorCode);
+            Assert.False(e.IsTransientSpannerFault());
+            Assert.Equal(0, rowsWritten);
+        }
+
+        [Fact]
+        public async Task BadTableName()
+        {
+            var rowsWritten = 0;
+            var e = await Assert.ThrowsAsync<SpannerException>(
+                async () =>
+                {
+                    using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+                    {
+                        var cmd = connection.CreateInsertCommand(
+                            "badjuju", new SpannerParameterCollection
+                            {
+                                {"K", SpannerDbType.String, UniqueString()}
+                            });
+
+                        rowsWritten = await cmd.ExecuteNonQueryAsync();
+                    }
+                }).ConfigureAwait(false);
+
+            Logger.Instance.Debug($"BadTableName: Caught error code:{e.ErrorCode}");
+            Assert.Equal(ErrorCode.NotFound, e.ErrorCode);
+            Assert.False(e.IsTransientSpannerFault());
+            Assert.Equal(0, rowsWritten);
+        }
+
+        [Fact]
+        public async Task WriteEmpties()
         {
             Assert.Equal(
                 1, await InsertAsync(
                     new SpannerParameterCollection
                     {
-                        new SpannerParameter("Float64Value", SpannerDbType.Float64, double.NaN)
+                        {
+                            "BoolArrayValue",
+                            SpannerDbType.ArrayOf(SpannerDbType.Bool),
+                            new bool[0]
+                        },
+                        {
+                            "Int64ArrayValue",
+                            SpannerDbType.ArrayOf(SpannerDbType.Int64),
+                            new long[0]
+                        },
+                        {
+                            "Float64ArrayValue",
+                            SpannerDbType.ArrayOf(SpannerDbType.Float64),
+                            new double[0]
+                        },
+                        {
+                            "StringArrayValue",
+                            SpannerDbType.ArrayOf(SpannerDbType.String),
+                            new string[0]
+                        },
+                        {
+                            "BytesArrayValue",
+                            SpannerDbType.ArrayOf(SpannerDbType.Bytes),
+                            new byte[0][]
+                        },
+                        {
+                            "TimestampArrayValue",
+                            SpannerDbType.ArrayOf(SpannerDbType.Timestamp),
+                            new DateTime[0]
+                        },
+                        {
+                            "DateArrayValue",
+                            SpannerDbType.ArrayOf(SpannerDbType.Date),
+                            new DateTime[0]
+                        }
                     }));
             using (var reader = await GetLastRowAsync())
             {
-                Assert.True(double.IsNaN(reader.GetFieldValue<double>("Float64Value")));
+                Assert.Equal(new bool[] { }, reader.GetFieldValue<bool[]>(reader.GetOrdinal("BoolArrayValue")));
+                Assert.Equal(new long[] { }, reader.GetFieldValue<long[]>(reader.GetOrdinal("Int64ArrayValue")));
+                Assert.Equal(new double[] { }, reader.GetFieldValue<double[]>(reader.GetOrdinal("Float64ArrayValue")));
+                Assert.Equal(new string[] { }, reader.GetFieldValue<string[]>(reader.GetOrdinal("StringArrayValue")));
+                Assert.Equal(new byte[][] { }, reader.GetFieldValue<byte[][]>(reader.GetOrdinal("BytesArrayValue")));
+                Assert.Equal(
+                    new DateTime[] { }, reader.GetFieldValue<DateTime[]>(reader.GetOrdinal("TimestampArrayValue")));
+                Assert.Equal(new DateTime[] { }, reader.GetFieldValue<DateTime[]>(reader.GetOrdinal("DateArrayValue")));
             }
         }
 
@@ -305,11 +319,26 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 1, await InsertAsync(
                     new SpannerParameterCollection
                     {
-                        new SpannerParameter("Float64Value", SpannerDbType.Float64, double.PositiveInfinity)
+                        {"Float64Value", SpannerDbType.Float64, double.PositiveInfinity}
                     }));
             using (var reader = await GetLastRowAsync())
             {
                 Assert.True(double.IsPositiveInfinity(reader.GetFieldValue<double>("Float64Value")));
+            }
+        }
+
+        [Fact]
+        public async Task WriteNanValue()
+        {
+            Assert.Equal(
+                1, await InsertAsync(
+                    new SpannerParameterCollection
+                    {
+                        {"Float64Value", SpannerDbType.Float64, double.NaN}
+                    }));
+            using (var reader = await GetLastRowAsync())
+            {
+                Assert.True(double.IsNaN(reader.GetFieldValue<double>("Float64Value")));
             }
         }
 
@@ -320,7 +349,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 1, await InsertAsync(
                     new SpannerParameterCollection
                     {
-                        new SpannerParameter("Float64Value", SpannerDbType.Float64, double.NegativeInfinity)
+                        {"Float64Value", SpannerDbType.Float64, double.NegativeInfinity}
                     }));
             using (var reader = await GetLastRowAsync())
             {
@@ -329,9 +358,76 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         [Fact]
+        public async Task WriteNulls()
+        {
+            Assert.Equal(
+                1, await InsertAsync(
+                    new SpannerParameterCollection
+                    {
+                        {"BoolValue", SpannerDbType.Bool, null},
+                        {"Int64Value", SpannerDbType.Int64, null},
+                        {"Float64Value", SpannerDbType.Float64, null},
+                        {"StringValue", SpannerDbType.String, null},
+                        {"TimestampValue", SpannerDbType.Timestamp, null},
+                        {"DateValue", SpannerDbType.Date, null},
+                        {
+                            "BoolArrayValue",
+                            SpannerDbType.ArrayOf(SpannerDbType.Bool),
+                            null
+                        },
+                        {
+                            "Int64ArrayValue",
+                            SpannerDbType.ArrayOf(SpannerDbType.Int64),
+                            null
+                        },
+                        {
+                            "Float64ArrayValue",
+                            SpannerDbType.ArrayOf(SpannerDbType.Float64),
+                            null
+                        },
+                        {
+                            "StringArrayValue",
+                            SpannerDbType.ArrayOf(SpannerDbType.String),
+                            null
+                        },
+                        {
+                            "BytesArrayValue",
+                            SpannerDbType.ArrayOf(SpannerDbType.Bytes),
+                            null
+                        },
+                        {
+                            "TimestampArrayValue",
+                            SpannerDbType.ArrayOf(SpannerDbType.Timestamp),
+                            null
+                        },
+                        {
+                            "DateArrayValue",
+                            SpannerDbType.ArrayOf(SpannerDbType.Date),
+                            null
+                        }
+                    }));
+            using (var reader = await GetLastRowAsync())
+            {
+                Assert.Null(reader.GetValue(reader.GetOrdinal("BoolValue")));
+                Assert.Null(reader.GetValue(reader.GetOrdinal("Int64Value")));
+                Assert.Null(reader.GetValue(reader.GetOrdinal("Float64Value")));
+                Assert.Null(reader.GetValue(reader.GetOrdinal("StringValue")));
+                Assert.Null(reader.GetValue(reader.GetOrdinal("TimestampValue")));
+                Assert.Null(reader.GetValue(reader.GetOrdinal("DateValue")));
+                Assert.Null(reader.GetValue(reader.GetOrdinal("BoolArrayValue")));
+                Assert.Null(reader.GetValue(reader.GetOrdinal("Int64ArrayValue")));
+                Assert.Null(reader.GetValue(reader.GetOrdinal("Float64ArrayValue")));
+                Assert.Null(reader.GetValue(reader.GetOrdinal("StringArrayValue")));
+                Assert.Null(reader.GetValue(reader.GetOrdinal("BytesArrayValue")));
+                Assert.Null(reader.GetValue(reader.GetOrdinal("TimestampArrayValue")));
+                Assert.Null(reader.GetValue(reader.GetOrdinal("DateArrayValue")));
+            }
+        }
+
+        [Fact]
         public async Task WriteRandomBytes()
         {
-            var seedByte = (byte)(Environment.TickCount % 256);
+            var seedByte = (byte) (Environment.TickCount % 256);
             var rnd = new Random(seedByte);
 
             //we write 1-50 rows where each row contains a bytearray of size 1-50
@@ -369,80 +465,5 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(0, recordedValues.Count);
             }
         }
-
-        [Fact]
-        public async Task BadTableName()
-        {
-            var rowsWritten = 0;
-            var e = await Assert.ThrowsAsync<SpannerException>(
-                async () =>
-                {
-                    using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
-                    {
-                        var cmd = connection.CreateInsertCommand("badjuju", new SpannerParameterCollection
-                        {
-                            new SpannerParameter("K", SpannerDbType.String, UniqueString())
-                        });
-
-                        rowsWritten = await cmd.ExecuteNonQueryAsync();
-                    }
-                }).ConfigureAwait(false);
-
-            Logger.Instance.Debug($"BadTableName: Caught error code:{e.ErrorCode}");
-            Assert.Equal(ErrorCode.NotFound, e.ErrorCode);
-            Assert.False(e.IsTransientSpannerFault());
-            Assert.Equal(0, rowsWritten);
-        }
-
-
-        [Fact]
-        public async Task BadColumnName()
-        {
-            var rowsWritten = 0;
-            var e = await Assert.ThrowsAsync<SpannerException>(
-                async () =>
-                {
-                    using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
-                    {
-                        var cmd = connection.CreateInsertCommand("T", new SpannerParameterCollection
-                        {
-                            new SpannerParameter("badjuju", SpannerDbType.String, UniqueString())
-                        });
-
-                        rowsWritten = await cmd.ExecuteNonQueryAsync();
-                    }
-                }).ConfigureAwait(false);
-
-            Logger.Instance.Debug($"BadColumnName: Caught error code:{e.ErrorCode}");
-            Assert.Equal(ErrorCode.NotFound, e.ErrorCode);
-            Assert.False(e.IsTransientSpannerFault());
-            Assert.Equal(0, rowsWritten);
-        }
-
-
-        [Fact]
-        public async Task BadColumnType()
-        {
-            int rowsWritten = 0;
-            var e = await Assert.ThrowsAsync<SpannerException>(
-                async () =>
-                {
-                    using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
-                    {
-                        var cmd = connection.CreateInsertCommand("T", new SpannerParameterCollection
-                        {
-                            new SpannerParameter("K", SpannerDbType.Float64, 0.1)
-                        });
-
-                        rowsWritten = await cmd.ExecuteNonQueryAsync();
-                    }
-                }).ConfigureAwait(false);
-
-            Logger.Instance.Debug($"BadColumnType: Caught error code:{e.ErrorCode}");
-            Assert.Equal(ErrorCode.FailedPrecondition, e.ErrorCode);
-            Assert.False(e.IsTransientSpannerFault());
-            Assert.Equal(0, rowsWritten);
-        }
-
     }
 }

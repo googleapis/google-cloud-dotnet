@@ -15,7 +15,7 @@
 using System;
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.Logging;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -36,8 +36,8 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public int MaximumPooledSessions
         {
-            get => SessionPool.MaximumPooledSessions;
-            set => SessionPool.MaximumPooledSessions = value;
+            get => SessionPool.Default.Options.MaximumPooledSessions;
+            set => SessionPool.Default.Options.MaximumPooledSessions = value;
         }
 
         /// <summary>
@@ -59,14 +59,14 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public int MaximumActiveSessions
         {
-            get => SessionPool.MaximumActiveSessions;
-            set => SessionPool.MaximumActiveSessions = value;
+            get => SessionPool.Default.Options.MaximumActiveSessions;
+            set => SessionPool.Default.Options.MaximumActiveSessions = value;
         }
 
         /// <summary>
         /// The maximum number of grpc channels used per credential.
-        /// Grpc channels are used in round robin fashion and can be used for multiple
-        /// <see cref="SpannerConnection"/> instances.
+        /// Grpc channels are used in round robin fashion and are assigned to
+        /// <see cref="SpannerConnection"/> instances on creation.
         /// </summary>
         public int MaximumGrpcChannels { get; set; } = 4;
 
@@ -92,7 +92,7 @@ namespace Google.Cloud.Spanner.Data
             set
             {
                 var underlyingLevel = (int) value;
-                Logger.LogLevel = GaxPreconditions.CheckEnumValue((V1.Logging.LogLevel) underlyingLevel,
+                Logger.LogLevel = GaxPreconditions.CheckEnumValue((V1.Internal.Logging.LogLevel) underlyingLevel,
                     nameof(LogLevel));
             }
         }
@@ -125,8 +125,8 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public TimeSpan PoolEvictionDelay
         {
-            get => SessionPool.PoolEvictionDelay;
-            set => SessionPool.PoolEvictionDelay = value;
+            get => SessionPool.Default.Options.PoolEvictionDelay;
+            set => SessionPool.Default.Options.PoolEvictionDelay = value;
         }
 
         internal bool ResetPerformanceTracesEachInterval
@@ -150,10 +150,10 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public ResourcesExhaustedBehavior ResourcesExhaustedBehavior
         {
-            get => SessionPool.WaitOnResourcesExhausted
+            get => SessionPool.Default.Options.WaitOnResourcesExhausted
                 ? ResourcesExhaustedBehavior.Block
                 : ResourcesExhaustedBehavior.Fail;
-            set => SessionPool.WaitOnResourcesExhausted = value == ResourcesExhaustedBehavior.Block;
+            set => SessionPool.Default.Options.WaitOnResourcesExhausted = value == ResourcesExhaustedBehavior.Block;
         }
 
         /// <summary>
@@ -163,8 +163,19 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public TimeSpan Timeout
         {
-            get => SessionPool.Timeout;
-            set => SessionPool.Timeout = value;
+            get => SessionPool.Default.Options.Timeout;
+            set => SessionPool.Default.Options.Timeout = value;
+        }
+
+        /// <summary>
+        /// The maximum number of session create operations allowed to occur simultaneously.
+        /// Spanner has limits on the number of sessions that can be created concurrently without affecting performance.
+        /// This value is not typically changed.
+        /// </summary>
+        public int MaximumConcurrentSessionCreates
+        {
+            get => SessionPool.Default.Options.MaximumConcurrentSessionCreates;
+            set => SessionPool.Default.Options.MaximumConcurrentSessionCreates = value;
         }
 
         private SpannerOptions() { }

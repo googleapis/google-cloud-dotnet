@@ -12,8 +12,6 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Description>Recommended Google client library to access the Stackdriver Error Reporting API, which groups and counts similar errors from cloud services. The Stackdriver Error Reporting API provides a way to report new errors and read access to error groups and their associated errors.</Description>
     <PackageTags>ErrorReporting;Stackdriver;Google;Cloud</PackageTags>
-    <IncludeSymbols>true</IncludeSymbols>
-    <IncludeSource>true</IncludeSource>
     <Copyright>Copyright 2017 Google Inc.</Copyright>
     <Authors>Google Inc.</Authors>
     <IconUrl>https://cloud.google.com/images/gcp-icon-64x64.png</IconUrl>
@@ -24,9 +22,20 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.0-beta4" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.Gax.Grpc" Version="2.0.0" />
+    <PackageReference Include="Google.Api.Gax.Grpc" Version="2.1.0-beta01" />
     <PackageReference Include="Grpc.Core" Version="1.4.0" PrivateAssets="None" />
+    <PackageReference Include="SourceLink.Create.CommandLine" Version="2.1.2" PrivateAssets="All" />
     <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup Label="dotnet pack instructions">
+    <Content Include="$(OutputPath)netstandard1.5\$(PackageId).pdb">
+      <Pack>true</Pack>
+      <PackagePath>lib/netstandard1.5</PackagePath>
+    </Content>
+    <Content Include="$(OutputPath)net45\$(PackageId).pdb">
+      <Pack>true</Pack>
+      <PackagePath>lib/net45</PackagePath>
+    </Content>
   </ItemGroup>
   <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
 </Project>

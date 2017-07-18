@@ -20,7 +20,7 @@ namespace Google.Cloud.BigQuery.V2
     /// <summary>
     /// Options for <c>CreateLoadJob</c> operations.
     /// </summary>
-    public sealed class CreateLoadJobOptions
+    public sealed class CreateLoadJobOptions : JobCreationOptions
     {
         /// <summary>
         /// The number of rows to skip, usually for headers.

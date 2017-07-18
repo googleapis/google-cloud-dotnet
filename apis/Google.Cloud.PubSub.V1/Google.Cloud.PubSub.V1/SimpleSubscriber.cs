@@ -112,9 +112,9 @@ namespace Google.Cloud.PubSub.V1
 
             internal void Validate()
             {
-                GaxPreconditions2.CheckArgumentRange(StreamAckDeadline, nameof(StreamAckDeadline), MinimumStreamAckDeadline, MaximumStreamAckDeadline);
+                GaxPreconditions.CheckArgumentRange(StreamAckDeadline, nameof(StreamAckDeadline), MinimumStreamAckDeadline, MaximumStreamAckDeadline);
                 var maxAckExtension = TimeSpan.FromTicks((StreamAckDeadline ?? DefaultStreamAckDeadline).Ticks / 2);
-                GaxPreconditions2.CheckArgumentRange(AckExtensionWindow, nameof(AckExtensionWindow), MinimumAckExtensionWindow, maxAckExtension);
+                GaxPreconditions.CheckArgumentRange(AckExtensionWindow, nameof(AckExtensionWindow), MinimumAckExtensionWindow, maxAckExtension);
             }
 
             /// <summary>
@@ -215,21 +215,24 @@ namespace Google.Cloud.PubSub.V1
         public static TimeSpan DefaultAckExtensionWindow { get; } = TimeSpan.FromSeconds(2);
 
         /// <summary>
-        /// Create a <see cref="SimpleSubscriber"/> instance associated with the specified <see cref="SubscriptionName"/>,
+        /// Create a <see cref="SimpleSubscriber"/> instance associated with the specified <see cref="SubscriptionName"/>.
+        /// The default <paramref name="settings"/> and <paramref name="clientCreationSettings"/> are suitable for machines with
+        /// high network bandwidth (e.g. Google Compute Engine instances). If running with more limited network bandwidth, some
+        /// settings may need changing; especially <see cref="Settings.StreamAckDeadline"/>.
         /// </summary>
         /// <param name="subscriptionName">The <see cref="SubscriptionName"/> to receive messages from.</param>
-        /// <param name="clientCreationsettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
+        /// <param name="clientCreationSettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
         /// <see cref="SubscriberClient"/>s.</param>
         /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="SimpleSubscriber"/>.</param>
         /// <returns>A <see cref="SimpleSubscriber"/> instance associated with the specified <see cref="SubscriptionName"/>.</returns>
-        public static async Task<SimpleSubscriber> CreateAsync(SubscriptionName subscriptionName, ClientCreationSettings clientCreationsettings = null, Settings settings = null)
+        public static async Task<SimpleSubscriber> CreateAsync(SubscriptionName subscriptionName, ClientCreationSettings clientCreationSettings = null, Settings settings = null)
         {
             GaxPreconditions.CheckNotNull(subscriptionName, nameof(subscriptionName));
-            clientCreationsettings?.Validate();
+            clientCreationSettings?.Validate();
             // Clone settings, just in case user modifies them and an await happens in this method
             settings = settings?.Clone() ?? new Settings();
-            var clientCount = clientCreationsettings?.ClientCount ?? Environment.ProcessorCount;
-            var channelCredentials = clientCreationsettings?.Credentials;
+            var clientCount = clientCreationSettings?.ClientCount ?? Environment.ProcessorCount;
+            var channelCredentials = clientCreationSettings?.Credentials;
             // Use default credentials if none given.
             if (channelCredentials == null)
             {
@@ -241,7 +244,7 @@ namespace Google.Cloud.PubSub.V1
                 channelCredentials = credentials.ToChannelCredentials();
             }
             // Create the channels and clients, and register shutdown functions for each channel
-            var endpoint = clientCreationsettings?.ServiceEndpoint ?? SubscriberClient.DefaultEndpoint;
+            var endpoint = clientCreationSettings?.ServiceEndpoint ?? SubscriberClient.DefaultEndpoint;
             var clients = new SubscriberClient[clientCount];
             var shutdowns = new Func<Task>[clientCount];
             // Set channel send/recv message size to unlimited. It defaults to ~4Mb which causes failures.
@@ -253,7 +256,7 @@ namespace Google.Cloud.PubSub.V1
             for (int i = 0; i < clientCount; i++)
             {
                 var channel = new Channel(endpoint.Host, endpoint.Port, channelCredentials, channelOptions);
-                clients[i] = SubscriberClient.Create(channel, clientCreationsettings?.SubscriberSettings);
+                clients[i] = SubscriberClient.Create(channel, clientCreationSettings?.SubscriberSettings);
                 shutdowns[i] = channel.ShutdownAsync;
             }
             Task Shutdown() => Task.WhenAll(shutdowns.Select(x => x()));
@@ -265,6 +268,9 @@ namespace Google.Cloud.PubSub.V1
         /// The gRPC <see cref="Channel"/>s underlying the provided <see cref="SubscriberClient"/>s must have their
         /// maximum send and maximum receive sizes set to unlimited, otherwise performance will be severly affected,
         /// possibly causing a deadlock.
+        /// The default <paramref name="settings"/> are suitable for machines with high network bandwidth (e.g. Google
+        /// Compute Engine instances). If running with more limited network bandwidth, some settings may need changing;
+        /// especially <see cref="Settings.StreamAckDeadline"/>.
         /// </summary>
         /// <param name="subscriptionName">The <see cref="SubscriptionName"/> to receive messages from.</param>
         /// <param name="clients">The <see cref="SubscriberClient"/>s to use in a <see cref="SimpleSubscriber"/>.
@@ -605,7 +611,7 @@ namespace Google.Cloud.PubSub.V1
                         // This is cancelled once the StreamingPull() RPC has an error.
                         var streamingPullCts = CancellationTokenSource.CreateLinkedTokenSource(_hardStopCts.Token);
                         pull = _client.StreamingPull(CallSettings.FromCancellationToken(streamingPullCts.Token),
-                            new BidirectionalStreamingSettings(10));// TODO: Put back to 1 once bug #188 released in v2.1.0
+                            new BidirectionalStreamingSettings(1));
                         // Initial call to start subscribe messages arriving.
                         await _taskHelper.ConfigureAwait(pull.WriteAsync(new StreamingPullRequest
                         {

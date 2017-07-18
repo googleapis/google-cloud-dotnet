@@ -19,18 +19,23 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Google.Cloud.Spanner.V1.Logging;
+using Google.Api.Gax;
+using Google.Cloud.Spanner.V1.Internal;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 
 namespace Google.Cloud.Spanner.V1
 {
     internal class SessionPoolImpl : IPriorityListItem<SessionPoolImpl>
     {
+        private readonly SessionPoolOptions _options;
+
         //This is the maximum we will search for a matching transaction option session.
         //We'll normally not hit this, but this is to stop abnormal cases where almost all
         //cached sessions are of one type, but another type is requested.
         private const int MaximumLinearSearchDepth = 50;
 
         private readonly List<SessionPoolEntry> _sessionMruStack = new List<SessionPoolEntry>();
+        private readonly SemaphoreSlim _sessionCreateThrottle;
         private int _lastAccessTime;
         private static int s_activeSessionsPooled;
 
@@ -38,10 +43,13 @@ namespace Google.Cloud.Spanner.V1
 
         public SessionPoolKey Key { get; }
 
-        internal SessionPoolImpl(SessionPoolKey key)
+        internal SessionPoolImpl(SessionPoolKey key, SessionPoolOptions options)
         {
+            _options = GaxPreconditions.CheckNotNull(options, nameof(options));
+            _sessionCreateThrottle = new SemaphoreSlim(_options.MaximumConcurrentSessionCreates, _options.MaximumConcurrentSessionCreates);
             Key = key;
         }
+
         internal int DumpSessionPoolContents(StringBuilder stringBuilder)
         {
             lock (_sessionMruStack)
@@ -52,6 +60,14 @@ namespace Google.Cloud.Spanner.V1
                     stringBuilder.AppendLine($"  {i}:{entry.Session?.GetHashCode()}");
                     i++;
                 }
+                return _sessionMruStack.Count;
+            }
+        }
+
+        internal int GetPoolSize()
+        {
+            lock (_sessionMruStack)
+            {
                 return _sessionMruStack.Count;
             }
         }
@@ -68,7 +84,7 @@ namespace Google.Cloud.Spanner.V1
 
         private Task EvictSessionPoolEntry(Session session, CancellationToken cancellationToken)
         {
-            var task = Task.Delay(SessionPool.PoolEvictionDelay, cancellationToken);
+            var task = Task.Delay(_options.PoolEvictionDelay, cancellationToken);
             return task.ContinueWith(async (delayTask, o) => 
             {
                 Logger.Debug(() => "Evict timer triggered.");
@@ -109,7 +125,7 @@ namespace Google.Cloud.Spanner.V1
             }
         }
 
-        private bool TryPop(TransactionOptions options, out SessionPoolEntry entry)
+        private bool TryPop(TransactionOptions transactionOptions, out SessionPoolEntry entry)
         {
             try
             {
@@ -126,11 +142,11 @@ namespace Google.Cloud.Spanner.V1
                             i++)
                         {
                             entry = _sessionMruStack[i];
-                            if (Equals(entry.Session.GetLastUsedTransactionOptions(), options))
+                            if (Equals(entry.Session.GetLastUsedTransactionOptions(), transactionOptions))
                             {
                                 Logger.Debug(() => "found a session with matching transaction semantics.");
                                 indexToUse = i;
-                                if (options.ModeCase == TransactionOptions.ModeOneofCase.ReadOnly
+                                if (transactionOptions?.ModeCase != TransactionOptions.ModeOneofCase.ReadWrite
                                     || entry.Session.IsPreWarmedTransactionReady())
                                 {
                                     //if our prewarmed tx is ready, we can jump out immediately.
@@ -184,20 +200,37 @@ namespace Google.Cloud.Spanner.V1
             SessionPoolEntry sessionEntry;
             if (!TryPop(options, out sessionEntry))
             {
-                Logger.Debug(() => "Attempting to acquire a session from the pool failed - creating a new instance.");
-                Stopwatch sw = null;
-                if (Logger.LogPerformanceTraces)
-                {
-                    sw = new Stopwatch();
-                    sw.Start();
-                }
                 //create a new session, blocking or throwing if at the limit.
-                var result = await Key.Client.CreateSessionAsync(new DatabaseName(Key.Project, Key.Instance, Key.Database), cancellationToken).ConfigureAwait(false);
-                if (sw != null)
+                await _sessionCreateThrottle.WaitAsync(cancellationToken).ConfigureAwait(false);
+                try
                 {
-                    Logger.LogPerformanceCounterFn("Session.CreateTime", x => sw.ElapsedMilliseconds);
+                    // Try to pop a session again after acquiring a throttle semaphore.
+                    // we may have waited for quite a while and the pool may now have entries.
+                    if (!TryPop(options, out sessionEntry))
+                    {
+                        Logger.Debug(
+                            () => "Attempting to acquire a session from the pool failed - creating a new instance.");
+                        Stopwatch sw = null;
+                        if (Logger.LogPerformanceTraces)
+                        {
+                            sw = new Stopwatch();
+                            sw.Start();
+                        }
+
+                        var result = await Key.Client.CreateSessionAsync(
+                                new DatabaseName(Key.Project, Key.Instance, Key.Database), cancellationToken)
+                            .ConfigureAwait(false);
+                        if (sw != null)
+                        {
+                            Logger.LogPerformanceCounterFn("Session.CreateTime", x => sw.ElapsedMilliseconds);
+                        }
+                        return result;
+                    }
                 }
-                return result;
+                finally
+                {
+                    _sessionCreateThrottle.Release();
+                }
             }
             MarkUsed();
             //note that the evict task will only actually delete the session if it was able to remove it from the pool.
@@ -247,7 +280,7 @@ namespace Google.Cloud.Spanner.V1
             //start evict timer.
             SessionPoolEntry entry = new SessionPoolEntry(session, new CancellationTokenSource());
 
-            if (SessionPool.UseTransactionWarming)
+            if (_options.UseTransactionWarming)
             {
                 client.StartPreWarmTransaction(entry.Session);
             }

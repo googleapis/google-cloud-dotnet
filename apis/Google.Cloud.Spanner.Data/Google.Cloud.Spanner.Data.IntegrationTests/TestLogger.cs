@@ -13,15 +13,14 @@
 // limitations under the License.
 
 using System;
-using Google.Cloud.Spanner.V1.Logging;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 using Xunit.Abstractions;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
     internal class TestLogger : DefaultLogger
     {
-        private static Lazy<TestLogger> s_Instance = new Lazy<TestLogger>(
-            () => new TestLogger());
+        private static readonly TestLogger s_instance = new TestLogger();
 
         private TestLogger()
         {
@@ -29,7 +28,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         public static void Install()
         {
-            SetLogger(s_Instance.Value);
+            SetLogger(s_instance);
         }
 
         // ReSharper disable once MemberCanBePrivate.Global
@@ -38,7 +37,15 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         protected override void WriteLine(string message)
         {
-            TestOutputHelper?.WriteLine(message);
+            try
+            {
+                TestOutputHelper?.WriteLine(message);
+            }
+            catch (Exception)
+            {
+                //Eat the exception.  This can happen if we try to output a log
+                //after a test has completed (some action ocurred asynchronously).
+            }
         }
     }
 }

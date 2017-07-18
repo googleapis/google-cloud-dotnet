@@ -25,49 +25,57 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Executes a query.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method will only return when the query has completed. It simply delegates to <see cref="CreateQueryJob(string, QueryOptions)"/>
+        /// and then <see cref="BigQueryJob.GetQueryResults(GetQueryResultsOptions)"/>.
+        /// </para>
+        /// </remarks>
         /// <param name="sql">The SQL query. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="queryOptions">The options for the query. May be null, in which case defaults will be supplied.</param>
+        /// <param name="resultsOptions">The options for retrieving query results. May be null, in which case defaults will be supplied.</param>
         /// <returns>The result of the query.</returns>
-        public virtual BigQueryResults ExecuteQuery(string sql, ExecuteQueryOptions options = null)
-        {
-            throw new NotImplementedException();
-        }
+        public virtual BigQueryResults ExecuteQuery(string sql, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null) =>
+            CreateQueryJob(sql, queryOptions).GetQueryResults(resultsOptions);
 
         /// <summary>
         /// Executes a command. This overload allows query parameterization, and is preferred over
-        /// <see cref="ExecuteQuery(string, ExecuteQueryOptions)"/> when values need to be passed in.
+        /// <see cref="ExecuteQuery(string, QueryOptions, GetQueryResultsOptions)"/> when values need to be passed in.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method will only return when the query has completed. It simply delegates to <see cref="CreateQueryJob(BigQueryCommand, QueryOptions)"/>
+        /// and then <see cref="BigQueryJob.GetQueryResults(GetQueryResultsOptions)"/>.
+        /// </para>
+        /// </remarks>
         /// <param name="command">The command to execute. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="queryOptions">The options for the query. May be null, in which case defaults will be supplied.</param>
+        /// <param name="resultsOptions">The options for retrieving query results. May be null, in which case defaults will be supplied.</param>
         /// <returns>The result of the query.</returns>
-        public virtual BigQueryResults ExecuteQuery(BigQueryCommand command, ExecuteQueryOptions options = null)
-        {
-            throw new NotImplementedException();
-        }
+        public virtual BigQueryResults ExecuteQuery(BigQueryCommand command, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null) =>
+            CreateQueryJob(command, queryOptions).GetQueryResults(resultsOptions);
 
         /// <summary>
-        /// Creates a job for a SQL query, with more facilities than <see cref="ExecuteQuery(string, ExecuteQueryOptions)"/>, including the option
-        /// to store the results in a persistent table.
+        /// Creates a job for a SQL query.
         /// </summary>
         /// <param name="sql">The SQL query. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The query job created. Use <see cref="GetQueryResults(JobReference,GetQueryResultsOptions)"/> to retrieve
         /// the results of the query.</returns>
-        public virtual BigQueryJob CreateQueryJob(string sql, CreateQueryJobOptions options = null)
+        public virtual BigQueryJob CreateQueryJob(string sql, QueryOptions options = null)
         {
             throw new NotImplementedException();
         }
 
         /// <summary>
-        /// Creates a job for a query/command, with more facilities than <see cref="ExecuteQuery(BigQueryCommand, ExecuteQueryOptions)"/>,
-        /// including the option to store the results in a persistent table. This overload allows query parameterization, and is preferred over
-        /// <see cref="CreateQueryJob(string, CreateQueryJobOptions)"/> when values need to be passed in.
+        /// Creates a job for a query/command. This overload allows query parameterization, and is preferred over
+        /// <see cref="CreateQueryJob(string, QueryOptions)"/> when values need to be passed in.
         /// </summary>
         /// <param name="command">The command to execute. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The query job created. Use <see cref="GetQueryResults(JobReference,GetQueryResultsOptions)"/> to retrieve
         /// the results of the query.</returns>
-        public virtual BigQueryJob CreateQueryJob(BigQueryCommand command, CreateQueryJobOptions options = null)
+        public virtual BigQueryJob CreateQueryJob(BigQueryCommand command, QueryOptions options = null)
         {
             throw new NotImplementedException();
         }
@@ -76,6 +84,11 @@ namespace Google.Cloud.BigQuery.V2
         /// Retrieves the results of the query job with specified by project ID and job ID.
         /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="GetQueryResults(JobReference, GetQueryResultsOptions)"/>.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method will only return when the query has completed.
+        /// </para>
+        /// </remarks>
         /// <param name="jobId">The job ID. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The results of the query.</returns>
@@ -86,6 +99,11 @@ namespace Google.Cloud.BigQuery.V2
         /// Retrieves the results of the query job with the specified ID in this clients project.
         /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="GetQueryResults(JobReference, GetQueryResultsOptions)"/>.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method will only return when the query has completed.
+        /// </para>
+        /// </remarks>
         /// <param name="projectId">The project ID. Must not be null.</param>
         /// <param name="jobId">The job ID. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
@@ -96,6 +114,11 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Retrieves the results of a query job.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method will only return when the query has completed.
+        /// </para>
+        /// </remarks>
         /// <param name="jobReference">A fully-qualified identifier for the job. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The results of the query.</returns>
@@ -104,40 +127,9 @@ namespace Google.Cloud.BigQuery.V2
             throw new NotImplementedException();
         }
 
-        /// <summary>
-        /// Polls the query job with the specified project ID and job ID until it has completed. The job must represent a query.
-        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="PollQueryUntilCompleted(JobReference, GetQueryResultsOptions, PollSettings)"/>.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be null.</param>
-        /// <param name="jobId">The job ID. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
-        /// May be null, in which case defaults will be supplied.</param>
-        /// <returns>The results of the query.</returns>
-        public virtual BigQueryResults PollQueryUntilCompleted(string projectId, string jobId, GetQueryResultsOptions options = null, PollSettings pollSettings = null)
-            => PollQueryUntilCompleted(GetJobReference(projectId, jobId), options, pollSettings);
-
-        /// <summary>
-        /// Polls the query job with the specified job ID in this project until it has completed. The job must represent a query.
-        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="PollQueryUntilCompleted(JobReference, GetQueryResultsOptions, PollSettings)"/>.
-        /// </summary>
-        /// <param name="jobId">The job ID. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
-        /// May be null, in which case defaults will be supplied.</param>
-        /// <returns>The results of the query.</returns>
-        public virtual BigQueryResults PollQueryUntilCompleted(string jobId, GetQueryResultsOptions options = null, PollSettings pollSettings = null)
-            => PollQueryUntilCompleted(GetJobReference(jobId), options, pollSettings);
-
-        /// <summary>
-        /// Polls the given job until it has completed. The job must represent a query.
-        /// </summary>
-        /// <param name="jobReference">A fully-qualified identifier for the job. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
-        /// May be null, in which case defaults will be supplied.</param>
-        /// <returns>The results of the query.</returns>
-        public virtual BigQueryResults PollQueryUntilCompleted(JobReference jobReference, GetQueryResultsOptions options = null, PollSettings pollSettings = null)
+        // TODO: Remove this, if the underlying GetQueryResultsResponse starts including the table reference.
+        // It allows us to call GetQueryResultsAsync from BigQueryJob without fetching the job again.
+        internal virtual BigQueryResults GetQueryResults(JobReference jobReference, TableReference tableReference, GetQueryResultsOptions options)
         {
             throw new NotImplementedException();
         }
@@ -185,33 +177,50 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Asynchronously executes a query.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The task returned by this method will only complete when the query has completed.
+        /// This method simply delegates to <see cref="CreateQueryJobAsync(string, QueryOptions, CancellationToken)"/>
+        /// and then <see cref="BigQueryJob.GetQueryResultsAsync(GetQueryResultsOptions, CancellationToken)"/>.
+        /// </para>
+        /// </remarks>
         /// <param name="sql">The SQL query. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="queryOptions">The options for the query. May be null, in which case defaults will be supplied.</param>
+        /// <param name="resultsOptions">The options for retrieving query results. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the <see cref="BigQueryResults"/> representing the query.</returns>
-        public virtual Task<BigQueryResults> ExecuteQueryAsync(string sql, ExecuteQueryOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public virtual async Task<BigQueryResults> ExecuteQueryAsync(string sql, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            throw new NotImplementedException();
+            var job = await CreateQueryJobAsync(sql, queryOptions, cancellationToken).ConfigureAwait(false);
+            return await job.GetQueryResultsAsync(resultsOptions, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// Asynchronously executes a command. This overload allows query parameterization, and is preferred over
-        /// <see cref="ExecuteQueryAsync(string, ExecuteQueryOptions,CancellationToken)"/> when values need to be passed in.
+        /// <see cref="ExecuteQueryAsync(string, QueryOptions, GetQueryResultsOptions, CancellationToken)"/> when values need to be passed in.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The task returned by this method will only complete when the query has completed.
+        /// This method simply delegates to <see cref="CreateQueryJobAsync(BigQueryCommand, QueryOptions, CancellationToken)"/>
+        /// and then <see cref="BigQueryJob.GetQueryResultsAsync(GetQueryResultsOptions, CancellationToken)"/>.
+        /// </para>
+        /// </remarks>
         /// <param name="command">The command to execute. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="queryOptions">The options for the query. May be null, in which case defaults will be supplied.</param>
+        /// <param name="resultsOptions">The options for retrieving query results. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the <see cref="BigQueryResults"/> representing the query.</returns>
-        public virtual Task<BigQueryResults> ExecuteQueryAsync(BigQueryCommand command, ExecuteQueryOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public virtual async Task<BigQueryResults> ExecuteQueryAsync(BigQueryCommand command, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            throw new NotImplementedException();
+            var job = await CreateQueryJobAsync(command, queryOptions, cancellationToken).ConfigureAwait(false);
+            return await job.GetQueryResultsAsync(resultsOptions, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// Asynchronously creates a job for a SQL query, with more facilities than <see cref="ExecuteQueryAsync(string, ExecuteQueryOptions,CancellationToken)"/>, including the option
-        /// to store the results in a persistent table.
+        /// Asynchronously creates a job for a SQL query.
         /// </summary>
         /// <param name="sql">The SQL query. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
@@ -219,15 +228,14 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the query job created. Use <see cref="GetQueryResultsAsync(JobReference,GetQueryResultsOptions,CancellationToken)"/> to retrieve
         /// the results of the query.</returns>
-        public virtual Task<BigQueryJob> CreateQueryJobAsync(string sql, CreateQueryJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public virtual Task<BigQueryJob> CreateQueryJobAsync(string sql, QueryOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             throw new NotImplementedException();
         }
 
         /// <summary>
-        /// Asynchronously creates a job for a query/command, with more facilities than <see cref="ExecuteQueryAsync(BigQueryCommand, ExecuteQueryOptions,CancellationToken)"/>,
-        /// including the option to store the results in a persistent table. This overload allows query parameterization, and is preferred over
-        /// <see cref="CreateQueryJobAsync(string, CreateQueryJobOptions,CancellationToken)"/> when values need to be passed in.
+        /// Asynchronously creates a job for a query/command. This overload allows query parameterization, and is preferred over
+        /// <see cref="CreateQueryJobAsync(string, QueryOptions,CancellationToken)"/> when values need to be passed in.
         /// </summary>
         /// <param name="command">The command to execute. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
@@ -235,7 +243,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the query job created. Use <see cref="GetQueryResultsAsync(JobReference,GetQueryResultsOptions,CancellationToken)"/> to retrieve
         /// the results of the query.</returns>
-        public virtual Task<BigQueryJob> CreateQueryJobAsync(BigQueryCommand command, CreateQueryJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public virtual Task<BigQueryJob> CreateQueryJobAsync(BigQueryCommand command, QueryOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             throw new NotImplementedException();
         }
@@ -244,6 +252,11 @@ namespace Google.Cloud.BigQuery.V2
         /// Asynchronously retrieves the results of the query job with specified by project ID and job ID.
         /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="GetQueryResultsAsync(JobReference, GetQueryResultsOptions,CancellationToken)"/>.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The task returned by this method will only complete when the query has completed.
+        /// </para>
+        /// </remarks>
         /// <param name="jobId">The job ID. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
@@ -256,6 +269,11 @@ namespace Google.Cloud.BigQuery.V2
         /// Asynchronously retrieves the results of the query job with the specified ID in this clients project.
         /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="GetQueryResultsAsync(JobReference, GetQueryResultsOptions,CancellationToken)"/>.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The task returned by this method will only complete when the query has completed.
+        /// </para>
+        /// </remarks>
         /// <param name="projectId">The project ID. Must not be null.</param>
         /// <param name="jobId">The job ID. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
@@ -268,6 +286,11 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Asynchronously retrieves the results of a query job.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The task returned by this method will only complete when the query has completed.
+        /// </para>
+        /// </remarks>
         /// <param name="jobReference">A fully-qualified identifier for the job. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
@@ -278,46 +301,9 @@ namespace Google.Cloud.BigQuery.V2
             throw new NotImplementedException();
         }
 
-        /// <summary>
-        /// Asynchronously polls the query job with the specified project ID and job ID until it has completed. The job must represent a query.
-        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="PollQueryUntilCompletedAsync(JobReference, GetQueryResultsOptions, PollSettings, CancellationToken)"/>.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be null.</param>
-        /// <param name="jobId">The job ID. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
-        /// May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// the <see cref="BigQueryResults"/> representing the query.</returns>
-        public virtual Task<BigQueryResults> PollQueryUntilCompletedAsync(string projectId, string jobId, GetQueryResultsOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken))
-            => PollQueryUntilCompletedAsync(GetJobReference(projectId, jobId), options, pollSettings, cancellationToken);
-
-        /// <summary>
-        /// Asynchronously polls the query job with the specified job ID in this project until it has completed. The job must represent a query.
-        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="PollQueryUntilCompletedAsync(JobReference, GetQueryResultsOptions, PollSettings, CancellationToken)"/>.
-        /// </summary>
-        /// <param name="jobId">The job ID. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
-        /// May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// the <see cref="BigQueryResults"/> representing the query.</returns>
-        public virtual Task<BigQueryResults> PollQueryUntilCompletedAsync(string jobId, GetQueryResultsOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken))
-            => PollQueryUntilCompletedAsync(GetJobReference(jobId), options, pollSettings, cancellationToken);
-
-        /// <summary>
-        /// Asynchronously polls the given job until it has completed. The job must represent a query.
-        /// </summary>
-        /// <param name="jobReference">A fully-qualified identifier for the job. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
-        /// May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// the <see cref="BigQueryResults"/> representing the query.</returns>
-        public virtual Task<BigQueryResults> PollQueryUntilCompletedAsync(JobReference jobReference, GetQueryResultsOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken))
+        // TODO: Remove this, if the underlying GetQueryResultsResponse starts including the table reference.
+        // It allows us to call GetQueryResultsAsync from BigQueryJob without fetching the job again.
+        internal virtual Task<BigQueryResults> GetQueryResultsAsync(JobReference jobReference, TableReference tableReference, GetQueryResultsOptions options, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }

@@ -11,6 +11,10 @@ branches:
 
 init:
   - git config --global core.autocrlf true
+  
+# TODO(talarico): Temporary work around for https://appveyor.statuspage.io/incidents/m2vdvw39kdk8
+hosts:
+  api.nuget.org: 93.184.221.200
 
 environment:
   COVERALLS_REPO_TOKEN:

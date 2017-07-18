@@ -25,8 +25,9 @@ git fetch -v --dry-run --tags upstream 2>&1 \
 cd $(dirname $0)
 
 rm -rf releasebuild
-git clone https://github.com/GoogleCloudPlatform/google-cloud-dotnet.git releasebuild
+git clone https://github.com/GoogleCloudPlatform/google-cloud-dotnet.git releasebuild -c core.autocrlf=input
 cd releasebuild
+export CI=true # Forces SourceLink in the main build.
 git checkout $tag
 ./build.sh
 dotnet pack AllProjects.sln --no-build -o $PWD/nuget -c Release
@@ -40,5 +41,4 @@ echo "- Upload new docs to gh-pages branch"
 echo "- Push packages to nuget:"
 echo "  - cd releasebuild/nuget"
 echo "  - Remove any packages you don't want to push"
-echo "  - for pkg in *[^s].nupkg; do nuget push -Source https://api.nuget.org/v3/index.json -ApiKey API_KEY_HERE \$pkg; done"
-echo "    (The [^s] avoids matching the symbols packages)"
+echo "  - for pkg in *.nupkg; do nuget push -Source nuget.org -ApiKey API_KEY_HERE \$pkg; done"

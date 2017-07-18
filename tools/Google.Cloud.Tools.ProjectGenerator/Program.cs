@@ -15,6 +15,7 @@
 using Google.Cloud.Tools.Common;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Xml.Linq;
@@ -24,7 +25,13 @@ namespace Google.Cloud.Tools.ProjectGenerator
     public class Program
     {
         private const string GrpcVersion = "1.4.0";
-        private const string GaxVersion = "2.0.0";
+        private const string StableGaxVersion = "2.0.0";
+        private const string PrereleaseGaxVersion = "2.1.0-beta01";
+        private const string DotnetPackInstructionsLabel = "dotnet pack instructions";
+
+        private const string ConfigureAwaitAnalyzer = "ConfigureAwaitChecker.Analyzer";
+        private const string SourceLinkPackage = "SourceLink.Create.CommandLine";
+        private static readonly HashSet<string> PrivateAssetPackages = new HashSet<string> { ConfigureAwaitAnalyzer, SourceLinkPackage };
 
         private const string AnalyzersPath = @"..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll";
         private const string StripDesktopOnNonWindows = @"..\..\..\StripDesktopOnNonWindows.xml";
@@ -37,6 +44,10 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 foreach (var api in ApiMetadata.LoadApis())
                 {
                     GenerateProjects(Path.Combine(root, "apis", api.Id), api);
+                }
+                foreach (var api in ApiMetadata.LoadApis())
+                {
+                    GenerateSolutionFiles(Path.Combine(root, "apis", api.Id), api);
                 }
                 return 0;
             }
@@ -78,8 +89,68 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 }
             }
 
-            // TODO: Solution file
             // TODO: Updates for unknown project types? Tricky...
+        }
+
+        static void GenerateSolutionFiles(string apiRoot, ApiMetadata api)
+        {
+            Console.WriteLine($"Generating solution file for {api.Id}");
+            var projectDirectories = Directory.GetDirectories(apiRoot)
+                .Where(pd => Path.GetFileName(pd).StartsWith(api.Id))
+                .ToList();
+
+            HashSet<string> projects = new HashSet<string>();
+            // We want to include all the project files, and all the project references
+            // from those project files, being aware that the solution file is already one directory
+            // higher than the project file...
+            foreach (var dir in projectDirectories)
+            {
+                string projectName = Path.GetFileName(dir);
+                string projectFile = Path.Combine(dir, $"{projectName}.csproj");
+                if (File.Exists(projectFile))
+                {
+                    projects.Add($"{projectName}\\{projectName}.csproj");
+                    XDocument doc = XDocument.Load(projectFile);
+                    var projectReferences = doc.Descendants("ProjectReference")
+                        .Select(x => x.Attribute("Include").Value.Replace("/", "\\"))
+                        .Select(x => x.StartsWith("..\\") ? x.Substring(3) : x);
+                    foreach (var reference in projectReferences)
+                    {
+                        projects.Add(reference);
+                    }
+                }
+            }
+
+            var solutionFile = $"{api.Id}.sln";
+            if (!File.Exists(Path.Combine(apiRoot, solutionFile)))
+            {
+                RunDotnet(apiRoot, "new", "sln", "-n", api.Id);
+            }
+            // It's much faster to run a single process than to run it once per project.
+            RunDotnet(apiRoot, new[] { "sln", solutionFile, "add" }.Concat(projects).ToArray());
+        }
+
+        private static void RunDotnet(string root, params string[] args)
+        {
+            string joinedArguments = string.Join(" ", args);
+            var psi = new ProcessStartInfo
+            {
+                FileName = "dotnet",
+                Arguments = joinedArguments,
+                WorkingDirectory = root,
+                RedirectStandardOutput = true,
+                RedirectStandardError = true
+            };
+            var process = Process.Start(psi);
+            // We assume there isn't so much output that this will block. Otherwise we'd have to read it in a different thread etc.
+            // 10s limit stops us from hanging forever...
+            process.WaitForExit(10000);
+            if (process.ExitCode != 0)
+            {
+                var output = process.StandardOutput.ReadToEnd();
+                var error = process.StandardError.ReadToEnd();
+                throw new Exception($"dotnet exit code {process.ExitCode}. Directory: {root}. Args: {joinedArguments}. Output: {output}. Error: {error}");
+            }
         }
 
         private static void GenerateMainProject(ApiMetadata api, string directory)
@@ -91,7 +162,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
             string targetFrameworks = api.TargetFrameworks;
             var dependencies = new SortedList<string, string>(api.Dependencies)
             {
-                { "ConfigureAwaitChecker.Analyzer", "1.0.0-beta4" }
+                { ConfigureAwaitAnalyzer, "1.0.0-beta4" },
+                { SourceLinkPackage, "2.1.2" }
             };
             // If Grpc.Core is ever specified explicitly (e.g. for "other" projects),
             // but without a version number, fill it in.
@@ -102,11 +174,11 @@ namespace Google.Cloud.Tools.ProjectGenerator
             switch (api.Type)
             {
                 case "rest":
-                    dependencies.Add("Google.Api.Gax.Rest", GaxVersion);
+                    dependencies.Add("Google.Api.Gax.Rest", api.IsReleaseVersion ? StableGaxVersion : PrereleaseGaxVersion);
                     targetFrameworks = targetFrameworks ?? "netstandard1.3;net45";
                     break;
                 case "grpc":
-                    dependencies.Add("Google.Api.Gax.Grpc", GaxVersion);
+                    dependencies.Add("Google.Api.Gax.Grpc", api.IsReleaseVersion ? StableGaxVersion : PrereleaseGaxVersion);
                     dependencies.Add("Grpc.Core", GrpcVersion);
                     targetFrameworks = targetFrameworks ?? "netstandard1.5;net45";
                     break;
@@ -126,8 +198,6 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 // Package-related properties
                 new XElement("Description", api.Description),
                 new XElement("PackageTags", string.Join(";", api.Tags.Concat(new[] { "Google", "Cloud" }))),
-                new XElement("IncludeSymbols", true),
-                new XElement("IncludeSource", true),
                 new XElement("Copyright", "Copyright 2017 Google Inc."),
                 new XElement("Authors", "Google Inc."),
                 new XElement("IconUrl", "https://cloud.google.com/images/gcp-icon-64x64.png"), // TODO: Check element name
@@ -136,7 +206,15 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 new XElement("RepositoryType", "git"),
                 new XElement("RepositoryUrl", "https://github.com/GoogleCloudPlatform/google-cloud-dotnet")
             );
-            WriteProjectFile(api, directory, propertyGroup, CreateDependenciesElement(dependencies));
+            var packingElement = new XElement("ItemGroup",
+                new XAttribute("Label", DotnetPackInstructionsLabel),
+                targetFrameworks.Split(';').Select(tfm => new XElement("Content",
+                    new XAttribute("Include", $@"$(OutputPath){tfm}\$(PackageId).pdb"),
+                    new XElement("Pack", true),
+                    new XElement("PackagePath", $"lib/{tfm}")
+                ))
+            );
+            WriteProjectFile(api, directory, propertyGroup, CreateDependenciesElement(dependencies, api.IsReleaseVersion), packingElement);
         }
 
         private static void GenerateTestProject(ApiMetadata api, string directory)
@@ -163,18 +241,18 @@ namespace Google.Cloud.Tools.ProjectGenerator
                     // See https://github.com/googleapis/toolkit/issues/1271 - when that's fixed, we can remove this.
                     new XElement("NoWarn", "1701;1702;1705;4014")
                 );
-            var itemGroup = CreateDependenciesElement(dependencies);
+            var itemGroup = CreateDependenciesElement(dependencies, api.IsReleaseVersion);
             // Allow test projects to use dynamic...
             itemGroup.Add(new XElement("Reference",
                 new XAttribute("Condition", "'$(TargetFramework)' == 'net452'"),
                 new XAttribute("Include", "Microsoft.CSharp")));
             // Test service... it keeps on getting added by Visual Studio, so let's just include it everywhere.
             itemGroup.Add(new XElement("Service", new XAttribute("Include", "{82a7f48d-3b50-4b1e-b82e-3ada8210c358}")));
-            WriteProjectFile(api, directory, propertyGroup, itemGroup);
+            WriteProjectFile(api, directory, propertyGroup, itemGroup, null);
         }
 
         private static void WriteProjectFile(
-            ApiMetadata api, string directory, XElement propertyGroup, XElement dependenciesItemGroup)
+            ApiMetadata api, string directory, XElement propertyGroup, XElement dependenciesItemGroup, XElement packingElement)
         {
             var file = Path.Combine(directory, $"{Path.GetFileName(directory)}.csproj");
             XElement doc;
@@ -186,6 +264,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 doc.Elements("Import").Where(x => (string)x.Attribute("Project") == @"..\..\StripDesktopOnNonWindows.xml").Remove();
                 doc.Elements("PropertyGroup").First().ReplaceWith(propertyGroup);
                 doc.Elements("ItemGroup").First().ReplaceWith(dependenciesItemGroup);
+                doc.Elements("ItemGroup").Where(x => (string)x.Attribute("Label") == DotnetPackInstructionsLabel).Remove();
+                doc.Elements("ItemGroup").First().AddAfterSelf(packingElement);
 
                 if (!doc.Elements("Import").Any(x => (string)x.Attribute("Project") == StripDesktopOnNonWindows))
                 {
@@ -198,6 +278,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 doc = new XElement("Project",
                     new XAttribute("Sdk", "Microsoft.NET.Sdk"),
                     propertyGroup,
+                    packingElement,
                     dependenciesItemGroup,
                     new XElement("Import", new XAttribute("Project", StripDesktopOnNonWindows))
                 );
@@ -227,14 +308,14 @@ namespace Google.Cloud.Tools.ProjectGenerator
 
         // Dependencies with an empty value will be treated as project dependencies;
         // dependencies with a value will be treated as package dependencies with the value as the version.
-        private static XElement CreateDependenciesElement(IDictionary<string, string> dependencies) =>
+        private static XElement CreateDependenciesElement(IDictionary<string, string> dependencies, bool stableRelease) =>
             new XElement("ItemGroup",
                 // Use the GAX version for all otherwise-unversioned GAX dependencies
                 dependencies
                     .Where(d => d.Value == "" && d.Key.StartsWith("Google.Api.Gax"))
                     .Select(d => new XElement("PackageReference",
                         new XAttribute("Include", d.Key),
-                        new XAttribute("Version", GaxVersion))),
+                        new XAttribute("Version", stableRelease ? StableGaxVersion : PrereleaseGaxVersion))),
                 dependencies
                     .Where(d => d.Value == "" && !d.Key.StartsWith("Google.Api.Gax"))
                     .Select(d => new XElement("ProjectReference", new XAttribute("Include", GenerateProjectReference(d.Key)))),
@@ -247,7 +328,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                         // See https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1066
                         d.Key == "Grpc.Core" ? new XAttribute("PrivateAssets", "None") : null,
                         // Make references to ConfigureAwaitChecker effectively private
-                        d.Key == "ConfigureAwaitChecker.Analyzer" ? new XAttribute("PrivateAssets", "All") : null)
+                        PrivateAssetPackages.Contains(d.Key) ? new XAttribute("PrivateAssets", "All") : null)
                     ),
                 new XElement("Analyzer",
                     new XAttribute("Condition", $"Exists('{AnalyzersPath}')"),

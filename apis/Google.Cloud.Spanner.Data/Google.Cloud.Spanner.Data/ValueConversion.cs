@@ -16,7 +16,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
-using System.Globalization;
+using static System.Globalization.CultureInfo;
 using System.Linq;
 using System.Reflection;
 using System.Xml;
@@ -176,37 +176,30 @@ namespace Google.Cloud.Spanner.Data
                 case TypeCode.Bool:
                     return new Value {BoolValue = Convert.ToBoolean(value)};
                 case TypeCode.String:
-                    if (value is DateTime)
+                    if (value is DateTime dateTime)
                     {
                         // If the value is a DateTime, we always convert using XmlConvert.
                         // This allows us to convert back to a datetime reliably from the
                         // resulting string (so roundtrip works properly if the developer uses
                         // a string as a backing field for a datetime for whatever reason).
-                        return new Value { StringValue = XmlConvert.ToString((DateTime)value, XmlDateTimeSerializationMode.Utc) };
+                        return new Value { StringValue = XmlConvert.ToString(dateTime, XmlDateTimeSerializationMode.Utc) };
                     }
-                    return new Value { StringValue = Convert.ToString(value, CultureInfo.InvariantCulture) };
+                    return new Value { StringValue = Convert.ToString(value, InvariantCulture) };
                 case TypeCode.Int64:
-                    if (value is string stringValue)
-                    {
-                        return new Value { StringValue = Convert.ToInt64(stringValue, CultureInfo.InvariantCulture)
-                            .ToString(CultureInfo.InvariantCulture) };
-                    }
-                    else
-                    {
-                        return new Value { StringValue = Convert.ToInt64(value).ToString(CultureInfo.InvariantCulture) };
-                    }
+                        return new Value { StringValue = Convert.ToInt64(value, InvariantCulture)
+                            .ToString(InvariantCulture) };
                 case TypeCode.Float64:
-                    return new Value {NumberValue = Convert.ToDouble(value)};
+                    return new Value {NumberValue = Convert.ToDouble(value, InvariantCulture)};
                 case TypeCode.Timestamp:
                     return new Value
                     {
-                        StringValue = XmlConvert.ToString(Convert.ToDateTime(value), XmlDateTimeSerializationMode.Utc)
+                        StringValue = XmlConvert.ToString(Convert.ToDateTime(value, InvariantCulture), XmlDateTimeSerializationMode.Utc)
                     };
                 case TypeCode.Date:
                     return new Value
                     {
                         StringValue = StripTimePart(
-                            XmlConvert.ToString(Convert.ToDateTime(value), XmlDateTimeSerializationMode.Utc))
+                            XmlConvert.ToString(Convert.ToDateTime(value, InvariantCulture), XmlDateTimeSerializationMode.Utc))
                     };
                 case TypeCode.Array:
                     if (value is IEnumerable enumerable)
@@ -222,7 +215,7 @@ namespace Google.Cloud.Spanner.Data
                         var structValue = new Struct();
                         foreach (var key in dictionary.Keys)
                         {
-                            string keyString = Convert.ToString(key, CultureInfo.InvariantCulture);
+                            string keyString = Convert.ToString(key, InvariantCulture);
                             if (!spannerDbType.StructMembers.ContainsKey(keyString))
                             {
                                 throw new ArgumentException("The given struct instance has members not defined in the Struct.", nameof(value));
@@ -262,9 +255,9 @@ namespace Google.Cloud.Spanner.Data
                     case Value.KindOneofCase.StringValue:
                         if (spannerType.Code == TypeCode.Int64)
                         {
-                            return Convert.ToBoolean(Convert.ToInt64(wireValue.StringValue, CultureInfo.InvariantCulture));
+                            return Convert.ToBoolean(Convert.ToInt64(wireValue.StringValue, InvariantCulture));
                         }
-                        return Convert.ToBoolean(wireValue.StringValue, CultureInfo.InvariantCulture);
+                        return Convert.ToBoolean(wireValue.StringValue);
                     case Value.KindOneofCase.BoolValue:
                         return wireValue.BoolValue;
                     case Value.KindOneofCase.NumberValue:
@@ -288,9 +281,9 @@ namespace Google.Cloud.Spanner.Data
                     case Value.KindOneofCase.StringValue:
                         if (spannerType.Code == TypeCode.Int64)
                         {
-                            return Convert.ToChar(Convert.ToInt64(wireValue.StringValue, CultureInfo.InvariantCulture));
+                            return Convert.ToChar(Convert.ToInt64(wireValue.StringValue, InvariantCulture));
                         }
-                        return Convert.ToChar(wireValue.StringValue, CultureInfo.InvariantCulture);
+                        return Convert.ToChar(wireValue.StringValue);
                     default:
                         throw new InvalidOperationException(
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
@@ -308,7 +301,7 @@ namespace Google.Cloud.Spanner.Data
                     case Value.KindOneofCase.NullValue:
                         return default(long);
                     case Value.KindOneofCase.StringValue:
-                        return Convert.ToInt64(wireValue.StringValue, CultureInfo.InvariantCulture);
+                        return Convert.ToInt64(wireValue.StringValue, InvariantCulture);
                     default:
                         throw new InvalidOperationException(
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
@@ -326,7 +319,7 @@ namespace Google.Cloud.Spanner.Data
                     case Value.KindOneofCase.NullValue:
                         return default(ulong);
                     case Value.KindOneofCase.StringValue:
-                        return Convert.ToUInt64(wireValue.StringValue, CultureInfo.InvariantCulture);
+                        return Convert.ToUInt64(wireValue.StringValue, InvariantCulture);
                     default:
                         throw new InvalidOperationException(
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
@@ -344,7 +337,7 @@ namespace Google.Cloud.Spanner.Data
                     case Value.KindOneofCase.NullValue:
                         return default(decimal);
                     case Value.KindOneofCase.StringValue:
-                        return Convert.ToDecimal(wireValue.StringValue, CultureInfo.InvariantCulture);
+                        return Convert.ToDecimal(wireValue.StringValue, InvariantCulture);
                     default:
                         throw new InvalidOperationException(
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
@@ -377,7 +370,7 @@ namespace Google.Cloud.Spanner.Data
                             return double.NegativeInfinity;
                         }
 
-                        return Convert.ToDouble(wireValue.StringValue, CultureInfo.InvariantCulture);
+                        return Convert.ToDouble(wireValue.StringValue, InvariantCulture);
                     default:
                         throw new InvalidOperationException(
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
@@ -419,7 +412,7 @@ namespace Google.Cloud.Spanner.Data
                     case Value.KindOneofCase.NullValue:
                         return null;
                     case Value.KindOneofCase.NumberValue:
-                        return wireValue.NumberValue.ToString(CultureInfo.CurrentCulture);
+                        return wireValue.NumberValue.ToString(InvariantCulture);
                     case Value.KindOneofCase.StringValue:
                         return wireValue.StringValue;
                     case Value.KindOneofCase.BoolValue:

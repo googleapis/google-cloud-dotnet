@@ -20,7 +20,7 @@ namespace Google.Cloud.BigQuery.V2
     /// <summary>
     /// Options for <c>UploadCsv</c> operations.
     /// </summary>
-    public sealed class UploadCsvOptions
+    public sealed class UploadCsvOptions : JobCreationOptions
     {
         /// <summary>
         /// The number of rows to skip, usually for headers.
@@ -85,7 +85,7 @@ namespace Google.Cloud.BigQuery.V2
         /// Specifies a string that represents a null value in a CSV file.
         /// If not set, this is effectively the empty string.
         /// </summary>
-        public string NullMarker { get; set; }
+        public string NullMarker { get; set; }        
 
         internal void ModifyConfiguration(JobConfigurationLoad loadRequest)
         {
