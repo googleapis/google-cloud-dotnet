@@ -161,6 +161,7 @@ namespace Google.Cloud.Spanner.Data
         /// Begins a readonly transaction using the optionally provided <see cref="CancellationToken" />.
         /// Read transactions are preferred if possible because they do not impose locks internally.
         /// ReadOnly transactions run with strong consistency and return the latest copy of data.
+        /// This method is thread safe.
         /// </summary>
         /// <param name="cancellationToken">An optional token for canceling the call. May be null.</param>
         /// <returns>a new <see cref="SpannerTransaction" /></returns>
@@ -174,6 +175,7 @@ namespace Google.Cloud.Spanner.Data
         /// of data.
         /// Read transactions are preferred if possible because they do not impose locks internally.
         /// Stale read-only transactions can execute more quickly than strong or read-write transactions,.
+        /// This method is thread safe.
         /// </summary>
         /// <param name="targetReadTimestamp">Specifies the timestamp or allowed staleness of data. Must not be null.</param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
@@ -233,6 +235,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// Begins a new read/write transaction.
+        /// This method is thread safe.
         /// </summary>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
         /// <returns>A new <see cref="SpannerTransaction" /></returns>
@@ -297,6 +300,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to delete rows from a Spanner database table.
+        /// This method is thread safe.
         /// </summary>
         /// <param name="databaseTable">The name of the table from which to delete rows. Must not be null.</param>
         /// <param name="primaryKeys">The set of columns that form the primary key of the table.</param>
@@ -309,6 +313,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to insert rows into a Spanner database table.
+        /// This method is thread safe.
         /// </summary>
         /// <param name="databaseTable">The name of the table to insert rows into. Must not be null.</param>
         /// <param name="insertedColumns">
@@ -325,6 +330,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to insert or update rows into a Spanner database table.
+        /// This method is thread safe.
         /// </summary>
         /// <param name="databaseTable">The name of the table to insert or updates rows. Must not be null.</param>
         /// <param name="insertUpdateColumns">
@@ -341,6 +347,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to select rows using a SQL query statement.
+        /// This method is thread safe.
         /// </summary>
         /// <param name="sqlQueryStatement">
         /// A full SQL query statement that may optionally have
@@ -359,6 +366,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to update rows in a Spanner database table.
+        /// This method is thread safe.
         /// </summary>
         /// <param name="databaseTable">The name of the table to update rows. Must not be null.</param>
         /// <param name="updateColumns">
@@ -376,6 +384,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to execute a DDL (CREATE/DROP TABLE, etc) statement.
+        /// This method is thread safe.
         /// </summary>
         /// <param name="ddlStatement">The DDL statement (eg 'CREATE TABLE MYTABLE ...').  Must not be null.</param>
         /// <returns>A configured <see cref="SpannerCommand" /></returns>

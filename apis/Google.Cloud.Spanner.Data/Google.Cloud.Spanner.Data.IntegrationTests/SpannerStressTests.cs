@@ -40,7 +40,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             TestLogger.TestOutputHelper = outputHelper;
         }
 
-        protected override async Task<TimeSpan> TestWriteOneRow(Stopwatch sw)
+        private async Task<TimeSpan> TestWriteOneRow(Stopwatch sw)
         {
             using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
             {
@@ -54,33 +54,78 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 insertCommand.Parameters["ID"].Value = $"{s_guid}{localCounter}";
                 insertCommand.Parameters["Title"].Value = "Title";
 
-                var retry = true;
-                long delay = 0;
-                while (retry)
+                await ExecuteWithRetry(insertCommand.ExecuteNonQueryAsync);
+            }
+            return sw.Elapsed;
+        }
+
+        private async Task<TimeSpan> TestWriteTx(Stopwatch sw)
+        {
+            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            {
+                await connection.OpenAsync();
+                using (var tx = await connection.BeginTransactionAsync())
                 {
-                    retry = false;
-                    try
-                    {
-                        //The open is implicit here...
-                        await insertCommand.ExecuteNonQueryAsync();
-                    }
-                    catch (Exception e) when (e.IsTransientSpannerFault())
-                    {
-                        //TODO(benwu): replace with topaz.
-                        retry = true;
-                        Console.WriteLine("retrying due to " + e.Message);
-                        delay = delay * 2;
-                        delay += s_rnd.Value.Next(100);
-                        delay = Math.Min(delay, 5000);
-                        await Task.Delay(TimeSpan.FromMilliseconds(delay));
-                    }
+                    var rowsToWrite = Enumerable.Range(0, s_rnd.Value.Next(5) + 1)
+                        .Select(x => Interlocked.Increment(ref s_rowCounter)).ToList();
+
+                    var insertCommand = connection.CreateInsertCommand(
+                        _testFixture.StressTestTable, new SpannerParameterCollection
+                        {
+                            {"ID", SpannerDbType.String},
+                            {"Title", SpannerDbType.String}
+                        });
+                    insertCommand.Parameters["Title"].Value = "Title";
+                    insertCommand.Transaction = tx;
+
+                    var tasks = rowsToWrite.Select(
+                        x =>
+                        {
+                            // This will blow up with dupe primary keys if not threadsafe.
+                            insertCommand.Parameters["ID"].Value = $"{s_guid}{x}";
+                            return insertCommand.ExecuteNonQueryAsync(CancellationToken.None);
+                        });
+
+                    // This doesn't really *help* with perf, but is something
+                    // somebody will try.
+                    await Task.WhenAll(tasks);
+                    await ExecuteWithRetry(tx.CommitAsync);
                 }
             }
             return sw.Elapsed;
         }
 
+        private static async Task ExecuteWithRetry(Func<Task> actionToRetry)
+        {
+            var retry = true;
+            long delay = 0;
+            while (retry)
+            {
+                retry = false;
+                try
+                {
+                    await actionToRetry();
+                }
+                catch (Exception e) when (e.IsTransientSpannerFault())
+                {
+                    //TODO(benwu): replace with topaz.
+                    retry = true;
+                    Console.WriteLine("retrying due to " + e.Message);
+                    delay = delay * 2;
+                    delay += s_rnd.Value.Next(100);
+                    delay = Math.Min(delay, 5000);
+                    await Task.Delay(TimeSpan.FromMilliseconds(delay));
+                }
+            }
+        }
+
         [Fact]
-        public async Task RunWriteStress()
+        public Task RunWriteStress() => RunStress(TestWriteOneRow);
+
+        [Fact]
+        public Task RunParallelTransactionStress() => RunStress(TestWriteTx);
+
+        private async Task RunStress(Func<Stopwatch, Task<TimeSpan>> writeFunc)
         {
             //prewarm
             // The maximum roundtrip time for spanner (and mysql) is about 200ms per
@@ -123,7 +168,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
 
             //now run the test.
-            double result = await TestWriteLatencyWithQps(TargetQps, TestDuration);
+            double result = await TestWriteLatencyWithQps(TargetQps, TestDuration, writeFunc);
             Logger.Instance.Info($"Spanner latency= {result}ms");
 
             ValidatePoolInfo();

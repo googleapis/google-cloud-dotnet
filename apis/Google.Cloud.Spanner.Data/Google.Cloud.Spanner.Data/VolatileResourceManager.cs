@@ -44,7 +44,7 @@ namespace Google.Cloud.Spanner.Data
 
         public void Commit(Enlistment enlistment)
         {
-            if (_transaction != null && !_transaction.Mutations.Any())
+            if (_transaction != null && !_transaction.HasMutations)
             {
                 //In the case where our resource manager doesn't have any mutations, it was a read,
                 //which we will no-op and allow through even if it was a two phase commit.
@@ -73,7 +73,7 @@ namespace Google.Cloud.Spanner.Data
 
         public void Prepare(PreparingEnlistment preparingEnlistment)
         {
-            if (_transaction != null && !_transaction.Mutations.Any()) {
+            if (_transaction != null && !_transaction.HasMutations) {
                 //In the case where our resource manager doesn't have any mutations, it was a read,
                 //which we will no-op and allow through even if it was a two phase commit.
                 //This allows cases such as nested transactions where the inner transaction is a readonly

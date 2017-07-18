@@ -29,12 +29,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         protected const int TargetQps = 100;
         protected static readonly TimeSpan TestDuration = TimeSpan.FromSeconds(60);
 
-        protected abstract Task<TimeSpan> TestWriteOneRow(Stopwatch sw);
-
-        private async Task<TimeSpan> TestWrite(Stopwatch sw)
+        private async Task<TimeSpan> TestWrite(Stopwatch sw, Func<Stopwatch, Task<TimeSpan>> writeFunc)
         {
             await Task.Yield(); //We immediately yield to allow the spawning thread to continue.
-            return await TestWriteOneRow(sw);
+            return await writeFunc(sw);
         }
 
         /// <summary>
@@ -50,7 +48,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         ///  Transaction.CacheHit: How many hits we got on prewarmed transactions.
         ///  Right now the return value is the average latency. TODO(benwu):switch to 90th percentile latency.
         /// </summary>
-        protected async Task<double> TestWriteLatencyWithQps(double queriesPerSecond, TimeSpan testTime)
+        protected async Task<double> TestWriteLatencyWithQps(double queriesPerSecond, TimeSpan testTime,
+            Func<Stopwatch, Task<TimeSpan>> writeFunc)
         {
             var sw = Stopwatch.StartNew();
             var all = new List<Task<TimeSpan>>();
@@ -59,7 +58,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 if (sw.Elapsed.TotalSeconds * queriesPerSecond > all.Count)
                 {
-                    all.Add(TestWrite(Stopwatch.StartNew()));
+                    all.Add(TestWrite(Stopwatch.StartNew(), writeFunc));
                 }
             }
 

@@ -14,6 +14,7 @@
 
 using System;
 using System.Collections;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Threading;
@@ -42,7 +43,7 @@ namespace Google.Cloud.Spanner.Data
         private readonly SpannerConnection _connectionToClose;
         private readonly List<Value> _innerList = new List<Value>();
         private readonly ReliableStreamReader _resultSet;
-        private Dictionary<string, int> _fieldIndex;
+        private ConcurrentDictionary<string, int> _fieldIndex = new ConcurrentDictionary<string, int>();
         private ResultSetMetadata _metadata;
         private readonly SingleUseTransaction _txToClose;
 
@@ -281,9 +282,8 @@ namespace Google.Cloud.Spanner.Data
         private async Task<int> GetFieldIndexAsync(string fieldName, CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckNotNullOrEmpty(fieldName, nameof(fieldName));
-            if (_fieldIndex == null)
+            if (_fieldIndex.Count == 0)
             {
-                _fieldIndex = new Dictionary<string, int>();
                 var metadata = await PopulateMetadataAsync(cancellationToken).ConfigureAwait(false);
                 if (metadata != null)
                 {
