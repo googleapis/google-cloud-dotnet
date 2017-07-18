@@ -39,7 +39,7 @@ namespace Google.Cloud.Diagnostics.Common
 
             private readonly SimpleManagedTracer _tracer;
 
-            private double _ticks;
+            private long _ticks;
 
             internal Span(SimpleManagedTracer tracer, TraceSpan traceSpan)
             {
@@ -52,7 +52,7 @@ namespace Google.Cloud.Diagnostics.Common
             {
                 if (Interlocked.CompareExchange(ref _ticks, DateTime.UtcNow.Ticks, 0) == 0)
                 {
-                    TraceSpan.EndTime = Timestamp.FromDateTime(new DateTime((long)_ticks, DateTimeKind.Utc));
+                    TraceSpan.EndTime = Timestamp.FromDateTime(new DateTime(_ticks, DateTimeKind.Utc));
                     _tracer.EndSpan(this);
                 }
                 else
