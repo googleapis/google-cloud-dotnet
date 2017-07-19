@@ -106,5 +106,30 @@ namespace Google.Cloud.Dlp.V2Beta1
     }
 
 
+    public partial class InspectOperationResult
+    {
+        /// <summary>
+        /// <see cref="ResultName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public ResultName ResultName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2Beta1.ResultName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListInspectFindingsRequest
+    {
+        /// <summary>
+        /// <see cref="ResultName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public ResultName ResultName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2Beta1.ResultName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
 
 }

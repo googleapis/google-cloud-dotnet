@@ -296,26 +296,26 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
 
         public async Task ListInspectFindingsAsync()
         {
-            // Snippet: ListInspectFindingsAsync(string,CallSettings)
-            // Additional: ListInspectFindingsAsync(string,CancellationToken)
+            // Snippet: ListInspectFindingsAsync(ResultName,CallSettings)
+            // Additional: ListInspectFindingsAsync(ResultName,CancellationToken)
             // Create client
             DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new ResultName("[RESULT]").ToString();
+            ResultName name = new ResultName("[RESULT]");
             // Make the request
-            ListInspectFindingsResponse response = await dlpServiceClient.ListInspectFindingsAsync(formattedName);
+            ListInspectFindingsResponse response = await dlpServiceClient.ListInspectFindingsAsync(name);
             // End snippet
         }
 
         public void ListInspectFindings()
         {
-            // Snippet: ListInspectFindings(string,CallSettings)
+            // Snippet: ListInspectFindings(ResultName,CallSettings)
             // Create client
             DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = new ResultName("[RESULT]").ToString();
+            ResultName name = new ResultName("[RESULT]");
             // Make the request
-            ListInspectFindingsResponse response = dlpServiceClient.ListInspectFindings(formattedName);
+            ListInspectFindingsResponse response = dlpServiceClient.ListInspectFindings(name);
             // End snippet
         }
 
@@ -327,7 +327,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // Initialize request argument(s)
             ListInspectFindingsRequest request = new ListInspectFindingsRequest
             {
-                Name = new ResultName("[RESULT]").ToString(),
+                ResultName = new ResultName("[RESULT]"),
             };
             // Make the request
             ListInspectFindingsResponse response = await dlpServiceClient.ListInspectFindingsAsync(request);
@@ -342,7 +342,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // Initialize request argument(s)
             ListInspectFindingsRequest request = new ListInspectFindingsRequest
             {
-                Name = new ResultName("[RESULT]").ToString(),
+                ResultName = new ResultName("[RESULT]"),
             };
             // Make the request
             ListInspectFindingsResponse response = dlpServiceClient.ListInspectFindings(request);
