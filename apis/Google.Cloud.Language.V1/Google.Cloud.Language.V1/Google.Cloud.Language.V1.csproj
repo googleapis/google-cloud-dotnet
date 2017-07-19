@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>1.0.0-beta08</Version>
+    <Version>1.0.0-beta09</Version>
     <TargetFrameworks>netstandard1.5;net45</TargetFrameworks>
     <Features>IOperation</Features>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
