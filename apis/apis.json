@@ -268,6 +268,8 @@
 
   {
     "id": "Google.Cloud.Spanner.Admin.Database.V1",
+    "productName": "Google Cloud Spanner Database Administration",
+    "productUrl": "https://cloud.google.com/spanner/",
     "version": "1.0.0-beta01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Spanner Database Admin API.",
@@ -280,6 +282,8 @@
 
   {
     "id": "Google.Cloud.Spanner.Admin.Instance.V1",
+    "productName": "Google Cloud Spanner Instance Administration",
+    "productUrl": "https://cloud.google.com/spanner/",
     "version": "1.0.0-beta01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Spanner Instance Admin API.",
@@ -308,6 +312,8 @@
   
   {
     "id": "Google.Cloud.Spanner.V1",
+    "productName": "Google Cloud Spanner",
+    "productUrl": "https://cloud.google.com/spanner/",
     "version": "1.0.0-beta01",
     "type": "grpc",
     "description": "Low-level Google client library to access the Google Cloud Spanner API. The ADO.NET provider (Google.Cloud.Spanner.Data) which depends on this package is generally preferred for Spanner access.",

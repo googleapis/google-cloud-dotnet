@@ -38,6 +38,12 @@ Beta:
 - [Google.Cloud.Monitoring.V3](Google.Cloud.Monitoring.V3/index.html)
 - [Google.Cloud.PubSub.V1](Google.Cloud.PubSub.V1/index.html)
 - [Google.Cloud.Trace.V1](Google.Cloud.Trace.V1/index.html)
+- Google Cloud Spanner:
+  - [Google.Cloud.Spanner.Data](Google.Cloud.Spanner.Data/index.html): ADO.NET provider for Google Cloud Spanner (recommended)
+  - [Google.Cloud.Spanner.V1](Google.Cloud.Spanner.V1/index.html): Low-level access to Spanner API
+  - [Google.Cloud.Spanner.Admin.Database.V1](Google.Cloud.Spanner.Admin.Database.V1/index.html): Database administration API
+  - [Google.Cloud.Spanner.Admin.Instance.V1](Google.Cloud.Spanner.Admin.Instance.V1/index.html): Instance administration API
+
 
 Alpha:
 
