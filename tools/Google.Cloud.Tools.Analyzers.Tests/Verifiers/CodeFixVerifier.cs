@@ -76,6 +76,12 @@ namespace TestHelper
         /// <param name="allowNewCompilerDiagnostics">A bool controlling whether or not the test will fail if the CodeFix introduces other warnings after being applied</param>
         private void VerifyFix(string language, DiagnosticAnalyzer analyzer, CodeFixProvider codeFixProvider, string oldSource, string newSource, int? codeFixIndex, bool allowNewCompilerDiagnostics)
         {
+            // Change from template code: for simplicity, we'll validate in a
+            // line-ending-insensitive way.
+            oldSource = oldSource.Replace("\r\n", "\n");
+            newSource = newSource.Replace("\r\n", "\n");
+            // End of manual change
+            
             var document = CreateDocument(oldSource, language);
             var analyzerDiagnostics = GetSortedDiagnosticsFromDocuments(analyzer, new[] { document });
             var compilerDiagnostics = GetCompilerDiagnostics(document);
@@ -125,6 +131,11 @@ namespace TestHelper
 
             //after applying all of the code fixes, compare the resulting string to the inputted one
             var actual = GetStringFromDocument(document);
+
+            // Manual change: again, normalize to LF for line endings.
+            actual = actual.Replace("\r\n", "\n");
+            // End of manual change
+
             Assert.Equal(newSource, actual);
         }
     }
