@@ -33,6 +33,20 @@
   },
 
   {
+    "id": "Google.Cloud.Bigtable.V2",
+    "productName": "Google Bigtable",
+    "productUrl": "https://cloud.google.com/bigtable/",
+    "version": "0.1.0",
+    "type": "grpc",
+    "description": "Recommended Google client library to access the Google Cloud Bigtable API.",
+    "tags": [ "Bigtable" ],
+    "testDependencies": {
+      "Google.Cloud.ClientTesting": "",
+      "Google.Api.Gax.Grpc.Testing": ""
+    }
+  },
+
+  {
     "id": "Google.Cloud.Datastore.V1",
     "productName": "Google Cloud Datastore",
     "productUrl": "https://cloud.google.com/datastore/docs/concepts/overview",
@@ -309,7 +323,7 @@
       "Grpc.Core": ""
     }
   },
-  
+
   {
     "id": "Google.Cloud.Spanner.V1",
     "productName": "Google Cloud Spanner",
@@ -387,7 +401,7 @@
       "Google.LongRunning": ""
     },
   },
-  
+
   {
     "id": "Google.Cloud.Vision.V1",
     "productName": "Google Cloud Vision",

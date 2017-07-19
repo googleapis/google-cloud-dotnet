@@ -1,0 +1,61 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Bigtable.V2", "Google.Cloud.Bigtable.V2\Google.Cloud.Bigtable.V2.csproj", "{4D4B5FB5-FC91-4E89-9A6F-4577671BE53E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Bigtable.V2.Snippets", "Google.Cloud.Bigtable.V2.Snippets\Google.Cloud.Bigtable.V2.Snippets.csproj", "{EBEEF3F2-005D-43DE-B676-BBDC8682FE79}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{59850771-DC4D-4523-AA6E-4575764855CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D4B5FB5-FC91-4E89-9A6F-4577671BE53E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D4B5FB5-FC91-4E89-9A6F-4577671BE53E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D4B5FB5-FC91-4E89-9A6F-4577671BE53E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4D4B5FB5-FC91-4E89-9A6F-4577671BE53E}.Debug|x64.Build.0 = Debug|Any CPU
+		{4D4B5FB5-FC91-4E89-9A6F-4577671BE53E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4D4B5FB5-FC91-4E89-9A6F-4577671BE53E}.Debug|x86.Build.0 = Debug|Any CPU
+		{4D4B5FB5-FC91-4E89-9A6F-4577671BE53E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D4B5FB5-FC91-4E89-9A6F-4577671BE53E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D4B5FB5-FC91-4E89-9A6F-4577671BE53E}.Release|x64.ActiveCfg = Release|Any CPU
+		{4D4B5FB5-FC91-4E89-9A6F-4577671BE53E}.Release|x64.Build.0 = Release|Any CPU
+		{4D4B5FB5-FC91-4E89-9A6F-4577671BE53E}.Release|x86.ActiveCfg = Release|Any CPU
+		{4D4B5FB5-FC91-4E89-9A6F-4577671BE53E}.Release|x86.Build.0 = Release|Any CPU
+		{EBEEF3F2-005D-43DE-B676-BBDC8682FE79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBEEF3F2-005D-43DE-B676-BBDC8682FE79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBEEF3F2-005D-43DE-B676-BBDC8682FE79}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EBEEF3F2-005D-43DE-B676-BBDC8682FE79}.Debug|x64.Build.0 = Debug|Any CPU
+		{EBEEF3F2-005D-43DE-B676-BBDC8682FE79}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EBEEF3F2-005D-43DE-B676-BBDC8682FE79}.Debug|x86.Build.0 = Debug|Any CPU
+		{EBEEF3F2-005D-43DE-B676-BBDC8682FE79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBEEF3F2-005D-43DE-B676-BBDC8682FE79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBEEF3F2-005D-43DE-B676-BBDC8682FE79}.Release|x64.ActiveCfg = Release|Any CPU
+		{EBEEF3F2-005D-43DE-B676-BBDC8682FE79}.Release|x64.Build.0 = Release|Any CPU
+		{EBEEF3F2-005D-43DE-B676-BBDC8682FE79}.Release|x86.ActiveCfg = Release|Any CPU
+		{EBEEF3F2-005D-43DE-B676-BBDC8682FE79}.Release|x86.Build.0 = Release|Any CPU
+		{59850771-DC4D-4523-AA6E-4575764855CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59850771-DC4D-4523-AA6E-4575764855CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59850771-DC4D-4523-AA6E-4575764855CB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{59850771-DC4D-4523-AA6E-4575764855CB}.Debug|x64.Build.0 = Debug|Any CPU
+		{59850771-DC4D-4523-AA6E-4575764855CB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{59850771-DC4D-4523-AA6E-4575764855CB}.Debug|x86.Build.0 = Debug|Any CPU
+		{59850771-DC4D-4523-AA6E-4575764855CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59850771-DC4D-4523-AA6E-4575764855CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59850771-DC4D-4523-AA6E-4575764855CB}.Release|x64.ActiveCfg = Release|Any CPU
+		{59850771-DC4D-4523-AA6E-4575764855CB}.Release|x64.Build.0 = Release|Any CPU
+		{59850771-DC4D-4523-AA6E-4575764855CB}.Release|x86.ActiveCfg = Release|Any CPU
+		{59850771-DC4D-4523-AA6E-4575764855CB}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

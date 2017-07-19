@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Version>0.1.0</Version>
+    <TargetFrameworks>netstandard1.5;net45</TargetFrameworks>
+    <Features>IOperation</Features>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+    <Deterministic>true</Deterministic>
+    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Description>Recommended Google client library to access the Google Cloud Bigtable API.</Description>
+    <PackageTags>Bigtable;Google;Cloud</PackageTags>
+    <Copyright>Copyright 2017 Google Inc.</Copyright>
+    <Authors>Google Inc.</Authors>
+    <PackageIconUrl>https://cloud.google.com/images/gcp-icon-64x64.png</PackageIconUrl>
+    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/GoogleCloudPlatform/google-cloud-dotnet</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/GoogleCloudPlatform/google-cloud-dotnet</RepositoryUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.0-beta4" PrivateAssets="All" />
+    <PackageReference Include="Google.Api.Gax.Grpc" Version="2.1.0-beta01" />
+    <PackageReference Include="Grpc.Core" Version="1.4.0" PrivateAssets="None" />
+    <PackageReference Include="SourceLink.Create.CommandLine" Version="2.1.2" PrivateAssets="All" />
+    <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup Label="dotnet pack instructions">
+    <Content Include="$(OutputPath)netstandard1.5\$(PackageId).pdb">
+      <Pack>true</Pack>
+      <PackagePath>lib/netstandard1.5</PackagePath>
+    </Content>
+    <Content Include="$(OutputPath)net45\$(PackageId).pdb">
+      <Pack>true</Pack>
+      <PackagePath>lib/net45</PackagePath>
+    </Content>
+  </ItemGroup>
+  <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
+</Project>
