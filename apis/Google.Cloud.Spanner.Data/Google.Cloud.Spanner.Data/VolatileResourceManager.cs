@@ -52,6 +52,10 @@ namespace Google.Cloud.Spanner.Data
                 //timestamp bound read and doesn't have anything to commit.
                 Logger.Debug(() => "Received a COMMIT for a two phase commit but without changes. This is allowed.");
                 enlistment.Done();
+
+                // For write transactions with no mutations, this ensures the transaction
+                // gets closed and the locks get released if any were made.
+                CommitToSpanner();
                 return;
             }
             Logger.Warn(
@@ -115,8 +119,7 @@ namespace Google.Cloud.Spanner.Data
         {
             try
             {
-                ExecuteHelper.WithErrorTranslationAndProfiling(() =>
-                    _transaction?.Commit(), "VolatileResourceManager.Commit");
+                CommitToSpanner();
                 singlePhaseEnlistment.Committed();
             }
             catch (SpannerException e)
@@ -130,6 +133,19 @@ namespace Google.Cloud.Spanner.Data
             finally
             {
                 Dispose();
+            }
+        }
+
+        private void CommitToSpanner()
+        {
+            // If its a read-only transaction, then just tell the outer transaction that everything is good.
+            // This can happen with a readonly transaction or a write transaction where we never
+            // executed any mutations.
+            if (_transaction?.Mode != TransactionMode.ReadOnly)
+            {
+                ExecuteHelper.WithErrorTranslationAndProfiling(
+                    () =>
+                        _transaction?.Commit(), "VolatileResourceManager.Commit");
             }
         }
 
