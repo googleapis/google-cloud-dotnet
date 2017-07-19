@@ -120,10 +120,10 @@
     "dependencies": {
       "Google.Cloud.Logging.V2": "",
       "Google.Cloud.Trace.V1": "",
-      "Google.Cloud.ErrorReporting.V1Beta1": "",
       "Grpc.Core": ""
     },
     "testDependencies": {
+      "Google.Cloud.ErrorReporting.V1Beta1": "",
       "Microsoft.AspNetCore.Http": "1.1.1"
     }
   },

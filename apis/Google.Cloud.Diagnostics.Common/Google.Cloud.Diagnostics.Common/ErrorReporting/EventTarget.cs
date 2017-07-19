@@ -15,7 +15,6 @@
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Cloud.ErrorReporting.V1Beta1;
 using Google.Cloud.Logging.V2;
 
 namespace Google.Cloud.Diagnostics.Common
@@ -25,15 +24,12 @@ namespace Google.Cloud.Diagnostics.Common
     /// </summary>
     public enum EventTargetKind
     {
-        /// <summary>Stackdriver Error Reporting API.</summary>
-        ErrorReporting,
-
         /// <summary>Stackdriver Error Logging API.</summary>
         Logging
     }
 
     /// <summary>
-    /// Represents the location error events will be sent, such as the Stackdriver Logging or Error Reporting API.
+    /// Represents the location error events will be sent.
     /// </summary>
     public sealed class EventTarget
     {
@@ -42,9 +38,6 @@ namespace Google.Cloud.Diagnostics.Common
 
         /// <summary>The location to send error events to.</summary>
         public EventTargetKind Kind { get; private set; }
-
-        /// <summary>The error reporting client.</summary>
-        public ReportErrorsServiceClient ErrorReportingClient { get; private set; }
 
         /// <summary>The logging client.</summary>
         public LoggingServiceV2Client LoggingClient { get; private set; }
@@ -112,25 +105,6 @@ namespace Google.Cloud.Diagnostics.Common
                 LogName = GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName)),
                 MonitoredResource = monitoredResource ?? MonitoredResourceBuilder.FromPlatform(),
                 ProjectId = logTarget.ProjectId,
-            };
-        }
-
-        /// <summary>
-        /// Creates a new <see cref="EventTarget"/> instance that will report to the Stackdriver Error Reporting API.
-        /// To use this option you must enable the Stackdriver Error Reporting API
-        /// (https://console.cloud.google.com/apis/api/clouderrorreporting.googleapis.com/overview).
-        /// </summary>
-        /// <param name="projectId">Optional if running on Google App Engine or Google Compute Engine.
-        ///     The Google Cloud Platform project ID. If running on GAE or GCE the project ID will be
-        ///     detected from the platform.</param>
-        /// <param name="errorReportingClient">The error reporting client.</param>
-        public static EventTarget ForErrorReporting(string projectId = null, ReportErrorsServiceClient errorReportingClient = null)
-        {
-            return new EventTarget
-            {
-                ProjectId = CommonUtils.GetAndCheckProjectId(projectId),
-                Kind = EventTargetKind.ErrorReporting,
-                ErrorReportingClient = errorReportingClient ?? ReportErrorsServiceClient.Create(),
             };
         }
     }

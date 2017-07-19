@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.ErrorReporting.V1Beta1;
 using Google.Cloud.Logging.V2;
 using Moq;
 using Xunit;
@@ -23,29 +22,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
     {
         private const string _projectId = "pid";
         private static readonly LoggingServiceV2Client _loggingClient = new Mock<LoggingServiceV2Client>().Object;
-        private static readonly ReportErrorsServiceClient _errorClient = new Mock<ReportErrorsServiceClient>().Object;
 
-        [Fact]
-        public void ErrorReportingOptions_EventTarget()
-        {
-            var eventTarget = EventTarget.ForErrorReporting(_projectId, _errorClient);
-            var bufferOptions = BufferOptions.SizedBuffer();
-
-            var options = ErrorReportingOptions.Create(eventTarget, bufferOptions);
-            Assert.Equal(eventTarget, options.EventTarget);
-            Assert.Equal(bufferOptions, options.BufferOptions);
-        }
-
-        [Fact]
-        public void CreateConsumer_ErrorConsumer()
-        {
-            var eventTarget = EventTarget.ForErrorReporting(_projectId, _errorClient);
-            var options = ErrorReportingOptions.Create(eventTarget);
-            var consumer = options.CreateConsumer();
-            Assert.IsType<RpcRetryConsumer<ReportedErrorEvent>>(consumer);
-            var retryConsumer = (RpcRetryConsumer<ReportedErrorEvent>) consumer;
-            Assert.IsType<GrpcErrorEventConsumer>(retryConsumer._consumer);
-        }
 
         [Fact]
         public void CreateConsumer_ErrorToLogsConsumer()
@@ -53,9 +30,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var eventTarget = EventTarget.ForLogging(_projectId, "test-log", _loggingClient);
             var options = ErrorReportingOptions.Create(eventTarget);
             var consumer = options.CreateConsumer();
-            Assert.IsType<RpcRetryConsumer<ReportedErrorEvent>>(consumer);
-            var retryConsumer = (RpcRetryConsumer<ReportedErrorEvent>) consumer;
-            Assert.IsType<ErrorEventToLogEntryConsumer>(retryConsumer._consumer);
+            Assert.IsType<RpcRetryConsumer<LogEntry>>(consumer);
+            var retryConsumer = (RpcRetryConsumer<LogEntry>) consumer;
+            Assert.IsType<GrpcLogConsumer>(retryConsumer._consumer);
         }
 
         [Fact]
@@ -65,7 +42,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var eventTarget = EventTarget.ForLogging(_projectId, "test-log", _loggingClient);
             var options = ErrorReportingOptions.Create(eventTarget, bufferOptions);
             var consumer = options.CreateConsumer();
-            Assert.IsType<SizedBufferingConsumer<ReportedErrorEvent>>(consumer);
+            Assert.IsType<SizedBufferingConsumer<LogEntry>>(consumer);
         }
     }
 }
