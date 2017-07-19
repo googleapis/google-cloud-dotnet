@@ -88,6 +88,38 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        public async Task UpdateTopicAsync_RequestObject()
+        {
+            // Snippet: UpdateTopicAsync(UpdateTopicRequest,CallSettings)
+            // Create client
+            PublisherClient publisherClient = await PublisherClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateTopicRequest request = new UpdateTopicRequest
+            {
+                Topic = new Topic(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Topic response = await publisherClient.UpdateTopicAsync(request);
+            // End snippet
+        }
+
+        public void UpdateTopic_RequestObject()
+        {
+            // Snippet: UpdateTopic(UpdateTopicRequest,CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            UpdateTopicRequest request = new UpdateTopicRequest
+            {
+                Topic = new Topic(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Topic response = publisherClient.UpdateTopic(request);
+            // End snippet
+        }
+
         public async Task PublishAsync()
         {
             // Snippet: PublishAsync(TopicName,IEnumerable<PubsubMessage>,CallSettings)

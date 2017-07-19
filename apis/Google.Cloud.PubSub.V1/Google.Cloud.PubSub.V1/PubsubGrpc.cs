@@ -49,6 +49,7 @@ namespace Google.Cloud.PubSub.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListSnapshotsResponse> __Marshaller_ListSnapshotsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListSnapshotsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.CreateSnapshotRequest> __Marshaller_CreateSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.CreateSnapshotRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.Snapshot> __Marshaller_Snapshot = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.Snapshot.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.UpdateSnapshotRequest> __Marshaller_UpdateSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.UpdateSnapshotRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.DeleteSnapshotRequest> __Marshaller_DeleteSnapshotRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.DeleteSnapshotRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.SeekRequest> __Marshaller_SeekRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.SeekRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.SeekResponse> __Marshaller_SeekResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.SeekResponse.Parser.ParseFrom);
@@ -137,6 +138,13 @@ namespace Google.Cloud.PubSub.V1 {
         __Marshaller_CreateSnapshotRequest,
         __Marshaller_Snapshot);
 
+    static readonly grpc::Method<global::Google.Cloud.PubSub.V1.UpdateSnapshotRequest, global::Google.Cloud.PubSub.V1.Snapshot> __Method_UpdateSnapshot = new grpc::Method<global::Google.Cloud.PubSub.V1.UpdateSnapshotRequest, global::Google.Cloud.PubSub.V1.Snapshot>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateSnapshot",
+        __Marshaller_UpdateSnapshotRequest,
+        __Marshaller_Snapshot);
+
     static readonly grpc::Method<global::Google.Cloud.PubSub.V1.DeleteSnapshotRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSnapshot = new grpc::Method<global::Google.Cloud.PubSub.V1.DeleteSnapshotRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -194,6 +202,10 @@ namespace Google.Cloud.PubSub.V1 {
       /// <summary>
       /// Updates an existing subscription. Note that certain properties of a
       /// subscription, such as its topic, are not modifiable.
+      /// NOTE:  The style guide requires body: "subscription" instead of body: "*".
+      /// Keeping the latter for internal consistency in V1, however it should be
+      /// corrected in V2.  See
+      /// https://cloud.google.com/apis/design/standard_methods#update for details.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -341,6 +353,22 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.Snapshot> CreateSnapshot(global::Google.Cloud.PubSub.V1.CreateSnapshotRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an existing snapshot. Note that certain properties of a snapshot
+      /// are not modifiable.
+      /// NOTE:  The style guide requires body: "snapshot" instead of body: "*".
+      /// Keeping the latter for internal consistency in V1, however it should be
+      /// corrected in V2.  See
+      /// https://cloud.google.com/apis/design/standard_methods#update for details.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.Snapshot> UpdateSnapshot(global::Google.Cloud.PubSub.V1.UpdateSnapshotRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -523,6 +551,10 @@ namespace Google.Cloud.PubSub.V1 {
       /// <summary>
       /// Updates an existing subscription. Note that certain properties of a
       /// subscription, such as its topic, are not modifiable.
+      /// NOTE:  The style guide requires body: "subscription" instead of body: "*".
+      /// Keeping the latter for internal consistency in V1, however it should be
+      /// corrected in V2.  See
+      /// https://cloud.google.com/apis/design/standard_methods#update for details.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -536,6 +568,10 @@ namespace Google.Cloud.PubSub.V1 {
       /// <summary>
       /// Updates an existing subscription. Note that certain properties of a
       /// subscription, such as its topic, are not modifiable.
+      /// NOTE:  The style guide requires body: "subscription" instead of body: "*".
+      /// Keeping the latter for internal consistency in V1, however it should be
+      /// corrected in V2.  See
+      /// https://cloud.google.com/apis/design/standard_methods#update for details.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -547,6 +583,10 @@ namespace Google.Cloud.PubSub.V1 {
       /// <summary>
       /// Updates an existing subscription. Note that certain properties of a
       /// subscription, such as its topic, are not modifiable.
+      /// NOTE:  The style guide requires body: "subscription" instead of body: "*".
+      /// Keeping the latter for internal consistency in V1, however it should be
+      /// corrected in V2.  See
+      /// https://cloud.google.com/apis/design/standard_methods#update for details.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -560,6 +600,10 @@ namespace Google.Cloud.PubSub.V1 {
       /// <summary>
       /// Updates an existing subscription. Note that certain properties of a
       /// subscription, such as its topic, are not modifiable.
+      /// NOTE:  The style guide requires body: "subscription" instead of body: "*".
+      /// Keeping the latter for internal consistency in V1, however it should be
+      /// corrected in V2.  See
+      /// https://cloud.google.com/apis/design/standard_methods#update for details.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1087,6 +1131,70 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSnapshot, null, options, request);
       }
       /// <summary>
+      /// Updates an existing snapshot. Note that certain properties of a snapshot
+      /// are not modifiable.
+      /// NOTE:  The style guide requires body: "snapshot" instead of body: "*".
+      /// Keeping the latter for internal consistency in V1, however it should be
+      /// corrected in V2.  See
+      /// https://cloud.google.com/apis/design/standard_methods#update for details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.PubSub.V1.Snapshot UpdateSnapshot(global::Google.Cloud.PubSub.V1.UpdateSnapshotRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return UpdateSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing snapshot. Note that certain properties of a snapshot
+      /// are not modifiable.
+      /// NOTE:  The style guide requires body: "snapshot" instead of body: "*".
+      /// Keeping the latter for internal consistency in V1, however it should be
+      /// corrected in V2.  See
+      /// https://cloud.google.com/apis/design/standard_methods#update for details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.PubSub.V1.Snapshot UpdateSnapshot(global::Google.Cloud.PubSub.V1.UpdateSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// Updates an existing snapshot. Note that certain properties of a snapshot
+      /// are not modifiable.
+      /// NOTE:  The style guide requires body: "snapshot" instead of body: "*".
+      /// Keeping the latter for internal consistency in V1, however it should be
+      /// corrected in V2.  See
+      /// https://cloud.google.com/apis/design/standard_methods#update for details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Snapshot> UpdateSnapshotAsync(global::Google.Cloud.PubSub.V1.UpdateSnapshotRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return UpdateSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing snapshot. Note that certain properties of a snapshot
+      /// are not modifiable.
+      /// NOTE:  The style guide requires body: "snapshot" instead of body: "*".
+      /// Keeping the latter for internal consistency in V1, however it should be
+      /// corrected in V2.  See
+      /// https://cloud.google.com/apis/design/standard_methods#update for details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Snapshot> UpdateSnapshotAsync(global::Google.Cloud.PubSub.V1.UpdateSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateSnapshot, null, options, request);
+      }
+      /// <summary>
       /// Removes an existing snapshot. All messages retained in the snapshot
       /// are immediately dropped. After a snapshot is deleted, a new one may be
       /// created with the same name, but the new one has no association with the old
@@ -1214,6 +1322,7 @@ namespace Google.Cloud.PubSub.V1 {
           .AddMethod(__Method_ModifyPushConfig, serviceImpl.ModifyPushConfig)
           .AddMethod(__Method_ListSnapshots, serviceImpl.ListSnapshots)
           .AddMethod(__Method_CreateSnapshot, serviceImpl.CreateSnapshot)
+          .AddMethod(__Method_UpdateSnapshot, serviceImpl.UpdateSnapshot)
           .AddMethod(__Method_DeleteSnapshot, serviceImpl.DeleteSnapshot)
           .AddMethod(__Method_Seek, serviceImpl.Seek).Build();
     }
@@ -1228,6 +1337,7 @@ namespace Google.Cloud.PubSub.V1 {
     static readonly string __ServiceName = "google.pubsub.v1.Publisher";
 
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.Topic> __Marshaller_Topic = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.Topic.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.UpdateTopicRequest> __Marshaller_UpdateTopicRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.UpdateTopicRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.PublishRequest> __Marshaller_PublishRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.PublishRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.PublishResponse> __Marshaller_PublishResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.PublishResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.GetTopicRequest> __Marshaller_GetTopicRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.GetTopicRequest.Parser.ParseFrom);
@@ -1243,6 +1353,13 @@ namespace Google.Cloud.PubSub.V1 {
         __ServiceName,
         "CreateTopic",
         __Marshaller_Topic,
+        __Marshaller_Topic);
+
+    static readonly grpc::Method<global::Google.Cloud.PubSub.V1.UpdateTopicRequest, global::Google.Cloud.PubSub.V1.Topic> __Method_UpdateTopic = new grpc::Method<global::Google.Cloud.PubSub.V1.UpdateTopicRequest, global::Google.Cloud.PubSub.V1.Topic>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateTopic",
+        __Marshaller_UpdateTopicRequest,
         __Marshaller_Topic);
 
     static readonly grpc::Method<global::Google.Cloud.PubSub.V1.PublishRequest, global::Google.Cloud.PubSub.V1.PublishResponse> __Method_Publish = new grpc::Method<global::Google.Cloud.PubSub.V1.PublishRequest, global::Google.Cloud.PubSub.V1.PublishResponse>(
@@ -1296,6 +1413,22 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.Topic> CreateTopic(global::Google.Cloud.PubSub.V1.Topic request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an existing topic. Note that certain properties of a topic are not
+      /// modifiable.  Options settings follow the style guide:
+      /// NOTE:  The style guide requires body: "topic" instead of body: "*".
+      /// Keeping the latter for internal consistency in V1, however it should be
+      /// corrected in V2.  See
+      /// https://cloud.google.com/apis/design/standard_methods#update for details.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.Topic> UpdateTopic(global::Google.Cloud.PubSub.V1.UpdateTopicRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1429,6 +1562,70 @@ namespace Google.Cloud.PubSub.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Topic> CreateTopicAsync(global::Google.Cloud.PubSub.V1.Topic request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateTopic, null, options, request);
+      }
+      /// <summary>
+      /// Updates an existing topic. Note that certain properties of a topic are not
+      /// modifiable.  Options settings follow the style guide:
+      /// NOTE:  The style guide requires body: "topic" instead of body: "*".
+      /// Keeping the latter for internal consistency in V1, however it should be
+      /// corrected in V2.  See
+      /// https://cloud.google.com/apis/design/standard_methods#update for details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.PubSub.V1.Topic UpdateTopic(global::Google.Cloud.PubSub.V1.UpdateTopicRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return UpdateTopic(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing topic. Note that certain properties of a topic are not
+      /// modifiable.  Options settings follow the style guide:
+      /// NOTE:  The style guide requires body: "topic" instead of body: "*".
+      /// Keeping the latter for internal consistency in V1, however it should be
+      /// corrected in V2.  See
+      /// https://cloud.google.com/apis/design/standard_methods#update for details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.PubSub.V1.Topic UpdateTopic(global::Google.Cloud.PubSub.V1.UpdateTopicRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateTopic, null, options, request);
+      }
+      /// <summary>
+      /// Updates an existing topic. Note that certain properties of a topic are not
+      /// modifiable.  Options settings follow the style guide:
+      /// NOTE:  The style guide requires body: "topic" instead of body: "*".
+      /// Keeping the latter for internal consistency in V1, however it should be
+      /// corrected in V2.  See
+      /// https://cloud.google.com/apis/design/standard_methods#update for details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Topic> UpdateTopicAsync(global::Google.Cloud.PubSub.V1.UpdateTopicRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return UpdateTopicAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing topic. Note that certain properties of a topic are not
+      /// modifiable.  Options settings follow the style guide:
+      /// NOTE:  The style guide requires body: "topic" instead of body: "*".
+      /// Keeping the latter for internal consistency in V1, however it should be
+      /// corrected in V2.  See
+      /// https://cloud.google.com/apis/design/standard_methods#update for details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Topic> UpdateTopicAsync(global::Google.Cloud.PubSub.V1.UpdateTopicRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateTopic, null, options, request);
       }
       /// <summary>
       /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
@@ -1687,6 +1884,7 @@ namespace Google.Cloud.PubSub.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateTopic, serviceImpl.CreateTopic)
+          .AddMethod(__Method_UpdateTopic, serviceImpl.UpdateTopic)
           .AddMethod(__Method_Publish, serviceImpl.Publish)
           .AddMethod(__Method_GetTopic, serviceImpl.GetTopic)
           .AddMethod(__Method_ListTopics, serviceImpl.ListTopics)

@@ -50,6 +50,7 @@ namespace Google.Cloud.PubSub.V1
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CreateTopicSettings = existing.CreateTopicSettings;
+            UpdateTopicSettings = existing.UpdateTopicSettings;
             PublishSettings = existing.PublishSettings;
             GetTopicSettings = existing.GetTopicSettings;
             ListTopicsSettings = existing.ListTopicsSettings;
@@ -209,6 +210,36 @@ namespace Google.Cloud.PubSub.V1
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public CallSettings CreateTopicSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PublisherClient.UpdateTopic</c> and <c>PublisherClient.UpdateTopicAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>PublisherClient.UpdateTopic</c> and
+        /// <c>PublisherClient.UpdateTopicAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings UpdateTopicSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
@@ -668,6 +699,54 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Topic CreateTopic(
             Topic request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Updates an existing topic. Note that certain properties of a topic are not
+        /// modifiable.  Options settings follow the style guide:
+        /// NOTE:  The style guide requires body: "topic" instead of body: "*".
+        /// Keeping the latter for internal consistency in V1, however it should be
+        /// corrected in V2.  See
+        /// https://cloud.google.com/apis/design/standard_methods#update for details.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Topic> UpdateTopicAsync(
+            UpdateTopicRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Updates an existing topic. Note that certain properties of a topic are not
+        /// modifiable.  Options settings follow the style guide:
+        /// NOTE:  The style guide requires body: "topic" instead of body: "*".
+        /// Keeping the latter for internal consistency in V1, however it should be
+        /// corrected in V2.  See
+        /// https://cloud.google.com/apis/design/standard_methods#update for details.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Topic UpdateTopic(
+            UpdateTopicRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -1626,6 +1705,7 @@ namespace Google.Cloud.PubSub.V1
     public sealed partial class PublisherClientImpl : PublisherClient
     {
         private readonly ApiCall<Topic, Topic> _callCreateTopic;
+        private readonly ApiCall<UpdateTopicRequest, Topic> _callUpdateTopic;
         private readonly ApiCall<PublishRequest, PublishResponse> _callPublish;
         private readonly ApiCall<GetTopicRequest, Topic> _callGetTopic;
         private readonly ApiCall<ListTopicsRequest, ListTopicsResponse> _callListTopics;
@@ -1648,6 +1728,8 @@ namespace Google.Cloud.PubSub.V1
             var grpcIAMPolicyClient = grpcClient.CreateIAMPolicyClient();
             _callCreateTopic = clientHelper.BuildApiCall<Topic, Topic>(
                 GrpcClient.CreateTopicAsync, GrpcClient.CreateTopic, effectiveSettings.CreateTopicSettings);
+            _callUpdateTopic = clientHelper.BuildApiCall<UpdateTopicRequest, Topic>(
+                GrpcClient.UpdateTopicAsync, GrpcClient.UpdateTopic, effectiveSettings.UpdateTopicSettings);
             _callPublish = clientHelper.BuildApiCall<PublishRequest, PublishResponse>(
                 GrpcClient.PublishAsync, GrpcClient.Publish, effectiveSettings.PublishSettings);
             _callGetTopic = clientHelper.BuildApiCall<GetTopicRequest, Topic>(
@@ -1676,6 +1758,7 @@ namespace Google.Cloud.PubSub.V1
 
         // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
         partial void Modify_Topic(ref Topic request, ref CallSettings settings);
+        partial void Modify_UpdateTopicRequest(ref UpdateTopicRequest request, ref CallSettings settings);
         partial void Modify_PublishRequest(ref PublishRequest request, ref CallSettings settings);
         partial void Modify_GetTopicRequest(ref GetTopicRequest request, ref CallSettings settings);
         partial void Modify_ListTopicsRequest(ref ListTopicsRequest request, ref CallSettings settings);
@@ -1723,6 +1806,56 @@ namespace Google.Cloud.PubSub.V1
         {
             Modify_Topic(ref request, ref callSettings);
             return _callCreateTopic.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an existing topic. Note that certain properties of a topic are not
+        /// modifiable.  Options settings follow the style guide:
+        /// NOTE:  The style guide requires body: "topic" instead of body: "*".
+        /// Keeping the latter for internal consistency in V1, however it should be
+        /// corrected in V2.  See
+        /// https://cloud.google.com/apis/design/standard_methods#update for details.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<Topic> UpdateTopicAsync(
+            UpdateTopicRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_UpdateTopicRequest(ref request, ref callSettings);
+            return _callUpdateTopic.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an existing topic. Note that certain properties of a topic are not
+        /// modifiable.  Options settings follow the style guide:
+        /// NOTE:  The style guide requires body: "topic" instead of body: "*".
+        /// Keeping the latter for internal consistency in V1, however it should be
+        /// corrected in V2.  See
+        /// https://cloud.google.com/apis/design/standard_methods#update for details.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override Topic UpdateTopic(
+            UpdateTopicRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_UpdateTopicRequest(ref request, ref callSettings);
+            return _callUpdateTopic.Sync(request, callSettings);
         }
 
         /// <summary>

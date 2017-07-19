@@ -62,6 +62,7 @@ namespace Google.Cloud.PubSub.V1
             ModifyPushConfigSettings = existing.ModifyPushConfigSettings;
             ListSnapshotsSettings = existing.ListSnapshotsSettings;
             CreateSnapshotSettings = existing.CreateSnapshotSettings;
+            UpdateSnapshotSettings = existing.UpdateSnapshotSettings;
             DeleteSnapshotSettings = existing.DeleteSnapshotSettings;
             SeekSettings = existing.SeekSettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
@@ -535,6 +536,36 @@ namespace Google.Cloud.PubSub.V1
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public CallSettings CreateSnapshotSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SubscriberClient.UpdateSnapshot</c> and <c>SubscriberClient.UpdateSnapshotAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>SubscriberClient.UpdateSnapshot</c> and
+        /// <c>SubscriberClient.UpdateSnapshotAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings UpdateSnapshotSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
@@ -1166,6 +1197,10 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Updates an existing subscription. Note that certain properties of a
         /// subscription, such as its topic, are not modifiable.
+        /// NOTE:  The style guide requires body: "subscription" instead of body: "*".
+        /// Keeping the latter for internal consistency in V1, however it should be
+        /// corrected in V2.  See
+        /// https://cloud.google.com/apis/design/standard_methods#update for details.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1186,6 +1221,10 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Updates an existing subscription. Note that certain properties of a
         /// subscription, such as its topic, are not modifiable.
+        /// NOTE:  The style guide requires body: "subscription" instead of body: "*".
+        /// Keeping the latter for internal consistency in V1, however it should be
+        /// corrected in V2.  See
+        /// https://cloud.google.com/apis/design/standard_methods#update for details.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2406,6 +2445,54 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
+        /// Updates an existing snapshot. Note that certain properties of a snapshot
+        /// are not modifiable.
+        /// NOTE:  The style guide requires body: "snapshot" instead of body: "*".
+        /// Keeping the latter for internal consistency in V1, however it should be
+        /// corrected in V2.  See
+        /// https://cloud.google.com/apis/design/standard_methods#update for details.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Snapshot> UpdateSnapshotAsync(
+            UpdateSnapshotRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Updates an existing snapshot. Note that certain properties of a snapshot
+        /// are not modifiable.
+        /// NOTE:  The style guide requires body: "snapshot" instead of body: "*".
+        /// Keeping the latter for internal consistency in V1, however it should be
+        /// corrected in V2.  See
+        /// https://cloud.google.com/apis/design/standard_methods#update for details.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Snapshot UpdateSnapshot(
+            UpdateSnapshotRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// Removes an existing snapshot. All messages retained in the snapshot
         /// are immediately dropped. After a snapshot is deleted, a new one may be
         /// created with the same name, but the new one has no association with the old
@@ -2965,6 +3052,7 @@ namespace Google.Cloud.PubSub.V1
         private readonly ApiCall<ModifyPushConfigRequest, Empty> _callModifyPushConfig;
         private readonly ApiCall<ListSnapshotsRequest, ListSnapshotsResponse> _callListSnapshots;
         private readonly ApiCall<CreateSnapshotRequest, Snapshot> _callCreateSnapshot;
+        private readonly ApiCall<UpdateSnapshotRequest, Snapshot> _callUpdateSnapshot;
         private readonly ApiCall<DeleteSnapshotRequest, Empty> _callDeleteSnapshot;
         private readonly ApiCall<SeekRequest, SeekResponse> _callSeek;
         private readonly ApiCall<SetIamPolicyRequest, Policy> _callSetIamPolicy;
@@ -3006,6 +3094,8 @@ namespace Google.Cloud.PubSub.V1
                 GrpcClient.ListSnapshotsAsync, GrpcClient.ListSnapshots, effectiveSettings.ListSnapshotsSettings);
             _callCreateSnapshot = clientHelper.BuildApiCall<CreateSnapshotRequest, Snapshot>(
                 GrpcClient.CreateSnapshotAsync, GrpcClient.CreateSnapshot, effectiveSettings.CreateSnapshotSettings);
+            _callUpdateSnapshot = clientHelper.BuildApiCall<UpdateSnapshotRequest, Snapshot>(
+                GrpcClient.UpdateSnapshotAsync, GrpcClient.UpdateSnapshot, effectiveSettings.UpdateSnapshotSettings);
             _callDeleteSnapshot = clientHelper.BuildApiCall<DeleteSnapshotRequest, Empty>(
                 GrpcClient.DeleteSnapshotAsync, GrpcClient.DeleteSnapshot, effectiveSettings.DeleteSnapshotSettings);
             _callSeek = clientHelper.BuildApiCall<SeekRequest, SeekResponse>(
@@ -3040,6 +3130,7 @@ namespace Google.Cloud.PubSub.V1
         partial void Modify_ModifyPushConfigRequest(ref ModifyPushConfigRequest request, ref CallSettings settings);
         partial void Modify_ListSnapshotsRequest(ref ListSnapshotsRequest request, ref CallSettings settings);
         partial void Modify_CreateSnapshotRequest(ref CreateSnapshotRequest request, ref CallSettings settings);
+        partial void Modify_UpdateSnapshotRequest(ref UpdateSnapshotRequest request, ref CallSettings settings);
         partial void Modify_DeleteSnapshotRequest(ref DeleteSnapshotRequest request, ref CallSettings settings);
         partial void Modify_SeekRequest(ref SeekRequest request, ref CallSettings settings);
         partial void Modify_SetIamPolicyRequest(ref SetIamPolicyRequest request, ref CallSettings settings);
@@ -3147,6 +3238,10 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Updates an existing subscription. Note that certain properties of a
         /// subscription, such as its topic, are not modifiable.
+        /// NOTE:  The style guide requires body: "subscription" instead of body: "*".
+        /// Keeping the latter for internal consistency in V1, however it should be
+        /// corrected in V2.  See
+        /// https://cloud.google.com/apis/design/standard_methods#update for details.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3168,6 +3263,10 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Updates an existing subscription. Note that certain properties of a
         /// subscription, such as its topic, are not modifiable.
+        /// NOTE:  The style guide requires body: "subscription" instead of body: "*".
+        /// Keeping the latter for internal consistency in V1, however it should be
+        /// corrected in V2.  See
+        /// https://cloud.google.com/apis/design/standard_methods#update for details.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3667,6 +3766,56 @@ namespace Google.Cloud.PubSub.V1
         {
             Modify_CreateSnapshotRequest(ref request, ref callSettings);
             return _callCreateSnapshot.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an existing snapshot. Note that certain properties of a snapshot
+        /// are not modifiable.
+        /// NOTE:  The style guide requires body: "snapshot" instead of body: "*".
+        /// Keeping the latter for internal consistency in V1, however it should be
+        /// corrected in V2.  See
+        /// https://cloud.google.com/apis/design/standard_methods#update for details.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<Snapshot> UpdateSnapshotAsync(
+            UpdateSnapshotRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_UpdateSnapshotRequest(ref request, ref callSettings);
+            return _callUpdateSnapshot.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an existing snapshot. Note that certain properties of a snapshot
+        /// are not modifiable.
+        /// NOTE:  The style guide requires body: "snapshot" instead of body: "*".
+        /// Keeping the latter for internal consistency in V1, however it should be
+        /// corrected in V2.  See
+        /// https://cloud.google.com/apis/design/standard_methods#update for details.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override Snapshot UpdateSnapshot(
+            UpdateSnapshotRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_UpdateSnapshotRequest(ref request, ref callSettings);
+            return _callUpdateSnapshot.Sync(request, callSettings);
         }
 
         /// <summary>
