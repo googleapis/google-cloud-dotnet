@@ -153,6 +153,8 @@ generate_api Google.Cloud.Spanner.V1 google/spanner/v1 spanner.yaml
 generate_api Google.Cloud.Spanner.Admin.Database.V1 google/spanner/admin/database/v1 spanner_admin_database.yaml
 generate_api Google.Cloud.Spanner.Admin.Instance.V1 google/spanner/admin/instance/v1 spanner_admin_instance.yaml
 
+generate_api Google.Cloud.Bigtable.V2 google/bigtable/v2 bigtable.yaml
+
 # Cleanup for the logging API's version-agnostic protos (in their own top-level directory)
 mv apis/Google.Cloud.Logging.V2/Google.Cloud.Logging.Type/*.cs apis/Google.Cloud.Logging.Type/Google.Cloud.Logging.Type
 rmdir apis/Google.Cloud.Logging.V2/Google.Cloud.Logging.Type
