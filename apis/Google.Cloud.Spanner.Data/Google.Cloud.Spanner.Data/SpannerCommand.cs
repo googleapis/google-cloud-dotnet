@@ -33,7 +33,7 @@ namespace Google.Cloud.Spanner.Data
     /// Represents a SQL query or command to execute against
     /// a Spanner database.
     /// If the command is a SQL query, then <see cref="SpannerCommand.CommandText"/>
-    /// contains the entire SQL statement. Use <see cref="ExecuteReaderAsync"/>  to obtain results.
+    /// contains the entire SQL statement. Use <see cref="SpannerCommand.ExecuteReaderAsync()"/>  to obtain results.
     /// 
     /// If the command is an update, insert or delete command, then <see cref="SpannerCommand.CommandText"/>
     /// is simply "[operation] [spanner_table]" such as "UPDATE MYTABLE" with the parameter
@@ -483,6 +483,41 @@ namespace Google.Cloud.Spanner.Data
 
         /// <inheritdoc />
         protected override void Dispose(bool disposing) { }
+
+        /// <summary>
+        /// Sends the command to Cloud Spanner and builds a <see cref="SpannerDataReader"/>.
+        /// </summary>
+        /// <returns>An asynchronous <see cref="Task"/> that produces a <see cref="SpannerDataReader"/>.</returns>
+        public new Task<SpannerDataReader> ExecuteReaderAsync()
+            => ExecuteReaderAsync(CommandBehavior.Default, CancellationToken.None);
+
+        /// <summary>
+        /// Sends the command to Cloud Spanner and builds a <see cref="SpannerDataReader"/>.
+        /// </summary>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>An asynchronous <see cref="Task"/> that produces a <see cref="SpannerDataReader"/>.</returns>
+        public new Task<SpannerDataReader> ExecuteReaderAsync(CancellationToken cancellationToken)
+            => ExecuteReaderAsync(CommandBehavior.Default, cancellationToken);
+
+        /// <summary>
+        /// Sends the command to Cloud Spanner and builds a <see cref="SpannerDataReader"/>.
+        /// </summary>
+        /// <param name="behavior">Options for statement execution and data retrieval.</param>
+        /// <returns>An asynchronous <see cref="Task"/> that produces a <see cref="SpannerDataReader"/>.</returns>
+        public new Task<SpannerDataReader> ExecuteReaderAsync(CommandBehavior behavior)
+            => ExecuteReaderAsync(behavior, CancellationToken.None);
+
+        /// <summary>
+        /// Sends the command to Cloud Spanner and builds a <see cref="SpannerDataReader"/>.
+        /// </summary>
+        /// <param name="behavior">Options for statement execution and data retrieval.</param>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>An asynchronous <see cref="Task"/> that produces a <see cref="SpannerDataReader"/>.</returns>
+        public new async Task<SpannerDataReader> ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+        {
+            return (SpannerDataReader) await ExecuteDbDataReaderAsync(behavior, cancellationToken)
+                .ConfigureAwait(false);
+        }
 
         /// <inheritdoc />
         protected override DbDataReader ExecuteDbDataReader(CommandBehavior behavior)
