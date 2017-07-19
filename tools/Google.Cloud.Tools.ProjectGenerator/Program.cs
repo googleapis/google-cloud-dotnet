@@ -278,8 +278,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 doc = new XElement("Project",
                     new XAttribute("Sdk", "Microsoft.NET.Sdk"),
                     propertyGroup,
-                    packingElement,
                     dependenciesItemGroup,
+                    packingElement,
                     new XElement("Import", new XAttribute("Project", StripDesktopOnNonWindows))
                 );
             }
