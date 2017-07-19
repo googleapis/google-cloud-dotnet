@@ -32,6 +32,11 @@ The following libraries are available at a [beta](#versioning) quality level:
 * [Stackdriver Monitoring](https://cloud.google.com/monitoring/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Monitoring.V3/) (beta)
 * [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.PubSub.V1/) (beta)
 * [Stackdriver Trace](https://cloud.google.com/trace/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Trace.V1/) (beta)
+* [Google Cloud Spanner](https://cloud.google.com/spanner/): four packages are available, all beta:
+  * [Google.Cloud.Spanner.Data](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.Data/): ADO.NET provider for Google Cloud Spanner (recommended)
+  * [Google.Cloud.Spanner.V1](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.V1/): Low-level access to Spanner API
+  * [Google.Cloud.Spanner.Admin.Database.V1](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.Admin.Database.V1/): Database administration API
+  * [Google.Cloud.Spanner.Admin.Instance.V1](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Spanner.Admin.Instance.V1/): Instance administration API
 
 The following libraries are available at an [alpha](#versioning) quality level:
 
