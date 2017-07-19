@@ -27,6 +27,7 @@ namespace Google.Cloud.Diagnostics.Common
     internal sealed class GrpcLogConsumer : IConsumer<LogEntry>
     {
 
+
         private LoggingServiceV2Client _client;
 
         /// <param name="client">The logging client that will push logs to the Stackdriver Logging API.</param>
