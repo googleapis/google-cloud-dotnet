@@ -16,7 +16,7 @@
 
 using System;
 using System.Threading.Tasks;
-using Google.Cloud.Spanner.Admin.Database.V1;
+using Google.Api.Gax;
 using Xunit;
 
 #endregion
@@ -36,7 +36,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public string ConnectionString => "Data Source=projects/" + TestProjectName + "/instances/" + TestInstanceName
             + "/databases/" + DatabaseName;
 
-        private string NoDbConnectionString => "Data Source=projects/" + TestProjectName + "/instances/" +
+        public string NoDbConnectionString => "Data Source=projects/" + TestProjectName + "/instances/" +
             TestInstanceName;
 
         // scratch can be used to run tests on a precreated db.
@@ -60,11 +60,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         public void Dispose()
         {
-            //TODO(benwu):DROP Database is not supported in DDL form yet.
-            var databaseAdminClient = DatabaseAdminClient.Create();
-
-            databaseAdminClient.DropDatabase(
-                new DatabaseName(TestProjectName, TestInstanceName, DatabaseName));
+            using (var connection = new SpannerConnection(NoDbConnectionString))
+            {
+                var dropCommand = connection.CreateDdlCommand("DROP DATABASE " + DatabaseName);
+                dropCommand.ExecuteNonQueryAsync().ResultWithUnwrappedExceptions();
+            }
         }
 
         public async Task<SpannerConnection> GetTestDatabaseConnectionAsync()

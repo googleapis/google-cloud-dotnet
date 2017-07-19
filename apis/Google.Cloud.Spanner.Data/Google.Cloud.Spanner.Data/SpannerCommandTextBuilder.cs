@@ -14,6 +14,7 @@
 
 using System;
 using System.Linq;
+using System.Text;
 using Google.Api.Gax;
 
 // ReSharper disable UnusedParameter.Local
@@ -34,7 +35,9 @@ namespace Google.Cloud.Spanner.Data
         private const string AlterCommand = "ALTER";
         private const string CreateCommand = "CREATE";
         private const string DropCommand = "DROP";
-        private const string CreateDatabaseCommand = "CREATE DATABASE";
+        //TODO(benwu): verify if whitespace between CREATE/DROP and DB is allowed.
+        private const string CreateDatabaseCommand = "CREATE DATABASE ";
+        private const string DropDatabaseCommand = "DROP DATABASE ";
 
         private string _targetTable;
 
@@ -87,7 +90,6 @@ namespace Google.Cloud.Spanner.Data
                 throw new InvalidOperationException($"'{commandText}' is not a recognized Spanner command.");
             }
 
-            var newBuilder = new SpannerCommandTextBuilder();
             if (!TryParseCommand(this, DeleteCommand, SpannerCommandType.Delete, commandSections)
                 && !TryParseCommand(this, UpdateCommand, SpannerCommandType.Update, commandSections)
                 && !TryParseCommand(this, InsertCommand, SpannerCommandType.Insert, commandSections)
@@ -95,13 +97,13 @@ namespace Google.Cloud.Spanner.Data
             {
                 if (string.Equals(commandSections[0], SelectCommand, StringComparison.OrdinalIgnoreCase))
                 {
-                    newBuilder.CommandText = commandText;
-                    newBuilder.SpannerCommandType = SpannerCommandType.Select;
+                    CommandText = commandText;
+                    SpannerCommandType = SpannerCommandType.Select;
                 }
                 else if (IsDdl(commandSections[0]))
                 {
-                    newBuilder.CommandText = commandText;
-                    newBuilder.SpannerCommandType = SpannerCommandType.Ddl;
+                    CommandText = commandText;
+                    SpannerCommandType = SpannerCommandType.Ddl;
                 }
                 else
                 {
@@ -120,6 +122,46 @@ namespace Google.Cloud.Spanner.Data
         }
 
         internal bool IsCreateDatabaseCommand => CommandText?.StartsWith(CreateDatabaseCommand, StringComparison.OrdinalIgnoreCase) ?? false;
+
+        internal bool IsDropDatabaseCommand => CommandText?.StartsWith(DropDatabaseCommand, StringComparison.OrdinalIgnoreCase) ?? false;
+
+        internal string DatabaseToDrop
+        {
+            get
+            {
+                if (!IsDropDatabaseCommand)
+                {
+                    return "";
+                }
+                string commandText = CommandText;
+                var dbName = new StringBuilder();
+                int i = DropDatabaseCommand.Length;
+                for (; i < commandText.Length; i++)
+                {
+                    if (char.IsWhiteSpace(commandText[i]) || commandText[i] == ';')
+                    {
+                        // if we see a whitespace after the dbname, we'll just bail.
+                        if (dbName.Length > 0)
+                        {
+                            break;
+                        }
+                        // keep looking for the start of the db name.
+                        continue;
+                    }
+                    dbName.Append(commandText[i]);
+                }
+                //ensure the rest of the string is whitespace
+                while (i < commandText.Length)
+                {
+                    if (!char.IsWhiteSpace(commandText[i]) && commandText[i] != ';')
+                    {
+                        throw new InvalidOperationException($"Could not parse the database to drop in `{CommandText}`.");
+                    }
+                    i++;
+                }
+                return dbName.ToString();
+            }
+        }
 
         /// <summary>
         /// </summary>
