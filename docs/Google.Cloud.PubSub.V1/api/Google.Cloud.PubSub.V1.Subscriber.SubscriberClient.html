@@ -3190,10 +3190,254 @@ control can be achieved by configuring the underlying RPC channel.</p>
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSnapshot_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshot*"></a>
+  <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSnapshot_Google_Cloud_PubSub_V1_UpdateSnapshotRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshot(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Grpc.Core.CallOptions)">UpdateSnapshot(UpdateSnapshotRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Updates an existing snapshot. Note that certain properties of a snapshot
+are not modifiable.
+NOTE:  The style guide requires body: &quot;snapshot&quot; instead of body: &quot;*&quot;.
+Keeping the latter for internal consistency in V1, however it should be
+corrected in V2.  See
+<a href="https://cloud.google.com/apis/design/standard_methods#update">https://cloud.google.com/apis/design/standard_methods#update</a> for details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Snapshot UpdateSnapshot(UpdateSnapshotRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.PubSub.V1.UpdateSnapshotRequest.html">UpdateSnapshotRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.PubSub.V1.Snapshot.html">Snapshot</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSnapshot_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshot*"></a>
+  <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSnapshot_Google_Cloud_PubSub_V1_UpdateSnapshotRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshot(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">UpdateSnapshot(UpdateSnapshotRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Updates an existing snapshot. Note that certain properties of a snapshot
+are not modifiable.
+NOTE:  The style guide requires body: &quot;snapshot&quot; instead of body: &quot;*&quot;.
+Keeping the latter for internal consistency in V1, however it should be
+corrected in V2.  See
+<a href="https://cloud.google.com/apis/design/standard_methods#update">https://cloud.google.com/apis/design/standard_methods#update</a> for details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Snapshot UpdateSnapshot(UpdateSnapshotRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.PubSub.V1.UpdateSnapshotRequest.html">UpdateSnapshotRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.PubSub.V1.Snapshot.html">Snapshot</a></td>
+        <td><p>The response received from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSnapshotAsync_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshotAsync*"></a>
+  <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSnapshotAsync_Google_Cloud_PubSub_V1_UpdateSnapshotRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshotAsync(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Grpc.Core.CallOptions)">UpdateSnapshotAsync(UpdateSnapshotRequest, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Updates an existing snapshot. Note that certain properties of a snapshot
+are not modifiable.
+NOTE:  The style guide requires body: &quot;snapshot&quot; instead of body: &quot;*&quot;.
+Keeping the latter for internal consistency in V1, however it should be
+corrected in V2.  See
+<a href="https://cloud.google.com/apis/design/standard_methods#update">https://cloud.google.com/apis/design/standard_methods#update</a> for details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Snapshot&gt; UpdateSnapshotAsync(UpdateSnapshotRequest request, CallOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.PubSub.V1.UpdateSnapshotRequest.html">UpdateSnapshotRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Snapshot.html">Snapshot</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSnapshotAsync_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshotAsync*"></a>
+  <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSnapshotAsync_Google_Cloud_PubSub_V1_UpdateSnapshotRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshotAsync(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">UpdateSnapshotAsync(UpdateSnapshotRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Updates an existing snapshot. Note that certain properties of a snapshot
+are not modifiable.
+NOTE:  The style guide requires body: &quot;snapshot&quot; instead of body: &quot;*&quot;.
+Keeping the latter for internal consistency in V1, however it should be
+corrected in V2.  See
+<a href="https://cloud.google.com/apis/design/standard_methods#update">https://cloud.google.com/apis/design/standard_methods#update</a> for details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Snapshot&gt; UpdateSnapshotAsync(UpdateSnapshotRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.PubSub.V1.UpdateSnapshotRequest.html">UpdateSnapshotRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request to send to the server.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Metadata.html">Metadata</a></td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional token for canceling the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncUnaryCall-1.html">AsyncUnaryCall</a>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Snapshot.html">Snapshot</a>&gt;</td>
+        <td><p>The call object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSubscription_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSubscription*"></a>
   <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSubscription_Google_Cloud_PubSub_V1_UpdateSubscriptionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSubscription(Google.Cloud.PubSub.V1.UpdateSubscriptionRequest,Grpc.Core.CallOptions)">UpdateSubscription(UpdateSubscriptionRequest, CallOptions)</h4>
   <div class="markdown level1 summary"><p>Updates an existing subscription. Note that certain properties of a
-subscription, such as its topic, are not modifiable.</p>
+subscription, such as its topic, are not modifiable.
+NOTE:  The style guide requires body: &quot;subscription&quot; instead of body: &quot;*&quot;.
+Keeping the latter for internal consistency in V1, however it should be
+corrected in V2.  See
+<a href="https://cloud.google.com/apis/design/standard_methods#update">https://cloud.google.com/apis/design/standard_methods#update</a> for details.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3243,7 +3487,11 @@ subscription, such as its topic, are not modifiable.</p>
   <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSubscription_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSubscription*"></a>
   <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSubscription_Google_Cloud_PubSub_V1_UpdateSubscriptionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSubscription(Google.Cloud.PubSub.V1.UpdateSubscriptionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">UpdateSubscription(UpdateSubscriptionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Updates an existing subscription. Note that certain properties of a
-subscription, such as its topic, are not modifiable.</p>
+subscription, such as its topic, are not modifiable.
+NOTE:  The style guide requires body: &quot;subscription&quot; instead of body: &quot;*&quot;.
+Keeping the latter for internal consistency in V1, however it should be
+corrected in V2.  See
+<a href="https://cloud.google.com/apis/design/standard_methods#update">https://cloud.google.com/apis/design/standard_methods#update</a> for details.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3305,7 +3553,11 @@ subscription, such as its topic, are not modifiable.</p>
   <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSubscriptionAsync_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSubscriptionAsync*"></a>
   <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSubscriptionAsync_Google_Cloud_PubSub_V1_UpdateSubscriptionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSubscriptionAsync(Google.Cloud.PubSub.V1.UpdateSubscriptionRequest,Grpc.Core.CallOptions)">UpdateSubscriptionAsync(UpdateSubscriptionRequest, CallOptions)</h4>
   <div class="markdown level1 summary"><p>Updates an existing subscription. Note that certain properties of a
-subscription, such as its topic, are not modifiable.</p>
+subscription, such as its topic, are not modifiable.
+NOTE:  The style guide requires body: &quot;subscription&quot; instead of body: &quot;*&quot;.
+Keeping the latter for internal consistency in V1, however it should be
+corrected in V2.  See
+<a href="https://cloud.google.com/apis/design/standard_methods#update">https://cloud.google.com/apis/design/standard_methods#update</a> for details.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3355,7 +3607,11 @@ subscription, such as its topic, are not modifiable.</p>
   <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSubscriptionAsync_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSubscriptionAsync*"></a>
   <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSubscriptionAsync_Google_Cloud_PubSub_V1_UpdateSubscriptionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSubscriptionAsync(Google.Cloud.PubSub.V1.UpdateSubscriptionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">UpdateSubscriptionAsync(UpdateSubscriptionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Updates an existing subscription. Note that certain properties of a
-subscription, such as its topic, are not modifiable.</p>
+subscription, such as its topic, are not modifiable.
+NOTE:  The style guide requires body: &quot;subscription&quot; instead of body: &quot;*&quot;.
+Keeping the latter for internal consistency in V1, however it should be
+corrected in V2.  See
+<a href="https://cloud.google.com/apis/design/standard_methods#update">https://cloud.google.com/apis/design/standard_methods#update</a> for details.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

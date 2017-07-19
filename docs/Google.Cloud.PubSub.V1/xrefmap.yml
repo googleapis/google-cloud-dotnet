@@ -17533,6 +17533,18 @@ references:
   commentId: Overload:Google.Cloud.PubSub.V1.Publisher.PublisherBase.Publish
   fullName: Google.Cloud.PubSub.V1.Publisher.PublisherBase.Publish
   nameWithType: Publisher.PublisherBase.Publish
+- uid: Google.Cloud.PubSub.V1.Publisher.PublisherBase.UpdateTopic(Google.Cloud.PubSub.V1.UpdateTopicRequest,Grpc.Core.ServerCallContext)
+  name: UpdateTopic(UpdateTopicRequest, ServerCallContext)
+  href: api/Google.Cloud.PubSub.V1.Publisher.PublisherBase.html#Google_Cloud_PubSub_V1_Publisher_PublisherBase_UpdateTopic_Google_Cloud_PubSub_V1_UpdateTopicRequest_Grpc_Core_ServerCallContext_
+  commentId: M:Google.Cloud.PubSub.V1.Publisher.PublisherBase.UpdateTopic(Google.Cloud.PubSub.V1.UpdateTopicRequest,Grpc.Core.ServerCallContext)
+  fullName: Google.Cloud.PubSub.V1.Publisher.PublisherBase.UpdateTopic(Google.Cloud.PubSub.V1.UpdateTopicRequest, Grpc.Core.ServerCallContext)
+  nameWithType: Publisher.PublisherBase.UpdateTopic(UpdateTopicRequest, ServerCallContext)
+- uid: Google.Cloud.PubSub.V1.Publisher.PublisherBase.UpdateTopic*
+  name: UpdateTopic
+  href: api/Google.Cloud.PubSub.V1.Publisher.PublisherBase.html#Google_Cloud_PubSub_V1_Publisher_PublisherBase_UpdateTopic_
+  commentId: Overload:Google.Cloud.PubSub.V1.Publisher.PublisherBase.UpdateTopic
+  fullName: Google.Cloud.PubSub.V1.Publisher.PublisherBase.UpdateTopic
+  nameWithType: Publisher.PublisherBase.UpdateTopic
 - uid: Google.Cloud.PubSub.V1.Publisher.PublisherClient
   name: Publisher.PublisherClient
   href: api/Google.Cloud.PubSub.V1.Publisher.PublisherClient.html
@@ -17845,6 +17857,48 @@ references:
   commentId: Overload:Google.Cloud.PubSub.V1.Publisher.PublisherClient.PublishAsync
   fullName: Google.Cloud.PubSub.V1.Publisher.PublisherClient.PublishAsync
   nameWithType: Publisher.PublisherClient.PublishAsync
+- uid: Google.Cloud.PubSub.V1.Publisher.PublisherClient.UpdateTopic(Google.Cloud.PubSub.V1.UpdateTopicRequest,Grpc.Core.CallOptions)
+  name: UpdateTopic(UpdateTopicRequest, CallOptions)
+  href: api/Google.Cloud.PubSub.V1.Publisher.PublisherClient.html#Google_Cloud_PubSub_V1_Publisher_PublisherClient_UpdateTopic_Google_Cloud_PubSub_V1_UpdateTopicRequest_Grpc_Core_CallOptions_
+  commentId: M:Google.Cloud.PubSub.V1.Publisher.PublisherClient.UpdateTopic(Google.Cloud.PubSub.V1.UpdateTopicRequest,Grpc.Core.CallOptions)
+  fullName: Google.Cloud.PubSub.V1.Publisher.PublisherClient.UpdateTopic(Google.Cloud.PubSub.V1.UpdateTopicRequest, Grpc.Core.CallOptions)
+  nameWithType: Publisher.PublisherClient.UpdateTopic(UpdateTopicRequest, CallOptions)
+- uid: Google.Cloud.PubSub.V1.Publisher.PublisherClient.UpdateTopic(Google.Cloud.PubSub.V1.UpdateTopicRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name: UpdateTopic(UpdateTopicRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  href: api/Google.Cloud.PubSub.V1.Publisher.PublisherClient.html#Google_Cloud_PubSub_V1_Publisher_PublisherClient_UpdateTopic_Google_Cloud_PubSub_V1_UpdateTopicRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.PubSub.V1.Publisher.PublisherClient.UpdateTopic(Google.Cloud.PubSub.V1.UpdateTopicRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name.vb: UpdateTopic(UpdateTopicRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+  fullName: Google.Cloud.PubSub.V1.Publisher.PublisherClient.UpdateTopic(Google.Cloud.PubSub.V1.UpdateTopicRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.PubSub.V1.Publisher.PublisherClient.UpdateTopic(Google.Cloud.PubSub.V1.UpdateTopicRequest, Grpc.Core.Metadata, System.Nullable(Of System.DateTime), System.Threading.CancellationToken)
+  nameWithType: Publisher.PublisherClient.UpdateTopic(UpdateTopicRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  nameWithType.vb: Publisher.PublisherClient.UpdateTopic(UpdateTopicRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+- uid: Google.Cloud.PubSub.V1.Publisher.PublisherClient.UpdateTopic*
+  name: UpdateTopic
+  href: api/Google.Cloud.PubSub.V1.Publisher.PublisherClient.html#Google_Cloud_PubSub_V1_Publisher_PublisherClient_UpdateTopic_
+  commentId: Overload:Google.Cloud.PubSub.V1.Publisher.PublisherClient.UpdateTopic
+  fullName: Google.Cloud.PubSub.V1.Publisher.PublisherClient.UpdateTopic
+  nameWithType: Publisher.PublisherClient.UpdateTopic
+- uid: Google.Cloud.PubSub.V1.Publisher.PublisherClient.UpdateTopicAsync(Google.Cloud.PubSub.V1.UpdateTopicRequest,Grpc.Core.CallOptions)
+  name: UpdateTopicAsync(UpdateTopicRequest, CallOptions)
+  href: api/Google.Cloud.PubSub.V1.Publisher.PublisherClient.html#Google_Cloud_PubSub_V1_Publisher_PublisherClient_UpdateTopicAsync_Google_Cloud_PubSub_V1_UpdateTopicRequest_Grpc_Core_CallOptions_
+  commentId: M:Google.Cloud.PubSub.V1.Publisher.PublisherClient.UpdateTopicAsync(Google.Cloud.PubSub.V1.UpdateTopicRequest,Grpc.Core.CallOptions)
+  fullName: Google.Cloud.PubSub.V1.Publisher.PublisherClient.UpdateTopicAsync(Google.Cloud.PubSub.V1.UpdateTopicRequest, Grpc.Core.CallOptions)
+  nameWithType: Publisher.PublisherClient.UpdateTopicAsync(UpdateTopicRequest, CallOptions)
+- uid: Google.Cloud.PubSub.V1.Publisher.PublisherClient.UpdateTopicAsync(Google.Cloud.PubSub.V1.UpdateTopicRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name: UpdateTopicAsync(UpdateTopicRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  href: api/Google.Cloud.PubSub.V1.Publisher.PublisherClient.html#Google_Cloud_PubSub_V1_Publisher_PublisherClient_UpdateTopicAsync_Google_Cloud_PubSub_V1_UpdateTopicRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.PubSub.V1.Publisher.PublisherClient.UpdateTopicAsync(Google.Cloud.PubSub.V1.UpdateTopicRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name.vb: UpdateTopicAsync(UpdateTopicRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+  fullName: Google.Cloud.PubSub.V1.Publisher.PublisherClient.UpdateTopicAsync(Google.Cloud.PubSub.V1.UpdateTopicRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.PubSub.V1.Publisher.PublisherClient.UpdateTopicAsync(Google.Cloud.PubSub.V1.UpdateTopicRequest, Grpc.Core.Metadata, System.Nullable(Of System.DateTime), System.Threading.CancellationToken)
+  nameWithType: Publisher.PublisherClient.UpdateTopicAsync(UpdateTopicRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  nameWithType.vb: Publisher.PublisherClient.UpdateTopicAsync(UpdateTopicRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+- uid: Google.Cloud.PubSub.V1.Publisher.PublisherClient.UpdateTopicAsync*
+  name: UpdateTopicAsync
+  href: api/Google.Cloud.PubSub.V1.Publisher.PublisherClient.html#Google_Cloud_PubSub_V1_Publisher_PublisherClient_UpdateTopicAsync_
+  commentId: Overload:Google.Cloud.PubSub.V1.Publisher.PublisherClient.UpdateTopicAsync
+  fullName: Google.Cloud.PubSub.V1.Publisher.PublisherClient.UpdateTopicAsync
+  nameWithType: Publisher.PublisherClient.UpdateTopicAsync
 - uid: Google.Cloud.PubSub.V1.PublisherClient
   name: PublisherClient
   href: api/Google.Cloud.PubSub.V1.PublisherClient.html
@@ -18325,6 +18379,30 @@ references:
   commentId: Overload:Google.Cloud.PubSub.V1.PublisherClient.TestIamPermissionsAsync
   fullName: Google.Cloud.PubSub.V1.PublisherClient.TestIamPermissionsAsync
   nameWithType: PublisherClient.TestIamPermissionsAsync
+- uid: Google.Cloud.PubSub.V1.PublisherClient.UpdateTopic(Google.Cloud.PubSub.V1.UpdateTopicRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: UpdateTopic(UpdateTopicRequest, CallSettings)
+  href: api/Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_UpdateTopic_Google_Cloud_PubSub_V1_UpdateTopicRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.PubSub.V1.PublisherClient.UpdateTopic(Google.Cloud.PubSub.V1.UpdateTopicRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.PubSub.V1.PublisherClient.UpdateTopic(Google.Cloud.PubSub.V1.UpdateTopicRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: PublisherClient.UpdateTopic(UpdateTopicRequest, CallSettings)
+- uid: Google.Cloud.PubSub.V1.PublisherClient.UpdateTopic*
+  name: UpdateTopic
+  href: api/Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_UpdateTopic_
+  commentId: Overload:Google.Cloud.PubSub.V1.PublisherClient.UpdateTopic
+  fullName: Google.Cloud.PubSub.V1.PublisherClient.UpdateTopic
+  nameWithType: PublisherClient.UpdateTopic
+- uid: Google.Cloud.PubSub.V1.PublisherClient.UpdateTopicAsync(Google.Cloud.PubSub.V1.UpdateTopicRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: UpdateTopicAsync(UpdateTopicRequest, CallSettings)
+  href: api/Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_UpdateTopicAsync_Google_Cloud_PubSub_V1_UpdateTopicRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.PubSub.V1.PublisherClient.UpdateTopicAsync(Google.Cloud.PubSub.V1.UpdateTopicRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.PubSub.V1.PublisherClient.UpdateTopicAsync(Google.Cloud.PubSub.V1.UpdateTopicRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: PublisherClient.UpdateTopicAsync(UpdateTopicRequest, CallSettings)
+- uid: Google.Cloud.PubSub.V1.PublisherClient.UpdateTopicAsync*
+  name: UpdateTopicAsync
+  href: api/Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_UpdateTopicAsync_
+  commentId: Overload:Google.Cloud.PubSub.V1.PublisherClient.UpdateTopicAsync
+  fullName: Google.Cloud.PubSub.V1.PublisherClient.UpdateTopicAsync
+  nameWithType: PublisherClient.UpdateTopicAsync
 - uid: Google.Cloud.PubSub.V1.PublisherClientImpl
   name: PublisherClientImpl
   href: api/Google.Cloud.PubSub.V1.PublisherClientImpl.html
@@ -18571,6 +18649,30 @@ references:
   commentId: Overload:Google.Cloud.PubSub.V1.PublisherClientImpl.TestIamPermissionsAsync
   fullName: Google.Cloud.PubSub.V1.PublisherClientImpl.TestIamPermissionsAsync
   nameWithType: PublisherClientImpl.TestIamPermissionsAsync
+- uid: Google.Cloud.PubSub.V1.PublisherClientImpl.UpdateTopic(Google.Cloud.PubSub.V1.UpdateTopicRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: UpdateTopic(UpdateTopicRequest, CallSettings)
+  href: api/Google.Cloud.PubSub.V1.PublisherClientImpl.html#Google_Cloud_PubSub_V1_PublisherClientImpl_UpdateTopic_Google_Cloud_PubSub_V1_UpdateTopicRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.PubSub.V1.PublisherClientImpl.UpdateTopic(Google.Cloud.PubSub.V1.UpdateTopicRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.PubSub.V1.PublisherClientImpl.UpdateTopic(Google.Cloud.PubSub.V1.UpdateTopicRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: PublisherClientImpl.UpdateTopic(UpdateTopicRequest, CallSettings)
+- uid: Google.Cloud.PubSub.V1.PublisherClientImpl.UpdateTopic*
+  name: UpdateTopic
+  href: api/Google.Cloud.PubSub.V1.PublisherClientImpl.html#Google_Cloud_PubSub_V1_PublisherClientImpl_UpdateTopic_
+  commentId: Overload:Google.Cloud.PubSub.V1.PublisherClientImpl.UpdateTopic
+  fullName: Google.Cloud.PubSub.V1.PublisherClientImpl.UpdateTopic
+  nameWithType: PublisherClientImpl.UpdateTopic
+- uid: Google.Cloud.PubSub.V1.PublisherClientImpl.UpdateTopicAsync(Google.Cloud.PubSub.V1.UpdateTopicRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: UpdateTopicAsync(UpdateTopicRequest, CallSettings)
+  href: api/Google.Cloud.PubSub.V1.PublisherClientImpl.html#Google_Cloud_PubSub_V1_PublisherClientImpl_UpdateTopicAsync_Google_Cloud_PubSub_V1_UpdateTopicRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.PubSub.V1.PublisherClientImpl.UpdateTopicAsync(Google.Cloud.PubSub.V1.UpdateTopicRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.PubSub.V1.PublisherClientImpl.UpdateTopicAsync(Google.Cloud.PubSub.V1.UpdateTopicRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: PublisherClientImpl.UpdateTopicAsync(UpdateTopicRequest, CallSettings)
+- uid: Google.Cloud.PubSub.V1.PublisherClientImpl.UpdateTopicAsync*
+  name: UpdateTopicAsync
+  href: api/Google.Cloud.PubSub.V1.PublisherClientImpl.html#Google_Cloud_PubSub_V1_PublisherClientImpl_UpdateTopicAsync_
+  commentId: Overload:Google.Cloud.PubSub.V1.PublisherClientImpl.UpdateTopicAsync
+  fullName: Google.Cloud.PubSub.V1.PublisherClientImpl.UpdateTopicAsync
+  nameWithType: PublisherClientImpl.UpdateTopicAsync
 - uid: Google.Cloud.PubSub.V1.PublisherSettings
   name: PublisherSettings
   href: api/Google.Cloud.PubSub.V1.PublisherSettings.html
@@ -18805,6 +18907,18 @@ references:
   commentId: Overload:Google.Cloud.PubSub.V1.PublisherSettings.TestIamPermissionsSettings
   fullName: Google.Cloud.PubSub.V1.PublisherSettings.TestIamPermissionsSettings
   nameWithType: PublisherSettings.TestIamPermissionsSettings
+- uid: Google.Cloud.PubSub.V1.PublisherSettings.UpdateTopicSettings
+  name: UpdateTopicSettings
+  href: api/Google.Cloud.PubSub.V1.PublisherSettings.html#Google_Cloud_PubSub_V1_PublisherSettings_UpdateTopicSettings
+  commentId: P:Google.Cloud.PubSub.V1.PublisherSettings.UpdateTopicSettings
+  fullName: Google.Cloud.PubSub.V1.PublisherSettings.UpdateTopicSettings
+  nameWithType: PublisherSettings.UpdateTopicSettings
+- uid: Google.Cloud.PubSub.V1.PublisherSettings.UpdateTopicSettings*
+  name: UpdateTopicSettings
+  href: api/Google.Cloud.PubSub.V1.PublisherSettings.html#Google_Cloud_PubSub_V1_PublisherSettings_UpdateTopicSettings_
+  commentId: Overload:Google.Cloud.PubSub.V1.PublisherSettings.UpdateTopicSettings
+  fullName: Google.Cloud.PubSub.V1.PublisherSettings.UpdateTopicSettings
+  nameWithType: PublisherSettings.UpdateTopicSettings
 - uid: Google.Cloud.PubSub.V1.PublishRequest
   name: PublishRequest
   href: api/Google.Cloud.PubSub.V1.PublishRequest.html
@@ -19936,6 +20050,18 @@ references:
   commentId: Overload:Google.Cloud.PubSub.V1.Snapshot.ExpireTime
   fullName: Google.Cloud.PubSub.V1.Snapshot.ExpireTime
   nameWithType: Snapshot.ExpireTime
+- uid: Google.Cloud.PubSub.V1.Snapshot.Labels
+  name: Labels
+  href: api/Google.Cloud.PubSub.V1.Snapshot.html#Google_Cloud_PubSub_V1_Snapshot_Labels
+  commentId: P:Google.Cloud.PubSub.V1.Snapshot.Labels
+  fullName: Google.Cloud.PubSub.V1.Snapshot.Labels
+  nameWithType: Snapshot.Labels
+- uid: Google.Cloud.PubSub.V1.Snapshot.Labels*
+  name: Labels
+  href: api/Google.Cloud.PubSub.V1.Snapshot.html#Google_Cloud_PubSub_V1_Snapshot_Labels_
+  commentId: Overload:Google.Cloud.PubSub.V1.Snapshot.Labels
+  fullName: Google.Cloud.PubSub.V1.Snapshot.Labels
+  nameWithType: Snapshot.Labels
 - uid: Google.Cloud.PubSub.V1.Snapshot.Name
   name: Name
   href: api/Google.Cloud.PubSub.V1.Snapshot.html#Google_Cloud_PubSub_V1_Snapshot_Name
@@ -20392,6 +20518,18 @@ references:
   commentId: Overload:Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.StreamingPull
   fullName: Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.StreamingPull
   nameWithType: Subscriber.SubscriberBase.StreamingPull
+- uid: Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.UpdateSnapshot(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Grpc.Core.ServerCallContext)
+  name: UpdateSnapshot(UpdateSnapshotRequest, ServerCallContext)
+  href: api/Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.html#Google_Cloud_PubSub_V1_Subscriber_SubscriberBase_UpdateSnapshot_Google_Cloud_PubSub_V1_UpdateSnapshotRequest_Grpc_Core_ServerCallContext_
+  commentId: M:Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.UpdateSnapshot(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Grpc.Core.ServerCallContext)
+  fullName: Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.UpdateSnapshot(Google.Cloud.PubSub.V1.UpdateSnapshotRequest, Grpc.Core.ServerCallContext)
+  nameWithType: Subscriber.SubscriberBase.UpdateSnapshot(UpdateSnapshotRequest, ServerCallContext)
+- uid: Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.UpdateSnapshot*
+  name: UpdateSnapshot
+  href: api/Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.html#Google_Cloud_PubSub_V1_Subscriber_SubscriberBase_UpdateSnapshot_
+  commentId: Overload:Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.UpdateSnapshot
+  fullName: Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.UpdateSnapshot
+  nameWithType: Subscriber.SubscriberBase.UpdateSnapshot
 - uid: Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.UpdateSubscription(Google.Cloud.PubSub.V1.UpdateSubscriptionRequest,Grpc.Core.ServerCallContext)
   name: UpdateSubscription(UpdateSubscriptionRequest, ServerCallContext)
   href: api/Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.html#Google_Cloud_PubSub_V1_Subscriber_SubscriberBase_UpdateSubscription_Google_Cloud_PubSub_V1_UpdateSubscriptionRequest_Grpc_Core_ServerCallContext_
@@ -20989,6 +21127,48 @@ references:
   commentId: Overload:Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.StreamingPull
   fullName: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.StreamingPull
   nameWithType: Subscriber.SubscriberClient.StreamingPull
+- uid: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshot(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Grpc.Core.CallOptions)
+  name: UpdateSnapshot(UpdateSnapshotRequest, CallOptions)
+  href: api/Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.html#Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSnapshot_Google_Cloud_PubSub_V1_UpdateSnapshotRequest_Grpc_Core_CallOptions_
+  commentId: M:Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshot(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Grpc.Core.CallOptions)
+  fullName: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshot(Google.Cloud.PubSub.V1.UpdateSnapshotRequest, Grpc.Core.CallOptions)
+  nameWithType: Subscriber.SubscriberClient.UpdateSnapshot(UpdateSnapshotRequest, CallOptions)
+- uid: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshot(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name: UpdateSnapshot(UpdateSnapshotRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  href: api/Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.html#Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSnapshot_Google_Cloud_PubSub_V1_UpdateSnapshotRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshot(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name.vb: UpdateSnapshot(UpdateSnapshotRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+  fullName: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshot(Google.Cloud.PubSub.V1.UpdateSnapshotRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshot(Google.Cloud.PubSub.V1.UpdateSnapshotRequest, Grpc.Core.Metadata, System.Nullable(Of System.DateTime), System.Threading.CancellationToken)
+  nameWithType: Subscriber.SubscriberClient.UpdateSnapshot(UpdateSnapshotRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  nameWithType.vb: Subscriber.SubscriberClient.UpdateSnapshot(UpdateSnapshotRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+- uid: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshot*
+  name: UpdateSnapshot
+  href: api/Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.html#Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSnapshot_
+  commentId: Overload:Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshot
+  fullName: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshot
+  nameWithType: Subscriber.SubscriberClient.UpdateSnapshot
+- uid: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshotAsync(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Grpc.Core.CallOptions)
+  name: UpdateSnapshotAsync(UpdateSnapshotRequest, CallOptions)
+  href: api/Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.html#Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSnapshotAsync_Google_Cloud_PubSub_V1_UpdateSnapshotRequest_Grpc_Core_CallOptions_
+  commentId: M:Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshotAsync(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Grpc.Core.CallOptions)
+  fullName: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshotAsync(Google.Cloud.PubSub.V1.UpdateSnapshotRequest, Grpc.Core.CallOptions)
+  nameWithType: Subscriber.SubscriberClient.UpdateSnapshotAsync(UpdateSnapshotRequest, CallOptions)
+- uid: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshotAsync(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name: UpdateSnapshotAsync(UpdateSnapshotRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  href: api/Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.html#Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSnapshotAsync_Google_Cloud_PubSub_V1_UpdateSnapshotRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshotAsync(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name.vb: UpdateSnapshotAsync(UpdateSnapshotRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+  fullName: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshotAsync(Google.Cloud.PubSub.V1.UpdateSnapshotRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshotAsync(Google.Cloud.PubSub.V1.UpdateSnapshotRequest, Grpc.Core.Metadata, System.Nullable(Of System.DateTime), System.Threading.CancellationToken)
+  nameWithType: Subscriber.SubscriberClient.UpdateSnapshotAsync(UpdateSnapshotRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  nameWithType.vb: Subscriber.SubscriberClient.UpdateSnapshotAsync(UpdateSnapshotRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+- uid: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshotAsync*
+  name: UpdateSnapshotAsync
+  href: api/Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.html#Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSnapshotAsync_
+  commentId: Overload:Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshotAsync
+  fullName: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSnapshotAsync
+  nameWithType: Subscriber.SubscriberClient.UpdateSnapshotAsync
 - uid: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSubscription(Google.Cloud.PubSub.V1.UpdateSubscriptionRequest,Grpc.Core.CallOptions)
   name: UpdateSubscription(UpdateSubscriptionRequest, CallOptions)
   href: api/Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.html#Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSubscription_Google_Cloud_PubSub_V1_UpdateSubscriptionRequest_Grpc_Core_CallOptions_
@@ -21790,6 +21970,30 @@ references:
   commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClient.TestIamPermissionsAsync
   fullName: Google.Cloud.PubSub.V1.SubscriberClient.TestIamPermissionsAsync
   nameWithType: SubscriberClient.TestIamPermissionsAsync
+- uid: Google.Cloud.PubSub.V1.SubscriberClient.UpdateSnapshot(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: UpdateSnapshot(UpdateSnapshotRequest, CallSettings)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_UpdateSnapshot_Google_Cloud_PubSub_V1_UpdateSnapshotRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.UpdateSnapshot(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClient.UpdateSnapshot(Google.Cloud.PubSub.V1.UpdateSnapshotRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SubscriberClient.UpdateSnapshot(UpdateSnapshotRequest, CallSettings)
+- uid: Google.Cloud.PubSub.V1.SubscriberClient.UpdateSnapshot*
+  name: UpdateSnapshot
+  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_UpdateSnapshot_
+  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClient.UpdateSnapshot
+  fullName: Google.Cloud.PubSub.V1.SubscriberClient.UpdateSnapshot
+  nameWithType: SubscriberClient.UpdateSnapshot
+- uid: Google.Cloud.PubSub.V1.SubscriberClient.UpdateSnapshotAsync(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: UpdateSnapshotAsync(UpdateSnapshotRequest, CallSettings)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_UpdateSnapshotAsync_Google_Cloud_PubSub_V1_UpdateSnapshotRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.UpdateSnapshotAsync(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClient.UpdateSnapshotAsync(Google.Cloud.PubSub.V1.UpdateSnapshotRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SubscriberClient.UpdateSnapshotAsync(UpdateSnapshotRequest, CallSettings)
+- uid: Google.Cloud.PubSub.V1.SubscriberClient.UpdateSnapshotAsync*
+  name: UpdateSnapshotAsync
+  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_UpdateSnapshotAsync_
+  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClient.UpdateSnapshotAsync
+  fullName: Google.Cloud.PubSub.V1.SubscriberClient.UpdateSnapshotAsync
+  nameWithType: SubscriberClient.UpdateSnapshotAsync
 - uid: Google.Cloud.PubSub.V1.SubscriberClient.UpdateSubscription(Google.Cloud.PubSub.V1.UpdateSubscriptionRequest,Google.Api.Gax.Grpc.CallSettings)
   name: UpdateSubscription(UpdateSubscriptionRequest, CallSettings)
   href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_UpdateSubscription_Google_Cloud_PubSub_V1_UpdateSubscriptionRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -22321,6 +22525,30 @@ references:
   commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClientImpl.TestIamPermissionsAsync
   fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.TestIamPermissionsAsync
   nameWithType: SubscriberClientImpl.TestIamPermissionsAsync
+- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.UpdateSnapshot(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: UpdateSnapshot(UpdateSnapshotRequest, CallSettings)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_UpdateSnapshot_Google_Cloud_PubSub_V1_UpdateSnapshotRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClientImpl.UpdateSnapshot(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.UpdateSnapshot(Google.Cloud.PubSub.V1.UpdateSnapshotRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SubscriberClientImpl.UpdateSnapshot(UpdateSnapshotRequest, CallSettings)
+- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.UpdateSnapshot*
+  name: UpdateSnapshot
+  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_UpdateSnapshot_
+  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClientImpl.UpdateSnapshot
+  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.UpdateSnapshot
+  nameWithType: SubscriberClientImpl.UpdateSnapshot
+- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.UpdateSnapshotAsync(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: UpdateSnapshotAsync(UpdateSnapshotRequest, CallSettings)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_UpdateSnapshotAsync_Google_Cloud_PubSub_V1_UpdateSnapshotRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClientImpl.UpdateSnapshotAsync(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.UpdateSnapshotAsync(Google.Cloud.PubSub.V1.UpdateSnapshotRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SubscriberClientImpl.UpdateSnapshotAsync(UpdateSnapshotRequest, CallSettings)
+- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.UpdateSnapshotAsync*
+  name: UpdateSnapshotAsync
+  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_UpdateSnapshotAsync_
+  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClientImpl.UpdateSnapshotAsync
+  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.UpdateSnapshotAsync
+  nameWithType: SubscriberClientImpl.UpdateSnapshotAsync
 - uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.UpdateSubscription(Google.Cloud.PubSub.V1.UpdateSubscriptionRequest,Google.Api.Gax.Grpc.CallSettings)
   name: UpdateSubscription(UpdateSubscriptionRequest, CallSettings)
   href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_UpdateSubscription_Google_Cloud_PubSub_V1_UpdateSubscriptionRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -22675,6 +22903,18 @@ references:
   commentId: Overload:Google.Cloud.PubSub.V1.SubscriberSettings.TestIamPermissionsSettings
   fullName: Google.Cloud.PubSub.V1.SubscriberSettings.TestIamPermissionsSettings
   nameWithType: SubscriberSettings.TestIamPermissionsSettings
+- uid: Google.Cloud.PubSub.V1.SubscriberSettings.UpdateSnapshotSettings
+  name: UpdateSnapshotSettings
+  href: api/Google.Cloud.PubSub.V1.SubscriberSettings.html#Google_Cloud_PubSub_V1_SubscriberSettings_UpdateSnapshotSettings
+  commentId: P:Google.Cloud.PubSub.V1.SubscriberSettings.UpdateSnapshotSettings
+  fullName: Google.Cloud.PubSub.V1.SubscriberSettings.UpdateSnapshotSettings
+  nameWithType: SubscriberSettings.UpdateSnapshotSettings
+- uid: Google.Cloud.PubSub.V1.SubscriberSettings.UpdateSnapshotSettings*
+  name: UpdateSnapshotSettings
+  href: api/Google.Cloud.PubSub.V1.SubscriberSettings.html#Google_Cloud_PubSub_V1_SubscriberSettings_UpdateSnapshotSettings_
+  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberSettings.UpdateSnapshotSettings
+  fullName: Google.Cloud.PubSub.V1.SubscriberSettings.UpdateSnapshotSettings
+  nameWithType: SubscriberSettings.UpdateSnapshotSettings
 - uid: Google.Cloud.PubSub.V1.SubscriberSettings.UpdateSubscriptionSettings
   name: UpdateSubscriptionSettings
   href: api/Google.Cloud.PubSub.V1.SubscriberSettings.html#Google_Cloud_PubSub_V1_SubscriberSettings_UpdateSubscriptionSettings
@@ -22705,6 +22945,18 @@ references:
   commentId: Overload:Google.Cloud.PubSub.V1.Subscription.AckDeadlineSeconds
   fullName: Google.Cloud.PubSub.V1.Subscription.AckDeadlineSeconds
   nameWithType: Subscription.AckDeadlineSeconds
+- uid: Google.Cloud.PubSub.V1.Subscription.Labels
+  name: Labels
+  href: api/Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription_Labels
+  commentId: P:Google.Cloud.PubSub.V1.Subscription.Labels
+  fullName: Google.Cloud.PubSub.V1.Subscription.Labels
+  nameWithType: Subscription.Labels
+- uid: Google.Cloud.PubSub.V1.Subscription.Labels*
+  name: Labels
+  href: api/Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription_Labels_
+  commentId: Overload:Google.Cloud.PubSub.V1.Subscription.Labels
+  fullName: Google.Cloud.PubSub.V1.Subscription.Labels
+  nameWithType: Subscription.Labels
 - uid: Google.Cloud.PubSub.V1.Subscription.MessageRetentionDuration
   name: MessageRetentionDuration
   href: api/Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription_MessageRetentionDuration
@@ -22924,6 +23176,18 @@ references:
   commentId: T:Google.Cloud.PubSub.V1.Topic
   fullName: Google.Cloud.PubSub.V1.Topic
   nameWithType: Topic
+- uid: Google.Cloud.PubSub.V1.Topic.Labels
+  name: Labels
+  href: api/Google.Cloud.PubSub.V1.Topic.html#Google_Cloud_PubSub_V1_Topic_Labels
+  commentId: P:Google.Cloud.PubSub.V1.Topic.Labels
+  fullName: Google.Cloud.PubSub.V1.Topic.Labels
+  nameWithType: Topic.Labels
+- uid: Google.Cloud.PubSub.V1.Topic.Labels*
+  name: Labels
+  href: api/Google.Cloud.PubSub.V1.Topic.html#Google_Cloud_PubSub_V1_Topic_Labels_
+  commentId: Overload:Google.Cloud.PubSub.V1.Topic.Labels
+  fullName: Google.Cloud.PubSub.V1.Topic.Labels
+  nameWithType: Topic.Labels
 - uid: Google.Cloud.PubSub.V1.Topic.Name
   name: Name
   href: api/Google.Cloud.PubSub.V1.Topic.html#Google_Cloud_PubSub_V1_Topic_Name
@@ -23272,6 +23536,36 @@ references:
   commentId: Overload:Google.Cloud.PubSub.V1.TopicNameOneof.Type
   fullName: Google.Cloud.PubSub.V1.TopicNameOneof.Type
   nameWithType: TopicNameOneof.Type
+- uid: Google.Cloud.PubSub.V1.UpdateSnapshotRequest
+  name: UpdateSnapshotRequest
+  href: api/Google.Cloud.PubSub.V1.UpdateSnapshotRequest.html
+  commentId: T:Google.Cloud.PubSub.V1.UpdateSnapshotRequest
+  fullName: Google.Cloud.PubSub.V1.UpdateSnapshotRequest
+  nameWithType: UpdateSnapshotRequest
+- uid: Google.Cloud.PubSub.V1.UpdateSnapshotRequest.Snapshot
+  name: Snapshot
+  href: api/Google.Cloud.PubSub.V1.UpdateSnapshotRequest.html#Google_Cloud_PubSub_V1_UpdateSnapshotRequest_Snapshot
+  commentId: P:Google.Cloud.PubSub.V1.UpdateSnapshotRequest.Snapshot
+  fullName: Google.Cloud.PubSub.V1.UpdateSnapshotRequest.Snapshot
+  nameWithType: UpdateSnapshotRequest.Snapshot
+- uid: Google.Cloud.PubSub.V1.UpdateSnapshotRequest.Snapshot*
+  name: Snapshot
+  href: api/Google.Cloud.PubSub.V1.UpdateSnapshotRequest.html#Google_Cloud_PubSub_V1_UpdateSnapshotRequest_Snapshot_
+  commentId: Overload:Google.Cloud.PubSub.V1.UpdateSnapshotRequest.Snapshot
+  fullName: Google.Cloud.PubSub.V1.UpdateSnapshotRequest.Snapshot
+  nameWithType: UpdateSnapshotRequest.Snapshot
+- uid: Google.Cloud.PubSub.V1.UpdateSnapshotRequest.UpdateMask
+  name: UpdateMask
+  href: api/Google.Cloud.PubSub.V1.UpdateSnapshotRequest.html#Google_Cloud_PubSub_V1_UpdateSnapshotRequest_UpdateMask
+  commentId: P:Google.Cloud.PubSub.V1.UpdateSnapshotRequest.UpdateMask
+  fullName: Google.Cloud.PubSub.V1.UpdateSnapshotRequest.UpdateMask
+  nameWithType: UpdateSnapshotRequest.UpdateMask
+- uid: Google.Cloud.PubSub.V1.UpdateSnapshotRequest.UpdateMask*
+  name: UpdateMask
+  href: api/Google.Cloud.PubSub.V1.UpdateSnapshotRequest.html#Google_Cloud_PubSub_V1_UpdateSnapshotRequest_UpdateMask_
+  commentId: Overload:Google.Cloud.PubSub.V1.UpdateSnapshotRequest.UpdateMask
+  fullName: Google.Cloud.PubSub.V1.UpdateSnapshotRequest.UpdateMask
+  nameWithType: UpdateSnapshotRequest.UpdateMask
 - uid: Google.Cloud.PubSub.V1.UpdateSubscriptionRequest
   name: UpdateSubscriptionRequest
   href: api/Google.Cloud.PubSub.V1.UpdateSubscriptionRequest.html
@@ -23302,6 +23596,36 @@ references:
   commentId: Overload:Google.Cloud.PubSub.V1.UpdateSubscriptionRequest.UpdateMask
   fullName: Google.Cloud.PubSub.V1.UpdateSubscriptionRequest.UpdateMask
   nameWithType: UpdateSubscriptionRequest.UpdateMask
+- uid: Google.Cloud.PubSub.V1.UpdateTopicRequest
+  name: UpdateTopicRequest
+  href: api/Google.Cloud.PubSub.V1.UpdateTopicRequest.html
+  commentId: T:Google.Cloud.PubSub.V1.UpdateTopicRequest
+  fullName: Google.Cloud.PubSub.V1.UpdateTopicRequest
+  nameWithType: UpdateTopicRequest
+- uid: Google.Cloud.PubSub.V1.UpdateTopicRequest.Topic
+  name: Topic
+  href: api/Google.Cloud.PubSub.V1.UpdateTopicRequest.html#Google_Cloud_PubSub_V1_UpdateTopicRequest_Topic
+  commentId: P:Google.Cloud.PubSub.V1.UpdateTopicRequest.Topic
+  fullName: Google.Cloud.PubSub.V1.UpdateTopicRequest.Topic
+  nameWithType: UpdateTopicRequest.Topic
+- uid: Google.Cloud.PubSub.V1.UpdateTopicRequest.Topic*
+  name: Topic
+  href: api/Google.Cloud.PubSub.V1.UpdateTopicRequest.html#Google_Cloud_PubSub_V1_UpdateTopicRequest_Topic_
+  commentId: Overload:Google.Cloud.PubSub.V1.UpdateTopicRequest.Topic
+  fullName: Google.Cloud.PubSub.V1.UpdateTopicRequest.Topic
+  nameWithType: UpdateTopicRequest.Topic
+- uid: Google.Cloud.PubSub.V1.UpdateTopicRequest.UpdateMask
+  name: UpdateMask
+  href: api/Google.Cloud.PubSub.V1.UpdateTopicRequest.html#Google_Cloud_PubSub_V1_UpdateTopicRequest_UpdateMask
+  commentId: P:Google.Cloud.PubSub.V1.UpdateTopicRequest.UpdateMask
+  fullName: Google.Cloud.PubSub.V1.UpdateTopicRequest.UpdateMask
+  nameWithType: UpdateTopicRequest.UpdateMask
+- uid: Google.Cloud.PubSub.V1.UpdateTopicRequest.UpdateMask*
+  name: UpdateMask
+  href: api/Google.Cloud.PubSub.V1.UpdateTopicRequest.html#Google_Cloud_PubSub_V1_UpdateTopicRequest_UpdateMask_
+  commentId: Overload:Google.Cloud.PubSub.V1.UpdateTopicRequest.UpdateMask
+  fullName: Google.Cloud.PubSub.V1.UpdateTopicRequest.UpdateMask
+  nameWithType: UpdateTopicRequest.UpdateMask
 - uid: Google.Protobuf
   name: Google.Protobuf
   href: api/Google.Protobuf.html

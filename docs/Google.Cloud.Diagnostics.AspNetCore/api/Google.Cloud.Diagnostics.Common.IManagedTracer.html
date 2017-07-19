@@ -109,16 +109,6 @@
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_Diagnostics_Common_IManagedTracer_EndSpan_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.EndSpan*"></a>
-  <h4 id="Google_Cloud_Diagnostics_Common_IManagedTracer_EndSpan" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.EndSpan">EndSpan()</h4>
-  <div class="markdown level1 summary"><p>Ends the current span if not ended by the <span class="xref">System.IDisposable</span> from
-<a class="xref" href="Google.Cloud.Diagnostics.Common.IManagedTracer.html#Google_Cloud_Diagnostics_Common_IManagedTracer_StartSpan_System_String_Google_Cloud_Diagnostics_Common_StartSpanOptions_">StartSpan(String, StartSpanOptions)</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void EndSpan()</code></pre>
-  </div>
   <a id="Google_Cloud_Diagnostics_Common_IManagedTracer_GetCurrentSpanId_" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.GetCurrentSpanId*"></a>
   <h4 id="Google_Cloud_Diagnostics_Common_IManagedTracer_GetCurrentSpanId" data-uid="Google.Cloud.Diagnostics.Common.IManagedTracer.GetCurrentSpanId">GetCurrentSpanId()</h4>
   <div class="markdown level1 summary"><p>Gets the current span id or null if none exists.</p>
@@ -382,7 +372,7 @@ from a thrown exception (the exception will be re-thrown) to the span.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IDisposable StartSpan(string name, StartSpanOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">ISpan StartSpan(string name, StartSpanOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -418,10 +408,8 @@ from a thrown exception (the exception will be re-thrown) to the span.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.IDisposable</span></td>
-        <td><p>An <span class="xref">System.IDisposable</span> that will end the current span when disposed.  If the span
-cannot end in the current scope, disposal can be skipped and <a class="xref" href="Google.Cloud.Diagnostics.Common.IManagedTracer.html#Google_Cloud_Diagnostics_Common_IManagedTracer_EndSpan">EndSpan()</a> can
-be called at a later time (this is not recommended and should be avoided if possible).</p>
+        <td><a class="xref" href="Google.Cloud.Diagnostics.Common.ISpan.html">ISpan</a></td>
+        <td><p>An <a class="xref" href="Google.Cloud.Diagnostics.Common.ISpan.html">ISpan</a> that will end the current span when disposed.</p>
 </td>
       </tr>
     </tbody>

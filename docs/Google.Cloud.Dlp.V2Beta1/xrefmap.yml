@@ -16770,12 +16770,12 @@ references:
   commentId: M:Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindings(Google.Cloud.Dlp.V2Beta1.ListInspectFindingsRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindings(Google.Cloud.Dlp.V2Beta1.ListInspectFindingsRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: DlpServiceClient.ListInspectFindings(ListInspectFindingsRequest, CallSettings)
-- uid: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindings(System.String,Google.Api.Gax.Grpc.CallSettings)
-  name: ListInspectFindings(String, CallSettings)
-  href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceClient.html#Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindings_System_String_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindings(System.String,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindings(System.String, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: DlpServiceClient.ListInspectFindings(String, CallSettings)
+- uid: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindings(Google.Cloud.Dlp.V2Beta1.ResultName,Google.Api.Gax.Grpc.CallSettings)
+  name: ListInspectFindings(ResultName, CallSettings)
+  href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceClient.html#Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindings_Google_Cloud_Dlp_V2Beta1_ResultName_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindings(Google.Cloud.Dlp.V2Beta1.ResultName,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindings(Google.Cloud.Dlp.V2Beta1.ResultName, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: DlpServiceClient.ListInspectFindings(ResultName, CallSettings)
 - uid: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindings*
   name: ListInspectFindings
   href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceClient.html#Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindings_
@@ -16788,18 +16788,18 @@ references:
   commentId: M:Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindingsAsync(Google.Cloud.Dlp.V2Beta1.ListInspectFindingsRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindingsAsync(Google.Cloud.Dlp.V2Beta1.ListInspectFindingsRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: DlpServiceClient.ListInspectFindingsAsync(ListInspectFindingsRequest, CallSettings)
-- uid: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindingsAsync(System.String,Google.Api.Gax.Grpc.CallSettings)
-  name: ListInspectFindingsAsync(String, CallSettings)
-  href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceClient.html#Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindingsAsync_System_String_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindingsAsync(System.String,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindingsAsync(System.String, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: DlpServiceClient.ListInspectFindingsAsync(String, CallSettings)
-- uid: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindingsAsync(System.String,System.Threading.CancellationToken)
-  name: ListInspectFindingsAsync(String, CancellationToken)
-  href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceClient.html#Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindingsAsync_System_String_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindingsAsync(System.String,System.Threading.CancellationToken)
-  fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindingsAsync(System.String, System.Threading.CancellationToken)
-  nameWithType: DlpServiceClient.ListInspectFindingsAsync(String, CancellationToken)
+- uid: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindingsAsync(Google.Cloud.Dlp.V2Beta1.ResultName,Google.Api.Gax.Grpc.CallSettings)
+  name: ListInspectFindingsAsync(ResultName, CallSettings)
+  href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceClient.html#Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindingsAsync_Google_Cloud_Dlp_V2Beta1_ResultName_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindingsAsync(Google.Cloud.Dlp.V2Beta1.ResultName,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindingsAsync(Google.Cloud.Dlp.V2Beta1.ResultName, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: DlpServiceClient.ListInspectFindingsAsync(ResultName, CallSettings)
+- uid: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindingsAsync(Google.Cloud.Dlp.V2Beta1.ResultName,System.Threading.CancellationToken)
+  name: ListInspectFindingsAsync(ResultName, CancellationToken)
+  href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceClient.html#Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindingsAsync_Google_Cloud_Dlp_V2Beta1_ResultName_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindingsAsync(Google.Cloud.Dlp.V2Beta1.ResultName,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindingsAsync(Google.Cloud.Dlp.V2Beta1.ResultName, System.Threading.CancellationToken)
+  nameWithType: DlpServiceClient.ListInspectFindingsAsync(ResultName, CancellationToken)
 - uid: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindingsAsync*
   name: ListInspectFindingsAsync
   href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceClient.html#Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindingsAsync_
@@ -17757,6 +17757,18 @@ references:
   commentId: Overload:Google.Cloud.Dlp.V2Beta1.InspectOperationResult.Name
   fullName: Google.Cloud.Dlp.V2Beta1.InspectOperationResult.Name
   nameWithType: InspectOperationResult.Name
+- uid: Google.Cloud.Dlp.V2Beta1.InspectOperationResult.ResultName
+  name: ResultName
+  href: api/Google.Cloud.Dlp.V2Beta1.InspectOperationResult.html#Google_Cloud_Dlp_V2Beta1_InspectOperationResult_ResultName
+  commentId: P:Google.Cloud.Dlp.V2Beta1.InspectOperationResult.ResultName
+  fullName: Google.Cloud.Dlp.V2Beta1.InspectOperationResult.ResultName
+  nameWithType: InspectOperationResult.ResultName
+- uid: Google.Cloud.Dlp.V2Beta1.InspectOperationResult.ResultName*
+  name: ResultName
+  href: api/Google.Cloud.Dlp.V2Beta1.InspectOperationResult.html#Google_Cloud_Dlp_V2Beta1_InspectOperationResult_ResultName_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.InspectOperationResult.ResultName
+  fullName: Google.Cloud.Dlp.V2Beta1.InspectOperationResult.ResultName
+  nameWithType: InspectOperationResult.ResultName
 - uid: Google.Cloud.Dlp.V2Beta1.InspectResult
   name: InspectResult
   href: api/Google.Cloud.Dlp.V2Beta1.InspectResult.html
@@ -18063,6 +18075,18 @@ references:
   commentId: Overload:Google.Cloud.Dlp.V2Beta1.ListInspectFindingsRequest.PageToken
   fullName: Google.Cloud.Dlp.V2Beta1.ListInspectFindingsRequest.PageToken
   nameWithType: ListInspectFindingsRequest.PageToken
+- uid: Google.Cloud.Dlp.V2Beta1.ListInspectFindingsRequest.ResultName
+  name: ResultName
+  href: api/Google.Cloud.Dlp.V2Beta1.ListInspectFindingsRequest.html#Google_Cloud_Dlp_V2Beta1_ListInspectFindingsRequest_ResultName
+  commentId: P:Google.Cloud.Dlp.V2Beta1.ListInspectFindingsRequest.ResultName
+  fullName: Google.Cloud.Dlp.V2Beta1.ListInspectFindingsRequest.ResultName
+  nameWithType: ListInspectFindingsRequest.ResultName
+- uid: Google.Cloud.Dlp.V2Beta1.ListInspectFindingsRequest.ResultName*
+  name: ResultName
+  href: api/Google.Cloud.Dlp.V2Beta1.ListInspectFindingsRequest.html#Google_Cloud_Dlp_V2Beta1_ListInspectFindingsRequest_ResultName_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.ListInspectFindingsRequest.ResultName
+  fullName: Google.Cloud.Dlp.V2Beta1.ListInspectFindingsRequest.ResultName
+  nameWithType: ListInspectFindingsRequest.ResultName
 - uid: Google.Cloud.Dlp.V2Beta1.ListInspectFindingsResponse
   name: ListInspectFindingsResponse
   href: api/Google.Cloud.Dlp.V2Beta1.ListInspectFindingsResponse.html

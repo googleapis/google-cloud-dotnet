@@ -1,0 +1,3836 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DatabaseAdminClient
+   | Google.Cloud.Spanner.Admin.Database.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DatabaseAdminClient
+   | Google.Cloud.Spanner.Admin.Database.V1 ">
+    <meta name="generator" content="docfx 2.20.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient">
+  
+  
+  <h1 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient" class="text-break">Class DatabaseAdminClient
+  </h1>
+  <div class="markdown level0 summary"><p>DatabaseAdmin client wrapper, for convenient use.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">DatabaseAdminClient</span></div>
+  </div>
+      <div class="level2"><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.html">DatabaseAdminClientImpl</a></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.html">Google.Cloud.Spanner.Admin.Database.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Spanner.Admin.Database.V1.dll</h6>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class DatabaseAdminClient</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_DefaultEndpoint_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.DefaultEndpoint*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_DefaultEndpoint" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.DefaultEndpoint">DefaultEndpoint</h4>
+  <div class="markdown level1 summary"><p>The default endpoint for the DatabaseAdmin service, which is a host of &quot;spanner.googleapis.com&quot; and a port of 443.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ServiceEndpoint DefaultEndpoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_DefaultScopes_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.DefaultScopes*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_DefaultScopes" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.DefaultScopes">DefaultScopes</h4>
+  <div class="markdown level1 summary"><p>The default DatabaseAdmin scopes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;string&gt; DefaultScopes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_DefaultScopes_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The default DatabaseAdmin scopes are:
+<ul><li>&quot;<a href="https://www.googleapis.com/auth/cloud-platform&amp;quot">https://www.googleapis.com/auth/cloud-platform&quot</a>;</li><li>&quot;<a href="https://www.googleapis.com/auth/spanner.admin&amp;quot">https://www.googleapis.com/auth/spanner.admin&quot</a>;</li></ul></p>
+</div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GrpcClient_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GrpcClient*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GrpcClient" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GrpcClient">GrpcClient</h4>
+  <div class="markdown level1 summary"><p>The underlying gRPC DatabaseAdmin client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DatabaseAdmin.DatabaseAdminClient GrpcClient { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdmin.DatabaseAdminClient.html">DatabaseAdmin.DatabaseAdminClient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_LongRunningOperationsClient_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.LongRunningOperationsClient*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_LongRunningOperationsClient" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.LongRunningOperationsClient">LongRunningOperationsClient</h4>
+  <div class="markdown level1 summary"><p>The client for long-running operations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual OperationsClient LongRunningOperationsClient { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.OperationsClient.html">OperationsClient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_Create_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.Create*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.Create(Google.Api.Gax.Grpc.ServiceEndpoint,Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings)">Create(ServiceEndpoint, DatabaseAdminSettings)</h4>
+  <div class="markdown level1 summary"><p>Synchronously creates a <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html">DatabaseAdminClient</a>, applying defaults for all unspecified settings,
+and creating a channel connecting to the given endpoint with application default credentials where
+necessary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DatabaseAdminClient Create(ServiceEndpoint endpoint = null, DatabaseAdminSettings settings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a></td>
+        <td><span class="parametername">endpoint</span></td>
+        <td><p>Optional <a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html">DatabaseAdminSettings</a></td>
+        <td><span class="parametername">settings</span></td>
+        <td><p>Optional <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html">DatabaseAdminSettings</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html">DatabaseAdminClient</a></td>
+        <td><p>The created <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html">DatabaseAdminClient</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_Create_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.Create*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_Create_Grpc_Core_Channel_Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.Create(Grpc.Core.Channel,Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings)">Create(Channel, DatabaseAdminSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html">DatabaseAdminClient</a> which uses the specified channel for remote operations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DatabaseAdminClient Create(Channel channel, DatabaseAdminSettings settings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Channel.html">Channel</a></td>
+        <td><span class="parametername">channel</span></td>
+        <td><p>The <a class="xref" href="Grpc.Core.Channel.html">Channel</a> for remote operations. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html">DatabaseAdminSettings</a></td>
+        <td><span class="parametername">settings</span></td>
+        <td><p>Optional <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html">DatabaseAdminSettings</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html">DatabaseAdminClient</a></td>
+        <td><p>The created <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html">DatabaseAdminClient</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_CreateAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateAsync(Google.Api.Gax.Grpc.ServiceEndpoint,Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings)">CreateAsync(ServiceEndpoint, DatabaseAdminSettings)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously creates a <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html">DatabaseAdminClient</a>, applying defaults for all unspecified settings,
+and creating a channel connecting to the given endpoint with application default credentials where
+necessary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;DatabaseAdminClient&gt; CreateAsync(ServiceEndpoint endpoint = null, DatabaseAdminSettings settings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a></td>
+        <td><span class="parametername">endpoint</span></td>
+        <td><p>Optional <a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html">DatabaseAdminSettings</a></td>
+        <td><span class="parametername">settings</span></td>
+        <td><p>Optional <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html">DatabaseAdminSettings</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html">DatabaseAdminClient</a>&gt;</td>
+        <td><p>The task representing the created <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html">DatabaseAdminClient</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_CreateDatabase_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabase*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_CreateDatabase_Google_Cloud_Spanner_Admin_Database_V1_CreateDatabaseRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabase(Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest,Google.Api.Gax.Grpc.CallSettings)">CreateDatabase(CreateDatabaseRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a new Cloud Spanner database and starts to prepare it for serving.
+The returned [long-running operation][google.longrunning.Operation] will
+have a name of the format <code>&amp;lt;database_name&gt;/operations/&amp;lt;operation_id&gt;</code> and
+can be used to track preparation of the database. The
+[metadata][google.longrunning.Operation.metadata] field type is
+[CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+[response][google.longrunning.Operation.response] field type is
+[Database][google.spanner.admin.database.v1.Database], if successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Operation&lt;Database, CreateDatabaseMetadata&gt; CreateDatabase(CreateDatabaseRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.html">CreateDatabaseRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.Database.html">Database</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseMetadata.html">CreateDatabaseMetadata</a>&gt;</td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_CreateDatabase_Google_Cloud_Spanner_Admin_Database_V1_CreateDatabaseRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+// Initialize request argument(s)
+CreateDatabaseRequest request = new CreateDatabaseRequest
+{
+    ParentAsInstanceName = new InstanceName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;),
+    CreateStatement = &quot;&quot;,
+};
+// Make the request
+Operation&lt;Database, CreateDatabaseMetadata&gt; response =
+    databaseAdminClient.CreateDatabase(request);
+
+// Poll until the returned long-running operation is complete
+Operation&lt;Database, CreateDatabaseMetadata&gt; completedResponse =
+    response.PollUntilCompleted();
+// Retrieve the operation result
+Database result = completedResponse.Result;
+
+// Or get the name of the operation
+string operationName = response.Name;
+// This name can be stored, then the long-running operation retrieved later by name
+Operation&lt;Database, CreateDatabaseMetadata&gt; retrievedResponse =
+    databaseAdminClient.PollOnceCreateDatabase(operationName);
+// Check if the retrieved long-running operation has completed
+if (retrievedResponse.IsCompleted)
+{
+    // If it has completed, then access the result
+    Database retrievedResult = retrievedResponse.Result;
+}
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_CreateDatabase_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabase*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_CreateDatabase_Google_Cloud_Spanner_Admin_Database_V1_InstanceName_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabase(Google.Cloud.Spanner.Admin.Database.V1.InstanceName,System.String,Google.Api.Gax.Grpc.CallSettings)">CreateDatabase(InstanceName, String, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a new Cloud Spanner database and starts to prepare it for serving.
+The returned [long-running operation][google.longrunning.Operation] will
+have a name of the format <code>&amp;lt;database_name&gt;/operations/&amp;lt;operation_id&gt;</code> and
+can be used to track preparation of the database. The
+[metadata][google.longrunning.Operation.metadata] field type is
+[CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+[response][google.longrunning.Operation.response] field type is
+[Database][google.spanner.admin.database.v1.Database], if successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Operation&lt;Database, CreateDatabaseMetadata&gt; CreateDatabase(InstanceName parent, string createStatement, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.InstanceName.html">InstanceName</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>Required. The name of the instance that will serve the new database.
+Values are of the form <code>projects/&amp;lt;project&gt;/instances/&amp;lt;instance&gt;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">createStatement</span></td>
+        <td><p>Required. A <code>CREATE DATABASE</code> statement, which specifies the ID of the
+new database.  The database ID must conform to the regular expression
+<code>[a-z][a-z0-9_\-]*[a-z0-9]</code> and be between 2 and 30 characters in length.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.Database.html">Database</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseMetadata.html">CreateDatabaseMetadata</a>&gt;</td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_CreateDatabase_Google_Cloud_Spanner_Admin_Database_V1_InstanceName_System_String_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+// Initialize request argument(s)
+InstanceName parent = new InstanceName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;);
+string createStatement = &quot;&quot;;
+// Make the request
+Operation&lt;Database, CreateDatabaseMetadata&gt; response =
+    databaseAdminClient.CreateDatabase(parent, createStatement);
+
+// Poll until the returned long-running operation is complete
+Operation&lt;Database, CreateDatabaseMetadata&gt; completedResponse =
+    response.PollUntilCompleted();
+// Retrieve the operation result
+Database result = completedResponse.Result;
+
+// Or get the name of the operation
+string operationName = response.Name;
+// This name can be stored, then the long-running operation retrieved later by name
+Operation&lt;Database, CreateDatabaseMetadata&gt; retrievedResponse =
+    databaseAdminClient.PollOnceCreateDatabase(operationName);
+// Check if the retrieved long-running operation has completed
+if (retrievedResponse.IsCompleted)
+{
+    // If it has completed, then access the result
+    Database retrievedResult = retrievedResponse.Result;
+}
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_CreateDatabaseAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabaseAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_CreateDatabaseAsync_Google_Cloud_Spanner_Admin_Database_V1_CreateDatabaseRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabaseAsync(Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest,Google.Api.Gax.Grpc.CallSettings)">CreateDatabaseAsync(CreateDatabaseRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a new Cloud Spanner database and starts to prepare it for serving.
+The returned [long-running operation][google.longrunning.Operation] will
+have a name of the format <code>&amp;lt;database_name&gt;/operations/&amp;lt;operation_id&gt;</code> and
+can be used to track preparation of the database. The
+[metadata][google.longrunning.Operation.metadata] field type is
+[CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+[response][google.longrunning.Operation.response] field type is
+[Database][google.spanner.admin.database.v1.Database], if successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;Database, CreateDatabaseMetadata&gt;&gt; CreateDatabaseAsync(CreateDatabaseRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.html">CreateDatabaseRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.Database.html">Database</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseMetadata.html">CreateDatabaseMetadata</a>&gt;&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_CreateDatabaseAsync_Google_Cloud_Spanner_Admin_Database_V1_CreateDatabaseRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+CreateDatabaseRequest request = new CreateDatabaseRequest
+{
+    ParentAsInstanceName = new InstanceName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;),
+    CreateStatement = &quot;&quot;,
+};
+// Make the request
+Operation&lt;Database, CreateDatabaseMetadata&gt; response =
+    await databaseAdminClient.CreateDatabaseAsync(request);
+
+// Poll until the returned long-running operation is complete
+Operation&lt;Database, CreateDatabaseMetadata&gt; completedResponse =
+    await response.PollUntilCompletedAsync();
+// Retrieve the operation result
+Database result = completedResponse.Result;
+
+// Or get the name of the operation
+string operationName = response.Name;
+// This name can be stored, then the long-running operation retrieved later by name
+Operation&lt;Database, CreateDatabaseMetadata&gt; retrievedResponse =
+    await databaseAdminClient.PollOnceCreateDatabaseAsync(operationName);
+// Check if the retrieved long-running operation has completed
+if (retrievedResponse.IsCompleted)
+{
+    // If it has completed, then access the result
+    Database retrievedResult = retrievedResponse.Result;
+}
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_CreateDatabaseAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabaseAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_CreateDatabaseAsync_Google_Cloud_Spanner_Admin_Database_V1_InstanceName_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabaseAsync(Google.Cloud.Spanner.Admin.Database.V1.InstanceName,System.String,Google.Api.Gax.Grpc.CallSettings)">CreateDatabaseAsync(InstanceName, String, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a new Cloud Spanner database and starts to prepare it for serving.
+The returned [long-running operation][google.longrunning.Operation] will
+have a name of the format <code>&amp;lt;database_name&gt;/operations/&amp;lt;operation_id&gt;</code> and
+can be used to track preparation of the database. The
+[metadata][google.longrunning.Operation.metadata] field type is
+[CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+[response][google.longrunning.Operation.response] field type is
+[Database][google.spanner.admin.database.v1.Database], if successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;Database, CreateDatabaseMetadata&gt;&gt; CreateDatabaseAsync(InstanceName parent, string createStatement, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.InstanceName.html">InstanceName</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>Required. The name of the instance that will serve the new database.
+Values are of the form <code>projects/&amp;lt;project&gt;/instances/&amp;lt;instance&gt;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">createStatement</span></td>
+        <td><p>Required. A <code>CREATE DATABASE</code> statement, which specifies the ID of the
+new database.  The database ID must conform to the regular expression
+<code>[a-z][a-z0-9_\-]*[a-z0-9]</code> and be between 2 and 30 characters in length.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.Database.html">Database</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseMetadata.html">CreateDatabaseMetadata</a>&gt;&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_CreateDatabaseAsync_Google_Cloud_Spanner_Admin_Database_V1_InstanceName_System_String_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+InstanceName parent = new InstanceName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;);
+string createStatement = &quot;&quot;;
+// Make the request
+Operation&lt;Database, CreateDatabaseMetadata&gt; response =
+    await databaseAdminClient.CreateDatabaseAsync(parent, createStatement);
+
+// Poll until the returned long-running operation is complete
+Operation&lt;Database, CreateDatabaseMetadata&gt; completedResponse =
+    await response.PollUntilCompletedAsync();
+// Retrieve the operation result
+Database result = completedResponse.Result;
+
+// Or get the name of the operation
+string operationName = response.Name;
+// This name can be stored, then the long-running operation retrieved later by name
+Operation&lt;Database, CreateDatabaseMetadata&gt; retrievedResponse =
+    await databaseAdminClient.PollOnceCreateDatabaseAsync(operationName);
+// Check if the retrieved long-running operation has completed
+if (retrievedResponse.IsCompleted)
+{
+    // If it has completed, then access the result
+    Database retrievedResult = retrievedResponse.Result;
+}
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_CreateDatabaseAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabaseAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_CreateDatabaseAsync_Google_Cloud_Spanner_Admin_Database_V1_InstanceName_System_String_System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabaseAsync(Google.Cloud.Spanner.Admin.Database.V1.InstanceName,System.String,System.Threading.CancellationToken)">CreateDatabaseAsync(InstanceName, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Creates a new Cloud Spanner database and starts to prepare it for serving.
+The returned [long-running operation][google.longrunning.Operation] will
+have a name of the format <code>&amp;lt;database_name&gt;/operations/&amp;lt;operation_id&gt;</code> and
+can be used to track preparation of the database. The
+[metadata][google.longrunning.Operation.metadata] field type is
+[CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+[response][google.longrunning.Operation.response] field type is
+[Database][google.spanner.admin.database.v1.Database], if successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;Database, CreateDatabaseMetadata&gt;&gt; CreateDatabaseAsync(InstanceName parent, string createStatement, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.InstanceName.html">InstanceName</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>Required. The name of the instance that will serve the new database.
+Values are of the form <code>projects/&amp;lt;project&gt;/instances/&amp;lt;instance&gt;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">createStatement</span></td>
+        <td><p>Required. A <code>CREATE DATABASE</code> statement, which specifies the ID of the
+new database.  The database ID must conform to the regular expression
+<code>[a-z][a-z0-9_\-]*[a-z0-9]</code> and be between 2 and 30 characters in length.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.Database.html">Database</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseMetadata.html">CreateDatabaseMetadata</a>&gt;&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_CreateDatabaseAsync_Google_Cloud_Spanner_Admin_Database_V1_InstanceName_System_String_System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+InstanceName parent = new InstanceName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;);
+string createStatement = &quot;&quot;;
+// Make the request
+Operation&lt;Database, CreateDatabaseMetadata&gt; response =
+    await databaseAdminClient.CreateDatabaseAsync(parent, createStatement);
+
+// Poll until the returned long-running operation is complete
+Operation&lt;Database, CreateDatabaseMetadata&gt; completedResponse =
+    await response.PollUntilCompletedAsync();
+// Retrieve the operation result
+Database result = completedResponse.Result;
+
+// Or get the name of the operation
+string operationName = response.Name;
+// This name can be stored, then the long-running operation retrieved later by name
+Operation&lt;Database, CreateDatabaseMetadata&gt; retrievedResponse =
+    await databaseAdminClient.PollOnceCreateDatabaseAsync(operationName);
+// Check if the retrieved long-running operation has completed
+if (retrievedResponse.IsCompleted)
+{
+    // If it has completed, then access the result
+    Database retrievedResult = retrievedResponse.Result;
+}
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_DropDatabase_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.DropDatabase*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_DropDatabase_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.DropDatabase(Google.Cloud.Spanner.Admin.Database.V1.DatabaseName,Google.Api.Gax.Grpc.CallSettings)">DropDatabase(DatabaseName, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Drops (aka deletes) a Cloud Spanner database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DropDatabase(DatabaseName database, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.html">DatabaseName</a></td>
+        <td><span class="parametername">database</span></td>
+        <td><p>Required. The database to be dropped.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_DropDatabase_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+// Initialize request argument(s)
+DatabaseName database = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;);
+// Make the request
+databaseAdminClient.DropDatabase(database);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_DropDatabase_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.DropDatabase*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_DropDatabase_Google_Cloud_Spanner_Admin_Database_V1_DropDatabaseRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.DropDatabase(Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest,Google.Api.Gax.Grpc.CallSettings)">DropDatabase(DropDatabaseRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Drops (aka deletes) a Cloud Spanner database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DropDatabase(DropDatabaseRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest.html">DropDatabaseRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_DropDatabase_Google_Cloud_Spanner_Admin_Database_V1_DropDatabaseRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+// Initialize request argument(s)
+DropDatabaseRequest request = new DropDatabaseRequest
+{
+    DatabaseAsDatabaseName = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;),
+};
+// Make the request
+databaseAdminClient.DropDatabase(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_DropDatabaseAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.DropDatabaseAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_DropDatabaseAsync_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.DropDatabaseAsync(Google.Cloud.Spanner.Admin.Database.V1.DatabaseName,Google.Api.Gax.Grpc.CallSettings)">DropDatabaseAsync(DatabaseName, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Drops (aka deletes) a Cloud Spanner database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task DropDatabaseAsync(DatabaseName database, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.html">DatabaseName</a></td>
+        <td><span class="parametername">database</span></td>
+        <td><p>Required. The database to be dropped.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_DropDatabaseAsync_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+DatabaseName database = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;);
+// Make the request
+await databaseAdminClient.DropDatabaseAsync(database);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_DropDatabaseAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.DropDatabaseAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_DropDatabaseAsync_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.DropDatabaseAsync(Google.Cloud.Spanner.Admin.Database.V1.DatabaseName,System.Threading.CancellationToken)">DropDatabaseAsync(DatabaseName, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Drops (aka deletes) a Cloud Spanner database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task DropDatabaseAsync(DatabaseName database, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.html">DatabaseName</a></td>
+        <td><span class="parametername">database</span></td>
+        <td><p>Required. The database to be dropped.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_DropDatabaseAsync_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+DatabaseName database = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;);
+// Make the request
+await databaseAdminClient.DropDatabaseAsync(database);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_DropDatabaseAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.DropDatabaseAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_DropDatabaseAsync_Google_Cloud_Spanner_Admin_Database_V1_DropDatabaseRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.DropDatabaseAsync(Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest,Google.Api.Gax.Grpc.CallSettings)">DropDatabaseAsync(DropDatabaseRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Drops (aka deletes) a Cloud Spanner database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task DropDatabaseAsync(DropDatabaseRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest.html">DropDatabaseRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_DropDatabaseAsync_Google_Cloud_Spanner_Admin_Database_V1_DropDatabaseRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+DropDatabaseRequest request = new DropDatabaseRequest
+{
+    DatabaseAsDatabaseName = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;),
+};
+// Make the request
+await databaseAdminClient.DropDatabaseAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabase_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetDatabase*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabase_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetDatabase(Google.Cloud.Spanner.Admin.Database.V1.DatabaseName,Google.Api.Gax.Grpc.CallSettings)">GetDatabase(DatabaseName, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets the state of a Cloud Spanner database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Database GetDatabase(DatabaseName name, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.html">DatabaseName</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Required. The name of the requested database. Values are of the form
+<code>projects/&amp;lt;project&gt;/instances/&amp;lt;instance&gt;/databases/&amp;lt;database&gt;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.Database.html">Database</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabase_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+// Initialize request argument(s)
+DatabaseName name = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;);
+// Make the request
+Database response = databaseAdminClient.GetDatabase(name);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabase_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetDatabase*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabase_Google_Cloud_Spanner_Admin_Database_V1_GetDatabaseRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetDatabase(Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest,Google.Api.Gax.Grpc.CallSettings)">GetDatabase(GetDatabaseRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets the state of a Cloud Spanner database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Database GetDatabase(GetDatabaseRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest.html">GetDatabaseRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.Database.html">Database</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabase_Google_Cloud_Spanner_Admin_Database_V1_GetDatabaseRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+// Initialize request argument(s)
+GetDatabaseRequest request = new GetDatabaseRequest
+{
+    DatabaseName = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;),
+};
+// Make the request
+Database response = databaseAdminClient.GetDatabase(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetDatabaseAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseAsync_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetDatabaseAsync(Google.Cloud.Spanner.Admin.Database.V1.DatabaseName,Google.Api.Gax.Grpc.CallSettings)">GetDatabaseAsync(DatabaseName, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets the state of a Cloud Spanner database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Database&gt; GetDatabaseAsync(DatabaseName name, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.html">DatabaseName</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Required. The name of the requested database. Values are of the form
+<code>projects/&amp;lt;project&gt;/instances/&amp;lt;instance&gt;/databases/&amp;lt;database&gt;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.Database.html">Database</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseAsync_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+DatabaseName name = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;);
+// Make the request
+Database response = await databaseAdminClient.GetDatabaseAsync(name);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetDatabaseAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseAsync_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetDatabaseAsync(Google.Cloud.Spanner.Admin.Database.V1.DatabaseName,System.Threading.CancellationToken)">GetDatabaseAsync(DatabaseName, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Gets the state of a Cloud Spanner database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Database&gt; GetDatabaseAsync(DatabaseName name, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.html">DatabaseName</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Required. The name of the requested database. Values are of the form
+<code>projects/&amp;lt;project&gt;/instances/&amp;lt;instance&gt;/databases/&amp;lt;database&gt;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.Database.html">Database</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseAsync_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+DatabaseName name = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;);
+// Make the request
+Database response = await databaseAdminClient.GetDatabaseAsync(name);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetDatabaseAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseAsync_Google_Cloud_Spanner_Admin_Database_V1_GetDatabaseRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetDatabaseAsync(Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest,Google.Api.Gax.Grpc.CallSettings)">GetDatabaseAsync(GetDatabaseRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets the state of a Cloud Spanner database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Database&gt; GetDatabaseAsync(GetDatabaseRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest.html">GetDatabaseRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.Database.html">Database</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseAsync_Google_Cloud_Spanner_Admin_Database_V1_GetDatabaseRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+GetDatabaseRequest request = new GetDatabaseRequest
+{
+    DatabaseName = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;),
+};
+// Make the request
+Database response = await databaseAdminClient.GetDatabaseAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseDdl_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetDatabaseDdl*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseDdl_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetDatabaseDdl(Google.Cloud.Spanner.Admin.Database.V1.DatabaseName,Google.Api.Gax.Grpc.CallSettings)">GetDatabaseDdl(DatabaseName, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns the schema of a Cloud Spanner database as a list of formatted
+DDL statements. This method does not show pending schema updates, those may
+be queried using the [Operations][google.longrunning.Operations] API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual GetDatabaseDdlResponse GetDatabaseDdl(DatabaseName database, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.html">DatabaseName</a></td>
+        <td><span class="parametername">database</span></td>
+        <td><p>Required. The database whose schema we wish to get.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse.html">GetDatabaseDdlResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseDdl_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+// Initialize request argument(s)
+DatabaseName database = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;);
+// Make the request
+GetDatabaseDdlResponse response = databaseAdminClient.GetDatabaseDdl(database);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseDdl_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetDatabaseDdl*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseDdl_Google_Cloud_Spanner_Admin_Database_V1_GetDatabaseDdlRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetDatabaseDdl(Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest,Google.Api.Gax.Grpc.CallSettings)">GetDatabaseDdl(GetDatabaseDdlRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns the schema of a Cloud Spanner database as a list of formatted
+DDL statements. This method does not show pending schema updates, those may
+be queried using the [Operations][google.longrunning.Operations] API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual GetDatabaseDdlResponse GetDatabaseDdl(GetDatabaseDdlRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest.html">GetDatabaseDdlRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse.html">GetDatabaseDdlResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseDdl_Google_Cloud_Spanner_Admin_Database_V1_GetDatabaseDdlRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+// Initialize request argument(s)
+GetDatabaseDdlRequest request = new GetDatabaseDdlRequest
+{
+    DatabaseAsDatabaseName = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;),
+};
+// Make the request
+GetDatabaseDdlResponse response = databaseAdminClient.GetDatabaseDdl(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseDdlAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetDatabaseDdlAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseDdlAsync_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetDatabaseDdlAsync(Google.Cloud.Spanner.Admin.Database.V1.DatabaseName,Google.Api.Gax.Grpc.CallSettings)">GetDatabaseDdlAsync(DatabaseName, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns the schema of a Cloud Spanner database as a list of formatted
+DDL statements. This method does not show pending schema updates, those may
+be queried using the [Operations][google.longrunning.Operations] API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;GetDatabaseDdlResponse&gt; GetDatabaseDdlAsync(DatabaseName database, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.html">DatabaseName</a></td>
+        <td><span class="parametername">database</span></td>
+        <td><p>Required. The database whose schema we wish to get.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse.html">GetDatabaseDdlResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseDdlAsync_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+DatabaseName database = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;);
+// Make the request
+GetDatabaseDdlResponse response = await databaseAdminClient.GetDatabaseDdlAsync(database);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseDdlAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetDatabaseDdlAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseDdlAsync_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetDatabaseDdlAsync(Google.Cloud.Spanner.Admin.Database.V1.DatabaseName,System.Threading.CancellationToken)">GetDatabaseDdlAsync(DatabaseName, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Returns the schema of a Cloud Spanner database as a list of formatted
+DDL statements. This method does not show pending schema updates, those may
+be queried using the [Operations][google.longrunning.Operations] API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;GetDatabaseDdlResponse&gt; GetDatabaseDdlAsync(DatabaseName database, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.html">DatabaseName</a></td>
+        <td><span class="parametername">database</span></td>
+        <td><p>Required. The database whose schema we wish to get.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse.html">GetDatabaseDdlResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseDdlAsync_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+DatabaseName database = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;);
+// Make the request
+GetDatabaseDdlResponse response = await databaseAdminClient.GetDatabaseDdlAsync(database);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseDdlAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetDatabaseDdlAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseDdlAsync_Google_Cloud_Spanner_Admin_Database_V1_GetDatabaseDdlRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetDatabaseDdlAsync(Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest,Google.Api.Gax.Grpc.CallSettings)">GetDatabaseDdlAsync(GetDatabaseDdlRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns the schema of a Cloud Spanner database as a list of formatted
+DDL statements. This method does not show pending schema updates, those may
+be queried using the [Operations][google.longrunning.Operations] API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;GetDatabaseDdlResponse&gt; GetDatabaseDdlAsync(GetDatabaseDdlRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest.html">GetDatabaseDdlRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse.html">GetDatabaseDdlResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetDatabaseDdlAsync_Google_Cloud_Spanner_Admin_Database_V1_GetDatabaseDdlRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+GetDatabaseDdlRequest request = new GetDatabaseDdlRequest
+{
+    DatabaseAsDatabaseName = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;),
+};
+// Make the request
+GetDatabaseDdlResponse response = await databaseAdminClient.GetDatabaseDdlAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetIamPolicy_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetIamPolicy*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetIamPolicy_Google_Cloud_Iam_V1_GetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetIamPolicy(Google.Cloud.Iam.V1.GetIamPolicyRequest,Google.Api.Gax.Grpc.CallSettings)">GetIamPolicy(GetIamPolicyRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets the access control policy for a database resource. Returns an empty
+policy if a database exists but does not have a policy set.</p>
+<p>Authorization requires <code>spanner.databases.getIamPolicy</code> permission on
+[resource][google.iam.v1.GetIamPolicyRequest.resource].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Policy GetIamPolicy(GetIamPolicyRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.GetIamPolicyRequest.html">GetIamPolicyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.Policy.html">Policy</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetIamPolicy_Google_Cloud_Iam_V1_GetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+// Initialize request argument(s)
+GetIamPolicyRequest request = new GetIamPolicyRequest
+{
+    Resource = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;).ToString(),
+};
+// Make the request
+Policy response = databaseAdminClient.GetIamPolicy(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetIamPolicy_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetIamPolicy*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetIamPolicy_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetIamPolicy(System.String,Google.Api.Gax.Grpc.CallSettings)">GetIamPolicy(String, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets the access control policy for a database resource. Returns an empty
+policy if a database exists but does not have a policy set.</p>
+<p>Authorization requires <code>spanner.databases.getIamPolicy</code> permission on
+[resource][google.iam.v1.GetIamPolicyRequest.resource].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Policy GetIamPolicy(string resource, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">resource</span></td>
+        <td><p>REQUIRED: The resource for which the policy is being requested.
+<code>resource</code> is usually specified as a path. For example, a Project
+resource is specified as <code>projects/{project}</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.Policy.html">Policy</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetIamPolicy_System_String_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+// Initialize request argument(s)
+string formattedResource = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;).ToString();
+// Make the request
+Policy response = databaseAdminClient.GetIamPolicy(formattedResource);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetIamPolicyAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetIamPolicyAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetIamPolicyAsync_Google_Cloud_Iam_V1_GetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetIamPolicyAsync(Google.Cloud.Iam.V1.GetIamPolicyRequest,Google.Api.Gax.Grpc.CallSettings)">GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets the access control policy for a database resource. Returns an empty
+policy if a database exists but does not have a policy set.</p>
+<p>Authorization requires <code>spanner.databases.getIamPolicy</code> permission on
+[resource][google.iam.v1.GetIamPolicyRequest.resource].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Policy&gt; GetIamPolicyAsync(GetIamPolicyRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.GetIamPolicyRequest.html">GetIamPolicyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Iam.V1.Policy.html">Policy</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetIamPolicyAsync_Google_Cloud_Iam_V1_GetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+GetIamPolicyRequest request = new GetIamPolicyRequest
+{
+    Resource = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;).ToString(),
+};
+// Make the request
+Policy response = await databaseAdminClient.GetIamPolicyAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetIamPolicyAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetIamPolicyAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetIamPolicyAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetIamPolicyAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">GetIamPolicyAsync(String, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets the access control policy for a database resource. Returns an empty
+policy if a database exists but does not have a policy set.</p>
+<p>Authorization requires <code>spanner.databases.getIamPolicy</code> permission on
+[resource][google.iam.v1.GetIamPolicyRequest.resource].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Policy&gt; GetIamPolicyAsync(string resource, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">resource</span></td>
+        <td><p>REQUIRED: The resource for which the policy is being requested.
+<code>resource</code> is usually specified as a path. For example, a Project
+resource is specified as <code>projects/{project}</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Iam.V1.Policy.html">Policy</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetIamPolicyAsync_System_String_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+string formattedResource = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;).ToString();
+// Make the request
+Policy response = await databaseAdminClient.GetIamPolicyAsync(formattedResource);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetIamPolicyAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetIamPolicyAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetIamPolicyAsync_System_String_System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.GetIamPolicyAsync(System.String,System.Threading.CancellationToken)">GetIamPolicyAsync(String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Gets the access control policy for a database resource. Returns an empty
+policy if a database exists but does not have a policy set.</p>
+<p>Authorization requires <code>spanner.databases.getIamPolicy</code> permission on
+[resource][google.iam.v1.GetIamPolicyRequest.resource].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Policy&gt; GetIamPolicyAsync(string resource, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">resource</span></td>
+        <td><p>REQUIRED: The resource for which the policy is being requested.
+<code>resource</code> is usually specified as a path. For example, a Project
+resource is specified as <code>projects/{project}</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Iam.V1.Policy.html">Policy</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_GetIamPolicyAsync_System_String_System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+string formattedResource = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;).ToString();
+// Make the request
+Policy response = await databaseAdminClient.GetIamPolicyAsync(formattedResource);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_ListDatabases_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.ListDatabases*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_ListDatabases_Google_Cloud_Spanner_Admin_Database_V1_InstanceName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.ListDatabases(Google.Cloud.Spanner.Admin.Database.V1.InstanceName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListDatabases(InstanceName, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists Cloud Spanner databases.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListDatabasesResponse, Database&gt; ListDatabases(InstanceName parent, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.InstanceName.html">InstanceName</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>Required. The instance whose databases should be listed.
+Values are of the form <code>projects/&amp;lt;project&gt;/instances/&amp;lt;instance&gt;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">pageToken</span></td>
+        <td><p>The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">pageSize</span></td>
+        <td><p>The size of page to request. The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html">PagedEnumerable</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse.html">ListDatabasesResponse</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.Database.html">Database</a>&gt;</td>
+        <td><p>A pageable sequence of <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.Database.html">Database</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_ListDatabases_Google_Cloud_Spanner_Admin_Database_V1_InstanceName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+// Initialize request argument(s)
+InstanceName parent = new InstanceName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;);
+// Make the request
+PagedEnumerable&lt;ListDatabasesResponse, Database&gt; response =
+    databaseAdminClient.ListDatabases(parent);
+
+// Iterate over all response items, lazily performing RPCs as required
+foreach (Database item in response)
+{
+    // Do something with each item
+    Console.WriteLine(item);
+}
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+foreach (ListDatabasesResponse page in response.AsRawResponses())
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (Database item in page)
+    {
+        Console.WriteLine(item);
+    }
+}
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;Database&gt; singlePage = response.ReadPage(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (Database item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_ListDatabases_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.ListDatabases*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_ListDatabases_Google_Cloud_Spanner_Admin_Database_V1_ListDatabasesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.ListDatabases(Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest,Google.Api.Gax.Grpc.CallSettings)">ListDatabases(ListDatabasesRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists Cloud Spanner databases.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListDatabasesResponse, Database&gt; ListDatabases(ListDatabasesRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest.html">ListDatabasesRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html">PagedEnumerable</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse.html">ListDatabasesResponse</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.Database.html">Database</a>&gt;</td>
+        <td><p>A pageable sequence of <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.Database.html">Database</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_ListDatabases_Google_Cloud_Spanner_Admin_Database_V1_ListDatabasesRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+// Initialize request argument(s)
+ListDatabasesRequest request = new ListDatabasesRequest
+{
+    ParentAsInstanceName = new InstanceName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;),
+};
+// Make the request
+PagedEnumerable&lt;ListDatabasesResponse, Database&gt; response =
+    databaseAdminClient.ListDatabases(request);
+
+// Iterate over all response items, lazily performing RPCs as required
+foreach (Database item in response)
+{
+    // Do something with each item
+    Console.WriteLine(item);
+}
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+foreach (ListDatabasesResponse page in response.AsRawResponses())
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (Database item in page)
+    {
+        Console.WriteLine(item);
+    }
+}
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;Database&gt; singlePage = response.ReadPage(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (Database item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_ListDatabasesAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.ListDatabasesAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_ListDatabasesAsync_Google_Cloud_Spanner_Admin_Database_V1_InstanceName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.ListDatabasesAsync(Google.Cloud.Spanner.Admin.Database.V1.InstanceName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListDatabasesAsync(InstanceName, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists Cloud Spanner databases.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListDatabasesResponse, Database&gt; ListDatabasesAsync(InstanceName parent, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.InstanceName.html">InstanceName</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td><p>Required. The instance whose databases should be listed.
+Values are of the form <code>projects/&amp;lt;project&gt;/instances/&amp;lt;instance&gt;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">pageToken</span></td>
+        <td><p>The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">pageSize</span></td>
+        <td><p>The size of page to request. The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html">PagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse.html">ListDatabasesResponse</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.Database.html">Database</a>&gt;</td>
+        <td><p>A pageable asynchronous sequence of <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.Database.html">Database</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_ListDatabasesAsync_Google_Cloud_Spanner_Admin_Database_V1_InstanceName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+InstanceName parent = new InstanceName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;);
+// Make the request
+PagedAsyncEnumerable&lt;ListDatabasesResponse, Database&gt; response =
+    databaseAdminClient.ListDatabasesAsync(parent);
+
+// Iterate over all response items, lazily performing RPCs as required
+await response.ForEachAsync((Database item) =&gt;
+{
+    // Do something with each item
+    Console.WriteLine(item);
+});
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+await response.AsRawResponses().ForEachAsync((ListDatabasesResponse page) =&gt;
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (Database item in page)
+    {
+        Console.WriteLine(item);
+    }
+});
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;Database&gt; singlePage = await response.ReadPageAsync(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (Database item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_ListDatabasesAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.ListDatabasesAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_ListDatabasesAsync_Google_Cloud_Spanner_Admin_Database_V1_ListDatabasesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.ListDatabasesAsync(Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest,Google.Api.Gax.Grpc.CallSettings)">ListDatabasesAsync(ListDatabasesRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists Cloud Spanner databases.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListDatabasesResponse, Database&gt; ListDatabasesAsync(ListDatabasesRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest.html">ListDatabasesRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html">PagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse.html">ListDatabasesResponse</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.Database.html">Database</a>&gt;</td>
+        <td><p>A pageable asynchronous sequence of <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.Database.html">Database</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_ListDatabasesAsync_Google_Cloud_Spanner_Admin_Database_V1_ListDatabasesRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+ListDatabasesRequest request = new ListDatabasesRequest
+{
+    ParentAsInstanceName = new InstanceName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;),
+};
+// Make the request
+PagedAsyncEnumerable&lt;ListDatabasesResponse, Database&gt; response =
+    databaseAdminClient.ListDatabasesAsync(request);
+
+// Iterate over all response items, lazily performing RPCs as required
+await response.ForEachAsync((Database item) =&gt;
+{
+    // Do something with each item
+    Console.WriteLine(item);
+});
+
+// Or iterate over pages (of server-defined size), performing one RPC per page
+await response.AsRawResponses().ForEachAsync((ListDatabasesResponse page) =&gt;
+{
+    // Do something with each page of items
+    Console.WriteLine(&quot;A page of results:&quot;);
+    foreach (Database item in page)
+    {
+        Console.WriteLine(item);
+    }
+});
+
+// Or retrieve a single page of known size (unless it&#39;s the final page), performing as many RPCs as required
+int pageSize = 10;
+Page&lt;Database&gt; singlePage = await response.ReadPageAsync(pageSize);
+// Do something with the page of items
+Console.WriteLine($&quot;A page of {pageSize} results (unless it&#39;s the final page):&quot;);
+foreach (Database item in singlePage)
+{
+    Console.WriteLine(item);
+}
+// Store the pageToken, for when the next page is required.
+string nextPageToken = singlePage.NextPageToken;
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_PollOnceCreateDatabase_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.PollOnceCreateDatabase*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_PollOnceCreateDatabase_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.PollOnceCreateDatabase(System.String,Google.Api.Gax.Grpc.CallSettings)">PollOnceCreateDatabase(String, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Poll an operation once, using an <code>operationName</code> from a previous invocation of <code>CreateDatabase</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Operation&lt;Database, CreateDatabaseMetadata&gt; PollOnceCreateDatabase(string operationName, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">operationName</span></td>
+        <td><p>The name of a previously invoked operation. Must not be <code>null</code> or empty.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.Database.html">Database</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseMetadata.html">CreateDatabaseMetadata</a>&gt;</td>
+        <td><p>The result of polling the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_PollOnceCreateDatabaseAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.PollOnceCreateDatabaseAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_PollOnceCreateDatabaseAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.PollOnceCreateDatabaseAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">PollOnceCreateDatabaseAsync(String, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously poll an operation once, using an <code>operationName</code> from a previous invocation of <code>CreateDatabaseAsync</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;Database, CreateDatabaseMetadata&gt;&gt; PollOnceCreateDatabaseAsync(string operationName, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">operationName</span></td>
+        <td><p>The name of a previously invoked operation. Must not be <code>null</code> or empty.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.Database.html">Database</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseMetadata.html">CreateDatabaseMetadata</a>&gt;&gt;</td>
+        <td><p>A task representing the result of polling the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_PollOnceUpdateDatabaseDdl_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.PollOnceUpdateDatabaseDdl*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_PollOnceUpdateDatabaseDdl_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.PollOnceUpdateDatabaseDdl(System.String,Google.Api.Gax.Grpc.CallSettings)">PollOnceUpdateDatabaseDdl(String, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Poll an operation once, using an <code>operationName</code> from a previous invocation of <code>UpdateDatabaseDdl</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Operation&lt;Empty, UpdateDatabaseDdlMetadata&gt; PollOnceUpdateDatabaseDdl(string operationName, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">operationName</span></td>
+        <td><p>The name of a previously invoked operation. Must not be <code>null</code> or empty.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlMetadata.html">UpdateDatabaseDdlMetadata</a>&gt;</td>
+        <td><p>The result of polling the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_PollOnceUpdateDatabaseDdlAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.PollOnceUpdateDatabaseDdlAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_PollOnceUpdateDatabaseDdlAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.PollOnceUpdateDatabaseDdlAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">PollOnceUpdateDatabaseDdlAsync(String, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously poll an operation once, using an <code>operationName</code> from a previous invocation of <code>UpdateDatabaseDdlAsync</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;Empty, UpdateDatabaseDdlMetadata&gt;&gt; PollOnceUpdateDatabaseDdlAsync(string operationName, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">operationName</span></td>
+        <td><p>The name of a previously invoked operation. Must not be <code>null</code> or empty.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlMetadata.html">UpdateDatabaseDdlMetadata</a>&gt;&gt;</td>
+        <td><p>A task representing the result of polling the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_SetIamPolicy_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.SetIamPolicy*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_SetIamPolicy_Google_Cloud_Iam_V1_SetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.SetIamPolicy(Google.Cloud.Iam.V1.SetIamPolicyRequest,Google.Api.Gax.Grpc.CallSettings)">SetIamPolicy(SetIamPolicyRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets the access control policy on a database resource. Replaces any
+existing policy.</p>
+<p>Authorization requires <code>spanner.databases.setIamPolicy</code> permission on
+[resource][google.iam.v1.SetIamPolicyRequest.resource].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Policy SetIamPolicy(SetIamPolicyRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.SetIamPolicyRequest.html">SetIamPolicyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.Policy.html">Policy</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_SetIamPolicy_Google_Cloud_Iam_V1_SetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+// Initialize request argument(s)
+SetIamPolicyRequest request = new SetIamPolicyRequest
+{
+    Resource = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;).ToString(),
+    Policy = new Policy(),
+};
+// Make the request
+Policy response = databaseAdminClient.SetIamPolicy(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_SetIamPolicy_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.SetIamPolicy*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_SetIamPolicy_System_String_Google_Cloud_Iam_V1_Policy_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.SetIamPolicy(System.String,Google.Cloud.Iam.V1.Policy,Google.Api.Gax.Grpc.CallSettings)">SetIamPolicy(String, Policy, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets the access control policy on a database resource. Replaces any
+existing policy.</p>
+<p>Authorization requires <code>spanner.databases.setIamPolicy</code> permission on
+[resource][google.iam.v1.SetIamPolicyRequest.resource].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Policy SetIamPolicy(string resource, Policy policy, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">resource</span></td>
+        <td><p>REQUIRED: The resource for which the policy is being specified.
+<code>resource</code> is usually specified as a path. For example, a Project
+resource is specified as <code>projects/{project}</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.Policy.html">Policy</a></td>
+        <td><span class="parametername">policy</span></td>
+        <td><p>REQUIRED: The complete policy to be applied to the <code>resource</code>. The size of
+the policy is limited to a few 10s of KB. An empty policy is a
+valid policy but certain Cloud Platform services (such as Projects)
+might reject them.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.Policy.html">Policy</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_SetIamPolicy_System_String_Google_Cloud_Iam_V1_Policy_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+// Initialize request argument(s)
+string formattedResource = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;).ToString();
+Policy policy = new Policy();
+// Make the request
+Policy response = databaseAdminClient.SetIamPolicy(formattedResource, policy);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_SetIamPolicyAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.SetIamPolicyAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_SetIamPolicyAsync_Google_Cloud_Iam_V1_SetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.SetIamPolicyAsync(Google.Cloud.Iam.V1.SetIamPolicyRequest,Google.Api.Gax.Grpc.CallSettings)">SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets the access control policy on a database resource. Replaces any
+existing policy.</p>
+<p>Authorization requires <code>spanner.databases.setIamPolicy</code> permission on
+[resource][google.iam.v1.SetIamPolicyRequest.resource].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Policy&gt; SetIamPolicyAsync(SetIamPolicyRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.SetIamPolicyRequest.html">SetIamPolicyRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Iam.V1.Policy.html">Policy</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_SetIamPolicyAsync_Google_Cloud_Iam_V1_SetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+SetIamPolicyRequest request = new SetIamPolicyRequest
+{
+    Resource = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;).ToString(),
+    Policy = new Policy(),
+};
+// Make the request
+Policy response = await databaseAdminClient.SetIamPolicyAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_SetIamPolicyAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.SetIamPolicyAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_SetIamPolicyAsync_System_String_Google_Cloud_Iam_V1_Policy_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.SetIamPolicyAsync(System.String,Google.Cloud.Iam.V1.Policy,Google.Api.Gax.Grpc.CallSettings)">SetIamPolicyAsync(String, Policy, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets the access control policy on a database resource. Replaces any
+existing policy.</p>
+<p>Authorization requires <code>spanner.databases.setIamPolicy</code> permission on
+[resource][google.iam.v1.SetIamPolicyRequest.resource].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Policy&gt; SetIamPolicyAsync(string resource, Policy policy, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">resource</span></td>
+        <td><p>REQUIRED: The resource for which the policy is being specified.
+<code>resource</code> is usually specified as a path. For example, a Project
+resource is specified as <code>projects/{project}</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.Policy.html">Policy</a></td>
+        <td><span class="parametername">policy</span></td>
+        <td><p>REQUIRED: The complete policy to be applied to the <code>resource</code>. The size of
+the policy is limited to a few 10s of KB. An empty policy is a
+valid policy but certain Cloud Platform services (such as Projects)
+might reject them.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Iam.V1.Policy.html">Policy</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_SetIamPolicyAsync_System_String_Google_Cloud_Iam_V1_Policy_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+string formattedResource = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;).ToString();
+Policy policy = new Policy();
+// Make the request
+Policy response = await databaseAdminClient.SetIamPolicyAsync(formattedResource, policy);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_SetIamPolicyAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.SetIamPolicyAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_SetIamPolicyAsync_System_String_Google_Cloud_Iam_V1_Policy_System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.SetIamPolicyAsync(System.String,Google.Cloud.Iam.V1.Policy,System.Threading.CancellationToken)">SetIamPolicyAsync(String, Policy, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Sets the access control policy on a database resource. Replaces any
+existing policy.</p>
+<p>Authorization requires <code>spanner.databases.setIamPolicy</code> permission on
+[resource][google.iam.v1.SetIamPolicyRequest.resource].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Policy&gt; SetIamPolicyAsync(string resource, Policy policy, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">resource</span></td>
+        <td><p>REQUIRED: The resource for which the policy is being specified.
+<code>resource</code> is usually specified as a path. For example, a Project
+resource is specified as <code>projects/{project}</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.Policy.html">Policy</a></td>
+        <td><span class="parametername">policy</span></td>
+        <td><p>REQUIRED: The complete policy to be applied to the <code>resource</code>. The size of
+the policy is limited to a few 10s of KB. An empty policy is a
+valid policy but certain Cloud Platform services (such as Projects)
+might reject them.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Iam.V1.Policy.html">Policy</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_SetIamPolicyAsync_System_String_Google_Cloud_Iam_V1_Policy_System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+string formattedResource = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;).ToString();
+Policy policy = new Policy();
+// Make the request
+Policy response = await databaseAdminClient.SetIamPolicyAsync(formattedResource, policy);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_ShutdownDefaultChannelsAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.ShutdownDefaultChannelsAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_ShutdownDefaultChannelsAsync" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.ShutdownDefaultChannelsAsync">ShutdownDefaultChannelsAsync()</h4>
+  <div class="markdown level1 summary"><p>Shuts down any channels automatically created by <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_">Create(ServiceEndpoint, DatabaseAdminSettings)</a>
+and <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_">CreateAsync(ServiceEndpoint, DatabaseAdminSettings)</a>. Channels which weren&apos;t automatically
+created are not affected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task ShutdownDefaultChannelsAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task representing the asynchronous shutdown operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_ShutdownDefaultChannelsAsync_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>After calling this method, further calls to <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_">Create(ServiceEndpoint, DatabaseAdminSettings)</a>
+and <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_">CreateAsync(ServiceEndpoint, DatabaseAdminSettings)</a> will create new channels, which could
+in turn be shut down by another call to this method.</p>
+</div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_TestIamPermissions_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.TestIamPermissions*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_TestIamPermissions_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.TestIamPermissions(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Google.Api.Gax.Grpc.CallSettings)">TestIamPermissions(TestIamPermissionsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns permissions that the caller has on the specified database resource.</p>
+<p>Attempting this RPC on a non-existent Cloud Spanner database will result in
+a NOT_FOUND error if the user has <code>spanner.databases.list</code> permission on
+the containing Cloud Spanner instance. Otherwise returns an empty set of
+permissions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual TestIamPermissionsResponse TestIamPermissions(TestIamPermissionsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.TestIamPermissionsRequest.html">TestIamPermissionsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.TestIamPermissionsResponse.html">TestIamPermissionsResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_TestIamPermissions_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+// Initialize request argument(s)
+TestIamPermissionsRequest request = new TestIamPermissionsRequest
+{
+    Resource = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;).ToString(),
+    Permissions = { },
+};
+// Make the request
+TestIamPermissionsResponse response = databaseAdminClient.TestIamPermissions(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_TestIamPermissions_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.TestIamPermissions*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_TestIamPermissions_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.TestIamPermissions(System.String,System.Collections.Generic.IEnumerable{System.String},Google.Api.Gax.Grpc.CallSettings)">TestIamPermissions(String, IEnumerable&lt;String&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns permissions that the caller has on the specified database resource.</p>
+<p>Attempting this RPC on a non-existent Cloud Spanner database will result in
+a NOT_FOUND error if the user has <code>spanner.databases.list</code> permission on
+the containing Cloud Spanner instance. Otherwise returns an empty set of
+permissions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual TestIamPermissionsResponse TestIamPermissions(string resource, IEnumerable&lt;string&gt; permissions, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">resource</span></td>
+        <td><p>REQUIRED: The resource for which the policy detail is being requested.
+<code>resource</code> is usually specified as a path. For example, a Project
+resource is specified as <code>projects/{project}</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">permissions</span></td>
+        <td><p>The set of permissions to check for the <code>resource</code>. Permissions with
+wildcards (such as &apos;<em>&apos; or &apos;storage.</em>&apos;) are not allowed. For more
+information see
+<a href="https://cloud.google.com/iam/docs/overview#permissions">IAM Overview</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.TestIamPermissionsResponse.html">TestIamPermissionsResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_TestIamPermissions_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+// Initialize request argument(s)
+string formattedResource = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;).ToString();
+IEnumerable&lt;string&gt; permissions = new List&lt;string&gt;();
+// Make the request
+TestIamPermissionsResponse response = databaseAdminClient.TestIamPermissions(formattedResource, permissions);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_TestIamPermissionsAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.TestIamPermissionsAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_TestIamPermissionsAsync_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.TestIamPermissionsAsync(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Google.Api.Gax.Grpc.CallSettings)">TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns permissions that the caller has on the specified database resource.</p>
+<p>Attempting this RPC on a non-existent Cloud Spanner database will result in
+a NOT_FOUND error if the user has <code>spanner.databases.list</code> permission on
+the containing Cloud Spanner instance. Otherwise returns an empty set of
+permissions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;TestIamPermissionsResponse&gt; TestIamPermissionsAsync(TestIamPermissionsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Iam.V1.TestIamPermissionsRequest.html">TestIamPermissionsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Iam.V1.TestIamPermissionsResponse.html">TestIamPermissionsResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_TestIamPermissionsAsync_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+TestIamPermissionsRequest request = new TestIamPermissionsRequest
+{
+    Resource = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;).ToString(),
+    Permissions = { },
+};
+// Make the request
+TestIamPermissionsResponse response = await databaseAdminClient.TestIamPermissionsAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_TestIamPermissionsAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.TestIamPermissionsAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_TestIamPermissionsAsync_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.TestIamPermissionsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},Google.Api.Gax.Grpc.CallSettings)">TestIamPermissionsAsync(String, IEnumerable&lt;String&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns permissions that the caller has on the specified database resource.</p>
+<p>Attempting this RPC on a non-existent Cloud Spanner database will result in
+a NOT_FOUND error if the user has <code>spanner.databases.list</code> permission on
+the containing Cloud Spanner instance. Otherwise returns an empty set of
+permissions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;TestIamPermissionsResponse&gt; TestIamPermissionsAsync(string resource, IEnumerable&lt;string&gt; permissions, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">resource</span></td>
+        <td><p>REQUIRED: The resource for which the policy detail is being requested.
+<code>resource</code> is usually specified as a path. For example, a Project
+resource is specified as <code>projects/{project}</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">permissions</span></td>
+        <td><p>The set of permissions to check for the <code>resource</code>. Permissions with
+wildcards (such as &apos;<em>&apos; or &apos;storage.</em>&apos;) are not allowed. For more
+information see
+<a href="https://cloud.google.com/iam/docs/overview#permissions">IAM Overview</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Iam.V1.TestIamPermissionsResponse.html">TestIamPermissionsResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_TestIamPermissionsAsync_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+string formattedResource = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;).ToString();
+IEnumerable&lt;string&gt; permissions = new List&lt;string&gt;();
+// Make the request
+TestIamPermissionsResponse response = await databaseAdminClient.TestIamPermissionsAsync(formattedResource, permissions);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_TestIamPermissionsAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.TestIamPermissionsAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_TestIamPermissionsAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.TestIamPermissionsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">TestIamPermissionsAsync(String, IEnumerable&lt;String&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Returns permissions that the caller has on the specified database resource.</p>
+<p>Attempting this RPC on a non-existent Cloud Spanner database will result in
+a NOT_FOUND error if the user has <code>spanner.databases.list</code> permission on
+the containing Cloud Spanner instance. Otherwise returns an empty set of
+permissions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;TestIamPermissionsResponse&gt; TestIamPermissionsAsync(string resource, IEnumerable&lt;string&gt; permissions, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">resource</span></td>
+        <td><p>REQUIRED: The resource for which the policy detail is being requested.
+<code>resource</code> is usually specified as a path. For example, a Project
+resource is specified as <code>projects/{project}</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">permissions</span></td>
+        <td><p>The set of permissions to check for the <code>resource</code>. Permissions with
+wildcards (such as &apos;<em>&apos; or &apos;storage.</em>&apos;) are not allowed. For more
+information see
+<a href="https://cloud.google.com/iam/docs/overview#permissions">IAM Overview</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Iam.V1.TestIamPermissionsResponse.html">TestIamPermissionsResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_TestIamPermissionsAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+string formattedResource = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;).ToString();
+IEnumerable&lt;string&gt; permissions = new List&lt;string&gt;();
+// Make the request
+TestIamPermissionsResponse response = await databaseAdminClient.TestIamPermissionsAsync(formattedResource, permissions);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_UpdateDatabaseDdl_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdl*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_UpdateDatabaseDdl_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdl(Google.Cloud.Spanner.Admin.Database.V1.DatabaseName,System.Collections.Generic.IEnumerable{System.String},Google.Api.Gax.Grpc.CallSettings)">UpdateDatabaseDdl(DatabaseName, IEnumerable&lt;String&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates the schema of a Cloud Spanner database by
+creating/altering/dropping tables, columns, indexes, etc. The returned
+[long-running operation][google.longrunning.Operation] will have a name of
+the format <code>&amp;lt;database_name&gt;/operations/&amp;lt;operation_id&gt;</code> and can be used to
+track execution of the schema change(s). The
+[metadata][google.longrunning.Operation.metadata] field type is
+[UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Operation&lt;Empty, UpdateDatabaseDdlMetadata&gt; UpdateDatabaseDdl(DatabaseName database, IEnumerable&lt;string&gt; statements, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.html">DatabaseName</a></td>
+        <td><span class="parametername">database</span></td>
+        <td><p>Required. The database to update.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">statements</span></td>
+        <td><p>DDL statements to be applied to the database.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlMetadata.html">UpdateDatabaseDdlMetadata</a>&gt;</td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_UpdateDatabaseDdl_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+// Initialize request argument(s)
+DatabaseName database = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;);
+IEnumerable&lt;string&gt; statements = new List&lt;string&gt;();
+// Make the request
+Operation&lt;Empty, UpdateDatabaseDdlMetadata&gt; response =
+    databaseAdminClient.UpdateDatabaseDdl(database, statements);
+
+// Poll until the returned long-running operation is complete
+Operation&lt;Empty, UpdateDatabaseDdlMetadata&gt; completedResponse =
+    response.PollUntilCompleted();
+// The long-running operation is now complete.
+
+// Or get the name of the operation
+string operationName = response.Name;
+// This name can be stored, then the long-running operation retrieved later by name
+Operation&lt;Empty, UpdateDatabaseDdlMetadata&gt; retrievedResponse =
+    databaseAdminClient.PollOnceUpdateDatabaseDdl(operationName);
+// Check if the retrieved long-running operation has completed
+if (retrievedResponse.IsCompleted)
+{
+    // The long-running operation is now complete.
+}
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_UpdateDatabaseDdl_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdl*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_UpdateDatabaseDdl_Google_Cloud_Spanner_Admin_Database_V1_UpdateDatabaseDdlRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdl(Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateDatabaseDdl(UpdateDatabaseDdlRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates the schema of a Cloud Spanner database by
+creating/altering/dropping tables, columns, indexes, etc. The returned
+[long-running operation][google.longrunning.Operation] will have a name of
+the format <code>&amp;lt;database_name&gt;/operations/&amp;lt;operation_id&gt;</code> and can be used to
+track execution of the schema change(s). The
+[metadata][google.longrunning.Operation.metadata] field type is
+[UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Operation&lt;Empty, UpdateDatabaseDdlMetadata&gt; UpdateDatabaseDdl(UpdateDatabaseDdlRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest.html">UpdateDatabaseDdlRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlMetadata.html">UpdateDatabaseDdlMetadata</a>&gt;</td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_UpdateDatabaseDdl_Google_Cloud_Spanner_Admin_Database_V1_UpdateDatabaseDdlRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+// Initialize request argument(s)
+UpdateDatabaseDdlRequest request = new UpdateDatabaseDdlRequest
+{
+    DatabaseAsDatabaseName = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;),
+    Statements = { },
+};
+// Make the request
+Operation&lt;Empty, UpdateDatabaseDdlMetadata&gt; response =
+    databaseAdminClient.UpdateDatabaseDdl(request);
+
+// Poll until the returned long-running operation is complete
+Operation&lt;Empty, UpdateDatabaseDdlMetadata&gt; completedResponse =
+    response.PollUntilCompleted();
+// The long-running operation is now complete.
+
+// Or get the name of the operation
+string operationName = response.Name;
+// This name can be stored, then the long-running operation retrieved later by name
+Operation&lt;Empty, UpdateDatabaseDdlMetadata&gt; retrievedResponse =
+    databaseAdminClient.PollOnceUpdateDatabaseDdl(operationName);
+// Check if the retrieved long-running operation has completed
+if (retrievedResponse.IsCompleted)
+{
+    // The long-running operation is now complete.
+}
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_UpdateDatabaseDdlAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdlAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_UpdateDatabaseDdlAsync_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdlAsync(Google.Cloud.Spanner.Admin.Database.V1.DatabaseName,System.Collections.Generic.IEnumerable{System.String},Google.Api.Gax.Grpc.CallSettings)">UpdateDatabaseDdlAsync(DatabaseName, IEnumerable&lt;String&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates the schema of a Cloud Spanner database by
+creating/altering/dropping tables, columns, indexes, etc. The returned
+[long-running operation][google.longrunning.Operation] will have a name of
+the format <code>&amp;lt;database_name&gt;/operations/&amp;lt;operation_id&gt;</code> and can be used to
+track execution of the schema change(s). The
+[metadata][google.longrunning.Operation.metadata] field type is
+[UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;Empty, UpdateDatabaseDdlMetadata&gt;&gt; UpdateDatabaseDdlAsync(DatabaseName database, IEnumerable&lt;string&gt; statements, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.html">DatabaseName</a></td>
+        <td><span class="parametername">database</span></td>
+        <td><p>Required. The database to update.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">statements</span></td>
+        <td><p>DDL statements to be applied to the database.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlMetadata.html">UpdateDatabaseDdlMetadata</a>&gt;&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_UpdateDatabaseDdlAsync_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+DatabaseName database = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;);
+IEnumerable&lt;string&gt; statements = new List&lt;string&gt;();
+// Make the request
+Operation&lt;Empty, UpdateDatabaseDdlMetadata&gt; response =
+    await databaseAdminClient.UpdateDatabaseDdlAsync(database, statements);
+
+// Poll until the returned long-running operation is complete
+Operation&lt;Empty, UpdateDatabaseDdlMetadata&gt; completedResponse =
+    await response.PollUntilCompletedAsync();
+// The long-running operation is now complete.
+
+// Or get the name of the operation
+string operationName = response.Name;
+// This name can be stored, then the long-running operation retrieved later by name
+Operation&lt;Empty, UpdateDatabaseDdlMetadata&gt; retrievedResponse =
+    await databaseAdminClient.PollOnceUpdateDatabaseDdlAsync(operationName);
+// Check if the retrieved long-running operation has completed
+if (retrievedResponse.IsCompleted)
+{
+    // The long-running operation is now complete.
+}
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_UpdateDatabaseDdlAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdlAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_UpdateDatabaseDdlAsync_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdlAsync(Google.Cloud.Spanner.Admin.Database.V1.DatabaseName,System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">UpdateDatabaseDdlAsync(DatabaseName, IEnumerable&lt;String&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Updates the schema of a Cloud Spanner database by
+creating/altering/dropping tables, columns, indexes, etc. The returned
+[long-running operation][google.longrunning.Operation] will have a name of
+the format <code>&amp;lt;database_name&gt;/operations/&amp;lt;operation_id&gt;</code> and can be used to
+track execution of the schema change(s). The
+[metadata][google.longrunning.Operation.metadata] field type is
+[UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;Empty, UpdateDatabaseDdlMetadata&gt;&gt; UpdateDatabaseDdlAsync(DatabaseName database, IEnumerable&lt;string&gt; statements, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.html">DatabaseName</a></td>
+        <td><span class="parametername">database</span></td>
+        <td><p>Required. The database to update.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">statements</span></td>
+        <td><p>DDL statements to be applied to the database.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlMetadata.html">UpdateDatabaseDdlMetadata</a>&gt;&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_UpdateDatabaseDdlAsync_Google_Cloud_Spanner_Admin_Database_V1_DatabaseName_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+DatabaseName database = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;);
+IEnumerable&lt;string&gt; statements = new List&lt;string&gt;();
+// Make the request
+Operation&lt;Empty, UpdateDatabaseDdlMetadata&gt; response =
+    await databaseAdminClient.UpdateDatabaseDdlAsync(database, statements);
+
+// Poll until the returned long-running operation is complete
+Operation&lt;Empty, UpdateDatabaseDdlMetadata&gt; completedResponse =
+    await response.PollUntilCompletedAsync();
+// The long-running operation is now complete.
+
+// Or get the name of the operation
+string operationName = response.Name;
+// This name can be stored, then the long-running operation retrieved later by name
+Operation&lt;Empty, UpdateDatabaseDdlMetadata&gt; retrievedResponse =
+    await databaseAdminClient.PollOnceUpdateDatabaseDdlAsync(operationName);
+// Check if the retrieved long-running operation has completed
+if (retrievedResponse.IsCompleted)
+{
+    // The long-running operation is now complete.
+}
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_UpdateDatabaseDdlAsync_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdlAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_UpdateDatabaseDdlAsync_Google_Cloud_Spanner_Admin_Database_V1_UpdateDatabaseDdlRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdlAsync(Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateDatabaseDdlAsync(UpdateDatabaseDdlRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates the schema of a Cloud Spanner database by
+creating/altering/dropping tables, columns, indexes, etc. The returned
+[long-running operation][google.longrunning.Operation] will have a name of
+the format <code>&amp;lt;database_name&gt;/operations/&amp;lt;operation_id&gt;</code> and can be used to
+track execution of the schema change(s). The
+[metadata][google.longrunning.Operation.metadata] field type is
+[UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;Empty, UpdateDatabaseDdlMetadata&gt;&gt; UpdateDatabaseDdlAsync(UpdateDatabaseDdlRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest.html">UpdateDatabaseDdlRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation-2.html">Operation</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlMetadata.html">UpdateDatabaseDdlMetadata</a>&gt;&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_UpdateDatabaseDdlAsync_Google_Cloud_Spanner_Admin_Database_V1_UpdateDatabaseDdlRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+// Initialize request argument(s)
+UpdateDatabaseDdlRequest request = new UpdateDatabaseDdlRequest
+{
+    DatabaseAsDatabaseName = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;),
+    Statements = { },
+};
+// Make the request
+Operation&lt;Empty, UpdateDatabaseDdlMetadata&gt; response =
+    await databaseAdminClient.UpdateDatabaseDdlAsync(request);
+
+// Poll until the returned long-running operation is complete
+Operation&lt;Empty, UpdateDatabaseDdlMetadata&gt; completedResponse =
+    await response.PollUntilCompletedAsync();
+// The long-running operation is now complete.
+
+// Or get the name of the operation
+string operationName = response.Name;
+// This name can be stored, then the long-running operation retrieved later by name
+Operation&lt;Empty, UpdateDatabaseDdlMetadata&gt; retrievedResponse =
+    await databaseAdminClient.PollOnceUpdateDatabaseDdlAsync(operationName);
+// Check if the retrieved long-running operation has completed
+if (retrievedResponse.IsCompleted)
+{
+    // The long-running operation is now complete.
+}
+</code></pre></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

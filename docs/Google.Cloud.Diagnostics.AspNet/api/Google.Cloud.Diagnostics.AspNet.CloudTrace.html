@@ -128,9 +128,10 @@ trace data can be collected manually.</p>
 
   <pre><code>public void DoSomething()
 {
-    CloudTrace.Tracer.StartSpan(&quot;DoSomething&quot;);
-    ...
-    CloudTrace.Tracer.EndSpan();
+    using (CloudTrace.Tracer.StartSpan(&quot;DoSomething&quot;))
+    {
+        ...
+    }
 }</code></pre>
 
   <h3 id="fields">Fields

@@ -1,0 +1,1097 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PostalAddress
+   | Google.Cloud.Spanner.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PostalAddress
+   | Google.Cloud.Spanner.V1 ">
+    <meta name="generator" content="docfx 2.20.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Type.PostalAddress">
+  
+  
+  <h1 id="Google_Type_PostalAddress" data-uid="Google.Type.PostalAddress" class="text-break">Class PostalAddress
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a postal address, e.g. for postal delivery or payments addresses.
+Given a postal address, a postal service can deliver items to a premise, P.O.
+Box or similar.
+It is not intended to model geographical locations (roads, towns,
+mountains).</p>
+<p>In typical usage an address would be created via user input or from importing
+existing data, depending on the type of process.</p>
+<p>Advice on address input / editing:</p>
+<ul>
+<li>Use an i18n-ready address widget such as
+<a href="https://github.com/googlei18n/libaddressinput">https://github.com/googlei18n/libaddressinput</a>)</li>
+<li>Users should not be presented with UI elements for input or editing of
+fields outside countries where that field is used.</li>
+</ul>
+<p>For more guidance on how to use this schema, please see:
+<a href="https://support.google.com/business/answer/6397478">https://support.google.com/business/answer/6397478</a></p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">PostalAddress</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Type.html">Google.Type</a></h6>
+  <h6><strong>Assembly</strong>: Google.Api.CommonProtos.dll</h6>
+  <h5 id="Google_Type_PostalAddress_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class PostalAddress : IMessage&lt;PostalAddress&gt;, IMessage, IEquatable&lt;PostalAddress&gt;, IDeepCloneable&lt;PostalAddress&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Google_Type_PostalAddress__ctor_" data-uid="Google.Type.PostalAddress.#ctor*"></a>
+  <h4 id="Google_Type_PostalAddress__ctor" data-uid="Google.Type.PostalAddress.#ctor">PostalAddress()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PostalAddress()</code></pre>
+  </div>
+  <a id="Google_Type_PostalAddress__ctor_" data-uid="Google.Type.PostalAddress.#ctor*"></a>
+  <h4 id="Google_Type_PostalAddress__ctor_Google_Type_PostalAddress_" data-uid="Google.Type.PostalAddress.#ctor(Google.Type.PostalAddress)">PostalAddress(PostalAddress)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PostalAddress(PostalAddress other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Type.PostalAddress.html">PostalAddress</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <h4 id="Google_Type_PostalAddress_AddressLinesFieldNumber" data-uid="Google.Type.PostalAddress.AddressLinesFieldNumber">AddressLinesFieldNumber</h4>
+  <div class="markdown level1 summary"><p>Field number for the &quot;address_lines&quot; field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int AddressLinesFieldNumber = 9</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Google_Type_PostalAddress_AdministrativeAreaFieldNumber" data-uid="Google.Type.PostalAddress.AdministrativeAreaFieldNumber">AdministrativeAreaFieldNumber</h4>
+  <div class="markdown level1 summary"><p>Field number for the &quot;administrative_area&quot; field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int AdministrativeAreaFieldNumber = 6</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Google_Type_PostalAddress_LanguageCodeFieldNumber" data-uid="Google.Type.PostalAddress.LanguageCodeFieldNumber">LanguageCodeFieldNumber</h4>
+  <div class="markdown level1 summary"><p>Field number for the &quot;language_code&quot; field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int LanguageCodeFieldNumber = 3</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Google_Type_PostalAddress_LocalityFieldNumber" data-uid="Google.Type.PostalAddress.LocalityFieldNumber">LocalityFieldNumber</h4>
+  <div class="markdown level1 summary"><p>Field number for the &quot;locality&quot; field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int LocalityFieldNumber = 7</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Google_Type_PostalAddress_OrganizationFieldNumber" data-uid="Google.Type.PostalAddress.OrganizationFieldNumber">OrganizationFieldNumber</h4>
+  <div class="markdown level1 summary"><p>Field number for the &quot;organization&quot; field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int OrganizationFieldNumber = 11</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Google_Type_PostalAddress_PostalCodeFieldNumber" data-uid="Google.Type.PostalAddress.PostalCodeFieldNumber">PostalCodeFieldNumber</h4>
+  <div class="markdown level1 summary"><p>Field number for the &quot;postal_code&quot; field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PostalCodeFieldNumber = 4</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Google_Type_PostalAddress_RecipientsFieldNumber" data-uid="Google.Type.PostalAddress.RecipientsFieldNumber">RecipientsFieldNumber</h4>
+  <div class="markdown level1 summary"><p>Field number for the &quot;recipients&quot; field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int RecipientsFieldNumber = 10</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Google_Type_PostalAddress_RegionCodeFieldNumber" data-uid="Google.Type.PostalAddress.RegionCodeFieldNumber">RegionCodeFieldNumber</h4>
+  <div class="markdown level1 summary"><p>Field number for the &quot;region_code&quot; field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int RegionCodeFieldNumber = 2</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Google_Type_PostalAddress_RevisionFieldNumber" data-uid="Google.Type.PostalAddress.RevisionFieldNumber">RevisionFieldNumber</h4>
+  <div class="markdown level1 summary"><p>Field number for the &quot;revision&quot; field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int RevisionFieldNumber = 1</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Google_Type_PostalAddress_SortingCodeFieldNumber" data-uid="Google.Type.PostalAddress.SortingCodeFieldNumber">SortingCodeFieldNumber</h4>
+  <div class="markdown level1 summary"><p>Field number for the &quot;sorting_code&quot; field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int SortingCodeFieldNumber = 5</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Google_Type_PostalAddress_SublocalityFieldNumber" data-uid="Google.Type.PostalAddress.SublocalityFieldNumber">SublocalityFieldNumber</h4>
+  <div class="markdown level1 summary"><p>Field number for the &quot;sublocality&quot; field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int SublocalityFieldNumber = 8</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Type_PostalAddress_AddressLines_" data-uid="Google.Type.PostalAddress.AddressLines*"></a>
+  <h4 id="Google_Type_PostalAddress_AddressLines" data-uid="Google.Type.PostalAddress.AddressLines">AddressLines</h4>
+  <div class="markdown level1 summary"><p>Unstructured address lines describing the lower levels of an address.</p>
+<p>Because values in address_lines do not have type information and may
+sometimes contain multiple values in a single field (e.g.
+&quot;Austin, TX&quot;), it is important that the line order is clear. The order of
+address lines should be &quot;envelope order&quot; for the country/region of the
+address. In places where this can vary (e.g. Japan), address_language is
+used to make it explicit (e.g. &quot;ja&quot; for large-to-small ordering and
+&quot;ja-Latn&quot; or &quot;en&quot; for small-to-large). This way, the most specific line of
+an address can be selected based on the language.</p>
+<p>The minimum permitted structural representation of an address consists
+of a region_code with all remaining information placed in the
+address_lines. It would be possible to format such an address very
+approximately without geocoding, but no semantic reasoning could be
+made about any of the address components until it was at least
+partially resolved.</p>
+<p>Creating an address only containing a region_code and address_lines, and
+then geocoding is the recommended way to handle completely unstructured
+addresses (as opposed to guessing which parts of the address should be
+localities or administrative areas).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;string&gt; AddressLines { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Type_PostalAddress_AdministrativeArea_" data-uid="Google.Type.PostalAddress.AdministrativeArea*"></a>
+  <h4 id="Google_Type_PostalAddress_AdministrativeArea" data-uid="Google.Type.PostalAddress.AdministrativeArea">AdministrativeArea</h4>
+  <div class="markdown level1 summary"><p>Optional. Highest administrative subdivision which is used for postal
+addresses of a country or region.
+For example, this can be a state, a province, an oblast, or a prefecture.
+Specifically, for Spain this is the province and not the autonomous
+community (e.g. &quot;Barcelona&quot; and not &quot;Catalonia&quot;).
+Many countries don&apos;t use an administrative area in postal addresses. E.g.
+in Switzerland this should be left unpopulated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AdministrativeArea { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Type_PostalAddress_Descriptor_" data-uid="Google.Type.PostalAddress.Descriptor*"></a>
+  <h4 id="Google_Type_PostalAddress_Descriptor" data-uid="Google.Type.PostalAddress.Descriptor">Descriptor</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html">MessageDescriptor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Type_PostalAddress_LanguageCode_" data-uid="Google.Type.PostalAddress.LanguageCode*"></a>
+  <h4 id="Google_Type_PostalAddress_LanguageCode" data-uid="Google.Type.PostalAddress.LanguageCode">LanguageCode</h4>
+  <div class="markdown level1 summary"><p>Optional. BCP-47 language code of the contents of this address (if
+known). This is often the UI language of the input form or is expected
+to match one of the languages used in the address&apos; country/region, or their
+transliterated equivalents.
+This can affect formatting in certain countries, but is not critical
+to the correctness of the data and will never affect any validation or
+other non-formatting related operations.</p>
+<p>If this value is not known, it should be omitted (rather than specifying a
+possibly incorrect default).</p>
+<p>Examples: &quot;zh-Hant&quot;, &quot;ja&quot;, &quot;ja-Latn&quot;, &quot;en&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LanguageCode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Type_PostalAddress_Locality_" data-uid="Google.Type.PostalAddress.Locality*"></a>
+  <h4 id="Google_Type_PostalAddress_Locality" data-uid="Google.Type.PostalAddress.Locality">Locality</h4>
+  <div class="markdown level1 summary"><p>Optional. Generally refers to the city/town portion of the address.
+Examples: US city, IT comune, UK post town.
+In regions of the world where localities are not well defined or do not fit
+into this structure well, leave locality empty and use address_lines.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Locality { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Type_PostalAddress_Organization_" data-uid="Google.Type.PostalAddress.Organization*"></a>
+  <h4 id="Google_Type_PostalAddress_Organization" data-uid="Google.Type.PostalAddress.Organization">Organization</h4>
+  <div class="markdown level1 summary"><p>Optional. The name of the organization at the address.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Organization { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Type_PostalAddress_Parser_" data-uid="Google.Type.PostalAddress.Parser*"></a>
+  <h4 id="Google_Type_PostalAddress_Parser" data-uid="Google.Type.PostalAddress.Parser">Parser</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MessageParser&lt;PostalAddress&gt; Parser { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.MessageParser-1.html">MessageParser</a>&lt;<a class="xref" href="Google.Type.PostalAddress.html">PostalAddress</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Type_PostalAddress_PostalCode_" data-uid="Google.Type.PostalAddress.PostalCode*"></a>
+  <h4 id="Google_Type_PostalAddress_PostalCode" data-uid="Google.Type.PostalAddress.PostalCode">PostalCode</h4>
+  <div class="markdown level1 summary"><p>Optional. Postal code of the address. Not all countries use or require
+postal codes to be present, but where they are used, they may trigger
+additional validation with other parts of the address (e.g. state/zip
+validation in the U.S.A.).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PostalCode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Type_PostalAddress_Recipients_" data-uid="Google.Type.PostalAddress.Recipients*"></a>
+  <h4 id="Google_Type_PostalAddress_Recipients" data-uid="Google.Type.PostalAddress.Recipients">Recipients</h4>
+  <div class="markdown level1 summary"><p>Optional. The recipient at the address.
+This field may, under certain circumstances, contain multiline information.
+For example, it might contain &quot;care of&quot; information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;string&gt; Recipients { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Type_PostalAddress_RegionCode_" data-uid="Google.Type.PostalAddress.RegionCode*"></a>
+  <h4 id="Google_Type_PostalAddress_RegionCode" data-uid="Google.Type.PostalAddress.RegionCode">RegionCode</h4>
+  <div class="markdown level1 summary"><p>Required. CLDR region code of the country/region of the address. This
+is never inferred and it is up to the user to ensure the value is
+correct. See <a href="http://cldr.unicode.org/">http://cldr.unicode.org/</a> and
+<a href="http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html">http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html</a>
+for details. Example: &quot;CH&quot; for Switzerland.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string RegionCode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Type_PostalAddress_Revision_" data-uid="Google.Type.PostalAddress.Revision*"></a>
+  <h4 id="Google_Type_PostalAddress_Revision" data-uid="Google.Type.PostalAddress.Revision">Revision</h4>
+  <div class="markdown level1 summary"><p>The schema revision of the <code>PostalAddress</code>.
+All new revisions <strong>must</strong> be backward compatible with old revisions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Revision { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Type_PostalAddress_SortingCode_" data-uid="Google.Type.PostalAddress.SortingCode*"></a>
+  <h4 id="Google_Type_PostalAddress_SortingCode" data-uid="Google.Type.PostalAddress.SortingCode">SortingCode</h4>
+  <div class="markdown level1 summary"><p>Optional. Additional, country-specific, sorting code. This is not used
+in most regions. Where it is used, the value is either a string like
+&quot;CEDEX&quot;, optionally followed by a number (e.g. &quot;CEDEX 7&quot;), or just a number
+alone, representing the &quot;sector code&quot; (Jamaica), &quot;delivery area indicator&quot;
+(Malawi) or &quot;post office indicator&quot; (e.g. Côte d&apos;Ivoire).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SortingCode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Type_PostalAddress_Sublocality_" data-uid="Google.Type.PostalAddress.Sublocality*"></a>
+  <h4 id="Google_Type_PostalAddress_Sublocality" data-uid="Google.Type.PostalAddress.Sublocality">Sublocality</h4>
+  <div class="markdown level1 summary"><p>Optional. Sublocality of the address.
+For example, this can be neighborhoods, boroughs, districts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Sublocality { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Type_PostalAddress_CalculateSize_" data-uid="Google.Type.PostalAddress.CalculateSize*"></a>
+  <h4 id="Google_Type_PostalAddress_CalculateSize" data-uid="Google.Type.PostalAddress.CalculateSize">CalculateSize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CalculateSize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
+  <a id="Google_Type_PostalAddress_Clone_" data-uid="Google.Type.PostalAddress.Clone*"></a>
+  <h4 id="Google_Type_PostalAddress_Clone" data-uid="Google.Type.PostalAddress.Clone">Clone()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PostalAddress Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Type.PostalAddress.html">PostalAddress</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;T&gt;.Clone()</a></div>
+  <a id="Google_Type_PostalAddress_Equals_" data-uid="Google.Type.PostalAddress.Equals*"></a>
+  <h4 id="Google_Type_PostalAddress_Equals_Google_Type_PostalAddress_" data-uid="Google.Type.PostalAddress.Equals(Google.Type.PostalAddress)">Equals(PostalAddress)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(PostalAddress other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Type.PostalAddress.html">PostalAddress</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.IEquatable&lt;T&gt;.Equals(T)</span></div>
+  <a id="Google_Type_PostalAddress_Equals_" data-uid="Google.Type.PostalAddress.Equals*"></a>
+  <h4 id="Google_Type_PostalAddress_Equals_System_Object_" data-uid="Google.Type.PostalAddress.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+  <a id="Google_Type_PostalAddress_GetHashCode_" data-uid="Google.Type.PostalAddress.GetHashCode*"></a>
+  <h4 id="Google_Type_PostalAddress_GetHashCode" data-uid="Google.Type.PostalAddress.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
+  <a id="Google_Type_PostalAddress_MergeFrom_" data-uid="Google.Type.PostalAddress.MergeFrom*"></a>
+  <h4 id="Google_Type_PostalAddress_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Type.PostalAddress.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void MergeFrom(CodedInputStream input)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.CodedInputStream.html">CodedInputStream</a></td>
+        <td><span class="parametername">input</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
+  <a id="Google_Type_PostalAddress_MergeFrom_" data-uid="Google.Type.PostalAddress.MergeFrom*"></a>
+  <h4 id="Google_Type_PostalAddress_MergeFrom_Google_Type_PostalAddress_" data-uid="Google.Type.PostalAddress.MergeFrom(Google.Type.PostalAddress)">MergeFrom(PostalAddress)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void MergeFrom(PostalAddress other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Type.PostalAddress.html">PostalAddress</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;T&gt;.MergeFrom(T)</a></div>
+  <a id="Google_Type_PostalAddress_ToString_" data-uid="Google.Type.PostalAddress.ToString*"></a>
+  <h4 id="Google_Type_PostalAddress_ToString" data-uid="Google.Type.PostalAddress.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
+  <a id="Google_Type_PostalAddress_WriteTo_" data-uid="Google.Type.PostalAddress.WriteTo*"></a>
+  <h4 id="Google_Type_PostalAddress_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Type.PostalAddress.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteTo(CodedOutputStream output)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html">CodedOutputStream</a></td>
+        <td><span class="parametername">output</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <a id="Google_Type_PostalAddress_Google_Protobuf_IMessage_Descriptor_" data-uid="Google.Type.PostalAddress.Google#Protobuf#IMessage#Descriptor*"></a>
+  <h4 id="Google_Type_PostalAddress_Google_Protobuf_IMessage_Descriptor" data-uid="Google.Type.PostalAddress.Google#Protobuf#IMessage#Descriptor">IMessage.Descriptor</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html">MessageDescriptor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_Descriptor">IMessage.Descriptor</a></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

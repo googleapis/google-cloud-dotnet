@@ -64,21 +64,8 @@
 <p>The <code>Google.Cloud.BigQuery.V2</code> package wraps a lot of the functionality of
 the underlying REST API. This document lays out the patterns
 involved to help guide further API extensions.</p>
-<h2 id="status">Status</h2>
-<p>This package is effectively experimental at this time. Some
-functionality is missing, and a lot is likely to change. Big ticket
-work items:</p>
-<ul>
-<li>Review query approach, exposing more information and being more
-consistent</li>
-<li>Alternative approaches for providing data and schema, e.g. simple property
-binding. (Note: we&#39;re not trying to become an ORM...)</li>
-<li>Async operations. (API design is progressing with sync-only
-operations; asynchrony will be added when we&#39;re done with that
-first pass.)</li>
-</ul>
 <h2 id="bigqueryclient"><code>BigQueryClient</code></h2>
-<p>Like other API wrappers, <code>BigQueryClient</code> is the entry point for
+<p>Like other REST API wrappers, <code>BigQueryClient</code> is the entry point for
 everything. This is an abstract class (to allow for mocking) with
 <code>Create</code>/<code>CreateAsync</code> static methods which construct instances of
 <code>BigQueryClientImpl</code>. The implementation can be constructed directly
@@ -107,6 +94,11 @@ all BigQuery operations require a project ID, and almost all
 operations will use the same one. The project ID is typically used
 as an invisible default, but it is still possible to query a
 dataset/table/job in a different project.</p>
+<h2 id="options">Options</h2>
+<p>All operations accept at least one &quot;options&quot; parameter (and sometimes more, if
+the operation is a shortcut for multiple operations). All properties on options
+classes are nullable, with null being the default value, indicating that the user
+hasn&#39;t specified that option.</p>
 <h2 id="datasets-tables-and-results">Datasets, tables and results</h2>
 <p>All the relevant operations are available on <code>BigQueryClient</code>, but
 many are more conveniently placed on other classes representing
@@ -114,13 +106,15 @@ entities:</p>
 <ul>
 <li><code>BigQueryDataset</code>: a dataset containing tables</li>
 <li><code>BigQueryTable</code>: a table</li>
+<li><code>BigQueryJob</code>: a job, which may or may not be completed</li>
 </ul>
-<p>Additionally, <code>BigQueryResult</code> represents the result of a query.</p>
+<p>Additionally, <code>BigQueryResults</code> represents the results of a completed query in a form
+which is easy to iterate over and obtain &quot;pages&quot; of results.</p>
 <p>The <code>BigQuery</code> prefix here avoids confusion with the underlying
 REST-based resources, which are still available.</p>
 <h2 id="synchronous-vs-asynchronous-c-calls">Synchronous vs asynchronous C# calls</h2>
 <p>All API calls potentially involving server interaction come in sync
-and async flavours. (Or at least, they will do...)</p>
+and async flavours.</p>
 </article>
           </div>
           

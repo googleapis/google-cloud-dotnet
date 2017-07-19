@@ -1,0 +1,564 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Google.Cloud.Spanner.V1
+   | Google.Cloud.Spanner.Data </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Google.Cloud.Spanner.V1
+   | Google.Cloud.Spanner.Data ">
+    <meta name="generator" content="docfx 2.20.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Spanner.V1">
+  
+  <h1 id="Google_Cloud_Spanner_V1" data-uid="Google.Cloud.Spanner.V1" class="text-break">Namespace Google.Cloud.Spanner.V1
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.BeginTransactionRequest.html">BeginTransactionRequest</a></h4>
+      <section><p>The request for [BeginTransaction][google.spanner.v1.Spanner.BeginTransaction].</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.CommitRequest.html">CommitRequest</a></h4>
+      <section><p>The request for [Commit][google.spanner.v1.Spanner.Commit].</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.CommitResponse.html">CommitResponse</a></h4>
+      <section><p>The response for [Commit][google.spanner.v1.Spanner.Commit].</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.CreateSessionRequest.html">CreateSessionRequest</a></h4>
+      <section><p>The request for [CreateSession][google.spanner.v1.Spanner.CreateSession].</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.DatabaseName.html">DatabaseName</a></h4>
+      <section><p>Resource name for the &apos;database&apos; resource.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.DeleteSessionRequest.html">DeleteSessionRequest</a></h4>
+      <section><p>The request for [DeleteSession][google.spanner.v1.Spanner.DeleteSession].</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.ExecuteSqlRequest.html">ExecuteSqlRequest</a></h4>
+      <section><p>The request for [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+[ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql].</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.html">ExecuteSqlRequest.Types</a></h4>
+      <section><p>Container for nested types declared in the ExecuteSqlRequest message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.GetSessionRequest.html">GetSessionRequest</a></h4>
+      <section><p>The request for [GetSession][google.spanner.v1.Spanner.GetSession].</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.KeyRange.html">KeyRange</a></h4>
+      <section><p>KeyRange represents a range of rows in a table or index.</p>
+<p>A range has a start key and an end key. These keys can be open or
+closed, indicating if the range includes rows with that key.</p>
+<p>Keys are represented by lists, where the ith value in the list
+corresponds to the ith component of the table or index primary key.
+Individual values are encoded as described [here][google.spanner.v1.TypeCode].</p>
+<p>For example, consider the following table definition:</p>
+<p>CREATE TABLE UserEvents (
+ UserName STRING(MAX),
+ EventDate STRING(10)
+) PRIMARY KEY(UserName, EventDate);</p>
+<p>The following keys name rows in this table:</p>
+<p>[&quot;Bob&quot;, &quot;2014-09-23&quot;]
+[&quot;Alfred&quot;, &quot;2015-06-12&quot;]</p>
+<p>Since the <code>UserEvents</code> table&apos;s <code>PRIMARY KEY</code> clause names two
+columns, each <code>UserEvents</code> key has two elements; the first is the
+<code>UserName</code>, and the second is the <code>EventDate</code>.</p>
+<p>Key ranges with multiple components are interpreted
+lexicographically by component using the table or index key&apos;s declared
+sort order. For example, the following range returns all events for
+user <code>&amp;quot;Bob&amp;quot;</code> that occurred in the year 2015:</p>
+<p>&quot;start_closed&quot;: [&quot;Bob&quot;, &quot;2015-01-01&quot;]
+&quot;end_closed&quot;: [&quot;Bob&quot;, &quot;2015-12-31&quot;]</p>
+<p>Start and end keys can omit trailing key components. This affects the
+inclusion and exclusion of rows that exactly match the provided key
+components: if the key is closed, then rows that exactly match the
+provided components are included; if the key is open, then rows
+that exactly match are not included.</p>
+<p>For example, the following range includes all events for <code>&amp;quot;Bob&amp;quot;</code> that
+occurred during and after the year 2000:</p>
+<p>&quot;start_closed&quot;: [&quot;Bob&quot;, &quot;2000-01-01&quot;]
+&quot;end_closed&quot;: [&quot;Bob&quot;]</p>
+<p>The next example retrieves all events for <code>&amp;quot;Bob&amp;quot;</code>:</p>
+<p>&quot;start_closed&quot;: [&quot;Bob&quot;]
+&quot;end_closed&quot;: [&quot;Bob&quot;]</p>
+<p>To retrieve events before the year 2000:</p>
+<p>&quot;start_closed&quot;: [&quot;Bob&quot;]
+&quot;end_open&quot;: [&quot;Bob&quot;, &quot;2000-01-01&quot;]</p>
+<p>The following range includes all rows in the table:</p>
+<p>&quot;start_closed&quot;: []
+&quot;end_closed&quot;: []</p>
+<p>This range returns all users whose <code>UserName</code> begins with any
+character from A to C:</p>
+<p>&quot;start_closed&quot;: [&quot;A&quot;]
+&quot;end_open&quot;: [&quot;D&quot;]</p>
+<p>This range returns all users whose <code>UserName</code> begins with B:</p>
+<p>&quot;start_closed&quot;: [&quot;B&quot;]
+&quot;end_open&quot;: [&quot;C&quot;]</p>
+<p>Key ranges honor column sort order. For example, suppose a table is
+defined as follows:</p>
+<p>CREATE TABLE DescendingSortedTable {
+ Key INT64,
+ ...
+) PRIMARY KEY(Key DESC);</p>
+<p>The following range retrieves all rows with key values between 1
+and 100 inclusive:</p>
+<p>&quot;start_closed&quot;: [&quot;100&quot;]
+&quot;end_closed&quot;: [&quot;1&quot;]</p>
+<p>Note that 100 is passed as the start, and 1 is passed as the end,
+because <code>Key</code> is a descending column in the schema.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.KeySet.html">KeySet</a></h4>
+      <section><p><code>KeySet</code> defines a collection of Cloud Spanner keys and/or key ranges. All
+the keys are expected to be in the same table or index. The keys need
+not be sorted in any particular way.</p>
+<p>If the same key is specified multiple times in the set (for example
+if two ranges, two keys, or a key and a range overlap), Cloud Spanner
+behaves as if the key were only specified once.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.Mutation.html">Mutation</a></h4>
+      <section><p>A modification to one or more Cloud Spanner rows.  Mutations can be
+applied to a Cloud Spanner database by sending them in a
+[Commit][google.spanner.v1.Spanner.Commit] call.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.Mutation.Types.html">Mutation.Types</a></h4>
+      <section><p>Container for nested types declared in the Mutation message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.Mutation.Types.Delete.html">Mutation.Types.Delete</a></h4>
+      <section><p>Arguments to [delete][google.spanner.v1.Mutation.delete] operations.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.Mutation.Types.Write.html">Mutation.Types.Write</a></h4>
+      <section><p>Arguments to [insert][google.spanner.v1.Mutation.insert], [update][google.spanner.v1.Mutation.update], [insert_or_update][google.spanner.v1.Mutation.insert_or_update], and
+[replace][google.spanner.v1.Mutation.replace] operations.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.PartialResultSet.html">PartialResultSet</a></h4>
+      <section><p>Partial results from a streaming read or SQL query. Streaming reads and
+SQL queries better tolerate large result sets, large rows, and large
+values, but are a little trickier to consume.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.PlanNode.html">PlanNode</a></h4>
+      <section><p>Node information for nodes appearing in a [QueryPlan.plan_nodes][google.spanner.v1.QueryPlan.plan_nodes].</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.PlanNode.Types.html">PlanNode.Types</a></h4>
+      <section><p>Container for nested types declared in the PlanNode message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.PlanNode.Types.ChildLink.html">PlanNode.Types.ChildLink</a></h4>
+      <section><p>Metadata associated with a parent-child relationship appearing in a
+[PlanNode][google.spanner.v1.PlanNode].</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.PlanNode.Types.ShortRepresentation.html">PlanNode.Types.ShortRepresentation</a></h4>
+      <section><p>Condensed representation of a node and its subtree. Only present for
+<code>SCALAR</code> [PlanNode(s)][google.spanner.v1.PlanNode].</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.QueryPlan.html">QueryPlan</a></h4>
+      <section><p>Contains an ordered list of nodes appearing in the query plan.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.ReadRequest.html">ReadRequest</a></h4>
+      <section><p>The request for [Read][google.spanner.v1.Spanner.Read] and
+[StreamingRead][google.spanner.v1.Spanner.StreamingRead].</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.ReliableStreamReader.html">ReliableStreamReader</a></h4>
+      <section><p>Provides streaming access to a Spanner SQL query that automatically retries, handles
+chunking and recoverable errors.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.ResultSet.html">ResultSet</a></h4>
+      <section><p>Results from [Read][google.spanner.v1.Spanner.Read] or
+[ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.ResultSetMetadata.html">ResultSetMetadata</a></h4>
+      <section><p>Metadata about a [ResultSet][google.spanner.v1.ResultSet] or [PartialResultSet][google.spanner.v1.PartialResultSet].</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.ResultSetStats.html">ResultSetStats</a></h4>
+      <section><p>Additional statistics about a [ResultSet][google.spanner.v1.ResultSet] or [PartialResultSet][google.spanner.v1.PartialResultSet].</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.RollbackRequest.html">RollbackRequest</a></h4>
+      <section><p>The request for [Rollback][google.spanner.v1.Spanner.Rollback].</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a></h4>
+      <section><p>A session in the Cloud Spanner API.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.SessionName.html">SessionName</a></h4>
+      <section><p>Resource name for the &apos;session&apos; resource.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.SessionPool.html">SessionPool</a></h4>
+      <section><p>The SessionPool is the preferred method of managing Spanner Sessions.
+It performs pooling of sessions with an evict timer along with configurable settings to control the maximum
+number of pooled and active sessions.
+To create a session using the sessionpool, use the extension method on SpannerClient.</p>
+<p>var session = await SpannerClient.CreateSessionFromPoolAsync(project, spannerInstance, database, cancellationtoken);</p>
+<p>To release a session back to the sessionpool:</p>
+<p>session.ReleaseToPool();</p>
+<p>If you use the SessionPool, you must make sure sessions are properly released back into the pool and are not simply GC&apos;d.
+Allowing a session to GC will incur penalties on the current process as the session will count towards the maximum allowed
+and it will incur a penalty on other Spanner processes because it will be an hour before the server frees the session if 
+it&apos;s not properly deleted.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.SessionPoolOptions.html">SessionPoolOptions</a></h4>
+      <section><p>Options for session pools.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.Spanner.html">Spanner</a></h4>
+      <section><p>Cloud Spanner API</p>
+<p>The Cloud Spanner API can be used to manage sessions and execute
+transactions on data stored in Cloud Spanner databases.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.Spanner.SpannerBase.html">Spanner.SpannerBase</a></h4>
+      <section><p>Base class for server-side implementations of Spanner</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.Spanner.SpannerClient.html">Spanner.SpannerClient</a></h4>
+      <section><p>Client for Spanner</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.SpannerClient.html">SpannerClient</a></h4>
+      <section><p>Spanner client wrapper, for convenient use.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.SpannerClientImpl.html">SpannerClientImpl</a></h4>
+      <section><p>Spanner client wrapper implementation, for convenient use.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.SpannerSettings.html">SpannerSettings</a></h4>
+      <section><p>Settings for a <a class="xref" href="Google.Cloud.Spanner.V1.SpannerClient.html">SpannerClient</a>.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.StreamClosedEventArgs.html">StreamClosedEventArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.StructType.html">StructType</a></h4>
+      <section><p><code>StructType</code> defines the fields of a [STRUCT][google.spanner.v1.TypeCode.STRUCT] type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.StructType.Types.html">StructType.Types</a></h4>
+      <section><p>Container for nested types declared in the StructType message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.StructType.Types.Field.html">StructType.Types.Field</a></h4>
+      <section><p>Message representing a single field of a struct.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.TestExtensions.html">TestExtensions</a></h4>
+      <section><p>testonly</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.Transaction.html">Transaction</a></h4>
+      <section><p>A transaction.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.TransactionOptions.html">TransactionOptions</a></h4>
+      <section><h1 id="transactions">Transactions</h1>
+<p>Each session can have at most one active transaction at a time. After the
+active transaction is completed, the session can immediately be
+re-used for the next transaction. It is not necessary to create a
+new session for each transaction.</p>
+<h1 id="transaction-modes">Transaction Modes</h1>
+<p>Cloud Spanner supports two transaction modes:</p>
+<ol>
+<li><p>Locking read-write. This type of transaction is the only way
+to write data into Cloud Spanner. These transactions rely on
+pessimistic locking and, if necessary, two-phase commit.
+Locking read-write transactions may abort, requiring the
+application to retry.</p>
+</li>
+<li><p>Snapshot read-only. This transaction type provides guaranteed
+consistency across several reads, but does not allow
+writes. Snapshot read-only transactions can be configured to
+read at timestamps in the past. Snapshot read-only
+transactions do not need to be committed.</p>
+</li>
+</ol>
+<p>For transactions that only read, snapshot read-only transactions
+provide simpler semantics and are almost always faster. In
+particular, read-only transactions do not take locks, so they do
+not conflict with read-write transactions. As a consequence of not
+taking locks, they also do not abort, so retry loops are not needed.</p>
+<p>Transactions may only read/write data in a single database. They
+may, however, read/write data in different tables within that
+database.</p>
+<h2 id="locking-read-write-transactions">Locking Read-Write Transactions</h2>
+<p>Locking transactions may be used to atomically read-modify-write
+data anywhere in a database. This type of transaction is externally
+consistent.</p>
+<p>Clients should attempt to minimize the amount of time a transaction
+is active. Faster transactions commit with higher probability
+and cause less contention. Cloud Spanner attempts to keep read locks
+active as long as the transaction continues to do reads, and the
+transaction has not been terminated by
+[Commit][google.spanner.v1.Spanner.Commit] or
+[Rollback][google.spanner.v1.Spanner.Rollback].  Long periods of
+inactivity at the client may cause Cloud Spanner to release a
+transaction&apos;s locks and abort it.</p>
+<p>Reads performed within a transaction acquire locks on the data
+being read. Writes can only be done at commit time, after all reads
+have been completed.
+Conceptually, a read-write transaction consists of zero or more
+reads or SQL queries followed by
+[Commit][google.spanner.v1.Spanner.Commit]. At any time before
+[Commit][google.spanner.v1.Spanner.Commit], the client can send a
+[Rollback][google.spanner.v1.Spanner.Rollback] request to abort the
+transaction.</p>
+<h3 id="semantics">Semantics</h3>
+<p>Cloud Spanner can commit the transaction if all read locks it acquired
+are still valid at commit time, and it is able to acquire write
+locks for all writes. Cloud Spanner can abort the transaction for any
+reason. If a commit attempt returns <code>ABORTED</code>, Cloud Spanner guarantees
+that the transaction has not modified any user data in Cloud Spanner.</p>
+<p>Unless the transaction commits, Cloud Spanner makes no guarantees about
+how long the transaction&apos;s locks were held for. It is an error to
+use Cloud Spanner locks for any sort of mutual exclusion other than
+between Cloud Spanner transactions themselves.</p>
+<h3 id="retrying-aborted-transactions">Retrying Aborted Transactions</h3>
+<p>When a transaction aborts, the application can choose to retry the
+whole transaction again. To maximize the chances of successfully
+committing the retry, the client should execute the retry in the
+same session as the original attempt. The original session&apos;s lock
+priority increases with each consecutive abort, meaning that each
+attempt has a slightly better chance of success than the previous.</p>
+<p>Under some circumstances (e.g., many transactions attempting to
+modify the same row(s)), a transaction can abort many times in a
+short period before successfully committing. Thus, it is not a good
+idea to cap the number of retries a transaction can attempt;
+instead, it is better to limit the total amount of wall time spent
+retrying.</p>
+<h3 id="idle-transactions">Idle Transactions</h3>
+<p>A transaction is considered idle if it has no outstanding reads or
+SQL queries and has not started a read or SQL query within the last 10
+seconds. Idle transactions can be aborted by Cloud Spanner so that they
+don&apos;t hold on to locks indefinitely. In that case, the commit will
+fail with error <code>ABORTED</code>.</p>
+<p>If this behavior is undesirable, periodically executing a simple
+SQL query in the transaction (e.g., <code>SELECT 1</code>) prevents the
+transaction from becoming idle.</p>
+<h2 id="snapshot-read-only-transactions">Snapshot Read-Only Transactions</h2>
+<p>Snapshot read-only transactions provides a simpler method than
+locking read-write transactions for doing several consistent
+reads. However, this type of transaction does not support writes.</p>
+<p>Snapshot transactions do not take locks. Instead, they work by
+choosing a Cloud Spanner timestamp, then executing all reads at that
+timestamp. Since they do not acquire locks, they do not block
+concurrent read-write transactions.</p>
+<p>Unlike locking read-write transactions, snapshot read-only
+transactions never abort. They can fail if the chosen read
+timestamp is garbage collected; however, the default garbage
+collection policy is generous enough that most applications do not
+need to worry about this in practice.</p>
+<p>Snapshot read-only transactions do not need to call
+[Commit][google.spanner.v1.Spanner.Commit] or
+[Rollback]<a href="and in fact are not
+permitted to do so">google.spanner.v1.Spanner.Rollback</a>.</p>
+<p>To execute a snapshot transaction, the client specifies a timestamp
+bound, which tells Cloud Spanner how to choose a read timestamp.</p>
+<p>The types of timestamp bound are:</p>
+<ul>
+<li>Strong (the default).</li>
+<li>Bounded staleness.</li>
+<li>Exact staleness.</li>
+</ul>
+<p>If the Cloud Spanner database to be read is geographically distributed,
+stale read-only transactions can execute more quickly than strong
+or read-write transaction, because they are able to execute far
+from the leader replica.</p>
+<p>Each type of timestamp bound is discussed in detail below.</p>
+<h3 id="strong">Strong</h3>
+<p>Strong reads are guaranteed to see the effects of all transactions
+that have committed before the start of the read. Furthermore, all
+rows yielded by a single read are consistent with each other -- if
+any part of the read observes a transaction, all parts of the read
+see the transaction.</p>
+<p>Strong reads are not repeatable: two consecutive strong read-only
+transactions might return inconsistent results if there are
+concurrent writes. If consistency across reads is required, the
+reads should be executed within a transaction or at an exact read
+timestamp.</p>
+<p>See [TransactionOptions.ReadOnly.strong][google.spanner.v1.TransactionOptions.ReadOnly.strong].</p>
+<h3 id="exact-staleness">Exact Staleness</h3>
+<p>These timestamp bounds execute reads at a user-specified
+timestamp. Reads at a timestamp are guaranteed to see a consistent
+prefix of the global transaction history: they observe
+modifications done by all transactions with a commit timestamp &lt;=
+the read timestamp, and observe none of the modifications done by
+transactions with a larger commit timestamp. They will block until
+all conflicting transactions that may be assigned commit timestamps
+&lt;= the read timestamp have finished.</p>
+<p>The timestamp can either be expressed as an absolute Cloud Spanner commit
+timestamp or a staleness relative to the current time.</p>
+<p>These modes do not require a &quot;negotiation phase&quot; to pick a
+timestamp. As a result, they execute slightly faster than the
+equivalent boundedly stale concurrency modes. On the other hand,
+boundedly stale reads usually return fresher results.</p>
+<p>See [TransactionOptions.ReadOnly.read_timestamp][google.spanner.v1.TransactionOptions.ReadOnly.read_timestamp] and
+[TransactionOptions.ReadOnly.exact_staleness][google.spanner.v1.TransactionOptions.ReadOnly.exact_staleness].</p>
+<h3 id="bounded-staleness">Bounded Staleness</h3>
+<p>Bounded staleness modes allow Cloud Spanner to pick the read timestamp,
+subject to a user-provided staleness bound. Cloud Spanner chooses the
+newest timestamp within the staleness bound that allows execution
+of the reads at the closest available replica without blocking.</p>
+<p>All rows yielded are consistent with each other -- if any part of
+the read observes a transaction, all parts of the read see the
+transaction. Boundedly stale reads are not repeatable: two stale
+reads, even if they use the same staleness bound, can execute at
+different timestamps and thus return inconsistent results.</p>
+<p>Boundedly stale reads execute in two phases: the first phase
+negotiates a timestamp among all replicas needed to serve the
+read. In the second phase, reads are executed at the negotiated
+timestamp.</p>
+<p>As a result of the two phase execution, bounded staleness reads are
+usually a little slower than comparable exact staleness
+reads. However, they are typically able to return fresher
+results, and are more likely to execute at the closest replica.</p>
+<p>Because the timestamp negotiation requires up-front knowledge of
+which rows will be read, it can only be used with single-use
+read-only transactions.</p>
+<p>See [TransactionOptions.ReadOnly.max_staleness][google.spanner.v1.TransactionOptions.ReadOnly.max_staleness] and
+[TransactionOptions.ReadOnly.min_read_timestamp][google.spanner.v1.TransactionOptions.ReadOnly.min_read_timestamp].</p>
+<h3 id="old-read-timestamps-and-garbage-collection">Old Read Timestamps and Garbage Collection</h3>
+<p>Cloud Spanner continuously garbage collects deleted and overwritten data
+in the background to reclaim storage space. This process is known
+as &quot;version GC&quot;. By default, version GC reclaims versions after they
+are one hour old. Because of this, Cloud Spanner cannot perform reads
+at read timestamps more than one hour in the past. This
+restriction also applies to in-progress reads and/or SQL queries whose
+timestamp become too old while executing. Reads and SQL queries with
+too-old read timestamps fail with the error <code>FAILED_PRECONDITION</code>.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.TransactionOptions.Types.html">TransactionOptions.Types</a></h4>
+      <section><p>Container for nested types declared in the TransactionOptions message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly.html">TransactionOptions.Types.ReadOnly</a></h4>
+      <section><p>Options for read-only transactions.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.html">TransactionOptions.Types.ReadWrite</a></h4>
+      <section><p>Options for read-write transactions.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.TransactionPool.html">TransactionPool</a></h4>
+      <section><p>The TransactionPool works in conjunction with the Session pool to warm pooled Sessions
+with the transaction semantics it last used (if appropriate).
+When requesting a pooled session, the request can include TransactionOptions which
+is then used as a key in the SessionPool.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.TransactionSelector.html">TransactionSelector</a></h4>
+      <section><p>This message is used to select the transaction in which a
+[Read][google.spanner.v1.Spanner.Read] or
+[ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] call runs.</p>
+<p>See [TransactionOptions][google.spanner.v1.TransactionOptions] for more information about transactions.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.Type.html">Type</a></h4>
+      <section><p><code>Type</code> indicates the type of a Cloud Spanner value, as might be stored in a
+table cell or returned from an SQL query.</p>
+</section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.CommitRequest.TransactionOneofCase.html">CommitRequest.TransactionOneofCase</a></h4>
+      <section><p>Enum of possible cases for the &quot;transaction&quot; oneof.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.QueryMode.html">ExecuteSqlRequest.Types.QueryMode</a></h4>
+      <section><p>Mode in which the query must be processed.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.KeyRange.EndKeyTypeOneofCase.html">KeyRange.EndKeyTypeOneofCase</a></h4>
+      <section><p>Enum of possible cases for the &quot;end_key_type&quot; oneof.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.KeyRange.StartKeyTypeOneofCase.html">KeyRange.StartKeyTypeOneofCase</a></h4>
+      <section><p>Enum of possible cases for the &quot;start_key_type&quot; oneof.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.Mutation.OperationOneofCase.html">Mutation.OperationOneofCase</a></h4>
+      <section><p>Enum of possible cases for the &quot;operation&quot; oneof.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.PlanNode.Types.Kind.html">PlanNode.Types.Kind</a></h4>
+      <section><p>The kind of [PlanNode][google.spanner.v1.PlanNode]. Distinguishes between the two different kinds of
+nodes that can appear in a query plan.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.TransactionOptions.ModeOneofCase.html">TransactionOptions.ModeOneofCase</a></h4>
+      <section><p>Enum of possible cases for the &quot;mode&quot; oneof.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly.TimestampBoundOneofCase.html">TransactionOptions.Types.ReadOnly.TimestampBoundOneofCase</a></h4>
+      <section><p>Enum of possible cases for the &quot;timestamp_bound&quot; oneof.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.TransactionSelector.SelectorOneofCase.html">TransactionSelector.SelectorOneofCase</a></h4>
+      <section><p>Enum of possible cases for the &quot;selector&quot; oneof.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.V1.TypeCode.html">TypeCode</a></h4>
+      <section><p><code>TypeCode</code> is used as part of [Type][google.spanner.v1.Type] to
+indicate the type of a Cloud Spanner value.</p>
+<p>Each legal value of a type can be encoded to or decoded from a JSON
+value, using the encodings described below. All Cloud Spanner values can
+be <code>null</code>, regardless of type; <code>null</code>s are always encoded as a JSON
+<code>null</code>.</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

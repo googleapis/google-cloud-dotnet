@@ -5521,10 +5521,150 @@ IEnumerable&lt;string&gt; permissions = new List&lt;string&gt;();
 TestIamPermissionsResponse response = await subscriberClient.TestIamPermissionsAsync(formattedResource, permissions);
 </code></pre></div>
   </div>
+  <a id="Google_Cloud_PubSub_V1_SubscriberClient_UpdateSnapshot_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.UpdateSnapshot*"></a>
+  <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_UpdateSnapshot_Google_Cloud_PubSub_V1_UpdateSnapshotRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.UpdateSnapshot(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateSnapshot(UpdateSnapshotRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates an existing snapshot. Note that certain properties of a snapshot
+are not modifiable.
+NOTE:  The style guide requires body: &quot;snapshot&quot; instead of body: &quot;*&quot;.
+Keeping the latter for internal consistency in V1, however it should be
+corrected in V2.  See
+<a href="https://cloud.google.com/apis/design/standard_methods#update">https://cloud.google.com/apis/design/standard_methods#update</a> for details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Snapshot UpdateSnapshot(UpdateSnapshotRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.PubSub.V1.UpdateSnapshotRequest.html">UpdateSnapshotRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.PubSub.V1.Snapshot.html">Snapshot</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_PubSub_V1_SubscriberClient_UpdateSnapshot_Google_Cloud_PubSub_V1_UpdateSnapshotRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SubscriberClient subscriberClient = SubscriberClient.Create();
+// Initialize request argument(s)
+UpdateSnapshotRequest request = new UpdateSnapshotRequest
+{
+    Snapshot = new Snapshot(),
+    UpdateMask = new FieldMask(),
+};
+// Make the request
+Snapshot response = subscriberClient.UpdateSnapshot(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_PubSub_V1_SubscriberClient_UpdateSnapshotAsync_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.UpdateSnapshotAsync*"></a>
+  <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_UpdateSnapshotAsync_Google_Cloud_PubSub_V1_UpdateSnapshotRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.UpdateSnapshotAsync(Google.Cloud.PubSub.V1.UpdateSnapshotRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateSnapshotAsync(UpdateSnapshotRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates an existing snapshot. Note that certain properties of a snapshot
+are not modifiable.
+NOTE:  The style guide requires body: &quot;snapshot&quot; instead of body: &quot;*&quot;.
+Keeping the latter for internal consistency in V1, however it should be
+corrected in V2.  See
+<a href="https://cloud.google.com/apis/design/standard_methods#update">https://cloud.google.com/apis/design/standard_methods#update</a> for details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Snapshot&gt; UpdateSnapshotAsync(UpdateSnapshotRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.PubSub.V1.UpdateSnapshotRequest.html">UpdateSnapshotRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Snapshot.html">Snapshot</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_PubSub_V1_SubscriberClient_UpdateSnapshotAsync_Google_Cloud_PubSub_V1_UpdateSnapshotRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
+// Initialize request argument(s)
+UpdateSnapshotRequest request = new UpdateSnapshotRequest
+{
+    Snapshot = new Snapshot(),
+    UpdateMask = new FieldMask(),
+};
+// Make the request
+Snapshot response = await subscriberClient.UpdateSnapshotAsync(request);
+</code></pre></div>
+  </div>
   <a id="Google_Cloud_PubSub_V1_SubscriberClient_UpdateSubscription_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.UpdateSubscription*"></a>
   <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_UpdateSubscription_Google_Cloud_PubSub_V1_UpdateSubscriptionRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.UpdateSubscription(Google.Cloud.PubSub.V1.UpdateSubscriptionRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateSubscription(UpdateSubscriptionRequest, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Updates an existing subscription. Note that certain properties of a
-subscription, such as its topic, are not modifiable.</p>
+subscription, such as its topic, are not modifiable.
+NOTE:  The style guide requires body: &quot;subscription&quot; instead of body: &quot;*&quot;.
+Keeping the latter for internal consistency in V1, however it should be
+corrected in V2.  See
+<a href="https://cloud.google.com/apis/design/standard_methods#update">https://cloud.google.com/apis/design/standard_methods#update</a> for details.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -5588,7 +5728,11 @@ Subscription response = subscriberClient.UpdateSubscription(request);
   <a id="Google_Cloud_PubSub_V1_SubscriberClient_UpdateSubscriptionAsync_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.UpdateSubscriptionAsync*"></a>
   <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_UpdateSubscriptionAsync_Google_Cloud_PubSub_V1_UpdateSubscriptionRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.UpdateSubscriptionAsync(Google.Cloud.PubSub.V1.UpdateSubscriptionRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateSubscriptionAsync(UpdateSubscriptionRequest, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Updates an existing subscription. Note that certain properties of a
-subscription, such as its topic, are not modifiable.</p>
+subscription, such as its topic, are not modifiable.
+NOTE:  The style guide requires body: &quot;subscription&quot; instead of body: &quot;*&quot;.
+Keeping the latter for internal consistency in V1, however it should be
+corrected in V2.  See
+<a href="https://cloud.google.com/apis/design/standard_methods#update">https://cloud.google.com/apis/design/standard_methods#update</a> for details.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

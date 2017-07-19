@@ -126,11 +126,12 @@ Docs: <a href="https://cloud.google.com/trace/docs/">https://cloud.google.com/tr
 
   <pre><code>public void SomeFunction(IManagedTracer tracer)
 {
-    tracer.StartSpan(nameof(SomeFunction));
-    ...
-    // Do work.
-    ...
-    tracer.EndSpan();
+    using (tracer.StartSpan(nameof(SomeFunction)))
+    {
+        ...
+        // Do work.
+        ...
+    }
 }</code></pre>
 
   <h3 id="methods">Methods

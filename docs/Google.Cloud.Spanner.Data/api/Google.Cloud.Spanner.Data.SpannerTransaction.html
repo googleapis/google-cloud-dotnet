@@ -1,0 +1,373 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SpannerTransaction
+   | Google.Cloud.Spanner.Data </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SpannerTransaction
+   | Google.Cloud.Spanner.Data ">
+    <meta name="generator" content="docfx 2.20.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction">
+  
+  
+  <h1 id="Google_Cloud_Spanner_Data_SpannerTransaction" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction" class="text-break">Class SpannerTransaction
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a SQL transaction to be made in a Spanner database.
+A transaction in Cloud Spanner is a set of reads and writes that execute
+atomically at a single logical point in time across columns, rows, and
+tables in a database.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">System.MarshalByRefObject</span></div>
+    <div class="level2"><span class="xref">System.Data.Common.DbTransaction</span></div>
+    <div class="level3"><span class="xref">SpannerTransaction</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Data.Common.DbTransaction.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbTransaction.Connection</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbTransaction.System.Data.IDbTransaction.Connection</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.MemberwiseClone(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.GetLifetimeService()</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.InitializeLifetimeService()</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.CreateObjRef(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Spanner.Data.html">Google.Cloud.Spanner.Data</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Spanner.Data.dll</h6>
+  <h5 id="Google_Cloud_Spanner_Data_SpannerTransaction_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class SpannerTransaction : DbTransaction, IDbTransaction, IDisposable, ISpannerTransaction</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Spanner_Data_SpannerTransaction_DbConnection_" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction.DbConnection*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerTransaction_DbConnection" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction.DbConnection">DbConnection</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DbConnection DbConnection { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.DbConnection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbTransaction.DbConnection</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerTransaction_IsolationLevel_" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction.IsolationLevel*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerTransaction_IsolationLevel" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction.IsolationLevel">IsolationLevel</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IsolationLevel IsolationLevel { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IsolationLevel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbTransaction.IsolationLevel</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerTransaction_Mode_" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction.Mode*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerTransaction_Mode" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction.Mode">Mode</h4>
+  <div class="markdown level1 summary"><p>Indicates the <a class="xref" href="Google.Cloud.Spanner.Data.TransactionMode.html">TransactionMode</a> for the transaction.
+Cloud Spanner supports two transaction modes:
+Locking read-write transactions are the only transaction type that support writing
+data into Cloud Spanner. These transactions rely on pessimistic locking and, if
+necessary, two-phase commit. Locking read-write transactions may abort, requiring
+the application to retry.
+Read-only transactions provide guaranteed consistency across several reads,
+but do not allow writes. Read-only transactions can be configured to read at
+timestamps in the past. Read-only transactions do not need to be committed and
+do not take locks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionMode Mode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.TransactionMode.html">TransactionMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerTransaction_TimestampBound_" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction.TimestampBound*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerTransaction_TimestampBound" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction.TimestampBound">TimestampBound</h4>
+  <div class="markdown level1 summary"><p>Tells Cloud Spanner how to choose a timestamp at which to read the data for read-only
+transactions.
+The types of timestamp bounds are:
+Strong (the default): read the latest data.
+Bounded staleness: read a version of the data that&apos;s no staler than a bound.
+Exact staleness: read the version of the data at an exact timestamp.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimestampBound TimestampBound { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.TimestampBound.html">TimestampBound</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Spanner_Data_SpannerTransaction_Commit_" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction.Commit*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerTransaction_Commit" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction.Commit">Commit()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Commit()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbTransaction.Commit()</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerTransaction_CommitAsync_" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction.CommitAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerTransaction_CommitAsync" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction.CommitAsync">CommitAsync()</h4>
+  <div class="markdown level1 summary"><p>Commits the database transaction asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;DateTime? &gt; CommitAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;&gt;</td>
+        <td><p>Returns the UTC timestamp when the data was written to the database.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerTransaction_Dispose_" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction.Dispose*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerTransaction_Dispose_System_Boolean_" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbTransaction.Dispose(System.Boolean)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerTransaction_Rollback_" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction.Rollback*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerTransaction_Rollback" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction.Rollback">Rollback()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Rollback()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbTransaction.Rollback()</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerTransaction_RollbackAsync_" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction.RollbackAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerTransaction_RollbackAsync" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction.RollbackAsync">RollbackAsync()</h4>
+  <div class="markdown level1 summary"><p>Rolls back a transaction asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task RollbackAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

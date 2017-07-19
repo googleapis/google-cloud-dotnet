@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Google.Cloud.Spanner.Data
+   | Google.Cloud.Spanner.Data </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Google.Cloud.Spanner.Data
+   | Google.Cloud.Spanner.Data ">
+    <meta name="generator" content="docfx 2.20.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Spanner.Data">
+  
+  <h1 id="Google_Cloud_Spanner_Data" data-uid="Google.Cloud.Spanner.Data" class="text-break">Namespace Google.Cloud.Spanner.Data
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a></h4>
+      <section><p>Represents a SQL query or command to execute against
+a Spanner database.
+If the command is a SQL query, then <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_CommandText">CommandText</a>
+contains the entire SQL statement. Use <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_ExecuteReaderAsync_Google_Cloud_Spanner_Data_TimestampBound_System_Threading_CancellationToken_">ExecuteReaderAsync(TimestampBound, CancellationToken)</a>  to obtain results.</p>
+<p>If the command is an update, insert or delete command, then <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_CommandText">CommandText</a>
+is simply &quot;[operation] [spanner_table]&quot; such as &quot;UPDATE MYTABLE&quot; with the parameter
+collection containing <a class="xref" href="Google.Cloud.Spanner.Data.SpannerParameter.html">SpannerParameter</a> instances whose name matches a column
+in the target table. Use <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_ExecuteNonQueryAsync_System_Threading_CancellationToken_">ExecuteNonQueryAsync(CancellationToken)</a> to execute the command.</p>
+<p>The command may also be a DDL statement such as CREATE TABLE. Use <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_ExecuteNonQueryAsync_System_Threading_CancellationToken_">ExecuteNonQueryAsync(CancellationToken)</a>
+to execute a DDL statement.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommandTextBuilder.html">SpannerCommandTextBuilder</a></h4>
+      <section><p>Builds the <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_CommandText">CommandText</a> string for executing a query or operation
+on a Spanner database.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.Data.SpannerConnection.html">SpannerConnection</a></h4>
+      <section><p>Represents a connection to a single Spanner database.
+When opened, <a class="xref" href="Google.Cloud.Spanner.Data.SpannerConnection.html">SpannerConnection</a> will acquire and maintain a session
+with the target Spanner database.
+<a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a> instances using this <a class="xref" href="Google.Cloud.Spanner.Data.SpannerConnection.html">SpannerConnection</a>
+will use this session to execute their operation. Concurrent read operations can
+share this session, but concurrent write operations may cause additional sessions
+to be opened to the database.
+Underlying sessions with the Spanner database are pooled and are closed after a
+configurable
+<see>
+<cref>SpannerOptions.PoolEvictionDelay</cref>
+</see>
+.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.Data.SpannerConnectionStringBuilder.html">SpannerConnectionStringBuilder</a></h4>
+      <section><p>A connection string builder for Spanner connection strings.
+The connection string should be of the form:
+Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={hostname};][Port={portnumber}]</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.Data.SpannerDataAdapter.html">SpannerDataAdapter</a></h4>
+      <section><p>Represents a set of data commands and a database connection that are used to fill the DataSet
+and update a Spanner database.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.Data.SpannerDataReader.html">SpannerDataReader</a></h4>
+      <section><p>Reads a forward-only stream of rows from a data source.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.Data.SpannerDbType.html">SpannerDbType</a></h4>
+      <section><p>Represents a Type that can be stored in a Spanner column or returned from a query.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.Data.SpannerException.html">SpannerException</a></h4>
+      <section><p>Represents an error communicating with the Spanner database.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.Data.SpannerOptions.html">SpannerOptions</a></h4>
+      <section><p>Settings for <a class="xref" href="Google.Cloud.Spanner.Data.SpannerConnection.html">SpannerConnection</a>.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.Data.SpannerParameter.html">SpannerParameter</a></h4>
+      <section><p>Represents a parameter to a <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a> and optionally its mapping to DataSet columns.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.Data.SpannerParameterCollection.html">SpannerParameterCollection</a></h4>
+      <section><p>Represents a collection of parameters associated with a <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a> and their
+respective mappings to columns in a DataSet.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.Data.SpannerProviderFactory.html">SpannerProviderFactory</a></h4>
+      <section><p>Represents a set of methods for creating instances of the Spanner data provider&apos;s implementation of the data source classes.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.Data.SpannerRowUpdatedEventArgs.html">SpannerRowUpdatedEventArgs</a></h4>
+      <section><p>Provides data for the RowUpdated event of the Spanner data provider.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.Data.SpannerRowUpdatingEventArgs.html">SpannerRowUpdatingEventArgs</a></h4>
+      <section><p>Provides data for the RowUpdating event of the Spanner data provider.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.Data.SpannerTransaction.html">SpannerTransaction</a></h4>
+      <section><p>Represents a SQL transaction to be made in a Spanner database.
+A transaction in Cloud Spanner is a set of reads and writes that execute
+atomically at a single logical point in time across columns, rows, and
+tables in a database.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.Data.TimestampBound.html">TimestampBound</a></h4>
+      <section><p>Indicates how Spanner will choose a timestamp at which to read the data for read-only
+transactions.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.Data.TransientFaultDetector.html">TransientFaultDetector</a></h4>
+      <section><p>Transactions can be retried using the Transient Fault Handling Application Block.
+This extension helps you create a strategy that will detect transient faults when performing
+transactions with Spanner.
+To create an execution strategy, create a class</p>
+<pre><code>class SpannerTransientErrorDetectionStrategy : ITransientErrorDetectionStrategy
+{
+  public bool IsTransient(Exception ex) => ex.IsTransientSpannerFault();
+}</code></pre>
+</section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="Google.Cloud.Spanner.Data.ErrorCode.html">ErrorCode</a></h4>
+      <section><p>A detailed code supplied via <a class="xref" href="Google.Cloud.Spanner.Data.SpannerException.html#Google_Cloud_Spanner_Data_SpannerException_ErrorCode">ErrorCode</a> when an error
+occurs.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.Data.LogLevel.html">LogLevel</a></h4>
+      <section><p>Specifies the level of detail for Spanner client log messages.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.Data.ResourcesExhaustedBehavior.html">ResourcesExhaustedBehavior</a></h4>
+      <section><p>Specifies the behavior when <a class="xref" href="Google.Cloud.Spanner.Data.SpannerOptions.html#Google_Cloud_Spanner_Data_SpannerOptions_MaximumActiveSessions">MaximumActiveSessions</a>
+is reached.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommandType.html">SpannerCommandType</a></h4>
+      <section><p>Indicates the type of <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a> that will be executed.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.Data.TimestampBoundMode.html">TimestampBoundMode</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Google.Cloud.Spanner.Data.TransactionMode.html">TransactionMode</a></h4>
+      <section><p>Indicates the mode for the transaction.</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

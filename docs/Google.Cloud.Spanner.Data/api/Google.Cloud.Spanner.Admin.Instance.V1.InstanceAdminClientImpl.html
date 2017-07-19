@@ -1,0 +1,1523 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class InstanceAdminClientImpl
+   | Google.Cloud.Spanner.Data </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class InstanceAdminClientImpl
+   | Google.Cloud.Spanner.Data ">
+    <meta name="generator" content="docfx 2.20.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl">
+  
+  
+  <h1 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl" class="text-break">Class InstanceAdminClientImpl
+  </h1>
+  <div class="markdown level0 summary"><p>InstanceAdmin client wrapper implementation, for convenient use.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html">InstanceAdminClient</a></div>
+    <div class="level2"><span class="xref">InstanceAdminClientImpl</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_DefaultEndpoint">InstanceAdminClient.DefaultEndpoint</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_DefaultScopes">InstanceAdminClient.DefaultScopes</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminSettings_">InstanceAdminClient.CreateAsync(ServiceEndpoint, InstanceAdminSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminSettings_">InstanceAdminClient.Create(ServiceEndpoint, InstanceAdminSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_Create_Grpc_Core_Channel_Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminSettings_">InstanceAdminClient.Create(Channel, InstanceAdminSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_ShutdownDefaultChannelsAsync">InstanceAdminClient.ShutdownDefaultChannelsAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_ListInstanceConfigsAsync_Google_Cloud_Spanner_Admin_Instance_V1_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.ListInstanceConfigsAsync(ProjectName, String, Nullable&lt;Int32&gt;, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_ListInstanceConfigs_Google_Cloud_Spanner_Admin_Instance_V1_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.ListInstanceConfigs(ProjectName, String, Nullable&lt;Int32&gt;, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_GetInstanceConfigAsync_Google_Cloud_Spanner_Admin_Instance_V1_InstanceConfigName_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.GetInstanceConfigAsync(InstanceConfigName, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_GetInstanceConfigAsync_Google_Cloud_Spanner_Admin_Instance_V1_InstanceConfigName_System_Threading_CancellationToken_">InstanceAdminClient.GetInstanceConfigAsync(InstanceConfigName, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_GetInstanceConfig_Google_Cloud_Spanner_Admin_Instance_V1_InstanceConfigName_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.GetInstanceConfig(InstanceConfigName, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_ListInstancesAsync_Google_Cloud_Spanner_Admin_Instance_V1_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.ListInstancesAsync(ProjectName, String, Nullable&lt;Int32&gt;, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_ListInstances_Google_Cloud_Spanner_Admin_Instance_V1_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.ListInstances(ProjectName, String, Nullable&lt;Int32&gt;, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_GetInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_InstanceName_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.GetInstanceAsync(InstanceName, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_GetInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_InstanceName_System_Threading_CancellationToken_">InstanceAdminClient.GetInstanceAsync(InstanceName, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_GetInstance_Google_Cloud_Spanner_Admin_Instance_V1_InstanceName_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.GetInstance(InstanceName, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_CreateInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_ProjectName_Google_Cloud_Spanner_Admin_Instance_V1_InstanceName_Google_Cloud_Spanner_Admin_Instance_V1_Instance_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.CreateInstanceAsync(ProjectName, InstanceName, Instance, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_CreateInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_ProjectName_Google_Cloud_Spanner_Admin_Instance_V1_InstanceName_Google_Cloud_Spanner_Admin_Instance_V1_Instance_System_Threading_CancellationToken_">InstanceAdminClient.CreateInstanceAsync(ProjectName, InstanceName, Instance, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_CreateInstance_Google_Cloud_Spanner_Admin_Instance_V1_ProjectName_Google_Cloud_Spanner_Admin_Instance_V1_InstanceName_Google_Cloud_Spanner_Admin_Instance_V1_Instance_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.CreateInstance(ProjectName, InstanceName, Instance, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_PollOnceCreateInstanceAsync_System_String_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.PollOnceCreateInstanceAsync(String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_PollOnceCreateInstance_System_String_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.PollOnceCreateInstance(String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_UpdateInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_Instance_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.UpdateInstanceAsync(Instance, FieldMask, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_UpdateInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_Instance_Google_Protobuf_WellKnownTypes_FieldMask_System_Threading_CancellationToken_">InstanceAdminClient.UpdateInstanceAsync(Instance, FieldMask, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_UpdateInstance_Google_Cloud_Spanner_Admin_Instance_V1_Instance_Google_Protobuf_WellKnownTypes_FieldMask_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.UpdateInstance(Instance, FieldMask, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_PollOnceUpdateInstanceAsync_System_String_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.PollOnceUpdateInstanceAsync(String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_PollOnceUpdateInstance_System_String_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.PollOnceUpdateInstance(String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_DeleteInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_InstanceName_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.DeleteInstanceAsync(InstanceName, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_DeleteInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_InstanceName_System_Threading_CancellationToken_">InstanceAdminClient.DeleteInstanceAsync(InstanceName, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_DeleteInstance_Google_Cloud_Spanner_Admin_Instance_V1_InstanceName_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.DeleteInstance(InstanceName, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_SetIamPolicyAsync_System_String_Google_Cloud_Iam_V1_Policy_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.SetIamPolicyAsync(String, Policy, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_SetIamPolicyAsync_System_String_Google_Cloud_Iam_V1_Policy_System_Threading_CancellationToken_">InstanceAdminClient.SetIamPolicyAsync(String, Policy, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_SetIamPolicy_System_String_Google_Cloud_Iam_V1_Policy_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.SetIamPolicy(String, Policy, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_GetIamPolicyAsync_System_String_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.GetIamPolicyAsync(String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_GetIamPolicyAsync_System_String_System_Threading_CancellationToken_">InstanceAdminClient.GetIamPolicyAsync(String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_GetIamPolicy_System_String_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.GetIamPolicy(String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_TestIamPermissionsAsync_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.TestIamPermissionsAsync(String, IEnumerable&lt;String&gt;, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_TestIamPermissionsAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_">InstanceAdminClient.TestIamPermissionsAsync(String, IEnumerable&lt;String&gt;, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_TestIamPermissions_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.TestIamPermissions(String, IEnumerable&lt;String&gt;, CallSettings)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.html">Google.Cloud.Spanner.Admin.Instance.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Spanner.Admin.Instance.V1.dll</h6>
+  <h5 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class InstanceAdminClientImpl : InstanceAdminClient</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl__ctor_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.#ctor*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl__ctor_Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdmin_InstanceAdminClient_Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminSettings_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.#ctor(Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient,Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings)">InstanceAdminClientImpl(InstanceAdmin.InstanceAdminClient, InstanceAdminSettings)</h4>
+  <div class="markdown level1 summary"><p>Constructs a client wrapper for the InstanceAdmin service, with the specified gRPC client and settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InstanceAdminClientImpl(InstanceAdmin.InstanceAdminClient grpcClient, InstanceAdminSettings settings)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.html">InstanceAdmin.InstanceAdminClient</a></td>
+        <td><span class="parametername">grpcClient</span></td>
+        <td><p>The underlying gRPC client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html">InstanceAdminSettings</a></td>
+        <td><span class="parametername">settings</span></td>
+        <td><p>The base <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html">InstanceAdminSettings</a> used within this client </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_GrpcClient_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.GrpcClient*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_GrpcClient" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.GrpcClient">GrpcClient</h4>
+  <div class="markdown level1 summary"><p>The underlying gRPC InstanceAdmin client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override InstanceAdmin.InstanceAdminClient GrpcClient { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdmin.InstanceAdminClient.html">InstanceAdmin.InstanceAdminClient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_GrpcClient">InstanceAdminClient.GrpcClient</a></div>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_LongRunningOperationsClient_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.LongRunningOperationsClient*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_LongRunningOperationsClient" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.LongRunningOperationsClient">LongRunningOperationsClient</h4>
+  <div class="markdown level1 summary"><p>The client for long-running operations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override OperationsClient LongRunningOperationsClient { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.LongRunning.OperationsClient</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_LongRunningOperationsClient">InstanceAdminClient.LongRunningOperationsClient</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_CreateInstance_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.CreateInstance*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_CreateInstance_Google_Cloud_Spanner_Admin_Instance_V1_CreateInstanceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.CreateInstance(Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest,Google.Api.Gax.Grpc.CallSettings)">CreateInstance(CreateInstanceRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates an instance and begins preparing it to begin serving. The
+returned [long-running operation][google.longrunning.Operation]
+can be used to track the progress of preparing the new
+instance. The instance name is assigned by the caller. If the
+named instance already exists, <code>CreateInstance</code> returns
+<code>ALREADY_EXISTS</code>.</p>
+<p>Immediately upon completion of this request:</p>
+<ul>
+<li>The instance is readable via the API, with all requested attributes
+but no allocated resources. Its state is <code>CREATING</code>.</li>
+</ul>
+<p>Until completion of the returned operation:</p>
+<ul>
+<li>Cancelling the operation renders the instance immediately unreadable
+via the API.</li>
+<li>The instance can be deleted.</li>
+<li>All other attempts to modify the instance are rejected.</li>
+</ul>
+<p>Upon completion of the returned operation:</p>
+<ul>
+<li>Billing for all successfully-allocated resources begins (some types
+may have lower than the requested levels).</li>
+<li>Databases can be created in the instance.</li>
+<li>The instance&apos;s allocated resource levels are readable via the API.</li>
+<li>The instance&apos;s state becomes <code>READY</code>.</li>
+</ul>
+<p>The returned [long-running operation][google.longrunning.Operation] will
+have a name of the format <code>&amp;lt;instance_name&gt;/operations/&amp;lt;operation_id&gt;</code> and
+can be used to track creation of the instance.  The
+[metadata][google.longrunning.Operation.metadata] field type is
+[CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
+The [response][google.longrunning.Operation.response] field type is
+[Instance][google.spanner.admin.instance.v1.Instance], if successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation&lt;Instance, CreateInstanceMetadata&gt; CreateInstance(CreateInstanceRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest.html">CreateInstanceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.LongRunning.Operation</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.Instance.html">Instance</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata.html">CreateInstanceMetadata</a>&gt;</td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_CreateInstance_Google_Cloud_Spanner_Admin_Instance_V1_CreateInstanceRequest_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.CreateInstance(CreateInstanceRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_CreateInstanceAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.CreateInstanceAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_CreateInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_CreateInstanceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.CreateInstanceAsync(Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest,Google.Api.Gax.Grpc.CallSettings)">CreateInstanceAsync(CreateInstanceRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates an instance and begins preparing it to begin serving. The
+returned [long-running operation][google.longrunning.Operation]
+can be used to track the progress of preparing the new
+instance. The instance name is assigned by the caller. If the
+named instance already exists, <code>CreateInstance</code> returns
+<code>ALREADY_EXISTS</code>.</p>
+<p>Immediately upon completion of this request:</p>
+<ul>
+<li>The instance is readable via the API, with all requested attributes
+but no allocated resources. Its state is <code>CREATING</code>.</li>
+</ul>
+<p>Until completion of the returned operation:</p>
+<ul>
+<li>Cancelling the operation renders the instance immediately unreadable
+via the API.</li>
+<li>The instance can be deleted.</li>
+<li>All other attempts to modify the instance are rejected.</li>
+</ul>
+<p>Upon completion of the returned operation:</p>
+<ul>
+<li>Billing for all successfully-allocated resources begins (some types
+may have lower than the requested levels).</li>
+<li>Databases can be created in the instance.</li>
+<li>The instance&apos;s allocated resource levels are readable via the API.</li>
+<li>The instance&apos;s state becomes <code>READY</code>.</li>
+</ul>
+<p>The returned [long-running operation][google.longrunning.Operation] will
+have a name of the format <code>&amp;lt;instance_name&gt;/operations/&amp;lt;operation_id&gt;</code> and
+can be used to track creation of the instance.  The
+[metadata][google.longrunning.Operation.metadata] field type is
+[CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
+The [response][google.longrunning.Operation.response] field type is
+[Instance][google.spanner.admin.instance.v1.Instance], if successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&lt;Instance, CreateInstanceMetadata&gt;&gt; CreateInstanceAsync(CreateInstanceRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest.html">CreateInstanceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.LongRunning.Operation</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.Instance.html">Instance</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata.html">CreateInstanceMetadata</a>&gt;&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_CreateInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_CreateInstanceRequest_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.CreateInstanceAsync(CreateInstanceRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_DeleteInstance_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.DeleteInstance*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_DeleteInstance_Google_Cloud_Spanner_Admin_Instance_V1_DeleteInstanceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.DeleteInstance(Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteInstance(DeleteInstanceRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Deletes an instance.</p>
+<p>Immediately upon completion of the request:</p>
+<ul>
+<li>Billing ceases for all of the instance&apos;s reserved resources.</li>
+</ul>
+<p>Soon afterward:</p>
+<ul>
+<li>The instance and <em>all of its databases</em> immediately and
+irrevocably disappear from the API. All data in the databases
+is permanently deleted.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void DeleteInstance(DeleteInstanceRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest.html">DeleteInstanceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_DeleteInstance_Google_Cloud_Spanner_Admin_Instance_V1_DeleteInstanceRequest_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.DeleteInstance(DeleteInstanceRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_DeleteInstanceAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.DeleteInstanceAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_DeleteInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_DeleteInstanceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.DeleteInstanceAsync(Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteInstanceAsync(DeleteInstanceRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Deletes an instance.</p>
+<p>Immediately upon completion of the request:</p>
+<ul>
+<li>Billing ceases for all of the instance&apos;s reserved resources.</li>
+</ul>
+<p>Soon afterward:</p>
+<ul>
+<li>The instance and <em>all of its databases</em> immediately and
+irrevocably disappear from the API. All data in the databases
+is permanently deleted.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task DeleteInstanceAsync(DeleteInstanceRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest.html">DeleteInstanceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_DeleteInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_DeleteInstanceRequest_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.DeleteInstanceAsync(DeleteInstanceRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_GetIamPolicy_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.GetIamPolicy*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_GetIamPolicy_Google_Cloud_Iam_V1_GetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.GetIamPolicy(Google.Cloud.Iam.V1.GetIamPolicyRequest,Google.Api.Gax.Grpc.CallSettings)">GetIamPolicy(GetIamPolicyRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets the access control policy for an instance resource. Returns an empty
+policy if an instance exists but does not have a policy set.</p>
+<p>Authorization requires <code>spanner.instances.getIamPolicy</code> on
+[resource][google.iam.v1.GetIamPolicyRequest.resource].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Policy GetIamPolicy(GetIamPolicyRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Cloud.Iam.V1.GetIamPolicyRequest</span></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Cloud.Iam.V1.Policy</span></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_GetIamPolicy_Google_Cloud_Iam_V1_GetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.GetIamPolicy(GetIamPolicyRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_GetIamPolicyAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.GetIamPolicyAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_GetIamPolicyAsync_Google_Cloud_Iam_V1_GetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.GetIamPolicyAsync(Google.Cloud.Iam.V1.GetIamPolicyRequest,Google.Api.Gax.Grpc.CallSettings)">GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets the access control policy for an instance resource. Returns an empty
+policy if an instance exists but does not have a policy set.</p>
+<p>Authorization requires <code>spanner.instances.getIamPolicy</code> on
+[resource][google.iam.v1.GetIamPolicyRequest.resource].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Policy&gt; GetIamPolicyAsync(GetIamPolicyRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Cloud.Iam.V1.GetIamPolicyRequest</span></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Cloud.Iam.V1.Policy</span>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_GetIamPolicyAsync_Google_Cloud_Iam_V1_GetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_GetInstance_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.GetInstance*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_GetInstance_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.GetInstance(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest,Google.Api.Gax.Grpc.CallSettings)">GetInstance(GetInstanceRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets information about a particular instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Instance GetInstance(GetInstanceRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest.html">GetInstanceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.Instance.html">Instance</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_GetInstance_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceRequest_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.GetInstance(GetInstanceRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_GetInstanceAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.GetInstanceAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_GetInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.GetInstanceAsync(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest,Google.Api.Gax.Grpc.CallSettings)">GetInstanceAsync(GetInstanceRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets information about a particular instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Instance&gt; GetInstanceAsync(GetInstanceRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest.html">GetInstanceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.Instance.html">Instance</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_GetInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceRequest_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.GetInstanceAsync(GetInstanceRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_GetInstanceConfig_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.GetInstanceConfig*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_GetInstanceConfig_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceConfigRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.GetInstanceConfig(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest,Google.Api.Gax.Grpc.CallSettings)">GetInstanceConfig(GetInstanceConfigRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets information about a particular instance configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override InstanceConfig GetInstanceConfig(GetInstanceConfigRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest.html">GetInstanceConfigRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.html">InstanceConfig</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_GetInstanceConfig_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceConfigRequest_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.GetInstanceConfig(GetInstanceConfigRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_GetInstanceConfigAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.GetInstanceConfigAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_GetInstanceConfigAsync_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceConfigRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.GetInstanceConfigAsync(Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest,Google.Api.Gax.Grpc.CallSettings)">GetInstanceConfigAsync(GetInstanceConfigRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets information about a particular instance configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;InstanceConfig&gt; GetInstanceConfigAsync(GetInstanceConfigRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest.html">GetInstanceConfigRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.html">InstanceConfig</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_GetInstanceConfigAsync_Google_Cloud_Spanner_Admin_Instance_V1_GetInstanceConfigRequest_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.GetInstanceConfigAsync(GetInstanceConfigRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_ListInstanceConfigs_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.ListInstanceConfigs*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_ListInstanceConfigs_Google_Cloud_Spanner_Admin_Instance_V1_ListInstanceConfigsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.ListInstanceConfigs(Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest,Google.Api.Gax.Grpc.CallSettings)">ListInstanceConfigs(ListInstanceConfigsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists the supported instance configurations for a given project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PagedEnumerable&lt;ListInstanceConfigsResponse, InstanceConfig&gt; ListInstanceConfigs(ListInstanceConfigsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest.html">ListInstanceConfigsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.PagedEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse.html">ListInstanceConfigsResponse</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.html">InstanceConfig</a>&gt;</td>
+        <td><p>A pageable sequence of <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.html">InstanceConfig</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_ListInstanceConfigs_Google_Cloud_Spanner_Admin_Instance_V1_ListInstanceConfigsRequest_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.ListInstanceConfigs(ListInstanceConfigsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_ListInstanceConfigsAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.ListInstanceConfigsAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_ListInstanceConfigsAsync_Google_Cloud_Spanner_Admin_Instance_V1_ListInstanceConfigsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.ListInstanceConfigsAsync(Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest,Google.Api.Gax.Grpc.CallSettings)">ListInstanceConfigsAsync(ListInstanceConfigsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists the supported instance configurations for a given project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PagedAsyncEnumerable&lt;ListInstanceConfigsResponse, InstanceConfig&gt; ListInstanceConfigsAsync(ListInstanceConfigsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest.html">ListInstanceConfigsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.PagedAsyncEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse.html">ListInstanceConfigsResponse</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.html">InstanceConfig</a>&gt;</td>
+        <td><p>A pageable asynchronous sequence of <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.html">InstanceConfig</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_ListInstanceConfigsAsync_Google_Cloud_Spanner_Admin_Instance_V1_ListInstanceConfigsRequest_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.ListInstanceConfigsAsync(ListInstanceConfigsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_ListInstances_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.ListInstances*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_ListInstances_Google_Cloud_Spanner_Admin_Instance_V1_ListInstancesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.ListInstances(Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest,Google.Api.Gax.Grpc.CallSettings)">ListInstances(ListInstancesRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists all instances in the given project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PagedEnumerable&lt;ListInstancesResponse, Instance&gt; ListInstances(ListInstancesRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest.html">ListInstancesRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.PagedEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse.html">ListInstancesResponse</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.Instance.html">Instance</a>&gt;</td>
+        <td><p>A pageable sequence of <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.Instance.html">Instance</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_ListInstances_Google_Cloud_Spanner_Admin_Instance_V1_ListInstancesRequest_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.ListInstances(ListInstancesRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_ListInstancesAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.ListInstancesAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_ListInstancesAsync_Google_Cloud_Spanner_Admin_Instance_V1_ListInstancesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.ListInstancesAsync(Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest,Google.Api.Gax.Grpc.CallSettings)">ListInstancesAsync(ListInstancesRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Lists all instances in the given project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PagedAsyncEnumerable&lt;ListInstancesResponse, Instance&gt; ListInstancesAsync(ListInstancesRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest.html">ListInstancesRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.PagedAsyncEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse.html">ListInstancesResponse</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.Instance.html">Instance</a>&gt;</td>
+        <td><p>A pageable asynchronous sequence of <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.Instance.html">Instance</a> resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_ListInstancesAsync_Google_Cloud_Spanner_Admin_Instance_V1_ListInstancesRequest_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.ListInstancesAsync(ListInstancesRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_SetIamPolicy_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.SetIamPolicy*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_SetIamPolicy_Google_Cloud_Iam_V1_SetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.SetIamPolicy(Google.Cloud.Iam.V1.SetIamPolicyRequest,Google.Api.Gax.Grpc.CallSettings)">SetIamPolicy(SetIamPolicyRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets the access control policy on an instance resource. Replaces any
+existing policy.</p>
+<p>Authorization requires <code>spanner.instances.setIamPolicy</code> on
+[resource][google.iam.v1.SetIamPolicyRequest.resource].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Policy SetIamPolicy(SetIamPolicyRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Cloud.Iam.V1.SetIamPolicyRequest</span></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Cloud.Iam.V1.Policy</span></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_SetIamPolicy_Google_Cloud_Iam_V1_SetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.SetIamPolicy(SetIamPolicyRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_SetIamPolicyAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.SetIamPolicyAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_SetIamPolicyAsync_Google_Cloud_Iam_V1_SetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.SetIamPolicyAsync(Google.Cloud.Iam.V1.SetIamPolicyRequest,Google.Api.Gax.Grpc.CallSettings)">SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Sets the access control policy on an instance resource. Replaces any
+existing policy.</p>
+<p>Authorization requires <code>spanner.instances.setIamPolicy</code> on
+[resource][google.iam.v1.SetIamPolicyRequest.resource].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Policy&gt; SetIamPolicyAsync(SetIamPolicyRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Cloud.Iam.V1.SetIamPolicyRequest</span></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Cloud.Iam.V1.Policy</span>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_SetIamPolicyAsync_Google_Cloud_Iam_V1_SetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_TestIamPermissions_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.TestIamPermissions*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_TestIamPermissions_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.TestIamPermissions(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Google.Api.Gax.Grpc.CallSettings)">TestIamPermissions(TestIamPermissionsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns permissions that the caller has on the specified instance resource.</p>
+<p>Attempting this RPC on a non-existent Cloud Spanner instance resource will
+result in a NOT_FOUND error if the user has <code>spanner.instances.list</code>
+permission on the containing Google Cloud Project. Otherwise returns an
+empty set of permissions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override TestIamPermissionsResponse TestIamPermissions(TestIamPermissionsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Cloud.Iam.V1.TestIamPermissionsRequest</span></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Cloud.Iam.V1.TestIamPermissionsResponse</span></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_TestIamPermissions_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.TestIamPermissions(TestIamPermissionsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_TestIamPermissionsAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.TestIamPermissionsAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_TestIamPermissionsAsync_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.TestIamPermissionsAsync(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Google.Api.Gax.Grpc.CallSettings)">TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns permissions that the caller has on the specified instance resource.</p>
+<p>Attempting this RPC on a non-existent Cloud Spanner instance resource will
+result in a NOT_FOUND error if the user has <code>spanner.instances.list</code>
+permission on the containing Google Cloud Project. Otherwise returns an
+empty set of permissions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;TestIamPermissionsResponse&gt; TestIamPermissionsAsync(TestIamPermissionsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.Cloud.Iam.V1.TestIamPermissionsRequest</span></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Cloud.Iam.V1.TestIamPermissionsResponse</span>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_TestIamPermissionsAsync_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_UpdateInstance_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.UpdateInstance*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_UpdateInstance_Google_Cloud_Spanner_Admin_Instance_V1_UpdateInstanceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.UpdateInstance(Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateInstance(UpdateInstanceRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates an instance, and begins allocating or releasing resources
+as requested. The returned [long-running
+operation][google.longrunning.Operation] can be used to track the
+progress of updating the instance. If the named instance does not
+exist, returns <code>NOT_FOUND</code>.</p>
+<p>Immediately upon completion of this request:</p>
+<ul>
+<li>For resource types for which a decrease in the instance&apos;s allocation
+has been requested, billing is based on the newly-requested level.</li>
+</ul>
+<p>Until completion of the returned operation:</p>
+<ul>
+<li>Cancelling the operation sets its metadata&apos;s
+[cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
+restoring resources to their pre-request values. The operation
+is guaranteed to succeed at undoing all resource changes,
+after which point it terminates with a <code>CANCELLED</code> status.</li>
+<li>All other attempts to modify the instance are rejected.</li>
+<li>Reading the instance via the API continues to give the pre-request
+resource levels.</li>
+</ul>
+<p>Upon completion of the returned operation:</p>
+<ul>
+<li>Billing begins for all successfully-allocated resources (some types
+may have lower than the requested levels).</li>
+<li>All newly-reserved resources are available for serving the instance&apos;s
+tables.</li>
+<li>The instance&apos;s new resource levels are readable via the API.</li>
+</ul>
+<p>The returned [long-running operation][google.longrunning.Operation] will
+have a name of the format <code>&amp;lt;instance_name&gt;/operations/&amp;lt;operation_id&gt;</code> and
+can be used to track the instance modification.  The
+[metadata][google.longrunning.Operation.metadata] field type is
+[UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
+The [response][google.longrunning.Operation.response] field type is
+[Instance][google.spanner.admin.instance.v1.Instance], if successful.</p>
+<p>Authorization requires <code>spanner.instances.update</code> permission on
+resource [name][google.spanner.admin.instance.v1.Instance.name].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Operation&lt;Instance, UpdateInstanceMetadata&gt; UpdateInstance(UpdateInstanceRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest.html">UpdateInstanceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Google.LongRunning.Operation</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.Instance.html">Instance</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceMetadata.html">UpdateInstanceMetadata</a>&gt;</td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_UpdateInstance_Google_Cloud_Spanner_Admin_Instance_V1_UpdateInstanceRequest_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.UpdateInstance(UpdateInstanceRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_UpdateInstanceAsync_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.UpdateInstanceAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_UpdateInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_UpdateInstanceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.UpdateInstanceAsync(Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateInstanceAsync(UpdateInstanceRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates an instance, and begins allocating or releasing resources
+as requested. The returned [long-running
+operation][google.longrunning.Operation] can be used to track the
+progress of updating the instance. If the named instance does not
+exist, returns <code>NOT_FOUND</code>.</p>
+<p>Immediately upon completion of this request:</p>
+<ul>
+<li>For resource types for which a decrease in the instance&apos;s allocation
+has been requested, billing is based on the newly-requested level.</li>
+</ul>
+<p>Until completion of the returned operation:</p>
+<ul>
+<li>Cancelling the operation sets its metadata&apos;s
+[cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
+restoring resources to their pre-request values. The operation
+is guaranteed to succeed at undoing all resource changes,
+after which point it terminates with a <code>CANCELLED</code> status.</li>
+<li>All other attempts to modify the instance are rejected.</li>
+<li>Reading the instance via the API continues to give the pre-request
+resource levels.</li>
+</ul>
+<p>Upon completion of the returned operation:</p>
+<ul>
+<li>Billing begins for all successfully-allocated resources (some types
+may have lower than the requested levels).</li>
+<li>All newly-reserved resources are available for serving the instance&apos;s
+tables.</li>
+<li>The instance&apos;s new resource levels are readable via the API.</li>
+</ul>
+<p>The returned [long-running operation][google.longrunning.Operation] will
+have a name of the format <code>&amp;lt;instance_name&gt;/operations/&amp;lt;operation_id&gt;</code> and
+can be used to track the instance modification.  The
+[metadata][google.longrunning.Operation.metadata] field type is
+[UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
+The [response][google.longrunning.Operation.response] field type is
+[Instance][google.spanner.admin.instance.v1.Instance], if successful.</p>
+<p>Authorization requires <code>spanner.instances.update</code> permission on
+resource [name][google.spanner.admin.instance.v1.Instance.name].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;Operation&lt;Instance, UpdateInstanceMetadata&gt;&gt; UpdateInstanceAsync(UpdateInstanceRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest.html">UpdateInstanceRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.LongRunning.Operation</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.Instance.html">Instance</a>, <a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceMetadata.html">UpdateInstanceMetadata</a>&gt;&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_UpdateInstanceAsync_Google_Cloud_Spanner_Admin_Instance_V1_UpdateInstanceRequest_Google_Api_Gax_Grpc_CallSettings_">InstanceAdminClient.UpdateInstanceAsync(UpdateInstanceRequest, CallSettings)</a></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

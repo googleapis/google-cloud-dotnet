@@ -1,0 +1,646 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CallSettings
+   | Google.Cloud.Spanner.Admin.Database.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CallSettings
+   | Google.Cloud.Spanner.Admin.Database.V1 ">
+    <meta name="generator" content="docfx 2.20.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Api.Gax.Grpc.CallSettings">
+  
+  
+  <h1 id="Google_Api_Gax_Grpc_CallSettings" data-uid="Google.Api.Gax.Grpc.CallSettings" class="text-break">Class CallSettings
+  </h1>
+  <div class="markdown level0 summary"><p>Settings to determine how an RPC operates. This type is immutable.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">CallSettings</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Api.Gax.Grpc.html">Google.Api.Gax.Grpc</a></h6>
+  <h6><strong>Assembly</strong>: Google.Api.Gax.Grpc.dll</h6>
+  <h5 id="Google_Api_Gax_Grpc_CallSettings_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class CallSettings</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Google_Api_Gax_Grpc_CallSettings__ctor_" data-uid="Google.Api.Gax.Grpc.CallSettings.#ctor*"></a>
+  <h4 id="Google_Api_Gax_Grpc_CallSettings__ctor_System_Nullable_System_Threading_CancellationToken__Grpc_Core_CallCredentials_Google_Api_Gax_Grpc_CallTiming_System_Action_Grpc_Core_Metadata__Grpc_Core_WriteOptions_Grpc_Core_ContextPropagationToken_" data-uid="Google.Api.Gax.Grpc.CallSettings.#ctor(System.Nullable{System.Threading.CancellationToken},Grpc.Core.CallCredentials,Google.Api.Gax.Grpc.CallTiming,System.Action{Grpc.Core.Metadata},Grpc.Core.WriteOptions,Grpc.Core.ContextPropagationToken)">CallSettings(Nullable&lt;CancellationToken&gt;, CallCredentials, CallTiming, Action&lt;Metadata&gt;, WriteOptions, ContextPropagationToken)</h4>
+  <div class="markdown level1 summary"><p>Constructs an instance with the specified settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CallSettings(CancellationToken? cancellationToken, CallCredentials credentials, CallTiming timing, Action&lt;Metadata&gt; headerMutation, WriteOptions writeOptions, ContextPropagationToken propagationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Threading.CancellationToken</span>&gt;</td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>Cancellation token that can be used for cancelling the call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallCredentials.html">CallCredentials</a></td>
+        <td><span class="parametername">credentials</span></td>
+        <td><p>Credentials to use for the call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallTiming.html">CallTiming</a></td>
+        <td><span class="parametername">timing</span></td>
+        <td><p><a class="xref" href="Google.Api.Gax.Grpc.CallTiming.html">CallTiming</a> to use, or null for default retry/expiration behavior.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Grpc.Core.Metadata.html">Metadata</a>&gt;</td>
+        <td><span class="parametername">headerMutation</span></td>
+        <td><p>Action to modify the headers to send at the beginning of the call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.WriteOptions.html">WriteOptions</a></td>
+        <td><span class="parametername">writeOptions</span></td>
+        <td><p><a class="xref" href="Grpc.Core.WriteOptions.html">WriteOptions</a> that will be used for the call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ContextPropagationToken.html">ContextPropagationToken</a></td>
+        <td><span class="parametername">propagationToken</span></td>
+        <td><p><a class="xref" href="Grpc.Core.ContextPropagationToken.html">ContextPropagationToken</a> for propagating settings from a parent call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Api_Gax_Grpc_CallSettings_CancellationToken_" data-uid="Google.Api.Gax.Grpc.CallSettings.CancellationToken*"></a>
+  <h4 id="Google_Api_Gax_Grpc_CallSettings_CancellationToken" data-uid="Google.Api.Gax.Grpc.CallSettings.CancellationToken">CancellationToken</h4>
+  <div class="markdown level1 summary"><p>Cancellation token that can be used for cancelling the call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CancellationToken? CancellationToken { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Threading.CancellationToken</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Gax_Grpc_CallSettings_Credentials_" data-uid="Google.Api.Gax.Grpc.CallSettings.Credentials*"></a>
+  <h4 id="Google_Api_Gax_Grpc_CallSettings_Credentials" data-uid="Google.Api.Gax.Grpc.CallSettings.Credentials">Credentials</h4>
+  <div class="markdown level1 summary"><p>Credentials to use for the call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CallCredentials Credentials { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallCredentials.html">CallCredentials</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Gax_Grpc_CallSettings_HeaderMutation_" data-uid="Google.Api.Gax.Grpc.CallSettings.HeaderMutation*"></a>
+  <h4 id="Google_Api_Gax_Grpc_CallSettings_HeaderMutation" data-uid="Google.Api.Gax.Grpc.CallSettings.HeaderMutation">HeaderMutation</h4>
+  <div class="markdown level1 summary"><p>Delegate to mutate the metadata which will be sent at the start of the call,
+typically to add custom headers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;Metadata&gt; HeaderMutation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Grpc.Core.Metadata.html">Metadata</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Gax_Grpc_CallSettings_PropagationToken_" data-uid="Google.Api.Gax.Grpc.CallSettings.PropagationToken*"></a>
+  <h4 id="Google_Api_Gax_Grpc_CallSettings_PropagationToken" data-uid="Google.Api.Gax.Grpc.CallSettings.PropagationToken">PropagationToken</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="Grpc.Core.ContextPropagationToken.html">ContextPropagationToken</a> for propagating settings from a parent call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContextPropagationToken PropagationToken { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ContextPropagationToken.html">ContextPropagationToken</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Gax_Grpc_CallSettings_Timing_" data-uid="Google.Api.Gax.Grpc.CallSettings.Timing*"></a>
+  <h4 id="Google_Api_Gax_Grpc_CallSettings_Timing" data-uid="Google.Api.Gax.Grpc.CallSettings.Timing">Timing</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="Google.Api.Gax.Grpc.CallTiming.html">CallTiming</a> to use, or null for default retry/expiration behavior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CallTiming Timing { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallTiming.html">CallTiming</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Api_Gax_Grpc_CallSettings_Timing_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Allows selecting between retry and simple expiration.</p>
+</div>
+  <a id="Google_Api_Gax_Grpc_CallSettings_WriteOptions_" data-uid="Google.Api.Gax.Grpc.CallSettings.WriteOptions*"></a>
+  <h4 id="Google_Api_Gax_Grpc_CallSettings_WriteOptions" data-uid="Google.Api.Gax.Grpc.CallSettings.WriteOptions">WriteOptions</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="Grpc.Core.WriteOptions.html">WriteOptions</a> that will be used for the call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WriteOptions WriteOptions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.WriteOptions.html">WriteOptions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Api_Gax_Grpc_CallSettings_FromCallCredentials_" data-uid="Google.Api.Gax.Grpc.CallSettings.FromCallCredentials*"></a>
+  <h4 id="Google_Api_Gax_Grpc_CallSettings_FromCallCredentials_Grpc_Core_CallCredentials_" data-uid="Google.Api.Gax.Grpc.CallSettings.FromCallCredentials(Grpc.Core.CallCredentials)">FromCallCredentials(CallCredentials)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a> for the specified call credentials, or returns null
+if <span class="paramref">credentials</span> is null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CallSettings FromCallCredentials(CallCredentials credentials)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.CallCredentials.html">CallCredentials</a></td>
+        <td><span class="parametername">credentials</span></td>
+        <td><p>The call credentials for the new settings.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><p>A new instance, or null if <span class="paramref">credentials</span> is null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Gax_Grpc_CallSettings_FromCallTiming_" data-uid="Google.Api.Gax.Grpc.CallSettings.FromCallTiming*"></a>
+  <h4 id="Google_Api_Gax_Grpc_CallSettings_FromCallTiming_Google_Api_Gax_Grpc_CallTiming_" data-uid="Google.Api.Gax.Grpc.CallSettings.FromCallTiming(Google.Api.Gax.Grpc.CallTiming)">FromCallTiming(CallTiming)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a> for the specified call timing, or returns null
+if <span class="paramref">timing</span> is null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CallSettings FromCallTiming(CallTiming timing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallTiming.html">CallTiming</a></td>
+        <td><span class="parametername">timing</span></td>
+        <td><p>The call timing for the new settings.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><p>A new instance or null if <span class="paramref">timing</span> is null..</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Gax_Grpc_CallSettings_FromCancellationToken_" data-uid="Google.Api.Gax.Grpc.CallSettings.FromCancellationToken*"></a>
+  <h4 id="Google_Api_Gax_Grpc_CallSettings_FromCancellationToken_System_Threading_CancellationToken_" data-uid="Google.Api.Gax.Grpc.CallSettings.FromCancellationToken(System.Threading.CancellationToken)">FromCancellationToken(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a> for the specified cancellation token.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CallSettings FromCancellationToken(CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token for the new settings.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><p>A new instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Gax_Grpc_CallSettings_FromFieldMask_" data-uid="Google.Api.Gax.Grpc.CallSettings.FromFieldMask*"></a>
+  <h4 id="Google_Api_Gax_Grpc_CallSettings_FromFieldMask_System_String_" data-uid="Google.Api.Gax.Grpc.CallSettings.FromFieldMask(System.String)">FromFieldMask(String)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a> that will include a field mask in the request, to
+limit which fields are returned in the response.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CallSettings FromFieldMask(string fieldMask)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fieldMask</span></td>
+        <td><p>The field mask for the request. Must not be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><p>A new instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Api_Gax_Grpc_CallSettings_FromFieldMask_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The precise effect on the request is not guaranteed: it may be through a header or a side-channel,
+for example. Likewise the effect of combining multiple settings containing field masks is not specified.</p>
+</div>
+  <a id="Google_Api_Gax_Grpc_CallSettings_FromHeader_" data-uid="Google.Api.Gax.Grpc.CallSettings.FromHeader*"></a>
+  <h4 id="Google_Api_Gax_Grpc_CallSettings_FromHeader_System_String_System_String_" data-uid="Google.Api.Gax.Grpc.CallSettings.FromHeader(System.String,System.String)">FromHeader(String, String)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a> for the specified header name and value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CallSettings FromHeader(string name, string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the header to add. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value of the header to add. Must not be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><p>A new instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Api_Gax_Grpc_CallSettings_FromHeaderMutation_" data-uid="Google.Api.Gax.Grpc.CallSettings.FromHeaderMutation*"></a>
+  <h4 id="Google_Api_Gax_Grpc_CallSettings_FromHeaderMutation_System_Action_Grpc_Core_Metadata__" data-uid="Google.Api.Gax.Grpc.CallSettings.FromHeaderMutation(System.Action{Grpc.Core.Metadata})">FromHeaderMutation(Action&lt;Metadata&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a> for the specified header mutation, or returns null
+if <span class="paramref">headerMutation</span> is null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CallSettings FromHeaderMutation(Action&lt;Metadata&gt; headerMutation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Grpc.Core.Metadata.html">Metadata</a>&gt;</td>
+        <td><span class="parametername">headerMutation</span></td>
+        <td><p>Action to modify the headers to send at the beginning of the call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><p>A new instance, or null if <span class="paramref">headerMutation</span> is null..</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Google.Api.Gax.Grpc.CallSettingsExtensions.html#Google_Api_Gax_Grpc_CallSettingsExtensions_MergedWith_Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Grpc_CallSettings_">CallSettingsExtensions.MergedWith(CallSettings, CallSettings)</a>
+  </div>
+  <div>
+      <a class="xref" href="Google.Api.Gax.Grpc.CallSettingsExtensions.html#Google_Api_Gax_Grpc_CallSettingsExtensions_WithCancellationToken_Google_Api_Gax_Grpc_CallSettings_System_Threading_CancellationToken_">CallSettingsExtensions.WithCancellationToken(CallSettings, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="Google.Api.Gax.Grpc.CallSettingsExtensions.html#Google_Api_Gax_Grpc_CallSettingsExtensions_WithCallCredentials_Google_Api_Gax_Grpc_CallSettings_Grpc_Core_CallCredentials_">CallSettingsExtensions.WithCallCredentials(CallSettings, CallCredentials)</a>
+  </div>
+  <div>
+      <a class="xref" href="Google.Api.Gax.Grpc.CallSettingsExtensions.html#Google_Api_Gax_Grpc_CallSettingsExtensions_WithCallTiming_Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Grpc_CallTiming_">CallSettingsExtensions.WithCallTiming(CallSettings, CallTiming)</a>
+  </div>
+  <div>
+      <a class="xref" href="Google.Api.Gax.Grpc.CallSettingsExtensions.html#Google_Api_Gax_Grpc_CallSettingsExtensions_WithHeader_Google_Api_Gax_Grpc_CallSettings_System_String_System_String_">CallSettingsExtensions.WithHeader(CallSettings, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Google.Api.Gax.Grpc.CallSettingsExtensions.html#Google_Api_Gax_Grpc_CallSettingsExtensions_WithEarlierDeadline_Google_Api_Gax_Grpc_CallSettings_System_Nullable_System_DateTime__Google_Api_Gax_IClock_">CallSettingsExtensions.WithEarlierDeadline(CallSettings, Nullable&lt;DateTime&gt;, IClock)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

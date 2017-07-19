@@ -790,18 +790,6 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.Common.IManagedTracer.AnnotateSpan
   fullName: Google.Cloud.Diagnostics.Common.IManagedTracer.AnnotateSpan
   nameWithType: IManagedTracer.AnnotateSpan
-- uid: Google.Cloud.Diagnostics.Common.IManagedTracer.EndSpan
-  name: EndSpan()
-  href: api/Google.Cloud.Diagnostics.Common.IManagedTracer.html#Google_Cloud_Diagnostics_Common_IManagedTracer_EndSpan
-  commentId: M:Google.Cloud.Diagnostics.Common.IManagedTracer.EndSpan
-  fullName: Google.Cloud.Diagnostics.Common.IManagedTracer.EndSpan()
-  nameWithType: IManagedTracer.EndSpan()
-- uid: Google.Cloud.Diagnostics.Common.IManagedTracer.EndSpan*
-  name: EndSpan
-  href: api/Google.Cloud.Diagnostics.Common.IManagedTracer.html#Google_Cloud_Diagnostics_Common_IManagedTracer_EndSpan_
-  commentId: Overload:Google.Cloud.Diagnostics.Common.IManagedTracer.EndSpan
-  fullName: Google.Cloud.Diagnostics.Common.IManagedTracer.EndSpan
-  nameWithType: IManagedTracer.EndSpan
 - uid: Google.Cloud.Diagnostics.Common.IManagedTracer.GetCurrentSpanId
   name: GetCurrentSpanId()
   href: api/Google.Cloud.Diagnostics.Common.IManagedTracer.html#Google_Cloud_Diagnostics_Common_IManagedTracer_GetCurrentSpanId
@@ -886,6 +874,63 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.Common.IManagedTracer.StartSpan
   fullName: Google.Cloud.Diagnostics.Common.IManagedTracer.StartSpan
   nameWithType: IManagedTracer.StartSpan
+- uid: Google.Cloud.Diagnostics.Common.ISpan
+  name: ISpan
+  href: api/Google.Cloud.Diagnostics.Common.ISpan.html
+  commentId: T:Google.Cloud.Diagnostics.Common.ISpan
+  fullName: Google.Cloud.Diagnostics.Common.ISpan
+  nameWithType: ISpan
+- uid: Google.Cloud.Diagnostics.Common.ISpan.AnnotateSpan(System.Collections.Generic.Dictionary{System.String,System.String})
+  name: AnnotateSpan(Dictionary<String, String>)
+  href: api/Google.Cloud.Diagnostics.Common.ISpan.html#Google_Cloud_Diagnostics_Common_ISpan_AnnotateSpan_System_Collections_Generic_Dictionary_System_String_System_String__
+  commentId: M:Google.Cloud.Diagnostics.Common.ISpan.AnnotateSpan(System.Collections.Generic.Dictionary{System.String,System.String})
+  name.vb: AnnotateSpan(Dictionary(Of String, String))
+  fullName: Google.Cloud.Diagnostics.Common.ISpan.AnnotateSpan(System.Collections.Generic.Dictionary<System.String, System.String>)
+  fullName.vb: Google.Cloud.Diagnostics.Common.ISpan.AnnotateSpan(System.Collections.Generic.Dictionary(Of System.String, System.String))
+  nameWithType: ISpan.AnnotateSpan(Dictionary<String, String>)
+  nameWithType.vb: ISpan.AnnotateSpan(Dictionary(Of String, String))
+- uid: Google.Cloud.Diagnostics.Common.ISpan.AnnotateSpan*
+  name: AnnotateSpan
+  href: api/Google.Cloud.Diagnostics.Common.ISpan.html#Google_Cloud_Diagnostics_Common_ISpan_AnnotateSpan_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.ISpan.AnnotateSpan
+  fullName: Google.Cloud.Diagnostics.Common.ISpan.AnnotateSpan
+  nameWithType: ISpan.AnnotateSpan
+- uid: Google.Cloud.Diagnostics.Common.ISpan.Disposed
+  name: Disposed()
+  href: api/Google.Cloud.Diagnostics.Common.ISpan.html#Google_Cloud_Diagnostics_Common_ISpan_Disposed
+  commentId: M:Google.Cloud.Diagnostics.Common.ISpan.Disposed
+  fullName: Google.Cloud.Diagnostics.Common.ISpan.Disposed()
+  nameWithType: ISpan.Disposed()
+- uid: Google.Cloud.Diagnostics.Common.ISpan.Disposed*
+  name: Disposed
+  href: api/Google.Cloud.Diagnostics.Common.ISpan.html#Google_Cloud_Diagnostics_Common_ISpan_Disposed_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.ISpan.Disposed
+  fullName: Google.Cloud.Diagnostics.Common.ISpan.Disposed
+  nameWithType: ISpan.Disposed
+- uid: Google.Cloud.Diagnostics.Common.ISpan.SetStackTrace(System.Diagnostics.StackTrace)
+  name: SetStackTrace(StackTrace)
+  href: api/Google.Cloud.Diagnostics.Common.ISpan.html#Google_Cloud_Diagnostics_Common_ISpan_SetStackTrace_System_Diagnostics_StackTrace_
+  commentId: M:Google.Cloud.Diagnostics.Common.ISpan.SetStackTrace(System.Diagnostics.StackTrace)
+  fullName: Google.Cloud.Diagnostics.Common.ISpan.SetStackTrace(System.Diagnostics.StackTrace)
+  nameWithType: ISpan.SetStackTrace(StackTrace)
+- uid: Google.Cloud.Diagnostics.Common.ISpan.SetStackTrace*
+  name: SetStackTrace
+  href: api/Google.Cloud.Diagnostics.Common.ISpan.html#Google_Cloud_Diagnostics_Common_ISpan_SetStackTrace_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.ISpan.SetStackTrace
+  fullName: Google.Cloud.Diagnostics.Common.ISpan.SetStackTrace
+  nameWithType: ISpan.SetStackTrace
+- uid: Google.Cloud.Diagnostics.Common.ISpan.SpanId
+  name: SpanId()
+  href: api/Google.Cloud.Diagnostics.Common.ISpan.html#Google_Cloud_Diagnostics_Common_ISpan_SpanId
+  commentId: M:Google.Cloud.Diagnostics.Common.ISpan.SpanId
+  fullName: Google.Cloud.Diagnostics.Common.ISpan.SpanId()
+  nameWithType: ISpan.SpanId()
+- uid: Google.Cloud.Diagnostics.Common.ISpan.SpanId*
+  name: SpanId
+  href: api/Google.Cloud.Diagnostics.Common.ISpan.html#Google_Cloud_Diagnostics_Common_ISpan_SpanId_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.ISpan.SpanId
+  fullName: Google.Cloud.Diagnostics.Common.ISpan.SpanId
+  nameWithType: ISpan.SpanId
 - uid: Google.Cloud.Diagnostics.Common.LogTarget
   name: LogTarget
   href: api/Google.Cloud.Diagnostics.Common.LogTarget.html
@@ -1003,18 +1048,6 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.Common.NullManagedTracer.AnnotateSpan
   fullName: Google.Cloud.Diagnostics.Common.NullManagedTracer.AnnotateSpan
   nameWithType: NullManagedTracer.AnnotateSpan
-- uid: Google.Cloud.Diagnostics.Common.NullManagedTracer.EndSpan
-  name: EndSpan()
-  href: api/Google.Cloud.Diagnostics.Common.NullManagedTracer.html#Google_Cloud_Diagnostics_Common_NullManagedTracer_EndSpan
-  commentId: M:Google.Cloud.Diagnostics.Common.NullManagedTracer.EndSpan
-  fullName: Google.Cloud.Diagnostics.Common.NullManagedTracer.EndSpan()
-  nameWithType: NullManagedTracer.EndSpan()
-- uid: Google.Cloud.Diagnostics.Common.NullManagedTracer.EndSpan*
-  name: EndSpan
-  href: api/Google.Cloud.Diagnostics.Common.NullManagedTracer.html#Google_Cloud_Diagnostics_Common_NullManagedTracer_EndSpan_
-  commentId: Overload:Google.Cloud.Diagnostics.Common.NullManagedTracer.EndSpan
-  fullName: Google.Cloud.Diagnostics.Common.NullManagedTracer.EndSpan
-  nameWithType: NullManagedTracer.EndSpan
 - uid: Google.Cloud.Diagnostics.Common.NullManagedTracer.GetCurrentSpanId
   name: GetCurrentSpanId()
   href: api/Google.Cloud.Diagnostics.Common.NullManagedTracer.html#Google_Cloud_Diagnostics_Common_NullManagedTracer_GetCurrentSpanId

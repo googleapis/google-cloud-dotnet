@@ -17337,12 +17337,15 @@ references:
   commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntities(Google.Cloud.Language.V1.Document,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntities(Google.Cloud.Language.V1.Document, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: LanguageServiceClient.AnalyzeEntities(Document, CallSettings)
-- uid: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntities(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.EncodingType,Google.Api.Gax.Grpc.CallSettings)
-  name: AnalyzeEntities(Document, EncodingType, CallSettings)
-  href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnalyzeEntities_Google_Cloud_Language_V1_Document_Google_Cloud_Language_V1_EncodingType_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntities(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.EncodingType,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntities(Google.Cloud.Language.V1.Document, Google.Cloud.Language.V1.EncodingType, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: LanguageServiceClient.AnalyzeEntities(Document, EncodingType, CallSettings)
+- uid: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntities(Google.Cloud.Language.V1.Document,System.Nullable{Google.Cloud.Language.V1.EncodingType},Google.Api.Gax.Grpc.CallSettings)
+  name: AnalyzeEntities(Document, Nullable<EncodingType>, CallSettings)
+  href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnalyzeEntities_Google_Cloud_Language_V1_Document_System_Nullable_Google_Cloud_Language_V1_EncodingType__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntities(Google.Cloud.Language.V1.Document,System.Nullable{Google.Cloud.Language.V1.EncodingType},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: AnalyzeEntities(Document, Nullable(Of EncodingType), CallSettings)
+  fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntities(Google.Cloud.Language.V1.Document, System.Nullable<Google.Cloud.Language.V1.EncodingType>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntities(Google.Cloud.Language.V1.Document, System.Nullable(Of Google.Cloud.Language.V1.EncodingType), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: LanguageServiceClient.AnalyzeEntities(Document, Nullable<EncodingType>, CallSettings)
+  nameWithType.vb: LanguageServiceClient.AnalyzeEntities(Document, Nullable(Of EncodingType), CallSettings)
 - uid: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntities*
   name: AnalyzeEntities
   href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnalyzeEntities_
@@ -17361,18 +17364,24 @@ references:
   commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitiesAsync(Google.Cloud.Language.V1.Document,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitiesAsync(Google.Cloud.Language.V1.Document, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: LanguageServiceClient.AnalyzeEntitiesAsync(Document, CallSettings)
-- uid: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitiesAsync(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.EncodingType,Google.Api.Gax.Grpc.CallSettings)
-  name: AnalyzeEntitiesAsync(Document, EncodingType, CallSettings)
-  href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnalyzeEntitiesAsync_Google_Cloud_Language_V1_Document_Google_Cloud_Language_V1_EncodingType_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitiesAsync(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.EncodingType,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitiesAsync(Google.Cloud.Language.V1.Document, Google.Cloud.Language.V1.EncodingType, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: LanguageServiceClient.AnalyzeEntitiesAsync(Document, EncodingType, CallSettings)
-- uid: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitiesAsync(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.EncodingType,System.Threading.CancellationToken)
-  name: AnalyzeEntitiesAsync(Document, EncodingType, CancellationToken)
-  href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnalyzeEntitiesAsync_Google_Cloud_Language_V1_Document_Google_Cloud_Language_V1_EncodingType_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitiesAsync(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.EncodingType,System.Threading.CancellationToken)
-  fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitiesAsync(Google.Cloud.Language.V1.Document, Google.Cloud.Language.V1.EncodingType, System.Threading.CancellationToken)
-  nameWithType: LanguageServiceClient.AnalyzeEntitiesAsync(Document, EncodingType, CancellationToken)
+- uid: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitiesAsync(Google.Cloud.Language.V1.Document,System.Nullable{Google.Cloud.Language.V1.EncodingType},Google.Api.Gax.Grpc.CallSettings)
+  name: AnalyzeEntitiesAsync(Document, Nullable<EncodingType>, CallSettings)
+  href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnalyzeEntitiesAsync_Google_Cloud_Language_V1_Document_System_Nullable_Google_Cloud_Language_V1_EncodingType__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitiesAsync(Google.Cloud.Language.V1.Document,System.Nullable{Google.Cloud.Language.V1.EncodingType},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: AnalyzeEntitiesAsync(Document, Nullable(Of EncodingType), CallSettings)
+  fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitiesAsync(Google.Cloud.Language.V1.Document, System.Nullable<Google.Cloud.Language.V1.EncodingType>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitiesAsync(Google.Cloud.Language.V1.Document, System.Nullable(Of Google.Cloud.Language.V1.EncodingType), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: LanguageServiceClient.AnalyzeEntitiesAsync(Document, Nullable<EncodingType>, CallSettings)
+  nameWithType.vb: LanguageServiceClient.AnalyzeEntitiesAsync(Document, Nullable(Of EncodingType), CallSettings)
+- uid: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitiesAsync(Google.Cloud.Language.V1.Document,System.Nullable{Google.Cloud.Language.V1.EncodingType},System.Threading.CancellationToken)
+  name: AnalyzeEntitiesAsync(Document, Nullable<EncodingType>, CancellationToken)
+  href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnalyzeEntitiesAsync_Google_Cloud_Language_V1_Document_System_Nullable_Google_Cloud_Language_V1_EncodingType__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitiesAsync(Google.Cloud.Language.V1.Document,System.Nullable{Google.Cloud.Language.V1.EncodingType},System.Threading.CancellationToken)
+  name.vb: AnalyzeEntitiesAsync(Document, Nullable(Of EncodingType), CancellationToken)
+  fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitiesAsync(Google.Cloud.Language.V1.Document, System.Nullable<Google.Cloud.Language.V1.EncodingType>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitiesAsync(Google.Cloud.Language.V1.Document, System.Nullable(Of Google.Cloud.Language.V1.EncodingType), System.Threading.CancellationToken)
+  nameWithType: LanguageServiceClient.AnalyzeEntitiesAsync(Document, Nullable<EncodingType>, CancellationToken)
+  nameWithType.vb: LanguageServiceClient.AnalyzeEntitiesAsync(Document, Nullable(Of EncodingType), CancellationToken)
 - uid: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitiesAsync(Google.Cloud.Language.V1.Document,System.Threading.CancellationToken)
   name: AnalyzeEntitiesAsync(Document, CancellationToken)
   href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnalyzeEntitiesAsync_Google_Cloud_Language_V1_Document_System_Threading_CancellationToken_
@@ -17439,12 +17448,15 @@ references:
   commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntax(Google.Cloud.Language.V1.Document,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntax(Google.Cloud.Language.V1.Document, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: LanguageServiceClient.AnalyzeSyntax(Document, CallSettings)
-- uid: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntax(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.EncodingType,Google.Api.Gax.Grpc.CallSettings)
-  name: AnalyzeSyntax(Document, EncodingType, CallSettings)
-  href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnalyzeSyntax_Google_Cloud_Language_V1_Document_Google_Cloud_Language_V1_EncodingType_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntax(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.EncodingType,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntax(Google.Cloud.Language.V1.Document, Google.Cloud.Language.V1.EncodingType, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: LanguageServiceClient.AnalyzeSyntax(Document, EncodingType, CallSettings)
+- uid: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntax(Google.Cloud.Language.V1.Document,System.Nullable{Google.Cloud.Language.V1.EncodingType},Google.Api.Gax.Grpc.CallSettings)
+  name: AnalyzeSyntax(Document, Nullable<EncodingType>, CallSettings)
+  href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnalyzeSyntax_Google_Cloud_Language_V1_Document_System_Nullable_Google_Cloud_Language_V1_EncodingType__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntax(Google.Cloud.Language.V1.Document,System.Nullable{Google.Cloud.Language.V1.EncodingType},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: AnalyzeSyntax(Document, Nullable(Of EncodingType), CallSettings)
+  fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntax(Google.Cloud.Language.V1.Document, System.Nullable<Google.Cloud.Language.V1.EncodingType>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntax(Google.Cloud.Language.V1.Document, System.Nullable(Of Google.Cloud.Language.V1.EncodingType), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: LanguageServiceClient.AnalyzeSyntax(Document, Nullable<EncodingType>, CallSettings)
+  nameWithType.vb: LanguageServiceClient.AnalyzeSyntax(Document, Nullable(Of EncodingType), CallSettings)
 - uid: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntax*
   name: AnalyzeSyntax
   href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnalyzeSyntax_
@@ -17463,18 +17475,24 @@ references:
   commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntaxAsync(Google.Cloud.Language.V1.Document,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntaxAsync(Google.Cloud.Language.V1.Document, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: LanguageServiceClient.AnalyzeSyntaxAsync(Document, CallSettings)
-- uid: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntaxAsync(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.EncodingType,Google.Api.Gax.Grpc.CallSettings)
-  name: AnalyzeSyntaxAsync(Document, EncodingType, CallSettings)
-  href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnalyzeSyntaxAsync_Google_Cloud_Language_V1_Document_Google_Cloud_Language_V1_EncodingType_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntaxAsync(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.EncodingType,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntaxAsync(Google.Cloud.Language.V1.Document, Google.Cloud.Language.V1.EncodingType, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: LanguageServiceClient.AnalyzeSyntaxAsync(Document, EncodingType, CallSettings)
-- uid: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntaxAsync(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.EncodingType,System.Threading.CancellationToken)
-  name: AnalyzeSyntaxAsync(Document, EncodingType, CancellationToken)
-  href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnalyzeSyntaxAsync_Google_Cloud_Language_V1_Document_Google_Cloud_Language_V1_EncodingType_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntaxAsync(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.EncodingType,System.Threading.CancellationToken)
-  fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntaxAsync(Google.Cloud.Language.V1.Document, Google.Cloud.Language.V1.EncodingType, System.Threading.CancellationToken)
-  nameWithType: LanguageServiceClient.AnalyzeSyntaxAsync(Document, EncodingType, CancellationToken)
+- uid: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntaxAsync(Google.Cloud.Language.V1.Document,System.Nullable{Google.Cloud.Language.V1.EncodingType},Google.Api.Gax.Grpc.CallSettings)
+  name: AnalyzeSyntaxAsync(Document, Nullable<EncodingType>, CallSettings)
+  href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnalyzeSyntaxAsync_Google_Cloud_Language_V1_Document_System_Nullable_Google_Cloud_Language_V1_EncodingType__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntaxAsync(Google.Cloud.Language.V1.Document,System.Nullable{Google.Cloud.Language.V1.EncodingType},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: AnalyzeSyntaxAsync(Document, Nullable(Of EncodingType), CallSettings)
+  fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntaxAsync(Google.Cloud.Language.V1.Document, System.Nullable<Google.Cloud.Language.V1.EncodingType>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntaxAsync(Google.Cloud.Language.V1.Document, System.Nullable(Of Google.Cloud.Language.V1.EncodingType), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: LanguageServiceClient.AnalyzeSyntaxAsync(Document, Nullable<EncodingType>, CallSettings)
+  nameWithType.vb: LanguageServiceClient.AnalyzeSyntaxAsync(Document, Nullable(Of EncodingType), CallSettings)
+- uid: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntaxAsync(Google.Cloud.Language.V1.Document,System.Nullable{Google.Cloud.Language.V1.EncodingType},System.Threading.CancellationToken)
+  name: AnalyzeSyntaxAsync(Document, Nullable<EncodingType>, CancellationToken)
+  href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnalyzeSyntaxAsync_Google_Cloud_Language_V1_Document_System_Nullable_Google_Cloud_Language_V1_EncodingType__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntaxAsync(Google.Cloud.Language.V1.Document,System.Nullable{Google.Cloud.Language.V1.EncodingType},System.Threading.CancellationToken)
+  name.vb: AnalyzeSyntaxAsync(Document, Nullable(Of EncodingType), CancellationToken)
+  fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntaxAsync(Google.Cloud.Language.V1.Document, System.Nullable<Google.Cloud.Language.V1.EncodingType>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntaxAsync(Google.Cloud.Language.V1.Document, System.Nullable(Of Google.Cloud.Language.V1.EncodingType), System.Threading.CancellationToken)
+  nameWithType: LanguageServiceClient.AnalyzeSyntaxAsync(Document, Nullable<EncodingType>, CancellationToken)
+  nameWithType.vb: LanguageServiceClient.AnalyzeSyntaxAsync(Document, Nullable(Of EncodingType), CancellationToken)
 - uid: Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntaxAsync(Google.Cloud.Language.V1.Document,System.Threading.CancellationToken)
   name: AnalyzeSyntaxAsync(Document, CancellationToken)
   href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnalyzeSyntaxAsync_Google_Cloud_Language_V1_Document_System_Threading_CancellationToken_
@@ -17499,12 +17517,15 @@ references:
   commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnnotateText(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnnotateText(Google.Cloud.Language.V1.Document, Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: LanguageServiceClient.AnnotateText(Document, AnnotateTextRequest.Types.Features, CallSettings)
-- uid: Google.Cloud.Language.V1.LanguageServiceClient.AnnotateText(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features,Google.Cloud.Language.V1.EncodingType,Google.Api.Gax.Grpc.CallSettings)
-  name: AnnotateText(Document, AnnotateTextRequest.Types.Features, EncodingType, CallSettings)
-  href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnnotateText_Google_Cloud_Language_V1_Document_Google_Cloud_Language_V1_AnnotateTextRequest_Types_Features_Google_Cloud_Language_V1_EncodingType_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnnotateText(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features,Google.Cloud.Language.V1.EncodingType,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnnotateText(Google.Cloud.Language.V1.Document, Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features, Google.Cloud.Language.V1.EncodingType, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: LanguageServiceClient.AnnotateText(Document, AnnotateTextRequest.Types.Features, EncodingType, CallSettings)
+- uid: Google.Cloud.Language.V1.LanguageServiceClient.AnnotateText(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features,System.Nullable{Google.Cloud.Language.V1.EncodingType},Google.Api.Gax.Grpc.CallSettings)
+  name: AnnotateText(Document, AnnotateTextRequest.Types.Features, Nullable<EncodingType>, CallSettings)
+  href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnnotateText_Google_Cloud_Language_V1_Document_Google_Cloud_Language_V1_AnnotateTextRequest_Types_Features_System_Nullable_Google_Cloud_Language_V1_EncodingType__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnnotateText(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features,System.Nullable{Google.Cloud.Language.V1.EncodingType},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: AnnotateText(Document, AnnotateTextRequest.Types.Features, Nullable(Of EncodingType), CallSettings)
+  fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnnotateText(Google.Cloud.Language.V1.Document, Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features, System.Nullable<Google.Cloud.Language.V1.EncodingType>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Language.V1.LanguageServiceClient.AnnotateText(Google.Cloud.Language.V1.Document, Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features, System.Nullable(Of Google.Cloud.Language.V1.EncodingType), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: LanguageServiceClient.AnnotateText(Document, AnnotateTextRequest.Types.Features, Nullable<EncodingType>, CallSettings)
+  nameWithType.vb: LanguageServiceClient.AnnotateText(Document, AnnotateTextRequest.Types.Features, Nullable(Of EncodingType), CallSettings)
 - uid: Google.Cloud.Language.V1.LanguageServiceClient.AnnotateText*
   name: AnnotateText
   href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnnotateText_
@@ -17523,18 +17544,24 @@ references:
   commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnnotateTextAsync(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnnotateTextAsync(Google.Cloud.Language.V1.Document, Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: LanguageServiceClient.AnnotateTextAsync(Document, AnnotateTextRequest.Types.Features, CallSettings)
-- uid: Google.Cloud.Language.V1.LanguageServiceClient.AnnotateTextAsync(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features,Google.Cloud.Language.V1.EncodingType,Google.Api.Gax.Grpc.CallSettings)
-  name: AnnotateTextAsync(Document, AnnotateTextRequest.Types.Features, EncodingType, CallSettings)
-  href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnnotateTextAsync_Google_Cloud_Language_V1_Document_Google_Cloud_Language_V1_AnnotateTextRequest_Types_Features_Google_Cloud_Language_V1_EncodingType_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnnotateTextAsync(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features,Google.Cloud.Language.V1.EncodingType,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnnotateTextAsync(Google.Cloud.Language.V1.Document, Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features, Google.Cloud.Language.V1.EncodingType, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: LanguageServiceClient.AnnotateTextAsync(Document, AnnotateTextRequest.Types.Features, EncodingType, CallSettings)
-- uid: Google.Cloud.Language.V1.LanguageServiceClient.AnnotateTextAsync(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features,Google.Cloud.Language.V1.EncodingType,System.Threading.CancellationToken)
-  name: AnnotateTextAsync(Document, AnnotateTextRequest.Types.Features, EncodingType, CancellationToken)
-  href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnnotateTextAsync_Google_Cloud_Language_V1_Document_Google_Cloud_Language_V1_AnnotateTextRequest_Types_Features_Google_Cloud_Language_V1_EncodingType_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnnotateTextAsync(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features,Google.Cloud.Language.V1.EncodingType,System.Threading.CancellationToken)
-  fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnnotateTextAsync(Google.Cloud.Language.V1.Document, Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features, Google.Cloud.Language.V1.EncodingType, System.Threading.CancellationToken)
-  nameWithType: LanguageServiceClient.AnnotateTextAsync(Document, AnnotateTextRequest.Types.Features, EncodingType, CancellationToken)
+- uid: Google.Cloud.Language.V1.LanguageServiceClient.AnnotateTextAsync(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features,System.Nullable{Google.Cloud.Language.V1.EncodingType},Google.Api.Gax.Grpc.CallSettings)
+  name: AnnotateTextAsync(Document, AnnotateTextRequest.Types.Features, Nullable<EncodingType>, CallSettings)
+  href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnnotateTextAsync_Google_Cloud_Language_V1_Document_Google_Cloud_Language_V1_AnnotateTextRequest_Types_Features_System_Nullable_Google_Cloud_Language_V1_EncodingType__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnnotateTextAsync(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features,System.Nullable{Google.Cloud.Language.V1.EncodingType},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: AnnotateTextAsync(Document, AnnotateTextRequest.Types.Features, Nullable(Of EncodingType), CallSettings)
+  fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnnotateTextAsync(Google.Cloud.Language.V1.Document, Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features, System.Nullable<Google.Cloud.Language.V1.EncodingType>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Language.V1.LanguageServiceClient.AnnotateTextAsync(Google.Cloud.Language.V1.Document, Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features, System.Nullable(Of Google.Cloud.Language.V1.EncodingType), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: LanguageServiceClient.AnnotateTextAsync(Document, AnnotateTextRequest.Types.Features, Nullable<EncodingType>, CallSettings)
+  nameWithType.vb: LanguageServiceClient.AnnotateTextAsync(Document, AnnotateTextRequest.Types.Features, Nullable(Of EncodingType), CallSettings)
+- uid: Google.Cloud.Language.V1.LanguageServiceClient.AnnotateTextAsync(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features,System.Nullable{Google.Cloud.Language.V1.EncodingType},System.Threading.CancellationToken)
+  name: AnnotateTextAsync(Document, AnnotateTextRequest.Types.Features, Nullable<EncodingType>, CancellationToken)
+  href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnnotateTextAsync_Google_Cloud_Language_V1_Document_Google_Cloud_Language_V1_AnnotateTextRequest_Types_Features_System_Nullable_Google_Cloud_Language_V1_EncodingType__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Language.V1.LanguageServiceClient.AnnotateTextAsync(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features,System.Nullable{Google.Cloud.Language.V1.EncodingType},System.Threading.CancellationToken)
+  name.vb: AnnotateTextAsync(Document, AnnotateTextRequest.Types.Features, Nullable(Of EncodingType), CancellationToken)
+  fullName: Google.Cloud.Language.V1.LanguageServiceClient.AnnotateTextAsync(Google.Cloud.Language.V1.Document, Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features, System.Nullable<Google.Cloud.Language.V1.EncodingType>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Language.V1.LanguageServiceClient.AnnotateTextAsync(Google.Cloud.Language.V1.Document, Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features, System.Nullable(Of Google.Cloud.Language.V1.EncodingType), System.Threading.CancellationToken)
+  nameWithType: LanguageServiceClient.AnnotateTextAsync(Document, AnnotateTextRequest.Types.Features, Nullable<EncodingType>, CancellationToken)
+  nameWithType.vb: LanguageServiceClient.AnnotateTextAsync(Document, AnnotateTextRequest.Types.Features, Nullable(Of EncodingType), CancellationToken)
 - uid: Google.Cloud.Language.V1.LanguageServiceClient.AnnotateTextAsync(Google.Cloud.Language.V1.Document,Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features,System.Threading.CancellationToken)
   name: AnnotateTextAsync(Document, AnnotateTextRequest.Types.Features, CancellationToken)
   href: api/Google.Cloud.Language.V1.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageServiceClient_AnnotateTextAsync_Google_Cloud_Language_V1_Document_Google_Cloud_Language_V1_AnnotateTextRequest_Types_Features_System_Threading_CancellationToken_

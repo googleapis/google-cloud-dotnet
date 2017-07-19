@@ -1564,20 +1564,20 @@ DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
 // Initialize request argument(s)
 ListInspectFindingsRequest request = new ListInspectFindingsRequest
 {
-    Name = new ResultName(&quot;[RESULT]&quot;).ToString(),
+    ResultName = new ResultName(&quot;[RESULT]&quot;),
 };
 // Make the request
 ListInspectFindingsResponse response = dlpServiceClient.ListInspectFindings(request);
 </code></pre></div>
   </div>
   <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindings_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindings*"></a>
-  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindings_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindings(System.String,Google.Api.Gax.Grpc.CallSettings)">ListInspectFindings(String, CallSettings)</h4>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindings_Google_Cloud_Dlp_V2Beta1_ResultName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindings(Google.Cloud.Dlp.V2Beta1.ResultName,Google.Api.Gax.Grpc.CallSettings)">ListInspectFindings(ResultName, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Returns list of results for given inspect operation result set id.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual ListInspectFindingsResponse ListInspectFindings(string name, CallSettings callSettings = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual ListInspectFindingsResponse ListInspectFindings(ResultName name, CallSettings callSettings = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1590,7 +1590,7 @@ ListInspectFindingsResponse response = dlpServiceClient.ListInspectFindings(requ
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.ResultName.html">ResultName</a></td>
         <td><span class="parametername">name</span></td>
         <td><p>Identifier of the results set returned as metadata of
 the longrunning operation created by a call to CreateInspectOperation.
@@ -1622,13 +1622,13 @@ Should be in the format of `inspect/results/{id}.</p>
     </tbody>
   </table>
   <div>
-  <h5 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindings_System_String_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <h5 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindings_Google_Cloud_Dlp_V2Beta1_ResultName_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
   <div class="markdown level1"><pre><code class="lang-cs">// Create client
 DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
 // Initialize request argument(s)
-string formattedName = new ResultName(&quot;[RESULT]&quot;).ToString();
+ResultName name = new ResultName(&quot;[RESULT]&quot;);
 // Make the request
-ListInspectFindingsResponse response = dlpServiceClient.ListInspectFindings(formattedName);
+ListInspectFindingsResponse response = dlpServiceClient.ListInspectFindings(name);
 </code></pre></div>
   </div>
   <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindingsAsync_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindingsAsync*"></a>
@@ -1687,20 +1687,20 @@ DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
 // Initialize request argument(s)
 ListInspectFindingsRequest request = new ListInspectFindingsRequest
 {
-    Name = new ResultName(&quot;[RESULT]&quot;).ToString(),
+    ResultName = new ResultName(&quot;[RESULT]&quot;),
 };
 // Make the request
 ListInspectFindingsResponse response = await dlpServiceClient.ListInspectFindingsAsync(request);
 </code></pre></div>
   </div>
   <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindingsAsync_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindingsAsync*"></a>
-  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindingsAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindingsAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">ListInspectFindingsAsync(String, CallSettings)</h4>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindingsAsync_Google_Cloud_Dlp_V2Beta1_ResultName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindingsAsync(Google.Cloud.Dlp.V2Beta1.ResultName,Google.Api.Gax.Grpc.CallSettings)">ListInspectFindingsAsync(ResultName, CallSettings)</h4>
   <div class="markdown level1 summary"><p>Returns list of results for given inspect operation result set id.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;ListInspectFindingsResponse&gt; ListInspectFindingsAsync(string name, CallSettings callSettings = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ListInspectFindingsResponse&gt; ListInspectFindingsAsync(ResultName name, CallSettings callSettings = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1713,7 +1713,7 @@ ListInspectFindingsResponse response = await dlpServiceClient.ListInspectFinding
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.ResultName.html">ResultName</a></td>
         <td><span class="parametername">name</span></td>
         <td><p>Identifier of the results set returned as metadata of
 the longrunning operation created by a call to CreateInspectOperation.
@@ -1745,23 +1745,23 @@ Should be in the format of `inspect/results/{id}.</p>
     </tbody>
   </table>
   <div>
-  <h5 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindingsAsync_System_String_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <h5 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindingsAsync_Google_Cloud_Dlp_V2Beta1_ResultName_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
   <div class="markdown level1"><pre><code class="lang-cs">// Create client
 DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
 // Initialize request argument(s)
-string formattedName = new ResultName(&quot;[RESULT]&quot;).ToString();
+ResultName name = new ResultName(&quot;[RESULT]&quot;);
 // Make the request
-ListInspectFindingsResponse response = await dlpServiceClient.ListInspectFindingsAsync(formattedName);
+ListInspectFindingsResponse response = await dlpServiceClient.ListInspectFindingsAsync(name);
 </code></pre></div>
   </div>
   <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindingsAsync_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindingsAsync*"></a>
-  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindingsAsync_System_String_System_Threading_CancellationToken_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindingsAsync(System.String,System.Threading.CancellationToken)">ListInspectFindingsAsync(String, CancellationToken)</h4>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindingsAsync_Google_Cloud_Dlp_V2Beta1_ResultName_System_Threading_CancellationToken_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListInspectFindingsAsync(Google.Cloud.Dlp.V2Beta1.ResultName,System.Threading.CancellationToken)">ListInspectFindingsAsync(ResultName, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Returns list of results for given inspect operation result set id.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;ListInspectFindingsResponse&gt; ListInspectFindingsAsync(string name, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ListInspectFindingsResponse&gt; ListInspectFindingsAsync(ResultName name, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1774,7 +1774,7 @@ ListInspectFindingsResponse response = await dlpServiceClient.ListInspectFinding
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.ResultName.html">ResultName</a></td>
         <td><span class="parametername">name</span></td>
         <td><p>Identifier of the results set returned as metadata of
 the longrunning operation created by a call to CreateInspectOperation.
@@ -1806,13 +1806,13 @@ Should be in the format of `inspect/results/{id}.</p>
     </tbody>
   </table>
   <div>
-  <h5 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindingsAsync_System_String_System_Threading_CancellationToken__snippet">Sample code</h5>
+  <h5 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListInspectFindingsAsync_Google_Cloud_Dlp_V2Beta1_ResultName_System_Threading_CancellationToken__snippet">Sample code</h5>
   <div class="markdown level1"><pre><code class="lang-cs">// Create client
 DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
 // Initialize request argument(s)
-string formattedName = new ResultName(&quot;[RESULT]&quot;).ToString();
+ResultName name = new ResultName(&quot;[RESULT]&quot;);
 // Make the request
-ListInspectFindingsResponse response = await dlpServiceClient.ListInspectFindingsAsync(formattedName);
+ListInspectFindingsResponse response = await dlpServiceClient.ListInspectFindingsAsync(name);
 </code></pre></div>
   </div>
   <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_ListRootCategories_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListRootCategories*"></a>

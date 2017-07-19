@@ -1,0 +1,975 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SpannerParameterCollection
+   | Google.Cloud.Spanner.Data </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SpannerParameterCollection
+   | Google.Cloud.Spanner.Data ">
+    <meta name="generator" content="docfx 2.20.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection">
+  
+  
+  <h1 id="Google_Cloud_Spanner_Data_SpannerParameterCollection" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection" class="text-break">Class SpannerParameterCollection
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a collection of parameters associated with a <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a> and their
+respective mappings to columns in a DataSet.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">System.MarshalByRefObject</span></div>
+    <div class="level2"><span class="xref">System.Data.Common.DbParameterCollection</span></div>
+    <div class="level3"><span class="xref">SpannerParameterCollection</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Data.Common.DbParameterCollection.System.Collections.IList.get_Item(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbParameterCollection.System.Collections.IList.set_Item(System.Int32, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbParameterCollection.System.Data.IDataParameterCollection.get_Item(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbParameterCollection.System.Data.IDataParameterCollection.set_Item(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbParameterCollection.System.Collections.IList.Item[System.Int32]</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbParameterCollection.System.Data.IDataParameterCollection.Item[System.String]</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbParameterCollection.Item[System.Int32]</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbParameterCollection.Item[System.String]</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.MemberwiseClone(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.GetLifetimeService()</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.InitializeLifetimeService()</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.CreateObjRef(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Spanner.Data.html">Google.Cloud.Spanner.Data</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Spanner.Data.dll</h6>
+  <h5 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class SpannerParameterCollection : DbParameterCollection, IDataParameterCollection, IList, ICollection, IEnumerable&lt;SpannerParameter&gt;, IEnumerable</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_Count_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.Count*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_Count" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.Count">Count</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int Count { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbParameterCollection.Count</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_IsFixedSize_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.IsFixedSize*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_IsFixedSize" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.IsFixedSize">IsFixedSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsFixedSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbParameterCollection.IsFixedSize</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_IsReadOnly_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.IsReadOnly*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_IsReadOnly" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.IsReadOnly">IsReadOnly</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsReadOnly { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbParameterCollection.IsReadOnly</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_IsSynchronized_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.IsSynchronized*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_IsSynchronized" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.IsSynchronized">IsSynchronized</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsSynchronized { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbParameterCollection.IsSynchronized</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_SyncRoot_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.SyncRoot*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_SyncRoot" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.SyncRoot">SyncRoot</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override object SyncRoot { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbParameterCollection.SyncRoot</span></div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_Add_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.Add*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_Add_System_Object_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.Add(System.Object)">Add(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int Add(object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbParameterCollection.Add(System.Object)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_Add_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.Add*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_Add_System_String_Google_Cloud_Spanner_Data_SpannerDbType_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.Add(System.String,Google.Cloud.Spanner.Data.SpannerDbType)">Add(String, SpannerDbType)</h4>
+  <div class="markdown level1 summary"><p>Adds a new <a class="xref" href="Google.Cloud.Spanner.Data.SpannerParameter.html">SpannerParameter</a> to the <a class="xref" href="Google.Cloud.Spanner.Data.SpannerParameterCollection.html">SpannerParameterCollection</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(string parameterName, SpannerDbType dbType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter. For Insert, Update and Delete commands, this name should
+be the name of a valid Column in a Spanner table. In Select commands, this name should be the name of a parameter
+used in the SQL Query. Must not be null</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.SpannerDbType.html">SpannerDbType</a></td>
+        <td><span class="parametername">dbType</span></td>
+        <td><p>One of the <a class="xref" href="Google.Cloud.Spanner.Data.SpannerDbType.html">SpannerDbType</a> values that indicates the type of the parameter.
+Must not be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_Add_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.Add*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_Add_System_String_Google_Cloud_Spanner_Data_SpannerDbType_System_Object_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.Add(System.String,Google.Cloud.Spanner.Data.SpannerDbType,System.Object)">Add(String, SpannerDbType, Object)</h4>
+  <div class="markdown level1 summary"><p>Adds a new <a class="xref" href="Google.Cloud.Spanner.Data.SpannerParameter.html">SpannerParameter</a> to the <a class="xref" href="Google.Cloud.Spanner.Data.SpannerParameterCollection.html">SpannerParameterCollection</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(string parameterName, SpannerDbType dbType, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter. For Insert, Update and Delete commands, this name should
+be the name of a valid Column in a Spanner table. In Select commands, this name should be the name of a parameter
+used in the SQL Query. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.SpannerDbType.html">SpannerDbType</a></td>
+        <td><span class="parametername">dbType</span></td>
+        <td><p>One of the <a class="xref" href="Google.Cloud.Spanner.Data.SpannerDbType.html">SpannerDbType</a> values that indicates the type of the parameter.
+Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>An object that is the value of the SpannerParameter. May be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_AddRange_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.AddRange*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_AddRange_System_Array_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.AddRange(System.Array)">AddRange(Array)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void AddRange(Array values)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Array</span></td>
+        <td><span class="parametername">values</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbParameterCollection.AddRange(System.Array)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_Clear_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.Clear*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_Clear" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.Clear">Clear()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Clear()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbParameterCollection.Clear()</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_Contains_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.Contains*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_Contains_System_Object_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.Contains(System.Object)">Contains(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Contains(object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbParameterCollection.Contains(System.Object)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_Contains_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.Contains*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_Contains_System_String_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.Contains(System.String)">Contains(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Contains(string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbParameterCollection.Contains(System.String)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_CopyTo_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.CopyTo*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_CopyTo_System_Array_System_Int32_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.CopyTo(System.Array,System.Int32)">CopyTo(Array, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void CopyTo(Array array, int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Array</span></td>
+        <td><span class="parametername">array</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbParameterCollection.CopyTo(System.Array, System.Int32)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_GetEnumerator_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.GetEnumerator*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_GetEnumerator" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerator GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbParameterCollection.GetEnumerator()</span></div>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.IEnumerable.GetEnumerator()</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_GetParameter_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.GetParameter*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_GetParameter_System_Int32_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.GetParameter(System.Int32)">GetParameter(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DbParameter GetParameter(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.DbParameter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbParameterCollection.GetParameter(System.Int32)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_GetParameter_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.GetParameter*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_GetParameter_System_String_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.GetParameter(System.String)">GetParameter(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DbParameter GetParameter(string parameterName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.DbParameter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbParameterCollection.GetParameter(System.String)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_IndexOf_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.IndexOf*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_IndexOf_System_Object_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.IndexOf(System.Object)">IndexOf(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int IndexOf(object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbParameterCollection.IndexOf(System.Object)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_IndexOf_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.IndexOf*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_IndexOf_System_String_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.IndexOf(System.String)">IndexOf(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int IndexOf(string parameterName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbParameterCollection.IndexOf(System.String)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_Insert_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.Insert*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_Insert_System_Int32_System_Object_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.Insert(System.Int32,System.Object)">Insert(Int32, Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Insert(int index, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbParameterCollection.Insert(System.Int32, System.Object)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_Remove_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.Remove*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_Remove_System_Object_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.Remove(System.Object)">Remove(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Remove(object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbParameterCollection.Remove(System.Object)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_RemoveAt_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.RemoveAt*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_RemoveAt_System_Int32_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.RemoveAt(System.Int32)">RemoveAt(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void RemoveAt(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbParameterCollection.RemoveAt(System.Int32)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_RemoveAt_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.RemoveAt*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_RemoveAt_System_String_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.RemoveAt(System.String)">RemoveAt(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void RemoveAt(string parameterName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbParameterCollection.RemoveAt(System.String)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_SetParameter_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.SetParameter*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_SetParameter_System_Int32_System_Data_Common_DbParameter_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.SetParameter(System.Int32,System.Data.Common.DbParameter)">SetParameter(Int32, DbParameter)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void SetParameter(int index, DbParameter value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.Common.DbParameter</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbParameterCollection.SetParameter(System.Int32, System.Data.Common.DbParameter)</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_SetParameter_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.SetParameter*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_SetParameter_System_String_System_Data_Common_DbParameter_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.SetParameter(System.String,System.Data.Common.DbParameter)">SetParameter(String, DbParameter)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void SetParameter(string parameterName, DbParameter value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.Common.DbParameter</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbParameterCollection.SetParameter(System.String, System.Data.Common.DbParameter)</span></div>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_System_Collections_Generic_IEnumerable_Google_Cloud_Spanner_Data_SpannerParameter__GetEnumerator_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.System#Collections#Generic#IEnumerable{Google#Cloud#Spanner#Data#SpannerParameter}#GetEnumerator*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_System_Collections_Generic_IEnumerable_Google_Cloud_Spanner_Data_SpannerParameter__GetEnumerator" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.System#Collections#Generic#IEnumerable{Google#Cloud#Spanner#Data#SpannerParameter}#GetEnumerator">IEnumerable&lt;SpannerParameter&gt;.GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator&lt;SpannerParameter&gt; IEnumerable&lt;SpannerParameter&gt;.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Data.SpannerParameter.html">SpannerParameter</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()</span></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

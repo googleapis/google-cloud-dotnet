@@ -1,0 +1,697 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Spanner.SpannerBase
+   | Google.Cloud.Spanner.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Spanner.SpannerBase
+   | Google.Cloud.Spanner.V1 ">
+    <meta name="generator" content="docfx 2.20.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerBase">
+  
+  
+  <h1 id="Google_Cloud_Spanner_V1_Spanner_SpannerBase" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerBase" class="text-break">Class Spanner.SpannerBase
+  </h1>
+  <div class="markdown level0 summary"><p>Base class for server-side implementations of Spanner</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Spanner.SpannerBase</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Spanner.V1.html">Google.Cloud.Spanner.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Spanner.V1.dll</h6>
+  <h5 id="Google_Cloud_Spanner_V1_Spanner_SpannerBase_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class SpannerBase</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Spanner_V1_Spanner_SpannerBase_BeginTransaction_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerBase.BeginTransaction*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerBase_BeginTransaction_Google_Cloud_Spanner_V1_BeginTransactionRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerBase.BeginTransaction(Google.Cloud.Spanner.V1.BeginTransactionRequest,Grpc.Core.ServerCallContext)">BeginTransaction(BeginTransactionRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Begins a new transaction. This step can often be skipped:
+[Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+[Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
+side-effect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Transaction&gt; BeginTransaction(BeginTransactionRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.BeginTransactionRequest.html">BeginTransactionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Transaction.html">Transaction</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_Spanner_SpannerBase_Commit_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerBase.Commit*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerBase_Commit_Google_Cloud_Spanner_V1_CommitRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerBase.Commit(Google.Cloud.Spanner.V1.CommitRequest,Grpc.Core.ServerCallContext)">Commit(CommitRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Commits a transaction. The request includes the mutations to be
+applied to rows in the database.</p>
+<p><code>Commit</code> might return an <code>ABORTED</code> error. This can occur at any time;
+commonly, the cause is conflicts with concurrent
+transactions. However, it can also happen for a variety of other
+reasons. If <code>Commit</code> returns <code>ABORTED</code>, the caller should re-attempt
+the transaction from the beginning, re-using the same session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;CommitResponse&gt; Commit(CommitRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.CommitRequest.html">CommitRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.CommitResponse.html">CommitResponse</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_Spanner_SpannerBase_CreateSession_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerBase.CreateSession*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerBase_CreateSession_Google_Cloud_Spanner_V1_CreateSessionRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerBase.CreateSession(Google.Cloud.Spanner.V1.CreateSessionRequest,Grpc.Core.ServerCallContext)">CreateSession(CreateSessionRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Creates a new session. A session can be used to perform
+transactions that read and/or modify data in a Cloud Spanner database.
+Sessions are meant to be reused for many consecutive
+transactions.</p>
+<p>Sessions can only execute one transaction at a time. To execute
+multiple concurrent read-write/write-only transactions, create
+multiple sessions. Note that standalone reads and queries use a
+transaction internally, and count toward the one transaction
+limit.</p>
+<p>Cloud Spanner limits the number of sessions that can exist at any given
+time; thus, it is a good idea to delete idle and/or unneeded sessions.
+Aside from explicit deletes, Cloud Spanner can delete sessions for which no
+operations are sent for more than an hour. If a session is deleted,
+requests to it return <code>NOT_FOUND</code>.</p>
+<p>Idle sessions can be kept alive by sending a trivial SQL query
+periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Session&gt; CreateSession(CreateSessionRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.CreateSessionRequest.html">CreateSessionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_Spanner_SpannerBase_DeleteSession_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerBase.DeleteSession*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerBase_DeleteSession_Google_Cloud_Spanner_V1_DeleteSessionRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerBase.DeleteSession(Google.Cloud.Spanner.V1.DeleteSessionRequest,Grpc.Core.ServerCallContext)">DeleteSession(DeleteSessionRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Ends a session, releasing server resources associated with it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Empty&gt; DeleteSession(DeleteSessionRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.DeleteSessionRequest.html">DeleteSessionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_Spanner_SpannerBase_ExecuteSql_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerBase.ExecuteSql*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerBase_ExecuteSql_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerBase.ExecuteSql(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Grpc.Core.ServerCallContext)">ExecuteSql(ExecuteSqlRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Executes an SQL query, returning all rows in a single reply. This
+method cannot be used to return a result set larger than 10 MiB;
+if the query yields more data than that, the query fails with
+a <code>FAILED_PRECONDITION</code> error.</p>
+<p>Queries inside read-write transactions might return <code>ABORTED</code>. If
+this occurs, the application should restart the transaction from
+the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.</p>
+<p>Larger result sets can be fetched in streaming fashion by calling
+[ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ResultSet&gt; ExecuteSql(ExecuteSqlRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.ExecuteSqlRequest.html">ExecuteSqlRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.ResultSet.html">ResultSet</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_Spanner_SpannerBase_ExecuteStreamingSql_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerBase.ExecuteStreamingSql*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerBase_ExecuteStreamingSql_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Grpc_Core_IServerStreamWriter_Google_Cloud_Spanner_V1_PartialResultSet__Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerBase.ExecuteStreamingSql(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Grpc.Core.IServerStreamWriter{Google.Cloud.Spanner.V1.PartialResultSet},Grpc.Core.ServerCallContext)">ExecuteStreamingSql(ExecuteSqlRequest, IServerStreamWriter&lt;PartialResultSet&gt;, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Like [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], except returns the result
+set as a stream. Unlike [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], there
+is no limit on the size of the returned result set. However, no
+individual row in the result set can exceed 100 MiB, and no
+column value can exceed 10 MiB.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task ExecuteStreamingSql(ExecuteSqlRequest request, IServerStreamWriter&lt;PartialResultSet&gt; responseStream, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.ExecuteSqlRequest.html">ExecuteSqlRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.IServerStreamWriter-1.html">IServerStreamWriter</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.PartialResultSet.html">PartialResultSet</a>&gt;</td>
+        <td><span class="parametername">responseStream</span></td>
+        <td><p>Used for sending responses back to the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task indicating completion of the handler.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_Spanner_SpannerBase_GetSession_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerBase.GetSession*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerBase_GetSession_Google_Cloud_Spanner_V1_GetSessionRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerBase.GetSession(Google.Cloud.Spanner.V1.GetSessionRequest,Grpc.Core.ServerCallContext)">GetSession(GetSessionRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Gets a session. Returns <code>NOT_FOUND</code> if the session does not exist.
+This is mainly useful for determining whether a session is still
+alive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Session&gt; GetSession(GetSessionRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.GetSessionRequest.html">GetSessionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_Spanner_SpannerBase_Read_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerBase.Read*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerBase_Read_Google_Cloud_Spanner_V1_ReadRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerBase.Read(Google.Cloud.Spanner.V1.ReadRequest,Grpc.Core.ServerCallContext)">Read(ReadRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Reads rows from the database using key lookups and scans, as a
+simple key/value style alternative to
+[ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
+return a result set larger than 10 MiB; if the read matches more
+data than that, the read fails with a <code>FAILED_PRECONDITION</code>
+error.</p>
+<p>Reads inside read-write transactions might return <code>ABORTED</code>. If
+this occurs, the application should restart the transaction from
+the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.</p>
+<p>Larger result sets can be yielded in streaming fashion by calling
+[StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ResultSet&gt; Read(ReadRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.ReadRequest.html">ReadRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.ResultSet.html">ResultSet</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_Spanner_SpannerBase_Rollback_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerBase.Rollback*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerBase_Rollback_Google_Cloud_Spanner_V1_RollbackRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerBase.Rollback(Google.Cloud.Spanner.V1.RollbackRequest,Grpc.Core.ServerCallContext)">Rollback(RollbackRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Rolls back a transaction, releasing any locks it holds. It is a good
+idea to call this for any transaction that includes one or more
+[Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
+ultimately decides not to commit.</p>
+<p><code>Rollback</code> returns <code>OK</code> if it successfully aborts the transaction, the
+transaction was already aborted, or the transaction is not
+found. <code>Rollback</code> never returns <code>ABORTED</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Empty&gt; Rollback(RollbackRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.RollbackRequest.html">RollbackRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html">Empty</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_Spanner_SpannerBase_StreamingRead_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerBase.StreamingRead*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_Spanner_SpannerBase_StreamingRead_Google_Cloud_Spanner_V1_ReadRequest_Grpc_Core_IServerStreamWriter_Google_Cloud_Spanner_V1_PartialResultSet__Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Spanner.V1.Spanner.SpannerBase.StreamingRead(Google.Cloud.Spanner.V1.ReadRequest,Grpc.Core.IServerStreamWriter{Google.Cloud.Spanner.V1.PartialResultSet},Grpc.Core.ServerCallContext)">StreamingRead(ReadRequest, IServerStreamWriter&lt;PartialResultSet&gt;, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Like [Read][google.spanner.v1.Spanner.Read], except returns the result set as a
+stream. Unlike [Read][google.spanner.v1.Spanner.Read], there is no limit on the
+size of the returned result set. However, no individual row in
+the result set can exceed 100 MiB, and no column value can exceed
+10 MiB.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task StreamingRead(ReadRequest request, IServerStreamWriter&lt;PartialResultSet&gt; responseStream, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.ReadRequest.html">ReadRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.IServerStreamWriter-1.html">IServerStreamWriter</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.PartialResultSet.html">PartialResultSet</a>&gt;</td>
+        <td><span class="parametername">responseStream</span></td>
+        <td><p>Used for sending responses back to the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task indicating completion of the handler.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

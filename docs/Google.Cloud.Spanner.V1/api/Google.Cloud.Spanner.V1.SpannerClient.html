@@ -1,0 +1,3052 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SpannerClient
+   | Google.Cloud.Spanner.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SpannerClient
+   | Google.Cloud.Spanner.V1 ">
+    <meta name="generator" content="docfx 2.20.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Spanner.V1.SpannerClient">
+  
+  
+  <h1 id="Google_Cloud_Spanner_V1_SpannerClient" data-uid="Google.Cloud.Spanner.V1.SpannerClient" class="text-break">Class SpannerClient
+  </h1>
+  <div class="markdown level0 summary"><p>Spanner client wrapper, for convenient use.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SpannerClient</span></div>
+  </div>
+      <div class="level2"><a class="xref" href="Google.Cloud.Spanner.V1.SpannerClientImpl.html">SpannerClientImpl</a></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Spanner.V1.html">Google.Cloud.Spanner.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Spanner.V1.dll</h6>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class SpannerClient</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_DefaultEndpoint_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.DefaultEndpoint*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_DefaultEndpoint" data-uid="Google.Cloud.Spanner.V1.SpannerClient.DefaultEndpoint">DefaultEndpoint</h4>
+  <div class="markdown level1 summary"><p>The default endpoint for the Spanner service, which is a host of &quot;spanner.googleapis.com&quot; and a port of 443.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ServiceEndpoint DefaultEndpoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_DefaultScopes_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.DefaultScopes*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_DefaultScopes" data-uid="Google.Cloud.Spanner.V1.SpannerClient.DefaultScopes">DefaultScopes</h4>
+  <div class="markdown level1 summary"><p>The default Spanner scopes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;string&gt; DefaultScopes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_DefaultScopes_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The default Spanner scopes are:
+<ul><li>&quot;<a href="https://www.googleapis.com/auth/cloud-platform&amp;quot">https://www.googleapis.com/auth/cloud-platform&quot</a>;</li><li>&quot;<a href="https://www.googleapis.com/auth/spanner.data&amp;quot">https://www.googleapis.com/auth/spanner.data&quot</a>;</li></ul></p>
+</div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_GrpcClient_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.GrpcClient*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_GrpcClient" data-uid="Google.Cloud.Spanner.V1.SpannerClient.GrpcClient">GrpcClient</h4>
+  <div class="markdown level1 summary"><p>The underlying gRPC Spanner client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Spanner.SpannerClient GrpcClient { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.Spanner.SpannerClient.html">Spanner.SpannerClient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_BeginTransaction_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.BeginTransaction*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_BeginTransaction_Google_Cloud_Spanner_V1_BeginTransactionRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.BeginTransaction(Google.Cloud.Spanner.V1.BeginTransactionRequest,Google.Api.Gax.Grpc.CallSettings)">BeginTransaction(BeginTransactionRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Begins a new transaction. This step can often be skipped:
+[Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+[Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
+side-effect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Transaction BeginTransaction(BeginTransactionRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.BeginTransactionRequest.html">BeginTransactionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.Transaction.html">Transaction</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_BeginTransaction_Google_Cloud_Spanner_V1_BeginTransactionRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = SpannerClient.Create();
+// Initialize request argument(s)
+BeginTransactionRequest request = new BeginTransactionRequest
+{
+    SessionAsSessionName = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;),
+    Options = new TransactionOptions(),
+};
+// Make the request
+Transaction response = spannerClient.BeginTransaction(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_BeginTransaction_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.BeginTransaction*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_BeginTransaction_Google_Cloud_Spanner_V1_SessionName_Google_Cloud_Spanner_V1_TransactionOptions_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.BeginTransaction(Google.Cloud.Spanner.V1.SessionName,Google.Cloud.Spanner.V1.TransactionOptions,Google.Api.Gax.Grpc.CallSettings)">BeginTransaction(SessionName, TransactionOptions, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Begins a new transaction. This step can often be skipped:
+[Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+[Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
+side-effect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Transaction BeginTransaction(SessionName session, TransactionOptions options, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.SessionName.html">SessionName</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>Required. The session in which the transaction runs.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.TransactionOptions.html">TransactionOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Required. Options for the new transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.Transaction.html">Transaction</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_BeginTransaction_Google_Cloud_Spanner_V1_SessionName_Google_Cloud_Spanner_V1_TransactionOptions_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = SpannerClient.Create();
+// Initialize request argument(s)
+SessionName session = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;);
+TransactionOptions options = new TransactionOptions();
+// Make the request
+Transaction response = spannerClient.BeginTransaction(session, options);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_BeginTransactionAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.BeginTransactionAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_BeginTransactionAsync_Google_Cloud_Spanner_V1_BeginTransactionRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.BeginTransactionAsync(Google.Cloud.Spanner.V1.BeginTransactionRequest,Google.Api.Gax.Grpc.CallSettings)">BeginTransactionAsync(BeginTransactionRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Begins a new transaction. This step can often be skipped:
+[Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+[Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
+side-effect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Transaction&gt; BeginTransactionAsync(BeginTransactionRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.BeginTransactionRequest.html">BeginTransactionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Transaction.html">Transaction</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_BeginTransactionAsync_Google_Cloud_Spanner_V1_BeginTransactionRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = await SpannerClient.CreateAsync();
+// Initialize request argument(s)
+BeginTransactionRequest request = new BeginTransactionRequest
+{
+    SessionAsSessionName = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;),
+    Options = new TransactionOptions(),
+};
+// Make the request
+Transaction response = await spannerClient.BeginTransactionAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_BeginTransactionAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.BeginTransactionAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_BeginTransactionAsync_Google_Cloud_Spanner_V1_SessionName_Google_Cloud_Spanner_V1_TransactionOptions_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.BeginTransactionAsync(Google.Cloud.Spanner.V1.SessionName,Google.Cloud.Spanner.V1.TransactionOptions,Google.Api.Gax.Grpc.CallSettings)">BeginTransactionAsync(SessionName, TransactionOptions, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Begins a new transaction. This step can often be skipped:
+[Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+[Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
+side-effect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Transaction&gt; BeginTransactionAsync(SessionName session, TransactionOptions options, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.SessionName.html">SessionName</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>Required. The session in which the transaction runs.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.TransactionOptions.html">TransactionOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Required. Options for the new transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Transaction.html">Transaction</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_BeginTransactionAsync_Google_Cloud_Spanner_V1_SessionName_Google_Cloud_Spanner_V1_TransactionOptions_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = await SpannerClient.CreateAsync();
+// Initialize request argument(s)
+SessionName session = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;);
+TransactionOptions options = new TransactionOptions();
+// Make the request
+Transaction response = await spannerClient.BeginTransactionAsync(session, options);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_BeginTransactionAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.BeginTransactionAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_BeginTransactionAsync_Google_Cloud_Spanner_V1_SessionName_Google_Cloud_Spanner_V1_TransactionOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.BeginTransactionAsync(Google.Cloud.Spanner.V1.SessionName,Google.Cloud.Spanner.V1.TransactionOptions,System.Threading.CancellationToken)">BeginTransactionAsync(SessionName, TransactionOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Begins a new transaction. This step can often be skipped:
+[Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+[Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
+side-effect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Transaction&gt; BeginTransactionAsync(SessionName session, TransactionOptions options, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.SessionName.html">SessionName</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>Required. The session in which the transaction runs.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.TransactionOptions.html">TransactionOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Required. Options for the new transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Transaction.html">Transaction</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_BeginTransactionAsync_Google_Cloud_Spanner_V1_SessionName_Google_Cloud_Spanner_V1_TransactionOptions_System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = await SpannerClient.CreateAsync();
+// Initialize request argument(s)
+SessionName session = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;);
+TransactionOptions options = new TransactionOptions();
+// Make the request
+Transaction response = await spannerClient.BeginTransactionAsync(session, options);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_Commit_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.Commit*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_Commit_Google_Cloud_Spanner_V1_CommitRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.Commit(Google.Cloud.Spanner.V1.CommitRequest,Google.Api.Gax.Grpc.CallSettings)">Commit(CommitRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Commits a transaction. The request includes the mutations to be
+applied to rows in the database.</p>
+<p><code>Commit</code> might return an <code>ABORTED</code> error. This can occur at any time;
+commonly, the cause is conflicts with concurrent
+transactions. However, it can also happen for a variety of other
+reasons. If <code>Commit</code> returns <code>ABORTED</code>, the caller should re-attempt
+the transaction from the beginning, re-using the same session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual CommitResponse Commit(CommitRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.CommitRequest.html">CommitRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.CommitResponse.html">CommitResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_Commit_Google_Cloud_Spanner_V1_CommitRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = SpannerClient.Create();
+// Initialize request argument(s)
+CommitRequest request = new CommitRequest
+{
+    SessionAsSessionName = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;),
+    Mutations = { },
+};
+// Make the request
+CommitResponse response = spannerClient.Commit(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_Commit_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.Commit*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_Commit_Google_Cloud_Spanner_V1_SessionName_Google_Cloud_Spanner_V1_TransactionOptions_System_Collections_Generic_IEnumerable_Google_Cloud_Spanner_V1_Mutation__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.Commit(Google.Cloud.Spanner.V1.SessionName,Google.Cloud.Spanner.V1.TransactionOptions,System.Collections.Generic.IEnumerable{Google.Cloud.Spanner.V1.Mutation},Google.Api.Gax.Grpc.CallSettings)">Commit(SessionName, TransactionOptions, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Commits a transaction. The request includes the mutations to be
+applied to rows in the database.</p>
+<p><code>Commit</code> might return an <code>ABORTED</code> error. This can occur at any time;
+commonly, the cause is conflicts with concurrent
+transactions. However, it can also happen for a variety of other
+reasons. If <code>Commit</code> returns <code>ABORTED</code>, the caller should re-attempt
+the transaction from the beginning, re-using the same session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual CommitResponse Commit(SessionName session, TransactionOptions singleUseTransaction, IEnumerable&lt;Mutation&gt; mutations, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.SessionName.html">SessionName</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>Required. The session in which the transaction to be committed is running.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.TransactionOptions.html">TransactionOptions</a></td>
+        <td><span class="parametername">singleUseTransaction</span></td>
+        <td><p>Execute mutations in a temporary transaction. Note that unlike
+commit of a previously-started transaction, commit with a
+temporary transaction is non-idempotent. That is, if the
+<code>CommitRequest</code> is sent to Cloud Spanner more than once (for
+instance, due to retries in the application, or in the
+transport library), it is possible that the mutations are
+executed more than once. If this is undesirable, use
+[BeginTransaction][google.spanner.v1.Spanner.BeginTransaction] and
+[Commit][google.spanner.v1.Spanner.Commit] instead.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Mutation.html">Mutation</a>&gt;</td>
+        <td><span class="parametername">mutations</span></td>
+        <td><p>The mutations to be executed when this transaction commits. All
+mutations are applied atomically, in the order they appear in
+this list.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.CommitResponse.html">CommitResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_Commit_Google_Cloud_Spanner_V1_SessionName_Google_Cloud_Spanner_V1_TransactionOptions_System_Collections_Generic_IEnumerable_Google_Cloud_Spanner_V1_Mutation__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = SpannerClient.Create();
+// Initialize request argument(s)
+SessionName session = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;);
+TransactionOptions singleUseTransaction = new TransactionOptions();
+IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
+// Make the request
+CommitResponse response = spannerClient.Commit(session, singleUseTransaction, mutations);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_Commit_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.Commit*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_Commit_Google_Cloud_Spanner_V1_SessionName_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Spanner_V1_Mutation__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.Commit(Google.Cloud.Spanner.V1.SessionName,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Spanner.V1.Mutation},Google.Api.Gax.Grpc.CallSettings)">Commit(SessionName, ByteString, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Commits a transaction. The request includes the mutations to be
+applied to rows in the database.</p>
+<p><code>Commit</code> might return an <code>ABORTED</code> error. This can occur at any time;
+commonly, the cause is conflicts with concurrent
+transactions. However, it can also happen for a variety of other
+reasons. If <code>Commit</code> returns <code>ABORTED</code>, the caller should re-attempt
+the transaction from the beginning, re-using the same session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual CommitResponse Commit(SessionName session, ByteString transactionId, IEnumerable&lt;Mutation&gt; mutations, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.SessionName.html">SessionName</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>Required. The session in which the transaction to be committed is running.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td><span class="parametername">transactionId</span></td>
+        <td><p>Commit a previously-started transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Mutation.html">Mutation</a>&gt;</td>
+        <td><span class="parametername">mutations</span></td>
+        <td><p>The mutations to be executed when this transaction commits. All
+mutations are applied atomically, in the order they appear in
+this list.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.CommitResponse.html">CommitResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_Commit_Google_Cloud_Spanner_V1_SessionName_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Spanner_V1_Mutation__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = SpannerClient.Create();
+// Initialize request argument(s)
+SessionName session = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;);
+ByteString transactionId = ByteString.CopyFromUtf8(&quot;&quot;);
+IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
+// Make the request
+CommitResponse response = spannerClient.Commit(session, transactionId, mutations);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_CommitAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.CommitAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_CommitAsync_Google_Cloud_Spanner_V1_CommitRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.CommitAsync(Google.Cloud.Spanner.V1.CommitRequest,Google.Api.Gax.Grpc.CallSettings)">CommitAsync(CommitRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Commits a transaction. The request includes the mutations to be
+applied to rows in the database.</p>
+<p><code>Commit</code> might return an <code>ABORTED</code> error. This can occur at any time;
+commonly, the cause is conflicts with concurrent
+transactions. However, it can also happen for a variety of other
+reasons. If <code>Commit</code> returns <code>ABORTED</code>, the caller should re-attempt
+the transaction from the beginning, re-using the same session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;CommitResponse&gt; CommitAsync(CommitRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.CommitRequest.html">CommitRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.CommitResponse.html">CommitResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_CommitAsync_Google_Cloud_Spanner_V1_CommitRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = await SpannerClient.CreateAsync();
+// Initialize request argument(s)
+CommitRequest request = new CommitRequest
+{
+    SessionAsSessionName = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;),
+    Mutations = { },
+};
+// Make the request
+CommitResponse response = await spannerClient.CommitAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_CommitAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.CommitAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_CommitAsync_Google_Cloud_Spanner_V1_SessionName_Google_Cloud_Spanner_V1_TransactionOptions_System_Collections_Generic_IEnumerable_Google_Cloud_Spanner_V1_Mutation__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.CommitAsync(Google.Cloud.Spanner.V1.SessionName,Google.Cloud.Spanner.V1.TransactionOptions,System.Collections.Generic.IEnumerable{Google.Cloud.Spanner.V1.Mutation},Google.Api.Gax.Grpc.CallSettings)">CommitAsync(SessionName, TransactionOptions, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Commits a transaction. The request includes the mutations to be
+applied to rows in the database.</p>
+<p><code>Commit</code> might return an <code>ABORTED</code> error. This can occur at any time;
+commonly, the cause is conflicts with concurrent
+transactions. However, it can also happen for a variety of other
+reasons. If <code>Commit</code> returns <code>ABORTED</code>, the caller should re-attempt
+the transaction from the beginning, re-using the same session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;CommitResponse&gt; CommitAsync(SessionName session, TransactionOptions singleUseTransaction, IEnumerable&lt;Mutation&gt; mutations, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.SessionName.html">SessionName</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>Required. The session in which the transaction to be committed is running.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.TransactionOptions.html">TransactionOptions</a></td>
+        <td><span class="parametername">singleUseTransaction</span></td>
+        <td><p>Execute mutations in a temporary transaction. Note that unlike
+commit of a previously-started transaction, commit with a
+temporary transaction is non-idempotent. That is, if the
+<code>CommitRequest</code> is sent to Cloud Spanner more than once (for
+instance, due to retries in the application, or in the
+transport library), it is possible that the mutations are
+executed more than once. If this is undesirable, use
+[BeginTransaction][google.spanner.v1.Spanner.BeginTransaction] and
+[Commit][google.spanner.v1.Spanner.Commit] instead.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Mutation.html">Mutation</a>&gt;</td>
+        <td><span class="parametername">mutations</span></td>
+        <td><p>The mutations to be executed when this transaction commits. All
+mutations are applied atomically, in the order they appear in
+this list.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.CommitResponse.html">CommitResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_CommitAsync_Google_Cloud_Spanner_V1_SessionName_Google_Cloud_Spanner_V1_TransactionOptions_System_Collections_Generic_IEnumerable_Google_Cloud_Spanner_V1_Mutation__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = await SpannerClient.CreateAsync();
+// Initialize request argument(s)
+SessionName session = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;);
+TransactionOptions singleUseTransaction = new TransactionOptions();
+IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
+// Make the request
+CommitResponse response = await spannerClient.CommitAsync(session, singleUseTransaction, mutations);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_CommitAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.CommitAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_CommitAsync_Google_Cloud_Spanner_V1_SessionName_Google_Cloud_Spanner_V1_TransactionOptions_System_Collections_Generic_IEnumerable_Google_Cloud_Spanner_V1_Mutation__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.CommitAsync(Google.Cloud.Spanner.V1.SessionName,Google.Cloud.Spanner.V1.TransactionOptions,System.Collections.Generic.IEnumerable{Google.Cloud.Spanner.V1.Mutation},System.Threading.CancellationToken)">CommitAsync(SessionName, TransactionOptions, IEnumerable&lt;Mutation&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Commits a transaction. The request includes the mutations to be
+applied to rows in the database.</p>
+<p><code>Commit</code> might return an <code>ABORTED</code> error. This can occur at any time;
+commonly, the cause is conflicts with concurrent
+transactions. However, it can also happen for a variety of other
+reasons. If <code>Commit</code> returns <code>ABORTED</code>, the caller should re-attempt
+the transaction from the beginning, re-using the same session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;CommitResponse&gt; CommitAsync(SessionName session, TransactionOptions singleUseTransaction, IEnumerable&lt;Mutation&gt; mutations, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.SessionName.html">SessionName</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>Required. The session in which the transaction to be committed is running.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.TransactionOptions.html">TransactionOptions</a></td>
+        <td><span class="parametername">singleUseTransaction</span></td>
+        <td><p>Execute mutations in a temporary transaction. Note that unlike
+commit of a previously-started transaction, commit with a
+temporary transaction is non-idempotent. That is, if the
+<code>CommitRequest</code> is sent to Cloud Spanner more than once (for
+instance, due to retries in the application, or in the
+transport library), it is possible that the mutations are
+executed more than once. If this is undesirable, use
+[BeginTransaction][google.spanner.v1.Spanner.BeginTransaction] and
+[Commit][google.spanner.v1.Spanner.Commit] instead.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Mutation.html">Mutation</a>&gt;</td>
+        <td><span class="parametername">mutations</span></td>
+        <td><p>The mutations to be executed when this transaction commits. All
+mutations are applied atomically, in the order they appear in
+this list.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.CommitResponse.html">CommitResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_CommitAsync_Google_Cloud_Spanner_V1_SessionName_Google_Cloud_Spanner_V1_TransactionOptions_System_Collections_Generic_IEnumerable_Google_Cloud_Spanner_V1_Mutation__System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = await SpannerClient.CreateAsync();
+// Initialize request argument(s)
+SessionName session = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;);
+TransactionOptions singleUseTransaction = new TransactionOptions();
+IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
+// Make the request
+CommitResponse response = await spannerClient.CommitAsync(session, singleUseTransaction, mutations);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_CommitAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.CommitAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_CommitAsync_Google_Cloud_Spanner_V1_SessionName_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Spanner_V1_Mutation__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.CommitAsync(Google.Cloud.Spanner.V1.SessionName,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Spanner.V1.Mutation},Google.Api.Gax.Grpc.CallSettings)">CommitAsync(SessionName, ByteString, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Commits a transaction. The request includes the mutations to be
+applied to rows in the database.</p>
+<p><code>Commit</code> might return an <code>ABORTED</code> error. This can occur at any time;
+commonly, the cause is conflicts with concurrent
+transactions. However, it can also happen for a variety of other
+reasons. If <code>Commit</code> returns <code>ABORTED</code>, the caller should re-attempt
+the transaction from the beginning, re-using the same session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;CommitResponse&gt; CommitAsync(SessionName session, ByteString transactionId, IEnumerable&lt;Mutation&gt; mutations, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.SessionName.html">SessionName</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>Required. The session in which the transaction to be committed is running.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td><span class="parametername">transactionId</span></td>
+        <td><p>Commit a previously-started transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Mutation.html">Mutation</a>&gt;</td>
+        <td><span class="parametername">mutations</span></td>
+        <td><p>The mutations to be executed when this transaction commits. All
+mutations are applied atomically, in the order they appear in
+this list.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.CommitResponse.html">CommitResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_CommitAsync_Google_Cloud_Spanner_V1_SessionName_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Spanner_V1_Mutation__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = await SpannerClient.CreateAsync();
+// Initialize request argument(s)
+SessionName session = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;);
+ByteString transactionId = ByteString.CopyFromUtf8(&quot;&quot;);
+IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
+// Make the request
+CommitResponse response = await spannerClient.CommitAsync(session, transactionId, mutations);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_CommitAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.CommitAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_CommitAsync_Google_Cloud_Spanner_V1_SessionName_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Spanner_V1_Mutation__System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.CommitAsync(Google.Cloud.Spanner.V1.SessionName,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Spanner.V1.Mutation},System.Threading.CancellationToken)">CommitAsync(SessionName, ByteString, IEnumerable&lt;Mutation&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Commits a transaction. The request includes the mutations to be
+applied to rows in the database.</p>
+<p><code>Commit</code> might return an <code>ABORTED</code> error. This can occur at any time;
+commonly, the cause is conflicts with concurrent
+transactions. However, it can also happen for a variety of other
+reasons. If <code>Commit</code> returns <code>ABORTED</code>, the caller should re-attempt
+the transaction from the beginning, re-using the same session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;CommitResponse&gt; CommitAsync(SessionName session, ByteString transactionId, IEnumerable&lt;Mutation&gt; mutations, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.SessionName.html">SessionName</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>Required. The session in which the transaction to be committed is running.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td><span class="parametername">transactionId</span></td>
+        <td><p>Commit a previously-started transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Mutation.html">Mutation</a>&gt;</td>
+        <td><span class="parametername">mutations</span></td>
+        <td><p>The mutations to be executed when this transaction commits. All
+mutations are applied atomically, in the order they appear in
+this list.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.CommitResponse.html">CommitResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_CommitAsync_Google_Cloud_Spanner_V1_SessionName_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Spanner_V1_Mutation__System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = await SpannerClient.CreateAsync();
+// Initialize request argument(s)
+SessionName session = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;);
+ByteString transactionId = ByteString.CopyFromUtf8(&quot;&quot;);
+IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
+// Make the request
+CommitResponse response = await spannerClient.CommitAsync(session, transactionId, mutations);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_Create_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.Create*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Spanner_V1_SpannerSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.Create(Google.Api.Gax.Grpc.ServiceEndpoint,Google.Cloud.Spanner.V1.SpannerSettings)">Create(ServiceEndpoint, SpannerSettings)</h4>
+  <div class="markdown level1 summary"><p>Synchronously creates a <a class="xref" href="Google.Cloud.Spanner.V1.SpannerClient.html">SpannerClient</a>, applying defaults for all unspecified settings,
+and creating a channel connecting to the given endpoint with application default credentials where
+necessary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SpannerClient Create(ServiceEndpoint endpoint = null, SpannerSettings settings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a></td>
+        <td><span class="parametername">endpoint</span></td>
+        <td><p>Optional <a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.SpannerSettings.html">SpannerSettings</a></td>
+        <td><span class="parametername">settings</span></td>
+        <td><p>Optional <a class="xref" href="Google.Cloud.Spanner.V1.SpannerSettings.html">SpannerSettings</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.SpannerClient.html">SpannerClient</a></td>
+        <td><p>The created <a class="xref" href="Google.Cloud.Spanner.V1.SpannerClient.html">SpannerClient</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_Create_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.Create*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_Create_Grpc_Core_Channel_Google_Cloud_Spanner_V1_SpannerSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.Create(Grpc.Core.Channel,Google.Cloud.Spanner.V1.SpannerSettings)">Create(Channel, SpannerSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Spanner.V1.SpannerClient.html">SpannerClient</a> which uses the specified channel for remote operations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SpannerClient Create(Channel channel, SpannerSettings settings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Channel.html">Channel</a></td>
+        <td><span class="parametername">channel</span></td>
+        <td><p>The <a class="xref" href="Grpc.Core.Channel.html">Channel</a> for remote operations. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.SpannerSettings.html">SpannerSettings</a></td>
+        <td><span class="parametername">settings</span></td>
+        <td><p>Optional <a class="xref" href="Google.Cloud.Spanner.V1.SpannerSettings.html">SpannerSettings</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.SpannerClient.html">SpannerClient</a></td>
+        <td><p>The created <a class="xref" href="Google.Cloud.Spanner.V1.SpannerClient.html">SpannerClient</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_CreateAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.CreateAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Spanner_V1_SpannerSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.CreateAsync(Google.Api.Gax.Grpc.ServiceEndpoint,Google.Cloud.Spanner.V1.SpannerSettings)">CreateAsync(ServiceEndpoint, SpannerSettings)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously creates a <a class="xref" href="Google.Cloud.Spanner.V1.SpannerClient.html">SpannerClient</a>, applying defaults for all unspecified settings,
+and creating a channel connecting to the given endpoint with application default credentials where
+necessary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;SpannerClient&gt; CreateAsync(ServiceEndpoint endpoint = null, SpannerSettings settings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a></td>
+        <td><span class="parametername">endpoint</span></td>
+        <td><p>Optional <a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.SpannerSettings.html">SpannerSettings</a></td>
+        <td><span class="parametername">settings</span></td>
+        <td><p>Optional <a class="xref" href="Google.Cloud.Spanner.V1.SpannerSettings.html">SpannerSettings</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.SpannerClient.html">SpannerClient</a>&gt;</td>
+        <td><p>The task representing the created <a class="xref" href="Google.Cloud.Spanner.V1.SpannerClient.html">SpannerClient</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_CreateSession_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.CreateSession*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_CreateSession_Google_Cloud_Spanner_V1_CreateSessionRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.CreateSession(Google.Cloud.Spanner.V1.CreateSessionRequest,Google.Api.Gax.Grpc.CallSettings)">CreateSession(CreateSessionRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a new session. A session can be used to perform
+transactions that read and/or modify data in a Cloud Spanner database.
+Sessions are meant to be reused for many consecutive
+transactions.</p>
+<p>Sessions can only execute one transaction at a time. To execute
+multiple concurrent read-write/write-only transactions, create
+multiple sessions. Note that standalone reads and queries use a
+transaction internally, and count toward the one transaction
+limit.</p>
+<p>Cloud Spanner limits the number of sessions that can exist at any given
+time; thus, it is a good idea to delete idle and/or unneeded sessions.
+Aside from explicit deletes, Cloud Spanner can delete sessions for which no
+operations are sent for more than an hour. If a session is deleted,
+requests to it return <code>NOT_FOUND</code>.</p>
+<p>Idle sessions can be kept alive by sending a trivial SQL query
+periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Session CreateSession(CreateSessionRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.CreateSessionRequest.html">CreateSessionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_CreateSession_Google_Cloud_Spanner_V1_CreateSessionRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = SpannerClient.Create();
+// Initialize request argument(s)
+CreateSessionRequest request = new CreateSessionRequest
+{
+    DatabaseAsDatabaseName = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;),
+};
+// Make the request
+Session response = spannerClient.CreateSession(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_CreateSession_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.CreateSession*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_CreateSession_Google_Cloud_Spanner_V1_DatabaseName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.CreateSession(Google.Cloud.Spanner.V1.DatabaseName,Google.Api.Gax.Grpc.CallSettings)">CreateSession(DatabaseName, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a new session. A session can be used to perform
+transactions that read and/or modify data in a Cloud Spanner database.
+Sessions are meant to be reused for many consecutive
+transactions.</p>
+<p>Sessions can only execute one transaction at a time. To execute
+multiple concurrent read-write/write-only transactions, create
+multiple sessions. Note that standalone reads and queries use a
+transaction internally, and count toward the one transaction
+limit.</p>
+<p>Cloud Spanner limits the number of sessions that can exist at any given
+time; thus, it is a good idea to delete idle and/or unneeded sessions.
+Aside from explicit deletes, Cloud Spanner can delete sessions for which no
+operations are sent for more than an hour. If a session is deleted,
+requests to it return <code>NOT_FOUND</code>.</p>
+<p>Idle sessions can be kept alive by sending a trivial SQL query
+periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Session CreateSession(DatabaseName database, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.DatabaseName.html">DatabaseName</a></td>
+        <td><span class="parametername">database</span></td>
+        <td><p>Required. The database in which the new session is created.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_CreateSession_Google_Cloud_Spanner_V1_DatabaseName_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = SpannerClient.Create();
+// Initialize request argument(s)
+DatabaseName database = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;);
+// Make the request
+Session response = spannerClient.CreateSession(database);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_CreateSessionAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.CreateSessionAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_CreateSessionAsync_Google_Cloud_Spanner_V1_CreateSessionRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.CreateSessionAsync(Google.Cloud.Spanner.V1.CreateSessionRequest,Google.Api.Gax.Grpc.CallSettings)">CreateSessionAsync(CreateSessionRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a new session. A session can be used to perform
+transactions that read and/or modify data in a Cloud Spanner database.
+Sessions are meant to be reused for many consecutive
+transactions.</p>
+<p>Sessions can only execute one transaction at a time. To execute
+multiple concurrent read-write/write-only transactions, create
+multiple sessions. Note that standalone reads and queries use a
+transaction internally, and count toward the one transaction
+limit.</p>
+<p>Cloud Spanner limits the number of sessions that can exist at any given
+time; thus, it is a good idea to delete idle and/or unneeded sessions.
+Aside from explicit deletes, Cloud Spanner can delete sessions for which no
+operations are sent for more than an hour. If a session is deleted,
+requests to it return <code>NOT_FOUND</code>.</p>
+<p>Idle sessions can be kept alive by sending a trivial SQL query
+periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Session&gt; CreateSessionAsync(CreateSessionRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.CreateSessionRequest.html">CreateSessionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_CreateSessionAsync_Google_Cloud_Spanner_V1_CreateSessionRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = await SpannerClient.CreateAsync();
+// Initialize request argument(s)
+CreateSessionRequest request = new CreateSessionRequest
+{
+    DatabaseAsDatabaseName = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;),
+};
+// Make the request
+Session response = await spannerClient.CreateSessionAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_CreateSessionAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.CreateSessionAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_CreateSessionAsync_Google_Cloud_Spanner_V1_DatabaseName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.CreateSessionAsync(Google.Cloud.Spanner.V1.DatabaseName,Google.Api.Gax.Grpc.CallSettings)">CreateSessionAsync(DatabaseName, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a new session. A session can be used to perform
+transactions that read and/or modify data in a Cloud Spanner database.
+Sessions are meant to be reused for many consecutive
+transactions.</p>
+<p>Sessions can only execute one transaction at a time. To execute
+multiple concurrent read-write/write-only transactions, create
+multiple sessions. Note that standalone reads and queries use a
+transaction internally, and count toward the one transaction
+limit.</p>
+<p>Cloud Spanner limits the number of sessions that can exist at any given
+time; thus, it is a good idea to delete idle and/or unneeded sessions.
+Aside from explicit deletes, Cloud Spanner can delete sessions for which no
+operations are sent for more than an hour. If a session is deleted,
+requests to it return <code>NOT_FOUND</code>.</p>
+<p>Idle sessions can be kept alive by sending a trivial SQL query
+periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Session&gt; CreateSessionAsync(DatabaseName database, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.DatabaseName.html">DatabaseName</a></td>
+        <td><span class="parametername">database</span></td>
+        <td><p>Required. The database in which the new session is created.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_CreateSessionAsync_Google_Cloud_Spanner_V1_DatabaseName_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = await SpannerClient.CreateAsync();
+// Initialize request argument(s)
+DatabaseName database = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;);
+// Make the request
+Session response = await spannerClient.CreateSessionAsync(database);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_CreateSessionAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.CreateSessionAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_CreateSessionAsync_Google_Cloud_Spanner_V1_DatabaseName_System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.CreateSessionAsync(Google.Cloud.Spanner.V1.DatabaseName,System.Threading.CancellationToken)">CreateSessionAsync(DatabaseName, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Creates a new session. A session can be used to perform
+transactions that read and/or modify data in a Cloud Spanner database.
+Sessions are meant to be reused for many consecutive
+transactions.</p>
+<p>Sessions can only execute one transaction at a time. To execute
+multiple concurrent read-write/write-only transactions, create
+multiple sessions. Note that standalone reads and queries use a
+transaction internally, and count toward the one transaction
+limit.</p>
+<p>Cloud Spanner limits the number of sessions that can exist at any given
+time; thus, it is a good idea to delete idle and/or unneeded sessions.
+Aside from explicit deletes, Cloud Spanner can delete sessions for which no
+operations are sent for more than an hour. If a session is deleted,
+requests to it return <code>NOT_FOUND</code>.</p>
+<p>Idle sessions can be kept alive by sending a trivial SQL query
+periodically, e.g., <code>&amp;quot;SELECT 1&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Session&gt; CreateSessionAsync(DatabaseName database, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.DatabaseName.html">DatabaseName</a></td>
+        <td><span class="parametername">database</span></td>
+        <td><p>Required. The database in which the new session is created.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_CreateSessionAsync_Google_Cloud_Spanner_V1_DatabaseName_System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = await SpannerClient.CreateAsync();
+// Initialize request argument(s)
+DatabaseName database = new DatabaseName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;);
+// Make the request
+Session response = await spannerClient.CreateSessionAsync(database);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_DeleteSession_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.DeleteSession*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_DeleteSession_Google_Cloud_Spanner_V1_DeleteSessionRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.DeleteSession(Google.Cloud.Spanner.V1.DeleteSessionRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteSession(DeleteSessionRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Ends a session, releasing server resources associated with it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DeleteSession(DeleteSessionRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.DeleteSessionRequest.html">DeleteSessionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_DeleteSession_Google_Cloud_Spanner_V1_DeleteSessionRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = SpannerClient.Create();
+// Initialize request argument(s)
+DeleteSessionRequest request = new DeleteSessionRequest
+{
+    SessionName = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;),
+};
+// Make the request
+spannerClient.DeleteSession(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_DeleteSession_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.DeleteSession*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_DeleteSession_Google_Cloud_Spanner_V1_SessionName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.DeleteSession(Google.Cloud.Spanner.V1.SessionName,Google.Api.Gax.Grpc.CallSettings)">DeleteSession(SessionName, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Ends a session, releasing server resources associated with it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DeleteSession(SessionName name, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.SessionName.html">SessionName</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Required. The name of the session to delete.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_DeleteSession_Google_Cloud_Spanner_V1_SessionName_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = SpannerClient.Create();
+// Initialize request argument(s)
+SessionName name = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;);
+// Make the request
+spannerClient.DeleteSession(name);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_DeleteSessionAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.DeleteSessionAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_DeleteSessionAsync_Google_Cloud_Spanner_V1_DeleteSessionRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.DeleteSessionAsync(Google.Cloud.Spanner.V1.DeleteSessionRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteSessionAsync(DeleteSessionRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Ends a session, releasing server resources associated with it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task DeleteSessionAsync(DeleteSessionRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.DeleteSessionRequest.html">DeleteSessionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_DeleteSessionAsync_Google_Cloud_Spanner_V1_DeleteSessionRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = await SpannerClient.CreateAsync();
+// Initialize request argument(s)
+DeleteSessionRequest request = new DeleteSessionRequest
+{
+    SessionName = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;),
+};
+// Make the request
+await spannerClient.DeleteSessionAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_DeleteSessionAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.DeleteSessionAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_DeleteSessionAsync_Google_Cloud_Spanner_V1_SessionName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.DeleteSessionAsync(Google.Cloud.Spanner.V1.SessionName,Google.Api.Gax.Grpc.CallSettings)">DeleteSessionAsync(SessionName, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Ends a session, releasing server resources associated with it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task DeleteSessionAsync(SessionName name, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.SessionName.html">SessionName</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Required. The name of the session to delete.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_DeleteSessionAsync_Google_Cloud_Spanner_V1_SessionName_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = await SpannerClient.CreateAsync();
+// Initialize request argument(s)
+SessionName name = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;);
+// Make the request
+await spannerClient.DeleteSessionAsync(name);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_DeleteSessionAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.DeleteSessionAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_DeleteSessionAsync_Google_Cloud_Spanner_V1_SessionName_System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.DeleteSessionAsync(Google.Cloud.Spanner.V1.SessionName,System.Threading.CancellationToken)">DeleteSessionAsync(SessionName, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Ends a session, releasing server resources associated with it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task DeleteSessionAsync(SessionName name, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.SessionName.html">SessionName</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Required. The name of the session to delete.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_DeleteSessionAsync_Google_Cloud_Spanner_V1_SessionName_System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = await SpannerClient.CreateAsync();
+// Initialize request argument(s)
+SessionName name = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;);
+// Make the request
+await spannerClient.DeleteSessionAsync(name);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_ExecuteSql_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.ExecuteSql*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_ExecuteSql_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.ExecuteSql(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Google.Api.Gax.Grpc.CallSettings)">ExecuteSql(ExecuteSqlRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Executes an SQL query, returning all rows in a single reply. This
+method cannot be used to return a result set larger than 10 MiB;
+if the query yields more data than that, the query fails with
+a <code>FAILED_PRECONDITION</code> error.</p>
+<p>Queries inside read-write transactions might return <code>ABORTED</code>. If
+this occurs, the application should restart the transaction from
+the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.</p>
+<p>Larger result sets can be fetched in streaming fashion by calling
+[ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ResultSet ExecuteSql(ExecuteSqlRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.ExecuteSqlRequest.html">ExecuteSqlRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.ResultSet.html">ResultSet</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_ExecuteSql_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = SpannerClient.Create();
+// Initialize request argument(s)
+ExecuteSqlRequest request = new ExecuteSqlRequest
+{
+    SessionAsSessionName = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;),
+    Sql = &quot;&quot;,
+};
+// Make the request
+ResultSet response = spannerClient.ExecuteSql(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_ExecuteSqlAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.ExecuteSqlAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_ExecuteSqlAsync_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.ExecuteSqlAsync(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Google.Api.Gax.Grpc.CallSettings)">ExecuteSqlAsync(ExecuteSqlRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Executes an SQL query, returning all rows in a single reply. This
+method cannot be used to return a result set larger than 10 MiB;
+if the query yields more data than that, the query fails with
+a <code>FAILED_PRECONDITION</code> error.</p>
+<p>Queries inside read-write transactions might return <code>ABORTED</code>. If
+this occurs, the application should restart the transaction from
+the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.</p>
+<p>Larger result sets can be fetched in streaming fashion by calling
+[ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ResultSet&gt; ExecuteSqlAsync(ExecuteSqlRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.ExecuteSqlRequest.html">ExecuteSqlRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.ResultSet.html">ResultSet</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_ExecuteSqlAsync_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = await SpannerClient.CreateAsync();
+// Initialize request argument(s)
+ExecuteSqlRequest request = new ExecuteSqlRequest
+{
+    SessionAsSessionName = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;),
+    Sql = &quot;&quot;,
+};
+// Make the request
+ResultSet response = await spannerClient.ExecuteSqlAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_ExecuteSqlStream_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.ExecuteSqlStream*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_ExecuteSqlStream_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.ExecuteSqlStream(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Google.Api.Gax.Grpc.CallSettings)">ExecuteSqlStream(ExecuteSqlRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Executes an SQL Query on Spanner returning the results as a set of partialresult streams.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AsyncServerStreamingCall&lt;PartialResultSet&gt; ExecuteSqlStream(ExecuteSqlRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.ExecuteSqlRequest.html">ExecuteSqlRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.AsyncServerStreamingCall-1.html">AsyncServerStreamingCall</a>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.PartialResultSet.html">PartialResultSet</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_GetSession_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.GetSession*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_GetSession_Google_Cloud_Spanner_V1_GetSessionRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.GetSession(Google.Cloud.Spanner.V1.GetSessionRequest,Google.Api.Gax.Grpc.CallSettings)">GetSession(GetSessionRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets a session. Returns <code>NOT_FOUND</code> if the session does not exist.
+This is mainly useful for determining whether a session is still
+alive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Session GetSession(GetSessionRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.GetSessionRequest.html">GetSessionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_GetSession_Google_Cloud_Spanner_V1_GetSessionRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = SpannerClient.Create();
+// Initialize request argument(s)
+GetSessionRequest request = new GetSessionRequest
+{
+    SessionName = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;),
+};
+// Make the request
+Session response = spannerClient.GetSession(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_GetSession_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.GetSession*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_GetSession_Google_Cloud_Spanner_V1_SessionName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.GetSession(Google.Cloud.Spanner.V1.SessionName,Google.Api.Gax.Grpc.CallSettings)">GetSession(SessionName, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets a session. Returns <code>NOT_FOUND</code> if the session does not exist.
+This is mainly useful for determining whether a session is still
+alive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Session GetSession(SessionName name, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.SessionName.html">SessionName</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Required. The name of the session to retrieve.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_GetSession_Google_Cloud_Spanner_V1_SessionName_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = SpannerClient.Create();
+// Initialize request argument(s)
+SessionName name = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;);
+// Make the request
+Session response = spannerClient.GetSession(name);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_GetSessionAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.GetSessionAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_GetSessionAsync_Google_Cloud_Spanner_V1_GetSessionRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.GetSessionAsync(Google.Cloud.Spanner.V1.GetSessionRequest,Google.Api.Gax.Grpc.CallSettings)">GetSessionAsync(GetSessionRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets a session. Returns <code>NOT_FOUND</code> if the session does not exist.
+This is mainly useful for determining whether a session is still
+alive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Session&gt; GetSessionAsync(GetSessionRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.GetSessionRequest.html">GetSessionRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_GetSessionAsync_Google_Cloud_Spanner_V1_GetSessionRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = await SpannerClient.CreateAsync();
+// Initialize request argument(s)
+GetSessionRequest request = new GetSessionRequest
+{
+    SessionName = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;),
+};
+// Make the request
+Session response = await spannerClient.GetSessionAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_GetSessionAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.GetSessionAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_GetSessionAsync_Google_Cloud_Spanner_V1_SessionName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.GetSessionAsync(Google.Cloud.Spanner.V1.SessionName,Google.Api.Gax.Grpc.CallSettings)">GetSessionAsync(SessionName, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Gets a session. Returns <code>NOT_FOUND</code> if the session does not exist.
+This is mainly useful for determining whether a session is still
+alive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Session&gt; GetSessionAsync(SessionName name, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.SessionName.html">SessionName</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Required. The name of the session to retrieve.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_GetSessionAsync_Google_Cloud_Spanner_V1_SessionName_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = await SpannerClient.CreateAsync();
+// Initialize request argument(s)
+SessionName name = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;);
+// Make the request
+Session response = await spannerClient.GetSessionAsync(name);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_GetSessionAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.GetSessionAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_GetSessionAsync_Google_Cloud_Spanner_V1_SessionName_System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.GetSessionAsync(Google.Cloud.Spanner.V1.SessionName,System.Threading.CancellationToken)">GetSessionAsync(SessionName, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Gets a session. Returns <code>NOT_FOUND</code> if the session does not exist.
+This is mainly useful for determining whether a session is still
+alive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;Session&gt; GetSessionAsync(SessionName name, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.SessionName.html">SessionName</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Required. The name of the session to retrieve.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_GetSessionAsync_Google_Cloud_Spanner_V1_SessionName_System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = await SpannerClient.CreateAsync();
+// Initialize request argument(s)
+SessionName name = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;);
+// Make the request
+Session response = await spannerClient.GetSessionAsync(name);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_GetSqlStreamReader_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.GetSqlStreamReader*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_GetSqlStreamReader_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Google_Cloud_Spanner_V1_Session_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.GetSqlStreamReader(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Google.Cloud.Spanner.V1.Session)">GetSqlStreamReader(ExecuteSqlRequest, Session)</h4>
+  <div class="markdown level1 summary"><p>Executes an SQL Query on Spanner returning the results as a set of partialresult streams.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ReliableStreamReader GetSqlStreamReader(ExecuteSqlRequest request, Session session)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.ExecuteSqlRequest.html">ExecuteSqlRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a></td>
+        <td><span class="parametername">session</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.ReliableStreamReader.html">ReliableStreamReader</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_Read_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.Read*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_Read_Google_Cloud_Spanner_V1_ReadRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.Read(Google.Cloud.Spanner.V1.ReadRequest,Google.Api.Gax.Grpc.CallSettings)">Read(ReadRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Reads rows from the database using key lookups and scans, as a
+simple key/value style alternative to
+[ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
+return a result set larger than 10 MiB; if the read matches more
+data than that, the read fails with a <code>FAILED_PRECONDITION</code>
+error.</p>
+<p>Reads inside read-write transactions might return <code>ABORTED</code>. If
+this occurs, the application should restart the transaction from
+the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.</p>
+<p>Larger result sets can be yielded in streaming fashion by calling
+[StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ResultSet Read(ReadRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.ReadRequest.html">ReadRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.ResultSet.html">ResultSet</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_Read_Google_Cloud_Spanner_V1_ReadRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = SpannerClient.Create();
+// Initialize request argument(s)
+ReadRequest request = new ReadRequest
+{
+    SessionAsSessionName = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;),
+    Table = &quot;&quot;,
+    Columns = { },
+    KeySet = new KeySet(),
+};
+// Make the request
+ResultSet response = spannerClient.Read(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_ReadAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.ReadAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_ReadAsync_Google_Cloud_Spanner_V1_ReadRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.ReadAsync(Google.Cloud.Spanner.V1.ReadRequest,Google.Api.Gax.Grpc.CallSettings)">ReadAsync(ReadRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Reads rows from the database using key lookups and scans, as a
+simple key/value style alternative to
+[ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
+return a result set larger than 10 MiB; if the read matches more
+data than that, the read fails with a <code>FAILED_PRECONDITION</code>
+error.</p>
+<p>Reads inside read-write transactions might return <code>ABORTED</code>. If
+this occurs, the application should restart the transaction from
+the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.</p>
+<p>Larger result sets can be yielded in streaming fashion by calling
+[StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ResultSet&gt; ReadAsync(ReadRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.ReadRequest.html">ReadRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.ResultSet.html">ResultSet</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_ReadAsync_Google_Cloud_Spanner_V1_ReadRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = await SpannerClient.CreateAsync();
+// Initialize request argument(s)
+ReadRequest request = new ReadRequest
+{
+    SessionAsSessionName = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;),
+    Table = &quot;&quot;,
+    Columns = { },
+    KeySet = new KeySet(),
+};
+// Make the request
+ResultSet response = await spannerClient.ReadAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_Rollback_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.Rollback*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_Rollback_Google_Cloud_Spanner_V1_RollbackRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.Rollback(Google.Cloud.Spanner.V1.RollbackRequest,Google.Api.Gax.Grpc.CallSettings)">Rollback(RollbackRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Rolls back a transaction, releasing any locks it holds. It is a good
+idea to call this for any transaction that includes one or more
+[Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
+ultimately decides not to commit.</p>
+<p><code>Rollback</code> returns <code>OK</code> if it successfully aborts the transaction, the
+transaction was already aborted, or the transaction is not
+found. <code>Rollback</code> never returns <code>ABORTED</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Rollback(RollbackRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.RollbackRequest.html">RollbackRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_Rollback_Google_Cloud_Spanner_V1_RollbackRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = SpannerClient.Create();
+// Initialize request argument(s)
+RollbackRequest request = new RollbackRequest
+{
+    SessionAsSessionName = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;),
+    TransactionId = ByteString.CopyFromUtf8(&quot;&quot;),
+};
+// Make the request
+spannerClient.Rollback(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_Rollback_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.Rollback*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_Rollback_Google_Cloud_Spanner_V1_SessionName_Google_Protobuf_ByteString_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.Rollback(Google.Cloud.Spanner.V1.SessionName,Google.Protobuf.ByteString,Google.Api.Gax.Grpc.CallSettings)">Rollback(SessionName, ByteString, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Rolls back a transaction, releasing any locks it holds. It is a good
+idea to call this for any transaction that includes one or more
+[Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
+ultimately decides not to commit.</p>
+<p><code>Rollback</code> returns <code>OK</code> if it successfully aborts the transaction, the
+transaction was already aborted, or the transaction is not
+found. <code>Rollback</code> never returns <code>ABORTED</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Rollback(SessionName session, ByteString transactionId, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.SessionName.html">SessionName</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>Required. The session in which the transaction to roll back is running.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td><span class="parametername">transactionId</span></td>
+        <td><p>Required. The transaction to roll back.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_Rollback_Google_Cloud_Spanner_V1_SessionName_Google_Protobuf_ByteString_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = SpannerClient.Create();
+// Initialize request argument(s)
+SessionName session = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;);
+ByteString transactionId = ByteString.CopyFromUtf8(&quot;&quot;);
+// Make the request
+spannerClient.Rollback(session, transactionId);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_RollbackAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.RollbackAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_RollbackAsync_Google_Cloud_Spanner_V1_RollbackRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.RollbackAsync(Google.Cloud.Spanner.V1.RollbackRequest,Google.Api.Gax.Grpc.CallSettings)">RollbackAsync(RollbackRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Rolls back a transaction, releasing any locks it holds. It is a good
+idea to call this for any transaction that includes one or more
+[Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
+ultimately decides not to commit.</p>
+<p><code>Rollback</code> returns <code>OK</code> if it successfully aborts the transaction, the
+transaction was already aborted, or the transaction is not
+found. <code>Rollback</code> never returns <code>ABORTED</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task RollbackAsync(RollbackRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.RollbackRequest.html">RollbackRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_RollbackAsync_Google_Cloud_Spanner_V1_RollbackRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = await SpannerClient.CreateAsync();
+// Initialize request argument(s)
+RollbackRequest request = new RollbackRequest
+{
+    SessionAsSessionName = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;),
+    TransactionId = ByteString.CopyFromUtf8(&quot;&quot;),
+};
+// Make the request
+await spannerClient.RollbackAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_RollbackAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.RollbackAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_RollbackAsync_Google_Cloud_Spanner_V1_SessionName_Google_Protobuf_ByteString_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.RollbackAsync(Google.Cloud.Spanner.V1.SessionName,Google.Protobuf.ByteString,Google.Api.Gax.Grpc.CallSettings)">RollbackAsync(SessionName, ByteString, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Rolls back a transaction, releasing any locks it holds. It is a good
+idea to call this for any transaction that includes one or more
+[Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
+ultimately decides not to commit.</p>
+<p><code>Rollback</code> returns <code>OK</code> if it successfully aborts the transaction, the
+transaction was already aborted, or the transaction is not
+found. <code>Rollback</code> never returns <code>ABORTED</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task RollbackAsync(SessionName session, ByteString transactionId, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.SessionName.html">SessionName</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>Required. The session in which the transaction to roll back is running.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td><span class="parametername">transactionId</span></td>
+        <td><p>Required. The transaction to roll back.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_RollbackAsync_Google_Cloud_Spanner_V1_SessionName_Google_Protobuf_ByteString_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = await SpannerClient.CreateAsync();
+// Initialize request argument(s)
+SessionName session = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;);
+ByteString transactionId = ByteString.CopyFromUtf8(&quot;&quot;);
+// Make the request
+await spannerClient.RollbackAsync(session, transactionId);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_RollbackAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.RollbackAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_RollbackAsync_Google_Cloud_Spanner_V1_SessionName_Google_Protobuf_ByteString_System_Threading_CancellationToken_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.RollbackAsync(Google.Cloud.Spanner.V1.SessionName,Google.Protobuf.ByteString,System.Threading.CancellationToken)">RollbackAsync(SessionName, ByteString, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Rolls back a transaction, releasing any locks it holds. It is a good
+idea to call this for any transaction that includes one or more
+[Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
+ultimately decides not to commit.</p>
+<p><code>Rollback</code> returns <code>OK</code> if it successfully aborts the transaction, the
+transaction was already aborted, or the transaction is not
+found. <code>Rollback</code> never returns <code>ABORTED</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task RollbackAsync(SessionName session, ByteString transactionId, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.V1.SessionName.html">SessionName</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>Required. The session in which the transaction to roll back is running.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td><span class="parametername">transactionId</span></td>
+        <td><p>Required. The transaction to roll back.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_RollbackAsync_Google_Cloud_Spanner_V1_SessionName_Google_Protobuf_ByteString_System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+SpannerClient spannerClient = await SpannerClient.CreateAsync();
+// Initialize request argument(s)
+SessionName session = new SessionName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[DATABASE]&quot;, &quot;[SESSION]&quot;);
+ByteString transactionId = ByteString.CopyFromUtf8(&quot;&quot;);
+// Make the request
+await spannerClient.RollbackAsync(session, transactionId);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Spanner_V1_SpannerClient_ShutdownDefaultChannelsAsync_" data-uid="Google.Cloud.Spanner.V1.SpannerClient.ShutdownDefaultChannelsAsync*"></a>
+  <h4 id="Google_Cloud_Spanner_V1_SpannerClient_ShutdownDefaultChannelsAsync" data-uid="Google.Cloud.Spanner.V1.SpannerClient.ShutdownDefaultChannelsAsync">ShutdownDefaultChannelsAsync()</h4>
+  <div class="markdown level1 summary"><p>Shuts down any channels automatically created by <a class="xref" href="Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Spanner_V1_SpannerSettings_">Create(ServiceEndpoint, SpannerSettings)</a>
+and <a class="xref" href="Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Spanner_V1_SpannerSettings_">CreateAsync(ServiceEndpoint, SpannerSettings)</a>. Channels which weren&apos;t automatically
+created are not affected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task ShutdownDefaultChannelsAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task representing the asynchronous shutdown operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Spanner_V1_SpannerClient_ShutdownDefaultChannelsAsync_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>After calling this method, further calls to <a class="xref" href="Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Spanner_V1_SpannerSettings_">Create(ServiceEndpoint, SpannerSettings)</a>
+and <a class="xref" href="Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Spanner_V1_SpannerSettings_">CreateAsync(ServiceEndpoint, SpannerSettings)</a> will create new channels, which could
+in turn be shut down by another call to this method.</p>
+</div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Google.Cloud.Spanner.V1.TransactionPool.html#Google_Cloud_Spanner_V1_TransactionPool_BeginPooledTransactionAsync_Google_Cloud_Spanner_V1_SpannerClient_Google_Cloud_Spanner_V1_Session_Google_Cloud_Spanner_V1_TransactionOptions_">TransactionPool.BeginPooledTransactionAsync(SpannerClient, Session, TransactionOptions)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
