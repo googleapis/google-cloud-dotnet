@@ -938,6 +938,38 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        public async Task UpdateSnapshotAsync_RequestObject()
+        {
+            // Snippet: UpdateSnapshotAsync(UpdateSnapshotRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateSnapshotRequest request = new UpdateSnapshotRequest
+            {
+                Snapshot = new Snapshot(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Snapshot response = await subscriberClient.UpdateSnapshotAsync(request);
+            // End snippet
+        }
+
+        public void UpdateSnapshot_RequestObject()
+        {
+            // Snippet: UpdateSnapshot(UpdateSnapshotRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            UpdateSnapshotRequest request = new UpdateSnapshotRequest
+            {
+                Snapshot = new Snapshot(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Snapshot response = subscriberClient.UpdateSnapshot(request);
+            // End snippet
+        }
+
         public async Task DeleteSnapshotAsync()
         {
             // Snippet: DeleteSnapshotAsync(SnapshotName,CallSettings)
