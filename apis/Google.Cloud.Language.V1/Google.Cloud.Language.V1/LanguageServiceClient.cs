@@ -457,12 +457,12 @@ namespace Google.Cloud.Language.V1
         /// </returns>
         public virtual Task<AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(
             Document document,
-            EncodingType encodingType,
+            EncodingType? encodingType,
             CallSettings callSettings = null) => AnalyzeEntitiesAsync(
                 new AnalyzeEntitiesRequest
                 {
                     Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
-                    EncodingType = encodingType,
+                    EncodingType = encodingType ?? EncodingType.None, // Optional
                 },
                 callSettings);
 
@@ -485,7 +485,7 @@ namespace Google.Cloud.Language.V1
         /// </returns>
         public virtual Task<AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(
             Document document,
-            EncodingType encodingType,
+            EncodingType? encodingType,
             CancellationToken cancellationToken) => AnalyzeEntitiesAsync(
                 document,
                 encodingType,
@@ -510,12 +510,12 @@ namespace Google.Cloud.Language.V1
         /// </returns>
         public virtual AnalyzeEntitiesResponse AnalyzeEntities(
             Document document,
-            EncodingType encodingType,
+            EncodingType? encodingType,
             CallSettings callSettings = null) => AnalyzeEntities(
                 new AnalyzeEntitiesRequest
                 {
                     Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
-                    EncodingType = encodingType,
+                    EncodingType = encodingType ?? EncodingType.None, // Optional
                 },
                 callSettings);
 
@@ -580,12 +580,12 @@ namespace Google.Cloud.Language.V1
         /// </returns>
         public virtual Task<AnalyzeSyntaxResponse> AnalyzeSyntaxAsync(
             Document document,
-            EncodingType encodingType,
+            EncodingType? encodingType,
             CallSettings callSettings = null) => AnalyzeSyntaxAsync(
                 new AnalyzeSyntaxRequest
                 {
                     Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
-                    EncodingType = encodingType,
+                    EncodingType = encodingType ?? EncodingType.None, // Optional
                 },
                 callSettings);
 
@@ -608,7 +608,7 @@ namespace Google.Cloud.Language.V1
         /// </returns>
         public virtual Task<AnalyzeSyntaxResponse> AnalyzeSyntaxAsync(
             Document document,
-            EncodingType encodingType,
+            EncodingType? encodingType,
             CancellationToken cancellationToken) => AnalyzeSyntaxAsync(
                 document,
                 encodingType,
@@ -633,12 +633,12 @@ namespace Google.Cloud.Language.V1
         /// </returns>
         public virtual AnalyzeSyntaxResponse AnalyzeSyntax(
             Document document,
-            EncodingType encodingType,
+            EncodingType? encodingType,
             CallSettings callSettings = null) => AnalyzeSyntax(
                 new AnalyzeSyntaxRequest
                 {
                     Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
-                    EncodingType = encodingType,
+                    EncodingType = encodingType ?? EncodingType.None, // Optional
                 },
                 callSettings);
 
@@ -706,13 +706,13 @@ namespace Google.Cloud.Language.V1
         public virtual Task<AnnotateTextResponse> AnnotateTextAsync(
             Document document,
             AnnotateTextRequest.Types.Features features,
-            EncodingType encodingType,
+            EncodingType? encodingType,
             CallSettings callSettings = null) => AnnotateTextAsync(
                 new AnnotateTextRequest
                 {
                     Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
                     Features = GaxPreconditions.CheckNotNull(features, nameof(features)),
-                    EncodingType = encodingType,
+                    EncodingType = encodingType ?? EncodingType.None, // Optional
                 },
                 callSettings);
 
@@ -738,7 +738,7 @@ namespace Google.Cloud.Language.V1
         public virtual Task<AnnotateTextResponse> AnnotateTextAsync(
             Document document,
             AnnotateTextRequest.Types.Features features,
-            EncodingType encodingType,
+            EncodingType? encodingType,
             CancellationToken cancellationToken) => AnnotateTextAsync(
                 document,
                 features,
@@ -767,13 +767,13 @@ namespace Google.Cloud.Language.V1
         public virtual AnnotateTextResponse AnnotateText(
             Document document,
             AnnotateTextRequest.Types.Features features,
-            EncodingType encodingType,
+            EncodingType? encodingType,
             CallSettings callSettings = null) => AnnotateText(
                 new AnnotateTextRequest
                 {
                     Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
                     Features = GaxPreconditions.CheckNotNull(features, nameof(features)),
-                    EncodingType = encodingType,
+                    EncodingType = encodingType ?? EncodingType.None, // Optional
                 },
                 callSettings);
 
