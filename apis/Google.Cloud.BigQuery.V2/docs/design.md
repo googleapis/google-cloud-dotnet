@@ -4,23 +4,9 @@ The `Google.Cloud.BigQuery.V2` package wraps a lot of the functionality of
 the underlying REST API. This document lays out the patterns
 involved to help guide further API extensions.
 
-## Status
-
-This package is effectively experimental at this time. Some
-functionality is missing, and a lot is likely to change. Big ticket
-work items:
-
-- Review query approach, exposing more information and being more
-  consistent
-- Alternative approaches for providing data and schema, e.g. simple property
-  binding. (Note: we're not trying to become an ORM...)
-- Async operations. (API design is progressing with sync-only
-  operations; asynchrony will be added when we're done with that
-  first pass.)
-
 ## `BigQueryClient`
 
-Like other API wrappers, `BigQueryClient` is the entry point for
+Like other REST API wrappers, `BigQueryClient` is the entry point for
 everything. This is an abstract class (to allow for mocking) with
 `Create`/`CreateAsync` static methods which construct instances of
 `BigQueryClientImpl`. The implementation can be constructed directly
@@ -55,6 +41,13 @@ operations will use the same one. The project ID is typically used
 as an invisible default, but it is still possible to query a
 dataset/table/job in a different project.
 
+## Options
+
+All operations accept at least one "options" parameter (and sometimes more, if
+the operation is a shortcut for multiple operations). All properties on options
+classes are nullable, with null being the default value, indicating that the user
+hasn't specified that option.
+
 ## Datasets, tables and results
 
 All the relevant operations are available on `BigQueryClient`, but
@@ -63,8 +56,10 @@ entities:
 
 - `BigQueryDataset`: a dataset containing tables
 - `BigQueryTable`: a table
+- `BigQueryJob`: a job, which may or may not be completed
 
-Additionally, `BigQueryResult` represents the result of a query.
+Additionally, `BigQueryResults` represents the results of a completed query in a form
+which is easy to iterate over and obtain "pages" of results.
 
 The `BigQuery` prefix here avoids confusion with the underlying
 REST-based resources, which are still available.
@@ -72,4 +67,4 @@ REST-based resources, which are still available.
 ## Synchronous vs asynchronous C# calls
 
 All API calls potentially involving server interaction come in sync
-and async flavours. (Or at least, they will do...)
+and async flavours.
