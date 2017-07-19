@@ -200,7 +200,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 new XElement("PackageTags", string.Join(";", api.Tags.Concat(new[] { "Google", "Cloud" }))),
                 new XElement("Copyright", "Copyright 2017 Google Inc."),
                 new XElement("Authors", "Google Inc."),
-                new XElement("IconUrl", "https://cloud.google.com/images/gcp-icon-64x64.png"), // TODO: Check element name
+                new XElement("PackageIconUrl", "https://cloud.google.com/images/gcp-icon-64x64.png"),
                 new XElement("PackageLicenseUrl", "http://www.apache.org/licenses/LICENSE-2.0"),
                 new XElement("PackageProjectUrl", "https://github.com/GoogleCloudPlatform/google-cloud-dotnet"),
                 new XElement("RepositoryType", "git"),
