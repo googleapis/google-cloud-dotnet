@@ -244,6 +244,30 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         [Fact]
+        public async Task ReadAllowsNewApis()
+        {
+            // ReSharper disable once RedundantAssignment
+            int rowsRead = -1;
+
+            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            {
+                var cmd = connection.CreateSelectCommand(
+                    $"SELECT * FROM {_testFixture.TestTable} WHERE Key = 'k1'");
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    rowsRead = 0;
+                    while (await reader.ReadAsync())
+                    {
+                        Assert.Equal("k1", reader.GetFieldValue<string>("Key"));
+                        Assert.Equal("v1", reader.GetFieldValue<string>("StringValue"));
+                        rowsRead++;
+                    }
+                }
+            }
+            Assert.Equal(1, rowsRead);
+        }
+
+        [Fact]
         public async Task PointReadEmpty()
         {
             // ReSharper disable once RedundantAssignment
