@@ -887,11 +887,11 @@ namespace Google.Cloud.Dlp.V2Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<ListInspectFindingsResponse> ListInspectFindingsAsync(
-            string name,
+            ResultName name,
             CallSettings callSettings = null) => ListInspectFindingsAsync(
                 new ListInspectFindingsRequest
                 {
-                    Name = GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    ResultName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -910,7 +910,7 @@ namespace Google.Cloud.Dlp.V2Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<ListInspectFindingsResponse> ListInspectFindingsAsync(
-            string name,
+            ResultName name,
             CancellationToken cancellationToken) => ListInspectFindingsAsync(
                 name,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -930,11 +930,11 @@ namespace Google.Cloud.Dlp.V2Beta1
         /// The RPC response.
         /// </returns>
         public virtual ListInspectFindingsResponse ListInspectFindings(
-            string name,
+            ResultName name,
             CallSettings callSettings = null) => ListInspectFindings(
                 new ListInspectFindingsRequest
                 {
-                    Name = GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    ResultName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
