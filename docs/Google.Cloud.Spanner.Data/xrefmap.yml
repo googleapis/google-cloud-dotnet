@@ -5227,6 +5227,36 @@ references:
   commentId: N:Google.Cloud.Spanner.Data.IntegrationTests
   fullName: Google.Cloud.Spanner.Data.IntegrationTests
   nameWithType: Google.Cloud.Spanner.Data.IntegrationTests
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.AdminTests
+  name: AdminTests
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.AdminTests.html
+  commentId: T:Google.Cloud.Spanner.Data.IntegrationTests.AdminTests
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.AdminTests
+  nameWithType: AdminTests
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.AdminTests.#ctor(Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture,ITestOutputHelper)
+  name: AdminTests(TestDatabaseFixture, ITestOutputHelper)
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.AdminTests.html#Google_Cloud_Spanner_Data_IntegrationTests_AdminTests__ctor_Google_Cloud_Spanner_Data_IntegrationTests_TestDatabaseFixture_ITestOutputHelper_
+  commentId: M:Google.Cloud.Spanner.Data.IntegrationTests.AdminTests.#ctor(Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture,ITestOutputHelper)
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.AdminTests.AdminTests(Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture, ITestOutputHelper)
+  nameWithType: AdminTests.AdminTests(TestDatabaseFixture, ITestOutputHelper)
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.AdminTests.#ctor*
+  name: AdminTests
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.AdminTests.html#Google_Cloud_Spanner_Data_IntegrationTests_AdminTests__ctor_
+  commentId: Overload:Google.Cloud.Spanner.Data.IntegrationTests.AdminTests.#ctor
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.AdminTests.AdminTests
+  nameWithType: AdminTests.AdminTests
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.AdminTests.CreateDrop
+  name: CreateDrop()
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.AdminTests.html#Google_Cloud_Spanner_Data_IntegrationTests_AdminTests_CreateDrop
+  commentId: M:Google.Cloud.Spanner.Data.IntegrationTests.AdminTests.CreateDrop
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.AdminTests.CreateDrop()
+  nameWithType: AdminTests.CreateDrop()
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.AdminTests.CreateDrop*
+  name: CreateDrop
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.AdminTests.html#Google_Cloud_Spanner_Data_IntegrationTests_AdminTests_CreateDrop_
+  commentId: Overload:Google.Cloud.Spanner.Data.IntegrationTests.AdminTests.CreateDrop
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.AdminTests.CreateDrop
+  nameWithType: AdminTests.CreateDrop
 - uid: Google.Cloud.Spanner.Data.IntegrationTests.BindingTests
   name: BindingTests
   href: api/Google.Cloud.Spanner.Data.IntegrationTests.BindingTests.html
@@ -6178,6 +6208,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.GetTestDatabaseConnectionAsync
   fullName: Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.GetTestDatabaseConnectionAsync
   nameWithType: TestDatabaseFixture.GetTestDatabaseConnectionAsync
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.NoDbConnectionString
+  name: NoDbConnectionString
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.html#Google_Cloud_Spanner_Data_IntegrationTests_TestDatabaseFixture_NoDbConnectionString
+  commentId: P:Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.NoDbConnectionString
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.NoDbConnectionString
+  nameWithType: TestDatabaseFixture.NoDbConnectionString
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.NoDbConnectionString*
+  name: NoDbConnectionString
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.html#Google_Cloud_Spanner_Data_IntegrationTests_TestDatabaseFixture_NoDbConnectionString_
+  commentId: Overload:Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.NoDbConnectionString
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.NoDbConnectionString
+  nameWithType: TestDatabaseFixture.NoDbConnectionString
 - uid: Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.StressTestTable
   name: StressTestTable
   href: api/Google.Cloud.Spanner.Data.IntegrationTests.TestDatabaseFixture.html#Google_Cloud_Spanner_Data_IntegrationTests_TestDatabaseFixture_StressTestTable
@@ -6376,6 +6418,30 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ReadStrongSingle
   fullName: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ReadStrongSingle
   nameWithType: TransactionTests.ReadStrongSingle
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithNoWritesDoesntThrow
+  name: ScopeCompleteWithNoWritesDoesntThrow()
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.html#Google_Cloud_Spanner_Data_IntegrationTests_TransactionTests_ScopeCompleteWithNoWritesDoesntThrow
+  commentId: M:Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithNoWritesDoesntThrow
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithNoWritesDoesntThrow()
+  nameWithType: TransactionTests.ScopeCompleteWithNoWritesDoesntThrow()
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithNoWritesDoesntThrow*
+  name: ScopeCompleteWithNoWritesDoesntThrow
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.html#Google_Cloud_Spanner_Data_IntegrationTests_TransactionTests_ScopeCompleteWithNoWritesDoesntThrow_
+  commentId: Overload:Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithNoWritesDoesntThrow
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithNoWritesDoesntThrow
+  nameWithType: TransactionTests.ScopeCompleteWithNoWritesDoesntThrow
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithReadDoesntThrow
+  name: ScopeCompleteWithReadDoesntThrow()
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.html#Google_Cloud_Spanner_Data_IntegrationTests_TransactionTests_ScopeCompleteWithReadDoesntThrow
+  commentId: M:Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithReadDoesntThrow
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithReadDoesntThrow()
+  nameWithType: TransactionTests.ScopeCompleteWithReadDoesntThrow()
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithReadDoesntThrow*
+  name: ScopeCompleteWithReadDoesntThrow
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.html#Google_Cloud_Spanner_Data_IntegrationTests_TransactionTests_ScopeCompleteWithReadDoesntThrow_
+  commentId: Overload:Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithReadDoesntThrow
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithReadDoesntThrow
+  nameWithType: TransactionTests.ScopeCompleteWithReadDoesntThrow
 - uid: Google.Cloud.Spanner.Data.IntegrationTests.WriteTests
   name: WriteTests
   href: api/Google.Cloud.Spanner.Data.IntegrationTests.WriteTests.html
