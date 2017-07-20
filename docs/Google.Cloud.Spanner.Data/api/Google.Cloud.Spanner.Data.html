@@ -80,7 +80,7 @@
       <section><p>Represents a SQL query or command to execute against
 a Spanner database.
 If the command is a SQL query, then <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_CommandText">CommandText</a>
-contains the entire SQL statement. Use <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_ExecuteReaderAsync_Google_Cloud_Spanner_Data_TimestampBound_System_Threading_CancellationToken_">ExecuteReaderAsync(TimestampBound, CancellationToken)</a>  to obtain results.</p>
+contains the entire SQL statement. Use <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_ExecuteReaderAsync">ExecuteReaderAsync()</a>  to obtain results.</p>
 <p>If the command is an update, insert or delete command, then <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_CommandText">CommandText</a>
 is simply &quot;[operation] [spanner_table]&quot; such as &quot;UPDATE MYTABLE&quot; with the parameter
 collection containing <a class="xref" href="Google.Cloud.Spanner.Data.SpannerParameter.html">SpannerParameter</a> instances whose name matches a column

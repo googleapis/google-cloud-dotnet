@@ -72,7 +72,7 @@
   
   <h1 id="Google_Cloud_Diagnostics_Common_EventTarget" data-uid="Google.Cloud.Diagnostics.Common.EventTarget" class="text-break">Class EventTarget
   </h1>
-  <div class="markdown level0 summary"><p>Represents the location error events will be sent, such as the Stackdriver Logging or Error Reporting API.</p>
+  <div class="markdown level0 summary"><p>Represents the location error events will be sent.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -103,30 +103,6 @@
   </div>
   <h3 id="properties">Properties
   </h3>
-  <a id="Google_Cloud_Diagnostics_Common_EventTarget_ErrorReportingClient_" data-uid="Google.Cloud.Diagnostics.Common.EventTarget.ErrorReportingClient*"></a>
-  <h4 id="Google_Cloud_Diagnostics_Common_EventTarget_ErrorReportingClient" data-uid="Google.Cloud.Diagnostics.Common.EventTarget.ErrorReportingClient">ErrorReportingClient</h4>
-  <div class="markdown level1 summary"><p>The error reporting client.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ReportErrorsServiceClient ErrorReportingClient { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="Google_Cloud_Diagnostics_Common_EventTarget_Kind_" data-uid="Google.Cloud.Diagnostics.Common.EventTarget.Kind*"></a>
   <h4 id="Google_Cloud_Diagnostics_Common_EventTarget_Kind" data-uid="Google.Cloud.Diagnostics.Common.EventTarget.Kind">Kind</h4>
   <div class="markdown level1 summary"><p>The location to send error events to.</p>
@@ -273,58 +249,6 @@
   </table>
   <h3 id="methods">Methods
   </h3>
-  <a id="Google_Cloud_Diagnostics_Common_EventTarget_ForErrorReporting_" data-uid="Google.Cloud.Diagnostics.Common.EventTarget.ForErrorReporting*"></a>
-  <h4 id="Google_Cloud_Diagnostics_Common_EventTarget_ForErrorReporting_System_String_Google_Cloud_ErrorReporting_V1Beta1_ReportErrorsServiceClient_" data-uid="Google.Cloud.Diagnostics.Common.EventTarget.ForErrorReporting(System.String,Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient)">ForErrorReporting(String, ReportErrorsServiceClient)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Diagnostics.Common.EventTarget.html">EventTarget</a> instance that will report to the Stackdriver Error Reporting API.
-To use this option you must enable the Stackdriver Error Reporting API
-(<a href="https://console.cloud.google.com/apis/api/clouderrorreporting.googleapis.com/overview">https://console.cloud.google.com/apis/api/clouderrorreporting.googleapis.com/overview</a>).</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static EventTarget ForErrorReporting(string projectId = null, ReportErrorsServiceClient errorReportingClient = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">projectId</span></td>
-        <td><p>Optional if running on Google App Engine or Google Compute Engine.
-    The Google Cloud Platform project ID. If running on GAE or GCE the project ID will be
-    detected from the platform.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient</span></td>
-        <td><span class="parametername">errorReportingClient</span></td>
-        <td><p>The error reporting client.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Google.Cloud.Diagnostics.Common.EventTarget.html">EventTarget</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="Google_Cloud_Diagnostics_Common_EventTarget_ForLogging_" data-uid="Google.Cloud.Diagnostics.Common.EventTarget.ForLogging*"></a>
   <h4 id="Google_Cloud_Diagnostics_Common_EventTarget_ForLogging_Google_Cloud_Diagnostics_Common_LogTarget_System_String_Google_Cloud_Logging_V2_LoggingServiceV2Client_Google_Api_MonitoredResource_" data-uid="Google.Cloud.Diagnostics.Common.EventTarget.ForLogging(Google.Cloud.Diagnostics.Common.LogTarget,System.String,Google.Cloud.Logging.V2.LoggingServiceV2Client,Google.Api.MonitoredResource)">ForLogging(LogTarget, String, LoggingServiceV2Client, MonitoredResource)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Diagnostics.Common.EventTarget.html">EventTarget</a> instance that will report to the Stackdriver Logging API.

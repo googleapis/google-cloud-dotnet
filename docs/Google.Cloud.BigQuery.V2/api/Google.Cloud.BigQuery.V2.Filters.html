@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ListDatasetsOptions
+    <title>Class Filters
    | Google.Cloud.BigQuery.V2 </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ListDatasetsOptions
+    <meta name="title" content="Class Filters
    | Google.Cloud.BigQuery.V2 ">
     <meta name="generator" content="docfx 2.20.0.0">
     
@@ -67,18 +67,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Google.Cloud.BigQuery.V2.ListDatasetsOptions">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.BigQuery.V2.Filters">
   
   
-  <h1 id="Google_Cloud_BigQuery_V2_ListDatasetsOptions" data-uid="Google.Cloud.BigQuery.V2.ListDatasetsOptions" class="text-break">Class ListDatasetsOptions
+  <h1 id="Google_Cloud_BigQuery_V2_Filters" data-uid="Google.Cloud.BigQuery.V2.Filters" class="text-break">Class Filters
   </h1>
-  <div class="markdown level0 summary"><p>Options used when listing datasets. Details TBD.</p>
+  <div class="markdown level0 summary"><p>Helper method to build filter strings.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ListDatasetsOptions</span></div>
+    <div class="level1"><span class="xref">Filters</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -97,23 +97,46 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.BigQuery.V2.html">Google.Cloud.BigQuery.V2</a></h6>
   <h6><strong>Assembly</strong>: Google.Cloud.BigQuery.V2.dll</h6>
-  <h5 id="Google_Cloud_BigQuery_V2_ListDatasetsOptions_syntax">Syntax</h5>
+  <h5 id="Google_Cloud_BigQuery_V2_Filters_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ListDatasetsOptions</code></pre>
+    <pre><code class="lang-csharp hljs">public static class Filters</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="methods">Methods
   </h3>
-  <a id="Google_Cloud_BigQuery_V2_ListDatasetsOptions_Filter_" data-uid="Google.Cloud.BigQuery.V2.ListDatasetsOptions.Filter*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_ListDatasetsOptions_Filter" data-uid="Google.Cloud.BigQuery.V2.ListDatasetsOptions.Filter">Filter</h4>
-  <div class="markdown level1 summary"><p>The filter to apply when listing datasets. See <a href="https://cloud.google.com/bigquery/docs/labeling-datasets#filtering_datasets_using_labels">https://cloud.google.com/bigquery/docs/labeling-datasets#filtering_datasets_using_labels</a>
-for more details. Filters for labels can be created easily using the <a class="xref" href="Google.Cloud.BigQuery.V2.Filters.html">Filters</a> class.</p>
+  <a id="Google_Cloud_BigQuery_V2_Filters_FromLabel_" data-uid="Google.Cloud.BigQuery.V2.Filters.FromLabel*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_Filters_FromLabel_System_String_System_String_" data-uid="Google.Cloud.BigQuery.V2.Filters.FromLabel(System.String,System.String)">FromLabel(String, String)</h4>
+  <div class="markdown level1 summary"><p>Creates a filter for a single label.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Filter { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string FromLabel(string name, string value)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the label to filter on. Must not be null or empty.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value for the label. May be null or empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -124,21 +147,40 @@ for more details. Filters for labels can be created easily using the <a class="x
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>A string of the form &quot;labels.{name}:{value}&quot; when <span class="paramref">value</span> is non-null and non-empty,
+or &quot;labels.{name}&quot; when <span class="paramref">value</span> is null.</p>
+</td>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_BigQuery_V2_ListDatasetsOptions_IncludeHidden_" data-uid="Google.Cloud.BigQuery.V2.ListDatasetsOptions.IncludeHidden*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_ListDatasetsOptions_IncludeHidden" data-uid="Google.Cloud.BigQuery.V2.ListDatasetsOptions.IncludeHidden">IncludeHidden</h4>
-  <div class="markdown level1 summary"><p>Whether to include hidden datasets, equivalent to the &quot;all&quot; parameter of
-the REST API. By default, hidden datasets will not be included.</p>
+  <a id="Google_Cloud_BigQuery_V2_Filters_FromLabels_" data-uid="Google.Cloud.BigQuery.V2.Filters.FromLabels*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_Filters_FromLabels_System_Collections_Generic_IDictionary_System_String_System_String__" data-uid="Google.Cloud.BigQuery.V2.Filters.FromLabels(System.Collections.Generic.IDictionary{System.String,System.String})">FromLabels(IDictionary&lt;String, String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a filter for the given labels.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool ? IncludeHidden { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string FromLabels(IDictionary&lt;string, string&gt; labels)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">labels</span></td>
+        <td><p>The labels to filter by. Must not be null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -148,36 +190,16 @@ the REST API. By default, hidden datasets will not be included.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td></td>
+        <td><span class="xref">System.String</span></td>
+        <td><p>A filter for the given labels.</p>
+</td>
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_BigQuery_V2_ListDatasetsOptions_PageSize_" data-uid="Google.Cloud.BigQuery.V2.ListDatasetsOptions.PageSize*"></a>
-  <h4 id="Google_Cloud_BigQuery_V2_ListDatasetsOptions_PageSize" data-uid="Google.Cloud.BigQuery.V2.ListDatasetsOptions.PageSize">PageSize</h4>
-  <div class="markdown level1 summary"><p>The number of results to return per page. (This modifies the per-request page size;
-it does not affect the total number of results returned.)</p>
+  <h5 id="Google_Cloud_BigQuery_V2_Filters_FromLabels_System_Collections_Generic_IDictionary_System_String_System_String___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>See <a class="xref" href="Google.Cloud.BigQuery.V2.Filters.html#Google_Cloud_BigQuery_V2_Filters_FromLabel_System_String_System_String_">FromLabel(String, String)</a> for the format of a single label; this method joins
+multiple labels together with spaces.</p>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ? PageSize { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 </article>
           </div>
           

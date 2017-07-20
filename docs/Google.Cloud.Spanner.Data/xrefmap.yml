@@ -5941,6 +5941,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.QueryTypo
   fullName: Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.QueryTypo
   nameWithType: ReadTests.QueryTypo
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.ReadAllowsNewApis
+  name: ReadAllowsNewApis()
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.html#Google_Cloud_Spanner_Data_IntegrationTests_ReadTests_ReadAllowsNewApis
+  commentId: M:Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.ReadAllowsNewApis
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.ReadAllowsNewApis()
+  nameWithType: ReadTests.ReadAllowsNewApis()
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.ReadAllowsNewApis*
+  name: ReadAllowsNewApis
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.html#Google_Cloud_Spanner_Data_IntegrationTests_ReadTests_ReadAllowsNewApis_
+  commentId: Overload:Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.ReadAllowsNewApis
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.ReadAllowsNewApis
+  nameWithType: ReadTests.ReadAllowsNewApis
 - uid: Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.ReadyEmpty
   name: ReadyEmpty()
   href: api/Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.html#Google_Cloud_Spanner_Data_IntegrationTests_ReadTests_ReadyEmpty
@@ -6766,12 +6778,36 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Data.SpannerCommand.ExecuteNonQueryAsync
   fullName: Google.Cloud.Spanner.Data.SpannerCommand.ExecuteNonQueryAsync
   nameWithType: SpannerCommand.ExecuteNonQueryAsync
+- uid: Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync
+  name: ExecuteReaderAsync()
+  href: api/Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_ExecuteReaderAsync
+  commentId: M:Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync
+  fullName: Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync()
+  nameWithType: SpannerCommand.ExecuteReaderAsync()
 - uid: Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync(Google.Cloud.Spanner.Data.TimestampBound,System.Threading.CancellationToken)
   name: ExecuteReaderAsync(TimestampBound, CancellationToken)
   href: api/Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_ExecuteReaderAsync_Google_Cloud_Spanner_Data_TimestampBound_System_Threading_CancellationToken_
   commentId: M:Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync(Google.Cloud.Spanner.Data.TimestampBound,System.Threading.CancellationToken)
   fullName: Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync(Google.Cloud.Spanner.Data.TimestampBound, System.Threading.CancellationToken)
   nameWithType: SpannerCommand.ExecuteReaderAsync(TimestampBound, CancellationToken)
+- uid: Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync(System.Data.CommandBehavior)
+  name: ExecuteReaderAsync(CommandBehavior)
+  href: api/Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_ExecuteReaderAsync_System_Data_CommandBehavior_
+  commentId: M:Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync(System.Data.CommandBehavior)
+  fullName: Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync(System.Data.CommandBehavior)
+  nameWithType: SpannerCommand.ExecuteReaderAsync(CommandBehavior)
+- uid: Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync(System.Data.CommandBehavior,System.Threading.CancellationToken)
+  name: ExecuteReaderAsync(CommandBehavior, CancellationToken)
+  href: api/Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_ExecuteReaderAsync_System_Data_CommandBehavior_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync(System.Data.CommandBehavior,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync(System.Data.CommandBehavior, System.Threading.CancellationToken)
+  nameWithType: SpannerCommand.ExecuteReaderAsync(CommandBehavior, CancellationToken)
+- uid: Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync(System.Threading.CancellationToken)
+  name: ExecuteReaderAsync(CancellationToken)
+  href: api/Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_ExecuteReaderAsync_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync(System.Threading.CancellationToken)
+  fullName: Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync(System.Threading.CancellationToken)
+  nameWithType: SpannerCommand.ExecuteReaderAsync(CancellationToken)
 - uid: Google.Cloud.Spanner.Data.SpannerCommand.ExecuteReaderAsync*
   name: ExecuteReaderAsync
   href: api/Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_ExecuteReaderAsync_

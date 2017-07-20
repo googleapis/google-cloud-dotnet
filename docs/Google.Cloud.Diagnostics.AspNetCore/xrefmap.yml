@@ -589,30 +589,6 @@ references:
   commentId: T:Google.Cloud.Diagnostics.Common.EventTarget
   fullName: Google.Cloud.Diagnostics.Common.EventTarget
   nameWithType: EventTarget
-- uid: Google.Cloud.Diagnostics.Common.EventTarget.ErrorReportingClient
-  name: ErrorReportingClient
-  href: api/Google.Cloud.Diagnostics.Common.EventTarget.html#Google_Cloud_Diagnostics_Common_EventTarget_ErrorReportingClient
-  commentId: P:Google.Cloud.Diagnostics.Common.EventTarget.ErrorReportingClient
-  fullName: Google.Cloud.Diagnostics.Common.EventTarget.ErrorReportingClient
-  nameWithType: EventTarget.ErrorReportingClient
-- uid: Google.Cloud.Diagnostics.Common.EventTarget.ErrorReportingClient*
-  name: ErrorReportingClient
-  href: api/Google.Cloud.Diagnostics.Common.EventTarget.html#Google_Cloud_Diagnostics_Common_EventTarget_ErrorReportingClient_
-  commentId: Overload:Google.Cloud.Diagnostics.Common.EventTarget.ErrorReportingClient
-  fullName: Google.Cloud.Diagnostics.Common.EventTarget.ErrorReportingClient
-  nameWithType: EventTarget.ErrorReportingClient
-- uid: Google.Cloud.Diagnostics.Common.EventTarget.ForErrorReporting(System.String,Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient)
-  name: ForErrorReporting(String, ReportErrorsServiceClient)
-  href: api/Google.Cloud.Diagnostics.Common.EventTarget.html#Google_Cloud_Diagnostics_Common_EventTarget_ForErrorReporting_System_String_Google_Cloud_ErrorReporting_V1Beta1_ReportErrorsServiceClient_
-  commentId: M:Google.Cloud.Diagnostics.Common.EventTarget.ForErrorReporting(System.String,Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient)
-  fullName: Google.Cloud.Diagnostics.Common.EventTarget.ForErrorReporting(System.String, Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient)
-  nameWithType: EventTarget.ForErrorReporting(String, ReportErrorsServiceClient)
-- uid: Google.Cloud.Diagnostics.Common.EventTarget.ForErrorReporting*
-  name: ForErrorReporting
-  href: api/Google.Cloud.Diagnostics.Common.EventTarget.html#Google_Cloud_Diagnostics_Common_EventTarget_ForErrorReporting_
-  commentId: Overload:Google.Cloud.Diagnostics.Common.EventTarget.ForErrorReporting
-  fullName: Google.Cloud.Diagnostics.Common.EventTarget.ForErrorReporting
-  nameWithType: EventTarget.ForErrorReporting
 - uid: Google.Cloud.Diagnostics.Common.EventTarget.ForLogging(Google.Cloud.Diagnostics.Common.LogTarget,System.String,Google.Cloud.Logging.V2.LoggingServiceV2Client,Google.Api.MonitoredResource)
   name: ForLogging(LogTarget, String, LoggingServiceV2Client, MonitoredResource)
   href: api/Google.Cloud.Diagnostics.Common.EventTarget.html#Google_Cloud_Diagnostics_Common_EventTarget_ForLogging_Google_Cloud_Diagnostics_Common_LogTarget_System_String_Google_Cloud_Logging_V2_LoggingServiceV2Client_Google_Api_MonitoredResource_
@@ -709,12 +685,6 @@ references:
   commentId: T:Google.Cloud.Diagnostics.Common.EventTargetKind
   fullName: Google.Cloud.Diagnostics.Common.EventTargetKind
   nameWithType: EventTargetKind
-- uid: Google.Cloud.Diagnostics.Common.EventTargetKind.ErrorReporting
-  name: ErrorReporting
-  href: api/Google.Cloud.Diagnostics.Common.EventTargetKind.html#Google_Cloud_Diagnostics_Common_EventTargetKind_ErrorReporting
-  commentId: F:Google.Cloud.Diagnostics.Common.EventTargetKind.ErrorReporting
-  fullName: Google.Cloud.Diagnostics.Common.EventTargetKind.ErrorReporting
-  nameWithType: EventTargetKind.ErrorReporting
 - uid: Google.Cloud.Diagnostics.Common.EventTargetKind.Logging
   name: Logging
   href: api/Google.Cloud.Diagnostics.Common.EventTargetKind.html#Google_Cloud_Diagnostics_Common_EventTargetKind_Logging

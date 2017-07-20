@@ -14330,6 +14330,39 @@ references:
   commentId: F:Google.Cloud.BigQuery.V2.FileFormat.NewlineDelimitedJson
   fullName: Google.Cloud.BigQuery.V2.FileFormat.NewlineDelimitedJson
   nameWithType: FileFormat.NewlineDelimitedJson
+- uid: Google.Cloud.BigQuery.V2.Filters
+  name: Filters
+  href: api/Google.Cloud.BigQuery.V2.Filters.html
+  commentId: T:Google.Cloud.BigQuery.V2.Filters
+  fullName: Google.Cloud.BigQuery.V2.Filters
+  nameWithType: Filters
+- uid: Google.Cloud.BigQuery.V2.Filters.FromLabel(System.String,System.String)
+  name: FromLabel(String, String)
+  href: api/Google.Cloud.BigQuery.V2.Filters.html#Google_Cloud_BigQuery_V2_Filters_FromLabel_System_String_System_String_
+  commentId: M:Google.Cloud.BigQuery.V2.Filters.FromLabel(System.String,System.String)
+  fullName: Google.Cloud.BigQuery.V2.Filters.FromLabel(System.String, System.String)
+  nameWithType: Filters.FromLabel(String, String)
+- uid: Google.Cloud.BigQuery.V2.Filters.FromLabel*
+  name: FromLabel
+  href: api/Google.Cloud.BigQuery.V2.Filters.html#Google_Cloud_BigQuery_V2_Filters_FromLabel_
+  commentId: Overload:Google.Cloud.BigQuery.V2.Filters.FromLabel
+  fullName: Google.Cloud.BigQuery.V2.Filters.FromLabel
+  nameWithType: Filters.FromLabel
+- uid: Google.Cloud.BigQuery.V2.Filters.FromLabels(System.Collections.Generic.IDictionary{System.String,System.String})
+  name: FromLabels(IDictionary<String, String>)
+  href: api/Google.Cloud.BigQuery.V2.Filters.html#Google_Cloud_BigQuery_V2_Filters_FromLabels_System_Collections_Generic_IDictionary_System_String_System_String__
+  commentId: M:Google.Cloud.BigQuery.V2.Filters.FromLabels(System.Collections.Generic.IDictionary{System.String,System.String})
+  name.vb: FromLabels(IDictionary(Of String, String))
+  fullName: Google.Cloud.BigQuery.V2.Filters.FromLabels(System.Collections.Generic.IDictionary<System.String, System.String>)
+  fullName.vb: Google.Cloud.BigQuery.V2.Filters.FromLabels(System.Collections.Generic.IDictionary(Of System.String, System.String))
+  nameWithType: Filters.FromLabels(IDictionary<String, String>)
+  nameWithType.vb: Filters.FromLabels(IDictionary(Of String, String))
+- uid: Google.Cloud.BigQuery.V2.Filters.FromLabels*
+  name: FromLabels
+  href: api/Google.Cloud.BigQuery.V2.Filters.html#Google_Cloud_BigQuery_V2_Filters_FromLabels_
+  commentId: Overload:Google.Cloud.BigQuery.V2.Filters.FromLabels
+  fullName: Google.Cloud.BigQuery.V2.Filters.FromLabels
+  nameWithType: Filters.FromLabels
 - uid: Google.Cloud.BigQuery.V2.GetDatasetOptions
   name: GetDatasetOptions
   href: api/Google.Cloud.BigQuery.V2.GetDatasetOptions.html
@@ -14492,6 +14525,30 @@ references:
   commentId: T:Google.Cloud.BigQuery.V2.ListDatasetsOptions
   fullName: Google.Cloud.BigQuery.V2.ListDatasetsOptions
   nameWithType: ListDatasetsOptions
+- uid: Google.Cloud.BigQuery.V2.ListDatasetsOptions.Filter
+  name: Filter
+  href: api/Google.Cloud.BigQuery.V2.ListDatasetsOptions.html#Google_Cloud_BigQuery_V2_ListDatasetsOptions_Filter
+  commentId: P:Google.Cloud.BigQuery.V2.ListDatasetsOptions.Filter
+  fullName: Google.Cloud.BigQuery.V2.ListDatasetsOptions.Filter
+  nameWithType: ListDatasetsOptions.Filter
+- uid: Google.Cloud.BigQuery.V2.ListDatasetsOptions.Filter*
+  name: Filter
+  href: api/Google.Cloud.BigQuery.V2.ListDatasetsOptions.html#Google_Cloud_BigQuery_V2_ListDatasetsOptions_Filter_
+  commentId: Overload:Google.Cloud.BigQuery.V2.ListDatasetsOptions.Filter
+  fullName: Google.Cloud.BigQuery.V2.ListDatasetsOptions.Filter
+  nameWithType: ListDatasetsOptions.Filter
+- uid: Google.Cloud.BigQuery.V2.ListDatasetsOptions.IncludeHidden
+  name: IncludeHidden
+  href: api/Google.Cloud.BigQuery.V2.ListDatasetsOptions.html#Google_Cloud_BigQuery_V2_ListDatasetsOptions_IncludeHidden
+  commentId: P:Google.Cloud.BigQuery.V2.ListDatasetsOptions.IncludeHidden
+  fullName: Google.Cloud.BigQuery.V2.ListDatasetsOptions.IncludeHidden
+  nameWithType: ListDatasetsOptions.IncludeHidden
+- uid: Google.Cloud.BigQuery.V2.ListDatasetsOptions.IncludeHidden*
+  name: IncludeHidden
+  href: api/Google.Cloud.BigQuery.V2.ListDatasetsOptions.html#Google_Cloud_BigQuery_V2_ListDatasetsOptions_IncludeHidden_
+  commentId: Overload:Google.Cloud.BigQuery.V2.ListDatasetsOptions.IncludeHidden
+  fullName: Google.Cloud.BigQuery.V2.ListDatasetsOptions.IncludeHidden
+  nameWithType: ListDatasetsOptions.IncludeHidden
 - uid: Google.Cloud.BigQuery.V2.ListDatasetsOptions.PageSize
   name: PageSize
   href: api/Google.Cloud.BigQuery.V2.ListDatasetsOptions.html#Google_Cloud_BigQuery_V2_ListDatasetsOptions_PageSize
