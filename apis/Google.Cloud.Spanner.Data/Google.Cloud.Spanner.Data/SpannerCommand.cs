@@ -191,7 +191,8 @@ namespace Google.Cloud.Spanner.Data
             set => _transaction = (SpannerTransaction) value;
         }
 
-        private SpannerCommandTextBuilder SpannerCommandTextBuilder { get; set; }
+        // ReSharper disable once MemberCanBePrivate.Global
+        internal SpannerCommandTextBuilder SpannerCommandTextBuilder { get; set; }
 
         /// <summary>
         /// Returns a copy of this <see cref="SpannerCommand"/>.
@@ -314,6 +315,13 @@ namespace Google.Cloud.Spanner.Data
                 var parent = new InstanceName(spannerConnection.Project, spannerConnection.SpannerInstance);
                 var response = await databaseAdminClient.CreateDatabaseAsync(parent, commandText).ConfigureAwait(false);
                 await response.PollUntilCompletedAsync().ConfigureAwait(false);
+            }
+            else if (spannerCommandTextBuilder.IsDropDatabaseCommand)
+            {
+                var dbName = new DatabaseName(spannerConnection.Project,
+                    spannerConnection.SpannerInstance,
+                    spannerCommandTextBuilder.DatabaseToDrop);
+                await databaseAdminClient.DropDatabaseAsync(dbName, cancellationToken).ConfigureAwait(false);
             }
             else
             {
