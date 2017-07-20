@@ -17,6 +17,9 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+#if NET45 || NET451 || NET452
+using System.Transactions;
+#endif
 using Xunit;
 using Xunit.Abstractions;
 
@@ -462,6 +465,47 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
+
+#if NET45 || NET451 || NET452
+        [Fact]
+        public async Task ScopeCompleteWithReadDoesntThrow()
+        {
+            await WriteSampleRowsAsync();
+            using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            {
+                using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+                {
+                    await connection.OpenAsReadOnlyAsync();
+                    var cmd = connection.CreateSelectCommand(
+                        "SELECT * FROM TX WHERE K=@k",
+                        new SpannerParameterCollection {{"k", SpannerDbType.String, _key}});
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        if (await reader.ReadAsync())
+                        {
+                            Assert.Equal(
+                                _history[2].Value, reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
+                        }
+                    }
+                    scope.Complete();
+                }
+            }
+        }
+
+        [Fact]
+        public async Task ScopeCompleteWithNoWritesDoesntThrow()
+        {
+            await WriteSampleRowsAsync();
+            using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            {
+                using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+                {
+                    await connection.OpenAsync();
+                    scope.Complete();
+                }
+            }
+        }
+#endif
 
         [Fact]
         public async Task ReadStrongSingle()
