@@ -62,7 +62,7 @@
 
   {
     "id": "Google.Cloud.DevTools.Common",
-    "version": "1.0.0-alpha03",
+    "version": "1.0.0",
     "type": "other",
     "targetFrameworks": "netstandard1.3;net45",
     "description": "Common Protocol Buffer messages for Google Cloud Developer Tools APIs.",
