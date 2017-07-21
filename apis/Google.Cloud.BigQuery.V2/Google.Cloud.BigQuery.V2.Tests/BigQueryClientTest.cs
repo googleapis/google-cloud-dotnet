@@ -170,6 +170,32 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
+        public void UpdateDatasetEquivalents()
+        {
+            var datasetId = "dataset";
+            var reference = GetDatasetReference(datasetId);
+            var resource = new Dataset();
+            var options = new UpdateDatasetOptions();
+            VerifyEquivalent(new BigQueryDataset(new DerivedBigQueryClient(), resource),
+                client => client.UpdateDataset(MatchesWhenSerialized(reference), resource, options),
+                client => client.UpdateDataset(datasetId, resource, options),
+                client => client.UpdateDataset(ProjectId, datasetId, resource, options));
+        }
+
+        [Fact]
+        public void PatchDatasetEquivalents()
+        {
+            var datasetId = "dataset";
+            var reference = GetDatasetReference(datasetId);
+            var resource = new Dataset();
+            var options = new PatchDatasetOptions();
+            VerifyEquivalent(new BigQueryDataset(new DerivedBigQueryClient(), resource),
+                client => client.PatchDataset(MatchesWhenSerialized(reference), resource, options),
+                client => client.PatchDataset(datasetId, resource, options),
+                client => client.PatchDataset(ProjectId, datasetId, resource, options));
+        }
+
+        [Fact]
         public void GetOrCreateDatasetEquivalents()
         {
             var datasetId = "dataset";

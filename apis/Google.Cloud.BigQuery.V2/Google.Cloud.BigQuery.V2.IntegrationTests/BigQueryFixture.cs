@@ -19,6 +19,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Threading;
 using Xunit;
 
 
@@ -36,6 +37,11 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
     public class BigQueryFixture : IDisposable, ICollectionFixture<BigQueryFixture>
     {
         private const string ProjectEnvironmentVariable = "TEST_PROJECT";
+
+        /// <summary>
+        /// Used to generate dataset IDs which are still clearly identifiable with this test.
+        /// </summary>
+        private int extraDatasetCounter;
 
         public string ProjectId { get; }
         public string DatasetId { get; }
@@ -248,6 +254,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         }
 
         internal string CreateTableId() => "test_" + Guid.NewGuid().ToString().Replace("-", "_");
+        internal string CreateDatasetId() => $"{DatasetId}_{Interlocked.Increment(ref extraDatasetCounter)}";
 
         public void Dispose()
         {

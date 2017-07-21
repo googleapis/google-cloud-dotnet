@@ -161,6 +161,45 @@ namespace Google.Cloud.BigQuery.V2
         public void Delete(DeleteDatasetOptions options = null) => _client.DeleteDataset(Reference, options);
 
         /// <summary>
+        /// Updates this dataset to match the specified resource.
+        /// </summary>
+        /// <remarks>
+        /// This method delegates to <see cref="BigQueryClient.UpdateDataset(DatasetReference, Dataset, UpdateDatasetOptions)"/>.
+        /// A simple way of updating the dataset is to modify <see cref="Resource"/> and then call this method with no arguments.
+        /// This is convenient, but it's important to understand that modifying <see cref="Resource"/> in this way leaves this object
+        /// in an unusual state - it represents "the dataset as it was when fetched, but then modified locally". For example, the etag
+        /// will be the original etag, rather than the one associated with the updated dataset. To avoid this causing confusion,
+        /// we recommend only taking this approach if the object will not be used afterwards. Use the value returned by this method
+        /// as the new, self-consistent representation of the dataset.
+        /// </remarks>
+        /// <param name="resource">The resource to update with. If null, the <see cref="Resource"/> property is
+        /// used.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The updated dataset.</returns>
+        public BigQueryDataset Update(Dataset resource = null, UpdateDatasetOptions options = null) =>
+            _client.UpdateDataset(Reference, resource ?? Resource, options);
+
+        /// <summary>
+        /// Patches this dataset with fields in the specified resource.
+        /// </summary>
+        /// <remarks>
+        /// This method delegates to <see cref="BigQueryClient.PatchDataset(DatasetReference, Dataset, PatchDatasetOptions)"/>.
+        /// </remarks>
+        /// <param name="resource">The resource to patch with. Must not be null.</param>
+        /// <param name="matchEtag">If true, the etag from <see cref="Resource"/> is propagated into <paramref name="resource"/> for
+        /// optimistic concurrency. Otherwise, <paramref name="resource"/> is left unchanged.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The updated dataset.</returns>
+        public BigQueryDataset Patch(Dataset resource, bool matchEtag, PatchDatasetOptions options = null)
+        {
+            if (matchEtag)
+            {
+                resource.ETag = Resource.ETag;
+            }
+            return _client.PatchDataset(Reference, resource, options);
+        }
+
+        /// <summary>
         /// Asynchronously uploads a stream of CSV data to a table.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.UploadCsvAsync(TableReference, TableSchema, Stream, UploadCsvOptions, CancellationToken)"/>.
         /// </summary>

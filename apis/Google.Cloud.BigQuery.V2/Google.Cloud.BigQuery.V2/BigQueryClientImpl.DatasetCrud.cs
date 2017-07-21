@@ -106,6 +106,28 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
+        public override BigQueryDataset UpdateDataset(DatasetReference datasetReference, Dataset resource, UpdateDatasetOptions options = null)
+        {
+            GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
+            GaxPreconditions.CheckNotNull(resource, nameof(resource));
+            var request = Service.Datasets.Update(resource, datasetReference.ProjectId, datasetReference.DatasetId);
+            request.ModifyRequest += _versionHeaderAction;
+            options?.ModifyRequest(request);
+            return new BigQueryDataset(this, request.Execute());
+        }
+
+        /// <inheritdoc />
+        public override BigQueryDataset PatchDataset(DatasetReference datasetReference, Dataset resource, PatchDatasetOptions options = null)
+        {
+            GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
+            GaxPreconditions.CheckNotNull(resource, nameof(resource));
+            var request = Service.Datasets.Patch(resource, datasetReference.ProjectId, datasetReference.DatasetId);
+            request.ModifyRequest += _versionHeaderAction;
+            options?.ModifyRequest(request);
+            return new BigQueryDataset(this, request.Execute());
+        }
+
+        /// <inheritdoc />
         public override async Task<BigQueryDataset> GetDatasetAsync(DatasetReference datasetReference, GetDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
