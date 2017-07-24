@@ -321,6 +321,9 @@
       "Google.Cloud.Spanner.Admin.Database.V1": "",
       "Google.Cloud.Spanner.Admin.Instance.V1": "",
       "Grpc.Core": ""
+    },
+    "testDependencies": {
+      "CoreCompat.EnterpriseLibrary.TransientFaultHandling": "6.0.1304-r3"
     }
   },
 
