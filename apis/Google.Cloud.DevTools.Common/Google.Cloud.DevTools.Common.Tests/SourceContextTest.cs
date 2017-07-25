@@ -63,7 +63,7 @@ namespace Google.Cloud.DevTools.Common.Tests
         [Fact]
         public void ReadIOError()
         {
-            SourceContext.s_fileExistsFunc = _ => { return true; };
+            SourceContext.s_fileExistsFunc = _ => true;
             SourceContext.s_fileReadAllTextFunc = _ => { throw new IOException(); };
             Assert.Null(SourceContext.AppSourceContext);
         }
@@ -76,7 +76,7 @@ namespace Google.Cloud.DevTools.Common.Tests
                 Assert.Equal(Path.GetFileName(path), "source-context.json");
                 return s_sampleContextFileContent;
             };
-            SourceContext.s_fileExistsFunc = _ => { return true; };
+            SourceContext.s_fileExistsFunc = _ => true;
             Assert.Equal(SourceContext.AppSourceContext?.Git?.RevisionId, TestRevisionId);
             Assert.Equal(SourceContext.AppSourceContext?.Git?.Url, TestGitUrl);
         }
