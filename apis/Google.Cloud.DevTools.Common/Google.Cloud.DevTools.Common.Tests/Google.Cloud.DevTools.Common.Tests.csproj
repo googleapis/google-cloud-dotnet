@@ -3,7 +3,7 @@
   <PropertyGroup>    
     <TargetFrameworks>netcoreapp1.0;net452</TargetFrameworks>    
     <SignAssembly>True</SignAssembly>    
-    <AssemblyOriginatorKeyFile>GoogleApis.snk</AssemblyOriginatorKeyFile>    
+    <AssemblyOriginatorKeyFile>..\..\GoogleApis.snk</AssemblyOriginatorKeyFile>    
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
