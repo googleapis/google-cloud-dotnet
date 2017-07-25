@@ -21,15 +21,17 @@ namespace Google.Cloud.DevTools.Common.Tests
 {
     public class SourceContextTest
     {
+        private const string TestRevisionId = "65a600df90f5b715451a3e0dbafc8a74472f8bb9";
+        private const string TestGitUrl = "https://github.com/test-account/google-cloud-test-project.git";
+
         private static readonly Func<string, string> s_oldReadAllFunc = SourceContext.s_fileReadAllTextFunc;
         private static readonly Func<string, bool> s_oldFileExistsFunc = SourceContext.s_fileExistsFunc;
 
-        private const string TestRevisionId = "65a600df90f5b715451a3e0dbafc8a74472f8bb9";
         private static readonly string s_sampleContextFileContent = $@"
 {{
   ""git"": {{
     ""revisionId"": ""{TestRevisionId}"", 
-    ""url"": ""https://github.com/test-account/google-cloud-test-project.git""
+    ""url"": ""{TestGitUrl}""
   }}
 }}
 ";
@@ -52,29 +54,47 @@ namespace Google.Cloud.DevTools.Common.Tests
             Assert.Equal(sourceContext.ContextCase, SourceContext.ContextOneofCase.None);
         }
 
-        [Fact] void DefaultEmptySourceContext()
+        [Fact]
+        public void DefaultEmptySourceContext()
         {
             Assert.Null(SourceContext.AppSourceContext);
         }
 
-        [Fact] void ReadIOError()
+        [Fact]
+        public void ReadIOError()
         {
-            SourceContext.s_fileExistsFunc = (path) => { return true; };
-            SourceContext.s_fileReadAllTextFunc = (path) => { throw new IOException(); };
+            SourceContext.s_fileExistsFunc = _ => { return true; };
+            SourceContext.s_fileReadAllTextFunc = _ => { throw new IOException(); };
             Assert.Null(SourceContext.AppSourceContext);
         }
 
-        [Fact] void ReadSourceContextByMock()
+        [Fact]
+        public void ReadSourceContextByMock()
         {
-            SourceContext.s_fileReadAllTextFunc = ReadSampleSourceContext;
-            SourceContext.s_fileExistsFunc = (path) => { return true; };
+            SourceContext.s_fileReadAllTextFunc = (path) =>
+            {
+                Assert.Equal(Path.GetFileName(path), "source-context.json");
+                return s_sampleContextFileContent;
+            };
+            SourceContext.s_fileExistsFunc = _ => { return true; };
             Assert.Equal(SourceContext.AppSourceContext?.Git?.RevisionId, TestRevisionId);
+            Assert.Equal(SourceContext.AppSourceContext?.Git?.Url, TestGitUrl);
         }
 
-        private string ReadSampleSourceContext(string path)
+        [Fact]
+        public void ReadSourceContextFile()
         {
-            Assert.Equal(Path.GetFileName(path), "source-context.json");
-            return s_sampleContextFileContent;
+            string filePath = "source-context.json";
+            try
+            {
+                File.WriteAllText(filePath, s_sampleContextFileContent);
+                Assert.Equal(SourceContext.AppSourceContext?.Git?.RevisionId, TestRevisionId);
+                Assert.Equal(SourceContext.AppSourceContext?.Git?.Url, TestGitUrl);
+            }
+            finally
+            {
+                File.Delete(filePath);
+            }
         }
     }
 }

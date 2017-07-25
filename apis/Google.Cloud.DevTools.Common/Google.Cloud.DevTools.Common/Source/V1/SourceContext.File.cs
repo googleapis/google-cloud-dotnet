@@ -26,8 +26,8 @@ namespace Google.Cloud.DevTools.Source.V1
     public sealed partial class SourceContext
     {
         private const string SourceContextFileName = "source-context.json";
-        private static Lazy<string> s_filePath = new Lazy<string>(GetFilePath);
-        private static Lazy<SourceContext> s_sourceContext = new Lazy<SourceContext>(OpenParseFile);
+        private static Lazy<string> s_filePath;
+        private static Lazy<SourceContext> s_sourceContext;
 
         /// <summary>
         /// The func that reads file all text. Can be overridden by unit tests.
@@ -66,6 +66,14 @@ namespace Google.Cloud.DevTools.Source.V1
         /// Theown when the application is not authorized to access the file.
         /// </exception>
         public static SourceContext AppSourceContext => s_sourceContext.Value;
+
+        /// <summary>
+        /// Static constructor.
+        /// </summary>
+        static SourceContext()
+        {
+            ResetAppSourceContext();
+        }
 
         /// <summary>
         /// Open the source context file and parse it with <seealso cref="SourceContext"/> proto.
