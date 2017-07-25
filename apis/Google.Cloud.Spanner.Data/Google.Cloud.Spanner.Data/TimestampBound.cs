@@ -40,7 +40,9 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// The type of timestamp bound.
+        /// Indicates how to choose the timestamp at which to read the data for Cloud Spanner read-only transactions.
+        /// If your application can tolerate some staleness when reading data, you can use a stale read,
+        /// which can execute much faster when compared to reading the latest data.
         /// The types of timestamp bounds are:
         ///  Strong (the default): read the latest data.
         ///  Bounded staleness: read a version of the data that's no staler than a bound.

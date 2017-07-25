@@ -15,6 +15,9 @@
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
+    /// Indicates how to choose the timestamp at which to read the data for Cloud Spanner read-only transactions.
+    /// If your application can tolerate some staleness when reading data, you can use a stale read,
+    /// which can execute much faster when compared to reading the latest data.
     /// </summary>
     public enum TimestampBoundMode
     {
