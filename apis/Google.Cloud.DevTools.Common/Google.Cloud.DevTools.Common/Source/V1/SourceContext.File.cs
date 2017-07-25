@@ -30,6 +30,16 @@ namespace Google.Cloud.DevTools.Source.V1
         private static Lazy<SourceContext> s_sourceContext = new Lazy<SourceContext>(OpenParseFile);
 
         /// <summary>
+        /// The func that reads file all text. Can be overridden by unit tests.
+        /// </summary>
+        internal static Func<string, string> s_fileReadAllTextFunc = File.ReadAllText;
+
+        /// <summary>
+        /// The func that tests if file exists. Can be overridden by unit tests.
+        /// </summary>
+        internal static Func<string, bool> s_fileExistsFunc = File.Exists;
+
+        /// <summary>
         /// Gets the custom log label of Stackdriver Logging entry to set Git revision id.
         /// When writing Stackdriver Logging entry, 
         /// user should add this custom label, set the value to the git revision id.
@@ -85,7 +95,7 @@ namespace Google.Cloud.DevTools.Source.V1
             }
             try
             {
-                return File.ReadAllText(s_filePath.Value);
+                return s_fileReadAllTextFunc(s_filePath.Value);
             }
             catch (Exception ex) when (ex is IOException)
             {
@@ -101,7 +111,16 @@ namespace Google.Cloud.DevTools.Source.V1
             string root = AppDomain.CurrentDomain.BaseDirectory;
 #endif
             var fullPath = Path.Combine(root, SourceContextFileName);
-            return File.Exists(fullPath) ? fullPath : null;
+            return s_fileExistsFunc(fullPath) ? fullPath : null;
+        }
+
+        /// <summary>
+        /// Intended to be used by unit test only.
+        /// </summary>
+        internal static void ResetAppSourceContext()
+        {
+            s_filePath = new Lazy<string>(GetFilePath);
+            s_sourceContext = new Lazy<SourceContext>(OpenParseFile);
         }
     }
 }
