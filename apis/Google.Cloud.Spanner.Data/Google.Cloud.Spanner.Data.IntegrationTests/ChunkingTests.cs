@@ -53,6 +53,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         private readonly Dictionary<string, byte[]> _bytesValues = new Dictionary<string, byte[]>();
         private readonly Dictionary<string, string[]> _stringArrayValues = new Dictionary<string, string[]>();
         private readonly Dictionary<string, byte[][]> _bytesArrayValues = new Dictionary<string, byte[][]>();
+        private readonly HashSet<string> _addedKeys = new HashSet<string>();
 
         private readonly Random _random;
         private readonly int _seed;
@@ -87,6 +88,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         private Task InsertRowAsync(SpannerCommand writeCommand)
         {
             string k = UniqueString();
+            _addedKeys.Add(k);
             writeCommand.Parameters["K"].Value = k;
             _stringValues[k] = (string) (writeCommand.Parameters["StringValue"].Value =
                 GetLargeString(MinDataSize, MaxDataSize));
@@ -140,8 +142,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         var keySet = new HashSet<string>();
                         while (await reader.ReadAsync())
                         {
-                            rowsRead++;
                             var k = reader.GetFieldValue<string>("K");
+                            if (!_addedKeys.Contains(k))
+                            {
+                                continue; // this key is from a previous test run.
+                            }
+                            rowsRead++;
                             Assert.True(keySet.Add(k));
                             Assert.Equal(_stringValues[k], reader.GetFieldValue<string>("StringValue"));
                             Assert.Equal(_stringArrayValues[k], reader.GetFieldValue<string[]>("StringArrayValue"));
