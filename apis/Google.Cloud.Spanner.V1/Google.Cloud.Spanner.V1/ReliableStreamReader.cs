@@ -166,6 +166,7 @@ namespace Google.Cloud.Spanner.V1 {
                 return;
             }
             IsClosed = true;
+            _currentCall?.Dispose();
             StreamClosed?.Invoke(this, new StreamClosedEventArgs());
         }
 
