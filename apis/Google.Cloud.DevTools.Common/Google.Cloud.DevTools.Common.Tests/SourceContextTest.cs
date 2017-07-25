@@ -34,8 +34,7 @@ namespace Google.Cloud.DevTools.Common.Tests
 }}
 ";
         /// <summary>
-        /// The constructor gets the source context file path,
-        /// and then restores the SourceContext static members
+        /// The constructor restores the SourceContext static members
         /// before each test method execution.
         /// </summary>
         public SourceContextTest()
