@@ -26,8 +26,18 @@ namespace Google.Cloud.DevTools.Source.V1
     public sealed partial class SourceContext
     {
         private const string SourceContextFileName = "source-context.json";
-        private static Lazy<string> s_filePath = new Lazy<string>(GetFilePath);
-        private static Lazy<SourceContext> s_sourceContext = new Lazy<SourceContext>(OpenParseFile);
+        private static Lazy<string> s_filePath;
+        private static Lazy<SourceContext> s_sourceContext;
+
+        /// <summary>
+        /// The func that reads file all text. Can be overridden by unit tests.
+        /// </summary>
+        internal static Func<string, string> s_fileReadAllTextFunc = File.ReadAllText;
+
+        /// <summary>
+        /// The func that tests if file exists. Can be overridden by unit tests.
+        /// </summary>
+        internal static Func<string, bool> s_fileExistsFunc = File.Exists;
 
         /// <summary>
         /// Gets the custom log label of Stackdriver Logging entry to set Git revision id.
@@ -58,6 +68,14 @@ namespace Google.Cloud.DevTools.Source.V1
         public static SourceContext AppSourceContext => s_sourceContext.Value;
 
         /// <summary>
+        /// Static constructor.
+        /// </summary>
+        static SourceContext()
+        {
+            ResetAppSourceContext();
+        }
+
+        /// <summary>
         /// Open the source context file and parse it with <seealso cref="SourceContext"/> proto.
         /// </summary>
         /// <returns>
@@ -85,7 +103,7 @@ namespace Google.Cloud.DevTools.Source.V1
             }
             try
             {
-                return File.ReadAllText(s_filePath.Value);
+                return s_fileReadAllTextFunc(s_filePath.Value);
             }
             catch (Exception ex) when (ex is IOException)
             {
@@ -101,7 +119,16 @@ namespace Google.Cloud.DevTools.Source.V1
             string root = AppDomain.CurrentDomain.BaseDirectory;
 #endif
             var fullPath = Path.Combine(root, SourceContextFileName);
-            return File.Exists(fullPath) ? fullPath : null;
+            return s_fileExistsFunc(fullPath) ? fullPath : null;
+        }
+
+        /// <summary>
+        /// Intended to be used by unit test only.
+        /// </summary>
+        internal static void ResetAppSourceContext()
+        {
+            s_filePath = new Lazy<string>(GetFilePath);
+            s_sourceContext = new Lazy<SourceContext>(OpenParseFile);
         }
     }
 }
