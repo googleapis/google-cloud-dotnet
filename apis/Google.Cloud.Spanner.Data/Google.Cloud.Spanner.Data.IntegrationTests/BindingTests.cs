@@ -41,7 +41,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         private readonly TestDatabaseFixture _testFixture;
 
-        private async Task TestBind<T>(SpannerDbType parameterType, T value)
+        private async Task TestBind<T>(SpannerDbType parameterType, T value, Func<SpannerDataReader, T> typeSpecificReader = null)
         {
             int rowsRead;
             var valueRead = default(T);
@@ -59,6 +59,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     while (await reader.ReadAsync())
                     {
                         valueRead = reader.GetFieldValue<T>(0);
+
+                        // optional extra test for certain built in types
+                        if (typeSpecificReader != null)
+                        {
+                            Assert.Equal(typeSpecificReader(reader), valueRead);
+                        }
+
                         rowsRead++;
                     }
                 }
@@ -83,7 +90,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         [Fact]
-        public Task BindBoolean() => TestBind(SpannerDbType.Bool, true);
+        public Task BindBoolean() => TestBind(SpannerDbType.Bool, true, r => r.GetBoolean(0));
 
         [Fact]
         public Task BindBooleanArray() => TestBind(
@@ -151,7 +158,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             null);
 
         [Fact]
-        public Task BindFloat64() => TestBind(SpannerDbType.Float64, 1.0);
+        public Task BindFloat64() => TestBind(SpannerDbType.Float64, 1.0, r => r.GetDouble(0));
 
         [Fact]
         public Task BindFloat64Array() => TestBind(
@@ -172,7 +179,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             null);
 
         [Fact]
-        public Task BindInt64() => TestBind(SpannerDbType.Int64, (long) 1);
+        public Task BindInt64() => TestBind(SpannerDbType.Int64, 1, r => r.GetInt64(0));
 
         [Fact]
         public Task BindInt64Array() => TestBind(
@@ -193,7 +200,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             null);
 
         [Fact]
-        public Task BindString() => TestBind(SpannerDbType.String, "abc");
+        public Task BindString() => TestBind(SpannerDbType.String, "abc", r => r.GetString(0));
 
         [Fact]
         public Task BindStringArray() => TestBind(

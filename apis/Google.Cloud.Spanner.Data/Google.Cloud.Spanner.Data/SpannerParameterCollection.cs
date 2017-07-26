@@ -29,6 +29,19 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     public sealed class SpannerParameterCollection : DbParameterCollection, IEnumerable<SpannerParameter>
     {
+        /// <summary>
+        /// Initializes a new SpannerParameterCollection with the given set of optional <see cref="SpannerParameter"/>
+        /// objects.
+        /// </summary>
+        /// <param name="initialParameters">The initial parameters to include in the collection.</param>
+        public SpannerParameterCollection(IEnumerable<SpannerParameter> initialParameters = null)
+        {
+            if (initialParameters != null)
+            {
+                _innerList.AddRange(initialParameters);
+            }
+        }
+
         private readonly List<SpannerParameter> _innerList = new List<SpannerParameter>();
 
         /// <inheritdoc />
@@ -240,5 +253,13 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override bool IsReadOnly => false;
 #endif
+        /// <summary>
+        /// Clones the collection.
+        /// </summary>
+        /// <returns></returns>
+        public SpannerParameterCollection Clone()
+        {
+            return new SpannerParameterCollection(_innerList);
+        }
     }
 }

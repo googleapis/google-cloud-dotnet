@@ -68,7 +68,10 @@ namespace Google.Cloud.Spanner.Data
         {
             SpannerConnection = connection;
             _transaction = transaction;
-            Parameters = parameters;
+            if (parameters != null)
+            {
+                Parameters = parameters;
+            }
         }
 
         /// <summary>
@@ -151,7 +154,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// The parameters of the SQL statement or command.
         /// </summary>
-        public new SpannerParameterCollection Parameters { get; }
+        public new SpannerParameterCollection Parameters { get; } = new SpannerParameterCollection();
 
         /// <summary>
         /// The connection to the data source.
@@ -198,7 +201,7 @@ namespace Google.Cloud.Spanner.Data
         /// Returns a copy of this <see cref="SpannerCommand"/>.
         /// </summary>
         /// <returns>a copy of this <see cref="SpannerCommand"/>.</returns>
-        public object Clone() => new SpannerCommand(SpannerConnection, _transaction, Parameters)
+        public object Clone() => new SpannerCommand(SpannerConnection, _transaction, Parameters?.Clone())
         {
             DesignTimeVisible = DesignTimeVisible,
             SpannerCommandTextBuilder = SpannerCommandTextBuilder,

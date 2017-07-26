@@ -467,6 +467,34 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
 #if NET45 || NET451 || NET452
+        private async Task UpdateValueInTransactionScope(SpannerConnection writeConnection)
+        {
+            var writeCommand = writeConnection.CreateUpdateCommand(
+                "TX",
+                new SpannerParameterCollection
+                {
+                    {"k", SpannerDbType.String, _key},
+                    {"Int64Value", SpannerDbType.Int64, 0}
+                });
+            await writeCommand.ExecuteNonQueryAsync().ConfigureAwait(false);
+        }
+
+        private async Task ReadValueInTransactionScope(SpannerConnection readConnection)
+        {
+            var cmd = readConnection.CreateSelectCommand(
+                "SELECT * FROM TX WHERE K=@k",
+                new SpannerParameterCollection { { "k", SpannerDbType.String, _key } });
+            using (var reader = await cmd.ExecuteReaderAsync())
+            {
+                if (await reader.ReadAsync())
+                {
+                    Assert.Equal(
+                        _history[2].Value,
+                        reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
+                }
+            }
+        }
+
         [Fact]
         public async Task ScopeCompleteWithReadDoesntThrow()
         {
@@ -504,6 +532,66 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     scope.Complete();
                 }
             }
+        }
+
+        [Fact]
+        public async Task ScopeCompleteWithTwoReadsDoesntThrow()
+        {
+            await WriteSampleRowsAsync();
+            using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            using (var readConnection1 = await _testFixture.GetTestDatabaseConnectionAsync())
+            using (var readConnection2 = await _testFixture.GetTestDatabaseConnectionAsync())
+            {
+                await readConnection1.OpenAsReadOnlyAsync();
+                await readConnection2.OpenAsReadOnlyAsync();
+
+                await ReadValueInTransactionScope(readConnection1);
+                await ReadValueInTransactionScope(readConnection2);
+                scope.Complete();
+            }
+        }
+
+        [Fact]
+        public async Task ScopeCompleteWithOneReadOneWriteThrows()
+        {
+            await WriteSampleRowsAsync();
+            await Assert.ThrowsAsync<TransactionAbortedException>(
+                async () =>
+                {
+                    using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+                    using (var readConnection = await _testFixture.GetTestDatabaseConnectionAsync())
+                    using (var writeConnection = await _testFixture.GetTestDatabaseConnectionAsync())
+                    {
+                        await readConnection.OpenAsReadOnlyAsync();
+                        await writeConnection.OpenAsync();
+
+                        await ReadValueInTransactionScope(readConnection);
+                        await UpdateValueInTransactionScope(writeConnection);
+                        scope.Complete();
+                    }
+                });
+        }
+
+        [Fact]
+        public async Task ScopeCompleteWithTwoWritesThrows()
+        {
+            await WriteSampleRowsAsync();
+            await Assert.ThrowsAsync<TransactionAbortedException>(
+                async () =>
+                {
+                    using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+                    using (var writeConnection1 = await _testFixture.GetTestDatabaseConnectionAsync())
+                    using (var writeConnection2 = await _testFixture.GetTestDatabaseConnectionAsync())
+                    {
+                        await writeConnection1.OpenAsync();
+                        await writeConnection2.OpenAsync();
+
+                        await UpdateValueInTransactionScope(writeConnection1);
+                        await UpdateValueInTransactionScope(writeConnection2);
+
+                        scope.Complete();
+                    }
+                });
         }
 #endif
 
