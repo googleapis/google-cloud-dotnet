@@ -480,7 +480,12 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         protected override DbTransaction BeginDbTransaction(IsolationLevel isolationLevel)
         {
-            isolationLevel.AssertOneOf(nameof(isolationLevel), IsolationLevel.Serializable, IsolationLevel.Unspecified);
+            if (isolationLevel != IsolationLevel.Unspecified
+                && isolationLevel != IsolationLevel.Serializable)
+            {
+                throw new NotSupportedException(
+                    $"Cloud Spanner only supports isolation levels {IsolationLevel.Serializable} and {IsolationLevel.Unspecified}.");
+            }
             return BeginTransactionAsync().ResultWithUnwrappedExceptions();
         }
 
@@ -816,18 +821,7 @@ namespace Google.Cloud.Spanner.Data
         /// read operation. Must not be null.
         /// </param>
         public void OpenAsReadOnly(TimestampBound timestampBound = null)
-        {
-            if (Transaction.Current == null)
-            {
-                throw new InvalidOperationException($"{nameof(OpenAsReadOnly)} should only be called within a TransactionScope.");
-            }
-            if (!EnlistInTransaction)
-            {
-                throw new InvalidOperationException($"{nameof(OpenAsReadOnly)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
-            }
-            _timestampBound = timestampBound ?? TimestampBound.Strong;
-            Open();
-        }
+            => Task.Run(() => OpenAsReadOnlyAsync(timestampBound, CancellationToken.None)).Wait();
 
         /// <summary>
         /// If this connection is being opened within a <see cref="System.Transactions.TransactionScope" />, this forces

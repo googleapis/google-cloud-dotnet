@@ -54,6 +54,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 insertCommand.Parameters["ID"].Value = $"{s_guid}{localCounter}";
                 insertCommand.Parameters["Title"].Value = "Title";
 
+                // This uses an ephemeral transaction, so its legal to retry it.
                 await ExecuteWithRetry(insertCommand.ExecuteNonQueryAsync);
             }
             return sw.Elapsed;
@@ -61,37 +62,40 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         private async Task<TimeSpan> TestWriteTx(Stopwatch sw)
         {
-            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            await ExecuteWithRetry(async () =>
             {
-                await connection.OpenAsync();
-                using (var tx = await connection.BeginTransactionAsync())
+                using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
                 {
-                    var rowsToWrite = Enumerable.Range(0, s_rnd.Value.Next(5) + 1)
-                        .Select(x => Interlocked.Increment(ref s_rowCounter)).ToList();
+                    await connection.OpenAsync();
+                    using (var tx = await connection.BeginTransactionAsync())
+                    {
+                        var rowsToWrite = Enumerable.Range(0, s_rnd.Value.Next(5) + 1)
+                            .Select(x => Interlocked.Increment(ref s_rowCounter)).ToList();
 
-                    var insertCommand = connection.CreateInsertCommand(
-                        _testFixture.StressTestTable, new SpannerParameterCollection
-                        {
-                            {"ID", SpannerDbType.String},
-                            {"Title", SpannerDbType.String}
-                        });
-                    insertCommand.Parameters["Title"].Value = "Title";
-                    insertCommand.Transaction = tx;
+                        var insertCommand = connection.CreateInsertCommand(
+                            _testFixture.StressTestTable, new SpannerParameterCollection
+                            {
+                                {"ID", SpannerDbType.String},
+                                {"Title", SpannerDbType.String}
+                            });
+                        insertCommand.Parameters["Title"].Value = "Title";
+                        insertCommand.Transaction = tx;
 
-                    var tasks = rowsToWrite.Select(
-                        x =>
-                        {
-                            // This will blow up with dupe primary keys if not threadsafe.
-                            insertCommand.Parameters["ID"].Value = $"{s_guid}{x}";
-                            return insertCommand.ExecuteNonQueryAsync(CancellationToken.None);
-                        });
+                        var tasks = rowsToWrite.Select(
+                            x =>
+                            {
+                                // This will blow up with dupe primary keys if not threadsafe.
+                                insertCommand.Parameters["ID"].Value = $"{s_guid}{x}";
+                                return insertCommand.ExecuteNonQueryAsync(CancellationToken.None);
+                            });
 
-                    // This doesn't really *help* with perf, but is something
-                    // somebody will try.
-                    await Task.WhenAll(tasks);
-                    await ExecuteWithRetry(tx.CommitAsync);
+                        // This doesn't really *help* with perf, but is something
+                        // somebody will try.
+                        await Task.WhenAll(tasks);
+                        await tx.CommitAsync();
+                    }
                 }
-            }
+            });
             return sw.Elapsed;
         }
 

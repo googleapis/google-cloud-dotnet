@@ -185,21 +185,8 @@ namespace Google.Cloud.Spanner.Data
             .Name;
 
         /// <inheritdoc />
-        public override int GetOrdinal(string name)
-        {
-            GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name));
-            var fields = _resultSet.GetMetadataAsync(CancellationToken.None).ResultWithUnwrappedExceptions().RowType
-                .Fields;
-            for (var i = 0; i < fields.Count; i++)
-            {
-                if (Compare(name, fields[i].Name, StringComparison.Ordinal) == 0)
-                {
-                    return i;
-                }
-            }
-
-            return -1;
-        }
+        public override int GetOrdinal(string name) 
+            => GetFieldIndexAsync(name, CancellationToken.None).ResultWithUnwrappedExceptions();
 
         /// <inheritdoc />
         public override string GetString(int i) => _innerList[i].ConvertToClrType<string>(GetSpannerFieldType(i));

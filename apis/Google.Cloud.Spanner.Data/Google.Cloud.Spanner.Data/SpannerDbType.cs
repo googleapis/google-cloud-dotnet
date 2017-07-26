@@ -233,8 +233,8 @@ namespace Google.Cloud.Spanner.Data
         {
             unchecked
             {
-                int hashCode = StructMembers?.GetHashCode() ?? 0;
-                hashCode = (hashCode * 397) ^ (int) TypeCode;
+                int hashCode = StructMembers?.Count ?? 0;
+                hashCode = (hashCode * 397) ^ (int)TypeCode;
                 hashCode = (hashCode * 397) ^ (ArrayElementType?.GetHashCode() ?? 0);
                 return hashCode;
             }
