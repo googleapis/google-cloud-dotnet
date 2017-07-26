@@ -181,7 +181,10 @@ is reached.</p>
       <section><p>Indicates the type of <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html">SpannerCommand</a> that will be executed.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Spanner.Data.TimestampBoundMode.html">TimestampBoundMode</a></h4>
-      <section></section>
+      <section><p>Indicates how to choose the timestamp at which to read the data for Cloud Spanner read-only transactions.
+If your application can tolerate some staleness when reading data, you can use a stale read,
+which can execute much faster when compared to reading the latest data.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Spanner.Data.TransactionMode.html">TransactionMode</a></h4>
       <section><p>Indicates the mode for the transaction.</p>
 </section>

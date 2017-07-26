@@ -140,6 +140,36 @@ respective mappings to columns in a DataSet.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public sealed class SpannerParameterCollection : DbParameterCollection, IDataParameterCollection, IList, ICollection, IEnumerable&lt;SpannerParameter&gt;, IEnumerable</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection__ctor_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.#ctor*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection__ctor_System_Collections_Generic_IEnumerable_Google_Cloud_Spanner_Data_SpannerParameter__" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.#ctor(System.Collections.Generic.IEnumerable{Google.Cloud.Spanner.Data.SpannerParameter})">SpannerParameterCollection(IEnumerable&lt;SpannerParameter&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new SpannerParameterCollection with the given set of optional <a class="xref" href="Google.Cloud.Spanner.Data.SpannerParameter.html">SpannerParameter</a>
+objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpannerParameterCollection(IEnumerable&lt;SpannerParameter&gt; initialParameters = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.Data.SpannerParameter.html">SpannerParameter</a>&gt;</td>
+        <td><span class="parametername">initialParameters</span></td>
+        <td><p>The initial parameters to include in the collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_Count_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.Count*"></a>
@@ -426,6 +456,30 @@ Must not be null.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Data.Common.DbParameterCollection.Clear()</span></div>
+  <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_Clone_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.Clone*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_Clone" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.Clone">Clone()</h4>
+  <div class="markdown level1 summary"><p>Clones the collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpannerParameterCollection Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Spanner.Data.SpannerParameterCollection.html">SpannerParameterCollection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Spanner_Data_SpannerParameterCollection_Contains_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.Contains*"></a>
   <h4 id="Google_Cloud_Spanner_Data_SpannerParameterCollection_Contains_System_Object_" data-uid="Google.Cloud.Spanner.Data.SpannerParameterCollection.Contains(System.Object)">Contains(Object)</h4>
   <div class="markdown level1 summary"></div>

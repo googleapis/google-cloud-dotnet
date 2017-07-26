@@ -6430,6 +6430,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithNoWritesDoesntThrow
   fullName: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithNoWritesDoesntThrow
   nameWithType: TransactionTests.ScopeCompleteWithNoWritesDoesntThrow
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithOneReadOneWriteThrows
+  name: ScopeCompleteWithOneReadOneWriteThrows()
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.html#Google_Cloud_Spanner_Data_IntegrationTests_TransactionTests_ScopeCompleteWithOneReadOneWriteThrows
+  commentId: M:Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithOneReadOneWriteThrows
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithOneReadOneWriteThrows()
+  nameWithType: TransactionTests.ScopeCompleteWithOneReadOneWriteThrows()
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithOneReadOneWriteThrows*
+  name: ScopeCompleteWithOneReadOneWriteThrows
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.html#Google_Cloud_Spanner_Data_IntegrationTests_TransactionTests_ScopeCompleteWithOneReadOneWriteThrows_
+  commentId: Overload:Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithOneReadOneWriteThrows
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithOneReadOneWriteThrows
+  nameWithType: TransactionTests.ScopeCompleteWithOneReadOneWriteThrows
 - uid: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithReadDoesntThrow
   name: ScopeCompleteWithReadDoesntThrow()
   href: api/Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.html#Google_Cloud_Spanner_Data_IntegrationTests_TransactionTests_ScopeCompleteWithReadDoesntThrow
@@ -6442,6 +6454,30 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithReadDoesntThrow
   fullName: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithReadDoesntThrow
   nameWithType: TransactionTests.ScopeCompleteWithReadDoesntThrow
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithTwoReadsDoesntThrow
+  name: ScopeCompleteWithTwoReadsDoesntThrow()
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.html#Google_Cloud_Spanner_Data_IntegrationTests_TransactionTests_ScopeCompleteWithTwoReadsDoesntThrow
+  commentId: M:Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithTwoReadsDoesntThrow
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithTwoReadsDoesntThrow()
+  nameWithType: TransactionTests.ScopeCompleteWithTwoReadsDoesntThrow()
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithTwoReadsDoesntThrow*
+  name: ScopeCompleteWithTwoReadsDoesntThrow
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.html#Google_Cloud_Spanner_Data_IntegrationTests_TransactionTests_ScopeCompleteWithTwoReadsDoesntThrow_
+  commentId: Overload:Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithTwoReadsDoesntThrow
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithTwoReadsDoesntThrow
+  nameWithType: TransactionTests.ScopeCompleteWithTwoReadsDoesntThrow
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithTwoWritesThrows
+  name: ScopeCompleteWithTwoWritesThrows()
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.html#Google_Cloud_Spanner_Data_IntegrationTests_TransactionTests_ScopeCompleteWithTwoWritesThrows
+  commentId: M:Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithTwoWritesThrows
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithTwoWritesThrows()
+  nameWithType: TransactionTests.ScopeCompleteWithTwoWritesThrows()
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithTwoWritesThrows*
+  name: ScopeCompleteWithTwoWritesThrows
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.html#Google_Cloud_Spanner_Data_IntegrationTests_TransactionTests_ScopeCompleteWithTwoWritesThrows_
+  commentId: Overload:Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithTwoWritesThrows
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.ScopeCompleteWithTwoWritesThrows
+  nameWithType: TransactionTests.ScopeCompleteWithTwoWritesThrows
 - uid: Google.Cloud.Spanner.Data.IntegrationTests.WriteTests
   name: WriteTests
   href: api/Google.Cloud.Spanner.Data.IntegrationTests.WriteTests.html
@@ -8891,6 +8927,21 @@ references:
   commentId: T:Google.Cloud.Spanner.Data.SpannerParameterCollection
   fullName: Google.Cloud.Spanner.Data.SpannerParameterCollection
   nameWithType: SpannerParameterCollection
+- uid: Google.Cloud.Spanner.Data.SpannerParameterCollection.#ctor(System.Collections.Generic.IEnumerable{Google.Cloud.Spanner.Data.SpannerParameter})
+  name: SpannerParameterCollection(IEnumerable<SpannerParameter>)
+  href: api/Google.Cloud.Spanner.Data.SpannerParameterCollection.html#Google_Cloud_Spanner_Data_SpannerParameterCollection__ctor_System_Collections_Generic_IEnumerable_Google_Cloud_Spanner_Data_SpannerParameter__
+  commentId: M:Google.Cloud.Spanner.Data.SpannerParameterCollection.#ctor(System.Collections.Generic.IEnumerable{Google.Cloud.Spanner.Data.SpannerParameter})
+  name.vb: SpannerParameterCollection(IEnumerable(Of SpannerParameter))
+  fullName: Google.Cloud.Spanner.Data.SpannerParameterCollection.SpannerParameterCollection(System.Collections.Generic.IEnumerable<Google.Cloud.Spanner.Data.SpannerParameter>)
+  fullName.vb: Google.Cloud.Spanner.Data.SpannerParameterCollection.SpannerParameterCollection(System.Collections.Generic.IEnumerable(Of Google.Cloud.Spanner.Data.SpannerParameter))
+  nameWithType: SpannerParameterCollection.SpannerParameterCollection(IEnumerable<SpannerParameter>)
+  nameWithType.vb: SpannerParameterCollection.SpannerParameterCollection(IEnumerable(Of SpannerParameter))
+- uid: Google.Cloud.Spanner.Data.SpannerParameterCollection.#ctor*
+  name: SpannerParameterCollection
+  href: api/Google.Cloud.Spanner.Data.SpannerParameterCollection.html#Google_Cloud_Spanner_Data_SpannerParameterCollection__ctor_
+  commentId: Overload:Google.Cloud.Spanner.Data.SpannerParameterCollection.#ctor
+  fullName: Google.Cloud.Spanner.Data.SpannerParameterCollection.SpannerParameterCollection
+  nameWithType: SpannerParameterCollection.SpannerParameterCollection
 - uid: Google.Cloud.Spanner.Data.SpannerParameterCollection.Add(System.Object)
   name: Add(Object)
   href: api/Google.Cloud.Spanner.Data.SpannerParameterCollection.html#Google_Cloud_Spanner_Data_SpannerParameterCollection_Add_System_Object_
@@ -8939,6 +8990,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Data.SpannerParameterCollection.Clear
   fullName: Google.Cloud.Spanner.Data.SpannerParameterCollection.Clear
   nameWithType: SpannerParameterCollection.Clear
+- uid: Google.Cloud.Spanner.Data.SpannerParameterCollection.Clone
+  name: Clone()
+  href: api/Google.Cloud.Spanner.Data.SpannerParameterCollection.html#Google_Cloud_Spanner_Data_SpannerParameterCollection_Clone
+  commentId: M:Google.Cloud.Spanner.Data.SpannerParameterCollection.Clone
+  fullName: Google.Cloud.Spanner.Data.SpannerParameterCollection.Clone()
+  nameWithType: SpannerParameterCollection.Clone()
+- uid: Google.Cloud.Spanner.Data.SpannerParameterCollection.Clone*
+  name: Clone
+  href: api/Google.Cloud.Spanner.Data.SpannerParameterCollection.html#Google_Cloud_Spanner_Data_SpannerParameterCollection_Clone_
+  commentId: Overload:Google.Cloud.Spanner.Data.SpannerParameterCollection.Clone
+  fullName: Google.Cloud.Spanner.Data.SpannerParameterCollection.Clone
+  nameWithType: SpannerParameterCollection.Clone
 - uid: Google.Cloud.Spanner.Data.SpannerParameterCollection.Contains(System.Object)
   name: Contains(Object)
   href: api/Google.Cloud.Spanner.Data.SpannerParameterCollection.html#Google_Cloud_Spanner_Data_SpannerParameterCollection_Contains_System_Object_

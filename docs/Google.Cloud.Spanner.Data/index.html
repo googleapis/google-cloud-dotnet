@@ -61,12 +61,10 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="googlecloudspannerdata">Google.Cloud.Spanner.Data</h1>
 
-<p><code>Google.Cloud.Spanner.Data</code> is the ADO.NET provider for Google Cloud Spanner. It is the recommended
-package for regular Spanner database access from .NET.</p>
-<p>The <a href="../Google.Cloud.Spanner.Admin.Database.V1/">Google.Cloud.Spanner.Admin.Database.V1</a>
-and <a href="../Google.Cloud.Spanner.Admin.Instance.V1/">Google.Cloud.Spanner.Admin.Instance.V1</a> packages 
-should be used for database and instance administration respectively, such as creating or deleting
-databases and instances.</p>
+<p><code>Google.Cloud.Spanner.Data</code> is the ADO.NET provider for Cloud Spanner. It is the recommended
+package for regular Cloud Spanner database access from .NET.</p>
+<p>The <a href="../Google.Cloud.Spanner.Admin.Instance.V1/">Google.Cloud.Spanner.Admin.Instance.V1</a> package
+should be used for Cloud Spanner instance administration, such as creating or deleting instances.</p>
 <h1 id="installation">Installation</h1>
 <p>Install the <code>Google.Cloud.Spanner.Data</code> package from NuGet. Add it to
 your project in the normal way (for example by right-clicking on the
@@ -74,7 +72,543 @@ project in Visual Studio and choosing &quot;Manage NuGet Packages...&quot;).
 Please ensure you enable pre-release packages(for example, in the
 Visual Studio NuGet user interface, check the &quot;Include prerelease&quot;
 box).</p>
-</article>
+<h1 id="authentication">Authentication</h1>
+<p>When running on Google Cloud Platform, no action needs to be taken to authenticate.</p>
+<p>Otherwise, the simplest way of authenticating your API calls is to
+download a service account JSON file then set the <code>GOOGLE_APPLICATION_CREDENTIALS</code> environment variable to refer to it.
+The credentials will automatically be used to authenticate. See the <a href="https://cloud.google.com/docs/authentication/getting-started">Getting Started With
+Authentication</a> guide for more details.</p>
+<h1 id="getting-started">Getting started</h1>
+<p>Operations generally follow ADO.NET conventions.
+However Cloud Spanner does not support DDL (eg. &quot;INSERT INTO ...&quot;). Therefore you should
+use the corresponding API on SpannerConnection to create ADO command objects instead
+of setting CommandText manually.</p>
+<p>See examples below:</p>
+<h1 id="sample-code">Sample code</h1>
+<p>Once you have created your Google Cloud Project and Spanner Instance using the web console,
+you can start using the ADO.NET provider to create and modify a Cloud Spanner database.</p>
+<h2 id="creating-a-database-and-table">Creating a Database and Table</h2>
+<pre><code class="lang-cs">using (var connection =
+    new SpannerConnection($&quot;Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}&quot;))
+{
+    var createDbCmd = connection.CreateDdlCommand($&quot;CREATE DATABASE {_databaseName}&quot;);
+    await createDbCmd.ExecuteNonQueryAsync();
+
+    var createTableCmd = connection.CreateDdlCommand(
+        @&quot;CREATE TABLE TestTable (
+                                Key                STRING(MAX) NOT NULL,
+                                StringValue        STRING(MAX),
+                                Int64Value         INT64,
+                              ) PRIMARY KEY (Key)&quot;);
+    await createTableCmd.ExecuteNonQueryAsync();
+}
+</code></pre><h2 id="dataadapter-support-net-45-only">DataAdapter support (.NET 4.5+ only)</h2>
+<p>Cloud Spanner supports a limited DataAdapter that provides basic CRUD operations on any table.
+Create a SpannerDataAdapter with the target table and its primary keys.  You may replace any
+commands provided by SpannerDataAdapter with your own custom commands.</p>
+<pre><code class="lang-cs">using (var connection =
+    new SpannerConnection(
+        $&quot;Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}&quot;))
+{
+    var untypedDataSet = new DataSet();
+
+    // Provide the name of the Cloud Spanner table and primary key column names.
+    var adapter = new SpannerDataAdapter(connection, &quot;TestTable&quot;, &quot;Key&quot;);
+    adapter.Fill(untypedDataSet);
+
+    // Insert a row
+    var row = untypedDataSet.Tables[0].NewRow();
+    row[&quot;Key&quot;] = Guid.NewGuid().ToString(&quot;N&quot;);
+    row[&quot;StringValue&quot;] = &quot;New String Value&quot;;
+    row[&quot;Int64Value&quot;] = 0L;
+    untypedDataSet.Tables[0].Rows.Add(row);
+
+    adapter.Update(untypedDataSet.Tables[0]);
+}
+</code></pre><h2 id="inserting-data">Inserting Data</h2>
+<pre><code class="lang-cs">using (var connection = new SpannerConnection(
+    $&quot;Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}&quot;))
+{
+    await connection.OpenAsync();
+
+    var cmd = connection.CreateInsertCommand(
+        &quot;TestTable&quot;, new SpannerParameterCollection
+        {
+            {&quot;Key&quot;, SpannerDbType.String},
+            {&quot;StringValue&quot;, SpannerDbType.String},
+            {&quot;Int64Value&quot;, SpannerDbType.Int64}
+        });
+
+    // This executes 5 distinct transactions with one row written per transaction.
+    for (var i = 0; i &lt; 5; i++)
+    {
+        cmd.Parameters[&quot;Key&quot;].Value = Guid.NewGuid().ToString(&quot;N&quot;);
+        cmd.Parameters[&quot;StringValue&quot;].Value = $&quot;StringValue{i}&quot;;
+        cmd.Parameters[&quot;Int64Value&quot;].Value = i;
+        await cmd.ExecuteNonQueryAsync();
+    }
+}
+</code></pre><h2 id="reading-updating-and-deleting-data">Reading, Updating and Deleting Data</h2>
+<pre><code class="lang-cs">using (var connection = new SpannerConnection(
+    $&quot;Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}&quot;))
+{
+    await connection.OpenAsync();
+
+    // Read the first two keys in the database.
+    var keys = new List&lt;string&gt;();
+    var selectCmd = connection.CreateSelectCommand(&quot;SELECT * FROM TestTable&quot;);
+    using (var reader = await selectCmd.ExecuteReaderAsync())
+    {
+        while (await reader.ReadAsync())
+        {
+            if (keys.Count &lt; 3)
+            {
+                keys.Add(reader.GetFieldValue&lt;string&gt;(&quot;Key&quot;));
+                continue;
+            }
+            break;
+        }
+    }
+
+    // Update the Int64Value of keys[0]
+    // Include the primary key and update columns.
+    var updateCmd = connection.CreateUpdateCommand(
+        &quot;TestTable&quot;, new SpannerParameterCollection
+        {
+            {&quot;Key&quot;, SpannerDbType.String, keys[0]},
+            {&quot;Int64Value&quot;, SpannerDbType.Int64, 0L}
+        });
+    await updateCmd.ExecuteNonQueryAsync();
+
+    // Delete row for keys[1]
+    var deleteCmd = connection.CreateDeleteCommand(
+        &quot;TestTable&quot;, new SpannerParameterCollection
+        {
+            {&quot;Key&quot;, SpannerDbType.String, keys[1]}
+        });
+    await deleteCmd.ExecuteNonQueryAsync();
+}
+</code></pre><h2 id="transactions-and-fault-handling">Transactions and Fault Handling</h2>
+<p>Cloud Spanner is fully ACID compliant.</p>
+<p>Retries should be implemented at the transaction level (as opposed to individual call level)
+because there is a chance in high stress situations that a Cloud Spanner session (transaction)
+can be canceled due to causing a deadlock. In this case, the entire transaction should be
+retried and run on a new session.</p>
+<p>Use the extension method IsTransientSpannerFault() on Exception to create your detection
+strategy for the TransientFaultApplication Block.</p>
+<pre><code class="lang-cs">private class SpannerFaultDetectionStrategy : ITransientErrorDetectionStrategy
+{
+    /// &lt;inheritdoc /&gt;
+    public bool IsTransient(Exception ex) =&gt; ex.IsTransientSpannerFault();
+}
+</code></pre><p> You should execute the entire transaction within a RetryPolicy. Generally, we recommend
+ using exponential backoff as shown below.</p>
+<!-- Tag TransactionAsync&#39;s start line &#39;138&#39; should be less than end line &#39;135&#39; -->
+<pre><code class="lang-cs">----- Snippet CreateDatabaseAsync -----
+// &lt;CreateDatabaseAsync&gt;
+using (var connection =
+    new SpannerConnection($&quot;Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}&quot;))
+{
+    var createDbCmd = connection.CreateDdlCommand($&quot;CREATE DATABASE {_databaseName}&quot;);
+    await createDbCmd.ExecuteNonQueryAsync();
+
+    var createTableCmd = connection.CreateDdlCommand(
+        @&quot;CREATE TABLE TestTable (
+                                Key                STRING(MAX) NOT NULL,
+                                StringValue        STRING(MAX),
+                                Int64Value         INT64,
+                              ) PRIMARY KEY (Key)&quot;);
+    await createTableCmd.ExecuteNonQueryAsync();
+}
+// &lt;/CreateDatabaseAsync&gt;
+
+----- Snippet InsertDataAsync -----
+// &lt;InsertDataAsync&gt;
+using (var connection = new SpannerConnection(
+    $&quot;Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}&quot;))
+{
+    await connection.OpenAsync();
+
+    var cmd = connection.CreateInsertCommand(
+        &quot;TestTable&quot;, new SpannerParameterCollection
+        {
+            {&quot;Key&quot;, SpannerDbType.String},
+            {&quot;StringValue&quot;, SpannerDbType.String},
+            {&quot;Int64Value&quot;, SpannerDbType.Int64}
+        });
+
+    // This executes 5 distinct transactions with one row written per transaction.
+    for (var i = 0; i &lt; 5; i++)
+    {
+        cmd.Parameters[&quot;Key&quot;].Value = Guid.NewGuid().ToString(&quot;N&quot;);
+        cmd.Parameters[&quot;StringValue&quot;].Value = $&quot;StringValue{i}&quot;;
+        cmd.Parameters[&quot;Int64Value&quot;].Value = i;
+        await cmd.ExecuteNonQueryAsync();
+    }
+}
+// &lt;/InsertDataAsync&gt;
+
+----- Snippet ReadUpdateDeleteAsync -----
+// &lt;ReadUpdateDeleteAsync&gt;
+using (var connection = new SpannerConnection(
+    $&quot;Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}&quot;))
+{
+    await connection.OpenAsync();
+
+    // Read the first two keys in the database.
+    var keys = new List&lt;string&gt;();
+    var selectCmd = connection.CreateSelectCommand(&quot;SELECT * FROM TestTable&quot;);
+    using (var reader = await selectCmd.ExecuteReaderAsync())
+    {
+        while (await reader.ReadAsync())
+        {
+            if (keys.Count &lt; 3)
+            {
+                keys.Add(reader.GetFieldValue&lt;string&gt;(&quot;Key&quot;));
+                continue;
+            }
+            break;
+        }
+    }
+
+    // Update the Int64Value of keys[0]
+    // Include the primary key and update columns.
+    var updateCmd = connection.CreateUpdateCommand(
+        &quot;TestTable&quot;, new SpannerParameterCollection
+        {
+            {&quot;Key&quot;, SpannerDbType.String, keys[0]},
+            {&quot;Int64Value&quot;, SpannerDbType.Int64, 0L}
+        });
+    await updateCmd.ExecuteNonQueryAsync();
+
+    // Delete row for keys[1]
+    var deleteCmd = connection.CreateDeleteCommand(
+        &quot;TestTable&quot;, new SpannerParameterCollection
+        {
+            {&quot;Key&quot;, SpannerDbType.String, keys[1]}
+        });
+    await deleteCmd.ExecuteNonQueryAsync();
+}
+// &lt;/ReadUpdateDeleteAsync&gt;
+
+----- Snippet SpannerFaultDetectionStrategy -----
+// &lt;SpannerFaultDetectionStrategy&gt;
+private class SpannerFaultDetectionStrategy : ITransientErrorDetectionStrategy
+{
+    /// &lt;inheritdoc /&gt;
+    public bool IsTransient(Exception ex) =&gt; ex.IsTransientSpannerFault();
+}
+// &lt;/SpannerFaultDetectionStrategy&gt;
+
+----- Snippet TransactionAsync -----
+// &lt;TransactionAsync&gt;
+var retryPolicy = new RetryPolicy&lt;SpannerFaultDetectionStrategy&gt;(RetryStrategy.DefaultExponential);
+
+await retryPolicy.ExecuteAsync(
+    async () =&gt;
+    {
+        using (var connection =
+            new SpannerConnection(
+                $&quot;Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}&quot;))
+        {
+            await connection.OpenAsync();
+
+            using (var transaction = await connection.BeginTransactionAsync())
+            {
+                var cmd = connection.CreateInsertCommand(
+                    &quot;TestTable&quot;, new SpannerParameterCollection
+                    {
+                        {&quot;Key&quot;, SpannerDbType.String},
+                        {&quot;StringValue&quot;, SpannerDbType.String},
+                        {&quot;Int64Value&quot;, SpannerDbType.Int64}
+                    });
+                cmd.Transaction = transaction;
+
+                // This executes a single transactions with alls row written at once during CommitAsync().
+                // If a transient fault occurs, this entire method is re-run.
+                for (var i = 0; i &lt; 5; i++)
+                {
+                    cmd.Parameters[&quot;Key&quot;].Value = Guid.NewGuid().ToString(&quot;N&quot;);
+                    cmd.Parameters[&quot;StringValue&quot;].Value = $&quot;StringValue{i}&quot;;
+                    cmd.Parameters[&quot;Int64Value&quot;].Value = i;
+                    await cmd.ExecuteNonQueryAsync();
+                }
+
+                await transaction.CommitAsync();
+            }
+        }
+    });
+// &lt;/TransactionAsync&gt;
+
+----- Snippet TransactionAsync -----
+// &lt;TransactionAsync&gt;
+var retryPolicy = new RetryPolicy&lt;SpannerFaultDetectionStrategy&gt;(RetryStrategy.DefaultExponential);
+
+await retryPolicy.ExecuteAsync(
+    async () =&gt;
+    {
+        using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+        {
+            using (var connection =
+                new SpannerConnection(
+                    $&quot;Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}&quot;))
+            {
+                await connection.OpenAsync();
+
+                var cmd = connection.CreateInsertCommand(
+                    &quot;TestTable&quot;, new SpannerParameterCollection
+                    {
+                        {&quot;Key&quot;, SpannerDbType.String},
+                        {&quot;StringValue&quot;, SpannerDbType.String},
+                        {&quot;Int64Value&quot;, SpannerDbType.Int64}
+                    });
+
+                // This executes a single transactions with alls row written at once during scope.Complete().
+                // If a transient fault occurs, this entire method is re-run.
+                for (var i = 0; i &lt; 5; i++)
+                {
+                    cmd.Parameters[&quot;Key&quot;].Value = Guid.NewGuid().ToString(&quot;N&quot;);
+                    cmd.Parameters[&quot;StringValue&quot;].Value = $&quot;StringValue{i}&quot;;
+                    cmd.Parameters[&quot;Int64Value&quot;].Value = i;
+                    await cmd.ExecuteNonQueryAsync();
+                }
+
+                scope.Complete();
+                await Task.Yield();
+            }
+        }
+    });
+// &lt;/TransactionAsync&gt;
+
+----- Snippet DataAdapterAsync -----
+// &lt;DataAdapterAsync&gt;
+using (var connection =
+    new SpannerConnection(
+        $&quot;Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}&quot;))
+{
+    var untypedDataSet = new DataSet();
+
+    // Provide the name of the Cloud Spanner table and primary key column names.
+    var adapter = new SpannerDataAdapter(connection, &quot;TestTable&quot;, &quot;Key&quot;);
+    adapter.Fill(untypedDataSet);
+
+    // Insert a row
+    var row = untypedDataSet.Tables[0].NewRow();
+    row[&quot;Key&quot;] = Guid.NewGuid().ToString(&quot;N&quot;);
+    row[&quot;StringValue&quot;] = &quot;New String Value&quot;;
+    row[&quot;Int64Value&quot;] = 0L;
+    untypedDataSet.Tables[0].Rows.Add(row);
+
+    adapter.Update(untypedDataSet.Tables[0]);
+}
+// &lt;/DataAdapterAsync&gt;
+
+</code></pre><h2 id="transactionscope-support-net-45-single-resource-only">TransactionScope support (.NET 4.5+, Single resource only)</h2>
+<p>In addition to supporting setting Transaction on individual commands, Spanner also supports
+TransactionScope and implicit transactions given that only a single resource is involved.</p>
+<p>Spanner does not support public two phase commit to commit multiple resources in a
+single transaction.</p>
+<!-- Tag name TransactionScopeAsync is not found -->
+<pre><code class="lang-cs">----- Snippet CreateDatabaseAsync -----
+// &lt;CreateDatabaseAsync&gt;
+using (var connection =
+    new SpannerConnection($&quot;Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}&quot;))
+{
+    var createDbCmd = connection.CreateDdlCommand($&quot;CREATE DATABASE {_databaseName}&quot;);
+    await createDbCmd.ExecuteNonQueryAsync();
+
+    var createTableCmd = connection.CreateDdlCommand(
+        @&quot;CREATE TABLE TestTable (
+                                Key                STRING(MAX) NOT NULL,
+                                StringValue        STRING(MAX),
+                                Int64Value         INT64,
+                              ) PRIMARY KEY (Key)&quot;);
+    await createTableCmd.ExecuteNonQueryAsync();
+}
+// &lt;/CreateDatabaseAsync&gt;
+
+----- Snippet InsertDataAsync -----
+// &lt;InsertDataAsync&gt;
+using (var connection = new SpannerConnection(
+    $&quot;Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}&quot;))
+{
+    await connection.OpenAsync();
+
+    var cmd = connection.CreateInsertCommand(
+        &quot;TestTable&quot;, new SpannerParameterCollection
+        {
+            {&quot;Key&quot;, SpannerDbType.String},
+            {&quot;StringValue&quot;, SpannerDbType.String},
+            {&quot;Int64Value&quot;, SpannerDbType.Int64}
+        });
+
+    // This executes 5 distinct transactions with one row written per transaction.
+    for (var i = 0; i &lt; 5; i++)
+    {
+        cmd.Parameters[&quot;Key&quot;].Value = Guid.NewGuid().ToString(&quot;N&quot;);
+        cmd.Parameters[&quot;StringValue&quot;].Value = $&quot;StringValue{i}&quot;;
+        cmd.Parameters[&quot;Int64Value&quot;].Value = i;
+        await cmd.ExecuteNonQueryAsync();
+    }
+}
+// &lt;/InsertDataAsync&gt;
+
+----- Snippet ReadUpdateDeleteAsync -----
+// &lt;ReadUpdateDeleteAsync&gt;
+using (var connection = new SpannerConnection(
+    $&quot;Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}&quot;))
+{
+    await connection.OpenAsync();
+
+    // Read the first two keys in the database.
+    var keys = new List&lt;string&gt;();
+    var selectCmd = connection.CreateSelectCommand(&quot;SELECT * FROM TestTable&quot;);
+    using (var reader = await selectCmd.ExecuteReaderAsync())
+    {
+        while (await reader.ReadAsync())
+        {
+            if (keys.Count &lt; 3)
+            {
+                keys.Add(reader.GetFieldValue&lt;string&gt;(&quot;Key&quot;));
+                continue;
+            }
+            break;
+        }
+    }
+
+    // Update the Int64Value of keys[0]
+    // Include the primary key and update columns.
+    var updateCmd = connection.CreateUpdateCommand(
+        &quot;TestTable&quot;, new SpannerParameterCollection
+        {
+            {&quot;Key&quot;, SpannerDbType.String, keys[0]},
+            {&quot;Int64Value&quot;, SpannerDbType.Int64, 0L}
+        });
+    await updateCmd.ExecuteNonQueryAsync();
+
+    // Delete row for keys[1]
+    var deleteCmd = connection.CreateDeleteCommand(
+        &quot;TestTable&quot;, new SpannerParameterCollection
+        {
+            {&quot;Key&quot;, SpannerDbType.String, keys[1]}
+        });
+    await deleteCmd.ExecuteNonQueryAsync();
+}
+// &lt;/ReadUpdateDeleteAsync&gt;
+
+----- Snippet SpannerFaultDetectionStrategy -----
+// &lt;SpannerFaultDetectionStrategy&gt;
+private class SpannerFaultDetectionStrategy : ITransientErrorDetectionStrategy
+{
+    /// &lt;inheritdoc /&gt;
+    public bool IsTransient(Exception ex) =&gt; ex.IsTransientSpannerFault();
+}
+// &lt;/SpannerFaultDetectionStrategy&gt;
+
+----- Snippet TransactionAsync -----
+// &lt;TransactionAsync&gt;
+var retryPolicy = new RetryPolicy&lt;SpannerFaultDetectionStrategy&gt;(RetryStrategy.DefaultExponential);
+
+await retryPolicy.ExecuteAsync(
+    async () =&gt;
+    {
+        using (var connection =
+            new SpannerConnection(
+                $&quot;Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}&quot;))
+        {
+            await connection.OpenAsync();
+
+            using (var transaction = await connection.BeginTransactionAsync())
+            {
+                var cmd = connection.CreateInsertCommand(
+                    &quot;TestTable&quot;, new SpannerParameterCollection
+                    {
+                        {&quot;Key&quot;, SpannerDbType.String},
+                        {&quot;StringValue&quot;, SpannerDbType.String},
+                        {&quot;Int64Value&quot;, SpannerDbType.Int64}
+                    });
+                cmd.Transaction = transaction;
+
+                // This executes a single transactions with alls row written at once during CommitAsync().
+                // If a transient fault occurs, this entire method is re-run.
+                for (var i = 0; i &lt; 5; i++)
+                {
+                    cmd.Parameters[&quot;Key&quot;].Value = Guid.NewGuid().ToString(&quot;N&quot;);
+                    cmd.Parameters[&quot;StringValue&quot;].Value = $&quot;StringValue{i}&quot;;
+                    cmd.Parameters[&quot;Int64Value&quot;].Value = i;
+                    await cmd.ExecuteNonQueryAsync();
+                }
+
+                await transaction.CommitAsync();
+            }
+        }
+    });
+// &lt;/TransactionAsync&gt;
+
+----- Snippet TransactionAsync -----
+// &lt;TransactionAsync&gt;
+var retryPolicy = new RetryPolicy&lt;SpannerFaultDetectionStrategy&gt;(RetryStrategy.DefaultExponential);
+
+await retryPolicy.ExecuteAsync(
+    async () =&gt;
+    {
+        using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+        {
+            using (var connection =
+                new SpannerConnection(
+                    $&quot;Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}&quot;))
+            {
+                await connection.OpenAsync();
+
+                var cmd = connection.CreateInsertCommand(
+                    &quot;TestTable&quot;, new SpannerParameterCollection
+                    {
+                        {&quot;Key&quot;, SpannerDbType.String},
+                        {&quot;StringValue&quot;, SpannerDbType.String},
+                        {&quot;Int64Value&quot;, SpannerDbType.Int64}
+                    });
+
+                // This executes a single transactions with alls row written at once during scope.Complete().
+                // If a transient fault occurs, this entire method is re-run.
+                for (var i = 0; i &lt; 5; i++)
+                {
+                    cmd.Parameters[&quot;Key&quot;].Value = Guid.NewGuid().ToString(&quot;N&quot;);
+                    cmd.Parameters[&quot;StringValue&quot;].Value = $&quot;StringValue{i}&quot;;
+                    cmd.Parameters[&quot;Int64Value&quot;].Value = i;
+                    await cmd.ExecuteNonQueryAsync();
+                }
+
+                scope.Complete();
+                await Task.Yield();
+            }
+        }
+    });
+// &lt;/TransactionAsync&gt;
+
+----- Snippet DataAdapterAsync -----
+// &lt;DataAdapterAsync&gt;
+using (var connection =
+    new SpannerConnection(
+        $&quot;Data Source=projects/{_projectId}/instances/{_instanceName}/databases/{_databaseName}&quot;))
+{
+    var untypedDataSet = new DataSet();
+
+    // Provide the name of the Cloud Spanner table and primary key column names.
+    var adapter = new SpannerDataAdapter(connection, &quot;TestTable&quot;, &quot;Key&quot;);
+    adapter.Fill(untypedDataSet);
+
+    // Insert a row
+    var row = untypedDataSet.Tables[0].NewRow();
+    row[&quot;Key&quot;] = Guid.NewGuid().ToString(&quot;N&quot;);
+    row[&quot;StringValue&quot;] = &quot;New String Value&quot;;
+    row[&quot;Int64Value&quot;] = 0L;
+    untypedDataSet.Tables[0].Rows.Add(row);
+
+    adapter.Update(untypedDataSet.Tables[0]);
+}
+// &lt;/DataAdapterAsync&gt;
+
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
