@@ -211,7 +211,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
         {
             await _fixture.EnsureTestDatabaseAsync().ConfigureAwait(false);
 
-            // Sample: TransactionAsync
+            // Sample: TransactionScopeAsync
             var retryPolicy = new RetryPolicy<SpannerFaultDetectionStrategy>(RetryStrategy.DefaultExponential);
 
             await retryPolicy.ExecuteAsync(
