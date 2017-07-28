@@ -133,7 +133,7 @@
     "description": "Google Stackdriver Instrumentation Libraries Common Components.",
     "tags": [ "Error", "Reporting", "Stackdriver", "ExceptionLogger", "Trace", "Diagnostics" ],
     "dependencies": {
-      "Google.Cloud.Logging.V2": "1.0",
+      "Google.Cloud.Logging.V2": "2.0",
       "Google.Cloud.Trace.V1": "1.0.0-beta07",
       "Grpc.Core": ""
     },
