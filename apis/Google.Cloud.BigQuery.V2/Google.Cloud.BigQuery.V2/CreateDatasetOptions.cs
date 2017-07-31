@@ -40,6 +40,12 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public TimeSpan? DefaultTableExpiration { get; set; }
 
+        /// <summary>
+        /// Location to create the dataset in, such as "EU" or "US". See
+        /// the Dataset resource documentation for all possible values.
+        /// </summary>
+        public string Location { get; set; }
+
         internal void ModifyRequest(Dataset dataset, InsertRequest request)
         {
             if (Description != null)
@@ -49,6 +55,10 @@ namespace Google.Cloud.BigQuery.V2
             if (FriendlyName != null)
             {
                 dataset.FriendlyName = FriendlyName;
+            }
+            if (Location != null)
+            {
+                dataset.Location = Location;
             }
             
             if (DefaultTableExpiration != null)
