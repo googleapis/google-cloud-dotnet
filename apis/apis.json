@@ -62,7 +62,7 @@
 
   {
     "id": "Google.Cloud.DevTools.Common",
-    "version": "1.0.0",
+    "version": "1.0.0-alpha04",
     "type": "other",
     "targetFrameworks": "netstandard1.3;net45",
     "testTargetFrameworks": "netcoreapp1.0;net452",	
