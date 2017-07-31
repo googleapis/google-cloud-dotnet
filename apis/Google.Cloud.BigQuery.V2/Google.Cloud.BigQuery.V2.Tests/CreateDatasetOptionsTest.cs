@@ -29,7 +29,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
             {
                 DefaultTableExpiration = TimeSpan.FromSeconds(10),
                 Description = "A description",
-                FriendlyName = "A friendly name"                
+                FriendlyName = "A friendly name",
+                Location = "EU"
             };
             Dataset dataset = new Dataset();
             InsertRequest request = new InsertRequest(new BigqueryService(), dataset, "project");
@@ -37,6 +38,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(10 * 1000, dataset.DefaultTableExpirationMs);
             Assert.Equal("A description", dataset.Description);
             Assert.Equal("A friendly name", dataset.FriendlyName);
+            Assert.Equal("EU", dataset.Location);
         }
     }
 }
