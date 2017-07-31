@@ -16893,6 +16893,18 @@ references:
   commentId: T:Google.Cloud.Speech.V1.RecognitionConfig
   fullName: Google.Cloud.Speech.V1.RecognitionConfig
   nameWithType: RecognitionConfig
+- uid: Google.Cloud.Speech.V1.RecognitionConfig.EnableWordTimeOffsets
+  name: EnableWordTimeOffsets
+  href: api/Google.Cloud.Speech.V1.RecognitionConfig.html#Google_Cloud_Speech_V1_RecognitionConfig_EnableWordTimeOffsets
+  commentId: P:Google.Cloud.Speech.V1.RecognitionConfig.EnableWordTimeOffsets
+  fullName: Google.Cloud.Speech.V1.RecognitionConfig.EnableWordTimeOffsets
+  nameWithType: RecognitionConfig.EnableWordTimeOffsets
+- uid: Google.Cloud.Speech.V1.RecognitionConfig.EnableWordTimeOffsets*
+  name: EnableWordTimeOffsets
+  href: api/Google.Cloud.Speech.V1.RecognitionConfig.html#Google_Cloud_Speech_V1_RecognitionConfig_EnableWordTimeOffsets_
+  commentId: Overload:Google.Cloud.Speech.V1.RecognitionConfig.EnableWordTimeOffsets
+  fullName: Google.Cloud.Speech.V1.RecognitionConfig.EnableWordTimeOffsets
+  nameWithType: RecognitionConfig.EnableWordTimeOffsets
 - uid: Google.Cloud.Speech.V1.RecognitionConfig.Encoding
   name: Encoding
   href: api/Google.Cloud.Speech.V1.RecognitionConfig.html#Google_Cloud_Speech_V1_RecognitionConfig_Encoding
@@ -17778,6 +17790,18 @@ references:
   commentId: Overload:Google.Cloud.Speech.V1.SpeechRecognitionAlternative.Transcript
   fullName: Google.Cloud.Speech.V1.SpeechRecognitionAlternative.Transcript
   nameWithType: SpeechRecognitionAlternative.Transcript
+- uid: Google.Cloud.Speech.V1.SpeechRecognitionAlternative.Words
+  name: Words
+  href: api/Google.Cloud.Speech.V1.SpeechRecognitionAlternative.html#Google_Cloud_Speech_V1_SpeechRecognitionAlternative_Words
+  commentId: P:Google.Cloud.Speech.V1.SpeechRecognitionAlternative.Words
+  fullName: Google.Cloud.Speech.V1.SpeechRecognitionAlternative.Words
+  nameWithType: SpeechRecognitionAlternative.Words
+- uid: Google.Cloud.Speech.V1.SpeechRecognitionAlternative.Words*
+  name: Words
+  href: api/Google.Cloud.Speech.V1.SpeechRecognitionAlternative.html#Google_Cloud_Speech_V1_SpeechRecognitionAlternative_Words_
+  commentId: Overload:Google.Cloud.Speech.V1.SpeechRecognitionAlternative.Words
+  fullName: Google.Cloud.Speech.V1.SpeechRecognitionAlternative.Words
+  nameWithType: SpeechRecognitionAlternative.Words
 - uid: Google.Cloud.Speech.V1.SpeechRecognitionResult
   name: SpeechRecognitionResult
   href: api/Google.Cloud.Speech.V1.SpeechRecognitionResult.html
@@ -18162,6 +18186,48 @@ references:
   commentId: F:Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType.SpeechEventUnspecified
   fullName: Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType.SpeechEventUnspecified
   nameWithType: StreamingRecognizeResponse.Types.SpeechEventType.SpeechEventUnspecified
+- uid: Google.Cloud.Speech.V1.WordInfo
+  name: WordInfo
+  href: api/Google.Cloud.Speech.V1.WordInfo.html
+  commentId: T:Google.Cloud.Speech.V1.WordInfo
+  fullName: Google.Cloud.Speech.V1.WordInfo
+  nameWithType: WordInfo
+- uid: Google.Cloud.Speech.V1.WordInfo.EndTime
+  name: EndTime
+  href: api/Google.Cloud.Speech.V1.WordInfo.html#Google_Cloud_Speech_V1_WordInfo_EndTime
+  commentId: P:Google.Cloud.Speech.V1.WordInfo.EndTime
+  fullName: Google.Cloud.Speech.V1.WordInfo.EndTime
+  nameWithType: WordInfo.EndTime
+- uid: Google.Cloud.Speech.V1.WordInfo.EndTime*
+  name: EndTime
+  href: api/Google.Cloud.Speech.V1.WordInfo.html#Google_Cloud_Speech_V1_WordInfo_EndTime_
+  commentId: Overload:Google.Cloud.Speech.V1.WordInfo.EndTime
+  fullName: Google.Cloud.Speech.V1.WordInfo.EndTime
+  nameWithType: WordInfo.EndTime
+- uid: Google.Cloud.Speech.V1.WordInfo.StartTime
+  name: StartTime
+  href: api/Google.Cloud.Speech.V1.WordInfo.html#Google_Cloud_Speech_V1_WordInfo_StartTime
+  commentId: P:Google.Cloud.Speech.V1.WordInfo.StartTime
+  fullName: Google.Cloud.Speech.V1.WordInfo.StartTime
+  nameWithType: WordInfo.StartTime
+- uid: Google.Cloud.Speech.V1.WordInfo.StartTime*
+  name: StartTime
+  href: api/Google.Cloud.Speech.V1.WordInfo.html#Google_Cloud_Speech_V1_WordInfo_StartTime_
+  commentId: Overload:Google.Cloud.Speech.V1.WordInfo.StartTime
+  fullName: Google.Cloud.Speech.V1.WordInfo.StartTime
+  nameWithType: WordInfo.StartTime
+- uid: Google.Cloud.Speech.V1.WordInfo.Word
+  name: Word
+  href: api/Google.Cloud.Speech.V1.WordInfo.html#Google_Cloud_Speech_V1_WordInfo_Word
+  commentId: P:Google.Cloud.Speech.V1.WordInfo.Word
+  fullName: Google.Cloud.Speech.V1.WordInfo.Word
+  nameWithType: WordInfo.Word
+- uid: Google.Cloud.Speech.V1.WordInfo.Word*
+  name: Word
+  href: api/Google.Cloud.Speech.V1.WordInfo.html#Google_Cloud_Speech_V1_WordInfo_Word_
+  commentId: Overload:Google.Cloud.Speech.V1.WordInfo.Word
+  fullName: Google.Cloud.Speech.V1.WordInfo.Word
+  nameWithType: WordInfo.Word
 - uid: Google.LongRunning
   name: Google.LongRunning
   href: api/Google.LongRunning.html

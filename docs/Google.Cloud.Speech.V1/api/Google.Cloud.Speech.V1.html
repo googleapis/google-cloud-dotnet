@@ -235,7 +235,7 @@ service.</p>
       <h4><a class="xref" href="Google.Cloud.Speech.V1.RecognitionAudio.html">RecognitionAudio</a></h4>
       <section><p>Contains audio data in the encoding specified in the <code>RecognitionConfig</code>.
 Either <code>content</code> or <code>uri</code> must be supplied. Supplying both or neither
-returns [google.rpc.Code.INVALID_ARGUMENT][]. See
+returns [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]. See
 <a href="https://cloud.google.com/speech/limits#content">audio limits</a>.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Speech.V1.RecognitionConfig.html">RecognitionConfig</a></h4>
@@ -326,8 +326,6 @@ results { alternatives { transcript: &quot; or not to be&quot; } stability: 0.01
 <li><p>results { alternatives { transcript: &quot; that is&quot; } stability: 0.9 }
 results { alternatives { transcript: &quot; the question&quot; } stability: 0.01 }</p>
 </li>
-<li><p>speech_event_type: END_OF_SINGLE_UTTERANCE</p>
-</li>
 <li><p>results { alternatives { transcript: &quot; that is the question&quot;
                     confidence: 0.98 }
      alternatives { transcript: &quot; that was the question&quot; }
@@ -336,7 +334,7 @@ results { alternatives { transcript: &quot; the question&quot; } stability: 0.01
 </ol>
 <p>Notes:</p>
 <ul>
-<li><p>Only two of the above responses #4 and #8 contain final results; they are
+<li><p>Only two of the above responses #4 and #7 contain final results; they are
 indicated by <code>is_final: true</code>. Concatenating these together generates the
 full transcript: &quot;to be or not to be that is the question&quot;.</p>
 </li>
@@ -358,6 +356,11 @@ one or more (repeated) <code>results</code>.</p>
       <h4><a class="xref" href="Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.html">StreamingRecognizeResponse.Types</a></h4>
       <section><p>Container for nested types declared in the StreamingRecognizeResponse message type.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Speech.V1.WordInfo.html">WordInfo</a></h4>
+      <section><p>Word-specific information for recognized words. Word information is only
+included in the response when certain request parameters are set, such
+as <code>enable_word_time_offsets</code>.</p>
+</section>
     <h3 id="enums">Enums
   </h3>
       <h4><a class="xref" href="Google.Cloud.Speech.V1.RecognitionAudio.AudioSourceOneofCase.html">RecognitionAudio.AudioSourceOneofCase</a></h4>
@@ -365,9 +368,9 @@ one or more (repeated) <code>results</code>.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Speech.V1.RecognitionConfig.Types.AudioEncoding.html">RecognitionConfig.Types.AudioEncoding</a></h4>
       <section><p>Audio encoding of the data sent in the audio message. All encodings support
-only 1 channel (mono) audio. Only <code>FLAC</code> includes a header that describes
-the bytes of audio that follow the header. The other encodings are raw
-audio bytes with no header.</p>
+only 1 channel (mono) audio. Only <code>FLAC</code> and <code>WAV</code> include a header that
+describes the bytes of audio that follow the header. The other encodings
+are raw audio bytes with no header.</p>
 <p>For best results, the audio source should be captured and transmitted using
 a lossless encoding (<code>FLAC</code> or <code>LINEAR16</code>). Recognition accuracy may be
 reduced if lossy codecs, which include the other codecs listed in

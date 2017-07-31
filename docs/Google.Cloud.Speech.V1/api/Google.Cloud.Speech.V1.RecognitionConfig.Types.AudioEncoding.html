@@ -73,9 +73,9 @@
   <h1 id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding" data-uid="Google.Cloud.Speech.V1.RecognitionConfig.Types.AudioEncoding" class="text-break">Enum RecognitionConfig.Types.AudioEncoding
   </h1>
   <div class="markdown level0 summary"><p>Audio encoding of the data sent in the audio message. All encodings support
-only 1 channel (mono) audio. Only <code>FLAC</code> includes a header that describes
-the bytes of audio that follow the header. The other encodings are raw
-audio bytes with no header.</p>
+only 1 channel (mono) audio. Only <code>FLAC</code> and <code>WAV</code> include a header that
+describes the bytes of audio that follow the header. The other encodings
+are raw audio bytes with no header.</p>
 <p>For best results, the audio source should be captured and transmitted using
 a lossless encoding (<code>FLAC</code> or <code>LINEAR16</code>). Recognition accuracy may be
 reduced if lossy codecs, which include the other codecs listed in
@@ -111,7 +111,7 @@ background noise is present.</p>
       </tr>
       <tr>
         <td id="Google_Cloud_Speech_V1_RecognitionConfig_Types_AudioEncoding_EncodingUnspecified">EncodingUnspecified</td>
-        <td><p>Not specified. Will return result [google.rpc.Code.INVALID_ARGUMENT][].</p>
+        <td><p>Not specified. Will return result [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT].</p>
 </td>
       </tr>
       <tr>
