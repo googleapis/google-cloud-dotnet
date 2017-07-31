@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# THIS DOES NOT WORK YET!
+# We use dotcover instead of OpenCover.
 # OpenCover doesn't support portable pdbs, and we don't
 # really want to go back to full pdbs.
 # See https://github.com/OpenCover/opencover/issues/601
@@ -22,41 +22,32 @@ then
     NUGET="nuget"
   fi
 fi
+set -e
 
-$NUGET install -Verbosity quiet -OutputDirectory packages -Version 4.6.519 OpenCover
-$NUGET install -Verbosity quiet -OutputDirectory packages -Version 2.4.5.0 ReportGenerator
-OPENCOVER=$PWD/packages/OpenCover.4.6.519/tools/OpenCover.Console.exe
+$NUGET install -Verbosity quiet -OutputDirectory packages -Version 2017.1.20170613.162720 JetBrains.dotCover.CommandLineTools
+
+DOTCOVER=$PWD/packages/JetBrains.dotCover.CommandLineTools.2017.1.20170613.162720/tools/dotCover.exe
 REPORTGENERATOR=$PWD/packages/ReportGenerator.2.4.5.0/tools/ReportGenerator.exe
 FIND=/usr/bin/find
 
-rm -rf coverage
-mkdir coverage
+if [ ! -d coverage ]
+then
+ mkdir coverage
+fi
 
 while read csproj
 do
   testdir=$(dirname $csproj)
   api=$(basename $(realpath $testdir/..))
-  echo "Running coverage for $api"
-  # OpenCover is picky about how it finds the excluded files. There may be a better approach than this,
-  # but it'll do for now.
-  generatedFiles=$($FIND $testdir/../$api -name '*.cs' | grep -v "obj/" | xargs -n 1 grep -l "// Generated" | sed 's/.*\/.*\//*\\\\*\\\\/g' | tr '\n' ';')
-  echo Coverage excluding files $generatedFiles
-  
-  $OPENCOVER \
-    -target:"c:\Program Files\dotnet\dotnet.exe" \
-    -targetargs:"test --no-build -f net452 -c Release $csproj" \
-    -mergeoutput \
-    -hideskipped:File \
-    -output:coverage/coverage.xml \
-    -filter:"+[$api]*" \
-    -oldStyle \
-    -searchdirs:$testdir/bin/$CONFIG/net452 \
-    -register:user \
-    -excludebyfile:$generatedFiles
 
+  echo "Scanning for $testdir/coverage.xml"
+
+  [ ! -f "$testdir/coverage.xml" ] && continue
+  pushd "$testdir"
+
+  echo "Running coverage for $api"
+  $DOTCOVER cover "coverage.xml" /ReturnTargetExitCode
+
+  popd
 done < AllTests.txt
 
-$REPORTGENERATOR \
-  -reports:$coverage/coverage.xml \
-  -targetdir:$coverage \
-  -verbosity:Error

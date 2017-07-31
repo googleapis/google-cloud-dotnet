@@ -34,14 +34,20 @@ build_script:
   - dotnet --info
   - echo "Regenerating projects: if this fails, run generateprojects.sh and commit changes"
   - generateprojects.sh && git diff --exit-code
-  - bash build.sh
+  - bash build.sh --notests
   - cd docs
   - bash builddocs.sh
+  - cd ..
 
-# TODO: Reinstate these...
-#  - bash runcoverage.sh
-#  - bash coveralls.sh
+# scripts to run before tests
+before_test:
+  - choco install codecov
 
+# scripts to run after tests
+after_test:
+  - bash createcoveragereport.sh
+  - codecov -f "coverage/coverage.xml"
 
-# The tests are run as part of the build.
-test: off
+# to run your custom scripts instead of automatic tests
+test_script:
+  - bash runcoverage.sh

@@ -90,6 +90,9 @@ namespace Google.Cloud.Tools.ProjectGenerator
         private const string AnalyzersPath = @"..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll";
         private const string StripDesktopOnNonWindows = @"..\..\..\StripDesktopOnNonWindows.xml";
 
+        private const string TargetFrameworkCore = "netcoreapp1.0";
+        private const string TargetFrameworkClassic = "net452";
+
         static int Main()
         {
             try
@@ -146,6 +149,9 @@ namespace Google.Cloud.Tools.ProjectGenerator
                         break;
                     case ".IntegrationTests":
                     case ".Tests":
+                        GenerateTestProject(api, dir, apiNames);
+                        GenerateCoverageFile(api, dir);
+                        break;
                     case ".Snippets":
                         GenerateTestProject(api, dir, apiNames);
                         break;
@@ -280,6 +286,20 @@ namespace Google.Cloud.Tools.ProjectGenerator
             WriteProjectFile(api, directory, propertyGroup, dependenciesElement, packingElement);
         }
 
+        private static string GetTestTargetFrameworks(ApiMetadata api) => api.TestTargetFrameworks ??
+                                                                      api.TargetFrameworks ?? DefaultTestTargetFrameworks;
+
+        private static string GetPreferredCoverageFramework(ApiMetadata api)
+        {
+            var targetFrameworks = GetTestTargetFrameworks(api);
+            if (targetFrameworks.Contains(TargetFrameworkClassic))
+            {
+                return TargetFrameworkClassic;
+            }
+            // Otherwise, return the first one found.
+            return targetFrameworks.Split(';').FirstOrDefault();
+        }
+
         private static void GenerateTestProject(ApiMetadata api, string directory, HashSet<string> apiNames)
         {
             var dependencies = new SortedList<string, string>(CommonTestDependencies);
@@ -293,7 +313,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
             
             var propertyGroup =
                 new XElement("PropertyGroup",
-                    new XElement("TargetFrameworks", api.TestTargetFrameworks ?? api.TargetFrameworks ?? DefaultTestTargetFrameworks),
+                    new XElement("TargetFrameworks", GetTestTargetFrameworks(api)),
                     new XElement("Features", "IOperation"),
                     new XElement("IsPackable", false),
                     new XElement("AssemblyOriginatorKeyFile", "../../GoogleApis.snk"),
@@ -314,6 +334,33 @@ namespace Google.Cloud.Tools.ProjectGenerator
             // Test service... it keeps on getting added by Visual Studio, so let's just include it everywhere.
             dependenciesElement.Add(new XElement("Service", new XAttribute("Include", "{82a7f48d-3b50-4b1e-b82e-3ada8210c358}")));
             WriteProjectFile(api, directory, propertyGroup, dependenciesElement, null);
+        }
+
+        private static void GenerateCoverageFile(ApiMetadata api, string directory)
+        {
+            var targetExecutable = new XElement("TargetExecutable", "/Program Files/dotnet/dotnet.exe");
+            var targetArguments = new XElement("TargetArguments",
+                $"test --no-build -f {GetPreferredCoverageFramework(api)} -c Release");
+            var attributeFilters = new XElement("AttributeFilters",
+                new XElement("AttributeFilterEntry",
+                    "System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute"),
+                new XElement("AttributeFilterEntry", "System.Diagnostics.DebuggerNonUserCodeAttribute")
+            );
+            var output = new XElement("Output", $"../../../coverage/{Path.GetFileName(directory)}.dvcr");
+            var workingDir = new XElement("TargetWorkingDir", ".");
+
+            var doc = new XElement("CoverageParams",
+                targetExecutable,
+                targetArguments,
+                attributeFilters,
+                workingDir,
+                output
+            );
+
+            using (var stream = File.Create(Path.Combine(directory, "coverage.xml")))
+            {
+                doc.Save(stream);
+            }
         }
 
         private static void WriteProjectFile(

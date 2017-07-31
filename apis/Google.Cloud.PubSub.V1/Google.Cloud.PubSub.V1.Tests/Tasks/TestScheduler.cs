@@ -450,7 +450,7 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
         public T Run<T>(Func<Task<T>> taskProvider)
         {
             var simulatedTimeout = Clock.GetCurrentDateTimeUtc() + TimeSpan.FromHours(24);
-            var realCts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+            var realCts = new CancellationTokenSource(TimeSpan.FromSeconds(20));
             Task<Task<T>> mainTask = Task<Task<T>>.Factory.StartNew(taskProvider, CancellationToken.None, TaskCreationOptions.None, _taskScheduler);
             while (true)
             {

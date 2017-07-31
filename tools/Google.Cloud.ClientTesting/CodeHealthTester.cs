@@ -23,6 +23,14 @@ namespace Google.Cloud.ClientTesting
 {
     public static class CodeHealthTester
     {
+        private static readonly HashSet<string> s_exemptedFields = new HashSet<string>()
+        {
+            "DataOnStack.Pointer",
+            "DataOnStack.StatementCount",
+            "DataOnStack.MetadataIndex",
+            "DataOnStack.MethodToken"
+        };
+
         /// <summary>
         /// Asserts that all the fields in the assembly containing the given type are private,
         /// other than for constants.
@@ -39,6 +47,8 @@ namespace Google.Cloud.ClientTesting
                             where !field.IsPrivate && !field.IsLiteral
                             // Allow internal static readonly fields, e.g. for singletons
                             where !(field.IsAssembly && field.IsStatic && field.IsInitOnly)
+                            // Exempt fields added for coverage by dotCover
+                            where !s_exemptedFields.Contains($"{type.Name}.{field.Name}")
                             select $"{type.Name}.{field.Name}";
             // Force output to show the bad fields
             Assert.Equal(new string[0], badFields.ToList());
