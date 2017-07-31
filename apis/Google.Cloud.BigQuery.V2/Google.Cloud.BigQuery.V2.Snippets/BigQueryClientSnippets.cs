@@ -1423,8 +1423,8 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         // TODO: Repeated fields and record types.
 
         // TODO:
-        // Dataset update/patch
         // Table update/patch
+        // Job update/patch
 
         [Fact]
         public void DryRunValidQuery()
@@ -1474,5 +1474,66 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             }
             // End sample
         }
+
+        [Fact]
+        public void UpdateDataset()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GenerateDatasetId();
+
+            BigQueryClient.Create(projectId).CreateDataset(datasetId);
+
+            // Snippet: UpdateDataset(string, Dataset, *)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            BigQueryDataset dataset = client.GetDataset(datasetId);
+            Dataset resource = dataset.Resource;
+            resource.FriendlyName = "Updated dataset";
+
+            // Alternatively, just call dataset.Update(). In either case,
+            // the etag in the resource will automatically be used for optimistic concurrency.
+            client.UpdateDataset(datasetId, resource);
+
+            // Fetch just to make sure it's really changed...
+            BigQueryDataset fetched = client.GetDataset(datasetId);
+            Console.WriteLine($"Fetched dataset friendly name: {fetched.Resource.FriendlyName}");
+            // End snippet
+
+            Assert.Equal("Updated dataset", fetched.Resource.FriendlyName);
+        }
+
+        // See-also: UpdateDataset(string, Dataset, *)
+        // Member: UpdateDataset(DatasetReference, Dataset, *)
+        // Member: UpdateDataset(string, string, Dataset, *)
+        // See [UpdateDataset](ref) for an example using an alternative overload.
+        // End see-also
+
+        [Fact]
+        public void PatchDataset()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GenerateDatasetId();
+
+            BigQueryClient.Create(projectId).CreateDataset(datasetId);
+
+            // Snippet: PatchDataset(string, Dataset, *)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+
+            // There's no ETag in this Dataset, so the patch will be applied unconditionally.
+            // If we specified an ETag, the patch would only be applied if it matched.
+            client.PatchDataset(datasetId, new Dataset { FriendlyName = "Patched dataset" } );
+
+            // Fetch just to make sure it's really changed...
+            BigQueryDataset fetched = client.GetDataset(datasetId);
+            Console.WriteLine($"Fetched dataset friendly name: {fetched.Resource.FriendlyName}");
+            // End snippet
+
+            Assert.Equal("Patched dataset", fetched.Resource.FriendlyName);
+        }
+
+        // See-also: PatchDataset(string, Dataset, *)
+        // Member: PatchDataset(DatasetReference, Dataset, *)
+        // Member: PatchDataset(string, string, Dataset, *)
+        // See [PatchDataset](ref) for an example using an alternative overload.
+        // End see-also
     }
 }
