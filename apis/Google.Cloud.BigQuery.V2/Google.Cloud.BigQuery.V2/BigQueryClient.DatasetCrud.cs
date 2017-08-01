@@ -182,6 +182,7 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Updates the specified dataset to match the given resource.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="UpdateDataset(DatasetReference, Dataset, UpdateDatasetOptions)"/>.
         /// </summary>
         /// <remarks>
         /// If the resource contains an ETag, it is used for optimistic concurrency validation.
@@ -196,6 +197,7 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Updates the specified dataset within this client's project to match the given resource.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="UpdateDataset(DatasetReference, Dataset, UpdateDatasetOptions)"/>.
         /// </summary>
         /// <remarks>
         /// If the resource contains an ETag, it is used for optimistic concurrency validation.
@@ -222,6 +224,7 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Patches the specified dataset with fields in the given resource.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="PatchDataset(DatasetReference, Dataset, PatchDatasetOptions)"/>.
         /// </summary>
         /// <remarks>
         /// If the resource contains an ETag, it is used for optimistic concurrency validation.
@@ -236,6 +239,7 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Patches the specified dataset within this client's project with fields in the given resource.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="PatchDataset(DatasetReference, Dataset, PatchDatasetOptions)"/>.
         /// </summary>
         /// <remarks>
         /// If the resource contains an ETag, it is used for optimistic concurrency validation.
@@ -452,6 +456,7 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Asynchronously updates the specified dataset to match the given resource.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="UpdateDatasetAsync(DatasetReference, Dataset, UpdateDatasetOptions, CancellationToken)"/>.
         /// </summary>
         /// <remarks>
         /// If the resource contains an ETag, it is used for optimistic concurrency validation.
@@ -468,6 +473,7 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Asynchronously updates the specified dataset within this client's project to match the given resource.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="UpdateDatasetAsync(DatasetReference, Dataset, UpdateDatasetOptions, CancellationToken)"/>.
         /// </summary>
         /// <remarks>
         /// If the resource contains an ETag, it is used for optimistic concurrency validation.
@@ -498,6 +504,7 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Asynchronously patches the specified dataset with fields in the given resource.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="PatchDatasetAsync(DatasetReference, Dataset, PatchDatasetOptions, CancellationToken)"/>.
         /// </summary>
         /// <remarks>
         /// If the resource contains an ETag, it is used for optimistic concurrency validation.
@@ -514,6 +521,7 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Asynchronously patches the specified dataset within this client's project with fields in the given resource.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="PatchDatasetAsync(DatasetReference, Dataset, PatchDatasetOptions, CancellationToken)"/>.
         /// </summary>
         /// <remarks>
         /// If the resource contains an ETag, it is used for optimistic concurrency validation.
