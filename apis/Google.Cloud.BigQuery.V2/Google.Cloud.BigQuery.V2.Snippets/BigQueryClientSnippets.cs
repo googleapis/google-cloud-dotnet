@@ -1507,6 +1507,13 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         // See [UpdateDataset](ref) for an example using an alternative overload.
         // End see-also
 
+        // See-also: UpdateDataset(string, Dataset, *)
+        // Member: UpdateDatasetAsync(DatasetReference, Dataset, *, *)
+        // Member: UpdateDatasetAsync(string, Dataset, *, *)
+        // Member: UpdateDatasetAsync(string, string, Dataset, *, *)
+        // See [UpdateDataset](ref) for a synchronous example.
+        // End see-also
+
         [Fact]
         public void PatchDataset()
         {
@@ -1534,6 +1541,13 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         // Member: PatchDataset(DatasetReference, Dataset, *)
         // Member: PatchDataset(string, string, Dataset, *)
         // See [PatchDataset](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: PatchDataset(string, Dataset, *)
+        // Member: PatchDatasetAsync(DatasetReference, Dataset, *, *)
+        // Member: PatchDatasetAsync(string, Dataset, *, *)
+        // Member: PatchDatasetAsync(string, string, Dataset, *, *)
+        // See [PatchDataset](ref) for a synchronous example.
         // End see-also
     }
 }
