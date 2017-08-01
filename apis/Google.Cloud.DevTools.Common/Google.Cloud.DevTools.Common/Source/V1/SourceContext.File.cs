@@ -19,10 +19,8 @@ using System.Security;
 
 namespace Google.Cloud.DevTools.Source.V1
 {
-    /// <summary>
-    /// Partial class to SourceContext proto.
-    /// The class here reads source-context.json file from app root.
-    /// </summary>
+    // Partial class to SourceContext proto.
+    // This code reads the source-context.json file from the application root directory.
     public sealed partial class SourceContext
     {
         private const string SourceContextFileName = "source-context.json";
@@ -41,11 +39,10 @@ namespace Google.Cloud.DevTools.Source.V1
 
         /// <summary>
         /// Gets the custom log label of Stackdriver Logging entry to set Git revision id.
-        /// When writing Stackdriver Logging entry, 
-        /// user should add this custom label, set the value to the git revision id.
-        /// This enables Google Cloud Tools for Visual Studio to locate source file revision
+        /// When writing a Stackdriver Logging entry, the user should add this custom label,
+        /// with a value of the git revision id for the source code.
+        /// This enables Google Cloud Tools for Visual Studio to locate the source file revision
         /// of the log entry. 
-        /// The design is still evolving, the usage of the label is subject to change.
         /// </summary>
         public const string GitRevisionIdLogLabel = "git_revision_id";
 
@@ -53,34 +50,30 @@ namespace Google.Cloud.DevTools.Source.V1
         /// Gets the <seealso cref="SourceContext"/> for the application.
         /// </summary>
         /// <exception cref="InvalidProtocolBufferException">
-        /// Thrown when the source context file is invalid in some way, 
-        /// e.g. it contains a malformed varint or a negative byte length.
+        /// The source context file is valid JSON, but is not valid as a SourceContext.
         /// </exception>
         /// <exception cref="InvalidJsonException">
-        /// Thrown when the source context file is not in valid json format.
+        /// The source context file is not valid JSON.
         /// </exception>
         /// <exception cref="SecurityException">
-        /// Thrown when the application does not have permission to read the file.
+        /// The application does not have permission to read the file.
         /// </exception>
         /// <exception cref="UnauthorizedAccessException">
-        /// Theown when the application is not authorized to access the file.
+        /// The application is not authorized to access the file.
         /// </exception>
         public static SourceContext AppSourceContext => s_sourceContext.Value;
 
-        /// <summary>
-        /// Static constructor.
-        /// </summary>
         static SourceContext()
         {
             ResetAppSourceContext();
         }
 
         /// <summary>
-        /// Open the source context file and parse it with <seealso cref="SourceContext"/> proto.
+        /// Open the source context file and parses it (as JSON) to a <seealso cref="SourceContext"/> proto.
         /// </summary>
         /// <returns>
-        /// A <seealso cref="SourceContext"/> object if the file is read and parsed successfully.
-        /// null is returned if there is error reading/parsing the file or the source context file is not found.
+        /// A <seealso cref="SourceContext"/> object if the file is read and parsed successfully, or
+        /// null if there is an error reading/parsing the file or the source context file is not found.
         /// </returns>
         private static SourceContext OpenParseFile()
         {
@@ -93,7 +86,7 @@ namespace Google.Cloud.DevTools.Source.V1
         }
 
         /// <summary>
-        /// Find source context file and open the content.
+        /// Finds the source context file and reads the content as a string.
         /// </summary>
         private static string Read()
         {
