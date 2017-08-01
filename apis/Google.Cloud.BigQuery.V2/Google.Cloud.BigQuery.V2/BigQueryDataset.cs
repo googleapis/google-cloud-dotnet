@@ -302,7 +302,7 @@ namespace Google.Cloud.BigQuery.V2
         /// Asynchronously updates this dataset to match the specified resource.
         /// </summary>
         /// <remarks>
-        /// This method delegates to <see cref="BigQueryClient.UpdateDataset(DatasetReference, Dataset, UpdateDatasetOptions)"/>.
+        /// This method delegates to <see cref="BigQueryClient.UpdateDatasetAsync(DatasetReference, Dataset, UpdateDatasetOptions, CancellationToken)"/>.
         /// A simple way of updating the dataset is to modify <see cref="Resource"/> and then call this method with no arguments.
         /// This is convenient, but it's important to understand that modifying <see cref="Resource"/> in this way leaves this object
         /// in an unusual state - it represents "the dataset as it was when fetched, but then modified locally". For example, the etag
@@ -323,7 +323,7 @@ namespace Google.Cloud.BigQuery.V2
         /// Asynchronously patches this dataset with fields in the specified resource.
         /// </summary>
         /// <remarks>
-        /// This method delegates to <see cref="BigQueryClient.PatchDataset(DatasetReference, Dataset, PatchDatasetOptions)"/>.
+        /// This method delegates to <see cref="BigQueryClient.PatchDatasetAsync(DatasetReference, Dataset, PatchDatasetOptions, CancellationToken)"/>.
         /// </remarks>
         /// <param name="resource">The resource to patch with. Must not be null.</param>
         /// <param name="matchEtag">If true, the etag from <see cref="Resource"/> is propagated into <paramref name="resource"/> for
