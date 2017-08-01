@@ -182,5 +182,27 @@ namespace Google.Cloud.BigQuery.V2
             options?.ModifyRequest(request);
             await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
         }
+
+        /// <inheritdoc />
+        public override async Task<BigQueryDataset> UpdateDatasetAsync(DatasetReference datasetReference, Dataset resource, UpdateDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
+            GaxPreconditions.CheckNotNull(resource, nameof(resource));
+            var request = Service.Datasets.Update(resource, datasetReference.ProjectId, datasetReference.DatasetId);
+            request.ModifyRequest += _versionHeaderAction;
+            options?.ModifyRequest(request);
+            return new BigQueryDataset(this, await request.ExecuteAsync(cancellationToken).ConfigureAwait(false));
+        }
+
+        /// <inheritdoc />
+        public override async Task<BigQueryDataset> PatchDatasetAsync(DatasetReference datasetReference, Dataset resource, PatchDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
+            GaxPreconditions.CheckNotNull(resource, nameof(resource));
+            var request = Service.Datasets.Patch(resource, datasetReference.ProjectId, datasetReference.DatasetId);
+            request.ModifyRequest += _versionHeaderAction;
+            options?.ModifyRequest(request);
+            return new BigQueryDataset(this, await request.ExecuteAsync(cancellationToken).ConfigureAwait(false));
+        }
     }
 }

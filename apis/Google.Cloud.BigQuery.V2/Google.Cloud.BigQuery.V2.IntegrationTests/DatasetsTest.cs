@@ -14,6 +14,7 @@
 
 using Google.Apis.Bigquery.v2.Data;
 using System.Net;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.BigQuery.V2.IntegrationTests
@@ -145,5 +146,120 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal("Description2", fetched.Resource.Description);
             Assert.Equal("Sneak attack!", fetched.Resource.FriendlyName);
         }
+
+        [Fact]
+        public async Task UpdateDatasetAsync()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var id = _fixture.CreateDatasetId();
+
+            var original = await client.CreateDatasetAsync(id, new CreateDatasetOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
+
+            // Modify locally...
+            original.Resource.Description = "Description2";
+            original.Resource.FriendlyName = "FriendlyName2";
+
+            // FIXME: I shouldn't need to do this.
+            original.Resource.ETag = client.GetDataset(id).Resource.ETag;
+
+            // Check the results of the update
+            var updated = await original.UpdateAsync();
+            Assert.Equal("Description2", updated.Resource.Description);
+            Assert.Equal("FriendlyName2", updated.Resource.FriendlyName);
+
+            // Check that it's still valid if fetched directly
+            var fetched = await client.GetDatasetAsync(id);
+            Assert.Equal("Description2", fetched.Resource.Description);
+            Assert.Equal("FriendlyName2", fetched.Resource.FriendlyName);
+        }
+
+        [Fact]
+        public async Task UpdateDatasetAsync_Conflict()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var id = _fixture.CreateDatasetId();
+
+            var original = await client.CreateDatasetAsync(id, new CreateDatasetOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
+
+            // Modify on the server, which will change the etag
+            var sneaky = await client.GetDatasetAsync(id);
+            sneaky.Resource.FriendlyName = "Sneak attack!";
+            sneaky.Update();
+
+            // Modify the originally-created version...
+            original.Resource.Description = "Description2";
+
+            // Fails due to the conflict.
+            var exception = await Assert.ThrowsAsync<GoogleApiException>(() => original.UpdateAsync());
+            Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
+        }
+
+        [Fact]
+        public async Task PatchDatasetAsync()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var id = _fixture.CreateDatasetId();
+
+            var original = await client.CreateDatasetAsync(id, new CreateDatasetOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
+            var patched = await original.PatchAsync(new Dataset { Description = "Description2" }, matchEtag: false);
+
+            // Check the results of the patch
+            Assert.Equal("Description2", patched.Resource.Description);
+            Assert.Equal("FriendlyName1", patched.Resource.FriendlyName);
+
+            // Check that it's still valid if fetched directly
+            var fetched = await client.GetDatasetAsync(id);
+            Assert.Equal("Description2", fetched.Resource.Description);
+            Assert.Equal("FriendlyName1", fetched.Resource.FriendlyName);
+        }
+
+        [Fact]
+        public async Task PatchDatasetAsync_ConflictMatchEtag()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var id = _fixture.CreateDatasetId();
+
+            var original = await client.CreateDatasetAsync(id, new CreateDatasetOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
+            // FIXME: I shouldn't need to do this.
+            original.Resource.ETag = client.GetDataset(id).Resource.ETag;
+
+            // Modify on the server, which will change the etag
+            var sneaky = await client.GetDatasetAsync(id);
+            sneaky.Resource.FriendlyName = "Sneak attack!";
+            sneaky.Update();
+
+            // Fails due to the conflict.
+            var exception = await Assert.ThrowsAsync<GoogleApiException>(() => original.PatchAsync(new Dataset { Description = "Description2" }, matchEtag: true));
+            Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
+        }
+
+        [Fact]
+        public async Task PatchDatasetAsync_ConflictDontMatchEtag()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var id = _fixture.CreateDatasetId();
+
+            var original = await client.CreateDatasetAsync(id, new CreateDatasetOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
+            // FIXME: I shouldn't need to do this.
+            original.Resource.ETag = client.GetDataset(id).Resource.ETag;
+
+            // Modify on the server, which will change the etag
+            var sneaky = await client.GetDatasetAsync(id);
+            sneaky.Resource.FriendlyName = "Sneak attack!";
+            sneaky.Update();
+
+            // Patch from the original, but don't bother with optimistic concurrency checks. (Don't propagate the etag.)
+            var patched = await original.PatchAsync(new Dataset { Description = "Description2" }, matchEtag: false);
+
+            // Check the results of the patch
+            Assert.Equal("Description2", patched.Resource.Description);
+            Assert.Equal("Sneak attack!", patched.Resource.FriendlyName);
+
+            // Check that it's still valid if fetched directly
+            var fetched = await client.GetDatasetAsync(id);
+            Assert.Equal("Description2", fetched.Resource.Description);
+            Assert.Equal("Sneak attack!", fetched.Resource.FriendlyName);
+        }
+
     }
 }

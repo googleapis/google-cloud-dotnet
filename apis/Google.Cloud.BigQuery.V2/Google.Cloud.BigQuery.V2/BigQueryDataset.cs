@@ -292,10 +292,53 @@ namespace Google.Cloud.BigQuery.V2
         /// Deletes this dataset.
         /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="BigQueryClient.DeleteDatasetAsync(string, string, DeleteDatasetOptions, CancellationToken)"/>.
         /// </summary>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
         public Task DeleteAsync(DeleteDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             _client.DeleteDatasetAsync(Reference, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously updates this dataset to match the specified resource.
+        /// </summary>
+        /// <remarks>
+        /// This method delegates to <see cref="BigQueryClient.UpdateDataset(DatasetReference, Dataset, UpdateDatasetOptions)"/>.
+        /// A simple way of updating the dataset is to modify <see cref="Resource"/> and then call this method with no arguments.
+        /// This is convenient, but it's important to understand that modifying <see cref="Resource"/> in this way leaves this object
+        /// in an unusual state - it represents "the dataset as it was when fetched, but then modified locally". For example, the etag
+        /// will be the original etag, rather than the one associated with the updated dataset. To avoid this causing confusion,
+        /// we recommend only taking this approach if the object will not be used afterwards. Use the value returned by this method
+        /// as the new, self-consistent representation of the dataset.
+        /// </remarks>
+        /// <param name="resource">The resource to update with. If null, the <see cref="Resource"/> property is
+        /// used.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the updated dataset.</returns>
+        public Task<BigQueryDataset> UpdateAsync(Dataset resource = null, UpdateDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            _client.UpdateDatasetAsync(Reference, resource ?? Resource, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously patches this dataset with fields in the specified resource.
+        /// </summary>
+        /// <remarks>
+        /// This method delegates to <see cref="BigQueryClient.PatchDataset(DatasetReference, Dataset, PatchDatasetOptions)"/>.
+        /// </remarks>
+        /// <param name="resource">The resource to patch with. Must not be null.</param>
+        /// <param name="matchEtag">If true, the etag from <see cref="Resource"/> is propagated into <paramref name="resource"/> for
+        /// optimistic concurrency. Otherwise, <paramref name="resource"/> is left unchanged.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the updated dataset.</returns>
+        public Task<BigQueryDataset> PatchAsync(Dataset resource, bool matchEtag, PatchDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            if (matchEtag)
+            {
+                resource.ETag = Resource.ETag;
+            }
+            return _client.PatchDatasetAsync(Reference, resource, options, cancellationToken);
+        }
     }
 }
