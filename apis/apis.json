@@ -19,7 +19,7 @@
     "id": "Google.Cloud.BigQuery.V2",
     "productName": "Google BigQuery",
     "productUrl": "https://cloud.google.com/bigquery/",
-    "version": "1.0.0-beta15",
+    "version": "1.0.0-beta16",
     "type": "rest",
     "description": "Recommended Google client library to access the BigQuery API. It wraps the Google.Apis.Bigquery.v2 client library, making common operations simpler in client code. BigQuery is a data platform for customers to create, manage, share and query data.",
     "dependencies": {
@@ -200,7 +200,7 @@
 
   {
     "id": "Google.Cloud.Logging.Log4Net",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "type": "other",
     "targetFrameworks": "netstandard1.5;net45",
     "testTargetFrameworks": "netcoreapp1.0;net452",
@@ -208,8 +208,8 @@
     "tags": [ "Log4Net", "Logging", "Stackdriver" ],
     "dependencies": {
       "log4net": "2.0.8",
-      "Google.Cloud.Logging.V2": "",
-      "Google.Cloud.DevTools.Common": "",
+      "Google.Cloud.Logging.V2": "2.0.0",
+      "Google.Cloud.DevTools.Common": "1.0.0",
       "Grpc.Core": ""
     },
     "testDependencies": {
