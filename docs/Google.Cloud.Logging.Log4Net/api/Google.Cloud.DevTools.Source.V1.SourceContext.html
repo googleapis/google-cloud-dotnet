@@ -106,11 +106,10 @@ with a path point to a unique revision of a single file or directory.</p>
   </h3>
   <h4 id="Google_Cloud_DevTools_Source_V1_SourceContext_GitRevisionIdLogLabel" data-uid="Google.Cloud.DevTools.Source.V1.SourceContext.GitRevisionIdLogLabel">GitRevisionIdLogLabel</h4>
   <div class="markdown level1 summary"><p>Gets the custom log label of Stackdriver Logging entry to set Git revision id.
-When writing Stackdriver Logging entry, 
-user should add this custom label, set the value to the git revision id.
-This enables Google Cloud Tools for Visual Studio to locate source file revision
-of the log entry. 
-The design is still evolving, the usage of the label is subject to change.</p>
+When writing a Stackdriver Logging entry, the user should add this custom label,
+with a value of the git revision id for the source code.
+This enables Google Cloud Tools for Visual Studio to locate the source file revision
+of the log entry. </p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -169,23 +168,22 @@ The design is still evolving, the usage of the label is subject to change.</p>
     <tbody>
       <tr>
         <td><span class="xref">Google.Protobuf.InvalidProtocolBufferException</span></td>
-        <td><p>Thrown when the source context file is invalid in some way, 
-e.g. it contains a malformed varint or a negative byte length.</p>
+        <td><p>The source context file is valid JSON, but is not valid as a SourceContext.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">Google.Protobuf.InvalidJsonException</span></td>
-        <td><p>Thrown when the source context file is not in valid json format.</p>
+        <td><p>The source context file is not valid JSON.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Security.SecurityException</span></td>
-        <td><p>Thrown when the application does not have permission to read the file.</p>
+        <td><p>The application does not have permission to read the file.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.UnauthorizedAccessException</span></td>
-        <td><p>Theown when the application is not authorized to access the file.</p>
+        <td><p>The application is not authorized to access the file.</p>
 </td>
       </tr>
     </tbody>

@@ -754,6 +754,256 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_BigQuery_V2_BigQueryDataset_Patch_" data-uid="Google.Cloud.BigQuery.V2.BigQueryDataset.Patch*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryDataset_Patch_Google_Apis_Bigquery_v2_Data_Dataset_System_Boolean_Google_Cloud_BigQuery_V2_PatchDatasetOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryDataset.Patch(Google.Apis.Bigquery.v2.Data.Dataset,System.Boolean,Google.Cloud.BigQuery.V2.PatchDatasetOptions)">Patch(Dataset, Boolean, PatchDatasetOptions)</h4>
+  <div class="markdown level1 summary"><p>Patches this dataset with fields in the specified resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BigQueryDataset Patch(Dataset resource, bool matchEtag, PatchDatasetOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Dataset.html">Dataset</a></td>
+        <td><span class="parametername">resource</span></td>
+        <td><p>The resource to patch with. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">matchEtag</span></td>
+        <td><p>If true, the etag from <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryDataset.html#Google_Cloud_BigQuery_V2_BigQueryDataset_Resource">Resource</a> is propagated into <span class="paramref">resource</span> for
+optimistic concurrency. Otherwise, <span class="paramref">resource</span> is left unchanged.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.V2.PatchDatasetOptions.html">PatchDatasetOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryDataset.html">BigQueryDataset</a></td>
+        <td><p>The updated dataset.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryDataset_Patch_Google_Apis_Bigquery_v2_Data_Dataset_System_Boolean_Google_Cloud_BigQuery_V2_PatchDatasetOptions__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PatchDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_PatchDatasetOptions_">PatchDataset(DatasetReference, Dataset, PatchDatasetOptions)</a>.</p>
+</div>
+  <a id="Google_Cloud_BigQuery_V2_BigQueryDataset_PatchAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryDataset.PatchAsync*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryDataset_PatchAsync_Google_Apis_Bigquery_v2_Data_Dataset_System_Boolean_Google_Cloud_BigQuery_V2_PatchDatasetOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryDataset.PatchAsync(Google.Apis.Bigquery.v2.Data.Dataset,System.Boolean,Google.Cloud.BigQuery.V2.PatchDatasetOptions,System.Threading.CancellationToken)">PatchAsync(Dataset, Boolean, PatchDatasetOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously patches this dataset with fields in the specified resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryDataset&gt; PatchAsync(Dataset resource, bool matchEtag, PatchDatasetOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Dataset.html">Dataset</a></td>
+        <td><span class="parametername">resource</span></td>
+        <td><p>The resource to patch with. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">matchEtag</span></td>
+        <td><p>If true, the etag from <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryDataset.html#Google_Cloud_BigQuery_V2_BigQueryDataset_Resource">Resource</a> is propagated into <span class="paramref">resource</span> for
+optimistic concurrency. Otherwise, <span class="paramref">resource</span> is left unchanged.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.V2.PatchDatasetOptions.html">PatchDatasetOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The token to monitor for cancellation requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryDataset.html">BigQueryDataset</a>&gt;</td>
+        <td><p>A task representing the asynchronous operation. When complete, the result is
+the updated dataset.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryDataset_PatchAsync_Google_Apis_Bigquery_v2_Data_Dataset_System_Boolean_Google_Cloud_BigQuery_V2_PatchDatasetOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PatchDatasetAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_PatchDatasetOptions_System_Threading_CancellationToken_">PatchDatasetAsync(DatasetReference, Dataset, PatchDatasetOptions, CancellationToken)</a>.</p>
+</div>
+  <a id="Google_Cloud_BigQuery_V2_BigQueryDataset_Update_" data-uid="Google.Cloud.BigQuery.V2.BigQueryDataset.Update*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryDataset_Update_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_UpdateDatasetOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryDataset.Update(Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions)">Update(Dataset, UpdateDatasetOptions)</h4>
+  <div class="markdown level1 summary"><p>Updates this dataset to match the specified resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BigQueryDataset Update(Dataset resource = null, UpdateDatasetOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Dataset.html">Dataset</a></td>
+        <td><span class="parametername">resource</span></td>
+        <td><p>The resource to update with. If null, the <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryDataset.html#Google_Cloud_BigQuery_V2_BigQueryDataset_Resource">Resource</a> property is
+used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.V2.UpdateDatasetOptions.html">UpdateDatasetOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryDataset.html">BigQueryDataset</a></td>
+        <td><p>The updated dataset.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryDataset_Update_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_UpdateDatasetOptions__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UpdateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_UpdateDatasetOptions_">UpdateDataset(DatasetReference, Dataset, UpdateDatasetOptions)</a>.
+A simple way of updating the dataset is to modify <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryDataset.html#Google_Cloud_BigQuery_V2_BigQueryDataset_Resource">Resource</a> and then call this method with no arguments.
+This is convenient, but it&apos;s important to understand that modifying <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryDataset.html#Google_Cloud_BigQuery_V2_BigQueryDataset_Resource">Resource</a> in this way leaves this object
+in an unusual state - it represents &quot;the dataset as it was when fetched, but then modified locally&quot;. For example, the etag
+will be the original etag, rather than the one associated with the updated dataset. To avoid this causing confusion,
+we recommend only taking this approach if the object will not be used afterwards. Use the value returned by this method
+as the new, self-consistent representation of the dataset.</p>
+</div>
+  <a id="Google_Cloud_BigQuery_V2_BigQueryDataset_UpdateAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryDataset.UpdateAsync*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryDataset_UpdateAsync_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_UpdateDatasetOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryDataset.UpdateAsync(Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions,System.Threading.CancellationToken)">UpdateAsync(Dataset, UpdateDatasetOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously updates this dataset to match the specified resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryDataset&gt; UpdateAsync(Dataset resource = null, UpdateDatasetOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Dataset.html">Dataset</a></td>
+        <td><span class="parametername">resource</span></td>
+        <td><p>The resource to update with. If null, the <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryDataset.html#Google_Cloud_BigQuery_V2_BigQueryDataset_Resource">Resource</a> property is
+used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.V2.UpdateDatasetOptions.html">UpdateDatasetOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The token to monitor for cancellation requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryDataset.html">BigQueryDataset</a>&gt;</td>
+        <td><p>A task representing the asynchronous operation. When complete, the result is
+the updated dataset.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryDataset_UpdateAsync_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_UpdateDatasetOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UpdateDatasetAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_UpdateDatasetOptions_System_Threading_CancellationToken_">UpdateDatasetAsync(DatasetReference, Dataset, UpdateDatasetOptions, CancellationToken)</a>.
+A simple way of updating the dataset is to modify <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryDataset.html#Google_Cloud_BigQuery_V2_BigQueryDataset_Resource">Resource</a> and then call this method with no arguments.
+This is convenient, but it&apos;s important to understand that modifying <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryDataset.html#Google_Cloud_BigQuery_V2_BigQueryDataset_Resource">Resource</a> in this way leaves this object
+in an unusual state - it represents &quot;the dataset as it was when fetched, but then modified locally&quot;. For example, the etag
+will be the original etag, rather than the one associated with the updated dataset. To avoid this causing confusion,
+we recommend only taking this approach if the object will not be used afterwards. Use the value returned by this method
+as the new, self-consistent representation of the dataset.</p>
+</div>
   <a id="Google_Cloud_BigQuery_V2_BigQueryDataset_UploadAvro_" data-uid="Google.Cloud.BigQuery.V2.BigQueryDataset.UploadAvro*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryDataset_UploadAvro_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryDataset.UploadAvro(System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions)">UploadAvro(String, TableSchema, Stream, UploadAvroOptions)</h4>
   <div class="markdown level1 summary"><p>Uploads a stream of Avro data to a table.

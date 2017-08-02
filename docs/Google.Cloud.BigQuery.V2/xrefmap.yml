@@ -11276,6 +11276,54 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.ListTablesAsync
   fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ListTablesAsync
   nameWithType: BigQueryClient.ListTablesAsync
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.PatchDataset(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.PatchDatasetOptions)
+  name: PatchDataset(DatasetReference, Dataset, PatchDatasetOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PatchDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_PatchDatasetOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.PatchDataset(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.PatchDatasetOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.PatchDataset(Google.Apis.Bigquery.v2.Data.DatasetReference, Google.Apis.Bigquery.v2.Data.Dataset, Google.Cloud.BigQuery.V2.PatchDatasetOptions)
+  nameWithType: BigQueryClient.PatchDataset(DatasetReference, Dataset, PatchDatasetOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.PatchDataset(System.String,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.PatchDatasetOptions)
+  name: PatchDataset(String, Dataset, PatchDatasetOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PatchDataset_System_String_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_PatchDatasetOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.PatchDataset(System.String,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.PatchDatasetOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.PatchDataset(System.String, Google.Apis.Bigquery.v2.Data.Dataset, Google.Cloud.BigQuery.V2.PatchDatasetOptions)
+  nameWithType: BigQueryClient.PatchDataset(String, Dataset, PatchDatasetOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.PatchDataset(System.String,System.String,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.PatchDatasetOptions)
+  name: PatchDataset(String, String, Dataset, PatchDatasetOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PatchDataset_System_String_System_String_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_PatchDatasetOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.PatchDataset(System.String,System.String,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.PatchDatasetOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.PatchDataset(System.String, System.String, Google.Apis.Bigquery.v2.Data.Dataset, Google.Cloud.BigQuery.V2.PatchDatasetOptions)
+  nameWithType: BigQueryClient.PatchDataset(String, String, Dataset, PatchDatasetOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.PatchDataset*
+  name: PatchDataset
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PatchDataset_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.PatchDataset
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.PatchDataset
+  nameWithType: BigQueryClient.PatchDataset
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.PatchDatasetAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.PatchDatasetOptions,System.Threading.CancellationToken)
+  name: PatchDatasetAsync(DatasetReference, Dataset, PatchDatasetOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PatchDatasetAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_PatchDatasetOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.PatchDatasetAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.PatchDatasetOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.PatchDatasetAsync(Google.Apis.Bigquery.v2.Data.DatasetReference, Google.Apis.Bigquery.v2.Data.Dataset, Google.Cloud.BigQuery.V2.PatchDatasetOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.PatchDatasetAsync(DatasetReference, Dataset, PatchDatasetOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.PatchDatasetAsync(System.String,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.PatchDatasetOptions,System.Threading.CancellationToken)
+  name: PatchDatasetAsync(String, Dataset, PatchDatasetOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PatchDatasetAsync_System_String_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_PatchDatasetOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.PatchDatasetAsync(System.String,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.PatchDatasetOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.PatchDatasetAsync(System.String, Google.Apis.Bigquery.v2.Data.Dataset, Google.Cloud.BigQuery.V2.PatchDatasetOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.PatchDatasetAsync(String, Dataset, PatchDatasetOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.PatchDatasetAsync(System.String,System.String,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.PatchDatasetOptions,System.Threading.CancellationToken)
+  name: PatchDatasetAsync(String, String, Dataset, PatchDatasetOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PatchDatasetAsync_System_String_System_String_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_PatchDatasetOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.PatchDatasetAsync(System.String,System.String,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.PatchDatasetOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.PatchDatasetAsync(System.String, System.String, Google.Apis.Bigquery.v2.Data.Dataset, Google.Cloud.BigQuery.V2.PatchDatasetOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.PatchDatasetAsync(String, String, Dataset, PatchDatasetOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.PatchDatasetAsync*
+  name: PatchDatasetAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PatchDatasetAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.PatchDatasetAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.PatchDatasetAsync
+  nameWithType: BigQueryClient.PatchDatasetAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryClient.PollJobUntilCompleted(Google.Apis.Bigquery.v2.Data.JobReference,Google.Cloud.BigQuery.V2.GetJobOptions,Google.Api.Gax.PollSettings)
   name: PollJobUntilCompleted(JobReference, GetJobOptions, PollSettings)
   href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PollJobUntilCompleted_Google_Apis_Bigquery_v2_Data_JobReference_Google_Cloud_BigQuery_V2_GetJobOptions_Google_Api_Gax_PollSettings_
@@ -11348,6 +11396,54 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.Service
   fullName: Google.Cloud.BigQuery.V2.BigQueryClient.Service
   nameWithType: BigQueryClient.Service
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDataset(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions)
+  name: UpdateDataset(DatasetReference, Dataset, UpdateDatasetOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UpdateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_UpdateDatasetOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDataset(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDataset(Google.Apis.Bigquery.v2.Data.DatasetReference, Google.Apis.Bigquery.v2.Data.Dataset, Google.Cloud.BigQuery.V2.UpdateDatasetOptions)
+  nameWithType: BigQueryClient.UpdateDataset(DatasetReference, Dataset, UpdateDatasetOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDataset(System.String,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions)
+  name: UpdateDataset(String, Dataset, UpdateDatasetOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UpdateDataset_System_String_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_UpdateDatasetOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDataset(System.String,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDataset(System.String, Google.Apis.Bigquery.v2.Data.Dataset, Google.Cloud.BigQuery.V2.UpdateDatasetOptions)
+  nameWithType: BigQueryClient.UpdateDataset(String, Dataset, UpdateDatasetOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDataset(System.String,System.String,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions)
+  name: UpdateDataset(String, String, Dataset, UpdateDatasetOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UpdateDataset_System_String_System_String_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_UpdateDatasetOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDataset(System.String,System.String,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDataset(System.String, System.String, Google.Apis.Bigquery.v2.Data.Dataset, Google.Cloud.BigQuery.V2.UpdateDatasetOptions)
+  nameWithType: BigQueryClient.UpdateDataset(String, String, Dataset, UpdateDatasetOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDataset*
+  name: UpdateDataset
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UpdateDataset_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDataset
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDataset
+  nameWithType: BigQueryClient.UpdateDataset
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDatasetAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions,System.Threading.CancellationToken)
+  name: UpdateDatasetAsync(DatasetReference, Dataset, UpdateDatasetOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UpdateDatasetAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_UpdateDatasetOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDatasetAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDatasetAsync(Google.Apis.Bigquery.v2.Data.DatasetReference, Google.Apis.Bigquery.v2.Data.Dataset, Google.Cloud.BigQuery.V2.UpdateDatasetOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.UpdateDatasetAsync(DatasetReference, Dataset, UpdateDatasetOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDatasetAsync(System.String,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions,System.Threading.CancellationToken)
+  name: UpdateDatasetAsync(String, Dataset, UpdateDatasetOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UpdateDatasetAsync_System_String_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_UpdateDatasetOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDatasetAsync(System.String,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDatasetAsync(System.String, Google.Apis.Bigquery.v2.Data.Dataset, Google.Cloud.BigQuery.V2.UpdateDatasetOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.UpdateDatasetAsync(String, Dataset, UpdateDatasetOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDatasetAsync(System.String,System.String,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions,System.Threading.CancellationToken)
+  name: UpdateDatasetAsync(String, String, Dataset, UpdateDatasetOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UpdateDatasetAsync_System_String_System_String_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_UpdateDatasetOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDatasetAsync(System.String,System.String,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDatasetAsync(System.String, System.String, Google.Apis.Bigquery.v2.Data.Dataset, Google.Cloud.BigQuery.V2.UpdateDatasetOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.UpdateDatasetAsync(String, String, Dataset, UpdateDatasetOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDatasetAsync*
+  name: UpdateDatasetAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UpdateDatasetAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDatasetAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDatasetAsync
+  nameWithType: BigQueryClient.UpdateDatasetAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvro(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions)
   name: UploadAvro(TableReference, TableSchema, Stream, UploadAvroOptions)
   href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadAvro_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_
@@ -12122,6 +12218,30 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.ListTablesAsync
   fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ListTablesAsync
   nameWithType: BigQueryClientImpl.ListTablesAsync
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.PatchDataset(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.PatchDatasetOptions)
+  name: PatchDataset(DatasetReference, Dataset, PatchDatasetOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_PatchDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_PatchDatasetOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.PatchDataset(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.PatchDatasetOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.PatchDataset(Google.Apis.Bigquery.v2.Data.DatasetReference, Google.Apis.Bigquery.v2.Data.Dataset, Google.Cloud.BigQuery.V2.PatchDatasetOptions)
+  nameWithType: BigQueryClientImpl.PatchDataset(DatasetReference, Dataset, PatchDatasetOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.PatchDataset*
+  name: PatchDataset
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_PatchDataset_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.PatchDataset
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.PatchDataset
+  nameWithType: BigQueryClientImpl.PatchDataset
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.PatchDatasetAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.PatchDatasetOptions,System.Threading.CancellationToken)
+  name: PatchDatasetAsync(DatasetReference, Dataset, PatchDatasetOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_PatchDatasetAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_PatchDatasetOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.PatchDatasetAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.PatchDatasetOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.PatchDatasetAsync(Google.Apis.Bigquery.v2.Data.DatasetReference, Google.Apis.Bigquery.v2.Data.Dataset, Google.Cloud.BigQuery.V2.PatchDatasetOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClientImpl.PatchDatasetAsync(DatasetReference, Dataset, PatchDatasetOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.PatchDatasetAsync*
+  name: PatchDatasetAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_PatchDatasetAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.PatchDatasetAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.PatchDatasetAsync
+  nameWithType: BigQueryClientImpl.PatchDatasetAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.PollJobUntilCompleted(Google.Apis.Bigquery.v2.Data.JobReference,Google.Cloud.BigQuery.V2.GetJobOptions,Google.Api.Gax.PollSettings)
   name: PollJobUntilCompleted(JobReference, GetJobOptions, PollSettings)
   href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_PollJobUntilCompleted_Google_Apis_Bigquery_v2_Data_JobReference_Google_Cloud_BigQuery_V2_GetJobOptions_Google_Api_Gax_PollSettings_
@@ -12170,6 +12290,30 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.Service
   fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.Service
   nameWithType: BigQueryClientImpl.Service
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.UpdateDataset(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions)
+  name: UpdateDataset(DatasetReference, Dataset, UpdateDatasetOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_UpdateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_UpdateDatasetOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.UpdateDataset(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.UpdateDataset(Google.Apis.Bigquery.v2.Data.DatasetReference, Google.Apis.Bigquery.v2.Data.Dataset, Google.Cloud.BigQuery.V2.UpdateDatasetOptions)
+  nameWithType: BigQueryClientImpl.UpdateDataset(DatasetReference, Dataset, UpdateDatasetOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.UpdateDataset*
+  name: UpdateDataset
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_UpdateDataset_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.UpdateDataset
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.UpdateDataset
+  nameWithType: BigQueryClientImpl.UpdateDataset
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.UpdateDatasetAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions,System.Threading.CancellationToken)
+  name: UpdateDatasetAsync(DatasetReference, Dataset, UpdateDatasetOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_UpdateDatasetAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_UpdateDatasetOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.UpdateDatasetAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.UpdateDatasetAsync(Google.Apis.Bigquery.v2.Data.DatasetReference, Google.Apis.Bigquery.v2.Data.Dataset, Google.Cloud.BigQuery.V2.UpdateDatasetOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClientImpl.UpdateDatasetAsync(DatasetReference, Dataset, UpdateDatasetOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.UpdateDatasetAsync*
+  name: UpdateDatasetAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_UpdateDatasetAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.UpdateDatasetAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.UpdateDatasetAsync
+  nameWithType: BigQueryClientImpl.UpdateDatasetAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.UploadAvro(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions)
   name: UploadAvro(TableReference, TableSchema, Stream, UploadAvroOptions)
   href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_UploadAvro_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_
@@ -12470,6 +12614,30 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryDataset.ListTablesAsync
   fullName: Google.Cloud.BigQuery.V2.BigQueryDataset.ListTablesAsync
   nameWithType: BigQueryDataset.ListTablesAsync
+- uid: Google.Cloud.BigQuery.V2.BigQueryDataset.Patch(Google.Apis.Bigquery.v2.Data.Dataset,System.Boolean,Google.Cloud.BigQuery.V2.PatchDatasetOptions)
+  name: Patch(Dataset, Boolean, PatchDatasetOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryDataset.html#Google_Cloud_BigQuery_V2_BigQueryDataset_Patch_Google_Apis_Bigquery_v2_Data_Dataset_System_Boolean_Google_Cloud_BigQuery_V2_PatchDatasetOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryDataset.Patch(Google.Apis.Bigquery.v2.Data.Dataset,System.Boolean,Google.Cloud.BigQuery.V2.PatchDatasetOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryDataset.Patch(Google.Apis.Bigquery.v2.Data.Dataset, System.Boolean, Google.Cloud.BigQuery.V2.PatchDatasetOptions)
+  nameWithType: BigQueryDataset.Patch(Dataset, Boolean, PatchDatasetOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryDataset.Patch*
+  name: Patch
+  href: api/Google.Cloud.BigQuery.V2.BigQueryDataset.html#Google_Cloud_BigQuery_V2_BigQueryDataset_Patch_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryDataset.Patch
+  fullName: Google.Cloud.BigQuery.V2.BigQueryDataset.Patch
+  nameWithType: BigQueryDataset.Patch
+- uid: Google.Cloud.BigQuery.V2.BigQueryDataset.PatchAsync(Google.Apis.Bigquery.v2.Data.Dataset,System.Boolean,Google.Cloud.BigQuery.V2.PatchDatasetOptions,System.Threading.CancellationToken)
+  name: PatchAsync(Dataset, Boolean, PatchDatasetOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryDataset.html#Google_Cloud_BigQuery_V2_BigQueryDataset_PatchAsync_Google_Apis_Bigquery_v2_Data_Dataset_System_Boolean_Google_Cloud_BigQuery_V2_PatchDatasetOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryDataset.PatchAsync(Google.Apis.Bigquery.v2.Data.Dataset,System.Boolean,Google.Cloud.BigQuery.V2.PatchDatasetOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryDataset.PatchAsync(Google.Apis.Bigquery.v2.Data.Dataset, System.Boolean, Google.Cloud.BigQuery.V2.PatchDatasetOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryDataset.PatchAsync(Dataset, Boolean, PatchDatasetOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryDataset.PatchAsync*
+  name: PatchAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryDataset.html#Google_Cloud_BigQuery_V2_BigQueryDataset_PatchAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryDataset.PatchAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryDataset.PatchAsync
+  nameWithType: BigQueryDataset.PatchAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryDataset.Reference
   name: Reference
   href: api/Google.Cloud.BigQuery.V2.BigQueryDataset.html#Google_Cloud_BigQuery_V2_BigQueryDataset_Reference
@@ -12494,6 +12662,30 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryDataset.Resource
   fullName: Google.Cloud.BigQuery.V2.BigQueryDataset.Resource
   nameWithType: BigQueryDataset.Resource
+- uid: Google.Cloud.BigQuery.V2.BigQueryDataset.Update(Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions)
+  name: Update(Dataset, UpdateDatasetOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryDataset.html#Google_Cloud_BigQuery_V2_BigQueryDataset_Update_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_UpdateDatasetOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryDataset.Update(Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryDataset.Update(Google.Apis.Bigquery.v2.Data.Dataset, Google.Cloud.BigQuery.V2.UpdateDatasetOptions)
+  nameWithType: BigQueryDataset.Update(Dataset, UpdateDatasetOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryDataset.Update*
+  name: Update
+  href: api/Google.Cloud.BigQuery.V2.BigQueryDataset.html#Google_Cloud_BigQuery_V2_BigQueryDataset_Update_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryDataset.Update
+  fullName: Google.Cloud.BigQuery.V2.BigQueryDataset.Update
+  nameWithType: BigQueryDataset.Update
+- uid: Google.Cloud.BigQuery.V2.BigQueryDataset.UpdateAsync(Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions,System.Threading.CancellationToken)
+  name: UpdateAsync(Dataset, UpdateDatasetOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryDataset.html#Google_Cloud_BigQuery_V2_BigQueryDataset_UpdateAsync_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_UpdateDatasetOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryDataset.UpdateAsync(Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryDataset.UpdateAsync(Google.Apis.Bigquery.v2.Data.Dataset, Google.Cloud.BigQuery.V2.UpdateDatasetOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryDataset.UpdateAsync(Dataset, UpdateDatasetOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryDataset.UpdateAsync*
+  name: UpdateAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryDataset.html#Google_Cloud_BigQuery_V2_BigQueryDataset_UpdateAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryDataset.UpdateAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryDataset.UpdateAsync
+  nameWithType: BigQueryDataset.UpdateAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryDataset.UploadAvro(System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions)
   name: UploadAvro(String, TableSchema, Stream, UploadAvroOptions)
   href: api/Google.Cloud.BigQuery.V2.BigQueryDataset.html#Google_Cloud_BigQuery_V2_BigQueryDataset_UploadAvro_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_
@@ -13952,6 +14144,18 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.CreateDatasetOptions.FriendlyName
   fullName: Google.Cloud.BigQuery.V2.CreateDatasetOptions.FriendlyName
   nameWithType: CreateDatasetOptions.FriendlyName
+- uid: Google.Cloud.BigQuery.V2.CreateDatasetOptions.Location
+  name: Location
+  href: api/Google.Cloud.BigQuery.V2.CreateDatasetOptions.html#Google_Cloud_BigQuery_V2_CreateDatasetOptions_Location
+  commentId: P:Google.Cloud.BigQuery.V2.CreateDatasetOptions.Location
+  fullName: Google.Cloud.BigQuery.V2.CreateDatasetOptions.Location
+  nameWithType: CreateDatasetOptions.Location
+- uid: Google.Cloud.BigQuery.V2.CreateDatasetOptions.Location*
+  name: Location
+  href: api/Google.Cloud.BigQuery.V2.CreateDatasetOptions.html#Google_Cloud_BigQuery_V2_CreateDatasetOptions_Location_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateDatasetOptions.Location
+  fullName: Google.Cloud.BigQuery.V2.CreateDatasetOptions.Location
+  nameWithType: CreateDatasetOptions.Location
 - uid: Google.Cloud.BigQuery.V2.CreateDisposition
   name: CreateDisposition
   href: api/Google.Cloud.BigQuery.V2.CreateDisposition.html
@@ -14681,6 +14885,12 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.ListTablesOptions.PageSize
   fullName: Google.Cloud.BigQuery.V2.ListTablesOptions.PageSize
   nameWithType: ListTablesOptions.PageSize
+- uid: Google.Cloud.BigQuery.V2.PatchDatasetOptions
+  name: PatchDatasetOptions
+  href: api/Google.Cloud.BigQuery.V2.PatchDatasetOptions.html
+  commentId: T:Google.Cloud.BigQuery.V2.PatchDatasetOptions
+  fullName: Google.Cloud.BigQuery.V2.PatchDatasetOptions
+  nameWithType: PatchDatasetOptions
 - uid: Google.Cloud.BigQuery.V2.QueryOptions
   name: QueryOptions
   href: api/Google.Cloud.BigQuery.V2.QueryOptions.html
@@ -14949,6 +15159,12 @@ references:
   commentId: F:Google.Cloud.BigQuery.V2.TimePartitionType.None
   fullName: Google.Cloud.BigQuery.V2.TimePartitionType.None
   nameWithType: TimePartitionType.None
+- uid: Google.Cloud.BigQuery.V2.UpdateDatasetOptions
+  name: UpdateDatasetOptions
+  href: api/Google.Cloud.BigQuery.V2.UpdateDatasetOptions.html
+  commentId: T:Google.Cloud.BigQuery.V2.UpdateDatasetOptions
+  fullName: Google.Cloud.BigQuery.V2.UpdateDatasetOptions
+  nameWithType: UpdateDatasetOptions
 - uid: Google.Cloud.BigQuery.V2.UploadAvroOptions
   name: UploadAvroOptions
   href: api/Google.Cloud.BigQuery.V2.UploadAvroOptions.html
