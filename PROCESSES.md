@@ -150,7 +150,7 @@ Issues with this:
   as the regular unit tests)
   - We may wish to run integration tests of any packages that depend
     on the package being built, too.
-- Potentially check tht the GitHub tags are still what they were
+- Potentially check that the GitHub tags are still what they were
   at the start of the process. (If a tag has been deleted or changed,
   don't publish anything, and report an error. It becomes awkward if
   there were two tags for the same commit and only one of them has
