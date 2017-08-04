@@ -21,8 +21,20 @@ dotnet publish -c Release -f netstandard1.3 tools/Google.Cloud.Tools.Analyzers/G
 # Command line arguments are the APIs to build. Each argument
 # should be the name of a directory, either relative to the location
 # of this script, or under apis.
-apis=$@
-if [ -z "$apis" ]
+apis=()
+runtests=true
+while (( "$#" )); do
+  if [[ "$1" == "--notests" ]]
+  then 
+    echo "Not Running Tests..."
+    runtests=false
+  else 
+    apis+=($1)
+  fi
+  shift
+done
+
+if [ ${#apis[@]} -eq 0 ]
 then
   apis="tools $(echo apis/Google.* | sed 's/apis\///g')"
 fi
@@ -77,9 +89,12 @@ dotnet restore AllProjects.sln
 echo "$(date +%T) Building solution"
 dotnet build -c Release AllProjects.sln
 
-# Could use xargs, but this is more flexible
-while read testproject
-do  
-  echo "$(date +%T) Testing $testproject"
-  dotnet test -c Release $testproject
-done < AllTests.txt
+if [[ "$runtests" = true ]]
+then
+  # Could use xargs, but this is more flexible
+  while read testproject
+  do  
+    echo "$(date +%T) Testing $testproject"
+    dotnet test -c Release $testproject
+  done < AllTests.txt
+fi
