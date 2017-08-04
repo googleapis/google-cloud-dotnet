@@ -6,6 +6,10 @@
   // id: Name of the main generated library; matches top-level
   //     directory name and solution file
   // version: library version, e.g. 1.0.0 or 1.0.0-alpha01
+  //   - Special value "project" is used to indicate a project reference within this repository.
+  //   - Special value "default" is used for external package references that are defaulted by
+  //     the project generator. Currently valid for GAX and gRPC packages. The version number
+  //     must be specified explicitly for stable projects.
   // description: Used for NuGet package description
   // tags: Any tags to use in NuGet in addition to Google and Cloud
   // type: "rest", "grpc" or "other":
@@ -14,7 +18,8 @@
   // targetFrameworks: only used for "other" projects
   // dependencies: Dependencies in addition to defaults, for the main API
   // testDependencies: Dependencies for all test projects. (This can lead to redundant dependencies, but it's simple.)
-
+  // productName: Name of product to include when using doc templates
+  // productUrl: Product home page URL to include when using doc templates
   {
     "id": "Google.Cloud.BigQuery.V2",
     "productName": "Google BigQuery",
@@ -26,8 +31,8 @@
       "Google.Apis.Bigquery.v2": "1.28.0.932"
     },
     "testDependencies": {
-      "Google.Cloud.Storage.V1": "",
-      "Google.Cloud.ClientTesting": ""
+      "Google.Cloud.Storage.V1": "project",
+      "Google.Cloud.ClientTesting": "project"
     },
     "tags": [ "BigQuery" ]
   },
@@ -41,8 +46,8 @@
     "description": "Recommended Google client library to access the Google Cloud Bigtable API.",
     "tags": [ "Bigtable" ],
     "testDependencies": {
-      "Google.Cloud.ClientTesting": "",
-      "Google.Api.Gax.Grpc.Testing": ""
+      "Google.Cloud.ClientTesting": "project",
+      "Google.Api.Gax.Grpc.Testing": "default"
     }
   },
 
@@ -54,9 +59,13 @@
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Datastore API, which accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application.",
     "tags": [ "Datastore" ],
+    "dependencies": {
+      "Grpc.Core": "1.4.0",
+      "Google.Api.Gax.Grpc": "2.0.0"
+    },
     "testDependencies": {
-      "Google.Cloud.ClientTesting": "",
-      "Google.Api.Gax.Grpc.Testing": ""
+      "Google.Cloud.ClientTesting": "project",
+      "Google.Api.Gax.Grpc.Testing": "2.0.0"
     },
   },
 
@@ -83,15 +92,15 @@
     "description": "Google Stackdriver Instrumentation Libraries for ASP.NET.",
     "tags": [ "Error", "Reporting", "Stackdriver", "ExceptionLogger", "Trace", "Diagnostics" ],
     "dependencies": {
-      "Google.Cloud.Diagnostics.Common": "",
+      "Google.Cloud.Diagnostics.Common": "project",
       "Microsoft.AspNet.WebApi.Core": "5.2.3",
       "Microsoft.AspNet.WebPages": "3.2.3",
       "Microsoft.AspNet.Mvc": "5.2.3",
-      "Grpc.Core": ""
+      "Grpc.Core": "default"
     },
     "testDependencies": {
-      "../../Google.Cloud.Diagnostics.Common/Google.Cloud.Diagnostics.Common.Tests/Google.Cloud.Diagnostics.Common.Tests.csproj": "",
-      "../../Google.Cloud.Diagnostics.Common/Google.Cloud.Diagnostics.Common.IntegrationTests/Google.Cloud.Diagnostics.Common.IntegrationTests.csproj": "",
+      "Google.Cloud.Diagnostics.Common.Tests": "project",
+      "Google.Cloud.Diagnostics.Common.IntegrationTests": "project",
       "Microsoft.AspNet.Http": "1.0.0-rc1-final"
     },
   },
@@ -105,22 +114,22 @@
     "description": "Google Stackdriver Instrumentation Libraries for ASP.NET Core.",
     "tags": [ "Error", "Reporting", "Stackdriver", "ExceptionLogger", "Trace", "Diagnostics" ],
     "dependencies": {
-      "Google.Cloud.Diagnostics.Common": "",
+      "Google.Cloud.Diagnostics.Common": "project",
       "Microsoft.AspNetCore.Diagnostics.Abstractions": "1.0.0",
       "Microsoft.AspNetCore.Http": "1.1.0",
       "Microsoft.AspNetCore.Http.Abstractions": "1.1.0",
       "Microsoft.AspNetCore.Http.Extensions": "1.1.0",
       "Microsoft.Extensions.Logging": "1.0.0",
       "Microsoft.Extensions.Logging.Debug": "1.0.0",
-      "Grpc.Core": ""
+      "Grpc.Core": "default"
     },
     "testDependencies": {
       "Microsoft.AspNetCore.Mvc": "1.1.2",
       "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.1.2",
       "Microsoft.AspNetCore.TestHost": "1.1.0",
-      "../../Google.Cloud.Diagnostics.Common/Google.Cloud.Diagnostics.Common.Tests/Google.Cloud.Diagnostics.Common.Tests.csproj": "",
-      "../../Google.Cloud.Diagnostics.Common/Google.Cloud.Diagnostics.Common.IntegrationTests/Google.Cloud.Diagnostics.Common.IntegrationTests.csproj": "",
-      "Google.Api.Gax.Testing": ""
+      "Google.Cloud.Diagnostics.Common.Tests": "project",
+      "Google.Cloud.Diagnostics.Common.IntegrationTests": "project",
+      "Google.Api.Gax.Testing": "default"
     }
   },
 
@@ -133,12 +142,12 @@
     "description": "Google Stackdriver Instrumentation Libraries Common Components.",
     "tags": [ "Error", "Reporting", "Stackdriver", "ExceptionLogger", "Trace", "Diagnostics" ],
     "dependencies": {
-      "Google.Cloud.Logging.V2": "2.0",
+      "Google.Cloud.Logging.V2": "2.0.0",
       "Google.Cloud.Trace.V1": "1.0.0-beta07",
-      "Grpc.Core": ""
+      "Grpc.Core": "default"
     },
     "testDependencies": {
-      "Google.Cloud.ErrorReporting.V1Beta1": "",
+      "Google.Cloud.ErrorReporting.V1Beta1": "project",
       "Microsoft.AspNetCore.Http": "1.1.1"
     }
   },
@@ -152,7 +161,7 @@
     "description": "Recommended Google client library to access the Google Data Loss Prevention API, provides methods for detection of privacy-sensitive fragments in text, images, and Google Cloud Platform storage repositories.",
     "tags": [ "DLP", "data loss prevention", "privacy", "pii" ],
     "dependencies": {
-      "Google.LongRunning": ""
+      "Google.LongRunning": "project"
     }
   },
 
@@ -194,7 +203,7 @@
     "description": "Experimental library for the Google Cloud Natural Language API, containing features which may still change before final release.",
     "tags": [ "Language", "Experimental" ],
     "dependencies": {
-      "Google.LongRunning": ""
+      "Google.LongRunning": "project"
     }
   },
 
@@ -210,10 +219,10 @@
       "log4net": "2.0.8",
       "Google.Cloud.Logging.V2": "2.0.0",
       "Google.Cloud.DevTools.Common": "1.0.0",
-      "Grpc.Core": ""
+      "Grpc.Core": "1.4.0"
     },
     "testDependencies": {
-      "Google.Api.Gax.Testing": ""
+      "Google.Api.Gax.Testing": "2.0.0"
     }
   },
 
@@ -238,7 +247,9 @@
     "description": "Recommended Google client library to access the Google Stackdriver Logging API, which writes log entries and manages your logs, log sinks, and logs-based metrics.",
     "tags": [ "Logging", "Stackdriver" ],
     "dependencies": {
-      "Google.Cloud.Logging.Type": ""
+      "Google.Api.Gax.Grpc": "2.0.0",
+      "Google.Cloud.Logging.Type": "2.0.0",
+      "Grpc.Core": "1.4.0"
     }
   },
 
@@ -273,7 +284,7 @@
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Pub/Sub API, which provides reliable, many-to-many, asynchronous messaging between applications.",
     "dependencies": {
-      "Google.Cloud.Iam.V1": ""
+      "Google.Cloud.Iam.V1": "project"
     },
     "testDependencies": {
       "System.ValueTuple": "4.3.1"
@@ -290,8 +301,8 @@
     "description": "Recommended Google client library to access the Google Cloud Spanner Database Admin API.",
     "tags": [ "Spanner" ],
     "dependencies": {
-      "Google.LongRunning": "",
-      "Google.Cloud.Iam.V1": ""
+      "Google.LongRunning": "project",
+      "Google.Cloud.Iam.V1": "project"
     }
   },
 
@@ -304,8 +315,8 @@
     "description": "Recommended Google client library to access the Google Cloud Spanner Instance Admin API.",
     "tags": [ "Spanner" ],
     "dependencies": {
-      "Google.LongRunning": "",
-      "Google.Cloud.Iam.V1": ""
+      "Google.LongRunning": "project",
+      "Google.Cloud.Iam.V1": "project"
     }
   },
 
@@ -318,10 +329,10 @@
     "description": "Google ADO.NET Provider for Google Cloud Spanner.",
     "tags": [ "Spanner", "ADO" ],
     "dependencies": {
-      "Google.Cloud.Spanner.V1": "",
-      "Google.Cloud.Spanner.Admin.Database.V1": "",
-      "Google.Cloud.Spanner.Admin.Instance.V1": "",
-      "Grpc.Core": ""
+      "Google.Cloud.Spanner.V1": "project",
+      "Google.Cloud.Spanner.Admin.Database.V1": "project",
+      "Google.Cloud.Spanner.Admin.Instance.V1": "project",
+      "Grpc.Core": "default"
     },
     "testDependencies": {
       "CoreCompat.EnterpriseLibrary.TransientFaultHandling": "6.0.1304-r3"
@@ -347,7 +358,7 @@
     "description": "Recommended Google client library to access the Google Cloud Speech API, which performs speech recognition.",
     "tags": [ "Speech" ],
     "dependencies": {
-      "Google.LongRunning": ""
+      "Google.LongRunning": "project"
     },
   },
 
@@ -363,7 +374,7 @@
     },
     "tags": [ "Storage" ],
     "testDependencies": {
-      "Google.Cloud.ClientTesting": ""
+      "Google.Cloud.ClientTesting": "project"
     }
   },
 
@@ -389,7 +400,7 @@
     },
     "tags": [ "Translate", "Translation" ],
     "testDependencies": {
-      "Google.Cloud.ClientTesting": ""
+      "Google.Cloud.ClientTesting": "project"
     }
   },
 
@@ -402,7 +413,7 @@
     "description": "Recommended Google client library to access the Google Cloud Video Intelligence API.",
     "tags": [ "VideoIntelligence" ],
     "dependencies": {
-      "Google.LongRunning": ""
+      "Google.LongRunning": "project"
     },
   },
 
@@ -423,7 +434,7 @@
     "description": "gRPC services for the Google Long Running Operations API. This library is typically used as a dependency for other API client libraries.",
     "tags": [ "LongRunning" ],
     "testDependencies": {
-      "Google.Api.Gax.Testing": ""
+      "Google.Api.Gax.Testing": "default"
     }
   }
 ]

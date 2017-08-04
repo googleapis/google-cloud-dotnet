@@ -18,20 +18,74 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
 namespace Google.Cloud.Tools.ProjectGenerator
 {
     public class Program
     {
-        private const string GrpcVersion = "1.4.0";
-        private const string StableGaxVersion = "2.0.0";
-        private const string PrereleaseGaxVersion = "2.1.0-beta01";
-        private const string DotnetPackInstructionsLabel = "dotnet pack instructions";
+        private static readonly Regex AnyVersionPattern = new Regex(@"^[0-9]\d*\.\d+\.\d+(\.\d+)?(-.*)?$");
+        private static readonly Regex StableVersionPattern = new Regex(@"^[1-9]\d*\.\d+\.\d+(\.\d+)?$");
 
+        // Project references which don't just follow the pattern of ..\..\{package}\{package}\{package}.csproj
+        private static readonly Dictionary<string, string> KnownProjectReferences = new Dictionary<string, string>
+        {
+            { "Google.Cloud.ClientTesting", @"..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" },
+            { "Google.Cloud.Diagnostics.Common.Tests", @"..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.Tests\Google.Cloud.Diagnostics.Common.Tests.csproj" },
+            { "Google.Cloud.Diagnostics.Common.IntegrationTests", @"..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.IntegrationTests\Google.Cloud.Diagnostics.Common.IntegrationTests.csproj" }
+        };
+
+        private const string DefaultRestTargetFrameworks = "netstandard1.3;net45";
+        private const string DefaultGrpcTargetFrameworks = "netstandard1.5;net45";
+        private const string DefaultTestTargetFrameworks = "netcoreapp1.0;net452";
+
+        private const string ProjectVersionValue = "project";
+        private const string DefaultVersionValue = "default";
+        private const string GrpcPackage = "Grpc.Core";
+        private const string DefaultGaxVersion = "2.1.0-beta01";
+        private const string GrpcVersion = "1.4.0";
+        private static readonly Dictionary<string, string> DefaultPackageVersions = new Dictionary<string, string>
+        {
+            { "Google.Api.Gax", DefaultGaxVersion },
+            { "Google.Api.Gax.Rest", DefaultGaxVersion },
+            { "Google.Api.Gax.Grpc", DefaultGaxVersion },
+            { "Google.Api.Gax.Testing", DefaultGaxVersion },
+            { "Google.Api.Gax.Grpc.Testing", DefaultGaxVersion },
+            { GrpcPackage, GrpcVersion },
+        };
+
+        // Hard-coded versions for all test packages. These can be defaulted even for stable packages, whereas
+        // the packages in DefaultPackageVersions should be specified precisely in stable packages.
+        private static readonly Dictionary<string, string> CommonTestDependencies = new Dictionary<string, string>
+        {
+            { "Microsoft.NET.Test.Sdk", "15.0.0" },
+            { "xunit", "2.3.0-beta1-build3642" },
+            { "xunit.runner.visualstudio", "2.3.0-beta1-build1309" },
+            { "Moq", "4.7.8" }
+        };
+
+        // Hard-coded versions for dependencies for production packages that can be updated arbitrarily, as their assets are all private.
+        // The relationship between this and PrivateAssets is tested on startup.
+        private static readonly Dictionary<string, string> CommonHiddenProductionDependencies = new Dictionary<string, string>
+        {
+            { ConfigureAwaitAnalyzer, "1.0.0-beta4" },
+            { SourceLinkPackage, "2.1.2" }
+        };
+
+        private const string DotnetPackInstructionsLabel = "dotnet pack instructions";
         private const string ConfigureAwaitAnalyzer = "ConfigureAwaitChecker.Analyzer";
         private const string SourceLinkPackage = "SourceLink.Create.CommandLine";
-        private static readonly HashSet<string> PrivateAssetPackages = new HashSet<string> { ConfigureAwaitAnalyzer, SourceLinkPackage };
+
+        /// <summary>
+        /// For packages which need a PrivateAssets attribute in dependencies, this dictionary provides the value of the attribute.
+        /// </summary>
+        private static readonly Dictionary<string, string> PrivateAssets = new Dictionary<string, string>
+        {
+            { GrpcPackage, "None" },
+            { ConfigureAwaitAnalyzer, "All" },
+            { SourceLinkPackage, "All" }
+        };
 
         private const string AnalyzersPath = @"..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll";
         private const string StripDesktopOnNonWindows = @"..\..\..\StripDesktopOnNonWindows.xml";
@@ -40,16 +94,25 @@ namespace Google.Cloud.Tools.ProjectGenerator
         {
             try
             {
+                ValidateCommonHiddenProductionDependencies();
                 var root = DirectoryLayout.DetermineRootDirectory();
-                foreach (var api in ApiMetadata.LoadApis())
+                var apis = ApiMetadata.LoadApis();
+                HashSet<string> apiNames = new HashSet<string>(apis.Select(api => api.Id));
+
+                foreach (var api in apis)
                 {
-                    GenerateProjects(Path.Combine(root, "apis", api.Id), api);
+                    GenerateProjects(Path.Combine(root, "apis", api.Id), api, apiNames);
                 }
-                foreach (var api in ApiMetadata.LoadApis())
+                foreach (var api in apis)
                 {
                     GenerateSolutionFiles(Path.Combine(root, "apis", api.Id), api);
                 }
                 return 0;
+            }
+            catch (UserErrorException e)
+            {
+                Console.WriteLine($"Configuration error: {e.Message}");
+                return 1;
             }
             catch (Exception e)
             {
@@ -58,7 +121,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
             }
         }
 
-        static void GenerateProjects(string apiRoot, ApiMetadata api)
+        static void GenerateProjects(string apiRoot, ApiMetadata api, HashSet<string> apiNames)
         {
             // We assume the source directories already exist, either because they've just
             // been generated or because they were already there. We infer the type of each
@@ -79,12 +142,12 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 switch (suffix)
                 {
                     case "":
-                        GenerateMainProject(api, dir);
+                        GenerateMainProject(api, dir, apiNames);
                         break;
                     case ".IntegrationTests":
                     case ".Tests":
                     case ".Snippets":
-                        GenerateTestProject(api, dir);
+                        GenerateTestProject(api, dir, apiNames);
                         break;
                 }
             }
@@ -153,35 +216,34 @@ namespace Google.Cloud.Tools.ProjectGenerator
             }
         }
 
-        private static void GenerateMainProject(ApiMetadata api, string directory)
+        private static void GenerateMainProject(ApiMetadata api, string directory, HashSet<string> apiNames)
         {
             if (api.Version == null)
             {
-                throw new Exception($"No version specified for {api.Id}");
+                throw new UserErrorException($"No version specified for {api.Id}");
             }
             string targetFrameworks = api.TargetFrameworks;
-            var dependencies = new SortedList<string, string>(api.Dependencies)
-            {
-                { ConfigureAwaitAnalyzer, "1.0.0-beta4" },
-                { SourceLinkPackage, "2.1.2" }
-            };
-            // If Grpc.Core is ever specified explicitly (e.g. for "other" projects),
-            // but without a version number, fill it in.
-            if (dependencies.ContainsKey("Grpc.Core") && dependencies["Grpc.Core"] == "")
-            {
-                dependencies["Grpc.Core"] = GrpcVersion;
-            }
+
+            var dependencies = new SortedList<string, string>(CommonHiddenProductionDependencies);
+
             switch (api.Type)
             {
                 case "rest":
-                    dependencies.Add("Google.Api.Gax.Rest", api.IsReleaseVersion ? StableGaxVersion : PrereleaseGaxVersion);
-                    targetFrameworks = targetFrameworks ?? "netstandard1.3;net45";
+                    dependencies.Add("Google.Api.Gax.Rest", DefaultVersionValue);
+                    targetFrameworks = targetFrameworks ?? DefaultRestTargetFrameworks;
                     break;
                 case "grpc":
-                    dependencies.Add("Google.Api.Gax.Grpc", api.IsReleaseVersion ? StableGaxVersion : PrereleaseGaxVersion);
+                    dependencies.Add("Google.Api.Gax.Grpc", DefaultVersionValue);
                     dependencies.Add("Grpc.Core", GrpcVersion);
-                    targetFrameworks = targetFrameworks ?? "netstandard1.5;net45";
+                    targetFrameworks = targetFrameworks ?? DefaultGrpcTargetFrameworks;
                     break;
+            }
+
+            // Deliberately not using Add, so that a project can override the defaults.
+            // In particular, stable releases *must* override versions of GRPC and GAX.
+            foreach (var dependency in api.Dependencies)
+            {
+                dependencies[dependency.Key] = dependency.Value;
             }
 
             var propertyGroup = new XElement("PropertyGroup",
@@ -214,22 +276,24 @@ namespace Google.Cloud.Tools.ProjectGenerator
                     new XElement("PackagePath", $"lib/{tfm}")
                 ))
             );
-            WriteProjectFile(api, directory, propertyGroup, CreateDependenciesElement(dependencies, api.IsReleaseVersion), packingElement);
+            var dependenciesElement = CreateDependenciesElement(api.Id, dependencies, api.IsReleaseVersion, testProject: false, apiNames: apiNames);
+            WriteProjectFile(api, directory, propertyGroup, dependenciesElement, packingElement);
         }
 
-        private static void GenerateTestProject(ApiMetadata api, string directory)
+        private static void GenerateTestProject(ApiMetadata api, string directory, HashSet<string> apiNames)
         {
-            var dependencies = new SortedList<string, string>(api.TestDependencies)
+            var dependencies = new SortedList<string, string>(CommonTestDependencies);
+            dependencies.Add(api.Id, "project");
+
+            // Deliberately not using Add, so that a project can override the defaults.
+            foreach (var dependency in api.TestDependencies)
             {
-                { $@"..\{api.Id}\{api.Id}.csproj", "" }, // Main project
-                { "Microsoft.NET.Test.Sdk", "15.0.0" },
-                { "xunit", "2.3.0-beta1-build3642" },
-                { "xunit.runner.visualstudio", "2.3.0-beta1-build1309 " },
-                { "Moq", "4.7.8" }
-            };
+                dependencies[dependency.Key] = dependency.Value;
+            }
+            
             var propertyGroup =
                 new XElement("PropertyGroup",
-                    new XElement("TargetFrameworks", api.TestTargetFrameworks ?? api.TargetFrameworks ?? "netcoreapp1.0;net452"),
+                    new XElement("TargetFrameworks", api.TestTargetFrameworks ?? api.TargetFrameworks ?? DefaultTestTargetFrameworks),
                     new XElement("Features", "IOperation"),
                     new XElement("IsPackable", false),
                     new XElement("AssemblyOriginatorKeyFile", "../../GoogleApis.snk"),
@@ -241,14 +305,15 @@ namespace Google.Cloud.Tools.ProjectGenerator
                     // See https://github.com/googleapis/toolkit/issues/1271 - when that's fixed, we can remove this.
                     new XElement("NoWarn", "1701;1702;1705;4014")
                 );
-            var itemGroup = CreateDependenciesElement(dependencies, api.IsReleaseVersion);
+            string project = Path.GetFileName(directory);
+            var dependenciesElement = CreateDependenciesElement(project, dependencies, api.IsReleaseVersion, testProject: true, apiNames: apiNames);
             // Allow test projects to use dynamic...
-            itemGroup.Add(new XElement("Reference",
+            dependenciesElement.Add(new XElement("Reference",
                 new XAttribute("Condition", "'$(TargetFramework)' == 'net452'"),
                 new XAttribute("Include", "Microsoft.CSharp")));
             // Test service... it keeps on getting added by Visual Studio, so let's just include it everywhere.
-            itemGroup.Add(new XElement("Service", new XAttribute("Include", "{82a7f48d-3b50-4b1e-b82e-3ada8210c358}")));
-            WriteProjectFile(api, directory, propertyGroup, itemGroup, null);
+            dependenciesElement.Add(new XElement("Service", new XAttribute("Include", "{82a7f48d-3b50-4b1e-b82e-3ada8210c358}")));
+            WriteProjectFile(api, directory, propertyGroup, dependenciesElement, null);
         }
 
         private static void WriteProjectFile(
@@ -306,32 +371,97 @@ namespace Google.Cloud.Tools.ProjectGenerator
             }
         }
 
-        // Dependencies with an empty value will be treated as project dependencies;
-        // dependencies with a value will be treated as package dependencies with the value as the version.
-        private static XElement CreateDependenciesElement(IDictionary<string, string> dependencies, bool stableRelease) =>
+        private static XElement CreateDependenciesElement(string project, IDictionary<string, string> dependencies, bool stableRelease, bool testProject, HashSet<string> apiNames) =>
             new XElement("ItemGroup",
                 // Use the GAX version for all otherwise-unversioned GAX dependencies
-                dependencies
-                    .Where(d => d.Value == "" && d.Key.StartsWith("Google.Api.Gax"))
-                    .Select(d => new XElement("PackageReference",
-                        new XAttribute("Include", d.Key),
-                        new XAttribute("Version", stableRelease ? StableGaxVersion : PrereleaseGaxVersion))),
-                dependencies
-                    .Where(d => d.Value == "" && !d.Key.StartsWith("Google.Api.Gax"))
-                    .Select(d => new XElement("ProjectReference", new XAttribute("Include", GenerateProjectReference(d.Key)))),
-                dependencies
-                    .Where(d => d.Value != "")
-                    .Select(d => new XElement("PackageReference",
-                        new XAttribute("Include", d.Key),
-                        new XAttribute("Version", d.Value),
-                        // Make references to Grpc.Core deploy native dependencies
-                        // See https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1066
-                        d.Key == "Grpc.Core" ? new XAttribute("PrivateAssets", "None") : null,
-                        // Make references to ConfigureAwaitChecker effectively private
-                        PrivateAssetPackages.Contains(d.Key) ? new XAttribute("PrivateAssets", "All") : null)
-                    ),
+                dependencies.Select(pair => CreateDependencyElement(project, pair.Key, pair.Value, stableRelease, testProject, apiNames)),
                 new XElement("Analyzer",
                     new XAttribute("Condition", $"Exists('{AnalyzersPath}')"),
                     new XAttribute("Include", AnalyzersPath)));
+
+        /// <summary>
+        /// Creates a single XElement for a dependency. This can be a package reference or a project reference:
+        /// - If the version is "project" it will be handled as a project reference:
+        ///   - The project must be known, either as the ID of an API or a member of <see cref="KnownProjectReferences"/>
+        /// - If the version is "default" it will be handled as a package reference to a common package, e.g. Grpc.Core or GAX
+        ///   with the version automatically populated. This is only valid for prereleases; stable packages must specify
+        ///   a version number (so that it's not accidentally increased)
+        /// - Otherwise, it will be treated as a package reference with the 
+        /// </summary>
+        /// <param name="project">The project depending on <paramref name="package"/></param>
+        /// <param name="package">Package name of dependency</param>
+        /// <param name="version">Version of dependency, or "project" or "default"</param>
+        /// <param name="allowDefaultVersions">Whether to allow default versions for </param>
+        /// <param name="apiNames">Names of all APIs in apis.json, valid for project references</param>
+        /// <returns>The element to include in the project file to represent the dependency</returns>
+        private static XElement CreateDependencyElement(string project, string package, string version, bool stableRelease, bool testProject, HashSet<string> apiNames)
+        {
+            if (version == ProjectVersionValue)
+            {
+                string path;
+                if (apiNames.Contains(package))
+                {
+                    // Simplify path for test packages - no need to go all the way back to the api directory
+                    path = project.StartsWith(package + ".")
+                        ? $@"..\{package}\{package}.csproj"
+                        : $@"..\..\{package}\{package}\{package}.csproj";
+                }
+                else if (KnownProjectReferences.ContainsKey(package))
+                {
+                    path = KnownProjectReferences[package];
+                }
+                else
+                {
+                    throw new UserErrorException($"Invalid project reference from {project} to {package}");
+                }
+                return new XElement("ProjectReference", new XAttribute("Include", path));
+            }
+
+            if (version == DefaultVersionValue)
+            {
+                if (stableRelease)
+                {
+                    throw new UserErrorException($"Project {project} cannot use the default version for {package}");
+                }
+                if (!DefaultPackageVersions.TryGetValue(package, out version))
+                {
+                    throw new UserErrorException($"Project {project} depends on default version of unknown package {package}");
+                }                
+            }
+
+            PrivateAssets.TryGetValue(package, out string privateAssetValue);
+
+            if (!AnyVersionPattern.IsMatch(version))
+            {
+                throw new UserErrorException($"Project {project} has invalid version '{version}' for package {package}");
+            }
+            // Dependencies from production projects, other than "hidden" packages, must be stable
+            if (stableRelease && !testProject && !StableVersionPattern.IsMatch(version) && privateAssetValue != "All")
+            {
+                throw new UserErrorException($"Project {project} uses prerelease version '{version}' for package {package}");
+            }
+
+            var element = new XElement("PackageReference",
+                new XAttribute("Include", package),
+                new XAttribute("Version", version));
+            if (privateAssetValue != null)
+            {
+                element.Add(new XAttribute("PrivateAssets", privateAssetValue));
+            }
+            return element;
+        }
+
+        /// <summary>
+        /// This is in lieu of a unit test... just make sure that all the dependencies we're hard-coding the values for
+        /// really do hide all their assets.
+        /// </summary>
+        private static void ValidateCommonHiddenProductionDependencies()
+        {
+            var brokenDependencies = CommonHiddenProductionDependencies.Keys.Where(p => !PrivateAssets.ContainsKey(p) || PrivateAssets[p] != "All").ToList();
+            if (brokenDependencies.Any())
+            {
+                throw new Exception($"ProjectGenerator error: invalid CommonHiddenProductionDependencies: {string.Join(", ", brokenDependencies)}");
+            }
+        }
     }
 }
