@@ -12,28 +12,35 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Tools.Common;
+using LibGit2Sharp;
 using Octokit;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-
-using Newtonsoft.Json;
-
-using Google.Cloud.Tools.Common;
 
 namespace Google.Cloud.Tools.TagReleases
 {
     /// <summary>
     /// Tool to tag releases on GitHub for any projects where there's no existing tag
     /// with the currently-specified version.
+    /// 
+    /// Steps taken:
+    /// 
+    /// - Find the current head of the master branch on github
+    /// - Check that the local repo is at the same commit
+    /// - Check that the local repo has no pending changes to apis.json
+    /// - Work out which packages would need to be tagged
+    /// - Check that there are no project references outside that package set
+    /// - Request confirmation of tagging
+    /// - Perform tagging
     /// </summary>
     internal class Program
     {
         private const string RepositoryOwner = "GoogleCloudPlatform";
         private const string RepositoryName = "google-cloud-dotnet";
+        private const string TargetBranch = "master";
         private const string ApplicationName = "google-cloud-dotnet-tagreleases";
 
         private static int Main(string[] args)
@@ -45,70 +52,133 @@ namespace Google.Cloud.Tools.TagReleases
             }
             try
             {
-                MainAsync(args).GetAwaiter().GetResult();
+                return MainAsync(args).GetAwaiter().GetResult();
+            }
+            catch (UserErrorException e)
+            {
+                Console.WriteLine($"Configuration error: {e.Message}");
+                return 1;
             }
             catch (Exception e)
             {
                 Console.WriteLine($"Error: {e}");
                 return 1;
             }
-            return 0;
         }
 
-        private static async Task MainAsync(string[] args)
+        private static async Task<int> MainAsync(string[] args)
         {
             var client = new GitHubClient(new ProductHeaderValue(ApplicationName))
             {
-                Credentials = new Credentials(args[0])
+                Credentials = new Octokit.Credentials(args[0])
             };
-            var tags = (await client.Repository.GetAllTags(RepositoryOwner, RepositoryName)).Select(tag => tag.Name);
+
+            var commit = await FetchRemoteCommitAsync(client);
+            ValidateLocalRepository(commit);
 
             var apis = ApiMetadata.LoadApis();
-            var noChange = apis.Where(api => tags.Contains($"{api.Id}-{api.Version}") || api.Version.EndsWith("00")).ToList();
-            var changed = apis.Except(noChange).ToList();
+            var newReleases = await ComputeNewReleasesAsync(client, apis);
+            ValidateChanges(newReleases);
 
-            Console.WriteLine("APIs already tagged at current version (or not ready for release):");
-            noChange.ForEach(api => Console.WriteLine($"{api.Id,-50} v{api.Version}"));
-            Console.WriteLine();
+            if (!ConfirmReleases(apis, newReleases))
+            {
+                return 0;
+            }
+
+            await MakeReleasesAsync(client, newReleases, commit);
+            return 0;
+        }
+
+        private static async Task<string> FetchRemoteCommitAsync(GitHubClient client)
+        {
+            var remoteBranch = await client.Repository.Branch.Get(RepositoryOwner, RepositoryName, TargetBranch);
+            string sha = remoteBranch.Commit.Sha;
+            Console.WriteLine($"Current GitHub {TargetBranch} commit: {sha}");
+            return sha;
+        }
+
+        private static void ValidateLocalRepository(string expectedCommit)
+        {
+            var root = DirectoryLayout.DetermineRootDirectory();
+            using (var repo = new LibGit2Sharp.Repository(root))
+            {
+                string tip = repo.Head.Tip.Sha;
+                if (tip != expectedCommit)
+                {
+                    throw new UserErrorException($"Current local commit: {tip}. Aborting.");
+                }
+                var status = repo.RetrieveStatus("apis/apis.json");
+                if (status != FileStatus.Unaltered)
+                {
+                    throw new UserErrorException($"Expected apis.json to be unaltered. Current status: {status}. Aborting.");
+                }
+            }
+        }
+
+        private static async Task<List<ApiMetadata>> ComputeNewReleasesAsync(GitHubClient client, List<ApiMetadata> allApis)
+        {
+            var tags = (await client.Repository.GetAllTags(RepositoryOwner, RepositoryName)).Select(tag => tag.Name);
+            var noChange = allApis.Where(api => tags.Contains($"{api.Id}-{api.Version}") || api.Version.EndsWith("00")).ToList();
+            return allApis.Except(noChange).ToList();
+        }
+
+        /// <summary>
+        /// Validates the set of changes.
+        /// </summary>
+        /// <remarks>
+        /// <para>Current checks:</para>
+        /// <para>
+        /// Project references (in production code) are okay so long as all the targets of the references
+        /// are also going to be released. If this is not the case, the dependencies within the target could be different
+        /// to the ones in the public package version, causing a dependency issue in the package we're about to publish.
+        /// (This caused issue #1280 for example.)
+        /// </para>
+        /// </remarks>
+        private static void ValidateChanges(List<ApiMetadata> newReleases)
+        {
+            var newReleaseNames = newReleases.Select(api => api.Id).ToList();
+            foreach (var api in newReleases)
+            {
+                var projectReferences = api.Dependencies.Where(p => p.Value == "project").Select(p => p.Key);
+                var badReferences = projectReferences.Except(newReleaseNames).ToList();
+                if (badReferences.Any())
+                {
+                    throw new UserErrorException(
+                        $"Project {api.Id} contains project references to projects outside the release set: {string.Join(", ", badReferences)}");
+                }
+            }
+        }
+
+        private static bool ConfirmReleases(List<ApiMetadata> allApis, List<ApiMetadata> newReleases)
+        {
             Console.WriteLine("APIs requiring a new release:");
-            changed.ForEach(api => Console.WriteLine($"{api.Id,-50} v{api.Version}"));
+            newReleases.ForEach(api => Console.WriteLine($"{api.Id,-50} v{api.Version}"));
 
-            Console.WriteLine();
-
-            if (!changed.Any())
+            if (!newReleases.Any())
             {
                 Console.WriteLine("No releases need to be created. Exiting.");
-                return;
+                return false;
             }
 
             Console.WriteLine("Go ahead and create releases? (y/n)");
             string response = Console.ReadLine();
-            bool createReleases = response == "y";
-            if (!createReleases)
+            return response == "y";
+        }
+
+        private static async Task MakeReleasesAsync(GitHubClient client, List<ApiMetadata> newReleases, string commit)
+        {
+            foreach (var api in newReleases)
             {
-                return;
-            }
-            foreach (var api in changed)
-            {
+                var gitRelease = new NewRelease($"{api.Id}-{api.Version}")
+                {
+                    Prerelease = !api.IsReleaseVersion,
+                    Name = $"{api.Version} release of {api.Id}",
+                    TargetCommitish = commit
+                };
                 // We could parallelize, but there's very little point.
-                await client.Repository.Release.Create(RepositoryOwner, RepositoryName, CreateNewRelease(api));
+                await client.Repository.Release.Create(RepositoryOwner, RepositoryName, gitRelease);
                 Console.WriteLine($"Created release for {api.Id}");
             }
-        }
-
-        private static List<ApiMetadata> LoadApis()
-        {
-            var root = DirectoryLayout.DetermineRootDirectory();
-
-            var json = File.ReadAllText(Path.Combine(root, "apis", "apis.json"));
-            return JsonConvert.DeserializeObject<List<ApiMetadata>>(json).OrderBy(api => api.Id).ToList();
-        }
-
-        private static NewRelease CreateNewRelease(ApiMetadata api) => new NewRelease($"{api.Id}-{api.Version}")
-        {
-            Prerelease = !api.IsReleaseVersion,
-            Name = $"{api.Version} release of {api.Id}",
-            // Default TargetCommitish is master, which is fine for now.
-        };
+        }       
     }
 }
