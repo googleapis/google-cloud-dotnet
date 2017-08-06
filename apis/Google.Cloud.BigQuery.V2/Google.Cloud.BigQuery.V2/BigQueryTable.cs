@@ -197,6 +197,45 @@ namespace Google.Cloud.BigQuery.V2
             _client.CreateCopyJob(Reference, destination, options);
 
         /// <summary>
+        /// Updates this table to match the specified resource.
+        /// </summary>
+        /// <remarks>
+        /// This method delegates to <see cref="BigQueryClient.UpdateTable(TableReference, Table, UpdateTableOptions)"/>.
+        /// A simple way of updating the table is to modify <see cref="Resource"/> and then call this method with no arguments.
+        /// This is convenient, but it's important to understand that modifying <see cref="Resource"/> in this way leaves this object
+        /// in an unusual state - it represents "the table as it was when fetched, but then modified locally". For example, the etag
+        /// will be the original etag, rather than the one associated with the updated table. To avoid this causing confusion,
+        /// we recommend only taking this approach if the object will not be used afterwards. Use the value returned by this method
+        /// as the new, self-consistent representation of the table.
+        /// </remarks>
+        /// <param name="resource">The resource to update with. If null, the <see cref="Resource"/> property is
+        /// used.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The updated table.</returns>
+        public BigQueryTable Update(Table resource = null, UpdateTableOptions options = null) =>
+            _client.UpdateTable(Reference, resource ?? Resource, options);
+
+        /// <summary>
+        /// Patches this table with fields in the specified resource.
+        /// </summary>
+        /// <remarks>
+        /// This method delegates to <see cref="BigQueryClient.PatchTable(TableReference, Table, PatchTableOptions)"/>.
+        /// </remarks>
+        /// <param name="resource">The resource to patch with. Must not be null.</param>
+        /// <param name="matchEtag">If true, the etag from <see cref="Resource"/> is propagated into <paramref name="resource"/> for
+        /// optimistic concurrency. Otherwise, <paramref name="resource"/> is left unchanged.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The updated table.</returns>
+        public BigQueryTable Patch(Table resource, bool matchEtag, PatchTableOptions options = null)
+        {
+            if (matchEtag)
+            {
+                resource.ETag = Resource.ETag;
+            }
+            return _client.PatchTable(Reference, resource, options);
+        }
+        
+        /// <summary>
         /// Asynchronously uploads a stream of CSV data to this table.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.UploadCsvAsync(TableReference, TableSchema, Stream, UploadCsvOptions, CancellationToken)"/>.
         /// </summary>
@@ -336,6 +375,49 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>A task representing the asynchronous operation. When complete, the result is the job created for the copy operation.</returns>
         public Task<BigQueryJob> CreateCopyJobAsync(TableReference destination, CreateCopyJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             _client.CreateCopyJobAsync(Reference, destination, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously updates this table to match the specified resource.
+        /// </summary>
+        /// <remarks>
+        /// This method delegates to <see cref="BigQueryClient.UpdateTableAsync(TableReference, Table, UpdateTableOptions, CancellationToken)"/>.
+        /// A simple way of updating the table is to modify <see cref="Resource"/> and then call this method with no arguments.
+        /// This is convenient, but it's important to understand that modifying <see cref="Resource"/> in this way leaves this object
+        /// in an unusual state - it represents "the table as it was when fetched, but then modified locally". For example, the etag
+        /// will be the original etag, rather than the one associated with the updated table. To avoid this causing confusion,
+        /// we recommend only taking this approach if the object will not be used afterwards. Use the value returned by this method
+        /// as the new, self-consistent representation of the table.
+        /// </remarks>
+        /// <param name="resource">The resource to update with. If null, the <see cref="Resource"/> property is
+        /// used.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the updated table.</returns>
+        public Task<BigQueryTable> UpdateAsync(Table resource = null, UpdateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            _client.UpdateTableAsync(Reference, resource ?? Resource, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously patches this table with fields in the specified resource.
+        /// </summary>
+        /// <remarks>
+        /// This method delegates to <see cref="BigQueryClient.PatchTableAsync(TableReference, Table, PatchTableOptions, CancellationToken)"/>.
+        /// </remarks>
+        /// <param name="resource">The resource to patch with. Must not be null.</param>
+        /// <param name="matchEtag">If true, the etag from <see cref="Resource"/> is propagated into <paramref name="resource"/> for
+        /// optimistic concurrency. Otherwise, <paramref name="resource"/> is left unchanged.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the updated table.</returns>
+        public Task<BigQueryTable> PatchAsync(Table resource, bool matchEtag, PatchTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            if (matchEtag)
+            {
+                resource.ETag = Resource.ETag;
+            }
+            return _client.PatchTableAsync(Reference, resource, options, cancellationToken);
+        }
 
         /// <summary>
         /// Returns the fully-qualified ID of the table in Legacy SQL format. The Legacy SQL

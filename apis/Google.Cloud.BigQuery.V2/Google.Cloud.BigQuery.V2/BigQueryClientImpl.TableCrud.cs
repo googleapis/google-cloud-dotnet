@@ -113,6 +113,28 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
+        public override BigQueryTable UpdateTable(TableReference tableReference, Table resource, UpdateTableOptions options = null)
+        {
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            GaxPreconditions.CheckNotNull(resource, nameof(resource));
+            var request = Service.Tables.Update(resource, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
+            request.ModifyRequest += _versionHeaderAction;
+            options?.ModifyRequest(request);
+            return new BigQueryTable(this, request.Execute());
+        }
+
+        /// <inheritdoc />
+        public override BigQueryTable PatchTable(TableReference tableReference, Table resource, PatchTableOptions options = null)
+        {
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            GaxPreconditions.CheckNotNull(resource, nameof(resource));
+            var request = Service.Tables.Patch(resource, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
+            request.ModifyRequest += _versionHeaderAction;
+            options?.ModifyRequest(request);
+            return new BigQueryTable(this, request.Execute());
+        }
+        
+        /// <inheritdoc />
         public override async Task<BigQueryTable> GetTableAsync(TableReference tableReference, GetTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
@@ -176,5 +198,26 @@ namespace Google.Cloud.BigQuery.V2
             await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
         }
 
+        /// <inheritdoc />
+        public override async Task<BigQueryTable> UpdateTableAsync(TableReference tableReference, Table resource, UpdateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            GaxPreconditions.CheckNotNull(resource, nameof(resource));
+            var request = Service.Tables.Update(resource, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
+            request.ModifyRequest += _versionHeaderAction;
+            options?.ModifyRequest(request);
+            return new BigQueryTable(this, await request.ExecuteAsync(cancellationToken).ConfigureAwait(false));
+        }
+
+        /// <inheritdoc />
+        public override async Task<BigQueryTable> PatchTableAsync(TableReference tableReference, Table resource, PatchTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            GaxPreconditions.CheckNotNull(resource, nameof(resource));
+            var request = Service.Tables.Patch(resource, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
+            request.ModifyRequest += _versionHeaderAction;
+            options?.ModifyRequest(request);
+            return new BigQueryTable(this, await request.ExecuteAsync(cancellationToken).ConfigureAwait(false));
+        }
     }
 }
