@@ -3,7 +3,7 @@
 
 [![Travis build Status](https://travis-ci.org/GoogleCloudPlatform/google-cloud-dotnet.svg?branch=master)](https://travis-ci.org/GoogleCloudPlatform/google-cloud-dotnet)
 [![Appveyor build status](https://ci.appveyor.com/api/projects/status/d25hbwksdu6y9v5t?svg=true)](https://ci.appveyor.com/project/GoogleCloudPlatform/google-cloud-dotnet)
-[![Coverage Status](https://coveralls.io/repos/github/GoogleCloudPlatform/google-cloud-dotnet/badge.svg)](https://coveralls.io/github/GoogleCloudPlatform/google-cloud-dotnet)
+[![Coverage Status](https://codecov.io/gh/GoogleCloudPlatform/google-cloud-dotnet/branch/master/graph/badge.svg)](https://codecov.io/gh/GoogleCloudPlatform/google-cloud-dotnet)
 
 * [Homepage](https://cloud.google.com/dotnet/)
 * [API Documentation](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/)
