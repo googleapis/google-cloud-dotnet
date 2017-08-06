@@ -65,7 +65,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             Assert.True(rateLimiter.CanTrace());
         }
 
-        [Fact]
+        [Fact(Skip = "See issue 610")]
         public void CanTrace_StressTest()
         {
             // Create a rate limiter that allows .5 QPS
