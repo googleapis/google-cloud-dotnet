@@ -200,6 +200,94 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <summary>
+        /// Updates the specified table to match the given resource.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UpdateTable(TableReference, Table, UpdateTableOptions)"/>.
+        /// </summary>
+        /// <remarks>
+        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
+        /// </remarks>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="resource">The table resource representation to use for the update. All updatable fields will be updated.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The updated table.</returns>
+        public virtual BigQueryTable UpdateTable(string projectId, string datasetId, string tableId, Table resource, UpdateTableOptions options = null) =>
+            UpdateTable(GetTableReference(projectId, datasetId, tableId), resource, options);
+
+        /// <summary>
+        /// Updates the specified table within this client's project to match the given resource.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UpdateTable(TableReference, Table, UpdateTableOptions)"/>.
+        /// </summary>
+        /// <remarks>
+        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
+        /// </remarks>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="resource">The table resource representation to use for the update. All updatable fields will be updated.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The updated table.</returns>
+        public virtual BigQueryTable UpdateTable(string datasetId, string tableId, Table resource, UpdateTableOptions options = null) =>
+            UpdateTable(GetTableReference(datasetId, tableId), resource, options);
+
+        /// <summary>
+        /// Updates the specified table to match the given resource.
+        /// </summary>
+        /// <remarks>
+        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
+        /// </remarks>
+        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// <param name="resource">The table resource representation to use for the update. All updatable fields will be updated.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The updated table.</returns>
+        public virtual BigQueryTable UpdateTable(TableReference tableReference, Table resource, UpdateTableOptions options = null) =>
+            throw new NotImplementedException();
+
+        /// <summary>
+        /// Patches the specified table with fields in the given resource.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="PatchTable(TableReference, Table, PatchTableOptions)"/>.
+        /// </summary>
+        /// <remarks>
+        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
+        /// </remarks>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="resource">The table resource representation to use for the patch. Only fields present in the resource will be updated.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The updated table.</returns>
+        public virtual BigQueryTable PatchTable(string projectId, string datasetId, string tableId, Table resource, PatchTableOptions options = null) =>
+            PatchTable(GetTableReference(projectId, datasetId, tableId), resource, options);
+
+        /// <summary>
+        /// Patches the specified table within this client's project with fields in the given resource.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="PatchTable(TableReference, Table, PatchTableOptions)"/>.
+        /// </summary>
+        /// <remarks>
+        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
+        /// </remarks>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="resource">The table resource representation to use for the patch. Only fields present in the resource will be updated.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The updated table.</returns>
+        public virtual BigQueryTable PatchTable(string datasetId, string tableId, Table resource, PatchTableOptions options = null) =>
+            PatchTable(GetTableReference(datasetId, tableId), resource, options);
+
+        /// <summary>
+        /// Patches the specified table with fields in the given resource.
+        /// </summary>
+        /// <remarks>
+        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
+        /// </remarks>
+        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// <param name="resource">The table resource representation to use for the patch. Only fields present in the resource will be updated.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The updated table.</returns>
+        public virtual BigQueryTable PatchTable(TableReference tableReference, Table resource, PatchTableOptions options = null) =>
+            throw new NotImplementedException();
+
+        /// <summary>
         /// Retrieves a table given a project ID, dataset ID and table ID.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="GetTableAsync(TableReference,GetTableOptions,CancellationToken)"/>.
         /// </summary>
@@ -399,5 +487,105 @@ namespace Google.Cloud.BigQuery.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Asynchronously updates the specified table to match the given resource.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UpdateTableAsync(TableReference, Table, UpdateTableOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <remarks>
+        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
+        /// </remarks>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="resource">The table resource representation to use for the update. All updatable fields will be updated.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the updated table.</returns>
+        public virtual Task<BigQueryTable> UpdateTableAsync(string projectId, string datasetId, string tableId, Table resource, UpdateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            UpdateTableAsync(GetTableReference(projectId, datasetId, tableId), resource, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously updates the specified table within this client's project to match the given resource.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UpdateTableAsync(TableReference, Table, UpdateTableOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <remarks>
+        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
+        /// </remarks>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="resource">The table resource representation to use for the update. All updatable fields will be updated.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the updated table.</returns>
+        public virtual Task<BigQueryTable> UpdateTableAsync(string datasetId, string tableId, Table resource, UpdateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            UpdateTableAsync(GetTableReference(datasetId, tableId), resource, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously updates the specified table to match the given resource.
+        /// </summary>
+        /// <remarks>
+        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
+        /// </remarks>
+        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// <param name="resource">The table resource representation to use for the update. All updatable fields will be updated.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the updated table.</returns>
+        public virtual Task<BigQueryTable> UpdateTableAsync(TableReference tableReference, Table resource, UpdateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            throw new NotImplementedException();
+
+        /// <summary>
+        /// Asynchronously patches the specified table with fields in the given resource.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="PatchTableAsync(TableReference, Table, PatchTableOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <remarks>
+        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
+        /// </remarks>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="resource">The table resource representation to use for the patch. Only fields present in the resource will be updated.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the updated table.</returns>
+        public virtual Task<BigQueryTable> PatchTableAsync(string projectId, string datasetId, string tableId, Table resource, PatchTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            PatchTableAsync(GetTableReference(projectId, datasetId, tableId), resource, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously patches the specified table within this client's project with fields in the given resource.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="PatchTableAsync(TableReference, Table, PatchTableOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <remarks>
+        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
+        /// </remarks>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="resource">The table resource representation to use for the patch. Only fields present in the resource will be updated.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the updated table.</returns>
+        public virtual Task<BigQueryTable> PatchTableAsync(string datasetId, string tableId, Table resource, PatchTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            PatchTableAsync(GetTableReference(datasetId, tableId), resource, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously patches the specified table with fields in the given resource.
+        /// </summary>
+        /// <remarks>
+        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
+        /// </remarks>
+        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// <param name="resource">The table resource representation to use for the patch. Only fields present in the resource will be updated.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the updated table.</returns>
+        public virtual Task<BigQueryTable> PatchTableAsync(TableReference tableReference, Table resource, PatchTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            throw new NotImplementedException();
     }
 }

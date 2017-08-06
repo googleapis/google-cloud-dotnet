@@ -1423,7 +1423,6 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         // TODO: Repeated fields and record types.
 
         // TODO:
-        // Table update/patch
         // Job update/patch
 
         [Fact]
@@ -1537,17 +1536,92 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Equal("Patched dataset", fetched.Resource.FriendlyName);
         }
 
-        // See-also: PatchDataset(string, Dataset, *)
-        // Member: PatchDataset(DatasetReference, Dataset, *)
-        // Member: PatchDataset(string, string, Dataset, *)
-        // See [PatchDataset](ref) for an example using an alternative overload.
+        // See-also: PatchTable(string, Table, *)
+        // Member: PatchTable(TableReference, Table, *)
+        // Member: PatchTable(string, string, Table, *)
+        // See [PatchTable](ref) for an example using an alternative overload.
         // End see-also
 
-        // See-also: PatchDataset(string, Dataset, *)
-        // Member: PatchDatasetAsync(DatasetReference, Dataset, *, *)
-        // Member: PatchDatasetAsync(string, Dataset, *, *)
-        // Member: PatchDatasetAsync(string, string, Dataset, *, *)
-        // See [PatchDataset](ref) for a synchronous example.
+        // See-also: PatchTable(string, Table, *)
+        // Member: PatchTableAsync(TableReference, Table, *, *)
+        // Member: PatchTableAsync(string, Table, *, *)
+        // Member: PatchTableAsync(string, string, Table, *, *)
+        // See [PatchTable](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void UpdateTable()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string tableId = _fixture.GenerateTableId();
+            BigQueryClient.Create(projectId).CreateTable(datasetId, tableId, new TableSchema());
+
+            // Snippet: CreateTable(string,string,*,*)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            BigQueryTable table = client.GetTable(datasetId, tableId);
+            Table resource = table.Resource;
+            resource.FriendlyName = "Updated table";
+
+            // Alternatively, just call table.Update(). In either case,
+            // the etag in the resource will automatically be used for optimistic concurrency.
+            client.UpdateTable(datasetId, tableId, resource);
+
+            // Fetch just to make sure it's really changed...
+            BigQueryTable fetched = client.GetTable(datasetId, tableId);
+            Console.WriteLine($"Fetched table friendly name: {fetched.Resource.FriendlyName}");
+            // End snippet
+
+            Assert.Equal("Updated table", fetched.Resource.FriendlyName);
+        }
+
+        // See-also: UpdateTable(string, string, Table, *)
+        // Member: UpdateTable(TableReference, Table, *)
+        // Member: UpdateTable(string, string, string, Table, *)
+        // See [UpdateTable](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: UpdateTable(string, string, Table, *)
+        // Member: UpdateTableAsync(TableReference, Table, *, *)
+        // Member: UpdateTableAsync(string, string, Table, *, *)
+        // Member: UpdateTableAsync(string, string, string, Table, *, *)
+        // See [UpdateTable](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void PatchTable()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string tableId = _fixture.GenerateTableId();
+            BigQueryClient.Create(projectId).CreateTable(datasetId, tableId, new TableSchema());
+
+            // Snippet: PatchTable(string, string, Table, *)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+
+            // There's no ETag in this Table, so the patch will be applied unconditionally.
+            // If we specified an ETag, the patch would only be applied if it matched.
+            client.PatchTable(datasetId, tableId, new Table { FriendlyName = "Patched table" });
+
+            // Fetch just to make sure it's really changed...
+            BigQueryTable fetched = client.GetTable(datasetId, tableId);
+            Console.WriteLine($"Fetched table friendly name: {fetched.Resource.FriendlyName}");
+            // End snippet
+
+            Assert.Equal("Patched table", fetched.Resource.FriendlyName);
+        }
+
+        // See-also: PatchTable(string, Table, *)
+        // Member: PatchTable(TableReference, Table, *)
+        // Member: PatchTable(string, string, string, Table, *)
+        // See [PatchTable](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: PatchTable(string, string, Table, *)
+        // Member: PatchTableAsync(TableReference, Table, *, *)
+        // Member: PatchTableAsync(string, string, Table, *, *)
+        // Member: PatchTableAsync(string, string, string, Table, *, *)
+        // See [PatchTable](ref) for a synchronous example.
         // End see-also
     }
 }
