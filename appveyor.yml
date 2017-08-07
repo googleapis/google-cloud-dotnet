@@ -47,7 +47,7 @@ test_script:
 # scripts to run after tests
 after_test:
   - bash createcoveragereport.sh
-  - codecov -f "coverage/coverage.xml"
+  - codecov -f "coverage/coverage-filtered.xml"
   - cd docs
   - bash builddocs.sh
   - cd ..
