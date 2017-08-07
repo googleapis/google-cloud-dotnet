@@ -93,8 +93,11 @@ namespace Google.Cloud.Diagnostics.Common
             RetryAttempts = GaxPreconditions.CheckArgumentRange(
                 retryAttempts ?? 0, nameof(retryAttempts), 0, int.MaxValue);
             RetryInterval = retryInterval ?? TimeSpan.Zero;
-            GaxPreconditions.CheckArgument(RetryInterval >= TimeSpan.Zero, nameof(retryInterval),
-                $"{nameof(retryInterval)} must be greater than 0");
+            if (retryType != RetryType.None)
+            {
+                GaxPreconditions.CheckArgument(RetryInterval > TimeSpan.Zero, nameof(retryInterval),
+                    $"{nameof(retryInterval)} must be greater than 0");
+            }
         }
 
         /// <summary>
