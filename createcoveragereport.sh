@@ -38,10 +38,14 @@ $DOTCOVER merge -Source=$(echo coverage/*.dvcr | sed 's/ /;/g') -Output=coverage
 echo "Generating detailed xml report..."
 $DOTCOVER report -Source=coverage/all.dvcr -Output=coverage/coverage.xml -ReportType=DetailedXML ""
 
+# We assume the tools solution has already been restored as part of the build
+echo "Filtering xml report..."
+dotnet run -p tools/Google.Cloud.Tools.TrimCoverageReport/Google.Cloud.Tools.TrimCoverageReport.csproj -- coverage/coverage.xml coverage/coverage-filtered.xml
+
 echo "Running ReportGenerator to create an html report..."
 
 $REPORTGENERATOR \
-   -reports:coverage/coverage.xml \
+   -reports:coverage/coverage-filtered.xml \
    -targetdir:coverage/report \
    -verbosity:Error
 
