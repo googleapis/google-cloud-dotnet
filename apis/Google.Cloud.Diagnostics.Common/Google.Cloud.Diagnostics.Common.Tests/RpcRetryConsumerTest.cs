@@ -208,7 +208,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         /// </summary>
         private class FakeSequentialThreadingTimer : ISequentialThreadingTimer
         {
-            internal Action Callback = null;
+            internal Action Callback { get; private set; }
 
             public void Initialize(Action callback, TimeSpan waitTime) => Callback = callback;
 
