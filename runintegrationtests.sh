@@ -1,10 +1,12 @@
 #!/bin/bash
 
-# Assumption: everything has been built already.
+# Assumption: everything has been built already, and if you're asking for
+# coverage, you've already installed the relevant package.
 
 set -e
 
 CONTINUE_ARG=
+COVERAGE_ARG=
 
 for arg in "$@"
 do
@@ -13,8 +15,8 @@ do
     CONTINUE_ARG=yes
     ;;
   --coverage)
-    OPENCOVER=$PWD/packages/OpenCover.4.6.519/tools/OpenCover.Console.exe
-    REPORTGENERATOR=$PWD/packages/ReportGenerator.2.4.5.0/tools/ReportGenerator.exe
+    DOTCOVER=$PWD/packages/JetBrains.dotCover.CommandLineTools.2017.1.20170613.162720/tools/dotCover.exe
+    COVERAGE_ARG=yes
     ;;
   *)
     echo "Unknown argument: $arg. Supported arguments: --coverage --continue"
@@ -22,7 +24,6 @@ do
     ;;
   esac
 done
-
 
 PROGRESS_FILE=`realpath integrationprogress.txt`
 FIND=/usr/bin/find
@@ -41,22 +42,15 @@ do
   elif echo "$testdir" | grep --quiet -F -f $PROGRESS_FILE
   then
     echo "Skipping $testdir; test already run"
-  elif [ -n "$OPENCOVER" ]
+  elif [[ "$COVERAGE_ARG" == "yes" && -f "$testdir/coverage.xml" ]]
   then
-    # TODO: When coverage is working again, use it. No point in
-    # having a non-working version here yet...
-    echo "Coverage not yet supported in .NET Core SDK 1.0.0...."
-    exit 1
+    pushd "$testdir"
+    echo "Running coverage for $testdir"
+    $DOTCOVER cover "coverage.xml" /ReturnTargetExitCode
+    popd
+    echo "$testdir" >> $PROGRESS_FILE
   else
     dotnet test -c Release --no-build -f netcoreapp1.0 $DOTNET_TEST_ARGS $testdir/*.csproj
     echo "$testdir" >> $PROGRESS_FILE
   fi
 done
-
-if [ -n "$OPENCOVER" -a -n "REPORTGENERATOR" ]
-then
-  $REPORTGENERATOR \
-    -reports:../coverage/coverage.xml \
-    -targetdir:../coverage \
-    -verbosity:Error
-fi
