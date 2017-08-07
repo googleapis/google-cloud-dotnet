@@ -35,19 +35,19 @@ build_script:
   - echo "Regenerating projects: if this fails, run generateprojects.sh and commit changes"
   - generateprojects.sh && git diff --exit-code
   - bash build.sh --notests
-  - cd docs
-  - bash builddocs.sh
-  - cd ..
 
 # scripts to run before tests
 before_test:
   - choco install codecov
 
+# run the tests with coverage
+test_script:
+  - bash runcoverage.sh
+  
 # scripts to run after tests
 after_test:
   - bash createcoveragereport.sh
   - codecov -f "coverage/coverage.xml"
-
-# to run your custom scripts instead of automatic tests
-test_script:
-  - bash runcoverage.sh
+  - cd docs
+  - bash builddocs.sh
+  - cd ..

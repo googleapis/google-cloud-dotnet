@@ -10,6 +10,10 @@
 # only to be executed on Windows, and only after build.sh
 # has been run (so we already have an AllTests.txt file).
 
+# Disable automatic test reporting to AppVeyor.
+# See https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1232
+unset APPVEYOR_API_URL
+
 # Use an appropriate version of nuget... preferring
 # first an existing NUGET variable, then NuGet, then
 # just falling back to the path.
