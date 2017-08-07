@@ -78,6 +78,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var threads = Enumerable.Range(0, 10)
                 .Select(_ => new Thread(() =>
                 {
+                    Console.WriteLine($"Starting thread {_} at {DateTime.UtcNow:HH:mm:ss.fff}");
                     DateTime lastLog = DateTime.UtcNow;
                     while (DateTime.UtcNow < end)
                     {
@@ -101,6 +102,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             // Start the threads and wait for them all to finish
             threads.ForEach(t => t.Start());
+            Console.WriteLine($"Start() loop finished at {DateTime.UtcNow:HH:mm:ss.fff}");
             threads.ForEach(t => t.Join());
             Console.WriteLine($"Finished at {DateTime.UtcNow:HH:mm:ss.fff}");
 
