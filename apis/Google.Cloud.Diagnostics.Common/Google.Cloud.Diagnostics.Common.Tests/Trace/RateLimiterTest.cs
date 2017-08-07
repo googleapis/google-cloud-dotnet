@@ -78,11 +78,17 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var threads = Enumerable.Range(0, 10)
                 .Select(_ => new Thread(() =>
                 {
+                    DateTime lastLog = DateTime.UtcNow;
                     while (DateTime.UtcNow < end)
                     {
                         if (_ == 0)
                         {
-                            Console.WriteLine($"Trying at {DateTime.UtcNow:HH:mm:ss.fff}");
+                            DateTime now = DateTime.UtcNow;
+                            if ((now - lastLog).TotalMilliseconds > 100)
+                            {
+                                Console.WriteLine($"Trying at {DateTime.UtcNow:HH:mm:ss.fff}");
+                                lastLog = now;
+                            }
                         }
                         if (rateLimiter.CanTrace())
                         {
