@@ -30,7 +30,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
     {
         private readonly Lazy<Task> _creationTask;
 
-        public string TestInstanceName => "spannerinstance";
+        public string TestInstanceName => "spannerintegration";
 
         public string TestProjectName => Environment.GetEnvironmentVariable("TEST_PROJECT") ?? "cloud-sharp-jenkins";
 
