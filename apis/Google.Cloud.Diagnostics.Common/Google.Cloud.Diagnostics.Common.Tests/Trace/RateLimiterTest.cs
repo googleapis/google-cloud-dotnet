@@ -65,7 +65,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             Assert.True(rateLimiter.CanTrace());
         }
 
-        [Fact(Skip = "See issue 610")]
+        [Fact]
         public void CanTrace_StressTest()
         {
             // Create a rate limiter that allows .5 QPS
@@ -79,6 +79,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 {
                     while (DateTime.UtcNow < end)
                     {
+                        // Avoid completely tight-looping, so that we can actually start enough threads.
+                        // (Note that Thread.Yield isn't available on .NET Core.)
+                        Thread.Sleep(1);
                         if (rateLimiter.CanTrace())
                         {
                             Interlocked.Increment(ref canTraceCounter);
