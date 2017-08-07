@@ -48,6 +48,6 @@ test_script:
 after_test:
   - bash createcoveragereport.sh
   - codecov -f "coverage/coverage.xml"
-  - cd docs
-  - bash builddocs.sh
-  - cd ..
+  - #cd docs
+  - #bash builddocs.sh
+  - #cd ..
