@@ -2,6 +2,13 @@
 <CoverageParams>
   <TargetExecutable>/Program Files/dotnet/dotnet.exe</TargetExecutable>
   <TargetArguments>test --no-build -f netcoreapp1.0 -c Release</TargetArguments>
+  <Filters>
+    <IncludeFilters>
+      <FilterEntry>
+        <ModuleMask>Google.Cloud.Diagnostics.AspNetCore</ModuleMask>
+      </FilterEntry>
+    </IncludeFilters>
+  </Filters>
   <AttributeFilters>
     <AttributeFilterEntry>System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute</AttributeFilterEntry>
     <AttributeFilterEntry>System.Diagnostics.DebuggerNonUserCodeAttribute</AttributeFilterEntry>
