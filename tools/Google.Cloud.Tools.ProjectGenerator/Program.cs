@@ -240,7 +240,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                     break;
                 case "grpc":
                     dependencies.Add("Google.Api.Gax.Grpc", DefaultVersionValue);
-                    dependencies.Add("Grpc.Core", GrpcVersion);
+                    dependencies.Add("Grpc.Core", DefaultVersionValue);
                     targetFrameworks = targetFrameworks ?? DefaultGrpcTargetFrameworks;
                     break;
             }
