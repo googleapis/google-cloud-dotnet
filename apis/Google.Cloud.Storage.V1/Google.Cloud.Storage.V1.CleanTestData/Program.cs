@@ -63,6 +63,6 @@ namespace Google.Storage.V2.CleanTestData
         }
 
         private static bool IsTestBucket(string name) =>
-            name.StartsWith("tests-") || name.StartsWith("snippets-");
+            name.StartsWith("tests-") || name.StartsWith("snippets-") || name.StartsWith("bigquerysnippets-");
     }
 }
