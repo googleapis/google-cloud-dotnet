@@ -20,6 +20,7 @@ GA:
 - [Google.Cloud.Logging.V2](Google.Cloud.Logging.V2/index.html)
   - Additionally, a [separate Log4Net integration package is available](Google.Cloud.Logging.Log4Net/index.html)
 - [Google.Cloud.Storage.V1](Google.Cloud.Storage.V1/index.html)
+- [Google.Cloud.Trace.V1](Google.Cloud.Trace.V1/index.html)
 - [Google.Cloud.Translation.V2](Google.Cloud.Translation.V2/index.html)
 
 Late beta:
@@ -37,7 +38,6 @@ Beta:
 - [Google.Cloud.ErrorReporting.V1Beta1](Google.Cloud.ErrorReporting.V1Beta1/index.html)
 - [Google.Cloud.Monitoring.V3](Google.Cloud.Monitoring.V3/index.html)
 - [Google.Cloud.PubSub.V1](Google.Cloud.PubSub.V1/index.html)
-- [Google.Cloud.Trace.V1](Google.Cloud.Trace.V1/index.html)
 - Google Cloud Spanner:
   - [Google.Cloud.Spanner.Data](Google.Cloud.Spanner.Data/index.html): ADO.NET provider for Google Cloud Spanner (recommended)
   - [Google.Cloud.Spanner.V1](Google.Cloud.Spanner.V1/index.html): Low-level access to Spanner API
