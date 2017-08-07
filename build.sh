@@ -36,7 +36,7 @@ done
 
 if [ ${#apis[@]} -eq 0 ]
 then
-  apis="tools $(echo apis/Google.* | sed 's/apis\///g')"
+  apis="tools $(echo apis/Google.Cloud.Diagnos* | sed 's/apis\///g')"
 fi
 
 # First build up a solution file with all the projects, and a text
