@@ -143,7 +143,7 @@
     "tags": [ "Error", "Reporting", "Stackdriver", "ExceptionLogger", "Trace", "Diagnostics" ],
     "dependencies": {
       "Google.Cloud.Logging.V2": "2.0.0",
-      "Google.Cloud.Trace.V1": "1.0.0-beta07",
+      "Google.Cloud.Trace.V1": "1.0.0",
       "Grpc.Core": "default"
     },
     "testDependencies": {
