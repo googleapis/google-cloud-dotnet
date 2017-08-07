@@ -36,7 +36,7 @@ done
 
 if [ ${#apis[@]} -eq 0 ]
 then
-  apis="tools $(echo apis/Google.Cloud.Diagnos* | sed 's/apis\///g')"
+  apis="tools $(echo apis/Google.* | sed 's/apis\///g')"
 fi
 
 # First build up a solution file with all the projects, and a text
@@ -90,7 +90,7 @@ echo "$(date +%T) Building solution"
 dotnet build -c Release AllProjects.sln
 
 # Only test common diagnostics...
-echo apis/Google.Cloud.Diagnostics.Common/Google.Cloud.Diagnostics.Common.Tests/Google.Cloud.Diagnostics.Common.Tests.csproj > AllTests.txt
+# echo apis/Google.Cloud.Diagnostics.Common/Google.Cloud.Diagnostics.Common.Tests/Google.Cloud.Diagnostics.Common.Tests.csproj > AllTests.txt
 
 if [[ "$runtests" = true ]]
 then
