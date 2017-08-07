@@ -148,12 +148,10 @@ namespace Google.Cloud.Tools.ProjectGenerator
                         GenerateMainProject(api, dir, apiNames);
                         break;
                     case ".IntegrationTests":
+                    case ".Snippets":
                     case ".Tests":
                         GenerateTestProject(api, dir, apiNames);
                         GenerateCoverageFile(api, dir);
-                        break;
-                    case ".Snippets":
-                        GenerateTestProject(api, dir, apiNames);
                         break;
                 }
             }
