@@ -80,6 +80,10 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 {
                     while (DateTime.UtcNow < end)
                     {
+                        if (_ == 0)
+                        {
+                            Console.WriteLine($"Trying at {DateTime.UtcNow:HH:mm:ss.fff}");
+                        }
                         if (rateLimiter.CanTrace())
                         {
                             Console.WriteLine($"Incrementing at {DateTime.UtcNow:HH:mm:ss.fff}");
