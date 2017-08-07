@@ -65,13 +65,14 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             Assert.True(rateLimiter.CanTrace());
         }
 
-        [Fact(Skip = "See issue 610")]
+        [Fact]
         public void CanTrace_StressTest()
         {
             // Create a rate limiter that allows .5 QPS
             var rateLimiter = new RateLimiter(.5, StopwatchTimer.Create());
             int canTraceCounter = 0;
             DateTime start = DateTime.UtcNow;
+            Console.WriteLine($"Starting at {start:HH:mm:ss.fff}");
             DateTime end = start.AddSeconds(5.5);
             // Create 10 threads to run for a little over two seconds.
             var threads = Enumerable.Range(0, 10)
@@ -81,6 +82,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                     {
                         if (rateLimiter.CanTrace())
                         {
+                            Console.WriteLine($"Incrementing at {DateTime.UtcNow:HH:mm:ss.fff}");
                             Interlocked.Increment(ref canTraceCounter);
                         }
                     }
@@ -90,6 +92,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             // Start the threads and wait for them all to finish
             threads.ForEach(t => t.Start());
             threads.ForEach(t => t.Join());
+            Console.WriteLine($"Finished at {DateTime.UtcNow:HH:mm:ss.fff}");
 
             // We should have exactly 3 traces: one at t~=0, one at t~=2, one at t~=4.
             // (The test machine would have to be very highly loaded to take half a second between

@@ -89,6 +89,9 @@ dotnet restore AllProjects.sln
 echo "$(date +%T) Building solution"
 dotnet build -c Release AllProjects.sln
 
+# Only test common diagnostics...
+echo apis/Google.Cloud.Diagnostics.Common/Google.Cloud.Diagnostics.Common.Tests/Google.Cloud.Diagnostics.Common.Tests.csproj > AllTests.txt
+
 if [[ "$runtests" = true ]]
 then
   # Could use xargs, but this is more flexible
@@ -98,3 +101,4 @@ then
     dotnet test -c Release $testproject
   done < AllTests.txt
 fi
+
