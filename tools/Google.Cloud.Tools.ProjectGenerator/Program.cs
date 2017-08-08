@@ -339,9 +339,14 @@ namespace Google.Cloud.Tools.ProjectGenerator
             var targetExecutable = new XElement("TargetExecutable", "/Program Files/dotnet/dotnet.exe");
             var targetArguments = new XElement("TargetArguments",
                 $"test --no-build -f {GetPreferredCoverageFramework(api)} -c Release");
-            // TODO: Some APIs integration tests naturally contribute to others, but it's good to always have
-            // at least one filter, to avoid displaying coverage to test code etc.
-            var filters = new XElement("Filters", new XElement("IncludeFilters", new XElement("FilterEntry", new XElement("ModuleMask", api.Id))));
+            var filters = new XElement("Filters", new XElement("IncludeFilters",
+                new XElement("FilterEntry", new XElement("ModuleMask", api.Id)),
+                // Allow tests to contribute coverage to project dependencies, but not package dependencies
+                // (as the latter will be covering code we're not reporting on).
+                api.Dependencies
+                    .Where(dep => dep.Value == ProjectVersionValue)
+                    .Select(dep => new XElement("FilterEntry", new XElement("ModuleMask", dep.Key)))
+                ));
             var attributeFilters = new XElement("AttributeFilters",
                 new XElement("AttributeFilterEntry",
                     "System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute"),
