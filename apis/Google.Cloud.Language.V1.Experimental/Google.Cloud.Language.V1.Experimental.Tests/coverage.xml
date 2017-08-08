@@ -7,6 +7,9 @@
       <FilterEntry>
         <ModuleMask>Google.Cloud.Language.V1.Experimental</ModuleMask>
       </FilterEntry>
+      <FilterEntry>
+        <ModuleMask>Google.LongRunning</ModuleMask>
+      </FilterEntry>
     </IncludeFilters>
   </Filters>
   <AttributeFilters>

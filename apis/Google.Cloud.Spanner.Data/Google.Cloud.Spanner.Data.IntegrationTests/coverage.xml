@@ -7,6 +7,15 @@
       <FilterEntry>
         <ModuleMask>Google.Cloud.Spanner.Data</ModuleMask>
       </FilterEntry>
+      <FilterEntry>
+        <ModuleMask>Google.Cloud.Spanner.V1</ModuleMask>
+      </FilterEntry>
+      <FilterEntry>
+        <ModuleMask>Google.Cloud.Spanner.Admin.Database.V1</ModuleMask>
+      </FilterEntry>
+      <FilterEntry>
+        <ModuleMask>Google.Cloud.Spanner.Admin.Instance.V1</ModuleMask>
+      </FilterEntry>
     </IncludeFilters>
   </Filters>
   <AttributeFilters>
