@@ -1,10 +1,9 @@
 #!/bin/bash
 
-# We use dotcover instead of OpenCover.
-# OpenCover doesn't support portable pdbs, and we don't
-# really want to go back to full pdbs.
-# See https://github.com/OpenCover/opencover/issues/601
-# for current status.
+# We use the dotCover CLI for coverage.
+# Other options considered include OpenCover, but that doesn't support portable PDBs.
+# See https://github.com/OpenCover/opencover/issues/601 for current status of OpenCover,
+# although now dotCover is working, we probably won't change back.
 
 # Run unit tests with coverage. We expect this script
 # only to be executed on Windows, and only after build.sh
@@ -28,10 +27,13 @@ then
 fi
 set -e
 
-$NUGET install -Verbosity quiet -OutputDirectory packages -Version 2017.1.20170613.162720 JetBrains.dotCover.CommandLineTools
+declare -r DOTCOVER_VERSION=2017.1.20170613.162720 
+declare -r REPORTGENERATOR_VERSION=2.4.5.0
 
-DOTCOVER=$PWD/packages/JetBrains.dotCover.CommandLineTools.2017.1.20170613.162720/tools/dotCover.exe
-REPORTGENERATOR=$PWD/packages/ReportGenerator.2.4.5.0/tools/ReportGenerator.exe
+$NUGET install -Verbosity quiet -OutputDirectory packages -Version $DOTCOVER_VERSION JetBrains.dotCover.CommandLineTools
+
+DOTCOVER=$PWD/packages/JetBrains.dotCover.CommandLineTools.$DOTCOVER_VERSION/tools/dotCover.exe
+REPORTGENERATOR=$PWD/packages/ReportGenerator.$REPORTGENERATOR_VERSION/tools/ReportGenerator.exe
 FIND=/usr/bin/find
 
 if [ ! -d coverage ]
