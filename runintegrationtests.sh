@@ -4,6 +4,7 @@
 # coverage, you've already installed the relevant package.
 
 set -e
+source toolversions.sh
 
 CONTINUE_ARG=
 COVERAGE_ARG=
@@ -15,7 +16,7 @@ do
     CONTINUE_ARG=yes
     ;;
   --coverage)
-    DOTCOVER=$PWD/packages/JetBrains.dotCover.CommandLineTools.2017.1.20170613.162720/tools/dotCover.exe
+    install_dotcover
     COVERAGE_ARG=yes
     ;;
   *)
@@ -26,7 +27,6 @@ do
 done
 
 PROGRESS_FILE=`realpath integrationprogress.txt`
-FIND=/usr/bin/find
 
 [[ "$CONTINUE_ARG" == "yes" ]] || rm -f $PROGRESS_FILE
 touch $PROGRESS_FILE

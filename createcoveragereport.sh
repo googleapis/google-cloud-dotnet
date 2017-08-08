@@ -1,29 +1,10 @@
 #!/bin/bash
 
-# This script merges all coverage files found under the 'coverage' directory
-# and then creates a dotcover XML report and from that creates a browsable
-# ReportGenerator html report.
-
-# Use an appropriate version of nuget... preferring
-# first an existing NUGET variable, then NuGet, then
-# just falling back to the path.
-if [ -z "$NUGET" ]
-then
-  if [ -n "$NuGet" ]
-  then
-    NUGET="$NuGet"
-  else
-    NUGET="nuget"
-  fi
-fi
 set -e
+source toolversions.sh
 
-$NUGET install -Verbosity quiet -OutputDirectory packages -Version 2017.1.20170613.162720 JetBrains.dotCover.CommandLineTools
-$NUGET install -Verbosity quiet -OutputDirectory packages -Version 2.4.5.0 ReportGenerator
-
-DOTCOVER=$PWD/packages/JetBrains.dotCover.CommandLineTools.2017.1.20170613.162720/tools/dotCover.exe
-REPORTGENERATOR=$PWD/packages/ReportGenerator.2.4.5.0/tools/ReportGenerator.exe
-FIND=/usr/bin/find
+install_dotcover
+install_reportgenerator
 
 if [ ! -d coverage ]
 then

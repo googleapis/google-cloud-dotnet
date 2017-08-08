@@ -2,6 +2,9 @@
 
 set -e
 
+# TODO: Use toolversions.sh
+# This script needs to work on Linux machines without nuget, unlike other scripts...
+
 # TODO: Use some appropriate way of determining OS. Ideally, shouldn't need dotnet installed.
 #[[ $(dotnet --info | grep "OS Platform" | grep -c Windows) -ne 0 ]] && OS=windows || OS=linux
 OS=linux
