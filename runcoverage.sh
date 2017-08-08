@@ -1,5 +1,10 @@
 #!/bin/bash
 
+set -e
+
+source toolversions.sh
+install_dotcover
+
 # We use the dotCover CLI for coverage.
 # Other options considered include OpenCover, but that doesn't support portable PDBs.
 # See https://github.com/OpenCover/opencover/issues/601 for current status of OpenCover,
@@ -12,29 +17,6 @@
 # Disable automatic test reporting to AppVeyor.
 # See https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1232
 unset APPVEYOR_API_URL
-
-# Use an appropriate version of nuget... preferring
-# first an existing NUGET variable, then NuGet, then
-# just falling back to the path.
-if [ -z "$NUGET" ]
-then
-  if [ -n "$NuGet" ]
-  then
-    NUGET="$NuGet"
-  else
-    NUGET="nuget"
-  fi
-fi
-set -e
-
-declare -r DOTCOVER_VERSION=2017.1.20170613.162720 
-declare -r REPORTGENERATOR_VERSION=2.4.5.0
-
-$NUGET install -Verbosity quiet -OutputDirectory packages -Version $DOTCOVER_VERSION JetBrains.dotCover.CommandLineTools
-
-DOTCOVER=$PWD/packages/JetBrains.dotCover.CommandLineTools.$DOTCOVER_VERSION/tools/dotCover.exe
-REPORTGENERATOR=$PWD/packages/ReportGenerator.$REPORTGENERATOR_VERSION/tools/ReportGenerator.exe
-FIND=/usr/bin/find
 
 if [ ! -d coverage ]
 then
@@ -56,4 +38,3 @@ do
 
   popd
 done < AllTests.txt
-

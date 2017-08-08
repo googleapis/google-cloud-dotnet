@@ -1,6 +1,9 @@
 #!/bin/bash
 
 set -e
+source ../toolversions.sh
+
+install_docfx
 
 build_api_docs() {
   echo "$(date +%T) Building docs for $1"
@@ -15,7 +18,7 @@ build_api_docs() {
     dotnet run -p ../tools/Google.Cloud.Tools.GenerateDocfxSources/*.csproj -- $api
   fi
   cp filterConfig.yml output/$api
-  docfx metadata -f output/$api/docfx.json | tee errors.txt
+  $DOCFX metadata -f output/$api/docfx.json | tee errors.txt
   (! grep --quiet 'Build failed.' errors.txt)
   dotnet run -p ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown/*.csproj -- $api
   
@@ -26,7 +29,7 @@ build_api_docs() {
     cat dependencies/api/$dep/toc >> output/$api/obj/api/toc.yml
   done
   
-  docfx build output/$api/docfx.json | tee errors.txt
+  $DOCFX build output/$api/docfx.json | tee errors.txt
   (! grep --quiet 'Build failed.' errors.txt)
 
   # Special case root: that should end up in the root of the assembled
@@ -42,7 +45,6 @@ build_api_docs() {
   fi
   echo Finished building docs for $api
 }
-
 
 if [[ ! -d "dependencies" ]]
 then
