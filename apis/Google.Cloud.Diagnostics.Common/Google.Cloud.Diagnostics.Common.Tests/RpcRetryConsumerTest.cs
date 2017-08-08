@@ -64,8 +64,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 Assert.Throws<RpcException>(() => { retryConsumer.Receive(intArray); });
 
                 mockConsumer.Verify(c => c.Receive(intArray), Times.Once);
-                timer.Call();
-                mockConsumer.Verify(c => c.Receive(intArray), Times.Once);
+                Assert.Null(timer.Callback);
             }, RetryOptions.NoRetry(ExceptionHandling.Propagate));
         }
 
@@ -78,8 +77,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 retryConsumer.Receive(intArray);
 
                 mockConsumer.Verify(c => c.Receive(intArray), Times.Once);
-                timer.Call();
-                mockConsumer.Verify(c => c.Receive(intArray), Times.Once);
+                Assert.Null(timer.Callback);
             }, RetryOptions.NoRetry());
         }
 
@@ -210,11 +208,11 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         /// </summary>
         private class FakeSequentialThreadingTimer : ISequentialThreadingTimer
         {
-            private Action _callback;
+            internal Action Callback { get; private set; }
 
-            public void Initialize(Action callback, TimeSpan waitTime) => _callback = callback;
+            public void Initialize(Action callback, TimeSpan waitTime) => Callback = callback;
 
-            public void Call() => _callback();
+            public void Call() => Callback();
 
             public void Dispose() { }
         }

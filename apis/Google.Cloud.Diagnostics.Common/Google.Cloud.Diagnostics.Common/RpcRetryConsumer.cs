@@ -72,7 +72,10 @@ namespace Google.Cloud.Diagnostics.Common
             _timerFactory = GaxPreconditions.CheckNotNull(timerFactory, nameof(timerFactory));
 
             // Start the background timer that will retry failed requests.
-            _timer = _timerFactory(FlushBuffer, _options);
+            if (options.RetryType != RetryType.None)
+            {
+                _timer = _timerFactory(FlushBuffer, _options);
+            }
         }
 
         /// <inheritdoc />

@@ -52,8 +52,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             RetryOptions.Retry(retryAttempts: 0);
             Assert.Throws<ArgumentOutOfRangeException>(() => RetryOptions.Retry(retryAttempts: -1));
 
-            RetryOptions.Retry(retryInterval: TimeSpan.Zero);
-            Assert.Throws<ArgumentException>(() => RetryOptions.Retry(retryInterval: TimeSpan.FromSeconds(-1)));
+            RetryOptions.Retry(retryInterval: TimeSpan.FromMilliseconds(1));
+            Assert.Throws<ArgumentException>(() => RetryOptions.Retry(retryInterval: TimeSpan.Zero));
         }
     }
 }
