@@ -1536,16 +1536,16 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Equal("Patched dataset", fetched.Resource.FriendlyName);
         }
 
-        // See-also: PatchTable(string, Table, *)
+        // See-also: PatchTable(string, string, Table, *)
         // Member: PatchTable(TableReference, Table, *)
-        // Member: PatchTable(string, string, Table, *)
+        // Member: PatchTable(string, string, string, Table, *)
         // See [PatchTable](ref) for an example using an alternative overload.
         // End see-also
 
-        // See-also: PatchTable(string, Table, *)
+        // See-also: PatchTable(string, string, Table, *)
         // Member: PatchTableAsync(TableReference, Table, *, *)
-        // Member: PatchTableAsync(string, Table, *, *)
         // Member: PatchTableAsync(string, string, Table, *, *)
+        // Member: PatchTableAsync(string, string, string, Table, *, *)
         // See [PatchTable](ref) for a synchronous example.
         // End see-also
 
@@ -1557,7 +1557,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string tableId = _fixture.GenerateTableId();
             BigQueryClient.Create(projectId).CreateTable(datasetId, tableId, new TableSchema());
 
-            // Snippet: CreateTable(string,string,*,*)
+            // Snippet: UpdateTable(string,string,*,*)
             BigQueryClient client = BigQueryClient.Create(projectId);
             BigQueryTable table = client.GetTable(datasetId, tableId);
             Table resource = table.Resource;
@@ -1611,7 +1611,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Equal("Patched table", fetched.Resource.FriendlyName);
         }
 
-        // See-also: PatchTable(string, Table, *)
+        // See-also: PatchTable(string, string, Table, *)
         // Member: PatchTable(TableReference, Table, *)
         // Member: PatchTable(string, string, string, Table, *)
         // See [PatchTable](ref) for an example using an alternative overload.
