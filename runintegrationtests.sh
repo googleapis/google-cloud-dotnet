@@ -33,10 +33,9 @@ touch $PROGRESS_FILE
 
 cd apis
 
-# Only run them for Core, for simplicity.
 for testdir in */*.IntegrationTests */*.Snippets
 do
-  if [[ "$testdir" =~ (Metadata|AspNet|Log4Net) ]]
+  if [[ "$testdir" =~ Metadata ]]
   then
     echo "Skipping $testdir; test not supported yet."
   elif echo "$testdir" | grep --quiet -F -f $PROGRESS_FILE
@@ -44,13 +43,16 @@ do
     echo "Skipping $testdir; test already run"
   elif [[ "$COVERAGE_ARG" == "yes" && -f "$testdir/coverage.xml" ]]
   then
-    pushd "$testdir"
     echo "Running coverage for $testdir"
-    $DOTCOVER cover "coverage.xml" /ReturnTargetExitCode
-    popd
+    (cd $testdir; $DOTCOVER cover "coverage.xml" /ReturnTargetExitCode)
     echo "$testdir" >> $PROGRESS_FILE
   else
-    dotnet test -c Release --no-build -f netcoreapp1.0 $DOTNET_TEST_ARGS $testdir/*.csproj
+    # For a non-coverage run, just run dotnet with the same arugments that we would have run
+    # for coverage.
+    (cd $testdir;
+     dotnetargs=$(grep TargetArguments coverage.xml | sed -E 's/<\/?TargetArguments>//g');
+     dotnet $dotnetargs)
+    
     echo "$testdir" >> $PROGRESS_FILE
   fi
 done
