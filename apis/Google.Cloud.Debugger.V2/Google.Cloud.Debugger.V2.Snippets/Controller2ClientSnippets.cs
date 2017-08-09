@@ -35,7 +35,6 @@ namespace Google.Cloud.Debugger.V2.Snippets
             string description = "module - version";
             string uniquifier = "uniquifier";
             // Sample: RegisterDebuggee
-            // Additional: RegisterDebuggee(*,*)
             Controller2Client client = Controller2Client.Create();
             Debuggee debuggee = new Debuggee
             {
