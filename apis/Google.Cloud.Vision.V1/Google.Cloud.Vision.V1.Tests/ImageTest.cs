@@ -20,6 +20,10 @@ namespace Google.Cloud.Vision.V1.Tests
 {
     public class ImageTest
     {
+        // Very unlikely this icon will change...
+        private const string IconUri = "https://cloud.google.com/images/devtools-icon-64x64.png";
+        private const int IconContentSize = 1776;
+
         [Fact]
         public void FromUri_String()
         {
@@ -61,6 +65,78 @@ namespace Google.Cloud.Vision.V1.Tests
             var data = new byte[] { 0, 0, 1, 2, 3, 0, 0 };
             var image = Image.FromBytes(data, 2, 3);
             Assert.Equal(new byte[] { 1, 2, 3 }, image.Content.ToByteArray());
+        }
+
+        [Fact]
+        public void FromFile()
+        {
+            using (var tempFile = TempFile.Generate(500))
+            {
+                var image = Image.FromFile(tempFile.Name);
+                Assert.Equal(tempFile.Bytes, image.Content.ToByteArray());
+            }
+        }
+
+        [Fact]
+        public async Task FromFileAsync()
+        {
+            using (var tempFile = TempFile.Generate(500))
+            {
+                var image = await Image.FromFileAsync(tempFile.Name);
+                Assert.Equal(tempFile.Bytes, image.Content.ToByteArray());
+            }
+        }
+
+        [Fact]
+        public void FetchFromUri_String()
+        {
+            var image = Image.FetchFromUri(IconUri);
+            Assert.Equal(IconContentSize, image.Content.Length);
+        }
+
+        [Fact]
+        public void FetchFromUri_Uri()
+        {
+            var image = Image.FetchFromUri(new Uri(IconUri));
+            Assert.Equal(IconContentSize, image.Content.Length);
+        }
+
+        [Fact]
+        public async Task FetchFromUriAsync_String()
+        {
+            var image = await Image.FetchFromUriAsync(IconUri);
+            Assert.Equal(IconContentSize, image.Content.Length);
+        }
+
+        [Fact]
+        public async Task FetchFromUriAsync_Uri()
+        {
+            var image = await Image.FetchFromUriAsync(new Uri(IconUri));
+            Assert.Equal(IconContentSize, image.Content.Length);
+        }
+
+        private class TempFile : IDisposable
+        {
+            public string Name { get; }
+            public byte[] Bytes { get; }
+
+            private TempFile(string name, byte[] bytes)
+            {
+                Name = name;
+                Bytes = bytes;
+            }
+
+            public static TempFile Generate(int byteCount)
+            {
+                Random rng = new Random();
+                var bytes = new byte[byteCount];
+                rng.NextBytes(bytes);
+                string name = Path.GetTempFileName();
+                File.WriteAllBytes(name, bytes);
+                return new TempFile(name, bytes);
+            }
+
+            public void Dispose() => File.Delete(Name);
         }
     }
 }
