@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Google.Cloud.Debugger.V2
+   | Google.Cloud.Debugger.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Google.Cloud.Debugger.V2
+   | Google.Cloud.Debugger.V2 ">
+    <meta name="generator" content="docfx 2.21.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Debugger.V2">
+  
+  <h1 id="Google_Cloud_Debugger_V2" data-uid="Google.Cloud.Debugger.V2" class="text-break">Namespace Google.Cloud.Debugger.V2
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.Breakpoint.html">Breakpoint</a></h4>
+      <section><p>Represents the breakpoint specification, status and results.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.Breakpoint.Types.html">Breakpoint.Types</a></h4>
+      <section><p>Container for nested types declared in the Breakpoint message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.Controller2.html">Controller2</a></h4>
+      <section><p>The Controller service provides the API for orchestrating a collection of
+debugger agents to perform debugging tasks. These agents are each attached
+to a process of an application which may include one or more replicas.</p>
+<p>The debugger agents register with the Controller to identify the application
+being debugged, the Debuggee. All agents that register with the same data,
+represent the same Debuggee, and are assigned the same <code>debuggee_id</code>.</p>
+<p>The debugger agents call the Controller to retrieve  the list of active
+Breakpoints. Agents with the same <code>debuggee_id</code> get the same breakpoints
+list. An agent that can fulfill the breakpoint request updates the
+Controller with the breakpoint result. The controller selects the first
+result received and discards the rest of the results.
+Agents that poll again for active breakpoints will no longer have
+the completed breakpoint in the list and should remove that breakpoint from
+their attached process.</p>
+<p>The Controller service does not provide a way to retrieve the results of
+a completed breakpoint. This functionality is available using the Debugger
+service.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.Controller2.Controller2Base.html">Controller2.Controller2Base</a></h4>
+      <section><p>Base class for server-side implementations of Controller2</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.Controller2.Controller2Client.html">Controller2.Controller2Client</a></h4>
+      <section><p>Client for Controller2</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html">Controller2Client</a></h4>
+      <section><p>Controller2 client wrapper, for convenient use.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.Controller2ClientImpl.html">Controller2ClientImpl</a></h4>
+      <section><p>Controller2 client wrapper implementation, for convenient use.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.Controller2Settings.html">Controller2Settings</a></h4>
+      <section><p>Settings for a <a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html">Controller2Client</a>.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.Debuggee.html">Debuggee</a></h4>
+      <section><p>Represents the debugged application. The application may include one or more
+replicated processes executing the same code. Each of these processes is
+attached with a debugger agent, carrying out the debugging commands.
+Agents attached to the same debuggee identify themselves as such by using
+exactly the same Debuggee message value when registering.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.Debugger2.html">Debugger2</a></h4>
+      <section><p>The Debugger service provides the API that allows users to collect run-time
+information from a running application, without stopping or slowing it down
+and without modifying its state.  An application may include one or
+more replicated processes performing the same work.</p>
+<p>A debugged application is represented using the Debuggee concept. The
+Debugger service provides a way to query for available debuggees, but does
+not provide a way to create one.  A debuggee is created using the Controller
+service, usually by running a debugger agent with the application.</p>
+<p>The Debugger service enables the client to set one or more Breakpoints on a
+Debuggee and collect the results of the set Breakpoints.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.Debugger2.Debugger2Base.html">Debugger2.Debugger2Base</a></h4>
+      <section><p>Base class for server-side implementations of Debugger2</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.Debugger2.Debugger2Client.html">Debugger2.Debugger2Client</a></h4>
+      <section><p>Client for Debugger2</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.Debugger2Client.html">Debugger2Client</a></h4>
+      <section><p>Debugger2 client wrapper, for convenient use.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.Debugger2ClientImpl.html">Debugger2ClientImpl</a></h4>
+      <section><p>Debugger2 client wrapper implementation, for convenient use.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.Debugger2Settings.html">Debugger2Settings</a></h4>
+      <section><p>Settings for a <a class="xref" href="Google.Cloud.Debugger.V2.Debugger2Client.html">Debugger2Client</a>.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.DeleteBreakpointRequest.html">DeleteBreakpointRequest</a></h4>
+      <section><p>Request to delete a breakpoint.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.FormatMessage.html">FormatMessage</a></h4>
+      <section><p>Represents a message with parameters.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.GetBreakpointRequest.html">GetBreakpointRequest</a></h4>
+      <section><p>Request to get breakpoint information.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.GetBreakpointResponse.html">GetBreakpointResponse</a></h4>
+      <section><p>Response for getting breakpoint information.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest.html">ListActiveBreakpointsRequest</a></h4>
+      <section><p>Request to list active breakpoints.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse.html">ListActiveBreakpointsResponse</a></h4>
+      <section><p>Response for listing active breakpoints.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.ListBreakpointsRequest.html">ListBreakpointsRequest</a></h4>
+      <section><p>Request to list breakpoints.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.ListBreakpointsRequest.Types.html">ListBreakpointsRequest.Types</a></h4>
+      <section><p>Container for nested types declared in the ListBreakpointsRequest message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.ListBreakpointsRequest.Types.BreakpointActionValue.html">ListBreakpointsRequest.Types.BreakpointActionValue</a></h4>
+      <section><p>Wrapper message for <code>Breakpoint.Action</code>. Defines a filter on the action
+field of breakpoints.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.ListBreakpointsResponse.html">ListBreakpointsResponse</a></h4>
+      <section><p>Response for listing breakpoints.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.ListDebuggeesRequest.html">ListDebuggeesRequest</a></h4>
+      <section><p>Request to list debuggees.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.ListDebuggeesResponse.html">ListDebuggeesResponse</a></h4>
+      <section><p>Response for listing debuggees.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.RegisterDebuggeeRequest.html">RegisterDebuggeeRequest</a></h4>
+      <section><p>Request to register a debuggee.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.RegisterDebuggeeResponse.html">RegisterDebuggeeResponse</a></h4>
+      <section><p>Response for registering a debuggee.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.SetBreakpointRequest.html">SetBreakpointRequest</a></h4>
+      <section><p>Request to set a breakpoint</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.SetBreakpointResponse.html">SetBreakpointResponse</a></h4>
+      <section><p>Response for setting a breakpoint.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.SourceLocation.html">SourceLocation</a></h4>
+      <section><p>Represents a location in the source code.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.StackFrame.html">StackFrame</a></h4>
+      <section><p>Represents a stack frame context.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.StatusMessage.html">StatusMessage</a></h4>
+      <section><p>Represents a contextual status message.
+The message can indicate an error or informational status, and refer to
+specific parts of the containing object.
+For example, the <code>Breakpoint.status</code> field can indicate an error referring
+to the <code>BREAKPOINT_SOURCE_LOCATION</code> with the message <code>Location not found</code>.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.StatusMessage.Types.html">StatusMessage.Types</a></h4>
+      <section><p>Container for nested types declared in the StatusMessage message type.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest.html">UpdateActiveBreakpointRequest</a></h4>
+      <section><p>Request to update an active breakpoint.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse.html">UpdateActiveBreakpointResponse</a></h4>
+      <section><p>Response for updating an active breakpoint.
+The message is defined to allow future extensions.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.Variable.html">Variable</a></h4>
+      <section><p>Represents a variable or an argument possibly of a compound object type.
+Note how the following variables are represented:</p>
+<p>1) A simple variable:</p>
+<p>int x = 5</p>
+<p>{ name: &quot;x&quot;, value: &quot;5&quot;, type: &quot;int&quot; }  // Captured variable</p>
+<p>2) A compound object:</p>
+<p>struct T {
+   int m1;
+   int m2;
+};
+T x = { 3, 7 };</p>
+<p>{  // Captured variable
+   name: &quot;x&quot;,
+   type: &quot;T&quot;,
+   members { name: &quot;m1&quot;, value: &quot;3&quot;, type: &quot;int&quot; },
+   members { name: &quot;m2&quot;, value: &quot;7&quot;, type: &quot;int&quot; }
+}</p>
+<p>3) A pointer where the pointee was captured:</p>
+<p>T x = { 3, 7 };
+T* p = &amp;x;</p>
+<p>{   // Captured variable
+   name: &quot;p&quot;,
+   type: &quot;T*&quot;,
+   value: &quot;0x00500500&quot;,
+   members { name: &quot;m1&quot;, value: &quot;3&quot;, type: &quot;int&quot; },
+   members { name: &quot;m2&quot;, value: &quot;7&quot;, type: &quot;int&quot; }
+}</p>
+<p>4) A pointer where the pointee was not captured:</p>
+<p>T* p = new T;</p>
+<p>{   // Captured variable
+   name: &quot;p&quot;,
+   type: &quot;T*&quot;,
+   value: &quot;0x00400400&quot;
+   status { is_error: true, description { format: &quot;unavailable&quot; } }
+}</p>
+<p>The status should describe the reason for the missing value,
+such as <code>&amp;lt;optimized out&gt;</code>, <code>&amp;lt;inaccessible&gt;</code>, <code>&amp;lt;pointers limit reached&gt;</code>.</p>
+<p>Note that a null pointer should not have members.</p>
+<p>5) An unnamed value:</p>
+<p>int* p = new int(7);</p>
+<p>{   // Captured variable
+   name: &quot;p&quot;,
+   value: &quot;0x00500500&quot;,
+   type: &quot;int*&quot;,
+   members { value: &quot;7&quot;, type: &quot;int&quot; } }</p>
+<p>6) An unnamed pointer where the pointee was not captured:</p>
+<p>int* p = new int(7);
+int** pp = &amp;p;</p>
+<p>{  // Captured variable
+   name: &quot;pp&quot;,
+   value: &quot;0x00500500&quot;,
+   type: &quot;int<em>*&quot;,
+   members {
+       value: &quot;0x00400400&quot;,
+       type: &quot;int</em>&quot;
+       status {
+           is_error: true,
+           description: { format: &quot;unavailable&quot; } }
+       }
+   }
+}</p>
+<p>To optimize computation, memory and network traffic, variables that
+repeat in the output multiple times can be stored once in a shared
+variable table and be referenced using the <code>var_table_index</code> field.  The
+variables stored in the shared table are nameless and are essentially
+a partition of the complete variable. To reconstruct the complete
+variable, merge the referencing variable with the referenced variable.</p>
+<p>When using the shared variable table, the following variables:</p>
+<p>T x = { 3, 7 };
+T* p = &amp;x;
+T&amp; r = x;</p>
+<p>{ name: &quot;x&quot;, var_table_index: 3, type: &quot;T&quot; }  // Captured variables
+{ name: &quot;p&quot;, value &quot;0x00500500&quot;, type=&quot;T*&quot;, var_table_index: 3 }
+{ name: &quot;r&quot;, type=&quot;T&amp;&quot;, var_table_index: 3 }</p>
+<p>{  // Shared variable table entry #3:
+   members { name: &quot;m1&quot;, value: &quot;3&quot;, type: &quot;int&quot; },
+   members { name: &quot;m2&quot;, value: &quot;7&quot;, type: &quot;int&quot; }
+}</p>
+<p>Note that the pointer address is stored with the referencing variable
+and not with the referenced variable. This allows the referenced variable
+to be shared between pointers and references.</p>
+<p>The type field is optional. The debugger agent may or may not support it.</p>
+</section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.Breakpoint.Types.Action.html">Breakpoint.Types.Action</a></h4>
+      <section><p>Actions that can be taken when a breakpoint hits.
+Agents should reject breakpoints with unsupported or unknown action values.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.Breakpoint.Types.LogLevel.html">Breakpoint.Types.LogLevel</a></h4>
+      <section><p>Log severity levels.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Debugger.V2.StatusMessage.Types.Reference.html">StatusMessage.Types.Reference</a></h4>
+      <section><p>Enumerates references to which the message applies.</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

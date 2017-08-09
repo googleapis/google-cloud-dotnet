@@ -989,6 +989,131 @@ await result.ForEachAsync(row =&gt;
 });
 </code></pre></div>
   </div>
+  <a id="Google_Cloud_BigQuery_V2_BigQueryTable_Patch_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.Patch*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_Patch_Google_Apis_Bigquery_v2_Data_Table_System_Boolean_Google_Cloud_BigQuery_V2_PatchTableOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.Patch(Google.Apis.Bigquery.v2.Data.Table,System.Boolean,Google.Cloud.BigQuery.V2.PatchTableOptions)">Patch(Table, Boolean, PatchTableOptions)</h4>
+  <div class="markdown level1 summary"><p>Patches this table with fields in the specified resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BigQueryTable Patch(Table resource, bool matchEtag, PatchTableOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Table.html">Table</a></td>
+        <td><span class="parametername">resource</span></td>
+        <td><p>The resource to patch with. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">matchEtag</span></td>
+        <td><p>If true, the etag from <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_Resource">Resource</a> is propagated into <span class="paramref">resource</span> for
+optimistic concurrency. Otherwise, <span class="paramref">resource</span> is left unchanged.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.V2.PatchTableOptions.html">PatchTableOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryTable.html">BigQueryTable</a></td>
+        <td><p>The updated table.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryTable_Patch_Google_Apis_Bigquery_v2_Data_Table_System_Boolean_Google_Cloud_BigQuery_V2_PatchTableOptions__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PatchTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_Table_Google_Cloud_BigQuery_V2_PatchTableOptions_">PatchTable(TableReference, Table, PatchTableOptions)</a>.</p>
+</div>
+  <a id="Google_Cloud_BigQuery_V2_BigQueryTable_PatchAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.PatchAsync*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_PatchAsync_Google_Apis_Bigquery_v2_Data_Table_System_Boolean_Google_Cloud_BigQuery_V2_PatchTableOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.PatchAsync(Google.Apis.Bigquery.v2.Data.Table,System.Boolean,Google.Cloud.BigQuery.V2.PatchTableOptions,System.Threading.CancellationToken)">PatchAsync(Table, Boolean, PatchTableOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously patches this table with fields in the specified resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryTable&gt; PatchAsync(Table resource, bool matchEtag, PatchTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Table.html">Table</a></td>
+        <td><span class="parametername">resource</span></td>
+        <td><p>The resource to patch with. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">matchEtag</span></td>
+        <td><p>If true, the etag from <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_Resource">Resource</a> is propagated into <span class="paramref">resource</span> for
+optimistic concurrency. Otherwise, <span class="paramref">resource</span> is left unchanged.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.V2.PatchTableOptions.html">PatchTableOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The token to monitor for cancellation requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryTable.html">BigQueryTable</a>&gt;</td>
+        <td><p>A task representing the asynchronous operation. When complete, the result is
+the updated table.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryTable_PatchAsync_Google_Apis_Bigquery_v2_Data_Table_System_Boolean_Google_Cloud_BigQuery_V2_PatchTableOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PatchTableAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_Table_Google_Cloud_BigQuery_V2_PatchTableOptions_System_Threading_CancellationToken_">PatchTableAsync(TableReference, Table, PatchTableOptions, CancellationToken)</a>.</p>
+</div>
   <a id="Google_Cloud_BigQuery_V2_BigQueryTable_ToLegacySqlFormat_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.ToLegacySqlFormat*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_ToLegacySqlFormat" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.ToLegacySqlFormat">ToLegacySqlFormat()</h4>
   <div class="markdown level1 summary"><p>Returns the fully-qualified ID of the table in Legacy SQL format. The Legacy SQL
@@ -1114,6 +1239,131 @@ interpolated string.
 <pre><code>var table = client.GetTable(datasetId, tableId);
 var query = $&quot;SELECT name, age from {table:legacy}&quot;;</code></pre>
 <p></example></p>
+</div>
+  <a id="Google_Cloud_BigQuery_V2_BigQueryTable_Update_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.Update*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_Update_Google_Apis_Bigquery_v2_Data_Table_Google_Cloud_BigQuery_V2_UpdateTableOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.Update(Google.Apis.Bigquery.v2.Data.Table,Google.Cloud.BigQuery.V2.UpdateTableOptions)">Update(Table, UpdateTableOptions)</h4>
+  <div class="markdown level1 summary"><p>Updates this table to match the specified resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BigQueryTable Update(Table resource = null, UpdateTableOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Table.html">Table</a></td>
+        <td><span class="parametername">resource</span></td>
+        <td><p>The resource to update with. If null, the <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_Resource">Resource</a> property is
+used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.V2.UpdateTableOptions.html">UpdateTableOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryTable.html">BigQueryTable</a></td>
+        <td><p>The updated table.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryTable_Update_Google_Apis_Bigquery_v2_Data_Table_Google_Cloud_BigQuery_V2_UpdateTableOptions__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UpdateTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_Table_Google_Cloud_BigQuery_V2_UpdateTableOptions_">UpdateTable(TableReference, Table, UpdateTableOptions)</a>.
+A simple way of updating the table is to modify <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_Resource">Resource</a> and then call this method with no arguments.
+This is convenient, but it&apos;s important to understand that modifying <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_Resource">Resource</a> in this way leaves this object
+in an unusual state - it represents &quot;the table as it was when fetched, but then modified locally&quot;. For example, the etag
+will be the original etag, rather than the one associated with the updated table. To avoid this causing confusion,
+we recommend only taking this approach if the object will not be used afterwards. Use the value returned by this method
+as the new, self-consistent representation of the table.</p>
+</div>
+  <a id="Google_Cloud_BigQuery_V2_BigQueryTable_UpdateAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.UpdateAsync*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_UpdateAsync_Google_Apis_Bigquery_v2_Data_Table_Google_Cloud_BigQuery_V2_UpdateTableOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.UpdateAsync(Google.Apis.Bigquery.v2.Data.Table,Google.Cloud.BigQuery.V2.UpdateTableOptions,System.Threading.CancellationToken)">UpdateAsync(Table, UpdateTableOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously updates this table to match the specified resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryTable&gt; UpdateAsync(Table resource = null, UpdateTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Table.html">Table</a></td>
+        <td><span class="parametername">resource</span></td>
+        <td><p>The resource to update with. If null, the <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_Resource">Resource</a> property is
+used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.V2.UpdateTableOptions.html">UpdateTableOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The token to monitor for cancellation requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryTable.html">BigQueryTable</a>&gt;</td>
+        <td><p>A task representing the asynchronous operation. When complete, the result is
+the updated table.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryTable_UpdateAsync_Google_Apis_Bigquery_v2_Data_Table_Google_Cloud_BigQuery_V2_UpdateTableOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UpdateTableAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_Table_Google_Cloud_BigQuery_V2_UpdateTableOptions_System_Threading_CancellationToken_">UpdateTableAsync(TableReference, Table, UpdateTableOptions, CancellationToken)</a>.
+A simple way of updating the table is to modify <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_Resource">Resource</a> and then call this method with no arguments.
+This is convenient, but it&apos;s important to understand that modifying <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_Resource">Resource</a> in this way leaves this object
+in an unusual state - it represents &quot;the table as it was when fetched, but then modified locally&quot;. For example, the etag
+will be the original etag, rather than the one associated with the updated table. To avoid this causing confusion,
+we recommend only taking this approach if the object will not be used afterwards. Use the value returned by this method
+as the new, self-consistent representation of the table.</p>
 </div>
   <a id="Google_Cloud_BigQuery_V2_BigQueryTable_UploadAvro_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.UploadAvro*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_UploadAvro_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.UploadAvro(System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions)">UploadAvro(Stream, UploadAvroOptions)</h4>

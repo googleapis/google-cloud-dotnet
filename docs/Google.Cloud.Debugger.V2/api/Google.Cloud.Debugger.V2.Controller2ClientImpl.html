@@ -1,0 +1,598 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Controller2ClientImpl
+   | Google.Cloud.Debugger.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Controller2ClientImpl
+   | Google.Cloud.Debugger.V2 ">
+    <meta name="generator" content="docfx 2.21.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Debugger.V2.Controller2ClientImpl">
+  
+  
+  <h1 id="Google_Cloud_Debugger_V2_Controller2ClientImpl" data-uid="Google.Cloud.Debugger.V2.Controller2ClientImpl" class="text-break">Class Controller2ClientImpl
+  </h1>
+  <div class="markdown level0 summary"><p>Controller2 client wrapper implementation, for convenient use.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html">Controller2Client</a></div>
+    <div class="level2"><span class="xref">Controller2ClientImpl</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html#Google_Cloud_Debugger_V2_Controller2Client_DefaultEndpoint">Controller2Client.DefaultEndpoint</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html#Google_Cloud_Debugger_V2_Controller2Client_DefaultScopes">Controller2Client.DefaultScopes</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html#Google_Cloud_Debugger_V2_Controller2Client_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Debugger_V2_Controller2Settings_">Controller2Client.CreateAsync(ServiceEndpoint, Controller2Settings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html#Google_Cloud_Debugger_V2_Controller2Client_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Debugger_V2_Controller2Settings_">Controller2Client.Create(ServiceEndpoint, Controller2Settings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html#Google_Cloud_Debugger_V2_Controller2Client_Create_Grpc_Core_Channel_Google_Cloud_Debugger_V2_Controller2Settings_">Controller2Client.Create(Channel, Controller2Settings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html#Google_Cloud_Debugger_V2_Controller2Client_ShutdownDefaultChannelsAsync">Controller2Client.ShutdownDefaultChannelsAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html#Google_Cloud_Debugger_V2_Controller2Client_RegisterDebuggeeAsync_Google_Cloud_Debugger_V2_Debuggee_Google_Api_Gax_Grpc_CallSettings_">Controller2Client.RegisterDebuggeeAsync(Debuggee, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html#Google_Cloud_Debugger_V2_Controller2Client_RegisterDebuggeeAsync_Google_Cloud_Debugger_V2_Debuggee_System_Threading_CancellationToken_">Controller2Client.RegisterDebuggeeAsync(Debuggee, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html#Google_Cloud_Debugger_V2_Controller2Client_RegisterDebuggee_Google_Cloud_Debugger_V2_Debuggee_Google_Api_Gax_Grpc_CallSettings_">Controller2Client.RegisterDebuggee(Debuggee, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html#Google_Cloud_Debugger_V2_Controller2Client_ListActiveBreakpointsAsync_System_String_Google_Api_Gax_Grpc_CallSettings_">Controller2Client.ListActiveBreakpointsAsync(String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html#Google_Cloud_Debugger_V2_Controller2Client_ListActiveBreakpointsAsync_System_String_System_Threading_CancellationToken_">Controller2Client.ListActiveBreakpointsAsync(String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html#Google_Cloud_Debugger_V2_Controller2Client_ListActiveBreakpoints_System_String_Google_Api_Gax_Grpc_CallSettings_">Controller2Client.ListActiveBreakpoints(String, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html#Google_Cloud_Debugger_V2_Controller2Client_UpdateActiveBreakpointAsync_System_String_Google_Cloud_Debugger_V2_Breakpoint_Google_Api_Gax_Grpc_CallSettings_">Controller2Client.UpdateActiveBreakpointAsync(String, Breakpoint, CallSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html#Google_Cloud_Debugger_V2_Controller2Client_UpdateActiveBreakpointAsync_System_String_Google_Cloud_Debugger_V2_Breakpoint_System_Threading_CancellationToken_">Controller2Client.UpdateActiveBreakpointAsync(String, Breakpoint, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html#Google_Cloud_Debugger_V2_Controller2Client_UpdateActiveBreakpoint_System_String_Google_Cloud_Debugger_V2_Breakpoint_Google_Api_Gax_Grpc_CallSettings_">Controller2Client.UpdateActiveBreakpoint(String, Breakpoint, CallSettings)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Debugger.V2.html">Google.Cloud.Debugger.V2</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Debugger.V2.dll</h6>
+  <h5 id="Google_Cloud_Debugger_V2_Controller2ClientImpl_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class Controller2ClientImpl : Controller2Client</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Google_Cloud_Debugger_V2_Controller2ClientImpl__ctor_" data-uid="Google.Cloud.Debugger.V2.Controller2ClientImpl.#ctor*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Controller2ClientImpl__ctor_Google_Cloud_Debugger_V2_Controller2_Controller2Client_Google_Cloud_Debugger_V2_Controller2Settings_" data-uid="Google.Cloud.Debugger.V2.Controller2ClientImpl.#ctor(Google.Cloud.Debugger.V2.Controller2.Controller2Client,Google.Cloud.Debugger.V2.Controller2Settings)">Controller2ClientImpl(Controller2.Controller2Client, Controller2Settings)</h4>
+  <div class="markdown level1 summary"><p>Constructs a client wrapper for the Controller2 service, with the specified gRPC client and settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Controller2ClientImpl(Controller2.Controller2Client grpcClient, Controller2Settings settings)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Debugger.V2.Controller2.Controller2Client.html">Controller2.Controller2Client</a></td>
+        <td><span class="parametername">grpcClient</span></td>
+        <td><p>The underlying gRPC client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Debugger.V2.Controller2Settings.html">Controller2Settings</a></td>
+        <td><span class="parametername">settings</span></td>
+        <td><p>The base <a class="xref" href="Google.Cloud.Debugger.V2.Controller2Settings.html">Controller2Settings</a> used within this client </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Debugger_V2_Controller2ClientImpl_GrpcClient_" data-uid="Google.Cloud.Debugger.V2.Controller2ClientImpl.GrpcClient*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Controller2ClientImpl_GrpcClient" data-uid="Google.Cloud.Debugger.V2.Controller2ClientImpl.GrpcClient">GrpcClient</h4>
+  <div class="markdown level1 summary"><p>The underlying gRPC Controller2 client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Controller2.Controller2Client GrpcClient { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Debugger.V2.Controller2.Controller2Client.html">Controller2.Controller2Client</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html#Google_Cloud_Debugger_V2_Controller2Client_GrpcClient">Controller2Client.GrpcClient</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Debugger_V2_Controller2ClientImpl_ListActiveBreakpoints_" data-uid="Google.Cloud.Debugger.V2.Controller2ClientImpl.ListActiveBreakpoints*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Controller2ClientImpl_ListActiveBreakpoints_Google_Cloud_Debugger_V2_ListActiveBreakpointsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Debugger.V2.Controller2ClientImpl.ListActiveBreakpoints(Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest,Google.Api.Gax.Grpc.CallSettings)">ListActiveBreakpoints(ListActiveBreakpointsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns the list of all active breakpoints for the debuggee.</p>
+<p>The breakpoint specification (<code>location</code>, <code>condition</code>, and <code>expressions</code>
+fields) is semantically immutable, although the field values may
+change. For example, an agent may update the location line number
+to reflect the actual line where the breakpoint was set, but this
+doesn&apos;t change the breakpoint semantics.</p>
+<p>This means that an agent does not need to check if a breakpoint has changed
+when it encounters the same breakpoint on a successive call.
+Moreover, an agent should remember the breakpoints that are completed
+until the controller removes them from the active list to avoid
+setting those breakpoints again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ListActiveBreakpointsResponse ListActiveBreakpoints(ListActiveBreakpointsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest.html">ListActiveBreakpointsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse.html">ListActiveBreakpointsResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html#Google_Cloud_Debugger_V2_Controller2Client_ListActiveBreakpoints_Google_Cloud_Debugger_V2_ListActiveBreakpointsRequest_Google_Api_Gax_Grpc_CallSettings_">Controller2Client.ListActiveBreakpoints(ListActiveBreakpointsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Debugger_V2_Controller2ClientImpl_ListActiveBreakpointsAsync_" data-uid="Google.Cloud.Debugger.V2.Controller2ClientImpl.ListActiveBreakpointsAsync*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Controller2ClientImpl_ListActiveBreakpointsAsync_Google_Cloud_Debugger_V2_ListActiveBreakpointsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Debugger.V2.Controller2ClientImpl.ListActiveBreakpointsAsync(Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest,Google.Api.Gax.Grpc.CallSettings)">ListActiveBreakpointsAsync(ListActiveBreakpointsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns the list of all active breakpoints for the debuggee.</p>
+<p>The breakpoint specification (<code>location</code>, <code>condition</code>, and <code>expressions</code>
+fields) is semantically immutable, although the field values may
+change. For example, an agent may update the location line number
+to reflect the actual line where the breakpoint was set, but this
+doesn&apos;t change the breakpoint semantics.</p>
+<p>This means that an agent does not need to check if a breakpoint has changed
+when it encounters the same breakpoint on a successive call.
+Moreover, an agent should remember the breakpoints that are completed
+until the controller removes them from the active list to avoid
+setting those breakpoints again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;ListActiveBreakpointsResponse&gt; ListActiveBreakpointsAsync(ListActiveBreakpointsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest.html">ListActiveBreakpointsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse.html">ListActiveBreakpointsResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html#Google_Cloud_Debugger_V2_Controller2Client_ListActiveBreakpointsAsync_Google_Cloud_Debugger_V2_ListActiveBreakpointsRequest_Google_Api_Gax_Grpc_CallSettings_">Controller2Client.ListActiveBreakpointsAsync(ListActiveBreakpointsRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Debugger_V2_Controller2ClientImpl_RegisterDebuggee_" data-uid="Google.Cloud.Debugger.V2.Controller2ClientImpl.RegisterDebuggee*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Controller2ClientImpl_RegisterDebuggee_Google_Cloud_Debugger_V2_RegisterDebuggeeRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Debugger.V2.Controller2ClientImpl.RegisterDebuggee(Google.Cloud.Debugger.V2.RegisterDebuggeeRequest,Google.Api.Gax.Grpc.CallSettings)">RegisterDebuggee(RegisterDebuggeeRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Registers the debuggee with the controller service.</p>
+<p>All agents attached to the same application must call this method with
+exactly the same request content to get back the same stable <code>debuggee_id</code>.
+Agents should call this method again whenever <code>google.rpc.Code.NOT_FOUND</code>
+is returned from any controller method.</p>
+<p>This protocol allows the controller service to disable debuggees, recover
+from data loss, or change the <code>debuggee_id</code> format. Agents must handle
+<code>debuggee_id</code> value changing upon re-registration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override RegisterDebuggeeResponse RegisterDebuggee(RegisterDebuggeeRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Debugger.V2.RegisterDebuggeeRequest.html">RegisterDebuggeeRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Debugger.V2.RegisterDebuggeeResponse.html">RegisterDebuggeeResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html#Google_Cloud_Debugger_V2_Controller2Client_RegisterDebuggee_Google_Cloud_Debugger_V2_RegisterDebuggeeRequest_Google_Api_Gax_Grpc_CallSettings_">Controller2Client.RegisterDebuggee(RegisterDebuggeeRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Debugger_V2_Controller2ClientImpl_RegisterDebuggeeAsync_" data-uid="Google.Cloud.Debugger.V2.Controller2ClientImpl.RegisterDebuggeeAsync*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Controller2ClientImpl_RegisterDebuggeeAsync_Google_Cloud_Debugger_V2_RegisterDebuggeeRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Debugger.V2.Controller2ClientImpl.RegisterDebuggeeAsync(Google.Cloud.Debugger.V2.RegisterDebuggeeRequest,Google.Api.Gax.Grpc.CallSettings)">RegisterDebuggeeAsync(RegisterDebuggeeRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Registers the debuggee with the controller service.</p>
+<p>All agents attached to the same application must call this method with
+exactly the same request content to get back the same stable <code>debuggee_id</code>.
+Agents should call this method again whenever <code>google.rpc.Code.NOT_FOUND</code>
+is returned from any controller method.</p>
+<p>This protocol allows the controller service to disable debuggees, recover
+from data loss, or change the <code>debuggee_id</code> format. Agents must handle
+<code>debuggee_id</code> value changing upon re-registration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;RegisterDebuggeeResponse&gt; RegisterDebuggeeAsync(RegisterDebuggeeRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Debugger.V2.RegisterDebuggeeRequest.html">RegisterDebuggeeRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Debugger.V2.RegisterDebuggeeResponse.html">RegisterDebuggeeResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html#Google_Cloud_Debugger_V2_Controller2Client_RegisterDebuggeeAsync_Google_Cloud_Debugger_V2_RegisterDebuggeeRequest_Google_Api_Gax_Grpc_CallSettings_">Controller2Client.RegisterDebuggeeAsync(RegisterDebuggeeRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Debugger_V2_Controller2ClientImpl_UpdateActiveBreakpoint_" data-uid="Google.Cloud.Debugger.V2.Controller2ClientImpl.UpdateActiveBreakpoint*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Controller2ClientImpl_UpdateActiveBreakpoint_Google_Cloud_Debugger_V2_UpdateActiveBreakpointRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Debugger.V2.Controller2ClientImpl.UpdateActiveBreakpoint(Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateActiveBreakpoint(UpdateActiveBreakpointRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates the breakpoint state or mutable fields.
+The entire Breakpoint message must be sent back to the controller service.</p>
+<p>Updates to active breakpoint fields are only allowed if the new value
+does not change the breakpoint specification. Updates to the <code>location</code>,
+<code>condition</code> and <code>expressions</code> fields should not alter the breakpoint
+semantics. These may only make changes such as canonicalizing a value
+or snapping the location to the correct line of code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override UpdateActiveBreakpointResponse UpdateActiveBreakpoint(UpdateActiveBreakpointRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest.html">UpdateActiveBreakpointRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse.html">UpdateActiveBreakpointResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html#Google_Cloud_Debugger_V2_Controller2Client_UpdateActiveBreakpoint_Google_Cloud_Debugger_V2_UpdateActiveBreakpointRequest_Google_Api_Gax_Grpc_CallSettings_">Controller2Client.UpdateActiveBreakpoint(UpdateActiveBreakpointRequest, CallSettings)</a></div>
+  <a id="Google_Cloud_Debugger_V2_Controller2ClientImpl_UpdateActiveBreakpointAsync_" data-uid="Google.Cloud.Debugger.V2.Controller2ClientImpl.UpdateActiveBreakpointAsync*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Controller2ClientImpl_UpdateActiveBreakpointAsync_Google_Cloud_Debugger_V2_UpdateActiveBreakpointRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Debugger.V2.Controller2ClientImpl.UpdateActiveBreakpointAsync(Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateActiveBreakpointAsync(UpdateActiveBreakpointRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Updates the breakpoint state or mutable fields.
+The entire Breakpoint message must be sent back to the controller service.</p>
+<p>Updates to active breakpoint fields are only allowed if the new value
+does not change the breakpoint specification. Updates to the <code>location</code>,
+<code>condition</code> and <code>expressions</code> fields should not alter the breakpoint
+semantics. These may only make changes such as canonicalizing a value
+or snapping the location to the correct line of code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;UpdateActiveBreakpointResponse&gt; UpdateActiveBreakpointAsync(UpdateActiveBreakpointRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest.html">UpdateActiveBreakpointRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse.html">UpdateActiveBreakpointResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Google.Cloud.Debugger.V2.Controller2Client.html#Google_Cloud_Debugger_V2_Controller2Client_UpdateActiveBreakpointAsync_Google_Cloud_Debugger_V2_UpdateActiveBreakpointRequest_Google_Api_Gax_Grpc_CallSettings_">Controller2Client.UpdateActiveBreakpointAsync(UpdateActiveBreakpointRequest, CallSettings)</a></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

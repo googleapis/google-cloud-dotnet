@@ -338,7 +338,7 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Da
   <a id="Google_Cloud_BigQuery_V2_BigQueryDataset_DeleteAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryDataset.DeleteAsync*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryDataset_DeleteAsync_Google_Cloud_BigQuery_V2_DeleteDatasetOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryDataset.DeleteAsync(Google.Cloud.BigQuery.V2.DeleteDatasetOptions,System.Threading.CancellationToken)">DeleteAsync(DeleteDatasetOptions, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Deletes this dataset.
-This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html">DatasetReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_DeleteDatasetAsync_System_String_System_String_Google_Cloud_BigQuery_V2_DeleteDatasetOptions_System_Threading_CancellationToken_">DeleteDatasetAsync(String, String, DeleteDatasetOptions, CancellationToken)</a>.</p>
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html">DatasetReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_DeleteDatasetAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Cloud_BigQuery_V2_DeleteDatasetOptions_System_Threading_CancellationToken_">DeleteDatasetAsync(DatasetReference, DeleteDatasetOptions, CancellationToken)</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1267,6 +1267,73 @@ a data upload job.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_BigQuery_V2_BigQueryDataset_UploadJson_" data-uid="Google.Cloud.BigQuery.V2.BigQueryDataset.UploadJson*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryDataset_UploadJson_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_UploadJsonOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryDataset.UploadJson(System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.UploadJsonOptions)">UploadJson(String, TableSchema, IEnumerable&lt;String&gt;, UploadJsonOptions)</h4>
+  <div class="markdown level1 summary"><p>Uploads a stream of JSON data to a table.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadJson_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_UploadJsonOptions_">UploadJson(TableReference, TableSchema, IEnumerable&lt;String&gt;, UploadJsonOptions)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BigQueryJob UploadJson(string tableId, TableSchema schema, IEnumerable&lt;string&gt; rows, UploadJsonOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableId</span></td>
+        <td><p>The table ID. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
+        <td><span class="parametername">schema</span></td>
+        <td><p>The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">rows</span></td>
+        <td><p>The sequence of JSON strings to upload. Must not be null, and must not contain null elements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html">UploadJsonOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html">BigQueryJob</a></td>
+        <td><p>A data upload job.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryDataset_UploadJson_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_UploadJsonOptions__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Each element of <span class="paramref">rows</span> is converted into a single line of text by replacing carriage returns and line
+feeds with spaces. This is safe as they cannot exist within well-formed JSON keys or values, and simply means that the
+original JSON can be formatted however you choose.</p>
+</div>
+  <a id="Google_Cloud_BigQuery_V2_BigQueryDataset_UploadJson_" data-uid="Google.Cloud.BigQuery.V2.BigQueryDataset.UploadJson*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryDataset_UploadJson_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadJsonOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryDataset.UploadJson(System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadJsonOptions)">UploadJson(String, TableSchema, Stream, UploadJsonOptions)</h4>
   <div class="markdown level1 summary"><p>Uploads a stream of JSON data to a table.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadJson_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadJsonOptions_">UploadJson(TableReference, TableSchema, Stream, UploadJsonOptions)</a>.</p>
@@ -1328,6 +1395,80 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_BigQuery_V2_BigQueryDataset_UploadJsonAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryDataset.UploadJsonAsync*"></a>
+  <h4 id="Google_Cloud_BigQuery_V2_BigQueryDataset_UploadJsonAsync_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_UploadJsonOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryDataset.UploadJsonAsync(System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.UploadJsonOptions,System.Threading.CancellationToken)">UploadJsonAsync(String, TableSchema, IEnumerable&lt;String&gt;, UploadJsonOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously uploads a stream of JSON data to a table.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadJsonAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_UploadJsonOptions_System_Threading_CancellationToken_">UploadJsonAsync(TableReference, TableSchema, IEnumerable&lt;String&gt;, UploadJsonOptions, CancellationToken)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;BigQueryJob&gt; UploadJsonAsync(string tableId, TableSchema schema, IEnumerable&lt;string&gt; rows, UploadJsonOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableId</span></td>
+        <td><p>The table ID. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
+        <td><span class="parametername">schema</span></td>
+        <td><p>The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">rows</span></td>
+        <td><p>The sequence of JSON strings to upload. Must not be null, and must not contain null elements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.BigQuery.V2.UploadJsonOptions.html">UploadJsonOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The token to monitor for cancellation requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html">BigQueryJob</a>&gt;</td>
+        <td><p>A task representing the asynchronous operation. When complete, the result is
+a data upload job.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_BigQuery_V2_BigQueryDataset_UploadJsonAsync_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_UploadJsonOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Each element of <span class="paramref">rows</span> is converted into a single line of text by replacing carriage returns and line
+feeds with spaces. This is safe as they cannot exist within well-formed JSON keys or values, and simply means that the
+original JSON can be formatted however you choose.</p>
+</div>
   <a id="Google_Cloud_BigQuery_V2_BigQueryDataset_UploadJsonAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryDataset.UploadJsonAsync*"></a>
   <h4 id="Google_Cloud_BigQuery_V2_BigQueryDataset_UploadJsonAsync_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadJsonOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryDataset.UploadJsonAsync(System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadJsonOptions,System.Threading.CancellationToken)">UploadJsonAsync(String, TableSchema, Stream, UploadJsonOptions, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Asynchronously uploads a stream of JSON data to a table.

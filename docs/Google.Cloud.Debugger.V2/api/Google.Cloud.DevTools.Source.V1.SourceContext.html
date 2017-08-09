@@ -1,0 +1,341 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SourceContext
+   | Google.Cloud.Debugger.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SourceContext
+   | Google.Cloud.Debugger.V2 ">
+    <meta name="generator" content="docfx 2.21.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.DevTools.Source.V1.SourceContext">
+  
+  
+  <h1 id="Google_Cloud_DevTools_Source_V1_SourceContext" data-uid="Google.Cloud.DevTools.Source.V1.SourceContext" class="text-break">Class SourceContext
+  </h1>
+  <div class="markdown level0 summary"><p>A SourceContext is a reference to a tree of files. A SourceContext together
+with a path point to a unique revision of a single file or directory.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SourceContext</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.DevTools.Source.V1.html">Google.Cloud.DevTools.Source.V1</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.DevTools.Common.dll</h6>
+  <h5 id="Google_Cloud_DevTools_Source_V1_SourceContext_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class SourceContext : IMessage&lt;SourceContext&gt;, IMessage, IEquatable&lt;SourceContext&gt;, IDeepCloneable&lt;SourceContext&gt;</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <h4 id="Google_Cloud_DevTools_Source_V1_SourceContext_GitRevisionIdLogLabel" data-uid="Google.Cloud.DevTools.Source.V1.SourceContext.GitRevisionIdLogLabel">GitRevisionIdLogLabel</h4>
+  <div class="markdown level1 summary"><p>Gets the custom log label of Stackdriver Logging entry to set Git revision id.
+When writing a Stackdriver Logging entry, the user should add this custom label,
+with a value of the git revision id for the source code.
+This enables Google Cloud Tools for Visual Studio to locate the source file revision
+of the log entry. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string GitRevisionIdLogLabel = &quot;git_revision_id&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_DevTools_Source_V1_SourceContext_AppSourceContext_" data-uid="Google.Cloud.DevTools.Source.V1.SourceContext.AppSourceContext*"></a>
+  <h4 id="Google_Cloud_DevTools_Source_V1_SourceContext_AppSourceContext" data-uid="Google.Cloud.DevTools.Source.V1.SourceContext.AppSourceContext">AppSourceContext</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Google.Cloud.DevTools.Source.V1.SourceContext.html">SourceContext</a> for the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SourceContext AppSourceContext { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.DevTools.Source.V1.SourceContext.html">SourceContext</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.InvalidProtocolBufferException.html">InvalidProtocolBufferException</a></td>
+        <td><p>The source context file is valid JSON, but is not valid as a SourceContext.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.InvalidJsonException.html">InvalidJsonException</a></td>
+        <td><p>The source context file is not valid JSON.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Security.SecurityException</span></td>
+        <td><p>The application does not have permission to read the file.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UnauthorizedAccessException</span></td>
+        <td><p>The application is not authorized to access the file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_DevTools_Source_V1_SourceContext_CloudRepo_" data-uid="Google.Cloud.DevTools.Source.V1.SourceContext.CloudRepo*"></a>
+  <h4 id="Google_Cloud_DevTools_Source_V1_SourceContext_CloudRepo" data-uid="Google.Cloud.DevTools.Source.V1.SourceContext.CloudRepo">CloudRepo</h4>
+  <div class="markdown level1 summary"><p>A SourceContext referring to a revision in a cloud repo.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudRepoSourceContext CloudRepo { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.DevTools.Source.V1.CloudRepoSourceContext.html">CloudRepoSourceContext</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_DevTools_Source_V1_SourceContext_CloudWorkspace_" data-uid="Google.Cloud.DevTools.Source.V1.SourceContext.CloudWorkspace*"></a>
+  <h4 id="Google_Cloud_DevTools_Source_V1_SourceContext_CloudWorkspace" data-uid="Google.Cloud.DevTools.Source.V1.SourceContext.CloudWorkspace">CloudWorkspace</h4>
+  <div class="markdown level1 summary"><p>A SourceContext referring to a snapshot in a cloud workspace.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudWorkspaceSourceContext CloudWorkspace { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.DevTools.Source.V1.CloudWorkspaceSourceContext.html">CloudWorkspaceSourceContext</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_DevTools_Source_V1_SourceContext_ContextCase_" data-uid="Google.Cloud.DevTools.Source.V1.SourceContext.ContextCase*"></a>
+  <h4 id="Google_Cloud_DevTools_Source_V1_SourceContext_ContextCase" data-uid="Google.Cloud.DevTools.Source.V1.SourceContext.ContextCase">ContextCase</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SourceContext.ContextOneofCase ContextCase { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.DevTools.Source.V1.SourceContext.ContextOneofCase.html">SourceContext.ContextOneofCase</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_DevTools_Source_V1_SourceContext_Gerrit_" data-uid="Google.Cloud.DevTools.Source.V1.SourceContext.Gerrit*"></a>
+  <h4 id="Google_Cloud_DevTools_Source_V1_SourceContext_Gerrit" data-uid="Google.Cloud.DevTools.Source.V1.SourceContext.Gerrit">Gerrit</h4>
+  <div class="markdown level1 summary"><p>A SourceContext referring to a Gerrit project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GerritSourceContext Gerrit { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.DevTools.Source.V1.GerritSourceContext.html">GerritSourceContext</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_DevTools_Source_V1_SourceContext_Git_" data-uid="Google.Cloud.DevTools.Source.V1.SourceContext.Git*"></a>
+  <h4 id="Google_Cloud_DevTools_Source_V1_SourceContext_Git" data-uid="Google.Cloud.DevTools.Source.V1.SourceContext.Git">Git</h4>
+  <div class="markdown level1 summary"><p>A SourceContext referring to any third party Git repo (e.g. GitHub).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GitSourceContext Git { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.DevTools.Source.V1.GitSourceContext.html">GitSourceContext</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

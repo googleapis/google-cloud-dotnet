@@ -1,0 +1,563 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Breakpoint
+   | Google.Cloud.Debugger.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Breakpoint
+   | Google.Cloud.Debugger.V2 ">
+    <meta name="generator" content="docfx 2.21.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Debugger.V2.Breakpoint">
+  
+  
+  <h1 id="Google_Cloud_Debugger_V2_Breakpoint" data-uid="Google.Cloud.Debugger.V2.Breakpoint" class="text-break">Class Breakpoint
+  </h1>
+  <div class="markdown level0 summary"><p>Represents the breakpoint specification, status and results.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Breakpoint</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Debugger.V2.html">Google.Cloud.Debugger.V2</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Debugger.V2.dll</h6>
+  <h5 id="Google_Cloud_Debugger_V2_Breakpoint_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class Breakpoint : IMessage&lt;Breakpoint&gt;, IMessage, IEquatable&lt;Breakpoint&gt;, IDeepCloneable&lt;Breakpoint&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Debugger_V2_Breakpoint_Action_" data-uid="Google.Cloud.Debugger.V2.Breakpoint.Action*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Breakpoint_Action" data-uid="Google.Cloud.Debugger.V2.Breakpoint.Action">Action</h4>
+  <div class="markdown level1 summary"><p>Action that the agent should perform when the code at the
+breakpoint location is hit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Breakpoint.Types.Action Action { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Debugger.V2.Breakpoint.Types.Action.html">Breakpoint.Types.Action</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Debugger_V2_Breakpoint_Condition_" data-uid="Google.Cloud.Debugger.V2.Breakpoint.Condition*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Breakpoint_Condition" data-uid="Google.Cloud.Debugger.V2.Breakpoint.Condition">Condition</h4>
+  <div class="markdown level1 summary"><p>Condition that triggers the breakpoint.
+The condition is a compound boolean expression composed using expressions
+in a programming language at the source location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Condition { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Debugger_V2_Breakpoint_CreateTime_" data-uid="Google.Cloud.Debugger.V2.Breakpoint.CreateTime*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Breakpoint_CreateTime" data-uid="Google.Cloud.Debugger.V2.Breakpoint.CreateTime">CreateTime</h4>
+  <div class="markdown level1 summary"><p>Time this breakpoint was created by the server in seconds resolution.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Timestamp CreateTime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html">Timestamp</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Debugger_V2_Breakpoint_EvaluatedExpressions_" data-uid="Google.Cloud.Debugger.V2.Breakpoint.EvaluatedExpressions*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Breakpoint_EvaluatedExpressions" data-uid="Google.Cloud.Debugger.V2.Breakpoint.EvaluatedExpressions">EvaluatedExpressions</h4>
+  <div class="markdown level1 summary"><p>Values of evaluated expressions at breakpoint time.
+The evaluated expressions appear in exactly the same order they
+are listed in the <code>expressions</code> field.
+The <code>name</code> field holds the original expression text, the <code>value</code> or
+<code>members</code> field holds the result of the evaluated expression.
+If the expression cannot be evaluated, the <code>status</code> inside the <code>Variable</code>
+will indicate an error and contain the error text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;Variable&gt; EvaluatedExpressions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Debugger.V2.Variable.html">Variable</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Debugger_V2_Breakpoint_Expressions_" data-uid="Google.Cloud.Debugger.V2.Breakpoint.Expressions*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Breakpoint_Expressions" data-uid="Google.Cloud.Debugger.V2.Breakpoint.Expressions">Expressions</h4>
+  <div class="markdown level1 summary"><p>List of read-only expressions to evaluate at the breakpoint location.
+The expressions are composed using expressions in the programming language
+at the source location. If the breakpoint action is <code>LOG</code>, the evaluated
+expressions are included in log statements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;string&gt; Expressions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Debugger_V2_Breakpoint_FinalTime_" data-uid="Google.Cloud.Debugger.V2.Breakpoint.FinalTime*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Breakpoint_FinalTime" data-uid="Google.Cloud.Debugger.V2.Breakpoint.FinalTime">FinalTime</h4>
+  <div class="markdown level1 summary"><p>Time this breakpoint was finalized as seen by the server in seconds
+resolution.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Timestamp FinalTime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html">Timestamp</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Debugger_V2_Breakpoint_Id_" data-uid="Google.Cloud.Debugger.V2.Breakpoint.Id*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Breakpoint_Id" data-uid="Google.Cloud.Debugger.V2.Breakpoint.Id">Id</h4>
+  <div class="markdown level1 summary"><p>Breakpoint identifier, unique in the scope of the debuggee.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Id { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Debugger_V2_Breakpoint_IsFinalState_" data-uid="Google.Cloud.Debugger.V2.Breakpoint.IsFinalState*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Breakpoint_IsFinalState" data-uid="Google.Cloud.Debugger.V2.Breakpoint.IsFinalState">IsFinalState</h4>
+  <div class="markdown level1 summary"><p>When true, indicates that this is a final result and the
+breakpoint state will not change from here on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFinalState { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Debugger_V2_Breakpoint_Labels_" data-uid="Google.Cloud.Debugger.V2.Breakpoint.Labels*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Breakpoint_Labels" data-uid="Google.Cloud.Debugger.V2.Breakpoint.Labels">Labels</h4>
+  <div class="markdown level1 summary"><p>A set of custom breakpoint properties, populated by the agent, to be
+displayed to the user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapField&lt;string, string&gt; Labels { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.MapField-2.html">MapField</a>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Debugger_V2_Breakpoint_Location_" data-uid="Google.Cloud.Debugger.V2.Breakpoint.Location*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Breakpoint_Location" data-uid="Google.Cloud.Debugger.V2.Breakpoint.Location">Location</h4>
+  <div class="markdown level1 summary"><p>Breakpoint source location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SourceLocation Location { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Debugger.V2.SourceLocation.html">SourceLocation</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Debugger_V2_Breakpoint_LogLevel_" data-uid="Google.Cloud.Debugger.V2.Breakpoint.LogLevel*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Breakpoint_LogLevel" data-uid="Google.Cloud.Debugger.V2.Breakpoint.LogLevel">LogLevel</h4>
+  <div class="markdown level1 summary"><p>Indicates the severity of the log. Only relevant when action is <code>LOG</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Breakpoint.Types.LogLevel LogLevel { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Debugger.V2.Breakpoint.Types.LogLevel.html">Breakpoint.Types.LogLevel</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Debugger_V2_Breakpoint_LogMessageFormat_" data-uid="Google.Cloud.Debugger.V2.Breakpoint.LogMessageFormat*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Breakpoint_LogMessageFormat" data-uid="Google.Cloud.Debugger.V2.Breakpoint.LogMessageFormat">LogMessageFormat</h4>
+  <div class="markdown level1 summary"><p>Only relevant when action is <code>LOG</code>. Defines the message to log when
+the breakpoint hits. The message may include parameter placeholders <code>$0</code>,
+<code>$1</code>, etc. These placeholders are replaced with the evaluated value
+of the appropriate expression. Expressions not referenced in
+<code>log_message_format</code> are not logged.</p>
+<p>Example: <code>Message received, id = $0, count = $1</code> with
+<code>expressions</code> = <code>[ message.id, message.count ]</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LogMessageFormat { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Debugger_V2_Breakpoint_StackFrames_" data-uid="Google.Cloud.Debugger.V2.Breakpoint.StackFrames*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Breakpoint_StackFrames" data-uid="Google.Cloud.Debugger.V2.Breakpoint.StackFrames">StackFrames</h4>
+  <div class="markdown level1 summary"><p>The stack at breakpoint time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;StackFrame&gt; StackFrames { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Debugger.V2.StackFrame.html">StackFrame</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Debugger_V2_Breakpoint_Status_" data-uid="Google.Cloud.Debugger.V2.Breakpoint.Status*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Breakpoint_Status" data-uid="Google.Cloud.Debugger.V2.Breakpoint.Status">Status</h4>
+  <div class="markdown level1 summary"><p>Breakpoint status.</p>
+<p>The status includes an error flag and a human readable message.
+This field is usually unset. The message can be either
+informational or an error message. Regardless, clients should always
+display the text message back to the user.</p>
+<p>Error status indicates complete failure of the breakpoint.</p>
+<p>Example (non-final state): <code>Still loading symbols...</code></p>
+<p>Examples (final state):</p>
+<ul>
+<li><code>Invalid line number</code> referring to location</li>
+<li><code>Field f not found in class C</code> referring to condition</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StatusMessage Status { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Debugger.V2.StatusMessage.html">StatusMessage</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Debugger_V2_Breakpoint_UserEmail_" data-uid="Google.Cloud.Debugger.V2.Breakpoint.UserEmail*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Breakpoint_UserEmail" data-uid="Google.Cloud.Debugger.V2.Breakpoint.UserEmail">UserEmail</h4>
+  <div class="markdown level1 summary"><p>E-mail address of the user that created this breakpoint</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string UserEmail { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Debugger_V2_Breakpoint_VariableTable_" data-uid="Google.Cloud.Debugger.V2.Breakpoint.VariableTable*"></a>
+  <h4 id="Google_Cloud_Debugger_V2_Breakpoint_VariableTable" data-uid="Google.Cloud.Debugger.V2.Breakpoint.VariableTable">VariableTable</h4>
+  <div class="markdown level1 summary"><p>The <code>variable_table</code> exists to aid with computation, memory and network
+traffic optimization.  It enables storing a variable once and reference
+it from multiple variables, including variables stored in the
+<code>variable_table</code> itself.
+For example, the same <code>this</code> object, which may appear at many levels of
+the stack, can have all of its data stored once in this table.  The
+stack frame variables then would hold only a reference to it.</p>
+<p>The variable <code>var_table_index</code> field is an index into this repeated field.
+The stored objects are nameless and get their name from the referencing
+variable. The effective variable is a merge of the referencing variable
+and the referenced variable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;Variable&gt; VariableTable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Debugger.V2.Variable.html">Variable</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
