@@ -73,9 +73,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 switch (ErrorCode)
                 {
-                    case ErrorCode.DeadlineExceeded:
                     case ErrorCode.Aborted:
-                    case ErrorCode.Unavailable:
                         return true;
                     default:
                         return false;

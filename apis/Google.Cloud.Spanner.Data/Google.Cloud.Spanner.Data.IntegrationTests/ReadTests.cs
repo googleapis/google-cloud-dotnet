@@ -408,7 +408,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     }).ConfigureAwait(false);
 
                 Assert.Equal(ErrorCode.DeadlineExceeded, e.ErrorCode);
-                Assert.True(e.IsTransientSpannerFault());
+                Assert.False(e.IsTransientSpannerFault());
                 Assert.Equal(0, result);
             }
             finally
