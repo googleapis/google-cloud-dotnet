@@ -61,5 +61,20 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var request = new ListRequest(new BigqueryService(), "project", "dataset", "table");
             Assert.Throws<ArgumentException>(() => options.ModifyRequest(request));
         }
+
+        [Fact]
+        public void Clone()
+        {
+            var options = new ListRowsOptions
+            {
+                PageSize = 25,
+                StartIndex = 10
+            };
+            var clone = options.Clone();
+            options.PageSize = 20;
+            options.StartIndex = 5;
+            Assert.Equal(25, clone.PageSize);
+            Assert.Equal(10UL, clone.StartIndex);
+        }
     }
 }

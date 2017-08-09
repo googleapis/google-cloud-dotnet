@@ -462,6 +462,18 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Throws<GoogleApiException>(() => results.ThrowOnAnyError());
         }
 
+        [Fact]
+        public void DryRun_GetResults()
+        {
+            var projectId = _fixture.ProjectId;
+            var client = BigQueryClient.Create(projectId);
+            var table = client.GetTable(PublicDatasetsProject, PublicDatasetsDataset, ShakespeareTable);
+
+            var sql = $"SELECT corpus as title, COUNT(word) as unique_words FROM {table} GROUP BY title ORDER BY unique_words DESC LIMIT 10";
+            var job = client.CreateQueryJob(sql, new QueryOptions { DryRun = true });
+            Assert.Throws<InvalidOperationException>(() => job.GetQueryResults());
+        }
+
         private class TitleComparer : IEqualityComparer<BigQueryRow>
         {
             public bool Equals(BigQueryRow x, BigQueryRow y) => (string)x["title"] == (string)y["title"];

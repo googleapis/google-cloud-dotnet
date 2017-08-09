@@ -12,12 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Xunit;
 using static Google.Apis.Bigquery.v2.Data.ProjectList;
 
@@ -40,6 +37,27 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(name, project.FriendlyName);
             Assert.Equal(id, project.ProjectId);
             Assert.Equal(id, project.Reference.ProjectId);
+        }
+
+        [Fact]
+        public void CreateClient()
+        {
+            string projectId = "project";
+            var data = new ProjectsData
+            {
+                Id = projectId,
+                ProjectReference = new ProjectReference { ProjectId = projectId }
+            };
+            var originalClient = new SimpleClient();
+            var project = new CloudProject(originalClient, data);
+            var newClient = project.CreateClient();
+            Assert.Equal(projectId, newClient.ProjectId);
+            Assert.Same(originalClient.Service, newClient.Service);
+        }
+
+        private class SimpleClient : BigQueryClient
+        {
+            public override BigqueryService Service { get; } = new FakeBigqueryService();
         }
     }
 }

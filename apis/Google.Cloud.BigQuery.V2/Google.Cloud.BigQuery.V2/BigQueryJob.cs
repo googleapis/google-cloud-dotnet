@@ -98,7 +98,7 @@ namespace Google.Cloud.BigQuery.V2
             var errors = Resource.Status?.Errors;
             if (errors?.Count > 0)
             {
-                throw new GoogleApiException(_client.Service.Name, $"Job {Reference.ProjectId}/{Reference.JobId} contained errors")
+                throw new GoogleApiException(_client.Service.Name, $"Job {Reference?.ProjectId}/{Reference?.JobId} contained errors")
                 {
                     Error = new RequestError
                     {
@@ -196,14 +196,18 @@ namespace Google.Cloud.BigQuery.V2
             {
                 throw new InvalidOperationException("Job doesn't represent a query");
             }
-            ThrowOnAnyError();
-            var reference = query.DestinationTable;
-            if (reference == null)
+            if (Reference == null || Reference.ProjectId == null || Reference.JobId == null)
             {
-                // TODO: Work out when this could happen.
+                throw new InvalidOperationException("Job has no ID. (This can happen for dry run queries.)");
+            }
+            ThrowOnAnyError();
+            var tableReference = query.DestinationTable;
+            if (tableReference == null)
+            {
+                // This can happen if it's been fetched with an odd field mask.
                 throw new InvalidOperationException("Query doesn't have a destination table");
             }
-            return reference;
+            return tableReference;
         }
 
         // TODO: Refresh? Could easily call GetJob, but can't easily modify *this* job...

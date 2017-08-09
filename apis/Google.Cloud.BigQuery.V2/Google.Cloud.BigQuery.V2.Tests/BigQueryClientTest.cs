@@ -29,7 +29,7 @@ using Xunit;
 
 namespace Google.Cloud.BigQuery.V2.Tests
 {
-    public class BigQueryClientTest : AbstractClientTester<BigQueryClient, BigQueryClientTest.DerivedBigQueryClient>
+    public class BigQueryClientTest : AbstractClientTester<BigQueryClient, BigQueryClientTest.NoOverridesBigQueryClient>
     {
         private const string ProjectId = "sample-project";
 
@@ -49,7 +49,12 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 var referenceAcceptingOverload = overloads.FirstOrDefault(
                     o => o.GetParameters().FirstOrDefault()?.ParameterType.Name.EndsWith("Reference") == true);
                 return referenceAcceptingOverload == null || referenceAcceptingOverload == method;
-            });
+            })
+            .Concat(AllInstanceGetters);
+
+        public class NoOverridesBigQueryClient : BigQueryClient
+        {
+        }
 
         public class DerivedBigQueryClient : BigQueryClient
         {
@@ -154,7 +159,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
             VerifyEquivalent(
                 client => client.DeleteDataset(MatchesWhenSerialized(reference), options),
                 client => client.DeleteDataset(datasetId, options),
-                client => client.DeleteDataset(ProjectId, datasetId, options));
+                client => client.DeleteDataset(ProjectId, datasetId, options),
+                client => new BigQueryDataset(client, GetDataset(reference)).Delete(options));
         }
 
         [Fact]
@@ -179,7 +185,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
             VerifyEquivalent(new BigQueryDataset(new DerivedBigQueryClient(), resource),
                 client => client.UpdateDataset(MatchesWhenSerialized(reference), resource, options),
                 client => client.UpdateDataset(datasetId, resource, options),
-                client => client.UpdateDataset(ProjectId, datasetId, resource, options));
+                client => client.UpdateDataset(ProjectId, datasetId, resource, options),
+                client => new BigQueryDataset(client, GetDataset(reference)).Update(resource, options));
         }
 
         [Fact]
@@ -192,7 +199,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
             VerifyEquivalent(new BigQueryDataset(new DerivedBigQueryClient(), resource),
                 client => client.PatchDataset(MatchesWhenSerialized(reference), resource, options),
                 client => client.PatchDataset(datasetId, resource, options),
-                client => client.PatchDataset(ProjectId, datasetId, resource, options));
+                client => client.PatchDataset(ProjectId, datasetId, resource, options),
+                client => new BigQueryDataset(client, GetDataset(reference)).Patch(resource, false, options));
         }
 
         [Fact]
@@ -293,6 +301,36 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
+        public void UpdateTableEquivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var reference = GetTableReference(datasetId, tableId);
+            var resource = new Table();
+            var options = new UpdateTableOptions();
+            VerifyEquivalent(new BigQueryTable(new DerivedBigQueryClient(), resource),
+                client => client.UpdateTable(MatchesWhenSerialized(reference), resource, options),
+                client => client.UpdateTable(datasetId, tableId, resource, options),
+                client => client.UpdateTable(ProjectId, datasetId, tableId, resource, options),
+                client => new BigQueryTable(client, GetTable(reference)).Update(resource, options));
+        }
+
+        [Fact]
+        public void PatchTableEquivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var reference = GetTableReference(datasetId, tableId);
+            var resource = new Table();
+            var options = new PatchTableOptions();
+            VerifyEquivalent(new BigQueryTable(new DerivedBigQueryClient(), resource),
+                client => client.PatchTable(MatchesWhenSerialized(reference), resource, options),
+                client => client.PatchTable(datasetId, tableId, resource, options),
+                client => client.PatchTable(ProjectId, datasetId, tableId, resource, options),
+                client => new BigQueryTable(client, GetTable(reference)).Patch(resource, false, options));
+        }
+
+        [Fact]
         public void GetJobEquivalents()
         {
             var jobId = "job";
@@ -363,6 +401,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var datasetId = "dataset";
             var tableId = "table";
             var jobReference = GetJobReference("job");
+            var datasetReference = GetDatasetReference(datasetId);
             var tableReference = GetTableReference(datasetId, tableId);
             var schema = new TableSchemaBuilder().Build();
             var options = new UploadCsvOptions();
@@ -371,7 +410,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.UploadCsv(MatchesWhenSerialized(tableReference), schema, stream, options),
                 client => client.UploadCsv(datasetId, tableId, schema, stream, options),
                 client => client.UploadCsv(ProjectId, datasetId, tableId, schema, stream, options),
-                client => new BigQueryTable(client, GetTable(tableReference, schema)).UploadCsv(stream, options));
+                client => new BigQueryTable(client, GetTable(tableReference, schema)).UploadCsv(stream, options),
+                client => new BigQueryDataset(client, GetDataset(datasetReference)).UploadCsv(tableId, schema, stream, options));
         }
 
         [Fact]
@@ -380,6 +420,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var datasetId = "dataset";
             var tableId = "table";
             var jobReference = GetJobReference("job");
+            var datasetReference = GetDatasetReference(datasetId);
             var tableReference = GetTableReference(datasetId, tableId);
             var schema = new TableSchemaBuilder().Build();
             var options = new UploadJsonOptions();
@@ -388,7 +429,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.UploadJson(MatchesWhenSerialized(tableReference), schema, stream, options),
                 client => client.UploadJson(datasetId, tableId, schema, stream, options),
                 client => client.UploadJson(ProjectId, datasetId, tableId, schema, stream, options),
-                client => new BigQueryTable(client, GetTable(tableReference, schema)).UploadJson(stream, options));
+                client => new BigQueryTable(client, GetTable(tableReference, schema)).UploadJson(stream, options),
+                client => new BigQueryDataset(client, GetDataset(datasetReference)).UploadJson(tableId, schema, stream, options));
         }
 
         [Fact]
@@ -397,6 +439,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var datasetId = "dataset";
             var tableId = "table";
             var jobReference = GetJobReference("job");
+            var datasetReference = GetDatasetReference(datasetId);
             var tableReference = GetTableReference(datasetId, tableId);
             var schema = new TableSchemaBuilder().Build();
             var options = new UploadJsonOptions();
@@ -405,7 +448,27 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.UploadJson(MatchesWhenSerialized(tableReference), schema, rows, options),
                 client => client.UploadJson(datasetId, tableId, schema, rows, options),
                 client => client.UploadJson(ProjectId, datasetId, tableId, schema, rows, options),
-                client => new BigQueryTable(client, GetTable(tableReference, schema)).UploadJson(rows, options));
+                client => new BigQueryTable(client, GetTable(tableReference, schema)).UploadJson(rows, options),
+                client => new BigQueryDataset(client, GetDataset(datasetReference)).UploadJson(tableId, schema, rows, options));
+        }
+
+        [Fact]
+        public void UploadAvro_Equivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var jobReference = GetJobReference("job");
+            var datasetReference = GetDatasetReference(datasetId);
+            var tableReference = GetTableReference(datasetId, tableId);
+            var schema = new TableSchemaBuilder().Build();
+            var options = new UploadAvroOptions();
+            var stream = new MemoryStream();
+            VerifyEquivalent(new BigQueryJob(new DerivedBigQueryClient(), new Job { JobReference = jobReference }),
+                client => client.UploadAvro(MatchesWhenSerialized(tableReference), schema, stream, options),
+                client => client.UploadAvro(datasetId, tableId, schema, stream, options),
+                client => client.UploadAvro(ProjectId, datasetId, tableId, schema, stream, options),
+                client => new BigQueryTable(client, GetTable(tableReference, schema)).UploadAvro(stream, options),
+                client => new BigQueryDataset(client, GetDataset(datasetReference)).UploadAvro(tableId, schema, stream, options));
         }
 
         [Fact]
@@ -471,6 +534,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
 
             VerifyEquivalent(new BigQueryJob(new DerivedBigQueryClient(), new Job { JobReference = jobReference }),
                 client => client.CreateExtractJob(MatchesWhenSerialized(tableReference), new[] { uri }, options),
+                client => client.CreateExtractJob(tableReference, uri, options),
                 client => client.CreateExtractJob(ProjectId, datasetId, tableId, uri, options),
                 client => client.CreateExtractJob(datasetId, tableId, uri, options),
                 client => client.CreateExtractJob(tableReference, uri, options),
@@ -519,7 +583,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
             VerifyEquivalentAsync(
                 client => client.DeleteDatasetAsync(MatchesWhenSerialized(reference), options, token),
                 client => client.DeleteDatasetAsync(datasetId, options, token),
-                client => client.DeleteDatasetAsync(ProjectId, datasetId, options, token));
+                client => client.DeleteDatasetAsync(ProjectId, datasetId, options, token),
+                client => new BigQueryDataset(client, GetDataset(reference)).DeleteAsync(options, token));
         }
 
         [Fact]
@@ -558,6 +623,36 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.ListDatasetsAsync(MatchesWhenSerialized(reference), options),
                 client => client.ListDatasetsAsync(options),
                 client => client.ListDatasetsAsync(ProjectId, options));
+        }
+
+        [Fact]
+        public void UpdateDatasetAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var reference = GetDatasetReference(datasetId);
+            var resource = new Dataset();
+            var options = new UpdateDatasetOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(new BigQueryDataset(new DerivedBigQueryClient(), resource),
+                client => client.UpdateDatasetAsync(MatchesWhenSerialized(reference), resource, options, token),
+                client => client.UpdateDatasetAsync(datasetId, resource, options, token),
+                client => client.UpdateDatasetAsync(ProjectId, datasetId, resource, options, token),
+                client => new BigQueryDataset(client, GetDataset(reference)).UpdateAsync(resource, options, token));
+        }
+
+        [Fact]
+        public void PatchDatasetAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var reference = GetDatasetReference(datasetId);
+            var resource = new Dataset();
+            var options = new PatchDatasetOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(new BigQueryDataset(new DerivedBigQueryClient(), resource),
+                client => client.PatchDatasetAsync(MatchesWhenSerialized(reference), resource, options, token),
+                client => client.PatchDatasetAsync(datasetId, resource, options, token),
+                client => client.PatchDatasetAsync(ProjectId, datasetId, resource, options, token),
+                client => new BigQueryDataset(client, GetDataset(reference)).PatchAsync(resource, false, options, token));
         }
 
         [Fact]
@@ -639,6 +734,38 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
+        public void UpdateTableAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var reference = GetTableReference(datasetId, tableId);
+            var resource = new Table();
+            var options = new UpdateTableOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(new BigQueryTable(new DerivedBigQueryClient(), resource),
+                client => client.UpdateTableAsync(MatchesWhenSerialized(reference), resource, options, token),
+                client => client.UpdateTableAsync(datasetId, tableId, resource, options, token),
+                client => client.UpdateTableAsync(ProjectId, datasetId, tableId, resource, options, token),
+                client => new BigQueryTable(client, GetTable(reference)).UpdateAsync(resource, options, token));
+        }
+
+        [Fact]
+        public void PatchTableAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var reference = GetTableReference(datasetId, tableId);
+            var resource = new Table();
+            var options = new PatchTableOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(new BigQueryTable(new DerivedBigQueryClient(), resource),
+                client => client.PatchTableAsync(MatchesWhenSerialized(reference), resource, options, token),
+                client => client.PatchTableAsync(datasetId, tableId, resource, options, token),
+                client => client.PatchTableAsync(ProjectId, datasetId, tableId, resource, options, token),
+                client => new BigQueryTable(client, GetTable(reference)).PatchAsync(resource, false, options, token));
+        }
+
+        [Fact]
         public void GetJobAsyncEquivalents()
         {
             var jobId = "job";
@@ -712,6 +839,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var datasetId = "dataset";
             var tableId = "table";
             var jobReference = GetJobReference("job");
+            var datasetReference = GetDatasetReference(datasetId);
             var tableReference = GetTableReference(datasetId, tableId);
             var schema = new TableSchemaBuilder().Build();
             var options = new UploadCsvOptions();
@@ -721,7 +849,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.UploadCsvAsync(MatchesWhenSerialized(tableReference), schema, stream, options, token),
                 client => client.UploadCsvAsync(datasetId, tableId, schema, stream, options, token),
                 client => client.UploadCsvAsync(ProjectId, datasetId, tableId, schema, stream, options, token),
-                client => new BigQueryTable(client, GetTable(tableReference, schema)).UploadCsvAsync(stream, options, token));
+                client => new BigQueryTable(client, GetTable(tableReference, schema)).UploadCsvAsync(stream, options, token),
+                client => new BigQueryDataset(client, GetDataset(datasetReference)).UploadCsvAsync(tableId, schema, stream, options, token));
         }
 
         [Fact]
@@ -730,6 +859,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var datasetId = "dataset";
             var tableId = "table";
             var jobReference = GetJobReference("job");
+            var datasetReference = GetDatasetReference(datasetId);
             var tableReference = GetTableReference(datasetId, tableId);
             var schema = new TableSchemaBuilder().Build();
             var options = new UploadJsonOptions();
@@ -739,7 +869,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.UploadJsonAsync(MatchesWhenSerialized(tableReference), schema, stream, options, token),
                 client => client.UploadJsonAsync(datasetId, tableId, schema, stream, options, token),
                 client => client.UploadJsonAsync(ProjectId, datasetId, tableId, schema, stream, options, token),
-                client => new BigQueryTable(client, GetTable(tableReference, schema)).UploadJsonAsync(stream, options, token));
+                client => new BigQueryTable(client, GetTable(tableReference, schema)).UploadJsonAsync(stream, options, token),
+                client => new BigQueryDataset(client, GetDataset(datasetReference)).UploadJsonAsync(tableId, schema, stream, options, token));
         }
 
         [Fact]
@@ -748,6 +879,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var datasetId = "dataset";
             var tableId = "table";
             var jobReference = GetJobReference("job");
+            var datasetReference = GetDatasetReference(datasetId);
             var tableReference = GetTableReference(datasetId, tableId);
             var schema = new TableSchemaBuilder().Build();
             var options = new UploadJsonOptions();
@@ -757,7 +889,28 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.UploadJsonAsync(MatchesWhenSerialized(tableReference), schema, rows, options, token),
                 client => client.UploadJsonAsync(datasetId, tableId, schema, rows, options, token),
                 client => client.UploadJsonAsync(ProjectId, datasetId, tableId, schema, rows, options, token),
-                client => new BigQueryTable(client, GetTable(tableReference, schema)).UploadJsonAsync(rows, options, token));
+                client => new BigQueryTable(client, GetTable(tableReference, schema)).UploadJsonAsync(rows, options, token),
+                client => new BigQueryDataset(client, GetDataset(datasetReference)).UploadJsonAsync(tableId, schema, rows, options, token));
+        }
+
+        [Fact]
+        public void UploadAvroAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var jobReference = GetJobReference("job");
+            var datasetReference = GetDatasetReference(datasetId);
+            var tableReference = GetTableReference(datasetId, tableId);
+            var schema = new TableSchemaBuilder().Build();
+            var options = new UploadAvroOptions();
+            var token = new CancellationTokenSource().Token;
+            var stream = new MemoryStream();
+            VerifyEquivalentAsync(new BigQueryJob(new DerivedBigQueryClient(), new Job { JobReference = jobReference }),
+                client => client.UploadAvroAsync(MatchesWhenSerialized(tableReference), schema, stream, options, token),
+                client => client.UploadAvroAsync(datasetId, tableId, schema, stream, options, token),
+                client => client.UploadAvroAsync(ProjectId, datasetId, tableId, schema, stream, options, token),
+                client => new BigQueryTable(client, GetTable(tableReference, schema)).UploadAvroAsync(stream, options, token),
+                client => new BigQueryDataset(client, GetDataset(datasetReference)).UploadAvroAsync(tableId, schema, stream, options, token));
         }
 
         [Fact]
@@ -827,6 +980,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
 
             VerifyEquivalentAsync(new BigQueryJob(new DerivedBigQueryClient(), new Job { JobReference = jobReference }),
                 client => client.CreateExtractJobAsync(MatchesWhenSerialized(tableReference), new[] { uri }, options, token),
+                client => client.CreateExtractJobAsync(tableReference, uri, options, token),
                 client => client.CreateExtractJobAsync(ProjectId, datasetId, tableId, uri, options, token),
                 client => client.CreateExtractJobAsync(datasetId, tableId, uri, options, token),
                 client => client.CreateExtractJobAsync(tableReference, uri, options, token),
@@ -852,6 +1006,9 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.CreateCopyJobAsync(sourceTableReference, destinationTableReference, options, token),
                 client => new BigQueryTable(client, GetTable(sourceTableReference)).CreateCopyJobAsync(destinationTableReference, options, token));
         }
+
+        // TODO: Equivalents for GetQueryResults. That's currently a two-stage process (fetch job, fetch results) which we don't have
+        // support for in the code below.
 
         private T MatchesWhenSerialized<T>(T expected)
         {

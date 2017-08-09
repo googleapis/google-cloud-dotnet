@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+﻿// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,27 +12,22 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System.Collections.Generic;
 using Google.Apis.Bigquery.v2.Data;
+using Moq;
 using Xunit;
 
 namespace Google.Cloud.BigQuery.V2.Tests
 {
-    public class TableSchemaExtensionsTest
+    public class BigQueryDatasetTest
     {
+        // Most aspects are tested via equivalent in BigQueryClientTest
+
         [Fact]
-        public void GetFieldIndex()
+        public void FullyQualifiedId()
         {
-            var schema = new TableSchema
-            {
-                Fields = new List<TableFieldSchema>
-                {
-                    new TableFieldSchema { Name = "foo" },
-                    new TableFieldSchema { Name = "bar" }
-                }
-            };
-            Assert.Equal(1, schema.GetFieldIndex("bar"));
-            Assert.Throws<KeyNotFoundException>(() => schema.GetFieldIndex("qux"));
+            var reference = new DatasetReference { ProjectId = "my-project", DatasetId = "my-dataset" };
+            var dataset = new BigQueryDataset(new Mock<BigQueryClient>().Object, new Dataset { DatasetReference = reference });
+            Assert.Equal("my-project:my-dataset", dataset.FullyQualifiedId);
         }
     }
 }

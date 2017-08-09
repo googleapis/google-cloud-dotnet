@@ -14,6 +14,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Xunit;
 
 namespace Google.Cloud.BigQuery.V2.Tests
@@ -31,6 +32,17 @@ namespace Google.Cloud.BigQuery.V2.Tests
         public void InvalidFieldName()
         {
             AssertInvalid("bad field name", "");
+        }
+
+        // Invalid values should be invalid for general insert, but also invalid
+        // in a list at conversion time
+        private void AssertInvalidValueWithListCheck<T>(string name, T value)
+        {
+            AssertInvalid(name, value);
+            var list = new List<T>();
+            var row = new BigQueryInsertRow { { name, list } };
+            list.Add(value);
+            Assert.Throws<InvalidOperationException>(() => row.ToRowsData());
         }
 
         private void AssertInvalid(string name, object value)
@@ -108,14 +120,14 @@ namespace Google.Cloud.BigQuery.V2.Tests
         [Fact]
         public void TimeSpan_Invalid()
         {
-            AssertInvalid("field", TimeSpan.FromTicks(-1L));
-            AssertInvalid("field", TimeSpan.FromDays(1));
+            AssertInvalidValueWithListCheck("field", TimeSpan.FromTicks(-1L));
+            AssertInvalidValueWithListCheck("field", TimeSpan.FromDays(1));
         }
 
         [Fact]
         public void LocalDateTimeRejection()
         {
-            AssertInvalid("field", new DateTime(2000, 1, 1, 5, 0, 0, DateTimeKind.Local));
+            AssertInvalidValueWithListCheck("field", new DateTime(2000, 1, 1, 5, 0, 0, DateTimeKind.Local));
         }
 
         [Fact]
@@ -141,6 +153,17 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
+        public void TimespanFormatting()
+        {
+            var row = new BigQueryInsertRow
+            {
+                { "field", new TimeSpan(1, 2, 3) },
+            };
+            var rowData = row.ToRowsData();
+            Assert.Equal("01:02:03", rowData.Json["field"]);
+        }
+
+        [Fact]
         public void NestedRecordFormatting()
         {
             var nested = new BigQueryInsertRow { { "inner", "value" } };
@@ -163,6 +186,17 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var row = new BigQueryInsertRow { { "names", new[] { "a", null, "b" } } };
             Assert.Throws<InvalidOperationException>(() => row.ToRowsData());
+        }
+
+        [Fact]
+        public void GetEnumerator()
+        {
+            var row = new BigQueryInsertRow
+            {
+                { "field1", 10 },
+                { "field2", "text" }
+            };
+            Assert.Equal(2, row.Cast<object>().Count());
         }
     }
 }

@@ -31,6 +31,12 @@ namespace Google.Cloud.ClientTesting
                 .Where(m => m.IsPublic && !m.IsStatic && !m.IsSpecialName)
                 .Select(m => new object[] { m });
 
+        public static IEnumerable<object[]> AllInstanceGetters =>
+            typeof(TAbstract).GetTypeInfo().DeclaredProperties
+                .Select(p => p.GetGetMethod())
+                .Where(m => m.IsPublic && !m.IsStatic)
+                .Select(m => new object[] { m });
+
         protected void AssertNotImplemented(MethodInfo method)
         {
             var exception = Assert.Throws<NotImplementedException>(() => Invoke(method));

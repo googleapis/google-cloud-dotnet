@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
+using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
@@ -104,6 +105,23 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>A data upload job.</returns>
         public BigQueryJob UploadJson(string tableId, TableSchema schema, Stream input, UploadJsonOptions options = null) =>
             _client.UploadJson(GetTableReference(tableId), schema, input, options);
+
+        /// <summary>
+        /// Uploads a stream of JSON data to a table.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.UploadJson(TableReference, TableSchema, IEnumerable{string}, UploadJsonOptions)"/>.
+        /// </summary>
+        /// <remarks>
+        /// Each element of <paramref name="rows"/> is converted into a single line of text by replacing carriage returns and line
+        /// feeds with spaces. This is safe as they cannot exist within well-formed JSON keys or values, and simply means that the
+        /// original JSON can be formatted however you choose.
+        /// </remarks>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="rows">The sequence of JSON strings to upload. Must not be null, and must not contain null elements.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>A data upload job.</returns>
+        public BigQueryJob UploadJson(string tableId, TableSchema schema, IEnumerable<string> rows, UploadJsonOptions options = null) =>
+            _client.UploadJson(GetTableReference(tableId), schema, rows, options);
 
         /// <summary>
         /// Lists the tables within this dataset.
@@ -229,6 +247,25 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Asynchronously uploads a stream of JSON data to a table.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.UploadJsonAsync(TableReference, TableSchema, IEnumerable{string}, UploadJsonOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <remarks>
+        /// Each element of <paramref name="rows"/> is converted into a single line of text by replacing carriage returns and line
+        /// feeds with spaces. This is safe as they cannot exist within well-formed JSON keys or values, and simply means that the
+        /// original JSON can be formatted however you choose.
+        /// </remarks>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="rows">The sequence of JSON strings to upload. Must not be null, and must not contain null elements.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// a data upload job.</returns>
+        public Task<BigQueryJob> UploadJsonAsync(string tableId, TableSchema schema, IEnumerable<string> rows, UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            _client.UploadJsonAsync(GetTableReference(tableId), schema, rows, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously uploads a stream of JSON data to a table.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.UploadJsonAsync(TableReference, TableSchema, Stream, UploadJsonOptions, CancellationToken)"/>.
         /// </summary>
         /// <param name="tableId">The table ID. Must not be null.</param>
@@ -290,7 +327,7 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Deletes this dataset.
-        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="BigQueryClient.DeleteDatasetAsync(string, string, DeleteDatasetOptions, CancellationToken)"/>.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="BigQueryClient.DeleteDatasetAsync(DatasetReference, DeleteDatasetOptions, CancellationToken)"/>.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
