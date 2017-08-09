@@ -72,7 +72,7 @@
   {
     "id": "Google.Cloud.Debugger.V2",
     "productName": "Stackdriver Debugger",
-    "productUrl": "https://cloud.google.com/debug/",
+    "productUrl": "https://cloud.google.com/debugger/",
     "version": "1.0.0-alpha01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Debugger API.",
