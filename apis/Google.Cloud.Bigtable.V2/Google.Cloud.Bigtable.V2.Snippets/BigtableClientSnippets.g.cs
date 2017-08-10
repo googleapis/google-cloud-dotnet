@@ -32,6 +32,54 @@ namespace Google.Cloud.Bigtable.V2.Snippets
 {
     public class GeneratedBigtableClientSnippets
     {
+        public async Task ReadRows()
+        {
+            // Snippet: ReadRows(ReadRowsRequest,CallSettings)
+            // Create client
+            BigtableClient bigtableClient = BigtableClient.Create();
+            // Initialize request argument
+            ReadRowsRequest request = new ReadRowsRequest
+            {
+                TableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+            };
+            // Make the request, returning a streaming response
+            BigtableClient.ReadRowsStream streamingResponse = bigtableClient.ReadRows(request);
+
+            // Read streaming responses from server until complete
+            IAsyncEnumerator<ReadRowsResponse> responseStream = streamingResponse.ResponseStream;
+            while (await responseStream.MoveNext())
+            {
+                ReadRowsResponse response = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
+        public async Task SampleRowKeys()
+        {
+            // Snippet: SampleRowKeys(SampleRowKeysRequest,CallSettings)
+            // Create client
+            BigtableClient bigtableClient = BigtableClient.Create();
+            // Initialize request argument
+            SampleRowKeysRequest request = new SampleRowKeysRequest
+            {
+                TableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+            };
+            // Make the request, returning a streaming response
+            BigtableClient.SampleRowKeysStream streamingResponse = bigtableClient.SampleRowKeys(request);
+
+            // Read streaming responses from server until complete
+            IAsyncEnumerator<SampleRowKeysResponse> responseStream = streamingResponse.ResponseStream;
+            while (await responseStream.MoveNext())
+            {
+                SampleRowKeysResponse response = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
         public async Task MutateRowAsync()
         {
             // Snippet: MutateRowAsync(string,ByteString,IEnumerable<Mutation>,CallSettings)
@@ -92,6 +140,31 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             };
             // Make the request
             MutateRowResponse response = bigtableClient.MutateRow(request);
+            // End snippet
+        }
+
+        public async Task MutateRows()
+        {
+            // Snippet: MutateRows(MutateRowsRequest,CallSettings)
+            // Create client
+            BigtableClient bigtableClient = BigtableClient.Create();
+            // Initialize request argument
+            MutateRowsRequest request = new MutateRowsRequest
+            {
+                TableName = new TableName("[PROJECT]", "[INSTANCE]", "[TABLE]").ToString(),
+                Entries = { },
+            };
+            // Make the request, returning a streaming response
+            BigtableClient.MutateRowsStream streamingResponse = bigtableClient.MutateRows(request);
+
+            // Read streaming responses from server until complete
+            IAsyncEnumerator<MutateRowsResponse> responseStream = streamingResponse.ResponseStream;
+            while (await responseStream.MoveNext())
+            {
+                MutateRowsResponse response = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
             // End snippet
         }
 
