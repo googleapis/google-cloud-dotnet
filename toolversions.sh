@@ -42,6 +42,7 @@ install_docfx() {
   if [[ ! -f $DOCFX ]]
   then
     (echo "Fetching docfx v${DOCFX_VERSION}";
+     mkdir -p $REPO_ROOT/packages;
      cd $REPO_ROOT/packages;
      mkdir docfx.$DOCFX_VERSION;
      cd docfx.$DOCFX_VERSION;
