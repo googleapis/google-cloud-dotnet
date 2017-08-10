@@ -1,21 +1,22 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26114.2
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.V2", "Google.Cloud.BigQuery.V2\Google.Cloud.BigQuery.V2.csproj", "{1A49495F-B749-42F6-AE05-28B1B3E1EDF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.BigQuery.V2", "Google.Cloud.BigQuery.V2\Google.Cloud.BigQuery.V2.csproj", "{1A49495F-B749-42F6-AE05-28B1B3E1EDF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.V2.CleanTestData", "Google.Cloud.BigQuery.V2.CleanTestData\Google.Cloud.BigQuery.V2.CleanTestData.csproj", "{B5F7491C-ED9E-4032-88C0-22EE959D19E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.BigQuery.V2.CleanTestData", "Google.Cloud.BigQuery.V2.CleanTestData\Google.Cloud.BigQuery.V2.CleanTestData.csproj", "{B5F7491C-ED9E-4032-88C0-22EE959D19E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.V2.IntegrationTests", "Google.Cloud.BigQuery.V2.IntegrationTests\Google.Cloud.BigQuery.V2.IntegrationTests.csproj", "{CBD350EE-3B27-4129-8999-1815DECF9E66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.BigQuery.V2.IntegrationTests", "Google.Cloud.BigQuery.V2.IntegrationTests\Google.Cloud.BigQuery.V2.IntegrationTests.csproj", "{CBD350EE-3B27-4129-8999-1815DECF9E66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.V2.Snippets", "Google.Cloud.BigQuery.V2.Snippets\Google.Cloud.BigQuery.V2.Snippets.csproj", "{A55F5009-37C2-4EB6-A100-AB86885A3AE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.BigQuery.V2.Snippets", "Google.Cloud.BigQuery.V2.Snippets\Google.Cloud.BigQuery.V2.Snippets.csproj", "{A55F5009-37C2-4EB6-A100-AB86885A3AE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.V2.Tests", "Google.Cloud.BigQuery.V2.Tests\Google.Cloud.BigQuery.V2.Tests.csproj", "{96BDCC84-EF76-4B35-A390-D2F6D7B8F55B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.BigQuery.V2.Tests", "Google.Cloud.BigQuery.V2.Tests\Google.Cloud.BigQuery.V2.Tests.csproj", "{96BDCC84-EF76-4B35-A390-D2F6D7B8F55B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Storage.V1", "..\Google.Cloud.Storage.V1\Google.Cloud.Storage.V1\Google.Cloud.Storage.V1.csproj", "{E8814844-5FA9-4F2B-AEAD-E7CE427DE48A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Storage.V1", "..\Google.Cloud.Storage.V1\Google.Cloud.Storage.V1\Google.Cloud.Storage.V1.csproj", "{E8814844-5FA9-4F2B-AEAD-E7CE427DE48A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{4810D3AB-8422-4940-BB99-0A89AD057C1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{4810D3AB-8422-4940-BB99-0A89AD057C1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.V2.GenerateOverloads", "Google.Cloud.BigQuery.V2.GenerateOverloads\Google.Cloud.BigQuery.V2.GenerateOverloads.csproj", "{DF2523B4-6B8E-4F0F-B5C5-B682AF1213F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +52,10 @@ Global
 		{4810D3AB-8422-4940-BB99-0A89AD057C1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4810D3AB-8422-4940-BB99-0A89AD057C1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4810D3AB-8422-4940-BB99-0A89AD057C1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF2523B4-6B8E-4F0F-B5C5-B682AF1213F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF2523B4-6B8E-4F0F-B5C5-B682AF1213F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF2523B4-6B8E-4F0F-B5C5-B682AF1213F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF2523B4-6B8E-4F0F-B5C5-B682AF1213F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
