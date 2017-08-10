@@ -48,7 +48,7 @@ namespace Google.Cloud.BigQuery.V2.CleanTestData
         private static bool IsTestDataset(BigQueryDataset dataset)
         {
             var id = dataset.Reference.DatasetId;
-            return id.StartsWith("test_") || id.StartsWith("snippets_");
+            return id.StartsWith("test_") || id.StartsWith("snippets_") || id.StartsWith("testlabels_");
         }
     }
 }

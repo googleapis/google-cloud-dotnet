@@ -228,6 +228,58 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
+        public void SetDatasetLabelEquivalents()
+        {
+            var datasetId = "dataset";
+            var reference = GetDatasetReference(datasetId);
+            var options = new ModifyLabelsOptions();
+            string labelName = "label";
+            string labelValue = "value";
+            VerifyEquivalent("oldValue",
+                client => client.SetDatasetLabel(MatchesWhenSerialized(reference), labelName, labelValue, options),
+                client => client.SetDatasetLabel(datasetId, labelName, labelValue, options),
+                client => client.SetDatasetLabel(ProjectId, datasetId, labelName, labelValue, options));
+        }
+
+        [Fact]
+        public void RemoveDatasetLabelEquivalents()
+        {
+            var datasetId = "dataset";
+            var reference = GetDatasetReference(datasetId);
+            var options = new ModifyLabelsOptions();
+            string labelName = "label";
+            VerifyEquivalent("oldValue",
+                client => client.RemoveDatasetLabel(MatchesWhenSerialized(reference), labelName, options),
+                client => client.RemoveDatasetLabel(datasetId, labelName, options),
+                client => client.RemoveDatasetLabel(ProjectId, datasetId, labelName, options));
+        }
+
+        [Fact]
+        public void ClearDatasetLabelsEquivalents()
+        {
+            var datasetId = "dataset";
+            var reference = GetDatasetReference(datasetId);
+            var options = new ModifyLabelsOptions();
+            VerifyEquivalent(new Dictionary<string, string>(),
+                client => client.ClearDatasetLabels(MatchesWhenSerialized(reference), options),
+                client => client.ClearDatasetLabels(datasetId, options),
+                client => client.ClearDatasetLabels(ProjectId, datasetId, options));
+        }
+
+        [Fact]
+        public void ModifyDatasetLabelsEquivalents()
+        {
+            var datasetId = "dataset";
+            var reference = GetDatasetReference(datasetId);
+            var options = new ModifyLabelsOptions();
+            var labels = new Dictionary<string, string>();
+            VerifyEquivalent(new Dictionary<string, string>(),
+                client => client.ModifyDatasetLabels(MatchesWhenSerialized(reference), labels, options),
+                client => client.ModifyDatasetLabels(datasetId, labels, options),
+                client => client.ModifyDatasetLabels(ProjectId, datasetId, labels, options));
+        }
+
+        [Fact]
         public void CreateTableEquivalents()
         {
             var datasetId = "dataset";
@@ -653,6 +705,62 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.PatchDatasetAsync(datasetId, resource, options, token),
                 client => client.PatchDatasetAsync(ProjectId, datasetId, resource, options, token),
                 client => new BigQueryDataset(client, GetDataset(reference)).PatchAsync(resource, false, options, token));
+        }
+
+        [Fact]
+        public void SetDatasetLabelAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var reference = GetDatasetReference(datasetId);
+            var options = new ModifyLabelsOptions();
+            var token = new CancellationTokenSource().Token;
+            string labelName = "label";
+            string labelValue = "value";
+            VerifyEquivalentAsync("oldValue",
+                client => client.SetDatasetLabelAsync(MatchesWhenSerialized(reference), labelName, labelValue, options, token),
+                client => client.SetDatasetLabelAsync(datasetId, labelName, labelValue, options, token),
+                client => client.SetDatasetLabelAsync(ProjectId, datasetId, labelName, labelValue, options, token));
+        }
+
+        [Fact]
+        public void RemoveDatasetLabelAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var reference = GetDatasetReference(datasetId);
+            var options = new ModifyLabelsOptions();
+            var token = new CancellationTokenSource().Token;
+            string labelName = "label";
+            VerifyEquivalentAsync("oldValue",
+                client => client.RemoveDatasetLabelAsync(MatchesWhenSerialized(reference), labelName, options, token),
+                client => client.RemoveDatasetLabelAsync(datasetId, labelName, options, token),
+                client => client.RemoveDatasetLabelAsync(ProjectId, datasetId, labelName, options, token));
+        }
+
+        [Fact]
+        public void ClearDatasetLabelsAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var reference = GetDatasetReference(datasetId);
+            var options = new ModifyLabelsOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(new Dictionary<string, string>(),
+                client => client.ClearDatasetLabelsAsync(MatchesWhenSerialized(reference), options, token),
+                client => client.ClearDatasetLabelsAsync(datasetId, options, token),
+                client => client.ClearDatasetLabelsAsync(ProjectId, datasetId, options, token));
+        }
+
+        [Fact]
+        public void ModifyDatasetLabelsAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var reference = GetDatasetReference(datasetId);
+            var options = new ModifyLabelsOptions();
+            var token = new CancellationTokenSource().Token;
+            var labels = new Dictionary<string, string>();
+            VerifyEquivalentAsync(new Dictionary<string, string>(),
+                client => client.ModifyDatasetLabelsAsync(MatchesWhenSerialized(reference), labels, options, token),
+                client => client.ModifyDatasetLabelsAsync(datasetId, labels, options, token),
+                client => client.ModifyDatasetLabelsAsync(ProjectId, datasetId, labels, options, token));
         }
 
         [Fact]

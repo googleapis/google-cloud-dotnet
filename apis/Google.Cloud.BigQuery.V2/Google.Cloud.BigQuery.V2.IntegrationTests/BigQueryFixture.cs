@@ -45,6 +45,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
         public string ProjectId { get; }
         public string DatasetId { get; }
+        public string LabelsDatasetId { get; }
         public string HighScoreTableId { get; } = "highscores";
         public string PeopleTableId { get; } = "people";
         public string ComplexTypesTableId { get; } = "complex";
@@ -59,7 +60,9 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                     $"Please set the {ProjectEnvironmentVariable} environment variable before running tests");
             }
 
-            DatasetId = DateTime.UtcNow.ToString("'test'_yyyyMMddTHHmmssfff", CultureInfo.InvariantCulture);
+            var now = DateTime.UtcNow;
+            DatasetId = now.ToString("'test'_yyyyMMddTHHmmssfff", CultureInfo.InvariantCulture);
+            LabelsDatasetId = now.ToString("'testlabels'_yyyyMMddTHHmmssfff", CultureInfo.InvariantCulture);
 
             CreateData();
         }
@@ -68,6 +71,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         {
             var client = BigQueryClient.Create(ProjectId);
             var dataset = client.CreateDataset(DatasetId);
+            client.CreateDataset(LabelsDatasetId);
             CreateHighScoreTable(dataset);
             CreatePeopleTable(dataset);
             CreateComplexTypesTable(dataset);
@@ -255,6 +259,27 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
         internal string CreateTableId() => "test_" + Guid.NewGuid().ToString().Replace("-", "_");
         internal string CreateDatasetId() => $"{DatasetId}_{Interlocked.Increment(ref extraDatasetCounter)}";
+
+        /// <summary>
+        /// Sets the labels on <see cref="LabelsDatasetId"/> without using any of the client *Labels methods.
+        /// Any old labels are wiped.
+        /// </summary>
+        public void SetUpLabels(Dictionary<string, string> labels)
+        {
+            // Just avoid mutating the parameter...
+            labels = new Dictionary<string, string>(labels);
+            var client = BigQueryClient.Create(ProjectId);
+            var dataset = client.GetDataset(LabelsDatasetId);
+            var oldLabels = dataset.Resource.Labels ?? new Dictionary<string, string>();
+            foreach (var key in oldLabels.Keys.Except(labels.Keys))
+            {
+                labels[key] = null;
+            }
+            dataset.Patch(new Dataset { Labels = labels }, true);
+            // Quota: only one Patch/Update operation per 2 seconds.
+            Thread.Sleep(2500);
+        }
+
 
         public void Dispose()
         {
