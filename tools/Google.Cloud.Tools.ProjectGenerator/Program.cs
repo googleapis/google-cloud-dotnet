@@ -18,6 +18,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
@@ -100,6 +101,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 ValidateCommonHiddenProductionDependencies();
                 var root = DirectoryLayout.DetermineRootDirectory();
                 var apis = ApiMetadata.LoadApis();
+                Console.WriteLine($"API catalog contains {apis.Count} entries");
                 HashSet<string> apiNames = new HashSet<string>(apis.Select(api => api.Id));
 
                 foreach (var api in apis)
@@ -109,6 +111,10 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 foreach (var api in apis)
                 {
                     GenerateSolutionFiles(Path.Combine(root, "apis", api.Id), api);
+                }
+                foreach (var api in apis)
+                {
+                    GenerateDocumentationStub(Path.Combine(root, "apis", api.Id), api);
                 }
                 return 0;
             }
@@ -135,7 +141,6 @@ namespace Google.Cloud.Tools.ProjectGenerator
             // - .IntegrationTests: integration tests
 
             // Anything else will be ignored for now...
-            Console.WriteLine($"Generating projects for {api.Id}");
             var projectDirectories = Directory.GetDirectories(apiRoot)
                 .Where(pd => Path.GetFileName(pd).StartsWith(api.Id))
                 .ToList();
@@ -161,7 +166,6 @@ namespace Google.Cloud.Tools.ProjectGenerator
 
         static void GenerateSolutionFiles(string apiRoot, ApiMetadata api)
         {
-            Console.WriteLine($"Generating solution file for {api.Id}");
             var projectDirectories = Directory.GetDirectories(apiRoot)
                 .Where(pd => Path.GetFileName(pd).StartsWith(api.Id))
                 .ToList();
@@ -189,12 +193,46 @@ namespace Google.Cloud.Tools.ProjectGenerator
             }
 
             var solutionFile = $"{api.Id}.sln";
-            if (!File.Exists(Path.Combine(apiRoot, solutionFile)))
+            string fullFile = Path.Combine(apiRoot, solutionFile);
+            string beforeHash = GetFileHash(fullFile);
+            if (!File.Exists(fullFile))
             {
                 RunDotnet(apiRoot, "new", "sln", "-n", api.Id);
             }
             // It's much faster to run a single process than to run it once per project.
             RunDotnet(apiRoot, new[] { "sln", solutionFile, "add" }.Concat(projects).ToArray());
+            string afterHash = GetFileHash(fullFile);
+            if (beforeHash != afterHash)
+            {
+                Console.WriteLine($"{(beforeHash == null ? "Created" : "Modified")} solution file for {api.Id}");
+            }
+        }
+
+        static void GenerateDocumentationStub(string apiRoot, ApiMetadata api)
+        {
+            string file = Path.Combine(apiRoot, "docs", "index.md");
+            if (!File.Exists(file) && api.ProductName != null && api.ProductUrl != null)
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(file));
+                File.WriteAllText(file,
+@"{{title}}
+
+{{description}}
+
+{{installation}}
+
+{{auth}}
+
+# Getting started
+
+TODO: Add a link to the client classes here, and introductory text.
+
+# Sample code
+
+TODO: Add snippet references here.
+");
+                Console.WriteLine($"Generated documentation stub for {api.Id}");
+            }
         }
 
         private static void RunDotnet(string root, params string[] args)
@@ -374,6 +412,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
             ApiMetadata api, string directory, XElement propertyGroup, XElement dependenciesItemGroup, XElement packingElement)
         {
             var file = Path.Combine(directory, $"{Path.GetFileName(directory)}.csproj");
+            string beforeHash = GetFileHash(file);
             XElement doc;
             // If the file already exists, load it and replace the elements (leaving any further PropertyGroup and ItemGroup elements).
             // Make sure there's an appropriate import for stripping desktop builds on non-Windows platforms.
@@ -409,6 +448,11 @@ namespace Google.Cloud.Tools.ProjectGenerator
             using (var stream = File.Create(Path.Combine(directory, $"{Path.GetFileName(directory)}.csproj")))
             {
                 doc.Save(stream);
+            }
+            string afterHash = GetFileHash(file);
+            if (beforeHash != afterHash)
+            {
+                Console.WriteLine($"{(beforeHash == null ? "Created" : "Modified")} project file {Path.GetFileName(file)}");
             }
         }
 
@@ -515,6 +559,22 @@ namespace Google.Cloud.Tools.ProjectGenerator
             if (brokenDependencies.Any())
             {
                 throw new Exception($"ProjectGenerator error: invalid CommonHiddenProductionDependencies: {string.Join(", ", brokenDependencies)}");
+            }
+        }
+
+        private static string GetFileHash(string file)
+        {
+            if (!File.Exists(file))
+            {
+                return null;
+            }
+            using (var sha256 = SHA256.Create())
+            {
+                using (var stream = File.OpenRead(file))
+                {
+                    byte[] hash = sha256.ComputeHash(stream);
+                    return BitConverter.ToString(hash);
+                }
             }
         }
     }
