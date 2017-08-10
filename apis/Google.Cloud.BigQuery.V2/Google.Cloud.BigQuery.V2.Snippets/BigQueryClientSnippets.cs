@@ -21,6 +21,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -1622,6 +1623,136 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         // Member: PatchTableAsync(string, string, Table, *, *)
         // Member: PatchTableAsync(string, string, string, Table, *, *)
         // See [PatchTable](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void ClearDatasetLabels()
+        {
+            // Avoid quota issues: only one dataset modification is allowed per 2 seconds.
+            Thread.Sleep(2500);
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+
+            // Snippet: ClearDatasetLabels(string, *)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+
+            IDictionary<string, string> previousLabels = client.ClearDatasetLabels(datasetId);
+            Console.WriteLine("Previous labels:");
+            foreach (KeyValuePair<string, string> label in previousLabels)
+            {
+                Console.WriteLine($"Name: {label.Key}; Value: {label.Value}");
+            }
+            // End snippet
+        }
+
+        // See-also: ClearDatasetLabels(string, *)
+        // Member: ClearDatasetLabels(string, string, *)
+        // Member: ClearDatasetLabels(DatasetReference, *)
+        // See [ClearDatasetLabels](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: ClearDatasetLabels(string, *)
+        // Member: ClearDatasetLabelsAsync(string, *, *)
+        // Member: ClearDatasetLabelsAsync(string, string, *, *)
+        // Member: ClearDatasetLabelsAsync(DatasetReference, *, *)
+        // See [ClearDatasetLabels](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void SetDatasetLabel()
+        {
+            // Avoid quota issues: only one dataset modification is allowed per 2 seconds.
+            Thread.Sleep(2500);
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+
+            // Snippet: SetDatasetLabel(string, string, string, *)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+
+            string previousValue = client.SetDatasetLabel(datasetId, "label_name", "new_label_value");
+            Console.WriteLine($"Previous label value: {previousValue}");
+            // End snippet
+        }
+
+        // See-also: SetDatasetLabel(string, string, string, *)
+        // Member: SetDatasetLabel(string, string, string, string, *)
+        // Member: SetDatasetLabel(DatasetReference, string, string, *)
+        // See [ClearDatasetLabels](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: SetDatasetLabel(string, string, string, *)
+        // Member: SetDatasetLabelAsync(string, string, string, *, *)
+        // Member: SetDatasetLabelAsync(string, string, string, string, *, *)
+        // Member: SetDatasetLabelAsync(DatasetReference, string, string, *, *)
+        // See [SetDatasetLabel](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void RemoveDatasetLabel()
+        {
+            // Avoid quota issues: only one dataset modification is allowed per 2 seconds.
+            Thread.Sleep(2500);
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+
+            // Snippet: RemoveDatasetLabel(string, string, *)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+
+            string previousValue = client.RemoveDatasetLabel(datasetId, "labelName");
+            Console.WriteLine($"Previous label value: {previousValue}");
+            // End snippet
+        }
+
+        // See-also: RemoveDatasetLabel(string, string, *)
+        // Member: RemoveDatasetLabel(string, string, string, *)
+        // Member: RemoveDatasetLabel(DatasetReference, string, *)
+        // See [ClearDatasetLabels](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: RemoveDatasetLabel(string, string, *)
+        // Member: RemoveDatasetLabelAsync(string, string, *, *)
+        // Member: RemoveDatasetLabelAsync(string, string, string, *, *)
+        // Member: RemoveDatasetLabelAsync(DatasetReference, string, *, *)
+        // See [RemoveDatasetLabel](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void ModifyDatasetLabels()
+        {
+            // Avoid quota issues: only one dataset modification is allowed per 2 seconds.
+            Thread.Sleep(2500);
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+
+            // Snippet: ModifyDatasetLabels(string, IDictionary<string, string>, *)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+
+            IDictionary<string, string> modifications = new Dictionary<string, string>
+            {
+                { "set_me", "x" },    // Label "set_me" will be set to value "x"
+                { "remove_me", null } // Label "remove_me" will be removed
+            };
+
+            IDictionary<string, string> previousLabels = client.ModifyDatasetLabels(datasetId, modifications);
+            Console.WriteLine("Previous values for specified labels:");
+            foreach (KeyValuePair<string, string> label in previousLabels)
+            {
+                Console.WriteLine($"Name: {label.Key}; Value: {label.Value}");
+            }
+            // End snippet
+        }
+
+        // See-also: ModifyDatasetLabels(string, IDictionary<string, string>, *)
+        // Member: ModifyDatasetLabels(string, string, IDictionary<string, string>, *)
+        // Member: ModifyDatasetLabels(DatasetReference, IDictionary<string, string>, *)
+        // See [ClearDatasetLabels](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: ModifyDatasetLabels(string, IDictionary<string, string>, *)
+        // Member: ModifyDatasetLabelsAsync(string, IDictionary<string, string>, *, *)
+        // Member: ModifyDatasetLabelsAsync(string, string, IDictionary<string, string>, *, *)
+        // Member: ModifyDatasetLabelsAsync(DatasetReference, IDictionary<string, string>, *, *)
+        // See [ModifyDatasetLabels](ref) for a synchronous example.
         // End see-also
     }
 }
