@@ -2598,7 +2598,7 @@ namespace Google.Cloud.Datastore.V1 {
         /// </summary>
         [pbr::OriginalName("MORE_RESULTS_AFTER_CURSOR")] MoreResultsAfterCursor = 4,
         /// <summary>
-        /// The query has been exhausted.
+        /// The query is finished, and there are no more results.
         /// </summary>
         [pbr::OriginalName("NO_MORE_RESULTS")] NoMoreResults = 3,
       }

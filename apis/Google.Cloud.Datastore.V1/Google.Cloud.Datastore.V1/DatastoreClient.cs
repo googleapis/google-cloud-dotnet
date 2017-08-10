@@ -1242,7 +1242,7 @@ namespace Google.Cloud.Datastore.V1
         /// <param name="settings">The base <see cref="DatastoreSettings"/> used within this client </param>
         public DatastoreClientImpl(Datastore.DatastoreClient grpcClient, DatastoreSettings settings)
         {
-            this.GrpcClient = grpcClient;
+            GrpcClient = grpcClient;
             DatastoreSettings effectiveSettings = settings ?? DatastoreSettings.GetDefault();
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             _callLookup = clientHelper.BuildApiCall<LookupRequest, LookupResponse>(
@@ -1522,5 +1522,6 @@ namespace Google.Cloud.Datastore.V1
     }
 
     // Partial classes to enable page-streaming
+
 
 }

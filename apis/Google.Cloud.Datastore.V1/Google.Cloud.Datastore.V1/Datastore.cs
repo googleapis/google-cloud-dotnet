@@ -40,58 +40,64 @@ namespace Google.Cloud.Datastore.V1 {
             "b2dsZS5kYXRhc3RvcmUudjEuR3FsUXVlcnlIAEIMCgpxdWVyeV90eXBlInMK",
             "EFJ1blF1ZXJ5UmVzcG9uc2USNAoFYmF0Y2gYASABKAsyJS5nb29nbGUuZGF0",
             "YXN0b3JlLnYxLlF1ZXJ5UmVzdWx0QmF0Y2gSKQoFcXVlcnkYAiABKAsyGi5n",
-            "b29nbGUuZGF0YXN0b3JlLnYxLlF1ZXJ5Ii0KF0JlZ2luVHJhbnNhY3Rpb25S",
-            "ZXF1ZXN0EhIKCnByb2plY3RfaWQYCCABKAkiLwoYQmVnaW5UcmFuc2FjdGlv",
-            "blJlc3BvbnNlEhMKC3RyYW5zYWN0aW9uGAEgASgMIjoKD1JvbGxiYWNrUmVx",
-            "dWVzdBISCgpwcm9qZWN0X2lkGAggASgJEhMKC3RyYW5zYWN0aW9uGAEgASgM",
-            "IhIKEFJvbGxiYWNrUmVzcG9uc2UigwIKDUNvbW1pdFJlcXVlc3QSEgoKcHJv",
-            "amVjdF9pZBgIIAEoCRI1CgRtb2RlGAUgASgOMicuZ29vZ2xlLmRhdGFzdG9y",
-            "ZS52MS5Db21taXRSZXF1ZXN0Lk1vZGUSFQoLdHJhbnNhY3Rpb24YASABKAxI",
-            "ABIwCgltdXRhdGlvbnMYBiADKAsyHS5nb29nbGUuZGF0YXN0b3JlLnYxLk11",
-            "dGF0aW9uIkYKBE1vZGUSFAoQTU9ERV9VTlNQRUNJRklFRBAAEhEKDVRSQU5T",
-            "QUNUSU9OQUwQARIVChFOT05fVFJBTlNBQ1RJT05BTBACQhYKFHRyYW5zYWN0",
-            "aW9uX3NlbGVjdG9yImYKDkNvbW1pdFJlc3BvbnNlEj0KEG11dGF0aW9uX3Jl",
-            "c3VsdHMYAyADKAsyIy5nb29nbGUuZGF0YXN0b3JlLnYxLk11dGF0aW9uUmVz",
-            "dWx0EhUKDWluZGV4X3VwZGF0ZXMYBCABKAUiUAoSQWxsb2NhdGVJZHNSZXF1",
-            "ZXN0EhIKCnByb2plY3RfaWQYCCABKAkSJgoEa2V5cxgBIAMoCzIYLmdvb2ds",
-            "ZS5kYXRhc3RvcmUudjEuS2V5Ij0KE0FsbG9jYXRlSWRzUmVzcG9uc2USJgoE",
-            "a2V5cxgBIAMoCzIYLmdvb2dsZS5kYXRhc3RvcmUudjEuS2V5IocCCghNdXRh",
-            "dGlvbhItCgZpbnNlcnQYBCABKAsyGy5nb29nbGUuZGF0YXN0b3JlLnYxLkVu",
-            "dGl0eUgAEi0KBnVwZGF0ZRgFIAEoCzIbLmdvb2dsZS5kYXRhc3RvcmUudjEu",
-            "RW50aXR5SAASLQoGdXBzZXJ0GAYgASgLMhsuZ29vZ2xlLmRhdGFzdG9yZS52",
-            "MS5FbnRpdHlIABIqCgZkZWxldGUYByABKAsyGC5nb29nbGUuZGF0YXN0b3Jl",
-            "LnYxLktleUgAEhYKDGJhc2VfdmVyc2lvbhgIIAEoA0gBQgsKCW9wZXJhdGlv",
-            "bkIdChtjb25mbGljdF9kZXRlY3Rpb25fc3RyYXRlZ3kiYwoOTXV0YXRpb25S",
-            "ZXN1bHQSJQoDa2V5GAMgASgLMhguZ29vZ2xlLmRhdGFzdG9yZS52MS5LZXkS",
-            "DwoHdmVyc2lvbhgEIAEoAxIZChFjb25mbGljdF9kZXRlY3RlZBgFIAEoCCLV",
-            "AQoLUmVhZE9wdGlvbnMSTAoQcmVhZF9jb25zaXN0ZW5jeRgBIAEoDjIwLmdv",
-            "b2dsZS5kYXRhc3RvcmUudjEuUmVhZE9wdGlvbnMuUmVhZENvbnNpc3RlbmN5",
-            "SAASFQoLdHJhbnNhY3Rpb24YAiABKAxIACJNCg9SZWFkQ29uc2lzdGVuY3kS",
-            "IAocUkVBRF9DT05TSVNURU5DWV9VTlNQRUNJRklFRBAAEgoKBlNUUk9ORxAB",
-            "EgwKCEVWRU5UVUFMEAJCEgoQY29uc2lzdGVuY3lfdHlwZTLbBgoJRGF0YXN0",
-            "b3JlEn4KBkxvb2t1cBIiLmdvb2dsZS5kYXRhc3RvcmUudjEuTG9va3VwUmVx",
-            "dWVzdBojLmdvb2dsZS5kYXRhc3RvcmUudjEuTG9va3VwUmVzcG9uc2UiK4LT",
-            "5JMCJSIgL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfTpsb29rdXA6ASoShgEK",
-            "CFJ1blF1ZXJ5EiQuZ29vZ2xlLmRhdGFzdG9yZS52MS5SdW5RdWVyeVJlcXVl",
-            "c3QaJS5nb29nbGUuZGF0YXN0b3JlLnYxLlJ1blF1ZXJ5UmVzcG9uc2UiLYLT",
-            "5JMCJyIiL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfTpydW5RdWVyeToBKhKm",
-            "AQoQQmVnaW5UcmFuc2FjdGlvbhIsLmdvb2dsZS5kYXRhc3RvcmUudjEuQmVn",
-            "aW5UcmFuc2FjdGlvblJlcXVlc3QaLS5nb29nbGUuZGF0YXN0b3JlLnYxLkJl",
-            "Z2luVHJhbnNhY3Rpb25SZXNwb25zZSI1gtPkkwIvIiovdjEvcHJvamVjdHMv",
-            "e3Byb2plY3RfaWR9OmJlZ2luVHJhbnNhY3Rpb246ASoSfgoGQ29tbWl0EiIu",
-            "Z29vZ2xlLmRhdGFzdG9yZS52MS5Db21taXRSZXF1ZXN0GiMuZ29vZ2xlLmRh",
-            "dGFzdG9yZS52MS5Db21taXRSZXNwb25zZSIrgtPkkwIlIiAvdjEvcHJvamVj",
-            "dHMve3Byb2plY3RfaWR9OmNvbW1pdDoBKhKGAQoIUm9sbGJhY2sSJC5nb29n",
-            "bGUuZGF0YXN0b3JlLnYxLlJvbGxiYWNrUmVxdWVzdBolLmdvb2dsZS5kYXRh",
-            "c3RvcmUudjEuUm9sbGJhY2tSZXNwb25zZSItgtPkkwInIiIvdjEvcHJvamVj",
-            "dHMve3Byb2plY3RfaWR9OnJvbGxiYWNrOgEqEpIBCgtBbGxvY2F0ZUlkcxIn",
-            "Lmdvb2dsZS5kYXRhc3RvcmUudjEuQWxsb2NhdGVJZHNSZXF1ZXN0GiguZ29v",
-            "Z2xlLmRhdGFzdG9yZS52MS5BbGxvY2F0ZUlkc1Jlc3BvbnNlIjCC0+STAioi",
-            "JS92MS9wcm9qZWN0cy97cHJvamVjdF9pZH06YWxsb2NhdGVJZHM6ASpChQEK",
-            "F2NvbS5nb29nbGUuZGF0YXN0b3JlLnYxQg5EYXRhc3RvcmVQcm90b1ABWjxn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2RhdGFzdG9y",
-            "ZS92MTtkYXRhc3RvcmWqAhlHb29nbGUuQ2xvdWQuRGF0YXN0b3JlLlYxYgZw",
-            "cm90bzM="));
+            "b29nbGUuZGF0YXN0b3JlLnYxLlF1ZXJ5InMKF0JlZ2luVHJhbnNhY3Rpb25S",
+            "ZXF1ZXN0EhIKCnByb2plY3RfaWQYCCABKAkSRAoTdHJhbnNhY3Rpb25fb3B0",
+            "aW9ucxgKIAEoCzInLmdvb2dsZS5kYXRhc3RvcmUudjEuVHJhbnNhY3Rpb25P",
+            "cHRpb25zIi8KGEJlZ2luVHJhbnNhY3Rpb25SZXNwb25zZRITCgt0cmFuc2Fj",
+            "dGlvbhgBIAEoDCI6Cg9Sb2xsYmFja1JlcXVlc3QSEgoKcHJvamVjdF9pZBgI",
+            "IAEoCRITCgt0cmFuc2FjdGlvbhgBIAEoDCISChBSb2xsYmFja1Jlc3BvbnNl",
+            "IoMCCg1Db21taXRSZXF1ZXN0EhIKCnByb2plY3RfaWQYCCABKAkSNQoEbW9k",
+            "ZRgFIAEoDjInLmdvb2dsZS5kYXRhc3RvcmUudjEuQ29tbWl0UmVxdWVzdC5N",
+            "b2RlEhUKC3RyYW5zYWN0aW9uGAEgASgMSAASMAoJbXV0YXRpb25zGAYgAygL",
+            "Mh0uZ29vZ2xlLmRhdGFzdG9yZS52MS5NdXRhdGlvbiJGCgRNb2RlEhQKEE1P",
+            "REVfVU5TUEVDSUZJRUQQABIRCg1UUkFOU0FDVElPTkFMEAESFQoRTk9OX1RS",
+            "QU5TQUNUSU9OQUwQAkIWChR0cmFuc2FjdGlvbl9zZWxlY3RvciJmCg5Db21t",
+            "aXRSZXNwb25zZRI9ChBtdXRhdGlvbl9yZXN1bHRzGAMgAygLMiMuZ29vZ2xl",
+            "LmRhdGFzdG9yZS52MS5NdXRhdGlvblJlc3VsdBIVCg1pbmRleF91cGRhdGVz",
+            "GAQgASgFIlAKEkFsbG9jYXRlSWRzUmVxdWVzdBISCgpwcm9qZWN0X2lkGAgg",
+            "ASgJEiYKBGtleXMYASADKAsyGC5nb29nbGUuZGF0YXN0b3JlLnYxLktleSI9",
+            "ChNBbGxvY2F0ZUlkc1Jlc3BvbnNlEiYKBGtleXMYASADKAsyGC5nb29nbGUu",
+            "ZGF0YXN0b3JlLnYxLktleSKHAgoITXV0YXRpb24SLQoGaW5zZXJ0GAQgASgL",
+            "MhsuZ29vZ2xlLmRhdGFzdG9yZS52MS5FbnRpdHlIABItCgZ1cGRhdGUYBSAB",
+            "KAsyGy5nb29nbGUuZGF0YXN0b3JlLnYxLkVudGl0eUgAEi0KBnVwc2VydBgG",
+            "IAEoCzIbLmdvb2dsZS5kYXRhc3RvcmUudjEuRW50aXR5SAASKgoGZGVsZXRl",
+            "GAcgASgLMhguZ29vZ2xlLmRhdGFzdG9yZS52MS5LZXlIABIWCgxiYXNlX3Zl",
+            "cnNpb24YCCABKANIAUILCglvcGVyYXRpb25CHQobY29uZmxpY3RfZGV0ZWN0",
+            "aW9uX3N0cmF0ZWd5ImMKDk11dGF0aW9uUmVzdWx0EiUKA2tleRgDIAEoCzIY",
+            "Lmdvb2dsZS5kYXRhc3RvcmUudjEuS2V5Eg8KB3ZlcnNpb24YBCABKAMSGQoR",
+            "Y29uZmxpY3RfZGV0ZWN0ZWQYBSABKAgi1QEKC1JlYWRPcHRpb25zEkwKEHJl",
+            "YWRfY29uc2lzdGVuY3kYASABKA4yMC5nb29nbGUuZGF0YXN0b3JlLnYxLlJl",
+            "YWRPcHRpb25zLlJlYWRDb25zaXN0ZW5jeUgAEhUKC3RyYW5zYWN0aW9uGAIg",
+            "ASgMSAAiTQoPUmVhZENvbnNpc3RlbmN5EiAKHFJFQURfQ09OU0lTVEVOQ1lf",
+            "VU5TUEVDSUZJRUQQABIKCgZTVFJPTkcQARIMCghFVkVOVFVBTBACQhIKEGNv",
+            "bnNpc3RlbmN5X3R5cGUi4wEKElRyYW5zYWN0aW9uT3B0aW9ucxJHCgpyZWFk",
+            "X3dyaXRlGAEgASgLMjEuZ29vZ2xlLmRhdGFzdG9yZS52MS5UcmFuc2FjdGlv",
+            "bk9wdGlvbnMuUmVhZFdyaXRlSAASRQoJcmVhZF9vbmx5GAIgASgLMjAuZ29v",
+            "Z2xlLmRhdGFzdG9yZS52MS5UcmFuc2FjdGlvbk9wdGlvbnMuUmVhZE9ubHlI",
+            "ABopCglSZWFkV3JpdGUSHAoUcHJldmlvdXNfdHJhbnNhY3Rpb24YASABKAwa",
+            "CgoIUmVhZE9ubHlCBgoEbW9kZTLbBgoJRGF0YXN0b3JlEn4KBkxvb2t1cBIi",
+            "Lmdvb2dsZS5kYXRhc3RvcmUudjEuTG9va3VwUmVxdWVzdBojLmdvb2dsZS5k",
+            "YXRhc3RvcmUudjEuTG9va3VwUmVzcG9uc2UiK4LT5JMCJSIgL3YxL3Byb2pl",
+            "Y3RzL3twcm9qZWN0X2lkfTpsb29rdXA6ASoShgEKCFJ1blF1ZXJ5EiQuZ29v",
+            "Z2xlLmRhdGFzdG9yZS52MS5SdW5RdWVyeVJlcXVlc3QaJS5nb29nbGUuZGF0",
+            "YXN0b3JlLnYxLlJ1blF1ZXJ5UmVzcG9uc2UiLYLT5JMCJyIiL3YxL3Byb2pl",
+            "Y3RzL3twcm9qZWN0X2lkfTpydW5RdWVyeToBKhKmAQoQQmVnaW5UcmFuc2Fj",
+            "dGlvbhIsLmdvb2dsZS5kYXRhc3RvcmUudjEuQmVnaW5UcmFuc2FjdGlvblJl",
+            "cXVlc3QaLS5nb29nbGUuZGF0YXN0b3JlLnYxLkJlZ2luVHJhbnNhY3Rpb25S",
+            "ZXNwb25zZSI1gtPkkwIvIiovdjEvcHJvamVjdHMve3Byb2plY3RfaWR9OmJl",
+            "Z2luVHJhbnNhY3Rpb246ASoSfgoGQ29tbWl0EiIuZ29vZ2xlLmRhdGFzdG9y",
+            "ZS52MS5Db21taXRSZXF1ZXN0GiMuZ29vZ2xlLmRhdGFzdG9yZS52MS5Db21t",
+            "aXRSZXNwb25zZSIrgtPkkwIlIiAvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9",
+            "OmNvbW1pdDoBKhKGAQoIUm9sbGJhY2sSJC5nb29nbGUuZGF0YXN0b3JlLnYx",
+            "LlJvbGxiYWNrUmVxdWVzdBolLmdvb2dsZS5kYXRhc3RvcmUudjEuUm9sbGJh",
+            "Y2tSZXNwb25zZSItgtPkkwInIiIvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9",
+            "OnJvbGxiYWNrOgEqEpIBCgtBbGxvY2F0ZUlkcxInLmdvb2dsZS5kYXRhc3Rv",
+            "cmUudjEuQWxsb2NhdGVJZHNSZXF1ZXN0GiguZ29vZ2xlLmRhdGFzdG9yZS52",
+            "MS5BbGxvY2F0ZUlkc1Jlc3BvbnNlIjCC0+STAioiJS92MS9wcm9qZWN0cy97",
+            "cHJvamVjdF9pZH06YWxsb2NhdGVJZHM6ASpChQEKF2NvbS5nb29nbGUuZGF0",
+            "YXN0b3JlLnYxQg5EYXRhc3RvcmVQcm90b1ABWjxnb29nbGUuZ29sYW5nLm9y",
+            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2RhdGFzdG9yZS92MTtkYXRhc3RvcmWq",
+            "AhlHb29nbGUuQ2xvdWQuRGF0YXN0b3JlLlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Datastore.V1.EntityReflection.Descriptor, global::Google.Cloud.Datastore.V1.QueryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -99,7 +105,7 @@ namespace Google.Cloud.Datastore.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.LookupResponse), global::Google.Cloud.Datastore.V1.LookupResponse.Parser, new[]{ "Found", "Missing", "Deferred" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RunQueryRequest), global::Google.Cloud.Datastore.V1.RunQueryRequest.Parser, new[]{ "ProjectId", "PartitionId", "ReadOptions", "Query", "GqlQuery" }, new[]{ "QueryType" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RunQueryResponse), global::Google.Cloud.Datastore.V1.RunQueryResponse.Parser, new[]{ "Batch", "Query" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.BeginTransactionRequest), global::Google.Cloud.Datastore.V1.BeginTransactionRequest.Parser, new[]{ "ProjectId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.BeginTransactionRequest), global::Google.Cloud.Datastore.V1.BeginTransactionRequest.Parser, new[]{ "ProjectId", "TransactionOptions" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.BeginTransactionResponse), global::Google.Cloud.Datastore.V1.BeginTransactionResponse.Parser, new[]{ "Transaction" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RollbackRequest), global::Google.Cloud.Datastore.V1.RollbackRequest.Parser, new[]{ "ProjectId", "Transaction" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RollbackResponse), global::Google.Cloud.Datastore.V1.RollbackResponse.Parser, null, null, null, null),
@@ -109,7 +115,9 @@ namespace Google.Cloud.Datastore.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.AllocateIdsResponse), global::Google.Cloud.Datastore.V1.AllocateIdsResponse.Parser, new[]{ "Keys" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Mutation), global::Google.Cloud.Datastore.V1.Mutation.Parser, new[]{ "Insert", "Update", "Upsert", "Delete", "BaseVersion" }, new[]{ "Operation", "ConflictDetectionStrategy" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.MutationResult), global::Google.Cloud.Datastore.V1.MutationResult.Parser, new[]{ "Key", "Version", "ConflictDetected" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.ReadOptions), global::Google.Cloud.Datastore.V1.ReadOptions.Parser, new[]{ "ReadConsistency", "Transaction" }, new[]{ "ConsistencyType" }, new[]{ typeof(global::Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency) }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.ReadOptions), global::Google.Cloud.Datastore.V1.ReadOptions.Parser, new[]{ "ReadConsistency", "Transaction" }, new[]{ "ConsistencyType" }, new[]{ typeof(global::Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.TransactionOptions), global::Google.Cloud.Datastore.V1.TransactionOptions.Parser, new[]{ "ReadWrite", "ReadOnly" }, new[]{ "Mode" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite), global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite.Parser, new[]{ "PreviousTransaction" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadOnly), global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadOnly.Parser, null, null, null, null)})
           }));
     }
     #endregion
@@ -963,6 +971,7 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BeginTransactionRequest(BeginTransactionRequest other) : this() {
       projectId_ = other.projectId_;
+      TransactionOptions = other.transactionOptions_ != null ? other.TransactionOptions.Clone() : null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -984,6 +993,20 @@ namespace Google.Cloud.Datastore.V1 {
       }
     }
 
+    /// <summary>Field number for the "transaction_options" field.</summary>
+    public const int TransactionOptionsFieldNumber = 10;
+    private global::Google.Cloud.Datastore.V1.TransactionOptions transactionOptions_;
+    /// <summary>
+    /// Options for a new transaction.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Datastore.V1.TransactionOptions TransactionOptions {
+      get { return transactionOptions_; }
+      set {
+        transactionOptions_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as BeginTransactionRequest);
@@ -998,6 +1021,7 @@ namespace Google.Cloud.Datastore.V1 {
         return true;
       }
       if (ProjectId != other.ProjectId) return false;
+      if (!object.Equals(TransactionOptions, other.TransactionOptions)) return false;
       return true;
     }
 
@@ -1005,6 +1029,7 @@ namespace Google.Cloud.Datastore.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
+      if (transactionOptions_ != null) hash ^= TransactionOptions.GetHashCode();
       return hash;
     }
 
@@ -1019,6 +1044,10 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(66);
         output.WriteString(ProjectId);
       }
+      if (transactionOptions_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(TransactionOptions);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1026,6 +1055,9 @@ namespace Google.Cloud.Datastore.V1 {
       int size = 0;
       if (ProjectId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectId);
+      }
+      if (transactionOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TransactionOptions);
       }
       return size;
     }
@@ -1037,6 +1069,12 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (other.ProjectId.Length != 0) {
         ProjectId = other.ProjectId;
+      }
+      if (other.transactionOptions_ != null) {
+        if (transactionOptions_ == null) {
+          transactionOptions_ = new global::Google.Cloud.Datastore.V1.TransactionOptions();
+        }
+        TransactionOptions.MergeFrom(other.TransactionOptions);
       }
     }
 
@@ -1050,6 +1088,13 @@ namespace Google.Cloud.Datastore.V1 {
             break;
           case 66: {
             ProjectId = input.ReadString();
+            break;
+          }
+          case 82: {
+            if (transactionOptions_ == null) {
+              transactionOptions_ = new global::Google.Cloud.Datastore.V1.TransactionOptions();
+            }
+            input.ReadMessage(transactionOptions_);
             break;
           }
         }
@@ -2857,6 +2902,423 @@ namespace Google.Cloud.Datastore.V1 {
         /// Eventual consistency.
         /// </summary>
         [pbr::OriginalName("EVENTUAL")] Eventual = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Options for beginning a new transaction.
+  /// </summary>
+  public sealed partial class TransactionOptions : pb::IMessage<TransactionOptions> {
+    private static readonly pb::MessageParser<TransactionOptions> _parser = new pb::MessageParser<TransactionOptions>(() => new TransactionOptions());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TransactionOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TransactionOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TransactionOptions(TransactionOptions other) : this() {
+      switch (other.ModeCase) {
+        case ModeOneofCase.ReadWrite:
+          ReadWrite = other.ReadWrite.Clone();
+          break;
+        case ModeOneofCase.ReadOnly:
+          ReadOnly = other.ReadOnly.Clone();
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TransactionOptions Clone() {
+      return new TransactionOptions(this);
+    }
+
+    /// <summary>Field number for the "read_write" field.</summary>
+    public const int ReadWriteFieldNumber = 1;
+    /// <summary>
+    /// The transaction should allow both reads and writes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite ReadWrite {
+      get { return modeCase_ == ModeOneofCase.ReadWrite ? (global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite) mode_ : null; }
+      set {
+        mode_ = value;
+        modeCase_ = value == null ? ModeOneofCase.None : ModeOneofCase.ReadWrite;
+      }
+    }
+
+    /// <summary>Field number for the "read_only" field.</summary>
+    public const int ReadOnlyFieldNumber = 2;
+    /// <summary>
+    /// The transaction should only allow reads.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadOnly ReadOnly {
+      get { return modeCase_ == ModeOneofCase.ReadOnly ? (global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadOnly) mode_ : null; }
+      set {
+        mode_ = value;
+        modeCase_ = value == null ? ModeOneofCase.None : ModeOneofCase.ReadOnly;
+      }
+    }
+
+    private object mode_;
+    /// <summary>Enum of possible cases for the "mode" oneof.</summary>
+    public enum ModeOneofCase {
+      None = 0,
+      ReadWrite = 1,
+      ReadOnly = 2,
+    }
+    private ModeOneofCase modeCase_ = ModeOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ModeOneofCase ModeCase {
+      get { return modeCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearMode() {
+      modeCase_ = ModeOneofCase.None;
+      mode_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TransactionOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TransactionOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(ReadWrite, other.ReadWrite)) return false;
+      if (!object.Equals(ReadOnly, other.ReadOnly)) return false;
+      if (ModeCase != other.ModeCase) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (modeCase_ == ModeOneofCase.ReadWrite) hash ^= ReadWrite.GetHashCode();
+      if (modeCase_ == ModeOneofCase.ReadOnly) hash ^= ReadOnly.GetHashCode();
+      hash ^= (int) modeCase_;
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (modeCase_ == ModeOneofCase.ReadWrite) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ReadWrite);
+      }
+      if (modeCase_ == ModeOneofCase.ReadOnly) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ReadOnly);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (modeCase_ == ModeOneofCase.ReadWrite) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadWrite);
+      }
+      if (modeCase_ == ModeOneofCase.ReadOnly) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadOnly);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TransactionOptions other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.ModeCase) {
+        case ModeOneofCase.ReadWrite:
+          ReadWrite = other.ReadWrite;
+          break;
+        case ModeOneofCase.ReadOnly:
+          ReadOnly = other.ReadOnly;
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite subBuilder = new global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite();
+            if (modeCase_ == ModeOneofCase.ReadWrite) {
+              subBuilder.MergeFrom(ReadWrite);
+            }
+            input.ReadMessage(subBuilder);
+            ReadWrite = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadOnly subBuilder = new global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadOnly();
+            if (modeCase_ == ModeOneofCase.ReadOnly) {
+              subBuilder.MergeFrom(ReadOnly);
+            }
+            input.ReadMessage(subBuilder);
+            ReadOnly = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the TransactionOptions message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Options specific to read / write transactions.
+      /// </summary>
+      public sealed partial class ReadWrite : pb::IMessage<ReadWrite> {
+        private static readonly pb::MessageParser<ReadWrite> _parser = new pb::MessageParser<ReadWrite>(() => new ReadWrite());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<ReadWrite> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Datastore.V1.TransactionOptions.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ReadWrite() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ReadWrite(ReadWrite other) : this() {
+          previousTransaction_ = other.previousTransaction_;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ReadWrite Clone() {
+          return new ReadWrite(this);
+        }
+
+        /// <summary>Field number for the "previous_transaction" field.</summary>
+        public const int PreviousTransactionFieldNumber = 1;
+        private pb::ByteString previousTransaction_ = pb::ByteString.Empty;
+        /// <summary>
+        /// The transaction identifier of the transaction being retried.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pb::ByteString PreviousTransaction {
+          get { return previousTransaction_; }
+          set {
+            previousTransaction_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as ReadWrite);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(ReadWrite other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (PreviousTransaction != other.PreviousTransaction) return false;
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (PreviousTransaction.Length != 0) hash ^= PreviousTransaction.GetHashCode();
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (PreviousTransaction.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteBytes(PreviousTransaction);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (PreviousTransaction.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeBytesSize(PreviousTransaction);
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(ReadWrite other) {
+          if (other == null) {
+            return;
+          }
+          if (other.PreviousTransaction.Length != 0) {
+            PreviousTransaction = other.PreviousTransaction;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 10: {
+                PreviousTransaction = input.ReadBytes();
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+      /// <summary>
+      /// Options specific to read-only transactions.
+      /// </summary>
+      public sealed partial class ReadOnly : pb::IMessage<ReadOnly> {
+        private static readonly pb::MessageParser<ReadOnly> _parser = new pb::MessageParser<ReadOnly>(() => new ReadOnly());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<ReadOnly> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Datastore.V1.TransactionOptions.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ReadOnly() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ReadOnly(ReadOnly other) : this() {
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ReadOnly Clone() {
+          return new ReadOnly(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as ReadOnly);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(ReadOnly other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(ReadOnly other) {
+          if (other == null) {
+            return;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+            }
+          }
+        }
+
       }
 
     }
