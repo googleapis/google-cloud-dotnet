@@ -196,37 +196,9 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override bool Equals(object obj) => Equals(obj as SpannerDbType);
 
-        private bool Equals(SpannerDbType other) => DictionaryEquals(StructMembers, other?.StructMembers)
+        private bool Equals(SpannerDbType other) => TypeUtil.DictionaryEquals(StructMembers, other?.StructMembers)
             && TypeCode == other?.TypeCode
             && Equals(ArrayElementType, other.ArrayElementType);
-
-        private bool DictionaryEquals(IDictionary<string, SpannerDbType> d1, IDictionary<string, SpannerDbType> d2)
-        {
-            if (d1 == null && d2 == null)
-            {
-                return true;
-            }
-
-            if (d1 == null || d2 == null)
-            {
-                return false;
-            }
-
-            if (d1.Count != d2.Count)
-            {
-                return false;
-            }
-
-            foreach (var kvp in d1)
-            {
-                SpannerDbType d2Value;
-                if (!d2.TryGetValue(kvp.Key, out d2Value) || !kvp.Value.Equals(d2Value))
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
 
         /// <inheritdoc />
         public override int GetHashCode()

@@ -96,6 +96,8 @@ namespace Google.Cloud.Spanner.Data.Tests
                         It.IsAny<IEnumerable<Mutation>>(), It.IsAny<CallSettings>()))
                 .ReturnsAsync(() => new CommitResponse());
 
+            mockClient.Setup(x => x.Settings).Returns(() => SpannerSettings.GetDefault());
+
             return mockClient;
         }
 
@@ -134,7 +136,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 {
                     var transaction = await client.BeginPooledTransactionAsync(session, readWriteOptions)
                         .ConfigureAwait(false);
-                    await transaction.CommitAsync(session, null).ConfigureAwait(false);
+                    await transaction.CommitAsync(session, null, SpannerOptions.Instance.Timeout).ConfigureAwait(false);
                     pool.ReleaseToPool(client, session);
                 }
             }
@@ -393,7 +395,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 Transaction transaction;
                 Assert.True(_transactions.TryPop(out transaction));
                 Assert.Same(transaction, transactionAwaited);
-                await transaction.CommitAsync(session1, null).ConfigureAwait(false);
+                await transaction.CommitAsync(session1, null, SpannerOptions.Instance.Timeout).ConfigureAwait(false);
 
                 //Releasing should start the tx prewarm
                 pool.ReleaseToPool(client.Object, session1);

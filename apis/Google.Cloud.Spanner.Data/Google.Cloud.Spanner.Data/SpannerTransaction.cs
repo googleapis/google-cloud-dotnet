@@ -58,6 +58,17 @@ namespace Google.Cloud.Spanner.Data
 
         private Session Session { get; }
 
+        // Note: We use seconds here to follow the convention set by DbCommand.CommandTimeout.
+        /// <summary>
+        /// Gets or sets the wait time before terminating the attempt to <see cref="Commit"/> 
+        /// or <see cref="Rollback"/> and generating an error.
+        /// Defaults to <see cref="SpannerOptions.Timeout"/> which is 60 seconds.
+        /// A value of '0' normally indicates that no timeout should be used (it waits an infinite amount of time).
+        /// However, if you specify AllowImmediateTimeouts=true in the connection string, '0' will cause a timeout
+        /// that expires immediately. This is normally used only for testing purposes.
+        /// </summary>
+        public int CommitTimeout { get; set; } = SpannerOptions.Instance.Timeout;
+
         /// <summary>
         /// Tells Cloud Spanner how to choose a timestamp at which to read the data for read-only
         /// transactions.
@@ -108,7 +119,8 @@ namespace Google.Cloud.Spanner.Data
 
         Task<int> ISpannerTransaction.ExecuteMutationsAsync(
             List<Mutation> mutations,
-            CancellationToken cancellationToken)
+            CancellationToken cancellationToken,
+            int timeoutSeconds)
         {
             GaxPreconditions.CheckNotNull(mutations, nameof(mutations));
             CheckCompatibleMode(TransactionMode.ReadWrite);
@@ -128,7 +140,8 @@ namespace Google.Cloud.Spanner.Data
 
         Task<ReliableStreamReader> ISpannerTransaction.ExecuteQueryAsync(
             ExecuteSqlRequest request,
-            CancellationToken cancellationToken)
+            CancellationToken cancellationToken,
+            int timeoutSeconds)
         {
             GaxPreconditions.CheckNotNull(request, nameof(request));
             return ExecuteHelper.WithErrorTranslationAndProfiling(
@@ -137,7 +150,7 @@ namespace Google.Cloud.Spanner.Data
                     var taskCompletionSource =
                         new TaskCompletionSource<ReliableStreamReader>();
                     request.Transaction = GetTransactionSelector(TransactionMode.ReadOnly);
-                    taskCompletionSource.SetResult(_connection.SpannerClient.GetSqlStreamReader(request, Session));
+                    taskCompletionSource.SetResult(_connection.SpannerClient.GetSqlStreamReader(request, Session, timeoutSeconds));
 
                     return taskCompletionSource.Task;
                 }, "SpannerTransaction.ExecuteQuery");
@@ -146,10 +159,7 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override void Commit()
         {
-            if (!Task.Run(CommitAsync).Wait(SpannerOptions.Instance.Timeout))
-            {
-                throw new TimeoutException("The Commit did not complete in time.");
-            }
+            Task.Run(CommitAsync).Wait();
         }
 
         /// <summary>
@@ -165,7 +175,8 @@ namespace Google.Cloud.Spanner.Data
                         Mode != TransactionMode.ReadOnly, "You cannot commit a readonly transaction.");
                     // We allow access to _mutations outside of a lock here because multithreaded
                     // access at this point should be done and only one caller can call commit.
-                    var response = await WireTransaction.CommitAsync(Session, _mutations).ConfigureAwait(false);
+                    var response = await WireTransaction
+                        .CommitAsync(Session, _mutations, CommitTimeout).ConfigureAwait(false);
                     return response.CommitTimestamp?.ToDateTime();
                 }, "SpannerTransaction.Commit");
         }
@@ -173,10 +184,7 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override void Rollback()
         {
-            if (!Task.Run(RollbackAsync).Wait(SpannerOptions.Instance.Timeout))
-            {
-                throw new TimeoutException("The Rollback did not complete in time.");
-            }
+            Task.Run(RollbackAsync).Wait();
         }
 
         /// <summary>
@@ -189,7 +197,7 @@ namespace Google.Cloud.Spanner.Data
                 {
                     GaxPreconditions.CheckState(
                         Mode != TransactionMode.ReadOnly, "You cannot roll back a readonly transaction.");
-                    return WireTransaction.RollbackAsync(Session);
+                    return WireTransaction.RollbackAsync(Session, CommitTimeout);
                 }, "SpannerTransaction.Rollback");
         }
 

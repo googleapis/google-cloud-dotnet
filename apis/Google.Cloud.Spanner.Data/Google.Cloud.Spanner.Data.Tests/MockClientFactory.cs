@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Collections;
 using System.Threading.Tasks;
 using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
@@ -28,7 +29,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
         public MockClientFactory(SpannerClient firstClient) => _currentClient = firstClient;
 
-        public Task<SpannerClient> CreateClientAsync(ServiceEndpoint endpoint, ITokenAccess credential)
+        public Task<SpannerClient> CreateClientAsync(ServiceEndpoint endpoint, ITokenAccess credential, IDictionary additionalOptions)
         {
             Invocations++;
             var result = _currentClient;

@@ -50,7 +50,7 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public static SessionPool Default { get; } = new SessionPool();
 
-        private readonly TimeSpan _shutDownTimeout = TimeSpan.FromSeconds(60);
+        internal TimeSpan ShutDownTimeout { get; } = TimeSpan.FromSeconds(60);
 
         // This member holds information we'll use when the session later gets released.
         private readonly ConcurrentDictionary<Session, SessionPoolKey> _sessionsInUse =
@@ -410,7 +410,7 @@ namespace Google.Cloud.Spanner.V1
         /// <inheritdoc />
         public void Dispose()
         {
-            Task.Run(ReleaseAll).Wait(_shutDownTimeout);
+            Task.Run(ReleaseAll).Wait(ShutDownTimeout);
         }
     }
 }

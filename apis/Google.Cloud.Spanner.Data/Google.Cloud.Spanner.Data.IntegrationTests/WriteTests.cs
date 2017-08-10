@@ -18,6 +18,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Xunit;
 using Xunit.Abstractions;
@@ -85,6 +86,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
+        [Fact]
         public async Task WriteValues()
         {
             var testTimestamp = new DateTime(2017, 3, 17, 15, 30, 0);
@@ -464,6 +466,32 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
                 Assert.Equal(0, recordedValues.Count);
             }
+        }
+
+        [Fact]
+        public async Task CommandTimeout()
+        {
+            await _testFixture.EnsureTestDatabaseAsync();
+
+            var values = new SpannerParameterCollection
+            {
+                {"StringValue", SpannerDbType.String, "abc"},
+                {"K", SpannerDbType.String, _lastKey = UniqueString()}
+            };
+
+            var e = await Assert.ThrowsAsync<SpannerException>(
+                async () =>
+                {
+                    using (var connection = new SpannerConnection($"{_testFixture.ConnectionString};{nameof(SpannerSettings.AllowImmediateTimeouts)}=true"))
+                    {
+                        var cmd = connection.CreateInsertCommand("T", values);
+                        cmd.CommandTimeout = 0;
+                        await cmd.ExecuteNonQueryAsync();
+                    }
+                }).ConfigureAwait(false);
+
+            Assert.Equal(ErrorCode.DeadlineExceeded, e.ErrorCode);
+            Assert.False(e.IsTransientSpannerFault());
         }
     }
 }

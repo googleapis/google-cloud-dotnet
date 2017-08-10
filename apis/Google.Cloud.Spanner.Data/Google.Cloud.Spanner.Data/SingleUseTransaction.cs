@@ -42,19 +42,20 @@ namespace Google.Cloud.Spanner.Data
             _spannerConnection.ReleaseSession(_session);
         }
 
-        public Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken) => throw
+        public Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken, int timeoutSeconds) => throw
             new NotSupportedException("A single use transaction can only be used for read operations.");
 
         public Task<ReliableStreamReader> ExecuteQueryAsync(
             ExecuteSqlRequest request,
-            CancellationToken cancellationToken)
+            CancellationToken cancellationToken,
+            int timeoutSeconds)
         {
             GaxPreconditions.CheckNotNull(request, nameof(request));
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 () =>
                 {
                     request.Transaction = new TransactionSelector {SingleUse = _options};
-                    return Task.FromResult(_spannerConnection.SpannerClient.GetSqlStreamReader(request, _session));
+                    return Task.FromResult(_spannerConnection.SpannerClient.GetSqlStreamReader(request, _session, timeoutSeconds));
                 },
                 "SingleUseTransaction.ExecuteQuery");
         }

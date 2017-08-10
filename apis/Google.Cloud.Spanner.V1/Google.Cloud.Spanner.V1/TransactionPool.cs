@@ -17,6 +17,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using Google.Api.Gax;
 using Google.Cloud.Spanner.V1.Internal;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
@@ -149,13 +150,15 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="transaction"></param>
         /// <param name="session"></param>
         /// <param name="mutations"></param>
+        /// <param name="timeoutSeconds"></param>
         /// <returns></returns>
         public static Task<CommitResponse> CommitAsync(this Transaction transaction, Session session,
-            IEnumerable<Mutation> mutations)
+            IEnumerable<Mutation> mutations, int timeoutSeconds)
         {
-            return RunFinalMethodAsync(transaction, session,
-                info => info.SpannerClient.CommitAsync(session.SessionName, info.ActiveTransaction.GetTransactionId(), mutations)
-                    .WithSessionChecking(() => session));
+            return RunFinalMethodAsync(transaction, session, info => info.SpannerClient.CommitAsync(
+                            session.SessionName, info.ActiveTransaction.GetTransactionId(), mutations,
+                            info.SpannerClient.Settings.CommitSettings.WithCallExpiration(info.SpannerClient.Settings.ConvertTimeoutToExpiration(timeoutSeconds)))
+                        .WithSessionChecking(() => session));
         }
 
         /// <summary>
@@ -163,15 +166,19 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         /// <param name="transaction"></param>
         /// <param name="session"></param>
+        /// <param name="timeoutSeconds"></param>
         /// <returns></returns>
-        public static Task<bool> RollbackAsync(this Transaction transaction, Session session)
+        public static Task<bool> RollbackAsync(this Transaction transaction, Session session, int timeoutSeconds)
         {
             return RunFinalMethodAsync(transaction, session,
                 async info =>
                 {
                     await info.SpannerClient
-                        .RollbackAsync(session.GetSessionName(),
-                            info.ActiveTransaction.GetTransactionId())
+                        .RollbackAsync(
+                            session.GetSessionName(),
+                            info.ActiveTransaction.GetTransactionId(),
+                            info.SpannerClient.Settings.RollbackSettings.WithCallExpiration(
+                                info.SpannerClient.Settings.ConvertTimeoutToExpiration(timeoutSeconds)))
                         .WithSessionChecking(() => session).ConfigureAwait(false);
                     return true;
                 });
