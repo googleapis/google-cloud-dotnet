@@ -90,7 +90,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var tableId = _fixture.CreateTableId();
 
             var original = client.CreateTable(datasetId, tableId, new TableSchema(), new CreateTableOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
-            var patched = original.Patch(new Table { Description = "Description2" }, matchEtag: false);
+            var patched = original.Patch(new Table { Description = "Description2" }, matchETag: false);
 
             // Check the results of the patch
             Assert.Equal("Description2", patched.Resource.Description);
@@ -119,7 +119,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             sneaky.Update();
 
             // Fails due to the conflict.
-            var exception = Assert.Throws<GoogleApiException>(() => original.Patch(new Table { Description = "Description2" }, matchEtag: true));
+            var exception = Assert.Throws<GoogleApiException>(() => original.Patch(new Table { Description = "Description2" }, matchETag: true));
             Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
         }
 
@@ -140,7 +140,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             sneaky.Update();
 
             // Patch from the original, but don't bother with optimistic concurrency checks. (Don't propagate the etag.)
-            var patched = original.Patch(new Table { Description = "Description2" }, matchEtag: false);
+            var patched = original.Patch(new Table { Description = "Description2" }, matchETag: false);
 
             // Check the results of the patch
             Assert.Equal("Description2", patched.Resource.Description);
@@ -209,7 +209,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var tableId = _fixture.CreateTableId();
 
             var original = await client.CreateTableAsync(datasetId, tableId, new TableSchema(), new CreateTableOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
-            var patched = await original.PatchAsync(new Table { Description = "Description2" }, matchEtag: false);
+            var patched = await original.PatchAsync(new Table { Description = "Description2" }, matchETag: false);
 
             // Check the results of the patch
             Assert.Equal("Description2", patched.Resource.Description);
@@ -238,7 +238,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             sneaky.Update();
 
             // Fails due to the conflict.
-            var exception = await Assert.ThrowsAsync<GoogleApiException>(() => original.PatchAsync(new Table { Description = "Description2" }, matchEtag: true));
+            var exception = await Assert.ThrowsAsync<GoogleApiException>(() => original.PatchAsync(new Table { Description = "Description2" }, matchETag: true));
             Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
         }
 
@@ -259,7 +259,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             sneaky.Update();
 
             // Patch from the original, but don't bother with optimistic concurrency checks. (Don't propagate the etag.)
-            var patched = await original.PatchAsync(new Table { Description = "Description2" }, matchEtag: false);
+            var patched = await original.PatchAsync(new Table { Description = "Description2" }, matchETag: false);
 
             // Check the results of the patch
             Assert.Equal("Description2", patched.Resource.Description);

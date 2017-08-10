@@ -204,13 +204,13 @@ namespace Google.Cloud.BigQuery.V2
         /// This method delegates to <see cref="BigQueryClient.PatchDataset(DatasetReference, Dataset, PatchDatasetOptions)"/>.
         /// </remarks>
         /// <param name="resource">The resource to patch with. Must not be null.</param>
-        /// <param name="matchEtag">If true, the etag from <see cref="Resource"/> is propagated into <paramref name="resource"/> for
+        /// <param name="matchETag">If true, the etag from <see cref="Resource"/> is propagated into <paramref name="resource"/> for
         /// optimistic concurrency. Otherwise, <paramref name="resource"/> is left unchanged.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The updated dataset.</returns>
-        public BigQueryDataset Patch(Dataset resource, bool matchEtag, PatchDatasetOptions options = null)
+        public BigQueryDataset Patch(Dataset resource, bool matchETag, PatchDatasetOptions options = null)
         {
-            if (matchEtag)
+            if (matchETag)
             {
                 resource.ETag = Resource.ETag;
             }
@@ -363,15 +363,15 @@ namespace Google.Cloud.BigQuery.V2
         /// This method delegates to <see cref="BigQueryClient.PatchDatasetAsync(DatasetReference, Dataset, PatchDatasetOptions, CancellationToken)"/>.
         /// </remarks>
         /// <param name="resource">The resource to patch with. Must not be null.</param>
-        /// <param name="matchEtag">If true, the etag from <see cref="Resource"/> is propagated into <paramref name="resource"/> for
+        /// <param name="matchETag">If true, the etag from <see cref="Resource"/> is propagated into <paramref name="resource"/> for
         /// optimistic concurrency. Otherwise, <paramref name="resource"/> is left unchanged.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the updated dataset.</returns>
-        public Task<BigQueryDataset> PatchAsync(Dataset resource, bool matchEtag, PatchDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public Task<BigQueryDataset> PatchAsync(Dataset resource, bool matchETag, PatchDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            if (matchEtag)
+            if (matchETag)
             {
                 resource.ETag = Resource.ETag;
             }
