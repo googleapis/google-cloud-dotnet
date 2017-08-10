@@ -50,7 +50,10 @@ namespace Google.Cloud.Bigtable.V2
         private BigtableSettings(BigtableSettings existing) : base(existing)
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            ReadRowsSettings = existing.ReadRowsSettings;
+            SampleRowKeysSettings = existing.SampleRowKeysSettings;
             MutateRowSettings = existing.MutateRowSettings;
+            MutateRowsSettings = existing.MutateRowsSettings;
             CheckAndMutateRowSettings = existing.CheckAndMutateRowSettings;
             ReadModifyWriteRowSettings = existing.ReadModifyWriteRowSettings;
             OnCopy(existing);
@@ -123,6 +126,24 @@ namespace Google.Cloud.Bigtable.V2
         );
 
         /// <summary>
+        /// <see cref="CallSettings"/> for calls to <c>BigtableClient.ReadRows</c>.
+        /// </summary>
+        /// <remarks>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings ReadRowsSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromTimeout(TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for calls to <c>BigtableClient.SampleRowKeys</c>.
+        /// </summary>
+        /// <remarks>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings SampleRowKeysSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromTimeout(TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableClient.MutateRow</c> and <c>BigtableClient.MutateRowAsync</c>.
         /// </summary>
@@ -150,6 +171,15 @@ namespace Google.Cloud.Bigtable.V2
                 totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for calls to <c>BigtableClient.MutateRows</c>.
+        /// </summary>
+        /// <remarks>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings MutateRowsSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromTimeout(TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
@@ -319,6 +349,65 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         /// <summary>
+        /// Streams back the contents of all requested rows in key order, optionally
+        /// applying the same Reader filter to each. Depending on their size,
+        /// rows and cells may be broken up across multiple responses, but
+        /// atomicity of each row will still be preserved. See the
+        /// ReadRowsResponse documentation for details.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream.
+        /// </returns>
+        public virtual ReadRowsStream ReadRows(
+            ReadRowsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Server streaming methods for <c>ReadRows</c>.
+        /// </summary>
+        public abstract class ReadRowsStream : ServerStreamingBase<ReadRowsResponse>
+        {
+        }
+
+        /// <summary>
+        /// Returns a sample of row keys in the table. The returned row keys will
+        /// delimit contiguous sections of the table of approximately equal size,
+        /// which can be used to break up the data for distributed tasks like
+        /// mapreduces.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream.
+        /// </returns>
+        public virtual SampleRowKeysStream SampleRowKeys(
+            SampleRowKeysRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Server streaming methods for <c>SampleRowKeys</c>.
+        /// </summary>
+        public abstract class SampleRowKeysStream : ServerStreamingBase<SampleRowKeysResponse>
+        {
+        }
+
+        /// <summary>
         /// Mutates a row atomically. Cells already present in the row are left
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
@@ -461,6 +550,34 @@ namespace Google.Cloud.Bigtable.V2
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Mutates multiple rows in a batch. Each individual row is mutated
+        /// atomically as in MutateRow, but the entire batch is not executed
+        /// atomically.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream.
+        /// </returns>
+        public virtual MutateRowsStream MutateRows(
+            MutateRowsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Server streaming methods for <c>MutateRows</c>.
+        /// </summary>
+        public abstract class MutateRowsStream : ServerStreamingBase<MutateRowsResponse>
+        {
         }
 
         /// <summary>
@@ -809,7 +926,10 @@ namespace Google.Cloud.Bigtable.V2
     /// </summary>
     public sealed partial class BigtableClientImpl : BigtableClient
     {
+        private readonly ApiServerStreamingCall<ReadRowsRequest, ReadRowsResponse> _callReadRows;
+        private readonly ApiServerStreamingCall<SampleRowKeysRequest, SampleRowKeysResponse> _callSampleRowKeys;
         private readonly ApiCall<MutateRowRequest, MutateRowResponse> _callMutateRow;
+        private readonly ApiServerStreamingCall<MutateRowsRequest, MutateRowsResponse> _callMutateRows;
         private readonly ApiCall<CheckAndMutateRowRequest, CheckAndMutateRowResponse> _callCheckAndMutateRow;
         private readonly ApiCall<ReadModifyWriteRowRequest, ReadModifyWriteRowResponse> _callReadModifyWriteRow;
 
@@ -820,11 +940,17 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="settings">The base <see cref="BigtableSettings"/> used within this client </param>
         public BigtableClientImpl(Bigtable.BigtableClient grpcClient, BigtableSettings settings)
         {
-            this.GrpcClient = grpcClient;
+            GrpcClient = grpcClient;
             BigtableSettings effectiveSettings = settings ?? BigtableSettings.GetDefault();
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            _callReadRows = clientHelper.BuildApiCall<ReadRowsRequest, ReadRowsResponse>(
+                GrpcClient.ReadRows, effectiveSettings.ReadRowsSettings);
+            _callSampleRowKeys = clientHelper.BuildApiCall<SampleRowKeysRequest, SampleRowKeysResponse>(
+                GrpcClient.SampleRowKeys, effectiveSettings.SampleRowKeysSettings);
             _callMutateRow = clientHelper.BuildApiCall<MutateRowRequest, MutateRowResponse>(
                 GrpcClient.MutateRowAsync, GrpcClient.MutateRow, effectiveSettings.MutateRowSettings);
+            _callMutateRows = clientHelper.BuildApiCall<MutateRowsRequest, MutateRowsResponse>(
+                GrpcClient.MutateRows, effectiveSettings.MutateRowsSettings);
             _callCheckAndMutateRow = clientHelper.BuildApiCall<CheckAndMutateRowRequest, CheckAndMutateRowResponse>(
                 GrpcClient.CheckAndMutateRowAsync, GrpcClient.CheckAndMutateRow, effectiveSettings.CheckAndMutateRowSettings);
             _callReadModifyWriteRow = clientHelper.BuildApiCall<ReadModifyWriteRowRequest, ReadModifyWriteRowResponse>(
@@ -840,9 +966,95 @@ namespace Google.Cloud.Bigtable.V2
         public override Bigtable.BigtableClient GrpcClient { get; }
 
         // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        partial void Modify_ReadRowsRequest(ref ReadRowsRequest request, ref CallSettings settings);
+        partial void Modify_SampleRowKeysRequest(ref SampleRowKeysRequest request, ref CallSettings settings);
         partial void Modify_MutateRowRequest(ref MutateRowRequest request, ref CallSettings settings);
+        partial void Modify_MutateRowsRequest(ref MutateRowsRequest request, ref CallSettings settings);
         partial void Modify_CheckAndMutateRowRequest(ref CheckAndMutateRowRequest request, ref CallSettings settings);
         partial void Modify_ReadModifyWriteRowRequest(ref ReadModifyWriteRowRequest request, ref CallSettings settings);
+
+        /// <summary>
+        /// Streams back the contents of all requested rows in key order, optionally
+        /// applying the same Reader filter to each. Depending on their size,
+        /// rows and cells may be broken up across multiple responses, but
+        /// atomicity of each row will still be preserved. See the
+        /// ReadRowsResponse documentation for details.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream.
+        /// </returns>
+        public override ReadRowsStream ReadRows(
+            ReadRowsRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ReadRowsRequest(ref request, ref callSettings);
+            return new ReadRowsStreamImpl(_callReadRows.Call(request, callSettings));
+        }
+
+        internal sealed class ReadRowsStreamImpl : ReadRowsStream
+        {
+            /// <summary>
+            /// Construct the server-streaming method for <c>ReadRows</c>.
+            /// </summary>
+            /// <param name="call">The underlying gRPC server-streaming call.</param>
+            internal ReadRowsStreamImpl(AsyncServerStreamingCall<ReadRowsResponse> call)
+            {
+                GrpcCall = call;
+            }
+
+            /// <inheritdoc/>
+            public override AsyncServerStreamingCall<ReadRowsResponse> GrpcCall { get; }
+
+            /// <inheritdoc/>
+            public override IAsyncEnumerator<ReadRowsResponse> ResponseStream => GrpcCall.ResponseStream;
+        }
+
+        /// <summary>
+        /// Returns a sample of row keys in the table. The returned row keys will
+        /// delimit contiguous sections of the table of approximately equal size,
+        /// which can be used to break up the data for distributed tasks like
+        /// mapreduces.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream.
+        /// </returns>
+        public override SampleRowKeysStream SampleRowKeys(
+            SampleRowKeysRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_SampleRowKeysRequest(ref request, ref callSettings);
+            return new SampleRowKeysStreamImpl(_callSampleRowKeys.Call(request, callSettings));
+        }
+
+        internal sealed class SampleRowKeysStreamImpl : SampleRowKeysStream
+        {
+            /// <summary>
+            /// Construct the server-streaming method for <c>SampleRowKeys</c>.
+            /// </summary>
+            /// <param name="call">The underlying gRPC server-streaming call.</param>
+            internal SampleRowKeysStreamImpl(AsyncServerStreamingCall<SampleRowKeysResponse> call)
+            {
+                GrpcCall = call;
+            }
+
+            /// <inheritdoc/>
+            public override AsyncServerStreamingCall<SampleRowKeysResponse> GrpcCall { get; }
+
+            /// <inheritdoc/>
+            public override IAsyncEnumerator<SampleRowKeysResponse> ResponseStream => GrpcCall.ResponseStream;
+        }
 
         /// <summary>
         /// Mutates a row atomically. Cells already present in the row are left
@@ -884,6 +1096,46 @@ namespace Google.Cloud.Bigtable.V2
         {
             Modify_MutateRowRequest(ref request, ref callSettings);
             return _callMutateRow.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Mutates multiple rows in a batch. Each individual row is mutated
+        /// atomically as in MutateRow, but the entire batch is not executed
+        /// atomically.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream.
+        /// </returns>
+        public override MutateRowsStream MutateRows(
+            MutateRowsRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_MutateRowsRequest(ref request, ref callSettings);
+            return new MutateRowsStreamImpl(_callMutateRows.Call(request, callSettings));
+        }
+
+        internal sealed class MutateRowsStreamImpl : MutateRowsStream
+        {
+            /// <summary>
+            /// Construct the server-streaming method for <c>MutateRows</c>.
+            /// </summary>
+            /// <param name="call">The underlying gRPC server-streaming call.</param>
+            internal MutateRowsStreamImpl(AsyncServerStreamingCall<MutateRowsResponse> call)
+            {
+                GrpcCall = call;
+            }
+
+            /// <inheritdoc/>
+            public override AsyncServerStreamingCall<MutateRowsResponse> GrpcCall { get; }
+
+            /// <inheritdoc/>
+            public override IAsyncEnumerator<MutateRowsResponse> ResponseStream => GrpcCall.ResponseStream;
         }
 
         /// <summary>
@@ -977,5 +1229,6 @@ namespace Google.Cloud.Bigtable.V2
     }
 
     // Partial classes to enable page-streaming
+
 
 }
