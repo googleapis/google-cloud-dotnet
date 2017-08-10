@@ -976,7 +976,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="settings">The base <see cref="MetricsServiceV2Settings"/> used within this client </param>
         public MetricsServiceV2ClientImpl(MetricsServiceV2.MetricsServiceV2Client grpcClient, MetricsServiceV2Settings settings)
         {
-            this.GrpcClient = grpcClient;
+            GrpcClient = grpcClient;
             MetricsServiceV2Settings effectiveSettings = settings ?? MetricsServiceV2Settings.GetDefault();
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             _callListLogMetrics = clientHelper.BuildApiCall<ListLogMetricsRequest, ListLogMetricsResponse>(
@@ -1221,5 +1221,6 @@ namespace Google.Cloud.Logging.V2
         /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
+
 
 }

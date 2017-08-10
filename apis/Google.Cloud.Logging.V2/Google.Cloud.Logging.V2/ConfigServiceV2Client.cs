@@ -1096,7 +1096,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="settings">The base <see cref="ConfigServiceV2Settings"/> used within this client </param>
         public ConfigServiceV2ClientImpl(ConfigServiceV2.ConfigServiceV2Client grpcClient, ConfigServiceV2Settings settings)
         {
-            this.GrpcClient = grpcClient;
+            GrpcClient = grpcClient;
             ConfigServiceV2Settings effectiveSettings = settings ?? ConfigServiceV2Settings.GetDefault();
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             _callListSinks = clientHelper.BuildApiCall<ListSinksRequest, ListSinksResponse>(
@@ -1365,5 +1365,6 @@ namespace Google.Cloud.Logging.V2
         /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
+
 
 }

@@ -1169,7 +1169,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="settings">The base <see cref="LoggingServiceV2Settings"/> used within this client </param>
         public LoggingServiceV2ClientImpl(LoggingServiceV2.LoggingServiceV2Client grpcClient, LoggingServiceV2Settings settings)
         {
-            this.GrpcClient = grpcClient;
+            GrpcClient = grpcClient;
             LoggingServiceV2Settings effectiveSettings = settings ?? LoggingServiceV2Settings.GetDefault();
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             _callDeleteLog = clientHelper.BuildApiCall<DeleteLogRequest, Empty>(
@@ -1452,5 +1452,6 @@ namespace Google.Cloud.Logging.V2
         /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
+
 
 }

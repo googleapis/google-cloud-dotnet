@@ -681,7 +681,7 @@ namespace Google.Cloud.Trace.V1
         /// <param name="settings">The base <see cref="TraceServiceSettings"/> used within this client </param>
         public TraceServiceClientImpl(TraceService.TraceServiceClient grpcClient, TraceServiceSettings settings)
         {
-            this.GrpcClient = grpcClient;
+            GrpcClient = grpcClient;
             TraceServiceSettings effectiveSettings = settings ?? TraceServiceSettings.GetDefault();
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             _callPatchTraces = clientHelper.BuildApiCall<PatchTracesRequest, Empty>(
@@ -848,5 +848,6 @@ namespace Google.Cloud.Trace.V1
         /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
+
 
 }
