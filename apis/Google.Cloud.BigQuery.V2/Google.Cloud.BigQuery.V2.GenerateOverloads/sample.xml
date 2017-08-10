@@ -1,0 +1,50 @@
+﻿<!--
+ - The region label is used to identify the generated source code.
+ - It's only used in #region pragmas, but is conventionally the method name
+ - and any differentiating features (if there are multiple methods which vary by
+ - argument types other than the targeting part).
+ -
+ - The target type must be Table, Dataset, Job or empty. If it's empty, only two overloads
+ - are generated.
+ -
+ - The return type must be specified, even if it's void.
+ -->
+<Method RegionLabel="Foo(string)"
+        Name="Foo"
+        TargetType="Dataset"
+        ReturnType="BigQueryDataset">
+
+  <!-- This element is optional (ironically); any attribute not present is defaulted. -->
+  <Options Name="fooOptions" Type="FooOptions" Comment="The options for foo" />
+  <!-- Additional parameters between the target and the options. -->
+  <AdditionalParameters>
+    <Parameter Name="foo" Type="string" Comment="The foo to do stuff with." />
+    <Parameter Name="bar" Type="string" DefaultValue="null" Comment="The bar to do stuff with." />
+  </AdditionalParameters>
+  <!-- 
+    - Within comments:
+    - - {target} is replaced by "the specified dataset", or "the specified dataset within this client's project" etc.
+    - - For delegating methods, a line is added at the end of the summary to indicate the delegation.
+    -
+    - For asynchronous methods, the summary has "Asynchronously" prepended (and the first letter lower-cased). The returns comment has
+    - "A task representing the asynchronous operation. When complete, the result is " prepended, and the first letter lower-cased.
+    -
+    - Any comment element not specifically processed is copied verbatim.
+    - <param> elements are not required for the target datasetId etc, the options or the cancellation token for async methods.
+    -->
+  <Comments>
+    <summary>
+      Does something with {target}.
+    </summary>
+    <remarks>
+      <para>
+        Here are some remarks.
+      </para>
+      <para>
+        A second paragraph of remarks.
+      </para>
+    </remarks>
+    <returns>The updated dataset.</returns>
+  </Comments>
+
+</Method>
