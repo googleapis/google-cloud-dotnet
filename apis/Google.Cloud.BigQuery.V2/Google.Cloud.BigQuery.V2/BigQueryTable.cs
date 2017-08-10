@@ -222,13 +222,13 @@ namespace Google.Cloud.BigQuery.V2
         /// This method delegates to <see cref="BigQueryClient.PatchTable(TableReference, Table, PatchTableOptions)"/>.
         /// </remarks>
         /// <param name="resource">The resource to patch with. Must not be null.</param>
-        /// <param name="matchEtag">If true, the etag from <see cref="Resource"/> is propagated into <paramref name="resource"/> for
+        /// <param name="matchETag">If true, the etag from <see cref="Resource"/> is propagated into <paramref name="resource"/> for
         /// optimistic concurrency. Otherwise, <paramref name="resource"/> is left unchanged.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The updated table.</returns>
-        public BigQueryTable Patch(Table resource, bool matchEtag, PatchTableOptions options = null)
+        public BigQueryTable Patch(Table resource, bool matchETag, PatchTableOptions options = null)
         {
-            if (matchEtag)
+            if (matchETag)
             {
                 resource.ETag = Resource.ETag;
             }
@@ -404,15 +404,15 @@ namespace Google.Cloud.BigQuery.V2
         /// This method delegates to <see cref="BigQueryClient.PatchTableAsync(TableReference, Table, PatchTableOptions, CancellationToken)"/>.
         /// </remarks>
         /// <param name="resource">The resource to patch with. Must not be null.</param>
-        /// <param name="matchEtag">If true, the etag from <see cref="Resource"/> is propagated into <paramref name="resource"/> for
+        /// <param name="matchETag">If true, the etag from <see cref="Resource"/> is propagated into <paramref name="resource"/> for
         /// optimistic concurrency. Otherwise, <paramref name="resource"/> is left unchanged.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the updated table.</returns>
-        public Task<BigQueryTable> PatchAsync(Table resource, bool matchEtag, PatchTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public Task<BigQueryTable> PatchAsync(Table resource, bool matchETag, PatchTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            if (matchEtag)
+            if (matchETag)
             {
                 resource.ETag = Resource.ETag;
             }
