@@ -30,13 +30,18 @@ namespace TrimCoverageReport
         const string CoveredStatements = "CoveredStatements";
         const string CoveragePercent = "CoveragePercent";
 
+        private static bool s_fixFilePaths;
+        private static bool s_skipBadPaths;
+
         static int Main(string[] args)
         {
-            if (args.Length != 2)
+            if (args.Length < 2 || args.Length > 4)
             {
                 Console.WriteLine("Arguments: <input file> <output file>");
                 return 1;
             }
+            s_fixFilePaths = args.Any(x => x.Equals("--fixpaths", StringComparison.OrdinalIgnoreCase));
+            s_skipBadPaths = args.Any(x => x.Equals("--skipbadpaths", StringComparison.OrdinalIgnoreCase));
             XDocument doc = XDocument.Load(args[0]);
             ProcessDocument(doc);
             using (var writer = File.CreateText(args[1]))
@@ -63,7 +68,8 @@ namespace TrimCoverageReport
             // - Recompute the coverage for each Assembly element (based on descendant Namespace elements)
             // - Remove Assembly elements with 0 namespaces
 
-            var fileElements = document.Root.Element("FileIndices").Elements("File");
+            var fileElements = document.Root.Element("FileIndices").Elements("File").ToList();
+            FixPaths(fileElements);
             var generatedFiles = fileElements.Where(file => IsGeneratedFile(file.Attribute("Name").Value)).ToList();
             var generatedIndices = new HashSet<int>(generatedFiles.Select(file => (int) file.Attribute("Index")));
             generatedFiles.Remove();
@@ -109,13 +115,61 @@ namespace TrimCoverageReport
         private static (int statements, int covered) GetContainerCoverage(XElement container) =>
             ((int)container.Attribute(TotalStatements), (int)container.Attribute(CoveredStatements));
 
+        private static void FixPaths(IEnumerable<XElement> fileElements)
+        {
+            if (!s_fixFilePaths) return;
+            foreach (var fileNode in fileElements)
+            {
+                fileNode.Attribute("Name").Value = AdjustedLocalPath(fileNode.Attribute("Name")?.Value);
+                Console.WriteLine(fileNode.Attribute("Name").Value);
+            }
+        }
+
+        // If for some reason we are running on a new git clone with a different full path, we'll still
+        // try to fix up the stored path by looking for a relative path under the current working directory.
+        private static string AdjustedLocalPath(string originalPath)
+        {
+            if (string.IsNullOrEmpty(originalPath))
+            {
+                return originalPath;
+            }
+            var originalFile = new FileInfo(originalPath);
+            if (originalFile.Exists)
+            {
+                return originalPath;
+            }
+
+            var currentFolder = originalFile.Directory;
+            while (currentFolder != null)
+            {
+                var relativePath = originalFile.FullName.Substring(currentFolder.FullName.Length + 1);
+                var testFile = Path.Combine(Directory.GetCurrentDirectory(), relativePath);
+                if (File.Exists(testFile))
+                {
+                    return testFile;
+                }
+                currentFolder = currentFolder.Parent;
+            }
+            return originalPath;
+        }
+
         /// <summary>
         /// Detects whether a file is generated. All three code generators we use (protoc, grpc,
         /// toolkit) include a comment starting with "// Generated" early in the file.
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
-        static bool IsGeneratedFile(string path) =>
-            File.ReadLines(path).Take(20).Any(line => line.StartsWith("// Generated"));
+        private static bool IsGeneratedFile(string path)
+        {
+            try
+            {
+                return File.ReadLines(path).Take(20).Any(line => line.StartsWith("// Generated"));
+            }
+            catch (IOException e) when(s_skipBadPaths)
+            {
+                Console.Error.WriteLine(e);
+                return false;
+            }
+        }
     }
 }
