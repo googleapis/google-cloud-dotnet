@@ -517,7 +517,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <param name="settings">The base <see cref="ErrorGroupServiceSettings"/> used within this client </param>
         public ErrorGroupServiceClientImpl(ErrorGroupService.ErrorGroupServiceClient grpcClient, ErrorGroupServiceSettings settings)
         {
-            this.GrpcClient = grpcClient;
+            GrpcClient = grpcClient;
             ErrorGroupServiceSettings effectiveSettings = settings ?? ErrorGroupServiceSettings.GetDefault();
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             _callGetGroup = clientHelper.BuildApiCall<GetGroupRequest, ErrorGroup>(
@@ -623,5 +623,6 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     }
 
     // Partial classes to enable page-streaming
+
 
 }

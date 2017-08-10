@@ -836,7 +836,7 @@ namespace Google.Cloud.Language.V1
         /// <param name="settings">The base <see cref="LanguageServiceSettings"/> used within this client </param>
         public LanguageServiceClientImpl(LanguageService.LanguageServiceClient grpcClient, LanguageServiceSettings settings)
         {
-            this.GrpcClient = grpcClient;
+            GrpcClient = grpcClient;
             LanguageServiceSettings effectiveSettings = settings ?? LanguageServiceSettings.GetDefault();
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             _callAnalyzeSentiment = clientHelper.BuildApiCall<AnalyzeSentimentRequest, AnalyzeSentimentResponse>(
@@ -1036,5 +1036,6 @@ namespace Google.Cloud.Language.V1
     }
 
     // Partial classes to enable page-streaming
+
 
 }

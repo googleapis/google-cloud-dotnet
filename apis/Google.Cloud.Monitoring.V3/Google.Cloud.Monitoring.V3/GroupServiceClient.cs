@@ -1000,7 +1000,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="settings">The base <see cref="GroupServiceSettings"/> used within this client </param>
         public GroupServiceClientImpl(GroupService.GroupServiceClient grpcClient, GroupServiceSettings settings)
         {
-            this.GrpcClient = grpcClient;
+            GrpcClient = grpcClient;
             GroupServiceSettings effectiveSettings = settings ?? GroupServiceSettings.GetDefault();
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             _callListGroups = clientHelper.BuildApiCall<ListGroupsRequest, ListGroupsResponse>(
@@ -1302,5 +1302,6 @@ namespace Google.Cloud.Monitoring.V3
         /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
+
 
 }

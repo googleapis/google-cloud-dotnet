@@ -419,7 +419,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <param name="settings">The base <see cref="ReportErrorsServiceSettings"/> used within this client </param>
         public ReportErrorsServiceClientImpl(ReportErrorsService.ReportErrorsServiceClient grpcClient, ReportErrorsServiceSettings settings)
         {
-            this.GrpcClient = grpcClient;
+            GrpcClient = grpcClient;
             ReportErrorsServiceSettings effectiveSettings = settings ?? ReportErrorsServiceSettings.GetDefault();
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             _callReportErrorEvent = clientHelper.BuildApiCall<ReportErrorEventRequest, ReportErrorEventResponse>(
@@ -494,5 +494,6 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     }
 
     // Partial classes to enable page-streaming
+
 
 }

@@ -361,7 +361,7 @@ namespace Google.Cloud.Vision.V1
         /// <param name="settings">The base <see cref="ImageAnnotatorSettings"/> used within this client </param>
         public ImageAnnotatorClientImpl(ImageAnnotator.ImageAnnotatorClient grpcClient, ImageAnnotatorSettings settings)
         {
-            this.GrpcClient = grpcClient;
+            GrpcClient = grpcClient;
             ImageAnnotatorSettings effectiveSettings = settings ?? ImageAnnotatorSettings.GetDefault();
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             _callBatchAnnotateImages = clientHelper.BuildApiCall<BatchAnnotateImagesRequest, BatchAnnotateImagesResponse>(
@@ -422,5 +422,6 @@ namespace Google.Cloud.Vision.V1
     }
 
     // Partial classes to enable page-streaming
+
 
 }
