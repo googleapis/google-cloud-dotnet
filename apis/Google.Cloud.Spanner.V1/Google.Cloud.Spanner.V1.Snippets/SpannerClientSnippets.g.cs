@@ -229,6 +229,31 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // End snippet
         }
 
+        public async Task ExecuteStreamingSql()
+        {
+            // Snippet: ExecuteStreamingSql(ExecuteSqlRequest,CallSettings)
+            // Create client
+            SpannerClient spannerClient = SpannerClient.Create();
+            // Initialize request argument
+            ExecuteSqlRequest request = new ExecuteSqlRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Sql = "",
+            };
+            // Make the request, returning a streaming response
+            SpannerClient.ExecuteStreamingSqlStream streamingResponse = spannerClient.ExecuteStreamingSql(request);
+
+            // Read streaming responses from server until complete
+            IAsyncEnumerator<PartialResultSet> responseStream = streamingResponse.ResponseStream;
+            while (await responseStream.MoveNext())
+            {
+                PartialResultSet response = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
         public async Task ReadAsync_RequestObject()
         {
             // Snippet: ReadAsync(ReadRequest,CallSettings)
@@ -262,6 +287,33 @@ namespace Google.Cloud.Spanner.V1.Snippets
             };
             // Make the request
             ResultSet response = spannerClient.Read(request);
+            // End snippet
+        }
+
+        public async Task StreamingRead()
+        {
+            // Snippet: StreamingRead(ReadRequest,CallSettings)
+            // Create client
+            SpannerClient spannerClient = SpannerClient.Create();
+            // Initialize request argument
+            ReadRequest request = new ReadRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Table = "",
+                Columns = { },
+                KeySet = new KeySet(),
+            };
+            // Make the request, returning a streaming response
+            SpannerClient.StreamingReadStream streamingResponse = spannerClient.StreamingRead(request);
+
+            // Read streaming responses from server until complete
+            IAsyncEnumerator<PartialResultSet> responseStream = streamingResponse.ResponseStream;
+            while (await responseStream.MoveNext())
+            {
+                PartialResultSet response = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
             // End snippet
         }
 

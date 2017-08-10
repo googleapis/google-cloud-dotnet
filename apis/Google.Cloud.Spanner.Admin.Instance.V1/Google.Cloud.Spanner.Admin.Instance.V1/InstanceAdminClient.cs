@@ -2234,7 +2234,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <param name="settings">The base <see cref="InstanceAdminSettings"/> used within this client </param>
         public InstanceAdminClientImpl(InstanceAdmin.InstanceAdminClient grpcClient, InstanceAdminSettings settings)
         {
-            this.GrpcClient = grpcClient;
+            GrpcClient = grpcClient;
             InstanceAdminSettings effectiveSettings = settings ?? InstanceAdminSettings.GetDefault();
             LongRunningOperationsClient = new OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.LongRunningOperationsSettings);
@@ -2907,5 +2907,19 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
+
+    // Partial Grpc class to enable LRO client creation
+    public static partial class InstanceAdmin
+    {
+        public partial class InstanceAdminClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="Operations.OperationsClient"/> using the same call invoker as this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual Operations.OperationsClient CreateOperationsClient() => new Operations.OperationsClient(CallInvoker);
+        }
+    }
+
 
 }

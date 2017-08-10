@@ -195,6 +195,46 @@ namespace Google.Cloud.PubSub.V1
         );
 
         /// <summary>
+        /// "StreamingMessaging" retry backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// </summary>
+        /// <returns>
+        /// The "StreamingMessaging" retry backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// </returns>
+        /// <remarks>
+        /// The "StreamingMessaging" retry backoff for <see cref="SubscriberClient"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 100 milliseconds</description></item>
+        /// <item><description>Maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
+        /// </list>
+        /// </remarks>
+        public static BackoffSettings GetStreamingMessagingRetryBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(100),
+            maxDelay: TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.3
+        );
+
+        /// <summary>
+        /// "StreamingMessaging" timeout backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// </summary>
+        /// <returns>
+        /// The "StreamingMessaging" timeout backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// </returns>
+        /// <remarks>
+        /// The "StreamingMessaging" timeout backoff for <see cref="SubscriberClient"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial timeout: 600000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Maximum timeout: 600000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public static BackoffSettings GetStreamingMessagingTimeoutBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(600000),
+            maxDelay: TimeSpan.FromMilliseconds(600000),
+            delayMultiplier: 1.0
+        );
+
+        /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <c>SubscriberClient.CreateSubscription</c> and <c>SubscriberClient.CreateSubscriptionAsync</c>.
         /// </summary>
@@ -3066,10 +3106,10 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="settings">The base <see cref="SubscriberSettings"/> used within this client </param>
         public SubscriberClientImpl(Subscriber.SubscriberClient grpcClient, SubscriberSettings settings)
         {
-            this.GrpcClient = grpcClient;
+            GrpcClient = grpcClient;
             SubscriberSettings effectiveSettings = settings ?? SubscriberSettings.GetDefault();
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
-            var grpcIAMPolicyClient = grpcClient.CreateIAMPolicyClient();
+            IAMPolicy.IAMPolicyClient grpcIAMPolicyClient = grpcClient.CreateIAMPolicyClient();
             _callCreateSubscription = clientHelper.BuildApiCall<Subscription, Subscription>(
                 GrpcClient.CreateSubscriptionAsync, GrpcClient.CreateSubscription, effectiveSettings.CreateSubscriptionSettings);
             _callGetSubscription = clientHelper.BuildApiCall<GetSubscriptionRequest, Subscription>(
@@ -3557,10 +3597,7 @@ namespace Google.Cloud.PubSub.V1
             return new StreamingPullStreamImpl(this, call, writeBuffer);
         }
 
-        /// <summary>
-        /// Bidirectional streaming methods for <c>StreamingPull</c>.
-        /// </summary>
-        public sealed class StreamingPullStreamImpl : StreamingPullStream
+        internal sealed class StreamingPullStreamImpl : StreamingPullStream
         {
             /// <summary>
             /// Construct the bidirectional streaming method for <c>StreamingPull</c>.
@@ -4063,5 +4100,19 @@ namespace Google.Cloud.PubSub.V1
         /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
+
+    // Partial Grpc class to enable IAMPolicy.IAMPolicyClient client creation
+    public static partial class Subscriber
+    {
+        public partial class SubscriberClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="IAMPolicy.IAMPolicyClient"/> using the same call invoker as this client.
+            /// </summary>
+            /// <returns>A new IAMPolicy.IAMPolicyClient for the same target as this client.</returns>
+            public virtual IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() => new IAMPolicy.IAMPolicyClient(CallInvoker);
+        }
+    }
+
 
 }

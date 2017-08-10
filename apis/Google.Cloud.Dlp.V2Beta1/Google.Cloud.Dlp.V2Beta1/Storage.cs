@@ -24,41 +24,48 @@ namespace Google.Cloud.Dlp.V2Beta1 {
           string.Concat(
             "Cihnb29nbGUvcHJpdmFjeS9kbHAvdjJiZXRhMS9zdG9yYWdlLnByb3RvEhpn",
             "b29nbGUucHJpdmFjeS5kbHAudjJiZXRhMRocZ29vZ2xlL2FwaS9hbm5vdGF0",
-            "aW9ucy5wcm90byIYCghJbmZvVHlwZRIMCgRuYW1lGAEgASgJIh4KB0ZpZWxk",
-            "SWQSEwoLY29sdW1uX25hbWUYASABKAkiNwoLUGFydGl0aW9uSWQSEgoKcHJv",
-            "amVjdF9pZBgCIAEoCRIUCgxuYW1lc3BhY2VfaWQYBCABKAkiHgoOS2luZEV4",
-            "cHJlc3Npb24SDAoEbmFtZRgBIAEoCSIhChFQcm9wZXJ0eVJlZmVyZW5jZRIM",
-            "CgRuYW1lGAIgASgJIk0KClByb2plY3Rpb24SPwoIcHJvcGVydHkYASABKAsy",
-            "LS5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5Qcm9wZXJ0eVJlZmVyZW5j",
-            "ZSLHAQoQRGF0YXN0b3JlT3B0aW9ucxI9CgxwYXJ0aXRpb25faWQYASABKAsy",
-            "Jy5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5QYXJ0aXRpb25JZBI4CgRr",
-            "aW5kGAIgASgLMiouZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuS2luZEV4",
-            "cHJlc3Npb24SOgoKcHJvamVjdGlvbhgDIAMoCzImLmdvb2dsZS5wcml2YWN5",
-            "LmRscC52MmJldGExLlByb2plY3Rpb24ieAoTQ2xvdWRTdG9yYWdlT3B0aW9u",
-            "cxJJCghmaWxlX3NldBgBIAEoCzI3Lmdvb2dsZS5wcml2YWN5LmRscC52MmJl",
-            "dGExLkNsb3VkU3RvcmFnZU9wdGlvbnMuRmlsZVNldBoWCgdGaWxlU2V0EgsK",
-            "A3VybBgBIAEoCSIgChBDbG91ZFN0b3JhZ2VQYXRoEgwKBHBhdGgYASABKAki",
-            "tAEKDVN0b3JhZ2VDb25maWcSSQoRZGF0YXN0b3JlX29wdGlvbnMYAiABKAsy",
-            "LC5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5EYXRhc3RvcmVPcHRpb25z",
-            "SAASUAoVY2xvdWRfc3RvcmFnZV9vcHRpb25zGAMgASgLMi8uZ29vZ2xlLnBy",
-            "aXZhY3kuZGxwLnYyYmV0YTEuQ2xvdWRTdG9yYWdlT3B0aW9uc0gAQgYKBHR5",
-            "cGUiOgoPQ2xvdWRTdG9yYWdlS2V5EhEKCWZpbGVfcGF0aBgBIAEoCRIUCgxz",
-            "dGFydF9vZmZzZXQYAiABKAMiQwoMRGF0YXN0b3JlS2V5EjMKCmVudGl0eV9r",
-            "ZXkYASABKAsyHy5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5LZXkixQEK",
-            "A0tleRI9CgxwYXJ0aXRpb25faWQYASABKAsyJy5nb29nbGUucHJpdmFjeS5k",
-            "bHAudjJiZXRhMS5QYXJ0aXRpb25JZBI5CgRwYXRoGAIgAygLMisuZ29vZ2xl",
-            "LnByaXZhY3kuZGxwLnYyYmV0YTEuS2V5LlBhdGhFbGVtZW50GkQKC1BhdGhF",
-            "bGVtZW50EgwKBGtpbmQYASABKAkSDAoCaWQYAiABKANIABIOCgRuYW1lGAMg",
-            "ASgJSABCCQoHaWRfdHlwZSKgAQoJUmVjb3JkS2V5EkgKEWNsb3VkX3N0b3Jh",
-            "Z2Vfa2V5GAEgASgLMisuZ29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuQ2xv",
-            "dWRTdG9yYWdlS2V5SAASQQoNZGF0YXN0b3JlX2tleRgCIAEoCzIoLmdvb2ds",
-            "ZS5wcml2YWN5LmRscC52MmJldGExLkRhdGFzdG9yZUtleUgAQgYKBHR5cGVC",
-            "iAEKHmNvbS5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMUIKRGxwU3RvcmFn",
-            "ZVABWj1nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL3By",
-            "aXZhY3kvZGxwL3YyYmV0YTE7ZGxwqgIYR29vZ2xlLkNsb3VkLkRscC5WMkJl",
-            "dGExYgZwcm90bzM="));
+            "aW9ucy5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byIY",
+            "CghJbmZvVHlwZRIMCgRuYW1lGAEgASgJIh4KB0ZpZWxkSWQSEwoLY29sdW1u",
+            "X25hbWUYASABKAkiNwoLUGFydGl0aW9uSWQSEgoKcHJvamVjdF9pZBgCIAEo",
+            "CRIUCgxuYW1lc3BhY2VfaWQYBCABKAkiHgoOS2luZEV4cHJlc3Npb24SDAoE",
+            "bmFtZRgBIAEoCSIhChFQcm9wZXJ0eVJlZmVyZW5jZRIMCgRuYW1lGAIgASgJ",
+            "Ik0KClByb2plY3Rpb24SPwoIcHJvcGVydHkYASABKAsyLS5nb29nbGUucHJp",
+            "dmFjeS5kbHAudjJiZXRhMS5Qcm9wZXJ0eVJlZmVyZW5jZSLHAQoQRGF0YXN0",
+            "b3JlT3B0aW9ucxI9CgxwYXJ0aXRpb25faWQYASABKAsyJy5nb29nbGUucHJp",
+            "dmFjeS5kbHAudjJiZXRhMS5QYXJ0aXRpb25JZBI4CgRraW5kGAIgASgLMiou",
+            "Z29vZ2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuS2luZEV4cHJlc3Npb24SOgoK",
+            "cHJvamVjdGlvbhgDIAMoCzImLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGEx",
+            "LlByb2plY3Rpb24ieAoTQ2xvdWRTdG9yYWdlT3B0aW9ucxJJCghmaWxlX3Nl",
+            "dBgBIAEoCzI3Lmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLkNsb3VkU3Rv",
+            "cmFnZU9wdGlvbnMuRmlsZVNldBoWCgdGaWxlU2V0EgsKA3VybBgBIAEoCSIg",
+            "ChBDbG91ZFN0b3JhZ2VQYXRoEgwKBHBhdGgYASABKAkilgEKD0JpZ1F1ZXJ5",
+            "T3B0aW9ucxJCCg90YWJsZV9yZWZlcmVuY2UYASABKAsyKS5nb29nbGUucHJp",
+            "dmFjeS5kbHAudjJiZXRhMS5CaWdRdWVyeVRhYmxlEj8KEmlkZW50aWZ5aW5n",
+            "X2ZpZWxkcxgCIAMoCzIjLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLkZp",
+            "ZWxkSWQi/gEKDVN0b3JhZ2VDb25maWcSSQoRZGF0YXN0b3JlX29wdGlvbnMY",
+            "AiABKAsyLC5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5EYXRhc3RvcmVP",
+            "cHRpb25zSAASUAoVY2xvdWRfc3RvcmFnZV9vcHRpb25zGAMgASgLMi8uZ29v",
+            "Z2xlLnByaXZhY3kuZGxwLnYyYmV0YTEuQ2xvdWRTdG9yYWdlT3B0aW9uc0gA",
+            "EkgKEWJpZ19xdWVyeV9vcHRpb25zGAQgASgLMisuZ29vZ2xlLnByaXZhY3ku",
+            "ZGxwLnYyYmV0YTEuQmlnUXVlcnlPcHRpb25zSABCBgoEdHlwZSI6Cg9DbG91",
+            "ZFN0b3JhZ2VLZXkSEQoJZmlsZV9wYXRoGAEgASgJEhQKDHN0YXJ0X29mZnNl",
+            "dBgCIAEoAyJDCgxEYXRhc3RvcmVLZXkSMwoKZW50aXR5X2tleRgBIAEoCzIf",
+            "Lmdvb2dsZS5wcml2YWN5LmRscC52MmJldGExLktleSLFAQoDS2V5Ej0KDHBh",
+            "cnRpdGlvbl9pZBgBIAEoCzInLmdvb2dsZS5wcml2YWN5LmRscC52MmJldGEx",
+            "LlBhcnRpdGlvbklkEjkKBHBhdGgYAiADKAsyKy5nb29nbGUucHJpdmFjeS5k",
+            "bHAudjJiZXRhMS5LZXkuUGF0aEVsZW1lbnQaRAoLUGF0aEVsZW1lbnQSDAoE",
+            "a2luZBgBIAEoCRIMCgJpZBgCIAEoA0gAEg4KBG5hbWUYAyABKAlIAEIJCgdp",
+            "ZF90eXBlIqABCglSZWNvcmRLZXkSSAoRY2xvdWRfc3RvcmFnZV9rZXkYASAB",
+            "KAsyKy5nb29nbGUucHJpdmFjeS5kbHAudjJiZXRhMS5DbG91ZFN0b3JhZ2VL",
+            "ZXlIABJBCg1kYXRhc3RvcmVfa2V5GAIgASgLMiguZ29vZ2xlLnByaXZhY3ku",
+            "ZGxwLnYyYmV0YTEuRGF0YXN0b3JlS2V5SABCBgoEdHlwZSJJCg1CaWdRdWVy",
+            "eVRhYmxlEhIKCnByb2plY3RfaWQYASABKAkSEgoKZGF0YXNldF9pZBgCIAEo",
+            "CRIQCgh0YWJsZV9pZBgDIAEoCUKIAQoeY29tLmdvb2dsZS5wcml2YWN5LmRs",
+            "cC52MmJldGExQgpEbHBTdG9yYWdlUAFaPWdvb2dsZS5nb2xhbmcub3JnL2dl",
+            "bnByb3RvL2dvb2dsZWFwaXMvcHJpdmFjeS9kbHAvdjJiZXRhMTtkbHCqAhhH",
+            "b29nbGUuQ2xvdWQuRGxwLlYyQmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.InfoType), global::Google.Cloud.Dlp.V2Beta1.InfoType.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.FieldId), global::Google.Cloud.Dlp.V2Beta1.FieldId.Parser, new[]{ "ColumnName" }, null, null, null),
@@ -69,11 +76,13 @@ namespace Google.Cloud.Dlp.V2Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.DatastoreOptions), global::Google.Cloud.Dlp.V2Beta1.DatastoreOptions.Parser, new[]{ "PartitionId", "Kind", "Projection" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.CloudStorageOptions), global::Google.Cloud.Dlp.V2Beta1.CloudStorageOptions.Parser, new[]{ "FileSet" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.CloudStorageOptions.Types.FileSet), global::Google.Cloud.Dlp.V2Beta1.CloudStorageOptions.Types.FileSet.Parser, new[]{ "Url" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.CloudStoragePath), global::Google.Cloud.Dlp.V2Beta1.CloudStoragePath.Parser, new[]{ "Path" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.StorageConfig), global::Google.Cloud.Dlp.V2Beta1.StorageConfig.Parser, new[]{ "DatastoreOptions", "CloudStorageOptions" }, new[]{ "Type" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.BigQueryOptions), global::Google.Cloud.Dlp.V2Beta1.BigQueryOptions.Parser, new[]{ "TableReference", "IdentifyingFields" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.StorageConfig), global::Google.Cloud.Dlp.V2Beta1.StorageConfig.Parser, new[]{ "DatastoreOptions", "CloudStorageOptions", "BigQueryOptions" }, new[]{ "Type" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.CloudStorageKey), global::Google.Cloud.Dlp.V2Beta1.CloudStorageKey.Parser, new[]{ "FilePath", "StartOffset" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.DatastoreKey), global::Google.Cloud.Dlp.V2Beta1.DatastoreKey.Parser, new[]{ "EntityKey" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.Key), global::Google.Cloud.Dlp.V2Beta1.Key.Parser, new[]{ "PartitionId", "Path" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.Key.Types.PathElement), global::Google.Cloud.Dlp.V2Beta1.Key.Types.PathElement.Parser, new[]{ "Kind", "Id", "Name" }, new[]{ "IdType" }, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.RecordKey), global::Google.Cloud.Dlp.V2Beta1.RecordKey.Parser, new[]{ "CloudStorageKey", "DatastoreKey" }, new[]{ "Type" }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.RecordKey), global::Google.Cloud.Dlp.V2Beta1.RecordKey.Parser, new[]{ "CloudStorageKey", "DatastoreKey" }, new[]{ "Type" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2Beta1.BigQueryTable), global::Google.Cloud.Dlp.V2Beta1.BigQueryTable.Parser, new[]{ "ProjectId", "DatasetId", "TableId" }, null, null, null)
           }));
     }
     #endregion
@@ -119,10 +128,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Name of the information type. For built-in info types, this is provided by
-    /// the API call ListInfoTypes. For user-defined info types, this is
-    /// provided by the user. All user-defined info types must have unique names,
-    /// and cannot conflict with built-in info type names.
+    /// Name of the information type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -245,7 +251,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
     public const int ColumnNameFieldNumber = 1;
     private string columnName_ = "";
     /// <summary>
-    /// Column name describing the field.
+    /// Name describing the field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ColumnName {
@@ -1437,6 +1443,159 @@ namespace Google.Cloud.Dlp.V2Beta1 {
   }
 
   /// <summary>
+  /// Options defining BigQuery table and row identifiers.
+  /// </summary>
+  public sealed partial class BigQueryOptions : pb::IMessage<BigQueryOptions> {
+    private static readonly pb::MessageParser<BigQueryOptions> _parser = new pb::MessageParser<BigQueryOptions>(() => new BigQueryOptions());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<BigQueryOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BigQueryOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BigQueryOptions(BigQueryOptions other) : this() {
+      TableReference = other.tableReference_ != null ? other.TableReference.Clone() : null;
+      identifyingFields_ = other.identifyingFields_.Clone();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BigQueryOptions Clone() {
+      return new BigQueryOptions(this);
+    }
+
+    /// <summary>Field number for the "table_reference" field.</summary>
+    public const int TableReferenceFieldNumber = 1;
+    private global::Google.Cloud.Dlp.V2Beta1.BigQueryTable tableReference_;
+    /// <summary>
+    /// Complete BigQuery table reference.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.BigQueryTable TableReference {
+      get { return tableReference_; }
+      set {
+        tableReference_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "identifying_fields" field.</summary>
+    public const int IdentifyingFieldsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2Beta1.FieldId> _repeated_identifyingFields_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Dlp.V2Beta1.FieldId.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.FieldId> identifyingFields_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.FieldId>();
+    /// <summary>
+    /// References to fields uniquely identifying rows within the table.
+    /// Nested fields in the format, like `person.birthdate.year`, are allowed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Dlp.V2Beta1.FieldId> IdentifyingFields {
+      get { return identifyingFields_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as BigQueryOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(BigQueryOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(TableReference, other.TableReference)) return false;
+      if(!identifyingFields_.Equals(other.identifyingFields_)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (tableReference_ != null) hash ^= TableReference.GetHashCode();
+      hash ^= identifyingFields_.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (tableReference_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(TableReference);
+      }
+      identifyingFields_.WriteTo(output, _repeated_identifyingFields_codec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (tableReference_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TableReference);
+      }
+      size += identifyingFields_.CalculateSize(_repeated_identifyingFields_codec);
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(BigQueryOptions other) {
+      if (other == null) {
+        return;
+      }
+      if (other.tableReference_ != null) {
+        if (tableReference_ == null) {
+          tableReference_ = new global::Google.Cloud.Dlp.V2Beta1.BigQueryTable();
+        }
+        TableReference.MergeFrom(other.TableReference);
+      }
+      identifyingFields_.Add(other.identifyingFields_);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (tableReference_ == null) {
+              tableReference_ = new global::Google.Cloud.Dlp.V2Beta1.BigQueryTable();
+            }
+            input.ReadMessage(tableReference_);
+            break;
+          }
+          case 18: {
+            identifyingFields_.AddEntriesFrom(input, _repeated_identifyingFields_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// Shared message indicating Cloud storage type.
   /// </summary>
   public sealed partial class StorageConfig : pb::IMessage<StorageConfig> {
@@ -1446,7 +1605,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1469,6 +1628,9 @@ namespace Google.Cloud.Dlp.V2Beta1 {
           break;
         case TypeOneofCase.CloudStorageOptions:
           CloudStorageOptions = other.CloudStorageOptions.Clone();
+          break;
+        case TypeOneofCase.BigQueryOptions:
+          BigQueryOptions = other.BigQueryOptions.Clone();
           break;
       }
 
@@ -1507,12 +1669,27 @@ namespace Google.Cloud.Dlp.V2Beta1 {
       }
     }
 
+    /// <summary>Field number for the "big_query_options" field.</summary>
+    public const int BigQueryOptionsFieldNumber = 4;
+    /// <summary>
+    /// BigQuery options specification.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2Beta1.BigQueryOptions BigQueryOptions {
+      get { return typeCase_ == TypeOneofCase.BigQueryOptions ? (global::Google.Cloud.Dlp.V2Beta1.BigQueryOptions) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.BigQueryOptions;
+      }
+    }
+
     private object type_;
     /// <summary>Enum of possible cases for the "type" oneof.</summary>
     public enum TypeOneofCase {
       None = 0,
       DatastoreOptions = 2,
       CloudStorageOptions = 3,
+      BigQueryOptions = 4,
     }
     private TypeOneofCase typeCase_ = TypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1541,6 +1718,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
       }
       if (!object.Equals(DatastoreOptions, other.DatastoreOptions)) return false;
       if (!object.Equals(CloudStorageOptions, other.CloudStorageOptions)) return false;
+      if (!object.Equals(BigQueryOptions, other.BigQueryOptions)) return false;
       if (TypeCase != other.TypeCase) return false;
       return true;
     }
@@ -1550,6 +1728,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
       int hash = 1;
       if (typeCase_ == TypeOneofCase.DatastoreOptions) hash ^= DatastoreOptions.GetHashCode();
       if (typeCase_ == TypeOneofCase.CloudStorageOptions) hash ^= CloudStorageOptions.GetHashCode();
+      if (typeCase_ == TypeOneofCase.BigQueryOptions) hash ^= BigQueryOptions.GetHashCode();
       hash ^= (int) typeCase_;
       return hash;
     }
@@ -1569,6 +1748,10 @@ namespace Google.Cloud.Dlp.V2Beta1 {
         output.WriteRawTag(26);
         output.WriteMessage(CloudStorageOptions);
       }
+      if (typeCase_ == TypeOneofCase.BigQueryOptions) {
+        output.WriteRawTag(34);
+        output.WriteMessage(BigQueryOptions);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1579,6 +1762,9 @@ namespace Google.Cloud.Dlp.V2Beta1 {
       }
       if (typeCase_ == TypeOneofCase.CloudStorageOptions) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CloudStorageOptions);
+      }
+      if (typeCase_ == TypeOneofCase.BigQueryOptions) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BigQueryOptions);
       }
       return size;
     }
@@ -1594,6 +1780,9 @@ namespace Google.Cloud.Dlp.V2Beta1 {
           break;
         case TypeOneofCase.CloudStorageOptions:
           CloudStorageOptions = other.CloudStorageOptions;
+          break;
+        case TypeOneofCase.BigQueryOptions:
+          BigQueryOptions = other.BigQueryOptions;
           break;
       }
 
@@ -1625,6 +1814,15 @@ namespace Google.Cloud.Dlp.V2Beta1 {
             CloudStorageOptions = subBuilder;
             break;
           }
+          case 34: {
+            global::Google.Cloud.Dlp.V2Beta1.BigQueryOptions subBuilder = new global::Google.Cloud.Dlp.V2Beta1.BigQueryOptions();
+            if (typeCase_ == TypeOneofCase.BigQueryOptions) {
+              subBuilder.MergeFrom(BigQueryOptions);
+            }
+            input.ReadMessage(subBuilder);
+            BigQueryOptions = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -1641,7 +1839,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1795,7 +1993,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1927,7 +2125,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2323,7 +2521,7 @@ namespace Google.Cloud.Dlp.V2Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2494,6 +2692,196 @@ namespace Google.Cloud.Dlp.V2Beta1 {
             }
             input.ReadMessage(subBuilder);
             DatastoreKey = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Message defining the location of a BigQuery table. A table is uniquely
+  /// identified  by its project_id, dataset_id, and table_name. Within a query
+  /// a table is often referenced with a string in the format of:
+  /// `&lt;project_id>:&lt;dataset_id>.&lt;table_id>` or
+  /// `&lt;project_id>.&lt;dataset_id>.&lt;table_id>`.
+  /// </summary>
+  public sealed partial class BigQueryTable : pb::IMessage<BigQueryTable> {
+    private static readonly pb::MessageParser<BigQueryTable> _parser = new pb::MessageParser<BigQueryTable>(() => new BigQueryTable());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<BigQueryTable> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2Beta1.StorageReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BigQueryTable() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BigQueryTable(BigQueryTable other) : this() {
+      projectId_ = other.projectId_;
+      datasetId_ = other.datasetId_;
+      tableId_ = other.tableId_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BigQueryTable Clone() {
+      return new BigQueryTable(this);
+    }
+
+    /// <summary>Field number for the "project_id" field.</summary>
+    public const int ProjectIdFieldNumber = 1;
+    private string projectId_ = "";
+    /// <summary>
+    /// The Google Cloud Platform project ID of the project containing the table.
+    /// If omitted, project ID is inferred from the API call.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ProjectId {
+      get { return projectId_; }
+      set {
+        projectId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "dataset_id" field.</summary>
+    public const int DatasetIdFieldNumber = 2;
+    private string datasetId_ = "";
+    /// <summary>
+    /// Dataset ID of the table.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DatasetId {
+      get { return datasetId_; }
+      set {
+        datasetId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "table_id" field.</summary>
+    public const int TableIdFieldNumber = 3;
+    private string tableId_ = "";
+    /// <summary>
+    /// Name of the table.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string TableId {
+      get { return tableId_; }
+      set {
+        tableId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as BigQueryTable);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(BigQueryTable other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ProjectId != other.ProjectId) return false;
+      if (DatasetId != other.DatasetId) return false;
+      if (TableId != other.TableId) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
+      if (DatasetId.Length != 0) hash ^= DatasetId.GetHashCode();
+      if (TableId.Length != 0) hash ^= TableId.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectId);
+      }
+      if (DatasetId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DatasetId);
+      }
+      if (TableId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(TableId);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ProjectId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectId);
+      }
+      if (DatasetId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetId);
+      }
+      if (TableId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TableId);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(BigQueryTable other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ProjectId.Length != 0) {
+        ProjectId = other.ProjectId;
+      }
+      if (other.DatasetId.Length != 0) {
+        DatasetId = other.DatasetId;
+      }
+      if (other.TableId.Length != 0) {
+        TableId = other.TableId;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 18: {
+            DatasetId = input.ReadString();
+            break;
+          }
+          case 26: {
+            TableId = input.ReadString();
             break;
           }
         }

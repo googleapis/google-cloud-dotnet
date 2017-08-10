@@ -694,11 +694,13 @@ namespace Google.Cloud.Dlp.V2Beta1
         /// identifier for the Operation, and the `count` is a counter used for
         /// tracking the number of files written. &lt;p&gt;The CSV file(s) contain the
         /// following columns regardless of storage type scanned: &lt;li&gt;id &lt;li&gt;info_type
-        /// &lt;li&gt;likelihood &lt;li&gt;byte size of finding &lt;li&gt;quote &lt;li&gt;time_stamp&lt;br/&gt;
+        /// &lt;li&gt;likelihood &lt;li&gt;byte size of finding &lt;li&gt;quote &lt;li&gt;timestamp&lt;br/&gt;
         /// &lt;p&gt;For Cloud Storage the next columns are: &lt;li&gt;file_path
         /// &lt;li&gt;start_offset&lt;br/&gt;
         /// &lt;p&gt;For Cloud Datastore the next columns are: &lt;li&gt;project_id
-        /// &lt;li&gt;namespace_id &lt;li&gt;path &lt;li&gt;column_name &lt;li&gt;offset
+        /// &lt;li&gt;namespace_id &lt;li&gt;path &lt;li&gt;column_name &lt;li&gt;offset&lt;br/&gt;
+        /// &lt;p&gt;For BigQuery the next columns are: &lt;li&gt;row_number &lt;li&gt;project_id
+        /// &lt;li&gt;dataset_id &lt;li&gt;table_id
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -739,11 +741,13 @@ namespace Google.Cloud.Dlp.V2Beta1
         /// identifier for the Operation, and the `count` is a counter used for
         /// tracking the number of files written. &lt;p&gt;The CSV file(s) contain the
         /// following columns regardless of storage type scanned: &lt;li&gt;id &lt;li&gt;info_type
-        /// &lt;li&gt;likelihood &lt;li&gt;byte size of finding &lt;li&gt;quote &lt;li&gt;time_stamp&lt;br/&gt;
+        /// &lt;li&gt;likelihood &lt;li&gt;byte size of finding &lt;li&gt;quote &lt;li&gt;timestamp&lt;br/&gt;
         /// &lt;p&gt;For Cloud Storage the next columns are: &lt;li&gt;file_path
         /// &lt;li&gt;start_offset&lt;br/&gt;
         /// &lt;p&gt;For Cloud Datastore the next columns are: &lt;li&gt;project_id
-        /// &lt;li&gt;namespace_id &lt;li&gt;path &lt;li&gt;column_name &lt;li&gt;offset
+        /// &lt;li&gt;namespace_id &lt;li&gt;path &lt;li&gt;column_name &lt;li&gt;offset&lt;br/&gt;
+        /// &lt;p&gt;For BigQuery the next columns are: &lt;li&gt;row_number &lt;li&gt;project_id
+        /// &lt;li&gt;dataset_id &lt;li&gt;table_id
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -781,11 +785,13 @@ namespace Google.Cloud.Dlp.V2Beta1
         /// identifier for the Operation, and the `count` is a counter used for
         /// tracking the number of files written. &lt;p&gt;The CSV file(s) contain the
         /// following columns regardless of storage type scanned: &lt;li&gt;id &lt;li&gt;info_type
-        /// &lt;li&gt;likelihood &lt;li&gt;byte size of finding &lt;li&gt;quote &lt;li&gt;time_stamp&lt;br/&gt;
+        /// &lt;li&gt;likelihood &lt;li&gt;byte size of finding &lt;li&gt;quote &lt;li&gt;timestamp&lt;br/&gt;
         /// &lt;p&gt;For Cloud Storage the next columns are: &lt;li&gt;file_path
         /// &lt;li&gt;start_offset&lt;br/&gt;
         /// &lt;p&gt;For Cloud Datastore the next columns are: &lt;li&gt;project_id
-        /// &lt;li&gt;namespace_id &lt;li&gt;path &lt;li&gt;column_name &lt;li&gt;offset
+        /// &lt;li&gt;namespace_id &lt;li&gt;path &lt;li&gt;column_name &lt;li&gt;offset&lt;br/&gt;
+        /// &lt;p&gt;For BigQuery the next columns are: &lt;li&gt;row_number &lt;li&gt;project_id
+        /// &lt;li&gt;dataset_id &lt;li&gt;table_id
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -878,7 +884,7 @@ namespace Google.Cloud.Dlp.V2Beta1
         /// <param name="name">
         /// Identifier of the results set returned as metadata of
         /// the longrunning operation created by a call to CreateInspectOperation.
-        /// Should be in the format of `inspect/results/{id}.
+        /// Should be in the format of `inspect/results/{id}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -901,7 +907,7 @@ namespace Google.Cloud.Dlp.V2Beta1
         /// <param name="name">
         /// Identifier of the results set returned as metadata of
         /// the longrunning operation created by a call to CreateInspectOperation.
-        /// Should be in the format of `inspect/results/{id}.
+        /// Should be in the format of `inspect/results/{id}`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -921,7 +927,7 @@ namespace Google.Cloud.Dlp.V2Beta1
         /// <param name="name">
         /// Identifier of the results set returned as metadata of
         /// the longrunning operation created by a call to CreateInspectOperation.
-        /// Should be in the format of `inspect/results/{id}.
+        /// Should be in the format of `inspect/results/{id}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1220,7 +1226,7 @@ namespace Google.Cloud.Dlp.V2Beta1
         /// <param name="settings">The base <see cref="DlpServiceSettings"/> used within this client </param>
         public DlpServiceClientImpl(DlpService.DlpServiceClient grpcClient, DlpServiceSettings settings)
         {
-            this.GrpcClient = grpcClient;
+            GrpcClient = grpcClient;
             DlpServiceSettings effectiveSettings = settings ?? DlpServiceSettings.GetDefault();
             LongRunningOperationsClient = new OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.LongRunningOperationsSettings);
@@ -1511,5 +1517,19 @@ namespace Google.Cloud.Dlp.V2Beta1
     }
 
     // Partial classes to enable page-streaming
+
+    // Partial Grpc class to enable LRO client creation
+    public static partial class DlpService
+    {
+        public partial class DlpServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="Operations.OperationsClient"/> using the same call invoker as this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual Operations.OperationsClient CreateOperationsClient() => new Operations.OperationsClient(CallInvoker);
+        }
+    }
+
 
 }

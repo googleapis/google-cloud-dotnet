@@ -525,7 +525,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1
         /// <param name="settings">The base <see cref="VideoIntelligenceServiceSettings"/> used within this client </param>
         public VideoIntelligenceServiceClientImpl(VideoIntelligenceService.VideoIntelligenceServiceClient grpcClient, VideoIntelligenceServiceSettings settings)
         {
-            this.GrpcClient = grpcClient;
+            GrpcClient = grpcClient;
             VideoIntelligenceServiceSettings effectiveSettings = settings ?? VideoIntelligenceServiceSettings.GetDefault();
             LongRunningOperationsClient = new OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.LongRunningOperationsSettings);
@@ -601,5 +601,19 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1
     }
 
     // Partial classes to enable page-streaming
+
+    // Partial Grpc class to enable LRO client creation
+    public static partial class VideoIntelligenceService
+    {
+        public partial class VideoIntelligenceServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="Operations.OperationsClient"/> using the same call invoker as this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual Operations.OperationsClient CreateOperationsClient() => new Operations.OperationsClient(CallInvoker);
+        }
+    }
+
 
 }
