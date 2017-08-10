@@ -851,7 +851,7 @@ namespace Google.LongRunning
         /// <param name="settings">The base <see cref="OperationsSettings"/> used within this client </param>
         public OperationsClientImpl(Operations.OperationsClient grpcClient, OperationsSettings settings)
         {
-            this.GrpcClient = grpcClient;
+            GrpcClient = grpcClient;
             OperationsSettings effectiveSettings = settings ?? OperationsSettings.GetDefault();
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             _callGetOperation = clientHelper.BuildApiCall<GetOperationRequest, Operation>(
@@ -1089,5 +1089,6 @@ namespace Google.LongRunning
         /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
+
 
 }

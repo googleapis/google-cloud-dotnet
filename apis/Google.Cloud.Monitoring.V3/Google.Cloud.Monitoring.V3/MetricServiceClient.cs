@@ -1454,7 +1454,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <param name="settings">The base <see cref="MetricServiceSettings"/> used within this client </param>
         public MetricServiceClientImpl(MetricService.MetricServiceClient grpcClient, MetricServiceSettings settings)
         {
-            this.GrpcClient = grpcClient;
+            GrpcClient = grpcClient;
             MetricServiceSettings effectiveSettings = settings ?? MetricServiceSettings.GetDefault();
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             _callListMonitoredResourceDescriptors = clientHelper.BuildApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse>(
@@ -1864,5 +1864,6 @@ namespace Google.Cloud.Monitoring.V3
         /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
+
 
 }

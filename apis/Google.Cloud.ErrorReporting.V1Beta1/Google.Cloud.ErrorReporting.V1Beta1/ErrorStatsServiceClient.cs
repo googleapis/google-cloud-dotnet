@@ -695,7 +695,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <param name="settings">The base <see cref="ErrorStatsServiceSettings"/> used within this client </param>
         public ErrorStatsServiceClientImpl(ErrorStatsService.ErrorStatsServiceClient grpcClient, ErrorStatsServiceSettings settings)
         {
-            this.GrpcClient = grpcClient;
+            GrpcClient = grpcClient;
             ErrorStatsServiceSettings effectiveSettings = settings ?? ErrorStatsServiceSettings.GetDefault();
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             _callListGroupStats = clientHelper.BuildApiCall<ListGroupStatsRequest, ListGroupStatsResponse>(
@@ -866,5 +866,6 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
+
 
 }
