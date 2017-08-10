@@ -636,7 +636,7 @@ namespace Google.Cloud.Speech.V1
         /// <param name="settings">The base <see cref="SpeechSettings"/> used within this client </param>
         public SpeechClientImpl(Speech.SpeechClient grpcClient, SpeechSettings settings)
         {
-            this.GrpcClient = grpcClient;
+            GrpcClient = grpcClient;
             SpeechSettings effectiveSettings = settings ?? SpeechSettings.GetDefault();
             LongRunningOperationsClient = new OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.LongRunningOperationsSettings);
@@ -786,10 +786,7 @@ namespace Google.Cloud.Speech.V1
             return new StreamingRecognizeStreamImpl(this, call, writeBuffer);
         }
 
-        /// <summary>
-        /// Bidirectional streaming methods for <c>StreamingRecognize</c>.
-        /// </summary>
-        public sealed class StreamingRecognizeStreamImpl : StreamingRecognizeStream
+        internal sealed class StreamingRecognizeStreamImpl : StreamingRecognizeStream
         {
             /// <summary>
             /// Construct the bidirectional streaming method for <c>StreamingRecognize</c>.
@@ -852,5 +849,19 @@ namespace Google.Cloud.Speech.V1
     }
 
     // Partial classes to enable page-streaming
+
+    // Partial Grpc class to enable LRO client creation
+    public static partial class Speech
+    {
+        public partial class SpeechClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="Operations.OperationsClient"/> using the same call invoker as this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual Operations.OperationsClient CreateOperationsClient() => new Operations.OperationsClient(CallInvoker);
+        }
+    }
+
 
 }

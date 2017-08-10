@@ -53,7 +53,9 @@ namespace Google.Cloud.Spanner.V1
             GetSessionSettings = existing.GetSessionSettings;
             DeleteSessionSettings = existing.DeleteSessionSettings;
             ExecuteSqlSettings = existing.ExecuteSqlSettings;
+            ExecuteStreamingSqlSettings = existing.ExecuteStreamingSqlSettings;
             ReadSettings = existing.ReadSettings;
+            StreamingReadSettings = existing.StreamingReadSettings;
             BeginTransactionSettings = existing.BeginTransactionSettings;
             CommitSettings = existing.CommitSettings;
             RollbackSettings = existing.RollbackSettings;
@@ -245,6 +247,15 @@ namespace Google.Cloud.Spanner.V1
             )));
 
         /// <summary>
+        /// <see cref="CallSettings"/> for calls to <c>SpannerClient.ExecuteStreamingSql</c>.
+        /// </summary>
+        /// <remarks>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings ExecuteStreamingSqlSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromTimeout(TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <c>SpannerClient.Read</c> and <c>SpannerClient.ReadAsync</c>.
         /// </summary>
@@ -272,6 +283,15 @@ namespace Google.Cloud.Spanner.V1
                 totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for calls to <c>SpannerClient.StreamingRead</c>.
+        /// </summary>
+        /// <remarks>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings StreamingReadSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromTimeout(TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
@@ -914,6 +934,36 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
+        /// Like [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], except returns the result
+        /// set as a stream. Unlike [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], there
+        /// is no limit on the size of the returned result set. However, no
+        /// individual row in the result set can exceed 100 MiB, and no
+        /// column value can exceed 10 MiB.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream.
+        /// </returns>
+        public virtual ExecuteStreamingSqlStream ExecuteStreamingSql(
+            ExecuteSqlRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Server streaming methods for <c>ExecuteStreamingSql</c>.
+        /// </summary>
+        public abstract class ExecuteStreamingSqlStream : ServerStreamingBase<PartialResultSet>
+        {
+        }
+
+        /// <summary>
         /// Reads rows from the database using key lookups and scans, as a
         /// simple key/value style alternative to
         /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
@@ -973,6 +1023,36 @@ namespace Google.Cloud.Spanner.V1
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Like [Read][google.spanner.v1.Spanner.Read], except returns the result set as a
+        /// stream. Unlike [Read][google.spanner.v1.Spanner.Read], there is no limit on the
+        /// size of the returned result set. However, no individual row in
+        /// the result set can exceed 100 MiB, and no column value can exceed
+        /// 10 MiB.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream.
+        /// </returns>
+        public virtual StreamingReadStream StreamingRead(
+            ReadRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Server streaming methods for <c>StreamingRead</c>.
+        /// </summary>
+        public abstract class StreamingReadStream : ServerStreamingBase<PartialResultSet>
+        {
         }
 
         /// <summary>
@@ -1572,7 +1652,9 @@ namespace Google.Cloud.Spanner.V1
         private readonly ApiCall<GetSessionRequest, Session> _callGetSession;
         private readonly ApiCall<DeleteSessionRequest, Empty> _callDeleteSession;
         private readonly ApiCall<ExecuteSqlRequest, ResultSet> _callExecuteSql;
+        private readonly ApiServerStreamingCall<ExecuteSqlRequest, PartialResultSet> _callExecuteStreamingSql;
         private readonly ApiCall<ReadRequest, ResultSet> _callRead;
+        private readonly ApiServerStreamingCall<ReadRequest, PartialResultSet> _callStreamingRead;
         private readonly ApiCall<BeginTransactionRequest, Transaction> _callBeginTransaction;
         private readonly ApiCall<CommitRequest, CommitResponse> _callCommit;
         private readonly ApiCall<RollbackRequest, Empty> _callRollback;
@@ -1584,7 +1666,7 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="settings">The base <see cref="SpannerSettings"/> used within this client </param>
         public SpannerClientImpl(Spanner.SpannerClient grpcClient, SpannerSettings settings)
         {
-            this.GrpcClient = grpcClient;
+            GrpcClient = grpcClient;
             SpannerSettings effectiveSettings = settings ?? SpannerSettings.GetDefault();
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             _callCreateSession = clientHelper.BuildApiCall<CreateSessionRequest, Session>(
@@ -1595,8 +1677,12 @@ namespace Google.Cloud.Spanner.V1
                 GrpcClient.DeleteSessionAsync, GrpcClient.DeleteSession, effectiveSettings.DeleteSessionSettings);
             _callExecuteSql = clientHelper.BuildApiCall<ExecuteSqlRequest, ResultSet>(
                 GrpcClient.ExecuteSqlAsync, GrpcClient.ExecuteSql, effectiveSettings.ExecuteSqlSettings);
+            _callExecuteStreamingSql = clientHelper.BuildApiCall<ExecuteSqlRequest, PartialResultSet>(
+                GrpcClient.ExecuteStreamingSql, effectiveSettings.ExecuteStreamingSqlSettings);
             _callRead = clientHelper.BuildApiCall<ReadRequest, ResultSet>(
                 GrpcClient.ReadAsync, GrpcClient.Read, effectiveSettings.ReadSettings);
+            _callStreamingRead = clientHelper.BuildApiCall<ReadRequest, PartialResultSet>(
+                GrpcClient.StreamingRead, effectiveSettings.StreamingReadSettings);
             _callBeginTransaction = clientHelper.BuildApiCall<BeginTransactionRequest, Transaction>(
                 GrpcClient.BeginTransactionAsync, GrpcClient.BeginTransaction, effectiveSettings.BeginTransactionSettings);
             _callCommit = clientHelper.BuildApiCall<CommitRequest, CommitResponse>(
@@ -1844,6 +1930,48 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
+        /// Like [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], except returns the result
+        /// set as a stream. Unlike [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], there
+        /// is no limit on the size of the returned result set. However, no
+        /// individual row in the result set can exceed 100 MiB, and no
+        /// column value can exceed 10 MiB.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream.
+        /// </returns>
+        public override ExecuteStreamingSqlStream ExecuteStreamingSql(
+            ExecuteSqlRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ExecuteSqlRequest(ref request, ref callSettings);
+            return new ExecuteStreamingSqlStreamImpl(_callExecuteStreamingSql.Call(request, callSettings));
+        }
+
+        internal sealed class ExecuteStreamingSqlStreamImpl : ExecuteStreamingSqlStream
+        {
+            /// <summary>
+            /// Construct the server-streaming method for <c>ExecuteStreamingSql</c>.
+            /// </summary>
+            /// <param name="call">The underlying gRPC server-streaming call.</param>
+            internal ExecuteStreamingSqlStreamImpl(AsyncServerStreamingCall<PartialResultSet> call)
+            {
+                GrpcCall = call;
+            }
+
+            /// <inheritdoc/>
+            public override AsyncServerStreamingCall<PartialResultSet> GrpcCall { get; }
+
+            /// <inheritdoc/>
+            public override IAsyncEnumerator<PartialResultSet> ResponseStream => GrpcCall.ResponseStream;
+        }
+
+        /// <summary>
         /// Reads rows from the database using key lookups and scans, as a
         /// simple key/value style alternative to
         /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
@@ -1905,6 +2033,48 @@ namespace Google.Cloud.Spanner.V1
         {
             Modify_ReadRequest(ref request, ref callSettings);
             return _callRead.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Like [Read][google.spanner.v1.Spanner.Read], except returns the result set as a
+        /// stream. Unlike [Read][google.spanner.v1.Spanner.Read], there is no limit on the
+        /// size of the returned result set. However, no individual row in
+        /// the result set can exceed 100 MiB, and no column value can exceed
+        /// 10 MiB.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream.
+        /// </returns>
+        public override StreamingReadStream StreamingRead(
+            ReadRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ReadRequest(ref request, ref callSettings);
+            return new StreamingReadStreamImpl(_callStreamingRead.Call(request, callSettings));
+        }
+
+        internal sealed class StreamingReadStreamImpl : StreamingReadStream
+        {
+            /// <summary>
+            /// Construct the server-streaming method for <c>StreamingRead</c>.
+            /// </summary>
+            /// <param name="call">The underlying gRPC server-streaming call.</param>
+            internal StreamingReadStreamImpl(AsyncServerStreamingCall<PartialResultSet> call)
+            {
+                GrpcCall = call;
+            }
+
+            /// <inheritdoc/>
+            public override AsyncServerStreamingCall<PartialResultSet> GrpcCall { get; }
+
+            /// <inheritdoc/>
+            public override IAsyncEnumerator<PartialResultSet> ResponseStream => GrpcCall.ResponseStream;
         }
 
         /// <summary>
@@ -2064,5 +2234,6 @@ namespace Google.Cloud.Spanner.V1
     }
 
     // Partial classes to enable page-streaming
+
 
 }

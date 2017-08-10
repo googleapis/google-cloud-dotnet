@@ -178,12 +178,12 @@ namespace Google.Cloud.PubSub.V1
         /// <list type="bullet">
         /// <item><description>Initial timeout: 12000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Maximum timeout: 12000 milliseconds</description></item>
+        /// <item><description>Maximum timeout: 30000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public static BackoffSettings GetMessagingTimeoutBackoff() => new BackoffSettings(
             delay: TimeSpan.FromMilliseconds(12000),
-            maxDelay: TimeSpan.FromMilliseconds(12000),
+            maxDelay: TimeSpan.FromMilliseconds(30000),
             delayMultiplier: 1.0
         );
 
@@ -260,7 +260,7 @@ namespace Google.Cloud.PubSub.V1
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// <item><description>Initial timeout: 12000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 12000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -1722,10 +1722,10 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="settings">The base <see cref="PublisherSettings"/> used within this client </param>
         public PublisherClientImpl(Publisher.PublisherClient grpcClient, PublisherSettings settings)
         {
-            this.GrpcClient = grpcClient;
+            GrpcClient = grpcClient;
             PublisherSettings effectiveSettings = settings ?? PublisherSettings.GetDefault();
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
-            var grpcIAMPolicyClient = grpcClient.CreateIAMPolicyClient();
+            IAMPolicy.IAMPolicyClient grpcIAMPolicyClient = grpcClient.CreateIAMPolicyClient();
             _callCreateTopic = clientHelper.BuildApiCall<Topic, Topic>(
                 GrpcClient.CreateTopicAsync, GrpcClient.CreateTopic, effectiveSettings.CreateTopicSettings);
             _callUpdateTopic = clientHelper.BuildApiCall<UpdateTopicRequest, Topic>(
@@ -2227,5 +2227,19 @@ namespace Google.Cloud.PubSub.V1
         /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
+
+    // Partial Grpc class to enable IAMPolicy.IAMPolicyClient client creation
+    public static partial class Publisher
+    {
+        public partial class PublisherClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="IAMPolicy.IAMPolicyClient"/> using the same call invoker as this client.
+            /// </summary>
+            /// <returns>A new IAMPolicy.IAMPolicyClient for the same target as this client.</returns>
+            public virtual IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() => new IAMPolicy.IAMPolicyClient(CallInvoker);
+        }
+    }
+
 
 }
