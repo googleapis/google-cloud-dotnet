@@ -48,7 +48,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Datasets.Get(datasetReference.ProjectId, datasetReference.DatasetId);
             request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
-            return new BigQueryDataset(this, request.Execute());
+            return new BigQueryDataset(this, CheckETag(request.Execute(), options?.ETag));
         }
 
         /// <inheritdoc />
@@ -134,7 +134,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Datasets.Get(datasetReference.ProjectId, datasetReference.DatasetId);
             request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
-            return new BigQueryDataset(this, await request.ExecuteAsync(cancellationToken).ConfigureAwait(false));
+            return new BigQueryDataset(this, CheckETag(await request.ExecuteAsync(cancellationToken).ConfigureAwait(false), options?.ETag));
         }
 
         /// <inheritdoc />

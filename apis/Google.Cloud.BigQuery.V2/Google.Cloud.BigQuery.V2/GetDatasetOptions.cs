@@ -17,11 +17,16 @@ using static Google.Apis.Bigquery.v2.DatasetsResource;
 namespace Google.Cloud.BigQuery.V2
 {
     /// <summary>
-    /// Options for <c>GetDataset</c> operations. Currently no options are
-    /// available, but this class exists to provide consistency and extensibility.
+    /// Options for <c>GetDataset</c> operations.
     /// </summary>
     public sealed class GetDatasetOptions
     {
+        /// <summary>
+        /// The ETag of the dataset to request, causing a failure if the
+        /// specified dataset reference does not currently have this ETag.
+        /// </summary>
+        public string ETag { get; set; }
+
         internal void ModifyRequest(GetRequest request)
         {
         }
