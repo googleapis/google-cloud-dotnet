@@ -40,10 +40,24 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         public async Task Invoke_LogsAndThrows()
         {
             var mockLogger = new Mock<IExceptionLogger>();
-            RequestDelegate requestDelegate = context => { throw new Exception(); };
+            RequestDelegate requestDelegate = context => { throw new DivideByZeroException(); };
             var middleware = new ErrorReportingExceptionLoggerMiddleware(requestDelegate, mockLogger.Object);
 
-            await Assert.ThrowsAsync<Exception>(() => middleware.Invoke(new DefaultHttpContext()));
+            await Assert.ThrowsAsync<DivideByZeroException>(() => middleware.Invoke(new DefaultHttpContext()));
+
+            mockLogger.Verify(l => l.LogAsync(It.IsAny<Exception>(), It.IsAny<DefaultHttpContext>(), CancellationToken.None), Times.Once());
+        }
+
+        [Fact]
+        public async Task Invoke_LogThrowsAndThrows()
+        {
+            var mockLogger = new Mock<IExceptionLogger>();
+            mockLogger.Setup(l => l.LogAsync(It.IsAny<Exception>(), It.IsAny<DefaultHttpContext>(), CancellationToken.None))
+                .Throws(new ArgumentOutOfRangeException());
+            RequestDelegate requestDelegate = context => { throw new DivideByZeroException(); };
+            var middleware = new ErrorReportingExceptionLoggerMiddleware(requestDelegate, mockLogger.Object);
+
+            await Assert.ThrowsAsync<AggregateException>(() => middleware.Invoke(new DefaultHttpContext()));
 
             mockLogger.Verify(l => l.LogAsync(It.IsAny<Exception>(), It.IsAny<DefaultHttpContext>(), CancellationToken.None), Times.Once());
         }

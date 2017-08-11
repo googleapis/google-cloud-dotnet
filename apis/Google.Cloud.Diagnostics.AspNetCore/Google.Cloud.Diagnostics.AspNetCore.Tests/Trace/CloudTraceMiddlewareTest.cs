@@ -90,13 +90,40 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             tracerMock.Setup(t => t.SetStackTrace(It.IsAny<StackTrace>()));
 
             var delegateMock = new Mock<RequestDelegate>();
-            delegateMock.Setup(d => d(context)).Throws(new Exception());
+            delegateMock.Setup(d => d(context)).Throws(new DivideByZeroException());
 
             var tracerFactoryMock = new Mock<IManagedTracerFactory>();
             tracerFactoryMock.Setup(f => f.CreateTracer(_traceHeaderContext)).Returns(tracerMock.Object);
 
             var middleware = new CloudTraceMiddleware(delegateMock.Object, tracerFactoryMock.Object, accessor);
-            await Assert.ThrowsAsync<Exception>(
+            await Assert.ThrowsAsync<DivideByZeroException>(
+                () => middleware.Invoke(context, _traceHeaderContext));
+
+            Assert.True(context.Response.Headers.ContainsKey(TraceHeaderContext.TraceHeader));
+            Assert.Equal(_traceHeaderContext.ToString(), context.Response.Headers[TraceHeaderContext.TraceHeader]);
+
+            delegateMock.VerifyAll();
+            tracerMock.VerifyAll();
+        }
+
+
+        [Fact]
+        public async Task Invoke_TraceThrowsAndException()
+        {
+            var accessor = new HttpContextAccessor { HttpContext = new DefaultHttpContext() };
+            var context = CreateHttpContext();
+            var tracerMock = CreateIManagedTracerMock(context);
+            tracerMock.Setup(t => t.SetStackTrace(It.IsAny<StackTrace>()))
+                .Throws(new ArgumentOutOfRangeException());
+
+            var delegateMock = new Mock<RequestDelegate>();
+            delegateMock.Setup(d => d(context)).Throws(new DivideByZeroException());
+
+            var tracerFactoryMock = new Mock<IManagedTracerFactory>();
+            tracerFactoryMock.Setup(f => f.CreateTracer(_traceHeaderContext)).Returns(tracerMock.Object);
+
+            var middleware = new CloudTraceMiddleware(delegateMock.Object, tracerFactoryMock.Object, accessor);
+            await Assert.ThrowsAsync<AggregateException>(
                 () => middleware.Invoke(context, _traceHeaderContext));
 
             Assert.True(context.Response.Headers.ContainsKey(TraceHeaderContext.TraceHeader));
