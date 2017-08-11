@@ -79,6 +79,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         /// <param name="services">The service collection. Cannot be null.</param>
         /// <param name="setupAction">Action to set up options. Cannot be null.</param>
+        /// <remarks>
+        /// If <see cref="RetryOptions.ExceptionHandling"/> is set to <see cref="ExceptionHandling.Propagate"/>
+        /// and the <see cref="RequestDelegate"/> executed by this middleware throws an exception and this
+        /// diagnostics library also throws an exception trying to report it an <see cref="AggregateException"/>
+        /// with both exceptions will be thrown.  Otherwise only the exception from the <see cref="RequestDelegate"/>
+        /// will be thrown.
+        /// </remarks>
         public static void AddGoogleExceptionLogging(
             this IServiceCollection services, Action<ErrorReportingServiceOptions> setupAction)
         {
