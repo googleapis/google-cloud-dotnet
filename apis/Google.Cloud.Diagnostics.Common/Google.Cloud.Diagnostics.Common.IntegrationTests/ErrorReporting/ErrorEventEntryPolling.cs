@@ -56,7 +56,8 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                     {
                         ProjectName = _projectName.ToString(),
                         GroupId = group.Group.GroupId,
-                        TimeRange = s_oneHour
+                        TimeRange = s_oneHour,
+                        PageSize = 250
                     };
 
                     var events = _client.ListEvents(request);

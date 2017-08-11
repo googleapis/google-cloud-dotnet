@@ -50,11 +50,10 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                 var request = new ListLogEntriesRequest
                 {
                     ResourceNames = { $"projects/{_projectId}" },
-                    Filter = $"timestamp >= \"{time}\""
+                    Filter = $"timestamp >= \"{time}\" AND textPayload:{testId}",
+                    PageSize = 250,
                 };
-
-                var results = _client.ListLogEntries(request);
-                return results.Where(p => p.TextPayload.Contains(testId)).ToList();
+                return _client.ListLogEntries(request);
             });
         }
     }
