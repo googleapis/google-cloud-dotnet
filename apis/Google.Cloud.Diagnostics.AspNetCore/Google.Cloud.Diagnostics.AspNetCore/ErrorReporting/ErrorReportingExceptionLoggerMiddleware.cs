@@ -54,7 +54,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             }
             catch (Exception exception)
             {
-                await _logger.LogAsync(exception, httpContext).ConfigureAwait(false);
+                try
+                {
+                    await _logger.LogAsync(exception, httpContext).ConfigureAwait(false);
+                }
+                catch (Exception innerException)
+                {
+                    throw new AggregateException(innerException, exception);
+                }
                 throw;
             }
         }

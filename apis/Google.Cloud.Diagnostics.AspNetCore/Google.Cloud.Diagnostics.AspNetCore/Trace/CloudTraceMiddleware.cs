@@ -84,10 +84,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 {
                     await _next(httpContext).ConfigureAwait(false);
                 }
-                catch (Exception e)
+                catch (Exception exception)
                 {
-                    StackTrace stackTrace = new StackTrace(e, true);
-                    tracer.SetStackTrace(stackTrace);
+                    try
+                    {
+                        StackTrace stackTrace = new StackTrace(exception, true);
+                        tracer.SetStackTrace(stackTrace);
+                    }
+                    catch (Exception innerException)
+                    {
+                        throw new AggregateException(innerException, exception);
+                    }
                     throw;
                 }
                 finally
