@@ -18,6 +18,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Xunit;
 using Xunit.Abstractions;
@@ -131,6 +132,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         private async Task RunStress(Func<Stopwatch, Task<TimeSpan>> writeFunc)
         {
+            // Clear current session pool to eliminate the chance of a previous
+            // test altering the pool state (which is validated at end)
+            Task.Run(SessionPool.Default.ReleaseAll).Wait(SessionPool.Default.ShutDownTimeout);
+
             //prewarm
             // The maximum roundtrip time for spanner (and mysql) is about 200ms per
             // write.  so if we initialize with the target sustained # sessions,

@@ -372,10 +372,34 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         [Fact]
+        public async Task CommandTimeout()
+        {
+            long result = 0;
+            var e = await Assert.ThrowsAsync<SpannerException>(
+                async () =>
+                {
+                    using (await _testFixture.GetTestDatabaseConnectionAsync())
+                    {
+                        using (var connection =
+                            new SpannerConnection($"{_testFixture.ConnectionString};{nameof(SpannerSettings.AllowImmediateTimeouts)}=true"))
+                        {
+                            var cmd = connection.CreateSelectCommand("SELECT 1");
+                            cmd.CommandTimeout = 0;
+                            result = await cmd.ExecuteScalarAsync<long>();
+                        }
+                    }
+                }).ConfigureAwait(false);
+
+            Assert.Equal(ErrorCode.DeadlineExceeded, e.ErrorCode);
+            Assert.False(e.IsTransientSpannerFault());
+            Assert.Equal(0, result);
+        }
+
+        [Fact]
         public async Task TestDeadlineExceeded()
         {
             var oldTimeout = SpannerOptions.Instance.Timeout;
-            SpannerOptions.Instance.Timeout = TimeSpan.FromTicks(1);
+            SpannerOptions.Instance.Timeout = 0;
 
             try
             {
@@ -397,11 +421,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         {
                             using (var connection =
                                 new SpannerConnection(
-                                    _testFixture.ConnectionString,
+                                    $"{_testFixture.ConnectionString};{nameof(SpannerSettings.AllowImmediateTimeouts)}=true",
                                     new CredentialWrapper(appDefaultCredentials)))
                             {
                                 var cmd =
                                     connection.CreateSelectCommand("SELECT 1");
+                                Assert.Equal(0, cmd.CommandTimeout);
                                 result = await cmd.ExecuteScalarAsync<long>();
                             }
                         }

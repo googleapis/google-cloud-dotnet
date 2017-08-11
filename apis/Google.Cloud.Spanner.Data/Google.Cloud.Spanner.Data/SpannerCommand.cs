@@ -58,7 +58,7 @@ namespace Google.Cloud.Spanner.Data
         public SpannerCommand()
         {
             DesignTimeVisible = true;
-            _commandTimeout = (int) SpannerOptions.Instance.Timeout.TotalSeconds;
+            _commandTimeout = SpannerOptions.Instance.Timeout;
         }
 
         private SpannerCommand(
@@ -128,7 +128,14 @@ namespace Google.Cloud.Spanner.Data
             set => SpannerCommandTextBuilder = SpannerCommandTextBuilder.FromCommandText(value);
         }
 
-        /// <inheritdoc />
+
+        /// <summary>
+        /// Gets or sets the wait time before terminating the attempt to execute a command and generating an error.
+        /// Defaults to <see cref="SpannerOptions.Timeout"/> which is 60 seconds.
+        /// A value of '0' normally indicates that no timeout should be used (it waits an infinite amount of time).
+        /// However, if you specify AllowImmediateTimeouts=true in the connection string, '0' will cause a timeout
+        /// that expires immediately. This is normally used only for testing purposes.
+        /// </summary>
         public override int CommandTimeout
         {
             get => _commandTimeout;
@@ -357,8 +364,7 @@ namespace Google.Cloud.Spanner.Data
             }
 
             // Make the request. This will commit immediately or not depending on whether a transaction was explicitly created.
-            await spannerTransaction.ExecuteMutationsAsync(mutations, cancellationToken)
-                .WithTimeout(TimeSpan.FromSeconds(commandTimeout), $"The timeout of the {nameof(SpannerCommand)} was exceeded.")
+            await spannerTransaction.ExecuteMutationsAsync(mutations, cancellationToken, commandTimeout)
                 .ConfigureAwait(false);
             // Return the number of records affected.
             return mutations.Count;
@@ -586,8 +592,7 @@ namespace Google.Cloud.Spanner.Data
             var tx = singleUseTransaction ?? spannerTransaction;
 
             // Execute the command.
-            var resultSet = await tx.ExecuteQueryAsync(request, cancellationToken)
-                .WithTimeout(TimeSpan.FromSeconds(commandTimeout), $"The timeout of the {nameof(SpannerCommand)} was exceeded.")
+            var resultSet = await tx.ExecuteQueryAsync(request, cancellationToken, commandTimeout)
                 .ConfigureAwait(false);
 
             if ((behavior & CommandBehavior.CloseConnection) == CommandBehavior.CloseConnection)

@@ -54,9 +54,9 @@ namespace Google.Cloud.Spanner.V1
         public bool UseTransactionWarming { get; set; } = true;
 
         /// <summary>
-        /// The total time allowed for a network call to the Cloud Spanner server, including retries.
+        /// The total time in seconds allowed for a network call to the Cloud Spanner server, including retries.
         /// </summary>
-        public TimeSpan Timeout { get; set; } = TimeSpan.FromSeconds(60);
+        public int Timeout { get; set; } = 60;
 
         /// <summary>
         /// The maximum number of session create operations allowed to occur simultaneously.

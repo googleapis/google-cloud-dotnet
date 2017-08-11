@@ -80,15 +80,5 @@ namespace Google.Cloud.Spanner.Data
                 throw translatedException;
             }
         }
-
-        internal static async Task<T> WithTimeout<T>(this Task<T> task, TimeSpan timeout, string timeoutMessage)
-        {
-            if (task != await Task.WhenAny(task, Task.Delay(timeout, CancellationToken.None)).ConfigureAwait(false))
-            {
-                throw new TimeoutException(timeoutMessage);
-            }
-
-            return await task.ConfigureAwait(false);
-        }
     }
 }

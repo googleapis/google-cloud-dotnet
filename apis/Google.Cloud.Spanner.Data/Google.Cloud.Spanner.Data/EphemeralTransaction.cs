@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -41,10 +42,11 @@ namespace Google.Cloud.Spanner.Data
         /// SpannerCommand never uses implicit Transactions for write operations because they are non idempotent and
         /// may result in unexpected errors if retry is used.
         /// </summary>
-        /// <param name="mutations"></param>
-        /// <param name="cancellationToken"></param>
+        /// <param name="mutations">The list of changes to apply.</param>
+        /// <param name="cancellationToken">A cancellation token used for this task.</param>
+        /// <param name="timeoutSeconds">The timeout which will apply to the commit part of this method.</param>
         /// <returns></returns>
-        public Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken)
+        public Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken, int timeoutSeconds)
         {
             GaxPreconditions.CheckNotNull(mutations, nameof(mutations));
             Logger.Debug(() => "Executing a mutation change through an ephemeral transaction.");
@@ -56,8 +58,12 @@ namespace Google.Cloud.Spanner.Data
                     using (var transaction = await _connection.BeginTransactionAsync(cancellationToken)
                         .ConfigureAwait(false))
                     {
+                        // Importantly, we need to set timeout on the transaction, because
+                        // ExecuteMutations on SpannerTransaction doesnt actually hit the network
+                        // until you commit or rollback.
+                        transaction.CommitTimeout = timeoutSeconds;
                         count = await ((ISpannerTransaction) transaction)
-                            .ExecuteMutationsAsync(mutations, cancellationToken)
+                            .ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds)
                             .ConfigureAwait(false);
                         await transaction.CommitAsync().ConfigureAwait(false);
                     }
@@ -67,7 +73,8 @@ namespace Google.Cloud.Spanner.Data
 
         public Task<ReliableStreamReader> ExecuteQueryAsync(
             ExecuteSqlRequest request,
-            CancellationToken cancellationToken)
+            CancellationToken cancellationToken,
+            int timeoutSeconds)
         {
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 async () =>
@@ -79,7 +86,7 @@ namespace Google.Cloud.Spanner.Data
                         .Allocate(_connection, cancellationToken)
                         .ConfigureAwait(false))
                     {
-                        var streamReader = _connection.SpannerClient.GetSqlStreamReader(request, holder.Session);
+                        var streamReader = _connection.SpannerClient.GetSqlStreamReader(request, holder.Session, timeoutSeconds);
 
                         holder.TakeOwnership();
                         streamReader.StreamClosed += (o, e) => { _connection.ReleaseSession(streamReader.Session); };

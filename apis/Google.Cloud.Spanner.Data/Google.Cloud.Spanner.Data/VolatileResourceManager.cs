@@ -149,27 +149,27 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        public async Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken)
+        public async Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken, int timeoutSeconds)
         {
-            var transaction = await GetTransactionAsync(cancellationToken).ConfigureAwait(false);
+            var transaction = await GetTransactionAsync(cancellationToken, timeoutSeconds).ConfigureAwait(false);
             if (transaction == null)
             {
                 throw new InvalidOperationException("Unable to obtain a spanner transaction to execute within.");
             }
-            return await ((ISpannerTransaction) transaction).ExecuteMutationsAsync(mutations, cancellationToken).ConfigureAwait(false);
+            return await ((ISpannerTransaction) transaction).ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds).ConfigureAwait(false);
         }
 
-        public async Task<ReliableStreamReader> ExecuteQueryAsync(ExecuteSqlRequest request, CancellationToken cancellationToken)
+        public async Task<ReliableStreamReader> ExecuteQueryAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
-            var transaction = await GetTransactionAsync(cancellationToken).ConfigureAwait(false);
+            var transaction = await GetTransactionAsync(cancellationToken, timeoutSeconds).ConfigureAwait(false);
             if (transaction == null)
             {
                 throw new InvalidOperationException("Unable to obtain a spanner transaction to execute within.");
             }
-            return await((ISpannerTransaction) transaction).ExecuteQueryAsync(request, cancellationToken).ConfigureAwait(false);
+            return await((ISpannerTransaction) transaction).ExecuteQueryAsync(request, cancellationToken, timeoutSeconds).ConfigureAwait(false);
         }
 
-        private async Task<SpannerTransaction> GetTransactionAsync(CancellationToken cancellationToken)
+        private async Task<SpannerTransaction> GetTransactionAsync(CancellationToken cancellationToken, int timeoutSeconds)
         {
             //note that we delay transaction creation (and thereby session allocation)
             if (_timestampBound != null)
@@ -178,8 +178,10 @@ namespace Google.Cloud.Spanner.Data
                     await _spannerConnection.BeginReadOnlyTransactionAsync(_timestampBound, cancellationToken)
                         .ConfigureAwait(false));
             }
-            return _transaction ?? (_transaction = await _spannerConnection.BeginTransactionAsync(cancellationToken)
+            var result = _transaction ?? (_transaction = await _spannerConnection.BeginTransactionAsync(cancellationToken)
                 .ConfigureAwait(false));
+            result.CommitTimeout = timeoutSeconds;
+            return result;
         }
     }
 }

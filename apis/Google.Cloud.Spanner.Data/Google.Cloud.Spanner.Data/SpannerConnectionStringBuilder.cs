@@ -177,12 +177,12 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public SpannerConnectionStringBuilder() { }
 
-        internal SpannerConnectionStringBuilder CloneWithNewDataSource(string dataSource) => new
-            SpannerConnectionStringBuilder
+
+        internal SpannerConnectionStringBuilder Clone() => new SpannerConnectionStringBuilder(ConnectionString, Credential);
+
+        internal SpannerConnectionStringBuilder CloneWithNewDataSource(string dataSource)
+            => new SpannerConnectionStringBuilder(ConnectionString, Credential)
             {
-                Credential = Credential,
-                Host = Host,
-                Port = Port,
                 DataSource = dataSource
             };
 

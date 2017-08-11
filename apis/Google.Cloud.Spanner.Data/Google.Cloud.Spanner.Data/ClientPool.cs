@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Collections;
 using System.Collections.Concurrent;
 using System.Text;
 using System.Threading;
@@ -23,8 +24,6 @@ using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal;
 using Google.Cloud.Spanner.V1.Internal.Logging;
-using Grpc.Auth;
-using Grpc.Core;
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -45,9 +44,10 @@ namespace Google.Cloud.Spanner.Data
 
         public async Task<SpannerClient> AcquireClientAsync(
             ITokenAccess credentials = null,
-            ServiceEndpoint endpoint = null)
+            ServiceEndpoint endpoint = null,
+            IDictionary additionalOptions = null)
         {
-            var key = new ClientCredentialKey(credentials, endpoint);
+            var key = new ClientCredentialKey(credentials, endpoint, additionalOptions);
             var poolEntry = _clientPoolByCredential.GetOrAdd(key, k => new CredentialClientPool(k));
             var result = await poolEntry.AcquireClientAsync(_clientFactory).ConfigureAwait(false);
             Logger.LogPerformanceCounter("SpannerClient.TotalCount", () => _clientPoolByCredential.Count);
@@ -75,11 +75,12 @@ namespace Google.Cloud.Spanner.Data
 
         public void ReleaseClient(SpannerClient spannerClient,
             ITokenAccess credentials = null,
-            ServiceEndpoint endpoint = null)
+            ServiceEndpoint endpoint = null,
+            IDictionary additionalOptions = null)
         {
             if (spannerClient != null)
             {
-                var key = new ClientCredentialKey(credentials, endpoint);
+                var key = new ClientCredentialKey(credentials, endpoint, additionalOptions);
                 CredentialClientPool poolEntry;
                 if (_clientPoolByCredential.TryGetValue(key, out poolEntry))
                 {
@@ -95,16 +96,21 @@ namespace Google.Cloud.Spanner.Data
         private struct ClientCredentialKey : IEquatable<ClientCredentialKey>
         {
             public ITokenAccess Credential { get; }
+            public IDictionary AdditionalOptions { get; }
             public ServiceEndpoint Endpoint { get; }
 
-            public ClientCredentialKey(ITokenAccess tokenAccess, ServiceEndpoint serviceEndpoint) : this()
+            public ClientCredentialKey(ITokenAccess tokenAccess, ServiceEndpoint serviceEndpoint,
+                IDictionary additionalOptions) : this()
             {
                 Credential = tokenAccess;
+                AdditionalOptions = additionalOptions;
                 Endpoint = serviceEndpoint ?? SpannerClient.DefaultEndpoint;
             }
 
-            public bool Equals(ClientCredentialKey other) => Equals(Credential, other.Credential) &&
-                Equals(Endpoint, other.Endpoint);
+            public bool Equals(ClientCredentialKey other) =>
+                Equals(Credential, other.Credential)
+                && Equals(Endpoint, other.Endpoint)
+                && TypeUtil.DictionaryEquals(AdditionalOptions, other.AdditionalOptions);
 
             public override bool Equals(object obj) => obj is ClientCredentialKey other && Equals(other);
 
@@ -114,10 +120,10 @@ namespace Google.Cloud.Spanner.Data
                 unchecked
                 {
                     return ((Credential?.GetHashCode() ?? 0) * 397) ^
-                        (Endpoint?.GetHashCode() ?? 0);
+                        (Endpoint?.GetHashCode() ?? 0) ^
+                        (AdditionalOptions?.Count.GetHashCode() ?? 0);
                 }
             }
-
             /// <inheritdoc />
             public override string ToString()
             {
@@ -216,7 +222,7 @@ namespace Google.Cloud.Spanner.Data
                 {
                     //retry an already failed task.
                     _creationTask = new Lazy<Task<SpannerClient>>(
-                        () => clientFactory.CreateClientAsync(_parentKey.Endpoint, _parentKey.Credential));
+                        () => clientFactory.CreateClientAsync(_parentKey.Endpoint, _parentKey.Credential, _parentKey.AdditionalOptions));
                 }
 
                 var spannerClient = await _creationTask.Value.ConfigureAwait(false);

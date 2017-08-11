@@ -40,7 +40,7 @@ namespace Google.Cloud.Spanner.V1 {
         private readonly ExecuteSqlRequest _request;
         private readonly IScheduler _scheduler;
         private readonly Session _session;
-
+        private readonly int _timeoutSeconds;
 
         private int _nextIndex;
         private bool _isReading = true;
@@ -48,12 +48,15 @@ namespace Google.Cloud.Spanner.V1 {
         private int _resumeSkipCount;
         private ByteString _resumeToken;
 
-        internal ReliableStreamReader(SpannerClient spannerClient,
+        internal ReliableStreamReader(
+            SpannerClient spannerClient,
             ExecuteSqlRequest request,
-            Session session) {
+            Session session,
+            int timeoutSeconds) {
             _spannerClient = spannerClient;
             _request = request;
             _session = session;
+            _timeoutSeconds = timeoutSeconds;
             _clock = SpannerSettings.GetDefault().Clock ?? SystemClock.Instance;
             _scheduler = SpannerSettings.GetDefault().Scheduler ?? SystemScheduler.Instance;
 
@@ -80,7 +83,10 @@ namespace Google.Cloud.Spanner.V1 {
                 Logger.Debug(() => $"Resuming at location:{_resumeToken}");
                 _request.ResumeToken = _resumeToken;
             }
-            _currentCall = _spannerClient.ExecuteSqlStream(_request);
+
+            _currentCall = _spannerClient.ExecuteSqlStream(_request,
+                _spannerClient.Settings.ExecuteSqlStreamSettings.WithCallExpiration(
+                    _spannerClient.Settings.ConvertTimeoutToExpiration(_timeoutSeconds)));
             return _currentCall.ResponseHeadersAsync.WithSessionChecking(() => _session);
         }
 

@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
+using System.Collections;
 using System.Threading.Tasks;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
@@ -25,7 +27,7 @@ namespace Google.Cloud.Spanner.Data
 {
     internal interface ISpannerClientFactory
     {
-        Task<SpannerClient> CreateClientAsync(ServiceEndpoint endpoint, ITokenAccess credential);
+        Task<SpannerClient> CreateClientAsync(ServiceEndpoint endpoint, ITokenAccess credential, IDictionary additionalOptions);
     }
 
     /// <summary>
@@ -50,9 +52,15 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <inheritdoc />
-        public async Task<SpannerClient> CreateClientAsync(ServiceEndpoint endpoint, ITokenAccess credential)
+        public async Task<SpannerClient> CreateClientAsync(ServiceEndpoint endpoint, ITokenAccess credential, IDictionary additionalOptions)
         {
             ChannelCredentials channelCredentials;
+            var allowImmediateTimeout = false;
+
+            if (additionalOptions.Contains(nameof(SpannerSettings.AllowImmediateTimeouts)))
+            {
+                allowImmediateTimeout = Convert.ToBoolean(additionalOptions[nameof(SpannerSettings.AllowImmediateTimeouts)]);
+            }
 
             if (credential == null)
             {
@@ -76,7 +84,7 @@ namespace Google.Cloud.Spanner.Data
                     new RetrySettings(
                         SpannerSettings.GetDefaultRetryBackoff(),
                         SpannerSettings.GetDefaultTimeoutBackoff(),
-                        Expiration.FromTimeout(SpannerOptions.Instance.Timeout),
+                        SpannerSettings.ConvertTimeoutToExpiration(SpannerOptions.Instance.Timeout, allowImmediateTimeout),
                         SpannerSettings.IdempotentRetryFilter
                     )));
 
@@ -90,7 +98,8 @@ namespace Google.Cloud.Spanner.Data
                     ReadSettings = idempotentCallSettings,
                     BeginTransactionSettings = idempotentCallSettings,
                     CommitSettings = idempotentCallSettings,
-                    RollbackSettings = idempotentCallSettings
+                    RollbackSettings = idempotentCallSettings,
+                    AllowImmediateTimeouts = allowImmediateTimeout
                 });
         }
     }

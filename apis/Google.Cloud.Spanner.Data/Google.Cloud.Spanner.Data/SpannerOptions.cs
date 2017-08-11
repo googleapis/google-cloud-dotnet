@@ -157,11 +157,16 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// Defines the global timeout duration.
+        /// Defines the default values for <see cref="SpannerCommand.CommandTimeout"/> and
+        /// <see cref="SpannerTransaction.CommitTimeout"/> along with all network operations to a Cloud
+        /// Spanner database.
         /// Operations sent to the server that take greater than this duration will fail
         /// with a <see cref="SpannerException"/> and error code <see cref="ErrorCode.DeadlineExceeded"/>.
+        /// A value of '0' normally indicates that no timeout should be used (it waits an infinite amount of time).
+        /// However, if you specify AllowImmediateTimeouts=true in the connection string, '0' will cause a timeout
+        /// that expires immediately. This is normally used only for testing purposes.
         /// </summary>
-        public TimeSpan Timeout
+        public int Timeout
         {
             get => SessionPool.Default.Options.Timeout;
             set => SessionPool.Default.Options.Timeout = value;

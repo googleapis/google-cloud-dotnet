@@ -62,6 +62,7 @@ namespace Google.Cloud.Spanner.Data
         private static readonly TransactionOptions s_defaultTransactionOptions = new TransactionOptions();
         private readonly object _sync = new object();
 
+        //This value is never changed and never exposed to consumers.
         private SpannerConnectionStringBuilder _connectionStringBuilder;
 
         private CancellationTokenSource _keepAliveCancellation;
@@ -294,7 +295,8 @@ namespace Google.Cloud.Spanner.Data
                 ClientPool.Default.ReleaseClient(
                     client,
                     _connectionStringBuilder.Credential,
-                    _connectionStringBuilder.EndPoint);
+                    _connectionStringBuilder.EndPoint,
+                    _connectionStringBuilder);
             }
         }
 
@@ -441,7 +443,8 @@ namespace Google.Cloud.Spanner.Data
                     {
                         localClient = await ClientPool.Default.AcquireClientAsync(
                                 _connectionStringBuilder.Credential,
-                                _connectionStringBuilder.EndPoint)
+                                _connectionStringBuilder.EndPoint,
+                                _connectionStringBuilder)
                             .ConfigureAwait(false);
                         _sharedSession = await SessionPool.Default.CreateSessionFromPoolAsync(
                                 localClient, _connectionStringBuilder.Project,
@@ -760,7 +763,8 @@ namespace Google.Cloud.Spanner.Data
         private void TrySetNewConnectionInfo(SpannerConnectionStringBuilder newBuilder)
         {
             AssertClosed("change connection information.");
-            _connectionStringBuilder = newBuilder;
+            // We will never allow our internal connectionstringbuilder to be touched from the outside, so its cloned.
+            _connectionStringBuilder = newBuilder.Clone();
         }
 
         /// <summary>
