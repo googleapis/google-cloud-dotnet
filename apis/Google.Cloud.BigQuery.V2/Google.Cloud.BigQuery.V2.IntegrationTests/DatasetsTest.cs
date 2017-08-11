@@ -34,6 +34,52 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         }
 
         [Fact]
+        public void GetDataset_CorrectETag()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            // Fetch without specifying an ETag first
+            var unconditional = client.GetDataset(_fixture.DatasetId);
+
+            var options = new GetDatasetOptions { ETag = unconditional.Resource.ETag };
+            client.GetDataset(_fixture.DatasetId, options);
+        }
+
+        [Fact]
+        public void GetDataset_IncorrectETag()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            // Fetch without specifying an ETag first
+            var unconditional = client.GetDataset(_fixture.DatasetId);
+
+            var options = new GetDatasetOptions { ETag = "wrong-" + unconditional.Resource.ETag };
+            var exception = Assert.Throws<GoogleApiException>(() => client.GetDataset(_fixture.DatasetId, options));
+            Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
+        }
+
+        [Fact]
+        public async Task GetDatasetAsync_CorrectETag()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            // Fetch without specifying an ETag first
+            var unconditional = await client.GetDatasetAsync(_fixture.DatasetId);
+
+            var options = new GetDatasetOptions { ETag = unconditional.Resource.ETag };
+            await client.GetDatasetAsync(_fixture.DatasetId, options);
+        }
+
+        [Fact]
+        public async Task GetDatasetAsync_IncorrectETag()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            // Fetch without specifying an ETag first
+            var unconditional = await client.GetDatasetAsync(_fixture.DatasetId);
+
+            var options = new GetDatasetOptions { ETag = "wrong-" + unconditional.Resource.ETag };
+            var exception = await Assert.ThrowsAsync<GoogleApiException>(() => client.GetDatasetAsync(_fixture.DatasetId, options));
+            Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
+        }
+
+        [Fact]
         public void UpdateDataset()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);

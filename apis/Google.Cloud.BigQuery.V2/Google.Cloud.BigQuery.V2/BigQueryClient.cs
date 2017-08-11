@@ -18,10 +18,12 @@ using Google.Apis.Auth.OAuth2;
 using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
 using Google.Apis.Json;
+using Google.Apis.Requests;
 using Google.Apis.Services;
 using Newtonsoft.Json;
 using System;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.BigQuery.V2
@@ -206,5 +208,19 @@ namespace Google.Cloud.BigQuery.V2
             settings.DateParseHandling = DateParseHandling.None;
             return settings;
         }
+
+        /// <summary>
+        /// Validates an ETag, simulating an HTTP status code of 412 if the ETag doesn't match.
+        /// </summary>
+        /// <typeparam name="T">The entity type</typeparam>
+        /// <param name="resource">The resource to check</param>
+        /// <param name="etag">The ETag to check, or null for no check</param>
+        /// <returns><paramref name="resource"/> if the ETag matches, or if <paramref name="etag"/> is null</returns>
+        /// <exception cref="GoogleApiException">The ETag in the resource doesn't match <paramref name="etag"/></exception>
+        internal T CheckETag<T>(T resource, string etag) where T : IDirectResponseSchema =>
+            etag == null || etag == resource.ETag
+            ? resource
+            : throw new GoogleApiException(Service.Name, "ETag didn't match") { HttpStatusCode = HttpStatusCode.PreconditionFailed };
+
     }
 }
