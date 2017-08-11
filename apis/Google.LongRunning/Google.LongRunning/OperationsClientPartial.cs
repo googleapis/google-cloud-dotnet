@@ -23,7 +23,7 @@ namespace Google.LongRunning
         /// <summary>
         /// The poll settings used by default for repeated polling operations.
         /// </summary>
-        public PollSettings DefaultPollSettings { get; private set; }
+        public PollSettings DefaultPollSettings { get; set; }
 
         partial void OnCopy(OperationsSettings existing)
         {
