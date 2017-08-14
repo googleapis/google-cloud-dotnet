@@ -46,10 +46,11 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                 {
                     ProjectId = _projectId,
                     StartTime = startTime,
-                    View = ListTracesRequest.Types.ViewType.Complete
+                    View = ListTracesRequest.Types.ViewType.Complete,
+                    Filter = $"span:\"{spanName}\"",
+                    PageSize = 250
                 };
-                var traces = _client.ListTraces(request);
-                return traces.Where(t => t.Spans.Any(s => s.Name == spanName));
+                return _client.ListTraces(request);
             });
             return traceList.FirstOrDefault();
         }
