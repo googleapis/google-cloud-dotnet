@@ -24,6 +24,7 @@ namespace Google.Cloud.BigQuery.V2
 {
     public abstract partial class BigQueryClient
     {
+        #region UploadCsv
         /// <summary>
         /// Uploads a stream of CSV data to a table specified by project ID, dataset ID and table ID.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadCsv(TableReference, TableSchema, Stream, UploadCsvOptions)"/>.
@@ -91,6 +92,80 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <summary>
+        /// Asynchronously uploads a stream of CSV data to a table specified by project ID, dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadCsvAsync(TableReference, TableSchema, Stream, UploadCsvOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
+        /// </remarks>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// a data upload job.</returns>
+        public virtual Task<BigQueryJob> UploadCsvAsync(string projectId, string datasetId, string tableId,
+            TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            UploadCsvAsync(GetTableReference(projectId, datasetId, tableId), schema, input, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously uploads a stream of CSV data to a table in this project specified by dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadCsvAsync(TableReference, TableSchema, Stream, UploadCsvOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
+        /// </remarks>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// a data upload job.</returns>
+        public virtual Task<BigQueryJob> UploadCsvAsync(string datasetId, string tableId,
+            TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            UploadCsvAsync(GetTableReference(datasetId, tableId), schema, input, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously uploads a stream of CSV data to a table.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
+        /// </remarks>
+        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// a data upload job.</returns>
+        public virtual Task<BigQueryJob> UploadCsvAsync(TableReference tableReference, TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+
+        #region UploadJson(Stream)
+        /// <summary>
         /// Uploads a stream of JSON data to a table specified by project ID, dataset ID and table ID.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadJson(TableReference, TableSchema, Stream, UploadJsonOptions)"/>.
         /// </summary>
@@ -157,6 +232,81 @@ namespace Google.Cloud.BigQuery.V2
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Asynchronously uploads a stream of JSON data to a table specified by project ID, dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadJsonAsync(TableReference, TableSchema, Stream, UploadJsonOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
+        /// </remarks>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// a data upload job.</returns>
+        public virtual Task<BigQueryJob> UploadJsonAsync(string projectId, string datasetId, string tableId,
+            TableSchema schema, Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            UploadJsonAsync(GetTableReference(projectId, datasetId, tableId), schema, input, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously uploads a stream of JSON data to a table in this client's project specified by dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadJsonAsync(TableReference, TableSchema, Stream, UploadJsonOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
+        /// </remarks>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// a data upload job.</returns>
+        public virtual Task<BigQueryJob> UploadJsonAsync(string datasetId, string tableId,
+            TableSchema schema, Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            UploadJsonAsync(GetTableReference(datasetId, tableId), schema, input, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously uploads a stream of JSON data to a table.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
+        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+        /// it is expected that the table already exists, and its schema is loaded automatically.
+        /// </para>
+        /// </remarks>
+        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// a data upload job.</returns>
+        public virtual Task<BigQueryJob> UploadJsonAsync(TableReference tableReference,
+            TableSchema schema, Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+
+        #region UploadJson(strings)
         /// <summary>
         /// Uploads a sequence of JSON rows to a table specified by project ID, dataset ID and table ID.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadJson(TableReference, TableSchema, IEnumerable{String}, UploadJsonOptions)"/>.
@@ -235,350 +385,6 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>A data upload job.</returns>
         public virtual BigQueryJob UploadJson(TableReference tableReference,
             TableSchema schema, IEnumerable<string> rows, UploadJsonOptions options = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Uploads a stream of Avro data to a table specified by project ID, dataset ID and table ID.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadAvro(TableReference, TableSchema, Stream, UploadAvroOptions)"/>.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be null.</param>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
-        /// <param name="input">The stream of input data. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>A data upload job.</returns>
-        public virtual BigQueryJob UploadAvro(string projectId, string datasetId, string tableId,
-            TableSchema schema, Stream input, UploadAvroOptions options = null) =>
-            UploadAvro(GetTableReference(projectId, datasetId, tableId), schema, input, options);
-
-        /// <summary>
-        /// Uploads a stream of Avro data to a table in this project specified by dataset ID and table ID.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadAvro(TableReference, TableSchema, Stream, UploadAvroOptions)"/>.
-        /// </summary>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
-        /// <param name="input">The stream of input data. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>A data upload job.</returns>
-        public virtual BigQueryJob UploadAvro(string datasetId, string tableId,
-            TableSchema schema, Stream input, UploadAvroOptions options = null) =>
-            UploadAvro(GetTableReference(datasetId, tableId), schema, input, options);
-
-        /// <summary>
-        /// Uploads a stream of Avro data to a table.
-        /// </summary>
-        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
-        /// <param name="input">The stream of input data. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>A data upload job.</returns>
-        public virtual BigQueryJob UploadAvro(TableReference tableReference, TableSchema schema, Stream input, UploadAvroOptions options = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Inserts a single row of data into a table specified by project ID, dataset ID and table ID.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="InsertRow(TableReference, BigQueryInsertRow, InsertOptions)"/>.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be null.</param>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="row">The data to insert. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        public virtual void InsertRow(string projectId, string datasetId, string tableId, BigQueryInsertRow row, InsertOptions options = null) =>
-            InsertRow(GetTableReference(projectId, datasetId, tableId), row, options);
-
-        /// <summary>
-        /// Inserts a single row of data into a table in this client's project specified by dataset ID and table ID.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="InsertRow(TableReference, BigQueryInsertRow, InsertOptions)"/>.
-        /// </summary>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="row">The data to insert. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        public virtual void InsertRow(string datasetId, string tableId, BigQueryInsertRow row, InsertOptions options = null) =>
-            InsertRow(GetTableReference(datasetId, tableId), row, options);
-
-        /// <summary>
-        /// Inserts a single row of data into a table.
-        /// This method just creates an array with the single element and delegates to <see cref="InsertRows(TableReference, IEnumerable{BigQueryInsertRow}, InsertOptions)"/>.
-        /// </summary>
-        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
-        /// <param name="row">The data to insert. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        public virtual void InsertRow(TableReference tableReference, BigQueryInsertRow row, InsertOptions options = null) =>
-            InsertRows(tableReference, new[] { GaxPreconditions.CheckNotNull(row, nameof(row)) }, options);
-
-        /// <summary>
-        /// Inserts all the specified rows into a table.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="InsertRows(TableReference, BigQueryInsertRow[])"/>.
-        /// </summary>
-        /// <remarks>
-        /// Options are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
-        /// To specify options, create a collection or array explicitly, and call <see cref="InsertRows(string, string, string, IEnumerable{BigQueryInsertRow}, InsertOptions)"/>.
-        /// </remarks>
-        /// <param name="projectId">The project ID. Must not be null.</param>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="rows">The rows to insert. Must not be null, or contain null elements.</param>
-        public virtual void InsertRows(string projectId, string datasetId, string tableId, params BigQueryInsertRow[] rows) =>
-            InsertRows(GetTableReference(projectId, datasetId, tableId), rows, null);
-
-        /// <summary>
-        /// Inserts all the specified rows into a table in this client's project.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="InsertRows(TableReference, BigQueryInsertRow[])"/>.
-        /// </summary>
-        /// <remarks>
-        /// Options are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
-        /// To specify options, create a collection or array explicitly, and call <see cref="InsertRows(string, string, IEnumerable{BigQueryInsertRow}, InsertOptions)"/>.
-        /// </remarks>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="rows">The rows to insert. Must not be null, or contain null elements.</param>
-        public virtual void InsertRows(string datasetId, string tableId, params BigQueryInsertRow[] rows) =>
-            InsertRows(GetTableReference(datasetId, tableId), rows, null);
-
-        /// <summary>
-        /// Inserts all the specified rows into a table.
-        /// This method just delegates to <see cref="InsertRows(TableReference, IEnumerable{BigQueryInsertRow}, InsertOptions)"/>.
-        /// </summary>
-        /// <remarks>
-        /// Options are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
-        /// To specify options, create a collection or array explicitly, and call <see cref="InsertRows(TableReference, IEnumerable{BigQueryInsertRow}, InsertOptions)"/>.
-        /// </remarks>
-        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
-        /// <param name="rows">The rows to insert. Must not be null, or contain null elements.</param>
-        public virtual void InsertRows(TableReference tableReference, params BigQueryInsertRow[] rows) =>
-            InsertRows(tableReference, rows, null);
-
-        /// <summary>
-        /// Inserts all the given rows of data into a table specified by project ID, dataset ID and table ID.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="InsertRows(TableReference, IEnumerable{BigQueryInsertRow}, InsertOptions)"/>.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be null.</param>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="rows">The data to insert. Must not be null, or contain null entries.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        public virtual void InsertRows(string projectId, string datasetId, string tableId, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null) =>
-            InsertRows(GetTableReference(projectId, datasetId, tableId), rows, options);
-
-        /// <summary>
-        /// Inserts all the given rows of data into a table in this client's project specified by dataset ID and table ID.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="InsertRows(TableReference, IEnumerable{BigQueryInsertRow}, InsertOptions)"/>.
-        /// </summary>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="rows">The data to insert. Must not be null, or contain null entries.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        public virtual void InsertRows(string datasetId, string tableId, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null) =>
-            InsertRows(GetTableReference(datasetId, tableId), rows, options);
-
-        /// <summary>
-        /// Inserts all the given rows of data into a table.
-        /// </summary>
-        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
-        /// <param name="rows">The data to insert. Must not be null, or contain null entries.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        public virtual void InsertRows(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Asynchronously uploads a stream of CSV data to a table specified by project ID, dataset ID and table ID.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadCsvAsync(TableReference, TableSchema, Stream, UploadCsvOptions,CancellationToken)"/>.
-        /// </summary>
-        /// <remarks>
-        /// <para>
-        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
-        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
-        /// it is expected that the table already exists, and its schema is loaded automatically.
-        /// </para>
-        /// </remarks>
-        /// <param name="projectId">The project ID. Must not be null.</param>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
-        /// <param name="input">The stream of input data. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// a data upload job.</returns>
-        public virtual Task<BigQueryJob> UploadCsvAsync(string projectId, string datasetId, string tableId,
-            TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
-            UploadCsvAsync(GetTableReference(projectId, datasetId, tableId), schema, input, options, cancellationToken);
-
-        /// <summary>
-        /// Asynchronously uploads a stream of CSV data to a table in this project specified by dataset ID and table ID.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadCsvAsync(TableReference, TableSchema, Stream, UploadCsvOptions,CancellationToken)"/>.
-        /// </summary>
-        /// <remarks>
-        /// <para>
-        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
-        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
-        /// it is expected that the table already exists, and its schema is loaded automatically.
-        /// </para>
-        /// </remarks>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
-        /// <param name="input">The stream of input data. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// a data upload job.</returns>
-        public virtual Task<BigQueryJob> UploadCsvAsync(string datasetId, string tableId,
-            TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
-            UploadCsvAsync(GetTableReference(datasetId, tableId), schema, input, options, cancellationToken);
-
-        /// <summary>
-        /// Asynchronously uploads a stream of CSV data to a table.
-        /// </summary>
-        /// <remarks>
-        /// <para>
-        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
-        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
-        /// it is expected that the table already exists, and its schema is loaded automatically.
-        /// </para>
-        /// </remarks>
-        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
-        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
-        /// <param name="input">The stream of input data. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// a data upload job.</returns>
-        public virtual Task<BigQueryJob> UploadCsvAsync(TableReference tableReference, TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Asynchronously uploads a stream of Avro data to a table specified by project ID, dataset ID and table ID.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadAvroAsync(TableReference, TableSchema, Stream, UploadAvroOptions,CancellationToken)"/>.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be null.</param>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
-        /// <param name="input">The stream of input data. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// a data upload job.</returns>
-        public virtual Task<BigQueryJob> UploadAvroAsync(string projectId, string datasetId, string tableId,
-            TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
-            UploadAvroAsync(GetTableReference(projectId, datasetId, tableId), schema, input, options, cancellationToken);
-
-        /// <summary>
-        /// Asynchronously uploads a stream of Avro data to a table in this project specified by dataset ID and table ID.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadAvroAsync(TableReference, TableSchema, Stream, UploadAvroOptions,CancellationToken)"/>.
-        /// </summary>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
-        /// <param name="input">The stream of input data. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// a data upload job.</returns>
-        public virtual Task<BigQueryJob> UploadAvroAsync(string datasetId, string tableId,
-            TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
-            UploadAvroAsync(GetTableReference(datasetId, tableId), schema, input, options, cancellationToken);
-
-        /// <summary>
-        /// Asynchronously uploads a stream of Avro data to a table.
-        /// </summary>
-        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
-        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
-        /// <param name="input">The stream of input data. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// a data upload job.</returns>
-        public virtual Task<BigQueryJob> UploadAvroAsync(TableReference tableReference, TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Asynchronously uploads a stream of JSON data to a table specified by project ID, dataset ID and table ID.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadJsonAsync(TableReference, TableSchema, Stream, UploadJsonOptions,CancellationToken)"/>.
-        /// </summary>
-        /// <remarks>
-        /// <para>
-        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
-        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
-        /// it is expected that the table already exists, and its schema is loaded automatically.
-        /// </para>
-        /// </remarks>
-        /// <param name="projectId">The project ID. Must not be null.</param>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
-        /// <param name="input">The stream of input data. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// a data upload job.</returns>
-        public virtual Task<BigQueryJob> UploadJsonAsync(string projectId, string datasetId, string tableId,
-            TableSchema schema, Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
-            UploadJsonAsync(GetTableReference(projectId, datasetId, tableId), schema, input, options, cancellationToken);
-
-        /// <summary>
-        /// Asynchronously uploads a stream of JSON data to a table in this client's project specified by dataset ID and table ID.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadJsonAsync(TableReference, TableSchema, Stream, UploadJsonOptions,CancellationToken)"/>.
-        /// </summary>
-        /// <remarks>
-        /// <para>
-        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
-        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
-        /// it is expected that the table already exists, and its schema is loaded automatically.
-        /// </para>
-        /// </remarks>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
-        /// <param name="input">The stream of input data. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// a data upload job.</returns>
-        public virtual Task<BigQueryJob> UploadJsonAsync(string datasetId, string tableId,
-            TableSchema schema, Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
-            UploadJsonAsync(GetTableReference(datasetId, tableId), schema, input, options, cancellationToken);
-
-        /// <summary>
-        /// Asynchronously uploads a stream of JSON data to a table.
-        /// </summary>
-        /// <remarks>
-        /// <para>
-        /// The schema can come from three places: it can be specified by <paramref name="schema"/>,
-        /// it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
-        /// If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
-        /// it is expected that the table already exists, and its schema is loaded automatically.
-        /// </para>
-        /// </remarks>
-        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
-        /// <param name="schema">The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on <paramref name="options"/>).</param>
-        /// <param name="input">The stream of input data. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// a data upload job.</returns>
-        public virtual Task<BigQueryJob> UploadJsonAsync(TableReference tableReference,
-            TableSchema schema, Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             throw new NotImplementedException();
         }
@@ -670,6 +476,133 @@ namespace Google.Cloud.BigQuery.V2
         {
             throw new NotImplementedException();
         }
+        #endregion
+
+        #region UploadAvro
+        /// <summary>
+        /// Uploads a stream of Avro data to a table specified by project ID, dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadAvro(TableReference, TableSchema, Stream, UploadAvroOptions)"/>.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>A data upload job.</returns>
+        public virtual BigQueryJob UploadAvro(string projectId, string datasetId, string tableId,
+            TableSchema schema, Stream input, UploadAvroOptions options = null) =>
+            UploadAvro(GetTableReference(projectId, datasetId, tableId), schema, input, options);
+
+        /// <summary>
+        /// Uploads a stream of Avro data to a table in this project specified by dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadAvro(TableReference, TableSchema, Stream, UploadAvroOptions)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>A data upload job.</returns>
+        public virtual BigQueryJob UploadAvro(string datasetId, string tableId,
+            TableSchema schema, Stream input, UploadAvroOptions options = null) =>
+            UploadAvro(GetTableReference(datasetId, tableId), schema, input, options);
+
+        /// <summary>
+        /// Uploads a stream of Avro data to a table.
+        /// </summary>
+        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>A data upload job.</returns>
+        public virtual BigQueryJob UploadAvro(TableReference tableReference, TableSchema schema, Stream input, UploadAvroOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously uploads a stream of Avro data to a table specified by project ID, dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadAvroAsync(TableReference, TableSchema, Stream, UploadAvroOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// a data upload job.</returns>
+        public virtual Task<BigQueryJob> UploadAvroAsync(string projectId, string datasetId, string tableId,
+            TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            UploadAvroAsync(GetTableReference(projectId, datasetId, tableId), schema, input, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously uploads a stream of Avro data to a table in this project specified by dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadAvroAsync(TableReference, TableSchema, Stream, UploadAvroOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// a data upload job.</returns>
+        public virtual Task<BigQueryJob> UploadAvroAsync(string datasetId, string tableId,
+            TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            UploadAvroAsync(GetTableReference(datasetId, tableId), schema, input, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously uploads a stream of Avro data to a table.
+        /// </summary>
+        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// a data upload job.</returns>
+        public virtual Task<BigQueryJob> UploadAvroAsync(TableReference tableReference, TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+
+        #region InsertRow
+        /// <summary>
+        /// Inserts a single row of data into a table specified by project ID, dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="InsertRow(TableReference, BigQueryInsertRow, InsertOptions)"/>.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="row">The data to insert. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        public virtual void InsertRow(string projectId, string datasetId, string tableId, BigQueryInsertRow row, InsertOptions options = null) =>
+            InsertRow(GetTableReference(projectId, datasetId, tableId), row, options);
+
+        /// <summary>
+        /// Inserts a single row of data into a table in this client's project specified by dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="InsertRow(TableReference, BigQueryInsertRow, InsertOptions)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="row">The data to insert. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        public virtual void InsertRow(string datasetId, string tableId, BigQueryInsertRow row, InsertOptions options = null) =>
+            InsertRow(GetTableReference(datasetId, tableId), row, options);
+
+        /// <summary>
+        /// Inserts a single row of data into a table.
+        /// This method just creates an array with the single element and delegates to <see cref="InsertRows(TableReference, IEnumerable{BigQueryInsertRow}, InsertOptions)"/>.
+        /// </summary>
+        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// <param name="row">The data to insert. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        public virtual void InsertRow(TableReference tableReference, BigQueryInsertRow row, InsertOptions options = null) =>
+            InsertRows(tableReference, new[] { GaxPreconditions.CheckNotNull(row, nameof(row)) }, options);
 
         /// <summary>
         /// Asynchronously inserts a single row of data into a table specified by project ID, dataset ID and table ID.
@@ -709,6 +642,50 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>A task representing the asynchronous operation.</returns>
         public virtual Task InsertRowAsync(TableReference tableReference, BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             InsertRowsAsync(tableReference, new[] { GaxPreconditions.CheckNotNull(row, nameof(row)) }, options, cancellationToken);
+        #endregion
+
+        #region InsertRows(array)
+        /// <summary>
+        /// Inserts all the specified rows into a table.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="InsertRows(TableReference, BigQueryInsertRow[])"/>.
+        /// </summary>
+        /// <remarks>
+        /// Options are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+        /// To specify options, create a collection or array explicitly, and call <see cref="InsertRows(string, string, string, IEnumerable{BigQueryInsertRow}, InsertOptions)"/>.
+        /// </remarks>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="rows">The rows to insert. Must not be null, or contain null elements.</param>
+        public virtual void InsertRows(string projectId, string datasetId, string tableId, params BigQueryInsertRow[] rows) =>
+            InsertRows(GetTableReference(projectId, datasetId, tableId), rows, null);
+
+        /// <summary>
+        /// Inserts all the specified rows into a table in this client's project.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="InsertRows(TableReference, BigQueryInsertRow[])"/>.
+        /// </summary>
+        /// <remarks>
+        /// Options are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+        /// To specify options, create a collection or array explicitly, and call <see cref="InsertRows(string, string, IEnumerable{BigQueryInsertRow}, InsertOptions)"/>.
+        /// </remarks>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="rows">The rows to insert. Must not be null, or contain null elements.</param>
+        public virtual void InsertRows(string datasetId, string tableId, params BigQueryInsertRow[] rows) =>
+            InsertRows(GetTableReference(datasetId, tableId), rows, null);
+
+        /// <summary>
+        /// Inserts all the specified rows into a table.
+        /// This method just delegates to <see cref="InsertRows(TableReference, IEnumerable{BigQueryInsertRow}, InsertOptions)"/>.
+        /// </summary>
+        /// <remarks>
+        /// Options are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+        /// To specify options, create a collection or array explicitly, and call <see cref="InsertRows(TableReference, IEnumerable{BigQueryInsertRow}, InsertOptions)"/>.
+        /// </remarks>
+        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// <param name="rows">The rows to insert. Must not be null, or contain null elements.</param>
+        public virtual void InsertRows(TableReference tableReference, params BigQueryInsertRow[] rows) =>
+            InsertRows(tableReference, rows, null);
 
         /// <summary>
         /// Inserts all the specified rows into a table.
@@ -754,6 +731,42 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>A task representing the asynchronous operation.</returns>
         public virtual Task InsertRowsAsync(TableReference tableReference, params BigQueryInsertRow[] rows) =>
             InsertRowsAsync(tableReference, rows, null, CancellationToken.None);
+        #endregion
+
+        #region InsertRows(sequence)
+        /// <summary>
+        /// Inserts all the given rows of data into a table specified by project ID, dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="InsertRows(TableReference, IEnumerable{BigQueryInsertRow}, InsertOptions)"/>.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="rows">The data to insert. Must not be null, or contain null entries.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        public virtual void InsertRows(string projectId, string datasetId, string tableId, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null) =>
+            InsertRows(GetTableReference(projectId, datasetId, tableId), rows, options);
+
+        /// <summary>
+        /// Inserts all the given rows of data into a table in this client's project specified by dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="InsertRows(TableReference, IEnumerable{BigQueryInsertRow}, InsertOptions)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="rows">The data to insert. Must not be null, or contain null entries.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        public virtual void InsertRows(string datasetId, string tableId, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null) =>
+            InsertRows(GetTableReference(datasetId, tableId), rows, options);
+
+        /// <summary>
+        /// Inserts all the given rows of data into a table.
+        /// </summary>
+        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// <param name="rows">The data to insert. Must not be null, or contain null entries.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        public virtual void InsertRows(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Asynchronously inserts all the given rows of data into a table specified by project ID, dataset ID and table ID.
@@ -794,5 +807,7 @@ namespace Google.Cloud.BigQuery.V2
         {
             throw new NotImplementedException();
         }
+        #endregion
+
     }
 }

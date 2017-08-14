@@ -20,6 +20,7 @@ namespace Google.Cloud.BigQuery.V2
 {
     public abstract partial class BigQueryClient
     {
+        #region ListProjects
         /// <summary>
         /// Lists the cloud projects available using the current credentials.
         /// </summary>
@@ -45,5 +46,6 @@ namespace Google.Cloud.BigQuery.V2
         {
             throw new NotImplementedException();
         }
+        #endregion
     }
 }
