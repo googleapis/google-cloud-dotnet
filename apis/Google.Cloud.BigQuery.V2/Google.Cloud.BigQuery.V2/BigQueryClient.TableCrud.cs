@@ -24,6 +24,17 @@ namespace Google.Cloud.BigQuery.V2
     {
         #region GetTable
         /// <summary>
+        /// Retrieves a table within this client's project given the dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="GetTable(TableReference,GetTableOptions)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The requested table.</returns>
+        public virtual BigQueryTable GetTable(string datasetId, string tableId, GetTableOptions options = null) =>
+            GetTable(GetTableReference(datasetId, tableId), options);
+
+        /// <summary>
         /// Retrieves a table given a project ID, dataset ID and table ID.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="GetTable(TableReference,GetTableOptions)"/>.
         /// </summary>
@@ -36,17 +47,6 @@ namespace Google.Cloud.BigQuery.V2
             GetTable(GetTableReference(projectId, datasetId, tableId), options);
 
         /// <summary>
-        /// Retrieves a table within this client's project given the dataset ID and table ID.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="GetTable(TableReference,GetTableOptions)"/>.
-        /// </summary>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>The requested table.</returns>
-        public virtual BigQueryTable GetTable(string datasetId, string tableId, GetTableOptions options = null) =>
-            GetTable(GetTableReference(datasetId, tableId), options);
-
-        /// <summary>
         /// Retrieves a table.
         /// </summary>
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
@@ -56,6 +56,19 @@ namespace Google.Cloud.BigQuery.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Retrieves a table within this client's project given the dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="GetTableAsync(TableReference,GetTableOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the requested table.</returns>
+        public virtual Task<BigQueryTable> GetTableAsync(string datasetId, string tableId, GetTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            GetTableAsync(GetTableReference(datasetId, tableId), options, cancellationToken);
 
         /// <summary>
         /// Retrieves a table given a project ID, dataset ID and table ID.
@@ -70,19 +83,6 @@ namespace Google.Cloud.BigQuery.V2
         /// the requested table.</returns>
         public virtual Task<BigQueryTable> GetTableAsync(string projectId, string datasetId, string tableId, GetTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             GetTableAsync(GetTableReference(projectId, datasetId, tableId), options, cancellationToken);
-
-        /// <summary>
-        /// Retrieves a table within this client's project given the dataset ID and table ID.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="GetTableAsync(TableReference,GetTableOptions,CancellationToken)"/>.
-        /// </summary>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// the requested table.</returns>
-        public virtual Task<BigQueryTable> GetTableAsync(string datasetId, string tableId, GetTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
-            GetTableAsync(GetTableReference(datasetId, tableId), options, cancellationToken);
 
         /// <summary>
         /// Retrieves a table.
@@ -166,6 +166,18 @@ namespace Google.Cloud.BigQuery.V2
 
         #region CreateTable
         /// <summary>
+        /// Creates a table within this project, specified by a dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="CreateTable(TableReference, TableSchema, CreateTableOptions)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema for the new table. Must not be null unless the schema can be inferred (e.g. for a view).</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The newly created table.</returns>
+        public virtual BigQueryTable CreateTable(string datasetId, string tableId, TableSchema schema, CreateTableOptions options = null) =>
+            CreateTable(GetTableReference(datasetId, tableId), schema, options);
+
+        /// <summary>
         /// Creates a table specified by a project ID, dataset ID and table ID.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="CreateTable(TableReference, TableSchema, CreateTableOptions)"/>.
         /// </summary>
@@ -179,18 +191,6 @@ namespace Google.Cloud.BigQuery.V2
             CreateTable(GetTableReference(projectId, datasetId, tableId), schema, options);
 
         /// <summary>
-        /// Creates a table within this project, specified by a dataset ID and table ID.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="CreateTable(TableReference, TableSchema, CreateTableOptions)"/>.
-        /// </summary>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema for the new table. Must not be null unless the schema can be inferred (e.g. for a view).</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>The newly created table.</returns>
-        public virtual BigQueryTable CreateTable(string datasetId, string tableId, TableSchema schema, CreateTableOptions options = null) =>
-            CreateTable(GetTableReference(datasetId, tableId), schema, options);
-
-        /// <summary>
         /// Creates a table with the given schema.
         /// </summary>
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
@@ -201,6 +201,20 @@ namespace Google.Cloud.BigQuery.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Creates a table within this project, specified by a dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="CreateTableAsync(TableReference, TableSchema, CreateTableOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema for the new table. Must not be null unless the schema can be inferred (e.g. for a view).</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the newly created table.</returns>
+        public virtual Task<BigQueryTable> CreateTableAsync(string datasetId, string tableId, TableSchema schema, CreateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            CreateTableAsync(GetTableReference(datasetId, tableId), schema, options, cancellationToken);
 
         /// <summary>
         /// Creates a table specified by a project ID, dataset ID and table ID.
@@ -216,20 +230,6 @@ namespace Google.Cloud.BigQuery.V2
         /// the newly created table.</returns>
         public virtual Task<BigQueryTable> CreateTableAsync(string projectId, string datasetId, string tableId, TableSchema schema, CreateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             CreateTableAsync(GetTableReference(projectId, datasetId, tableId), schema, options, cancellationToken);
-
-        /// <summary>
-        /// Creates a table within this project, specified by a dataset ID and table ID.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="CreateTableAsync(TableReference, TableSchema, CreateTableOptions,CancellationToken)"/>.
-        /// </summary>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema for the new table. Must not be null unless the schema can be inferred (e.g. for a view).</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// the newly created table.</returns>
-        public virtual Task<BigQueryTable> CreateTableAsync(string datasetId, string tableId, TableSchema schema, CreateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
-            CreateTableAsync(GetTableReference(datasetId, tableId), schema, options, cancellationToken);
 
         /// <summary>
         /// Creates a table with the given schema.
@@ -248,6 +248,20 @@ namespace Google.Cloud.BigQuery.V2
 
         #region GetOrCreateTable
         /// <summary>
+        /// Attempts to fetch the specified table within this client's project, creating it if it doesn't exist.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="GetOrCreateTable(TableReference, TableSchema, GetTableOptions, CreateTableOptions)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema to use to create the table if necessary. Must not be null unless the schema can be inferred (e.g. for a view).</param>
+        /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The existing or new table.</returns>
+        public virtual BigQueryTable GetOrCreateTable(string datasetId, string tableId, TableSchema schema,
+            GetTableOptions getOptions = null, CreateTableOptions createOptions = null) =>
+            GetOrCreateTable(GetTableReference(datasetId, tableId), schema, getOptions, createOptions);
+
+        /// <summary>
         /// Attempts to fetch a table specified by project ID, dataset ID and table ID, creating it if it doesn't exist.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="GetOrCreateTable(TableReference, TableSchema, GetTableOptions, CreateTableOptions)"/>.
         /// </summary>
@@ -263,20 +277,6 @@ namespace Google.Cloud.BigQuery.V2
             GetOrCreateTable(GetTableReference(projectId, datasetId, tableId), schema, getOptions, createOptions);
 
         /// <summary>
-        /// Attempts to fetch the specified table within this client's project, creating it if it doesn't exist.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="GetOrCreateTable(TableReference, TableSchema, GetTableOptions, CreateTableOptions)"/>.
-        /// </summary>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema to use to create the table if necessary. Must not be null unless the schema can be inferred (e.g. for a view).</param>
-        /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>The existing or new table.</returns>
-        public virtual BigQueryTable GetOrCreateTable(string datasetId, string tableId, TableSchema schema,
-            GetTableOptions getOptions = null, CreateTableOptions createOptions = null) =>
-            GetOrCreateTable(GetTableReference(datasetId, tableId), schema, getOptions, createOptions);
-
-        /// <summary>
         /// Attempts to fetch a table, creating it if it doesn't exist.
         /// </summary>
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
@@ -289,6 +289,22 @@ namespace Google.Cloud.BigQuery.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Attempts to fetch the specified table within this client's project, creating it if it doesn't exist.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="GetOrCreateTableAsync(TableReference, TableSchema, GetTableOptions, CreateTableOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema to use to create the table if necessary. Must not be null unless the schema can be inferred (e.g. for a view).</param>
+        /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the existing or new table.</returns>
+        public virtual Task<BigQueryTable> GetOrCreateTableAsync(string datasetId, string tableId, TableSchema schema,
+            GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            GetOrCreateTableAsync(GetTableReference(datasetId, tableId), schema, getOptions, createOptions, cancellationToken);
 
         /// <summary>
         /// Attempts to fetch a table specified by project ID, dataset ID and table ID, creating it if it doesn't exist.
@@ -306,22 +322,6 @@ namespace Google.Cloud.BigQuery.V2
         public virtual Task<BigQueryTable> GetOrCreateTableAsync(string projectId, string datasetId, string tableId, TableSchema schema,
             GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             GetOrCreateTableAsync(GetTableReference(projectId, datasetId, tableId), schema, getOptions, createOptions, cancellationToken);
-
-        /// <summary>
-        /// Attempts to fetch the specified table within this client's project, creating it if it doesn't exist.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="GetOrCreateTableAsync(TableReference, TableSchema, GetTableOptions, CreateTableOptions,CancellationToken)"/>.
-        /// </summary>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="schema">The schema to use to create the table if necessary. Must not be null unless the schema can be inferred (e.g. for a view).</param>
-        /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// the existing or new table.</returns>
-        public virtual Task<BigQueryTable> GetOrCreateTableAsync(string datasetId, string tableId, TableSchema schema,
-            GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default(CancellationToken)) =>
-            GetOrCreateTableAsync(GetTableReference(datasetId, tableId), schema, getOptions, createOptions, cancellationToken);
 
         /// <summary>
         /// Attempts to fetch a table, creating it if it doesn't exist.
@@ -342,6 +342,16 @@ namespace Google.Cloud.BigQuery.V2
 
         #region DeleteTable
         /// <summary>
+        /// Deletes a table within this project specified by dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="DeleteTable(TableReference,DeleteTableOptions)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        public virtual void DeleteTable(string datasetId, string tableId, DeleteTableOptions options = null) =>
+            DeleteTable(GetTableReference(datasetId, tableId), options);
+
+        /// <summary>
         /// Deletes a table specified by project ID, dataset ID and table ID.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="DeleteTable(TableReference,DeleteTableOptions)"/>.
         /// </summary>
@@ -353,16 +363,6 @@ namespace Google.Cloud.BigQuery.V2
             DeleteTable(GetTableReference(projectId, datasetId, tableId), options);
 
         /// <summary>
-        /// Deletes a table within this project specified by dataset ID and table ID.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="DeleteTable(TableReference,DeleteTableOptions)"/>.
-        /// </summary>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        public virtual void DeleteTable(string datasetId, string tableId, DeleteTableOptions options = null) =>
-            DeleteTable(GetTableReference(datasetId, tableId), options);
-
-        /// <summary>
         /// Deletes a table.
         /// </summary>
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
@@ -371,6 +371,18 @@ namespace Google.Cloud.BigQuery.V2
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Deletes a table within this project specified by dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="DeleteTableAsync(TableReference,DeleteTableOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
+        public virtual Task DeleteTableAsync(string datasetId, string tableId, DeleteTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            DeleteTableAsync(GetTableReference(datasetId, tableId), options, cancellationToken);
 
         /// <summary>
         /// Deletes a table specified by project ID, dataset ID and table ID.
@@ -386,18 +398,6 @@ namespace Google.Cloud.BigQuery.V2
             DeleteTableAsync(GetTableReference(projectId, datasetId, tableId), options, cancellationToken);
 
         /// <summary>
-        /// Deletes a table within this project specified by dataset ID and table ID.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="DeleteTableAsync(TableReference,DeleteTableOptions,CancellationToken)"/>.
-        /// </summary>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task DeleteTableAsync(string datasetId, string tableId, DeleteTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
-            DeleteTableAsync(GetTableReference(datasetId, tableId), options, cancellationToken);
-
-        /// <summary>
         /// Deletes a table.
         /// </summary>
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
@@ -411,22 +411,6 @@ namespace Google.Cloud.BigQuery.V2
         #endregion
 
         #region UpdateTable
-        /// <summary>
-        /// Updates the specified table to match the given resource.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UpdateTable(TableReference, Table, UpdateTableOptions)"/>.
-        /// </summary>
-        /// <remarks>
-        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
-        /// </remarks>
-        /// <param name="projectId">The project ID. Must not be null.</param>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="resource">The table resource representation to use for the update. All updatable fields will be updated.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>The updated table.</returns>
-        public virtual BigQueryTable UpdateTable(string projectId, string datasetId, string tableId, Table resource, UpdateTableOptions options = null) =>
-            UpdateTable(GetTableReference(projectId, datasetId, tableId), resource, options);
-
         /// <summary>
         /// Updates the specified table within this client's project to match the given resource.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UpdateTable(TableReference, Table, UpdateTableOptions)"/>.
@@ -444,6 +428,22 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Updates the specified table to match the given resource.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UpdateTable(TableReference, Table, UpdateTableOptions)"/>.
+        /// </summary>
+        /// <remarks>
+        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
+        /// </remarks>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="resource">The table resource representation to use for the update. All updatable fields will be updated.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The updated table.</returns>
+        public virtual BigQueryTable UpdateTable(string projectId, string datasetId, string tableId, Table resource, UpdateTableOptions options = null) =>
+            UpdateTable(GetTableReference(projectId, datasetId, tableId), resource, options);
+
+        /// <summary>
+        /// Updates the specified table to match the given resource.
         /// </summary>
         /// <remarks>
         /// If the resource contains an ETag, it is used for optimistic concurrency validation.
@@ -454,24 +454,6 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>The updated table.</returns>
         public virtual BigQueryTable UpdateTable(TableReference tableReference, Table resource, UpdateTableOptions options = null) =>
             throw new NotImplementedException();
-
-        /// <summary>
-        /// Asynchronously updates the specified table to match the given resource.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UpdateTableAsync(TableReference, Table, UpdateTableOptions, CancellationToken)"/>.
-        /// </summary>
-        /// <remarks>
-        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
-        /// </remarks>
-        /// <param name="projectId">The project ID. Must not be null.</param>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="resource">The table resource representation to use for the update. All updatable fields will be updated.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// the updated table.</returns>
-        public virtual Task<BigQueryTable> UpdateTableAsync(string projectId, string datasetId, string tableId, Table resource, UpdateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
-            UpdateTableAsync(GetTableReference(projectId, datasetId, tableId), resource, options, cancellationToken);
 
         /// <summary>
         /// Asynchronously updates the specified table within this client's project to match the given resource.
@@ -492,6 +474,24 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Asynchronously updates the specified table to match the given resource.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UpdateTableAsync(TableReference, Table, UpdateTableOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <remarks>
+        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
+        /// </remarks>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="resource">The table resource representation to use for the update. All updatable fields will be updated.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the updated table.</returns>
+        public virtual Task<BigQueryTable> UpdateTableAsync(string projectId, string datasetId, string tableId, Table resource, UpdateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            UpdateTableAsync(GetTableReference(projectId, datasetId, tableId), resource, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously updates the specified table to match the given resource.
         /// </summary>
         /// <remarks>
         /// If the resource contains an ETag, it is used for optimistic concurrency validation.
@@ -507,22 +507,6 @@ namespace Google.Cloud.BigQuery.V2
         #endregion
 
         #region PatchTable
-        /// <summary>
-        /// Patches the specified table with fields in the given resource.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="PatchTable(TableReference, Table, PatchTableOptions)"/>.
-        /// </summary>
-        /// <remarks>
-        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
-        /// </remarks>
-        /// <param name="projectId">The project ID. Must not be null.</param>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="resource">The table resource representation to use for the patch. Only fields present in the resource will be updated.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>The updated table.</returns>
-        public virtual BigQueryTable PatchTable(string projectId, string datasetId, string tableId, Table resource, PatchTableOptions options = null) =>
-            PatchTable(GetTableReference(projectId, datasetId, tableId), resource, options);
-
         /// <summary>
         /// Patches the specified table within this client's project with fields in the given resource.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="PatchTable(TableReference, Table, PatchTableOptions)"/>.
@@ -540,6 +524,22 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Patches the specified table with fields in the given resource.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="PatchTable(TableReference, Table, PatchTableOptions)"/>.
+        /// </summary>
+        /// <remarks>
+        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
+        /// </remarks>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="resource">The table resource representation to use for the patch. Only fields present in the resource will be updated.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The updated table.</returns>
+        public virtual BigQueryTable PatchTable(string projectId, string datasetId, string tableId, Table resource, PatchTableOptions options = null) =>
+            PatchTable(GetTableReference(projectId, datasetId, tableId), resource, options);
+
+        /// <summary>
+        /// Patches the specified table with fields in the given resource.
         /// </summary>
         /// <remarks>
         /// If the resource contains an ETag, it is used for optimistic concurrency validation.
@@ -550,6 +550,23 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>The updated table.</returns>
         public virtual BigQueryTable PatchTable(TableReference tableReference, Table resource, PatchTableOptions options = null) =>
             throw new NotImplementedException();
+
+        /// <summary>
+        /// Asynchronously patches the specified table within this client's project with fields in the given resource.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="PatchTableAsync(TableReference, Table, PatchTableOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <remarks>
+        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
+        /// </remarks>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="resource">The table resource representation to use for the patch. Only fields present in the resource will be updated.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the updated table.</returns>
+        public virtual Task<BigQueryTable> PatchTableAsync(string datasetId, string tableId, Table resource, PatchTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            PatchTableAsync(GetTableReference(datasetId, tableId), resource, options, cancellationToken);
 
         /// <summary>
         /// Asynchronously patches the specified table with fields in the given resource.
@@ -568,23 +585,6 @@ namespace Google.Cloud.BigQuery.V2
         /// the updated table.</returns>
         public virtual Task<BigQueryTable> PatchTableAsync(string projectId, string datasetId, string tableId, Table resource, PatchTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             PatchTableAsync(GetTableReference(projectId, datasetId, tableId), resource, options, cancellationToken);
-
-        /// <summary>
-        /// Asynchronously patches the specified table within this client's project with fields in the given resource.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="PatchTableAsync(TableReference, Table, PatchTableOptions, CancellationToken)"/>.
-        /// </summary>
-        /// <remarks>
-        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
-        /// </remarks>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="tableId">The table ID. Must not be null.</param>
-        /// <param name="resource">The table resource representation to use for the patch. Only fields present in the resource will be updated.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// the updated table.</returns>
-        public virtual Task<BigQueryTable> PatchTableAsync(string datasetId, string tableId, Table resource, PatchTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
-            PatchTableAsync(GetTableReference(datasetId, tableId), resource, options, cancellationToken);
 
         /// <summary>
         /// Asynchronously patches the specified table with fields in the given resource.

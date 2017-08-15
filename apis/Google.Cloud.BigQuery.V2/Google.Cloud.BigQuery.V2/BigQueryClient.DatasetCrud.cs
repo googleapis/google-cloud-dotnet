@@ -382,21 +382,6 @@ namespace Google.Cloud.BigQuery.V2
 
         #region UpdateDataset
         /// <summary>
-        /// Updates the specified dataset to match the given resource.
-        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="UpdateDataset(DatasetReference, Dataset, UpdateDatasetOptions)"/>.
-        /// </summary>
-        /// <remarks>
-        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
-        /// </remarks>
-        /// <param name="projectId">The project ID. Must not be null.</param>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="resource">The dataset resource representation to use for the update. All updatable fields will be updated.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>The updated dataset.</returns>
-        public virtual BigQueryDataset UpdateDataset(string projectId, string datasetId, Dataset resource, UpdateDatasetOptions options = null) =>
-            UpdateDataset(GetDatasetReference(projectId, datasetId), resource, options);
-
-        /// <summary>
         /// Updates the specified dataset within this client's project to match the given resource.
         /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="UpdateDataset(DatasetReference, Dataset, UpdateDatasetOptions)"/>.
         /// </summary>
@@ -412,6 +397,21 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Updates the specified dataset to match the given resource.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="UpdateDataset(DatasetReference, Dataset, UpdateDatasetOptions)"/>.
+        /// </summary>
+        /// <remarks>
+        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
+        /// </remarks>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="resource">The dataset resource representation to use for the update. All updatable fields will be updated.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The updated dataset.</returns>
+        public virtual BigQueryDataset UpdateDataset(string projectId, string datasetId, Dataset resource, UpdateDatasetOptions options = null) =>
+            UpdateDataset(GetDatasetReference(projectId, datasetId), resource, options);
+
+        /// <summary>
+        /// Updates the specified dataset to match the given resource.
         /// </summary>
         /// <remarks>
         /// If the resource contains an ETag, it is used for optimistic concurrency validation.
@@ -422,23 +422,6 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>The updated dataset.</returns>
         public virtual BigQueryDataset UpdateDataset(DatasetReference datasetReference, Dataset resource, UpdateDatasetOptions options = null) =>
             throw new NotImplementedException();
-
-        /// <summary>
-        /// Asynchronously updates the specified dataset to match the given resource.
-        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="UpdateDatasetAsync(DatasetReference, Dataset, UpdateDatasetOptions, CancellationToken)"/>.
-        /// </summary>
-        /// <remarks>
-        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
-        /// </remarks>
-        /// <param name="projectId">The project ID. Must not be null.</param>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="resource">The dataset resource representation to use for the update. All updatable fields will be updated.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// the updated dataset.</returns>
-        public virtual Task<BigQueryDataset> UpdateDatasetAsync(string projectId, string datasetId, Dataset resource, UpdateDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
-            UpdateDatasetAsync(GetDatasetReference(projectId, datasetId), resource, options, cancellationToken);
 
         /// <summary>
         /// Asynchronously updates the specified dataset within this client's project to match the given resource.
@@ -458,6 +441,23 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Asynchronously updates the specified dataset to match the given resource.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="UpdateDatasetAsync(DatasetReference, Dataset, UpdateDatasetOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <remarks>
+        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
+        /// </remarks>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="resource">The dataset resource representation to use for the update. All updatable fields will be updated.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the updated dataset.</returns>
+        public virtual Task<BigQueryDataset> UpdateDatasetAsync(string projectId, string datasetId, Dataset resource, UpdateDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            UpdateDatasetAsync(GetDatasetReference(projectId, datasetId), resource, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously updates the specified dataset to match the given resource.
         /// </summary>
         /// <remarks>
         /// If the resource contains an ETag, it is used for optimistic concurrency validation.
@@ -474,21 +474,6 @@ namespace Google.Cloud.BigQuery.V2
 
         #region PatchDataset
         /// <summary>
-        /// Patches the specified dataset with fields in the given resource.
-        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="PatchDataset(DatasetReference, Dataset, PatchDatasetOptions)"/>.
-        /// </summary>
-        /// <remarks>
-        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
-        /// </remarks>
-        /// <param name="projectId">The project ID. Must not be null.</param>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="resource">The dataset resource representation to use for the patch. Only fields present in the resource will be updated.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>The updated dataset.</returns>
-        public virtual BigQueryDataset PatchDataset(string projectId, string datasetId, Dataset resource, PatchDatasetOptions options = null) =>
-            PatchDataset(GetDatasetReference(projectId, datasetId), resource, options);
-
-        /// <summary>
         /// Patches the specified dataset within this client's project with fields in the given resource.
         /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="PatchDataset(DatasetReference, Dataset, PatchDatasetOptions)"/>.
         /// </summary>
@@ -504,6 +489,21 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Patches the specified dataset with fields in the given resource.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="PatchDataset(DatasetReference, Dataset, PatchDatasetOptions)"/>.
+        /// </summary>
+        /// <remarks>
+        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
+        /// </remarks>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="resource">The dataset resource representation to use for the patch. Only fields present in the resource will be updated.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The updated dataset.</returns>
+        public virtual BigQueryDataset PatchDataset(string projectId, string datasetId, Dataset resource, PatchDatasetOptions options = null) =>
+            PatchDataset(GetDatasetReference(projectId, datasetId), resource, options);
+
+        /// <summary>
+        /// Patches the specified dataset with fields in the given resource.
         /// </summary>
         /// <remarks>
         /// If the resource contains an ETag, it is used for optimistic concurrency validation.
@@ -514,6 +514,22 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>The updated dataset.</returns>
         public virtual BigQueryDataset PatchDataset(DatasetReference datasetReference, Dataset resource, PatchDatasetOptions options = null) =>
             throw new NotImplementedException();
+
+        /// <summary>
+        /// Asynchronously patches the specified dataset within this client's project with fields in the given resource.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="PatchDatasetAsync(DatasetReference, Dataset, PatchDatasetOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <remarks>
+        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
+        /// </remarks>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="resource">The dataset resource representation to use for the patch. Only fields present in the resource will be updated.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the updated dataset.</returns>
+        public virtual Task<BigQueryDataset> PatchDatasetAsync(string datasetId, Dataset resource, PatchDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            PatchDatasetAsync(GetDatasetReference(datasetId), resource, options, cancellationToken);
 
         /// <summary>
         /// Asynchronously patches the specified dataset with fields in the given resource.
@@ -531,22 +547,6 @@ namespace Google.Cloud.BigQuery.V2
         /// the updated dataset.</returns>
         public virtual Task<BigQueryDataset> PatchDatasetAsync(string projectId, string datasetId, Dataset resource, PatchDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             PatchDatasetAsync(GetDatasetReference(projectId, datasetId), resource, options, cancellationToken);
-
-        /// <summary>
-        /// Asynchronously patches the specified dataset within this client's project with fields in the given resource.
-        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="PatchDatasetAsync(DatasetReference, Dataset, PatchDatasetOptions, CancellationToken)"/>.
-        /// </summary>
-        /// <remarks>
-        /// If the resource contains an ETag, it is used for optimistic concurrency validation.
-        /// </remarks>
-        /// <param name="datasetId">The dataset ID. Must not be null.</param>
-        /// <param name="resource">The dataset resource representation to use for the patch. Only fields present in the resource will be updated.</param>
-        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// the updated dataset.</returns>
-        public virtual Task<BigQueryDataset> PatchDatasetAsync(string datasetId, Dataset resource, PatchDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
-            PatchDatasetAsync(GetDatasetReference(datasetId), resource, options, cancellationToken);
 
         /// <summary>
         /// Asynchronously patches the specified dataset with fields in the given resource.
