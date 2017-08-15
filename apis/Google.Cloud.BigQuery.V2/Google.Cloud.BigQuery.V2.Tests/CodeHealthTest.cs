@@ -22,7 +22,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
         [Fact]
         public void PrivateFields()
         {
-            CodeHealthTester.AssertAllFieldsPrivate(typeof(BigQueryClient));
+            // BigQueryProviderFactory must have a public Instance field to work properly as its loaded and instantiated via reflection.
+            CodeHealthTester.AssertAllFieldsPrivate(typeof(BigQueryClient), new []{ typeof(BigQueryProviderFactory)});
         }
 
         [Fact]
