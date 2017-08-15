@@ -1,0 +1,119 @@
+﻿<File>
+  <Method Name="UploadCsv"
+          TargetType="Table"
+          ReturnType="BigQueryJob">
+    <AdditionalParameters>
+      <Parameter Name="schema" Type="TableSchema" Comment="The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on &lt;paramref name=&quot;options&quot;/>)." />
+      <Parameter Name="input" Type="Stream" Comment="The stream of input data. Must not be null." />
+    </AdditionalParameters>
+
+    <Comments>
+      <summary>
+        Uploads a stream of CSV data to {target}.
+      </summary>
+      <remarks>
+        <para>
+          The schema can come from three places: it can be specified by <paramref name="schema"/>,
+          it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+          If <paramref name="schema"/> is null and the <see cref="UploadCsvOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+          it is expected that the table already exists, and its schema is loaded automatically.
+        </para>
+      </remarks>
+      <returns>A data upload job.</returns>
+    </Comments>
+  </Method>
+
+  <Method Name="UploadJson"
+        RegionLabel="UploadJson(Stream)"
+        TargetType="Table"
+        ReturnType="BigQueryJob">
+    <AdditionalParameters>
+      <Parameter Name="schema" Type="TableSchema" Comment="The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on &lt;paramref name=&quot;options&quot;/>)." />
+      <Parameter Name="input" Type="Stream" Comment="The stream of input data. Must not be null." />
+    </AdditionalParameters>
+
+    <Comments>
+      <summary>
+        Uploads a stream of JSON data to {target}.
+      </summary>
+      <remarks>
+        <para>
+          The schema can come from three places: it can be specified by <paramref name="schema"/>,
+          it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+          If <paramref name="schema"/> is null and the <see cref="UploadJsonOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+          it is expected that the table already exists, and its schema is loaded automatically.
+        </para>
+      </remarks>
+      <returns>A data upload job.</returns>
+    </Comments>
+  </Method>
+
+  <Method Name="UploadJson"
+      RegionLabel="UploadJson(strings)"
+      TargetType="Table"
+      ReturnType="BigQueryJob">
+    <AdditionalParameters>
+      <Parameter Name="schema" Type="TableSchema" Comment="The schema of the data, or null for the schema to be loaded from the destination table or inferred (based on &lt;paramref name=&quot;options&quot;/>)." />
+      <Parameter Name="rows" Type="IEnumerable&lt;string&gt;" Comment="The sequence of JSON strings to upload. Must not be null, and must not contain null elements." />
+    </AdditionalParameters>
+
+    <Comments>
+      <summary>
+        Uploads a sequence of JSON rows to {target}.
+      </summary>
+      <remarks>
+        <para>
+          Each element of <paramref name="rows"/> is converted into a single line of text by replacing carriage returns and line
+          feeds with spaces. This is safe as they cannot exist within well-formed JSON keys or values, and simply means that the
+          original JSON can be formatted however you choose.
+        </para>
+        <para>
+          The schema can come from three places: it can be specified by <paramref name="schema"/>,
+          it can be retrieved from the destination table if that already exists, or it can be inferred by the server.
+          If <paramref name="schema"/> is null and the <see cref="UploadJsonOptions.Autodetect"/> of <paramref name="options"/> is not set to true,
+          it is expected that the table already exists, and its schema is loaded automatically.
+        </para>
+      </remarks>
+      <returns>A data upload job.</returns>
+    </Comments>
+  </Method>
+
+  <Method Name="UploadAvro"
+        TargetType="Table"
+        ReturnType="BigQueryJob">
+    <AdditionalParameters>
+      <Parameter Name="schema" Type="TableSchema" Comment="The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used." />
+      <Parameter Name="input" Type="Stream" Comment="The stream of input data. Must not be null." />
+    </AdditionalParameters>
+
+    <Comments>
+      <summary>
+        Uploads a stream of Avro data to {target}.
+      </summary>
+      <returns>A data upload job.</returns>
+    </Comments>
+  </Method>
+  
+  <!-- 
+    - InsertRow and InsertRows(array) can't be generated yet.
+    - InsertRow delegates to InsertRows.
+    - InsertRows(array) has a parameter array, so no options.
+    -->
+
+  <Method Name="InsertRows"
+      RegionLabel="InsertRows(sequence)"
+      TargetType="Table"
+      ReturnType="void">
+
+    <Options Type="InsertOptions" />
+    <AdditionalParameters>
+      <Parameter Name="rows" Type="IEnumerable&lt;BigQueryInsertRow&gt;" Comment="The data to insert. Must not be null, or contain null entries." />
+    </AdditionalParameters>
+
+    <Comments>
+      <summary>
+        Inserts all the given rows of data into {target}.
+      </summary>
+    </Comments>
+  </Method>
+</File>
