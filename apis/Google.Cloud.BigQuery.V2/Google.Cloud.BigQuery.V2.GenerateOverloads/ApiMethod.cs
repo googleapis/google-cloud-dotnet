@@ -31,6 +31,8 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
         private static readonly Parameter JobReferenceParameter = new Parameter("JobReference", "jobReference", "A fully-qualified identifier for the job. Must not be null.", null);
         private static readonly Parameter CancellationTokenParameter = new Parameter("CancellationToken", "cancellationToken", "The token to monitor for cancellation requests.", "default(CancellationToken)");
 
+        private static readonly Parameter[] IdParameters = { ProjectIdParameter, DatasetIdParameter, TableIdParameter, JobIdParameter };
+
         private static readonly Dictionary<TargetType, Parameter[]> TargetParametersByType = new Dictionary<TargetType, Parameter[]>
         {
             { TargetType.Dataset, new[] { ProjectIdParameter, DatasetIdParameter } },
@@ -184,7 +186,8 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
             XElement element = Comments.Element("summary");
             string text = element.ToString();
             string targetTypeDescription = TargetType.ToString().ToLowerInvariant();
-            string target = parameters.Contains(ProjectIdParameter)
+            // We only want to say "within this client's project" where we're using string IDs (not references) and there isn't a project ID parameter.
+            string target = (!parameters.Contains(ProjectIdParameter) && IdParameters.Intersect(parameters).Any())
                 ? $"the specified {targetTypeDescription} within this client's project"
                 : $"the specified {targetTypeDescription}";
             text = text.Replace("{target}", target);
