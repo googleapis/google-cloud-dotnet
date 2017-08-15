@@ -1,0 +1,22 @@
+﻿<File>
+
+  <!--
+   - Only GetQueryResults can be generated at the moment.
+   -->
+  
+  <Method Name="GetQueryResults"
+          TargetType="Job"
+          ReturnType="BigQueryResults">
+    <Comments>
+      <summary>
+        Retrieves the results of {target}, which must be a query job.
+      </summary>
+      <remarks>
+        <para>
+        This operation will only complete when the specified query has completed.
+        </para>
+      </remarks>
+      <returns>The results of the query.</returns>
+    </Comments>
+  </Method>
+</File>
