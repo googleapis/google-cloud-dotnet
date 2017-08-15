@@ -74,7 +74,7 @@ namespace Google.Cloud.BigQuery.V2
     /// Struct parameters are currently not supported.
     /// </para>
     /// </remarks>
-    public sealed class BigQueryParameter
+    public sealed partial class BigQueryParameter
     {
         private static HashSet<Type> s_validSingleTypes = new HashSet<Type>
         {
@@ -144,7 +144,7 @@ namespace Google.Cloud.BigQuery.V2
         /// The value of the parameter. If this is null, the type of the parameter must be specified
         /// explicitly.
         /// </summary>
-        public object Value
+        public override object Value
         {
             get { return _value; }
             set

@@ -21,7 +21,7 @@ namespace Google.Cloud.BigQuery.V2
     /// <summary>
     /// A collection of <see cref="BigQueryParameter"/> elements, as part of a <see cref="BigQueryCommand"/>.
     /// </summary>
-    public sealed class BigQueryParameterCollection : IReadOnlyList<BigQueryParameter>
+    public sealed partial class BigQueryParameterCollection : IReadOnlyList<BigQueryParameter>
     {
         private readonly List<BigQueryParameter> _parameters = new List<BigQueryParameter>();
 
@@ -75,16 +75,16 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public void Clear() => _parameters.Clear();
+        public override void Clear() => _parameters.Clear();
 
         /// <inheritdoc />
-        public int Count => _parameters.Count;
+        public override int Count => _parameters.Count;
 
         /// <inheritdoc />
-        public BigQueryParameter this[int index] => _parameters[index];
+        public new BigQueryParameter this[int index] => _parameters[index];
 
         /// <inheritdoc />
-        public IEnumerator<BigQueryParameter> GetEnumerator() => _parameters.GetEnumerator();
+        IEnumerator<BigQueryParameter> IEnumerable<BigQueryParameter>.GetEnumerator() => _parameters.GetEnumerator();
 
         /// <inheritdoc />
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
