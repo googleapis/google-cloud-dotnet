@@ -7,3 +7,4 @@ dotnet run -- Methods/DatasetLabels.xml $CLIENT.DatasetLabels.cs
 dotnet run -- Methods/InsertData.xml $CLIENT.InsertData.cs
 dotnet run -- Methods/JobCrud.xml $CLIENT.JobCrud.cs
 dotnet run -- Methods/Queries.xml $CLIENT.Queries.cs
+dotnet run -- Methods/TableCrud.xml $CLIENT.TableCrud.cs
