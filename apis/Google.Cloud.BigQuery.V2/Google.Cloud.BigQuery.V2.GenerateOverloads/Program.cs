@@ -52,11 +52,14 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
 
             try
             {
-                XDocument methodDoc = XDocument.Load(args[0]);
-                ApiMethod method = new ApiMethod(methodDoc);
-                var existingCode = File.ReadLines(args[1]);
-                var newCode = ModifyCode(method, existingCode);
-                File.WriteAllLines(args[1], newCode);
+                XDocument document = XDocument.Load(args[0]);
+                var code = File.ReadLines(args[1]);
+                foreach (var methodElement in document.Root.Elements("Method"))
+                {
+                    ApiMethod method = new ApiMethod(methodElement);
+                    code = ModifyCode(method, code);
+                }
+                File.WriteAllLines(args[1], code);
                 return 0;
             }
             catch (Exception e)
