@@ -191,6 +191,11 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
                 ? $"the specified {targetTypeDescription} within this client's project"
                 : $"the specified {targetTypeDescription}";
             text = text.Replace("{target}", target);
+            if (async)
+            {
+                text = text.Substring(text.IndexOf(">") + 1).Trim();
+                text = "<summary>\r\nAsynchronously " + LowerFirstLetter(text);
+            }
             if (delegating)
             {
                 var implementationParameters = GetImplementationMethodParameters(async);
