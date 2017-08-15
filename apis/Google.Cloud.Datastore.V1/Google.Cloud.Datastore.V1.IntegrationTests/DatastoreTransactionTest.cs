@@ -31,7 +31,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         }
 
         [Fact]
-        private void SyncQueries_ImplicityUsePartition()
+        public void SyncQueries_ImplicityUsePartition()
         {
             var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
             var parentKey = PrepareQueryTest(db);
@@ -56,7 +56,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         }
 
         [Fact]
-        private async Task AsyncQueries_ImplicityUsePartition()
+        public async Task AsyncQueries_ImplicityUsePartition()
         {
             var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
             var parentKey = PrepareQueryTest(db);
