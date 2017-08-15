@@ -1,0 +1,82 @@
+﻿<File>
+  <Method Name="GetDataset"
+          TargetType="Dataset"
+          ReturnType="BigQueryDataset">
+    <Comments>
+      <summary>
+        Retrieves {target}.
+      </summary>
+      <returns>The requested dataset.</returns>
+    </Comments>
+  </Method>
+
+  ﻿<Method Name="CreateDataset"
+       TargetType="Dataset"
+       ReturnType="BigQueryDataset">
+    <Comments>
+      <summary>
+        Creates {target}.
+      </summary>
+      <returns>The created dataset.</returns>
+    </Comments>
+  </Method>
+
+  ﻿<Method Name="GetOrCreateDataset"
+      TargetType="Dataset"
+      ReturnType="BigQueryDataset">
+    <AdditionalParameters>
+      <Parameter Type="GetDatasetOptions" Name="getOptions" Comment="The options for the &quot;get&quot; operation. May be null, in which case defaults will be supplied." DefaultValue="null" />
+    </AdditionalParameters>
+    <Options Type="CreateDatasetOptions" Name="createOptions" Comment="The options for the &quot;create&quot; operation. May be null, in which case defaults will be supplied." />
+    <Comments>
+      <summary>
+        Attempts to fetch {target}, creating it if it doesn't exist.
+      </summary>
+      <returns>The existing or new dataset.</returns>
+    </Comments>
+  </Method>
+
+  ﻿<Method Name="DeleteDataset"
+    TargetType="Dataset"
+    ReturnType="void">
+    <Comments>
+      <summary>
+        Deletes {target}.
+      </summary>
+    </Comments>
+  </Method>
+
+  ﻿<Method Name="UpdateDataset"
+    TargetType="Dataset"
+    ReturnType="BigQueryDataset">
+    <AdditionalParameters>
+      <Parameter Name="resource" Type="Dataset" Comment="The dataset resource representation to use for the update. All updatable fields will be updated." />
+    </AdditionalParameters>
+    <Comments>
+      <summary>
+        Updates {target} to match the specified resource.
+      </summary>
+      <remarks>
+        If the resource contains an ETag, it is used for optimistic concurrency validation.
+      </remarks>
+      <returns>The updated dataset.</returns>
+    </Comments>
+  </Method>
+
+  ﻿<Method Name="PatchDataset"
+     TargetType="Dataset"
+     ReturnType="BigQueryDataset">
+    <AdditionalParameters>
+      <Parameter Name="resource" Type="Dataset" Comment="The dataset resource representation to use for the patch. Only fields present in the resource will be updated." />
+    </AdditionalParameters>
+    <Comments>
+      <summary>
+        Patches {target} with fields in the given resource.
+      </summary>
+      <remarks>
+        If the resource contains an ETag, it is used for optimistic concurrency validation.
+      </remarks>
+      <returns>The updated dataset.</returns>
+    </Comments>
+  </Method>
+</File>

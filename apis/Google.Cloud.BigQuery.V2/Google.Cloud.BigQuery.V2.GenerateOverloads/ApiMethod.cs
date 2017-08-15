@@ -57,22 +57,21 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
         public XElement Comments { get; }
         public Parameter OptionsParameter { get; }
 
-        public ApiMethod(XDocument document)
+        public ApiMethod(XElement element)
         {
-            var root = document.Root;
             // Note: use of Value property for all mandatory elements/attributes; casting for optional ones.
-            Name = root.Attribute("Name").Value;
-            RegionLabel = (string)root.Attribute("RegionLabel") ?? Name;
-            string targetType = root.Attribute("TargetType").Value;
-            ReturnType = root.Attribute("ReturnType").Value;
-            AdditionalParameters = root.Elements("AdditionalParameters").Elements("Parameter").Select(x => new Parameter(x)).ToList();
-            var options = root.Element("Options");
+            Name = element.Attribute("Name").Value;
+            RegionLabel = (string)element.Attribute("RegionLabel") ?? Name;
+            string targetType = element.Attribute("TargetType").Value;
+            ReturnType = element.Attribute("ReturnType").Value;
+            AdditionalParameters = element.Elements("AdditionalParameters").Elements("Parameter").Select(x => new Parameter(x)).ToList();
+            var options = element.Element("Options");
             OptionsParameter = new Parameter(
                 (string)options?.Attribute("Type") ?? $"{Name}Options",
                 (string)options?.Attribute("Name") ?? "options",
                 (string)options?.Attribute("Comment") ?? "The options for the operation. May be null, in which case defaults will be supplied.",
                 "null");
-            Comments = root.Element("Comments");
+            Comments = element.Element("Comments");
 
             TargetType = targetType == "" ? TargetType.None : (TargetType)Enum.Parse(typeof(TargetType), targetType);
             if (TargetType == TargetType.None)
@@ -223,7 +222,7 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
         {
             if (ReturnType == "void")
             {
-                return async ? new[] { "A task representing the asynchronous operation." } : new string[0];
+                return async ? new[] { "<returns>A task representing the asynchronous operation.</returns>" } : new string[0];
             }
             XElement element = Comments.Element("returns");
             string text = element.ToString().Trim();
