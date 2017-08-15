@@ -80,7 +80,7 @@ namespace Google.Cloud.BigQuery.V2
             throw new NotImplementedException();
         
         /// <summary>
-        /// Sets the value for a single label on a dataset. The label will be added if it does
+        /// Asynchronously sets the value for a single label on a dataset. The label will be added if it does
         /// not exist, or updated if it already exists.
         /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="SetDatasetLabelAsync(DatasetReference, string, string, ModifyLabelsOptions, CancellationToken)"/>.
         /// </summary>
@@ -100,7 +100,7 @@ namespace Google.Cloud.BigQuery.V2
             SetDatasetLabelAsync(GetDatasetReference(datasetId), labelName, labelValue, options, cancellationToken);
         
         /// <summary>
-        /// Sets the value for a single label on a dataset. The label will be added if it does
+        /// Asynchronously sets the value for a single label on a dataset. The label will be added if it does
         /// not exist, or updated if it already exists.
         /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="SetDatasetLabelAsync(DatasetReference, string, string, ModifyLabelsOptions, CancellationToken)"/>.
         /// </summary>
@@ -121,7 +121,7 @@ namespace Google.Cloud.BigQuery.V2
             SetDatasetLabelAsync(GetDatasetReference(projectId, datasetId), labelName, labelValue, options, cancellationToken);
         
         /// <summary>
-        /// Sets the value for a single label on a dataset. The label will be added if it does
+        /// Asynchronously sets the value for a single label on a dataset. The label will be added if it does
         /// not exist, or updated if it already exists.
         /// </summary>
         /// <remarks>
@@ -178,7 +178,7 @@ namespace Google.Cloud.BigQuery.V2
             throw new NotImplementedException();
         
         /// <summary>
-        /// Removes a label from a dataset, if it previously existed. It is not an error to
+        /// Asynchronously removes a label from a dataset, if it previously existed. It is not an error to
         /// attempt to remove a label that doesn't already exist.
         /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="RemoveDatasetLabelAsync(DatasetReference, string, ModifyLabelsOptions, CancellationToken)"/>.
         /// </summary>
@@ -192,7 +192,7 @@ namespace Google.Cloud.BigQuery.V2
             RemoveDatasetLabelAsync(GetDatasetReference(datasetId), labelName, options, cancellationToken);
         
         /// <summary>
-        /// Removes a label from a dataset, if it previously existed. It is not an error to
+        /// Asynchronously removes a label from a dataset, if it previously existed. It is not an error to
         /// attempt to remove a label that doesn't already exist.
         /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="RemoveDatasetLabelAsync(DatasetReference, string, ModifyLabelsOptions, CancellationToken)"/>.
         /// </summary>
@@ -207,7 +207,7 @@ namespace Google.Cloud.BigQuery.V2
             RemoveDatasetLabelAsync(GetDatasetReference(projectId, datasetId), labelName, options, cancellationToken);
         
         /// <summary>
-        /// Removes a label from a dataset, if it previously existed. It is not an error to
+        /// Asynchronously removes a label from a dataset, if it previously existed. It is not an error to
         /// attempt to remove a label that doesn't already exist.
         /// </summary>
         /// <param name="datasetReference">A fully-qualified identifier for the dataset. Must not be null.</param>
@@ -252,7 +252,7 @@ namespace Google.Cloud.BigQuery.V2
             throw new NotImplementedException();
         
         /// <summary>
-        /// Clears all labels on the specified dataset within this client's project.
+        /// Asynchronously clears all labels on the specified dataset within this client's project.
         /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="ClearDatasetLabelsAsync(DatasetReference, ModifyLabelsOptions, CancellationToken)"/>.
         /// </summary>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
@@ -264,7 +264,7 @@ namespace Google.Cloud.BigQuery.V2
             ClearDatasetLabelsAsync(GetDatasetReference(datasetId), options, cancellationToken);
         
         /// <summary>
-        /// Clears all labels on the specified dataset.
+        /// Asynchronously clears all labels on the specified dataset.
         /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="ClearDatasetLabelsAsync(DatasetReference, ModifyLabelsOptions, CancellationToken)"/>.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be null.</param>
@@ -277,7 +277,7 @@ namespace Google.Cloud.BigQuery.V2
             ClearDatasetLabelsAsync(GetDatasetReference(projectId, datasetId), options, cancellationToken);
         
         /// <summary>
-        /// Clears all labels on the specified dataset.
+        /// Asynchronously clears all labels on the specified dataset.
         /// </summary>
         /// <param name="datasetReference">A fully-qualified identifier for the dataset. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
@@ -350,7 +350,7 @@ namespace Google.Cloud.BigQuery.V2
             throw new NotImplementedException();
         
         /// <summary>
-        /// Sets or removes one or more labels on the specified dataset within this client's project.
+        /// Asynchronously sets or removes one or more labels on the specified dataset within this client's project.
         /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="ModifyDatasetLabelsAsync(DatasetReference, IDictionary{string, string}, ModifyLabelsOptions, CancellationToken)"/>.
         /// </summary>
         /// <remarks>
@@ -371,7 +371,7 @@ namespace Google.Cloud.BigQuery.V2
             ModifyDatasetLabelsAsync(GetDatasetReference(datasetId), labels, options, cancellationToken);
         
         /// <summary>
-        /// Sets or removes one or more labels on the specified dataset.
+        /// Asynchronously sets or removes one or more labels on the specified dataset.
         /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="ModifyDatasetLabelsAsync(DatasetReference, IDictionary{string, string}, ModifyLabelsOptions, CancellationToken)"/>.
         /// </summary>
         /// <remarks>
@@ -393,7 +393,7 @@ namespace Google.Cloud.BigQuery.V2
             ModifyDatasetLabelsAsync(GetDatasetReference(projectId, datasetId), labels, options, cancellationToken);
         
         /// <summary>
-        /// Sets or removes one or more labels on the specified dataset.
+        /// Asynchronously sets or removes one or more labels on the specified dataset.
         /// </summary>
         /// <remarks>
         /// Each entry in <paramref name="labels" /> is treated as a label to set or remove. If the value is null,
