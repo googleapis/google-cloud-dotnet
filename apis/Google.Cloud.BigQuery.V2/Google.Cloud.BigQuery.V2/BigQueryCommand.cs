@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Data.Common;
 using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace Google.Cloud.BigQuery.V2
     /// A SQL query (or DML command) to be sent to BigQuery, optionally
     /// including parameters.
     /// </summary>
-    public sealed class BigQueryCommand
+    public sealed partial class BigQueryCommand
     {
         /// <summary>
         /// The SQL of the command. This must not be null by the time
@@ -44,7 +45,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// The parameters used within this command.
         /// </summary>
-        public BigQueryParameterCollection Parameters { get; } = new BigQueryParameterCollection();
+        public new BigQueryParameterCollection Parameters { get; } = new BigQueryParameterCollection();
 
         /// <summary>
         /// Constructs an instance with no SQL set yet.
