@@ -74,7 +74,7 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// </remarks>
     public sealed class CloudTrace : IDisposable
     {
-        private readonly IManagedTracerFactory _tracerFactory;
+        private readonly Func<TraceHeaderContext, IManagedTracer> _tracerFactory;
 
         private readonly IConsumer<TraceProto> _consumer;
 
@@ -85,8 +85,8 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// for creating spans for a trace as well as adding meta data to them.
         /// This <see cref="IManagedTracer"/> is a singleton.
         /// </summary>
-        public static readonly IManagedTracer Tracer =
-            new DelegatingTracer(() => ContextInstanceManager.Get<IManagedTracer>() ?? NullManagedTracer.Instance);
+        public static readonly IManagedTracer Tracer = ManagedTracer.CreateDelegatingTracer(
+            () => ContextInstanceManager.Get<IManagedTracer>() ?? NullManagedTracer.Instance);
 
         /// <summary>
         /// Creates a <see cref="TraceHeaderPropagatingHandler"/> to propagate trace headers
@@ -117,11 +117,8 @@ namespace Google.Cloud.Diagnostics.AspNet
             options = options ?? TraceOptions.Create(); 
             _traceFallbackPredicate = traceFallbackPredicate ?? TraceDecisionPredicate.Default;
 
-            _consumer = ConsumerFactory<TraceProto>.GetConsumer(
-                new GrpcTraceConsumer(client), MessageSizer<TraceProto>.GetSize, options.BufferOptions, options.RetryOptions);
-
-            _tracerFactory = new ManagedTracerFactory(projectId, _consumer,
-                RateLimitingTraceOptionsFactory.Create(options), TraceIdFactory.Create());
+            _consumer = ManagedTracer.CreateConsumer(client, options);
+            _tracerFactory = ManagedTracer.CreateTracerFactory(projectId, _consumer, options); 
         }
 
         /// <summary>
@@ -161,7 +158,7 @@ namespace Google.Cloud.Diagnostics.AspNet
             var headerContext = TraceHeaderContext.FromHeader(
                 header, () => _traceFallbackPredicate?.ShouldTrace(request));
 
-            var tracer = _tracerFactory.CreateTracer(headerContext);
+            var tracer = _tracerFactory(headerContext);
             if (tracer.GetCurrentTraceId() == null)
             {
                 return;

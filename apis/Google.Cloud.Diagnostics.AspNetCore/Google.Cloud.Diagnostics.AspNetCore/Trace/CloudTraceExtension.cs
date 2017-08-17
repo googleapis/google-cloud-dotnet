@@ -111,16 +111,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             var traceFallbackPredicate = serviceOptions.TraceFallbackPredicate ?? TraceDecisionPredicate.Default;
             var projectId = CommonUtils.GetAndCheckProjectId(serviceOptions.ProjectId);
 
-            var consumer = ConsumerFactory<TraceProto>.GetConsumer(
-                 new GrpcTraceConsumer(client), MessageSizer<TraceProto>.GetSize,
-                 options.BufferOptions, options.RetryOptions);
-
-            var tracerFactory = new ManagedTracerFactory(projectId, consumer,
-                RateLimitingTraceOptionsFactory.Create(options), TraceIdFactory.Create());
+            var consumer = ManagedTracer.CreateConsumer(client, options);
+            var tracerFactory = ManagedTracer.CreateTracerFactory(projectId, consumer, options);
 
             services.AddScoped(CreateTraceHeaderContext);
             
-            services.AddSingleton<IManagedTracerFactory>(tracerFactory);
+            services.AddSingleton<Func<TraceHeaderContext, IManagedTracer>>(tracerFactory);
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             services.AddSingleton(CreateManagedTracer);
@@ -159,8 +155,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         internal static IManagedTracer CreateManagedTracer(IServiceProvider provider)
         {
-            var accessor = provider.GetServiceCheckNotNull<IHttpContextAccessor>();
-            return new DelegatingTracer(() => ContextTracerManager.GetCurrentTracer(accessor));
+            return ManagedTracer.CreateDelegatingTracer(() =>
+            {
+                var accessor = provider.GetServiceCheckNotNull<IHttpContextAccessor>();
+                return ContextTracerManager.GetCurrentTracer(accessor);
+            });
         }
     }
 }

@@ -17,7 +17,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// <summary>
     /// Wraps an HTTP context.
     /// </summary>
-    internal interface IContextWrapper
+    public interface IContextWrapper
     {
         /// <summary>
         /// Gets the HTTP method.  GET, POST, etc. Can be null.

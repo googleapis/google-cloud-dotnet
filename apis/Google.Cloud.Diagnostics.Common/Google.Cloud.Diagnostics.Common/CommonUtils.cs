@@ -20,7 +20,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.Common
 {
-    internal static class CommonUtils
+    /// <summary>
+    /// Shared common functions.
+    /// </summary>
+    public static class CommonUtils
     {
         /// <summary>The name of the this agent.</summary>
         internal const string AgentName = "google-cloud-csharp-diagnostics";
@@ -51,7 +54,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="monitoredResource">Optional, The monitored resource. If unset the monitored resource will
         ///     be auto detected.</param>
         /// <returns>The Google Cloud project ID.</returns>
-        internal static string GetAndCheckProjectId(string projectId, MonitoredResource monitoredResource = null)
+        public static string GetAndCheckProjectId(string projectId, MonitoredResource monitoredResource = null)
         {
             if (projectId != null)
             {

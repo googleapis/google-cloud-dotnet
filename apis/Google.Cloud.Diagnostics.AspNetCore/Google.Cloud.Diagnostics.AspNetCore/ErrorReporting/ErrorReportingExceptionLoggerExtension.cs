@@ -98,7 +98,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             var version = GaxPreconditions.CheckNotNull(serviceOptions.Version, nameof(serviceOptions.Version));
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddSingleton(ErrorReportingContextExceptionLogger.Create(
+            services.AddSingleton(ContextExceptionLogger.Create(
                 serviceOptions.ProjectId, serviceName, version, serviceOptions.Options));
             services.AddSingleton(CreateExceptionLogger);
         }
