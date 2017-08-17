@@ -22,6 +22,7 @@ using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
+using Google.Api.Gax.Grpc;
 
 // ReSharper disable PrivateFieldCanBeConvertedToLocalVariable
 // ReSharper disable NotAccessedField.Local
@@ -85,7 +86,7 @@ namespace Google.Cloud.Spanner.V1 {
             }
 
             _currentCall = _spannerClient.ExecuteSqlStream(_request,
-                _spannerClient.Settings.ExecuteSqlStreamSettings.WithCallExpiration(
+                _spannerClient.Settings.ExecuteSqlStreamSettings.WithExpiration(
                     _spannerClient.Settings.ConvertTimeoutToExpiration(_timeoutSeconds)));
             return _currentCall.ResponseHeadersAsync.WithSessionChecking(() => _session);
         }

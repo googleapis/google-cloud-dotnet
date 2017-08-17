@@ -21,6 +21,7 @@ using Google.Api.Gax;
 using Google.Cloud.Spanner.V1.Internal;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
+using Google.Api.Gax.Grpc;
 
 namespace Google.Cloud.Spanner.V1
 {
@@ -157,7 +158,7 @@ namespace Google.Cloud.Spanner.V1
         {
             return RunFinalMethodAsync(transaction, session, info => info.SpannerClient.CommitAsync(
                             session.SessionName, info.ActiveTransaction.GetTransactionId(), mutations,
-                            info.SpannerClient.Settings.CommitSettings.WithCallExpiration(info.SpannerClient.Settings.ConvertTimeoutToExpiration(timeoutSeconds)))
+                            info.SpannerClient.Settings.CommitSettings.WithExpiration(info.SpannerClient.Settings.ConvertTimeoutToExpiration(timeoutSeconds)))
                         .WithSessionChecking(() => session));
         }
 
@@ -177,7 +178,7 @@ namespace Google.Cloud.Spanner.V1
                         .RollbackAsync(
                             session.GetSessionName(),
                             info.ActiveTransaction.GetTransactionId(),
-                            info.SpannerClient.Settings.RollbackSettings.WithCallExpiration(
+                            info.SpannerClient.Settings.RollbackSettings.WithExpiration(
                                 info.SpannerClient.Settings.ConvertTimeoutToExpiration(timeoutSeconds)))
                         .WithSessionChecking(() => session).ConfigureAwait(false);
                     return true;
