@@ -103,6 +103,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var fetched = client.GetDataset(id);
             Assert.Equal("Description2", fetched.Resource.Description);
             Assert.Equal("FriendlyName2", fetched.Resource.FriendlyName);
+            Assert.NotEqual(original.Resource.ETag, updated.Resource.ETag);
+            Assert.Equal(fetched.Resource.ETag, updated.Resource.ETag);
         }
 
         [Fact(Skip = "Known etag issue tracked internally")]
@@ -143,6 +145,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var fetched = client.GetDataset(id);
             Assert.Equal("Description2", fetched.Resource.Description);
             Assert.Equal("FriendlyName1", fetched.Resource.FriendlyName);
+            Assert.Equal(fetched.Resource.ETag, patched.Resource.ETag);
         }
 
         [Fact]
@@ -217,6 +220,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var fetched = await client.GetDatasetAsync(id);
             Assert.Equal("Description2", fetched.Resource.Description);
             Assert.Equal("FriendlyName2", fetched.Resource.FriendlyName);
+            Assert.NotEqual(original.Resource.ETag, updated.Resource.ETag);
+            Assert.Equal(fetched.Resource.ETag, updated.Resource.ETag);
         }
 
         [Fact(Skip = "Known etag issue tracked internally")]
@@ -257,6 +262,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var fetched = await client.GetDatasetAsync(id);
             Assert.Equal("Description2", fetched.Resource.Description);
             Assert.Equal("FriendlyName1", fetched.Resource.FriendlyName);
+            Assert.Equal(fetched.Resource.ETag, patched.Resource.ETag);
         }
 
         [Fact]
