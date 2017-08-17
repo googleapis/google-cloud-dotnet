@@ -22,7 +22,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.0-beta4" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.Gax.Grpc" Version="2.1.0-beta01" />
+    <PackageReference Include="Google.Api.Gax.Grpc" Version="2.1.0-beta02" />
     <ProjectReference Include="..\..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj" />
     <PackageReference Include="Grpc.Core" Version="1.4.0" PrivateAssets="None" />
     <PackageReference Include="SourceLink.Create.CommandLine" Version="2.1.2" PrivateAssets="All" />

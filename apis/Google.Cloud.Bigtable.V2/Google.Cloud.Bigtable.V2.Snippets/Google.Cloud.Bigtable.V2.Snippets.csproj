@@ -11,7 +11,7 @@
     <NoWarn>1701;1702;1705;4014</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Google.Api.Gax.Grpc.Testing" Version="2.1.0-beta01" />
+    <PackageReference Include="Google.Api.Gax.Grpc.Testing" Version="2.1.0-beta02" />
     <ProjectReference Include="..\Google.Cloud.Bigtable.V2\Google.Cloud.Bigtable.V2.csproj" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
