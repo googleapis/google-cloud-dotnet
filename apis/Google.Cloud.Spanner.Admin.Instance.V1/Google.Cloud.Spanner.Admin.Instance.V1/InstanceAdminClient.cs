@@ -55,12 +55,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             ListInstancesSettings = existing.ListInstancesSettings;
             GetInstanceSettings = existing.GetInstanceSettings;
             CreateInstanceSettings = existing.CreateInstanceSettings;
+            CreateInstanceOperationsSettings = existing.CreateInstanceOperationsSettings?.Clone();
             UpdateInstanceSettings = existing.UpdateInstanceSettings;
+            UpdateInstanceOperationsSettings = existing.UpdateInstanceOperationsSettings?.Clone();
             DeleteInstanceSettings = existing.DeleteInstanceSettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
-            LongRunningOperationsSettings = existing.LongRunningOperationsSettings?.Clone();
             OnCopy(existing);
         }
 
@@ -280,6 +281,27 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             )));
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>InstanceAdminClient.CreateInstance</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45000 milliseconds</description></item>
+        /// <item><description>Total timeout: 86400000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public OperationsSettings CreateInstanceOperationsSettings { get; set; } = new OperationsSettings
+        {
+            DefaultPollSettings = new PollSettings(
+                Expiration.FromTimeout(TimeSpan.FromMilliseconds(86400000L)),
+                TimeSpan.FromMilliseconds(20000L),
+                1.5,
+                TimeSpan.FromMilliseconds(45000L))
+        };
+
+        /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <c>InstanceAdminClient.UpdateInstance</c> and <c>InstanceAdminClient.UpdateInstanceAsync</c>.
         /// </summary>
@@ -307,6 +329,27 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
                 totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstanceAdminClient.UpdateInstance</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45000 milliseconds</description></item>
+        /// <item><description>Total timeout: 86400000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public OperationsSettings UpdateInstanceOperationsSettings { get; set; } = new OperationsSettings
+        {
+            DefaultPollSettings = new PollSettings(
+                Expiration.FromTimeout(TimeSpan.FromMilliseconds(86400000L)),
+                TimeSpan.FromMilliseconds(20000L),
+                1.5,
+                TimeSpan.FromMilliseconds(45000L))
+        };
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
@@ -427,11 +470,6 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             )));
 
         /// <summary>
-        /// Settings used for long running operations.
-        /// </summary>
-        public OperationsSettings LongRunningOperationsSettings { get; set; }
-
-        /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
         /// <returns>A deep clone of this <see cref="InstanceAdminSettings"/> object.</returns>
@@ -528,14 +566,6 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The underlying gRPC InstanceAdmin client.
         /// </summary>
         public virtual InstanceAdmin.InstanceAdminClient GrpcClient
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        /// <summary>
-        /// The client for long-running operations.
-        /// </summary>
-        public virtual OperationsClient LongRunningOperationsClient
         {
             get { throw new NotImplementedException(); }
         }
@@ -1219,7 +1249,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             string operationName,
             CallSettings callSettings = null) => Operation<Instance, CreateInstanceMetadata>.PollOnceFromNameAsync(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
-                LongRunningOperationsClient,
+                CreateInstanceOperationsClient,
                 callSettings);
 
         /// <summary>
@@ -1275,6 +1305,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         }
 
         /// <summary>
+        /// The long-running operations client for <c>CreateInstance</c>.
+        /// </summary>
+        public virtual OperationsClient CreateInstanceOperationsClient
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        /// <summary>
         /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateInstance</c>.
         /// </summary>
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
@@ -1284,7 +1322,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             string operationName,
             CallSettings callSettings = null) => Operation<Instance, CreateInstanceMetadata>.PollOnceFromName(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
-                LongRunningOperationsClient,
+                CreateInstanceOperationsClient,
                 callSettings);
 
         /// <summary>
@@ -1559,7 +1597,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             string operationName,
             CallSettings callSettings = null) => Operation<Instance, UpdateInstanceMetadata>.PollOnceFromNameAsync(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
-                LongRunningOperationsClient,
+                UpdateInstanceOperationsClient,
                 callSettings);
 
         /// <summary>
@@ -1621,6 +1659,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         }
 
         /// <summary>
+        /// The long-running operations client for <c>UpdateInstance</c>.
+        /// </summary>
+        public virtual OperationsClient UpdateInstanceOperationsClient
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        /// <summary>
         /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateInstance</c>.
         /// </summary>
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
@@ -1630,7 +1676,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             string operationName,
             CallSettings callSettings = null) => Operation<Instance, UpdateInstanceMetadata>.PollOnceFromName(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
-                LongRunningOperationsClient,
+                UpdateInstanceOperationsClient,
                 callSettings);
 
         /// <summary>
@@ -2236,9 +2282,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         {
             GrpcClient = grpcClient;
             InstanceAdminSettings effectiveSettings = settings ?? InstanceAdminSettings.GetDefault();
-            LongRunningOperationsClient = new OperationsClientImpl(
-                grpcClient.CreateOperationsClient(), effectiveSettings.LongRunningOperationsSettings);
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            CreateInstanceOperationsClient = new OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstanceOperationsSettings);
+            UpdateInstanceOperationsClient = new OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.UpdateInstanceOperationsSettings);
             _callListInstanceConfigs = clientHelper.BuildApiCall<ListInstanceConfigsRequest, ListInstanceConfigsResponse>(
                 GrpcClient.ListInstanceConfigsAsync, GrpcClient.ListInstanceConfigs, effectiveSettings.ListInstanceConfigsSettings);
             _callGetInstanceConfig = clientHelper.BuildApiCall<GetInstanceConfigRequest, InstanceConfig>(
@@ -2268,11 +2316,6 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The underlying gRPC InstanceAdmin client.
         /// </summary>
         public override InstanceAdmin.InstanceAdminClient GrpcClient { get; }
-
-        /// <summary>
-        /// The client for long-running operations.
-        /// </summary>
-        public override OperationsClient LongRunningOperationsClient { get; }
 
         // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
         partial void Modify_ListInstanceConfigsRequest(ref ListInstanceConfigsRequest request, ref CallSettings settings);
@@ -2497,7 +2540,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         {
             Modify_CreateInstanceRequest(ref request, ref callSettings);
             return new Operation<Instance, CreateInstanceMetadata>(
-                await _callCreateInstance.Async(request, callSettings).ConfigureAwait(false), LongRunningOperationsClient);
+                await _callCreateInstance.Async(request, callSettings).ConfigureAwait(false), CreateInstanceOperationsClient);
         }
 
         /// <summary>
@@ -2551,8 +2594,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         {
             Modify_CreateInstanceRequest(ref request, ref callSettings);
             return new Operation<Instance, CreateInstanceMetadata>(
-                _callCreateInstance.Sync(request, callSettings), LongRunningOperationsClient);
+                _callCreateInstance.Sync(request, callSettings), CreateInstanceOperationsClient);
         }
+
+        /// <summary>
+        /// The long-running operations client for <c>CreateInstance</c>.
+        /// </summary>
+        public override OperationsClient CreateInstanceOperationsClient { get; }
 
         /// <summary>
         /// Updates an instance, and begins allocating or releasing resources
@@ -2611,7 +2659,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         {
             Modify_UpdateInstanceRequest(ref request, ref callSettings);
             return new Operation<Instance, UpdateInstanceMetadata>(
-                await _callUpdateInstance.Async(request, callSettings).ConfigureAwait(false), LongRunningOperationsClient);
+                await _callUpdateInstance.Async(request, callSettings).ConfigureAwait(false), UpdateInstanceOperationsClient);
         }
 
         /// <summary>
@@ -2671,8 +2719,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         {
             Modify_UpdateInstanceRequest(ref request, ref callSettings);
             return new Operation<Instance, UpdateInstanceMetadata>(
-                _callUpdateInstance.Sync(request, callSettings), LongRunningOperationsClient);
+                _callUpdateInstance.Sync(request, callSettings), UpdateInstanceOperationsClient);
         }
+
+        /// <summary>
+        /// The long-running operations client for <c>UpdateInstance</c>.
+        /// </summary>
+        public override OperationsClient UpdateInstanceOperationsClient { get; }
 
         /// <summary>
         /// Deletes an instance.
