@@ -611,7 +611,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Exact sequence will depend on client/server behavior.
 
             // Create task to do something with responses from server
-            Task.Run(async () =>
+            Task responseHandlerTask = Task.Run(async () =>
             {
                 IAsyncEnumerator<StreamingPullResponse> responseStream = duplexStream.ResponseStream;
                 while (await responseStream.MoveNext())
@@ -639,6 +639,9 @@ namespace Google.Cloud.PubSub.V1.Snippets
             }
             // Complete writing requests to the stream
             await duplexStream.WriteCompleteAsync();
+            // Await the response handler.
+            // This will complete once all server responses have been processed.
+            await responseHandlerTask;
             // End snippet
         }
 

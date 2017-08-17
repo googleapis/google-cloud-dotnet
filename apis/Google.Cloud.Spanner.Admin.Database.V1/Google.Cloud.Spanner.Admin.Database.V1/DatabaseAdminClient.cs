@@ -52,14 +52,15 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListDatabasesSettings = existing.ListDatabasesSettings;
             CreateDatabaseSettings = existing.CreateDatabaseSettings;
+            CreateDatabaseOperationsSettings = existing.CreateDatabaseOperationsSettings?.Clone();
             GetDatabaseSettings = existing.GetDatabaseSettings;
             UpdateDatabaseDdlSettings = existing.UpdateDatabaseDdlSettings;
+            UpdateDatabaseDdlOperationsSettings = existing.UpdateDatabaseDdlOperationsSettings?.Clone();
             DropDatabaseSettings = existing.DropDatabaseSettings;
             GetDatabaseDdlSettings = existing.GetDatabaseDdlSettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
-            LongRunningOperationsSettings = existing.LongRunningOperationsSettings?.Clone();
             OnCopy(existing);
         }
 
@@ -189,6 +190,27 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             )));
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>DatabaseAdminClient.CreateDatabase</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45000 milliseconds</description></item>
+        /// <item><description>Total timeout: 86400000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public OperationsSettings CreateDatabaseOperationsSettings { get; set; } = new OperationsSettings
+        {
+            DefaultPollSettings = new PollSettings(
+                Expiration.FromTimeout(TimeSpan.FromMilliseconds(86400000L)),
+                TimeSpan.FromMilliseconds(20000L),
+                1.5,
+                TimeSpan.FromMilliseconds(45000L))
+        };
+
+        /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DatabaseAdminClient.GetDatabase</c> and <c>DatabaseAdminClient.GetDatabaseAsync</c>.
         /// </summary>
@@ -247,6 +269,27 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
                 totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DatabaseAdminClient.UpdateDatabaseDdl</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45000 milliseconds</description></item>
+        /// <item><description>Total timeout: 86400000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public OperationsSettings UpdateDatabaseDdlOperationsSettings { get; set; } = new OperationsSettings
+        {
+            DefaultPollSettings = new PollSettings(
+                Expiration.FromTimeout(TimeSpan.FromMilliseconds(86400000L)),
+                TimeSpan.FromMilliseconds(20000L),
+                1.5,
+                TimeSpan.FromMilliseconds(45000L))
+        };
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
@@ -397,11 +440,6 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             )));
 
         /// <summary>
-        /// Settings used for long running operations.
-        /// </summary>
-        public OperationsSettings LongRunningOperationsSettings { get; set; }
-
-        /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
         /// <returns>A deep clone of this <see cref="DatabaseAdminSettings"/> object.</returns>
@@ -498,14 +536,6 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The underlying gRPC DatabaseAdmin client.
         /// </summary>
         public virtual DatabaseAdmin.DatabaseAdminClient GrpcClient
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        /// <summary>
-        /// The client for long-running operations.
-        /// </summary>
-        public virtual OperationsClient LongRunningOperationsClient
         {
             get { throw new NotImplementedException(); }
         }
@@ -757,7 +787,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             string operationName,
             CallSettings callSettings = null) => Operation<Database, CreateDatabaseMetadata>.PollOnceFromNameAsync(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
-                LongRunningOperationsClient,
+                CreateDatabaseOperationsClient,
                 callSettings);
 
         /// <summary>
@@ -787,6 +817,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
+        /// The long-running operations client for <c>CreateDatabase</c>.
+        /// </summary>
+        public virtual OperationsClient CreateDatabaseOperationsClient
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        /// <summary>
         /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateDatabase</c>.
         /// </summary>
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
@@ -796,7 +834,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             string operationName,
             CallSettings callSettings = null) => Operation<Database, CreateDatabaseMetadata>.PollOnceFromName(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
-                LongRunningOperationsClient,
+                CreateDatabaseOperationsClient,
                 callSettings);
 
         /// <summary>
@@ -1028,7 +1066,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             string operationName,
             CallSettings callSettings = null) => Operation<Empty, UpdateDatabaseDdlMetadata>.PollOnceFromNameAsync(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
-                LongRunningOperationsClient,
+                UpdateDatabaseDdlOperationsClient,
                 callSettings);
 
         /// <summary>
@@ -1057,6 +1095,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
+        /// The long-running operations client for <c>UpdateDatabaseDdl</c>.
+        /// </summary>
+        public virtual OperationsClient UpdateDatabaseDdlOperationsClient
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        /// <summary>
         /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateDatabaseDdl</c>.
         /// </summary>
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
@@ -1066,7 +1112,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             string operationName,
             CallSettings callSettings = null) => Operation<Empty, UpdateDatabaseDdlMetadata>.PollOnceFromName(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
-                LongRunningOperationsClient,
+                UpdateDatabaseDdlOperationsClient,
                 callSettings);
 
         /// <summary>
@@ -1726,9 +1772,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         {
             GrpcClient = grpcClient;
             DatabaseAdminSettings effectiveSettings = settings ?? DatabaseAdminSettings.GetDefault();
-            LongRunningOperationsClient = new OperationsClientImpl(
-                grpcClient.CreateOperationsClient(), effectiveSettings.LongRunningOperationsSettings);
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            CreateDatabaseOperationsClient = new OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.CreateDatabaseOperationsSettings);
+            UpdateDatabaseDdlOperationsClient = new OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDatabaseDdlOperationsSettings);
             _callListDatabases = clientHelper.BuildApiCall<ListDatabasesRequest, ListDatabasesResponse>(
                 GrpcClient.ListDatabasesAsync, GrpcClient.ListDatabases, effectiveSettings.ListDatabasesSettings);
             _callCreateDatabase = clientHelper.BuildApiCall<CreateDatabaseRequest, Operation>(
@@ -1756,11 +1804,6 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The underlying gRPC DatabaseAdmin client.
         /// </summary>
         public override DatabaseAdmin.DatabaseAdminClient GrpcClient { get; }
-
-        /// <summary>
-        /// The client for long-running operations.
-        /// </summary>
-        public override OperationsClient LongRunningOperationsClient { get; }
 
         // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
         partial void Modify_ListDatabasesRequest(ref ListDatabasesRequest request, ref CallSettings settings);
@@ -1838,7 +1881,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         {
             Modify_CreateDatabaseRequest(ref request, ref callSettings);
             return new Operation<Database, CreateDatabaseMetadata>(
-                await _callCreateDatabase.Async(request, callSettings).ConfigureAwait(false), LongRunningOperationsClient);
+                await _callCreateDatabase.Async(request, callSettings).ConfigureAwait(false), CreateDatabaseOperationsClient);
         }
 
         /// <summary>
@@ -1866,8 +1909,13 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         {
             Modify_CreateDatabaseRequest(ref request, ref callSettings);
             return new Operation<Database, CreateDatabaseMetadata>(
-                _callCreateDatabase.Sync(request, callSettings), LongRunningOperationsClient);
+                _callCreateDatabase.Sync(request, callSettings), CreateDatabaseOperationsClient);
         }
+
+        /// <summary>
+        /// The long-running operations client for <c>CreateDatabase</c>.
+        /// </summary>
+        public override OperationsClient CreateDatabaseOperationsClient { get; }
 
         /// <summary>
         /// Gets the state of a Cloud Spanner database.
@@ -1933,7 +1981,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         {
             Modify_UpdateDatabaseDdlRequest(ref request, ref callSettings);
             return new Operation<Empty, UpdateDatabaseDdlMetadata>(
-                await _callUpdateDatabaseDdl.Async(request, callSettings).ConfigureAwait(false), LongRunningOperationsClient);
+                await _callUpdateDatabaseDdl.Async(request, callSettings).ConfigureAwait(false), UpdateDatabaseDdlOperationsClient);
         }
 
         /// <summary>
@@ -1960,8 +2008,13 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         {
             Modify_UpdateDatabaseDdlRequest(ref request, ref callSettings);
             return new Operation<Empty, UpdateDatabaseDdlMetadata>(
-                _callUpdateDatabaseDdl.Sync(request, callSettings), LongRunningOperationsClient);
+                _callUpdateDatabaseDdl.Sync(request, callSettings), UpdateDatabaseDdlOperationsClient);
         }
+
+        /// <summary>
+        /// The long-running operations client for <c>UpdateDatabaseDdl</c>.
+        /// </summary>
+        public override OperationsClient UpdateDatabaseDdlOperationsClient { get; }
 
         /// <summary>
         /// Drops (aka deletes) a Cloud Spanner database.
