@@ -59,6 +59,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var fetched = client.GetTable(datasetId, tableId);
             Assert.Equal("Description2", fetched.Resource.Description);
             Assert.Equal("FriendlyName2", fetched.Resource.FriendlyName);
+            Assert.NotEqual(original.Resource.ETag, updated.Resource.ETag);
+            Assert.Equal(fetched.Resource.ETag, updated.Resource.ETag);
         }
 
         [Fact]
@@ -101,6 +103,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var fetched = client.GetTable(datasetId, tableId);
             Assert.Equal("Description2", fetched.Resource.Description);
             Assert.Equal("FriendlyName1", fetched.Resource.FriendlyName);
+            Assert.Equal(fetched.Resource.ETag, patched.Resource.ETag);
         }
 
         [Fact]
@@ -178,6 +181,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var fetched = await client.GetTableAsync(datasetId, tableId);
             Assert.Equal("Description2", fetched.Resource.Description);
             Assert.Equal("FriendlyName2", fetched.Resource.FriendlyName);
+            Assert.NotEqual(original.Resource.ETag, updated.Resource.ETag);
+            Assert.Equal(fetched.Resource.ETag, updated.Resource.ETag);
         }
 
         [Fact]
@@ -220,6 +225,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var fetched = await client.GetTableAsync(datasetId, tableId);
             Assert.Equal("Description2", fetched.Resource.Description);
             Assert.Equal("FriendlyName1", fetched.Resource.FriendlyName);
+            Assert.Equal(fetched.Resource.ETag, patched.Resource.ETag);
         }
 
         [Fact]
