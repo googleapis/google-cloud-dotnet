@@ -402,6 +402,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 t2 = Task.Run(() => op("child-two", "grandchild-two").Wait());
             }
 
+            mockConsumer.VerifyAll();
+            mockConsumer.Reset();
+
             Predicate<IEnumerable<TraceProto>> childMatcher = t =>
             {
                 // Verify that even though the child spans were started after the root span was ended, they
