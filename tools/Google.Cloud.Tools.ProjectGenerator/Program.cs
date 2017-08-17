@@ -63,7 +63,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
             { "Microsoft.NET.Test.Sdk", "15.0.0" },
             { "xunit", "2.3.0-beta1-build3642" },
             { "xunit.runner.visualstudio", "2.3.0-beta1-build1309" },
-            { "Moq", "4.7.8" }
+            { "Moq", "4.7.99" }
         };
 
         // Hard-coded versions for dependencies for production packages that can be updated arbitrarily, as their assets are all private.
