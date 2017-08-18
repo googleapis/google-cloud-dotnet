@@ -3,6 +3,7 @@
   <PropertyGroup>
     <Version>2.1.0</Version>
     <TargetFrameworks>netstandard1.5;net45</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
     <Features>IOperation</Features>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
