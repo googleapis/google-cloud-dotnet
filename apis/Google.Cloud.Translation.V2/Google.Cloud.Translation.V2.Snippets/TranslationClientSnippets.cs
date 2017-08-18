@@ -15,6 +15,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Translation.V2.Snippets
@@ -63,6 +64,24 @@ namespace Google.Cloud.Translation.V2.Snippets
         }
 
         [Fact]
+        public async Task TranslateTextAsync()
+        {
+            // Snippet: TranslateTextAsync(string, string, string, *, *)
+            TranslationClient client = await TranslationClient.CreateAsync();
+            TranslationResult result = await client.TranslateTextAsync("It is raining.", LanguageCodes.French);
+            Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
+            // End snippet
+
+            Assert.Equal("Il pleut.", result.TranslatedText);
+            Assert.Equal("en", result.DetectedSourceLanguage);
+        }
+
+        // See-also: TranslateTextAsync(string, string, string, *, CancellationToken)
+        // Member: TranslateTextAsync(IEnumerable<string>, string, string, *, CancellationToken)
+        // See [TranslateTextAsync](ref) for an example using an alternative overload.
+        // End see-also
+
+        [Fact]
         public void TranslateHtml()
         {
             // Sample: TranslateHtml
@@ -75,6 +94,24 @@ namespace Google.Cloud.Translation.V2.Snippets
             Assert.Equal("<p> <strong>Il pleut.</strong> </p>", result.TranslatedText);
             Assert.Equal("en", result.DetectedSourceLanguage);
         }
+
+        [Fact]
+        public async Task TranslateHtmlAsync()
+        {
+            // Snippet: TranslateHtmlAsync(string, string, string, *, *)
+            TranslationClient client = await TranslationClient.CreateAsync();
+            TranslationResult result = await client.TranslateHtmlAsync("<p><strong>It is raining.</strong></p>", LanguageCodes.French);
+            Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
+            // End snippet
+
+            Assert.Equal("<p> <strong>Il pleut.</strong> </p>", result.TranslatedText);
+            Assert.Equal("en", result.DetectedSourceLanguage);
+        }
+
+        // See-also: TranslateHtmlAsync(string, string, string, *, CancellationToken)
+        // Member: TranslateHtmlAsync(IEnumerable<string>, string, string, *, CancellationToken)
+        // See [TranslateHtmlAsync](ref) for an example using an alternative overload.
+        // End see-also
 
         [Fact]
         public void TranslateText_Multiple()
@@ -118,18 +155,6 @@ namespace Google.Cloud.Translation.V2.Snippets
             Assert.Equal("en", results[1].DetectedSourceLanguage);
         }
 
-        // See-also: TranslateText(string, string, string, *)
-        // Member: TranslateTextAsync(string, string, string, *, CancellationToken)
-        // Member: TranslateTextAsync(IEnumerable<string>, string, string, *, CancellationToken)
-        // See [TranslateText](ref) for a synchronous example.
-        // End see-also
-
-        // See-also: TranslateHtml(string, string, string, *)
-        // Member: TranslateHtmlAsync(string, string, string, *, CancellationToken)
-        // Member: TranslateHtmlAsync(IEnumerable<string>, string, string, *, CancellationToken)
-        // See [TranslateHtml](ref) for a synchronous example.
-        // End see-also
-
         [Fact]
         public void DetectLanguage()
         {
@@ -144,10 +169,18 @@ namespace Google.Cloud.Translation.V2.Snippets
             Assert.Equal("It is raining.", result.Text);
         }
 
-        // See-also: DetectLanguage(string)
-        // Member: DetectLanguageAsync(string, CancellationToken)
-        // See [DetectLanguage](ref) for a synchronous example.
-        // End see-also
+        [Fact]
+        public async Task DetectLanguageAsync()
+        {
+            // Snippet: DetectLanguageAsync(string, CancellationToken)
+            TranslationClient client = TranslationClient.Create();
+            Detection result = await client.DetectLanguageAsync("It is raining.");
+            Console.WriteLine($"Language: {result.Language}; confidence {result.Confidence}");
+            // End snippet
+
+            Assert.Equal("en", result.Language);
+            Assert.Equal("It is raining.", result.Text);
+        }
 
         [Fact]
         public void DetectLanguages()
@@ -168,10 +201,23 @@ namespace Google.Cloud.Translation.V2.Snippets
             Assert.Equal("Il pleut.", results[1].Text);
         }
 
-        // See-also: DetectLanguages(IEnumerable<string>)
-        // Member: DetectLanguagesAsync(IEnumerable<string>, CancellationToken)
-        // See [DetectLanguages](ref) for a synchronous example.
-        // End see-also
+        [Fact]
+        public async Task DetectLanguagesAsync()
+        {
+            // Snippet: DetectLanguagesAsync(IEnumerable<string>, CancellationToken)
+            TranslationClient client = TranslationClient.Create();
+            IList<Detection> results = await client.DetectLanguagesAsync(new[] { "It is raining.", "Il pleut." });
+            foreach (var result in results)
+            {
+                Console.WriteLine($"Text: {result.Text}; language: {result.Language}; confidence {result.Confidence}");
+            }
+            // End snippet
+
+            Assert.Equal("en", results[0].Language);
+            Assert.Equal("It is raining.", results[0].Text);
+            Assert.Equal("fr", results[1].Language);
+            Assert.Equal("Il pleut.", results[1].Text);
+        }
 
         [Fact]
         public void ListLanguages()
@@ -185,11 +231,26 @@ namespace Google.Cloud.Translation.V2.Snippets
                 Console.WriteLine($"Language: {language.Name}; code {language.Code}");
             }
             // End snippet
+
+            var french = languages.Single(x => x.Code == LanguageCodes.French);
+            Assert.Equal("French", french.Name);
         }
 
-        // See-also: ListLanguages(string, TranslationModel?)
-        // Member: ListLanguagesAsync(string, TranslationModel?, CancellationToken)
-        // See [ListLanguages](ref) for a synchronous example.
-        // End see-also
+        [Fact]
+        public async Task ListLanguagesAsync()
+        {
+            // Snippet: ListLanguagesAsync(string, TranslationModel?, CancellationToken)
+            TranslationClient client = await TranslationClient.CreateAsync();
+            IList<Language> languages = await client.ListLanguagesAsync(LanguageCodes.English);
+            // Display just the first 10 languages for brevity
+            foreach (Language language in languages.Take(10))
+            {
+                Console.WriteLine($"Language: {language.Name}; code {language.Code}");
+            }
+            // End snippet
+
+            var french = languages.Single(x => x.Code == LanguageCodes.French);
+            Assert.Equal("French", french.Name);
+        }
     }
 }
