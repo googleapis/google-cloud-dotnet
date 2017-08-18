@@ -351,6 +351,7 @@ TODO: Add snippet references here.
             var propertyGroup =
                 new XElement("PropertyGroup",
                     new XElement("TargetFrameworks", GetTestTargetFrameworks(api)),
+                    new XElement("LangVersion", "latest"),
                     new XElement("Features", "IOperation"),
                     new XElement("IsPackable", false),
                     new XElement("AssemblyOriginatorKeyFile", "../../GoogleApis.snk"),
