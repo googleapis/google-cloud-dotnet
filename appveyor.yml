@@ -40,8 +40,7 @@ test_script:
 after_test:
   - bash createcoveragereport.sh
   - codecov -f "coverage/coverage-filtered.xml"
-# Docs disabled until https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1380
-# is better understood
-  - # cd docs
-  - # bash builddocs.sh
-  - # cd ..
+  - set MSBUILD_EXE_PATH=C:\Program Files\dotnet\sdk\2.0.0\MSBuild.dll
+  - cd docs
+  - bash builddocs.sh
+  - cd ..
