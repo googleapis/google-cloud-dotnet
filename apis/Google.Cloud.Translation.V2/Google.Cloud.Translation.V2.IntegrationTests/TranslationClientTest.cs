@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
 using System.IO;
 using System.Reflection;
 using Xunit;
@@ -36,6 +37,21 @@ namespace Google.Cloud.Translation.V2.IntegrationTests
             var client = TranslationClient.Create();
             var translation = client.TranslateText(LargeText, LanguageCodes.French);
             Assert.StartsWith("Lorsque, au cours des", translation.TranslatedText);
+            Assert.Equal(LargeText, translation.OriginalText);
+            Assert.Equal(LanguageCodes.French, translation.TargetLanguage);
+            Assert.Equal(LanguageCodes.English, translation.DetectedSourceLanguage);
+            Assert.Null(translation.SpecifiedSourceLanguage);
+        }
+
+        [Fact]
+        public void Translate_SpecifyLanguage()
+        {
+            var client = TranslationClient.Create();
+            var translation = client.TranslateText(LargeText, LanguageCodes.French, LanguageCodes.English);
+            Assert.Equal(LargeText, translation.OriginalText);
+            Assert.Equal(LanguageCodes.French, translation.TargetLanguage);
+            Assert.Null(translation.DetectedSourceLanguage);
+            Assert.Equal(LanguageCodes.English, translation.SpecifiedSourceLanguage);
         }
 
         [Fact]
@@ -45,6 +61,21 @@ namespace Google.Cloud.Translation.V2.IntegrationTests
             var model = TranslationModel.NeuralMachineTranslation;
             var translation = client.TranslateText("Please translate this", LanguageCodes.French, model: model);
             Assert.Equal(model, translation.Model);
+        }
+
+        [Fact]
+        public void InvalidModel()
+        {
+            var client = TranslationClient.Create();
+            Assert.Throws<ArgumentException>(() => client.TranslateText("Please translate this", LanguageCodes.French, model: (TranslationModel) 12345));
+        }
+
+        [Fact]
+        public void ApplicationName()
+        {
+            TranslationClientImpl.ApplicationName = "TestApplication";
+            var client = TranslationClient.Create();
+            Assert.Equal("TestApplication", client.Service.ApplicationName);
         }
 
         internal static string LoadResource(string name)
