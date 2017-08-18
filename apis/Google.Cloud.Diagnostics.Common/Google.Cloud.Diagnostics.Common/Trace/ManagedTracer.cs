@@ -53,14 +53,14 @@ namespace Google.Cloud.Diagnostics.Common
 
             var factory = new ManagedTracerFactory(projectId, consumer,
                 RateLimitingTraceOptionsFactory.Create(options), TraceIdFactory.Create());
-            return (x) => factory.CreateTracer(x);
+            return factory.CreateTracer;
         }
 
         /// <summary>
         /// Creates an <see cref="IManagedTracer"/> that delegates all calls to another <see cref="IManagedTracer"/>
         /// that is retrieved from the given function on each method call.
         /// </summary>
-        public static IManagedTracer CreateDelegatingTracer(Func<IManagedTracer> managedTracerGetter) 
-            => new DelegatingTracer(GaxPreconditions.CheckNotNull(managedTracerGetter, nameof(managedTracerGetter)));        
+        public static IManagedTracer CreateDelegatingTracer(Func<IManagedTracer> tracerFactory) 
+            => new DelegatingTracer(GaxPreconditions.CheckNotNull(tracerFactory, nameof(tracerFactory)));        
     }
 }

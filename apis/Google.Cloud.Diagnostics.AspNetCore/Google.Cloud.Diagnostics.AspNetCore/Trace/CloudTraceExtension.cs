@@ -109,7 +109,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             var client = serviceOptions.Client ?? TraceServiceClient.Create();
             var options = serviceOptions.Options ?? TraceOptions.Create();
             var traceFallbackPredicate = serviceOptions.TraceFallbackPredicate ?? TraceDecisionPredicate.Default;
-            var projectId = CommonUtils.GetAndCheckProjectId(serviceOptions.ProjectId);
+            var projectId = Project.GetAndCheckProjectId(serviceOptions.ProjectId);
 
             var consumer = ManagedTracer.CreateConsumer(client, options);
             var tracerFactory = ManagedTracer.CreateTracerFactory(projectId, consumer, options);
@@ -155,11 +155,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         internal static IManagedTracer CreateManagedTracer(IServiceProvider provider)
         {
-            return ManagedTracer.CreateDelegatingTracer(() =>
-            {
-                var accessor = provider.GetServiceCheckNotNull<IHttpContextAccessor>();
-                return ContextTracerManager.GetCurrentTracer(accessor);
-            });
+            var accessor = provider.GetServiceCheckNotNull<IHttpContextAccessor>();
+            return ManagedTracer.CreateDelegatingTracer(() => ContextTracerManager.GetCurrentTracer(accessor));
         }
     }
 }

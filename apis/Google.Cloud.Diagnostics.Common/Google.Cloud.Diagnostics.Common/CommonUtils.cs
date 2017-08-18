@@ -12,18 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api;
-using Google.Api.Gax.Grpc;
-using System;
 using System.Reflection;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.Common
 {
-    /// <summary>
-    /// Shared common functions.
-    /// </summary>
-    public static class CommonUtils
+    internal static class CommonUtils
     {
         /// <summary>The name of the this agent.</summary>
         internal const string AgentName = "google-cloud-csharp-diagnostics";
@@ -43,32 +37,5 @@ namespace Google.Cloud.Diagnostics.Common
                 .Assembly
                 .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
                 .InformationalVersion;
-
-        /// <summary>
-        /// Determines the correct project id from a string project id and a <see cref="MonitoredResource"/>.
-        /// If the specified project id is not null, it is returned. Otherwise, if the project id of
-        /// the MonitoredResource is not null, it is returned. It both are null,
-        /// an <see cref="InvalidOperationException"/> is thrown.
-        /// </summary>
-        /// <param name="projectId">The Google Cloud project ID.  Can be null.</param>
-        /// <param name="monitoredResource">Optional, The monitored resource. If unset the monitored resource will
-        ///     be auto detected.</param>
-        /// <returns>The Google Cloud project ID.</returns>
-        public static string GetAndCheckProjectId(string projectId, MonitoredResource monitoredResource = null)
-        {
-            if (projectId != null)
-            {
-                return projectId;
-            }
-
-            monitoredResource = monitoredResource ?? MonitoredResourceBuilder.FromPlatform();
-            string resourceProjectId;
-            if (monitoredResource.Labels.TryGetValue("project_id", out resourceProjectId))
-            {
-                return resourceProjectId;
-            }
-
-            throw new InvalidOperationException("No Google Cloud project ID was passed in or detected.");
-        }
     }
 }

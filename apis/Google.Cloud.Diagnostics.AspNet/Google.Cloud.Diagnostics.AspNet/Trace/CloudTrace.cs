@@ -139,7 +139,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         {
             GaxPreconditions.CheckNotNull(application, nameof(application));
 
-            projectId = CommonUtils.GetAndCheckProjectId(projectId);
+            projectId = Project.GetAndCheckProjectId(projectId);
             CloudTrace trace = new CloudTrace(projectId, options, client, traceFallbackPredicate);
 
             // Add event handlers to the application.

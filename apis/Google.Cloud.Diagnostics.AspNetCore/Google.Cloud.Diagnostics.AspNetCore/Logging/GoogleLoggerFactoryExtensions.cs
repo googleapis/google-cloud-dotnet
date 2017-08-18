@@ -54,7 +54,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             LoggerOptions options = null, LoggingServiceV2Client client = null)
         {
             options = options ?? LoggerOptions.Create();
-            projectId = CommonUtils.GetAndCheckProjectId(projectId, options.MonitoredResource);
+            projectId = Project.GetAndCheckProjectId(projectId, options.MonitoredResource);
             return factory.AddGoogle(LogTarget.ForProject(projectId), options, client);
         }
 

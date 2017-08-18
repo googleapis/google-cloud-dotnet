@@ -79,9 +79,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             mockProvider.Setup(p => p.GetService(typeof(IHttpContextAccessor))).Returns(new HttpContextAccessor());
             var tracer = CloudTraceExtension.CreateManagedTracer(mockProvider.Object);
             Assert.IsType(typeof(DelegatingTracer), tracer);
-
-            // Trigger the call to get a managed tracer.
-            tracer.GetCurrentTraceId();
             mockProvider.VerifyAll();
         }
 
