@@ -40,6 +40,7 @@ test_script:
 after_test:
   - bash createcoveragereport.sh
   - codecov -f "coverage/coverage-filtered.xml"
+  - copy MSBuild.dll.config.txt "c:\Program Files\dotnet\sdk\2.0.0\MSBuild.dll.config"
   - set MSBUILD_EXE_PATH=C:\Program Files\dotnet\sdk\2.0.0\MSBuild.dll
   - cd docs
   - bash builddocs.sh
