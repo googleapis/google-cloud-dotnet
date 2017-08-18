@@ -24,6 +24,7 @@ install:
 # Perform the build.
 build_script:
   - dotnet --info
+  - dir c:\Sdk.props /s 
   - echo "Regenerating projects: if this fails, run generateprojects.sh and commit changes"
   - bash generateprojects.sh && git diff --exit-code
   - bash build.sh --notests
