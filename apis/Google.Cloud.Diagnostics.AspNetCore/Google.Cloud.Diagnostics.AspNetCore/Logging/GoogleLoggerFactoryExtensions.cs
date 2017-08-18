@@ -54,7 +54,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             LoggerOptions options = null, LoggingServiceV2Client client = null)
         {
             options = options ?? LoggerOptions.Create();
-            projectId = CommonUtils.GetAndCheckProjectId(projectId, options.MonitoredResource);
+            projectId = Project.GetAndCheckProjectId(projectId, options.MonitoredResource);
             return factory.AddGoogle(LogTarget.ForProject(projectId), options, client);
         }
 
@@ -75,9 +75,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             options = options ?? LoggerOptions.Create();
 
             // Get the proper consumer from the options and add a logger provider.
-            GrpcLogConsumer grpcConsumer = new GrpcLogConsumer(client);
-            IConsumer<LogEntry> consumer = ConsumerFactory<LogEntry>.GetConsumer(
-                grpcConsumer, MessageSizer<LogEntry>.GetSize, options.BufferOptions, options.RetryOptions);
+            IConsumer<LogEntry> consumer = LogConsumer.Create(client, options.BufferOptions, options.RetryOptions);
             GoogleLoggerProvider provider = new GoogleLoggerProvider(consumer, logTarget, options);
             factory.AddProvider(provider);
             return factory;

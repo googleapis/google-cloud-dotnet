@@ -64,12 +64,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             var delegateMock = new Mock<RequestDelegate>();
             delegateMock.Setup(d => d(context)).Returns(Task.CompletedTask);
 
-            var tracerFactoryMock = new Mock<IManagedTracerFactory>();
-            tracerFactoryMock.Setup(f => f.CreateTracer(_traceHeaderContext)).Returns(tracerMock.Object);
+            Func<TraceHeaderContext, IManagedTracer> fakeFactory = f => tracerMock.Object;
 
             Assert.Equal(NullManagedTracer.Instance, ContextTracerManager.GetCurrentTracer(accessor));
 
-            var middleware = new CloudTraceMiddleware(delegateMock.Object, tracerFactoryMock.Object, accessor);
+            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory, accessor);
             await middleware.Invoke(context, _traceHeaderContext);
 
             Assert.Equal(tracerMock.Object, ContextTracerManager.GetCurrentTracer(accessor));
@@ -92,10 +91,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             var delegateMock = new Mock<RequestDelegate>();
             delegateMock.Setup(d => d(context)).Throws(new DivideByZeroException());
 
-            var tracerFactoryMock = new Mock<IManagedTracerFactory>();
-            tracerFactoryMock.Setup(f => f.CreateTracer(_traceHeaderContext)).Returns(tracerMock.Object);
+            Func<TraceHeaderContext, IManagedTracer> fakeFactory = f => tracerMock.Object;
 
-            var middleware = new CloudTraceMiddleware(delegateMock.Object, tracerFactoryMock.Object, accessor);
+            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory, accessor);
             await Assert.ThrowsAsync<DivideByZeroException>(
                 () => middleware.Invoke(context, _traceHeaderContext));
 
@@ -119,10 +117,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             var delegateMock = new Mock<RequestDelegate>();
             delegateMock.Setup(d => d(context)).Throws(new DivideByZeroException());
 
-            var tracerFactoryMock = new Mock<IManagedTracerFactory>();
-            tracerFactoryMock.Setup(f => f.CreateTracer(_traceHeaderContext)).Returns(tracerMock.Object);
+            Func<TraceHeaderContext, IManagedTracer> fakeFactory = f => tracerMock.Object;
 
-            var middleware = new CloudTraceMiddleware(delegateMock.Object, tracerFactoryMock.Object, accessor);
+            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory, accessor);
             await Assert.ThrowsAsync<AggregateException>(
                 () => middleware.Invoke(context, _traceHeaderContext));
 
@@ -141,10 +138,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             var delegateMock = new Mock<RequestDelegate>();
             var tracerMock = new Mock<IManagedTracer>();
 
-            var tracerFactoryMock = new Mock<IManagedTracerFactory>();
-            tracerFactoryMock.Setup(f => f.CreateTracer(_traceHeaderContext)).Returns(tracerMock.Object);
+            Func<TraceHeaderContext, IManagedTracer> fakeFactory = f => tracerMock.Object;
 
-            var middleware = new CloudTraceMiddleware(delegateMock.Object, tracerFactoryMock.Object, accessor);
+            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory, accessor);
             await middleware.Invoke(context, _traceHeaderContext);
 
             Assert.Equal(tracerMock.Object, ContextTracerManager.GetCurrentTracer(accessor));

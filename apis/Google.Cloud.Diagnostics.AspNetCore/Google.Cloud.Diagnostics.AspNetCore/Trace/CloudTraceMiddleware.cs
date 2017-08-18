@@ -29,7 +29,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     internal sealed class CloudTraceMiddleware
     {
         private readonly RequestDelegate _next;
-        private readonly IManagedTracerFactory _tracerFactory;
+        private readonly Func<TraceHeaderContext, IManagedTracer> _tracerFactory;
         private readonly IHttpContextAccessor _accessor;
 
         /// <summary>
@@ -39,7 +39,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="tracerFactory">A factory to create <see cref="IManagedTracer"/>s. Cannot be null.</param>
         /// <param name="accessor">Access to <see cref="HttpContext"/>. Cannot be null.</param>
         public CloudTraceMiddleware(
-            RequestDelegate next, IManagedTracerFactory tracerFactory, IHttpContextAccessor accessor)
+            RequestDelegate next, Func<TraceHeaderContext, IManagedTracer> tracerFactory, IHttpContextAccessor accessor)
         {
             _next = GaxPreconditions.CheckNotNull(next, nameof(next));
             _tracerFactory = GaxPreconditions.CheckNotNull(tracerFactory, nameof(tracerFactory));
@@ -59,7 +59,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             // Create a tracer for the given request and set it on the HttpContext so
             // the tracer can be used in other places.
-            var tracer = _tracerFactory.CreateTracer(traceHeaderContext);
+            var tracer = _tracerFactory(traceHeaderContext);
             ContextTracerManager.SetCurrentTracer(_accessor, tracer);
 
             if (tracer.GetCurrentTraceId() == null)

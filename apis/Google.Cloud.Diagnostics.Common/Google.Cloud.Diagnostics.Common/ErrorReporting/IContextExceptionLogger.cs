@@ -21,7 +21,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// <summary>
     /// A generic exception logger for <see cref="IContextWrapper"/>s.
     /// </summary>
-    internal interface IContextExceptionLogger : IDisposable
+    public interface IContextExceptionLogger : IDisposable
     {
         /// <summary>
         /// Logs an exception that occurred.
