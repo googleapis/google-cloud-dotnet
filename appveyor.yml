@@ -24,7 +24,7 @@ install:
 # Perform the build.
 build_script:
   - dotnet --info
-  - echo $PATH
+  - PATH
   - where msbuild.exe
   - ps: $env:MSBuildSDKsPath = "C:\Program Files\dotnet\sdk\1.0.4\Sdks"
   - ps: $env:MSBuildExtensionsPath = "C:\Program Files\dotnet\sdk\1.0.4"
