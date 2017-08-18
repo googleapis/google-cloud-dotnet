@@ -126,7 +126,7 @@ namespace Google.Cloud.BigQuery.V2
         public BigQueryDbType? Type
         {
             get { return _type; }
-            set { _type = value == null ? default(BigQueryDbType?) : GaxPreconditions.CheckEnumValue(value.Value, nameof(value)); }
+            set { _type = value == null ? default : GaxPreconditions.CheckEnumValue(value.Value, nameof(value)); }
         }
 
         private BigQueryDbType? _arrayType;
@@ -136,7 +136,7 @@ namespace Google.Cloud.BigQuery.V2
         public BigQueryDbType? ArrayType
         {
             get { return _arrayType; }
-            set { _arrayType = value == null ? default(BigQueryDbType?) : GaxPreconditions.CheckEnumValue(value.Value, nameof(value)); }
+            set { _arrayType = value == null ? default : GaxPreconditions.CheckEnumValue(value.Value, nameof(value)); }
         }
 
         private object _value;

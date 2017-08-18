@@ -101,7 +101,7 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <inheritdoc />
-        public async Task FlushAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task FlushAsync(CancellationToken cancellationToken = default)
         {
             await _semaphore.WaitAsync(cancellationToken).ConfigureAwait(false);
             try

@@ -45,7 +45,7 @@ namespace Google.Cloud.Storage.V1
         /// <returns>A task representing the asynchronous operation, with a result returning the
         /// resource representation of the newly-created bucket.</returns>
         public virtual Task<Bucket> CreateBucketAsync(string projectId, string bucket, CreateBucketOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken))
+            CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
@@ -74,7 +74,7 @@ namespace Google.Cloud.Storage.V1
         /// <returns>A task representing the asynchronous operation, with a result returning the
         /// resource representation of the newly-created bucket.</returns>
         public virtual Task<Bucket> CreateBucketAsync(string projectId, Bucket bucket, CreateBucketOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken))
+            CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }

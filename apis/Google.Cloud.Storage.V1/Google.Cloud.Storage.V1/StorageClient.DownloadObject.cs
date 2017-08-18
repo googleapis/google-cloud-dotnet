@@ -58,7 +58,7 @@ namespace Google.Cloud.Storage.V1
             string objectName,
             Stream destination,
             DownloadObjectOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken),
+            CancellationToken cancellationToken = default,
             IProgress<IDownloadProgress> progress = null)
         {
             throw new NotImplementedException();
@@ -101,7 +101,7 @@ namespace Google.Cloud.Storage.V1
             Object source,
             Stream destination,
             DownloadObjectOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken),
+            CancellationToken cancellationToken = default,
             IProgress<IDownloadProgress> progress = null)
         {
             throw new NotImplementedException();

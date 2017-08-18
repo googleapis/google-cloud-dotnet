@@ -29,7 +29,7 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
         private static readonly Parameter DatasetReferenceParameter = new Parameter("DatasetReference", "datasetReference", "A fully-qualified identifier for the dataset. Must not be null.", null);
         private static readonly Parameter TableReferenceParameter = new Parameter("TableReference", "tableReference", "A fully-qualified identifier for the table. Must not be null.", null);
         private static readonly Parameter JobReferenceParameter = new Parameter("JobReference", "jobReference", "A fully-qualified identifier for the job. Must not be null.", null);
-        private static readonly Parameter CancellationTokenParameter = new Parameter("CancellationToken", "cancellationToken", "The token to monitor for cancellation requests.", "default(CancellationToken)");
+        private static readonly Parameter CancellationTokenParameter = new Parameter("CancellationToken", "cancellationToken", "The token to monitor for cancellation requests.", "default");
 
         private static readonly Parameter[] IdParameters = { ProjectIdParameter, DatasetIdParameter, TableIdParameter, JobIdParameter };
 

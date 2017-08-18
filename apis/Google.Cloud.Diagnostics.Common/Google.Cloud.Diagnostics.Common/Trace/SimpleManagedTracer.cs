@@ -171,7 +171,7 @@ namespace Google.Cloud.Diagnostics.Common
                 catch (Exception e) when (SetStackTraceAndReturnFalse(e))
                 {
                     // This will never return as the condition above will always be false.
-                    return default(T);
+                    return default;
                 }
             }
         }
@@ -188,7 +188,7 @@ namespace Google.Cloud.Diagnostics.Common
                 catch (Exception e) when (SetStackTraceAndReturnFalse(e))
                 {
                     // This will never return as the condition above will always be false.
-                    return default(T);
+                    return default;
                 }
             }
         }
@@ -321,7 +321,7 @@ namespace Google.Cloud.Diagnostics.Common
 
         private sealed class ImmutableStack<T>
         {
-            public static readonly ImmutableStack<T> Empty = new ImmutableStack<T>(default(T), null);
+            public static readonly ImmutableStack<T> Empty = new ImmutableStack<T>(default, null);
 
             private readonly ImmutableStack<T> _previous;
             private readonly T _value;

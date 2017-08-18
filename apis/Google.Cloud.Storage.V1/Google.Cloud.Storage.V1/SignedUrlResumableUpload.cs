@@ -108,7 +108,7 @@ namespace Google.Cloud.Storage.V1
         public static Task<Uri> InitiateSessionAsync(
             string signedUrl,
             ResumableUploadOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken))
+            CancellationToken cancellationToken = default)
         {
             // We need an instance to call ExceptionForResponseAsync if the initiate request fails, so create a
             // temporary instance to initiate the session.

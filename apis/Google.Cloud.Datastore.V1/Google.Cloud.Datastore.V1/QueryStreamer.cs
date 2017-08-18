@@ -108,7 +108,7 @@ namespace Google.Cloud.Datastore.V1
                         return false;
                     }
                     CallSettings effectiveCallSettings = _parent._callSettings;
-                    if (cancellationToken != default(CancellationToken))
+                    if (cancellationToken != default)
                     {
                         effectiveCallSettings = effectiveCallSettings.WithCancellationToken(cancellationToken);
                     }

@@ -44,7 +44,7 @@ namespace Google.Cloud.Storage.V1
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation, with a result returning the
         /// <see cref="Policy"/> representation of the resulting storage bucket IAM policy.</returns>
-        public virtual Task<Policy> SetBucketIamPolicyAsync(string bucket, Policy policy, SetBucketIamPolicyOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public virtual Task<Policy> SetBucketIamPolicyAsync(string bucket, Policy policy, SetBucketIamPolicyOptions options = null, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }

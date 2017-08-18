@@ -32,6 +32,6 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        Task FlushAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task FlushAsync(CancellationToken cancellationToken = default);
     }
 }

@@ -228,7 +228,7 @@ namespace Google.Cloud.Spanner.V1
 
             await StartSessionCreatingAsync(cancellationToken).ConfigureAwait(false);
             Session sessionResult = null;
-            SessionPoolKey sessionPoolKey = default(SessionPoolKey);
+            SessionPoolKey sessionPoolKey = default;
             try
             {
                 sessionPoolKey = new SessionPoolKey(spannerClient,

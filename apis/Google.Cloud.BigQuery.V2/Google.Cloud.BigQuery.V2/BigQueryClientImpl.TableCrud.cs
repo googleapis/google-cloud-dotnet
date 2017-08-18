@@ -154,7 +154,7 @@ namespace Google.Cloud.BigQuery.V2
         }
         
         /// <inheritdoc />
-        public override async Task<BigQueryTable> GetTableAsync(TableReference tableReference, GetTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<BigQueryTable> GetTableAsync(TableReference tableReference, GetTableOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
 
@@ -178,7 +178,7 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <inheritdoc />
         public override async Task<BigQueryTable> CreateTableAsync(TableReference tableReference, TableSchema schema,
-            CreateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+            CreateTableOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
 
@@ -192,7 +192,7 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <inheritdoc />
         public override async Task<BigQueryTable> GetOrCreateTableAsync(TableReference tableReference, TableSchema schema,
-            GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default(CancellationToken))
+            GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
 
@@ -208,7 +208,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task DeleteTableAsync(TableReference tableReference, DeleteTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task DeleteTableAsync(TableReference tableReference, DeleteTableOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             var request = Service.Tables.Delete(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
@@ -218,7 +218,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task<BigQueryTable> UpdateTableAsync(TableReference tableReference, Table resource, UpdateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<BigQueryTable> UpdateTableAsync(TableReference tableReference, Table resource, UpdateTableOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             GaxPreconditions.CheckNotNull(resource, nameof(resource));
@@ -229,7 +229,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task<BigQueryTable> PatchTableAsync(TableReference tableReference, Table resource, PatchTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<BigQueryTable> PatchTableAsync(TableReference tableReference, Table resource, PatchTableOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             GaxPreconditions.CheckNotNull(resource, nameof(resource));

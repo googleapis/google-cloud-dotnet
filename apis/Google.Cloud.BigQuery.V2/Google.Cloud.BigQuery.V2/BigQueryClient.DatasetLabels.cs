@@ -96,7 +96,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the previous value of the label, or <c>null</c> if the label was not previously set.</returns>
-        public virtual Task<string> SetDatasetLabelAsync(string datasetId, string labelName, string labelValue, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<string> SetDatasetLabelAsync(string datasetId, string labelName, string labelValue, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default) =>
             SetDatasetLabelAsync(GetDatasetReference(datasetId), labelName, labelValue, options, cancellationToken);
         
         /// <summary>
@@ -117,7 +117,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the previous value of the label, or <c>null</c> if the label was not previously set.</returns>
-        public virtual Task<string> SetDatasetLabelAsync(string projectId, string datasetId, string labelName, string labelValue, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<string> SetDatasetLabelAsync(string projectId, string datasetId, string labelName, string labelValue, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default) =>
             SetDatasetLabelAsync(GetDatasetReference(projectId, datasetId), labelName, labelValue, options, cancellationToken);
         
         /// <summary>
@@ -136,7 +136,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the previous value of the label, or <c>null</c> if the label was not previously set.</returns>
-        public virtual Task<string> SetDatasetLabelAsync(DatasetReference datasetReference, string labelName, string labelValue, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<string> SetDatasetLabelAsync(DatasetReference datasetReference, string labelName, string labelValue, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
         #endregion
 
@@ -188,7 +188,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the previous value of the label, or <c>null</c> if the label was not previously set.</returns>
-        public virtual Task<string> RemoveDatasetLabelAsync(string datasetId, string labelName, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<string> RemoveDatasetLabelAsync(string datasetId, string labelName, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default) =>
             RemoveDatasetLabelAsync(GetDatasetReference(datasetId), labelName, options, cancellationToken);
         
         /// <summary>
@@ -203,7 +203,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the previous value of the label, or <c>null</c> if the label was not previously set.</returns>
-        public virtual Task<string> RemoveDatasetLabelAsync(string projectId, string datasetId, string labelName, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<string> RemoveDatasetLabelAsync(string projectId, string datasetId, string labelName, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default) =>
             RemoveDatasetLabelAsync(GetDatasetReference(projectId, datasetId), labelName, options, cancellationToken);
         
         /// <summary>
@@ -216,7 +216,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the previous value of the label, or <c>null</c> if the label was not previously set.</returns>
-        public virtual Task<string> RemoveDatasetLabelAsync(DatasetReference datasetReference, string labelName, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<string> RemoveDatasetLabelAsync(DatasetReference datasetReference, string labelName, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
         #endregion
 
@@ -260,7 +260,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// a dictionary with the labels on the dataset before they were cleared.</returns>
-        public virtual Task<IDictionary<string, string>> ClearDatasetLabelsAsync(string datasetId, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<IDictionary<string, string>> ClearDatasetLabelsAsync(string datasetId, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default) =>
             ClearDatasetLabelsAsync(GetDatasetReference(datasetId), options, cancellationToken);
         
         /// <summary>
@@ -273,7 +273,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// a dictionary with the labels on the dataset before they were cleared.</returns>
-        public virtual Task<IDictionary<string, string>> ClearDatasetLabelsAsync(string projectId, string datasetId, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<IDictionary<string, string>> ClearDatasetLabelsAsync(string projectId, string datasetId, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default) =>
             ClearDatasetLabelsAsync(GetDatasetReference(projectId, datasetId), options, cancellationToken);
         
         /// <summary>
@@ -284,7 +284,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// a dictionary with the labels on the dataset before they were cleared.</returns>
-        public virtual Task<IDictionary<string, string>> ClearDatasetLabelsAsync(DatasetReference datasetReference, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<IDictionary<string, string>> ClearDatasetLabelsAsync(DatasetReference datasetReference, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
         #endregion
 
@@ -367,7 +367,7 @@ namespace Google.Cloud.BigQuery.V2
         /// before this operation completed. Labels which weren't present on the dataset before the modification have corresponding
         /// null values in the returned dictionary.
         /// </returns>
-        public virtual Task<IDictionary<string, string>> ModifyDatasetLabelsAsync(string datasetId, IDictionary<string, string> labels, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<IDictionary<string, string>> ModifyDatasetLabelsAsync(string datasetId, IDictionary<string, string> labels, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default) =>
             ModifyDatasetLabelsAsync(GetDatasetReference(datasetId), labels, options, cancellationToken);
         
         /// <summary>
@@ -389,7 +389,7 @@ namespace Google.Cloud.BigQuery.V2
         /// before this operation completed. Labels which weren't present on the dataset before the modification have corresponding
         /// null values in the returned dictionary.
         /// </returns>
-        public virtual Task<IDictionary<string, string>> ModifyDatasetLabelsAsync(string projectId, string datasetId, IDictionary<string, string> labels, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<IDictionary<string, string>> ModifyDatasetLabelsAsync(string projectId, string datasetId, IDictionary<string, string> labels, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default) =>
             ModifyDatasetLabelsAsync(GetDatasetReference(projectId, datasetId), labels, options, cancellationToken);
         
         /// <summary>
@@ -409,7 +409,7 @@ namespace Google.Cloud.BigQuery.V2
         /// before this operation completed. Labels which weren't present on the dataset before the modification have corresponding
         /// null values in the returned dictionary.
         /// </returns>
-        public virtual Task<IDictionary<string, string>> ModifyDatasetLabelsAsync(DatasetReference datasetReference, IDictionary<string, string> labels, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<IDictionary<string, string>> ModifyDatasetLabelsAsync(DatasetReference datasetReference, IDictionary<string, string> labels, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
         #endregion
     }

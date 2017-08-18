@@ -72,7 +72,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the <see cref="BigQueryResults"/> representing the query.</returns>
-        public virtual async Task<BigQueryResults> ExecuteQueryAsync(string sql, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default(CancellationToken))
+        public virtual async Task<BigQueryResults> ExecuteQueryAsync(string sql, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default)
         {
             var job = await CreateQueryJobAsync(sql, queryOptions, cancellationToken).ConfigureAwait(false);
             return await job.GetQueryResultsAsync(resultsOptions, cancellationToken).ConfigureAwait(false);
@@ -95,7 +95,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the <see cref="BigQueryResults"/> representing the query.</returns>
-        public virtual async Task<BigQueryResults> ExecuteQueryAsync(BigQueryCommand command, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default(CancellationToken))
+        public virtual async Task<BigQueryResults> ExecuteQueryAsync(BigQueryCommand command, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null, CancellationToken cancellationToken = default)
         {
             var job = await CreateQueryJobAsync(command, queryOptions, cancellationToken).ConfigureAwait(false);
             return await job.GetQueryResultsAsync(resultsOptions, cancellationToken).ConfigureAwait(false);
@@ -137,7 +137,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the query job created. Use <see cref="GetQueryResultsAsync(JobReference,GetQueryResultsOptions,CancellationToken)"/> to retrieve
         /// the results of the query.</returns>
-        public virtual Task<BigQueryJob> CreateQueryJobAsync(string sql, QueryOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public virtual Task<BigQueryJob> CreateQueryJobAsync(string sql, QueryOptions options = null, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
@@ -152,7 +152,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the query job created. Use <see cref="GetQueryResultsAsync(JobReference,GetQueryResultsOptions,CancellationToken)"/> to retrieve
         /// the results of the query.</returns>
-        public virtual Task<BigQueryJob> CreateQueryJobAsync(BigQueryCommand command, QueryOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public virtual Task<BigQueryJob> CreateQueryJobAsync(BigQueryCommand command, QueryOptions options = null, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
@@ -218,7 +218,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the results of the query.</returns>
-        public virtual Task<BigQueryResults> GetQueryResultsAsync(string jobId, GetQueryResultsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryResults> GetQueryResultsAsync(string jobId, GetQueryResultsOptions options = null, CancellationToken cancellationToken = default) =>
             GetQueryResultsAsync(GetJobReference(jobId), options, cancellationToken);
         
         /// <summary>
@@ -236,7 +236,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the results of the query.</returns>
-        public virtual Task<BigQueryResults> GetQueryResultsAsync(string projectId, string jobId, GetQueryResultsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryResults> GetQueryResultsAsync(string projectId, string jobId, GetQueryResultsOptions options = null, CancellationToken cancellationToken = default) =>
             GetQueryResultsAsync(GetJobReference(projectId, jobId), options, cancellationToken);
         
         /// <summary>
@@ -252,7 +252,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the results of the query.</returns>
-        public virtual Task<BigQueryResults> GetQueryResultsAsync(JobReference jobReference, GetQueryResultsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryResults> GetQueryResultsAsync(JobReference jobReference, GetQueryResultsOptions options = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
         #endregion
 

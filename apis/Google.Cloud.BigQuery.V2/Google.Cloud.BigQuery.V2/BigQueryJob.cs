@@ -159,7 +159,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the completed job.</returns>
-        public Task<BigQueryJob> PollUntilCompletedAsync(GetJobOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public Task<BigQueryJob> PollUntilCompletedAsync(GetJobOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = default) =>
             _client.PollJobUntilCompletedAsync(Reference, options, pollSettings, cancellationToken);
 
         /// <summary>
@@ -175,7 +175,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// a <see cref="BigQueryResults"/> representation of the query.</returns>
-        public Task<BigQueryResults> GetQueryResultsAsync(GetQueryResultsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public Task<BigQueryResults> GetQueryResultsAsync(GetQueryResultsOptions options = null, CancellationToken cancellationToken = default) =>
             _client.GetQueryResultsAsync(Reference, GetQueryTableReference(), options, cancellationToken);
 
         /// <summary>
@@ -186,7 +186,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the final state of the job.</returns>
-        public Task<BigQueryJob> CancelAsync(CancelJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public Task<BigQueryJob> CancelAsync(CancelJobOptions options = null, CancellationToken cancellationToken = default) =>
             _client.CancelJobAsync(Reference, options, cancellationToken);
 
         private TableReference GetQueryTableReference()

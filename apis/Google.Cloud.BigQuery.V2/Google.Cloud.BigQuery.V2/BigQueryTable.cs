@@ -236,7 +236,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// a data upload job.</returns>
-        public Task<BigQueryJob> UploadCsvAsync(Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public Task<BigQueryJob> UploadCsvAsync(Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default) =>
             _client.UploadCsvAsync(Reference, Schema, input, options, cancellationToken);
 
         /// <summary>
@@ -248,7 +248,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// a data upload job.</returns>
-        public Task<BigQueryJob> UploadAvroAsync(Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public Task<BigQueryJob> UploadAvroAsync(Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default) =>
             _client.UploadAvroAsync(Reference, Schema, input, options, cancellationToken);
 
         /// <summary>
@@ -265,7 +265,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// a data upload job.</returns>
-        public Task<BigQueryJob> UploadJsonAsync(IEnumerable<string> rows, UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public Task<BigQueryJob> UploadJsonAsync(IEnumerable<string> rows, UploadJsonOptions options = null, CancellationToken cancellationToken = default) =>
             _client.UploadJsonAsync(Reference, Schema, rows, options, cancellationToken);
 
         /// <summary>
@@ -277,7 +277,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// a data upload job.</returns>
-        public Task<BigQueryJob> UploadJsonAsync(Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public Task<BigQueryJob> UploadJsonAsync(Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = default) =>
             _client.UploadJsonAsync(Reference, Schema, input, options, cancellationToken);
 
         /// <summary>
@@ -296,7 +296,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public Task InsertRowAsync(BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public Task InsertRowAsync(BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default) =>
             _client.InsertRowAsync(Reference, row, options, cancellationToken);
 
         /// <summary>
@@ -307,7 +307,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public Task InsertRowsAsync(IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public Task InsertRowsAsync(IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null, CancellationToken cancellationToken = default) =>
             _client.InsertRowsAsync(Reference, rows, options, cancellationToken);
 
         /// <summary>
@@ -326,7 +326,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public Task DeleteAsync(DeleteTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public Task DeleteAsync(DeleteTableOptions options = null, CancellationToken cancellationToken = default) =>
             _client.DeleteTableAsync(Reference, options, cancellationToken);
 
         /// <summary>
@@ -338,7 +338,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is the job created for the extract operation.</returns>
-        public Task<BigQueryJob> CreateExtractJobAsync(string destinationUri, CreateExtractJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public Task<BigQueryJob> CreateExtractJobAsync(string destinationUri, CreateExtractJobOptions options = null, CancellationToken cancellationToken = default) =>
             _client.CreateExtractJobAsync(Reference, destinationUri, options, cancellationToken);
 
         /// <summary>
@@ -350,7 +350,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is the job created for the extract operation.</returns>
-        public Task<BigQueryJob> CreateExtractJobAsync(IEnumerable<string> destinationUris, CreateExtractJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public Task<BigQueryJob> CreateExtractJobAsync(IEnumerable<string> destinationUris, CreateExtractJobOptions options = null, CancellationToken cancellationToken = default) =>
             _client.CreateExtractJobAsync(Reference, destinationUris, options, cancellationToken);
 
         /// <summary>
@@ -365,7 +365,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is the job created for the copy operation.</returns>
-        public Task<BigQueryJob> CreateCopyJobAsync(TableReference destination, CreateCopyJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public Task<BigQueryJob> CreateCopyJobAsync(TableReference destination, CreateCopyJobOptions options = null, CancellationToken cancellationToken = default) =>
             _client.CreateCopyJobAsync(Reference, destination, options, cancellationToken);
 
         /// <summary>
@@ -386,7 +386,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the updated table.</returns>
-        public Task<BigQueryTable> UpdateAsync(Table resource = null, UpdateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public Task<BigQueryTable> UpdateAsync(Table resource = null, UpdateTableOptions options = null, CancellationToken cancellationToken = default) =>
             _client.UpdateTableAsync(Reference, resource ?? Resource, options, cancellationToken);
 
         /// <summary>
@@ -402,7 +402,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the updated table.</returns>
-        public Task<BigQueryTable> PatchAsync(Table resource, bool matchETag, PatchTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public Task<BigQueryTable> PatchAsync(Table resource, bool matchETag, PatchTableOptions options = null, CancellationToken cancellationToken = default)
         {
             if (matchETag)
             {

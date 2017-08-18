@@ -27,7 +27,7 @@ namespace Google.Cloud.Storage.V1
             CreateSetBucketIamPolicyRequest(bucket, policy, options).Execute();
 
         /// <inheritdoc />
-        public override Task<Policy> SetBucketIamPolicyAsync(string bucket, Policy policy, SetBucketIamPolicyOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public override Task<Policy> SetBucketIamPolicyAsync(string bucket, Policy policy, SetBucketIamPolicyOptions options = null, CancellationToken cancellationToken = default) =>
             CreateSetBucketIamPolicyRequest(bucket, policy, options).ExecuteAsync(cancellationToken);
 
         private SetIamPolicyRequest CreateSetBucketIamPolicyRequest(string bucket, Policy policy, SetBucketIamPolicyOptions options)

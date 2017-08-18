@@ -47,7 +47,7 @@ namespace Google.Cloud.Storage.V1
         public virtual Task<Bucket> PatchBucketAsync(
             Bucket bucket,
             PatchBucketOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken))
+            CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }

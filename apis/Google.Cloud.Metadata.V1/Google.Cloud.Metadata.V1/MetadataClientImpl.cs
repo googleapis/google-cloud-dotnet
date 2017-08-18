@@ -276,7 +276,7 @@ namespace Google.Cloud.Metadata.V1
         public override TokenResponse GetAccessToken() => GetResult(GetAccessTokenAsync);
 
         /// <inheritdoc/>
-        public override async Task<TokenResponse> GetAccessTokenAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<TokenResponse> GetAccessTokenAsync(CancellationToken cancellationToken = default)
         {
             var response = await RequestMetadataAsync("instance/service-accounts/default/token", cancellationToken, requireMetadataFlavorHeader: false).ConfigureAwait(false);
             return await TokenResponse.FromHttpResponseAsync(response, SystemClock.Default, Logger).ConfigureAwait(false);
@@ -286,7 +286,7 @@ namespace Google.Cloud.Metadata.V1
         public override string GetCustomInstanceMetadata(string key) => GetResult(token => GetCustomInstanceMetadataAsync(key, token));
 
         /// <inheritdoc/>
-        public override async Task<string> GetCustomInstanceMetadataAsync(string key, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<string> GetCustomInstanceMetadataAsync(string key, CancellationToken cancellationToken = default)
         {
             ValidateCustomMetadataKey(key);
             var response = await RequestMetadataAsync("instance/attributes/" + key, cancellationToken).ConfigureAwait(false);
@@ -297,7 +297,7 @@ namespace Google.Cloud.Metadata.V1
         public override string GetCustomProjectMetadata(string key) => GetResult(token => GetCustomProjectMetadataAsync(key, token));
 
         /// <inheritdoc/>
-        public override async Task<string> GetCustomProjectMetadataAsync(string key, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<string> GetCustomProjectMetadataAsync(string key, CancellationToken cancellationToken = default)
         {
             ValidateCustomMetadataKey(key);
             var response = await RequestMetadataAsync("project/attributes/" + key, cancellationToken).ConfigureAwait(false);
@@ -308,7 +308,7 @@ namespace Google.Cloud.Metadata.V1
         public override Instance GetInstanceMetadata() => GetResult(GetInstanceMetadataAsync);
 
         /// <inheritdoc/>
-        public override async Task<Instance> GetInstanceMetadataAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<Instance> GetInstanceMetadataAsync(CancellationToken cancellationToken = default)
         {
             var response = await RequestMetadataAsync("instance?recursive=true", cancellationToken).ConfigureAwait(false);
             var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
@@ -319,7 +319,7 @@ namespace Google.Cloud.Metadata.V1
         public override MaintenanceStatus GetMaintenanceStatus() => GetResult(GetMaintenanceStatusAsync);
 
         /// <inheritdoc/>
-        public override async Task<MaintenanceStatus> GetMaintenanceStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<MaintenanceStatus> GetMaintenanceStatusAsync(CancellationToken cancellationToken = default)
         {
             var response = await RequestMetadataAsync("instance/maintenance-event", cancellationToken).ConfigureAwait(false);
             return ParseMaintenanceStatus(await response.Content.ReadAsStringAsync().ConfigureAwait(false));
@@ -329,7 +329,7 @@ namespace Google.Cloud.Metadata.V1
         public override MetadataResult GetMetadata(string key) => GetResult(token => GetMetadataAsync(key, token));
 
         /// <inheritdoc/>
-        public override Task<MetadataResult> GetMetadataAsync(string key, CancellationToken cancellationToken = default(CancellationToken))
+        public override Task<MetadataResult> GetMetadataAsync(string key, CancellationToken cancellationToken = default)
         {
             ValidateMetadataKey(key);
 
@@ -349,7 +349,7 @@ namespace Google.Cloud.Metadata.V1
         public override Project GetProjectMetadata() => GetResult(GetProjectMetadataAsync);
 
         /// <inheritdoc/>
-        public override async Task<Project> GetProjectMetadataAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<Project> GetProjectMetadataAsync(CancellationToken cancellationToken = default)
         {
             var response = await RequestMetadataAsync("project?recursive=true", cancellationToken).ConfigureAwait(false);
             var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
@@ -360,7 +360,7 @@ namespace Google.Cloud.Metadata.V1
         public override bool IsServerAvailable() => GetResult(IsServerAvailableAsync);
 
         /// <inheritdoc/>
-        public override async Task<bool> IsServerAvailableAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<bool> IsServerAvailableAsync(CancellationToken cancellationToken = default)
         {
             try
             {
@@ -461,11 +461,11 @@ namespace Google.Cloud.Metadata.V1
         }
 
         /// <inheritdoc/>
-        public override MetadataResult WaitForChange(string key, string lastETag = null, TimeSpan timeout = default(TimeSpan)) =>
+        public override MetadataResult WaitForChange(string key, string lastETag = null, TimeSpan timeout = default) =>
             GetResult(token => WaitForChangeAsync(key, lastETag, timeout, token));
 
         /// <inheritdoc/>
-        public override Task<MetadataResult> WaitForChangeAsync(string key, string lastETag = null, TimeSpan timeout = default(TimeSpan), CancellationToken cancellationToken = default(CancellationToken))
+        public override Task<MetadataResult> WaitForChangeAsync(string key, string lastETag = null, TimeSpan timeout = default, CancellationToken cancellationToken = default)
         {
             ValidateMetadataKey(key);
             ValidateETag(lastETag, nameof(lastETag));

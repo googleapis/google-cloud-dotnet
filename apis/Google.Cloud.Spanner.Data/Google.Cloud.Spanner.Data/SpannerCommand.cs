@@ -232,7 +232,7 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>a <see cref="SpannerDataReader"/>.</returns>
         public Task<DbDataReader> ExecuteReaderAsync(
             TimestampBound singleUseReadSettings,
-            CancellationToken cancellationToken = default(CancellationToken))
+            CancellationToken cancellationToken = default)
             => ExecuteReaderImplAsync(
                 SpannerConnection,
                 GetExecuteSqlRequest(),
@@ -448,7 +448,7 @@ namespace Google.Cloud.Spanner.Data
         /// boolean does not have either 'true' or 'false') then a <see cref="FormatException"/> exception will be
         /// thrown as documented by the <see cref="Convert"/> class.</typeparam>
         /// <returns>The first column of the first row resulting from execution of the query.</returns>
-        public Task<T> ExecuteScalarAsync<T>(CancellationToken cancellationToken = default(CancellationToken))
+        public Task<T> ExecuteScalarAsync<T>(CancellationToken cancellationToken = default)
             => ExecuteScalarImplAsync<T>(
                 SpannerConnection,
                 GetExecuteSqlRequest(),
@@ -482,7 +482,7 @@ namespace Google.Cloud.Spanner.Data
                     return reader.GetFieldValue<T>(0);
                 }
             }
-            return default(T);
+            return default;
         }
 
         /// <inheritdoc />

@@ -28,7 +28,7 @@ namespace Google.Cloud.Storage.V1
 
         /// <inheritdoc />
         public override Task<Bucket> CreateBucketAsync(string projectId, string bucket, CreateBucketOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken)) =>
+            CancellationToken cancellationToken = default) =>
             CreateCreateBucketRequest(projectId, bucket, options).ExecuteAsync(cancellationToken);
 
         /// <inheritdoc />
@@ -36,7 +36,7 @@ namespace Google.Cloud.Storage.V1
             CreateCreateBucketRequest(projectId, bucket, options).Execute();
 
         /// <inheritdoc />
-        public override Task<Bucket> CreateBucketAsync(string projectId, Bucket bucket, CreateBucketOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public override Task<Bucket> CreateBucketAsync(string projectId, Bucket bucket, CreateBucketOptions options = null, CancellationToken cancellationToken = default) =>
             CreateCreateBucketRequest(projectId, bucket, options).ExecuteAsync(cancellationToken);
 
         private BucketsResource.InsertRequest CreateCreateBucketRequest(string projectId, string bucket, CreateBucketOptions options)

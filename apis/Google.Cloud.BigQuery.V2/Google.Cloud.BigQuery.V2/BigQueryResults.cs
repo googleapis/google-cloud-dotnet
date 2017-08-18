@@ -108,7 +108,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// an in-memory result set of at most the given number of rows.</returns>
-        public async Task<BigQueryPage> ReadPageAsync(int pageSize, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<BigQueryPage> ReadPageAsync(int pageSize, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckArgumentRange(pageSize, nameof(pageSize), 1, int.MaxValue);
             // Make sure we start off by trying to read the right page size...

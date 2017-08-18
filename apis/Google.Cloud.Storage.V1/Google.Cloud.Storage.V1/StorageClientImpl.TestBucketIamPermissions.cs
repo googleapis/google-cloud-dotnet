@@ -30,7 +30,7 @@ namespace Google.Cloud.Storage.V1
 
         /// <inheritdoc />
         public override async Task<IList<string>> TestBucketIamPermissionsAsync(string bucket, IEnumerable<string> permissions,
-            TestBucketIamPermissionsOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+            TestBucketIamPermissionsOptions options = null, CancellationToken cancellationToken = default)
         {
             var response = await CreateTestIamPermissionsRequest(bucket, permissions, options).ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return response.Permissions;

@@ -97,7 +97,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         }
 
         /// <inheritdoc />
-        public Task LogAsync(Exception exception, HttpContext context = null, CancellationToken cancellationToken = default(CancellationToken))
+        public Task LogAsync(Exception exception, HttpContext context = null, CancellationToken cancellationToken = default)
         {
             context = context ?? HttpContext.Current;
             var contextWrapper = new HttpContextWrapper(context);

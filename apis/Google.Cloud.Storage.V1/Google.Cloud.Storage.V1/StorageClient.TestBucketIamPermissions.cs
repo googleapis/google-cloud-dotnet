@@ -44,7 +44,7 @@ namespace Google.Cloud.Storage.V1
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation, with a result returning the
         /// permissions held by the caller.</returns>
-        public virtual Task<IList<string>> TestBucketIamPermissionsAsync(string bucket, IEnumerable<string> permissions, TestBucketIamPermissionsOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public virtual Task<IList<string>> TestBucketIamPermissionsAsync(string bucket, IEnumerable<string> permissions, TestBucketIamPermissionsOptions options = null, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }

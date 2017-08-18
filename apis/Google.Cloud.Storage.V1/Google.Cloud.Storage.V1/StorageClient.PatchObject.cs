@@ -49,7 +49,7 @@ namespace Google.Cloud.Storage.V1
         public virtual Task<Object> PatchObjectAsync(
             Object obj,
             PatchObjectOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken))
+            CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }

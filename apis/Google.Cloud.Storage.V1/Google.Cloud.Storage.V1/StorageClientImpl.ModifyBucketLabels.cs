@@ -105,7 +105,7 @@ namespace Google.Cloud.Storage.V1
         }
 
         /// <inheritdoc />
-        public override async Task<IDictionary<string, string>> ModifyBucketLabelsAsync(string bucket, IDictionary<string, string> labels, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<IDictionary<string, string>> ModifyBucketLabelsAsync(string bucket, IDictionary<string, string> labels, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = default)
         {
             ValidateBucketName(bucket);
             GaxPreconditions.CheckNotNull(labels, nameof(labels));
@@ -148,7 +148,7 @@ namespace Google.Cloud.Storage.V1
         }
 
         /// <inheritdoc />
-        public override async Task<IDictionary<string, string>> ClearBucketLabelsAsync(string bucket, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<IDictionary<string, string>> ClearBucketLabelsAsync(string bucket, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = default)
         {
             ValidateBucketName(bucket);
 

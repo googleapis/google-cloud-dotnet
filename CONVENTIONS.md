@@ -21,7 +21,7 @@ for asynchronous operations, but using optional parameters to reduce
 the number of overloads. For example:
 
 ```csharp
-public Task<string> FooAsync(string normalParameter, CancellationToken cancellationToken = default(CancellationToken))
+public Task<string> FooAsync(string normalParameter, CancellationToken cancellationToken = default)
 ```
 
 Or:
@@ -29,7 +29,7 @@ Or:
 ```csharp
 public Task<string> FooAsync(
     string normalParameter,
-    CancellationToken cancellationToken = default(CancellationToken),
+    CancellationToken cancellationToken = default,
     IProgress<int> progress = null)
 ```
 
@@ -39,7 +39,7 @@ described later:
 ```csharp
 public Task<string> FooAsync(string normalParameter,
     FooOptions options = null,
-    CancellationToken cancellationToken = default(CancellationToken),
+    CancellationToken cancellationToken = default,
     IProgress<int> progress = null)
 ```
 
@@ -70,7 +70,7 @@ Optional parameters
 Optional parameters are discouraged, except in cases where these
 conventions specifically recommend their use. The default value for
 default arguments must be the default value for the parameter type
-(e.g. `default(T)`, `null` or `0`).
+(e.g. `default`, `null` or `0`).
 
 Note that changing any aspect of a parameter can be a breaking
 change. Making a parameter optional may not be a breaking change if
@@ -112,7 +112,7 @@ public string Foo(string normalParameter, FooOptions options = null)
 public Task<string> FooAsync(
     string normalParameter,
     FooOptions options = null,
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 ```
 
 List operations
@@ -134,7 +134,7 @@ public IEnumerable<Book> ListBooks(string normalParameter, ListBooksOptions opti
 public Task<IList<Book>> ListAllBooksAsync(
     string normalParameter,
     ListBooksOptions options = null,
-    CancellationToken cancellationToken = default(CancellationToken))
+    CancellationToken cancellationToken = default)
 public IAsyncEnumerable<Book> ListBooksAsync(string normalParameter)
 public IAsyncEnumerable<Book> ListBooksAsync(string normalParameter, ListBooksOptions options = null)
 ```

@@ -47,7 +47,7 @@ namespace Google.Cloud.Diagnostics.Common
 
         /// <inheritdoc />
         public Task ReceiveAsync(
-            IEnumerable<LogEntry> logs, CancellationToken cancellationToken = default(CancellationToken))
+            IEnumerable<LogEntry> logs, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(logs, nameof(logs));
             if (!logs.Any())

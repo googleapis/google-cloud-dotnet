@@ -48,7 +48,7 @@ namespace Google.Cloud.Storage.V1
             string destinationBucket,
             string destinationObjectName,
             CopyObjectOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken))
+            CancellationToken cancellationToken = default)
         {
             var request = CreateCopyObjectRequest(sourceBucket, sourceObjectName, destinationBucket, destinationObjectName, options);
             var response = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);

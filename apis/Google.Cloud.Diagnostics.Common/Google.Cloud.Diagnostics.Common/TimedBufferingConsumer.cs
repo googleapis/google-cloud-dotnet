@@ -83,7 +83,7 @@ namespace Google.Cloud.Diagnostics.Common
 
         /// <inheritdoc />
         protected override Task ReceiveAsyncWithSemaphoreHeldAsync(
-            IEnumerable<T> items, CancellationToken cancellationToken = default(CancellationToken))
+            IEnumerable<T> items, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(items, nameof(items));
             _items.AddRange(items);

@@ -45,6 +45,6 @@ namespace Google.Cloud.Diagnostics.Common
         ///     current context will be retrieved automatically.</param>
         /// <param name="cancellationToken">Optional, The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        Task LogAsync(Exception exception, HttpContext context = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task LogAsync(Exception exception, HttpContext context = null, CancellationToken cancellationToken = default);
     }
 }

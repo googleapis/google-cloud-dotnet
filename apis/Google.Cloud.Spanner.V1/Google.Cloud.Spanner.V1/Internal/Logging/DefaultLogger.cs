@@ -84,7 +84,7 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
                             {
                                 kvp.Value.Last = 0;
                                 kvp.Value.Instances = 0;
-                                kvp.Value.TotalTime = default(TimeSpan);
+                                kvp.Value.TotalTime = default;
                                 kvp.Value.LastMeasureTime = DateTime.UtcNow;
                                 kvp.Value.Maximum = 0;
                                 kvp.Value.Minimum = 0;
@@ -133,8 +133,8 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
                 double total = entry.Instances * entry.Average;
                 entry.Instances++;
                 entry.Average = (total + value) / entry.Instances;
-                entry.Maximum = entry.LastMeasureTime == default(DateTime) ? value : Math.Max(entry.Minimum, value);
-                entry.Minimum = entry.LastMeasureTime == default(DateTime) ? value : Math.Min(entry.Minimum, value);
+                entry.Maximum = entry.LastMeasureTime == default ? value : Math.Max(entry.Minimum, value);
+                entry.Minimum = entry.LastMeasureTime == default ? value : Math.Min(entry.Minimum, value);
                 var now = DateTime.UtcNow;
                 UpdateTimeWeightedAvg(entry, now);
                 entry.LastMeasureTime = now;
@@ -146,7 +146,7 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
         {
             lock (entry)
             {
-                if (entry.LastMeasureTime != default(DateTime))
+                if (entry.LastMeasureTime != default)
                 {
                     double milliSoFar = 0;
                     var deltaTime = (now - entry.LastMeasureTime).TotalMilliseconds;
