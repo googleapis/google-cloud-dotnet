@@ -40,6 +40,8 @@ test_script:
 after_test:
   - bash createcoveragereport.sh
   - codecov -f "coverage/coverage-filtered.xml"
-  - cd docs
-  - bash builddocs.sh
-  - cd ..
+# Docs disabled until https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1380
+# is better understood
+  - # cd docs
+  - # bash builddocs.sh
+  - # cd ..
