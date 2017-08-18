@@ -42,6 +42,7 @@ fi
 # First build up a solution file with all the projects, and a text
 # file with paths to all the test project files.
 > AllTests.txt
+rm -f AllProjects.sln
 dotnet new sln --name AllProjects
 
 if [[ "$OS" == "Windows_NT" ]]
