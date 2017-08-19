@@ -24,6 +24,11 @@ install:
 # Perform the build.
 build_script:
   - dotnet --info
+  - PATH
+  - where msbuild.exe
+  - ps: $env:MSBuildSDKsPath = "C:\Program Files\dotnet\sdk\1.0.4\Sdks"
+  - ps: $env:MSBuildExtensionsPath = "C:\Program Files\dotnet\sdk\1.0.4"
+  - ps: $env:MSBuildToolsVersion = "15.0"
   - echo "Regenerating projects: if this fails, run generateprojects.sh and commit changes"
   - bash generateprojects.sh && git diff --exit-code
   - bash build.sh --notests
