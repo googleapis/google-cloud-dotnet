@@ -23,7 +23,7 @@ install:
 
 # Perform the build.
 build_script:
-  - dir "c:\Program Files (x86)\Mirosoft Visual Studio 2017\Community"
+  - dir "c:\Program Files (x86)\Mirosoft Visual Studio 15.0"
   - dotnet --info
   - echo "Regenerating projects: if this fails, run generateprojects.sh and commit changes"
   - bash generateprojects.sh && git diff --exit-code
@@ -44,7 +44,7 @@ after_test:
 # Docs disabled until https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1380
 # is better understood
   - ps: $env:VisualStudioVersion = "15.0"
-  - ps: $env:VSINSTALLDIR = "c:\Program Files (x86)\Mirosoft Visual Studio 2017\Community"
+  - ps: $env:VSINSTALLDIR = "c:\Program Files (x86)\Mirosoft Visual Studio 15.0"
   - cd docs
   - bash builddocs.sh
   - cd ..
