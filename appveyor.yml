@@ -23,6 +23,7 @@ install:
 
 # Perform the build.
 build_script:
+  - dir "c:\Program Files (x86)\Mirosoft Visual Studio 2017\Community"
   - dotnet --info
   - echo "Regenerating projects: if this fails, run generateprojects.sh and commit changes"
   - bash generateprojects.sh && git diff --exit-code
@@ -42,6 +43,8 @@ after_test:
   - codecov -f "coverage/coverage-filtered.xml"
 # Docs disabled until https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1380
 # is better understood
-  - # cd docs
-  - # bash builddocs.sh
-  - # cd ..
+  - ps: $env:VisualStudioVersion = "15.0"
+  - ps: $env:VSINSTALLDIR = "c:\Program Files (x86)\Mirosoft Visual Studio 2017\Community"
+  - cd docs
+  - bash builddocs.sh
+  - cd ..
