@@ -17349,6 +17349,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceAsync
   fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceAsync
   nameWithType: InstanceAdminClient.CreateInstanceAsync
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceOperationsClient
+  name: CreateInstanceOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_CreateInstanceOperationsClient
+  commentId: P:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceOperationsClient
+  nameWithType: InstanceAdminClient.CreateInstanceOperationsClient
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceOperationsClient*
+  name: CreateInstanceOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_CreateInstanceOperationsClient_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceOperationsClient
+  nameWithType: InstanceAdminClient.CreateInstanceOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DefaultEndpoint
   name: DefaultEndpoint
   href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_DefaultEndpoint
@@ -17637,18 +17649,6 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstancesAsync
   fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstancesAsync
   nameWithType: InstanceAdminClient.ListInstancesAsync
-- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.LongRunningOperationsClient
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_LongRunningOperationsClient
-  commentId: P:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.LongRunningOperationsClient
-  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.LongRunningOperationsClient
-  nameWithType: InstanceAdminClient.LongRunningOperationsClient
-- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.LongRunningOperationsClient*
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_LongRunningOperationsClient_
-  commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.LongRunningOperationsClient
-  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.LongRunningOperationsClient
-  nameWithType: InstanceAdminClient.LongRunningOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.PollOnceCreateInstance(System.String,Google.Api.Gax.Grpc.CallSettings)
   name: PollOnceCreateInstance(String, CallSettings)
   href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_PollOnceCreateInstance_System_String_Google_Api_Gax_Grpc_CallSettings_
@@ -17844,6 +17844,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceAsync
   fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceAsync
   nameWithType: InstanceAdminClient.UpdateInstanceAsync
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceOperationsClient
+  name: UpdateInstanceOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_UpdateInstanceOperationsClient
+  commentId: P:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceOperationsClient
+  nameWithType: InstanceAdminClient.UpdateInstanceOperationsClient
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceOperationsClient*
+  name: UpdateInstanceOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_UpdateInstanceOperationsClient_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceOperationsClient
+  nameWithType: InstanceAdminClient.UpdateInstanceOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl
   name: InstanceAdminClientImpl
   href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.html
@@ -17886,6 +17898,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.CreateInstanceAsync
   fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.CreateInstanceAsync
   nameWithType: InstanceAdminClientImpl.CreateInstanceAsync
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.CreateInstanceOperationsClient
+  name: CreateInstanceOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_CreateInstanceOperationsClient
+  commentId: P:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.CreateInstanceOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.CreateInstanceOperationsClient
+  nameWithType: InstanceAdminClientImpl.CreateInstanceOperationsClient
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.CreateInstanceOperationsClient*
+  name: CreateInstanceOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_CreateInstanceOperationsClient_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.CreateInstanceOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.CreateInstanceOperationsClient
+  nameWithType: InstanceAdminClientImpl.CreateInstanceOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.DeleteInstance(Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest,Google.Api.Gax.Grpc.CallSettings)
   name: DeleteInstance(DeleteInstanceRequest, CallSettings)
   href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_DeleteInstance_Google_Cloud_Spanner_Admin_Instance_V1_DeleteInstanceRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -18042,18 +18066,6 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.ListInstancesAsync
   fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.ListInstancesAsync
   nameWithType: InstanceAdminClientImpl.ListInstancesAsync
-- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.LongRunningOperationsClient
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_LongRunningOperationsClient
-  commentId: P:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.LongRunningOperationsClient
-  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.LongRunningOperationsClient
-  nameWithType: InstanceAdminClientImpl.LongRunningOperationsClient
-- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.LongRunningOperationsClient*
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_LongRunningOperationsClient_
-  commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.LongRunningOperationsClient
-  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.LongRunningOperationsClient
-  nameWithType: InstanceAdminClientImpl.LongRunningOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.SetIamPolicy(Google.Cloud.Iam.V1.SetIamPolicyRequest,Google.Api.Gax.Grpc.CallSettings)
   name: SetIamPolicy(SetIamPolicyRequest, CallSettings)
   href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_SetIamPolicy_Google_Cloud_Iam_V1_SetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -18126,6 +18138,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.UpdateInstanceAsync
   fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.UpdateInstanceAsync
   nameWithType: InstanceAdminClientImpl.UpdateInstanceAsync
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.UpdateInstanceOperationsClient
+  name: UpdateInstanceOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_UpdateInstanceOperationsClient
+  commentId: P:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.UpdateInstanceOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.UpdateInstanceOperationsClient
+  nameWithType: InstanceAdminClientImpl.UpdateInstanceOperationsClient
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.UpdateInstanceOperationsClient*
+  name: UpdateInstanceOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_UpdateInstanceOperationsClient_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.UpdateInstanceOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.UpdateInstanceOperationsClient
+  nameWithType: InstanceAdminClientImpl.UpdateInstanceOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings
   name: InstanceAdminSettings
   href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html
@@ -18156,6 +18180,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.Clone
   fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.Clone
   nameWithType: InstanceAdminSettings.Clone
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.CreateInstanceOperationsSettings
+  name: CreateInstanceOperationsSettings
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminSettings_CreateInstanceOperationsSettings
+  commentId: P:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.CreateInstanceOperationsSettings
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.CreateInstanceOperationsSettings
+  nameWithType: InstanceAdminSettings.CreateInstanceOperationsSettings
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.CreateInstanceOperationsSettings*
+  name: CreateInstanceOperationsSettings
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminSettings_CreateInstanceOperationsSettings_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.CreateInstanceOperationsSettings
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.CreateInstanceOperationsSettings
+  nameWithType: InstanceAdminSettings.CreateInstanceOperationsSettings
 - uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.CreateInstanceSettings
   name: CreateInstanceSettings
   href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminSettings_CreateInstanceSettings
@@ -18288,18 +18324,6 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.ListInstancesSettings
   fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.ListInstancesSettings
   nameWithType: InstanceAdminSettings.ListInstancesSettings
-- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.LongRunningOperationsSettings
-  name: LongRunningOperationsSettings
-  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminSettings_LongRunningOperationsSettings
-  commentId: P:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.LongRunningOperationsSettings
-  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.LongRunningOperationsSettings
-  nameWithType: InstanceAdminSettings.LongRunningOperationsSettings
-- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.LongRunningOperationsSettings*
-  name: LongRunningOperationsSettings
-  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminSettings_LongRunningOperationsSettings_
-  commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.LongRunningOperationsSettings
-  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.LongRunningOperationsSettings
-  nameWithType: InstanceAdminSettings.LongRunningOperationsSettings
 - uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.NonIdempotentRetryFilter
   name: NonIdempotentRetryFilter
   href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminSettings_NonIdempotentRetryFilter
@@ -18336,6 +18360,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.TestIamPermissionsSettings
   fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.TestIamPermissionsSettings
   nameWithType: InstanceAdminSettings.TestIamPermissionsSettings
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.UpdateInstanceOperationsSettings
+  name: UpdateInstanceOperationsSettings
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminSettings_UpdateInstanceOperationsSettings
+  commentId: P:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.UpdateInstanceOperationsSettings
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.UpdateInstanceOperationsSettings
+  nameWithType: InstanceAdminSettings.UpdateInstanceOperationsSettings
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.UpdateInstanceOperationsSettings*
+  name: UpdateInstanceOperationsSettings
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminSettings_UpdateInstanceOperationsSettings_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.UpdateInstanceOperationsSettings
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.UpdateInstanceOperationsSettings
+  nameWithType: InstanceAdminSettings.UpdateInstanceOperationsSettings
 - uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.UpdateInstanceSettings
   name: UpdateInstanceSettings
   href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminSettings_UpdateInstanceSettings

@@ -16308,6 +16308,18 @@ references:
   commentId: Overload:Google.Cloud.Datastore.V1.BeginTransactionRequest.ProjectId
   fullName: Google.Cloud.Datastore.V1.BeginTransactionRequest.ProjectId
   nameWithType: BeginTransactionRequest.ProjectId
+- uid: Google.Cloud.Datastore.V1.BeginTransactionRequest.TransactionOptions
+  name: TransactionOptions
+  href: api/Google.Cloud.Datastore.V1.BeginTransactionRequest.html#Google_Cloud_Datastore_V1_BeginTransactionRequest_TransactionOptions
+  commentId: P:Google.Cloud.Datastore.V1.BeginTransactionRequest.TransactionOptions
+  fullName: Google.Cloud.Datastore.V1.BeginTransactionRequest.TransactionOptions
+  nameWithType: BeginTransactionRequest.TransactionOptions
+- uid: Google.Cloud.Datastore.V1.BeginTransactionRequest.TransactionOptions*
+  name: TransactionOptions
+  href: api/Google.Cloud.Datastore.V1.BeginTransactionRequest.html#Google_Cloud_Datastore_V1_BeginTransactionRequest_TransactionOptions_
+  commentId: Overload:Google.Cloud.Datastore.V1.BeginTransactionRequest.TransactionOptions
+  fullName: Google.Cloud.Datastore.V1.BeginTransactionRequest.TransactionOptions
+  nameWithType: BeginTransactionRequest.TransactionOptions
 - uid: Google.Cloud.Datastore.V1.BeginTransactionResponse
   name: BeginTransactionResponse
   href: api/Google.Cloud.Datastore.V1.BeginTransactionResponse.html
@@ -21151,6 +21163,102 @@ references:
   commentId: Overload:Google.Cloud.Datastore.V1.RunQueryResponse.Query
   fullName: Google.Cloud.Datastore.V1.RunQueryResponse.Query
   nameWithType: RunQueryResponse.Query
+- uid: Google.Cloud.Datastore.V1.TransactionOptions
+  name: TransactionOptions
+  href: api/Google.Cloud.Datastore.V1.TransactionOptions.html
+  commentId: T:Google.Cloud.Datastore.V1.TransactionOptions
+  fullName: Google.Cloud.Datastore.V1.TransactionOptions
+  nameWithType: TransactionOptions
+- uid: Google.Cloud.Datastore.V1.TransactionOptions.ModeCase
+  name: ModeCase
+  href: api/Google.Cloud.Datastore.V1.TransactionOptions.html#Google_Cloud_Datastore_V1_TransactionOptions_ModeCase
+  commentId: P:Google.Cloud.Datastore.V1.TransactionOptions.ModeCase
+  fullName: Google.Cloud.Datastore.V1.TransactionOptions.ModeCase
+  nameWithType: TransactionOptions.ModeCase
+- uid: Google.Cloud.Datastore.V1.TransactionOptions.ModeCase*
+  name: ModeCase
+  href: api/Google.Cloud.Datastore.V1.TransactionOptions.html#Google_Cloud_Datastore_V1_TransactionOptions_ModeCase_
+  commentId: Overload:Google.Cloud.Datastore.V1.TransactionOptions.ModeCase
+  fullName: Google.Cloud.Datastore.V1.TransactionOptions.ModeCase
+  nameWithType: TransactionOptions.ModeCase
+- uid: Google.Cloud.Datastore.V1.TransactionOptions.ModeOneofCase
+  name: TransactionOptions.ModeOneofCase
+  href: api/Google.Cloud.Datastore.V1.TransactionOptions.ModeOneofCase.html
+  commentId: T:Google.Cloud.Datastore.V1.TransactionOptions.ModeOneofCase
+  fullName: Google.Cloud.Datastore.V1.TransactionOptions.ModeOneofCase
+  nameWithType: TransactionOptions.ModeOneofCase
+- uid: Google.Cloud.Datastore.V1.TransactionOptions.ModeOneofCase.None
+  name: None
+  href: api/Google.Cloud.Datastore.V1.TransactionOptions.ModeOneofCase.html#Google_Cloud_Datastore_V1_TransactionOptions_ModeOneofCase_None
+  commentId: F:Google.Cloud.Datastore.V1.TransactionOptions.ModeOneofCase.None
+  fullName: Google.Cloud.Datastore.V1.TransactionOptions.ModeOneofCase.None
+  nameWithType: TransactionOptions.ModeOneofCase.None
+- uid: Google.Cloud.Datastore.V1.TransactionOptions.ModeOneofCase.ReadOnly
+  name: ReadOnly
+  href: api/Google.Cloud.Datastore.V1.TransactionOptions.ModeOneofCase.html#Google_Cloud_Datastore_V1_TransactionOptions_ModeOneofCase_ReadOnly
+  commentId: F:Google.Cloud.Datastore.V1.TransactionOptions.ModeOneofCase.ReadOnly
+  fullName: Google.Cloud.Datastore.V1.TransactionOptions.ModeOneofCase.ReadOnly
+  nameWithType: TransactionOptions.ModeOneofCase.ReadOnly
+- uid: Google.Cloud.Datastore.V1.TransactionOptions.ModeOneofCase.ReadWrite
+  name: ReadWrite
+  href: api/Google.Cloud.Datastore.V1.TransactionOptions.ModeOneofCase.html#Google_Cloud_Datastore_V1_TransactionOptions_ModeOneofCase_ReadWrite
+  commentId: F:Google.Cloud.Datastore.V1.TransactionOptions.ModeOneofCase.ReadWrite
+  fullName: Google.Cloud.Datastore.V1.TransactionOptions.ModeOneofCase.ReadWrite
+  nameWithType: TransactionOptions.ModeOneofCase.ReadWrite
+- uid: Google.Cloud.Datastore.V1.TransactionOptions.ReadOnly
+  name: ReadOnly
+  href: api/Google.Cloud.Datastore.V1.TransactionOptions.html#Google_Cloud_Datastore_V1_TransactionOptions_ReadOnly
+  commentId: P:Google.Cloud.Datastore.V1.TransactionOptions.ReadOnly
+  fullName: Google.Cloud.Datastore.V1.TransactionOptions.ReadOnly
+  nameWithType: TransactionOptions.ReadOnly
+- uid: Google.Cloud.Datastore.V1.TransactionOptions.ReadOnly*
+  name: ReadOnly
+  href: api/Google.Cloud.Datastore.V1.TransactionOptions.html#Google_Cloud_Datastore_V1_TransactionOptions_ReadOnly_
+  commentId: Overload:Google.Cloud.Datastore.V1.TransactionOptions.ReadOnly
+  fullName: Google.Cloud.Datastore.V1.TransactionOptions.ReadOnly
+  nameWithType: TransactionOptions.ReadOnly
+- uid: Google.Cloud.Datastore.V1.TransactionOptions.ReadWrite
+  name: ReadWrite
+  href: api/Google.Cloud.Datastore.V1.TransactionOptions.html#Google_Cloud_Datastore_V1_TransactionOptions_ReadWrite
+  commentId: P:Google.Cloud.Datastore.V1.TransactionOptions.ReadWrite
+  fullName: Google.Cloud.Datastore.V1.TransactionOptions.ReadWrite
+  nameWithType: TransactionOptions.ReadWrite
+- uid: Google.Cloud.Datastore.V1.TransactionOptions.ReadWrite*
+  name: ReadWrite
+  href: api/Google.Cloud.Datastore.V1.TransactionOptions.html#Google_Cloud_Datastore_V1_TransactionOptions_ReadWrite_
+  commentId: Overload:Google.Cloud.Datastore.V1.TransactionOptions.ReadWrite
+  fullName: Google.Cloud.Datastore.V1.TransactionOptions.ReadWrite
+  nameWithType: TransactionOptions.ReadWrite
+- uid: Google.Cloud.Datastore.V1.TransactionOptions.Types
+  name: TransactionOptions.Types
+  href: api/Google.Cloud.Datastore.V1.TransactionOptions.Types.html
+  commentId: T:Google.Cloud.Datastore.V1.TransactionOptions.Types
+  fullName: Google.Cloud.Datastore.V1.TransactionOptions.Types
+  nameWithType: TransactionOptions.Types
+- uid: Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadOnly
+  name: TransactionOptions.Types.ReadOnly
+  href: api/Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadOnly.html
+  commentId: T:Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadOnly
+  fullName: Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadOnly
+  nameWithType: TransactionOptions.Types.ReadOnly
+- uid: Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite
+  name: TransactionOptions.Types.ReadWrite
+  href: api/Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite.html
+  commentId: T:Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite
+  fullName: Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite
+  nameWithType: TransactionOptions.Types.ReadWrite
+- uid: Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite.PreviousTransaction
+  name: PreviousTransaction
+  href: api/Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite.html#Google_Cloud_Datastore_V1_TransactionOptions_Types_ReadWrite_PreviousTransaction
+  commentId: P:Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite.PreviousTransaction
+  fullName: Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite.PreviousTransaction
+  nameWithType: TransactionOptions.Types.ReadWrite.PreviousTransaction
+- uid: Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite.PreviousTransaction*
+  name: PreviousTransaction
+  href: api/Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite.html#Google_Cloud_Datastore_V1_TransactionOptions_Types_ReadWrite_PreviousTransaction_
+  commentId: Overload:Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite.PreviousTransaction
+  fullName: Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite.PreviousTransaction
+  nameWithType: TransactionOptions.Types.ReadWrite.PreviousTransaction
 - uid: Google.Cloud.Datastore.V1.Value
   name: Value
   href: api/Google.Cloud.Datastore.V1.Value.html

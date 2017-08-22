@@ -17385,18 +17385,6 @@ references:
   commentId: Overload:Google.Cloud.Speech.V1.SpeechClient.GrpcClient
   fullName: Google.Cloud.Speech.V1.SpeechClient.GrpcClient
   nameWithType: SpeechClient.GrpcClient
-- uid: Google.Cloud.Speech.V1.SpeechClient.LongRunningOperationsClient
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Speech.V1.SpeechClient.html#Google_Cloud_Speech_V1_SpeechClient_LongRunningOperationsClient
-  commentId: P:Google.Cloud.Speech.V1.SpeechClient.LongRunningOperationsClient
-  fullName: Google.Cloud.Speech.V1.SpeechClient.LongRunningOperationsClient
-  nameWithType: SpeechClient.LongRunningOperationsClient
-- uid: Google.Cloud.Speech.V1.SpeechClient.LongRunningOperationsClient*
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Speech.V1.SpeechClient.html#Google_Cloud_Speech_V1_SpeechClient_LongRunningOperationsClient_
-  commentId: Overload:Google.Cloud.Speech.V1.SpeechClient.LongRunningOperationsClient
-  fullName: Google.Cloud.Speech.V1.SpeechClient.LongRunningOperationsClient
-  nameWithType: SpeechClient.LongRunningOperationsClient
 - uid: Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognize(Google.Cloud.Speech.V1.LongRunningRecognizeRequest,Google.Api.Gax.Grpc.CallSettings)
   name: LongRunningRecognize(LongRunningRecognizeRequest, CallSettings)
   href: api/Google.Cloud.Speech.V1.SpeechClient.html#Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognize_Google_Cloud_Speech_V1_LongRunningRecognizeRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -17439,6 +17427,18 @@ references:
   commentId: Overload:Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognizeAsync
   fullName: Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognizeAsync
   nameWithType: SpeechClient.LongRunningRecognizeAsync
+- uid: Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognizeOperationsClient
+  name: LongRunningRecognizeOperationsClient
+  href: api/Google.Cloud.Speech.V1.SpeechClient.html#Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognizeOperationsClient
+  commentId: P:Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognizeOperationsClient
+  fullName: Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognizeOperationsClient
+  nameWithType: SpeechClient.LongRunningRecognizeOperationsClient
+- uid: Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognizeOperationsClient*
+  name: LongRunningRecognizeOperationsClient
+  href: api/Google.Cloud.Speech.V1.SpeechClient.html#Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognizeOperationsClient_
+  commentId: Overload:Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognizeOperationsClient
+  fullName: Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognizeOperationsClient
+  nameWithType: SpeechClient.LongRunningRecognizeOperationsClient
 - uid: Google.Cloud.Speech.V1.SpeechClient.PollOnceLongRunningRecognize(System.String,Google.Api.Gax.Grpc.CallSettings)
   name: PollOnceLongRunningRecognize(String, CallSettings)
   href: api/Google.Cloud.Speech.V1.SpeechClient.html#Google_Cloud_Speech_V1_SpeechClient_PollOnceLongRunningRecognize_System_String_Google_Api_Gax_Grpc_CallSettings_
@@ -17565,18 +17565,6 @@ references:
   commentId: Overload:Google.Cloud.Speech.V1.SpeechClientImpl.GrpcClient
   fullName: Google.Cloud.Speech.V1.SpeechClientImpl.GrpcClient
   nameWithType: SpeechClientImpl.GrpcClient
-- uid: Google.Cloud.Speech.V1.SpeechClientImpl.LongRunningOperationsClient
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Speech.V1.SpeechClientImpl.html#Google_Cloud_Speech_V1_SpeechClientImpl_LongRunningOperationsClient
-  commentId: P:Google.Cloud.Speech.V1.SpeechClientImpl.LongRunningOperationsClient
-  fullName: Google.Cloud.Speech.V1.SpeechClientImpl.LongRunningOperationsClient
-  nameWithType: SpeechClientImpl.LongRunningOperationsClient
-- uid: Google.Cloud.Speech.V1.SpeechClientImpl.LongRunningOperationsClient*
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Speech.V1.SpeechClientImpl.html#Google_Cloud_Speech_V1_SpeechClientImpl_LongRunningOperationsClient_
-  commentId: Overload:Google.Cloud.Speech.V1.SpeechClientImpl.LongRunningOperationsClient
-  fullName: Google.Cloud.Speech.V1.SpeechClientImpl.LongRunningOperationsClient
-  nameWithType: SpeechClientImpl.LongRunningOperationsClient
 - uid: Google.Cloud.Speech.V1.SpeechClientImpl.LongRunningRecognize(Google.Cloud.Speech.V1.LongRunningRecognizeRequest,Google.Api.Gax.Grpc.CallSettings)
   name: LongRunningRecognize(LongRunningRecognizeRequest, CallSettings)
   href: api/Google.Cloud.Speech.V1.SpeechClientImpl.html#Google_Cloud_Speech_V1_SpeechClientImpl_LongRunningRecognize_Google_Cloud_Speech_V1_LongRunningRecognizeRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -17601,6 +17589,18 @@ references:
   commentId: Overload:Google.Cloud.Speech.V1.SpeechClientImpl.LongRunningRecognizeAsync
   fullName: Google.Cloud.Speech.V1.SpeechClientImpl.LongRunningRecognizeAsync
   nameWithType: SpeechClientImpl.LongRunningRecognizeAsync
+- uid: Google.Cloud.Speech.V1.SpeechClientImpl.LongRunningRecognizeOperationsClient
+  name: LongRunningRecognizeOperationsClient
+  href: api/Google.Cloud.Speech.V1.SpeechClientImpl.html#Google_Cloud_Speech_V1_SpeechClientImpl_LongRunningRecognizeOperationsClient
+  commentId: P:Google.Cloud.Speech.V1.SpeechClientImpl.LongRunningRecognizeOperationsClient
+  fullName: Google.Cloud.Speech.V1.SpeechClientImpl.LongRunningRecognizeOperationsClient
+  nameWithType: SpeechClientImpl.LongRunningRecognizeOperationsClient
+- uid: Google.Cloud.Speech.V1.SpeechClientImpl.LongRunningRecognizeOperationsClient*
+  name: LongRunningRecognizeOperationsClient
+  href: api/Google.Cloud.Speech.V1.SpeechClientImpl.html#Google_Cloud_Speech_V1_SpeechClientImpl_LongRunningRecognizeOperationsClient_
+  commentId: Overload:Google.Cloud.Speech.V1.SpeechClientImpl.LongRunningRecognizeOperationsClient
+  fullName: Google.Cloud.Speech.V1.SpeechClientImpl.LongRunningRecognizeOperationsClient
+  nameWithType: SpeechClientImpl.LongRunningRecognizeOperationsClient
 - uid: Google.Cloud.Speech.V1.SpeechClientImpl.Recognize(Google.Cloud.Speech.V1.RecognizeRequest,Google.Api.Gax.Grpc.CallSettings)
   name: Recognize(RecognizeRequest, CallSettings)
   href: api/Google.Cloud.Speech.V1.SpeechClientImpl.html#Google_Cloud_Speech_V1_SpeechClientImpl_Recognize_Google_Cloud_Speech_V1_RecognizeRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -17637,111 +17637,6 @@ references:
   commentId: Overload:Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognize
   fullName: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognize
   nameWithType: SpeechClientImpl.StreamingRecognize
-- uid: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl
-  name: SpeechClientImpl.StreamingRecognizeStreamImpl
-  href: api/Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.html
-  commentId: T:Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl
-  fullName: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl
-  nameWithType: SpeechClientImpl.StreamingRecognizeStreamImpl
-- uid: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.#ctor(Google.Cloud.Speech.V1.SpeechClientImpl,Grpc.Core.AsyncDuplexStreamingCall{Google.Cloud.Speech.V1.StreamingRecognizeRequest,Google.Cloud.Speech.V1.StreamingRecognizeResponse},Google.Api.Gax.Grpc.BufferedClientStreamWriter{Google.Cloud.Speech.V1.StreamingRecognizeRequest})
-  name: StreamingRecognizeStreamImpl(SpeechClientImpl, AsyncDuplexStreamingCall<StreamingRecognizeRequest, StreamingRecognizeResponse>, BufferedClientStreamWriter<StreamingRecognizeRequest>)
-  href: api/Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.html#Google_Cloud_Speech_V1_SpeechClientImpl_StreamingRecognizeStreamImpl__ctor_Google_Cloud_Speech_V1_SpeechClientImpl_Grpc_Core_AsyncDuplexStreamingCall_Google_Cloud_Speech_V1_StreamingRecognizeRequest_Google_Cloud_Speech_V1_StreamingRecognizeResponse__Google_Api_Gax_Grpc_BufferedClientStreamWriter_Google_Cloud_Speech_V1_StreamingRecognizeRequest__
-  commentId: M:Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.#ctor(Google.Cloud.Speech.V1.SpeechClientImpl,Grpc.Core.AsyncDuplexStreamingCall{Google.Cloud.Speech.V1.StreamingRecognizeRequest,Google.Cloud.Speech.V1.StreamingRecognizeResponse},Google.Api.Gax.Grpc.BufferedClientStreamWriter{Google.Cloud.Speech.V1.StreamingRecognizeRequest})
-  name.vb: StreamingRecognizeStreamImpl(SpeechClientImpl, AsyncDuplexStreamingCall(Of StreamingRecognizeRequest, StreamingRecognizeResponse), BufferedClientStreamWriter(Of StreamingRecognizeRequest))
-  fullName: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.StreamingRecognizeStreamImpl(Google.Cloud.Speech.V1.SpeechClientImpl, Grpc.Core.AsyncDuplexStreamingCall<Google.Cloud.Speech.V1.StreamingRecognizeRequest, Google.Cloud.Speech.V1.StreamingRecognizeResponse>, Google.Api.Gax.Grpc.BufferedClientStreamWriter<Google.Cloud.Speech.V1.StreamingRecognizeRequest>)
-  fullName.vb: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.StreamingRecognizeStreamImpl(Google.Cloud.Speech.V1.SpeechClientImpl, Grpc.Core.AsyncDuplexStreamingCall(Of Google.Cloud.Speech.V1.StreamingRecognizeRequest, Google.Cloud.Speech.V1.StreamingRecognizeResponse), Google.Api.Gax.Grpc.BufferedClientStreamWriter(Of Google.Cloud.Speech.V1.StreamingRecognizeRequest))
-  nameWithType: SpeechClientImpl.StreamingRecognizeStreamImpl.StreamingRecognizeStreamImpl(SpeechClientImpl, AsyncDuplexStreamingCall<StreamingRecognizeRequest, StreamingRecognizeResponse>, BufferedClientStreamWriter<StreamingRecognizeRequest>)
-  nameWithType.vb: SpeechClientImpl.StreamingRecognizeStreamImpl.StreamingRecognizeStreamImpl(SpeechClientImpl, AsyncDuplexStreamingCall(Of StreamingRecognizeRequest, StreamingRecognizeResponse), BufferedClientStreamWriter(Of StreamingRecognizeRequest))
-- uid: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.#ctor*
-  name: StreamingRecognizeStreamImpl
-  href: api/Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.html#Google_Cloud_Speech_V1_SpeechClientImpl_StreamingRecognizeStreamImpl__ctor_
-  commentId: Overload:Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.#ctor
-  fullName: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.StreamingRecognizeStreamImpl
-  nameWithType: SpeechClientImpl.StreamingRecognizeStreamImpl.StreamingRecognizeStreamImpl
-- uid: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.GrpcCall
-  name: GrpcCall
-  href: api/Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.html#Google_Cloud_Speech_V1_SpeechClientImpl_StreamingRecognizeStreamImpl_GrpcCall
-  commentId: P:Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.GrpcCall
-  fullName: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.GrpcCall
-  nameWithType: SpeechClientImpl.StreamingRecognizeStreamImpl.GrpcCall
-- uid: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.GrpcCall*
-  name: GrpcCall
-  href: api/Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.html#Google_Cloud_Speech_V1_SpeechClientImpl_StreamingRecognizeStreamImpl_GrpcCall_
-  commentId: Overload:Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.GrpcCall
-  fullName: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.GrpcCall
-  nameWithType: SpeechClientImpl.StreamingRecognizeStreamImpl.GrpcCall
-- uid: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.ResponseStream
-  name: ResponseStream
-  href: api/Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.html#Google_Cloud_Speech_V1_SpeechClientImpl_StreamingRecognizeStreamImpl_ResponseStream
-  commentId: P:Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.ResponseStream
-  fullName: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.ResponseStream
-  nameWithType: SpeechClientImpl.StreamingRecognizeStreamImpl.ResponseStream
-- uid: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.ResponseStream*
-  name: ResponseStream
-  href: api/Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.html#Google_Cloud_Speech_V1_SpeechClientImpl_StreamingRecognizeStreamImpl_ResponseStream_
-  commentId: Overload:Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.ResponseStream
-  fullName: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.ResponseStream
-  nameWithType: SpeechClientImpl.StreamingRecognizeStreamImpl.ResponseStream
-- uid: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.TryWriteAsync(Google.Cloud.Speech.V1.StreamingRecognizeRequest)
-  name: TryWriteAsync(StreamingRecognizeRequest)
-  href: api/Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.html#Google_Cloud_Speech_V1_SpeechClientImpl_StreamingRecognizeStreamImpl_TryWriteAsync_Google_Cloud_Speech_V1_StreamingRecognizeRequest_
-  commentId: M:Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.TryWriteAsync(Google.Cloud.Speech.V1.StreamingRecognizeRequest)
-  fullName: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.TryWriteAsync(Google.Cloud.Speech.V1.StreamingRecognizeRequest)
-  nameWithType: SpeechClientImpl.StreamingRecognizeStreamImpl.TryWriteAsync(StreamingRecognizeRequest)
-- uid: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.TryWriteAsync(Google.Cloud.Speech.V1.StreamingRecognizeRequest,Grpc.Core.WriteOptions)
-  name: TryWriteAsync(StreamingRecognizeRequest, WriteOptions)
-  href: api/Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.html#Google_Cloud_Speech_V1_SpeechClientImpl_StreamingRecognizeStreamImpl_TryWriteAsync_Google_Cloud_Speech_V1_StreamingRecognizeRequest_Grpc_Core_WriteOptions_
-  commentId: M:Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.TryWriteAsync(Google.Cloud.Speech.V1.StreamingRecognizeRequest,Grpc.Core.WriteOptions)
-  fullName: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.TryWriteAsync(Google.Cloud.Speech.V1.StreamingRecognizeRequest, Grpc.Core.WriteOptions)
-  nameWithType: SpeechClientImpl.StreamingRecognizeStreamImpl.TryWriteAsync(StreamingRecognizeRequest, WriteOptions)
-- uid: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.TryWriteAsync*
-  name: TryWriteAsync
-  href: api/Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.html#Google_Cloud_Speech_V1_SpeechClientImpl_StreamingRecognizeStreamImpl_TryWriteAsync_
-  commentId: Overload:Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.TryWriteAsync
-  fullName: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.TryWriteAsync
-  nameWithType: SpeechClientImpl.StreamingRecognizeStreamImpl.TryWriteAsync
-- uid: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.TryWriteCompleteAsync
-  name: TryWriteCompleteAsync()
-  href: api/Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.html#Google_Cloud_Speech_V1_SpeechClientImpl_StreamingRecognizeStreamImpl_TryWriteCompleteAsync
-  commentId: M:Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.TryWriteCompleteAsync
-  fullName: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.TryWriteCompleteAsync()
-  nameWithType: SpeechClientImpl.StreamingRecognizeStreamImpl.TryWriteCompleteAsync()
-- uid: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.TryWriteCompleteAsync*
-  name: TryWriteCompleteAsync
-  href: api/Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.html#Google_Cloud_Speech_V1_SpeechClientImpl_StreamingRecognizeStreamImpl_TryWriteCompleteAsync_
-  commentId: Overload:Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.TryWriteCompleteAsync
-  fullName: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.TryWriteCompleteAsync
-  nameWithType: SpeechClientImpl.StreamingRecognizeStreamImpl.TryWriteCompleteAsync
-- uid: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.WriteAsync(Google.Cloud.Speech.V1.StreamingRecognizeRequest)
-  name: WriteAsync(StreamingRecognizeRequest)
-  href: api/Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.html#Google_Cloud_Speech_V1_SpeechClientImpl_StreamingRecognizeStreamImpl_WriteAsync_Google_Cloud_Speech_V1_StreamingRecognizeRequest_
-  commentId: M:Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.WriteAsync(Google.Cloud.Speech.V1.StreamingRecognizeRequest)
-  fullName: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.WriteAsync(Google.Cloud.Speech.V1.StreamingRecognizeRequest)
-  nameWithType: SpeechClientImpl.StreamingRecognizeStreamImpl.WriteAsync(StreamingRecognizeRequest)
-- uid: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.WriteAsync(Google.Cloud.Speech.V1.StreamingRecognizeRequest,Grpc.Core.WriteOptions)
-  name: WriteAsync(StreamingRecognizeRequest, WriteOptions)
-  href: api/Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.html#Google_Cloud_Speech_V1_SpeechClientImpl_StreamingRecognizeStreamImpl_WriteAsync_Google_Cloud_Speech_V1_StreamingRecognizeRequest_Grpc_Core_WriteOptions_
-  commentId: M:Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.WriteAsync(Google.Cloud.Speech.V1.StreamingRecognizeRequest,Grpc.Core.WriteOptions)
-  fullName: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.WriteAsync(Google.Cloud.Speech.V1.StreamingRecognizeRequest, Grpc.Core.WriteOptions)
-  nameWithType: SpeechClientImpl.StreamingRecognizeStreamImpl.WriteAsync(StreamingRecognizeRequest, WriteOptions)
-- uid: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.WriteAsync*
-  name: WriteAsync
-  href: api/Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.html#Google_Cloud_Speech_V1_SpeechClientImpl_StreamingRecognizeStreamImpl_WriteAsync_
-  commentId: Overload:Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.WriteAsync
-  fullName: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.WriteAsync
-  nameWithType: SpeechClientImpl.StreamingRecognizeStreamImpl.WriteAsync
-- uid: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.WriteCompleteAsync
-  name: WriteCompleteAsync()
-  href: api/Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.html#Google_Cloud_Speech_V1_SpeechClientImpl_StreamingRecognizeStreamImpl_WriteCompleteAsync
-  commentId: M:Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.WriteCompleteAsync
-  fullName: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.WriteCompleteAsync()
-  nameWithType: SpeechClientImpl.StreamingRecognizeStreamImpl.WriteCompleteAsync()
-- uid: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.WriteCompleteAsync*
-  name: WriteCompleteAsync
-  href: api/Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.html#Google_Cloud_Speech_V1_SpeechClientImpl_StreamingRecognizeStreamImpl_WriteCompleteAsync_
-  commentId: Overload:Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.WriteCompleteAsync
-  fullName: Google.Cloud.Speech.V1.SpeechClientImpl.StreamingRecognizeStreamImpl.WriteCompleteAsync
-  nameWithType: SpeechClientImpl.StreamingRecognizeStreamImpl.WriteCompleteAsync
 - uid: Google.Cloud.Speech.V1.SpeechContext
   name: SpeechContext
   href: api/Google.Cloud.Speech.V1.SpeechContext.html
@@ -17898,18 +17793,18 @@ references:
   commentId: Overload:Google.Cloud.Speech.V1.SpeechSettings.IdempotentRetryFilter
   fullName: Google.Cloud.Speech.V1.SpeechSettings.IdempotentRetryFilter
   nameWithType: SpeechSettings.IdempotentRetryFilter
-- uid: Google.Cloud.Speech.V1.SpeechSettings.LongRunningOperationsSettings
-  name: LongRunningOperationsSettings
-  href: api/Google.Cloud.Speech.V1.SpeechSettings.html#Google_Cloud_Speech_V1_SpeechSettings_LongRunningOperationsSettings
-  commentId: P:Google.Cloud.Speech.V1.SpeechSettings.LongRunningOperationsSettings
-  fullName: Google.Cloud.Speech.V1.SpeechSettings.LongRunningOperationsSettings
-  nameWithType: SpeechSettings.LongRunningOperationsSettings
-- uid: Google.Cloud.Speech.V1.SpeechSettings.LongRunningOperationsSettings*
-  name: LongRunningOperationsSettings
-  href: api/Google.Cloud.Speech.V1.SpeechSettings.html#Google_Cloud_Speech_V1_SpeechSettings_LongRunningOperationsSettings_
-  commentId: Overload:Google.Cloud.Speech.V1.SpeechSettings.LongRunningOperationsSettings
-  fullName: Google.Cloud.Speech.V1.SpeechSettings.LongRunningOperationsSettings
-  nameWithType: SpeechSettings.LongRunningOperationsSettings
+- uid: Google.Cloud.Speech.V1.SpeechSettings.LongRunningRecognizeOperationsSettings
+  name: LongRunningRecognizeOperationsSettings
+  href: api/Google.Cloud.Speech.V1.SpeechSettings.html#Google_Cloud_Speech_V1_SpeechSettings_LongRunningRecognizeOperationsSettings
+  commentId: P:Google.Cloud.Speech.V1.SpeechSettings.LongRunningRecognizeOperationsSettings
+  fullName: Google.Cloud.Speech.V1.SpeechSettings.LongRunningRecognizeOperationsSettings
+  nameWithType: SpeechSettings.LongRunningRecognizeOperationsSettings
+- uid: Google.Cloud.Speech.V1.SpeechSettings.LongRunningRecognizeOperationsSettings*
+  name: LongRunningRecognizeOperationsSettings
+  href: api/Google.Cloud.Speech.V1.SpeechSettings.html#Google_Cloud_Speech_V1_SpeechSettings_LongRunningRecognizeOperationsSettings_
+  commentId: Overload:Google.Cloud.Speech.V1.SpeechSettings.LongRunningRecognizeOperationsSettings
+  fullName: Google.Cloud.Speech.V1.SpeechSettings.LongRunningRecognizeOperationsSettings
+  nameWithType: SpeechSettings.LongRunningRecognizeOperationsSettings
 - uid: Google.Cloud.Speech.V1.SpeechSettings.LongRunningRecognizeSettings
   name: LongRunningRecognizeSettings
   href: api/Google.Cloud.Speech.V1.SpeechSettings.html#Google_Cloud_Speech_V1_SpeechSettings_LongRunningRecognizeSettings

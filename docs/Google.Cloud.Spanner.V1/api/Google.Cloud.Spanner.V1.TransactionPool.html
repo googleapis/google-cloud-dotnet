@@ -160,13 +160,13 @@ to Spanner over the network.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_TransactionPool_CommitAsync_" data-uid="Google.Cloud.Spanner.V1.TransactionPool.CommitAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_TransactionPool_CommitAsync_Google_Cloud_Spanner_V1_Transaction_Google_Cloud_Spanner_V1_Session_System_Collections_Generic_IEnumerable_Google_Cloud_Spanner_V1_Mutation__" data-uid="Google.Cloud.Spanner.V1.TransactionPool.CommitAsync(Google.Cloud.Spanner.V1.Transaction,Google.Cloud.Spanner.V1.Session,System.Collections.Generic.IEnumerable{Google.Cloud.Spanner.V1.Mutation})">CommitAsync(Transaction, Session, IEnumerable&lt;Mutation&gt;)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_TransactionPool_CommitAsync_Google_Cloud_Spanner_V1_Transaction_Google_Cloud_Spanner_V1_Session_System_Collections_Generic_IEnumerable_Google_Cloud_Spanner_V1_Mutation__System_Int32_" data-uid="Google.Cloud.Spanner.V1.TransactionPool.CommitAsync(Google.Cloud.Spanner.V1.Transaction,Google.Cloud.Spanner.V1.Session,System.Collections.Generic.IEnumerable{Google.Cloud.Spanner.V1.Mutation},System.Int32)">CommitAsync(Transaction, Session, IEnumerable&lt;Mutation&gt;, Int32)</h4>
   <div class="markdown level1 summary"><p>Commits a transaction and internally marks the transaction as used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;CommitResponse&gt; CommitAsync(this Transaction transaction, Session session, IEnumerable&lt;Mutation&gt; mutations)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;CommitResponse&gt; CommitAsync(this Transaction transaction, Session session, IEnumerable&lt;Mutation&gt; mutations, int timeoutSeconds)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -191,6 +191,11 @@ to Spanner over the network.</p>
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Spanner.V1.Mutation.html">Mutation</a>&gt;</td>
         <td><span class="parametername">mutations</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeoutSeconds</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -252,13 +257,13 @@ to Spanner over the network.</p>
     </tbody>
   </table>
   <a id="Google_Cloud_Spanner_V1_TransactionPool_RollbackAsync_" data-uid="Google.Cloud.Spanner.V1.TransactionPool.RollbackAsync*"></a>
-  <h4 id="Google_Cloud_Spanner_V1_TransactionPool_RollbackAsync_Google_Cloud_Spanner_V1_Transaction_Google_Cloud_Spanner_V1_Session_" data-uid="Google.Cloud.Spanner.V1.TransactionPool.RollbackAsync(Google.Cloud.Spanner.V1.Transaction,Google.Cloud.Spanner.V1.Session)">RollbackAsync(Transaction, Session)</h4>
+  <h4 id="Google_Cloud_Spanner_V1_TransactionPool_RollbackAsync_Google_Cloud_Spanner_V1_Transaction_Google_Cloud_Spanner_V1_Session_System_Int32_" data-uid="Google.Cloud.Spanner.V1.TransactionPool.RollbackAsync(Google.Cloud.Spanner.V1.Transaction,Google.Cloud.Spanner.V1.Session,System.Int32)">RollbackAsync(Transaction, Session, Int32)</h4>
   <div class="markdown level1 summary"><p>Rolls back a transaction and internally marks the transaction as used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; RollbackAsync(this Transaction transaction, Session session)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; RollbackAsync(this Transaction transaction, Session session, int timeoutSeconds)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -278,6 +283,11 @@ to Spanner over the network.</p>
       <tr>
         <td><a class="xref" href="Google.Cloud.Spanner.V1.Session.html">Session</a></td>
         <td><span class="parametername">session</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">timeoutSeconds</span></td>
         <td></td>
       </tr>
     </tbody>

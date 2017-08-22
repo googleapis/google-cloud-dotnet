@@ -180,14 +180,14 @@
       </tr>
     </tbody>
   </table>
-  <a id="Google_Cloud_Speech_V1_SpeechClient_LongRunningOperationsClient_" data-uid="Google.Cloud.Speech.V1.SpeechClient.LongRunningOperationsClient*"></a>
-  <h4 id="Google_Cloud_Speech_V1_SpeechClient_LongRunningOperationsClient" data-uid="Google.Cloud.Speech.V1.SpeechClient.LongRunningOperationsClient">LongRunningOperationsClient</h4>
-  <div class="markdown level1 summary"><p>The client for long-running operations.</p>
+  <a id="Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognizeOperationsClient_" data-uid="Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognizeOperationsClient*"></a>
+  <h4 id="Google_Cloud_Speech_V1_SpeechClient_LongRunningRecognizeOperationsClient" data-uid="Google.Cloud.Speech.V1.SpeechClient.LongRunningRecognizeOperationsClient">LongRunningRecognizeOperationsClient</h4>
+  <div class="markdown level1 summary"><p>The long-running operations client for <code>LongRunningRecognize</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual OperationsClient LongRunningOperationsClient { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual OperationsClient LongRunningRecognizeOperationsClient { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1391,7 +1391,7 @@ SpeechClient.StreamingRecognizeStream duplexStream = speechClient.StreamingRecog
 // Exact sequence will depend on client/server behavior.
 
 // Create task to do something with responses from server
-Task.Run(async () =&gt;
+Task responseHandlerTask = Task.Run(async () =&gt;
 {
     IAsyncEnumerator&lt;StreamingRecognizeResponse&gt; responseStream = duplexStream.ResponseStream;
     while (await responseStream.MoveNext())
@@ -1415,6 +1415,9 @@ while (!done)
 }
 // Complete writing requests to the stream
 await duplexStream.WriteCompleteAsync();
+// Await the response handler.
+// This will complete once all server responses have been processed.
+await responseHandlerTask;
 </code></pre></div>
   </div>
 </article>

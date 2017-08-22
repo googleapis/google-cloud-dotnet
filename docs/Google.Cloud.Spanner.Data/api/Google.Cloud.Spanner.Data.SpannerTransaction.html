@@ -129,6 +129,35 @@ tables in a database.</p>
   </div>
   <h3 id="properties">Properties
   </h3>
+  <a id="Google_Cloud_Spanner_Data_SpannerTransaction_CommitTimeout_" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction.CommitTimeout*"></a>
+  <h4 id="Google_Cloud_Spanner_Data_SpannerTransaction_CommitTimeout" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction.CommitTimeout">CommitTimeout</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the wait time before terminating the attempt to <a class="xref" href="Google.Cloud.Spanner.Data.SpannerTransaction.html#Google_Cloud_Spanner_Data_SpannerTransaction_Commit">Commit()</a> 
+or <a class="xref" href="Google.Cloud.Spanner.Data.SpannerTransaction.html#Google_Cloud_Spanner_Data_SpannerTransaction_Rollback">Rollback()</a> and generating an error.
+Defaults to <a class="xref" href="Google.Cloud.Spanner.Data.SpannerOptions.html#Google_Cloud_Spanner_Data_SpannerOptions_Timeout">Timeout</a> which is 60 seconds.
+A value of &apos;0&apos; normally indicates that no timeout should be used (it waits an infinite amount of time).
+However, if you specify AllowImmediateTimeouts=true in the connection string, &apos;0&apos; will cause a timeout
+that expires immediately. This is normally used only for testing purposes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CommitTimeout { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Spanner_Data_SpannerTransaction_DbConnection_" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction.DbConnection*"></a>
   <h4 id="Google_Cloud_Spanner_Data_SpannerTransaction_DbConnection" data-uid="Google.Cloud.Spanner.Data.SpannerTransaction.DbConnection">DbConnection</h4>
   <div class="markdown level1 summary"></div>

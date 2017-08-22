@@ -153,14 +153,14 @@ for &quot;Idempotent&quot; <a class="xref" href="Google.Cloud.Speech.V1.SpeechCl
   <div class="markdown level1 remarks"><p>The eligible RPC <a class="xref" href="Grpc.Core.StatusCode.html">StatusCode</a>s for retry for &quot;Idempotent&quot; RPC methods are:
 <ul><li><a class="xref" href="Grpc.Core.StatusCode.html#Grpc_Core_StatusCode_DeadlineExceeded">DeadlineExceeded</a></li><li><a class="xref" href="Grpc.Core.StatusCode.html#Grpc_Core_StatusCode_Unavailable">Unavailable</a></li></ul></p>
 </div>
-  <a id="Google_Cloud_Speech_V1_SpeechSettings_LongRunningOperationsSettings_" data-uid="Google.Cloud.Speech.V1.SpeechSettings.LongRunningOperationsSettings*"></a>
-  <h4 id="Google_Cloud_Speech_V1_SpeechSettings_LongRunningOperationsSettings" data-uid="Google.Cloud.Speech.V1.SpeechSettings.LongRunningOperationsSettings">LongRunningOperationsSettings</h4>
-  <div class="markdown level1 summary"><p>Settings used for long running operations.</p>
+  <a id="Google_Cloud_Speech_V1_SpeechSettings_LongRunningRecognizeOperationsSettings_" data-uid="Google.Cloud.Speech.V1.SpeechSettings.LongRunningRecognizeOperationsSettings*"></a>
+  <h4 id="Google_Cloud_Speech_V1_SpeechSettings_LongRunningRecognizeOperationsSettings" data-uid="Google.Cloud.Speech.V1.SpeechSettings.LongRunningRecognizeOperationsSettings">LongRunningRecognizeOperationsSettings</h4>
+  <div class="markdown level1 summary"><p>Long Running Operation settings for calls to <code>SpeechClient.LongRunningRecognize</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OperationsSettings LongRunningOperationsSettings { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public OperationsSettings LongRunningRecognizeOperationsSettings { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,6 +177,10 @@ for &quot;Idempotent&quot; <a class="xref" href="Google.Cloud.Speech.V1.SpeechCl
       </tr>
     </tbody>
   </table>
+  <h5 id="Google_Cloud_Speech_V1_SpeechSettings_LongRunningRecognizeOperationsSettings_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Uses default <a class="xref" href="Google.Api.Gax.PollSettings.html">PollSettings</a> of:
+<ul><li>Initial delay: 20000 milliseconds</li><li>Delay multiplier: 1.5</li><li>Maximum delay: 45000 milliseconds</li><li>Total timeout: 86400000 milliseconds</li></ul></p>
+</div>
   <a id="Google_Cloud_Speech_V1_SpeechSettings_LongRunningRecognizeSettings_" data-uid="Google.Cloud.Speech.V1.SpeechSettings.LongRunningRecognizeSettings*"></a>
   <h4 id="Google_Cloud_Speech_V1_SpeechSettings_LongRunningRecognizeSettings" data-uid="Google.Cloud.Speech.V1.SpeechSettings.LongRunningRecognizeSettings">LongRunningRecognizeSettings</h4>
   <div class="markdown level1 summary"><p><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a> for synchronous and asynchronous calls to

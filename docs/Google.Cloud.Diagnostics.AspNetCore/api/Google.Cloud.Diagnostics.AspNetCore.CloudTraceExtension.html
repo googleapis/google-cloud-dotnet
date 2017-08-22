@@ -169,6 +169,13 @@ Docs: <a href="https://cloud.google.com/trace/docs/">https://cloud.google.com/tr
       </tr>
     </tbody>
   </table>
+  <h5 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_IServiceCollection_System_Action_Google_Cloud_Diagnostics_AspNetCore_TraceServiceOptions___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Diagnostics.Common.RetryOptions.html#Google_Cloud_Diagnostics_Common_RetryOptions_ExceptionHandling">ExceptionHandling</a> is set to <a class="xref" href="Google.Cloud.Diagnostics.Common.ExceptionHandling.html#Google_Cloud_Diagnostics_Common_ExceptionHandling_Propagate">Propagate</a>
+and the <see cref="!:RequestDelegate"></see> executed by this middleware throws ad exception and this
+diagnostics library also throws an exception trying to report it and <span class="xref">System.AggregateException</span>
+with both exceptions will be thrown.  Otherwise only the exception from the <see cref="!:RequestDelegate"></see>
+will be thrown.</p>
+</div>
   <a id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_UseGoogleTrace_" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.UseGoogleTrace*"></a>
   <h4 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_UseGoogleTrace_IApplicationBuilder_" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.UseGoogleTrace(IApplicationBuilder)">UseGoogleTrace(IApplicationBuilder)</h4>
   <div class="markdown level1 summary"><p>Uses middleware that will trace time taken for all subsequent delegates to run.

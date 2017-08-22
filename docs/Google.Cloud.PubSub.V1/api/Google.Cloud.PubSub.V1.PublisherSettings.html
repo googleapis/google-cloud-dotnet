@@ -430,7 +430,7 @@ for &quot;OnePlusDelivery&quot; <a class="xref" href="Google.Cloud.PubSub.V1.Pub
   <h5 id="Google_Cloud_PubSub_V1_PublisherSettings_PublishSettings_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>The default <code>PublisherClient.Publish</code> and
 <code>PublisherClient.PublishAsync</code> <a class="xref" href="Google.Api.Gax.Grpc.RetrySettings.html">RetrySettings</a> are:
-<ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.3</li><li>Retry maximum delay: 60000 milliseconds</li><li>Initial timeout: 12000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Timeout maximum delay: 12000 milliseconds</li></ul>
+<ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.3</li><li>Retry maximum delay: 60000 milliseconds</li><li>Initial timeout: 12000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Timeout maximum delay: 30000 milliseconds</li></ul>
 Retry will be attempted on the following response status codes:</p>
 <p>Default RPC expiration is 600000 milliseconds.</p>
 </div>
@@ -696,7 +696,7 @@ Retry will be attempted on the following response status codes:</p>
   </table>
   <h5 id="Google_Cloud_PubSub_V1_PublisherSettings_GetMessagingTimeoutBackoff_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>The &quot;Messaging&quot; timeout backoff for <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html">PublisherClient</a> RPC methods is defined as:
-<ul><li>Initial timeout: 12000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Maximum timeout: 12000 milliseconds</li></ul></p>
+<ul><li>Initial timeout: 12000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Maximum timeout: 30000 milliseconds</li></ul></p>
 </div>
 </article>
           </div>

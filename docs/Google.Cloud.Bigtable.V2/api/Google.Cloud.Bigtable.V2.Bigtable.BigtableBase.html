@@ -1,0 +1,463 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Bigtable.BigtableBase
+   | Google.Cloud.Bigtable.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Bigtable.BigtableBase
+   | Google.Cloud.Bigtable.V2 ">
+    <meta name="generator" content="docfx 2.21.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Bigtable.V2.Bigtable.BigtableBase">
+  
+  
+  <h1 id="Google_Cloud_Bigtable_V2_Bigtable_BigtableBase" data-uid="Google.Cloud.Bigtable.V2.Bigtable.BigtableBase" class="text-break">Class Bigtable.BigtableBase
+  </h1>
+  <div class="markdown level0 summary"><p>Base class for server-side implementations of Bigtable</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Bigtable.BigtableBase</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Bigtable.V2.html">Google.Cloud.Bigtable.V2</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Bigtable.V2.dll</h6>
+  <h5 id="Google_Cloud_Bigtable_V2_Bigtable_BigtableBase_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class BigtableBase</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Bigtable_V2_Bigtable_BigtableBase_CheckAndMutateRow_" data-uid="Google.Cloud.Bigtable.V2.Bigtable.BigtableBase.CheckAndMutateRow*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_Bigtable_BigtableBase_CheckAndMutateRow_Google_Cloud_Bigtable_V2_CheckAndMutateRowRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.V2.Bigtable.BigtableBase.CheckAndMutateRow(Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest,Grpc.Core.ServerCallContext)">CheckAndMutateRow(CheckAndMutateRowRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Mutates a row atomically based on the output of a predicate Reader filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;CheckAndMutateRowResponse&gt; CheckAndMutateRow(CheckAndMutateRowRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest.html">CheckAndMutateRowRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse.html">CheckAndMutateRowResponse</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_Bigtable_BigtableBase_MutateRow_" data-uid="Google.Cloud.Bigtable.V2.Bigtable.BigtableBase.MutateRow*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_Bigtable_BigtableBase_MutateRow_Google_Cloud_Bigtable_V2_MutateRowRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.V2.Bigtable.BigtableBase.MutateRow(Google.Cloud.Bigtable.V2.MutateRowRequest,Grpc.Core.ServerCallContext)">MutateRow(MutateRowRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Mutates a row atomically. Cells already present in the row are left
+unchanged unless explicitly changed by <code>mutation</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;MutateRowResponse&gt; MutateRow(MutateRowRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.MutateRowRequest.html">MutateRowRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.MutateRowResponse.html">MutateRowResponse</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_Bigtable_BigtableBase_MutateRows_" data-uid="Google.Cloud.Bigtable.V2.Bigtable.BigtableBase.MutateRows*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_Bigtable_BigtableBase_MutateRows_Google_Cloud_Bigtable_V2_MutateRowsRequest_Grpc_Core_IServerStreamWriter_Google_Cloud_Bigtable_V2_MutateRowsResponse__Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.V2.Bigtable.BigtableBase.MutateRows(Google.Cloud.Bigtable.V2.MutateRowsRequest,Grpc.Core.IServerStreamWriter{Google.Cloud.Bigtable.V2.MutateRowsResponse},Grpc.Core.ServerCallContext)">MutateRows(MutateRowsRequest, IServerStreamWriter&lt;MutateRowsResponse&gt;, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Mutates multiple rows in a batch. Each individual row is mutated
+atomically as in MutateRow, but the entire batch is not executed
+atomically.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task MutateRows(MutateRowsRequest request, IServerStreamWriter&lt;MutateRowsResponse&gt; responseStream, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.MutateRowsRequest.html">MutateRowsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.IServerStreamWriter-1.html">IServerStreamWriter</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.MutateRowsResponse.html">MutateRowsResponse</a>&gt;</td>
+        <td><span class="parametername">responseStream</span></td>
+        <td><p>Used for sending responses back to the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task indicating completion of the handler.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_Bigtable_BigtableBase_ReadModifyWriteRow_" data-uid="Google.Cloud.Bigtable.V2.Bigtable.BigtableBase.ReadModifyWriteRow*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_Bigtable_BigtableBase_ReadModifyWriteRow_Google_Cloud_Bigtable_V2_ReadModifyWriteRowRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.V2.Bigtable.BigtableBase.ReadModifyWriteRow(Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest,Grpc.Core.ServerCallContext)">ReadModifyWriteRow(ReadModifyWriteRowRequest, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Modifies a row atomically. The method reads the latest existing timestamp
+and value from the specified columns and writes a new entry based on
+pre-defined read/modify/write rules. The new value for the timestamp is the
+greater of the existing timestamp or the current server time. The method
+returns the new contents of all modified cells.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ReadModifyWriteRowResponse&gt; ReadModifyWriteRow(ReadModifyWriteRowRequest request, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest.html">ReadModifyWriteRowRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse.html">ReadModifyWriteRowResponse</a>&gt;</td>
+        <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_Bigtable_BigtableBase_ReadRows_" data-uid="Google.Cloud.Bigtable.V2.Bigtable.BigtableBase.ReadRows*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_Bigtable_BigtableBase_ReadRows_Google_Cloud_Bigtable_V2_ReadRowsRequest_Grpc_Core_IServerStreamWriter_Google_Cloud_Bigtable_V2_ReadRowsResponse__Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.V2.Bigtable.BigtableBase.ReadRows(Google.Cloud.Bigtable.V2.ReadRowsRequest,Grpc.Core.IServerStreamWriter{Google.Cloud.Bigtable.V2.ReadRowsResponse},Grpc.Core.ServerCallContext)">ReadRows(ReadRowsRequest, IServerStreamWriter&lt;ReadRowsResponse&gt;, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Streams back the contents of all requested rows in key order, optionally
+applying the same Reader filter to each. Depending on their size,
+rows and cells may be broken up across multiple responses, but
+atomicity of each row will still be preserved. See the
+ReadRowsResponse documentation for details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task ReadRows(ReadRowsRequest request, IServerStreamWriter&lt;ReadRowsResponse&gt; responseStream, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.ReadRowsRequest.html">ReadRowsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.IServerStreamWriter-1.html">IServerStreamWriter</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.ReadRowsResponse.html">ReadRowsResponse</a>&gt;</td>
+        <td><span class="parametername">responseStream</span></td>
+        <td><p>Used for sending responses back to the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task indicating completion of the handler.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_Bigtable_BigtableBase_SampleRowKeys_" data-uid="Google.Cloud.Bigtable.V2.Bigtable.BigtableBase.SampleRowKeys*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_Bigtable_BigtableBase_SampleRowKeys_Google_Cloud_Bigtable_V2_SampleRowKeysRequest_Grpc_Core_IServerStreamWriter_Google_Cloud_Bigtable_V2_SampleRowKeysResponse__Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Bigtable.V2.Bigtable.BigtableBase.SampleRowKeys(Google.Cloud.Bigtable.V2.SampleRowKeysRequest,Grpc.Core.IServerStreamWriter{Google.Cloud.Bigtable.V2.SampleRowKeysResponse},Grpc.Core.ServerCallContext)">SampleRowKeys(SampleRowKeysRequest, IServerStreamWriter&lt;SampleRowKeysResponse&gt;, ServerCallContext)</h4>
+  <div class="markdown level1 summary"><p>Returns a sample of row keys in the table. The returned row keys will
+delimit contiguous sections of the table of approximately equal size,
+which can be used to break up the data for distributed tasks like
+mapreduces.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task SampleRowKeys(SampleRowKeysRequest request, IServerStreamWriter&lt;SampleRowKeysResponse&gt; responseStream, ServerCallContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.SampleRowKeysRequest.html">SampleRowKeysRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request received from the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.IServerStreamWriter-1.html">IServerStreamWriter</a>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.SampleRowKeysResponse.html">SampleRowKeysResponse</a>&gt;</td>
+        <td><span class="parametername">responseStream</span></td>
+        <td><p>Used for sending responses back to the client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.ServerCallContext.html">ServerCallContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task indicating completion of the handler.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

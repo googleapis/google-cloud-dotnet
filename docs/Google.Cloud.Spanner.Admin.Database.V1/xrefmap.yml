@@ -17097,6 +17097,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabaseAsync
   fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabaseAsync
   nameWithType: DatabaseAdminClient.CreateDatabaseAsync
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabaseOperationsClient
+  name: CreateDatabaseOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_CreateDatabaseOperationsClient
+  commentId: P:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabaseOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabaseOperationsClient
+  nameWithType: DatabaseAdminClient.CreateDatabaseOperationsClient
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabaseOperationsClient*
+  name: CreateDatabaseOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_CreateDatabaseOperationsClient_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabaseOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabaseOperationsClient
+  nameWithType: DatabaseAdminClient.CreateDatabaseOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.DefaultEndpoint
   name: DefaultEndpoint
   href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_DefaultEndpoint
@@ -17343,18 +17355,6 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.ListDatabasesAsync
   fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.ListDatabasesAsync
   nameWithType: DatabaseAdminClient.ListDatabasesAsync
-- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.LongRunningOperationsClient
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_LongRunningOperationsClient
-  commentId: P:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.LongRunningOperationsClient
-  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.LongRunningOperationsClient
-  nameWithType: DatabaseAdminClient.LongRunningOperationsClient
-- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.LongRunningOperationsClient*
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_LongRunningOperationsClient_
-  commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.LongRunningOperationsClient
-  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.LongRunningOperationsClient
-  nameWithType: DatabaseAdminClient.LongRunningOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.PollOnceCreateDatabase(System.String,Google.Api.Gax.Grpc.CallSettings)
   name: PollOnceCreateDatabase(String, CallSettings)
   href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_PollOnceCreateDatabase_System_String_Google_Api_Gax_Grpc_CallSettings_
@@ -17559,6 +17559,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdlAsync
   fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdlAsync
   nameWithType: DatabaseAdminClient.UpdateDatabaseDdlAsync
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdlOperationsClient
+  name: UpdateDatabaseDdlOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_UpdateDatabaseDdlOperationsClient
+  commentId: P:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdlOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdlOperationsClient
+  nameWithType: DatabaseAdminClient.UpdateDatabaseDdlOperationsClient
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdlOperationsClient*
+  name: UpdateDatabaseDdlOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_UpdateDatabaseDdlOperationsClient_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdlOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdlOperationsClient
+  nameWithType: DatabaseAdminClient.UpdateDatabaseDdlOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl
   name: DatabaseAdminClientImpl
   href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.html
@@ -17601,6 +17613,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.CreateDatabaseAsync
   fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.CreateDatabaseAsync
   nameWithType: DatabaseAdminClientImpl.CreateDatabaseAsync
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.CreateDatabaseOperationsClient
+  name: CreateDatabaseOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClientImpl_CreateDatabaseOperationsClient
+  commentId: P:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.CreateDatabaseOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.CreateDatabaseOperationsClient
+  nameWithType: DatabaseAdminClientImpl.CreateDatabaseOperationsClient
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.CreateDatabaseOperationsClient*
+  name: CreateDatabaseOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClientImpl_CreateDatabaseOperationsClient_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.CreateDatabaseOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.CreateDatabaseOperationsClient
+  nameWithType: DatabaseAdminClientImpl.CreateDatabaseOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.DropDatabase(Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest,Google.Api.Gax.Grpc.CallSettings)
   name: DropDatabase(DropDatabaseRequest, CallSettings)
   href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClientImpl_DropDatabase_Google_Cloud_Spanner_Admin_Database_V1_DropDatabaseRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -17733,18 +17757,6 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.ListDatabasesAsync
   fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.ListDatabasesAsync
   nameWithType: DatabaseAdminClientImpl.ListDatabasesAsync
-- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.LongRunningOperationsClient
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClientImpl_LongRunningOperationsClient
-  commentId: P:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.LongRunningOperationsClient
-  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.LongRunningOperationsClient
-  nameWithType: DatabaseAdminClientImpl.LongRunningOperationsClient
-- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.LongRunningOperationsClient*
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClientImpl_LongRunningOperationsClient_
-  commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.LongRunningOperationsClient
-  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.LongRunningOperationsClient
-  nameWithType: DatabaseAdminClientImpl.LongRunningOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.SetIamPolicy(Google.Cloud.Iam.V1.SetIamPolicyRequest,Google.Api.Gax.Grpc.CallSettings)
   name: SetIamPolicy(SetIamPolicyRequest, CallSettings)
   href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClientImpl_SetIamPolicy_Google_Cloud_Iam_V1_SetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -17817,6 +17829,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.UpdateDatabaseDdlAsync
   fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.UpdateDatabaseDdlAsync
   nameWithType: DatabaseAdminClientImpl.UpdateDatabaseDdlAsync
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.UpdateDatabaseDdlOperationsClient
+  name: UpdateDatabaseDdlOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClientImpl_UpdateDatabaseDdlOperationsClient
+  commentId: P:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.UpdateDatabaseDdlOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.UpdateDatabaseDdlOperationsClient
+  nameWithType: DatabaseAdminClientImpl.UpdateDatabaseDdlOperationsClient
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.UpdateDatabaseDdlOperationsClient*
+  name: UpdateDatabaseDdlOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClientImpl_UpdateDatabaseDdlOperationsClient_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.UpdateDatabaseDdlOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.UpdateDatabaseDdlOperationsClient
+  nameWithType: DatabaseAdminClientImpl.UpdateDatabaseDdlOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings
   name: DatabaseAdminSettings
   href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html
@@ -17847,6 +17871,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.Clone
   fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.Clone
   nameWithType: DatabaseAdminSettings.Clone
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.CreateDatabaseOperationsSettings
+  name: CreateDatabaseOperationsSettings
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_CreateDatabaseOperationsSettings
+  commentId: P:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.CreateDatabaseOperationsSettings
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.CreateDatabaseOperationsSettings
+  nameWithType: DatabaseAdminSettings.CreateDatabaseOperationsSettings
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.CreateDatabaseOperationsSettings*
+  name: CreateDatabaseOperationsSettings
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_CreateDatabaseOperationsSettings_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.CreateDatabaseOperationsSettings
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.CreateDatabaseOperationsSettings
+  nameWithType: DatabaseAdminSettings.CreateDatabaseOperationsSettings
 - uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.CreateDatabaseSettings
   name: CreateDatabaseSettings
   href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_CreateDatabaseSettings
@@ -17967,18 +18003,6 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.ListDatabasesSettings
   fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.ListDatabasesSettings
   nameWithType: DatabaseAdminSettings.ListDatabasesSettings
-- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.LongRunningOperationsSettings
-  name: LongRunningOperationsSettings
-  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_LongRunningOperationsSettings
-  commentId: P:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.LongRunningOperationsSettings
-  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.LongRunningOperationsSettings
-  nameWithType: DatabaseAdminSettings.LongRunningOperationsSettings
-- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.LongRunningOperationsSettings*
-  name: LongRunningOperationsSettings
-  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_LongRunningOperationsSettings_
-  commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.LongRunningOperationsSettings
-  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.LongRunningOperationsSettings
-  nameWithType: DatabaseAdminSettings.LongRunningOperationsSettings
 - uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.NonIdempotentRetryFilter
   name: NonIdempotentRetryFilter
   href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_NonIdempotentRetryFilter
@@ -18015,6 +18039,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.TestIamPermissionsSettings
   fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.TestIamPermissionsSettings
   nameWithType: DatabaseAdminSettings.TestIamPermissionsSettings
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.UpdateDatabaseDdlOperationsSettings
+  name: UpdateDatabaseDdlOperationsSettings
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_UpdateDatabaseDdlOperationsSettings
+  commentId: P:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.UpdateDatabaseDdlOperationsSettings
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.UpdateDatabaseDdlOperationsSettings
+  nameWithType: DatabaseAdminSettings.UpdateDatabaseDdlOperationsSettings
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.UpdateDatabaseDdlOperationsSettings*
+  name: UpdateDatabaseDdlOperationsSettings
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_UpdateDatabaseDdlOperationsSettings_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.UpdateDatabaseDdlOperationsSettings
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.UpdateDatabaseDdlOperationsSettings
+  nameWithType: DatabaseAdminSettings.UpdateDatabaseDdlOperationsSettings
 - uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.UpdateDatabaseDdlSettings
   name: UpdateDatabaseDdlSettings
   href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_UpdateDatabaseDdlSettings

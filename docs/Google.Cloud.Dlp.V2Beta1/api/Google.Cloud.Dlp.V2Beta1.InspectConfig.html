@@ -154,6 +154,30 @@ included in the response; see Finding.quote.</p>
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_Dlp_V2Beta1_InspectConfig_InfoTypeLimits_" data-uid="Google.Cloud.Dlp.V2Beta1.InspectConfig.InfoTypeLimits*"></a>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_InspectConfig_InfoTypeLimits" data-uid="Google.Cloud.Dlp.V2Beta1.InspectConfig.InfoTypeLimits">InfoTypeLimits</h4>
+  <div class="markdown level1 summary"><p>Configuration of findings limit given for specified info types.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeatedField&lt;InspectConfig.Types.InfoTypeLimit&gt; InfoTypeLimits { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.InfoTypeLimit.html">InspectConfig.Types.InfoTypeLimit</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Dlp_V2Beta1_InspectConfig_InfoTypes_" data-uid="Google.Cloud.Dlp.V2Beta1.InspectConfig.InfoTypes*"></a>
   <h4 id="Google_Cloud_Dlp_V2Beta1_InspectConfig_InfoTypes" data-uid="Google.Cloud.Dlp.V2Beta1.InspectConfig.InfoTypes">InfoTypes</h4>
   <div class="markdown level1 summary"><p>Restricts what info_types to look for. The values must correspond to
@@ -182,7 +206,7 @@ Empty info_types runs all enabled detectors.</p>
   </table>
   <a id="Google_Cloud_Dlp_V2Beta1_InspectConfig_MaxFindings_" data-uid="Google.Cloud.Dlp.V2Beta1.InspectConfig.MaxFindings*"></a>
   <h4 id="Google_Cloud_Dlp_V2Beta1_InspectConfig_MaxFindings" data-uid="Google.Cloud.Dlp.V2Beta1.InspectConfig.MaxFindings">MaxFindings</h4>
-  <div class="markdown level1 summary"><p>Limits the number of findings per content item.</p>
+  <div class="markdown level1 summary"><p>Limits the number of findings per content item or long running operation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

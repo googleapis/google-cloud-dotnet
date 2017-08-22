@@ -16770,6 +16770,18 @@ references:
   commentId: Overload:Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.AnnotateVideoAsync
   fullName: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.AnnotateVideoAsync
   nameWithType: VideoIntelligenceServiceClient.AnnotateVideoAsync
+- uid: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.AnnotateVideoOperationsClient
+  name: AnnotateVideoOperationsClient
+  href: api/Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.html#Google_Cloud_VideoIntelligence_V1Beta1_VideoIntelligenceServiceClient_AnnotateVideoOperationsClient
+  commentId: P:Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.AnnotateVideoOperationsClient
+  fullName: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.AnnotateVideoOperationsClient
+  nameWithType: VideoIntelligenceServiceClient.AnnotateVideoOperationsClient
+- uid: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.AnnotateVideoOperationsClient*
+  name: AnnotateVideoOperationsClient
+  href: api/Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.html#Google_Cloud_VideoIntelligence_V1Beta1_VideoIntelligenceServiceClient_AnnotateVideoOperationsClient_
+  commentId: Overload:Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.AnnotateVideoOperationsClient
+  fullName: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.AnnotateVideoOperationsClient
+  nameWithType: VideoIntelligenceServiceClient.AnnotateVideoOperationsClient
 - uid: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.Create(Google.Api.Gax.Grpc.ServiceEndpoint,Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings)
   name: Create(ServiceEndpoint, VideoIntelligenceServiceSettings)
   href: api/Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.html#Google_Cloud_VideoIntelligence_V1Beta1_VideoIntelligenceServiceClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_VideoIntelligence_V1Beta1_VideoIntelligenceServiceSettings_
@@ -16836,18 +16848,6 @@ references:
   commentId: Overload:Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.GrpcClient
   fullName: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.GrpcClient
   nameWithType: VideoIntelligenceServiceClient.GrpcClient
-- uid: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.LongRunningOperationsClient
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.html#Google_Cloud_VideoIntelligence_V1Beta1_VideoIntelligenceServiceClient_LongRunningOperationsClient
-  commentId: P:Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.LongRunningOperationsClient
-  fullName: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.LongRunningOperationsClient
-  nameWithType: VideoIntelligenceServiceClient.LongRunningOperationsClient
-- uid: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.LongRunningOperationsClient*
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.html#Google_Cloud_VideoIntelligence_V1Beta1_VideoIntelligenceServiceClient_LongRunningOperationsClient_
-  commentId: Overload:Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.LongRunningOperationsClient
-  fullName: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.LongRunningOperationsClient
-  nameWithType: VideoIntelligenceServiceClient.LongRunningOperationsClient
 - uid: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.PollOnceAnnotateVideo(System.String,Google.Api.Gax.Grpc.CallSettings)
   name: PollOnceAnnotateVideo(String, CallSettings)
   href: api/Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClient.html#Google_Cloud_VideoIntelligence_V1Beta1_VideoIntelligenceServiceClient_PollOnceAnnotateVideo_System_String_Google_Api_Gax_Grpc_CallSettings_
@@ -16926,6 +16926,18 @@ references:
   commentId: Overload:Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClientImpl.AnnotateVideoAsync
   fullName: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClientImpl.AnnotateVideoAsync
   nameWithType: VideoIntelligenceServiceClientImpl.AnnotateVideoAsync
+- uid: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClientImpl.AnnotateVideoOperationsClient
+  name: AnnotateVideoOperationsClient
+  href: api/Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClientImpl.html#Google_Cloud_VideoIntelligence_V1Beta1_VideoIntelligenceServiceClientImpl_AnnotateVideoOperationsClient
+  commentId: P:Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClientImpl.AnnotateVideoOperationsClient
+  fullName: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClientImpl.AnnotateVideoOperationsClient
+  nameWithType: VideoIntelligenceServiceClientImpl.AnnotateVideoOperationsClient
+- uid: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClientImpl.AnnotateVideoOperationsClient*
+  name: AnnotateVideoOperationsClient
+  href: api/Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClientImpl.html#Google_Cloud_VideoIntelligence_V1Beta1_VideoIntelligenceServiceClientImpl_AnnotateVideoOperationsClient_
+  commentId: Overload:Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClientImpl.AnnotateVideoOperationsClient
+  fullName: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClientImpl.AnnotateVideoOperationsClient
+  nameWithType: VideoIntelligenceServiceClientImpl.AnnotateVideoOperationsClient
 - uid: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClientImpl.GrpcClient
   name: GrpcClient
   href: api/Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClientImpl.html#Google_Cloud_VideoIntelligence_V1Beta1_VideoIntelligenceServiceClientImpl_GrpcClient
@@ -16938,18 +16950,6 @@ references:
   commentId: Overload:Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClientImpl.GrpcClient
   fullName: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClientImpl.GrpcClient
   nameWithType: VideoIntelligenceServiceClientImpl.GrpcClient
-- uid: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClientImpl.LongRunningOperationsClient
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClientImpl.html#Google_Cloud_VideoIntelligence_V1Beta1_VideoIntelligenceServiceClientImpl_LongRunningOperationsClient
-  commentId: P:Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClientImpl.LongRunningOperationsClient
-  fullName: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClientImpl.LongRunningOperationsClient
-  nameWithType: VideoIntelligenceServiceClientImpl.LongRunningOperationsClient
-- uid: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClientImpl.LongRunningOperationsClient*
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClientImpl.html#Google_Cloud_VideoIntelligence_V1Beta1_VideoIntelligenceServiceClientImpl_LongRunningOperationsClient_
-  commentId: Overload:Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClientImpl.LongRunningOperationsClient
-  fullName: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceClientImpl.LongRunningOperationsClient
-  nameWithType: VideoIntelligenceServiceClientImpl.LongRunningOperationsClient
 - uid: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings
   name: VideoIntelligenceServiceSettings
   href: api/Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.html
@@ -16968,6 +16968,18 @@ references:
   commentId: Overload:Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.#ctor
   fullName: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.VideoIntelligenceServiceSettings
   nameWithType: VideoIntelligenceServiceSettings.VideoIntelligenceServiceSettings
+- uid: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.AnnotateVideoOperationsSettings
+  name: AnnotateVideoOperationsSettings
+  href: api/Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.html#Google_Cloud_VideoIntelligence_V1Beta1_VideoIntelligenceServiceSettings_AnnotateVideoOperationsSettings
+  commentId: P:Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.AnnotateVideoOperationsSettings
+  fullName: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.AnnotateVideoOperationsSettings
+  nameWithType: VideoIntelligenceServiceSettings.AnnotateVideoOperationsSettings
+- uid: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.AnnotateVideoOperationsSettings*
+  name: AnnotateVideoOperationsSettings
+  href: api/Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.html#Google_Cloud_VideoIntelligence_V1Beta1_VideoIntelligenceServiceSettings_AnnotateVideoOperationsSettings_
+  commentId: Overload:Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.AnnotateVideoOperationsSettings
+  fullName: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.AnnotateVideoOperationsSettings
+  nameWithType: VideoIntelligenceServiceSettings.AnnotateVideoOperationsSettings
 - uid: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.AnnotateVideoSettings
   name: AnnotateVideoSettings
   href: api/Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.html#Google_Cloud_VideoIntelligence_V1Beta1_VideoIntelligenceServiceSettings_AnnotateVideoSettings
@@ -17040,18 +17052,6 @@ references:
   commentId: Overload:Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.IdempotentRetryFilter
   fullName: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.IdempotentRetryFilter
   nameWithType: VideoIntelligenceServiceSettings.IdempotentRetryFilter
-- uid: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.LongRunningOperationsSettings
-  name: LongRunningOperationsSettings
-  href: api/Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.html#Google_Cloud_VideoIntelligence_V1Beta1_VideoIntelligenceServiceSettings_LongRunningOperationsSettings
-  commentId: P:Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.LongRunningOperationsSettings
-  fullName: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.LongRunningOperationsSettings
-  nameWithType: VideoIntelligenceServiceSettings.LongRunningOperationsSettings
-- uid: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.LongRunningOperationsSettings*
-  name: LongRunningOperationsSettings
-  href: api/Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.html#Google_Cloud_VideoIntelligence_V1Beta1_VideoIntelligenceServiceSettings_LongRunningOperationsSettings_
-  commentId: Overload:Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.LongRunningOperationsSettings
-  fullName: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.LongRunningOperationsSettings
-  nameWithType: VideoIntelligenceServiceSettings.LongRunningOperationsSettings
 - uid: Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.NonIdempotentRetryFilter
   name: NonIdempotentRetryFilter
   href: api/Google.Cloud.VideoIntelligence.V1Beta1.VideoIntelligenceServiceSettings.html#Google_Cloud_VideoIntelligence_V1Beta1_VideoIntelligenceServiceSettings_NonIdempotentRetryFilter

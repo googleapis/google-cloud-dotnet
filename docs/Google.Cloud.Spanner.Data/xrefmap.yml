@@ -799,6 +799,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabaseAsync
   fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabaseAsync
   nameWithType: DatabaseAdminClient.CreateDatabaseAsync
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabaseOperationsClient
+  name: CreateDatabaseOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_CreateDatabaseOperationsClient
+  commentId: P:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabaseOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabaseOperationsClient
+  nameWithType: DatabaseAdminClient.CreateDatabaseOperationsClient
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabaseOperationsClient*
+  name: CreateDatabaseOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_CreateDatabaseOperationsClient_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabaseOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.CreateDatabaseOperationsClient
+  nameWithType: DatabaseAdminClient.CreateDatabaseOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.DefaultEndpoint
   name: DefaultEndpoint
   href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_DefaultEndpoint
@@ -1045,18 +1057,6 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.ListDatabasesAsync
   fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.ListDatabasesAsync
   nameWithType: DatabaseAdminClient.ListDatabasesAsync
-- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.LongRunningOperationsClient
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_LongRunningOperationsClient
-  commentId: P:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.LongRunningOperationsClient
-  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.LongRunningOperationsClient
-  nameWithType: DatabaseAdminClient.LongRunningOperationsClient
-- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.LongRunningOperationsClient*
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_LongRunningOperationsClient_
-  commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.LongRunningOperationsClient
-  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.LongRunningOperationsClient
-  nameWithType: DatabaseAdminClient.LongRunningOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.PollOnceCreateDatabase(System.String,Google.Api.Gax.Grpc.CallSettings)
   name: PollOnceCreateDatabase(String, CallSettings)
   href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_PollOnceCreateDatabase_System_String_Google_Api_Gax_Grpc_CallSettings_
@@ -1261,6 +1261,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdlAsync
   fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdlAsync
   nameWithType: DatabaseAdminClient.UpdateDatabaseDdlAsync
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdlOperationsClient
+  name: UpdateDatabaseDdlOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_UpdateDatabaseDdlOperationsClient
+  commentId: P:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdlOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdlOperationsClient
+  nameWithType: DatabaseAdminClient.UpdateDatabaseDdlOperationsClient
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdlOperationsClient*
+  name: UpdateDatabaseDdlOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClient_UpdateDatabaseDdlOperationsClient_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdlOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseDdlOperationsClient
+  nameWithType: DatabaseAdminClient.UpdateDatabaseDdlOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl
   name: DatabaseAdminClientImpl
   href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.html
@@ -1303,6 +1315,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.CreateDatabaseAsync
   fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.CreateDatabaseAsync
   nameWithType: DatabaseAdminClientImpl.CreateDatabaseAsync
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.CreateDatabaseOperationsClient
+  name: CreateDatabaseOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClientImpl_CreateDatabaseOperationsClient
+  commentId: P:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.CreateDatabaseOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.CreateDatabaseOperationsClient
+  nameWithType: DatabaseAdminClientImpl.CreateDatabaseOperationsClient
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.CreateDatabaseOperationsClient*
+  name: CreateDatabaseOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClientImpl_CreateDatabaseOperationsClient_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.CreateDatabaseOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.CreateDatabaseOperationsClient
+  nameWithType: DatabaseAdminClientImpl.CreateDatabaseOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.DropDatabase(Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest,Google.Api.Gax.Grpc.CallSettings)
   name: DropDatabase(DropDatabaseRequest, CallSettings)
   href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClientImpl_DropDatabase_Google_Cloud_Spanner_Admin_Database_V1_DropDatabaseRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -1435,18 +1459,6 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.ListDatabasesAsync
   fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.ListDatabasesAsync
   nameWithType: DatabaseAdminClientImpl.ListDatabasesAsync
-- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.LongRunningOperationsClient
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClientImpl_LongRunningOperationsClient
-  commentId: P:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.LongRunningOperationsClient
-  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.LongRunningOperationsClient
-  nameWithType: DatabaseAdminClientImpl.LongRunningOperationsClient
-- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.LongRunningOperationsClient*
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClientImpl_LongRunningOperationsClient_
-  commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.LongRunningOperationsClient
-  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.LongRunningOperationsClient
-  nameWithType: DatabaseAdminClientImpl.LongRunningOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.SetIamPolicy(Google.Cloud.Iam.V1.SetIamPolicyRequest,Google.Api.Gax.Grpc.CallSettings)
   name: SetIamPolicy(SetIamPolicyRequest, CallSettings)
   href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClientImpl_SetIamPolicy_Google_Cloud_Iam_V1_SetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -1519,6 +1531,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.UpdateDatabaseDdlAsync
   fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.UpdateDatabaseDdlAsync
   nameWithType: DatabaseAdminClientImpl.UpdateDatabaseDdlAsync
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.UpdateDatabaseDdlOperationsClient
+  name: UpdateDatabaseDdlOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClientImpl_UpdateDatabaseDdlOperationsClient
+  commentId: P:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.UpdateDatabaseDdlOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.UpdateDatabaseDdlOperationsClient
+  nameWithType: DatabaseAdminClientImpl.UpdateDatabaseDdlOperationsClient
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.UpdateDatabaseDdlOperationsClient*
+  name: UpdateDatabaseDdlOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminClientImpl_UpdateDatabaseDdlOperationsClient_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.UpdateDatabaseDdlOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClientImpl.UpdateDatabaseDdlOperationsClient
+  nameWithType: DatabaseAdminClientImpl.UpdateDatabaseDdlOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings
   name: DatabaseAdminSettings
   href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html
@@ -1549,6 +1573,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.Clone
   fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.Clone
   nameWithType: DatabaseAdminSettings.Clone
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.CreateDatabaseOperationsSettings
+  name: CreateDatabaseOperationsSettings
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_CreateDatabaseOperationsSettings
+  commentId: P:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.CreateDatabaseOperationsSettings
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.CreateDatabaseOperationsSettings
+  nameWithType: DatabaseAdminSettings.CreateDatabaseOperationsSettings
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.CreateDatabaseOperationsSettings*
+  name: CreateDatabaseOperationsSettings
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_CreateDatabaseOperationsSettings_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.CreateDatabaseOperationsSettings
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.CreateDatabaseOperationsSettings
+  nameWithType: DatabaseAdminSettings.CreateDatabaseOperationsSettings
 - uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.CreateDatabaseSettings
   name: CreateDatabaseSettings
   href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_CreateDatabaseSettings
@@ -1669,18 +1705,6 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.ListDatabasesSettings
   fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.ListDatabasesSettings
   nameWithType: DatabaseAdminSettings.ListDatabasesSettings
-- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.LongRunningOperationsSettings
-  name: LongRunningOperationsSettings
-  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_LongRunningOperationsSettings
-  commentId: P:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.LongRunningOperationsSettings
-  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.LongRunningOperationsSettings
-  nameWithType: DatabaseAdminSettings.LongRunningOperationsSettings
-- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.LongRunningOperationsSettings*
-  name: LongRunningOperationsSettings
-  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_LongRunningOperationsSettings_
-  commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.LongRunningOperationsSettings
-  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.LongRunningOperationsSettings
-  nameWithType: DatabaseAdminSettings.LongRunningOperationsSettings
 - uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.NonIdempotentRetryFilter
   name: NonIdempotentRetryFilter
   href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_NonIdempotentRetryFilter
@@ -1717,6 +1741,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.TestIamPermissionsSettings
   fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.TestIamPermissionsSettings
   nameWithType: DatabaseAdminSettings.TestIamPermissionsSettings
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.UpdateDatabaseDdlOperationsSettings
+  name: UpdateDatabaseDdlOperationsSettings
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_UpdateDatabaseDdlOperationsSettings
+  commentId: P:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.UpdateDatabaseDdlOperationsSettings
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.UpdateDatabaseDdlOperationsSettings
+  nameWithType: DatabaseAdminSettings.UpdateDatabaseDdlOperationsSettings
+- uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.UpdateDatabaseDdlOperationsSettings*
+  name: UpdateDatabaseDdlOperationsSettings
+  href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_UpdateDatabaseDdlOperationsSettings_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.UpdateDatabaseDdlOperationsSettings
+  fullName: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.UpdateDatabaseDdlOperationsSettings
+  nameWithType: DatabaseAdminSettings.UpdateDatabaseDdlOperationsSettings
 - uid: Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.UpdateDatabaseDdlSettings
   name: UpdateDatabaseDdlSettings
   href: api/Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminSettings.html#Google_Cloud_Spanner_Admin_Database_V1_DatabaseAdminSettings_UpdateDatabaseDdlSettings
@@ -3377,6 +3413,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceAsync
   fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceAsync
   nameWithType: InstanceAdminClient.CreateInstanceAsync
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceOperationsClient
+  name: CreateInstanceOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_CreateInstanceOperationsClient
+  commentId: P:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceOperationsClient
+  nameWithType: InstanceAdminClient.CreateInstanceOperationsClient
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceOperationsClient*
+  name: CreateInstanceOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_CreateInstanceOperationsClient_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstanceOperationsClient
+  nameWithType: InstanceAdminClient.CreateInstanceOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DefaultEndpoint
   name: DefaultEndpoint
   href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_DefaultEndpoint
@@ -3665,18 +3713,6 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstancesAsync
   fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstancesAsync
   nameWithType: InstanceAdminClient.ListInstancesAsync
-- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.LongRunningOperationsClient
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_LongRunningOperationsClient
-  commentId: P:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.LongRunningOperationsClient
-  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.LongRunningOperationsClient
-  nameWithType: InstanceAdminClient.LongRunningOperationsClient
-- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.LongRunningOperationsClient*
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_LongRunningOperationsClient_
-  commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.LongRunningOperationsClient
-  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.LongRunningOperationsClient
-  nameWithType: InstanceAdminClient.LongRunningOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.PollOnceCreateInstance(System.String,Google.Api.Gax.Grpc.CallSettings)
   name: PollOnceCreateInstance(String, CallSettings)
   href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_PollOnceCreateInstance_System_String_Google_Api_Gax_Grpc_CallSettings_
@@ -3872,6 +3908,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceAsync
   fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceAsync
   nameWithType: InstanceAdminClient.UpdateInstanceAsync
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceOperationsClient
+  name: UpdateInstanceOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_UpdateInstanceOperationsClient
+  commentId: P:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceOperationsClient
+  nameWithType: InstanceAdminClient.UpdateInstanceOperationsClient
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceOperationsClient*
+  name: UpdateInstanceOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClient_UpdateInstanceOperationsClient_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstanceOperationsClient
+  nameWithType: InstanceAdminClient.UpdateInstanceOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl
   name: InstanceAdminClientImpl
   href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.html
@@ -3914,6 +3962,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.CreateInstanceAsync
   fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.CreateInstanceAsync
   nameWithType: InstanceAdminClientImpl.CreateInstanceAsync
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.CreateInstanceOperationsClient
+  name: CreateInstanceOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_CreateInstanceOperationsClient
+  commentId: P:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.CreateInstanceOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.CreateInstanceOperationsClient
+  nameWithType: InstanceAdminClientImpl.CreateInstanceOperationsClient
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.CreateInstanceOperationsClient*
+  name: CreateInstanceOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_CreateInstanceOperationsClient_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.CreateInstanceOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.CreateInstanceOperationsClient
+  nameWithType: InstanceAdminClientImpl.CreateInstanceOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.DeleteInstance(Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest,Google.Api.Gax.Grpc.CallSettings)
   name: DeleteInstance(DeleteInstanceRequest, CallSettings)
   href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_DeleteInstance_Google_Cloud_Spanner_Admin_Instance_V1_DeleteInstanceRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -4070,18 +4130,6 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.ListInstancesAsync
   fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.ListInstancesAsync
   nameWithType: InstanceAdminClientImpl.ListInstancesAsync
-- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.LongRunningOperationsClient
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_LongRunningOperationsClient
-  commentId: P:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.LongRunningOperationsClient
-  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.LongRunningOperationsClient
-  nameWithType: InstanceAdminClientImpl.LongRunningOperationsClient
-- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.LongRunningOperationsClient*
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_LongRunningOperationsClient_
-  commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.LongRunningOperationsClient
-  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.LongRunningOperationsClient
-  nameWithType: InstanceAdminClientImpl.LongRunningOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.SetIamPolicy(Google.Cloud.Iam.V1.SetIamPolicyRequest,Google.Api.Gax.Grpc.CallSettings)
   name: SetIamPolicy(SetIamPolicyRequest, CallSettings)
   href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_SetIamPolicy_Google_Cloud_Iam_V1_SetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -4154,6 +4202,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.UpdateInstanceAsync
   fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.UpdateInstanceAsync
   nameWithType: InstanceAdminClientImpl.UpdateInstanceAsync
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.UpdateInstanceOperationsClient
+  name: UpdateInstanceOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_UpdateInstanceOperationsClient
+  commentId: P:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.UpdateInstanceOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.UpdateInstanceOperationsClient
+  nameWithType: InstanceAdminClientImpl.UpdateInstanceOperationsClient
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.UpdateInstanceOperationsClient*
+  name: UpdateInstanceOperationsClient
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminClientImpl_UpdateInstanceOperationsClient_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.UpdateInstanceOperationsClient
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClientImpl.UpdateInstanceOperationsClient
+  nameWithType: InstanceAdminClientImpl.UpdateInstanceOperationsClient
 - uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings
   name: InstanceAdminSettings
   href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html
@@ -4184,6 +4244,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.Clone
   fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.Clone
   nameWithType: InstanceAdminSettings.Clone
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.CreateInstanceOperationsSettings
+  name: CreateInstanceOperationsSettings
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminSettings_CreateInstanceOperationsSettings
+  commentId: P:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.CreateInstanceOperationsSettings
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.CreateInstanceOperationsSettings
+  nameWithType: InstanceAdminSettings.CreateInstanceOperationsSettings
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.CreateInstanceOperationsSettings*
+  name: CreateInstanceOperationsSettings
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminSettings_CreateInstanceOperationsSettings_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.CreateInstanceOperationsSettings
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.CreateInstanceOperationsSettings
+  nameWithType: InstanceAdminSettings.CreateInstanceOperationsSettings
 - uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.CreateInstanceSettings
   name: CreateInstanceSettings
   href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminSettings_CreateInstanceSettings
@@ -4316,18 +4388,6 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.ListInstancesSettings
   fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.ListInstancesSettings
   nameWithType: InstanceAdminSettings.ListInstancesSettings
-- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.LongRunningOperationsSettings
-  name: LongRunningOperationsSettings
-  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminSettings_LongRunningOperationsSettings
-  commentId: P:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.LongRunningOperationsSettings
-  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.LongRunningOperationsSettings
-  nameWithType: InstanceAdminSettings.LongRunningOperationsSettings
-- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.LongRunningOperationsSettings*
-  name: LongRunningOperationsSettings
-  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminSettings_LongRunningOperationsSettings_
-  commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.LongRunningOperationsSettings
-  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.LongRunningOperationsSettings
-  nameWithType: InstanceAdminSettings.LongRunningOperationsSettings
 - uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.NonIdempotentRetryFilter
   name: NonIdempotentRetryFilter
   href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminSettings_NonIdempotentRetryFilter
@@ -4364,6 +4424,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.TestIamPermissionsSettings
   fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.TestIamPermissionsSettings
   nameWithType: InstanceAdminSettings.TestIamPermissionsSettings
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.UpdateInstanceOperationsSettings
+  name: UpdateInstanceOperationsSettings
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminSettings_UpdateInstanceOperationsSettings
+  commentId: P:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.UpdateInstanceOperationsSettings
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.UpdateInstanceOperationsSettings
+  nameWithType: InstanceAdminSettings.UpdateInstanceOperationsSettings
+- uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.UpdateInstanceOperationsSettings*
+  name: UpdateInstanceOperationsSettings
+  href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminSettings_UpdateInstanceOperationsSettings_
+  commentId: Overload:Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.UpdateInstanceOperationsSettings
+  fullName: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.UpdateInstanceOperationsSettings
+  nameWithType: InstanceAdminSettings.UpdateInstanceOperationsSettings
 - uid: Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.UpdateInstanceSettings
   name: UpdateInstanceSettings
   href: api/Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminSettings.html#Google_Cloud_Spanner_Admin_Instance_V1_InstanceAdminSettings_UpdateInstanceSettings
@@ -5875,6 +5947,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.CancelRead
   fullName: Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.CancelRead
   nameWithType: ReadTests.CancelRead
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.CommandTimeout
+  name: CommandTimeout()
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.html#Google_Cloud_Spanner_Data_IntegrationTests_ReadTests_CommandTimeout
+  commentId: M:Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.CommandTimeout
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.CommandTimeout()
+  nameWithType: ReadTests.CommandTimeout()
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.CommandTimeout*
+  name: CommandTimeout
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.html#Google_Cloud_Spanner_Data_IntegrationTests_ReadTests_CommandTimeout_
+  commentId: Overload:Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.CommandTimeout
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.CommandTimeout
+  nameWithType: ReadTests.CommandTimeout
 - uid: Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.EmptyStructArray
   name: EmptyStructArray()
   href: api/Google.Cloud.Spanner.Data.IntegrationTests.ReadTests.html#Google_Cloud_Spanner_Data_IntegrationTests_ReadTests_EmptyStructArray
@@ -6310,6 +6394,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.AbortedThrownCorrectly
   fullName: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.AbortedThrownCorrectly
   nameWithType: TransactionTests.AbortedThrownCorrectly
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.DisposedTransactionDoesntLeak
+  name: DisposedTransactionDoesntLeak()
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.html#Google_Cloud_Spanner_Data_IntegrationTests_TransactionTests_DisposedTransactionDoesntLeak
+  commentId: M:Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.DisposedTransactionDoesntLeak
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.DisposedTransactionDoesntLeak()
+  nameWithType: TransactionTests.DisposedTransactionDoesntLeak()
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.DisposedTransactionDoesntLeak*
+  name: DisposedTransactionDoesntLeak
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.html#Google_Cloud_Spanner_Data_IntegrationTests_TransactionTests_DisposedTransactionDoesntLeak_
+  commentId: Overload:Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.DisposedTransactionDoesntLeak
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.DisposedTransactionDoesntLeak
+  nameWithType: TransactionTests.DisposedTransactionDoesntLeak
 - uid: Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.MultiWrite
   name: MultiWrite()
   href: api/Google.Cloud.Spanner.Data.IntegrationTests.TransactionTests.html#Google_Cloud_Spanner_Data_IntegrationTests_TransactionTests_MultiWrite
@@ -6532,6 +6628,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Data.IntegrationTests.WriteTests.BadTableName
   fullName: Google.Cloud.Spanner.Data.IntegrationTests.WriteTests.BadTableName
   nameWithType: WriteTests.BadTableName
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.WriteTests.CommandTimeout
+  name: CommandTimeout()
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.WriteTests.html#Google_Cloud_Spanner_Data_IntegrationTests_WriteTests_CommandTimeout
+  commentId: M:Google.Cloud.Spanner.Data.IntegrationTests.WriteTests.CommandTimeout
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.WriteTests.CommandTimeout()
+  nameWithType: WriteTests.CommandTimeout()
+- uid: Google.Cloud.Spanner.Data.IntegrationTests.WriteTests.CommandTimeout*
+  name: CommandTimeout
+  href: api/Google.Cloud.Spanner.Data.IntegrationTests.WriteTests.html#Google_Cloud_Spanner_Data_IntegrationTests_WriteTests_CommandTimeout_
+  commentId: Overload:Google.Cloud.Spanner.Data.IntegrationTests.WriteTests.CommandTimeout
+  fullName: Google.Cloud.Spanner.Data.IntegrationTests.WriteTests.CommandTimeout
+  nameWithType: WriteTests.CommandTimeout
 - uid: Google.Cloud.Spanner.Data.IntegrationTests.WriteTests.WriteEmpties
   name: WriteEmpties()
   href: api/Google.Cloud.Spanner.Data.IntegrationTests.WriteTests.html#Google_Cloud_Spanner_Data_IntegrationTests_WriteTests_WriteEmpties
@@ -9378,6 +9486,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.Data.SpannerTransaction.CommitAsync
   fullName: Google.Cloud.Spanner.Data.SpannerTransaction.CommitAsync
   nameWithType: SpannerTransaction.CommitAsync
+- uid: Google.Cloud.Spanner.Data.SpannerTransaction.CommitTimeout
+  name: CommitTimeout
+  href: api/Google.Cloud.Spanner.Data.SpannerTransaction.html#Google_Cloud_Spanner_Data_SpannerTransaction_CommitTimeout
+  commentId: P:Google.Cloud.Spanner.Data.SpannerTransaction.CommitTimeout
+  fullName: Google.Cloud.Spanner.Data.SpannerTransaction.CommitTimeout
+  nameWithType: SpannerTransaction.CommitTimeout
+- uid: Google.Cloud.Spanner.Data.SpannerTransaction.CommitTimeout*
+  name: CommitTimeout
+  href: api/Google.Cloud.Spanner.Data.SpannerTransaction.html#Google_Cloud_Spanner_Data_SpannerTransaction_CommitTimeout_
+  commentId: Overload:Google.Cloud.Spanner.Data.SpannerTransaction.CommitTimeout
+  fullName: Google.Cloud.Spanner.Data.SpannerTransaction.CommitTimeout
+  nameWithType: SpannerTransaction.CommitTimeout
 - uid: Google.Cloud.Spanner.Data.SpannerTransaction.DbConnection
   name: DbConnection
   href: api/Google.Cloud.Spanner.Data.SpannerTransaction.html#Google_Cloud_Spanner_Data_SpannerTransaction_DbConnection
@@ -12928,6 +13048,24 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.SpannerClient.ExecuteSqlStream
   fullName: Google.Cloud.Spanner.V1.SpannerClient.ExecuteSqlStream
   nameWithType: SpannerClient.ExecuteSqlStream
+- uid: Google.Cloud.Spanner.V1.SpannerClient.ExecuteStreamingSql(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: ExecuteStreamingSql(ExecuteSqlRequest, CallSettings)
+  href: api/Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_ExecuteStreamingSql_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Spanner.V1.SpannerClient.ExecuteStreamingSql(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Spanner.V1.SpannerClient.ExecuteStreamingSql(Google.Cloud.Spanner.V1.ExecuteSqlRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SpannerClient.ExecuteStreamingSql(ExecuteSqlRequest, CallSettings)
+- uid: Google.Cloud.Spanner.V1.SpannerClient.ExecuteStreamingSql*
+  name: ExecuteStreamingSql
+  href: api/Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_ExecuteStreamingSql_
+  commentId: Overload:Google.Cloud.Spanner.V1.SpannerClient.ExecuteStreamingSql
+  fullName: Google.Cloud.Spanner.V1.SpannerClient.ExecuteStreamingSql
+  nameWithType: SpannerClient.ExecuteStreamingSql
+- uid: Google.Cloud.Spanner.V1.SpannerClient.ExecuteStreamingSqlStream
+  name: SpannerClient.ExecuteStreamingSqlStream
+  href: api/Google.Cloud.Spanner.V1.SpannerClient.ExecuteStreamingSqlStream.html
+  commentId: T:Google.Cloud.Spanner.V1.SpannerClient.ExecuteStreamingSqlStream
+  fullName: Google.Cloud.Spanner.V1.SpannerClient.ExecuteStreamingSqlStream
+  nameWithType: SpannerClient.ExecuteStreamingSqlStream
 - uid: Google.Cloud.Spanner.V1.SpannerClient.GetSession(Google.Cloud.Spanner.V1.GetSessionRequest,Google.Api.Gax.Grpc.CallSettings)
   name: GetSession(GetSessionRequest, CallSettings)
   href: api/Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_GetSession_Google_Cloud_Spanner_V1_GetSessionRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -12970,12 +13108,12 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.SpannerClient.GetSessionAsync
   fullName: Google.Cloud.Spanner.V1.SpannerClient.GetSessionAsync
   nameWithType: SpannerClient.GetSessionAsync
-- uid: Google.Cloud.Spanner.V1.SpannerClient.GetSqlStreamReader(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Google.Cloud.Spanner.V1.Session)
-  name: GetSqlStreamReader(ExecuteSqlRequest, Session)
-  href: api/Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_GetSqlStreamReader_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Google_Cloud_Spanner_V1_Session_
-  commentId: M:Google.Cloud.Spanner.V1.SpannerClient.GetSqlStreamReader(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Google.Cloud.Spanner.V1.Session)
-  fullName: Google.Cloud.Spanner.V1.SpannerClient.GetSqlStreamReader(Google.Cloud.Spanner.V1.ExecuteSqlRequest, Google.Cloud.Spanner.V1.Session)
-  nameWithType: SpannerClient.GetSqlStreamReader(ExecuteSqlRequest, Session)
+- uid: Google.Cloud.Spanner.V1.SpannerClient.GetSqlStreamReader(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Google.Cloud.Spanner.V1.Session,System.Int32)
+  name: GetSqlStreamReader(ExecuteSqlRequest, Session, Int32)
+  href: api/Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_GetSqlStreamReader_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Google_Cloud_Spanner_V1_Session_System_Int32_
+  commentId: M:Google.Cloud.Spanner.V1.SpannerClient.GetSqlStreamReader(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Google.Cloud.Spanner.V1.Session,System.Int32)
+  fullName: Google.Cloud.Spanner.V1.SpannerClient.GetSqlStreamReader(Google.Cloud.Spanner.V1.ExecuteSqlRequest, Google.Cloud.Spanner.V1.Session, System.Int32)
+  nameWithType: SpannerClient.GetSqlStreamReader(ExecuteSqlRequest, Session, Int32)
 - uid: Google.Cloud.Spanner.V1.SpannerClient.GetSqlStreamReader*
   name: GetSqlStreamReader
   href: api/Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_GetSqlStreamReader_
@@ -13060,6 +13198,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.SpannerClient.RollbackAsync
   fullName: Google.Cloud.Spanner.V1.SpannerClient.RollbackAsync
   nameWithType: SpannerClient.RollbackAsync
+- uid: Google.Cloud.Spanner.V1.SpannerClient.Settings
+  name: Settings
+  href: api/Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_Settings
+  commentId: P:Google.Cloud.Spanner.V1.SpannerClient.Settings
+  fullName: Google.Cloud.Spanner.V1.SpannerClient.Settings
+  nameWithType: SpannerClient.Settings
+- uid: Google.Cloud.Spanner.V1.SpannerClient.Settings*
+  name: Settings
+  href: api/Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_Settings_
+  commentId: Overload:Google.Cloud.Spanner.V1.SpannerClient.Settings
+  fullName: Google.Cloud.Spanner.V1.SpannerClient.Settings
+  nameWithType: SpannerClient.Settings
 - uid: Google.Cloud.Spanner.V1.SpannerClient.ShutdownDefaultChannelsAsync
   name: ShutdownDefaultChannelsAsync()
   href: api/Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_ShutdownDefaultChannelsAsync
@@ -13072,6 +13222,24 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.SpannerClient.ShutdownDefaultChannelsAsync
   fullName: Google.Cloud.Spanner.V1.SpannerClient.ShutdownDefaultChannelsAsync
   nameWithType: SpannerClient.ShutdownDefaultChannelsAsync
+- uid: Google.Cloud.Spanner.V1.SpannerClient.StreamingRead(Google.Cloud.Spanner.V1.ReadRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: StreamingRead(ReadRequest, CallSettings)
+  href: api/Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_StreamingRead_Google_Cloud_Spanner_V1_ReadRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Spanner.V1.SpannerClient.StreamingRead(Google.Cloud.Spanner.V1.ReadRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Spanner.V1.SpannerClient.StreamingRead(Google.Cloud.Spanner.V1.ReadRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SpannerClient.StreamingRead(ReadRequest, CallSettings)
+- uid: Google.Cloud.Spanner.V1.SpannerClient.StreamingRead*
+  name: StreamingRead
+  href: api/Google.Cloud.Spanner.V1.SpannerClient.html#Google_Cloud_Spanner_V1_SpannerClient_StreamingRead_
+  commentId: Overload:Google.Cloud.Spanner.V1.SpannerClient.StreamingRead
+  fullName: Google.Cloud.Spanner.V1.SpannerClient.StreamingRead
+  nameWithType: SpannerClient.StreamingRead
+- uid: Google.Cloud.Spanner.V1.SpannerClient.StreamingReadStream
+  name: SpannerClient.StreamingReadStream
+  href: api/Google.Cloud.Spanner.V1.SpannerClient.StreamingReadStream.html
+  commentId: T:Google.Cloud.Spanner.V1.SpannerClient.StreamingReadStream
+  fullName: Google.Cloud.Spanner.V1.SpannerClient.StreamingReadStream
+  nameWithType: SpannerClient.StreamingReadStream
 - uid: Google.Cloud.Spanner.V1.SpannerClientImpl
   name: SpannerClientImpl
   href: api/Google.Cloud.Spanner.V1.SpannerClientImpl.html
@@ -13222,6 +13390,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.SpannerClientImpl.ExecuteSqlStream
   fullName: Google.Cloud.Spanner.V1.SpannerClientImpl.ExecuteSqlStream
   nameWithType: SpannerClientImpl.ExecuteSqlStream
+- uid: Google.Cloud.Spanner.V1.SpannerClientImpl.ExecuteStreamingSql(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: ExecuteStreamingSql(ExecuteSqlRequest, CallSettings)
+  href: api/Google.Cloud.Spanner.V1.SpannerClientImpl.html#Google_Cloud_Spanner_V1_SpannerClientImpl_ExecuteStreamingSql_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Spanner.V1.SpannerClientImpl.ExecuteStreamingSql(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Spanner.V1.SpannerClientImpl.ExecuteStreamingSql(Google.Cloud.Spanner.V1.ExecuteSqlRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SpannerClientImpl.ExecuteStreamingSql(ExecuteSqlRequest, CallSettings)
+- uid: Google.Cloud.Spanner.V1.SpannerClientImpl.ExecuteStreamingSql*
+  name: ExecuteStreamingSql
+  href: api/Google.Cloud.Spanner.V1.SpannerClientImpl.html#Google_Cloud_Spanner_V1_SpannerClientImpl_ExecuteStreamingSql_
+  commentId: Overload:Google.Cloud.Spanner.V1.SpannerClientImpl.ExecuteStreamingSql
+  fullName: Google.Cloud.Spanner.V1.SpannerClientImpl.ExecuteStreamingSql
+  nameWithType: SpannerClientImpl.ExecuteStreamingSql
 - uid: Google.Cloud.Spanner.V1.SpannerClientImpl.GetSession(Google.Cloud.Spanner.V1.GetSessionRequest,Google.Api.Gax.Grpc.CallSettings)
   name: GetSession(GetSessionRequest, CallSettings)
   href: api/Google.Cloud.Spanner.V1.SpannerClientImpl.html#Google_Cloud_Spanner_V1_SpannerClientImpl_GetSession_Google_Cloud_Spanner_V1_GetSessionRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -13246,12 +13426,12 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.SpannerClientImpl.GetSessionAsync
   fullName: Google.Cloud.Spanner.V1.SpannerClientImpl.GetSessionAsync
   nameWithType: SpannerClientImpl.GetSessionAsync
-- uid: Google.Cloud.Spanner.V1.SpannerClientImpl.GetSqlStreamReader(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Google.Cloud.Spanner.V1.Session)
-  name: GetSqlStreamReader(ExecuteSqlRequest, Session)
-  href: api/Google.Cloud.Spanner.V1.SpannerClientImpl.html#Google_Cloud_Spanner_V1_SpannerClientImpl_GetSqlStreamReader_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Google_Cloud_Spanner_V1_Session_
-  commentId: M:Google.Cloud.Spanner.V1.SpannerClientImpl.GetSqlStreamReader(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Google.Cloud.Spanner.V1.Session)
-  fullName: Google.Cloud.Spanner.V1.SpannerClientImpl.GetSqlStreamReader(Google.Cloud.Spanner.V1.ExecuteSqlRequest, Google.Cloud.Spanner.V1.Session)
-  nameWithType: SpannerClientImpl.GetSqlStreamReader(ExecuteSqlRequest, Session)
+- uid: Google.Cloud.Spanner.V1.SpannerClientImpl.GetSqlStreamReader(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Google.Cloud.Spanner.V1.Session,System.Int32)
+  name: GetSqlStreamReader(ExecuteSqlRequest, Session, Int32)
+  href: api/Google.Cloud.Spanner.V1.SpannerClientImpl.html#Google_Cloud_Spanner_V1_SpannerClientImpl_GetSqlStreamReader_Google_Cloud_Spanner_V1_ExecuteSqlRequest_Google_Cloud_Spanner_V1_Session_System_Int32_
+  commentId: M:Google.Cloud.Spanner.V1.SpannerClientImpl.GetSqlStreamReader(Google.Cloud.Spanner.V1.ExecuteSqlRequest,Google.Cloud.Spanner.V1.Session,System.Int32)
+  fullName: Google.Cloud.Spanner.V1.SpannerClientImpl.GetSqlStreamReader(Google.Cloud.Spanner.V1.ExecuteSqlRequest, Google.Cloud.Spanner.V1.Session, System.Int32)
+  nameWithType: SpannerClientImpl.GetSqlStreamReader(ExecuteSqlRequest, Session, Int32)
 - uid: Google.Cloud.Spanner.V1.SpannerClientImpl.GetSqlStreamReader*
   name: GetSqlStreamReader
   href: api/Google.Cloud.Spanner.V1.SpannerClientImpl.html#Google_Cloud_Spanner_V1_SpannerClientImpl_GetSqlStreamReader_
@@ -13318,6 +13498,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.SpannerClientImpl.RollbackAsync
   fullName: Google.Cloud.Spanner.V1.SpannerClientImpl.RollbackAsync
   nameWithType: SpannerClientImpl.RollbackAsync
+- uid: Google.Cloud.Spanner.V1.SpannerClientImpl.StreamingRead(Google.Cloud.Spanner.V1.ReadRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: StreamingRead(ReadRequest, CallSettings)
+  href: api/Google.Cloud.Spanner.V1.SpannerClientImpl.html#Google_Cloud_Spanner_V1_SpannerClientImpl_StreamingRead_Google_Cloud_Spanner_V1_ReadRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Spanner.V1.SpannerClientImpl.StreamingRead(Google.Cloud.Spanner.V1.ReadRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Spanner.V1.SpannerClientImpl.StreamingRead(Google.Cloud.Spanner.V1.ReadRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SpannerClientImpl.StreamingRead(ReadRequest, CallSettings)
+- uid: Google.Cloud.Spanner.V1.SpannerClientImpl.StreamingRead*
+  name: StreamingRead
+  href: api/Google.Cloud.Spanner.V1.SpannerClientImpl.html#Google_Cloud_Spanner_V1_SpannerClientImpl_StreamingRead_
+  commentId: Overload:Google.Cloud.Spanner.V1.SpannerClientImpl.StreamingRead
+  fullName: Google.Cloud.Spanner.V1.SpannerClientImpl.StreamingRead
+  nameWithType: SpannerClientImpl.StreamingRead
 - uid: Google.Cloud.Spanner.V1.SpannerSettings
   name: SpannerSettings
   href: api/Google.Cloud.Spanner.V1.SpannerSettings.html
@@ -13336,6 +13528,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.SpannerSettings.#ctor
   fullName: Google.Cloud.Spanner.V1.SpannerSettings.SpannerSettings
   nameWithType: SpannerSettings.SpannerSettings
+- uid: Google.Cloud.Spanner.V1.SpannerSettings.AllowImmediateTimeouts
+  name: AllowImmediateTimeouts
+  href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_AllowImmediateTimeouts
+  commentId: P:Google.Cloud.Spanner.V1.SpannerSettings.AllowImmediateTimeouts
+  fullName: Google.Cloud.Spanner.V1.SpannerSettings.AllowImmediateTimeouts
+  nameWithType: SpannerSettings.AllowImmediateTimeouts
+- uid: Google.Cloud.Spanner.V1.SpannerSettings.AllowImmediateTimeouts*
+  name: AllowImmediateTimeouts
+  href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_AllowImmediateTimeouts_
+  commentId: Overload:Google.Cloud.Spanner.V1.SpannerSettings.AllowImmediateTimeouts
+  fullName: Google.Cloud.Spanner.V1.SpannerSettings.AllowImmediateTimeouts
+  nameWithType: SpannerSettings.AllowImmediateTimeouts
 - uid: Google.Cloud.Spanner.V1.SpannerSettings.BeginTransactionSettings
   name: BeginTransactionSettings
   href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_BeginTransactionSettings
@@ -13372,6 +13576,24 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.SpannerSettings.CommitSettings
   fullName: Google.Cloud.Spanner.V1.SpannerSettings.CommitSettings
   nameWithType: SpannerSettings.CommitSettings
+- uid: Google.Cloud.Spanner.V1.SpannerSettings.ConvertTimeoutToExpiration(System.Int32)
+  name: ConvertTimeoutToExpiration(Int32)
+  href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_ConvertTimeoutToExpiration_System_Int32_
+  commentId: M:Google.Cloud.Spanner.V1.SpannerSettings.ConvertTimeoutToExpiration(System.Int32)
+  fullName: Google.Cloud.Spanner.V1.SpannerSettings.ConvertTimeoutToExpiration(System.Int32)
+  nameWithType: SpannerSettings.ConvertTimeoutToExpiration(Int32)
+- uid: Google.Cloud.Spanner.V1.SpannerSettings.ConvertTimeoutToExpiration(System.Int32,System.Boolean)
+  name: ConvertTimeoutToExpiration(Int32, Boolean)
+  href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_ConvertTimeoutToExpiration_System_Int32_System_Boolean_
+  commentId: M:Google.Cloud.Spanner.V1.SpannerSettings.ConvertTimeoutToExpiration(System.Int32,System.Boolean)
+  fullName: Google.Cloud.Spanner.V1.SpannerSettings.ConvertTimeoutToExpiration(System.Int32, System.Boolean)
+  nameWithType: SpannerSettings.ConvertTimeoutToExpiration(Int32, Boolean)
+- uid: Google.Cloud.Spanner.V1.SpannerSettings.ConvertTimeoutToExpiration*
+  name: ConvertTimeoutToExpiration
+  href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_ConvertTimeoutToExpiration_
+  commentId: Overload:Google.Cloud.Spanner.V1.SpannerSettings.ConvertTimeoutToExpiration
+  fullName: Google.Cloud.Spanner.V1.SpannerSettings.ConvertTimeoutToExpiration
+  nameWithType: SpannerSettings.ConvertTimeoutToExpiration
 - uid: Google.Cloud.Spanner.V1.SpannerSettings.CreateSessionSettings
   name: CreateSessionSettings
   href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_CreateSessionSettings
@@ -13408,6 +13630,30 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.SpannerSettings.ExecuteSqlSettings
   fullName: Google.Cloud.Spanner.V1.SpannerSettings.ExecuteSqlSettings
   nameWithType: SpannerSettings.ExecuteSqlSettings
+- uid: Google.Cloud.Spanner.V1.SpannerSettings.ExecuteSqlStreamSettings
+  name: ExecuteSqlStreamSettings
+  href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_ExecuteSqlStreamSettings
+  commentId: P:Google.Cloud.Spanner.V1.SpannerSettings.ExecuteSqlStreamSettings
+  fullName: Google.Cloud.Spanner.V1.SpannerSettings.ExecuteSqlStreamSettings
+  nameWithType: SpannerSettings.ExecuteSqlStreamSettings
+- uid: Google.Cloud.Spanner.V1.SpannerSettings.ExecuteSqlStreamSettings*
+  name: ExecuteSqlStreamSettings
+  href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_ExecuteSqlStreamSettings_
+  commentId: Overload:Google.Cloud.Spanner.V1.SpannerSettings.ExecuteSqlStreamSettings
+  fullName: Google.Cloud.Spanner.V1.SpannerSettings.ExecuteSqlStreamSettings
+  nameWithType: SpannerSettings.ExecuteSqlStreamSettings
+- uid: Google.Cloud.Spanner.V1.SpannerSettings.ExecuteStreamingSqlSettings
+  name: ExecuteStreamingSqlSettings
+  href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_ExecuteStreamingSqlSettings
+  commentId: P:Google.Cloud.Spanner.V1.SpannerSettings.ExecuteStreamingSqlSettings
+  fullName: Google.Cloud.Spanner.V1.SpannerSettings.ExecuteStreamingSqlSettings
+  nameWithType: SpannerSettings.ExecuteStreamingSqlSettings
+- uid: Google.Cloud.Spanner.V1.SpannerSettings.ExecuteStreamingSqlSettings*
+  name: ExecuteStreamingSqlSettings
+  href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_ExecuteStreamingSqlSettings_
+  commentId: Overload:Google.Cloud.Spanner.V1.SpannerSettings.ExecuteStreamingSqlSettings
+  fullName: Google.Cloud.Spanner.V1.SpannerSettings.ExecuteStreamingSqlSettings
+  nameWithType: SpannerSettings.ExecuteStreamingSqlSettings
 - uid: Google.Cloud.Spanner.V1.SpannerSettings.GetDefault
   name: GetDefault()
   href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_GetDefault
@@ -13444,6 +13690,30 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.SpannerSettings.GetDefaultTimeoutBackoff
   fullName: Google.Cloud.Spanner.V1.SpannerSettings.GetDefaultTimeoutBackoff
   nameWithType: SpannerSettings.GetDefaultTimeoutBackoff
+- uid: Google.Cloud.Spanner.V1.SpannerSettings.GetLongRunningRetryBackoff
+  name: GetLongRunningRetryBackoff()
+  href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_GetLongRunningRetryBackoff
+  commentId: M:Google.Cloud.Spanner.V1.SpannerSettings.GetLongRunningRetryBackoff
+  fullName: Google.Cloud.Spanner.V1.SpannerSettings.GetLongRunningRetryBackoff()
+  nameWithType: SpannerSettings.GetLongRunningRetryBackoff()
+- uid: Google.Cloud.Spanner.V1.SpannerSettings.GetLongRunningRetryBackoff*
+  name: GetLongRunningRetryBackoff
+  href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_GetLongRunningRetryBackoff_
+  commentId: Overload:Google.Cloud.Spanner.V1.SpannerSettings.GetLongRunningRetryBackoff
+  fullName: Google.Cloud.Spanner.V1.SpannerSettings.GetLongRunningRetryBackoff
+  nameWithType: SpannerSettings.GetLongRunningRetryBackoff
+- uid: Google.Cloud.Spanner.V1.SpannerSettings.GetLongRunningTimeoutBackoff
+  name: GetLongRunningTimeoutBackoff()
+  href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_GetLongRunningTimeoutBackoff
+  commentId: M:Google.Cloud.Spanner.V1.SpannerSettings.GetLongRunningTimeoutBackoff
+  fullName: Google.Cloud.Spanner.V1.SpannerSettings.GetLongRunningTimeoutBackoff()
+  nameWithType: SpannerSettings.GetLongRunningTimeoutBackoff()
+- uid: Google.Cloud.Spanner.V1.SpannerSettings.GetLongRunningTimeoutBackoff*
+  name: GetLongRunningTimeoutBackoff
+  href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_GetLongRunningTimeoutBackoff_
+  commentId: Overload:Google.Cloud.Spanner.V1.SpannerSettings.GetLongRunningTimeoutBackoff
+  fullName: Google.Cloud.Spanner.V1.SpannerSettings.GetLongRunningTimeoutBackoff
+  nameWithType: SpannerSettings.GetLongRunningTimeoutBackoff
 - uid: Google.Cloud.Spanner.V1.SpannerSettings.GetSessionSettings
   name: GetSessionSettings
   href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_GetSessionSettings
@@ -13468,6 +13738,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.SpannerSettings.IdempotentRetryFilter
   fullName: Google.Cloud.Spanner.V1.SpannerSettings.IdempotentRetryFilter
   nameWithType: SpannerSettings.IdempotentRetryFilter
+- uid: Google.Cloud.Spanner.V1.SpannerSettings.LongRunningRetryFilter
+  name: LongRunningRetryFilter
+  href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_LongRunningRetryFilter
+  commentId: P:Google.Cloud.Spanner.V1.SpannerSettings.LongRunningRetryFilter
+  fullName: Google.Cloud.Spanner.V1.SpannerSettings.LongRunningRetryFilter
+  nameWithType: SpannerSettings.LongRunningRetryFilter
+- uid: Google.Cloud.Spanner.V1.SpannerSettings.LongRunningRetryFilter*
+  name: LongRunningRetryFilter
+  href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_LongRunningRetryFilter_
+  commentId: Overload:Google.Cloud.Spanner.V1.SpannerSettings.LongRunningRetryFilter
+  fullName: Google.Cloud.Spanner.V1.SpannerSettings.LongRunningRetryFilter
+  nameWithType: SpannerSettings.LongRunningRetryFilter
 - uid: Google.Cloud.Spanner.V1.SpannerSettings.NonIdempotentRetryFilter
   name: NonIdempotentRetryFilter
   href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_NonIdempotentRetryFilter
@@ -13504,6 +13786,18 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.SpannerSettings.RollbackSettings
   fullName: Google.Cloud.Spanner.V1.SpannerSettings.RollbackSettings
   nameWithType: SpannerSettings.RollbackSettings
+- uid: Google.Cloud.Spanner.V1.SpannerSettings.StreamingReadSettings
+  name: StreamingReadSettings
+  href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_StreamingReadSettings
+  commentId: P:Google.Cloud.Spanner.V1.SpannerSettings.StreamingReadSettings
+  fullName: Google.Cloud.Spanner.V1.SpannerSettings.StreamingReadSettings
+  nameWithType: SpannerSettings.StreamingReadSettings
+- uid: Google.Cloud.Spanner.V1.SpannerSettings.StreamingReadSettings*
+  name: StreamingReadSettings
+  href: api/Google.Cloud.Spanner.V1.SpannerSettings.html#Google_Cloud_Spanner_V1_SpannerSettings_StreamingReadSettings_
+  commentId: Overload:Google.Cloud.Spanner.V1.SpannerSettings.StreamingReadSettings
+  fullName: Google.Cloud.Spanner.V1.SpannerSettings.StreamingReadSettings
+  nameWithType: SpannerSettings.StreamingReadSettings
 - uid: Google.Cloud.Spanner.V1.StreamClosedEventArgs
   name: StreamClosedEventArgs
   href: api/Google.Cloud.Spanner.V1.StreamClosedEventArgs.html
@@ -13864,15 +14158,15 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.TransactionPool.BeginPooledTransactionAsync
   fullName: Google.Cloud.Spanner.V1.TransactionPool.BeginPooledTransactionAsync
   nameWithType: TransactionPool.BeginPooledTransactionAsync
-- uid: Google.Cloud.Spanner.V1.TransactionPool.CommitAsync(Google.Cloud.Spanner.V1.Transaction,Google.Cloud.Spanner.V1.Session,System.Collections.Generic.IEnumerable{Google.Cloud.Spanner.V1.Mutation})
-  name: CommitAsync(Transaction, Session, IEnumerable<Mutation>)
-  href: api/Google.Cloud.Spanner.V1.TransactionPool.html#Google_Cloud_Spanner_V1_TransactionPool_CommitAsync_Google_Cloud_Spanner_V1_Transaction_Google_Cloud_Spanner_V1_Session_System_Collections_Generic_IEnumerable_Google_Cloud_Spanner_V1_Mutation__
-  commentId: M:Google.Cloud.Spanner.V1.TransactionPool.CommitAsync(Google.Cloud.Spanner.V1.Transaction,Google.Cloud.Spanner.V1.Session,System.Collections.Generic.IEnumerable{Google.Cloud.Spanner.V1.Mutation})
-  name.vb: CommitAsync(Transaction, Session, IEnumerable(Of Mutation))
-  fullName: Google.Cloud.Spanner.V1.TransactionPool.CommitAsync(Google.Cloud.Spanner.V1.Transaction, Google.Cloud.Spanner.V1.Session, System.Collections.Generic.IEnumerable<Google.Cloud.Spanner.V1.Mutation>)
-  fullName.vb: Google.Cloud.Spanner.V1.TransactionPool.CommitAsync(Google.Cloud.Spanner.V1.Transaction, Google.Cloud.Spanner.V1.Session, System.Collections.Generic.IEnumerable(Of Google.Cloud.Spanner.V1.Mutation))
-  nameWithType: TransactionPool.CommitAsync(Transaction, Session, IEnumerable<Mutation>)
-  nameWithType.vb: TransactionPool.CommitAsync(Transaction, Session, IEnumerable(Of Mutation))
+- uid: Google.Cloud.Spanner.V1.TransactionPool.CommitAsync(Google.Cloud.Spanner.V1.Transaction,Google.Cloud.Spanner.V1.Session,System.Collections.Generic.IEnumerable{Google.Cloud.Spanner.V1.Mutation},System.Int32)
+  name: CommitAsync(Transaction, Session, IEnumerable<Mutation>, Int32)
+  href: api/Google.Cloud.Spanner.V1.TransactionPool.html#Google_Cloud_Spanner_V1_TransactionPool_CommitAsync_Google_Cloud_Spanner_V1_Transaction_Google_Cloud_Spanner_V1_Session_System_Collections_Generic_IEnumerable_Google_Cloud_Spanner_V1_Mutation__System_Int32_
+  commentId: M:Google.Cloud.Spanner.V1.TransactionPool.CommitAsync(Google.Cloud.Spanner.V1.Transaction,Google.Cloud.Spanner.V1.Session,System.Collections.Generic.IEnumerable{Google.Cloud.Spanner.V1.Mutation},System.Int32)
+  name.vb: CommitAsync(Transaction, Session, IEnumerable(Of Mutation), Int32)
+  fullName: Google.Cloud.Spanner.V1.TransactionPool.CommitAsync(Google.Cloud.Spanner.V1.Transaction, Google.Cloud.Spanner.V1.Session, System.Collections.Generic.IEnumerable<Google.Cloud.Spanner.V1.Mutation>, System.Int32)
+  fullName.vb: Google.Cloud.Spanner.V1.TransactionPool.CommitAsync(Google.Cloud.Spanner.V1.Transaction, Google.Cloud.Spanner.V1.Session, System.Collections.Generic.IEnumerable(Of Google.Cloud.Spanner.V1.Mutation), System.Int32)
+  nameWithType: TransactionPool.CommitAsync(Transaction, Session, IEnumerable<Mutation>, Int32)
+  nameWithType.vb: TransactionPool.CommitAsync(Transaction, Session, IEnumerable(Of Mutation), Int32)
 - uid: Google.Cloud.Spanner.V1.TransactionPool.CommitAsync*
   name: CommitAsync
   href: api/Google.Cloud.Spanner.V1.TransactionPool.html#Google_Cloud_Spanner_V1_TransactionPool_CommitAsync_
@@ -13891,12 +14185,12 @@ references:
   commentId: Overload:Google.Cloud.Spanner.V1.TransactionPool.RemoveFromTransactionPoolAsync
   fullName: Google.Cloud.Spanner.V1.TransactionPool.RemoveFromTransactionPoolAsync
   nameWithType: TransactionPool.RemoveFromTransactionPoolAsync
-- uid: Google.Cloud.Spanner.V1.TransactionPool.RollbackAsync(Google.Cloud.Spanner.V1.Transaction,Google.Cloud.Spanner.V1.Session)
-  name: RollbackAsync(Transaction, Session)
-  href: api/Google.Cloud.Spanner.V1.TransactionPool.html#Google_Cloud_Spanner_V1_TransactionPool_RollbackAsync_Google_Cloud_Spanner_V1_Transaction_Google_Cloud_Spanner_V1_Session_
-  commentId: M:Google.Cloud.Spanner.V1.TransactionPool.RollbackAsync(Google.Cloud.Spanner.V1.Transaction,Google.Cloud.Spanner.V1.Session)
-  fullName: Google.Cloud.Spanner.V1.TransactionPool.RollbackAsync(Google.Cloud.Spanner.V1.Transaction, Google.Cloud.Spanner.V1.Session)
-  nameWithType: TransactionPool.RollbackAsync(Transaction, Session)
+- uid: Google.Cloud.Spanner.V1.TransactionPool.RollbackAsync(Google.Cloud.Spanner.V1.Transaction,Google.Cloud.Spanner.V1.Session,System.Int32)
+  name: RollbackAsync(Transaction, Session, Int32)
+  href: api/Google.Cloud.Spanner.V1.TransactionPool.html#Google_Cloud_Spanner_V1_TransactionPool_RollbackAsync_Google_Cloud_Spanner_V1_Transaction_Google_Cloud_Spanner_V1_Session_System_Int32_
+  commentId: M:Google.Cloud.Spanner.V1.TransactionPool.RollbackAsync(Google.Cloud.Spanner.V1.Transaction,Google.Cloud.Spanner.V1.Session,System.Int32)
+  fullName: Google.Cloud.Spanner.V1.TransactionPool.RollbackAsync(Google.Cloud.Spanner.V1.Transaction, Google.Cloud.Spanner.V1.Session, System.Int32)
+  nameWithType: TransactionPool.RollbackAsync(Transaction, Session, Int32)
 - uid: Google.Cloud.Spanner.V1.TransactionPool.RollbackAsync*
   name: RollbackAsync
   href: api/Google.Cloud.Spanner.V1.TransactionPool.html#Google_Cloud_Spanner_V1_TransactionPool_RollbackAsync_

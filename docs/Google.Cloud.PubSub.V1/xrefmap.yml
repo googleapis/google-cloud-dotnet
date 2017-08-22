@@ -22396,111 +22396,6 @@ references:
   commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPull
   fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPull
   nameWithType: SubscriberClientImpl.StreamingPull
-- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl
-  name: SubscriberClientImpl.StreamingPullStreamImpl
-  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html
-  commentId: T:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl
-  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl
-  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl
-- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.#ctor(Google.Cloud.PubSub.V1.SubscriberClientImpl,Grpc.Core.AsyncDuplexStreamingCall{Google.Cloud.PubSub.V1.StreamingPullRequest,Google.Cloud.PubSub.V1.StreamingPullResponse},Google.Api.Gax.Grpc.BufferedClientStreamWriter{Google.Cloud.PubSub.V1.StreamingPullRequest})
-  name: StreamingPullStreamImpl(SubscriberClientImpl, AsyncDuplexStreamingCall<StreamingPullRequest, StreamingPullResponse>, BufferedClientStreamWriter<StreamingPullRequest>)
-  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl__ctor_Google_Cloud_PubSub_V1_SubscriberClientImpl_Grpc_Core_AsyncDuplexStreamingCall_Google_Cloud_PubSub_V1_StreamingPullRequest_Google_Cloud_PubSub_V1_StreamingPullResponse__Google_Api_Gax_Grpc_BufferedClientStreamWriter_Google_Cloud_PubSub_V1_StreamingPullRequest__
-  commentId: M:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.#ctor(Google.Cloud.PubSub.V1.SubscriberClientImpl,Grpc.Core.AsyncDuplexStreamingCall{Google.Cloud.PubSub.V1.StreamingPullRequest,Google.Cloud.PubSub.V1.StreamingPullResponse},Google.Api.Gax.Grpc.BufferedClientStreamWriter{Google.Cloud.PubSub.V1.StreamingPullRequest})
-  name.vb: StreamingPullStreamImpl(SubscriberClientImpl, AsyncDuplexStreamingCall(Of StreamingPullRequest, StreamingPullResponse), BufferedClientStreamWriter(Of StreamingPullRequest))
-  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.StreamingPullStreamImpl(Google.Cloud.PubSub.V1.SubscriberClientImpl, Grpc.Core.AsyncDuplexStreamingCall<Google.Cloud.PubSub.V1.StreamingPullRequest, Google.Cloud.PubSub.V1.StreamingPullResponse>, Google.Api.Gax.Grpc.BufferedClientStreamWriter<Google.Cloud.PubSub.V1.StreamingPullRequest>)
-  fullName.vb: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.StreamingPullStreamImpl(Google.Cloud.PubSub.V1.SubscriberClientImpl, Grpc.Core.AsyncDuplexStreamingCall(Of Google.Cloud.PubSub.V1.StreamingPullRequest, Google.Cloud.PubSub.V1.StreamingPullResponse), Google.Api.Gax.Grpc.BufferedClientStreamWriter(Of Google.Cloud.PubSub.V1.StreamingPullRequest))
-  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.StreamingPullStreamImpl(SubscriberClientImpl, AsyncDuplexStreamingCall<StreamingPullRequest, StreamingPullResponse>, BufferedClientStreamWriter<StreamingPullRequest>)
-  nameWithType.vb: SubscriberClientImpl.StreamingPullStreamImpl.StreamingPullStreamImpl(SubscriberClientImpl, AsyncDuplexStreamingCall(Of StreamingPullRequest, StreamingPullResponse), BufferedClientStreamWriter(Of StreamingPullRequest))
-- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.#ctor*
-  name: StreamingPullStreamImpl
-  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl__ctor_
-  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.#ctor
-  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.StreamingPullStreamImpl
-  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.StreamingPullStreamImpl
-- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.GrpcCall
-  name: GrpcCall
-  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_GrpcCall
-  commentId: P:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.GrpcCall
-  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.GrpcCall
-  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.GrpcCall
-- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.GrpcCall*
-  name: GrpcCall
-  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_GrpcCall_
-  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.GrpcCall
-  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.GrpcCall
-  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.GrpcCall
-- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.ResponseStream
-  name: ResponseStream
-  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_ResponseStream
-  commentId: P:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.ResponseStream
-  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.ResponseStream
-  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.ResponseStream
-- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.ResponseStream*
-  name: ResponseStream
-  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_ResponseStream_
-  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.ResponseStream
-  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.ResponseStream
-  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.ResponseStream
-- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest)
-  name: TryWriteAsync(StreamingPullRequest)
-  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_TryWriteAsync_Google_Cloud_PubSub_V1_StreamingPullRequest_
-  commentId: M:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest)
-  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest)
-  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.TryWriteAsync(StreamingPullRequest)
-- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest,Grpc.Core.WriteOptions)
-  name: TryWriteAsync(StreamingPullRequest, WriteOptions)
-  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_TryWriteAsync_Google_Cloud_PubSub_V1_StreamingPullRequest_Grpc_Core_WriteOptions_
-  commentId: M:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest,Grpc.Core.WriteOptions)
-  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest, Grpc.Core.WriteOptions)
-  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.TryWriteAsync(StreamingPullRequest, WriteOptions)
-- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteAsync*
-  name: TryWriteAsync
-  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_TryWriteAsync_
-  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteAsync
-  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteAsync
-  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.TryWriteAsync
-- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteCompleteAsync
-  name: TryWriteCompleteAsync()
-  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_TryWriteCompleteAsync
-  commentId: M:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteCompleteAsync
-  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteCompleteAsync()
-  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.TryWriteCompleteAsync()
-- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteCompleteAsync*
-  name: TryWriteCompleteAsync
-  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_TryWriteCompleteAsync_
-  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteCompleteAsync
-  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteCompleteAsync
-  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.TryWriteCompleteAsync
-- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest)
-  name: WriteAsync(StreamingPullRequest)
-  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_WriteAsync_Google_Cloud_PubSub_V1_StreamingPullRequest_
-  commentId: M:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest)
-  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest)
-  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.WriteAsync(StreamingPullRequest)
-- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest,Grpc.Core.WriteOptions)
-  name: WriteAsync(StreamingPullRequest, WriteOptions)
-  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_WriteAsync_Google_Cloud_PubSub_V1_StreamingPullRequest_Grpc_Core_WriteOptions_
-  commentId: M:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest,Grpc.Core.WriteOptions)
-  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest, Grpc.Core.WriteOptions)
-  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.WriteAsync(StreamingPullRequest, WriteOptions)
-- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteAsync*
-  name: WriteAsync
-  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_WriteAsync_
-  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteAsync
-  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteAsync
-  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.WriteAsync
-- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteCompleteAsync
-  name: WriteCompleteAsync()
-  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_WriteCompleteAsync
-  commentId: M:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteCompleteAsync
-  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteCompleteAsync()
-  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.WriteCompleteAsync()
-- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteCompleteAsync*
-  name: WriteCompleteAsync
-  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_WriteCompleteAsync_
-  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteCompleteAsync
-  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteCompleteAsync
-  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.WriteCompleteAsync
 - uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.TestIamPermissions(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Google.Api.Gax.Grpc.CallSettings)
   name: TestIamPermissions(TestIamPermissionsRequest, CallSettings)
   href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_TestIamPermissions_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -22735,6 +22630,30 @@ references:
   commentId: Overload:Google.Cloud.PubSub.V1.SubscriberSettings.GetMessagingTimeoutBackoff
   fullName: Google.Cloud.PubSub.V1.SubscriberSettings.GetMessagingTimeoutBackoff
   nameWithType: SubscriberSettings.GetMessagingTimeoutBackoff
+- uid: Google.Cloud.PubSub.V1.SubscriberSettings.GetStreamingMessagingRetryBackoff
+  name: GetStreamingMessagingRetryBackoff()
+  href: api/Google.Cloud.PubSub.V1.SubscriberSettings.html#Google_Cloud_PubSub_V1_SubscriberSettings_GetStreamingMessagingRetryBackoff
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberSettings.GetStreamingMessagingRetryBackoff
+  fullName: Google.Cloud.PubSub.V1.SubscriberSettings.GetStreamingMessagingRetryBackoff()
+  nameWithType: SubscriberSettings.GetStreamingMessagingRetryBackoff()
+- uid: Google.Cloud.PubSub.V1.SubscriberSettings.GetStreamingMessagingRetryBackoff*
+  name: GetStreamingMessagingRetryBackoff
+  href: api/Google.Cloud.PubSub.V1.SubscriberSettings.html#Google_Cloud_PubSub_V1_SubscriberSettings_GetStreamingMessagingRetryBackoff_
+  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberSettings.GetStreamingMessagingRetryBackoff
+  fullName: Google.Cloud.PubSub.V1.SubscriberSettings.GetStreamingMessagingRetryBackoff
+  nameWithType: SubscriberSettings.GetStreamingMessagingRetryBackoff
+- uid: Google.Cloud.PubSub.V1.SubscriberSettings.GetStreamingMessagingTimeoutBackoff
+  name: GetStreamingMessagingTimeoutBackoff()
+  href: api/Google.Cloud.PubSub.V1.SubscriberSettings.html#Google_Cloud_PubSub_V1_SubscriberSettings_GetStreamingMessagingTimeoutBackoff
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberSettings.GetStreamingMessagingTimeoutBackoff
+  fullName: Google.Cloud.PubSub.V1.SubscriberSettings.GetStreamingMessagingTimeoutBackoff()
+  nameWithType: SubscriberSettings.GetStreamingMessagingTimeoutBackoff()
+- uid: Google.Cloud.PubSub.V1.SubscriberSettings.GetStreamingMessagingTimeoutBackoff*
+  name: GetStreamingMessagingTimeoutBackoff
+  href: api/Google.Cloud.PubSub.V1.SubscriberSettings.html#Google_Cloud_PubSub_V1_SubscriberSettings_GetStreamingMessagingTimeoutBackoff_
+  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberSettings.GetStreamingMessagingTimeoutBackoff
+  fullName: Google.Cloud.PubSub.V1.SubscriberSettings.GetStreamingMessagingTimeoutBackoff
+  nameWithType: SubscriberSettings.GetStreamingMessagingTimeoutBackoff
 - uid: Google.Cloud.PubSub.V1.SubscriberSettings.GetSubscriptionSettings
   name: GetSubscriptionSettings
   href: api/Google.Cloud.PubSub.V1.SubscriberSettings.html#Google_Cloud_PubSub_V1_SubscriberSettings_GetSubscriptionSettings

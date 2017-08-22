@@ -1,0 +1,1767 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BigtableClient
+   | Google.Cloud.Bigtable.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BigtableClient
+   | Google.Cloud.Bigtable.V2 ">
+    <meta name="generator" content="docfx 2.21.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Bigtable.V2.BigtableClient">
+  
+  
+  <h1 id="Google_Cloud_Bigtable_V2_BigtableClient" data-uid="Google.Cloud.Bigtable.V2.BigtableClient" class="text-break">Class BigtableClient
+  </h1>
+  <div class="markdown level0 summary"><p>Bigtable client wrapper, for convenient use.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">BigtableClient</span></div>
+  </div>
+      <div class="level2"><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClientImpl.html">BigtableClientImpl</a></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Bigtable.V2.html">Google.Cloud.Bigtable.V2</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Bigtable.V2.dll</h6>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class BigtableClient</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_DefaultEndpoint_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.DefaultEndpoint*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_DefaultEndpoint" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.DefaultEndpoint">DefaultEndpoint</h4>
+  <div class="markdown level1 summary"><p>The default endpoint for the Bigtable service, which is a host of &quot;bigtable.googleapis.com&quot; and a port of 443.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ServiceEndpoint DefaultEndpoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_DefaultScopes_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.DefaultScopes*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_DefaultScopes" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.DefaultScopes">DefaultScopes</h4>
+  <div class="markdown level1 summary"><p>The default Bigtable scopes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;string&gt; DefaultScopes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_DefaultScopes_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The default Bigtable scopes are:
+<ul><li>&quot;<a href="https://www.googleapis.com/auth/bigtable.data&amp;quot">https://www.googleapis.com/auth/bigtable.data&quot</a>;</li><li>&quot;<a href="https://www.googleapis.com/auth/bigtable.data.readonly&amp;quot">https://www.googleapis.com/auth/bigtable.data.readonly&quot</a>;</li><li>&quot;<a href="https://www.googleapis.com/auth/cloud-bigtable.data&amp;quot">https://www.googleapis.com/auth/cloud-bigtable.data&quot</a>;</li><li>&quot;<a href="https://www.googleapis.com/auth/cloud-bigtable.data.readonly&amp;quot">https://www.googleapis.com/auth/cloud-bigtable.data.readonly&quot</a>;</li><li>&quot;<a href="https://www.googleapis.com/auth/cloud-platform&amp;quot">https://www.googleapis.com/auth/cloud-platform&quot</a>;</li><li>&quot;<a href="https://www.googleapis.com/auth/cloud-platform.read-only&amp;quot">https://www.googleapis.com/auth/cloud-platform.read-only&quot</a>;</li></ul></p>
+</div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_GrpcClient_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.GrpcClient*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_GrpcClient" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.GrpcClient">GrpcClient</h4>
+  <div class="markdown level1 summary"><p>The underlying gRPC Bigtable client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Bigtable.BigtableClient GrpcClient { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.Bigtable.BigtableClient.html">Bigtable.BigtableClient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_CheckAndMutateRow_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.CheckAndMutateRow*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_CheckAndMutateRow_Google_Cloud_Bigtable_V2_CheckAndMutateRowRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.CheckAndMutateRow(Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest,Google.Api.Gax.Grpc.CallSettings)">CheckAndMutateRow(CheckAndMutateRowRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Mutates a row atomically based on the output of a predicate Reader filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual CheckAndMutateRowResponse CheckAndMutateRow(CheckAndMutateRowRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest.html">CheckAndMutateRowRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse.html">CheckAndMutateRowResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_CheckAndMutateRow_Google_Cloud_Bigtable_V2_CheckAndMutateRowRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+BigtableClient bigtableClient = BigtableClient.Create();
+// Initialize request argument(s)
+CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
+{
+    TableName = new TableName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[TABLE]&quot;).ToString(),
+    RowKey = ByteString.CopyFromUtf8(&quot;&quot;),
+};
+// Make the request
+CheckAndMutateRowResponse response = bigtableClient.CheckAndMutateRow(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_CheckAndMutateRow_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.CheckAndMutateRow*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_CheckAndMutateRow_System_String_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_Mutation__System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_Mutation__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.CheckAndMutateRow(System.String,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.Mutation},System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.Mutation},Google.Api.Gax.Grpc.CallSettings)">CheckAndMutateRow(String, ByteString, IEnumerable&lt;Mutation&gt;, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Mutates a row atomically based on the output of a predicate Reader filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual CheckAndMutateRowResponse CheckAndMutateRow(string tableName, ByteString rowKey, IEnumerable&lt;Mutation&gt; trueMutations, IEnumerable&lt;Mutation&gt; falseMutations, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>The unique name of the table to which the conditional mutation should be
+applied.
+Values are of the form
+<code>projects/&amp;lt;project&gt;/instances/&amp;lt;instance&gt;/tables/&amp;lt;table&gt;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td><span class="parametername">rowKey</span></td>
+        <td><p>The key of the row to which the conditional mutation should be applied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.Mutation.html">Mutation</a>&gt;</td>
+        <td><span class="parametername">trueMutations</span></td>
+        <td><p>Changes to be atomically applied to the specified row if <code>predicate_filter</code>
+yields at least one cell when applied to <code>row_key</code>. Entries are applied in
+order, meaning that earlier mutations can be masked by later ones.
+Must contain at least one entry if <code>false_mutations</code> is empty, and at most
+100000.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.Mutation.html">Mutation</a>&gt;</td>
+        <td><span class="parametername">falseMutations</span></td>
+        <td><p>Changes to be atomically applied to the specified row if <code>predicate_filter</code>
+does not yield any cells when applied to <code>row_key</code>. Entries are applied in
+order, meaning that earlier mutations can be masked by later ones.
+Must contain at least one entry if <code>true_mutations</code> is empty, and at most
+100000.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse.html">CheckAndMutateRowResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_CheckAndMutateRow_System_String_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_Mutation__System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_Mutation__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+BigtableClient bigtableClient = BigtableClient.Create();
+// Initialize request argument(s)
+string formattedTableName = new TableName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[TABLE]&quot;).ToString();
+ByteString rowKey = ByteString.CopyFromUtf8(&quot;&quot;);
+IEnumerable&lt;Mutation&gt; trueMutations = new List&lt;Mutation&gt;();
+IEnumerable&lt;Mutation&gt; falseMutations = new List&lt;Mutation&gt;();
+// Make the request
+CheckAndMutateRowResponse response = bigtableClient.CheckAndMutateRow(formattedTableName, rowKey, trueMutations, falseMutations);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_CheckAndMutateRowAsync_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.CheckAndMutateRowAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_CheckAndMutateRowAsync_Google_Cloud_Bigtable_V2_CheckAndMutateRowRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.CheckAndMutateRowAsync(Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest,Google.Api.Gax.Grpc.CallSettings)">CheckAndMutateRowAsync(CheckAndMutateRowRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Mutates a row atomically based on the output of a predicate Reader filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;CheckAndMutateRowResponse&gt; CheckAndMutateRowAsync(CheckAndMutateRowRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest.html">CheckAndMutateRowRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse.html">CheckAndMutateRowResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_CheckAndMutateRowAsync_Google_Cloud_Bigtable_V2_CheckAndMutateRowRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+BigtableClient bigtableClient = await BigtableClient.CreateAsync();
+// Initialize request argument(s)
+CheckAndMutateRowRequest request = new CheckAndMutateRowRequest
+{
+    TableName = new TableName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[TABLE]&quot;).ToString(),
+    RowKey = ByteString.CopyFromUtf8(&quot;&quot;),
+};
+// Make the request
+CheckAndMutateRowResponse response = await bigtableClient.CheckAndMutateRowAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_CheckAndMutateRowAsync_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.CheckAndMutateRowAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_CheckAndMutateRowAsync_System_String_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_Mutation__System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_Mutation__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.CheckAndMutateRowAsync(System.String,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.Mutation},System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.Mutation},Google.Api.Gax.Grpc.CallSettings)">CheckAndMutateRowAsync(String, ByteString, IEnumerable&lt;Mutation&gt;, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Mutates a row atomically based on the output of a predicate Reader filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;CheckAndMutateRowResponse&gt; CheckAndMutateRowAsync(string tableName, ByteString rowKey, IEnumerable&lt;Mutation&gt; trueMutations, IEnumerable&lt;Mutation&gt; falseMutations, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>The unique name of the table to which the conditional mutation should be
+applied.
+Values are of the form
+<code>projects/&amp;lt;project&gt;/instances/&amp;lt;instance&gt;/tables/&amp;lt;table&gt;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td><span class="parametername">rowKey</span></td>
+        <td><p>The key of the row to which the conditional mutation should be applied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.Mutation.html">Mutation</a>&gt;</td>
+        <td><span class="parametername">trueMutations</span></td>
+        <td><p>Changes to be atomically applied to the specified row if <code>predicate_filter</code>
+yields at least one cell when applied to <code>row_key</code>. Entries are applied in
+order, meaning that earlier mutations can be masked by later ones.
+Must contain at least one entry if <code>false_mutations</code> is empty, and at most
+100000.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.Mutation.html">Mutation</a>&gt;</td>
+        <td><span class="parametername">falseMutations</span></td>
+        <td><p>Changes to be atomically applied to the specified row if <code>predicate_filter</code>
+does not yield any cells when applied to <code>row_key</code>. Entries are applied in
+order, meaning that earlier mutations can be masked by later ones.
+Must contain at least one entry if <code>true_mutations</code> is empty, and at most
+100000.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse.html">CheckAndMutateRowResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_CheckAndMutateRowAsync_System_String_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_Mutation__System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_Mutation__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+BigtableClient bigtableClient = await BigtableClient.CreateAsync();
+// Initialize request argument(s)
+string formattedTableName = new TableName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[TABLE]&quot;).ToString();
+ByteString rowKey = ByteString.CopyFromUtf8(&quot;&quot;);
+IEnumerable&lt;Mutation&gt; trueMutations = new List&lt;Mutation&gt;();
+IEnumerable&lt;Mutation&gt; falseMutations = new List&lt;Mutation&gt;();
+// Make the request
+CheckAndMutateRowResponse response = await bigtableClient.CheckAndMutateRowAsync(formattedTableName, rowKey, trueMutations, falseMutations);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_CheckAndMutateRowAsync_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.CheckAndMutateRowAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_CheckAndMutateRowAsync_System_String_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_Mutation__System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_Mutation__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.CheckAndMutateRowAsync(System.String,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.Mutation},System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.Mutation},System.Threading.CancellationToken)">CheckAndMutateRowAsync(String, ByteString, IEnumerable&lt;Mutation&gt;, IEnumerable&lt;Mutation&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Mutates a row atomically based on the output of a predicate Reader filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;CheckAndMutateRowResponse&gt; CheckAndMutateRowAsync(string tableName, ByteString rowKey, IEnumerable&lt;Mutation&gt; trueMutations, IEnumerable&lt;Mutation&gt; falseMutations, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>The unique name of the table to which the conditional mutation should be
+applied.
+Values are of the form
+<code>projects/&amp;lt;project&gt;/instances/&amp;lt;instance&gt;/tables/&amp;lt;table&gt;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td><span class="parametername">rowKey</span></td>
+        <td><p>The key of the row to which the conditional mutation should be applied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.Mutation.html">Mutation</a>&gt;</td>
+        <td><span class="parametername">trueMutations</span></td>
+        <td><p>Changes to be atomically applied to the specified row if <code>predicate_filter</code>
+yields at least one cell when applied to <code>row_key</code>. Entries are applied in
+order, meaning that earlier mutations can be masked by later ones.
+Must contain at least one entry if <code>false_mutations</code> is empty, and at most
+100000.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.Mutation.html">Mutation</a>&gt;</td>
+        <td><span class="parametername">falseMutations</span></td>
+        <td><p>Changes to be atomically applied to the specified row if <code>predicate_filter</code>
+does not yield any cells when applied to <code>row_key</code>. Entries are applied in
+order, meaning that earlier mutations can be masked by later ones.
+Must contain at least one entry if <code>true_mutations</code> is empty, and at most
+100000.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse.html">CheckAndMutateRowResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_CheckAndMutateRowAsync_System_String_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_Mutation__System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_Mutation__System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+BigtableClient bigtableClient = await BigtableClient.CreateAsync();
+// Initialize request argument(s)
+string formattedTableName = new TableName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[TABLE]&quot;).ToString();
+ByteString rowKey = ByteString.CopyFromUtf8(&quot;&quot;);
+IEnumerable&lt;Mutation&gt; trueMutations = new List&lt;Mutation&gt;();
+IEnumerable&lt;Mutation&gt; falseMutations = new List&lt;Mutation&gt;();
+// Make the request
+CheckAndMutateRowResponse response = await bigtableClient.CheckAndMutateRowAsync(formattedTableName, rowKey, trueMutations, falseMutations);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_Create_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.Create*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Bigtable_V2_BigtableSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.Create(Google.Api.Gax.Grpc.ServiceEndpoint,Google.Cloud.Bigtable.V2.BigtableSettings)">Create(ServiceEndpoint, BigtableSettings)</h4>
+  <div class="markdown level1 summary"><p>Synchronously creates a <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html">BigtableClient</a>, applying defaults for all unspecified settings,
+and creating a channel connecting to the given endpoint with application default credentials where
+necessary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BigtableClient Create(ServiceEndpoint endpoint = null, BigtableSettings settings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a></td>
+        <td><span class="parametername">endpoint</span></td>
+        <td><p>Optional <a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableSettings.html">BigtableSettings</a></td>
+        <td><span class="parametername">settings</span></td>
+        <td><p>Optional <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableSettings.html">BigtableSettings</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html">BigtableClient</a></td>
+        <td><p>The created <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html">BigtableClient</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_Create_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.Create*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_Create_Grpc_Core_Channel_Google_Cloud_Bigtable_V2_BigtableSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.Create(Grpc.Core.Channel,Google.Cloud.Bigtable.V2.BigtableSettings)">Create(Channel, BigtableSettings)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html">BigtableClient</a> which uses the specified channel for remote operations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BigtableClient Create(Channel channel, BigtableSettings settings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Grpc.Core.Channel.html">Channel</a></td>
+        <td><span class="parametername">channel</span></td>
+        <td><p>The <a class="xref" href="Grpc.Core.Channel.html">Channel</a> for remote operations. Must not be null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableSettings.html">BigtableSettings</a></td>
+        <td><span class="parametername">settings</span></td>
+        <td><p>Optional <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableSettings.html">BigtableSettings</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html">BigtableClient</a></td>
+        <td><p>The created <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html">BigtableClient</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_CreateAsync_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.CreateAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Bigtable_V2_BigtableSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.CreateAsync(Google.Api.Gax.Grpc.ServiceEndpoint,Google.Cloud.Bigtable.V2.BigtableSettings)">CreateAsync(ServiceEndpoint, BigtableSettings)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously creates a <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html">BigtableClient</a>, applying defaults for all unspecified settings,
+and creating a channel connecting to the given endpoint with application default credentials where
+necessary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;BigtableClient&gt; CreateAsync(ServiceEndpoint endpoint = null, BigtableSettings settings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a></td>
+        <td><span class="parametername">endpoint</span></td>
+        <td><p>Optional <a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableSettings.html">BigtableSettings</a></td>
+        <td><span class="parametername">settings</span></td>
+        <td><p>Optional <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableSettings.html">BigtableSettings</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html">BigtableClient</a>&gt;</td>
+        <td><p>The task representing the created <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html">BigtableClient</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRow_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.MutateRow*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRow_Google_Cloud_Bigtable_V2_MutateRowRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.MutateRow(Google.Cloud.Bigtable.V2.MutateRowRequest,Google.Api.Gax.Grpc.CallSettings)">MutateRow(MutateRowRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Mutates a row atomically. Cells already present in the row are left
+unchanged unless explicitly changed by <code>mutation</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual MutateRowResponse MutateRow(MutateRowRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.MutateRowRequest.html">MutateRowRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.MutateRowResponse.html">MutateRowResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRow_Google_Cloud_Bigtable_V2_MutateRowRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+BigtableClient bigtableClient = BigtableClient.Create();
+// Initialize request argument(s)
+MutateRowRequest request = new MutateRowRequest
+{
+    TableName = new TableName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[TABLE]&quot;).ToString(),
+    RowKey = ByteString.CopyFromUtf8(&quot;&quot;),
+    Mutations = { },
+};
+// Make the request
+MutateRowResponse response = bigtableClient.MutateRow(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRow_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.MutateRow*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRow_System_String_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_Mutation__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.MutateRow(System.String,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.Mutation},Google.Api.Gax.Grpc.CallSettings)">MutateRow(String, ByteString, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Mutates a row atomically. Cells already present in the row are left
+unchanged unless explicitly changed by <code>mutation</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual MutateRowResponse MutateRow(string tableName, ByteString rowKey, IEnumerable&lt;Mutation&gt; mutations, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>The unique name of the table to which the mutation should be applied.
+Values are of the form
+<code>projects/&amp;lt;project&gt;/instances/&amp;lt;instance&gt;/tables/&amp;lt;table&gt;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td><span class="parametername">rowKey</span></td>
+        <td><p>The key of the row to which the mutation should be applied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.Mutation.html">Mutation</a>&gt;</td>
+        <td><span class="parametername">mutations</span></td>
+        <td><p>Changes to be atomically applied to the specified row. Entries are applied
+in order, meaning that earlier mutations can be masked by later ones.
+Must contain at least one entry and at most 100000.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.MutateRowResponse.html">MutateRowResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRow_System_String_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_Mutation__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+BigtableClient bigtableClient = BigtableClient.Create();
+// Initialize request argument(s)
+string formattedTableName = new TableName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[TABLE]&quot;).ToString();
+ByteString rowKey = ByteString.CopyFromUtf8(&quot;&quot;);
+IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
+// Make the request
+MutateRowResponse response = bigtableClient.MutateRow(formattedTableName, rowKey, mutations);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRowAsync_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.MutateRowAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRowAsync_Google_Cloud_Bigtable_V2_MutateRowRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.MutateRowAsync(Google.Cloud.Bigtable.V2.MutateRowRequest,Google.Api.Gax.Grpc.CallSettings)">MutateRowAsync(MutateRowRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Mutates a row atomically. Cells already present in the row are left
+unchanged unless explicitly changed by <code>mutation</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;MutateRowResponse&gt; MutateRowAsync(MutateRowRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.MutateRowRequest.html">MutateRowRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.MutateRowResponse.html">MutateRowResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRowAsync_Google_Cloud_Bigtable_V2_MutateRowRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+BigtableClient bigtableClient = await BigtableClient.CreateAsync();
+// Initialize request argument(s)
+MutateRowRequest request = new MutateRowRequest
+{
+    TableName = new TableName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[TABLE]&quot;).ToString(),
+    RowKey = ByteString.CopyFromUtf8(&quot;&quot;),
+    Mutations = { },
+};
+// Make the request
+MutateRowResponse response = await bigtableClient.MutateRowAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRowAsync_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.MutateRowAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRowAsync_System_String_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_Mutation__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.MutateRowAsync(System.String,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.Mutation},Google.Api.Gax.Grpc.CallSettings)">MutateRowAsync(String, ByteString, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Mutates a row atomically. Cells already present in the row are left
+unchanged unless explicitly changed by <code>mutation</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;MutateRowResponse&gt; MutateRowAsync(string tableName, ByteString rowKey, IEnumerable&lt;Mutation&gt; mutations, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>The unique name of the table to which the mutation should be applied.
+Values are of the form
+<code>projects/&amp;lt;project&gt;/instances/&amp;lt;instance&gt;/tables/&amp;lt;table&gt;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td><span class="parametername">rowKey</span></td>
+        <td><p>The key of the row to which the mutation should be applied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.Mutation.html">Mutation</a>&gt;</td>
+        <td><span class="parametername">mutations</span></td>
+        <td><p>Changes to be atomically applied to the specified row. Entries are applied
+in order, meaning that earlier mutations can be masked by later ones.
+Must contain at least one entry and at most 100000.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.MutateRowResponse.html">MutateRowResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRowAsync_System_String_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_Mutation__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+BigtableClient bigtableClient = await BigtableClient.CreateAsync();
+// Initialize request argument(s)
+string formattedTableName = new TableName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[TABLE]&quot;).ToString();
+ByteString rowKey = ByteString.CopyFromUtf8(&quot;&quot;);
+IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
+// Make the request
+MutateRowResponse response = await bigtableClient.MutateRowAsync(formattedTableName, rowKey, mutations);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRowAsync_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.MutateRowAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRowAsync_System_String_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_Mutation__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.MutateRowAsync(System.String,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.Mutation},System.Threading.CancellationToken)">MutateRowAsync(String, ByteString, IEnumerable&lt;Mutation&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Mutates a row atomically. Cells already present in the row are left
+unchanged unless explicitly changed by <code>mutation</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;MutateRowResponse&gt; MutateRowAsync(string tableName, ByteString rowKey, IEnumerable&lt;Mutation&gt; mutations, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>The unique name of the table to which the mutation should be applied.
+Values are of the form
+<code>projects/&amp;lt;project&gt;/instances/&amp;lt;instance&gt;/tables/&amp;lt;table&gt;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td><span class="parametername">rowKey</span></td>
+        <td><p>The key of the row to which the mutation should be applied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.Mutation.html">Mutation</a>&gt;</td>
+        <td><span class="parametername">mutations</span></td>
+        <td><p>Changes to be atomically applied to the specified row. Entries are applied
+in order, meaning that earlier mutations can be masked by later ones.
+Must contain at least one entry and at most 100000.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.MutateRowResponse.html">MutateRowResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRowAsync_System_String_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_Mutation__System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+BigtableClient bigtableClient = await BigtableClient.CreateAsync();
+// Initialize request argument(s)
+string formattedTableName = new TableName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[TABLE]&quot;).ToString();
+ByteString rowKey = ByteString.CopyFromUtf8(&quot;&quot;);
+IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
+// Make the request
+MutateRowResponse response = await bigtableClient.MutateRowAsync(formattedTableName, rowKey, mutations);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRows_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.MutateRows*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRows_Google_Cloud_Bigtable_V2_MutateRowsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.MutateRows(Google.Cloud.Bigtable.V2.MutateRowsRequest,Google.Api.Gax.Grpc.CallSettings)">MutateRows(MutateRowsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Mutates multiple rows in a batch. Each individual row is mutated
+atomically as in MutateRow, but the entire batch is not executed
+atomically.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual BigtableClient.MutateRowsStream MutateRows(MutateRowsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.MutateRowsRequest.html">MutateRowsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.MutateRowsStream.html">BigtableClient.MutateRowsStream</a></td>
+        <td><p>The server stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_MutateRows_Google_Cloud_Bigtable_V2_MutateRowsRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+BigtableClient bigtableClient = BigtableClient.Create();
+// Initialize request argument
+MutateRowsRequest request = new MutateRowsRequest
+{
+    TableName = new TableName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[TABLE]&quot;).ToString(),
+    Entries = { },
+};
+// Make the request, returning a streaming response
+BigtableClient.MutateRowsStream streamingResponse = bigtableClient.MutateRows(request);
+
+// Read streaming responses from server until complete
+IAsyncEnumerator&lt;MutateRowsResponse&gt; responseStream = streamingResponse.ResponseStream;
+while (await responseStream.MoveNext())
+{
+    MutateRowsResponse response = responseStream.Current;
+    // Do something with streamed response
+}
+// The response stream has completed
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_Google_Cloud_Bigtable_V2_ReadModifyWriteRowRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow(Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest,Google.Api.Gax.Grpc.CallSettings)">ReadModifyWriteRow(ReadModifyWriteRowRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Modifies a row atomically. The method reads the latest existing timestamp
+and value from the specified columns and writes a new entry based on
+pre-defined read/modify/write rules. The new value for the timestamp is the
+greater of the existing timestamp or the current server time. The method
+returns the new contents of all modified cells.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ReadModifyWriteRowResponse ReadModifyWriteRow(ReadModifyWriteRowRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest.html">ReadModifyWriteRowRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse.html">ReadModifyWriteRowResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_Google_Cloud_Bigtable_V2_ReadModifyWriteRowRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+BigtableClient bigtableClient = BigtableClient.Create();
+// Initialize request argument(s)
+ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
+{
+    TableName = new TableName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[TABLE]&quot;).ToString(),
+    RowKey = ByteString.CopyFromUtf8(&quot;&quot;),
+    Rules = { },
+};
+// Make the request
+ReadModifyWriteRowResponse response = bigtableClient.ReadModifyWriteRow(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_System_String_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_ReadModifyWriteRule__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRow(System.String,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.ReadModifyWriteRule},Google.Api.Gax.Grpc.CallSettings)">ReadModifyWriteRow(String, ByteString, IEnumerable&lt;ReadModifyWriteRule&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Modifies a row atomically. The method reads the latest existing timestamp
+and value from the specified columns and writes a new entry based on
+pre-defined read/modify/write rules. The new value for the timestamp is the
+greater of the existing timestamp or the current server time. The method
+returns the new contents of all modified cells.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ReadModifyWriteRowResponse ReadModifyWriteRow(string tableName, ByteString rowKey, IEnumerable&lt;ReadModifyWriteRule&gt; rules, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>The unique name of the table to which the read/modify/write rules should be
+applied.
+Values are of the form
+<code>projects/&amp;lt;project&gt;/instances/&amp;lt;instance&gt;/tables/&amp;lt;table&gt;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td><span class="parametername">rowKey</span></td>
+        <td><p>The key of the row to which the read/modify/write rules should be applied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.ReadModifyWriteRule.html">ReadModifyWriteRule</a>&gt;</td>
+        <td><span class="parametername">rules</span></td>
+        <td><p>Rules specifying how the specified row&apos;s contents are to be transformed
+into writes. Entries are applied in order, meaning that earlier rules will
+affect the results of later ones.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse.html">ReadModifyWriteRowResponse</a></td>
+        <td><p>The RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRow_System_String_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_ReadModifyWriteRule__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+BigtableClient bigtableClient = BigtableClient.Create();
+// Initialize request argument(s)
+string formattedTableName = new TableName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[TABLE]&quot;).ToString();
+ByteString rowKey = ByteString.CopyFromUtf8(&quot;&quot;);
+IEnumerable&lt;ReadModifyWriteRule&gt; rules = new List&lt;ReadModifyWriteRule&gt;();
+// Make the request
+ReadModifyWriteRowResponse response = bigtableClient.ReadModifyWriteRow(formattedTableName, rowKey, rules);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_Google_Cloud_Bigtable_V2_ReadModifyWriteRowRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync(Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest,Google.Api.Gax.Grpc.CallSettings)">ReadModifyWriteRowAsync(ReadModifyWriteRowRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Modifies a row atomically. The method reads the latest existing timestamp
+and value from the specified columns and writes a new entry based on
+pre-defined read/modify/write rules. The new value for the timestamp is the
+greater of the existing timestamp or the current server time. The method
+returns the new contents of all modified cells.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ReadModifyWriteRowResponse&gt; ReadModifyWriteRowAsync(ReadModifyWriteRowRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest.html">ReadModifyWriteRowRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse.html">ReadModifyWriteRowResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_Google_Cloud_Bigtable_V2_ReadModifyWriteRowRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+BigtableClient bigtableClient = await BigtableClient.CreateAsync();
+// Initialize request argument(s)
+ReadModifyWriteRowRequest request = new ReadModifyWriteRowRequest
+{
+    TableName = new TableName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[TABLE]&quot;).ToString(),
+    RowKey = ByteString.CopyFromUtf8(&quot;&quot;),
+    Rules = { },
+};
+// Make the request
+ReadModifyWriteRowResponse response = await bigtableClient.ReadModifyWriteRowAsync(request);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_System_String_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_ReadModifyWriteRule__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync(System.String,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.ReadModifyWriteRule},Google.Api.Gax.Grpc.CallSettings)">ReadModifyWriteRowAsync(String, ByteString, IEnumerable&lt;ReadModifyWriteRule&gt;, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Modifies a row atomically. The method reads the latest existing timestamp
+and value from the specified columns and writes a new entry based on
+pre-defined read/modify/write rules. The new value for the timestamp is the
+greater of the existing timestamp or the current server time. The method
+returns the new contents of all modified cells.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ReadModifyWriteRowResponse&gt; ReadModifyWriteRowAsync(string tableName, ByteString rowKey, IEnumerable&lt;ReadModifyWriteRule&gt; rules, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>The unique name of the table to which the read/modify/write rules should be
+applied.
+Values are of the form
+<code>projects/&amp;lt;project&gt;/instances/&amp;lt;instance&gt;/tables/&amp;lt;table&gt;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td><span class="parametername">rowKey</span></td>
+        <td><p>The key of the row to which the read/modify/write rules should be applied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.ReadModifyWriteRule.html">ReadModifyWriteRule</a>&gt;</td>
+        <td><span class="parametername">rules</span></td>
+        <td><p>Rules specifying how the specified row&apos;s contents are to be transformed
+into writes. Entries are applied in order, meaning that earlier rules will
+affect the results of later ones.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse.html">ReadModifyWriteRowResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_System_String_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_ReadModifyWriteRule__Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+BigtableClient bigtableClient = await BigtableClient.CreateAsync();
+// Initialize request argument(s)
+string formattedTableName = new TableName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[TABLE]&quot;).ToString();
+ByteString rowKey = ByteString.CopyFromUtf8(&quot;&quot;);
+IEnumerable&lt;ReadModifyWriteRule&gt; rules = new List&lt;ReadModifyWriteRule&gt;();
+// Make the request
+ReadModifyWriteRowResponse response = await bigtableClient.ReadModifyWriteRowAsync(formattedTableName, rowKey, rules);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_System_String_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_ReadModifyWriteRule__System_Threading_CancellationToken_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadModifyWriteRowAsync(System.String,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Cloud.Bigtable.V2.ReadModifyWriteRule},System.Threading.CancellationToken)">ReadModifyWriteRowAsync(String, ByteString, IEnumerable&lt;ReadModifyWriteRule&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Modifies a row atomically. The method reads the latest existing timestamp
+and value from the specified columns and writes a new entry based on
+pre-defined read/modify/write rules. The new value for the timestamp is the
+greater of the existing timestamp or the current server time. The method
+returns the new contents of all modified cells.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ReadModifyWriteRowResponse&gt; ReadModifyWriteRowAsync(string tableName, ByteString rowKey, IEnumerable&lt;ReadModifyWriteRule&gt; rules, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>The unique name of the table to which the read/modify/write rules should be
+applied.
+Values are of the form
+<code>projects/&amp;lt;project&gt;/instances/&amp;lt;instance&gt;/tables/&amp;lt;table&gt;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td><span class="parametername">rowKey</span></td>
+        <td><p>The key of the row to which the read/modify/write rules should be applied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.ReadModifyWriteRule.html">ReadModifyWriteRule</a>&gt;</td>
+        <td><span class="parametername">rules</span></td>
+        <td><p>Rules specifying how the specified row&apos;s contents are to be transformed
+into writes. Entries are applied in order, meaning that earlier rules will
+affect the results of later ones.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse.html">ReadModifyWriteRowResponse</a>&gt;</td>
+        <td><p>A Task containing the RPC response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadModifyWriteRowAsync_System_String_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Cloud_Bigtable_V2_ReadModifyWriteRule__System_Threading_CancellationToken__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+BigtableClient bigtableClient = await BigtableClient.CreateAsync();
+// Initialize request argument(s)
+string formattedTableName = new TableName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[TABLE]&quot;).ToString();
+ByteString rowKey = ByteString.CopyFromUtf8(&quot;&quot;);
+IEnumerable&lt;ReadModifyWriteRule&gt; rules = new List&lt;ReadModifyWriteRule&gt;();
+// Make the request
+ReadModifyWriteRowResponse response = await bigtableClient.ReadModifyWriteRowAsync(formattedTableName, rowKey, rules);
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_ReadRows_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadRows*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadRows_Google_Cloud_Bigtable_V2_ReadRowsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ReadRows(Google.Cloud.Bigtable.V2.ReadRowsRequest,Google.Api.Gax.Grpc.CallSettings)">ReadRows(ReadRowsRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Streams back the contents of all requested rows in key order, optionally
+applying the same Reader filter to each. Depending on their size,
+rows and cells may be broken up across multiple responses, but
+atomicity of each row will still be preserved. See the
+ReadRowsResponse documentation for details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual BigtableClient.ReadRowsStream ReadRows(ReadRowsRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.ReadRowsRequest.html">ReadRowsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.ReadRowsStream.html">BigtableClient.ReadRowsStream</a></td>
+        <td><p>The server stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_ReadRows_Google_Cloud_Bigtable_V2_ReadRowsRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+BigtableClient bigtableClient = BigtableClient.Create();
+// Initialize request argument
+ReadRowsRequest request = new ReadRowsRequest
+{
+    TableName = new TableName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[TABLE]&quot;).ToString(),
+};
+// Make the request, returning a streaming response
+BigtableClient.ReadRowsStream streamingResponse = bigtableClient.ReadRows(request);
+
+// Read streaming responses from server until complete
+IAsyncEnumerator&lt;ReadRowsResponse&gt; responseStream = streamingResponse.ResponseStream;
+while (await responseStream.MoveNext())
+{
+    ReadRowsResponse response = responseStream.Current;
+    // Do something with streamed response
+}
+// The response stream has completed
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_SampleRowKeys_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeys*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_SampleRowKeys_Google_Cloud_Bigtable_V2_SampleRowKeysRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeys(Google.Cloud.Bigtable.V2.SampleRowKeysRequest,Google.Api.Gax.Grpc.CallSettings)">SampleRowKeys(SampleRowKeysRequest, CallSettings)</h4>
+  <div class="markdown level1 summary"><p>Returns a sample of row keys in the table. The returned row keys will
+delimit contiguous sections of the table of approximately equal size,
+which can be used to break up the data for distributed tasks like
+mapreduces.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual BigtableClient.SampleRowKeysStream SampleRowKeys(SampleRowKeysRequest request, CallSettings callSettings = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.SampleRowKeysRequest.html">SampleRowKeysRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+        <td><span class="parametername">callSettings</span></td>
+        <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.SampleRowKeysStream.html">BigtableClient.SampleRowKeysStream</a></td>
+        <td><p>The server stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_SampleRowKeys_Google_Cloud_Bigtable_V2_SampleRowKeysRequest_Google_Api_Gax_Grpc_CallSettings__snippet">Sample code</h5>
+  <div class="markdown level1"><pre><code class="lang-cs">// Create client
+BigtableClient bigtableClient = BigtableClient.Create();
+// Initialize request argument
+SampleRowKeysRequest request = new SampleRowKeysRequest
+{
+    TableName = new TableName(&quot;[PROJECT]&quot;, &quot;[INSTANCE]&quot;, &quot;[TABLE]&quot;).ToString(),
+};
+// Make the request, returning a streaming response
+BigtableClient.SampleRowKeysStream streamingResponse = bigtableClient.SampleRowKeys(request);
+
+// Read streaming responses from server until complete
+IAsyncEnumerator&lt;SampleRowKeysResponse&gt; responseStream = streamingResponse.ResponseStream;
+while (await responseStream.MoveNext())
+{
+    SampleRowKeysResponse response = responseStream.Current;
+    // Do something with streamed response
+}
+// The response stream has completed
+</code></pre></div>
+  </div>
+  <a id="Google_Cloud_Bigtable_V2_BigtableClient_ShutdownDefaultChannelsAsync_" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ShutdownDefaultChannelsAsync*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_BigtableClient_ShutdownDefaultChannelsAsync" data-uid="Google.Cloud.Bigtable.V2.BigtableClient.ShutdownDefaultChannelsAsync">ShutdownDefaultChannelsAsync()</h4>
+  <div class="markdown level1 summary"><p>Shuts down any channels automatically created by <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Bigtable_V2_BigtableSettings_">Create(ServiceEndpoint, BigtableSettings)</a>
+and <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Bigtable_V2_BigtableSettings_">CreateAsync(ServiceEndpoint, BigtableSettings)</a>. Channels which weren&apos;t automatically
+created are not affected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task ShutdownDefaultChannelsAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task representing the asynchronous shutdown operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Google_Cloud_Bigtable_V2_BigtableClient_ShutdownDefaultChannelsAsync_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>After calling this method, further calls to <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Bigtable_V2_BigtableSettings_">Create(ServiceEndpoint, BigtableSettings)</a>
+and <a class="xref" href="Google.Cloud.Bigtable.V2.BigtableClient.html#Google_Cloud_Bigtable_V2_BigtableClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Bigtable_V2_BigtableSettings_">CreateAsync(ServiceEndpoint, BigtableSettings)</a> will create new channels, which could
+in turn be shut down by another call to this method.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

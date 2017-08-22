@@ -1,0 +1,746 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RowFilter
+   | Google.Cloud.Bigtable.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RowFilter
+   | Google.Cloud.Bigtable.V2 ">
+    <meta name="generator" content="docfx 2.21.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Google.Cloud.Bigtable.V2.RowFilter">
+  
+  
+  <h1 id="Google_Cloud_Bigtable_V2_RowFilter" data-uid="Google.Cloud.Bigtable.V2.RowFilter" class="text-break">Class RowFilter
+  </h1>
+  <div class="markdown level0 summary"><p>Takes a row as input and produces an alternate view of the row based on
+specified rules. For example, a RowFilter might trim down a row to include
+just the cells from columns matching a given regular expression, or might
+return all the cells of a row but not their values. More complicated filters
+can be composed out of these components to express requests such as, &quot;within
+every column of a particular family, give just the two most recent cells
+which are older than timestamp X.&quot;</p>
+<p>There are two broad categories of RowFilters (true filters and transformers),
+as well as two ways to compose simple filters into more complex ones
+(chains and interleaves). They work as follows:</p>
+<ul>
+<li><p>True filters alter the input row by excluding some of its cells wholesale
+from the output row. An example of a true filter is the <code>value_regex_filter</code>,
+which excludes cells whose values don&apos;t match the specified pattern. All
+regex true filters use RE2 syntax (<a href="https://github.com/google/re2/wiki/Syntax">https://github.com/google/re2/wiki/Syntax</a>)
+in raw byte mode (RE2::Latin1), and are evaluated as full matches. An
+important point to keep in mind is that <code>RE2(.)</code> is equivalent by default to
+<code>RE2([^\n])</code>, meaning that it does not match newlines. When attempting to
+match an arbitrary byte, you should therefore use the escape sequence <code>\C</code>,
+which may need to be further escaped as <code>\\C</code> in your client language.</p>
+</li>
+<li><p>Transformers alter the input row by changing the values of some of its
+cells in the output, without excluding them completely. Currently, the only
+supported transformer is the <code>strip_value_transformer</code>, which replaces every
+cell&apos;s value with the empty string.</p>
+</li>
+<li><p>Chains and interleaves are described in more detail in the
+RowFilter.Chain and RowFilter.Interleave documentation.</p>
+</li>
+</ul>
+<p>The total serialized size of a RowFilter message must not
+exceed 4096 bytes, and RowFilters may not be nested within each other
+(in Chains or Interleaves) to a depth of more than 20.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">RowFilter</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Google.Cloud.Bigtable.V2.html">Google.Cloud.Bigtable.V2</a></h6>
+  <h6><strong>Assembly</strong>: Google.Cloud.Bigtable.V2.dll</h6>
+  <h5 id="Google_Cloud_Bigtable_V2_RowFilter_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class RowFilter : IMessage&lt;RowFilter&gt;, IMessage, IEquatable&lt;RowFilter&gt;, IDeepCloneable&lt;RowFilter&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Google_Cloud_Bigtable_V2_RowFilter_ApplyLabelTransformer_" data-uid="Google.Cloud.Bigtable.V2.RowFilter.ApplyLabelTransformer*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilter_ApplyLabelTransformer" data-uid="Google.Cloud.Bigtable.V2.RowFilter.ApplyLabelTransformer">ApplyLabelTransformer</h4>
+  <div class="markdown level1 summary"><p>Applies the given label to all cells in the output row. This allows
+the client to determine which results were produced from which part of
+the filter.</p>
+<p>Values must be at most 15 characters in length, and match the RE2
+pattern <code>[a-z0-9\\-]+</code></p>
+<p>Due to a technical limitation, it is not currently possible to apply
+multiple labels to a cell. As a result, a Chain may have no more than
+one sub-filter which contains a <code>apply_label_transformer</code>. It is okay for
+an Interleave to contain multiple <code>apply_label_transformers</code>, as they
+will be applied to separate copies of the input. This may be relaxed in
+the future.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ApplyLabelTransformer { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilter_BlockAllFilter_" data-uid="Google.Cloud.Bigtable.V2.RowFilter.BlockAllFilter*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilter_BlockAllFilter" data-uid="Google.Cloud.Bigtable.V2.RowFilter.BlockAllFilter">BlockAllFilter</h4>
+  <div class="markdown level1 summary"><p>Does not match any cells, regardless of input. Useful for temporarily
+disabling just part of a filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool BlockAllFilter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilter_CellsPerColumnLimitFilter_" data-uid="Google.Cloud.Bigtable.V2.RowFilter.CellsPerColumnLimitFilter*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilter_CellsPerColumnLimitFilter" data-uid="Google.Cloud.Bigtable.V2.RowFilter.CellsPerColumnLimitFilter">CellsPerColumnLimitFilter</h4>
+  <div class="markdown level1 summary"><p>Matches only the most recent N cells within each column. For example,
+if N=2, this filter would match column <code>foo:bar</code> at timestamps 10 and 9,
+skip all earlier cells in <code>foo:bar</code>, and then begin matching again in
+column <code>foo:bar2</code>.
+If duplicate cells are present, as is possible when using an Interleave,
+each copy of the cell is counted separately.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CellsPerColumnLimitFilter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilter_CellsPerRowLimitFilter_" data-uid="Google.Cloud.Bigtable.V2.RowFilter.CellsPerRowLimitFilter*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilter_CellsPerRowLimitFilter" data-uid="Google.Cloud.Bigtable.V2.RowFilter.CellsPerRowLimitFilter">CellsPerRowLimitFilter</h4>
+  <div class="markdown level1 summary"><p>Matches only the first N cells of each row.
+If duplicate cells are present, as is possible when using an Interleave,
+each copy of the cell is counted separately.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CellsPerRowLimitFilter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilter_CellsPerRowOffsetFilter_" data-uid="Google.Cloud.Bigtable.V2.RowFilter.CellsPerRowOffsetFilter*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilter_CellsPerRowOffsetFilter" data-uid="Google.Cloud.Bigtable.V2.RowFilter.CellsPerRowOffsetFilter">CellsPerRowOffsetFilter</h4>
+  <div class="markdown level1 summary"><p>Skips the first N cells of each row, matching all subsequent cells.
+If duplicate cells are present, as is possible when using an Interleave,
+each copy of the cell is counted separately.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CellsPerRowOffsetFilter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilter_Chain_" data-uid="Google.Cloud.Bigtable.V2.RowFilter.Chain*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilter_Chain" data-uid="Google.Cloud.Bigtable.V2.RowFilter.Chain">Chain</h4>
+  <div class="markdown level1 summary"><p>Applies several RowFilters to the data in sequence, progressively
+narrowing the results.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RowFilter.Types.Chain Chain { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.Types.Chain.html">RowFilter.Types.Chain</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilter_ColumnQualifierRegexFilter_" data-uid="Google.Cloud.Bigtable.V2.RowFilter.ColumnQualifierRegexFilter*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilter_ColumnQualifierRegexFilter" data-uid="Google.Cloud.Bigtable.V2.RowFilter.ColumnQualifierRegexFilter">ColumnQualifierRegexFilter</h4>
+  <div class="markdown level1 summary"><p>Matches only cells from columns whose qualifiers satisfy the given RE2
+regex.
+Note that, since column qualifiers can contain arbitrary bytes, the <code>\C</code>
+escape sequence must be used if a true wildcard is desired. The <code>.</code>
+character will not match the new line character <code>\n</code>, which may be
+present in a binary qualifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ByteString ColumnQualifierRegexFilter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilter_ColumnRangeFilter_" data-uid="Google.Cloud.Bigtable.V2.RowFilter.ColumnRangeFilter*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilter_ColumnRangeFilter" data-uid="Google.Cloud.Bigtable.V2.RowFilter.ColumnRangeFilter">ColumnRangeFilter</h4>
+  <div class="markdown level1 summary"><p>Matches only cells from columns within the given range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ColumnRange ColumnRangeFilter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.ColumnRange.html">ColumnRange</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilter_Condition_" data-uid="Google.Cloud.Bigtable.V2.RowFilter.Condition*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilter_Condition" data-uid="Google.Cloud.Bigtable.V2.RowFilter.Condition">Condition</h4>
+  <div class="markdown level1 summary"><p>Applies one of two possible RowFilters to the data based on the output of
+a predicate RowFilter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RowFilter.Types.Condition Condition { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.Types.Condition.html">RowFilter.Types.Condition</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilter_FamilyNameRegexFilter_" data-uid="Google.Cloud.Bigtable.V2.RowFilter.FamilyNameRegexFilter*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilter_FamilyNameRegexFilter" data-uid="Google.Cloud.Bigtable.V2.RowFilter.FamilyNameRegexFilter">FamilyNameRegexFilter</h4>
+  <div class="markdown level1 summary"><p>Matches only cells from columns whose families satisfy the given RE2
+regex. For technical reasons, the regex must not contain the <code>:</code>
+character, even if it is not being used as a literal.
+Note that, since column families cannot contain the new line character
+<code>\n</code>, it is sufficient to use <code>.</code> as a full wildcard when matching
+column family names.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FamilyNameRegexFilter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilter_FilterCase_" data-uid="Google.Cloud.Bigtable.V2.RowFilter.FilterCase*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilter_FilterCase" data-uid="Google.Cloud.Bigtable.V2.RowFilter.FilterCase">FilterCase</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RowFilter.FilterOneofCase FilterCase { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.FilterOneofCase.html">RowFilter.FilterOneofCase</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilter_Interleave_" data-uid="Google.Cloud.Bigtable.V2.RowFilter.Interleave*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilter_Interleave" data-uid="Google.Cloud.Bigtable.V2.RowFilter.Interleave">Interleave</h4>
+  <div class="markdown level1 summary"><p>Applies several RowFilters to the data in parallel and combines the
+results.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RowFilter.Types.Interleave Interleave { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.RowFilter.Types.Interleave.html">RowFilter.Types.Interleave</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilter_PassAllFilter_" data-uid="Google.Cloud.Bigtable.V2.RowFilter.PassAllFilter*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilter_PassAllFilter" data-uid="Google.Cloud.Bigtable.V2.RowFilter.PassAllFilter">PassAllFilter</h4>
+  <div class="markdown level1 summary"><p>Matches all cells, regardless of input. Functionally equivalent to
+leaving <code>filter</code> unset, but included for completeness.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PassAllFilter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilter_RowKeyRegexFilter_" data-uid="Google.Cloud.Bigtable.V2.RowFilter.RowKeyRegexFilter*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilter_RowKeyRegexFilter" data-uid="Google.Cloud.Bigtable.V2.RowFilter.RowKeyRegexFilter">RowKeyRegexFilter</h4>
+  <div class="markdown level1 summary"><p>Matches only cells from rows whose keys satisfy the given RE2 regex. In
+other words, passes through the entire row when the key matches, and
+otherwise produces an empty row.
+Note that, since row keys can contain arbitrary bytes, the <code>\C</code> escape
+sequence must be used if a true wildcard is desired. The <code>.</code> character
+will not match the new line character <code>\n</code>, which may be present in a
+binary key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ByteString RowKeyRegexFilter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilter_RowSampleFilter_" data-uid="Google.Cloud.Bigtable.V2.RowFilter.RowSampleFilter*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilter_RowSampleFilter" data-uid="Google.Cloud.Bigtable.V2.RowFilter.RowSampleFilter">RowSampleFilter</h4>
+  <div class="markdown level1 summary"><p>Matches all cells from a row with probability p, and matches no cells
+from the row with probability 1-p.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double RowSampleFilter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilter_Sink_" data-uid="Google.Cloud.Bigtable.V2.RowFilter.Sink*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilter_Sink" data-uid="Google.Cloud.Bigtable.V2.RowFilter.Sink">Sink</h4>
+  <div class="markdown level1 summary"><p>ADVANCED USE ONLY.
+Hook for introspection into the RowFilter. Outputs all cells directly to
+the output of the read rather than to any parent filter. Consider the
+following example:</p>
+<p>Chain(
+ FamilyRegex(&quot;A&quot;),
+ Interleave(
+   All(),
+   Chain(Label(&quot;foo&quot;), Sink())
+ ),
+ QualifierRegex(&quot;B&quot;)
+)</p>
+<pre><code>               A,A,1,w
+               A,B,2,x
+               B,B,4,z
+                  |
+           FamilyRegex(&amp;quot;A&amp;quot;)
+                  |
+               A,A,1,w
+               A,B,2,x
+                  |
+     +------------+-------------+
+     |                          |
+   All()                    Label(foo)
+     |                          |
+  A,A,1,w              A,A,1,w,labels:[foo]
+  A,B,2,x              A,B,2,x,labels:[foo]
+     |                          |
+     |                        Sink() --------------+
+     |                          |                  |
+     +------------+      x------+          A,A,1,w,labels:[foo]
+                  |                        A,B,2,x,labels:[foo]
+               A,A,1,w                             |
+               A,B,2,x                             |
+                  |                                |
+          QualifierRegex(&amp;quot;B&amp;quot;)                      |
+                  |                                |
+               A,B,2,x                             |
+                  |                                |
+                  +--------------------------------+
+                  |
+               A,A,1,w,labels:[foo]
+               A,B,2,x,labels:[foo]  // could be switched
+               A,B,2,x               // could be switched
+</code></pre><p>Despite being excluded by the qualifier filter, a copy of every cell
+that reaches the sink is present in the final result.</p>
+<p>As with an [Interleave][google.bigtable.v2.RowFilter.Interleave],
+duplicate cells are possible, and appear in an unspecified mutual order.
+In this case we have a duplicate with column &quot;A:B&quot; and timestamp 2,
+because one copy passed through the all filter while the other was
+passed through the label and sink. Note that one copy has label &quot;foo&quot;,
+while the other does not.</p>
+<p>Cannot be used within the <code>predicate_filter</code>, <code>true_filter</code>, or
+<code>false_filter</code> of a [Condition][google.bigtable.v2.RowFilter.Condition].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Sink { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilter_StripValueTransformer_" data-uid="Google.Cloud.Bigtable.V2.RowFilter.StripValueTransformer*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilter_StripValueTransformer" data-uid="Google.Cloud.Bigtable.V2.RowFilter.StripValueTransformer">StripValueTransformer</h4>
+  <div class="markdown level1 summary"><p>Replaces each cell&apos;s value with the empty string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool StripValueTransformer { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilter_TimestampRangeFilter_" data-uid="Google.Cloud.Bigtable.V2.RowFilter.TimestampRangeFilter*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilter_TimestampRangeFilter" data-uid="Google.Cloud.Bigtable.V2.RowFilter.TimestampRangeFilter">TimestampRangeFilter</h4>
+  <div class="markdown level1 summary"><p>Matches only cells with timestamps within the given range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimestampRange TimestampRangeFilter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.TimestampRange.html">TimestampRange</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilter_ValueRangeFilter_" data-uid="Google.Cloud.Bigtable.V2.RowFilter.ValueRangeFilter*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilter_ValueRangeFilter" data-uid="Google.Cloud.Bigtable.V2.RowFilter.ValueRangeFilter">ValueRangeFilter</h4>
+  <div class="markdown level1 summary"><p>Matches only cells with values that fall within the given range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueRange ValueRangeFilter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Bigtable.V2.ValueRange.html">ValueRange</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Google_Cloud_Bigtable_V2_RowFilter_ValueRegexFilter_" data-uid="Google.Cloud.Bigtable.V2.RowFilter.ValueRegexFilter*"></a>
+  <h4 id="Google_Cloud_Bigtable_V2_RowFilter_ValueRegexFilter" data-uid="Google.Cloud.Bigtable.V2.RowFilter.ValueRegexFilter">ValueRegexFilter</h4>
+  <div class="markdown level1 summary"><p>Matches only cells with values that satisfy the given regular expression.
+Note that, since cell values can contain arbitrary bytes, the <code>\C</code> escape
+sequence must be used if a true wildcard is desired. The <code>.</code> character
+will not match the new line character <code>\n</code>, which may be present in a
+binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ByteString ValueRegexFilter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Protobuf.ByteString.html">ByteString</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

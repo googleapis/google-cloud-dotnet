@@ -358,14 +358,19 @@ an error code <see>
   </table>
   <a id="Google_Cloud_Spanner_Data_SpannerOptions_Timeout_" data-uid="Google.Cloud.Spanner.Data.SpannerOptions.Timeout*"></a>
   <h4 id="Google_Cloud_Spanner_Data_SpannerOptions_Timeout" data-uid="Google.Cloud.Spanner.Data.SpannerOptions.Timeout">Timeout</h4>
-  <div class="markdown level1 summary"><p>Defines the global timeout duration.
+  <div class="markdown level1 summary"><p>Defines the default values for <a class="xref" href="Google.Cloud.Spanner.Data.SpannerCommand.html#Google_Cloud_Spanner_Data_SpannerCommand_CommandTimeout">CommandTimeout</a> and
+<a class="xref" href="Google.Cloud.Spanner.Data.SpannerTransaction.html#Google_Cloud_Spanner_Data_SpannerTransaction_CommitTimeout">CommitTimeout</a> along with all network operations to a Cloud
+Spanner database.
 Operations sent to the server that take greater than this duration will fail
-with a <a class="xref" href="Google.Cloud.Spanner.Data.SpannerException.html">SpannerException</a> and error code <a class="xref" href="Google.Cloud.Spanner.Data.ErrorCode.html#Google_Cloud_Spanner_Data_ErrorCode_DeadlineExceeded">DeadlineExceeded</a>.</p>
+with a <a class="xref" href="Google.Cloud.Spanner.Data.SpannerException.html">SpannerException</a> and error code <a class="xref" href="Google.Cloud.Spanner.Data.ErrorCode.html#Google_Cloud_Spanner_Data_ErrorCode_DeadlineExceeded">DeadlineExceeded</a>.
+A value of &apos;0&apos; normally indicates that no timeout should be used (it waits an infinite amount of time).
+However, if you specify AllowImmediateTimeouts=true in the connection string, &apos;0&apos; will cause a timeout
+that expires immediately. This is normally used only for testing purposes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TimeSpan Timeout { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int Timeout { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -377,7 +382,7 @@ with a <a class="xref" href="Google.Cloud.Spanner.Data.SpannerException.html">Sp
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>

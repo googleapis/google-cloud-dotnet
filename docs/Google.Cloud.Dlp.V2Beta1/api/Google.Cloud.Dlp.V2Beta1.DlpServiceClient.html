@@ -104,6 +104,30 @@
   </div>
   <h3 id="properties">Properties
   </h3>
+  <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_CreateInspectOperationOperationsClient_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.CreateInspectOperationOperationsClient*"></a>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_CreateInspectOperationOperationsClient" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.CreateInspectOperationOperationsClient">CreateInspectOperationOperationsClient</h4>
+  <div class="markdown level1 summary"><p>The long-running operations client for <code>CreateInspectOperation</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual OperationsClient CreateInspectOperationOperationsClient { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.LongRunning.OperationsClient.html">OperationsClient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_DefaultEndpoint_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.DefaultEndpoint*"></a>
   <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_DefaultEndpoint" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.DefaultEndpoint">DefaultEndpoint</h4>
   <div class="markdown level1 summary"><p>The default endpoint for the DlpService service, which is a host of &quot;dlp.googleapis.com&quot; and a port of 443.</p>
@@ -176,30 +200,6 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.DlpService.DlpServiceClient.html">DlpService.DlpServiceClient</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_LongRunningOperationsClient_" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.LongRunningOperationsClient*"></a>
-  <h4 id="Google_Cloud_Dlp_V2Beta1_DlpServiceClient_LongRunningOperationsClient" data-uid="Google.Cloud.Dlp.V2Beta1.DlpServiceClient.LongRunningOperationsClient">LongRunningOperationsClient</h4>
-  <div class="markdown level1 summary"><p>The client for long-running operations.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual OperationsClient LongRunningOperationsClient { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Google.LongRunning.OperationsClient.html">OperationsClient</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -485,11 +485,13 @@ the pattern &quot;[operation_id]_[count].csv&quot;, for example
 identifier for the Operation, and the <code>count</code> is a counter used for
 tracking the number of files written. &lt;p&gt;The CSV file(s) contain the
 following columns regardless of storage type scanned: &lt;li&gt;id &lt;li&gt;info_type
-&lt;li&gt;likelihood &lt;li&gt;byte size of finding &lt;li&gt;quote &lt;li&gt;time_stamp&lt;br/&gt;
+&lt;li&gt;likelihood &lt;li&gt;byte size of finding &lt;li&gt;quote &lt;li&gt;timestamp&lt;br/&gt;
 &lt;p&gt;For Cloud Storage the next columns are: &lt;li&gt;file_path
 &lt;li&gt;start_offset&lt;br/&gt;
 &lt;p&gt;For Cloud Datastore the next columns are: &lt;li&gt;project_id
-&lt;li&gt;namespace_id &lt;li&gt;path &lt;li&gt;column_name &lt;li&gt;offset</p>
+&lt;li&gt;namespace_id &lt;li&gt;path &lt;li&gt;column_name &lt;li&gt;offset&lt;br/&gt;
+&lt;p&gt;For BigQuery the next columns are: &lt;li&gt;row_number &lt;li&gt;project_id
+&lt;li&gt;dataset_id &lt;li&gt;table_id</p>
 </td>
       </tr>
       <tr>
@@ -675,11 +677,13 @@ the pattern &quot;[operation_id]_[count].csv&quot;, for example
 identifier for the Operation, and the <code>count</code> is a counter used for
 tracking the number of files written. &lt;p&gt;The CSV file(s) contain the
 following columns regardless of storage type scanned: &lt;li&gt;id &lt;li&gt;info_type
-&lt;li&gt;likelihood &lt;li&gt;byte size of finding &lt;li&gt;quote &lt;li&gt;time_stamp&lt;br/&gt;
+&lt;li&gt;likelihood &lt;li&gt;byte size of finding &lt;li&gt;quote &lt;li&gt;timestamp&lt;br/&gt;
 &lt;p&gt;For Cloud Storage the next columns are: &lt;li&gt;file_path
 &lt;li&gt;start_offset&lt;br/&gt;
 &lt;p&gt;For Cloud Datastore the next columns are: &lt;li&gt;project_id
-&lt;li&gt;namespace_id &lt;li&gt;path &lt;li&gt;column_name &lt;li&gt;offset</p>
+&lt;li&gt;namespace_id &lt;li&gt;path &lt;li&gt;column_name &lt;li&gt;offset&lt;br/&gt;
+&lt;p&gt;For BigQuery the next columns are: &lt;li&gt;row_number &lt;li&gt;project_id
+&lt;li&gt;dataset_id &lt;li&gt;table_id</p>
 </td>
       </tr>
       <tr>
@@ -781,11 +785,13 @@ the pattern &quot;[operation_id]_[count].csv&quot;, for example
 identifier for the Operation, and the <code>count</code> is a counter used for
 tracking the number of files written. &lt;p&gt;The CSV file(s) contain the
 following columns regardless of storage type scanned: &lt;li&gt;id &lt;li&gt;info_type
-&lt;li&gt;likelihood &lt;li&gt;byte size of finding &lt;li&gt;quote &lt;li&gt;time_stamp&lt;br/&gt;
+&lt;li&gt;likelihood &lt;li&gt;byte size of finding &lt;li&gt;quote &lt;li&gt;timestamp&lt;br/&gt;
 &lt;p&gt;For Cloud Storage the next columns are: &lt;li&gt;file_path
 &lt;li&gt;start_offset&lt;br/&gt;
 &lt;p&gt;For Cloud Datastore the next columns are: &lt;li&gt;project_id
-&lt;li&gt;namespace_id &lt;li&gt;path &lt;li&gt;column_name &lt;li&gt;offset</p>
+&lt;li&gt;namespace_id &lt;li&gt;path &lt;li&gt;column_name &lt;li&gt;offset&lt;br/&gt;
+&lt;p&gt;For BigQuery the next columns are: &lt;li&gt;row_number &lt;li&gt;project_id
+&lt;li&gt;dataset_id &lt;li&gt;table_id</p>
 </td>
       </tr>
       <tr>
@@ -1594,7 +1600,7 @@ ListInspectFindingsResponse response = dlpServiceClient.ListInspectFindings(requ
         <td><span class="parametername">name</span></td>
         <td><p>Identifier of the results set returned as metadata of
 the longrunning operation created by a call to CreateInspectOperation.
-Should be in the format of `inspect/results/{id}.</p>
+Should be in the format of <code>inspect/results/{id}</code>.</p>
 </td>
       </tr>
       <tr>
@@ -1717,7 +1723,7 @@ ListInspectFindingsResponse response = await dlpServiceClient.ListInspectFinding
         <td><span class="parametername">name</span></td>
         <td><p>Identifier of the results set returned as metadata of
 the longrunning operation created by a call to CreateInspectOperation.
-Should be in the format of `inspect/results/{id}.</p>
+Should be in the format of <code>inspect/results/{id}</code>.</p>
 </td>
       </tr>
       <tr>
@@ -1778,7 +1784,7 @@ ListInspectFindingsResponse response = await dlpServiceClient.ListInspectFinding
         <td><span class="parametername">name</span></td>
         <td><p>Identifier of the results set returned as metadata of
 the longrunning operation created by a call to CreateInspectOperation.
-Should be in the format of `inspect/results/{id}.</p>
+Should be in the format of <code>inspect/results/{id}</code>.</p>
 </td>
       </tr>
       <tr>

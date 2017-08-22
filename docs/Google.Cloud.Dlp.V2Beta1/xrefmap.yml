@@ -15807,6 +15807,78 @@ references:
   commentId: N:Google.Cloud.Dlp.V2Beta1
   fullName: Google.Cloud.Dlp.V2Beta1
   nameWithType: Google.Cloud.Dlp.V2Beta1
+- uid: Google.Cloud.Dlp.V2Beta1.BigQueryOptions
+  name: BigQueryOptions
+  href: api/Google.Cloud.Dlp.V2Beta1.BigQueryOptions.html
+  commentId: T:Google.Cloud.Dlp.V2Beta1.BigQueryOptions
+  fullName: Google.Cloud.Dlp.V2Beta1.BigQueryOptions
+  nameWithType: BigQueryOptions
+- uid: Google.Cloud.Dlp.V2Beta1.BigQueryOptions.IdentifyingFields
+  name: IdentifyingFields
+  href: api/Google.Cloud.Dlp.V2Beta1.BigQueryOptions.html#Google_Cloud_Dlp_V2Beta1_BigQueryOptions_IdentifyingFields
+  commentId: P:Google.Cloud.Dlp.V2Beta1.BigQueryOptions.IdentifyingFields
+  fullName: Google.Cloud.Dlp.V2Beta1.BigQueryOptions.IdentifyingFields
+  nameWithType: BigQueryOptions.IdentifyingFields
+- uid: Google.Cloud.Dlp.V2Beta1.BigQueryOptions.IdentifyingFields*
+  name: IdentifyingFields
+  href: api/Google.Cloud.Dlp.V2Beta1.BigQueryOptions.html#Google_Cloud_Dlp_V2Beta1_BigQueryOptions_IdentifyingFields_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.BigQueryOptions.IdentifyingFields
+  fullName: Google.Cloud.Dlp.V2Beta1.BigQueryOptions.IdentifyingFields
+  nameWithType: BigQueryOptions.IdentifyingFields
+- uid: Google.Cloud.Dlp.V2Beta1.BigQueryOptions.TableReference
+  name: TableReference
+  href: api/Google.Cloud.Dlp.V2Beta1.BigQueryOptions.html#Google_Cloud_Dlp_V2Beta1_BigQueryOptions_TableReference
+  commentId: P:Google.Cloud.Dlp.V2Beta1.BigQueryOptions.TableReference
+  fullName: Google.Cloud.Dlp.V2Beta1.BigQueryOptions.TableReference
+  nameWithType: BigQueryOptions.TableReference
+- uid: Google.Cloud.Dlp.V2Beta1.BigQueryOptions.TableReference*
+  name: TableReference
+  href: api/Google.Cloud.Dlp.V2Beta1.BigQueryOptions.html#Google_Cloud_Dlp_V2Beta1_BigQueryOptions_TableReference_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.BigQueryOptions.TableReference
+  fullName: Google.Cloud.Dlp.V2Beta1.BigQueryOptions.TableReference
+  nameWithType: BigQueryOptions.TableReference
+- uid: Google.Cloud.Dlp.V2Beta1.BigQueryTable
+  name: BigQueryTable
+  href: api/Google.Cloud.Dlp.V2Beta1.BigQueryTable.html
+  commentId: T:Google.Cloud.Dlp.V2Beta1.BigQueryTable
+  fullName: Google.Cloud.Dlp.V2Beta1.BigQueryTable
+  nameWithType: BigQueryTable
+- uid: Google.Cloud.Dlp.V2Beta1.BigQueryTable.DatasetId
+  name: DatasetId
+  href: api/Google.Cloud.Dlp.V2Beta1.BigQueryTable.html#Google_Cloud_Dlp_V2Beta1_BigQueryTable_DatasetId
+  commentId: P:Google.Cloud.Dlp.V2Beta1.BigQueryTable.DatasetId
+  fullName: Google.Cloud.Dlp.V2Beta1.BigQueryTable.DatasetId
+  nameWithType: BigQueryTable.DatasetId
+- uid: Google.Cloud.Dlp.V2Beta1.BigQueryTable.DatasetId*
+  name: DatasetId
+  href: api/Google.Cloud.Dlp.V2Beta1.BigQueryTable.html#Google_Cloud_Dlp_V2Beta1_BigQueryTable_DatasetId_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.BigQueryTable.DatasetId
+  fullName: Google.Cloud.Dlp.V2Beta1.BigQueryTable.DatasetId
+  nameWithType: BigQueryTable.DatasetId
+- uid: Google.Cloud.Dlp.V2Beta1.BigQueryTable.ProjectId
+  name: ProjectId
+  href: api/Google.Cloud.Dlp.V2Beta1.BigQueryTable.html#Google_Cloud_Dlp_V2Beta1_BigQueryTable_ProjectId
+  commentId: P:Google.Cloud.Dlp.V2Beta1.BigQueryTable.ProjectId
+  fullName: Google.Cloud.Dlp.V2Beta1.BigQueryTable.ProjectId
+  nameWithType: BigQueryTable.ProjectId
+- uid: Google.Cloud.Dlp.V2Beta1.BigQueryTable.ProjectId*
+  name: ProjectId
+  href: api/Google.Cloud.Dlp.V2Beta1.BigQueryTable.html#Google_Cloud_Dlp_V2Beta1_BigQueryTable_ProjectId_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.BigQueryTable.ProjectId
+  fullName: Google.Cloud.Dlp.V2Beta1.BigQueryTable.ProjectId
+  nameWithType: BigQueryTable.ProjectId
+- uid: Google.Cloud.Dlp.V2Beta1.BigQueryTable.TableId
+  name: TableId
+  href: api/Google.Cloud.Dlp.V2Beta1.BigQueryTable.html#Google_Cloud_Dlp_V2Beta1_BigQueryTable_TableId
+  commentId: P:Google.Cloud.Dlp.V2Beta1.BigQueryTable.TableId
+  fullName: Google.Cloud.Dlp.V2Beta1.BigQueryTable.TableId
+  nameWithType: BigQueryTable.TableId
+- uid: Google.Cloud.Dlp.V2Beta1.BigQueryTable.TableId*
+  name: TableId
+  href: api/Google.Cloud.Dlp.V2Beta1.BigQueryTable.html#Google_Cloud_Dlp_V2Beta1_BigQueryTable_TableId_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.BigQueryTable.TableId
+  fullName: Google.Cloud.Dlp.V2Beta1.BigQueryTable.TableId
+  nameWithType: BigQueryTable.TableId
 - uid: Google.Cloud.Dlp.V2Beta1.CategoryDescription
   name: CategoryDescription
   href: api/Google.Cloud.Dlp.V2Beta1.CategoryDescription.html
@@ -16017,12 +16089,30 @@ references:
   commentId: F:Google.Cloud.Dlp.V2Beta1.ContentItem.DataItemOneofCase.None
   fullName: Google.Cloud.Dlp.V2Beta1.ContentItem.DataItemOneofCase.None
   nameWithType: ContentItem.DataItemOneofCase.None
+- uid: Google.Cloud.Dlp.V2Beta1.ContentItem.DataItemOneofCase.Table
+  name: Table
+  href: api/Google.Cloud.Dlp.V2Beta1.ContentItem.DataItemOneofCase.html#Google_Cloud_Dlp_V2Beta1_ContentItem_DataItemOneofCase_Table
+  commentId: F:Google.Cloud.Dlp.V2Beta1.ContentItem.DataItemOneofCase.Table
+  fullName: Google.Cloud.Dlp.V2Beta1.ContentItem.DataItemOneofCase.Table
+  nameWithType: ContentItem.DataItemOneofCase.Table
 - uid: Google.Cloud.Dlp.V2Beta1.ContentItem.DataItemOneofCase.Value
   name: Value
   href: api/Google.Cloud.Dlp.V2Beta1.ContentItem.DataItemOneofCase.html#Google_Cloud_Dlp_V2Beta1_ContentItem_DataItemOneofCase_Value
   commentId: F:Google.Cloud.Dlp.V2Beta1.ContentItem.DataItemOneofCase.Value
   fullName: Google.Cloud.Dlp.V2Beta1.ContentItem.DataItemOneofCase.Value
   nameWithType: ContentItem.DataItemOneofCase.Value
+- uid: Google.Cloud.Dlp.V2Beta1.ContentItem.Table
+  name: Table
+  href: api/Google.Cloud.Dlp.V2Beta1.ContentItem.html#Google_Cloud_Dlp_V2Beta1_ContentItem_Table
+  commentId: P:Google.Cloud.Dlp.V2Beta1.ContentItem.Table
+  fullName: Google.Cloud.Dlp.V2Beta1.ContentItem.Table
+  nameWithType: ContentItem.Table
+- uid: Google.Cloud.Dlp.V2Beta1.ContentItem.Table*
+  name: Table
+  href: api/Google.Cloud.Dlp.V2Beta1.ContentItem.html#Google_Cloud_Dlp_V2Beta1_ContentItem_Table_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.ContentItem.Table
+  fullName: Google.Cloud.Dlp.V2Beta1.ContentItem.Table
+  nameWithType: ContentItem.Table
 - uid: Google.Cloud.Dlp.V2Beta1.ContentItem.Type
   name: Type
   href: api/Google.Cloud.Dlp.V2Beta1.ContentItem.html#Google_Cloud_Dlp_V2Beta1_ContentItem_Type
@@ -16065,6 +16155,18 @@ references:
   commentId: Overload:Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest.InspectConfig
   fullName: Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest.InspectConfig
   nameWithType: CreateInspectOperationRequest.InspectConfig
+- uid: Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest.OperationConfig
+  name: OperationConfig
+  href: api/Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest.html#Google_Cloud_Dlp_V2Beta1_CreateInspectOperationRequest_OperationConfig
+  commentId: P:Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest.OperationConfig
+  fullName: Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest.OperationConfig
+  nameWithType: CreateInspectOperationRequest.OperationConfig
+- uid: Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest.OperationConfig*
+  name: OperationConfig
+  href: api/Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest.html#Google_Cloud_Dlp_V2Beta1_CreateInspectOperationRequest_OperationConfig_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest.OperationConfig
+  fullName: Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest.OperationConfig
+  nameWithType: CreateInspectOperationRequest.OperationConfig
 - uid: Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest.OutputConfig
   name: OutputConfig
   href: api/Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest.html#Google_Cloud_Dlp_V2Beta1_CreateInspectOperationRequest_OutputConfig
@@ -16635,6 +16737,18 @@ references:
   commentId: Overload:Google.Cloud.Dlp.V2Beta1.DlpServiceClient.CreateInspectOperationAsync
   fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.CreateInspectOperationAsync
   nameWithType: DlpServiceClient.CreateInspectOperationAsync
+- uid: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.CreateInspectOperationOperationsClient
+  name: CreateInspectOperationOperationsClient
+  href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceClient.html#Google_Cloud_Dlp_V2Beta1_DlpServiceClient_CreateInspectOperationOperationsClient
+  commentId: P:Google.Cloud.Dlp.V2Beta1.DlpServiceClient.CreateInspectOperationOperationsClient
+  fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.CreateInspectOperationOperationsClient
+  nameWithType: DlpServiceClient.CreateInspectOperationOperationsClient
+- uid: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.CreateInspectOperationOperationsClient*
+  name: CreateInspectOperationOperationsClient
+  href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceClient.html#Google_Cloud_Dlp_V2Beta1_DlpServiceClient_CreateInspectOperationOperationsClient_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.DlpServiceClient.CreateInspectOperationOperationsClient
+  fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.CreateInspectOperationOperationsClient
+  nameWithType: DlpServiceClient.CreateInspectOperationOperationsClient
 - uid: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.DefaultEndpoint
   name: DefaultEndpoint
   href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceClient.html#Google_Cloud_Dlp_V2Beta1_DlpServiceClient_DefaultEndpoint
@@ -16848,18 +16962,6 @@ references:
   commentId: Overload:Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListRootCategoriesAsync
   fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.ListRootCategoriesAsync
   nameWithType: DlpServiceClient.ListRootCategoriesAsync
-- uid: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.LongRunningOperationsClient
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceClient.html#Google_Cloud_Dlp_V2Beta1_DlpServiceClient_LongRunningOperationsClient
-  commentId: P:Google.Cloud.Dlp.V2Beta1.DlpServiceClient.LongRunningOperationsClient
-  fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.LongRunningOperationsClient
-  nameWithType: DlpServiceClient.LongRunningOperationsClient
-- uid: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.LongRunningOperationsClient*
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceClient.html#Google_Cloud_Dlp_V2Beta1_DlpServiceClient_LongRunningOperationsClient_
-  commentId: Overload:Google.Cloud.Dlp.V2Beta1.DlpServiceClient.LongRunningOperationsClient
-  fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.LongRunningOperationsClient
-  nameWithType: DlpServiceClient.LongRunningOperationsClient
 - uid: Google.Cloud.Dlp.V2Beta1.DlpServiceClient.PollOnceCreateInspectOperation(System.String,Google.Api.Gax.Grpc.CallSettings)
   name: PollOnceCreateInspectOperation(String, CallSettings)
   href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceClient.html#Google_Cloud_Dlp_V2Beta1_DlpServiceClient_PollOnceCreateInspectOperation_System_String_Google_Api_Gax_Grpc_CallSettings_
@@ -16989,6 +17091,18 @@ references:
   commentId: Overload:Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.CreateInspectOperationAsync
   fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.CreateInspectOperationAsync
   nameWithType: DlpServiceClientImpl.CreateInspectOperationAsync
+- uid: Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.CreateInspectOperationOperationsClient
+  name: CreateInspectOperationOperationsClient
+  href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.html#Google_Cloud_Dlp_V2Beta1_DlpServiceClientImpl_CreateInspectOperationOperationsClient
+  commentId: P:Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.CreateInspectOperationOperationsClient
+  fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.CreateInspectOperationOperationsClient
+  nameWithType: DlpServiceClientImpl.CreateInspectOperationOperationsClient
+- uid: Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.CreateInspectOperationOperationsClient*
+  name: CreateInspectOperationOperationsClient
+  href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.html#Google_Cloud_Dlp_V2Beta1_DlpServiceClientImpl_CreateInspectOperationOperationsClient_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.CreateInspectOperationOperationsClient
+  fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.CreateInspectOperationOperationsClient
+  nameWithType: DlpServiceClientImpl.CreateInspectOperationOperationsClient
 - uid: Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.GrpcClient
   name: GrpcClient
   href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.html#Google_Cloud_Dlp_V2Beta1_DlpServiceClientImpl_GrpcClient
@@ -17097,18 +17211,6 @@ references:
   commentId: Overload:Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.ListRootCategoriesAsync
   fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.ListRootCategoriesAsync
   nameWithType: DlpServiceClientImpl.ListRootCategoriesAsync
-- uid: Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.LongRunningOperationsClient
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.html#Google_Cloud_Dlp_V2Beta1_DlpServiceClientImpl_LongRunningOperationsClient
-  commentId: P:Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.LongRunningOperationsClient
-  fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.LongRunningOperationsClient
-  nameWithType: DlpServiceClientImpl.LongRunningOperationsClient
-- uid: Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.LongRunningOperationsClient*
-  name: LongRunningOperationsClient
-  href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.html#Google_Cloud_Dlp_V2Beta1_DlpServiceClientImpl_LongRunningOperationsClient_
-  commentId: Overload:Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.LongRunningOperationsClient
-  fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.LongRunningOperationsClient
-  nameWithType: DlpServiceClientImpl.LongRunningOperationsClient
 - uid: Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.RedactContent(Google.Cloud.Dlp.V2Beta1.RedactContentRequest,Google.Api.Gax.Grpc.CallSettings)
   name: RedactContent(RedactContentRequest, CallSettings)
   href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceClientImpl.html#Google_Cloud_Dlp_V2Beta1_DlpServiceClientImpl_RedactContent_Google_Cloud_Dlp_V2Beta1_RedactContentRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -17163,6 +17265,18 @@ references:
   commentId: Overload:Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.Clone
   fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.Clone
   nameWithType: DlpServiceSettings.Clone
+- uid: Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.CreateInspectOperationOperationsSettings
+  name: CreateInspectOperationOperationsSettings
+  href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.html#Google_Cloud_Dlp_V2Beta1_DlpServiceSettings_CreateInspectOperationOperationsSettings
+  commentId: P:Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.CreateInspectOperationOperationsSettings
+  fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.CreateInspectOperationOperationsSettings
+  nameWithType: DlpServiceSettings.CreateInspectOperationOperationsSettings
+- uid: Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.CreateInspectOperationOperationsSettings*
+  name: CreateInspectOperationOperationsSettings
+  href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.html#Google_Cloud_Dlp_V2Beta1_DlpServiceSettings_CreateInspectOperationOperationsSettings_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.CreateInspectOperationOperationsSettings
+  fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.CreateInspectOperationOperationsSettings
+  nameWithType: DlpServiceSettings.CreateInspectOperationOperationsSettings
 - uid: Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.CreateInspectOperationSettings
   name: CreateInspectOperationSettings
   href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.html#Google_Cloud_Dlp_V2Beta1_DlpServiceSettings_CreateInspectOperationSettings
@@ -17271,18 +17385,6 @@ references:
   commentId: Overload:Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.ListRootCategoriesSettings
   fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.ListRootCategoriesSettings
   nameWithType: DlpServiceSettings.ListRootCategoriesSettings
-- uid: Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.LongRunningOperationsSettings
-  name: LongRunningOperationsSettings
-  href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.html#Google_Cloud_Dlp_V2Beta1_DlpServiceSettings_LongRunningOperationsSettings
-  commentId: P:Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.LongRunningOperationsSettings
-  fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.LongRunningOperationsSettings
-  nameWithType: DlpServiceSettings.LongRunningOperationsSettings
-- uid: Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.LongRunningOperationsSettings*
-  name: LongRunningOperationsSettings
-  href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.html#Google_Cloud_Dlp_V2Beta1_DlpServiceSettings_LongRunningOperationsSettings_
-  commentId: Overload:Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.LongRunningOperationsSettings
-  fullName: Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.LongRunningOperationsSettings
-  nameWithType: DlpServiceSettings.LongRunningOperationsSettings
 - uid: Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.NonIdempotentRetryFilter
   name: NonIdempotentRetryFilter
   href: api/Google.Cloud.Dlp.V2Beta1.DlpServiceSettings.html#Google_Cloud_Dlp_V2Beta1_DlpServiceSettings_NonIdempotentRetryFilter
@@ -17565,6 +17667,18 @@ references:
   commentId: Overload:Google.Cloud.Dlp.V2Beta1.InspectConfig.IncludeQuote
   fullName: Google.Cloud.Dlp.V2Beta1.InspectConfig.IncludeQuote
   nameWithType: InspectConfig.IncludeQuote
+- uid: Google.Cloud.Dlp.V2Beta1.InspectConfig.InfoTypeLimits
+  name: InfoTypeLimits
+  href: api/Google.Cloud.Dlp.V2Beta1.InspectConfig.html#Google_Cloud_Dlp_V2Beta1_InspectConfig_InfoTypeLimits
+  commentId: P:Google.Cloud.Dlp.V2Beta1.InspectConfig.InfoTypeLimits
+  fullName: Google.Cloud.Dlp.V2Beta1.InspectConfig.InfoTypeLimits
+  nameWithType: InspectConfig.InfoTypeLimits
+- uid: Google.Cloud.Dlp.V2Beta1.InspectConfig.InfoTypeLimits*
+  name: InfoTypeLimits
+  href: api/Google.Cloud.Dlp.V2Beta1.InspectConfig.html#Google_Cloud_Dlp_V2Beta1_InspectConfig_InfoTypeLimits_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.InspectConfig.InfoTypeLimits
+  fullName: Google.Cloud.Dlp.V2Beta1.InspectConfig.InfoTypeLimits
+  nameWithType: InspectConfig.InfoTypeLimits
 - uid: Google.Cloud.Dlp.V2Beta1.InspectConfig.InfoTypes
   name: InfoTypes
   href: api/Google.Cloud.Dlp.V2Beta1.InspectConfig.html#Google_Cloud_Dlp_V2Beta1_InspectConfig_InfoTypes
@@ -17601,6 +17715,42 @@ references:
   commentId: Overload:Google.Cloud.Dlp.V2Beta1.InspectConfig.MinLikelihood
   fullName: Google.Cloud.Dlp.V2Beta1.InspectConfig.MinLikelihood
   nameWithType: InspectConfig.MinLikelihood
+- uid: Google.Cloud.Dlp.V2Beta1.InspectConfig.Types
+  name: InspectConfig.Types
+  href: api/Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.html
+  commentId: T:Google.Cloud.Dlp.V2Beta1.InspectConfig.Types
+  fullName: Google.Cloud.Dlp.V2Beta1.InspectConfig.Types
+  nameWithType: InspectConfig.Types
+- uid: Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.InfoTypeLimit
+  name: InspectConfig.Types.InfoTypeLimit
+  href: api/Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.InfoTypeLimit.html
+  commentId: T:Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.InfoTypeLimit
+  fullName: Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.InfoTypeLimit
+  nameWithType: InspectConfig.Types.InfoTypeLimit
+- uid: Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.InfoTypeLimit.InfoType
+  name: InfoType
+  href: api/Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.InfoTypeLimit.html#Google_Cloud_Dlp_V2Beta1_InspectConfig_Types_InfoTypeLimit_InfoType
+  commentId: P:Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.InfoTypeLimit.InfoType
+  fullName: Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.InfoTypeLimit.InfoType
+  nameWithType: InspectConfig.Types.InfoTypeLimit.InfoType
+- uid: Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.InfoTypeLimit.InfoType*
+  name: InfoType
+  href: api/Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.InfoTypeLimit.html#Google_Cloud_Dlp_V2Beta1_InspectConfig_Types_InfoTypeLimit_InfoType_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.InfoTypeLimit.InfoType
+  fullName: Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.InfoTypeLimit.InfoType
+  nameWithType: InspectConfig.Types.InfoTypeLimit.InfoType
+- uid: Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.InfoTypeLimit.MaxFindings
+  name: MaxFindings
+  href: api/Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.InfoTypeLimit.html#Google_Cloud_Dlp_V2Beta1_InspectConfig_Types_InfoTypeLimit_MaxFindings
+  commentId: P:Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.InfoTypeLimit.MaxFindings
+  fullName: Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.InfoTypeLimit.MaxFindings
+  nameWithType: InspectConfig.Types.InfoTypeLimit.MaxFindings
+- uid: Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.InfoTypeLimit.MaxFindings*
+  name: MaxFindings
+  href: api/Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.InfoTypeLimit.html#Google_Cloud_Dlp_V2Beta1_InspectConfig_Types_InfoTypeLimit_MaxFindings_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.InfoTypeLimit.MaxFindings
+  fullName: Google.Cloud.Dlp.V2Beta1.InspectConfig.Types.InfoTypeLimit.MaxFindings
+  nameWithType: InspectConfig.Types.InfoTypeLimit.MaxFindings
 - uid: Google.Cloud.Dlp.V2Beta1.InspectContentRequest
   name: InspectContentRequest
   href: api/Google.Cloud.Dlp.V2Beta1.InspectContentRequest.html
@@ -18219,6 +18369,36 @@ references:
   commentId: Overload:Google.Cloud.Dlp.V2Beta1.Location.RecordKey
   fullName: Google.Cloud.Dlp.V2Beta1.Location.RecordKey
   nameWithType: Location.RecordKey
+- uid: Google.Cloud.Dlp.V2Beta1.Location.TableLocation
+  name: TableLocation
+  href: api/Google.Cloud.Dlp.V2Beta1.Location.html#Google_Cloud_Dlp_V2Beta1_Location_TableLocation
+  commentId: P:Google.Cloud.Dlp.V2Beta1.Location.TableLocation
+  fullName: Google.Cloud.Dlp.V2Beta1.Location.TableLocation
+  nameWithType: Location.TableLocation
+- uid: Google.Cloud.Dlp.V2Beta1.Location.TableLocation*
+  name: TableLocation
+  href: api/Google.Cloud.Dlp.V2Beta1.Location.html#Google_Cloud_Dlp_V2Beta1_Location_TableLocation_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.Location.TableLocation
+  fullName: Google.Cloud.Dlp.V2Beta1.Location.TableLocation
+  nameWithType: Location.TableLocation
+- uid: Google.Cloud.Dlp.V2Beta1.OperationConfig
+  name: OperationConfig
+  href: api/Google.Cloud.Dlp.V2Beta1.OperationConfig.html
+  commentId: T:Google.Cloud.Dlp.V2Beta1.OperationConfig
+  fullName: Google.Cloud.Dlp.V2Beta1.OperationConfig
+  nameWithType: OperationConfig
+- uid: Google.Cloud.Dlp.V2Beta1.OperationConfig.MaxItemFindings
+  name: MaxItemFindings
+  href: api/Google.Cloud.Dlp.V2Beta1.OperationConfig.html#Google_Cloud_Dlp_V2Beta1_OperationConfig_MaxItemFindings
+  commentId: P:Google.Cloud.Dlp.V2Beta1.OperationConfig.MaxItemFindings
+  fullName: Google.Cloud.Dlp.V2Beta1.OperationConfig.MaxItemFindings
+  nameWithType: OperationConfig.MaxItemFindings
+- uid: Google.Cloud.Dlp.V2Beta1.OperationConfig.MaxItemFindings*
+  name: MaxItemFindings
+  href: api/Google.Cloud.Dlp.V2Beta1.OperationConfig.html#Google_Cloud_Dlp_V2Beta1_OperationConfig_MaxItemFindings_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.OperationConfig.MaxItemFindings
+  fullName: Google.Cloud.Dlp.V2Beta1.OperationConfig.MaxItemFindings
+  nameWithType: OperationConfig.MaxItemFindings
 - uid: Google.Cloud.Dlp.V2Beta1.OutputStorageConfig
   name: OutputStorageConfig
   href: api/Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.html
@@ -18237,6 +18417,18 @@ references:
   commentId: Overload:Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.StoragePath
   fullName: Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.StoragePath
   nameWithType: OutputStorageConfig.StoragePath
+- uid: Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.Table
+  name: Table
+  href: api/Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.html#Google_Cloud_Dlp_V2Beta1_OutputStorageConfig_Table
+  commentId: P:Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.Table
+  fullName: Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.Table
+  nameWithType: OutputStorageConfig.Table
+- uid: Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.Table*
+  name: Table
+  href: api/Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.html#Google_Cloud_Dlp_V2Beta1_OutputStorageConfig_Table_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.Table
+  fullName: Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.Table
+  nameWithType: OutputStorageConfig.Table
 - uid: Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.TypeCase
   name: TypeCase
   href: api/Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.html#Google_Cloud_Dlp_V2Beta1_OutputStorageConfig_TypeCase
@@ -18267,6 +18459,12 @@ references:
   commentId: F:Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.TypeOneofCase.StoragePath
   fullName: Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.TypeOneofCase.StoragePath
   nameWithType: OutputStorageConfig.TypeOneofCase.StoragePath
+- uid: Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.TypeOneofCase.Table
+  name: Table
+  href: api/Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.TypeOneofCase.html#Google_Cloud_Dlp_V2Beta1_OutputStorageConfig_TypeOneofCase_Table
+  commentId: F:Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.TypeOneofCase.Table
+  fullName: Google.Cloud.Dlp.V2Beta1.OutputStorageConfig.TypeOneofCase.Table
+  nameWithType: OutputStorageConfig.TypeOneofCase.Table
 - uid: Google.Cloud.Dlp.V2Beta1.PartitionId
   name: PartitionId
   href: api/Google.Cloud.Dlp.V2Beta1.PartitionId.html
@@ -18738,6 +18936,18 @@ references:
   commentId: T:Google.Cloud.Dlp.V2Beta1.StorageConfig
   fullName: Google.Cloud.Dlp.V2Beta1.StorageConfig
   nameWithType: StorageConfig
+- uid: Google.Cloud.Dlp.V2Beta1.StorageConfig.BigQueryOptions
+  name: BigQueryOptions
+  href: api/Google.Cloud.Dlp.V2Beta1.StorageConfig.html#Google_Cloud_Dlp_V2Beta1_StorageConfig_BigQueryOptions
+  commentId: P:Google.Cloud.Dlp.V2Beta1.StorageConfig.BigQueryOptions
+  fullName: Google.Cloud.Dlp.V2Beta1.StorageConfig.BigQueryOptions
+  nameWithType: StorageConfig.BigQueryOptions
+- uid: Google.Cloud.Dlp.V2Beta1.StorageConfig.BigQueryOptions*
+  name: BigQueryOptions
+  href: api/Google.Cloud.Dlp.V2Beta1.StorageConfig.html#Google_Cloud_Dlp_V2Beta1_StorageConfig_BigQueryOptions_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.StorageConfig.BigQueryOptions
+  fullName: Google.Cloud.Dlp.V2Beta1.StorageConfig.BigQueryOptions
+  nameWithType: StorageConfig.BigQueryOptions
 - uid: Google.Cloud.Dlp.V2Beta1.StorageConfig.CloudStorageOptions
   name: CloudStorageOptions
   href: api/Google.Cloud.Dlp.V2Beta1.StorageConfig.html#Google_Cloud_Dlp_V2Beta1_StorageConfig_CloudStorageOptions
@@ -18780,6 +18990,12 @@ references:
   commentId: T:Google.Cloud.Dlp.V2Beta1.StorageConfig.TypeOneofCase
   fullName: Google.Cloud.Dlp.V2Beta1.StorageConfig.TypeOneofCase
   nameWithType: StorageConfig.TypeOneofCase
+- uid: Google.Cloud.Dlp.V2Beta1.StorageConfig.TypeOneofCase.BigQueryOptions
+  name: BigQueryOptions
+  href: api/Google.Cloud.Dlp.V2Beta1.StorageConfig.TypeOneofCase.html#Google_Cloud_Dlp_V2Beta1_StorageConfig_TypeOneofCase_BigQueryOptions
+  commentId: F:Google.Cloud.Dlp.V2Beta1.StorageConfig.TypeOneofCase.BigQueryOptions
+  fullName: Google.Cloud.Dlp.V2Beta1.StorageConfig.TypeOneofCase.BigQueryOptions
+  nameWithType: StorageConfig.TypeOneofCase.BigQueryOptions
 - uid: Google.Cloud.Dlp.V2Beta1.StorageConfig.TypeOneofCase.CloudStorageOptions
   name: CloudStorageOptions
   href: api/Google.Cloud.Dlp.V2Beta1.StorageConfig.TypeOneofCase.html#Google_Cloud_Dlp_V2Beta1_StorageConfig_TypeOneofCase_CloudStorageOptions
@@ -18798,6 +19014,234 @@ references:
   commentId: F:Google.Cloud.Dlp.V2Beta1.StorageConfig.TypeOneofCase.None
   fullName: Google.Cloud.Dlp.V2Beta1.StorageConfig.TypeOneofCase.None
   nameWithType: StorageConfig.TypeOneofCase.None
+- uid: Google.Cloud.Dlp.V2Beta1.Table
+  name: Table
+  href: api/Google.Cloud.Dlp.V2Beta1.Table.html
+  commentId: T:Google.Cloud.Dlp.V2Beta1.Table
+  fullName: Google.Cloud.Dlp.V2Beta1.Table
+  nameWithType: Table
+- uid: Google.Cloud.Dlp.V2Beta1.Table.Headers
+  name: Headers
+  href: api/Google.Cloud.Dlp.V2Beta1.Table.html#Google_Cloud_Dlp_V2Beta1_Table_Headers
+  commentId: P:Google.Cloud.Dlp.V2Beta1.Table.Headers
+  fullName: Google.Cloud.Dlp.V2Beta1.Table.Headers
+  nameWithType: Table.Headers
+- uid: Google.Cloud.Dlp.V2Beta1.Table.Headers*
+  name: Headers
+  href: api/Google.Cloud.Dlp.V2Beta1.Table.html#Google_Cloud_Dlp_V2Beta1_Table_Headers_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.Table.Headers
+  fullName: Google.Cloud.Dlp.V2Beta1.Table.Headers
+  nameWithType: Table.Headers
+- uid: Google.Cloud.Dlp.V2Beta1.Table.Rows
+  name: Rows
+  href: api/Google.Cloud.Dlp.V2Beta1.Table.html#Google_Cloud_Dlp_V2Beta1_Table_Rows
+  commentId: P:Google.Cloud.Dlp.V2Beta1.Table.Rows
+  fullName: Google.Cloud.Dlp.V2Beta1.Table.Rows
+  nameWithType: Table.Rows
+- uid: Google.Cloud.Dlp.V2Beta1.Table.Rows*
+  name: Rows
+  href: api/Google.Cloud.Dlp.V2Beta1.Table.html#Google_Cloud_Dlp_V2Beta1_Table_Rows_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.Table.Rows
+  fullName: Google.Cloud.Dlp.V2Beta1.Table.Rows
+  nameWithType: Table.Rows
+- uid: Google.Cloud.Dlp.V2Beta1.Table.Types
+  name: Table.Types
+  href: api/Google.Cloud.Dlp.V2Beta1.Table.Types.html
+  commentId: T:Google.Cloud.Dlp.V2Beta1.Table.Types
+  fullName: Google.Cloud.Dlp.V2Beta1.Table.Types
+  nameWithType: Table.Types
+- uid: Google.Cloud.Dlp.V2Beta1.Table.Types.Row
+  name: Table.Types.Row
+  href: api/Google.Cloud.Dlp.V2Beta1.Table.Types.Row.html
+  commentId: T:Google.Cloud.Dlp.V2Beta1.Table.Types.Row
+  fullName: Google.Cloud.Dlp.V2Beta1.Table.Types.Row
+  nameWithType: Table.Types.Row
+- uid: Google.Cloud.Dlp.V2Beta1.Table.Types.Row.Values
+  name: Values
+  href: api/Google.Cloud.Dlp.V2Beta1.Table.Types.Row.html#Google_Cloud_Dlp_V2Beta1_Table_Types_Row_Values
+  commentId: P:Google.Cloud.Dlp.V2Beta1.Table.Types.Row.Values
+  fullName: Google.Cloud.Dlp.V2Beta1.Table.Types.Row.Values
+  nameWithType: Table.Types.Row.Values
+- uid: Google.Cloud.Dlp.V2Beta1.Table.Types.Row.Values*
+  name: Values
+  href: api/Google.Cloud.Dlp.V2Beta1.Table.Types.Row.html#Google_Cloud_Dlp_V2Beta1_Table_Types_Row_Values_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.Table.Types.Row.Values
+  fullName: Google.Cloud.Dlp.V2Beta1.Table.Types.Row.Values
+  nameWithType: Table.Types.Row.Values
+- uid: Google.Cloud.Dlp.V2Beta1.TableLocation
+  name: TableLocation
+  href: api/Google.Cloud.Dlp.V2Beta1.TableLocation.html
+  commentId: T:Google.Cloud.Dlp.V2Beta1.TableLocation
+  fullName: Google.Cloud.Dlp.V2Beta1.TableLocation
+  nameWithType: TableLocation
+- uid: Google.Cloud.Dlp.V2Beta1.TableLocation.RowIndex
+  name: RowIndex
+  href: api/Google.Cloud.Dlp.V2Beta1.TableLocation.html#Google_Cloud_Dlp_V2Beta1_TableLocation_RowIndex
+  commentId: P:Google.Cloud.Dlp.V2Beta1.TableLocation.RowIndex
+  fullName: Google.Cloud.Dlp.V2Beta1.TableLocation.RowIndex
+  nameWithType: TableLocation.RowIndex
+- uid: Google.Cloud.Dlp.V2Beta1.TableLocation.RowIndex*
+  name: RowIndex
+  href: api/Google.Cloud.Dlp.V2Beta1.TableLocation.html#Google_Cloud_Dlp_V2Beta1_TableLocation_RowIndex_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.TableLocation.RowIndex
+  fullName: Google.Cloud.Dlp.V2Beta1.TableLocation.RowIndex
+  nameWithType: TableLocation.RowIndex
+- uid: Google.Cloud.Dlp.V2Beta1.Value
+  name: Value
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.html
+  commentId: T:Google.Cloud.Dlp.V2Beta1.Value
+  fullName: Google.Cloud.Dlp.V2Beta1.Value
+  nameWithType: Value
+- uid: Google.Cloud.Dlp.V2Beta1.Value.BooleanValue
+  name: BooleanValue
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.html#Google_Cloud_Dlp_V2Beta1_Value_BooleanValue
+  commentId: P:Google.Cloud.Dlp.V2Beta1.Value.BooleanValue
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.BooleanValue
+  nameWithType: Value.BooleanValue
+- uid: Google.Cloud.Dlp.V2Beta1.Value.BooleanValue*
+  name: BooleanValue
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.html#Google_Cloud_Dlp_V2Beta1_Value_BooleanValue_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.Value.BooleanValue
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.BooleanValue
+  nameWithType: Value.BooleanValue
+- uid: Google.Cloud.Dlp.V2Beta1.Value.DateValue
+  name: DateValue
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.html#Google_Cloud_Dlp_V2Beta1_Value_DateValue
+  commentId: P:Google.Cloud.Dlp.V2Beta1.Value.DateValue
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.DateValue
+  nameWithType: Value.DateValue
+- uid: Google.Cloud.Dlp.V2Beta1.Value.DateValue*
+  name: DateValue
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.html#Google_Cloud_Dlp_V2Beta1_Value_DateValue_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.Value.DateValue
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.DateValue
+  nameWithType: Value.DateValue
+- uid: Google.Cloud.Dlp.V2Beta1.Value.FloatValue
+  name: FloatValue
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.html#Google_Cloud_Dlp_V2Beta1_Value_FloatValue
+  commentId: P:Google.Cloud.Dlp.V2Beta1.Value.FloatValue
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.FloatValue
+  nameWithType: Value.FloatValue
+- uid: Google.Cloud.Dlp.V2Beta1.Value.FloatValue*
+  name: FloatValue
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.html#Google_Cloud_Dlp_V2Beta1_Value_FloatValue_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.Value.FloatValue
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.FloatValue
+  nameWithType: Value.FloatValue
+- uid: Google.Cloud.Dlp.V2Beta1.Value.IntegerValue
+  name: IntegerValue
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.html#Google_Cloud_Dlp_V2Beta1_Value_IntegerValue
+  commentId: P:Google.Cloud.Dlp.V2Beta1.Value.IntegerValue
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.IntegerValue
+  nameWithType: Value.IntegerValue
+- uid: Google.Cloud.Dlp.V2Beta1.Value.IntegerValue*
+  name: IntegerValue
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.html#Google_Cloud_Dlp_V2Beta1_Value_IntegerValue_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.Value.IntegerValue
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.IntegerValue
+  nameWithType: Value.IntegerValue
+- uid: Google.Cloud.Dlp.V2Beta1.Value.StringValue
+  name: StringValue
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.html#Google_Cloud_Dlp_V2Beta1_Value_StringValue
+  commentId: P:Google.Cloud.Dlp.V2Beta1.Value.StringValue
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.StringValue
+  nameWithType: Value.StringValue
+- uid: Google.Cloud.Dlp.V2Beta1.Value.StringValue*
+  name: StringValue
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.html#Google_Cloud_Dlp_V2Beta1_Value_StringValue_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.Value.StringValue
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.StringValue
+  nameWithType: Value.StringValue
+- uid: Google.Cloud.Dlp.V2Beta1.Value.TimestampValue
+  name: TimestampValue
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.html#Google_Cloud_Dlp_V2Beta1_Value_TimestampValue
+  commentId: P:Google.Cloud.Dlp.V2Beta1.Value.TimestampValue
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.TimestampValue
+  nameWithType: Value.TimestampValue
+- uid: Google.Cloud.Dlp.V2Beta1.Value.TimestampValue*
+  name: TimestampValue
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.html#Google_Cloud_Dlp_V2Beta1_Value_TimestampValue_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.Value.TimestampValue
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.TimestampValue
+  nameWithType: Value.TimestampValue
+- uid: Google.Cloud.Dlp.V2Beta1.Value.TimeValue
+  name: TimeValue
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.html#Google_Cloud_Dlp_V2Beta1_Value_TimeValue
+  commentId: P:Google.Cloud.Dlp.V2Beta1.Value.TimeValue
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.TimeValue
+  nameWithType: Value.TimeValue
+- uid: Google.Cloud.Dlp.V2Beta1.Value.TimeValue*
+  name: TimeValue
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.html#Google_Cloud_Dlp_V2Beta1_Value_TimeValue_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.Value.TimeValue
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.TimeValue
+  nameWithType: Value.TimeValue
+- uid: Google.Cloud.Dlp.V2Beta1.Value.TypeCase
+  name: TypeCase
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.html#Google_Cloud_Dlp_V2Beta1_Value_TypeCase
+  commentId: P:Google.Cloud.Dlp.V2Beta1.Value.TypeCase
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.TypeCase
+  nameWithType: Value.TypeCase
+- uid: Google.Cloud.Dlp.V2Beta1.Value.TypeCase*
+  name: TypeCase
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.html#Google_Cloud_Dlp_V2Beta1_Value_TypeCase_
+  commentId: Overload:Google.Cloud.Dlp.V2Beta1.Value.TypeCase
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.TypeCase
+  nameWithType: Value.TypeCase
+- uid: Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase
+  name: Value.TypeOneofCase
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.html
+  commentId: T:Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase
+  nameWithType: Value.TypeOneofCase
+- uid: Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.BooleanValue
+  name: BooleanValue
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.html#Google_Cloud_Dlp_V2Beta1_Value_TypeOneofCase_BooleanValue
+  commentId: F:Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.BooleanValue
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.BooleanValue
+  nameWithType: Value.TypeOneofCase.BooleanValue
+- uid: Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.DateValue
+  name: DateValue
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.html#Google_Cloud_Dlp_V2Beta1_Value_TypeOneofCase_DateValue
+  commentId: F:Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.DateValue
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.DateValue
+  nameWithType: Value.TypeOneofCase.DateValue
+- uid: Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.FloatValue
+  name: FloatValue
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.html#Google_Cloud_Dlp_V2Beta1_Value_TypeOneofCase_FloatValue
+  commentId: F:Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.FloatValue
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.FloatValue
+  nameWithType: Value.TypeOneofCase.FloatValue
+- uid: Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.IntegerValue
+  name: IntegerValue
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.html#Google_Cloud_Dlp_V2Beta1_Value_TypeOneofCase_IntegerValue
+  commentId: F:Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.IntegerValue
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.IntegerValue
+  nameWithType: Value.TypeOneofCase.IntegerValue
+- uid: Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.None
+  name: None
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.html#Google_Cloud_Dlp_V2Beta1_Value_TypeOneofCase_None
+  commentId: F:Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.None
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.None
+  nameWithType: Value.TypeOneofCase.None
+- uid: Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.StringValue
+  name: StringValue
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.html#Google_Cloud_Dlp_V2Beta1_Value_TypeOneofCase_StringValue
+  commentId: F:Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.StringValue
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.StringValue
+  nameWithType: Value.TypeOneofCase.StringValue
+- uid: Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.TimestampValue
+  name: TimestampValue
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.html#Google_Cloud_Dlp_V2Beta1_Value_TypeOneofCase_TimestampValue
+  commentId: F:Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.TimestampValue
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.TimestampValue
+  nameWithType: Value.TypeOneofCase.TimestampValue
+- uid: Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.TimeValue
+  name: TimeValue
+  href: api/Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.html#Google_Cloud_Dlp_V2Beta1_Value_TypeOneofCase_TimeValue
+  commentId: F:Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.TimeValue
+  fullName: Google.Cloud.Dlp.V2Beta1.Value.TypeOneofCase.TimeValue
+  nameWithType: Value.TypeOneofCase.TimeValue
 - uid: Google.LongRunning
   name: Google.LongRunning
   href: api/Google.LongRunning.html

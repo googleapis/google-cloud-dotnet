@@ -10052,6 +10052,54 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.CancelJobAsync
   fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CancelJobAsync
   nameWithType: BigQueryClient.CancelJobAsync
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabels(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  name: ClearDatasetLabels(DatasetReference, ModifyLabelsOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ClearDatasetLabels_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabels(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabels(Google.Apis.Bigquery.v2.Data.DatasetReference, Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  nameWithType: BigQueryClient.ClearDatasetLabels(DatasetReference, ModifyLabelsOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabels(System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  name: ClearDatasetLabels(String, ModifyLabelsOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ClearDatasetLabels_System_String_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabels(System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabels(System.String, Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  nameWithType: BigQueryClient.ClearDatasetLabels(String, ModifyLabelsOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabels(System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  name: ClearDatasetLabels(String, String, ModifyLabelsOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ClearDatasetLabels_System_String_System_String_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabels(System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabels(System.String, System.String, Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  nameWithType: BigQueryClient.ClearDatasetLabels(String, String, ModifyLabelsOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabels*
+  name: ClearDatasetLabels
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ClearDatasetLabels_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabels
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabels
+  nameWithType: BigQueryClient.ClearDatasetLabels
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabelsAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  name: ClearDatasetLabelsAsync(DatasetReference, ModifyLabelsOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ClearDatasetLabelsAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabelsAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabelsAsync(Google.Apis.Bigquery.v2.Data.DatasetReference, Google.Cloud.BigQuery.V2.ModifyLabelsOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.ClearDatasetLabelsAsync(DatasetReference, ModifyLabelsOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabelsAsync(System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  name: ClearDatasetLabelsAsync(String, ModifyLabelsOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ClearDatasetLabelsAsync_System_String_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabelsAsync(System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabelsAsync(System.String, Google.Cloud.BigQuery.V2.ModifyLabelsOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.ClearDatasetLabelsAsync(String, ModifyLabelsOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabelsAsync(System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  name: ClearDatasetLabelsAsync(String, String, ModifyLabelsOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ClearDatasetLabelsAsync_System_String_System_String_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabelsAsync(System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabelsAsync(System.String, System.String, Google.Cloud.BigQuery.V2.ModifyLabelsOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.ClearDatasetLabelsAsync(String, String, ModifyLabelsOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabelsAsync*
+  name: ClearDatasetLabelsAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ClearDatasetLabelsAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabelsAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ClearDatasetLabelsAsync
+  nameWithType: BigQueryClient.ClearDatasetLabelsAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryClient.Create(System.String,Google.Apis.Auth.OAuth2.GoogleCredential)
   name: Create(String, GoogleCredential)
   href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_Create_System_String_Google_Apis_Auth_OAuth2_GoogleCredential_
@@ -11276,6 +11324,72 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.ListTablesAsync
   fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ListTablesAsync
   nameWithType: BigQueryClient.ListTablesAsync
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabels(Google.Apis.Bigquery.v2.Data.DatasetReference,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  name: ModifyDatasetLabels(DatasetReference, IDictionary<String, String>, ModifyLabelsOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ModifyDatasetLabels_Google_Apis_Bigquery_v2_Data_DatasetReference_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_BigQuery_V2_ModifyLabelsOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabels(Google.Apis.Bigquery.v2.Data.DatasetReference,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  name.vb: ModifyDatasetLabels(DatasetReference, IDictionary(Of String, String), ModifyLabelsOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabels(Google.Apis.Bigquery.v2.Data.DatasetReference, System.Collections.Generic.IDictionary<System.String, System.String>, Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabels(Google.Apis.Bigquery.v2.Data.DatasetReference, System.Collections.Generic.IDictionary(Of System.String, System.String), Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  nameWithType: BigQueryClient.ModifyDatasetLabels(DatasetReference, IDictionary<String, String>, ModifyLabelsOptions)
+  nameWithType.vb: BigQueryClient.ModifyDatasetLabels(DatasetReference, IDictionary(Of String, String), ModifyLabelsOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabels(System.String,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  name: ModifyDatasetLabels(String, IDictionary<String, String>, ModifyLabelsOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ModifyDatasetLabels_System_String_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_BigQuery_V2_ModifyLabelsOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabels(System.String,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  name.vb: ModifyDatasetLabels(String, IDictionary(Of String, String), ModifyLabelsOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabels(System.String, System.Collections.Generic.IDictionary<System.String, System.String>, Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabels(System.String, System.Collections.Generic.IDictionary(Of System.String, System.String), Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  nameWithType: BigQueryClient.ModifyDatasetLabels(String, IDictionary<String, String>, ModifyLabelsOptions)
+  nameWithType.vb: BigQueryClient.ModifyDatasetLabels(String, IDictionary(Of String, String), ModifyLabelsOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabels(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  name: ModifyDatasetLabels(String, String, IDictionary<String, String>, ModifyLabelsOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ModifyDatasetLabels_System_String_System_String_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_BigQuery_V2_ModifyLabelsOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabels(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  name.vb: ModifyDatasetLabels(String, String, IDictionary(Of String, String), ModifyLabelsOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabels(System.String, System.String, System.Collections.Generic.IDictionary<System.String, System.String>, Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabels(System.String, System.String, System.Collections.Generic.IDictionary(Of System.String, System.String), Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  nameWithType: BigQueryClient.ModifyDatasetLabels(String, String, IDictionary<String, String>, ModifyLabelsOptions)
+  nameWithType.vb: BigQueryClient.ModifyDatasetLabels(String, String, IDictionary(Of String, String), ModifyLabelsOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabels*
+  name: ModifyDatasetLabels
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ModifyDatasetLabels_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabels
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabels
+  nameWithType: BigQueryClient.ModifyDatasetLabels
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabelsAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  name: ModifyDatasetLabelsAsync(DatasetReference, IDictionary<String, String>, ModifyLabelsOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ModifyDatasetLabelsAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_BigQuery_V2_ModifyLabelsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabelsAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  name.vb: ModifyDatasetLabelsAsync(DatasetReference, IDictionary(Of String, String), ModifyLabelsOptions, CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabelsAsync(Google.Apis.Bigquery.v2.Data.DatasetReference, System.Collections.Generic.IDictionary<System.String, System.String>, Google.Cloud.BigQuery.V2.ModifyLabelsOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabelsAsync(Google.Apis.Bigquery.v2.Data.DatasetReference, System.Collections.Generic.IDictionary(Of System.String, System.String), Google.Cloud.BigQuery.V2.ModifyLabelsOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.ModifyDatasetLabelsAsync(DatasetReference, IDictionary<String, String>, ModifyLabelsOptions, CancellationToken)
+  nameWithType.vb: BigQueryClient.ModifyDatasetLabelsAsync(DatasetReference, IDictionary(Of String, String), ModifyLabelsOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabelsAsync(System.String,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  name: ModifyDatasetLabelsAsync(String, IDictionary<String, String>, ModifyLabelsOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ModifyDatasetLabelsAsync_System_String_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_BigQuery_V2_ModifyLabelsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabelsAsync(System.String,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  name.vb: ModifyDatasetLabelsAsync(String, IDictionary(Of String, String), ModifyLabelsOptions, CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabelsAsync(System.String, System.Collections.Generic.IDictionary<System.String, System.String>, Google.Cloud.BigQuery.V2.ModifyLabelsOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabelsAsync(System.String, System.Collections.Generic.IDictionary(Of System.String, System.String), Google.Cloud.BigQuery.V2.ModifyLabelsOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.ModifyDatasetLabelsAsync(String, IDictionary<String, String>, ModifyLabelsOptions, CancellationToken)
+  nameWithType.vb: BigQueryClient.ModifyDatasetLabelsAsync(String, IDictionary(Of String, String), ModifyLabelsOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabelsAsync(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  name: ModifyDatasetLabelsAsync(String, String, IDictionary<String, String>, ModifyLabelsOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ModifyDatasetLabelsAsync_System_String_System_String_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_BigQuery_V2_ModifyLabelsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabelsAsync(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  name.vb: ModifyDatasetLabelsAsync(String, String, IDictionary(Of String, String), ModifyLabelsOptions, CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabelsAsync(System.String, System.String, System.Collections.Generic.IDictionary<System.String, System.String>, Google.Cloud.BigQuery.V2.ModifyLabelsOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabelsAsync(System.String, System.String, System.Collections.Generic.IDictionary(Of System.String, System.String), Google.Cloud.BigQuery.V2.ModifyLabelsOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.ModifyDatasetLabelsAsync(String, String, IDictionary<String, String>, ModifyLabelsOptions, CancellationToken)
+  nameWithType.vb: BigQueryClient.ModifyDatasetLabelsAsync(String, String, IDictionary(Of String, String), ModifyLabelsOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabelsAsync*
+  name: ModifyDatasetLabelsAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ModifyDatasetLabelsAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabelsAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ModifyDatasetLabelsAsync
+  nameWithType: BigQueryClient.ModifyDatasetLabelsAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryClient.PatchDataset(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.PatchDatasetOptions)
   name: PatchDataset(DatasetReference, Dataset, PatchDatasetOptions)
   href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PatchDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_PatchDatasetOptions_
@@ -11432,6 +11546,54 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.ProjectId
   fullName: Google.Cloud.BigQuery.V2.BigQueryClient.ProjectId
   nameWithType: BigQueryClient.ProjectId
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabel(Google.Apis.Bigquery.v2.Data.DatasetReference,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  name: RemoveDatasetLabel(DatasetReference, String, ModifyLabelsOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_RemoveDatasetLabel_Google_Apis_Bigquery_v2_Data_DatasetReference_System_String_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabel(Google.Apis.Bigquery.v2.Data.DatasetReference,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabel(Google.Apis.Bigquery.v2.Data.DatasetReference, System.String, Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  nameWithType: BigQueryClient.RemoveDatasetLabel(DatasetReference, String, ModifyLabelsOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabel(System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  name: RemoveDatasetLabel(String, String, ModifyLabelsOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_RemoveDatasetLabel_System_String_System_String_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabel(System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabel(System.String, System.String, Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  nameWithType: BigQueryClient.RemoveDatasetLabel(String, String, ModifyLabelsOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabel(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  name: RemoveDatasetLabel(String, String, String, ModifyLabelsOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_RemoveDatasetLabel_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabel(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabel(System.String, System.String, System.String, Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  nameWithType: BigQueryClient.RemoveDatasetLabel(String, String, String, ModifyLabelsOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabel*
+  name: RemoveDatasetLabel
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_RemoveDatasetLabel_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabel
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabel
+  nameWithType: BigQueryClient.RemoveDatasetLabel
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabelAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  name: RemoveDatasetLabelAsync(DatasetReference, String, ModifyLabelsOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_RemoveDatasetLabelAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_System_String_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabelAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabelAsync(Google.Apis.Bigquery.v2.Data.DatasetReference, System.String, Google.Cloud.BigQuery.V2.ModifyLabelsOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.RemoveDatasetLabelAsync(DatasetReference, String, ModifyLabelsOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabelAsync(System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  name: RemoveDatasetLabelAsync(String, String, ModifyLabelsOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_RemoveDatasetLabelAsync_System_String_System_String_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabelAsync(System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabelAsync(System.String, System.String, Google.Cloud.BigQuery.V2.ModifyLabelsOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.RemoveDatasetLabelAsync(String, String, ModifyLabelsOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabelAsync(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  name: RemoveDatasetLabelAsync(String, String, String, ModifyLabelsOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_RemoveDatasetLabelAsync_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabelAsync(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabelAsync(System.String, System.String, System.String, Google.Cloud.BigQuery.V2.ModifyLabelsOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.RemoveDatasetLabelAsync(String, String, String, ModifyLabelsOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabelAsync*
+  name: RemoveDatasetLabelAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_RemoveDatasetLabelAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabelAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.RemoveDatasetLabelAsync
+  nameWithType: BigQueryClient.RemoveDatasetLabelAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryClient.Service
   name: Service
   href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_Service
@@ -11444,6 +11606,54 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.Service
   fullName: Google.Cloud.BigQuery.V2.BigQueryClient.Service
   nameWithType: BigQueryClient.Service
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabel(Google.Apis.Bigquery.v2.Data.DatasetReference,System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  name: SetDatasetLabel(DatasetReference, String, String, ModifyLabelsOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_SetDatasetLabel_Google_Apis_Bigquery_v2_Data_DatasetReference_System_String_System_String_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabel(Google.Apis.Bigquery.v2.Data.DatasetReference,System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabel(Google.Apis.Bigquery.v2.Data.DatasetReference, System.String, System.String, Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  nameWithType: BigQueryClient.SetDatasetLabel(DatasetReference, String, String, ModifyLabelsOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabel(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  name: SetDatasetLabel(String, String, String, ModifyLabelsOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_SetDatasetLabel_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabel(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabel(System.String, System.String, System.String, Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  nameWithType: BigQueryClient.SetDatasetLabel(String, String, String, ModifyLabelsOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabel(System.String,System.String,System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  name: SetDatasetLabel(String, String, String, String, ModifyLabelsOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_SetDatasetLabel_System_String_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabel(System.String,System.String,System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabel(System.String, System.String, System.String, System.String, Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  nameWithType: BigQueryClient.SetDatasetLabel(String, String, String, String, ModifyLabelsOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabel*
+  name: SetDatasetLabel
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_SetDatasetLabel_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabel
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabel
+  nameWithType: BigQueryClient.SetDatasetLabel
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabelAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  name: SetDatasetLabelAsync(DatasetReference, String, String, ModifyLabelsOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_SetDatasetLabelAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_System_String_System_String_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabelAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabelAsync(Google.Apis.Bigquery.v2.Data.DatasetReference, System.String, System.String, Google.Cloud.BigQuery.V2.ModifyLabelsOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.SetDatasetLabelAsync(DatasetReference, String, String, ModifyLabelsOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabelAsync(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  name: SetDatasetLabelAsync(String, String, String, ModifyLabelsOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_SetDatasetLabelAsync_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabelAsync(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabelAsync(System.String, System.String, System.String, Google.Cloud.BigQuery.V2.ModifyLabelsOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.SetDatasetLabelAsync(String, String, String, ModifyLabelsOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabelAsync(System.String,System.String,System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  name: SetDatasetLabelAsync(String, String, String, String, ModifyLabelsOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_SetDatasetLabelAsync_System_String_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabelAsync(System.String,System.String,System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabelAsync(System.String, System.String, System.String, System.String, Google.Cloud.BigQuery.V2.ModifyLabelsOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.SetDatasetLabelAsync(String, String, String, String, ModifyLabelsOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabelAsync*
+  name: SetDatasetLabelAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_SetDatasetLabelAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabelAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.SetDatasetLabelAsync
+  nameWithType: BigQueryClient.SetDatasetLabelAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryClient.UpdateDataset(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions)
   name: UpdateDataset(DatasetReference, Dataset, UpdateDatasetOptions)
   href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UpdateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_UpdateDatasetOptions_
@@ -11798,6 +12008,30 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CancelJobAsync
   fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CancelJobAsync
   nameWithType: BigQueryClientImpl.CancelJobAsync
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ClearDatasetLabels(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  name: ClearDatasetLabels(DatasetReference, ModifyLabelsOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_ClearDatasetLabels_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.ClearDatasetLabels(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ClearDatasetLabels(Google.Apis.Bigquery.v2.Data.DatasetReference, Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  nameWithType: BigQueryClientImpl.ClearDatasetLabels(DatasetReference, ModifyLabelsOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ClearDatasetLabels*
+  name: ClearDatasetLabels
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_ClearDatasetLabels_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.ClearDatasetLabels
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ClearDatasetLabels
+  nameWithType: BigQueryClientImpl.ClearDatasetLabels
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ClearDatasetLabelsAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  name: ClearDatasetLabelsAsync(DatasetReference, ModifyLabelsOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_ClearDatasetLabelsAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.ClearDatasetLabelsAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ClearDatasetLabelsAsync(Google.Apis.Bigquery.v2.Data.DatasetReference, Google.Cloud.BigQuery.V2.ModifyLabelsOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClientImpl.ClearDatasetLabelsAsync(DatasetReference, ModifyLabelsOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ClearDatasetLabelsAsync*
+  name: ClearDatasetLabelsAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_ClearDatasetLabelsAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.ClearDatasetLabelsAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ClearDatasetLabelsAsync
+  nameWithType: BigQueryClientImpl.ClearDatasetLabelsAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateCopyJob(System.Collections.Generic.IEnumerable{Google.Apis.Bigquery.v2.Data.TableReference},Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.CreateCopyJobOptions)
   name: CreateCopyJob(IEnumerable<TableReference>, TableReference, CreateCopyJobOptions)
   href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateCopyJob_System_Collections_Generic_IEnumerable_Google_Apis_Bigquery_v2_Data_TableReference__Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_CreateCopyJobOptions_
@@ -12314,6 +12548,36 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.ListTablesAsync
   fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ListTablesAsync
   nameWithType: BigQueryClientImpl.ListTablesAsync
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ModifyDatasetLabels(Google.Apis.Bigquery.v2.Data.DatasetReference,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  name: ModifyDatasetLabels(DatasetReference, IDictionary<String, String>, ModifyLabelsOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_ModifyDatasetLabels_Google_Apis_Bigquery_v2_Data_DatasetReference_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_BigQuery_V2_ModifyLabelsOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.ModifyDatasetLabels(Google.Apis.Bigquery.v2.Data.DatasetReference,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  name.vb: ModifyDatasetLabels(DatasetReference, IDictionary(Of String, String), ModifyLabelsOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ModifyDatasetLabels(Google.Apis.Bigquery.v2.Data.DatasetReference, System.Collections.Generic.IDictionary<System.String, System.String>, Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ModifyDatasetLabels(Google.Apis.Bigquery.v2.Data.DatasetReference, System.Collections.Generic.IDictionary(Of System.String, System.String), Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  nameWithType: BigQueryClientImpl.ModifyDatasetLabels(DatasetReference, IDictionary<String, String>, ModifyLabelsOptions)
+  nameWithType.vb: BigQueryClientImpl.ModifyDatasetLabels(DatasetReference, IDictionary(Of String, String), ModifyLabelsOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ModifyDatasetLabels*
+  name: ModifyDatasetLabels
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_ModifyDatasetLabels_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.ModifyDatasetLabels
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ModifyDatasetLabels
+  nameWithType: BigQueryClientImpl.ModifyDatasetLabels
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ModifyDatasetLabelsAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  name: ModifyDatasetLabelsAsync(DatasetReference, IDictionary<String, String>, ModifyLabelsOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_ModifyDatasetLabelsAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_System_Collections_Generic_IDictionary_System_String_System_String__Google_Cloud_BigQuery_V2_ModifyLabelsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.ModifyDatasetLabelsAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,System.Collections.Generic.IDictionary{System.String,System.String},Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  name.vb: ModifyDatasetLabelsAsync(DatasetReference, IDictionary(Of String, String), ModifyLabelsOptions, CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ModifyDatasetLabelsAsync(Google.Apis.Bigquery.v2.Data.DatasetReference, System.Collections.Generic.IDictionary<System.String, System.String>, Google.Cloud.BigQuery.V2.ModifyLabelsOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ModifyDatasetLabelsAsync(Google.Apis.Bigquery.v2.Data.DatasetReference, System.Collections.Generic.IDictionary(Of System.String, System.String), Google.Cloud.BigQuery.V2.ModifyLabelsOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClientImpl.ModifyDatasetLabelsAsync(DatasetReference, IDictionary<String, String>, ModifyLabelsOptions, CancellationToken)
+  nameWithType.vb: BigQueryClientImpl.ModifyDatasetLabelsAsync(DatasetReference, IDictionary(Of String, String), ModifyLabelsOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ModifyDatasetLabelsAsync*
+  name: ModifyDatasetLabelsAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_ModifyDatasetLabelsAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.ModifyDatasetLabelsAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ModifyDatasetLabelsAsync
+  nameWithType: BigQueryClientImpl.ModifyDatasetLabelsAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.PatchDataset(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.PatchDatasetOptions)
   name: PatchDataset(DatasetReference, Dataset, PatchDatasetOptions)
   href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_PatchDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_PatchDatasetOptions_
@@ -12398,6 +12662,30 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.ProjectId
   fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ProjectId
   nameWithType: BigQueryClientImpl.ProjectId
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.RemoveDatasetLabel(Google.Apis.Bigquery.v2.Data.DatasetReference,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  name: RemoveDatasetLabel(DatasetReference, String, ModifyLabelsOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_RemoveDatasetLabel_Google_Apis_Bigquery_v2_Data_DatasetReference_System_String_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.RemoveDatasetLabel(Google.Apis.Bigquery.v2.Data.DatasetReference,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.RemoveDatasetLabel(Google.Apis.Bigquery.v2.Data.DatasetReference, System.String, Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  nameWithType: BigQueryClientImpl.RemoveDatasetLabel(DatasetReference, String, ModifyLabelsOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.RemoveDatasetLabel*
+  name: RemoveDatasetLabel
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_RemoveDatasetLabel_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.RemoveDatasetLabel
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.RemoveDatasetLabel
+  nameWithType: BigQueryClientImpl.RemoveDatasetLabel
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.RemoveDatasetLabelAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  name: RemoveDatasetLabelAsync(DatasetReference, String, ModifyLabelsOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_RemoveDatasetLabelAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_System_String_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.RemoveDatasetLabelAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.RemoveDatasetLabelAsync(Google.Apis.Bigquery.v2.Data.DatasetReference, System.String, Google.Cloud.BigQuery.V2.ModifyLabelsOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClientImpl.RemoveDatasetLabelAsync(DatasetReference, String, ModifyLabelsOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.RemoveDatasetLabelAsync*
+  name: RemoveDatasetLabelAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_RemoveDatasetLabelAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.RemoveDatasetLabelAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.RemoveDatasetLabelAsync
+  nameWithType: BigQueryClientImpl.RemoveDatasetLabelAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.Service
   name: Service
   href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_Service
@@ -12410,6 +12698,30 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.Service
   fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.Service
   nameWithType: BigQueryClientImpl.Service
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.SetDatasetLabel(Google.Apis.Bigquery.v2.Data.DatasetReference,System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  name: SetDatasetLabel(DatasetReference, String, String, ModifyLabelsOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_SetDatasetLabel_Google_Apis_Bigquery_v2_Data_DatasetReference_System_String_System_String_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.SetDatasetLabel(Google.Apis.Bigquery.v2.Data.DatasetReference,System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.SetDatasetLabel(Google.Apis.Bigquery.v2.Data.DatasetReference, System.String, System.String, Google.Cloud.BigQuery.V2.ModifyLabelsOptions)
+  nameWithType: BigQueryClientImpl.SetDatasetLabel(DatasetReference, String, String, ModifyLabelsOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.SetDatasetLabel*
+  name: SetDatasetLabel
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_SetDatasetLabel_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.SetDatasetLabel
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.SetDatasetLabel
+  nameWithType: BigQueryClientImpl.SetDatasetLabel
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.SetDatasetLabelAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  name: SetDatasetLabelAsync(DatasetReference, String, String, ModifyLabelsOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_SetDatasetLabelAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_System_String_System_String_Google_Cloud_BigQuery_V2_ModifyLabelsOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.SetDatasetLabelAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,System.String,System.String,Google.Cloud.BigQuery.V2.ModifyLabelsOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.SetDatasetLabelAsync(Google.Apis.Bigquery.v2.Data.DatasetReference, System.String, System.String, Google.Cloud.BigQuery.V2.ModifyLabelsOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClientImpl.SetDatasetLabelAsync(DatasetReference, String, String, ModifyLabelsOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.SetDatasetLabelAsync*
+  name: SetDatasetLabelAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_SetDatasetLabelAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.SetDatasetLabelAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.SetDatasetLabelAsync
+  nameWithType: BigQueryClientImpl.SetDatasetLabelAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.UpdateDataset(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Apis.Bigquery.v2.Data.Dataset,Google.Cloud.BigQuery.V2.UpdateDatasetOptions)
   name: UpdateDataset(DatasetReference, Dataset, UpdateDatasetOptions)
   href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_UpdateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Apis_Bigquery_v2_Data_Dataset_Google_Cloud_BigQuery_V2_UpdateDatasetOptions_
@@ -14783,6 +15095,18 @@ references:
   commentId: T:Google.Cloud.BigQuery.V2.GetDatasetOptions
   fullName: Google.Cloud.BigQuery.V2.GetDatasetOptions
   nameWithType: GetDatasetOptions
+- uid: Google.Cloud.BigQuery.V2.GetDatasetOptions.ETag
+  name: ETag
+  href: api/Google.Cloud.BigQuery.V2.GetDatasetOptions.html#Google_Cloud_BigQuery_V2_GetDatasetOptions_ETag
+  commentId: P:Google.Cloud.BigQuery.V2.GetDatasetOptions.ETag
+  fullName: Google.Cloud.BigQuery.V2.GetDatasetOptions.ETag
+  nameWithType: GetDatasetOptions.ETag
+- uid: Google.Cloud.BigQuery.V2.GetDatasetOptions.ETag*
+  name: ETag
+  href: api/Google.Cloud.BigQuery.V2.GetDatasetOptions.html#Google_Cloud_BigQuery_V2_GetDatasetOptions_ETag_
+  commentId: Overload:Google.Cloud.BigQuery.V2.GetDatasetOptions.ETag
+  fullName: Google.Cloud.BigQuery.V2.GetDatasetOptions.ETag
+  nameWithType: GetDatasetOptions.ETag
 - uid: Google.Cloud.BigQuery.V2.GetJobOptions
   name: GetJobOptions
   href: api/Google.Cloud.BigQuery.V2.GetJobOptions.html
@@ -15095,6 +15419,36 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.ListTablesOptions.PageSize
   fullName: Google.Cloud.BigQuery.V2.ListTablesOptions.PageSize
   nameWithType: ListTablesOptions.PageSize
+- uid: Google.Cloud.BigQuery.V2.ModifyLabelsOptions
+  name: ModifyLabelsOptions
+  href: api/Google.Cloud.BigQuery.V2.ModifyLabelsOptions.html
+  commentId: T:Google.Cloud.BigQuery.V2.ModifyLabelsOptions
+  fullName: Google.Cloud.BigQuery.V2.ModifyLabelsOptions
+  nameWithType: ModifyLabelsOptions
+- uid: Google.Cloud.BigQuery.V2.ModifyLabelsOptions.ETag
+  name: ETag
+  href: api/Google.Cloud.BigQuery.V2.ModifyLabelsOptions.html#Google_Cloud_BigQuery_V2_ModifyLabelsOptions_ETag
+  commentId: P:Google.Cloud.BigQuery.V2.ModifyLabelsOptions.ETag
+  fullName: Google.Cloud.BigQuery.V2.ModifyLabelsOptions.ETag
+  nameWithType: ModifyLabelsOptions.ETag
+- uid: Google.Cloud.BigQuery.V2.ModifyLabelsOptions.ETag*
+  name: ETag
+  href: api/Google.Cloud.BigQuery.V2.ModifyLabelsOptions.html#Google_Cloud_BigQuery_V2_ModifyLabelsOptions_ETag_
+  commentId: Overload:Google.Cloud.BigQuery.V2.ModifyLabelsOptions.ETag
+  fullName: Google.Cloud.BigQuery.V2.ModifyLabelsOptions.ETag
+  nameWithType: ModifyLabelsOptions.ETag
+- uid: Google.Cloud.BigQuery.V2.ModifyLabelsOptions.Retries
+  name: Retries
+  href: api/Google.Cloud.BigQuery.V2.ModifyLabelsOptions.html#Google_Cloud_BigQuery_V2_ModifyLabelsOptions_Retries
+  commentId: P:Google.Cloud.BigQuery.V2.ModifyLabelsOptions.Retries
+  fullName: Google.Cloud.BigQuery.V2.ModifyLabelsOptions.Retries
+  nameWithType: ModifyLabelsOptions.Retries
+- uid: Google.Cloud.BigQuery.V2.ModifyLabelsOptions.Retries*
+  name: Retries
+  href: api/Google.Cloud.BigQuery.V2.ModifyLabelsOptions.html#Google_Cloud_BigQuery_V2_ModifyLabelsOptions_Retries_
+  commentId: Overload:Google.Cloud.BigQuery.V2.ModifyLabelsOptions.Retries
+  fullName: Google.Cloud.BigQuery.V2.ModifyLabelsOptions.Retries
+  nameWithType: ModifyLabelsOptions.Retries
 - uid: Google.Cloud.BigQuery.V2.PatchDatasetOptions
   name: PatchDatasetOptions
   href: api/Google.Cloud.BigQuery.V2.PatchDatasetOptions.html

@@ -128,6 +128,30 @@ repository.</p>
       </tr>
     </tbody>
   </table>
+  <a id="Google_Cloud_Dlp_V2Beta1_CreateInspectOperationRequest_OperationConfig_" data-uid="Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest.OperationConfig*"></a>
+  <h4 id="Google_Cloud_Dlp_V2Beta1_CreateInspectOperationRequest_OperationConfig" data-uid="Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest.OperationConfig">OperationConfig</h4>
+  <div class="markdown level1 summary"><p>Additional configuration settings for long running operations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OperationConfig OperationConfig { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Google.Cloud.Dlp.V2Beta1.OperationConfig.html">OperationConfig</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Google_Cloud_Dlp_V2Beta1_CreateInspectOperationRequest_OutputConfig_" data-uid="Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest.OutputConfig*"></a>
   <h4 id="Google_Cloud_Dlp_V2Beta1_CreateInspectOperationRequest_OutputConfig" data-uid="Google.Cloud.Dlp.V2Beta1.CreateInspectOperationRequest.OutputConfig">OutputConfig</h4>
   <div class="markdown level1 summary"><p>Optional location to store findings. The bucket must already exist and
@@ -139,11 +163,13 @@ the pattern &quot;[operation_id]_[count].csv&quot;, for example
 identifier for the Operation, and the <code>count</code> is a counter used for
 tracking the number of files written. &lt;p&gt;The CSV file(s) contain the
 following columns regardless of storage type scanned: &lt;li&gt;id &lt;li&gt;info_type
-&lt;li&gt;likelihood &lt;li&gt;byte size of finding &lt;li&gt;quote &lt;li&gt;time_stamp&lt;br/&gt;
+&lt;li&gt;likelihood &lt;li&gt;byte size of finding &lt;li&gt;quote &lt;li&gt;timestamp&lt;br/&gt;
 &lt;p&gt;For Cloud Storage the next columns are: &lt;li&gt;file_path
 &lt;li&gt;start_offset&lt;br/&gt;
 &lt;p&gt;For Cloud Datastore the next columns are: &lt;li&gt;project_id
-&lt;li&gt;namespace_id &lt;li&gt;path &lt;li&gt;column_name &lt;li&gt;offset</p>
+&lt;li&gt;namespace_id &lt;li&gt;path &lt;li&gt;column_name &lt;li&gt;offset&lt;br/&gt;
+&lt;p&gt;For BigQuery the next columns are: &lt;li&gt;row_number &lt;li&gt;project_id
+&lt;li&gt;dataset_id &lt;li&gt;table_id</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
