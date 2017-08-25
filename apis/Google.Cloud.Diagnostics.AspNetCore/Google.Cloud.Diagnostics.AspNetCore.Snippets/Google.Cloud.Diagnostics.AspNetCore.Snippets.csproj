@@ -12,13 +12,13 @@
     <NoWarn>1701;1702;1705;4014</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Google.Api.Gax.Testing" Version="2.1.0-beta02" />
+    <PackageReference Include="Google.Api.Gax.Testing" Version="2.0.0" />
     <ProjectReference Include="..\Google.Cloud.Diagnostics.AspNetCore\Google.Cloud.Diagnostics.AspNetCore.csproj" />
     <ProjectReference Include="..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.IntegrationTests\Google.Cloud.Diagnostics.Common.IntegrationTests.csproj" />
     <ProjectReference Include="..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.Tests\Google.Cloud.Diagnostics.Common.Tests.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="1.1.2" />
-    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="1.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="1.1.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
     <PackageReference Include="Moq" Version="4.7.99" />
     <PackageReference Include="xunit" Version="2.3.0-beta1-build3642" />
