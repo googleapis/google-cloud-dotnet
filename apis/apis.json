@@ -130,18 +130,18 @@
     "tags": [ "Error", "Reporting", "Stackdriver", "ExceptionLogger", "Trace", "Diagnostics" ],
     "dependencies": {
       "Google.Cloud.Diagnostics.Common": "project",
-      "Microsoft.AspNetCore.Diagnostics.Abstractions": "1.0.0",
-      "Microsoft.AspNetCore.Http": "1.1.0",
-      "Microsoft.AspNetCore.Http.Abstractions": "1.1.0",
-      "Microsoft.AspNetCore.Http.Extensions": "1.1.0",
-      "Microsoft.Extensions.Logging": "1.0.0",
-      "Microsoft.Extensions.Logging.Debug": "1.0.0",
+      "Microsoft.AspNetCore.Diagnostics.Abstractions": "1.1.2",
+      "Microsoft.AspNetCore.Http": "1.1.2",
+      "Microsoft.AspNetCore.Http.Abstractions": "1.1.2",
+      "Microsoft.AspNetCore.Http.Extensions": "1.1.2",
+      "Microsoft.Extensions.Logging": "1.1.2",
+      "Microsoft.Extensions.Logging.Debug": "1.1.2",
       "Grpc.Core": "1.4.0"
     },
     "testDependencies": {
       "Microsoft.AspNetCore.Mvc": "1.1.2",
       "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.1.2",
-      "Microsoft.AspNetCore.TestHost": "1.1.0",
+      "Microsoft.AspNetCore.TestHost": "1.1.2",
       "Google.Cloud.Diagnostics.Common.Tests": "project",
       "Google.Cloud.Diagnostics.Common.IntegrationTests": "project",
       "Google.Api.Gax.Testing": "2.0.0"
