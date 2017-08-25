@@ -100,7 +100,7 @@
 
   {
     "id": "Google.Cloud.Diagnostics.AspNet",
-    "version": "1.0.0-beta16",
+    "version": "1.0.0",
     "type": "other",
     "targetFrameworks": "net45",
     "testTargetFrameworks": "net452",
@@ -111,7 +111,7 @@
       "Microsoft.AspNet.WebApi.Core": "5.2.3",
       "Microsoft.AspNet.WebPages": "3.2.3",
       "Microsoft.AspNet.Mvc": "5.2.3",
-      "Grpc.Core": "default"
+      "Grpc.Core": "1.4.0"
     },
     "testDependencies": {
       "Google.Cloud.Diagnostics.Common.Tests": "project",
@@ -122,7 +122,7 @@
 
   {
     "id": "Google.Cloud.Diagnostics.AspNetCore",
-    "version": "1.0.0-beta16",
+    "version": "1.0.0",
     "type": "other",
     "targetFrameworks": "netstandard1.5",
     "testTargetFrameworks": "netcoreapp1.0",
@@ -136,7 +136,7 @@
       "Microsoft.AspNetCore.Http.Extensions": "1.1.0",
       "Microsoft.Extensions.Logging": "1.0.0",
       "Microsoft.Extensions.Logging.Debug": "1.0.0",
-      "Grpc.Core": "default"
+      "Grpc.Core": "1.4.0"
     },
     "testDependencies": {
       "Microsoft.AspNetCore.Mvc": "1.1.2",
@@ -144,13 +144,13 @@
       "Microsoft.AspNetCore.TestHost": "1.1.0",
       "Google.Cloud.Diagnostics.Common.Tests": "project",
       "Google.Cloud.Diagnostics.Common.IntegrationTests": "project",
-      "Google.Api.Gax.Testing": "default"
+      "Google.Api.Gax.Testing": "2.0.0"
     }
   },
 
   {
     "id": "Google.Cloud.Diagnostics.Common",
-    "version": "1.0.0-beta09",
+    "version": "1.0.0",
     "type": "other",
     "targetFrameworks": "netstandard1.5;net45",
     "testTargetFrameworks": "netcoreapp1.0;net452",
@@ -159,7 +159,7 @@
     "dependencies": {
       "Google.Cloud.Logging.V2": "2.0.0",
       "Google.Cloud.Trace.V1": "1.0.0",
-      "Grpc.Core": "default"
+      "Grpc.Core": "1.4.0"
     },
     "testDependencies": {
       "Google.Cloud.ErrorReporting.V1Beta1": "project",
