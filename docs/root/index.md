@@ -17,6 +17,8 @@ supported here.
 GA:
 
 - [Google.Cloud.Datastore.V1](Google.Cloud.Datastore.V1/index.html)
+- [Google.Cloud.Diagnostics.AspNet](Google.Cloud.Diagnostics.AspNet/index.html)
+- [Google.Cloud.Diagnostics.AspNetCore](Google.Cloud.Diagnostics.AspNetCore/index.html)
 - [Google.Cloud.Logging.V2](Google.Cloud.Logging.V2/index.html)
   - Additionally, a [separate Log4Net integration package is available](Google.Cloud.Logging.Log4Net/index.html)
 - [Google.Cloud.Storage.V1](Google.Cloud.Storage.V1/index.html)
@@ -33,8 +35,6 @@ Late beta:
 
 Beta:
 
-- [Google.Cloud.Diagnostics.AspNet](Google.Cloud.Diagnostics.AspNet/index.html)
-- [Google.Cloud.Diagnostics.AspNetCore](Google.Cloud.Diagnostics.AspNetCore/index.html)
 - [Google.Cloud.ErrorReporting.V1Beta1](Google.Cloud.ErrorReporting.V1Beta1/index.html)
 - [Google.Cloud.Monitoring.V3](Google.Cloud.Monitoring.V3/index.html)
 - [Google.Cloud.PubSub.V1](Google.Cloud.PubSub.V1/index.html)
