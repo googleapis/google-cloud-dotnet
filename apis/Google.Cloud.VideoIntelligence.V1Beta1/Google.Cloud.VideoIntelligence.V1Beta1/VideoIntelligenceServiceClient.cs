@@ -50,7 +50,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
             AnnotateVideoSettings = existing.AnnotateVideoSettings;
-            LongRunningOperationsSettings = existing.LongRunningOperationsSettings?.Clone();
+            AnnotateVideoOperationsSettings = existing.AnnotateVideoOperationsSettings?.Clone();
             OnCopy(existing);
         }
 
@@ -151,9 +151,25 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1
             )));
 
         /// <summary>
-        /// Settings used for long running operations.
+        /// Long Running Operation settings for calls to <c>VideoIntelligenceServiceClient.AnnotateVideo</c>.
         /// </summary>
-        public OperationsSettings LongRunningOperationsSettings { get; set; }
+        /// <remarks>
+        /// Uses default <see cref="PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45000 milliseconds</description></item>
+        /// <item><description>Total timeout: 86400000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public OperationsSettings AnnotateVideoOperationsSettings { get; set; } = new OperationsSettings
+        {
+            DefaultPollSettings = new PollSettings(
+                Expiration.FromTimeout(TimeSpan.FromMilliseconds(86400000L)),
+                TimeSpan.FromMilliseconds(20000L),
+                1.5,
+                TimeSpan.FromMilliseconds(45000L))
+        };
 
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
@@ -250,14 +266,6 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1
         /// The underlying gRPC VideoIntelligenceService client.
         /// </summary>
         public virtual VideoIntelligenceService.VideoIntelligenceServiceClient GrpcClient
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        /// <summary>
-        /// The client for long-running operations.
-        /// </summary>
-        public virtual OperationsClient LongRunningOperationsClient
         {
             get { throw new NotImplementedException(); }
         }
@@ -471,7 +479,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1
             string operationName,
             CallSettings callSettings = null) => Operation<AnnotateVideoResponse, AnnotateVideoProgress>.PollOnceFromNameAsync(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
-                LongRunningOperationsClient,
+                AnnotateVideoOperationsClient,
                 callSettings);
 
         /// <summary>
@@ -497,6 +505,14 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1
         }
 
         /// <summary>
+        /// The long-running operations client for <c>AnnotateVideo</c>.
+        /// </summary>
+        public virtual OperationsClient AnnotateVideoOperationsClient
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        /// <summary>
         /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>AnnotateVideo</c>.
         /// </summary>
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
@@ -506,7 +522,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1
             string operationName,
             CallSettings callSettings = null) => Operation<AnnotateVideoResponse, AnnotateVideoProgress>.PollOnceFromName(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
-                LongRunningOperationsClient,
+                AnnotateVideoOperationsClient,
                 callSettings);
 
     }
@@ -527,9 +543,9 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1
         {
             GrpcClient = grpcClient;
             VideoIntelligenceServiceSettings effectiveSettings = settings ?? VideoIntelligenceServiceSettings.GetDefault();
-            LongRunningOperationsClient = new OperationsClientImpl(
-                grpcClient.CreateOperationsClient(), effectiveSettings.LongRunningOperationsSettings);
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            AnnotateVideoOperationsClient = new OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.AnnotateVideoOperationsSettings);
             _callAnnotateVideo = clientHelper.BuildApiCall<AnnotateVideoRequest, Operation>(
                 GrpcClient.AnnotateVideoAsync, GrpcClient.AnnotateVideo, effectiveSettings.AnnotateVideoSettings);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -541,11 +557,6 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1
         /// The underlying gRPC VideoIntelligenceService client.
         /// </summary>
         public override VideoIntelligenceService.VideoIntelligenceServiceClient GrpcClient { get; }
-
-        /// <summary>
-        /// The client for long-running operations.
-        /// </summary>
-        public override OperationsClient LongRunningOperationsClient { get; }
 
         // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
         partial void Modify_AnnotateVideoRequest(ref AnnotateVideoRequest request, ref CallSettings settings);
@@ -571,7 +582,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1
         {
             Modify_AnnotateVideoRequest(ref request, ref callSettings);
             return new Operation<AnnotateVideoResponse, AnnotateVideoProgress>(
-                await _callAnnotateVideo.Async(request, callSettings).ConfigureAwait(false), LongRunningOperationsClient);
+                await _callAnnotateVideo.Async(request, callSettings).ConfigureAwait(false), AnnotateVideoOperationsClient);
         }
 
         /// <summary>
@@ -595,8 +606,13 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1
         {
             Modify_AnnotateVideoRequest(ref request, ref callSettings);
             return new Operation<AnnotateVideoResponse, AnnotateVideoProgress>(
-                _callAnnotateVideo.Sync(request, callSettings), LongRunningOperationsClient);
+                _callAnnotateVideo.Sync(request, callSettings), AnnotateVideoOperationsClient);
         }
+
+        /// <summary>
+        /// The long-running operations client for <c>AnnotateVideo</c>.
+        /// </summary>
+        public override OperationsClient AnnotateVideoOperationsClient { get; }
 
     }
 

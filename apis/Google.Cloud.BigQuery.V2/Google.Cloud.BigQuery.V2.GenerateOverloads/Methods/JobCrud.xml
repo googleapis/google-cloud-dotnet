@@ -1,0 +1,64 @@
+﻿<File>
+  <Method Name="PollJobUntilCompleted"
+          TargetType="Job"
+          ReturnType="BigQueryJob">
+    <!-- PollSettings coming last makes this configuration a bit odd. -->
+    <AdditionalParameters>
+      <Parameter Name="options" Type="GetJobOptions" Comment="The options for the operation. May be null, in which case defaults will be supplied." DefaultValue="null" />
+    </AdditionalParameters>
+    <Options Name="pollSettings" Type="PollSettings" Comment="The settings to control how often and long the job is fetched before timing out if it is still incomplete. May be null, in which case defaults will be supplied." DefaultValue="null" />
+    <Comments>
+      <summary>
+        Polls {target} for completion.
+      </summary>
+      <returns>The completed job.</returns>
+    </Comments>
+  </Method>
+
+  <Method Name="GetJob"
+        TargetType="Job"
+        ReturnType="BigQueryJob">
+    <Comments>
+      <summary>
+        Retrieves {target}.
+      </summary>
+      <returns>The retrieved job.</returns>
+    </Comments>
+  </Method>
+
+  <Method Name="CancelJob"
+      TargetType="Job"
+      ReturnType="BigQueryJob">
+    <Comments>
+      <summary>
+        Cancels {target}.
+      </summary>
+      <returns>The final state of the job.</returns>
+    </Comments>
+  </Method>
+
+  <!-- CreateExtractJob(single uri) can't be generated yet, as it has an implementation. -->
+
+  <Method Name="CreateExtractJob"
+      RegionLabel="CreateExtractJob(multiple uris)"
+      TargetType="Table"
+      ReturnType="BigQueryJob">
+
+    <AdditionalParameters>
+      <Parameter Name="destinationUris" Type="IEnumerable&lt;string&gt;" Comment="The Google Cloud Storage URIs (possibly including a wildcard) to extract the data to. Must not be null or empty." />    
+    </AdditionalParameters>
+    
+    <Comments>
+      <summary>
+        Creates a job to extract data from the specified BigQuery table to Google Cloud Storage.
+        See [the BigQuery documentation](https://cloud.google.com/bigquery/docs/exporting-data) for more information on extract jobs.      
+      </summary>
+      <returns>The job created for the extract operation.</returns>
+    </Comments>
+  </Method>
+
+  <!-- 
+    - CreateCopyJob and CreateLoadJob can't be generated yet, as they doesn't use IDs.
+    - Could still reduce copy/paste for the async using a target type of None, but it's probably not worth it.
+    -->
+</File>

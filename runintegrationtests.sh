@@ -6,53 +6,58 @@
 set -e
 source toolversions.sh
 
-CONTINUE_ARG=
+RETRY_ARG=
 COVERAGE_ARG=
 
 for arg in "$@"
 do
   case $arg in
-  --continue)
-    CONTINUE_ARG=yes
+  --retry)
+    RETRY_ARG=yes
     ;;
   --coverage)
     install_dotcover
     COVERAGE_ARG=yes
     ;;
   *)
-    echo "Unknown argument: $arg. Supported arguments: --coverage --continue"
+    echo "Unknown argument: $arg. Supported arguments: --coverage --retry"
     exit 1
     ;;
   esac
 done
 
-PROGRESS_FILE=`realpath integrationprogress.txt`
+# We only overwrite integration-test-failures.txt at the very end,
+# so that if we abort tests early, we don't assume there's nothing to retry.
+FAILURE_FILE=$(realpath integration-test-failures.txt)
+FAILURE_TEMP_FILE=${FAILURE_FILE}.tmp
 
-[[ "$CONTINUE_ARG" == "yes" ]] || rm -f $PROGRESS_FILE
-touch $PROGRESS_FILE
+rm -f $FAILURE_TEMP_FILE
+touch $FAILURE_TEMP_FILE
 
 cd apis
 
-for testdir in */*.IntegrationTests */*.Snippets
+if [[ "$RETRY_ARG" == "yes" ]]
+then
+  declare -r testdirs=$(cat $FAILURE_FILE)
+else
+  declare -r testdirs=$(echo */*.IntegrationTests */*.Snippets)
+fi
+
+for testdir in $testdirs
 do
   if [[ "$testdir" =~ Metadata ]]
   then
     echo "Skipping $testdir; test not supported yet."
-  elif echo "$testdir" | grep --quiet -F -f $PROGRESS_FILE
-  then
-    echo "Skipping $testdir; test already run"
   elif [[ "$COVERAGE_ARG" == "yes" && -f "$testdir/coverage.xml" ]]
   then
-    echo "Running coverage for $testdir"
-    (cd $testdir; $DOTCOVER cover "coverage.xml" /ReturnTargetExitCode)
-    echo "$testdir" >> $PROGRESS_FILE
+    (cd $testdir; $DOTCOVER cover "coverage.xml" /ReturnTargetExitCode || echo "$testdir" >> $FAILURE_TEMP_FILE)
   else
     # For a non-coverage run, just run dotnet with the same arugments that we would have run
     # for coverage.
     (cd $testdir;
      dotnetargs=$(grep TargetArguments coverage.xml | sed -E 's/<\/?TargetArguments>//g');
-     dotnet $dotnetargs)
-    
-    echo "$testdir" >> $PROGRESS_FILE
+     dotnet $dotnetargs || echo "$testdir" >> $FAILURE_TEMP_FILE)
   fi
 done
+
+mv -f $FAILURE_TEMP_FILE $FAILURE_FILE

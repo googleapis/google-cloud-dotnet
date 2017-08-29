@@ -56,73 +56,78 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         private async Task WriteSampleRowsAsync()
         {
             await _testFixture.EnsureTestDatabaseAsync();
+            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            {
+                await WriteSampleRowsAsync(connection);
+            }
+        }
+
+        private async Task WriteSampleRowsAsync(SpannerConnection connection)
+        {
             if (string.IsNullOrEmpty(_key))
             {
                 _key = Guid.NewGuid().ToString();
-                using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+                SpannerCommand insupdate;
+                // 1st update
+                await connection.OpenAsync();
+                using (var tx = await connection.BeginTransactionAsync())
                 {
-                    SpannerCommand insupdate;
-                    // 1st update
-                    await connection.OpenAsync();
-                    using (var tx = await connection.BeginTransactionAsync())
-                    {
-                        insupdate = connection.CreateInsertOrUpdateCommand(
-                            "TX",
-                            new SpannerParameterCollection
-                            {
-                                {"K", SpannerDbType.String, _key},
-                                {"StringValue", SpannerDbType.String, Guid.NewGuid().ToString()}
-                            });
-                        insupdate.Transaction = tx;
-                        await insupdate.ExecuteNonQueryAsync();
-                        var timestamp = await tx.CommitAsync();
-                        _history.Add(
-                            new HistoryEntry
-                            {
-                                Value = insupdate.Parameters[1].Value.ToString(),
-                                Timestamp = timestamp.GetValueOrDefault()
-                            });
-                    }
+                    insupdate = connection.CreateInsertOrUpdateCommand(
+                        "TX",
+                        new SpannerParameterCollection
+                        {
+                            {"K", SpannerDbType.String, _key},
+                            {"StringValue", SpannerDbType.String, Guid.NewGuid().ToString()}
+                        });
+                    insupdate.Transaction = tx;
+                    await insupdate.ExecuteNonQueryAsync();
+                    var timestamp = await tx.CommitAsync();
+                    _history.Add(
+                        new HistoryEntry
+                        {
+                            Value = insupdate.Parameters[1].Value.ToString(),
+                            Timestamp = timestamp.GetValueOrDefault()
+                        });
+                }
 
-                    await Task.Delay(250);
+                await Task.Delay(250);
 
-                    // 2nd update
-                    using (var tx = await connection.BeginTransactionAsync())
-                    {
-                        insupdate.Transaction = tx;
-                        insupdate.CommandText = "UPDATE TX";
-                        insupdate.Parameters[1].Value = Guid.NewGuid().ToString();
-                        await insupdate.ExecuteNonQueryAsync();
-                        var timestamp = await tx.CommitAsync();
-                        _history.Add(
-                            new HistoryEntry
-                            {
-                                Value = insupdate.Parameters[1].Value.ToString(),
-                                Timestamp = timestamp.GetValueOrDefault()
-                            });
-                    }
+                // 2nd update
+                using (var tx = await connection.BeginTransactionAsync())
+                {
+                    insupdate.Transaction = tx;
+                    insupdate.CommandText = "UPDATE TX";
+                    insupdate.Parameters[1].Value = Guid.NewGuid().ToString();
+                    await insupdate.ExecuteNonQueryAsync();
+                    var timestamp = await tx.CommitAsync();
+                    _history.Add(
+                        new HistoryEntry
+                        {
+                            Value = insupdate.Parameters[1].Value.ToString(),
+                            Timestamp = timestamp.GetValueOrDefault()
+                        });
+                }
 
-                    await Task.Delay(250);
+                await Task.Delay(250);
 
-                    // 3rd update
-                    using (var tx = await connection.BeginTransactionAsync())
-                    {
-                        insupdate.Transaction = tx;
-                        insupdate.Parameters[1].Value = Guid.NewGuid().ToString();
-                        await insupdate.ExecuteNonQueryAsync();
-                        var timestamp = await tx.CommitAsync();
-                        _history.Add(
-                            new HistoryEntry
-                            {
-                                Value = insupdate.Parameters[1].Value.ToString(),
-                                Timestamp = timestamp.GetValueOrDefault()
-                            });
-                    }
+                // 3rd update
+                using (var tx = await connection.BeginTransactionAsync())
+                {
+                    insupdate.Transaction = tx;
+                    insupdate.Parameters[1].Value = Guid.NewGuid().ToString();
+                    await insupdate.ExecuteNonQueryAsync();
+                    var timestamp = await tx.CommitAsync();
+                    _history.Add(
+                        new HistoryEntry
+                        {
+                            Value = insupdate.Parameters[1].Value.ToString(),
+                            Timestamp = timestamp.GetValueOrDefault()
+                        });
                 }
             }
         }
 
-        private async Task IncrementByOneAsync(SpannerConnection connection)
+        private async Task IncrementByOneAsync(SpannerConnection connection, bool orphanTransaction = false)
         {
             SpannerException spannerException;
             do
@@ -153,7 +158,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         {
                             cmd.Transaction = transaction;
                             await cmd.ExecuteNonQueryAsync().ConfigureAwait(false);
-                            await transaction.CommitAsync().ConfigureAwait(false);
+                            if (!orphanTransaction)
+                            {
+                                await transaction.CommitAsync().ConfigureAwait(false);
+                            }
                         }
                     }
                 }
@@ -169,6 +177,39 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             var connection = new SpannerConnection(_testFixture.ConnectionString);
             await connection.OpenAsync();
             return connection;
+        }
+
+        [Fact]
+        public async Task DisposedTransactionDoesntLeak()
+        {
+            // This test ensures that a transaction that had neither commit nor rollback called does
+            // not leak its transaction state to a subsequent transaction.
+            // The way this works currently is that every session added to the pool gets its state cleared.
+            // The reserved session in SpannerConnection can only be used for readonly transactions and is
+            // therefore immune to this bug.  However if that every changes, this test will catch it.
+            await _testFixture.EnsureTestDatabaseAsync();
+            using (var connection = await _testFixture.GetTestDatabaseConnectionAsync())
+            {
+                await WriteSampleRowsAsync(connection);
+                // The following line increments by one, but never commits the transaction, allowing it
+                // to get disposed (which releases the session).
+                await IncrementByOneAsync(connection, true);
+                using (var tx = await connection.BeginTransactionAsync())
+                {
+                    // Because Cloud Spanner does not have "read your writes"
+                    // to test any leaks, we must commit the transaction and then read it.
+                    await tx.CommitAsync();
+                }
+
+                // The value should never have been incremented (and should still be zero)
+                using (var cmd =
+                        connection.CreateSelectCommand(
+                            "SELECT Int64Value FROM TX WHERE K=@k",
+                            new SpannerParameterCollection { { "k", SpannerDbType.String, _key } }))
+                {
+                    Assert.Equal(0, await cmd.ExecuteScalarAsync<long>().ConfigureAwait(false));
+                }
+            }
         }
 
         [Fact]

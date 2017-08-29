@@ -52,10 +52,10 @@ namespace Google.Cloud.Dlp.V2Beta1
             InspectContentSettings = existing.InspectContentSettings;
             RedactContentSettings = existing.RedactContentSettings;
             CreateInspectOperationSettings = existing.CreateInspectOperationSettings;
+            CreateInspectOperationOperationsSettings = existing.CreateInspectOperationOperationsSettings?.Clone();
             ListInspectFindingsSettings = existing.ListInspectFindingsSettings;
             ListInfoTypesSettings = existing.ListInfoTypesSettings;
             ListRootCategoriesSettings = existing.ListRootCategoriesSettings;
-            LongRunningOperationsSettings = existing.LongRunningOperationsSettings?.Clone();
             OnCopy(existing);
         }
 
@@ -213,6 +213,27 @@ namespace Google.Cloud.Dlp.V2Beta1
             )));
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>DlpServiceClient.CreateInspectOperation</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45000 milliseconds</description></item>
+        /// <item><description>Total timeout: 86400000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public OperationsSettings CreateInspectOperationOperationsSettings { get; set; } = new OperationsSettings
+        {
+            DefaultPollSettings = new PollSettings(
+                Expiration.FromTimeout(TimeSpan.FromMilliseconds(86400000L)),
+                TimeSpan.FromMilliseconds(20000L),
+                1.5,
+                TimeSpan.FromMilliseconds(45000L))
+        };
+
+        /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.ListInspectFindings</c> and <c>DlpServiceClient.ListInspectFindingsAsync</c>.
         /// </summary>
@@ -301,11 +322,6 @@ namespace Google.Cloud.Dlp.V2Beta1
                 totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
-
-        /// <summary>
-        /// Settings used for long running operations.
-        /// </summary>
-        public OperationsSettings LongRunningOperationsSettings { get; set; }
 
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
@@ -402,14 +418,6 @@ namespace Google.Cloud.Dlp.V2Beta1
         /// The underlying gRPC DlpService client.
         /// </summary>
         public virtual DlpService.DlpServiceClient GrpcClient
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        /// <summary>
-        /// The client for long-running operations.
-        /// </summary>
-        public virtual OperationsClient LongRunningOperationsClient
         {
             get { throw new NotImplementedException(); }
         }
@@ -842,7 +850,7 @@ namespace Google.Cloud.Dlp.V2Beta1
             string operationName,
             CallSettings callSettings = null) => Operation<InspectOperationResult, InspectOperationMetadata>.PollOnceFromNameAsync(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
-                LongRunningOperationsClient,
+                CreateInspectOperationOperationsClient,
                 callSettings);
 
         /// <summary>
@@ -866,6 +874,14 @@ namespace Google.Cloud.Dlp.V2Beta1
         }
 
         /// <summary>
+        /// The long-running operations client for <c>CreateInspectOperation</c>.
+        /// </summary>
+        public virtual OperationsClient CreateInspectOperationOperationsClient
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        /// <summary>
         /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateInspectOperation</c>.
         /// </summary>
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
@@ -875,7 +891,7 @@ namespace Google.Cloud.Dlp.V2Beta1
             string operationName,
             CallSettings callSettings = null) => Operation<InspectOperationResult, InspectOperationMetadata>.PollOnceFromName(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
-                LongRunningOperationsClient,
+                CreateInspectOperationOperationsClient,
                 callSettings);
 
         /// <summary>
@@ -1228,9 +1244,9 @@ namespace Google.Cloud.Dlp.V2Beta1
         {
             GrpcClient = grpcClient;
             DlpServiceSettings effectiveSettings = settings ?? DlpServiceSettings.GetDefault();
-            LongRunningOperationsClient = new OperationsClientImpl(
-                grpcClient.CreateOperationsClient(), effectiveSettings.LongRunningOperationsSettings);
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            CreateInspectOperationOperationsClient = new OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.CreateInspectOperationOperationsSettings);
             _callInspectContent = clientHelper.BuildApiCall<InspectContentRequest, InspectContentResponse>(
                 GrpcClient.InspectContentAsync, GrpcClient.InspectContent, effectiveSettings.InspectContentSettings);
             _callRedactContent = clientHelper.BuildApiCall<RedactContentRequest, RedactContentResponse>(
@@ -1252,11 +1268,6 @@ namespace Google.Cloud.Dlp.V2Beta1
         /// The underlying gRPC DlpService client.
         /// </summary>
         public override DlpService.DlpServiceClient GrpcClient { get; }
-
-        /// <summary>
-        /// The client for long-running operations.
-        /// </summary>
-        public override OperationsClient LongRunningOperationsClient { get; }
 
         // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
         partial void Modify_InspectContentRequest(ref InspectContentRequest request, ref CallSettings settings);
@@ -1369,7 +1380,7 @@ namespace Google.Cloud.Dlp.V2Beta1
         {
             Modify_CreateInspectOperationRequest(ref request, ref callSettings);
             return new Operation<InspectOperationResult, InspectOperationMetadata>(
-                await _callCreateInspectOperation.Async(request, callSettings).ConfigureAwait(false), LongRunningOperationsClient);
+                await _callCreateInspectOperation.Async(request, callSettings).ConfigureAwait(false), CreateInspectOperationOperationsClient);
         }
 
         /// <summary>
@@ -1391,8 +1402,13 @@ namespace Google.Cloud.Dlp.V2Beta1
         {
             Modify_CreateInspectOperationRequest(ref request, ref callSettings);
             return new Operation<InspectOperationResult, InspectOperationMetadata>(
-                _callCreateInspectOperation.Sync(request, callSettings), LongRunningOperationsClient);
+                _callCreateInspectOperation.Sync(request, callSettings), CreateInspectOperationOperationsClient);
         }
+
+        /// <summary>
+        /// The long-running operations client for <c>CreateInspectOperation</c>.
+        /// </summary>
+        public override OperationsClient CreateInspectOperationOperationsClient { get; }
 
         /// <summary>
         /// Returns list of results for given inspect operation result set id.

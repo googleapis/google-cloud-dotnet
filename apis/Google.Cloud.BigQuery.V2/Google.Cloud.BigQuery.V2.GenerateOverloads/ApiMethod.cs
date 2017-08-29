@@ -31,6 +31,8 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
         private static readonly Parameter JobReferenceParameter = new Parameter("JobReference", "jobReference", "A fully-qualified identifier for the job. Must not be null.", null);
         private static readonly Parameter CancellationTokenParameter = new Parameter("CancellationToken", "cancellationToken", "The token to monitor for cancellation requests.", "default(CancellationToken)");
 
+        private static readonly Parameter[] IdParameters = { ProjectIdParameter, DatasetIdParameter, TableIdParameter, JobIdParameter };
+
         private static readonly Dictionary<TargetType, Parameter[]> TargetParametersByType = new Dictionary<TargetType, Parameter[]>
         {
             { TargetType.Dataset, new[] { ProjectIdParameter, DatasetIdParameter } },
@@ -55,22 +57,21 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
         public XElement Comments { get; }
         public Parameter OptionsParameter { get; }
 
-        public ApiMethod(XDocument document)
+        public ApiMethod(XElement element)
         {
-            var root = document.Root;
             // Note: use of Value property for all mandatory elements/attributes; casting for optional ones.
-            Name = root.Attribute("Name").Value;
-            RegionLabel = (string)root.Attribute("RegionLabel") ?? Name;
-            string targetType = root.Attribute("TargetType").Value;
-            ReturnType = root.Attribute("ReturnType").Value;
-            AdditionalParameters = root.Elements("AdditionalParameters").Elements("Parameter").Select(x => new Parameter(x)).ToList();
-            var options = root.Element("Options");
+            Name = element.Attribute("Name").Value;
+            RegionLabel = (string)element.Attribute("RegionLabel") ?? Name;
+            string targetType = element.Attribute("TargetType").Value;
+            ReturnType = element.Attribute("ReturnType").Value;
+            AdditionalParameters = element.Elements("AdditionalParameters").Elements("Parameter").Select(x => new Parameter(x)).ToList();
+            var options = element.Element("Options");
             OptionsParameter = new Parameter(
                 (string)options?.Attribute("Type") ?? $"{Name}Options",
                 (string)options?.Attribute("Name") ?? "options",
                 (string)options?.Attribute("Comment") ?? "The options for the operation. May be null, in which case defaults will be supplied.",
                 "null");
-            Comments = root.Element("Comments");
+            Comments = element.Element("Comments");
 
             TargetType = targetType == "" ? TargetType.None : (TargetType)Enum.Parse(typeof(TargetType), targetType);
             if (TargetType == TargetType.None)
@@ -184,10 +185,16 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
             XElement element = Comments.Element("summary");
             string text = element.ToString();
             string targetTypeDescription = TargetType.ToString().ToLowerInvariant();
-            string target = parameters.Contains(ProjectIdParameter)
+            // We only want to say "within this client's project" where we're using string IDs (not references) and there isn't a project ID parameter.
+            string target = (!parameters.Contains(ProjectIdParameter) && IdParameters.Intersect(parameters).Any())
                 ? $"the specified {targetTypeDescription} within this client's project"
                 : $"the specified {targetTypeDescription}";
             text = text.Replace("{target}", target);
+            if (async)
+            {
+                text = text.Substring(text.IndexOf(">") + 1).Trim();
+                text = "<summary>\r\nAsynchronously " + LowerFirstLetter(text);
+            }
             if (delegating)
             {
                 var implementationParameters = GetImplementationMethodParameters(async);
@@ -215,7 +222,7 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
         {
             if (ReturnType == "void")
             {
-                return async ? new[] { "A task representing the asynchronous operation." } : new string[0];
+                return async ? new[] { "<returns>A task representing the asynchronous operation.</returns>" } : new string[0];
             }
             XElement element = Comments.Element("returns");
             string text = element.ToString().Trim();

@@ -51,9 +51,9 @@ namespace Google.Cloud.Speech.V1
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
             RecognizeSettings = existing.RecognizeSettings;
             LongRunningRecognizeSettings = existing.LongRunningRecognizeSettings;
+            LongRunningRecognizeOperationsSettings = existing.LongRunningRecognizeOperationsSettings?.Clone();
             StreamingRecognizeSettings = existing.StreamingRecognizeSettings;
             StreamingRecognizeStreamingSettings = existing.StreamingRecognizeStreamingSettings;
-            LongRunningOperationsSettings = existing.LongRunningOperationsSettings?.Clone();
             OnCopy(existing);
         }
 
@@ -183,6 +183,27 @@ namespace Google.Cloud.Speech.V1
             )));
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>SpeechClient.LongRunningRecognize</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45000 milliseconds</description></item>
+        /// <item><description>Total timeout: 86400000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public OperationsSettings LongRunningRecognizeOperationsSettings { get; set; } = new OperationsSettings
+        {
+            DefaultPollSettings = new PollSettings(
+                Expiration.FromTimeout(TimeSpan.FromMilliseconds(86400000L)),
+                TimeSpan.FromMilliseconds(20000L),
+                1.5,
+                TimeSpan.FromMilliseconds(45000L))
+        };
+
+        /// <summary>
         /// <see cref="CallSettings"/> for calls to <c>SpeechClient.StreamingRecognize</c>.
         /// </summary>
         /// <remarks>
@@ -200,11 +221,6 @@ namespace Google.Cloud.Speech.V1
         /// </remarks>
         public BidirectionalStreamingSettings StreamingRecognizeStreamingSettings { get; set; } =
             new BidirectionalStreamingSettings(100);
-
-        /// <summary>
-        /// Settings used for long running operations.
-        /// </summary>
-        public OperationsSettings LongRunningOperationsSettings { get; set; }
 
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
@@ -301,14 +317,6 @@ namespace Google.Cloud.Speech.V1
         /// The underlying gRPC Speech client.
         /// </summary>
         public virtual Speech.SpeechClient GrpcClient
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        /// <summary>
-        /// The client for long-running operations.
-        /// </summary>
-        public virtual OperationsClient LongRunningOperationsClient
         {
             get { throw new NotImplementedException(); }
         }
@@ -553,7 +561,7 @@ namespace Google.Cloud.Speech.V1
             string operationName,
             CallSettings callSettings = null) => Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>.PollOnceFromNameAsync(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
-                LongRunningOperationsClient,
+                LongRunningRecognizeOperationsClient,
                 callSettings);
 
         /// <summary>
@@ -579,6 +587,14 @@ namespace Google.Cloud.Speech.V1
         }
 
         /// <summary>
+        /// The long-running operations client for <c>LongRunningRecognize</c>.
+        /// </summary>
+        public virtual OperationsClient LongRunningRecognizeOperationsClient
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        /// <summary>
         /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>LongRunningRecognize</c>.
         /// </summary>
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
@@ -588,7 +604,7 @@ namespace Google.Cloud.Speech.V1
             string operationName,
             CallSettings callSettings = null) => Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>.PollOnceFromName(
                 GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
-                LongRunningOperationsClient,
+                LongRunningRecognizeOperationsClient,
                 callSettings);
 
         /// <summary>
@@ -638,9 +654,9 @@ namespace Google.Cloud.Speech.V1
         {
             GrpcClient = grpcClient;
             SpeechSettings effectiveSettings = settings ?? SpeechSettings.GetDefault();
-            LongRunningOperationsClient = new OperationsClientImpl(
-                grpcClient.CreateOperationsClient(), effectiveSettings.LongRunningOperationsSettings);
             ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            LongRunningRecognizeOperationsClient = new OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.LongRunningRecognizeOperationsSettings);
             _callRecognize = clientHelper.BuildApiCall<RecognizeRequest, RecognizeResponse>(
                 GrpcClient.RecognizeAsync, GrpcClient.Recognize, effectiveSettings.RecognizeSettings);
             _callLongRunningRecognize = clientHelper.BuildApiCall<LongRunningRecognizeRequest, Operation>(
@@ -656,11 +672,6 @@ namespace Google.Cloud.Speech.V1
         /// The underlying gRPC Speech client.
         /// </summary>
         public override Speech.SpeechClient GrpcClient { get; }
-
-        /// <summary>
-        /// The client for long-running operations.
-        /// </summary>
-        public override OperationsClient LongRunningOperationsClient { get; }
 
         // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
         partial void Modify_RecognizeRequest(ref RecognizeRequest request, ref CallSettings settings);
@@ -731,7 +742,7 @@ namespace Google.Cloud.Speech.V1
         {
             Modify_LongRunningRecognizeRequest(ref request, ref callSettings);
             return new Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>(
-                await _callLongRunningRecognize.Async(request, callSettings).ConfigureAwait(false), LongRunningOperationsClient);
+                await _callLongRunningRecognize.Async(request, callSettings).ConfigureAwait(false), LongRunningRecognizeOperationsClient);
         }
 
         /// <summary>
@@ -755,8 +766,13 @@ namespace Google.Cloud.Speech.V1
         {
             Modify_LongRunningRecognizeRequest(ref request, ref callSettings);
             return new Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata>(
-                _callLongRunningRecognize.Sync(request, callSettings), LongRunningOperationsClient);
+                _callLongRunningRecognize.Sync(request, callSettings), LongRunningRecognizeOperationsClient);
         }
+
+        /// <summary>
+        /// The long-running operations client for <c>LongRunningRecognize</c>.
+        /// </summary>
+        public override OperationsClient LongRunningRecognizeOperationsClient { get; }
 
         /// <summary>
         /// Performs bidirectional streaming speech recognition: receive results while

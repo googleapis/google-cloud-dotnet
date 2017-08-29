@@ -24,6 +24,8 @@ toolkit
 
 # Testing
 integrationprogress.txt
+integration-test-failures.txt
+integration-test-failures.txt.tmp
 results.xml
 
 # Speech language codes temporary output
