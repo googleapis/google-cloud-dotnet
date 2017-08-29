@@ -34,6 +34,20 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             _fixture = fixture;
         }
 
+        // Regression test against issue where the etag returned on create wasn't the same as
+        // for the initial fetch.
+        [Fact]
+        public void CreateTable_InitialEtag()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string datasetId = _fixture.DatasetId;
+            var tableId = _fixture.CreateTableId();
+            var created = client.CreateTable(datasetId, tableId, new TableSchema(), new CreateTableOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
+
+            var fetched = client.GetTable(datasetId, tableId);
+            Assert.Equal(created.Resource.ETag, fetched.Resource.ETag);
+        }
+
         [Fact]
         public void UpdateTable()
         {
@@ -46,9 +60,6 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             // Modify locally...
             original.Resource.Description = "Description2";
             original.Resource.FriendlyName = "FriendlyName2";
-
-            // FIXME: I shouldn't need to do this.
-            original.Resource.ETag = client.GetTable(datasetId, tableId).Resource.ETag;
 
             // Check the results of the update
             var updated = original.Update();
@@ -114,8 +125,6 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var tableId = _fixture.CreateTableId();
 
             var original = client.CreateTable(datasetId, tableId, new TableSchema(), new CreateTableOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
-            // FIXME: I shouldn't need to do this.
-            original.Resource.ETag = client.GetTable(datasetId, tableId).Resource.ETag;
 
             // Modify on the server, which will change the etag
             var sneaky = client.GetTable(datasetId, tableId);
@@ -135,8 +144,6 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var tableId = _fixture.CreateTableId();
 
             var original = client.CreateTable(datasetId, tableId, new TableSchema(), new CreateTableOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
-            // FIXME: I shouldn't need to do this.
-            original.Resource.ETag = client.GetTable(datasetId, tableId).Resource.ETag;
 
             // Modify on the server, which will change the etag
             var sneaky = client.GetTable(datasetId, tableId);
@@ -168,9 +175,6 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             // Modify locally...
             original.Resource.Description = "Description2";
             original.Resource.FriendlyName = "FriendlyName2";
-
-            // FIXME: I shouldn't need to do this.
-            original.Resource.ETag = client.GetTable(datasetId, tableId).Resource.ETag;
 
             // Check the results of the update
             var updated = await original.UpdateAsync();
@@ -236,8 +240,6 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var tableId = _fixture.CreateTableId();
 
             var original = await client.CreateTableAsync(datasetId, tableId, new TableSchema(), new CreateTableOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
-            // FIXME: I shouldn't need to do this.
-            original.Resource.ETag = client.GetTable(datasetId, tableId).Resource.ETag;
 
             // Modify on the server, which will change the etag
             var sneaky = await client.GetTableAsync(datasetId, tableId);
@@ -257,8 +259,6 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var tableId = _fixture.CreateTableId();
 
             var original = await client.CreateTableAsync(datasetId, tableId, new TableSchema(), new CreateTableOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
-            // FIXME: I shouldn't need to do this.
-            original.Resource.ETag = client.GetTable(datasetId, tableId).Resource.ETag;
 
             // Modify on the server, which will change the etag
             var sneaky = await client.GetTableAsync(datasetId, tableId);
