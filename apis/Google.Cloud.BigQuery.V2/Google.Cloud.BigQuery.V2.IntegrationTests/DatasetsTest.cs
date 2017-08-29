@@ -79,6 +79,19 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
         }
 
+        // Regression test against issue where the etag returned on create wasn't the same as
+        // for the initial fetch.
+        [Fact]
+        public void CreateDataset_InitialEtag()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var id = _fixture.CreateDatasetId();
+
+            var created = client.CreateDataset(id, new CreateDatasetOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
+            var fetched = client.GetDataset(id);
+            Assert.Equal(created.Resource.ETag, fetched.Resource.ETag);
+        }
+
         [Fact]
         public void UpdateDataset()
         {
@@ -90,9 +103,6 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             // Modify locally...
             original.Resource.Description = "Description2";
             original.Resource.FriendlyName = "FriendlyName2";
-
-            // FIXME: I shouldn't need to do this.
-            original.Resource.ETag = client.GetDataset(id).Resource.ETag;
 
             // Check the results of the update
             var updated = original.Update();
@@ -155,8 +165,6 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var id = _fixture.CreateDatasetId();
 
             var original = client.CreateDataset(id, new CreateDatasetOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
-            // FIXME: I shouldn't need to do this.
-            original.Resource.ETag = client.GetDataset(id).Resource.ETag;
 
             // Modify on the server, which will change the etag
             var sneaky = client.GetDataset(id);
@@ -175,8 +183,6 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var id = _fixture.CreateDatasetId();
 
             var original = client.CreateDataset(id, new CreateDatasetOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
-            // FIXME: I shouldn't need to do this.
-            original.Resource.ETag = client.GetDataset(id).Resource.ETag;
 
             // Modify on the server, which will change the etag
             var sneaky = client.GetDataset(id);
@@ -207,9 +213,6 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             // Modify locally...
             original.Resource.Description = "Description2";
             original.Resource.FriendlyName = "FriendlyName2";
-
-            // FIXME: I shouldn't need to do this.
-            original.Resource.ETag = client.GetDataset(id).Resource.ETag;
 
             // Check the results of the update
             var updated = await original.UpdateAsync();
@@ -272,8 +275,6 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var id = _fixture.CreateDatasetId();
 
             var original = await client.CreateDatasetAsync(id, new CreateDatasetOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
-            // FIXME: I shouldn't need to do this.
-            original.Resource.ETag = client.GetDataset(id).Resource.ETag;
 
             // Modify on the server, which will change the etag
             var sneaky = await client.GetDatasetAsync(id);
@@ -292,8 +293,6 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var id = _fixture.CreateDatasetId();
 
             var original = await client.CreateDatasetAsync(id, new CreateDatasetOptions { Description = "Description1", FriendlyName = "FriendlyName1" });
-            // FIXME: I shouldn't need to do this.
-            original.Resource.ETag = client.GetDataset(id).Resource.ETag;
 
             // Modify on the server, which will change the etag
             var sneaky = await client.GetDatasetAsync(id);
