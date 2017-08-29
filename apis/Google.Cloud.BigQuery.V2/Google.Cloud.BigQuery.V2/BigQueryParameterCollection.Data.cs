@@ -14,8 +14,9 @@
 
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Data.Common;
+using System.Linq;
+using Google.Api.Gax;
 
 namespace Google.Cloud.BigQuery.V2
 {
@@ -26,105 +27,109 @@ namespace Google.Cloud.BigQuery.V2
         /// <inheritdoc />
         public override int Add(object value)
         {
-            throw new NotImplementedException();
+            var bigQueryParameter = value as BigQueryParameter;
+            GaxPreconditions.CheckArgument(bigQueryParameter != null, nameof(value),
+                "The argument must not be null and be of type {0}", nameof(BigQueryParameter));
+            _parameters.Add(bigQueryParameter);
+            return _parameters.Count - 1;
         }
 
         /// <inheritdoc />
-        public override bool Contains(object value)
-        {
-            throw new NotImplementedException();
-        }
+        public override bool Contains(object value) => _parameters.Contains(value as BigQueryParameter);
 
         /// <inheritdoc />
-        public override bool Contains(string value)
-        {
-            throw new NotImplementedException();
-        }
+        public override bool Contains(string value) => _parameters.Any(x => x.ParameterName.Equals(value));
 
         /// <inheritdoc />
-        public override int IndexOf(string parameterName)
-        {
-            throw new NotImplementedException();
-        }
+        public override int IndexOf(string parameterName) => _parameters.FindIndex(x => x.ParameterName.Equals(parameterName));
 
         /// <inheritdoc />
-        public override void RemoveAt(string parameterName)
-        {
-            throw new NotImplementedException();
-        }
+        public override void RemoveAt(string parameterName) => _parameters.RemoveAt(IndexOf(parameterName));
 
         /// <inheritdoc />
         protected override void SetParameter(int index, DbParameter value)
-        {
-            throw new NotImplementedException();
-        }
+            => _parameters[index] = (BigQueryParameter)value;
 
         /// <inheritdoc />
         protected override void SetParameter(string parameterName, DbParameter value)
         {
-            throw new NotImplementedException();
+            int index = IndexOf(parameterName);
+            if (index == -1)
+            {
+                _parameters.Add((BigQueryParameter)value);
+            }
+            else
+            {
+                _parameters[index] = (BigQueryParameter)value;
+            }
         }
 
 #if NET45
         /// <inheritdoc />
-        public override bool IsFixedSize { get; }
+        public override bool IsFixedSize => false;
         /// <inheritdoc />
-        public override bool IsReadOnly { get; }
+        public override bool IsReadOnly => false;
         /// <inheritdoc />
-        public override bool IsSynchronized { get; }
+        public override bool IsSynchronized => false;
 #endif
         /// <inheritdoc />
-        public override object SyncRoot { get; }
+        public override object SyncRoot => _parameters;
 
         /// <inheritdoc />
         public override void Insert(int index, object value)
-        {
-            throw new NotImplementedException();
-        }
+            => _parameters.Insert(index, (BigQueryParameter)value);
 
         /// <inheritdoc />
         public override void Remove(object value)
-        {
-            throw new NotImplementedException();
-        }
+            => _parameters.Remove((BigQueryParameter)value);
 
         /// <inheritdoc />
-        public override void RemoveAt(int index)
-        {
-            throw new NotImplementedException();
-        }
+        public override void RemoveAt(int index) => _parameters.RemoveAt(index);
 
         /// <inheritdoc />
         public override void CopyTo(Array array, int index)
         {
-            throw new NotImplementedException();
+            if (array == null)
+            {
+                throw new ArgumentNullException(nameof(array));
+            }
+            if (array.Length < _parameters.Count + index)
+            {
+                throw new ArgumentOutOfRangeException(
+                    nameof(array), "There is not enough space in the array to copy values.");
+            }
+            foreach (var item in _parameters)
+            {
+                array.SetValue(item, index);
+                index++;
+            }
         }
 
         /// <inheritdoc />
-        public override IEnumerator GetEnumerator() => ((IEnumerable<BigQueryParameter>) this).GetEnumerator();
+        public override IEnumerator GetEnumerator() => _parameters.GetEnumerator();
 
         /// <inheritdoc />
         protected override DbParameter GetParameter(int index)
-        {
-            throw new NotImplementedException();
-        }
+            => _parameters[index];
 
         /// <inheritdoc />
         protected override DbParameter GetParameter(string parameterName)
         {
-            throw new NotImplementedException();
+            int index = IndexOf(parameterName);
+            if (index == -1)
+            {
+                return null;
+            }
+
+            return _parameters[index];
         }
 
         /// <inheritdoc />
         public override int IndexOf(object value)
-        {
-            throw new NotImplementedException();
-        }
+            => _parameters.IndexOf(value as BigQueryParameter);
 
         /// <inheritdoc />
         public override void AddRange(Array values)
-        {
-            throw new NotImplementedException();
-        }
+            => _parameters.AddRange(values.Cast<BigQueryParameter>());
     }
 }

@@ -15,56 +15,170 @@
 using System;
 using System.Data;
 using System.Data.Common;
+using Google.Api.Gax;
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Bigquery.v2.Data;
 
 namespace Google.Cloud.BigQuery.V2
 {
     /// <summary>
     /// </summary>
-    public sealed class BigQueryConnection : DbConnection
+    public sealed partial class BigQueryConnection : DbConnection
     {
-        /// <inheritdoc />
-        protected override DbTransaction BeginDbTransaction(IsolationLevel isolationLevel)
+        private BigQueryConnectionStringBuilder _connectionStringBuilder;
+        private ConnectionState _state;
+
+        /// <summary>
+        /// Creates a BigQueryConnection with no datasource or credential specified.
+        /// </summary>
+        public BigQueryConnection()
         {
-            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates a BigQueryConnection with a datasource contained in connectionString
+        /// and optional credential information supplied in connectionString or the credential
+        /// argument.
+        /// </summary>
+        /// <param name="connectionString">
+        /// A BigQuery formatted connection string. This is usually of the form
+        /// `Data Source=projects/{project}/datasets/{datasetid}`
+        /// </param>
+        /// <param name="credential">An optional credential for operations to be performed on the BigQuery database.  May be null.</param>
+        public BigQueryConnection(string connectionString, GoogleCredential credential = null)
+            : this(new BigQueryConnectionStringBuilder(connectionString, credential))
+        {
+        }
+
+        /// <summary>
+        /// Creates a BigQueryConnection with a datasource contained in connectionString.
+        /// </summary>
+        /// <param name="connectionStringBuilder">
+        /// A BigQueryConnectionStringBuilder containing a formatted connection string.  Must not be null.
+        /// </param>
+        public BigQueryConnection(BigQueryConnectionStringBuilder connectionStringBuilder)
+        {
+            GaxPreconditions.CheckNotNull(connectionStringBuilder, nameof(connectionStringBuilder));
+            TrySetNewConnectionInfo(connectionStringBuilder);
+        }
+
+        internal BigQueryClient GetBigQueryClient()
+        {
+            AssertOpen();
+            return BigQueryClient;
+        }
+
+        internal string GetProjectId()
+        {
+            return _connectionStringBuilder.Project;
+        }
+
+        internal string GetDatasetId()
+        {
+            return _connectionStringBuilder.BigQueryDataset;
+        }
+
+        internal BigQueryClient BigQueryClient { get; private set; }
+
+        /// <inheritdoc />
+        public override string ConnectionString
+        {
+            get => _connectionStringBuilder?.ToString();
+            set => TrySetNewConnectionInfo(
+                new BigQueryConnectionStringBuilder(value, _connectionStringBuilder?.Credential));
         }
 
         /// <inheritdoc />
-        public override void ChangeDatabase(string databaseName)
+        public override string Database => _connectionStringBuilder?.BigQueryDataset;
+
+        /// <inheritdoc />
+        public override ConnectionState State => _state;
+
+        /// <inheritdoc />
+        public override string DataSource => _connectionStringBuilder?.DataSource;
+
+        /// <inheritdoc />
+        public override string ServerVersion { get; } = "0.0";
+
+        internal bool IsClosed => (State & ConnectionState.Open) == 0;
+
+        internal bool IsOpen => (State & ConnectionState.Open) == ConnectionState.Open;
+
+        internal BigQueryClient GetOpenedBigQueryClient()
         {
-            throw new NotImplementedException();
+            AssertOpen();
+            return BigQueryClient;
+        }
+
+
+        /// <inheritdoc />
+        protected override DbTransaction BeginDbTransaction(IsolationLevel isolationLevel) =>
+            throw new NotSupportedException("BigQuery does not support transactions.");
+
+        /// <inheritdoc />
+        public override void ChangeDatabase(string newDataSource)
+        {
+            if (IsOpen)
+                Close();
+
+            TrySetNewConnectionInfo(_connectionStringBuilder?.CloneWithNewDataSource(newDataSource));
         }
 
         /// <inheritdoc />
         public override void Close()
         {
-            throw new NotImplementedException();
+            _state = ConnectionState.Closed;
         }
 
         /// <inheritdoc />
         public override void Open()
         {
-            throw new NotImplementedException();
+            if (IsOpen)
+                return;
+            BigQueryClient = BigQueryClient.Create(_connectionStringBuilder.Project,
+                _connectionStringBuilder.Credential);
+            _state = ConnectionState.Open;
         }
 
-        /// <inheritdoc />
-        public override string ConnectionString { get; set; }
+        /// <summary>
+        /// </summary>
+        public TableReference GetTableReference(string tableId) =>
+            GetBigQueryClient().GetTableReference(_connectionStringBuilder.Project,
+                _connectionStringBuilder.BigQueryDataset, tableId);
+
+        /// <summary>
+        /// </summary>
+        public TableReference GetTableReference(string dataSetId, string tableId) =>
+            GetBigQueryClient().GetTableReference(_connectionStringBuilder.Project, dataSetId, tableId);
+
+        /// <summary>
+        /// </summary>
+        public TableReference GetTableReference(string projectId, string dataSetId, string tableId) =>
+            GetBigQueryClient().GetTableReference(projectId, dataSetId, tableId);
+
+        internal DatasetReference GetDatasetReference() => GetBigQueryClient()
+            .GetDatasetReference(GetProjectId(), GetDatasetId());
 
         /// <inheritdoc />
-        public override string Database { get; }
+        protected override DbCommand CreateDbCommand() => new BigQueryCommand();
 
-        /// <inheritdoc />
-        public override ConnectionState State { get; }
-
-        /// <inheritdoc />
-        public override string DataSource { get; }
-
-        /// <inheritdoc />
-        public override string ServerVersion { get; }
-
-        /// <inheritdoc />
-        protected override DbCommand CreateDbCommand()
+        private void TrySetNewConnectionInfo(BigQueryConnectionStringBuilder newBuilder)
         {
-            throw new NotImplementedException();
+            AssertClosed("change connection information.");
+            // We will never allow our internal connectionstringbuilder to be touched from the outside, so its cloned.
+            _connectionStringBuilder = newBuilder.Clone();
+        }
+
+        private void AssertClosed(string message)
+        {
+            if (!IsClosed)
+                throw new InvalidOperationException("The connection must be closed. Failed to " + message);
+        }
+
+        private void AssertOpen()
+        {
+            if (!IsOpen)
+                throw new InvalidOperationException("The connection must be open for this operation.");
         }
     }
 }
