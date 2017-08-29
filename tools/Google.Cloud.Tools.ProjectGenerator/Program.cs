@@ -60,9 +60,10 @@ namespace Google.Cloud.Tools.ProjectGenerator
         // the packages in DefaultPackageVersions should be specified precisely in stable packages.
         private static readonly Dictionary<string, string> CommonTestDependencies = new Dictionary<string, string>
         {
-            { "Microsoft.NET.Test.Sdk", "15.0.0" },
-            { "xunit", "2.3.0-beta1-build3642" },
-            { "xunit.runner.visualstudio", "2.3.0-beta1-build1309" },
+            { "Microsoft.NET.Test.Sdk", "15.3.0" },
+            { "xunit", "2.3.0-beta4-build3742" },
+            { "xunit.runner.visualstudio", "2.3.0-beta4-build3742" },
+            { "xunit.analyzers", "0.6.1" }, // Temporary measure to fix some broken analyzers in 0.6.0 that throw exceptions
             { "Moq", "4.7.99" }
         };
 
@@ -359,9 +360,12 @@ TODO: Add snippet references here.
                     new XElement("PublicSign", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), true),
                     new XElement("TreatWarningsAsErrors", true),
                     // 1701, 1702 and 1705 are disabled by default.
-                    // 4014 is required as snippets for streaming samples call Task.Run and don't await the result.
-                    // See https://github.com/googleapis/toolkit/issues/1271 - when that's fixed, we can remove this.
-                    new XElement("NoWarn", "1701;1702;1705;4014")
+                    // xUnit2004 prevents Assert.Equal(true, value) etc, preferring Assert.True and Assert.False, but
+                    //   Assert.Equal is clearer (IMO) for comparing values rather than conditions.
+                    // xUnit2013 prevents simple checks for the number of items in a collection
+                    // AD0001 is the error for an analyzer throwing an exception. We can remove this when
+                    // the fix for https://github.com/xunit/xunit/issues/1409 is in NuGet.
+                    new XElement("NoWarn", "1701;1702;1705;xUnit2004;xUnit2013;AD0001")
                 );
             string project = Path.GetFileName(directory);
             var dependenciesElement = CreateDependenciesElement(project, dependencies, api.IsReleaseVersion, testProject: true, apiNames: apiNames);
@@ -457,20 +461,7 @@ TODO: Add snippet references here.
                 Console.WriteLine($"{(beforeHash == null ? "Created" : "Modified")} project file {Path.GetFileName(file)}");
             }
         }
-
-        private static string GenerateProjectReference(string key)
-        {
-            // There are a few special cases which don't fit in, then the common case
-            // where it follows the normal pattern, then being flexible for anything
-            // that doesn't fit...
-            switch (key)
-            {
-                case "Google.Cloud.ClientTesting": return @"..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj";
-                case var _ when !key.Contains(".csproj"): return $@"..\..\{key}\{key}\{key}.csproj";
-                default: return key;
-            }
-        }
-
+        
         private static XElement CreateDependenciesElement(string project, IDictionary<string, string> dependencies, bool stableRelease, bool testProject, HashSet<string> apiNames) =>
             new XElement("ItemGroup",
                 // Use the GAX version for all otherwise-unversioned GAX dependencies
