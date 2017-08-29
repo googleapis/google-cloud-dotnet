@@ -63,8 +63,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             _fixture.InsertAndWait(table, () => table.InsertRows(rows), 2);
 
             var rowsAfter = table.ListRows().ToList();
-            Assert.True(rowsAfter.Any(r => (string)r["player"] == "Jenny"));
-            Assert.True(rowsAfter.Any(r => (string)r["player"] == "Lisa"));
+            Assert.Contains(rowsAfter, r => (string)r["player"] == "Jenny");
+            Assert.Contains(rowsAfter, r => (string)r["player"] == "Lisa");
         }
 
         [Fact]
@@ -193,8 +193,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 .Single();
             var fetchedNames = (Dictionary<string, object>[]) resultRow["names"];
             Assert.Equal(2, fetchedNames.Length);
-            Assert.True(fetchedNames.Any(d => (string) d["first"] == "a" && (string) d["last"] == "b"));
-            Assert.True(fetchedNames.Any(d => (string) d["first"] == "x" && (string) d["last"] == "y"));
+            Assert.Contains(fetchedNames, d => (string) d["first"] == "a" && (string) d["last"] == "b");
+            Assert.Contains(fetchedNames, d => (string) d["first"] == "x" && (string) d["last"] == "y");
         }
 
         [Fact]

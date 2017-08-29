@@ -54,7 +54,7 @@ namespace Google.Cloud.Metadata.V1.Snippets
             Console.Write(instance.Zone);
             // End snippet
 
-            Assert.Equal(instance.Zone, "projects/12345/zones/us-central1-f");
+            Assert.Equal("projects/12345/zones/us-central1-f", instance.Zone);
         }
 
         [Fact]

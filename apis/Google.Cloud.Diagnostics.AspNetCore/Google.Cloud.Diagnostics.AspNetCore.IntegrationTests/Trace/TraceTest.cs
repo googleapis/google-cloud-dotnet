@@ -61,8 +61,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 Assert.Equal(2, trace.Spans.Count);
                 var span = trace.Spans.First(s => s.Name.StartsWith("/Trace/Trace/"));
                 Assert.NotEmpty(span.Labels);
-                Assert.Equal(span.Labels[TraceLabels.HttpMethod], "GET");
-                Assert.Equal(span.Labels[TraceLabels.HttpStatusCode], "200");
+                Assert.Equal("GET", span.Labels[TraceLabels.HttpMethod]);
+                Assert.Equal("200", span.Labels[TraceLabels.HttpStatusCode]);
 
                 Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
             }
@@ -86,7 +86,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 Assert.Equal(2, trace.Spans.Count);
                 var span = trace.Spans.First(s => s.Name.StartsWith("Trace"));
                 Assert.Single(span.Labels);
-                Assert.Equal(span.Labels[TraceController.Label], TraceController.LabelValue);
+                Assert.Equal(TraceController.LabelValue, span.Labels[TraceController.Label]);
             }
         }
 
