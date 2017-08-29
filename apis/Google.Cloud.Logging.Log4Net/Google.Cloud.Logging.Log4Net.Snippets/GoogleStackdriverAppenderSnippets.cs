@@ -78,9 +78,11 @@ namespace Google.Cloud.Logging.Log4Net.Snippets
             // * Uploads happen in the background, so we can't check RPC repsonses.
         }
 
+#pragma warning disable xUnit1013 // Public method should be marked as test
+        // This cannot be a unit test as ASP.NET cannot run in this environment.
         public void Overview_AspNet()
+#pragma warning restore xUnit1013 // Public method should be marked as test
         {
-            // This cannot be a unit test as ASP.NET cannot run in this environment.
             // Resource: log4net-aspnet-template.xml log4net_aspnet_template
             // Sample: Overview_AspNet
             // Load log4net configuration from Web.config

@@ -51,7 +51,7 @@ namespace Google.Cloud.DevTools.Common.Tests
         {
             var sourceContext = new SourceContext();
             Assert.Null(sourceContext.Git);
-            Assert.Equal(sourceContext.ContextCase, SourceContext.ContextOneofCase.None);
+            Assert.Equal(SourceContext.ContextOneofCase.None, sourceContext.ContextCase);
         }
 
         [Fact]
@@ -73,12 +73,12 @@ namespace Google.Cloud.DevTools.Common.Tests
         {
             SourceContext.s_fileReadAllTextFunc = (path) =>
             {
-                Assert.Equal(Path.GetFileName(path), "source-context.json");
+                Assert.Equal("source-context.json", Path.GetFileName(path));
                 return s_sampleContextFileContent;
             };
             SourceContext.s_fileExistsFunc = _ => true;
-            Assert.Equal(SourceContext.AppSourceContext?.Git?.RevisionId, TestRevisionId);
-            Assert.Equal(SourceContext.AppSourceContext?.Git?.Url, TestGitUrl);
+            Assert.Equal(TestRevisionId, SourceContext.AppSourceContext?.Git?.RevisionId);
+            Assert.Equal(TestGitUrl, SourceContext.AppSourceContext?.Git?.Url);
         }
 
         [Fact]
@@ -88,8 +88,8 @@ namespace Google.Cloud.DevTools.Common.Tests
             try
             {
                 File.WriteAllText(filePath, s_sampleContextFileContent);
-                Assert.Equal(SourceContext.AppSourceContext?.Git?.RevisionId, TestRevisionId);
-                Assert.Equal(SourceContext.AppSourceContext?.Git?.Url, TestGitUrl);
+                Assert.Equal(TestRevisionId, SourceContext.AppSourceContext?.Git?.RevisionId);
+                Assert.Equal(TestGitUrl, SourceContext.AppSourceContext?.Git?.Url);
             }
             finally
             {

@@ -17,7 +17,7 @@ using Xunit;
 
 namespace Google.Cloud.BigQuery.V2.Tests
 {
-    class ModifyLabelsOptionsTest
+    public class ModifyLabelsOptionsTest
     {
         [Fact]
         public void NegativeRetries()

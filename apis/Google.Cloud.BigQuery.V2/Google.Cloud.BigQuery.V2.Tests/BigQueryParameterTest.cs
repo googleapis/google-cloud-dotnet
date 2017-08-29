@@ -12,6 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// We deliberately use names as a clear way of describing the tests.
+#pragma warning disable xUnit1026 // Theory methods should use all of their parameters
+
 using Google.Apis.Bigquery.v2.Data;
 using Newtonsoft.Json;
 using System;
