@@ -79,17 +79,29 @@
       <h4><a class="xref" href="Google.Cloud.Diagnostics.Common.BufferOptions.html">BufferOptions</a></h4>
       <section><p>Options that define a buffer.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Diagnostics.Common.ContextExceptionLogger.html">ContextExceptionLogger</a></h4>
+      <section><p>Functions to create <a class="xref" href="Google.Cloud.Diagnostics.Common.IContextExceptionLogger.html">IContextExceptionLogger</a>s.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Diagnostics.Common.ErrorReportingOptions.html">ErrorReportingOptions</a></h4>
       <section><p>Optional configuration to be used when initializing error reporting.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Diagnostics.Common.EventTarget.html">EventTarget</a></h4>
       <section><p>Represents the location error events will be sent.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Diagnostics.Common.LogConsumer.html">LogConsumer</a></h4>
+      <section><p>Functions to create <a class="xref" href="Google.Cloud.Diagnostics.Common.IConsumer-1.html">IConsumer&lt;T&gt;</a>s.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Diagnostics.Common.LogTarget.html">LogTarget</a></h4>
       <section><p>Represents the location log entries will be sent, such as a project or organization.</p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Diagnostics.Common.ManagedTracer.html">ManagedTracer</a></h4>
+      <section><p>Functions to create <a class="xref" href="Google.Cloud.Diagnostics.Common.IManagedTracer.html">IManagedTracer</a>s.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Diagnostics.Common.NullManagedTracer.html">NullManagedTracer</a></h4>
       <section><p>A managed tracer that does not trace.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Diagnostics.Common.Project.html">Project</a></h4>
+      <section><p>Operations for Cloud Console Projects.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Diagnostics.Common.RetryOptions.html">RetryOptions</a></h4>
       <section><p>Options that define retry logic for requests that failed.</p>
@@ -101,14 +113,29 @@
       <section><p>Used to determine if an <span class="xref">System.Web.HttpRequest</span> should be traced. This will not override
 a decision by the trace header. </p>
 </section>
+      <h4><a class="xref" href="Google.Cloud.Diagnostics.Common.TraceHeaderContext.html">TraceHeaderContext</a></h4>
+      <section><p>Context from the Cloud Trace Header.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.html">TraceHeaderPropagatingHandler</a></h4>
       <section><p>Traces outgoing HTTP requests and propagates the trace header.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Diagnostics.Common.TraceLabels.html">TraceLabels</a></h4>
+      <section><p>A helper class to handle span labels.</p>
 </section>
       <h4><a class="xref" href="Google.Cloud.Diagnostics.Common.TraceOptions.html">TraceOptions</a></h4>
       <section><p>Options to be used when initializing tracing.</p>
 </section>
     <h3 id="interfaces">Interfaces
   </h3>
+      <h4><a class="xref" href="Google.Cloud.Diagnostics.Common.IConsumer-1.html">IConsumer&lt;T&gt;</a></h4>
+      <section><p>A consumer.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Diagnostics.Common.IContextExceptionLogger.html">IContextExceptionLogger</a></h4>
+      <section><p>A generic exception logger for <a class="xref" href="Google.Cloud.Diagnostics.Common.IContextWrapper.html">IContextWrapper</a>s.</p>
+</section>
+      <h4><a class="xref" href="Google.Cloud.Diagnostics.Common.IContextWrapper.html">IContextWrapper</a></h4>
+      <section><p>Wraps an HTTP context.</p>
+</section>
       <h4><a class="xref" href="Google.Cloud.Diagnostics.Common.IExceptionLogger.html">IExceptionLogger</a></h4>
       <section><p>A generic exception logger.</p>
 </section>

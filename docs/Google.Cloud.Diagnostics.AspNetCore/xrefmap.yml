@@ -13,13 +13,13 @@ references:
   commentId: T:Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension
   fullName: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension
   nameWithType: CloudTraceExtension
-- uid: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(IServiceCollection,System.Action{Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions})
+- uid: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(IServiceCollection,Action{Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions})
   name: AddGoogleTrace(IServiceCollection, Action<TraceServiceOptions>)
-  href: api/Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_IServiceCollection_System_Action_Google_Cloud_Diagnostics_AspNetCore_TraceServiceOptions__
-  commentId: M:Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(IServiceCollection,System.Action{Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions})
+  href: api/Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_IServiceCollection_Action_Google_Cloud_Diagnostics_AspNetCore_TraceServiceOptions__
+  commentId: M:Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(IServiceCollection,Action{Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions})
   name.vb: AddGoogleTrace(IServiceCollection, Action(Of TraceServiceOptions))
-  fullName: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(IServiceCollection, System.Action<Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions>)
-  fullName.vb: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(IServiceCollection, System.Action(Of Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions))
+  fullName: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(IServiceCollection, Action<Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions>)
+  fullName.vb: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(IServiceCollection, Action(Of Google.Cloud.Diagnostics.AspNetCore.TraceServiceOptions))
   nameWithType: CloudTraceExtension.AddGoogleTrace(IServiceCollection, Action<TraceServiceOptions>)
   nameWithType.vb: CloudTraceExtension.AddGoogleTrace(IServiceCollection, Action(Of TraceServiceOptions))
 - uid: Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace*
@@ -46,13 +46,13 @@ references:
   commentId: T:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension
   fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension
   nameWithType: ErrorReportingExceptionLoggerExtension
-- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection,System.Action{Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions})
+- uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection,Action{Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions})
   name: AddGoogleExceptionLogging(IServiceCollection, Action<ErrorReportingServiceOptions>)
-  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension_AddGoogleExceptionLogging_IServiceCollection_System_Action_Google_Cloud_Diagnostics_AspNetCore_ErrorReportingServiceOptions__
-  commentId: M:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection,System.Action{Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions})
+  href: api/Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension_AddGoogleExceptionLogging_IServiceCollection_Action_Google_Cloud_Diagnostics_AspNetCore_ErrorReportingServiceOptions__
+  commentId: M:Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection,Action{Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions})
   name.vb: AddGoogleExceptionLogging(IServiceCollection, Action(Of ErrorReportingServiceOptions))
-  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection, System.Action<Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions>)
-  fullName.vb: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection, System.Action(Of Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions))
+  fullName: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection, Action<Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions>)
+  fullName.vb: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection, Action(Of Google.Cloud.Diagnostics.AspNetCore.ErrorReportingServiceOptions))
   nameWithType: ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection, Action<ErrorReportingServiceOptions>)
   nameWithType.vb: ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging(IServiceCollection, Action(Of ErrorReportingServiceOptions))
 - uid: Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.AddGoogleExceptionLogging*
@@ -178,11 +178,11 @@ references:
   fullName.vb: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.BeginScope(Of TState)(TState)
   nameWithType: GoogleLogger.BeginScope<TState>(TState)
   nameWithType.vb: GoogleLogger.BeginScope(Of TState)(TState)
-- uid: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.IsEnabled(System.LogLevel)
+- uid: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.IsEnabled(LogLevel)
   name: IsEnabled(LogLevel)
-  href: api/Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.html#Google_Cloud_Diagnostics_AspNetCore_GoogleLogger_IsEnabled_System_LogLevel_
-  commentId: M:Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.IsEnabled(System.LogLevel)
-  fullName: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.IsEnabled(System.LogLevel)
+  href: api/Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.html#Google_Cloud_Diagnostics_AspNetCore_GoogleLogger_IsEnabled_LogLevel_
+  commentId: M:Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.IsEnabled(LogLevel)
+  fullName: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.IsEnabled(LogLevel)
   nameWithType: GoogleLogger.IsEnabled(LogLevel)
 - uid: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.IsEnabled*
   name: IsEnabled
@@ -196,13 +196,13 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.Log
   fullName: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.Log
   nameWithType: GoogleLogger.Log
-- uid: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.Log``1(System.LogLevel,EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})
+- uid: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.Log``1(LogLevel,EventId,``0,Exception,Func{``0,Exception,System.String})
   name: Log<TState>(LogLevel, EventId, TState, Exception, Func<TState, Exception, String>)
-  href: api/Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.html#Google_Cloud_Diagnostics_AspNetCore_GoogleLogger_Log__1_System_LogLevel_EventId___0_System_Exception_System_Func___0_System_Exception_System_String__
-  commentId: M:Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.Log``1(System.LogLevel,EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})
+  href: api/Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.html#Google_Cloud_Diagnostics_AspNetCore_GoogleLogger_Log__1_LogLevel_EventId___0_Exception_Func___0_Exception_System_String__
+  commentId: M:Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.Log``1(LogLevel,EventId,``0,Exception,Func{``0,Exception,System.String})
   name.vb: Log(Of TState)(LogLevel, EventId, TState, Exception, Func(Of TState, Exception, String))
-  fullName: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.Log<TState>(System.LogLevel, EventId, TState, System.Exception, System.Func<TState, System.Exception, System.String>)
-  fullName.vb: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.Log(Of TState)(System.LogLevel, EventId, TState, System.Exception, System.Func(Of TState, System.Exception, System.String))
+  fullName: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.Log<TState>(LogLevel, EventId, TState, Exception, Func<TState, Exception, System.String>)
+  fullName.vb: Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.Log(Of TState)(LogLevel, EventId, TState, Exception, Func(Of TState, Exception, System.String))
   nameWithType: GoogleLogger.Log<TState>(LogLevel, EventId, TState, Exception, Func<TState, Exception, String>)
   nameWithType.vb: GoogleLogger.Log(Of TState)(LogLevel, EventId, TState, Exception, Func(Of TState, Exception, String))
 - uid: Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions
@@ -277,13 +277,13 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.BufferOptions
   fullName: Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.BufferOptions
   nameWithType: LoggerOptions.BufferOptions
-- uid: Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create(LogLevel,System.Collections.Generic.Dictionary{System.String,System.String},MonitoredResource,Google.Cloud.Diagnostics.Common.BufferOptions,Google.Cloud.Diagnostics.Common.RetryOptions)
+- uid: Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create(LogLevel,Dictionary{System.String,System.String},MonitoredResource,Google.Cloud.Diagnostics.Common.BufferOptions,Google.Cloud.Diagnostics.Common.RetryOptions)
   name: Create(LogLevel, Dictionary<String, String>, MonitoredResource, BufferOptions, RetryOptions)
-  href: api/Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.html#Google_Cloud_Diagnostics_AspNetCore_LoggerOptions_Create_LogLevel_System_Collections_Generic_Dictionary_System_String_System_String__MonitoredResource_Google_Cloud_Diagnostics_Common_BufferOptions_Google_Cloud_Diagnostics_Common_RetryOptions_
-  commentId: M:Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create(LogLevel,System.Collections.Generic.Dictionary{System.String,System.String},MonitoredResource,Google.Cloud.Diagnostics.Common.BufferOptions,Google.Cloud.Diagnostics.Common.RetryOptions)
+  href: api/Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.html#Google_Cloud_Diagnostics_AspNetCore_LoggerOptions_Create_LogLevel_Dictionary_System_String_System_String__MonitoredResource_Google_Cloud_Diagnostics_Common_BufferOptions_Google_Cloud_Diagnostics_Common_RetryOptions_
+  commentId: M:Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create(LogLevel,Dictionary{System.String,System.String},MonitoredResource,Google.Cloud.Diagnostics.Common.BufferOptions,Google.Cloud.Diagnostics.Common.RetryOptions)
   name.vb: Create(LogLevel, Dictionary(Of String, String), MonitoredResource, BufferOptions, RetryOptions)
-  fullName: Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create(LogLevel, System.Collections.Generic.Dictionary<System.String, System.String>, MonitoredResource, Google.Cloud.Diagnostics.Common.BufferOptions, Google.Cloud.Diagnostics.Common.RetryOptions)
-  fullName.vb: Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create(LogLevel, System.Collections.Generic.Dictionary(Of System.String, System.String), MonitoredResource, Google.Cloud.Diagnostics.Common.BufferOptions, Google.Cloud.Diagnostics.Common.RetryOptions)
+  fullName: Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create(LogLevel, Dictionary<System.String, System.String>, MonitoredResource, Google.Cloud.Diagnostics.Common.BufferOptions, Google.Cloud.Diagnostics.Common.RetryOptions)
+  fullName.vb: Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create(LogLevel, Dictionary(Of System.String, System.String), MonitoredResource, Google.Cloud.Diagnostics.Common.BufferOptions, Google.Cloud.Diagnostics.Common.RetryOptions)
   nameWithType: LoggerOptions.Create(LogLevel, Dictionary<String, String>, MonitoredResource, BufferOptions, RetryOptions)
   nameWithType.vb: LoggerOptions.Create(LogLevel, Dictionary(Of String, String), MonitoredResource, BufferOptions, RetryOptions)
 - uid: Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.Create*
@@ -523,6 +523,24 @@ references:
   commentId: F:Google.Cloud.Diagnostics.Common.BufferType.Timed
   fullName: Google.Cloud.Diagnostics.Common.BufferType.Timed
   nameWithType: BufferType.Timed
+- uid: Google.Cloud.Diagnostics.Common.ContextExceptionLogger
+  name: ContextExceptionLogger
+  href: api/Google.Cloud.Diagnostics.Common.ContextExceptionLogger.html
+  commentId: T:Google.Cloud.Diagnostics.Common.ContextExceptionLogger
+  fullName: Google.Cloud.Diagnostics.Common.ContextExceptionLogger
+  nameWithType: ContextExceptionLogger
+- uid: Google.Cloud.Diagnostics.Common.ContextExceptionLogger.Create(System.String,System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)
+  name: Create(String, String, String, ErrorReportingOptions)
+  href: api/Google.Cloud.Diagnostics.Common.ContextExceptionLogger.html#Google_Cloud_Diagnostics_Common_ContextExceptionLogger_Create_System_String_System_String_System_String_Google_Cloud_Diagnostics_Common_ErrorReportingOptions_
+  commentId: M:Google.Cloud.Diagnostics.Common.ContextExceptionLogger.Create(System.String,System.String,System.String,Google.Cloud.Diagnostics.Common.ErrorReportingOptions)
+  fullName: Google.Cloud.Diagnostics.Common.ContextExceptionLogger.Create(System.String, System.String, System.String, Google.Cloud.Diagnostics.Common.ErrorReportingOptions)
+  nameWithType: ContextExceptionLogger.Create(String, String, String, ErrorReportingOptions)
+- uid: Google.Cloud.Diagnostics.Common.ContextExceptionLogger.Create*
+  name: Create
+  href: api/Google.Cloud.Diagnostics.Common.ContextExceptionLogger.html#Google_Cloud_Diagnostics_Common_ContextExceptionLogger_Create_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.ContextExceptionLogger.Create
+  fullName: Google.Cloud.Diagnostics.Common.ContextExceptionLogger.Create
+  nameWithType: ContextExceptionLogger.Create
 - uid: Google.Cloud.Diagnostics.Common.ErrorReportingOptions
   name: ErrorReportingOptions
   href: api/Google.Cloud.Diagnostics.Common.ErrorReportingOptions.html
@@ -709,6 +727,133 @@ references:
   commentId: F:Google.Cloud.Diagnostics.Common.ExceptionHandling.Propagate
   fullName: Google.Cloud.Diagnostics.Common.ExceptionHandling.Propagate
   nameWithType: ExceptionHandling.Propagate
+- uid: Google.Cloud.Diagnostics.Common.IConsumer`1
+  name: IConsumer<T>
+  href: api/Google.Cloud.Diagnostics.Common.IConsumer-1.html
+  commentId: T:Google.Cloud.Diagnostics.Common.IConsumer`1
+  name.vb: IConsumer(Of T)
+  fullName: Google.Cloud.Diagnostics.Common.IConsumer<T>
+  fullName.vb: Google.Cloud.Diagnostics.Common.IConsumer(Of T)
+  nameWithType: IConsumer<T>
+  nameWithType.vb: IConsumer(Of T)
+- uid: Google.Cloud.Diagnostics.Common.IConsumer`1.Receive(System.Collections.Generic.IEnumerable{`0})
+  name: Receive(IEnumerable<T>)
+  href: api/Google.Cloud.Diagnostics.Common.IConsumer-1.html#Google_Cloud_Diagnostics_Common_IConsumer_1_Receive_System_Collections_Generic_IEnumerable__0__
+  commentId: M:Google.Cloud.Diagnostics.Common.IConsumer`1.Receive(System.Collections.Generic.IEnumerable{`0})
+  name.vb: Receive(IEnumerable(Of T))
+  fullName: Google.Cloud.Diagnostics.Common.IConsumer<T>.Receive(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Google.Cloud.Diagnostics.Common.IConsumer(Of T).Receive(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: IConsumer<T>.Receive(IEnumerable<T>)
+  nameWithType.vb: IConsumer(Of T).Receive(IEnumerable(Of T))
+- uid: Google.Cloud.Diagnostics.Common.IConsumer`1.Receive*
+  name: Receive
+  href: api/Google.Cloud.Diagnostics.Common.IConsumer-1.html#Google_Cloud_Diagnostics_Common_IConsumer_1_Receive_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.IConsumer`1.Receive
+  fullName: Google.Cloud.Diagnostics.Common.IConsumer<T>.Receive
+  fullName.vb: Google.Cloud.Diagnostics.Common.IConsumer(Of T).Receive
+  nameWithType: IConsumer<T>.Receive
+  nameWithType.vb: IConsumer(Of T).Receive
+- uid: Google.Cloud.Diagnostics.Common.IConsumer`1.ReceiveAsync(System.Collections.Generic.IEnumerable{`0},System.Threading.CancellationToken)
+  name: ReceiveAsync(IEnumerable<T>, CancellationToken)
+  href: api/Google.Cloud.Diagnostics.Common.IConsumer-1.html#Google_Cloud_Diagnostics_Common_IConsumer_1_ReceiveAsync_System_Collections_Generic_IEnumerable__0__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Diagnostics.Common.IConsumer`1.ReceiveAsync(System.Collections.Generic.IEnumerable{`0},System.Threading.CancellationToken)
+  name.vb: ReceiveAsync(IEnumerable(Of T), CancellationToken)
+  fullName: Google.Cloud.Diagnostics.Common.IConsumer<T>.ReceiveAsync(System.Collections.Generic.IEnumerable<T>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Diagnostics.Common.IConsumer(Of T).ReceiveAsync(System.Collections.Generic.IEnumerable(Of T), System.Threading.CancellationToken)
+  nameWithType: IConsumer<T>.ReceiveAsync(IEnumerable<T>, CancellationToken)
+  nameWithType.vb: IConsumer(Of T).ReceiveAsync(IEnumerable(Of T), CancellationToken)
+- uid: Google.Cloud.Diagnostics.Common.IConsumer`1.ReceiveAsync*
+  name: ReceiveAsync
+  href: api/Google.Cloud.Diagnostics.Common.IConsumer-1.html#Google_Cloud_Diagnostics_Common_IConsumer_1_ReceiveAsync_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.IConsumer`1.ReceiveAsync
+  fullName: Google.Cloud.Diagnostics.Common.IConsumer<T>.ReceiveAsync
+  fullName.vb: Google.Cloud.Diagnostics.Common.IConsumer(Of T).ReceiveAsync
+  nameWithType: IConsumer<T>.ReceiveAsync
+  nameWithType.vb: IConsumer(Of T).ReceiveAsync
+- uid: Google.Cloud.Diagnostics.Common.IContextExceptionLogger
+  name: IContextExceptionLogger
+  href: api/Google.Cloud.Diagnostics.Common.IContextExceptionLogger.html
+  commentId: T:Google.Cloud.Diagnostics.Common.IContextExceptionLogger
+  fullName: Google.Cloud.Diagnostics.Common.IContextExceptionLogger
+  nameWithType: IContextExceptionLogger
+- uid: Google.Cloud.Diagnostics.Common.IContextExceptionLogger.Log(System.Exception,Google.Cloud.Diagnostics.Common.IContextWrapper)
+  name: Log(Exception, IContextWrapper)
+  href: api/Google.Cloud.Diagnostics.Common.IContextExceptionLogger.html#Google_Cloud_Diagnostics_Common_IContextExceptionLogger_Log_System_Exception_Google_Cloud_Diagnostics_Common_IContextWrapper_
+  commentId: M:Google.Cloud.Diagnostics.Common.IContextExceptionLogger.Log(System.Exception,Google.Cloud.Diagnostics.Common.IContextWrapper)
+  fullName: Google.Cloud.Diagnostics.Common.IContextExceptionLogger.Log(System.Exception, Google.Cloud.Diagnostics.Common.IContextWrapper)
+  nameWithType: IContextExceptionLogger.Log(Exception, IContextWrapper)
+- uid: Google.Cloud.Diagnostics.Common.IContextExceptionLogger.Log*
+  name: Log
+  href: api/Google.Cloud.Diagnostics.Common.IContextExceptionLogger.html#Google_Cloud_Diagnostics_Common_IContextExceptionLogger_Log_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.IContextExceptionLogger.Log
+  fullName: Google.Cloud.Diagnostics.Common.IContextExceptionLogger.Log
+  nameWithType: IContextExceptionLogger.Log
+- uid: Google.Cloud.Diagnostics.Common.IContextExceptionLogger.LogAsync(System.Exception,Google.Cloud.Diagnostics.Common.IContextWrapper,System.Threading.CancellationToken)
+  name: LogAsync(Exception, IContextWrapper, CancellationToken)
+  href: api/Google.Cloud.Diagnostics.Common.IContextExceptionLogger.html#Google_Cloud_Diagnostics_Common_IContextExceptionLogger_LogAsync_System_Exception_Google_Cloud_Diagnostics_Common_IContextWrapper_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Diagnostics.Common.IContextExceptionLogger.LogAsync(System.Exception,Google.Cloud.Diagnostics.Common.IContextWrapper,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Diagnostics.Common.IContextExceptionLogger.LogAsync(System.Exception, Google.Cloud.Diagnostics.Common.IContextWrapper, System.Threading.CancellationToken)
+  nameWithType: IContextExceptionLogger.LogAsync(Exception, IContextWrapper, CancellationToken)
+- uid: Google.Cloud.Diagnostics.Common.IContextExceptionLogger.LogAsync*
+  name: LogAsync
+  href: api/Google.Cloud.Diagnostics.Common.IContextExceptionLogger.html#Google_Cloud_Diagnostics_Common_IContextExceptionLogger_LogAsync_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.IContextExceptionLogger.LogAsync
+  fullName: Google.Cloud.Diagnostics.Common.IContextExceptionLogger.LogAsync
+  nameWithType: IContextExceptionLogger.LogAsync
+- uid: Google.Cloud.Diagnostics.Common.IContextWrapper
+  name: IContextWrapper
+  href: api/Google.Cloud.Diagnostics.Common.IContextWrapper.html
+  commentId: T:Google.Cloud.Diagnostics.Common.IContextWrapper
+  fullName: Google.Cloud.Diagnostics.Common.IContextWrapper
+  nameWithType: IContextWrapper
+- uid: Google.Cloud.Diagnostics.Common.IContextWrapper.GetHttpMethod
+  name: GetHttpMethod()
+  href: api/Google.Cloud.Diagnostics.Common.IContextWrapper.html#Google_Cloud_Diagnostics_Common_IContextWrapper_GetHttpMethod
+  commentId: M:Google.Cloud.Diagnostics.Common.IContextWrapper.GetHttpMethod
+  fullName: Google.Cloud.Diagnostics.Common.IContextWrapper.GetHttpMethod()
+  nameWithType: IContextWrapper.GetHttpMethod()
+- uid: Google.Cloud.Diagnostics.Common.IContextWrapper.GetHttpMethod*
+  name: GetHttpMethod
+  href: api/Google.Cloud.Diagnostics.Common.IContextWrapper.html#Google_Cloud_Diagnostics_Common_IContextWrapper_GetHttpMethod_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.IContextWrapper.GetHttpMethod
+  fullName: Google.Cloud.Diagnostics.Common.IContextWrapper.GetHttpMethod
+  nameWithType: IContextWrapper.GetHttpMethod
+- uid: Google.Cloud.Diagnostics.Common.IContextWrapper.GetStatusCode
+  name: GetStatusCode()
+  href: api/Google.Cloud.Diagnostics.Common.IContextWrapper.html#Google_Cloud_Diagnostics_Common_IContextWrapper_GetStatusCode
+  commentId: M:Google.Cloud.Diagnostics.Common.IContextWrapper.GetStatusCode
+  fullName: Google.Cloud.Diagnostics.Common.IContextWrapper.GetStatusCode()
+  nameWithType: IContextWrapper.GetStatusCode()
+- uid: Google.Cloud.Diagnostics.Common.IContextWrapper.GetStatusCode*
+  name: GetStatusCode
+  href: api/Google.Cloud.Diagnostics.Common.IContextWrapper.html#Google_Cloud_Diagnostics_Common_IContextWrapper_GetStatusCode_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.IContextWrapper.GetStatusCode
+  fullName: Google.Cloud.Diagnostics.Common.IContextWrapper.GetStatusCode
+  nameWithType: IContextWrapper.GetStatusCode
+- uid: Google.Cloud.Diagnostics.Common.IContextWrapper.GetUri
+  name: GetUri()
+  href: api/Google.Cloud.Diagnostics.Common.IContextWrapper.html#Google_Cloud_Diagnostics_Common_IContextWrapper_GetUri
+  commentId: M:Google.Cloud.Diagnostics.Common.IContextWrapper.GetUri
+  fullName: Google.Cloud.Diagnostics.Common.IContextWrapper.GetUri()
+  nameWithType: IContextWrapper.GetUri()
+- uid: Google.Cloud.Diagnostics.Common.IContextWrapper.GetUri*
+  name: GetUri
+  href: api/Google.Cloud.Diagnostics.Common.IContextWrapper.html#Google_Cloud_Diagnostics_Common_IContextWrapper_GetUri_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.IContextWrapper.GetUri
+  fullName: Google.Cloud.Diagnostics.Common.IContextWrapper.GetUri
+  nameWithType: IContextWrapper.GetUri
+- uid: Google.Cloud.Diagnostics.Common.IContextWrapper.GetUserAgent
+  name: GetUserAgent()
+  href: api/Google.Cloud.Diagnostics.Common.IContextWrapper.html#Google_Cloud_Diagnostics_Common_IContextWrapper_GetUserAgent
+  commentId: M:Google.Cloud.Diagnostics.Common.IContextWrapper.GetUserAgent
+  fullName: Google.Cloud.Diagnostics.Common.IContextWrapper.GetUserAgent()
+  nameWithType: IContextWrapper.GetUserAgent()
+- uid: Google.Cloud.Diagnostics.Common.IContextWrapper.GetUserAgent*
+  name: GetUserAgent
+  href: api/Google.Cloud.Diagnostics.Common.IContextWrapper.html#Google_Cloud_Diagnostics_Common_IContextWrapper_GetUserAgent_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.IContextWrapper.GetUserAgent
+  fullName: Google.Cloud.Diagnostics.Common.IContextWrapper.GetUserAgent
+  nameWithType: IContextWrapper.GetUserAgent
 - uid: Google.Cloud.Diagnostics.Common.IExceptionLogger
   name: IExceptionLogger
   href: api/Google.Cloud.Diagnostics.Common.IExceptionLogger.html
@@ -901,6 +1046,24 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.Common.ISpan.SpanId
   fullName: Google.Cloud.Diagnostics.Common.ISpan.SpanId
   nameWithType: ISpan.SpanId
+- uid: Google.Cloud.Diagnostics.Common.LogConsumer
+  name: LogConsumer
+  href: api/Google.Cloud.Diagnostics.Common.LogConsumer.html
+  commentId: T:Google.Cloud.Diagnostics.Common.LogConsumer
+  fullName: Google.Cloud.Diagnostics.Common.LogConsumer
+  nameWithType: LogConsumer
+- uid: Google.Cloud.Diagnostics.Common.LogConsumer.Create(Google.Cloud.Logging.V2.LoggingServiceV2Client,Google.Cloud.Diagnostics.Common.BufferOptions,Google.Cloud.Diagnostics.Common.RetryOptions)
+  name: Create(LoggingServiceV2Client, BufferOptions, RetryOptions)
+  href: api/Google.Cloud.Diagnostics.Common.LogConsumer.html#Google_Cloud_Diagnostics_Common_LogConsumer_Create_Google_Cloud_Logging_V2_LoggingServiceV2Client_Google_Cloud_Diagnostics_Common_BufferOptions_Google_Cloud_Diagnostics_Common_RetryOptions_
+  commentId: M:Google.Cloud.Diagnostics.Common.LogConsumer.Create(Google.Cloud.Logging.V2.LoggingServiceV2Client,Google.Cloud.Diagnostics.Common.BufferOptions,Google.Cloud.Diagnostics.Common.RetryOptions)
+  fullName: Google.Cloud.Diagnostics.Common.LogConsumer.Create(Google.Cloud.Logging.V2.LoggingServiceV2Client, Google.Cloud.Diagnostics.Common.BufferOptions, Google.Cloud.Diagnostics.Common.RetryOptions)
+  nameWithType: LogConsumer.Create(LoggingServiceV2Client, BufferOptions, RetryOptions)
+- uid: Google.Cloud.Diagnostics.Common.LogConsumer.Create*
+  name: Create
+  href: api/Google.Cloud.Diagnostics.Common.LogConsumer.html#Google_Cloud_Diagnostics_Common_LogConsumer_Create_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.LogConsumer.Create
+  fullName: Google.Cloud.Diagnostics.Common.LogConsumer.Create
+  nameWithType: LogConsumer.Create
 - uid: Google.Cloud.Diagnostics.Common.LogTarget
   name: LogTarget
   href: api/Google.Cloud.Diagnostics.Common.LogTarget.html
@@ -997,6 +1160,54 @@ references:
   commentId: F:Google.Cloud.Diagnostics.Common.LogTargetKind.Project
   fullName: Google.Cloud.Diagnostics.Common.LogTargetKind.Project
   nameWithType: LogTargetKind.Project
+- uid: Google.Cloud.Diagnostics.Common.ManagedTracer
+  name: ManagedTracer
+  href: api/Google.Cloud.Diagnostics.Common.ManagedTracer.html
+  commentId: T:Google.Cloud.Diagnostics.Common.ManagedTracer
+  fullName: Google.Cloud.Diagnostics.Common.ManagedTracer
+  nameWithType: ManagedTracer
+- uid: Google.Cloud.Diagnostics.Common.ManagedTracer.CreateConsumer(Google.Cloud.Trace.V1.TraceServiceClient,Google.Cloud.Diagnostics.Common.TraceOptions)
+  name: CreateConsumer(TraceServiceClient, TraceOptions)
+  href: api/Google.Cloud.Diagnostics.Common.ManagedTracer.html#Google_Cloud_Diagnostics_Common_ManagedTracer_CreateConsumer_Google_Cloud_Trace_V1_TraceServiceClient_Google_Cloud_Diagnostics_Common_TraceOptions_
+  commentId: M:Google.Cloud.Diagnostics.Common.ManagedTracer.CreateConsumer(Google.Cloud.Trace.V1.TraceServiceClient,Google.Cloud.Diagnostics.Common.TraceOptions)
+  fullName: Google.Cloud.Diagnostics.Common.ManagedTracer.CreateConsumer(Google.Cloud.Trace.V1.TraceServiceClient, Google.Cloud.Diagnostics.Common.TraceOptions)
+  nameWithType: ManagedTracer.CreateConsumer(TraceServiceClient, TraceOptions)
+- uid: Google.Cloud.Diagnostics.Common.ManagedTracer.CreateConsumer*
+  name: CreateConsumer
+  href: api/Google.Cloud.Diagnostics.Common.ManagedTracer.html#Google_Cloud_Diagnostics_Common_ManagedTracer_CreateConsumer_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.ManagedTracer.CreateConsumer
+  fullName: Google.Cloud.Diagnostics.Common.ManagedTracer.CreateConsumer
+  nameWithType: ManagedTracer.CreateConsumer
+- uid: Google.Cloud.Diagnostics.Common.ManagedTracer.CreateDelegatingTracer(System.Func{Google.Cloud.Diagnostics.Common.IManagedTracer})
+  name: CreateDelegatingTracer(Func<IManagedTracer>)
+  href: api/Google.Cloud.Diagnostics.Common.ManagedTracer.html#Google_Cloud_Diagnostics_Common_ManagedTracer_CreateDelegatingTracer_System_Func_Google_Cloud_Diagnostics_Common_IManagedTracer__
+  commentId: M:Google.Cloud.Diagnostics.Common.ManagedTracer.CreateDelegatingTracer(System.Func{Google.Cloud.Diagnostics.Common.IManagedTracer})
+  name.vb: CreateDelegatingTracer(Func(Of IManagedTracer))
+  fullName: Google.Cloud.Diagnostics.Common.ManagedTracer.CreateDelegatingTracer(System.Func<Google.Cloud.Diagnostics.Common.IManagedTracer>)
+  fullName.vb: Google.Cloud.Diagnostics.Common.ManagedTracer.CreateDelegatingTracer(System.Func(Of Google.Cloud.Diagnostics.Common.IManagedTracer))
+  nameWithType: ManagedTracer.CreateDelegatingTracer(Func<IManagedTracer>)
+  nameWithType.vb: ManagedTracer.CreateDelegatingTracer(Func(Of IManagedTracer))
+- uid: Google.Cloud.Diagnostics.Common.ManagedTracer.CreateDelegatingTracer*
+  name: CreateDelegatingTracer
+  href: api/Google.Cloud.Diagnostics.Common.ManagedTracer.html#Google_Cloud_Diagnostics_Common_ManagedTracer_CreateDelegatingTracer_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.ManagedTracer.CreateDelegatingTracer
+  fullName: Google.Cloud.Diagnostics.Common.ManagedTracer.CreateDelegatingTracer
+  nameWithType: ManagedTracer.CreateDelegatingTracer
+- uid: Google.Cloud.Diagnostics.Common.ManagedTracer.CreateTracerFactory(System.String,Google.Cloud.Diagnostics.Common.IConsumer{Google.Cloud.Trace.V1.Trace},Google.Cloud.Diagnostics.Common.TraceOptions)
+  name: CreateTracerFactory(String, IConsumer<Trace>, TraceOptions)
+  href: api/Google.Cloud.Diagnostics.Common.ManagedTracer.html#Google_Cloud_Diagnostics_Common_ManagedTracer_CreateTracerFactory_System_String_Google_Cloud_Diagnostics_Common_IConsumer_Google_Cloud_Trace_V1_Trace__Google_Cloud_Diagnostics_Common_TraceOptions_
+  commentId: M:Google.Cloud.Diagnostics.Common.ManagedTracer.CreateTracerFactory(System.String,Google.Cloud.Diagnostics.Common.IConsumer{Google.Cloud.Trace.V1.Trace},Google.Cloud.Diagnostics.Common.TraceOptions)
+  name.vb: CreateTracerFactory(String, IConsumer(Of Trace), TraceOptions)
+  fullName: Google.Cloud.Diagnostics.Common.ManagedTracer.CreateTracerFactory(System.String, Google.Cloud.Diagnostics.Common.IConsumer<Google.Cloud.Trace.V1.Trace>, Google.Cloud.Diagnostics.Common.TraceOptions)
+  fullName.vb: Google.Cloud.Diagnostics.Common.ManagedTracer.CreateTracerFactory(System.String, Google.Cloud.Diagnostics.Common.IConsumer(Of Google.Cloud.Trace.V1.Trace), Google.Cloud.Diagnostics.Common.TraceOptions)
+  nameWithType: ManagedTracer.CreateTracerFactory(String, IConsumer<Trace>, TraceOptions)
+  nameWithType.vb: ManagedTracer.CreateTracerFactory(String, IConsumer(Of Trace), TraceOptions)
+- uid: Google.Cloud.Diagnostics.Common.ManagedTracer.CreateTracerFactory*
+  name: CreateTracerFactory
+  href: api/Google.Cloud.Diagnostics.Common.ManagedTracer.html#Google_Cloud_Diagnostics_Common_ManagedTracer_CreateTracerFactory_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.ManagedTracer.CreateTracerFactory
+  fullName: Google.Cloud.Diagnostics.Common.ManagedTracer.CreateTracerFactory
+  nameWithType: ManagedTracer.CreateTracerFactory
 - uid: Google.Cloud.Diagnostics.Common.NullManagedTracer
   name: NullManagedTracer
   href: api/Google.Cloud.Diagnostics.Common.NullManagedTracer.html
@@ -1108,6 +1319,24 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.Common.NullManagedTracer.StartSpan
   fullName: Google.Cloud.Diagnostics.Common.NullManagedTracer.StartSpan
   nameWithType: NullManagedTracer.StartSpan
+- uid: Google.Cloud.Diagnostics.Common.Project
+  name: Project
+  href: api/Google.Cloud.Diagnostics.Common.Project.html
+  commentId: T:Google.Cloud.Diagnostics.Common.Project
+  fullName: Google.Cloud.Diagnostics.Common.Project
+  nameWithType: Project
+- uid: Google.Cloud.Diagnostics.Common.Project.GetAndCheckProjectId(System.String,Google.Api.MonitoredResource)
+  name: GetAndCheckProjectId(String, MonitoredResource)
+  href: api/Google.Cloud.Diagnostics.Common.Project.html#Google_Cloud_Diagnostics_Common_Project_GetAndCheckProjectId_System_String_Google_Api_MonitoredResource_
+  commentId: M:Google.Cloud.Diagnostics.Common.Project.GetAndCheckProjectId(System.String,Google.Api.MonitoredResource)
+  fullName: Google.Cloud.Diagnostics.Common.Project.GetAndCheckProjectId(System.String, Google.Api.MonitoredResource)
+  nameWithType: Project.GetAndCheckProjectId(String, MonitoredResource)
+- uid: Google.Cloud.Diagnostics.Common.Project.GetAndCheckProjectId*
+  name: GetAndCheckProjectId
+  href: api/Google.Cloud.Diagnostics.Common.Project.html#Google_Cloud_Diagnostics_Common_Project_GetAndCheckProjectId_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.Project.GetAndCheckProjectId
+  fullName: Google.Cloud.Diagnostics.Common.Project.GetAndCheckProjectId
+  nameWithType: Project.GetAndCheckProjectId
 - uid: Google.Cloud.Diagnostics.Common.RetryOptions
   name: RetryOptions
   href: api/Google.Cloud.Diagnostics.Common.RetryOptions.html
@@ -1375,6 +1604,102 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace
   fullName: Google.Cloud.Diagnostics.Common.TraceDecisionPredicate.ShouldTrace
   nameWithType: TraceDecisionPredicate.ShouldTrace
+- uid: Google.Cloud.Diagnostics.Common.TraceHeaderContext
+  name: TraceHeaderContext
+  href: api/Google.Cloud.Diagnostics.Common.TraceHeaderContext.html
+  commentId: T:Google.Cloud.Diagnostics.Common.TraceHeaderContext
+  fullName: Google.Cloud.Diagnostics.Common.TraceHeaderContext
+  nameWithType: TraceHeaderContext
+- uid: Google.Cloud.Diagnostics.Common.TraceHeaderContext.Create(System.String,System.Nullable{System.UInt64},System.Nullable{System.Boolean})
+  name: Create(String, Nullable<UInt64>, Nullable<Boolean>)
+  href: api/Google.Cloud.Diagnostics.Common.TraceHeaderContext.html#Google_Cloud_Diagnostics_Common_TraceHeaderContext_Create_System_String_System_Nullable_System_UInt64__System_Nullable_System_Boolean__
+  commentId: M:Google.Cloud.Diagnostics.Common.TraceHeaderContext.Create(System.String,System.Nullable{System.UInt64},System.Nullable{System.Boolean})
+  name.vb: Create(String, Nullable(Of UInt64), Nullable(Of Boolean))
+  fullName: Google.Cloud.Diagnostics.Common.TraceHeaderContext.Create(System.String, System.Nullable<System.UInt64>, System.Nullable<System.Boolean>)
+  fullName.vb: Google.Cloud.Diagnostics.Common.TraceHeaderContext.Create(System.String, System.Nullable(Of System.UInt64), System.Nullable(Of System.Boolean))
+  nameWithType: TraceHeaderContext.Create(String, Nullable<UInt64>, Nullable<Boolean>)
+  nameWithType.vb: TraceHeaderContext.Create(String, Nullable(Of UInt64), Nullable(Of Boolean))
+- uid: Google.Cloud.Diagnostics.Common.TraceHeaderContext.Create*
+  name: Create
+  href: api/Google.Cloud.Diagnostics.Common.TraceHeaderContext.html#Google_Cloud_Diagnostics_Common_TraceHeaderContext_Create_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceHeaderContext.Create
+  fullName: Google.Cloud.Diagnostics.Common.TraceHeaderContext.Create
+  nameWithType: TraceHeaderContext.Create
+- uid: Google.Cloud.Diagnostics.Common.TraceHeaderContext.FromHeader(System.String)
+  name: FromHeader(String)
+  href: api/Google.Cloud.Diagnostics.Common.TraceHeaderContext.html#Google_Cloud_Diagnostics_Common_TraceHeaderContext_FromHeader_System_String_
+  commentId: M:Google.Cloud.Diagnostics.Common.TraceHeaderContext.FromHeader(System.String)
+  fullName: Google.Cloud.Diagnostics.Common.TraceHeaderContext.FromHeader(System.String)
+  nameWithType: TraceHeaderContext.FromHeader(String)
+- uid: Google.Cloud.Diagnostics.Common.TraceHeaderContext.FromHeader(System.String,System.Func{System.Nullable{System.Boolean}})
+  name: FromHeader(String, Func<Nullable<Boolean>>)
+  href: api/Google.Cloud.Diagnostics.Common.TraceHeaderContext.html#Google_Cloud_Diagnostics_Common_TraceHeaderContext_FromHeader_System_String_System_Func_System_Nullable_System_Boolean___
+  commentId: M:Google.Cloud.Diagnostics.Common.TraceHeaderContext.FromHeader(System.String,System.Func{System.Nullable{System.Boolean}})
+  name.vb: FromHeader(String, Func(Of Nullable(Of Boolean)))
+  fullName: Google.Cloud.Diagnostics.Common.TraceHeaderContext.FromHeader(System.String, System.Func<System.Nullable<System.Boolean>>)
+  fullName.vb: Google.Cloud.Diagnostics.Common.TraceHeaderContext.FromHeader(System.String, System.Func(Of System.Nullable(Of System.Boolean)))
+  nameWithType: TraceHeaderContext.FromHeader(String, Func<Nullable<Boolean>>)
+  nameWithType.vb: TraceHeaderContext.FromHeader(String, Func(Of Nullable(Of Boolean)))
+- uid: Google.Cloud.Diagnostics.Common.TraceHeaderContext.FromHeader*
+  name: FromHeader
+  href: api/Google.Cloud.Diagnostics.Common.TraceHeaderContext.html#Google_Cloud_Diagnostics_Common_TraceHeaderContext_FromHeader_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceHeaderContext.FromHeader
+  fullName: Google.Cloud.Diagnostics.Common.TraceHeaderContext.FromHeader
+  nameWithType: TraceHeaderContext.FromHeader
+- uid: Google.Cloud.Diagnostics.Common.TraceHeaderContext.ShouldTrace
+  name: ShouldTrace
+  href: api/Google.Cloud.Diagnostics.Common.TraceHeaderContext.html#Google_Cloud_Diagnostics_Common_TraceHeaderContext_ShouldTrace
+  commentId: P:Google.Cloud.Diagnostics.Common.TraceHeaderContext.ShouldTrace
+  fullName: Google.Cloud.Diagnostics.Common.TraceHeaderContext.ShouldTrace
+  nameWithType: TraceHeaderContext.ShouldTrace
+- uid: Google.Cloud.Diagnostics.Common.TraceHeaderContext.ShouldTrace*
+  name: ShouldTrace
+  href: api/Google.Cloud.Diagnostics.Common.TraceHeaderContext.html#Google_Cloud_Diagnostics_Common_TraceHeaderContext_ShouldTrace_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceHeaderContext.ShouldTrace
+  fullName: Google.Cloud.Diagnostics.Common.TraceHeaderContext.ShouldTrace
+  nameWithType: TraceHeaderContext.ShouldTrace
+- uid: Google.Cloud.Diagnostics.Common.TraceHeaderContext.SpanId
+  name: SpanId
+  href: api/Google.Cloud.Diagnostics.Common.TraceHeaderContext.html#Google_Cloud_Diagnostics_Common_TraceHeaderContext_SpanId
+  commentId: P:Google.Cloud.Diagnostics.Common.TraceHeaderContext.SpanId
+  fullName: Google.Cloud.Diagnostics.Common.TraceHeaderContext.SpanId
+  nameWithType: TraceHeaderContext.SpanId
+- uid: Google.Cloud.Diagnostics.Common.TraceHeaderContext.SpanId*
+  name: SpanId
+  href: api/Google.Cloud.Diagnostics.Common.TraceHeaderContext.html#Google_Cloud_Diagnostics_Common_TraceHeaderContext_SpanId_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceHeaderContext.SpanId
+  fullName: Google.Cloud.Diagnostics.Common.TraceHeaderContext.SpanId
+  nameWithType: TraceHeaderContext.SpanId
+- uid: Google.Cloud.Diagnostics.Common.TraceHeaderContext.ToString
+  name: ToString()
+  href: api/Google.Cloud.Diagnostics.Common.TraceHeaderContext.html#Google_Cloud_Diagnostics_Common_TraceHeaderContext_ToString
+  commentId: M:Google.Cloud.Diagnostics.Common.TraceHeaderContext.ToString
+  fullName: Google.Cloud.Diagnostics.Common.TraceHeaderContext.ToString()
+  nameWithType: TraceHeaderContext.ToString()
+- uid: Google.Cloud.Diagnostics.Common.TraceHeaderContext.ToString*
+  name: ToString
+  href: api/Google.Cloud.Diagnostics.Common.TraceHeaderContext.html#Google_Cloud_Diagnostics_Common_TraceHeaderContext_ToString_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceHeaderContext.ToString
+  fullName: Google.Cloud.Diagnostics.Common.TraceHeaderContext.ToString
+  nameWithType: TraceHeaderContext.ToString
+- uid: Google.Cloud.Diagnostics.Common.TraceHeaderContext.TraceHeader
+  name: TraceHeader
+  href: api/Google.Cloud.Diagnostics.Common.TraceHeaderContext.html#Google_Cloud_Diagnostics_Common_TraceHeaderContext_TraceHeader
+  commentId: F:Google.Cloud.Diagnostics.Common.TraceHeaderContext.TraceHeader
+  fullName: Google.Cloud.Diagnostics.Common.TraceHeaderContext.TraceHeader
+  nameWithType: TraceHeaderContext.TraceHeader
+- uid: Google.Cloud.Diagnostics.Common.TraceHeaderContext.TraceId
+  name: TraceId
+  href: api/Google.Cloud.Diagnostics.Common.TraceHeaderContext.html#Google_Cloud_Diagnostics_Common_TraceHeaderContext_TraceId
+  commentId: P:Google.Cloud.Diagnostics.Common.TraceHeaderContext.TraceId
+  fullName: Google.Cloud.Diagnostics.Common.TraceHeaderContext.TraceId
+  nameWithType: TraceHeaderContext.TraceId
+- uid: Google.Cloud.Diagnostics.Common.TraceHeaderContext.TraceId*
+  name: TraceId
+  href: api/Google.Cloud.Diagnostics.Common.TraceHeaderContext.html#Google_Cloud_Diagnostics_Common_TraceHeaderContext_TraceId_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceHeaderContext.TraceId
+  fullName: Google.Cloud.Diagnostics.Common.TraceHeaderContext.TraceId
+  nameWithType: TraceHeaderContext.TraceId
 - uid: Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler
   name: TraceHeaderPropagatingHandler
   href: api/Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.html
@@ -1408,6 +1733,72 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.SendAsync
   fullName: Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.SendAsync
   nameWithType: TraceHeaderPropagatingHandler.SendAsync
+- uid: Google.Cloud.Diagnostics.Common.TraceLabels
+  name: TraceLabels
+  href: api/Google.Cloud.Diagnostics.Common.TraceLabels.html
+  commentId: T:Google.Cloud.Diagnostics.Common.TraceLabels
+  fullName: Google.Cloud.Diagnostics.Common.TraceLabels
+  nameWithType: TraceLabels
+- uid: Google.Cloud.Diagnostics.Common.TraceLabels.Agent
+  name: Agent
+  href: api/Google.Cloud.Diagnostics.Common.TraceLabels.html#Google_Cloud_Diagnostics_Common_TraceLabels_Agent
+  commentId: F:Google.Cloud.Diagnostics.Common.TraceLabels.Agent
+  fullName: Google.Cloud.Diagnostics.Common.TraceLabels.Agent
+  nameWithType: TraceLabels.Agent
+- uid: Google.Cloud.Diagnostics.Common.TraceLabels.FromStackTrace(System.Diagnostics.StackTrace)
+  name: FromStackTrace(StackTrace)
+  href: api/Google.Cloud.Diagnostics.Common.TraceLabels.html#Google_Cloud_Diagnostics_Common_TraceLabels_FromStackTrace_System_Diagnostics_StackTrace_
+  commentId: M:Google.Cloud.Diagnostics.Common.TraceLabels.FromStackTrace(System.Diagnostics.StackTrace)
+  fullName: Google.Cloud.Diagnostics.Common.TraceLabels.FromStackTrace(System.Diagnostics.StackTrace)
+  nameWithType: TraceLabels.FromStackTrace(StackTrace)
+- uid: Google.Cloud.Diagnostics.Common.TraceLabels.FromStackTrace*
+  name: FromStackTrace
+  href: api/Google.Cloud.Diagnostics.Common.TraceLabels.html#Google_Cloud_Diagnostics_Common_TraceLabels_FromStackTrace_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceLabels.FromStackTrace
+  fullName: Google.Cloud.Diagnostics.Common.TraceLabels.FromStackTrace
+  nameWithType: TraceLabels.FromStackTrace
+- uid: Google.Cloud.Diagnostics.Common.TraceLabels.GetAgentLabel
+  name: GetAgentLabel()
+  href: api/Google.Cloud.Diagnostics.Common.TraceLabels.html#Google_Cloud_Diagnostics_Common_TraceLabels_GetAgentLabel
+  commentId: M:Google.Cloud.Diagnostics.Common.TraceLabels.GetAgentLabel
+  fullName: Google.Cloud.Diagnostics.Common.TraceLabels.GetAgentLabel()
+  nameWithType: TraceLabels.GetAgentLabel()
+- uid: Google.Cloud.Diagnostics.Common.TraceLabels.GetAgentLabel*
+  name: GetAgentLabel
+  href: api/Google.Cloud.Diagnostics.Common.TraceLabels.html#Google_Cloud_Diagnostics_Common_TraceLabels_GetAgentLabel_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.TraceLabels.GetAgentLabel
+  fullName: Google.Cloud.Diagnostics.Common.TraceLabels.GetAgentLabel
+  nameWithType: TraceLabels.GetAgentLabel
+- uid: Google.Cloud.Diagnostics.Common.TraceLabels.HttpHost
+  name: HttpHost
+  href: api/Google.Cloud.Diagnostics.Common.TraceLabels.html#Google_Cloud_Diagnostics_Common_TraceLabels_HttpHost
+  commentId: F:Google.Cloud.Diagnostics.Common.TraceLabels.HttpHost
+  fullName: Google.Cloud.Diagnostics.Common.TraceLabels.HttpHost
+  nameWithType: TraceLabels.HttpHost
+- uid: Google.Cloud.Diagnostics.Common.TraceLabels.HttpMethod
+  name: HttpMethod
+  href: api/Google.Cloud.Diagnostics.Common.TraceLabels.html#Google_Cloud_Diagnostics_Common_TraceLabels_HttpMethod
+  commentId: F:Google.Cloud.Diagnostics.Common.TraceLabels.HttpMethod
+  fullName: Google.Cloud.Diagnostics.Common.TraceLabels.HttpMethod
+  nameWithType: TraceLabels.HttpMethod
+- uid: Google.Cloud.Diagnostics.Common.TraceLabels.HttpRequestSize
+  name: HttpRequestSize
+  href: api/Google.Cloud.Diagnostics.Common.TraceLabels.html#Google_Cloud_Diagnostics_Common_TraceLabels_HttpRequestSize
+  commentId: F:Google.Cloud.Diagnostics.Common.TraceLabels.HttpRequestSize
+  fullName: Google.Cloud.Diagnostics.Common.TraceLabels.HttpRequestSize
+  nameWithType: TraceLabels.HttpRequestSize
+- uid: Google.Cloud.Diagnostics.Common.TraceLabels.HttpStatusCode
+  name: HttpStatusCode
+  href: api/Google.Cloud.Diagnostics.Common.TraceLabels.html#Google_Cloud_Diagnostics_Common_TraceLabels_HttpStatusCode
+  commentId: F:Google.Cloud.Diagnostics.Common.TraceLabels.HttpStatusCode
+  fullName: Google.Cloud.Diagnostics.Common.TraceLabels.HttpStatusCode
+  nameWithType: TraceLabels.HttpStatusCode
+- uid: Google.Cloud.Diagnostics.Common.TraceLabels.StackTrace
+  name: StackTrace
+  href: api/Google.Cloud.Diagnostics.Common.TraceLabels.html#Google_Cloud_Diagnostics_Common_TraceLabels_StackTrace
+  commentId: F:Google.Cloud.Diagnostics.Common.TraceLabels.StackTrace
+  fullName: Google.Cloud.Diagnostics.Common.TraceLabels.StackTrace
+  nameWithType: TraceLabels.StackTrace
 - uid: Google.Cloud.Diagnostics.Common.TraceOptions
   name: TraceOptions
   href: api/Google.Cloud.Diagnostics.Common.TraceOptions.html
