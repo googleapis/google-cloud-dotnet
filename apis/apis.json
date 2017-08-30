@@ -429,7 +429,20 @@
     "productUrl": "https://cloud.google.com/video-intelligence",
     "version": "1.0.0-alpha04",
     "type": "grpc",
-    "description": "Recommended Google client library to access the Google Cloud Video Intelligence API.",
+    "description": "Recommended Google client library to access the v1beta1 Google Cloud Video Intelligence API.",
+    "tags": [ "VideoIntelligence" ],
+    "dependencies": {
+      "Google.LongRunning": "project"
+    },
+  },
+
+  {
+    "id": "Google.Cloud.VideoIntelligence.V1Beta2",
+    "productName": "Google Cloud Video Intelligence",
+    "productUrl": "https://cloud.google.com/video-intelligence",
+    "version": "1.0.0-alpha00",
+    "type": "grpc",
+    "description": "Recommended Google client library to access the v1beta2 Google Cloud Video Intelligence API.",
     "tags": [ "VideoIntelligence" ],
     "dependencies": {
       "Google.LongRunning": "project"
