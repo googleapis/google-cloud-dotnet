@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
 using System.Collections.Generic;
 
 namespace Google.Cloud.BigQuery.V2
@@ -100,5 +101,38 @@ namespace Google.Cloud.BigQuery.V2
         };
 
         internal static string ToParameterApiType(this BigQueryDbType type) => s_typeToNameMapping[type];
+
+        internal static Type ToClrType(this BigQueryDbType type)
+        {
+            switch (type)
+            {
+                case BigQueryDbType.Int64:
+                    return typeof(long);
+                case BigQueryDbType.Float64:
+                    return typeof(double);
+                case BigQueryDbType.Bool:
+                    return typeof(bool);
+                case BigQueryDbType.String:
+                    return typeof(string);
+                case BigQueryDbType.Bytes:
+                    return typeof(byte[]);
+                case BigQueryDbType.Date:
+                    return typeof(DateTime);
+                case BigQueryDbType.DateTime:
+                    return typeof(DateTime);
+                case BigQueryDbType.Time:
+                    return typeof(TimeSpan);
+                case BigQueryDbType.Timestamp:
+                    return typeof(DateTime);
+                case BigQueryDbType.Array:
+                    // This should actually not be returned as this is handled
+                    // in TableFieldSchemaExtensions.
+                    return typeof(object[]);
+                case BigQueryDbType.Struct:
+                    return typeof(Dictionary<string, object>);
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(type), type, null);
+            }
+        }
     }
 }

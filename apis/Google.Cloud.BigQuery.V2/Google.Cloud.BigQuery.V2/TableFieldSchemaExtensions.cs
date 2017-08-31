@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
+using System.Collections.Generic;
 using Google.Apis.Bigquery.v2.Data;
 
 namespace Google.Cloud.BigQuery.V2
@@ -33,5 +35,15 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         internal static BigQueryFieldMode GetFieldMode(this TableFieldSchema field) =>
             EnumMap<BigQueryFieldMode>.ToValue(field.Mode);
+
+        internal static Type ToClrType(this TableFieldSchema field)
+        {
+            var fieldType = field.GetFieldType().ToClrType();
+            if (field.GetFieldMode() == BigQueryFieldMode.Repeated)
+            {
+                return fieldType.MakeArrayType();
+            }
+            return fieldType;
+        }
     }
 }

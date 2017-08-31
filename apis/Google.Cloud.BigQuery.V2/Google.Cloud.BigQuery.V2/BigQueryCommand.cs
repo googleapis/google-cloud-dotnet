@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
 using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
 using System.Linq;
@@ -22,13 +23,18 @@ namespace Google.Cloud.BigQuery.V2
     /// A SQL query (or DML command) to be sent to BigQuery, optionally
     /// including parameters.
     /// </summary>
-    public sealed class BigQueryCommand
+    public sealed partial class BigQueryCommand
     {
         /// <summary>
         /// The SQL of the command. This must not be null by the time
         /// the command is executed.
         /// </summary>
-        public string Sql { get; set; }
+        [Obsolete("Please use the CommandText property")]
+        public string Sql
+        {
+            get => CommandText;
+            set => CommandText = value;
+        }
 
         private BigQueryParameterMode _parameterMode = BigQueryParameterMode.Named;
         /// <summary>
@@ -44,10 +50,10 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// The parameters used within this command.
         /// </summary>
-        public BigQueryParameterCollection Parameters { get; } = new BigQueryParameterCollection();
+        public new BigQueryParameterCollection Parameters { get; } = new BigQueryParameterCollection();
 
         /// <summary>
-        /// Constructs an instance with no SQL set yet.
+        /// Constructs an instance of a <see cref="BigQueryCommand"/>.
         /// </summary>
         public BigQueryCommand()
         {
@@ -56,15 +62,15 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Constructs an instance for the given SQL.
         /// </summary>
-        /// <param name="sql">The SQL to execute.</param>
-        public BigQueryCommand(string sql)
+        /// <param name="commandText">The SQL to execute.</param>
+        public BigQueryCommand(string commandText)
         {
-            Sql = sql;
+            CommandText = commandText;
         }
 
         internal void PopulateQueryRequest(QueryRequest queryRequest)
         {
-            queryRequest.Query = Sql;
+            queryRequest.Query = CommandText;
             // Safe for now; we only have "named" or "positional". This is unlikely to change.
             queryRequest.ParameterMode = ParameterMode.ToString().ToLowerInvariant();
             queryRequest.QueryParameters = Parameters.Select(p => p.ToQueryParameter(ParameterMode)).ToList();
@@ -72,7 +78,7 @@ namespace Google.Cloud.BigQuery.V2
 
         internal void PopulateJobConfigurationQuery(JobConfigurationQuery query)
         {
-            query.Query = Sql;
+            query.Query = CommandText;
             // Safe for now; we only have "named" or "positional". This is unlikely to change.
             query.ParameterMode = ParameterMode.ToString().ToLowerInvariant();
             query.QueryParameters = Parameters.Select(p => p.ToQueryParameter(ParameterMode)).ToList();
