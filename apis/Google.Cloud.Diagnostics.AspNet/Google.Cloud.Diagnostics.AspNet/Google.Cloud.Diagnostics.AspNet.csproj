@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>1.0.0-beta16</Version>
+    <Version>1.0.0</Version>
     <TargetFrameworks>net45</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
     <Features>IOperation</Features>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>

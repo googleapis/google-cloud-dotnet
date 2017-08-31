@@ -6,9 +6,9 @@
 
 As suggested by the name of this package, this contains experimental
 features. The namespace of all the types in this package is the
-same as the namespace of the types in the stable
-`Google.Cloud.Language.V1` package; the expectation is that users
-will only use this package if they wish to use experimental
+same as the namespace of the types in the [stable
+Google.Cloud.Language.V1 package](../Google.Cloud.Language.V1/index.html);
+the expectation is that users will only use this package if they wish to use experimental
 features. You should *not* depend on both this package and the
 non-experimental one.
 

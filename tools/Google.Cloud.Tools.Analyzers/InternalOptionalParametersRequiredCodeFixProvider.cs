@@ -68,14 +68,15 @@ namespace Google.Cloud.Tools.Analyzers
 
             var omittedParameterVariablePairs = new List<Tuple<string, string>>();
             bool useNamedArguments = false;
-            foreach (var argument in invocation.ArgumentsInParameterOrder)
+            foreach (var argument in invocation.ArgumentsInEvaluationOrder)
             {
                 switch (argument.ArgumentKind)
                 {
-                    case ArgumentKind.Positional:
-                        break;
-                    case ArgumentKind.Named:
-                        useNamedArguments = true;
+                    case ArgumentKind.Explicit:
+                        if (argument.Syntax?.Parent is ArgumentSyntax argumentSyntax && argumentSyntax.NameColon != null)
+                        {
+                            useNamedArguments = true;
+                        }
                         break;
                     case ArgumentKind.DefaultValue:
                     {

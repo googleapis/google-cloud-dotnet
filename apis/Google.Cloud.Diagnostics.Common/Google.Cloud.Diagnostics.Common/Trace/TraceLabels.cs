@@ -24,25 +24,25 @@ namespace Google.Cloud.Diagnostics.Common
     /// <summary>
     /// A helper class to handle span labels.
     /// </summary>
-    internal static class TraceLabels
+    public static class TraceLabels
     {
         ///<summary>The label to denote the size of a request.</summary> 
-        internal const string HttpRequestSize = "/http/request/size";
+        public const string HttpRequestSize = "/http/request/size";
 
         ///<summary>The label to denote the host.</summary> 
-        internal const string HttpHost = "/http/host";
+        public const string HttpHost = "/http/host";
 
         ///<summary>The label to denote the request method.</summary> 
-        internal const string HttpMethod = "/http/method";
+        public const string HttpMethod = "/http/method";
 
         ///<summary>The label to denote the response status code.</summary> 
-        internal const string HttpStatusCode = "/http/status_code";
+        public const string HttpStatusCode = "/http/status_code";
 
         ///<summary>The label to denote a stack trace.</summary> 
-        internal const string StackTrace = "/stacktrace";
+        public const string StackTrace = "/stacktrace";
 
         ///<summary>The label to denote an agent.</summary> 
-        internal const string Agent = "/agent";
+        public const string Agent = "/agent";
 
         /// <summary>
         /// Creates a a map of labels to represent a <see cref="StackTrace"/> for a span.
@@ -59,7 +59,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Gets a map with the label for the agent which contains the agent's name and version.
         /// </summary>
-        internal static Dictionary<string, string> GetAgentLabel() =>
+        public static Dictionary<string, string> GetAgentLabel() =>
             new Dictionary<string, string> { { Agent, CommonUtils.AgentNameAndVersion } };
 
         /// <summary>

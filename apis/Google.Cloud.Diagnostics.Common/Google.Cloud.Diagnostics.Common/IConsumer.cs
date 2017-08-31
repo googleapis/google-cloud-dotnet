@@ -22,7 +22,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// <summary>
     /// A consumer.
     /// </summary>
-    internal interface IConsumer<T> : IDisposable
+    public interface IConsumer<T> : IDisposable
     {
         /// <summary>
         /// Accepts an enumerable of items.

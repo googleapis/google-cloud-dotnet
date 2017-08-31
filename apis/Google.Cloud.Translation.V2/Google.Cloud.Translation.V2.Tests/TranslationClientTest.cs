@@ -14,6 +14,7 @@
 
 using Google.Cloud.ClientTesting;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using Xunit;
 
@@ -21,14 +22,14 @@ namespace Google.Cloud.Translation.V2.Tests
 {
     public class TranslationClientTest : AbstractClientTester<TranslationClient, TranslationClientTest.DerivedTranslationClient>
     {
-        public static IEnumerable<object[]> NotImplementedMethods => AllInstanceMethods;
+        public static IEnumerable<object[]> NotImplementedMembers => AllInstanceMethods.Concat(AllInstanceGetters);
 
         public class DerivedTranslationClient : TranslationClient
         {
         }
 
         [Theory]
-        [MemberData(nameof(NotImplementedMethods))]
+        [MemberData(nameof(NotImplementedMembers))]
         public void NotImplementedMethodsThrow(MethodInfo method)
         {
             AssertNotImplemented(method);

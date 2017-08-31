@@ -356,14 +356,15 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
             var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
 
-            ulong rootId = 0;
             Predicate<IEnumerable<TraceProto>> rootMatcher = t =>
             {
                 var spans = t.Single().Spans;
-                rootId = spans[0].SpanId;
                 return spans.Count == 1 && IsValidSpan(spans[0], "root");
             };
-            mockConsumer.Setup(c => c.Receive(Match.Create(rootMatcher)));
+            ulong rootId = 0;
+            mockConsumer
+                .Setup(c => c.Receive(Match.Create(rootMatcher)))
+                .Callback<IEnumerable<TraceProto>>(t => rootId = t.Single().Spans[0].SpanId);
 
             var childThreadsReleased = new ManualResetEventSlim(initialState: false);
             var startedChildSpans = 0;
@@ -401,9 +402,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 t1 = Task.Run(() => op("child-one", "grandchild-one").Wait());
                 t2 = Task.Run(() => op("child-two", "grandchild-two").Wait());
             }
-
-            mockConsumer.VerifyAll();
-            mockConsumer.Reset();
 
             Predicate<IEnumerable<TraceProto>> childMatcher = t =>
             {

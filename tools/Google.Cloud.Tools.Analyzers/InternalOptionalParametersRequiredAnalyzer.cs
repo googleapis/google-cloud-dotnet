@@ -60,7 +60,7 @@ namespace Google.Cloud.Tools.Analyzers
                 var semanticModel = context.Compilation.GetSemanticModel(context.Operation.Syntax.SyntaxTree);
                 var variablesInScope = GetVariablesInScope(context.Operation.Syntax, semanticModel);
 
-                foreach (var arg in invocation.ArgumentsInParameterOrder)
+                foreach (var arg in invocation.ArgumentsInEvaluationOrder)
                 {
                     if (arg.ArgumentKind != ArgumentKind.DefaultValue || arg.Parameter == null)
                     {

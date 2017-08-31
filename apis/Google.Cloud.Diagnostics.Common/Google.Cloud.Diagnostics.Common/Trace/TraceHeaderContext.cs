@@ -26,7 +26,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// The trace id, parent span id and whether or not to trace can be set.
     /// See: https://cloud.google.com/trace/docs/faq#how_do_i_force_a_request_to_be_traced
     /// </remarks>
-    internal sealed class TraceHeaderContext
+    public sealed class TraceHeaderContext
     {
         private static readonly TraceIdFactory _traceIdFactory = TraceIdFactory.Create();
 
@@ -35,7 +35,7 @@ namespace Google.Cloud.Diagnostics.Common
             new TraceHeaderContext(null, null, null);
 
         /// <summary>The trace header.</summary>
-        internal const string TraceHeader = "X-Cloud-Trace-Context";
+        public const string TraceHeader = "X-Cloud-Trace-Context";
 
         /// <summary>
         /// A regex to match the trace header. 

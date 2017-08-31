@@ -32,6 +32,9 @@ git checkout $tag
 ./build.sh
 dotnet pack AllProjects.sln --no-build -o $PWD/nuget -c Release
 
+# Remove any tools packages (e.g. the analyzer)
+rm -f nuget/Google.Cloud.Tools.*
+
 # TODO: Make builddocs.sh cope with being run from any directory.
 cd docs
 ./builddocs.sh

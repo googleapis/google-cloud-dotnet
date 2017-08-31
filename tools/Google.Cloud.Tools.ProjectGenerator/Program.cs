@@ -292,6 +292,7 @@ TODO: Add snippet references here.
                 // Build-related properties
                 new XElement("Version", api.Version), // TODO: Version, or VersionPrefix/VersionSuffix?
                 new XElement("TargetFrameworks", targetFrameworks),
+                new XElement("LangVersion", "latest"),
                 new XElement("Features", "IOperation"),
                 new XElement("GenerateDocumentationFile", true),
                 new XElement("AssemblyOriginatorKeyFile", "../../GoogleApis.snk"),
@@ -350,6 +351,7 @@ TODO: Add snippet references here.
             var propertyGroup =
                 new XElement("PropertyGroup",
                     new XElement("TargetFrameworks", GetTestTargetFrameworks(api)),
+                    new XElement("LangVersion", "latest"),
                     new XElement("Features", "IOperation"),
                     new XElement("IsPackable", false),
                     new XElement("AssemblyOriginatorKeyFile", "../../GoogleApis.snk"),

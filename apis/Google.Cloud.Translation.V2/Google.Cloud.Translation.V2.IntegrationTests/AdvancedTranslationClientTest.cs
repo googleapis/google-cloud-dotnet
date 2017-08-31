@@ -43,6 +43,30 @@ namespace Google.Cloud.Translation.V2.IntegrationTests
             string modelName = "nmt";
             var translation = client.TranslateText("Please translate this", LanguageCodes.French, model: modelName);
             Assert.Equal(modelName, translation.ModelName);
-        }        
+        }
+
+        [Fact]
+        public void Translate_OverrideToServerDefaultModel()
+        {
+            var client = AdvancedTranslationClient.Create(model: "nmt");
+            var translation = client.TranslateText("Please translate this", LanguageCodes.French, model: "");
+            Assert.Null(translation.ModelName);
+        }
+
+        [Fact]
+        public void Translate_DefaultModel()
+        {
+            var client = AdvancedTranslationClient.Create(model: "nmt");
+            var translation = client.TranslateText("Please translate this", LanguageCodes.French);
+            Assert.Equal("nmt", translation.ModelName);
+        }
+
+        [Fact]
+        public void ApplicationName()
+        {
+            AdvancedTranslationClientImpl.ApplicationName = "TestApplication";
+            var client = AdvancedTranslationClient.Create();
+            Assert.Equal("TestApplication", client.Service.ApplicationName);
+        }
     }
 }
