@@ -16,7 +16,6 @@ using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.Logging.V2;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Xml;
 
 namespace Google.Cloud.Diagnostics.Common.IntegrationTests
@@ -51,7 +50,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                 {
                     ResourceNames = { $"projects/{_projectId}" },
                     Filter = $"timestamp >= \"{time}\" AND textPayload:{testId}",
-                    PageSize = 250,
+                    PageSize = 1000,
                 };
                 return _client.ListLogEntries(request);
             });
