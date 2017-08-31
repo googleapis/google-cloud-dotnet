@@ -24,7 +24,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta2.Snippets
         public void AnnotateVideo()
         {
             // Sample: AnnotateVideo
-            // Additional: AnnotateVideo(string,IEnumerable<Feature>,VideoContext,string,string,CallSettings)
+            // Additional: AnnotateVideo(string,IEnumerable<Feature>,ByteString,VideoContext,string,string,CallSettings)
             VideoIntelligenceServiceClient client = VideoIntelligenceServiceClient.Create();
             AnnotateVideoRequest request = new AnnotateVideoRequest
             {
