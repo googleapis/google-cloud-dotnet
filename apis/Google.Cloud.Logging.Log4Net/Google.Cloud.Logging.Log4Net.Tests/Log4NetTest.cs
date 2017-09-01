@@ -188,6 +188,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                 Assert.Throws<InvalidOperationException>(() => appender.AddResourceLabel(new GoogleStackdriverAppender.Label { Key = "a", Value = "b" }));
                 Assert.Throws<InvalidOperationException>(() => appender.ProjectId = "");
                 Assert.Throws<InvalidOperationException>(() => appender.LogId = "");
+                Assert.Throws<InvalidOperationException>(() => appender.CredentialFile = "");
                 Assert.Throws<InvalidOperationException>(() => appender.MaxUploadBatchSize = 0);
                 Assert.Throws<InvalidOperationException>(() => appender.LocalQueueType = LocalQueueType.Memory);
                 Assert.Throws<InvalidOperationException>(() => appender.MaxMemorySize = 0);
@@ -212,6 +213,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             appender.AddResourceLabel(new GoogleStackdriverAppender.Label { Key = "a", Value = "b" });
             appender.ProjectId = "";
             appender.LogId = "";
+            appender.CredentialFile = "";
             appender.MaxUploadBatchSize = 0;
             appender.LocalQueueType = LocalQueueType.Memory;
             appender.MaxMemorySize = 0;
