@@ -60,10 +60,10 @@ namespace Google.Cloud.Tools.ProjectGenerator
         // the packages in DefaultPackageVersions should be specified precisely in stable packages.
         private static readonly Dictionary<string, string> CommonTestDependencies = new Dictionary<string, string>
         {
+            { "Google.Cloud.ClientTesting", ProjectVersionValue }, // Needed for all snippets and some other tests - easiest to just default
             { "Microsoft.NET.Test.Sdk", "15.3.0" },
-            { "xunit", "2.3.0-beta4-build3742" },
-            { "xunit.runner.visualstudio", "2.3.0-beta4-build3742" },
-            { "xunit.analyzers", "0.6.1" }, // Temporary measure to fix some broken analyzers in 0.6.0 that throw exceptions
+            { "xunit", "2.3.0-beta5-build3769" },
+            { "xunit.runner.visualstudio", "2.3.0-beta5-build3769" },
             { "Moq", "4.7.99" }
         };
 

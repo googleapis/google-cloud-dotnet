@@ -31,8 +31,7 @@
       "Google.Apis.Bigquery.v2": "1.28.0.932"
     },
     "testDependencies": {
-      "Google.Cloud.Storage.V1": "project",
-      "Google.Cloud.ClientTesting": "project"
+      "Google.Cloud.Storage.V1": "project"
     },
     "tags": [ "BigQuery" ]
   },
@@ -46,7 +45,6 @@
     "description": "Recommended Google client library to access the Google Cloud Bigtable API.",
     "tags": [ "Bigtable" ],
     "testDependencies": {
-      "Google.Cloud.ClientTesting": "project",
       "Google.Api.Gax.Grpc.Testing": "default"
     }
   },
@@ -64,7 +62,6 @@
       "Google.Api.Gax.Grpc": "2.0.0"
     },
     "testDependencies": {
-      "Google.Cloud.ClientTesting": "project",
       "Google.Api.Gax.Grpc.Testing": "2.0.0"
     },
   },
@@ -387,10 +384,7 @@
     "dependencies": {
       "Google.Apis.Storage.v1": "1.28.0.888"
     },
-    "tags": [ "Storage" ],
-    "testDependencies": {
-      "Google.Cloud.ClientTesting": "project"
-    }
+    "tags": [ "Storage" ]
   },
 
   {
@@ -417,10 +411,7 @@
     "dependencies": {
       "Google.Apis.Translate.v2": "1.28.0.875"
     },
-    "tags": [ "Translate", "Translation" ],
-    "testDependencies": {
-      "Google.Cloud.ClientTesting": "project"
-    }
+    "tags": [ "Translate", "Translation" ]
   },
 
   {
