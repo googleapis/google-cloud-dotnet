@@ -203,23 +203,29 @@ namespace Google.Cloud.Logging.Log4Net
 
         private LoggingServiceV2Client BuildLoggingServiceClient()
         {
-            GoogleCredential credential;
-            if(!TryGetCredentialFromFile(out credential))
+            GoogleCredential credential = GetCredentialFromFile();
+            if(credential == null)
             {
                 return LoggingServiceV2Client.Create();
             }
-            
-            return LoggingServiceV2Client.Create(new Grpc.Core.Channel(LoggingServiceV2Client.DefaultEndpoint.Host, LoggingServiceV2Client.DefaultEndpoint.Port, Grpc.Auth.GoogleGrpcCredentials.ToChannelCredentials(credential)));
+
+            Grpc.Core.Channel channel = new Grpc.Core.Channel(
+                LoggingServiceV2Client.DefaultEndpoint.Host, 
+                LoggingServiceV2Client.DefaultEndpoint.Port, 
+                credential.ToChannelCredential()
+            );
+
+            return LoggingServiceV2Client.Create(channel);
         }
 
-        private bool TryGetCredentialFromFile(out GoogleCredential credential)
+        private GoogleCredential GetCredentialFromFile()
         {
-            credential = null;
             if(string.IsNullOrWhiteSpace(CredentialFile))
             {
-                return false;
+                return null;
             }
-            
+
+            GoogleCredential credential;
             using (FileStream credStream = File.OpenRead(CredentialFile))
             {
                 credential = GoogleCredential.FromStream(credStream);
@@ -230,7 +236,7 @@ namespace Google.Cloud.Logging.Log4Net
                 credential = credential.CreateScoped(s_oAuthScopes);
             }
 
-            return true;
+            return credential;
         }
 
         private void ActivateLogIdAndResource()
