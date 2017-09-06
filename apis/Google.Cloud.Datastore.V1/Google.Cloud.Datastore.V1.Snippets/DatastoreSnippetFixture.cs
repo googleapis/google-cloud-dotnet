@@ -14,6 +14,7 @@
 using System;
 using System.Linq;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace Google.Cloud.Datastore.V1.Snippets
 {

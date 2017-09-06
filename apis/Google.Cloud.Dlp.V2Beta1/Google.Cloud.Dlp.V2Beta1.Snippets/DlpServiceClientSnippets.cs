@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,12 +13,14 @@
 // limitations under the License.
 
 
+using Google.Cloud.ClientTesting;
 using System;
 using Xunit;
 using static Google.Cloud.Dlp.V2Beta1.RedactContentRequest.Types;
 
 namespace Google.Cloud.Dlp.V2Beta1.Snippets
 {
+    [SnippetOutputCollector]
     public class DlpServiceClientSnippets
     {
         [Fact]

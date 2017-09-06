@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,6 +14,7 @@
 
 using Google.Apis.Compute.v1.Data;
 using Google.Cloud.Metadata.V1;
+using Google.Cloud.ClientTesting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -23,6 +24,7 @@ using Xunit;
 
 namespace Google.Cloud.Metadata.V1.Snippets
 {
+    [SnippetOutputCollector]
     [Collection(nameof(MetadataSnippetFixture))]
     public class MetadataClientSnippets
     {

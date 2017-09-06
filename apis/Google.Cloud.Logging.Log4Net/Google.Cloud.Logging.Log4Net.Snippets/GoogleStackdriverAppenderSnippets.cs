@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,12 +14,14 @@
 
 using log4net;
 using log4net.Config;
+using Google.Cloud.ClientTesting;
 using System.IO;
 using Xunit;
 using System.Reflection;
 
 namespace Google.Cloud.Logging.Log4Net.Snippets
 {
+    [SnippetOutputCollector]
     [Collection(nameof(Log4NetSnippetFixture))]
     public class GoogleStackdriverAppenderSnippets
     {

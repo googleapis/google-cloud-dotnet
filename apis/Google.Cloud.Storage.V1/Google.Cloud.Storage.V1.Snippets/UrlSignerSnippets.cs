@@ -13,20 +13,18 @@
 // limitations under the License.
 
 using Google.Apis.Auth.OAuth2;
-using Google.Apis.Json;
+using Google.Cloud.ClientTesting;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Security.Cryptography;
-using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Storage.V1.Snippets
 {
+    [SnippetOutputCollector]
     [Collection(nameof(StorageSnippetFixture))]
     public class UrlSignerSnippets
     {
