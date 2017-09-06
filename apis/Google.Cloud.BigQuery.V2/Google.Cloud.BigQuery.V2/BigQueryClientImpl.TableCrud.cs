@@ -26,7 +26,8 @@ namespace Google.Cloud.BigQuery.V2
 {
     public partial class BigQueryClientImpl
     {
-        private sealed class TablePageManager : IPageManager<ListRequest, TableList, BigQueryTable>
+        // Visible for testing
+        internal sealed class TablePageManager : IPageManager<ListRequest, TableList, BigQueryTable>
         {
             private readonly BigQueryClient _client;
 
@@ -40,10 +41,12 @@ namespace Google.Cloud.BigQuery.V2
             public void SetPageSize(ListRequest request, int pageSize) => request.MaxResults = pageSize;
             public void SetPageToken(ListRequest request, string pageToken) => request.PageToken = pageToken;
 
+            // Visible for testing
+
             /// <summary>
             /// Converts from the list representation of a table to the get/update/patch one, as far as possible.
             /// </summary>
-            private static Table ConvertResource(TableList.TablesData resource) =>
+            internal static Table ConvertResource(TableList.TablesData resource) =>
                 new Table
                 {
                     FriendlyName = resource.FriendlyName,

@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2.Data;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Xunit;
@@ -271,5 +272,16 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal("Sneak attack!", fetched.Resource.FriendlyName);
         }
 
+        [Fact]
+        public void ListTables_ResourceConversion()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string datasetId = _fixture.DatasetId;
+            var tableId = _fixture.CreateTableId();
+
+            client.CreateTable(datasetId, tableId, new TableSchema(), new CreateTableOptions { FriendlyName = "FriendlyName" });
+            var list = client.ListTables(datasetId).ToList();
+            Assert.Contains(list, candidate => candidate.Reference.TableId == tableId && candidate.Resource.FriendlyName == "FriendlyName");
+        }
     }
 }
