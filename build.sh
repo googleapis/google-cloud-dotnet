@@ -12,11 +12,9 @@ unset APPVEYOR_API_URL
 # match anything, e.g. when looking for tests.
 shopt -s nullglob
 
-echo "$(date +%T) Build started"
-
+echo "$(date +%T) Building analyzers"
 # First build the analyzers, for use in everything else.
-dotnet restore tools/Google.Cloud.Tools.Analyzers/Google.Cloud.Tools.Analyzers.csproj
-dotnet publish -c Release -f netstandard1.3 tools/Google.Cloud.Tools.Analyzers/Google.Cloud.Tools.Analyzers.csproj
+dotnet publish -c Release -f netstandard1.3 tools/Google.Cloud.Tools.Analyzers
 
 # Command line arguments are the APIs to build. Each argument
 # should be the name of a directory, either relative to the location
@@ -26,7 +24,7 @@ runtests=true
 while (( "$#" )); do
   if [[ "$1" == "--notests" ]]
   then 
-    echo "Not Running Tests..."
+    echo "Not running tests..."
     runtests=false
   else 
     apis+=($1)
@@ -34,61 +32,38 @@ while (( "$#" )); do
   shift
 done
 
+# Build and test the tools, but only on Windows
+[[ "$OS" == "Windows_NT" ]] && tools="tools" || tools=""
+
 if [ ${#apis[@]} -eq 0 ]
 then
-  apis="tools $(echo apis/Google.* | sed 's/apis\///g')"
+  apis="${tools} $(echo apis/Google.* | sed 's/apis\///g')"
 fi
 
-# First build up a solution file with all the projects, and a text
-# file with paths to all the test project files.
-> AllTests.txt
-rm -f AllProjects.sln
-dotnet new sln --name AllProjects
+# First build, working out the test projects as we go.
+for api in $apis
+do
+  echo "$(date +%T) Building $api"
+  [[ -d "$api" ]] && apidir=$api || apidir=apis/$api
 
-if [[ "$OS" == "Windows_NT" ]]
-then
-  # On Windows, we can just add all the projects, unconditionally.
-  # (And it's faster to add them all in one call to dotnet sln than
-  # to do them one at a time.)
-  for api in $apis
-  do 
-    [[ -d "$api" ]] && apidir=$api || apidir=apis/$api
-    dotnet sln AllProjects.sln add $apidir/*/*.csproj
+  # Only build ASP.NET support on Windows
+  if [[ "$OS" != "Windows_NT" ]] && [[ "$apidir" == "apis/Google.Cloud.Diagnostics.AspNet" ]]
+  then
+    continue
+  fi
 
-    for testproject in $apidir/*.Tests/*.csproj
-    do
-      echo "$testproject" >> AllTests.txt
-    done
-  done
-else
+  dotnet build -c Release $apidir
+
   # On Linux, we don't have desktop .NET, so any projects which only
   # support desktop .NET are going to be broken. Just don't add them.
-  for api in $apis
-  do 
-    [[ -d "$api" ]] && apidir=$api || apidir=apis/$api
-    for project in $apidir/*/*.csproj
-    do
-      if ! grep -q -E '>net[0-9]+<' $project
-      then
-        dotnet sln AllProjects.sln add $project
-      fi
-    done
-  
-    for testproject in $apidir/*.Tests/*.csproj
-    do
-      if ! grep -q -E '>net[0-9]+<' $testproject
-      then
-        echo "$testproject" >> AllTests.txt
-      fi
-    done
+  for testproject in $apidir/*.Tests/*.csproj
+  do
+    if [[ "$OS" == "Windows_NT" ]] || ! grep -q -E '>net[0-9]+<' $testproject
+    then
+      echo "$testproject" >> AllTests.txt
+    fi
   done
-fi
-
-# Restore, build, test.
-echo "$(date +%T) Restoring solution"
-dotnet restore AllProjects.sln
-echo "$(date +%T) Building solution"
-dotnet build -c Release AllProjects.sln
+done
 
 if [[ "$runtests" = true ]]
 then
@@ -99,3 +74,5 @@ then
     dotnet test -c Release $testproject
   done < AllTests.txt
 fi
+
+echo "$(date +%T) Build finished."
