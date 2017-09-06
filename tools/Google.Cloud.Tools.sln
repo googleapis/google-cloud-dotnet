@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.GenerateSnippetMarkdown", "Google.Cloud.Tools.GenerateSnippetMarkdown\Google.Cloud.Tools.GenerateSnippetMarkdown.csproj", "{656E050F-D24B-4CBE-9771-B3EF472342C0}"
 EndProject
@@ -253,5 +253,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C634B4F9-8177-4763-B3C3-38472DB3FC76}
 	EndGlobalSection
 EndGlobal
