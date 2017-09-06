@@ -14,6 +14,7 @@
 
 using Google.Apis.Bigquery.v2.Data;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
@@ -445,6 +446,31 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var options = new UploadCsvOptions { JobIdPrefix = "prefix", JobId = "id" };
             Assert.Throws<ArgumentException>(() => CreateJobWithSampleConfiguration(options));
+        }
+
+        [Fact]
+        public void ListTablesConversion()
+        {
+            var listResource = new TableList.TablesData
+            {
+                FriendlyName = "friendly name",
+                Id = "id",
+                Kind = "Table",
+                Labels = new Dictionary<string, string> { { "x", "y" } },
+                TableReference = new TableReference { DatasetId = "dataset", TableId = "id", ProjectId = "project" },
+                TimePartitioning = new TimePartitioning { ExpirationMs = 10000, Type = "DAY" },
+                Type = "VIEW",
+                View = new TableList.TablesData.ViewData { UseLegacySql = true }
+            };
+
+            var tableResource = BigQueryClientImpl.TablePageManager.ConvertResource(listResource);
+            Assert.Equal("friendly name", tableResource.FriendlyName);
+            Assert.Equal("id", tableResource.Id);
+            Assert.Equal("Table", tableResource.Kind);
+            Assert.Equal("y", tableResource.Labels["x"]);
+            Assert.Same(listResource.TableReference, tableResource.TableReference);
+            Assert.Equal("VIEW", tableResource.Type);
+            Assert.True(tableResource.View.UseLegacySql);
         }
     }
 }
