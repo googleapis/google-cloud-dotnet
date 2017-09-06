@@ -484,6 +484,16 @@ namespace Google.Cloud.Spanner.Data.Tests
             }
         }
 
+        [Fact]
+        public void SessionPoolDefaultTimeout()
+        {
+            SessionPoolOptions options = new SessionPoolOptions();
+            Assert.Equal(options.Timeout,
+                // ReSharper disable once PossibleInvalidOperationException
+                (int)SpannerSettings.GetDefault().CommitSettings.Timing.Retry
+                    .TotalExpiration.Timeout.Value.TotalSeconds);
+        }
+
         private class ParallelSpannerClient : SpannerClient
         {
             private int _concurrentRequests = 0;
