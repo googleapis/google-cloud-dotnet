@@ -2,22 +2,27 @@
 
 set -e
 
+# This script generates all APIs from the googleapis/googleapis github repository,
+# using the API toolkit from googleapis/toolkit. It will fetch both repositories if
+# necessary.
+# This script can be run on Linux, or Windows from the "Linux for Windows" subsystem.
+# Prerequisites:
+# - Ubuntu 16.04 (other versions may work too)
+# - git
+# - Java 8 (e.g. openjdk-8-jdk-headless)
+# - wget
+# - unzip
+
 # TODO: Use toolversions.sh
 # This script needs to work on Linux machines without nuget, unlike other scripts...
-
-# TODO: Use some appropriate way of determining OS. Ideally, shouldn't need dotnet installed.
-#[[ $(dotnet --info | grep "OS Platform" | grep -c Windows) -ne 0 ]] && OS=windows || OS=linux
-OS=linux
-[[ ${OS} = "windows" ]] && EXE_SUFFIX=.exe || EXE_SUFFIX=
-
 GRPC_VERSION=1.4.0
 PROTOBUF_VERSION=3.3.0
-PROTOC=packages/Grpc.Tools.$GRPC_VERSION/tools/${OS}_x64/protoc${EXE_SUFFIX}
-GRPC_PLUGIN=packages/Grpc.Tools.$GRPC_VERSION/tools/${OS}_x64/grpc_csharp_plugin${EXE_SUFFIX}
+PROTOC=packages/Grpc.Tools.$GRPC_VERSION/tools/linux_x64/protoc
+GRPC_PLUGIN=packages/Grpc.Tools.$GRPC_VERSION/tools/linux_x64/grpc_csharp_plugin
 CORE_PROTOS_ROOT=packages/Google.Protobuf.Tools.$PROTOBUF_VERSION/tools
 OUTDIR=tmp
 
-# Nuget isn't working nicely for me on Linux...
+# Fake nuget installation by downloading and unpacking a zip file
 nuget_install() {
   outdir=packages/$1.$2
   if [ ! -d "$outdir" ]
