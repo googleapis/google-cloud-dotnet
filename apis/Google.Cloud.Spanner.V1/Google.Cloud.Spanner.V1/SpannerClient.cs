@@ -398,13 +398,13 @@ namespace Google.Cloud.Spanner.V1
         /// <list>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 36000000 milliseconds.
+        /// Default RPC expiration is 3600000 milliseconds.
         /// </remarks>
         public CallSettings CommitSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetLongRunningRetryBackoff(),
                 timeoutBackoff: GetLongRunningTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(36000000)),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(3600000)),
                 retryFilter: LongRunningRetryFilter
             )));
 

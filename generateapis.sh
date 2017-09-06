@@ -147,7 +147,7 @@ generate_api Google.Cloud.ErrorReporting.V1Beta1 google/devtools/clouderrorrepor
 generate_api Google.Cloud.Language.V1 google/cloud/language/v1 language_v1.yaml
 # Config is currently broken for Language v1beta2
 # generate_api Google.Cloud.Language.V1.Experimental google/cloud/language/v1beta2 language_v1beta2.yaml
-generate_api Google.Cloud.Logging.V2 google/logging/v2 logging.yaml google/logging/type
+# generate_api Google.Cloud.Logging.V2 google/logging/v2 logging.yaml google/logging/type
 generate_api Google.Cloud.Monitoring.V3 google/monitoring/v3 monitoring.yaml
 generate_api Google.Cloud.PubSub.V1 google/pubsub/v1 pubsub.yaml
 generate_api Google.Cloud.Spanner.Admin.Database.V1 google/spanner/admin/database/v1 spanner_admin_database.yaml
@@ -160,5 +160,5 @@ generate_api Google.Cloud.VideoIntelligence.V1Beta2 google/cloud/videointelligen
 generate_api Google.Cloud.Vision.V1 google/cloud/vision/v1 vision.yaml
 
 # Cleanup for the logging API's version-agnostic protos (in their own top-level directory)
-mv apis/Google.Cloud.Logging.V2/Google.Cloud.Logging.Type/*.cs apis/Google.Cloud.Logging.Type/Google.Cloud.Logging.Type
-rmdir apis/Google.Cloud.Logging.V2/Google.Cloud.Logging.Type
+# mv apis/Google.Cloud.Logging.V2/Google.Cloud.Logging.Type/*.cs apis/Google.Cloud.Logging.Type/Google.Cloud.Logging.Type
+# rmdir apis/Google.Cloud.Logging.V2/Google.Cloud.Logging.Type

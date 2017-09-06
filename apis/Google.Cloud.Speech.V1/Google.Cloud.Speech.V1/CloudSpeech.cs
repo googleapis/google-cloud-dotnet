@@ -2008,8 +2008,10 @@ namespace Google.Cloud.Speech.V1 {
 
   /// <summary>
   /// `StreamingRecognizeResponse` is the only message returned to the client by
-  /// `StreamingRecognize`. A series of one or more `StreamingRecognizeResponse`
-  /// messages are streamed back to the client.
+  /// `StreamingRecognize`. A series of zero or more `StreamingRecognizeResponse`
+  /// messages are streamed back to the client. If there is no recognizable
+  /// audio, and `single_utterance` is set to false, then no messages are streamed
+  /// back to the client.
   ///
   /// Here's an example of a series of ten `StreamingRecognizeResponse`s that might
   /// be returned while processing audio:
@@ -2112,8 +2114,8 @@ namespace Google.Cloud.Speech.V1 {
     /// <summary>
     /// *Output-only* This repeated list contains zero or more results that
     /// correspond to consecutive portions of the audio currently being processed.
-    /// It contains zero or one `is_final=true` result (the newly settled portion),
-    /// followed by zero or more `is_final=false` results.
+    /// It contains zero or more `is_final=false` results followed by zero or one
+    /// `is_final=true` result (the newly settled portion).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Speech.V1.StreamingRecognitionResult> Results {

@@ -40,8 +40,23 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // Create client
             DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)
-            InspectConfig inspectConfig = new InspectConfig();
-            IEnumerable<ContentItem> items = new List<ContentItem>();
+            InspectConfig inspectConfig = new InspectConfig
+            {
+                InfoTypes = {
+                                new InfoType
+                                {
+                                    Name = "EMAIL_ADDRESS",
+                                },
+                            },
+            };
+            IEnumerable<ContentItem> items = new[]
+            {
+                new ContentItem
+                {
+                    Type = "text/plain",
+                    Value = "My email is example@example.com.",
+                },
+            };
             // Make the request
             InspectContentResponse response = await dlpServiceClient.InspectContentAsync(inspectConfig, items);
             // End snippet
@@ -53,8 +68,23 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // Create client
             DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
             // Initialize request argument(s)
-            InspectConfig inspectConfig = new InspectConfig();
-            IEnumerable<ContentItem> items = new List<ContentItem>();
+            InspectConfig inspectConfig = new InspectConfig
+            {
+                InfoTypes = {
+                                new InfoType
+                                {
+                                    Name = "EMAIL_ADDRESS",
+                                },
+                            },
+            };
+            IEnumerable<ContentItem> items = new[]
+            {
+                new ContentItem
+                {
+                    Type = "text/plain",
+                    Value = "My email is example@example.com.",
+                },
+            };
             // Make the request
             InspectContentResponse response = dlpServiceClient.InspectContent(inspectConfig, items);
             // End snippet
@@ -68,8 +98,22 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // Initialize request argument(s)
             InspectContentRequest request = new InspectContentRequest
             {
-                InspectConfig = new InspectConfig(),
-                Items = { },
+                InspectConfig = new InspectConfig
+                                {
+                                    InfoTypes = {
+                                                    new InfoType
+                                                    {
+                                                        Name = "EMAIL_ADDRESS",
+                                                    },
+                                                },
+                                },
+                Items = {
+                            new ContentItem
+                            {
+                                Type = "text/plain",
+                                Value = "My email is example@example.com.",
+                            },
+                        },
             };
             // Make the request
             InspectContentResponse response = await dlpServiceClient.InspectContentAsync(request);
@@ -84,8 +128,22 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // Initialize request argument(s)
             InspectContentRequest request = new InspectContentRequest
             {
-                InspectConfig = new InspectConfig(),
-                Items = { },
+                InspectConfig = new InspectConfig
+                                {
+                                    InfoTypes = {
+                                                    new InfoType
+                                                    {
+                                                        Name = "EMAIL_ADDRESS",
+                                                    },
+                                                },
+                                },
+                Items = {
+                            new ContentItem
+                            {
+                                Type = "text/plain",
+                                Value = "My email is example@example.com.",
+                            },
+                        },
             };
             // Make the request
             InspectContentResponse response = dlpServiceClient.InspectContent(request);
@@ -99,9 +157,34 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // Create client
             DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)
-            InspectConfig inspectConfig = new InspectConfig();
-            IEnumerable<ContentItem> items = new List<ContentItem>();
-            IEnumerable<RedactContentRequest.Types.ReplaceConfig> replaceConfigs = new List<RedactContentRequest.Types.ReplaceConfig>();
+            InspectConfig inspectConfig = new InspectConfig
+            {
+                InfoTypes = {
+                                new InfoType
+                                {
+                                    Name = "EMAIL_ADDRESS",
+                                },
+                            },
+            };
+            IEnumerable<ContentItem> items = new[]
+            {
+                new ContentItem
+                {
+                    Type = "text/plain",
+                    Value = "My email is example@example.com.",
+                },
+            };
+            IEnumerable<RedactContentRequest.Types.ReplaceConfig> replaceConfigs = new[]
+            {
+                new RedactContentRequest.Types.ReplaceConfig
+                {
+                    InfoType = new InfoType
+                               {
+                                   Name = "EMAIL_ADDRESS",
+                               },
+                    ReplaceWith = "REDACTED",
+                },
+            };
             // Make the request
             RedactContentResponse response = await dlpServiceClient.RedactContentAsync(inspectConfig, items, replaceConfigs);
             // End snippet
@@ -113,9 +196,34 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // Create client
             DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
             // Initialize request argument(s)
-            InspectConfig inspectConfig = new InspectConfig();
-            IEnumerable<ContentItem> items = new List<ContentItem>();
-            IEnumerable<RedactContentRequest.Types.ReplaceConfig> replaceConfigs = new List<RedactContentRequest.Types.ReplaceConfig>();
+            InspectConfig inspectConfig = new InspectConfig
+            {
+                InfoTypes = {
+                                new InfoType
+                                {
+                                    Name = "EMAIL_ADDRESS",
+                                },
+                            },
+            };
+            IEnumerable<ContentItem> items = new[]
+            {
+                new ContentItem
+                {
+                    Type = "text/plain",
+                    Value = "My email is example@example.com.",
+                },
+            };
+            IEnumerable<RedactContentRequest.Types.ReplaceConfig> replaceConfigs = new[]
+            {
+                new RedactContentRequest.Types.ReplaceConfig
+                {
+                    InfoType = new InfoType
+                               {
+                                   Name = "EMAIL_ADDRESS",
+                               },
+                    ReplaceWith = "REDACTED",
+                },
+            };
             // Make the request
             RedactContentResponse response = dlpServiceClient.RedactContent(inspectConfig, items, replaceConfigs);
             // End snippet
@@ -129,9 +237,32 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // Initialize request argument(s)
             RedactContentRequest request = new RedactContentRequest
             {
-                InspectConfig = new InspectConfig(),
-                Items = { },
-                ReplaceConfigs = { },
+                InspectConfig = new InspectConfig
+                                {
+                                    InfoTypes = {
+                                                    new InfoType
+                                                    {
+                                                        Name = "EMAIL_ADDRESS",
+                                                    },
+                                                },
+                                },
+                Items = {
+                            new ContentItem
+                            {
+                                Type = "text/plain",
+                                Value = "My email is example@example.com.",
+                            },
+                        },
+                ReplaceConfigs = {
+                                     new RedactContentRequest.Types.ReplaceConfig
+                                     {
+                                         InfoType = new InfoType
+                                                    {
+                                                        Name = "EMAIL_ADDRESS",
+                                                    },
+                                         ReplaceWith = "REDACTED",
+                                     },
+                                 },
             };
             // Make the request
             RedactContentResponse response = await dlpServiceClient.RedactContentAsync(request);
@@ -146,9 +277,32 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // Initialize request argument(s)
             RedactContentRequest request = new RedactContentRequest
             {
-                InspectConfig = new InspectConfig(),
-                Items = { },
-                ReplaceConfigs = { },
+                InspectConfig = new InspectConfig
+                                {
+                                    InfoTypes = {
+                                                    new InfoType
+                                                    {
+                                                        Name = "EMAIL_ADDRESS",
+                                                    },
+                                                },
+                                },
+                Items = {
+                            new ContentItem
+                            {
+                                Type = "text/plain",
+                                Value = "My email is example@example.com.",
+                            },
+                        },
+                ReplaceConfigs = {
+                                     new RedactContentRequest.Types.ReplaceConfig
+                                     {
+                                         InfoType = new InfoType
+                                                    {
+                                                        Name = "EMAIL_ADDRESS",
+                                                    },
+                                         ReplaceWith = "REDACTED",
+                                     },
+                                 },
             };
             // Make the request
             RedactContentResponse response = dlpServiceClient.RedactContent(request);
@@ -162,8 +316,25 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // Create client
             DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)
-            InspectConfig inspectConfig = new InspectConfig();
-            StorageConfig storageConfig = new StorageConfig();
+            InspectConfig inspectConfig = new InspectConfig
+            {
+                InfoTypes = {
+                                new InfoType
+                                {
+                                    Name = "EMAIL_ADDRESS",
+                                },
+                            },
+            };
+            StorageConfig storageConfig = new StorageConfig
+            {
+                CloudStorageOptions = new CloudStorageOptions
+                                      {
+                                          FileSet = new CloudStorageOptions.Types.FileSet
+                                                    {
+                                                        Url = "gs://example_bucket/example_file.png",
+                                                    },
+                                      },
+            };
             OutputStorageConfig outputConfig = new OutputStorageConfig();
             // Make the request
             Operation<InspectOperationResult, InspectOperationMetadata> response =
@@ -195,8 +366,25 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // Create client
             DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
             // Initialize request argument(s)
-            InspectConfig inspectConfig = new InspectConfig();
-            StorageConfig storageConfig = new StorageConfig();
+            InspectConfig inspectConfig = new InspectConfig
+            {
+                InfoTypes = {
+                                new InfoType
+                                {
+                                    Name = "EMAIL_ADDRESS",
+                                },
+                            },
+            };
+            StorageConfig storageConfig = new StorageConfig
+            {
+                CloudStorageOptions = new CloudStorageOptions
+                                      {
+                                          FileSet = new CloudStorageOptions.Types.FileSet
+                                                    {
+                                                        Url = "gs://example_bucket/example_file.png",
+                                                    },
+                                      },
+            };
             OutputStorageConfig outputConfig = new OutputStorageConfig();
             // Make the request
             Operation<InspectOperationResult, InspectOperationMetadata> response =
@@ -230,8 +418,25 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // Initialize request argument(s)
             CreateInspectOperationRequest request = new CreateInspectOperationRequest
             {
-                InspectConfig = new InspectConfig(),
-                StorageConfig = new StorageConfig(),
+                InspectConfig = new InspectConfig
+                                {
+                                    InfoTypes = {
+                                                    new InfoType
+                                                    {
+                                                        Name = "EMAIL_ADDRESS",
+                                                    },
+                                                },
+                                },
+                StorageConfig = new StorageConfig
+                                {
+                                    CloudStorageOptions = new CloudStorageOptions
+                                                          {
+                                                              FileSet = new CloudStorageOptions.Types.FileSet
+                                                                        {
+                                                                            Url = "gs://example_bucket/example_file.png",
+                                                                        },
+                                                          },
+                                },
                 OutputConfig = new OutputStorageConfig(),
             };
             // Make the request
@@ -266,8 +471,25 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // Initialize request argument(s)
             CreateInspectOperationRequest request = new CreateInspectOperationRequest
             {
-                InspectConfig = new InspectConfig(),
-                StorageConfig = new StorageConfig(),
+                InspectConfig = new InspectConfig
+                                {
+                                    InfoTypes = {
+                                                    new InfoType
+                                                    {
+                                                        Name = "EMAIL_ADDRESS",
+                                                    },
+                                                },
+                                },
+                StorageConfig = new StorageConfig
+                                {
+                                    CloudStorageOptions = new CloudStorageOptions
+                                                          {
+                                                              FileSet = new CloudStorageOptions.Types.FileSet
+                                                                        {
+                                                                            Url = "gs://example_bucket/example_file.png",
+                                                                        },
+                                                          },
+                                },
                 OutputConfig = new OutputStorageConfig(),
             };
             // Make the request
@@ -356,8 +578,8 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // Create client
             DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string category = "";
-            string languageCode = "";
+            string category = "PII";
+            string languageCode = "en";
             // Make the request
             ListInfoTypesResponse response = await dlpServiceClient.ListInfoTypesAsync(category, languageCode);
             // End snippet
@@ -369,8 +591,8 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // Create client
             DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
             // Initialize request argument(s)
-            string category = "";
-            string languageCode = "";
+            string category = "PII";
+            string languageCode = "en";
             // Make the request
             ListInfoTypesResponse response = dlpServiceClient.ListInfoTypes(category, languageCode);
             // End snippet
@@ -384,8 +606,8 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // Initialize request argument(s)
             ListInfoTypesRequest request = new ListInfoTypesRequest
             {
-                Category = "",
-                LanguageCode = "",
+                Category = "PII",
+                LanguageCode = "en",
             };
             // Make the request
             ListInfoTypesResponse response = await dlpServiceClient.ListInfoTypesAsync(request);
@@ -400,8 +622,8 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // Initialize request argument(s)
             ListInfoTypesRequest request = new ListInfoTypesRequest
             {
-                Category = "",
-                LanguageCode = "",
+                Category = "PII",
+                LanguageCode = "en",
             };
             // Make the request
             ListInfoTypesResponse response = dlpServiceClient.ListInfoTypes(request);
@@ -415,7 +637,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // Create client
             DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string languageCode = "";
+            string languageCode = "en";
             // Make the request
             ListRootCategoriesResponse response = await dlpServiceClient.ListRootCategoriesAsync(languageCode);
             // End snippet
@@ -427,7 +649,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // Create client
             DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
             // Initialize request argument(s)
-            string languageCode = "";
+            string languageCode = "en";
             // Make the request
             ListRootCategoriesResponse response = dlpServiceClient.ListRootCategories(languageCode);
             // End snippet
@@ -441,7 +663,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // Initialize request argument(s)
             ListRootCategoriesRequest request = new ListRootCategoriesRequest
             {
-                LanguageCode = "",
+                LanguageCode = "en",
             };
             // Make the request
             ListRootCategoriesResponse response = await dlpServiceClient.ListRootCategoriesAsync(request);
@@ -456,7 +678,7 @@ namespace Google.Cloud.Dlp.V2Beta1.Snippets
             // Initialize request argument(s)
             ListRootCategoriesRequest request = new ListRootCategoriesRequest
             {
-                LanguageCode = "",
+                LanguageCode = "en",
             };
             // Make the request
             ListRootCategoriesResponse response = dlpServiceClient.ListRootCategories(request);
