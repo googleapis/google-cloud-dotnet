@@ -36,9 +36,25 @@ namespace Google.Cloud.BigQuery.V2
             }
 
             public string GetNextPageToken(TableList response) => response.NextPageToken;
-            public IEnumerable<BigQueryTable> GetResources(TableList response) => response.Tables?.Select(resource => new BigQueryTable(_client, resource));
+            public IEnumerable<BigQueryTable> GetResources(TableList response) => response.Tables?.Select(resource => new BigQueryTable(_client, ConvertResource(resource)));
             public void SetPageSize(ListRequest request, int pageSize) => request.MaxResults = pageSize;
             public void SetPageToken(ListRequest request, string pageToken) => request.PageToken = pageToken;
+
+            /// <summary>
+            /// Converts from the list representation of a table to the get/update/patch one, as far as possible.
+            /// </summary>
+            private static Table ConvertResource(TableList.TablesData resource) =>
+                new Table
+                {
+                    FriendlyName = resource.FriendlyName,
+                    Id = resource.Id,
+                    Kind = resource.Kind,
+                    Labels = resource.Labels,
+                    TimePartitioning = resource.TimePartitioning,
+                    TableReference = resource.TableReference,
+                    Type = resource.Type,
+                    View = resource.View == null ? null : new ViewDefinition { UseLegacySql = resource.View.UseLegacySql }
+                };
         }
 
         /// <inheritdoc />
