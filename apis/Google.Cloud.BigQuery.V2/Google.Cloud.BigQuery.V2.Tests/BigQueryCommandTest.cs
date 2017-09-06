@@ -34,7 +34,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             {
                 Parameters = { { BigQueryDbType.Int64, 10 } }
             };
-            Assert.Equal("sql here", command.Sql);
+            Assert.Equal("sql here", command.CommandText);
             Assert.Equal(1, command.Parameters.Count);
             Assert.Equal(10, command.Parameters[0].Value);
             Assert.Equal(BigQueryDbType.Int64, command.Parameters[0].Type);

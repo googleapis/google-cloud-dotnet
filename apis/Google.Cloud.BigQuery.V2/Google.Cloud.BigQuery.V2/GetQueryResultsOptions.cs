@@ -61,6 +61,13 @@ namespace Google.Cloud.BigQuery.V2
             // Nothing to do? We may have something later...
         }
 
+        /// <summary>
+        /// </summary>
+        public GetQueryResultsOptions Clone()
+        {
+            return (GetQueryResultsOptions)MemberwiseClone();
+        }
+
         internal ListRowsOptions ToListRowsOptions()
         {
             if (PageToken != null && StartIndex != null)

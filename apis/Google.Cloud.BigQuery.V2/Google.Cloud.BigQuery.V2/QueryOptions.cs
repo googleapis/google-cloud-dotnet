@@ -100,6 +100,13 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// </summary>
+        public QueryOptions Clone()
+        {
+            return (QueryOptions)MemberwiseClone();
+        }
+
         internal void ModifyRequest(JobConfigurationQuery query)
         {
             // Note: no validation of combinations (flatten results etc). Leave this to the server,

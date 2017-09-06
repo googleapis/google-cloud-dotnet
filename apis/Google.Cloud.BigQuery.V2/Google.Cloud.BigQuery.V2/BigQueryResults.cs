@@ -70,6 +70,11 @@ namespace Google.Cloud.BigQuery.V2
             _client.ListRows(TableReference, Schema, _options).GetEnumerator();
 
         /// <summary>
+        /// Returns the results in the form of a data reader.
+        /// </summary>
+        public BigQueryDataReader GetDataReader() => new BigQueryDataReader(this);
+
+        /// <summary>
         /// Returns an iterator over the query results.
         /// </summary>
         /// <returns>An iterator over the query results.</returns>

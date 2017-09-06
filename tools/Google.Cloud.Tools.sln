@@ -36,6 +36,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.Analyzer
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.TrimCoverageReport", "Google.Cloud.Tools.TrimCoverageReport\Google.Cloud.Tools.TrimCoverageReport.csproj", "{A0FB3380-F0B1-4E61-90AF-291606C3128A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.DataGenerator", "Google.Cloud.Tools.DataGenerator\Google.Cloud.Tools.DataGenerator.csproj", "{AB76BFEA-DFC9-4ABF-AE99-C7384AA269D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -250,6 +252,18 @@ Global
 		{A0FB3380-F0B1-4E61-90AF-291606C3128A}.Release|x64.Build.0 = Release|Any CPU
 		{A0FB3380-F0B1-4E61-90AF-291606C3128A}.Release|x86.ActiveCfg = Release|Any CPU
 		{A0FB3380-F0B1-4E61-90AF-291606C3128A}.Release|x86.Build.0 = Release|Any CPU
+		{AB76BFEA-DFC9-4ABF-AE99-C7384AA269D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB76BFEA-DFC9-4ABF-AE99-C7384AA269D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB76BFEA-DFC9-4ABF-AE99-C7384AA269D1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AB76BFEA-DFC9-4ABF-AE99-C7384AA269D1}.Debug|x64.Build.0 = Debug|Any CPU
+		{AB76BFEA-DFC9-4ABF-AE99-C7384AA269D1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AB76BFEA-DFC9-4ABF-AE99-C7384AA269D1}.Debug|x86.Build.0 = Debug|Any CPU
+		{AB76BFEA-DFC9-4ABF-AE99-C7384AA269D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB76BFEA-DFC9-4ABF-AE99-C7384AA269D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB76BFEA-DFC9-4ABF-AE99-C7384AA269D1}.Release|x64.ActiveCfg = Release|Any CPU
+		{AB76BFEA-DFC9-4ABF-AE99-C7384AA269D1}.Release|x64.Build.0 = Release|Any CPU
+		{AB76BFEA-DFC9-4ABF-AE99-C7384AA269D1}.Release|x86.ActiveCfg = Release|Any CPU
+		{AB76BFEA-DFC9-4ABF-AE99-C7384AA269D1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

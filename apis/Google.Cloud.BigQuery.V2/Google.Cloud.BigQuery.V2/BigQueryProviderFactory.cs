@@ -18,6 +18,8 @@ using System.Data.Common;
 namespace Google.Cloud.BigQuery.V2
 {
     /// <summary>
+    /// Represents a set of methods for creating instances of the 
+    /// BigQuery data provider's implementation of the data source classes.
     /// </summary>
     public sealed class BigQueryProviderFactory : DbProviderFactory
     {
@@ -45,7 +47,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <inheritdoc />
         public override DbDataAdapter CreateDataAdapter()
         {
-            throw new NotSupportedException("todo");
+            throw new NotSupportedException("BigQuery does not yet support DataAdapter");
         }
 #endif
     }
