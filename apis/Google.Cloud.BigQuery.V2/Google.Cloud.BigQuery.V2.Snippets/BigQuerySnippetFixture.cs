@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Storage.V1;
+using Google.Cloud.ClientTesting;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -25,6 +26,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
     /// Fixture which is set up at the start of the test run, and torn down at the end.
     /// All entities use the same partition, which is then wiped at the end of the run.
     /// </summary>
+    [SnippetOutputCollector]
     [CollectionDefinition(nameof(BigQuerySnippetFixture))]
     public sealed class BigQuerySnippetFixture : IDisposable, ICollectionFixture<BigQuerySnippetFixture>
     {

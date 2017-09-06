@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Iam.V1;
+using Google.Cloud.ClientTesting;
 using Google.Protobuf;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,7 @@ using Xunit;
 
 namespace Google.Cloud.PubSub.V1.Snippets
 {
+    [SnippetOutputCollector]
     [Collection(nameof(PubsubSnippetFixture))]
     public class PublisherClientSnippets
     {

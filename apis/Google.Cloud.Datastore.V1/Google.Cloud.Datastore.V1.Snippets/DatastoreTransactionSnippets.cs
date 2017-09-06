@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -11,6 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+using Google.Cloud.ClientTesting;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ using static Google.Cloud.Datastore.V1.Key.Types;
 namespace Google.Cloud.Datastore.V1.Snippets
 {
     [Collection(nameof(DatastoreSnippetFixture))]
+    [SnippetOutputCollector]
     public class DatastoreTransactionSnippets
     {
         private readonly DatastoreSnippetFixture _fixture;
