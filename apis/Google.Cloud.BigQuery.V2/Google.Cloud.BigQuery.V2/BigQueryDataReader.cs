@@ -16,6 +16,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data.Common;
+using System.Globalization;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Api.Gax;
@@ -28,16 +29,15 @@ namespace Google.Cloud.BigQuery.V2
     public sealed class BigQueryDataReader : DbDataReader
     {
         private readonly BigQueryConnection _connectionToClose;
-        private IAsyncEnumerator<BigQueryRow> _results;
+        private readonly IAsyncEnumerator<BigQueryRow> _results;
         private bool _isEnumerating;
 
         internal BigQueryDataReader(BigQueryResults bigQueryResults, BigQueryConnection connectionToClose = null)
         {
             _connectionToClose = connectionToClose;
-            _isEnumerating = true;
-
             GaxPreconditions.CheckNotNull(bigQueryResults, nameof(bigQueryResults));
             BigQueryResults = bigQueryResults;
+            _results = BigQueryResults.GetRowsAsync().GetEnumerator();
         }
 
 
@@ -66,16 +66,18 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <inheritdoc />
         public override async Task<bool> ReadAsync(CancellationToken cancellationToken)
-            => _isEnumerating = await MoveNextAsync().ConfigureAwait(false);
+            => await MoveNextAsync(cancellationToken).ConfigureAwait(false);
 
         /// <inheritdoc />
         public override int Depth => 0;
 
+        //HasRows is true before any MoveNext and thereafter as long as Current is not null.
         /// <inheritdoc />
-        public override bool HasRows => _isEnumerating && _results?.Current != null;
+        public override bool HasRows => !_isEnumerating || _results.Current != null;
 
+        //IsClosed returns the negation of HasRows.
         /// <inheritdoc />
-        public override bool IsClosed => !_isEnumerating;
+        public override bool IsClosed => !HasRows;
 
         /// <inheritdoc />
         public override object this[int i] => Current?[i];
@@ -118,7 +120,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <inheritdoc />
         public override IEnumerator GetEnumerator()
         {
-#if NET45 || NET451
+#if NET45
             return new DbEnumerator(this);
 #else
             throw new NotSupportedException("GetEnumerator not yet supported in .NET Core");
@@ -130,7 +132,7 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <inheritdoc />
         public override T GetFieldValue<T>(int ordinal)
-            => (T) Convert.ChangeType(Current?[ordinal], typeof(T));
+            => (T) Convert.ChangeType(Current?[ordinal], typeof(T), CultureInfo.InvariantCulture);
 
         /// <summary>
         /// Gets the value of the specified column as type T.
@@ -160,13 +162,17 @@ namespace Google.Cloud.BigQuery.V2
         {
             var fields = Current?.Schema.Fields;
             if (fields == null)
+            {
                 return -1;
+            }
 
             var index = 0;
             foreach (var field in fields)
             {
                 if (field.Name == name)
+                {
                     return index;
+                }
                 index++;
             }
             return -1;
@@ -203,18 +209,14 @@ namespace Google.Cloud.BigQuery.V2
             base.Dispose(disposing);
         }
 
-        private BigQueryRow Current => _isEnumerating ? _results?.Current : null;
+        private BigQueryRow Current => _results?.Current;
 
         private BigQueryResults BigQueryResults { get; }
 
-        private Task<bool> MoveNextAsync() => GetResultsAsync().MoveNext();
-
-        private IAsyncEnumerator<BigQueryRow> GetResultsAsync()
+        private Task<bool> MoveNextAsync(CancellationToken cancellationToken)
         {
-            if (_results != null)
-                return _results;
-            _results = BigQueryResults.GetRowsAsync().GetEnumerator();
-            return _results;
+            _isEnumerating = true;
+            return _results.MoveNext(cancellationToken);
         }
     }
 }

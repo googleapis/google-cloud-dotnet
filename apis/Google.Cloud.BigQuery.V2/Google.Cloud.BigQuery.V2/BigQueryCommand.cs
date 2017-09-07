@@ -13,9 +13,7 @@
 // limitations under the License.
 
 using System;
-using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
-using System.Linq;
 
 namespace Google.Cloud.BigQuery.V2
 {
@@ -36,21 +34,20 @@ namespace Google.Cloud.BigQuery.V2
             set => CommandText = value;
         }
 
-        private BigQueryParameterMode _parameterMode = BigQueryParameterMode.Named;
         /// <summary>
         /// The mode of the parameter, either named (for parameters such of the form <c>@myparam</c>)
         /// or positional (for parameters specified as <c>?</c> in the query).
         /// </summary>
         public BigQueryParameterMode ParameterMode
         {
-            get { return _parameterMode; }
-            set { _parameterMode = GaxPreconditions.CheckEnumValue(value, nameof(value)); }
+            get => CommandOptions.ParameterMode;
+            set => CommandOptions.ParameterMode = value;
         }
 
         /// <summary>
         /// The parameters used within this command.
         /// </summary>
-        public new BigQueryParameterCollection Parameters { get; } = new BigQueryParameterCollection();
+        public new BigQueryParameterCollection Parameters => CommandOptions.Parameters;
 
         /// <summary>
         /// Constructs an instance of a <see cref="BigQueryCommand"/>.
@@ -69,19 +66,9 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         internal void PopulateQueryRequest(QueryRequest queryRequest)
-        {
-            queryRequest.Query = CommandText;
-            // Safe for now; we only have "named" or "positional". This is unlikely to change.
-            queryRequest.ParameterMode = ParameterMode.ToString().ToLowerInvariant();
-            queryRequest.QueryParameters = Parameters.Select(p => p.ToQueryParameter(ParameterMode)).ToList();
-        }
+            => CommandOptions.PopulateQueryRequest(queryRequest);
 
         internal void PopulateJobConfigurationQuery(JobConfigurationQuery query)
-        {
-            query.Query = CommandText;
-            // Safe for now; we only have "named" or "positional". This is unlikely to change.
-            query.ParameterMode = ParameterMode.ToString().ToLowerInvariant();
-            query.QueryParameters = Parameters.Select(p => p.ToQueryParameter(ParameterMode)).ToList();
-        }
+            => CommandOptions.PopulateJobConfigurationQuery(query);
     }
 }

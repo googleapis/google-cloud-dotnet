@@ -14,6 +14,7 @@
 using System;
 using System.Data;
 using System.Data.Common;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Api.Gax;
@@ -26,7 +27,7 @@ namespace Google.Cloud.BigQuery.V2
     public sealed partial class BigQueryConnection
     {
         /// <summary>
-        /// Creates a <see cref="BigQueryCommand"/> that is configured to execute a SQL query.
+        /// Creates a <see cref="BigQueryCommand" /> that is configured to execute a SQL query.
         /// </summary>
         public BigQueryCommand CreateSqlCommand(string sql, QueryOptions queryOptions = null,
             GetQueryResultsOptions resultsOptions = null)
@@ -147,7 +148,7 @@ namespace Google.Cloud.BigQuery.V2
 
     /// <summary>
     /// Command options for configuring a sql query or DML statement.
-    /// You may create a new <see cref="BigQueryCommand"/> and set <see cref="BigQueryCommand.CommandOptions"/>
+    /// You may create a new <see cref="BigQueryCommand" /> and set <see cref="BigQueryCommand.CommandOptions" />
     /// to an instance of this class to perform a SQL query or DML statement.
     /// </summary>
     public sealed class SqlCommandOptions : BigQueryCommandOptions
@@ -155,20 +156,12 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Options for <c>GetQueryResults</c> operations.
         /// </summary>
-        public GetQueryResultsOptions GetQueryResultsOptions
-        {
-            get;
-            set;
-        }
+        public GetQueryResultsOptions GetQueryResultsOptions { get; set; }
 
         /// <summary>
         /// Options for <c>CreateQueryJob</c> and <c>ExecuteQuery</c> operations.
         /// </summary>
-        public QueryOptions QueryOptions
-        {
-            get;
-            set;
-        }
+        public QueryOptions QueryOptions { get; set; }
 
         /// <summary>
         /// The type of this Command.
@@ -183,10 +176,12 @@ namespace Google.Cloud.BigQuery.V2
 
         internal override Task<BigQueryJob> StartJobAsync(BigQueryConnection connection,
             CancellationToken cancellationToken)
-            => StartJobImplAsync(connection, Sql, QueryOptions != null ? QueryOptions.Clone() : new QueryOptions(),
+            => StartJobImplAsync(connection, CreateJobConfig(),
+                QueryOptions != null ? QueryOptions.Clone() : new QueryOptions(),
                 cancellationToken);
 
-        internal static Task<BigQueryJob> StartJobImplAsync(BigQueryConnection connection, string sql,
+        internal static Task<BigQueryJob> StartJobImplAsync(BigQueryConnection connection,
+            JobConfigurationQuery jobConfig,
             QueryOptions queryOptions, CancellationToken cancellationToken)
         {
             queryOptions = queryOptions ?? new QueryOptions();
@@ -194,7 +189,7 @@ namespace Google.Cloud.BigQuery.V2
             {
                 queryOptions.DefaultDataset = connection.GetDatasetReference();
             }
-            return connection.GetOpenedBigQueryClient().CreateQueryJobAsync(sql, queryOptions, cancellationToken);
+            return connection.GetOpenedBigQueryClient().CreateQueryJobAsync(jobConfig, queryOptions, cancellationToken);
         }
 
         internal override async Task<int> ExecuteNonQueryAsync(BigQueryConnection connection,
@@ -202,26 +197,51 @@ namespace Google.Cloud.BigQuery.V2
         {
             var job = await StartJobAsync(connection, cancellationToken).ConfigureAwait(false);
             await job.PollUntilCompletedAsync(cancellationToken: cancellationToken).ConfigureAwait(false);
-            // Number of rows affected is unavailable in BQ.
+            // Number of rows affected is unavailable in BQ.  TODO(benwu): something better here?
             return 0;
         }
 
         internal override Task<DbDataReader> ExecuteDbDataReaderAsync(
             BigQueryConnection connection, CommandBehavior behavior, CancellationToken cancellationToken) =>
-            ExecuteDbDataReaderImplAsync(connection, Sql, behavior, QueryOptions ?? new QueryOptions(),
+            ExecuteDbDataReaderImplAsync(connection, CreateJobConfig(), behavior, QueryOptions ?? new QueryOptions(),
                 GetQueryResultsOptions ?? new GetQueryResultsOptions(), CommandTimeout, cancellationToken);
 
         internal static async Task<DbDataReader> ExecuteDbDataReaderImplAsync(
-            BigQueryConnection connection, string sql, CommandBehavior behavior, QueryOptions queryOptions,
+            BigQueryConnection connection, JobConfigurationQuery jobConfig, CommandBehavior behavior,
+            QueryOptions queryOptions,
             GetQueryResultsOptions resultOptions, int? commandTimeout, CancellationToken cancellationToken)
         {
             if (commandTimeout.HasValue)
             {
                 resultOptions.Timeout = TimeSpan.FromSeconds(commandTimeout.Value);
             }
-            var job = await StartJobImplAsync(connection, sql, queryOptions, cancellationToken).ConfigureAwait(false);
+            var job = await StartJobImplAsync(connection, jobConfig, queryOptions, cancellationToken)
+                .ConfigureAwait(false);
             var results = await job.GetQueryResultsAsync(resultOptions, cancellationToken).ConfigureAwait(false);
             return new BigQueryDataReader(results, behavior == CommandBehavior.CloseConnection ? connection : null);
+        }
+
+        internal override void PopulateQueryRequest(QueryRequest queryRequest)
+        {
+            queryRequest.Query = CommandText;
+            // Safe for now; we only have "named" or "positional". This is unlikely to change.
+            queryRequest.ParameterMode = ParameterMode.ToString().ToLowerInvariant();
+            queryRequest.QueryParameters = Parameters.Select(p => p.ToQueryParameter(ParameterMode)).ToList();
+        }
+
+        internal override void PopulateJobConfigurationQuery(JobConfigurationQuery query)
+        {
+            query.Query = CommandText;
+            // Safe for now; we only have "named" or "positional". This is unlikely to change.
+            query.ParameterMode = ParameterMode.ToString().ToLowerInvariant();
+            query.QueryParameters = Parameters.Select(p => p.ToQueryParameter(ParameterMode)).ToList();
+        }
+
+        private JobConfigurationQuery CreateJobConfig()
+        {
+            var jobConfig = new JobConfigurationQuery {UseLegacySql = false};
+            PopulateJobConfigurationQuery(jobConfig);
+            return jobConfig;
         }
     }
 }

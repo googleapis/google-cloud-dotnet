@@ -386,35 +386,31 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                             [TIMESTAMP '2016-11-29 12:34:56.123456'] AS Timestamp"))
                 using (var reader = await sqlCmd.ExecuteReaderAsync())
                 {
-                    var rowCount = 0;
-                    while (await reader.ReadAsync())
-                    {
-                        Assert.Equal(new[] { "Hello" }, reader.GetFieldValue<string[]>("String"));
-                        Assert.Equal(new[] { "Hello" }, reader["String"]);
-                        Assert.Equal(new[] { Encoding.UTF8.GetBytes("Hello") }, reader.GetFieldValue<byte[][]>("Bytes"));
-                        Assert.Equal(new[] { Encoding.UTF8.GetBytes("Hello") }, reader["Bytes"]);
-                        Assert.Equal(new[] { true }, reader.GetFieldValue<bool[]>("Boolean"));
-                        Assert.Equal(new[] { true }, reader["Boolean"]);
-                        Assert.Equal(new[] { 1234567890L }, reader.GetFieldValue<long[]>("Int64"));
-                        Assert.Equal(new[] { 1234567890L }, reader["Int64"]);
-                        Assert.Equal(new[] { 1.234567 }, reader.GetFieldValue<double[]>("Float64"));
-                        Assert.Equal(new[] { 1.234567 }, reader["Float64"]);
-                        Assert.Equal(new[] { new DateTime(2016, 11, 29, 0, 0, 0, DateTimeKind.Unspecified) }, reader.GetFieldValue<DateTime[]>("Date"));
-                        Assert.Equal(new[] { new DateTime(2016, 11, 29, 0, 0, 0, DateTimeKind.Unspecified) }, reader["Date"]);
-                        // There are 10 ticks per microsecond.
-                        Assert.Equal(new[] { new TimeSpan(0, 12, 34, 56, 123) + TimeSpan.FromTicks(4560) }, reader.GetFieldValue<TimeSpan[]>("Time"));
-                        Assert.Equal(new[] { new TimeSpan(0, 12, 34, 56, 123) + TimeSpan.FromTicks(4560) }, reader["Time"]);
-                        Assert.Equal(new[] { new DateTime(2016, 11, 29, 12, 34, 56, 123, DateTimeKind.Unspecified) + TimeSpan.FromTicks(4560) }, reader.GetFieldValue<DateTime[]>("DateTime"));
-                        Assert.Equal(new[] { new DateTime(2016, 11, 29, 12, 34, 56, 123, DateTimeKind.Unspecified) + TimeSpan.FromTicks(4560) }, reader["DateTime"]);
-                        Assert.Equal(new[] { new DateTime(2016, 11, 29, 12, 34, 56, 123, DateTimeKind.Utc) + TimeSpan.FromTicks(4560) }, reader.GetFieldValue<DateTime[]>("Timestamp"));
-                        Assert.Equal(new[] { new DateTime(2016, 11, 29, 12, 34, 56, 123, DateTimeKind.Utc) + TimeSpan.FromTicks(4560) }, reader["Timestamp"]);
+                    Assert.True(await reader.ReadAsync());
+                    Assert.Equal(new[] { "Hello" }, reader.GetFieldValue<string[]>("String"));
+                    Assert.Equal(new[] { "Hello" }, reader["String"]);
+                    Assert.Equal(new[] { Encoding.UTF8.GetBytes("Hello") }, reader.GetFieldValue<byte[][]>("Bytes"));
+                    Assert.Equal(new[] { Encoding.UTF8.GetBytes("Hello") }, reader["Bytes"]);
+                    Assert.Equal(new[] { true }, reader.GetFieldValue<bool[]>("Boolean"));
+                    Assert.Equal(new[] { true }, reader["Boolean"]);
+                    Assert.Equal(new[] { 1234567890L }, reader.GetFieldValue<long[]>("Int64"));
+                    Assert.Equal(new[] { 1234567890L }, reader["Int64"]);
+                    Assert.Equal(new[] { 1.234567 }, reader.GetFieldValue<double[]>("Float64"));
+                    Assert.Equal(new[] { 1.234567 }, reader["Float64"]);
+                    Assert.Equal(new[] { new DateTime(2016, 11, 29, 0, 0, 0, DateTimeKind.Unspecified) }, reader.GetFieldValue<DateTime[]>("Date"));
+                    Assert.Equal(new[] { new DateTime(2016, 11, 29, 0, 0, 0, DateTimeKind.Unspecified) }, reader["Date"]);
+                    // There are 10 ticks per microsecond.
+                    Assert.Equal(new[] { new TimeSpan(0, 12, 34, 56, 123) + TimeSpan.FromTicks(4560) }, reader.GetFieldValue<TimeSpan[]>("Time"));
+                    Assert.Equal(new[] { new TimeSpan(0, 12, 34, 56, 123) + TimeSpan.FromTicks(4560) }, reader["Time"]);
+                    Assert.Equal(new[] { new DateTime(2016, 11, 29, 12, 34, 56, 123, DateTimeKind.Unspecified) + TimeSpan.FromTicks(4560) }, reader.GetFieldValue<DateTime[]>("DateTime"));
+                    Assert.Equal(new[] { new DateTime(2016, 11, 29, 12, 34, 56, 123, DateTimeKind.Unspecified) + TimeSpan.FromTicks(4560) }, reader["DateTime"]);
+                    Assert.Equal(new[] { new DateTime(2016, 11, 29, 12, 34, 56, 123, DateTimeKind.Utc) + TimeSpan.FromTicks(4560) }, reader.GetFieldValue<DateTime[]>("Timestamp"));
+                    Assert.Equal(new[] { new DateTime(2016, 11, 29, 12, 34, 56, 123, DateTimeKind.Utc) + TimeSpan.FromTicks(4560) }, reader["Timestamp"]);
 
-                        // Double-check the kinds here...
-                        Assert.Equal(DateTimeKind.Unspecified, reader.GetFieldValue<DateTime[]>("DateTime")[0].Kind);
-                        Assert.Equal(DateTimeKind.Utc, reader.GetFieldValue<DateTime[]>("Timestamp")[0].Kind);
-                        rowCount++;
-                    }
-                    Assert.Equal(1, rowCount);
+                    // Double-check the kinds here...
+                    Assert.Equal(DateTimeKind.Unspecified, reader.GetFieldValue<DateTime[]>("DateTime")[0].Kind);
+                    Assert.Equal(DateTimeKind.Utc, reader.GetFieldValue<DateTime[]>("Timestamp")[0].Kind);
+                    Assert.False(await reader.ReadAsync());
                 }
             }
         }
@@ -513,7 +509,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 await connection.OpenAsync();
 
                 var viewDefinition = new ViewDefinition { Query = $"SELECT player, MAX(score) AS score FROM {connection.GetTable(_fixture.HighScoreTableId)} WHERE player IS NOT NULL GROUP BY player ORDER BY 2 DESC", UseLegacySql = false };
-                var view = await connection.CreateTableAsync("highscore_view", null, new CreateTableOptions {View = viewDefinition});
+                var view = await connection.CreateTableAsync("highscore_view_data", null, new CreateTableOptions {View = viewDefinition});
                 Assert.NotNull(view.Resource.View);
 
                 using (var sqlCmd = connection.CreateSqlCommand($"SELECT * FROM {view} WHERE player = 'Bob'"))
@@ -536,13 +532,10 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             using (var connection = new BigQueryConnection($"Data Source=projects/{_fixture.ProjectId}/datasets/{_fixture.DatasetId}"))
             {
                 await connection.OpenAsync();
-                await Assert.ThrowsAsync<GoogleApiException>(async () =>
+                using (var sqlCmd = connection.CreateSqlCommand("This is a broken query"))
                 {
-                    using (var sqlCmd = connection.CreateSqlCommand("This is a broken query"))
-                    using (await sqlCmd.ExecuteReaderAsync())
-                    {
-                    }
-                });
+                    await Assert.ThrowsAsync<GoogleApiException>(() => sqlCmd.ExecuteReaderAsync());
+                }
             }
         }
 
@@ -552,17 +545,14 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             using (var connection = new BigQueryConnection($"Data Source=projects/{_fixture.ProjectId}"))
             {
                 await connection.OpenAsync();
-                await Assert.ThrowsAsync<TimeoutException>(async () =>
+                // SQL that Jon happens to know takes over 10 seconds to query.
+                using (var sqlCmd = connection.CreateSqlCommand(
+                    "SELECT id FROM [bigquery-public-data:github_repos.contents] where content contains 'NodaTime' AND content contains '2.0.2' LIMIT 1000",
+                    new QueryOptions { UseLegacySql = true, UseQueryCache = false },
+                    new GetQueryResultsOptions { Timeout = TimeSpan.FromSeconds(2) }))
                 {
-                    // SQL that Jon happens to know takes over 10 seconds to query.
-                    using (var sqlCmd = connection.CreateSqlCommand(
-                        "SELECT id FROM [bigquery-public-data:github_repos.contents] where content contains 'NodaTime' AND content contains '2.0.2' LIMIT 1000",
-                        new QueryOptions { UseLegacySql = true, UseQueryCache = false },
-                        new GetQueryResultsOptions { Timeout = TimeSpan.FromSeconds(2) }))
-                    using (await sqlCmd.ExecuteReaderAsync())
-                    {
-                    }
-                });
+                    await Assert.ThrowsAsync<GoogleApiException>(() => sqlCmd.ExecuteReaderAsync());
+                }
             }
         }
 
@@ -580,9 +570,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                         new QueryOptions {UseLegacySql = true, UseQueryCache = false}))
                     {
                         sqlCmd.CommandTimeout = 2;
-                        using (await sqlCmd.ExecuteReaderAsync())
-                        {
-                        }
+                        await Assert.ThrowsAsync<GoogleApiException>(() => sqlCmd.ExecuteReaderAsync());
                     }
                 });
             }

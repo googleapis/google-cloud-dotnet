@@ -20,8 +20,6 @@ using Google.Api.Gax;
 
 namespace Google.Cloud.BigQuery.V2
 {
-    /// <summary>
-    /// </summary>
     public sealed partial class BigQueryParameterCollection : DbParameterCollection
     {
         /// <inheritdoc />
@@ -41,30 +39,31 @@ namespace Google.Cloud.BigQuery.V2
         public override bool Contains(string value) => _parameters.Any(x => x.ParameterName.Equals(value));
 
         /// <inheritdoc />
-        public override int IndexOf(string parameterName) => _parameters.FindIndex(x => x.ParameterName.Equals(parameterName));
+        public override int IndexOf(string parameterName) => _parameters.FindIndex(
+            x => x.ParameterName.Equals(parameterName));
 
         /// <inheritdoc />
         public override void RemoveAt(string parameterName) => _parameters.RemoveAt(IndexOf(parameterName));
 
         /// <inheritdoc />
         protected override void SetParameter(int index, DbParameter value)
-            => _parameters[index] = (BigQueryParameter)value;
+            => _parameters[index] = (BigQueryParameter) value;
 
         /// <inheritdoc />
         protected override void SetParameter(string parameterName, DbParameter value)
         {
-            int index = IndexOf(parameterName);
+            var index = IndexOf(parameterName);
             if (index == -1)
             {
-                _parameters.Add((BigQueryParameter)value);
+                _parameters.Add((BigQueryParameter) value);
             }
             else
             {
-                _parameters[index] = (BigQueryParameter)value;
+                _parameters[index] = (BigQueryParameter) value;
             }
         }
 
-#if NET45
+#if NET45 
         /// <inheritdoc />
         public override bool IsFixedSize => false;
         /// <inheritdoc />
@@ -77,11 +76,11 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <inheritdoc />
         public override void Insert(int index, object value)
-            => _parameters.Insert(index, (BigQueryParameter)value);
+            => _parameters.Insert(index, (BigQueryParameter) value);
 
         /// <inheritdoc />
         public override void Remove(object value)
-            => _parameters.Remove((BigQueryParameter)value);
+            => _parameters.Remove((BigQueryParameter) value);
 
         /// <inheritdoc />
         public override void RemoveAt(int index) => _parameters.RemoveAt(index);
@@ -89,15 +88,8 @@ namespace Google.Cloud.BigQuery.V2
         /// <inheritdoc />
         public override void CopyTo(Array array, int index)
         {
-            if (array == null)
-            {
-                throw new ArgumentNullException(nameof(array));
-            }
-            if (array.Length < _parameters.Count + index)
-            {
-                throw new ArgumentOutOfRangeException(
-                    nameof(array), "There is not enough space in the array to copy values.");
-            }
+            GaxPreconditions.CheckNotNull(array, nameof(array));
+            GaxPreconditions.CheckArgumentRange(array.Length, nameof(array), _parameters.Count + index, int.MaxValue);
             foreach (var item in _parameters)
             {
                 array.SetValue(item, index);
@@ -115,7 +107,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <inheritdoc />
         protected override DbParameter GetParameter(string parameterName)
         {
-            int index = IndexOf(parameterName);
+            var index = IndexOf(parameterName);
             if (index == -1)
             {
                 return null;

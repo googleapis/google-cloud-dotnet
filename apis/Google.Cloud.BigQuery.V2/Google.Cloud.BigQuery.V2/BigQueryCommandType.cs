@@ -12,10 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace Google.Cloud.BigQuery.V2
 {
     /// <summary>
@@ -24,10 +20,8 @@ namespace Google.Cloud.BigQuery.V2
     public enum BigQueryCommandType
     {
         /// <summary>
+        /// <see cref="BigQueryCommand.CommandText" /> contains SQL with a query or DML.
         /// </summary>
-        None = 0,
-        /// <summary>
-        /// </summary>
-        Sql = 1
+        Sql = 0
     }
 }

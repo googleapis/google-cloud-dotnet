@@ -15,12 +15,11 @@
 using System;
 using System.Data;
 using System.Data.Common;
-using Google.Api.Gax;
 
 namespace Google.Cloud.BigQuery.V2
 {
     public sealed partial class BigQueryParameter : DbParameter
-#if NET45 || NET451
+#if NET45
         , ICloneable
 #endif
     {
@@ -106,7 +105,8 @@ namespace Google.Cloud.BigQuery.V2
         public override bool IsNullable { get; set; } = true;
 
         /// <inheritdoc />
-        public override string ParameterName {
+        public override string ParameterName
+        {
             get => Name;
             set => Name = value;
         }
@@ -120,14 +120,14 @@ namespace Google.Cloud.BigQuery.V2
         /// <inheritdoc />
         public override bool SourceColumnNullMapping { get; set; }
 
-#if NET45 || NET451
+#if NET45
         /// <inheritdoc />
         public override DataRowVersion SourceVersion { get; set; } = DataRowVersion.Current;
 
 #endif
 
         /// <inheritdoc />
-        public object Clone() => (BigQueryParameter)MemberwiseClone();
+        public object Clone() => (BigQueryParameter) MemberwiseClone();
 
         /// <inheritdoc />
         public override void ResetDbType()

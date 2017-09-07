@@ -37,11 +37,13 @@ namespace Google.Cloud.BigQuery.V2
         private TemplatedResourceName _resourceName;
 
         /// <summary>
-        /// Creates an instance of a <see cref="BigQueryConnectionStringBuilder"/>
+        /// Creates an instance of a <see cref="BigQueryConnectionStringBuilder" />
         /// </summary>
         /// <param name="connectionString">The connection string to use.</param>
-        /// <param name="credential">The credentials to use for making API calls. Typically you would use
-        /// default application credentials, but you may specify a <see cref="GoogleCredential"/></param>
+        /// <param name="credential">
+        /// The credentials to use for making API calls. Typically you would use
+        /// default application credentials, but you may specify a <see cref="GoogleCredential" />
+        /// </param>
         public BigQueryConnectionStringBuilder(string connectionString, GoogleCredential credential = null)
         {
             connectionString.ThrowIfNullOrEmpty(nameof(connectionString));
@@ -50,7 +52,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <summary>
-        /// Creates an instance of a <see cref="BigQueryConnectionStringBuilder"/>
+        /// Creates an instance of a <see cref="BigQueryConnectionStringBuilder" />
         /// </summary>
         public BigQueryConnectionStringBuilder()
         {
@@ -90,7 +92,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <summary>
-        /// The <see cref="GoogleCredential"/> used if overridden.
+        /// The <see cref="GoogleCredential" /> used if overridden.
         /// </summary>
         public GoogleCredential Credential { get; }
 
@@ -101,7 +103,9 @@ namespace Google.Cloud.BigQuery.V2
             set
             {
                 if (string.Equals(keyword, DataSourceKeyword, StringComparison.OrdinalIgnoreCase))
+                {
                     value = ValidatedDataSource((string) value);
+                }
                 base[keyword] = value;
             }
         }
@@ -110,21 +114,25 @@ namespace Google.Cloud.BigQuery.V2
         {
             _hasDataset = s_datasetTemplate.TryParseName(DataSource, out _resourceName);
             if (!_hasDataset)
+            {
                 s_projectTemplate.TryParseName(DataSource, out _resourceName);
+            }
         }
 
         private string ValidatedDataSource(string dataSource)
         {
             if (!s_datasetTemplate.TryParseName(dataSource, out _)
                 && !s_projectTemplate.TryParseName(dataSource, out _))
+            {
                 throw new ArgumentException(
                     $"'{dataSource}' is not a valid value for ${nameof(DataSource)}. It should be of the form "
                     + "projects/<project>/datasets/<datasetid>.", nameof(DataSource));
+            }
 
             return dataSource;
         }
 
-        internal BigQueryConnectionStringBuilder Clone() 
+        internal BigQueryConnectionStringBuilder Clone()
             => new BigQueryConnectionStringBuilder(ConnectionString, Credential);
 
         internal BigQueryConnectionStringBuilder CloneWithNewDataSource(string dataSource)
@@ -137,7 +145,9 @@ namespace Google.Cloud.BigQuery.V2
         {
             key = key.ToLower();
             if (ContainsKey(key))
+            {
                 return (string) this[key];
+            }
 
             return defaultValue;
         }

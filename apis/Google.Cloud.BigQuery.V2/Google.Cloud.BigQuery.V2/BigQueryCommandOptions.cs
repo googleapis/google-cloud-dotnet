@@ -16,6 +16,8 @@ using System.Data;
 using System.Data.Common;
 using System.Threading;
 using System.Threading.Tasks;
+using Google.Api.Gax;
+using Google.Apis.Bigquery.v2.Data;
 
 namespace Google.Cloud.BigQuery.V2
 {
@@ -24,11 +26,20 @@ namespace Google.Cloud.BigQuery.V2
     /// </summary>
     public abstract class BigQueryCommandOptions
     {
+        private BigQueryParameterMode _parameterMode = BigQueryParameterMode.Named;
         internal BigQueryConnection BigQueryConnection { get; set; }
 
         internal string CommandText { get; set; }
 
         internal int? CommandTimeout { get; set; }
+
+        internal BigQueryParameterMode ParameterMode
+        {
+            get => _parameterMode;
+            set => _parameterMode = GaxPreconditions.CheckEnumValue(value, nameof(value));
+        }
+
+        internal BigQueryParameterCollection Parameters { get; } = new BigQueryParameterCollection();
 
         /// <summary>
         /// </summary>
@@ -46,5 +57,9 @@ namespace Google.Cloud.BigQuery.V2
             BigQueryConnection connection,
             CommandBehavior behavior,
             CancellationToken cancellationToken);
+
+        internal abstract void PopulateQueryRequest(QueryRequest queryRequest);
+
+        internal abstract void PopulateJobConfigurationQuery(JobConfigurationQuery query);
     }
 }

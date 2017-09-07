@@ -32,21 +32,21 @@ namespace Google.Cloud.BigQuery.V2
         private ConnectionState _state;
 
         /// <summary>
-        ///     Creates a BigQueryConnection with no datasource or credential specified.
+        /// Creates a BigQueryConnection with no datasource or credential specified.
         /// </summary>
         public BigQueryConnection()
         {
         }
 
         /// <summary>
-        ///     Creates a BigQueryConnection with a datasource contained in connectionString
-        ///     and optional credential information supplied in connectionString or the credential
-        ///     argument.
+        /// Creates a BigQueryConnection with a datasource contained in connectionString
+        /// and optional credential information supplied in connectionString or the credential
+        /// argument.
         /// </summary>
         /// <param name="connectionString">
-        ///     A BigQuery formatted connection string. This is usually of the form
-        ///     `Data Source=projects/{project}/datasets/{datasetid}` but may optionally only include the project
-        ///     if only temporary tables are used.
+        /// A BigQuery formatted connection string. This is usually of the form
+        /// `Data Source=projects/{project}/datasets/{datasetid}` but may optionally only include the project
+        /// if only temporary tables are used.
         /// </param>
         /// <param name="credential">An optional credential for operations to be performed on the BigQuery database.  May be null.</param>
         public BigQueryConnection(string connectionString, GoogleCredential credential = null)
@@ -55,10 +55,10 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <summary>
-        ///     Creates a BigQueryConnection with a datasource contained in connectionString.
+        /// Creates a BigQueryConnection with a datasource contained in connectionString.
         /// </summary>
         /// <param name="connectionStringBuilder">
-        ///     A BigQueryConnectionStringBuilder containing a formatted connection string.  Must not be null.
+        /// A BigQueryConnectionStringBuilder containing a formatted connection string.  Must not be null.
         /// </param>
         public BigQueryConnection(BigQueryConnectionStringBuilder connectionStringBuilder)
         {
@@ -119,7 +119,9 @@ namespace Google.Cloud.BigQuery.V2
         public override void ChangeDatabase(string newDataSource)
         {
             if (IsOpen)
+            {
                 Close();
+            }
 
             TrySetNewConnectionInfo(_connectionStringBuilder?.CloneWithNewDataSource(newDataSource));
         }
@@ -131,39 +133,41 @@ namespace Google.Cloud.BigQuery.V2
         public override void Open()
         {
             if (IsOpen)
+            {
                 return;
+            }
             BigQueryClient = BigQueryClient.Create(_connectionStringBuilder.Project,
                 _connectionStringBuilder.Credential);
             _state = ConnectionState.Open;
         }
 
         /// <summary>
-        /// Returns a <see cref="TableReference"/> using the Google Cloud Project and Dataset
+        /// Returns a <see cref="TableReference" /> using the Google Cloud Project and Dataset
         /// associated with this connection and the given tableId.
         /// </summary>
         /// <param name="tableId">The BigQuery table id to use for the reference.</param>
-        /// <returns>A <see cref="TableReference"/> instance.</returns>
+        /// <returns>A <see cref="TableReference" /> instance.</returns>
         public TableReference GetTableReference(string tableId) =>
             GetBigQueryClient().GetTableReference(_connectionStringBuilder.Project,
                 _connectionStringBuilder.BigQueryDataset, tableId);
 
         /// <summary>
-        /// Returns a <see cref="TableReference"/> using the Google Cloud Project
+        /// Returns a <see cref="TableReference" /> using the Google Cloud Project
         /// associated with this connection along with the specified datasetId and tableId.
         /// </summary>
         /// <param name="datasetId">The BigQuery dataset id to use for the reference.</param>
         /// <param name="tableId">The BigQuery table id to use for the reference.</param>
-        /// <returns>A <see cref="TableReference"/> instance.</returns>
+        /// <returns>A <see cref="TableReference" /> instance.</returns>
         public TableReference GetTableReference(string datasetId, string tableId) =>
             GetBigQueryClient().GetTableReference(_connectionStringBuilder.Project, datasetId, tableId);
 
         /// <summary>
-        /// Returns a <see cref="TableReference"/> using the specified projectId, datasetId and tableId.
+        /// Returns a <see cref="TableReference" /> using the specified projectId, datasetId and tableId.
         /// </summary>
         /// <param name="projectId">The BigQuery project id to use for the reference.</param>
         /// <param name="datasetId">The BigQuery dataset id to use for the reference.</param>
         /// <param name="tableId">The BigQuery table id to use for the reference.</param>
-        /// <returns>A <see cref="TableReference"/> instance.</returns>
+        /// <returns>A <see cref="TableReference" /> instance.</returns>
         public TableReference GetTableReference(string projectId, string datasetId, string tableId) =>
             GetBigQueryClient().GetTableReference(projectId, datasetId, tableId);
 
@@ -185,13 +189,17 @@ namespace Google.Cloud.BigQuery.V2
         private void AssertClosed(string message)
         {
             if (!IsClosed)
+            {
                 throw new InvalidOperationException("The connection must be closed. Failed to " + message);
+            }
         }
 
         private void AssertOpen()
         {
             if (!IsOpen)
+            {
                 throw new InvalidOperationException("The connection must be open for this operation.");
+            }
         }
     }
 }
