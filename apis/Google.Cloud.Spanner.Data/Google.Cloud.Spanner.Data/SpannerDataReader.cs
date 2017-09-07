@@ -25,7 +25,7 @@ using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf.WellKnownTypes;
 using static System.String;
 
-#if NET45 || NET451
+#if NET45 || NETSTANDARD2_0
 using System.Data;
 
 #endif
@@ -117,7 +117,7 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override IEnumerator GetEnumerator()
         {
-#if NET45 || NET451
+#if NET45 || NETSTANDARD2_0
             return new DbEnumerator(this);
 #else
             throw new NotSupportedException("GetEnumerator not yet supported in .NET Core");
@@ -300,7 +300,7 @@ namespace Google.Cloud.Spanner.Data
             return fieldMetadata.Type;
         }
 
-#if NET45 || NET451
+#if NET45 || NETSTANDARD2_0
 
         /// <inheritdoc />
         public override void Close()

@@ -44,7 +44,7 @@ namespace Google.Cloud.Spanner.Data
     /// to execute a DDL statement.
     /// </summary>
     public sealed class SpannerCommand : DbCommand
-#if NET45 || NET451
+#if NET45 || NETSTANDARD2_0
         , ICloneable
 #endif
     {

@@ -42,7 +42,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.IsType<SpannerParameter>(SpannerProviderFactory.Instance.CreateParameter());
         }
 
-#if NET45 || NET451 || NET452
+#if NET452 || NETCOREAPP2_0
         [Fact]
         public void CreateDataAdapter()
         {

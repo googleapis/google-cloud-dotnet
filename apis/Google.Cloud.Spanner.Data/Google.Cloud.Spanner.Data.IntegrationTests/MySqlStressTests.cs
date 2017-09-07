@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#if NET45 || NET451 || NET452
+#if NET452
 
 using System;
 using System.Collections.Generic;
