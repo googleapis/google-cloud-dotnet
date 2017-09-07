@@ -16,7 +16,7 @@ namespace Google.Api.Gax
     public sealed class BatchingSettings
     {
         /// <summary>
-        /// Create a new instance with the specified settings.
+        /// Creates a new instance with the specified settings.
         /// </summary>
         /// <param name="elementCountThreshold">The element count above which further processing of a batch will occur.</param>
         /// <param name="byteCountThreshold">The byte count above which further processing of a batch will occur.</param>
@@ -46,28 +46,32 @@ namespace Google.Api.Gax
     }
 
     /// <summary>
-    /// TODO
+    /// Settings used to control data flow.
     /// </summary>
     public sealed class FlowControlSettings
     {
         /// <summary>
-        /// TODO
+        /// Creates a new instance with the specified settings.
         /// </summary>
-        /// <param name="maxOutstandingElementCount"></param>
-        /// <param name="maxOutstandardByteCount"></param>
-        public FlowControlSettings(long? maxOutstandingElementCount, long? maxOutstandardByteCount)
+        /// <param name="maxOutstandingElementCount">The maximum number of elements that can be outstanding before data flow is restricted, or
+        /// null if there is no specified limit.</param>
+        /// <param name="maxOutstandingByteCount">The maximum number of bytes that can be outstanding before data flow is restricted, or
+        /// null if there is no specified limit.</param>
+        public FlowControlSettings(long? maxOutstandingElementCount, long? maxOutstandingByteCount)
         {
             MaxOutstandingElementCount = GaxPreconditions.CheckNonNegative(maxOutstandingElementCount, nameof(maxOutstandingElementCount));
-            MaxOutstandingByteCount = GaxPreconditions.CheckNonNegative(maxOutstandardByteCount, nameof(maxOutstandardByteCount));
+            MaxOutstandingByteCount = GaxPreconditions.CheckNonNegative(maxOutstandingByteCount, nameof(maxOutstandingByteCount));
         }
 
         /// <summary>
-        /// TODO
+        /// The maximum number of elements that can be outstanding before data flow is restricted, or
+        /// null if there is no specified limit.
         /// </summary>
         public long? MaxOutstandingElementCount { get; }
 
         /// <summary>
-        /// TODO
+        /// The maximum number of bytes that can be outstanding before data flow is restricted, or
+        /// null if there is no specified limit.
         /// </summary>
         public long? MaxOutstandingByteCount { get; }
     }
