@@ -42,6 +42,8 @@ namespace Google.Cloud.BigQuery.V2
         internal BigQueryParameterCollection Parameters { get; } = new BigQueryParameterCollection();
 
         /// <summary>
+        /// The type of command currently configured. Currently the only valid value for this is
+        /// <see cref="BigQueryCommandType.Sql"/>
         /// </summary>
         public abstract BigQueryCommandType BigQueryCommandType { get; }
 
