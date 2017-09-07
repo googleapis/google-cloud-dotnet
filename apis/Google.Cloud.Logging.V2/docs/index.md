@@ -19,7 +19,7 @@ package](https://www.nuget.org/packages/Logary.Targets.Stackdriver)
 and follow the [instructions on the project
 homepage](https://github.com/logary/logary#stackdriver-target-alpha-level).
 
-[Serilog](https://serilog.net/) has a sink output to Google Stackdriver Logging. Install [Nuget package](https://www.nuget.org/packages/Serilog.Sinks.GoogleCloudLogging/) `Serilog.Sinks.GoogleCloudLogging` and [configure options](https://github.com/manigandham/serilog-sinks-googlecloudlogging).
+[Serilog](https://serilog.net/) has a sink output to Google Stackdriver Logging. Install the [NuGet package](https://www.nuget.org/packages/Serilog.Sinks.GoogleCloudLogging/) `Serilog.Sinks.GoogleCloudLogging` and [configure options](https://github.com/manigandham/serilog-sinks-googlecloudlogging).
 
 # Raw RPC API
 
