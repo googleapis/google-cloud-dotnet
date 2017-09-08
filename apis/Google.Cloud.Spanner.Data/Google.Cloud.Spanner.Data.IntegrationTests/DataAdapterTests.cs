@@ -35,7 +35,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             TestLogger.TestOutputHelper = outputHelper;
         }
 
-#if NET452 || NETCOREAPP2_0
+#if !NETCOREAPP1_0
         [Fact]
         public async Task AdapterFill()
         {

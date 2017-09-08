@@ -17,7 +17,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-#if NET452 || NETCOREAPP2_0
+#if !NETCOREAPP1_0
 using System.Transactions;
 #endif
 using Xunit;
@@ -507,7 +507,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-#if NET452 || NETCOREAPP2_0
+#if !NETCOREAPP1_0
         private async Task UpdateValueInTransactionScope(SpannerConnection writeConnection)
         {
             var writeCommand = writeConnection.CreateUpdateCommand(
