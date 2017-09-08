@@ -3,6 +3,7 @@
   <PropertyGroup>
     <Version>1.0.0-beta04</Version>
     <TargetFrameworks>netstandard1.5;netstandard2.0;net45</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.5;netstandard2.0</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <Features>IOperation</Features>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -42,5 +43,4 @@
       <PackagePath>lib/net45</PackagePath>
     </Content>
   </ItemGroup>
-  <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
 </Project>

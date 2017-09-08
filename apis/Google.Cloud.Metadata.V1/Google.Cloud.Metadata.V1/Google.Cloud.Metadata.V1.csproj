@@ -3,6 +3,7 @@
   <PropertyGroup>
     <Version>1.0.0-alpha07</Version>
     <TargetFrameworks>netstandard1.3;net45</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.3</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <Features>IOperation</Features>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -41,5 +42,4 @@
   <ItemGroup>
     <Reference Condition="'$(TargetFramework)' == 'net45'" Include="Microsoft.CSharp" />
   </ItemGroup>
-  <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
 </Project>

@@ -2,6 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net452</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">net452</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <Features>IOperation</Features>
     <IsPackable>false</IsPackable>
@@ -34,5 +35,4 @@
     <PackageReference Include="Microsoft.Owin.Testing" Version="3.0.1" />
     <ProjectReference Include="..\Google.Cloud.Diagnostics.AspNet.Tests\Google.Cloud.Diagnostics.AspNet.Tests.csproj" />
   </ItemGroup>
-  <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
 </Project>

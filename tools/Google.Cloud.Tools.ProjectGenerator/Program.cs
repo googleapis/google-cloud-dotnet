@@ -28,6 +28,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
     {
         private static readonly Regex AnyVersionPattern = new Regex(@"^[0-9]\d*\.\d+\.\d+(\.\d+)?(-.*)?$");
         private static readonly Regex StableVersionPattern = new Regex(@"^[1-9]\d*\.\d+\.\d+(\.\d+)?$");
+        private static readonly Regex AnyDesktopFramework = new Regex(@";net\d+");
 
         // Project references which don't just follow the pattern of ..\..\{package}\{package}\{package}.csproj
         private static readonly Dictionary<string, string> KnownProjectReferences = new Dictionary<string, string>
@@ -90,7 +91,6 @@ namespace Google.Cloud.Tools.ProjectGenerator
         };
 
         private const string AnalyzersPath = @"..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll";
-        private const string StripDesktopOnNonWindows = @"..\..\..\StripDesktopOnNonWindows.xml";
 
         private const string TargetFrameworkCore = "netcoreapp1.0";
         private const string TargetFrameworkClassic = "net452";
@@ -293,6 +293,7 @@ TODO: Add snippet references here.
                 // Build-related properties
                 new XElement("Version", api.Version), // TODO: Version, or VersionPrefix/VersionSuffix?
                 new XElement("TargetFrameworks", targetFrameworks),
+                new XElement("TargetFrameworks", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), AnyDesktopFramework.Replace(targetFrameworks, "")),
                 new XElement("LangVersion", "latest"),
                 new XElement("Features", "IOperation"),
                 new XElement("GenerateDocumentationFile", true),
@@ -352,6 +353,7 @@ TODO: Add snippet references here.
             var propertyGroup =
                 new XElement("PropertyGroup",
                     new XElement("TargetFrameworks", GetTestTargetFrameworks(api)),
+                    new XElement("TargetFrameworks", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), AnyDesktopFramework.Replace(GetTestTargetFrameworks(api), "")),
                     new XElement("LangVersion", "latest"),
                     new XElement("Features", "IOperation"),
                     new XElement("IsPackable", false),
@@ -426,15 +428,11 @@ TODO: Add snippet references here.
             {
                 doc = XElement.Load(file);
                 doc.Elements("Import").Where(x => (string)x.Attribute("Project") == @"..\..\StripDesktopOnNonWindows.xml").Remove();
+                doc.Elements("Import").Where(x => (string)x.Attribute("Project") == @"..\..\..\StripDesktopOnNonWindows.xml").Remove();
                 doc.Elements("PropertyGroup").First().ReplaceWith(propertyGroup);
                 doc.Elements("ItemGroup").First().ReplaceWith(dependenciesItemGroup);
                 doc.Elements("ItemGroup").Where(x => (string)x.Attribute("Label") == DotnetPackInstructionsLabel).Remove();
                 doc.Elements("ItemGroup").First().AddAfterSelf(packingElement);
-
-                if (!doc.Elements("Import").Any(x => (string)x.Attribute("Project") == StripDesktopOnNonWindows))
-                {
-                    doc.Add(new XElement("Import", new XAttribute("Project", StripDesktopOnNonWindows)));
-                }
             }
             // Otherwise, create a new one
             else
@@ -443,9 +441,7 @@ TODO: Add snippet references here.
                     new XAttribute("Sdk", "Microsoft.NET.Sdk"),
                     propertyGroup,
                     dependenciesItemGroup,
-                    packingElement,
-                    new XElement("Import", new XAttribute("Project", StripDesktopOnNonWindows))
-                );
+                    packingElement);
             }
 
             // Don't use File.CreateText as that omits the byte order mark.
