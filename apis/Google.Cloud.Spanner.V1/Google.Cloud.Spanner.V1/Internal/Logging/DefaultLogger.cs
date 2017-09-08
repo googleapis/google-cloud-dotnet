@@ -30,7 +30,7 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
 
         protected virtual void WriteLine(string message)
         {
-#if NET45 || NETSTANDARD2_0
+#if !NETSTANDARD1_5
             Trace.TraceInformation(message);
 #else
             Console.Error.WriteLine(message);

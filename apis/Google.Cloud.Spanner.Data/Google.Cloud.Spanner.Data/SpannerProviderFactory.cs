@@ -43,7 +43,7 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override DbParameter CreateParameter() => new SpannerParameter();
 
-#if NET45 || NETSTANDARD2_0
+#if !NETSTANDARD1_5
 
         /// <inheritdoc />
         public override DbDataAdapter CreateDataAdapter()

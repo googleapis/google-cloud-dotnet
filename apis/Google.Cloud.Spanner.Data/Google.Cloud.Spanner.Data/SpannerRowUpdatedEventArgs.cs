@@ -15,7 +15,7 @@
 // ReSharper disable EmptyNamespace
 
 
-#if NET45 || NETSTANDARD2_0
+#if !NETSTANDARD1_5
 using System;
 using System.Data;
 using System.Data.Common;
@@ -25,7 +25,7 @@ using Google.Api.Gax;
 
 namespace Google.Cloud.Spanner.Data
 {
-#if NET45 || NETSTANDARD2_0
+#if !NETSTANDARD1_5
 
     /// <summary>
     /// Provides data for the RowUpdated event of the Spanner data provider.

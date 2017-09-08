@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Version>1.0.0-beta04</Version>
-    <TargetFrameworks>netstandard1.5;net45</TargetFrameworks>
+    <TargetFrameworks>netstandard1.5;net45;netstandard2.0</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <Features>IOperation</Features>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -38,6 +38,10 @@
     <Content Include="$(OutputPath)net45\$(PackageId).pdb">
       <Pack>true</Pack>
       <PackagePath>lib/net45</PackagePath>
+    </Content>
+    <Content Include="$(OutputPath)netstandard2.0\$(PackageId).pdb">
+      <Pack>true</Pack>
+      <PackagePath>lib/netstandard2.0</PackagePath>
     </Content>
   </ItemGroup>
   <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />

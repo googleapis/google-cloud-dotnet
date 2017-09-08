@@ -69,7 +69,7 @@ namespace Google.Cloud.Spanner.V1
 
         static SessionPool()
         {
-#if NET45 || NETSTANDARD2_0
+#if !NETSTANDARD1_5
             AppDomain.CurrentDomain.DomainUnload += (sender, args) =>
 #endif
 #if NETSTANDARD1_5

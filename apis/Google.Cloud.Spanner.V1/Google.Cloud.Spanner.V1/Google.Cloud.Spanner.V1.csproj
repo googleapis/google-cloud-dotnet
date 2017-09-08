@@ -37,6 +37,10 @@
       <Pack>true</Pack>
       <PackagePath>lib/net45</PackagePath>
     </Content>
+    <Content Include="$(OutputPath)netstandard2.0\$(PackageId).pdb">
+      <Pack>true</Pack>
+      <PackagePath>lib/netstandard2.0</PackagePath>
+    </Content>
   </ItemGroup>
   <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
 </Project>

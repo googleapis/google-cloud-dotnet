@@ -112,7 +112,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             // TODO: investigate how to change the current thread's culture in .NET Core.
             // (There may be code in Noda Time to do it.)
-#if NET452
+#if !NETCOREAPP1_0
             var originalCulture = Thread.CurrentThread.CurrentCulture;
             try
             {
@@ -400,7 +400,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             CultureInfo.InvariantCulture,
             // Under .NET Core we don't change the culture anyway, so let's not run the same
             // test multiple times...
-#if NET452
+#if !NETCOREAPP1_0
             new CultureInfo("fr-FR"),
             new CultureInfo("en-US")
 #endif
