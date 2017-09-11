@@ -243,7 +243,7 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-#if NET45
+#if !NETSTANDARD1_5
         /// <inheritdoc />
         public override bool IsFixedSize => false;
 

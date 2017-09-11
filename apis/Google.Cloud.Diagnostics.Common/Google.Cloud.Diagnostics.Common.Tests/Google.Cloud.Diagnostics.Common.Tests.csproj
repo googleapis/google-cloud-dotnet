@@ -2,6 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>netcoreapp1.0;net452</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netcoreapp1.0</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <Features>IOperation</Features>
     <IsPackable>false</IsPackable>
@@ -31,5 +32,4 @@
     <!-- Make sure we get suitable stack traces for tests -->
     <DebugType>full</DebugType>
   </PropertyGroup>
-  <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
 </Project>

@@ -20,7 +20,7 @@ using System.Threading.Tasks;
 using Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling;
 using Xunit;
 
-#if NET451 || NET451 || NET452
+#if !NETCOREAPP1_0
 using System.Transactions;
 #endif
 
@@ -207,7 +207,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
             // End sample
         }
 
-#if NET451 || NET451 || NET452
+#if !NETCOREAPP1_0
         [Fact]
         public async Task TransactionScopeAsync()
         {

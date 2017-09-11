@@ -3,6 +3,7 @@
   <PropertyGroup>
     <Version>1.0.0-beta17</Version>
     <TargetFrameworks>netstandard1.3;net45</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.3</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <Features>IOperation</Features>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -46,5 +47,4 @@
       <DependentUpon>BigQueryClientImpl.cs</DependentUpon>
     </Compile>
   </ItemGroup>
-  <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
 </Project>

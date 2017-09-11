@@ -3,6 +3,7 @@
   <PropertyGroup>
     <IsPackable>false</IsPackable>
     <TargetFrameworks>netstandard1.3;net451</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.3</TargetFrameworks>
     <AssemblyName>Google.Cloud.ClientTesting</AssemblyName>
     <AssemblyOriginatorKeyFile>../GoogleApiTools.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
@@ -20,6 +21,4 @@
   <ItemGroup Condition="'$(TargetFramework)'=='Net451'">
     <Reference Include="System.Net.Http" />
   </ItemGroup>
-
-  <Import Project="..\..\StripDesktopOnNonWindows.xml" />
 </Project>

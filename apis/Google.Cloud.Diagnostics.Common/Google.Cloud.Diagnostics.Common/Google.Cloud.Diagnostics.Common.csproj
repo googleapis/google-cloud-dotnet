@@ -3,6 +3,7 @@
   <PropertyGroup>
     <Version>1.0.0</Version>
     <TargetFrameworks>netstandard1.5;net45</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.5</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <Features>IOperation</Features>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -46,5 +47,4 @@
   <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
     <Reference Include="System.Web" />
   </ItemGroup>
-  <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
 </Project>

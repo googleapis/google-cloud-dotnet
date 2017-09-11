@@ -26,7 +26,7 @@ namespace Google.Cloud.Spanner.Data
     /// Represents a parameter to a <see cref="SpannerCommand" /> and optionally its mapping to DataSet columns.
     /// </summary>
     public sealed class SpannerParameter : DbParameter
-#if NET45 || NET451
+#if !NETSTANDARD1_5
         , ICloneable
 #endif
     {
@@ -96,7 +96,7 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override bool SourceColumnNullMapping { get; set; }
 
-#if NET45 || NET451
+#if !NETSTANDARD1_5
 
         /// <inheritdoc />
         public override DataRowVersion SourceVersion { get; set; } = DataRowVersion.Current;

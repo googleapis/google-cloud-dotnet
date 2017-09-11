@@ -26,7 +26,7 @@ using Google.Cloud.Spanner.V1.Internal;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf.WellKnownTypes;
 
-#if NET45 || NET451
+#if !NETSTANDARD1_5
 using Transaction = System.Transactions.Transaction;
 
 #endif
@@ -271,7 +271,7 @@ namespace Google.Cloud.Spanner.Data
                 }
 
                 _keepAliveCancellation?.Cancel();
-#if NET45 || NET451
+#if !NETSTANDARD1_5
                 _volatileResourceManager = null;
 #endif
                 primarySessionInUse = _sessionRefCount > 0;
@@ -408,7 +408,7 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override Task OpenAsync(CancellationToken cancellationToken)
         {
-#if NET45 || NET451
+#if !NETSTANDARD1_5
             var currentTransaction = Transaction.Current; //snap it on this thread.
 #endif
             return ExecuteHelper.WithErrorTranslationAndProfiling(
@@ -470,7 +470,7 @@ namespace Google.Cloud.Spanner.Data
                         {
                             ReleaseClient(localClient);
                         }
-#if NET45 || NET451
+#if !NETSTANDARD1_5
                         if (IsOpen && currentTransaction != null)
                         {
                             EnlistTransaction(currentTransaction);
@@ -506,7 +506,7 @@ namespace Google.Cloud.Spanner.Data
 
         internal ISpannerTransaction GetDefaultTransaction()
         {
-#if NET45 || NET451
+#if !NETSTANDARD1_5
             if (_volatileResourceManager != null)
             {
                 return _volatileResourceManager;
@@ -808,12 +808,12 @@ namespace Google.Cloud.Spanner.Data
             public Session TakeOwnership() => Interlocked.Exchange(ref _session, null);
         }
 
-#if NET45 || NET451
+#if !NETSTANDARD1_5
         private TimestampBound _timestampBound;
         private VolatileResourceManager _volatileResourceManager;
 #endif
 
-#if NET45 || NET451
+#if !NETSTANDARD1_5
 
         /// <summary>
         /// If this connection is being opened within a <see cref="System.Transactions.TransactionScope" />, this forces
@@ -852,7 +852,7 @@ namespace Google.Cloud.Spanner.Data
         }
 #endif
 
-#if NET45 || NET451
+#if !NETSTANDARD1_5
 
         /// <summary>
         /// Gets or Sets whether to participate in the active <see cref="System.Transactions.TransactionScope" />
