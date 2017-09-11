@@ -31,6 +31,17 @@ namespace Google.Cloud.BigQuery.V2
     public sealed partial class BigQueryCommand : DbCommand
     {
         /// <summary>
+        /// Constructs an instance for the given SQL and <see cref="BigQueryConnection"/>
+        /// </summary>
+        /// <param name="commandText">The SQL to execute.</param>
+        /// <param name="connection"></param>
+        public BigQueryCommand(string commandText, BigQueryConnection connection)
+        {
+            CommandText = commandText;
+            BigQueryConnection = connection;
+        }
+
+        /// <summary>
         /// CommandOptions provides options and what sort of command is being executed.
         /// It can never be null and defaults to a sql command (DML or Query).
         /// </summary>

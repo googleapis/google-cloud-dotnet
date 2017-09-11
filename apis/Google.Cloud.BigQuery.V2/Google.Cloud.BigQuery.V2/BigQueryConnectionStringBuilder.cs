@@ -28,12 +28,13 @@ namespace Google.Cloud.BigQuery.V2
     public sealed class BigQueryConnectionStringBuilder : DbConnectionStringBuilder
     {
         private const string DataSourceKeyword = "Data Source";
+        private const string ProjectKeyword = "Project";
+        private const string DatasetKeyword = "Dataset";
 
         private static readonly PathTemplate s_datasetTemplate =
             new PathTemplate("projects/{project}/datasets/{dataset}");
 
         private static readonly PathTemplate s_projectTemplate = new PathTemplate("projects/{project}");
-        private bool _hasDataset;
         private TemplatedResourceName _resourceName;
 
         /// <summary>
@@ -72,11 +73,8 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public string Project
         {
-            get
-            {
-                ParseCurrentDataSource();
-                return _resourceName?[0];
-            }
+            get => GetValueOrDefault(ProjectKeyword, GetCurrentDataSourcePart(0));
+            set => this[ProjectKeyword] = value;
         }
 
         /// <summary>
@@ -84,11 +82,8 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public string BigQueryDataset
         {
-            get
-            {
-                ParseCurrentDataSource();
-                return _hasDataset ? _resourceName?[1] : null;
-            }
+            get => GetValueOrDefault(DatasetKeyword, GetCurrentDataSourcePart(1));
+            set => this[DatasetKeyword] = value;
         }
 
         /// <summary>
@@ -110,13 +105,17 @@ namespace Google.Cloud.BigQuery.V2
             }
         }
 
-        private void ParseCurrentDataSource()
+        private string GetCurrentDataSourcePart(int index)
         {
-            _hasDataset = s_datasetTemplate.TryParseName(DataSource, out _resourceName);
-            if (!_hasDataset)
+            if (!s_datasetTemplate.TryParseName(DataSource, out _resourceName))
             {
+                if (index > 0)
+                {
+                    return string.Empty;
+                }
                 s_projectTemplate.TryParseName(DataSource, out _resourceName);
             }
+            return _resourceName?[index];
         }
 
         private string ValidatedDataSource(string dataSource)
