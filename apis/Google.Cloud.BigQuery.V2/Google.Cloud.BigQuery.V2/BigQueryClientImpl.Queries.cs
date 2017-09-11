@@ -134,6 +134,13 @@ namespace Google.Cloud.BigQuery.V2
             return new BigQueryJob(this, job);
         }
 
+        internal override async Task<BigQueryJob> CreateQueryJobAsync(JobConfigurationQuery jobConfiguration, QueryOptions options, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            GaxPreconditions.CheckNotNull(jobConfiguration, nameof(jobConfiguration));
+            var job = await CreateInsertQueryJobRequest(jobConfiguration, options).ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            return new BigQueryJob(this, job);
+        }
+
         /// <inheritdoc />
         public override async Task<BigQueryResults> GetQueryResultsAsync(JobReference jobReference, GetQueryResultsOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {

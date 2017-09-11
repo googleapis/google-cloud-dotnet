@@ -45,6 +45,12 @@
     <Compile Update="BigQueryClientImpl.*.cs">
       <DependentUpon>BigQueryClientImpl.cs</DependentUpon>
     </Compile>
+    <Compile Update="BigQueryConnection.*.cs">
+      <DependentUpon>BigQueryConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BigQueryCommand.*.cs">
+      <DependentUpon>BigQueryCommand.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
     <Reference Include="System.Transactions" />
@@ -53,11 +59,6 @@
     <PackageReference Include="System.Data.Common">
       <Version>4.3.0</Version>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Update="BigQueryConnection.cs">
-      <SubType>Component</SubType>
-    </Compile>
   </ItemGroup>
   <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
 </Project>

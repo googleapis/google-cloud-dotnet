@@ -93,7 +93,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(0, resultSet.Rows.Count);
 
             // But we should be able to find the null value this way.
-            command.Sql = $"SELECT score FROM {table} WHERE player=@player OR (player IS NULL AND @player IS NULL)";
+            command.CommandText = $"SELECT score FROM {table} WHERE player=@player OR (player IS NULL AND @player IS NULL)";
             resultSet = client.ExecuteQuery(command).ReadPage(5);
             Assert.Equal(1, resultSet.Rows.Count);
             Assert.Equal(1, (long)resultSet.Rows[0]["score"]);

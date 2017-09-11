@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<MethodCloneConfig>
+  <SourceFilePrefix>BigQueryClient</SourceFilePrefix>
+  <DestinationFilePrefix>BigQueryConnection</DestinationFilePrefix>
+  <ExcludedMethod>GetQueryResults</ExcludedMethod>
+  <ExcludedMethod>GetQueryResultsAsync</ExcludedMethod>
+  <ExcludedMethod>ExecuteQuery</ExcludedMethod>
+  <ExcludedMethod>ExecuteQueryAsync</ExcludedMethod>
+  <ExcludedMethod>CreateQueryJob</ExcludedMethod>
+  <ExcludedMethod>CreateQueryJobAsync</ExcludedMethod>
+  <ParameterReplacement>projectId,GetProjectId()</ParameterReplacement>
+  <ParameterReplacement>datasetId,GetDatasetId()</ParameterReplacement>
+  <ParameterReplacement>datasetReference,GetDatasetReference()</ParameterReplacement>
+</MethodCloneConfig>

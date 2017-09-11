@@ -11,22 +11,28 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
+#if NET45
 using System;
+#endif
 using System.Data.Common;
 
 namespace Google.Cloud.BigQuery.V2
 {
     /// <summary>
+    /// Represents a set of methods for creating instances of the
+    /// BigQuery data provider's implementation of the data source classes.
     /// </summary>
     public sealed class BigQueryProviderFactory : DbProviderFactory
     {
         /// <summary>
+        /// The singleton instance of <see cref="BigQueryProviderFactory"/>
         /// </summary>
         // ReSharper disable once InconsistentNaming
         public static readonly BigQueryProviderFactory Instance = new BigQueryProviderFactory();
 
-        private BigQueryProviderFactory() { }
+        private BigQueryProviderFactory()
+        {
+        }
 
         /// <inheritdoc />
         public override DbCommand CreateCommand() => new BigQueryCommand();
@@ -45,7 +51,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <inheritdoc />
         public override DbDataAdapter CreateDataAdapter()
         {
-            throw new NotSupportedException("todo");
+            throw new NotSupportedException("BigQuery does not yet support DataAdapter");
         }
 #endif
     }

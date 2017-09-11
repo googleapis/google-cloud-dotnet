@@ -345,5 +345,10 @@ namespace Google.Cloud.BigQuery.V2
             throw new NotImplementedException();
         internal virtual Task<BigQueryResults> GetQueryResultsAsync(JobReference jobReference, TableReference tableReference, GetQueryResultsOptions options, CancellationToken cancellationToken) =>
             throw new NotImplementedException();
+
+        // This method exists so that BQCommandOptions can pass a configured JobConfigurationQuery instead of itself.
+        // The JobConfigurationQuery can be initialized with cloned values, making it threadsafe vs the command.
+        internal virtual Task<BigQueryJob> CreateQueryJobAsync(JobConfigurationQuery jobConfiguration, QueryOptions options, CancellationToken cancellationToken = default(CancellationToken))
+            => throw new NotImplementedException();
     }
 }
