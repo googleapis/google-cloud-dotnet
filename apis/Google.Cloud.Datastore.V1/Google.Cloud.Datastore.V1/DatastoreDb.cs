@@ -238,6 +238,28 @@ namespace Google.Cloud.Datastore.V1
         }
 
         /// <summary>
+        /// Begins a transaction, returning a <see cref="DatastoreTransaction"/> which can be used to operate on the transaction.
+        /// </summary>
+        /// <param name="options">The options for the new transaction. May be null, for default options.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A new <see cref="DatastoreTransaction"/> for this object's project.</returns>
+        public virtual DatastoreTransaction BeginTransactionWithOptions(TransactionOptions options, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Begins a transaction asynchronously, returning a <see cref="DatastoreTransaction"/> which can be used to operate on the transaction.
+        /// </summary>
+        /// <param name="options">The options for the new transaction. May be null, for default options.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A new <see cref="DatastoreTransaction"/> for this object's project.</returns>
+        public virtual Task<DatastoreTransaction> BeginTransactionWithOptionsAsync(TransactionOptions options, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// Allocates an ID for a single incomplete key.
         /// </summary>
         /// <remarks>This method simply delegates to <see cref="AllocateIds(IEnumerable{Key},CallSettings)"/>.</remarks>
