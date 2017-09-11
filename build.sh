@@ -41,6 +41,7 @@ then
 fi
 
 # First build, working out the test projects as we go.
+> AllTests.txt
 for api in $apis
 do
   echo "$(date +%T) Building $api"
