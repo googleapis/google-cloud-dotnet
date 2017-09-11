@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Grpc.Core;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -163,6 +164,62 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             ValidateQueryResults(db.RunQueryLazilyAsync(query).ToEnumerable());
             ValidateQueryResults(db.RunQueryLazilyAsync(gql).ToEnumerable());
         }
+
+        [Fact]
+        public void BeginTransaction_ReadOnly()
+        {
+            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var keyFactory = db.CreateKeyFactory("readonly_test");
+            var options = TransactionOptions.CreateReadOnly();
+            using (var transaction = db.BeginTransaction(options))
+            {
+                transaction.Insert(new Entity { Key = keyFactory.CreateIncompleteKey(), ["x"] = 3 });
+                var exception = Assert.Throws<RpcException>(() => transaction.Commit());
+                Assert.Equal(StatusCode.InvalidArgument, exception.Status.StatusCode);
+            }
+        }
+
+        [Fact]
+        public async Task BeginTransactionAsync_ReadOnly()
+        {
+            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var keyFactory = db.CreateKeyFactory("readonly_test");
+            var options = TransactionOptions.CreateReadOnly();
+            using (var transaction = await db.BeginTransactionAsync(options))
+            {
+                transaction.Insert(new Entity { Key = keyFactory.CreateIncompleteKey(), ["x"] = 3 });
+                var exception = await Assert.ThrowsAsync<RpcException>(() => transaction.CommitAsync());
+                Assert.Equal(StatusCode.InvalidArgument, exception.Status.StatusCode);
+            }
+        }
+
+        [Fact]
+        public void BeginTransaction_ReadWrite()
+        {
+            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var keyFactory = db.CreateKeyFactory("readonly_test");
+            var options = TransactionOptions.CreateReadWrite();
+            using (var transaction = db.BeginTransaction(options))
+            {
+                transaction.Insert(new Entity { Key = keyFactory.CreateIncompleteKey(), ["x"] = 3 });
+                transaction.Commit();
+            }
+        }
+
+        [Fact]
+        public async Task BeginTransactionAsync_ReadWrite()
+        {
+            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var keyFactory = db.CreateKeyFactory("readonly_test");
+            var options = TransactionOptions.CreateReadWrite();
+            using (var transaction = await db.BeginTransactionAsync(options))
+            {
+                transaction.Insert(new Entity { Key = keyFactory.CreateIncompleteKey(), ["x"] = 3 });
+                await transaction.CommitAsync();
+            }
+        }
+
+        // TODO: Tests for retry-based transaction options
 
         private void ValidateQueryResults(IEnumerable<Entity> entities)
         {
