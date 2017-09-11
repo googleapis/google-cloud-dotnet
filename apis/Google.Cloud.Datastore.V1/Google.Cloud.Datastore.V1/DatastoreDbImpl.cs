@@ -146,7 +146,23 @@ namespace Google.Cloud.Datastore.V1
         {
             var response = await Client.BeginTransactionAsync(ProjectId, callSettings).ConfigureAwait(false);
             return DatastoreTransaction.Create(Client, ProjectId, NamespaceId, response.Transaction);
-        }                
+        }
+
+        /// <inheritdoc/>
+        public override DatastoreTransaction BeginTransactionWithOptions(TransactionOptions options, CallSettings callSettings = null)
+        {
+            var request = new BeginTransactionRequest { ProjectId = ProjectId, TransactionOptions = options };
+            var response = Client.BeginTransaction(request, callSettings);
+            return DatastoreTransaction.Create(Client, ProjectId, NamespaceId, response.Transaction);
+        }
+
+        /// <inheritdoc/>
+        public async override Task<DatastoreTransaction> BeginTransactionWithOptionsAsync(TransactionOptions options, CallSettings callSettings = null)
+        {
+            var request = new BeginTransactionRequest { ProjectId = ProjectId, TransactionOptions = options };
+            var response = await Client.BeginTransactionAsync(request, callSettings).ConfigureAwait(false);
+            return DatastoreTransaction.Create(Client, ProjectId, NamespaceId, response.Transaction);
+        }
 
         /// <inheritdoc/>
         public override IReadOnlyList<Key> AllocateIds(IEnumerable<Key> keys, CallSettings callSettings = null)
