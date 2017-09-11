@@ -126,73 +126,84 @@ namespace Google.Cloud.Language.V1 {
             "dGlvbi5UeXBlEjsKCXNlbnRpbWVudBgDIAEoCzIoLmdvb2dsZS5jbG91ZC5s",
             "YW5ndWFnZS52MWJldGEyLlNlbnRpbWVudCIwCgRUeXBlEhAKDFRZUEVfVU5L",
             "Tk9XThAAEgoKBlBST1BFUhABEgoKBkNPTU1PThACIjEKCFRleHRTcGFuEg8K",
-            "B2NvbnRlbnQYASABKAkSFAoMYmVnaW5fb2Zmc2V0GAIgASgFIpgBChdBbmFs",
-            "eXplU2VudGltZW50UmVxdWVzdBI5Cghkb2N1bWVudBgBIAEoCzInLmdvb2ds",
-            "ZS5jbG91ZC5sYW5ndWFnZS52MWJldGEyLkRvY3VtZW50EkIKDWVuY29kaW5n",
-            "X3R5cGUYAiABKA4yKy5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjFiZXRhMi5F",
-            "bmNvZGluZ1R5cGUirgEKGEFuYWx5emVTZW50aW1lbnRSZXNwb25zZRJEChJk",
-            "b2N1bWVudF9zZW50aW1lbnQYASABKAsyKC5nb29nbGUuY2xvdWQubGFuZ3Vh",
-            "Z2UudjFiZXRhMi5TZW50aW1lbnQSEAoIbGFuZ3VhZ2UYAiABKAkSOgoJc2Vu",
-            "dGVuY2VzGAMgAygLMicuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxYmV0YTIu",
-            "U2VudGVuY2UingEKHUFuYWx5emVFbnRpdHlTZW50aW1lbnRSZXF1ZXN0EjkK",
-            "CGRvY3VtZW50GAEgASgLMicuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxYmV0",
-            "YTIuRG9jdW1lbnQSQgoNZW5jb2RpbmdfdHlwZRgCIAEoDjIrLmdvb2dsZS5j",
-            "bG91ZC5sYW5ndWFnZS52MWJldGEyLkVuY29kaW5nVHlwZSJrCh5BbmFseXpl",
-            "RW50aXR5U2VudGltZW50UmVzcG9uc2USNwoIZW50aXRpZXMYASADKAsyJS5n",
-            "b29nbGUuY2xvdWQubGFuZ3VhZ2UudjFiZXRhMi5FbnRpdHkSEAoIbGFuZ3Vh",
-            "Z2UYAiABKAkilwEKFkFuYWx5emVFbnRpdGllc1JlcXVlc3QSOQoIZG9jdW1l",
-            "bnQYASABKAsyJy5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjFiZXRhMi5Eb2N1",
-            "bWVudBJCCg1lbmNvZGluZ190eXBlGAIgASgOMisuZ29vZ2xlLmNsb3VkLmxh",
-            "bmd1YWdlLnYxYmV0YTIuRW5jb2RpbmdUeXBlImQKF0FuYWx5emVFbnRpdGll",
-            "c1Jlc3BvbnNlEjcKCGVudGl0aWVzGAEgAygLMiUuZ29vZ2xlLmNsb3VkLmxh",
-            "bmd1YWdlLnYxYmV0YTIuRW50aXR5EhAKCGxhbmd1YWdlGAIgASgJIpUBChRB",
-            "bmFseXplU3ludGF4UmVxdWVzdBI5Cghkb2N1bWVudBgBIAEoCzInLmdvb2ds",
-            "ZS5jbG91ZC5sYW5ndWFnZS52MWJldGEyLkRvY3VtZW50EkIKDWVuY29kaW5n",
-            "X3R5cGUYAiABKA4yKy5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjFiZXRhMi5F",
-            "bmNvZGluZ1R5cGUimwEKFUFuYWx5emVTeW50YXhSZXNwb25zZRI6CglzZW50",
-            "ZW5jZXMYASADKAsyJy5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjFiZXRhMi5T",
-            "ZW50ZW5jZRI0CgZ0b2tlbnMYAiADKAsyJC5nb29nbGUuY2xvdWQubGFuZ3Vh",
-            "Z2UudjFiZXRhMi5Ub2tlbhIQCghsYW5ndWFnZRgDIAEoCSLoAgoTQW5ub3Rh",
-            "dGVUZXh0UmVxdWVzdBI5Cghkb2N1bWVudBgBIAEoCzInLmdvb2dsZS5jbG91",
-            "ZC5sYW5ndWFnZS52MWJldGEyLkRvY3VtZW50Ek0KCGZlYXR1cmVzGAIgASgL",
-            "MjsuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxYmV0YTIuQW5ub3RhdGVUZXh0",
-            "UmVxdWVzdC5GZWF0dXJlcxJCCg1lbmNvZGluZ190eXBlGAMgASgOMisuZ29v",
-            "Z2xlLmNsb3VkLmxhbmd1YWdlLnYxYmV0YTIuRW5jb2RpbmdUeXBlGoIBCghG",
-            "ZWF0dXJlcxIWCg5leHRyYWN0X3N5bnRheBgBIAEoCBIYChBleHRyYWN0X2Vu",
-            "dGl0aWVzGAIgASgIEiIKGmV4dHJhY3RfZG9jdW1lbnRfc2VudGltZW50GAMg",
-            "ASgIEiAKGGV4dHJhY3RfZW50aXR5X3NlbnRpbWVudBgEIAEoCCKZAgoUQW5u",
-            "b3RhdGVUZXh0UmVzcG9uc2USOgoJc2VudGVuY2VzGAEgAygLMicuZ29vZ2xl",
-            "LmNsb3VkLmxhbmd1YWdlLnYxYmV0YTIuU2VudGVuY2USNAoGdG9rZW5zGAIg",
-            "AygLMiQuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxYmV0YTIuVG9rZW4SNwoI",
-            "ZW50aXRpZXMYAyADKAsyJS5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjFiZXRh",
-            "Mi5FbnRpdHkSRAoSZG9jdW1lbnRfc2VudGltZW50GAQgASgLMiguZ29vZ2xl",
-            "LmNsb3VkLmxhbmd1YWdlLnYxYmV0YTIuU2VudGltZW50EhAKCGxhbmd1YWdl",
-            "GAUgASgJKjgKDEVuY29kaW5nVHlwZRIICgROT05FEAASCAoEVVRGOBABEgkK",
-            "BVVURjE2EAISCQoFVVRGMzIQAzKXBwoPTGFuZ3VhZ2VTZXJ2aWNlErMBChBB",
-            "bmFseXplU2VudGltZW50EjYuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxYmV0",
-            "YTIuQW5hbHl6ZVNlbnRpbWVudFJlcXVlc3QaNy5nb29nbGUuY2xvdWQubGFu",
-            "Z3VhZ2UudjFiZXRhMi5BbmFseXplU2VudGltZW50UmVzcG9uc2UiLoLT5JMC",
-            "KCIjL3YxYmV0YTIvZG9jdW1lbnRzOmFuYWx5emVTZW50aW1lbnQ6ASoSrwEK",
-            "D0FuYWx5emVFbnRpdGllcxI1Lmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52MWJl",
-            "dGEyLkFuYWx5emVFbnRpdGllc1JlcXVlc3QaNi5nb29nbGUuY2xvdWQubGFu",
-            "Z3VhZ2UudjFiZXRhMi5BbmFseXplRW50aXRpZXNSZXNwb25zZSItgtPkkwIn",
-            "IiIvdjFiZXRhMi9kb2N1bWVudHM6YW5hbHl6ZUVudGl0aWVzOgEqEssBChZB",
-            "bmFseXplRW50aXR5U2VudGltZW50EjwuZ29vZ2xlLmNsb3VkLmxhbmd1YWdl",
-            "LnYxYmV0YTIuQW5hbHl6ZUVudGl0eVNlbnRpbWVudFJlcXVlc3QaPS5nb29n",
-            "bGUuY2xvdWQubGFuZ3VhZ2UudjFiZXRhMi5BbmFseXplRW50aXR5U2VudGlt",
-            "ZW50UmVzcG9uc2UiNILT5JMCLiIpL3YxYmV0YTIvZG9jdW1lbnRzOmFuYWx5",
-            "emVFbnRpdHlTZW50aW1lbnQ6ASoSpwEKDUFuYWx5emVTeW50YXgSMy5nb29n",
-            "bGUuY2xvdWQubGFuZ3VhZ2UudjFiZXRhMi5BbmFseXplU3ludGF4UmVxdWVz",
-            "dBo0Lmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52MWJldGEyLkFuYWx5emVTeW50",
-            "YXhSZXNwb25zZSIrgtPkkwIlIiAvdjFiZXRhMi9kb2N1bWVudHM6YW5hbHl6",
-            "ZVN5bnRheDoBKhKjAQoMQW5ub3RhdGVUZXh0EjIuZ29vZ2xlLmNsb3VkLmxh",
-            "bmd1YWdlLnYxYmV0YTIuQW5ub3RhdGVUZXh0UmVxdWVzdBozLmdvb2dsZS5j",
-            "bG91ZC5sYW5ndWFnZS52MWJldGEyLkFubm90YXRlVGV4dFJlc3BvbnNlIiqC",
-            "0+STAiQiHy92MWJldGEyL2RvY3VtZW50czphbm5vdGF0ZVRleHQ6ASpCnQEK",
-            "IWNvbS5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjFiZXRhMkIUTGFuZ3VhZ2VT",
-            "ZXJ2aWNlUHJvdG9QAVpFZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
-            "Z2xlYXBpcy9jbG91ZC9sYW5ndWFnZS92MWJldGEyO2xhbmd1YWdlqgIYR29v",
-            "Z2xlLkNsb3VkLkxhbmd1YWdlLlYxYgZwcm90bzM="));
+            "B2NvbnRlbnQYASABKAkSFAoMYmVnaW5fb2Zmc2V0GAIgASgFIjoKFkNsYXNz",
+            "aWZpY2F0aW9uQ2F0ZWdvcnkSDAoEbmFtZRgBIAEoCRISCgpjb25maWRlbmNl",
+            "GAIgASgCIpgBChdBbmFseXplU2VudGltZW50UmVxdWVzdBI5Cghkb2N1bWVu",
+            "dBgBIAEoCzInLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52MWJldGEyLkRvY3Vt",
+            "ZW50EkIKDWVuY29kaW5nX3R5cGUYAiABKA4yKy5nb29nbGUuY2xvdWQubGFu",
+            "Z3VhZ2UudjFiZXRhMi5FbmNvZGluZ1R5cGUirgEKGEFuYWx5emVTZW50aW1l",
+            "bnRSZXNwb25zZRJEChJkb2N1bWVudF9zZW50aW1lbnQYASABKAsyKC5nb29n",
+            "bGUuY2xvdWQubGFuZ3VhZ2UudjFiZXRhMi5TZW50aW1lbnQSEAoIbGFuZ3Vh",
+            "Z2UYAiABKAkSOgoJc2VudGVuY2VzGAMgAygLMicuZ29vZ2xlLmNsb3VkLmxh",
+            "bmd1YWdlLnYxYmV0YTIuU2VudGVuY2UingEKHUFuYWx5emVFbnRpdHlTZW50",
+            "aW1lbnRSZXF1ZXN0EjkKCGRvY3VtZW50GAEgASgLMicuZ29vZ2xlLmNsb3Vk",
+            "Lmxhbmd1YWdlLnYxYmV0YTIuRG9jdW1lbnQSQgoNZW5jb2RpbmdfdHlwZRgC",
+            "IAEoDjIrLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52MWJldGEyLkVuY29kaW5n",
+            "VHlwZSJrCh5BbmFseXplRW50aXR5U2VudGltZW50UmVzcG9uc2USNwoIZW50",
+            "aXRpZXMYASADKAsyJS5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjFiZXRhMi5F",
+            "bnRpdHkSEAoIbGFuZ3VhZ2UYAiABKAkilwEKFkFuYWx5emVFbnRpdGllc1Jl",
+            "cXVlc3QSOQoIZG9jdW1lbnQYASABKAsyJy5nb29nbGUuY2xvdWQubGFuZ3Vh",
+            "Z2UudjFiZXRhMi5Eb2N1bWVudBJCCg1lbmNvZGluZ190eXBlGAIgASgOMisu",
+            "Z29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxYmV0YTIuRW5jb2RpbmdUeXBlImQK",
+            "F0FuYWx5emVFbnRpdGllc1Jlc3BvbnNlEjcKCGVudGl0aWVzGAEgAygLMiUu",
+            "Z29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxYmV0YTIuRW50aXR5EhAKCGxhbmd1",
+            "YWdlGAIgASgJIpUBChRBbmFseXplU3ludGF4UmVxdWVzdBI5Cghkb2N1bWVu",
+            "dBgBIAEoCzInLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52MWJldGEyLkRvY3Vt",
+            "ZW50EkIKDWVuY29kaW5nX3R5cGUYAiABKA4yKy5nb29nbGUuY2xvdWQubGFu",
+            "Z3VhZ2UudjFiZXRhMi5FbmNvZGluZ1R5cGUimwEKFUFuYWx5emVTeW50YXhS",
+            "ZXNwb25zZRI6CglzZW50ZW5jZXMYASADKAsyJy5nb29nbGUuY2xvdWQubGFu",
+            "Z3VhZ2UudjFiZXRhMi5TZW50ZW5jZRI0CgZ0b2tlbnMYAiADKAsyJC5nb29n",
+            "bGUuY2xvdWQubGFuZ3VhZ2UudjFiZXRhMi5Ub2tlbhIQCghsYW5ndWFnZRgD",
+            "IAEoCSJQChNDbGFzc2lmeVRleHRSZXF1ZXN0EjkKCGRvY3VtZW50GAEgASgL",
+            "MicuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxYmV0YTIuRG9jdW1lbnQiYQoU",
+            "Q2xhc3NpZnlUZXh0UmVzcG9uc2USSQoKY2F0ZWdvcmllcxgBIAMoCzI1Lmdv",
+            "b2dsZS5jbG91ZC5sYW5ndWFnZS52MWJldGEyLkNsYXNzaWZpY2F0aW9uQ2F0",
+            "ZWdvcnki/wIKE0Fubm90YXRlVGV4dFJlcXVlc3QSOQoIZG9jdW1lbnQYASAB",
+            "KAsyJy5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjFiZXRhMi5Eb2N1bWVudBJN",
+            "CghmZWF0dXJlcxgCIAEoCzI7Lmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52MWJl",
+            "dGEyLkFubm90YXRlVGV4dFJlcXVlc3QuRmVhdHVyZXMSQgoNZW5jb2Rpbmdf",
+            "dHlwZRgDIAEoDjIrLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52MWJldGEyLkVu",
+            "Y29kaW5nVHlwZRqZAQoIRmVhdHVyZXMSFgoOZXh0cmFjdF9zeW50YXgYASAB",
+            "KAgSGAoQZXh0cmFjdF9lbnRpdGllcxgCIAEoCBIiChpleHRyYWN0X2RvY3Vt",
+            "ZW50X3NlbnRpbWVudBgDIAEoCBIgChhleHRyYWN0X2VudGl0eV9zZW50aW1l",
+            "bnQYBCABKAgSFQoNY2xhc3NpZnlfdGV4dBgGIAEoCCLkAgoUQW5ub3RhdGVU",
+            "ZXh0UmVzcG9uc2USOgoJc2VudGVuY2VzGAEgAygLMicuZ29vZ2xlLmNsb3Vk",
+            "Lmxhbmd1YWdlLnYxYmV0YTIuU2VudGVuY2USNAoGdG9rZW5zGAIgAygLMiQu",
+            "Z29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxYmV0YTIuVG9rZW4SNwoIZW50aXRp",
+            "ZXMYAyADKAsyJS5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjFiZXRhMi5FbnRp",
+            "dHkSRAoSZG9jdW1lbnRfc2VudGltZW50GAQgASgLMiguZ29vZ2xlLmNsb3Vk",
+            "Lmxhbmd1YWdlLnYxYmV0YTIuU2VudGltZW50EhAKCGxhbmd1YWdlGAUgASgJ",
+            "EkkKCmNhdGVnb3JpZXMYBiADKAsyNS5nb29nbGUuY2xvdWQubGFuZ3VhZ2Uu",
+            "djFiZXRhMi5DbGFzc2lmaWNhdGlvbkNhdGVnb3J5KjgKDEVuY29kaW5nVHlw",
+            "ZRIICgROT05FEAASCAoEVVRGOBABEgkKBVVURjE2EAISCQoFVVRGMzIQAzK9",
+            "CAoPTGFuZ3VhZ2VTZXJ2aWNlErMBChBBbmFseXplU2VudGltZW50EjYuZ29v",
+            "Z2xlLmNsb3VkLmxhbmd1YWdlLnYxYmV0YTIuQW5hbHl6ZVNlbnRpbWVudFJl",
+            "cXVlc3QaNy5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjFiZXRhMi5BbmFseXpl",
+            "U2VudGltZW50UmVzcG9uc2UiLoLT5JMCKCIjL3YxYmV0YTIvZG9jdW1lbnRz",
+            "OmFuYWx5emVTZW50aW1lbnQ6ASoSrwEKD0FuYWx5emVFbnRpdGllcxI1Lmdv",
+            "b2dsZS5jbG91ZC5sYW5ndWFnZS52MWJldGEyLkFuYWx5emVFbnRpdGllc1Jl",
+            "cXVlc3QaNi5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjFiZXRhMi5BbmFseXpl",
+            "RW50aXRpZXNSZXNwb25zZSItgtPkkwInIiIvdjFiZXRhMi9kb2N1bWVudHM6",
+            "YW5hbHl6ZUVudGl0aWVzOgEqEssBChZBbmFseXplRW50aXR5U2VudGltZW50",
+            "EjwuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxYmV0YTIuQW5hbHl6ZUVudGl0",
+            "eVNlbnRpbWVudFJlcXVlc3QaPS5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjFi",
+            "ZXRhMi5BbmFseXplRW50aXR5U2VudGltZW50UmVzcG9uc2UiNILT5JMCLiIp",
+            "L3YxYmV0YTIvZG9jdW1lbnRzOmFuYWx5emVFbnRpdHlTZW50aW1lbnQ6ASoS",
+            "pwEKDUFuYWx5emVTeW50YXgSMy5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjFi",
+            "ZXRhMi5BbmFseXplU3ludGF4UmVxdWVzdBo0Lmdvb2dsZS5jbG91ZC5sYW5n",
+            "dWFnZS52MWJldGEyLkFuYWx5emVTeW50YXhSZXNwb25zZSIrgtPkkwIlIiAv",
+            "djFiZXRhMi9kb2N1bWVudHM6YW5hbHl6ZVN5bnRheDoBKhKjAQoMQ2xhc3Np",
+            "ZnlUZXh0EjIuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxYmV0YTIuQ2xhc3Np",
+            "ZnlUZXh0UmVxdWVzdBozLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52MWJldGEy",
+            "LkNsYXNzaWZ5VGV4dFJlc3BvbnNlIiqC0+STAiQiHy92MWJldGEyL2RvY3Vt",
+            "ZW50czpjbGFzc2lmeVRleHQ6ASoSowEKDEFubm90YXRlVGV4dBIyLmdvb2ds",
+            "ZS5jbG91ZC5sYW5ndWFnZS52MWJldGEyLkFubm90YXRlVGV4dFJlcXVlc3Qa",
+            "My5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjFiZXRhMi5Bbm5vdGF0ZVRleHRS",
+            "ZXNwb25zZSIqgtPkkwIkIh8vdjFiZXRhMi9kb2N1bWVudHM6YW5ub3RhdGVU",
+            "ZXh0OgEqQoIBCiFjb20uZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxYmV0YTJC",
+            "FExhbmd1YWdlU2VydmljZVByb3RvUAFaRWdvb2dsZS5nb2xhbmcub3JnL2dl",
+            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvbGFuZ3VhZ2UvdjFiZXRhMjtsYW5n",
+            "dWFnZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Language.V1.EncodingType), }, new pbr::GeneratedClrTypeInfo[] {
@@ -205,6 +216,7 @@ namespace Google.Cloud.Language.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.DependencyEdge), global::Google.Cloud.Language.V1.DependencyEdge.Parser, new[]{ "HeadTokenIndex", "Label" }, null, new[]{ typeof(global::Google.Cloud.Language.V1.DependencyEdge.Types.Label) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.EntityMention), global::Google.Cloud.Language.V1.EntityMention.Parser, new[]{ "Text", "Type", "Sentiment" }, null, new[]{ typeof(global::Google.Cloud.Language.V1.EntityMention.Types.Type) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.TextSpan), global::Google.Cloud.Language.V1.TextSpan.Parser, new[]{ "Content", "BeginOffset" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.ClassificationCategory), global::Google.Cloud.Language.V1.ClassificationCategory.Parser, new[]{ "Name", "Confidence" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeSentimentRequest), global::Google.Cloud.Language.V1.AnalyzeSentimentRequest.Parser, new[]{ "Document", "EncodingType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeSentimentResponse), global::Google.Cloud.Language.V1.AnalyzeSentimentResponse.Parser, new[]{ "DocumentSentiment", "Language", "Sentences" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest), global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest.Parser, new[]{ "Document", "EncodingType" }, null, null, null),
@@ -213,8 +225,10 @@ namespace Google.Cloud.Language.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse), global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse.Parser, new[]{ "Entities", "Language" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest), global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest.Parser, new[]{ "Document", "EncodingType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse), global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse.Parser, new[]{ "Sentences", "Tokens", "Language" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnnotateTextRequest), global::Google.Cloud.Language.V1.AnnotateTextRequest.Parser, new[]{ "Document", "Features", "EncodingType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features), global::Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features.Parser, new[]{ "ExtractSyntax", "ExtractEntities", "ExtractDocumentSentiment", "ExtractEntitySentiment" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnnotateTextResponse), global::Google.Cloud.Language.V1.AnnotateTextResponse.Parser, new[]{ "Sentences", "Tokens", "Entities", "DocumentSentiment", "Language" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.ClassifyTextRequest), global::Google.Cloud.Language.V1.ClassifyTextRequest.Parser, new[]{ "Document" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.ClassifyTextResponse), global::Google.Cloud.Language.V1.ClassifyTextResponse.Parser, new[]{ "Categories" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnnotateTextRequest), global::Google.Cloud.Language.V1.AnnotateTextRequest.Parser, new[]{ "Document", "Features", "EncodingType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features), global::Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features.Parser, new[]{ "ExtractSyntax", "ExtractEntities", "ExtractDocumentSentiment", "ExtractEntitySentiment", "ClassifyText" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnnotateTextResponse), global::Google.Cloud.Language.V1.AnnotateTextResponse.Parser, new[]{ "Sentences", "Tokens", "Entities", "DocumentSentiment", "Language", "Categories" }, null, null, null)
           }));
     }
     #endregion
@@ -357,7 +371,7 @@ namespace Google.Cloud.Language.V1 {
     /// The language of the document (if not specified, the language is
     /// automatically detected). Both ISO and BCP-47 language codes are
     /// accepted.&lt;br>
-    /// [Language Support](https://cloud.google.com/natural-language/docs/languages)
+    /// [Language Support](/natural-language/docs/languages)
     /// lists currently supported languages for each API method.
     /// If the language (either specified by the caller or automatically detected)
     /// is not supported by the called API method, an `INVALID_ARGUMENT` error
@@ -3168,6 +3182,161 @@ namespace Google.Cloud.Language.V1 {
   }
 
   /// <summary>
+  /// Represents a category returned from the text classifier.
+  /// </summary>
+  public sealed partial class ClassificationCategory : pb::IMessage<ClassificationCategory> {
+    private static readonly pb::MessageParser<ClassificationCategory> _parser = new pb::MessageParser<ClassificationCategory>(() => new ClassificationCategory());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ClassificationCategory> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ClassificationCategory() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ClassificationCategory(ClassificationCategory other) : this() {
+      name_ = other.name_;
+      confidence_ = other.confidence_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ClassificationCategory Clone() {
+      return new ClassificationCategory(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// The name of the category representing the document.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "confidence" field.</summary>
+    public const int ConfidenceFieldNumber = 2;
+    private float confidence_;
+    /// <summary>
+    /// The classifier's confidence of the category. Number represents how certain
+    /// the classifier is that this category represents the given text.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Confidence {
+      get { return confidence_; }
+      set {
+        confidence_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ClassificationCategory);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ClassificationCategory other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Confidence != other.Confidence) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Confidence != 0F) hash ^= Confidence.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Confidence != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Confidence);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Confidence != 0F) {
+        size += 1 + 4;
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ClassificationCategory other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Confidence != 0F) {
+        Confidence = other.Confidence;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 21: {
+            Confidence = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// The sentiment analysis request message.
   /// </summary>
   public sealed partial class AnalyzeSentimentRequest : pb::IMessage<AnalyzeSentimentRequest> {
@@ -3177,7 +3346,7 @@ namespace Google.Cloud.Language.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3338,7 +3507,7 @@ namespace Google.Cloud.Language.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3523,7 +3692,7 @@ namespace Google.Cloud.Language.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3683,7 +3852,7 @@ namespace Google.Cloud.Language.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3831,7 +4000,7 @@ namespace Google.Cloud.Language.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3991,7 +4160,7 @@ namespace Google.Cloud.Language.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4139,7 +4308,7 @@ namespace Google.Cloud.Language.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4299,7 +4468,7 @@ namespace Google.Cloud.Language.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4461,6 +4630,250 @@ namespace Google.Cloud.Language.V1 {
   }
 
   /// <summary>
+  /// The document classification request message.
+  /// </summary>
+  public sealed partial class ClassifyTextRequest : pb::IMessage<ClassifyTextRequest> {
+    private static readonly pb::MessageParser<ClassifyTextRequest> _parser = new pb::MessageParser<ClassifyTextRequest>(() => new ClassifyTextRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ClassifyTextRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[18]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ClassifyTextRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ClassifyTextRequest(ClassifyTextRequest other) : this() {
+      Document = other.document_ != null ? other.Document.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ClassifyTextRequest Clone() {
+      return new ClassifyTextRequest(this);
+    }
+
+    /// <summary>Field number for the "document" field.</summary>
+    public const int DocumentFieldNumber = 1;
+    private global::Google.Cloud.Language.V1.Document document_;
+    /// <summary>
+    /// Input document.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Language.V1.Document Document {
+      get { return document_; }
+      set {
+        document_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ClassifyTextRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ClassifyTextRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Document, other.Document)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (document_ != null) hash ^= Document.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (document_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Document);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (document_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Document);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ClassifyTextRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.document_ != null) {
+        if (document_ == null) {
+          document_ = new global::Google.Cloud.Language.V1.Document();
+        }
+        Document.MergeFrom(other.Document);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (document_ == null) {
+              document_ = new global::Google.Cloud.Language.V1.Document();
+            }
+            input.ReadMessage(document_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The document classification response message.
+  /// </summary>
+  public sealed partial class ClassifyTextResponse : pb::IMessage<ClassifyTextResponse> {
+    private static readonly pb::MessageParser<ClassifyTextResponse> _parser = new pb::MessageParser<ClassifyTextResponse>(() => new ClassifyTextResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ClassifyTextResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ClassifyTextResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ClassifyTextResponse(ClassifyTextResponse other) : this() {
+      categories_ = other.categories_.Clone();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ClassifyTextResponse Clone() {
+      return new ClassifyTextResponse(this);
+    }
+
+    /// <summary>Field number for the "categories" field.</summary>
+    public const int CategoriesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Language.V1.ClassificationCategory> _repeated_categories_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Language.V1.ClassificationCategory.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Language.V1.ClassificationCategory> categories_ = new pbc::RepeatedField<global::Google.Cloud.Language.V1.ClassificationCategory>();
+    /// <summary>
+    /// Categories representing the input document.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Language.V1.ClassificationCategory> Categories {
+      get { return categories_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ClassifyTextResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ClassifyTextResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!categories_.Equals(other.categories_)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= categories_.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      categories_.WriteTo(output, _repeated_categories_codec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += categories_.CalculateSize(_repeated_categories_codec);
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ClassifyTextResponse other) {
+      if (other == null) {
+        return;
+      }
+      categories_.Add(other.categories_);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            categories_.AddEntriesFrom(input, _repeated_categories_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// The request message for the text annotation API, which can perform multiple
   /// analysis types (sentiment, entities, and syntax) in one call.
   /// </summary>
@@ -4471,7 +4884,7 @@ namespace Google.Cloud.Language.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4692,6 +5105,7 @@ namespace Google.Cloud.Language.V1 {
           extractEntities_ = other.extractEntities_;
           extractDocumentSentiment_ = other.extractDocumentSentiment_;
           extractEntitySentiment_ = other.extractEntitySentiment_;
+          classifyText_ = other.classifyText_;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4755,6 +5169,20 @@ namespace Google.Cloud.Language.V1 {
           }
         }
 
+        /// <summary>Field number for the "classify_text" field.</summary>
+        public const int ClassifyTextFieldNumber = 6;
+        private bool classifyText_;
+        /// <summary>
+        /// Classify the full document into categories.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool ClassifyText {
+          get { return classifyText_; }
+          set {
+            classifyText_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
           return Equals(other as Features);
@@ -4772,6 +5200,7 @@ namespace Google.Cloud.Language.V1 {
           if (ExtractEntities != other.ExtractEntities) return false;
           if (ExtractDocumentSentiment != other.ExtractDocumentSentiment) return false;
           if (ExtractEntitySentiment != other.ExtractEntitySentiment) return false;
+          if (ClassifyText != other.ClassifyText) return false;
           return true;
         }
 
@@ -4782,6 +5211,7 @@ namespace Google.Cloud.Language.V1 {
           if (ExtractEntities != false) hash ^= ExtractEntities.GetHashCode();
           if (ExtractDocumentSentiment != false) hash ^= ExtractDocumentSentiment.GetHashCode();
           if (ExtractEntitySentiment != false) hash ^= ExtractEntitySentiment.GetHashCode();
+          if (ClassifyText != false) hash ^= ClassifyText.GetHashCode();
           return hash;
         }
 
@@ -4808,6 +5238,10 @@ namespace Google.Cloud.Language.V1 {
             output.WriteRawTag(32);
             output.WriteBool(ExtractEntitySentiment);
           }
+          if (ClassifyText != false) {
+            output.WriteRawTag(48);
+            output.WriteBool(ClassifyText);
+          }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4823,6 +5257,9 @@ namespace Google.Cloud.Language.V1 {
             size += 1 + 1;
           }
           if (ExtractEntitySentiment != false) {
+            size += 1 + 1;
+          }
+          if (ClassifyText != false) {
             size += 1 + 1;
           }
           return size;
@@ -4844,6 +5281,9 @@ namespace Google.Cloud.Language.V1 {
           }
           if (other.ExtractEntitySentiment != false) {
             ExtractEntitySentiment = other.ExtractEntitySentiment;
+          }
+          if (other.ClassifyText != false) {
+            ClassifyText = other.ClassifyText;
           }
         }
 
@@ -4871,6 +5311,10 @@ namespace Google.Cloud.Language.V1 {
                 ExtractEntitySentiment = input.ReadBool();
                 break;
               }
+              case 48: {
+                ClassifyText = input.ReadBool();
+                break;
+              }
             }
           }
         }
@@ -4892,7 +5336,7 @@ namespace Google.Cloud.Language.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4914,6 +5358,7 @@ namespace Google.Cloud.Language.V1 {
       entities_ = other.entities_.Clone();
       DocumentSentiment = other.documentSentiment_ != null ? other.DocumentSentiment.Clone() : null;
       language_ = other.language_;
+      categories_ = other.categories_.Clone();
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4996,6 +5441,19 @@ namespace Google.Cloud.Language.V1 {
       }
     }
 
+    /// <summary>Field number for the "categories" field.</summary>
+    public const int CategoriesFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Language.V1.ClassificationCategory> _repeated_categories_codec
+        = pb::FieldCodec.ForMessage(50, global::Google.Cloud.Language.V1.ClassificationCategory.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Language.V1.ClassificationCategory> categories_ = new pbc::RepeatedField<global::Google.Cloud.Language.V1.ClassificationCategory>();
+    /// <summary>
+    /// Categories identified in the input document.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Language.V1.ClassificationCategory> Categories {
+      get { return categories_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AnnotateTextResponse);
@@ -5014,6 +5472,7 @@ namespace Google.Cloud.Language.V1 {
       if(!entities_.Equals(other.entities_)) return false;
       if (!object.Equals(DocumentSentiment, other.DocumentSentiment)) return false;
       if (Language != other.Language) return false;
+      if(!categories_.Equals(other.categories_)) return false;
       return true;
     }
 
@@ -5025,6 +5484,7 @@ namespace Google.Cloud.Language.V1 {
       hash ^= entities_.GetHashCode();
       if (documentSentiment_ != null) hash ^= DocumentSentiment.GetHashCode();
       if (Language.Length != 0) hash ^= Language.GetHashCode();
+      hash ^= categories_.GetHashCode();
       return hash;
     }
 
@@ -5046,6 +5506,7 @@ namespace Google.Cloud.Language.V1 {
         output.WriteRawTag(42);
         output.WriteString(Language);
       }
+      categories_.WriteTo(output, _repeated_categories_codec);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5060,6 +5521,7 @@ namespace Google.Cloud.Language.V1 {
       if (Language.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Language);
       }
+      size += categories_.CalculateSize(_repeated_categories_codec);
       return size;
     }
 
@@ -5080,6 +5542,7 @@ namespace Google.Cloud.Language.V1 {
       if (other.Language.Length != 0) {
         Language = other.Language;
       }
+      categories_.Add(other.categories_);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5111,6 +5574,10 @@ namespace Google.Cloud.Language.V1 {
           }
           case 42: {
             Language = input.ReadString();
+            break;
+          }
+          case 50: {
+            categories_.AddEntriesFrom(input, _repeated_categories_codec);
             break;
           }
         }

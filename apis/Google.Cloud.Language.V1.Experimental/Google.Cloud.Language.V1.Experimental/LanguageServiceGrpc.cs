@@ -39,6 +39,8 @@ namespace Google.Cloud.Language.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse> __Marshaller_AnalyzeEntitySentimentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest> __Marshaller_AnalyzeSyntaxRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse> __Marshaller_AnalyzeSyntaxResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.ClassifyTextRequest> __Marshaller_ClassifyTextRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Language.V1.ClassifyTextRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.ClassifyTextResponse> __Marshaller_ClassifyTextResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Language.V1.ClassifyTextResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnnotateTextRequest> __Marshaller_AnnotateTextRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Language.V1.AnnotateTextRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnnotateTextResponse> __Marshaller_AnnotateTextResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Language.V1.AnnotateTextResponse.Parser.ParseFrom);
 
@@ -69,6 +71,13 @@ namespace Google.Cloud.Language.V1 {
         "AnalyzeSyntax",
         __Marshaller_AnalyzeSyntaxRequest,
         __Marshaller_AnalyzeSyntaxResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Language.V1.ClassifyTextRequest, global::Google.Cloud.Language.V1.ClassifyTextResponse> __Method_ClassifyText = new grpc::Method<global::Google.Cloud.Language.V1.ClassifyTextRequest, global::Google.Cloud.Language.V1.ClassifyTextResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ClassifyText",
+        __Marshaller_ClassifyTextRequest,
+        __Marshaller_ClassifyTextResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Language.V1.AnnotateTextRequest, global::Google.Cloud.Language.V1.AnnotateTextResponse> __Method_AnnotateText = new grpc::Method<global::Google.Cloud.Language.V1.AnnotateTextRequest, global::Google.Cloud.Language.V1.AnnotateTextResponse>(
         grpc::MethodType.Unary,
@@ -136,8 +145,19 @@ namespace Google.Cloud.Language.V1 {
       }
 
       /// <summary>
-      /// A convenience method that provides all syntax, sentiment, and entity
-      /// features in one call.
+      /// Classifies a document into categories.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Language.V1.ClassifyTextResponse> ClassifyText(global::Google.Cloud.Language.V1.ClassifyTextRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// A convenience method that provides all syntax, sentiment, entity, and
+      /// classification features in one call.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -369,8 +389,52 @@ namespace Google.Cloud.Language.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_AnalyzeSyntax, null, options, request);
       }
       /// <summary>
-      /// A convenience method that provides all syntax, sentiment, and entity
-      /// features in one call.
+      /// Classifies a document into categories.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Language.V1.ClassifyTextResponse ClassifyText(global::Google.Cloud.Language.V1.ClassifyTextRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return ClassifyText(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Classifies a document into categories.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Language.V1.ClassifyTextResponse ClassifyText(global::Google.Cloud.Language.V1.ClassifyTextRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ClassifyText, null, options, request);
+      }
+      /// <summary>
+      /// Classifies a document into categories.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.ClassifyTextResponse> ClassifyTextAsync(global::Google.Cloud.Language.V1.ClassifyTextRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return ClassifyTextAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Classifies a document into categories.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.ClassifyTextResponse> ClassifyTextAsync(global::Google.Cloud.Language.V1.ClassifyTextRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ClassifyText, null, options, request);
+      }
+      /// <summary>
+      /// A convenience method that provides all syntax, sentiment, entity, and
+      /// classification features in one call.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -382,8 +446,8 @@ namespace Google.Cloud.Language.V1 {
         return AnnotateText(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// A convenience method that provides all syntax, sentiment, and entity
-      /// features in one call.
+      /// A convenience method that provides all syntax, sentiment, entity, and
+      /// classification features in one call.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -393,8 +457,8 @@ namespace Google.Cloud.Language.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_AnnotateText, null, options, request);
       }
       /// <summary>
-      /// A convenience method that provides all syntax, sentiment, and entity
-      /// features in one call.
+      /// A convenience method that provides all syntax, sentiment, entity, and
+      /// classification features in one call.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -406,8 +470,8 @@ namespace Google.Cloud.Language.V1 {
         return AnnotateTextAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// A convenience method that provides all syntax, sentiment, and entity
-      /// features in one call.
+      /// A convenience method that provides all syntax, sentiment, entity, and
+      /// classification features in one call.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -432,6 +496,7 @@ namespace Google.Cloud.Language.V1 {
           .AddMethod(__Method_AnalyzeEntities, serviceImpl.AnalyzeEntities)
           .AddMethod(__Method_AnalyzeEntitySentiment, serviceImpl.AnalyzeEntitySentiment)
           .AddMethod(__Method_AnalyzeSyntax, serviceImpl.AnalyzeSyntax)
+          .AddMethod(__Method_ClassifyText, serviceImpl.ClassifyText)
           .AddMethod(__Method_AnnotateText, serviceImpl.AnnotateText).Build();
     }
 
