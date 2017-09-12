@@ -88,7 +88,7 @@ namespace Google.Cloud.Spanner.Data
         {
             get => _connectionStringBuilder?.ToString();
             set => TrySetNewConnectionInfo(
-                new SpannerConnectionStringBuilder(value, _connectionStringBuilder?.Credential));
+                new SpannerConnectionStringBuilder(value, _connectionStringBuilder?.CredentialOverride));
         }
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace Google.Cloud.Spanner.Data
         /// If credentials are not specified, then application default credentials are used instead.
         /// See gcloud documentation on how to set up application default credentials.
         /// </summary>
-        public ITokenAccess Credential => _connectionStringBuilder?.Credential;
+        public ITokenAccess GetCredential() => _connectionStringBuilder?.GetCredential();
 
         /// <inheritdoc />
         public override string Database => _connectionStringBuilder?.SpannerDatabase;
@@ -294,7 +294,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 ClientPool.Default.ReleaseClient(
                     client,
-                    _connectionStringBuilder.Credential,
+                    _connectionStringBuilder.GetCredential(),
                     _connectionStringBuilder.EndPoint,
                     _connectionStringBuilder);
             }
@@ -442,7 +442,7 @@ namespace Google.Cloud.Spanner.Data
                     try
                     {
                         localClient = await ClientPool.Default.AcquireClientAsync(
-                                _connectionStringBuilder.Credential,
+                                _connectionStringBuilder.GetCredential(),
                                 _connectionStringBuilder.EndPoint,
                                 _connectionStringBuilder)
                             .ConfigureAwait(false);

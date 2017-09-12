@@ -56,14 +56,14 @@ namespace Google.Cloud.Spanner.Data
         AlreadyExists = StatusCode.AlreadyExists,
 
         /// <summary>
-        /// The supplied credential from <see cref="SpannerConnectionStringBuilder.Credential"/>
+        /// The supplied credential from <see cref="SpannerConnectionStringBuilder.CredentialFile"/>
         /// or from default application credentials does not have sufficient permission for the request.
         /// </summary>
         PermissionDenied = StatusCode.PermissionDenied,
 
         /// <summary>
         /// There is no supplied credential either through default application credentials or
-        /// directly through <see cref="SpannerConnectionStringBuilder.Credential"/>
+        /// directly through <see cref="SpannerConnectionStringBuilder.CredentialFile"/>
         /// </summary>
         Unauthenticated = StatusCode.Unauthenticated,
 

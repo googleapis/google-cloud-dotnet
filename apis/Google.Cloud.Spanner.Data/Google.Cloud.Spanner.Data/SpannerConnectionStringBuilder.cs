@@ -14,6 +14,7 @@
 
 using System;
 using System.Data.Common;
+using System.IO;
 using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Util;
@@ -31,6 +32,7 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     public sealed class SpannerConnectionStringBuilder : DbConnectionStringBuilder
     {
+        private const string CredentialFileKeyword = "CredentialFile";
         private const string DataSourceKeyword = "Data Source";
         private InstanceName _instanceName;
         private DatabaseName _databaseName;
@@ -41,7 +43,53 @@ namespace Google.Cloud.Spanner.Data
         /// Credentials can be retrieved from a file or obtained interactively.
         /// See Google Cloud documentation for more information.
         /// </summary>
-        public ITokenAccess Credential { get; private set; }
+        public ITokenAccess GetCredential()
+        {
+            // Check the ctor override.
+            if (CredentialOverride != null)
+            {
+                return CredentialOverride;
+            }
+
+            //Calculate it from the CredentialFile argument in the connection string.
+            GoogleCredential credential = null;
+            string jsonFile = CredentialFile;
+            if (!string.IsNullOrEmpty(jsonFile))
+            {
+                if (!string.Equals(Path.GetExtension(jsonFile), ".json", StringComparison.OrdinalIgnoreCase))
+                {
+                    throw new InvalidOperationException($"{nameof(CredentialFile)} should only be set to a JSON file.");
+                }
+
+                if (!File.Exists(jsonFile))
+                {
+                    //try some relative locations.
+                    jsonFile = $"{GetApplicationFolder()}{Path.DirectorySeparatorChar}{jsonFile}";
+                }
+                if (!File.Exists(jsonFile))
+                {
+                    //throw a meaningful error that tells the developer where we looked.
+                    throw new FileNotFoundException($"Could not find {nameof(CredentialFile)}. Also looked in {jsonFile}.");
+                }
+
+                //TODO(benwu) replace with GoogleCredential.FromFile
+                using (var credStream = File.OpenRead(jsonFile))
+                {
+                    credential = GoogleCredential.FromStream(credStream).CreateScoped(SpannerClient.DefaultScopes);
+                }
+            }
+            return credential;
+        }
+
+        /// <summary>
+        /// Optional path to a JSON Credential file. If a Credential is not supplied, Cloud Spanner
+        /// will use Default Application Credentials.
+        /// </summary>
+        public string CredentialFile
+        {
+            get => GetValueOrDefault(CredentialFileKeyword);
+            set => this[CredentialFileKeyword] = value;
+        }
 
         /// <summary>
         /// DataSource of the Spanner database in the form of 'projects/{project}/instances/{instance}/databases/{database}'
@@ -152,6 +200,8 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
+        internal ITokenAccess CredentialOverride { get; }
+
         /// <summary>
         /// Creates a new <see cref="SpannerConnectionStringBuilder"/> with the given
         /// connection string and optional credential
@@ -168,7 +218,7 @@ namespace Google.Cloud.Spanner.Data
         public SpannerConnectionStringBuilder(string connectionString, ITokenAccess credential = null)
         {
             connectionString.ThrowIfNullOrEmpty(nameof(connectionString));
-            Credential = credential;
+            CredentialOverride = credential;
             ConnectionString = connectionString;
         }
 
@@ -178,10 +228,10 @@ namespace Google.Cloud.Spanner.Data
         public SpannerConnectionStringBuilder() { }
 
 
-        internal SpannerConnectionStringBuilder Clone() => new SpannerConnectionStringBuilder(ConnectionString, Credential);
+        internal SpannerConnectionStringBuilder Clone() => new SpannerConnectionStringBuilder(ConnectionString, CredentialOverride);
 
         internal SpannerConnectionStringBuilder CloneWithNewDataSource(string dataSource)
-            => new SpannerConnectionStringBuilder(ConnectionString, Credential)
+            => new SpannerConnectionStringBuilder(ConnectionString, CredentialOverride)
             {
                 DataSource = dataSource
             };
@@ -195,6 +245,15 @@ namespace Google.Cloud.Spanner.Data
             }
 
             return defaultValue;
+        }
+
+        private string GetApplicationFolder()
+        {
+#if NETSTANDARD1_5
+            return AppContext.BaseDirectory;
+#else
+            return AppDomain.CurrentDomain.BaseDirectory;
+#endif
         }
 
         /// <inheritdoc />
