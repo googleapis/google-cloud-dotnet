@@ -86,14 +86,14 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void CreateTracer_DoNothingTracer()
         {
             IManagedTracer tracer =  s_tracerFactoryLimit.CreateTracer(s_headerFalse);
-            Assert.IsType(typeof(NullManagedTracer), tracer);
+            Assert.IsType<NullManagedTracer>(tracer);
         }
 
         [Fact]
         public void CreateTracer_SimpleManagedTracer()
         {
             IManagedTracer tracer = s_tracerFactoryNoLimit.CreateTracer(s_headerTrue);
-            Assert.IsType(typeof(SimpleManagedTracer), tracer);
+            Assert.IsType<SimpleManagedTracer>(tracer);
             Assert.Equal(tracer.GetCurrentTraceId(), TraceId);
             Assert.Equal(tracer.GetCurrentSpanId(), SpanId);
         }

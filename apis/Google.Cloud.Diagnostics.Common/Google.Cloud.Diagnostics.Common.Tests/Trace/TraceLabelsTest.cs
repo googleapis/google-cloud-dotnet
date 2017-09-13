@@ -47,19 +47,19 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             Assert.Equal(1, labels.Count);
             string jsonTrace = labels[TraceLabels.StackTrace];
 
-            Assert.Equal(Regex.Matches(jsonTrace, "stack_frame").Count, 1);
-            Assert.Equal(Regex.Matches(jsonTrace, "class_name").Count, 3);
-            Assert.Equal(Regex.Matches(jsonTrace, "method_name").Count, 3);
-            Assert.Equal(Regex.Matches(jsonTrace, "file_name").Count, 2);
-            Assert.Equal(Regex.Matches(jsonTrace, "line_number").Count, 2);
+            Assert.Equal(1, Regex.Matches(jsonTrace, "stack_frame").Count);
+            Assert.Equal(3, Regex.Matches(jsonTrace, "class_name").Count);
+            Assert.Equal(3, Regex.Matches(jsonTrace, "method_name").Count);
+            Assert.Equal(2, Regex.Matches(jsonTrace, "file_name").Count);
+            Assert.Equal(2, Regex.Matches(jsonTrace, "line_number").Count);
 
-            Assert.Equal(Regex.Matches(jsonTrace, "compare_file").Count, 1);
-            Assert.Equal(Regex.Matches(jsonTrace, "22").Count, 1);
-            Assert.Equal(Regex.Matches(jsonTrace, "SpecialMethod").Count, 1);
-            Assert.Equal(Regex.Matches(jsonTrace, "UniqueMethod").Count, 1);
-            Assert.Equal(Regex.Matches(jsonTrace, "concat_file").Count, 1);
-            Assert.Equal(Regex.Matches(jsonTrace, "33").Count, 1);
-            Assert.Equal(Regex.Matches(jsonTrace, "ThisIsAMethod").Count, 1);
+            Assert.Equal(1, Regex.Matches(jsonTrace, "compare_file").Count);
+            Assert.Equal(1, Regex.Matches(jsonTrace, "22").Count);
+            Assert.Equal(1, Regex.Matches(jsonTrace, "SpecialMethod").Count);
+            Assert.Equal(1, Regex.Matches(jsonTrace, "UniqueMethod").Count);
+            Assert.Equal(1, Regex.Matches(jsonTrace, "concat_file").Count);
+            Assert.Equal(1, Regex.Matches(jsonTrace, "33").Count);
+            Assert.Equal(1, Regex.Matches(jsonTrace, "ThisIsAMethod").Count);
         }
 
         [Fact]

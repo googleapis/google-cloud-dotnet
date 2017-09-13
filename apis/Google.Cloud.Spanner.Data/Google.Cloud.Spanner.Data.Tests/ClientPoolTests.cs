@@ -110,7 +110,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             for (var i = 0; i < SpannerOptions.Instance.MaximumGrpcChannels; i++)
             {
                 var newClient = await testPool.AcquireClientAsync();
-                Assert.False(clientList.Contains(newClient));
+                Assert.DoesNotContain(newClient, clientList);
                 clientList.Add(newClient);
             }
 

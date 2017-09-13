@@ -564,7 +564,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                     // Verify that the URL no longer works.
                     var progress = await uploader.UploadAsync();
                     Assert.Equal(UploadStatus.Failed, progress.Status);
-                    Assert.IsType(typeof(GoogleApiException), progress.Exception);
+                    Assert.IsType<GoogleApiException>(progress.Exception);
 
                     var obj = await _fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefault(o => o.Name == name);
                     Assert.Null(obj);
@@ -661,7 +661,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                     // Verify that the URL no longer works.
                     var progress = await uploader.UploadAsync();
                     Assert.Equal(UploadStatus.Failed, progress.Status);
-                    Assert.IsType(typeof(GoogleApiException), progress.Exception);
+                    Assert.IsType<GoogleApiException>(progress.Exception);
                 });
         }
 

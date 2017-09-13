@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -19,12 +20,13 @@ using System.Threading.Tasks;
 using Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling;
 using Xunit;
 
-#if NET451 || NET451 || NET452
+#if !NETCOREAPP1_0
 using System.Transactions;
 #endif
 
 namespace Google.Cloud.Spanner.Data.Snippets
 {
+    [SnippetOutputCollector]
     [Collection(nameof(SnippetFixture))]
     public class SpannerOverviews
     {
@@ -205,7 +207,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
             // End sample
         }
 
-#if NET451 || NET451 || NET452
+#if !NETCOREAPP1_0
         [Fact]
         public async Task TransactionScopeAsync()
         {

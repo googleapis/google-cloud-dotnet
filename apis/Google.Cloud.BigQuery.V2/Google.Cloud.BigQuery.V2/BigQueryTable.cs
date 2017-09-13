@@ -39,6 +39,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <remarks>
         /// The data within the resource may be incomplete, depending on how it was obtained.
+        /// (ListTables operations return less data than GetTable operations.)
         /// </remarks>
         public Table Resource { get; }
 
@@ -62,15 +63,6 @@ namespace Google.Cloud.BigQuery.V2
         /// dataset ID and table ID components.
         /// </remarks>
         public TableReference Reference => Resource.TableReference;
-
-        internal BigQueryTable(BigQueryClient client, TableList.TablesData resource)
-            : this(client, new Table {
-                TableReference = resource.TableReference,
-                FriendlyName = resource.FriendlyName,
-                Id = resource.Id, Kind = resource.Kind
-            })
-        {
-        }
 
         internal BigQueryTable(BigQueryClient client, Table resource)
         {

@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.15
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Data", "Google.Cloud.Spanner.Data\Google.Cloud.Spanner.Data.csproj", "{CA7C98B1-9F7A-4817-9FC0-55F7D670BF4E}"
 EndProject
@@ -19,6 +19,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Data.Tests", "Google.Cloud.Spanner.Data.Tests\Google.Cloud.Spanner.Data.Tests.csproj", "{27CBB26A-6F78-4247-9E3C-7A80C4FD965A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Data.Snippets", "Google.Cloud.Spanner.Data.Snippets\Google.Cloud.Spanner.Data.Snippets.csproj", "{EBF9F4E0-C115-4DF0-BD06-2951A88A65AB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{9FABF89B-6D3F-43BE-A9B5-C5D75ADBBB4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -138,8 +140,23 @@ Global
 		{EBF9F4E0-C115-4DF0-BD06-2951A88A65AB}.Release|x64.Build.0 = Release|Any CPU
 		{EBF9F4E0-C115-4DF0-BD06-2951A88A65AB}.Release|x86.ActiveCfg = Release|Any CPU
 		{EBF9F4E0-C115-4DF0-BD06-2951A88A65AB}.Release|x86.Build.0 = Release|Any CPU
+		{9FABF89B-6D3F-43BE-A9B5-C5D75ADBBB4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FABF89B-6D3F-43BE-A9B5-C5D75ADBBB4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FABF89B-6D3F-43BE-A9B5-C5D75ADBBB4D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9FABF89B-6D3F-43BE-A9B5-C5D75ADBBB4D}.Debug|x64.Build.0 = Debug|Any CPU
+		{9FABF89B-6D3F-43BE-A9B5-C5D75ADBBB4D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9FABF89B-6D3F-43BE-A9B5-C5D75ADBBB4D}.Debug|x86.Build.0 = Debug|Any CPU
+		{9FABF89B-6D3F-43BE-A9B5-C5D75ADBBB4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FABF89B-6D3F-43BE-A9B5-C5D75ADBBB4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FABF89B-6D3F-43BE-A9B5-C5D75ADBBB4D}.Release|x64.ActiveCfg = Release|Any CPU
+		{9FABF89B-6D3F-43BE-A9B5-C5D75ADBBB4D}.Release|x64.Build.0 = Release|Any CPU
+		{9FABF89B-6D3F-43BE-A9B5-C5D75ADBBB4D}.Release|x86.ActiveCfg = Release|Any CPU
+		{9FABF89B-6D3F-43BE-A9B5-C5D75ADBBB4D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5010D5C3-B68F-49A8-9EB4-7ED86A89EFF7}
 	EndGlobalSection
 EndGlobal

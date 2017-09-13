@@ -13,7 +13,7 @@
 // limitations under the License.
 
 
-#if NET45 || NET451
+#if !NETSTANDARD1_5
 using System;
 using System.Collections.Generic;
 using System.Linq;

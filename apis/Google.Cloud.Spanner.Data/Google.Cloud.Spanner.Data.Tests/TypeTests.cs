@@ -112,7 +112,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             // TODO: investigate how to change the current thread's culture in .NET Core.
             // (There may be code in Noda Time to do it.)
-#if NET452
+#if !NETCOREAPP1_0
             var originalCulture = Thread.CurrentThread.CurrentCulture;
             try
             {
@@ -369,30 +369,30 @@ namespace Google.Cloud.Spanner.Data.Tests
         public static IEnumerable<object[]> GetInvalidValueConversions()
         {
             //Spanner type = Float64 tests.
-            yield return new object[] {(char) 1, SpannerDbType.Float64, ""};
-            yield return new object[] {s_testDate, SpannerDbType.Float64, ""};
-            yield return new object[] {new ToStringClass("1.5"), SpannerDbType.Float64, ""};
-            yield return new object[] {"", SpannerDbType.Float64, ""};
+            yield return new object[] {(char) 1, SpannerDbType.Float64};
+            yield return new object[] {s_testDate, SpannerDbType.Float64};
+            yield return new object[] {new ToStringClass("1.5"), SpannerDbType.Float64};
+            yield return new object[] {"", SpannerDbType.Float64};
 
             //Spanner type = Int64 tests.
-            yield return new object[] {s_testDate, SpannerDbType.Int64, ""};
-            yield return new object[] {double.NegativeInfinity, SpannerDbType.Int64, ""};
-            yield return new object[] {double.PositiveInfinity, SpannerDbType.Int64, ""};
-            yield return new object[] {double.NaN, SpannerDbType.Int64, ""};
-            yield return new object[] {"1.5", SpannerDbType.Int64, Quote("2")};
-            yield return new object[] {new ToStringClass("1.5"), SpannerDbType.Int64, ""};
+            yield return new object[] {s_testDate, SpannerDbType.Int64};
+            yield return new object[] {double.NegativeInfinity, SpannerDbType.Int64};
+            yield return new object[] {double.PositiveInfinity, SpannerDbType.Int64};
+            yield return new object[] {double.NaN, SpannerDbType.Int64};
+            yield return new object[] {"1.5", SpannerDbType.Int64};
+            yield return new object[] {new ToStringClass("1.5"), SpannerDbType.Int64};
 
             //Spanner type = Bool tests.
-            yield return new object[] {(char) 1, SpannerDbType.Bool, ""};
-            yield return new object[] {"1", SpannerDbType.Bool, ""};
-            yield return new object[] {new ToStringClass("true"), SpannerDbType.Bool, ""};
+            yield return new object[] {(char) 1, SpannerDbType.Bool};
+            yield return new object[] {"1", SpannerDbType.Bool};
+            yield return new object[] {new ToStringClass("true"), SpannerDbType.Bool};
 
             //Spanner type = String tests.
             //(all work)
 
             //Spanner type = Date tests.
-            yield return new object[] {new ToStringClass("hello"), SpannerDbType.Date, ""};
-            yield return new object[] {"badjuju", SpannerDbType.Date, ""};
+            yield return new object[] {new ToStringClass("hello"), SpannerDbType.Date};
+            yield return new object[] {"badjuju", SpannerDbType.Date};
         }
 
         private static readonly CultureInfo[] s_cultures = new[]
@@ -400,7 +400,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             CultureInfo.InvariantCulture,
             // Under .NET Core we don't change the culture anyway, so let's not run the same
             // test multiple times...
-#if NET452
+#if !NETCOREAPP1_0
             new CultureInfo("fr-FR"),
             new CultureInfo("en-US")
 #endif
@@ -499,7 +499,6 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void TestInvalidSerializeToValue(
             object value,
             SpannerDbType type,
-            string expectedJsonValue,
             TestType testType = TestType.Both)
         {
             if (testType == TestType.ValueToClr)

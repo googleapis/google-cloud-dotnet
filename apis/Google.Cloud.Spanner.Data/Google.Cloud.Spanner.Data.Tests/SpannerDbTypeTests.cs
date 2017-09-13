@@ -19,7 +19,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 {
     public class SpannerDbTypeTests
     {
-        private static IEnumerable<object[]> GetSpannerDbTypes()
+        public static IEnumerable<object[]> GetSpannerDbTypes()
         {
             yield return new object[]
                 {SpannerDbType.ArrayOf(SpannerDbType.String), SpannerDbType.ArrayOf(SpannerDbType.String)};

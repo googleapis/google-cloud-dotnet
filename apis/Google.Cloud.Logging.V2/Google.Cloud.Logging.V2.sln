@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26114.2
@@ -9,10 +9,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Logging.V2", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Logging.V2.Snippets", "Google.Cloud.Logging.V2.Snippets\Google.Cloud.Logging.V2.Snippets.csproj", "{569CFE43-C1A1-4BF4-9D88-C69621195C3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{01890F09-84E9-4307-B039-769E585E6A44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A8382B79-21E7-4AAD-AFF8-AB8707958128}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -27,6 +33,18 @@ Global
 		{569CFE43-C1A1-4BF4-9D88-C69621195C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{569CFE43-C1A1-4BF4-9D88-C69621195C3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{569CFE43-C1A1-4BF4-9D88-C69621195C3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01890F09-84E9-4307-B039-769E585E6A44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01890F09-84E9-4307-B039-769E585E6A44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01890F09-84E9-4307-B039-769E585E6A44}.Debug|x64.ActiveCfg = Debug|x64
+		{01890F09-84E9-4307-B039-769E585E6A44}.Debug|x64.Build.0 = Debug|x64
+		{01890F09-84E9-4307-B039-769E585E6A44}.Debug|x86.ActiveCfg = Debug|x86
+		{01890F09-84E9-4307-B039-769E585E6A44}.Debug|x86.Build.0 = Debug|x86
+		{01890F09-84E9-4307-B039-769E585E6A44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01890F09-84E9-4307-B039-769E585E6A44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01890F09-84E9-4307-B039-769E585E6A44}.Release|x64.ActiveCfg = Release|x64
+		{01890F09-84E9-4307-B039-769E585E6A44}.Release|x64.Build.0 = Release|x64
+		{01890F09-84E9-4307-B039-769E585E6A44}.Release|x86.ActiveCfg = Release|x86
+		{01890F09-84E9-4307-B039-769E585E6A44}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

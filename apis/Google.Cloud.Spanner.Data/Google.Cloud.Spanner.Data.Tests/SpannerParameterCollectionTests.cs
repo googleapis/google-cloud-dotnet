@@ -97,7 +97,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.False(collection.Contains(parameters[4]));
         }
 
-#if NET45 || NET451 || NET452
+#if !NETCOREAPP1_0
         [Fact]
         public void AssertConsts()
         {

@@ -15,6 +15,7 @@
 using Google.Apis.Download;
 using Google.Apis.Storage.v1.Data;
 using Google.Apis.Upload;
+using Google.Cloud.ClientTesting;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -28,6 +29,7 @@ using Xunit;
 
 namespace Google.Cloud.Storage.V1.Snippets
 {
+    [SnippetOutputCollector]
     [Collection(nameof(StorageSnippetFixture))]
     public class StorageClientSnippets
     {

@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,12 +14,14 @@
 
 using log4net;
 using log4net.Config;
+using Google.Cloud.ClientTesting;
 using System.IO;
 using Xunit;
 using System.Reflection;
 
 namespace Google.Cloud.Logging.Log4Net.Snippets
 {
+    [SnippetOutputCollector]
     [Collection(nameof(Log4NetSnippetFixture))]
     public class GoogleStackdriverAppenderSnippets
     {
@@ -78,9 +80,11 @@ namespace Google.Cloud.Logging.Log4Net.Snippets
             // * Uploads happen in the background, so we can't check RPC repsonses.
         }
 
+#pragma warning disable xUnit1013 // Public method should be marked as test
+        // This cannot be a unit test as ASP.NET cannot run in this environment.
         public void Overview_AspNet()
+#pragma warning restore xUnit1013 // Public method should be marked as test
         {
-            // This cannot be a unit test as ASP.NET cannot run in this environment.
             // Resource: log4net-aspnet-template.xml log4net_aspnet_template
             // Sample: Overview_AspNet
             // Load log4net configuration from Web.config

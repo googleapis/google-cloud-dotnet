@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26114.2
@@ -25,10 +25,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Logging.V2", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.Common.IntegrationTests", "..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.IntegrationTests\Google.Cloud.Diagnostics.Common.IntegrationTests.csproj", "{DE96A626-6BAF-4012-889C-E1AAADE5CB3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{334F81F6-7414-4C70-B534-5719C64F4AC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D85333C3-F612-4D92-8ECD-E674A73AEC8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -75,6 +81,18 @@ Global
 		{DE96A626-6BAF-4012-889C-E1AAADE5CB3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE96A626-6BAF-4012-889C-E1AAADE5CB3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE96A626-6BAF-4012-889C-E1AAADE5CB3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{334F81F6-7414-4C70-B534-5719C64F4AC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{334F81F6-7414-4C70-B534-5719C64F4AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{334F81F6-7414-4C70-B534-5719C64F4AC3}.Debug|x64.ActiveCfg = Debug|x64
+		{334F81F6-7414-4C70-B534-5719C64F4AC3}.Debug|x64.Build.0 = Debug|x64
+		{334F81F6-7414-4C70-B534-5719C64F4AC3}.Debug|x86.ActiveCfg = Debug|x86
+		{334F81F6-7414-4C70-B534-5719C64F4AC3}.Debug|x86.Build.0 = Debug|x86
+		{334F81F6-7414-4C70-B534-5719C64F4AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{334F81F6-7414-4C70-B534-5719C64F4AC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{334F81F6-7414-4C70-B534-5719C64F4AC3}.Release|x64.ActiveCfg = Release|x64
+		{334F81F6-7414-4C70-B534-5719C64F4AC3}.Release|x64.Build.0 = Release|x64
+		{334F81F6-7414-4C70-B534-5719C64F4AC3}.Release|x86.ActiveCfg = Release|x86
+		{334F81F6-7414-4C70-B534-5719C64F4AC3}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

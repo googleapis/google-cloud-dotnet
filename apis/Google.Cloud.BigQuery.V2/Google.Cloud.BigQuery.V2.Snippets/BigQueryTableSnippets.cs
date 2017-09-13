@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
+using Google.Cloud.ClientTesting;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ using Xunit;
 
 namespace Google.Cloud.BigQuery.V2.Snippets
 {
+    [SnippetOutputCollector]
     [Collection(nameof(BigQuerySnippetFixture))]
     public class BigQueryTableSnippets
     {

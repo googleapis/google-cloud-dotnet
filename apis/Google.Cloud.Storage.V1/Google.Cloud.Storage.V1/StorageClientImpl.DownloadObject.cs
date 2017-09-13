@@ -81,7 +81,7 @@ namespace Google.Cloud.Storage.V1
         {
             ValidateBucketName(bucket);
             GaxPreconditions.CheckNotNull(objectName, nameof(objectName));
-            return $"https://www.googleapis.com/download/storage/v1/b/{bucket}/o/{Uri.EscapeDataString(objectName)}?alt=media";
+            return $"https://www.googleapis.com/download/storage/v1/b/{bucket}/o/{Uri.EscapeDataString(objectName)}";
         }
 
         /// <summary>

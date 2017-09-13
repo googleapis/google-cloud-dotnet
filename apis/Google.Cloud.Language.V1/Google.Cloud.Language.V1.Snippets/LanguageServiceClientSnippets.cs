@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,11 +14,13 @@
 
 using System;
 using Xunit;
+using Google.Cloud.ClientTesting;
 using static Google.Cloud.Language.V1.AnnotateTextRequest.Types;
 using static Google.Cloud.Language.V1.PartOfSpeech.Types;
 
 namespace Google.Cloud.Language.V1.Snippets
 {
+    [SnippetOutputCollector]
     public class LanguageServiceClientSnippets
     {
         [Fact]

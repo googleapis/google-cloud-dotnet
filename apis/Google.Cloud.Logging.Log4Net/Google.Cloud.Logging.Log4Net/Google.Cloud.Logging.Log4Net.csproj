@@ -3,6 +3,7 @@
   <PropertyGroup>
     <Version>2.1.0</Version>
     <TargetFrameworks>netstandard1.5;net45</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.5</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <Features>IOperation</Features>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -43,5 +44,4 @@
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.5'">
     <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="1.1.1" />
   </ItemGroup>
-  <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
 </Project>

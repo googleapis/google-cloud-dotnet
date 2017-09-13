@@ -99,6 +99,12 @@ namespace Google.Cloud.BigQuery.V2
         /// Lists the tables in a dataset specified by project ID and dataset ID.
         /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="ListTables(DatasetReference, ListTablesOptions)"/>.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The returned tables will not have all the properties in the resource populated. For complete information, make a GetTable
+        /// call for each table you need the details of.
+        /// </para>
+        /// </remarks>
         /// <param name="projectId">The ID of the project containing the dataset. Must not be null.</param>
         /// <param name="datasetId">The ID of the dataset to list tables from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
@@ -110,6 +116,12 @@ namespace Google.Cloud.BigQuery.V2
         /// Lists the tables in a dataset specified by dataset ID, where the dataset is in this client's project.
         /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="ListTables(DatasetReference, ListTablesOptions)"/>.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The returned tables will not have all the properties in the resource populated. For complete information, make a GetTable
+        /// call for each table you need the details of.
+        /// </para>
+        /// </remarks>
         /// <param name="datasetId">The ID of the dataset to list tables from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A sequence of tables within the dataset.</returns>
@@ -119,6 +131,12 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Lists the tables in a dataset.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The returned tables will not have all the properties in the resource populated. For complete information, make a GetTable
+        /// call for each table you need the details of.
+        /// </para>
+        /// </remarks>
         /// <param name="datasetReference">A fully-qualified identifier for the dataset. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A sequence of tables within the dataset.</returns>
@@ -131,6 +149,12 @@ namespace Google.Cloud.BigQuery.V2
         /// Lists the tables in a dataset specified by project ID and dataset ID.
         /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="ListTablesAsync(DatasetReference, ListTablesOptions)"/>.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The returned tables will not have all the properties in the resource populated. For complete information, make a GetTable
+        /// call for each table you need the details of.
+        /// </para>
+        /// </remarks>
         /// <param name="projectId">The ID of the project containing the dataset. Must not be null.</param>
         /// <param name="datasetId">The ID of the dataset to list tables from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
@@ -142,6 +166,12 @@ namespace Google.Cloud.BigQuery.V2
         /// Lists the tables in a dataset specified by dataset ID, where the dataset is in this client's project.
         /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="ListTablesAsync(DatasetReference, ListTablesOptions)"/>.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The returned tables will not have all the properties in the resource populated. For complete information, make a GetTable
+        /// call for each table you need the details of.
+        /// </para>
+        /// </remarks>
         /// <param name="datasetId">The ID of the dataset to list tables from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of tables within the dataset.</returns>
@@ -151,6 +181,12 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Lists the tables in a dataset.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The returned tables will not have all the properties in the resource populated. For complete information, make a GetTable
+        /// call for each table you need the details of.
+        /// </para>
+        /// </remarks>
         /// <param name="datasetReference">A fully-qualified identifier for the dataset. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A sequence of tables within the dataset.</returns>

@@ -105,7 +105,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal("FriendlyName2", fetched.Resource.FriendlyName);
         }
 
-        [Fact]
+        [Fact(Skip = "Known etag issue tracked internally")]
         public void UpdateDataset_Conflict()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
@@ -219,7 +219,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal("FriendlyName2", fetched.Resource.FriendlyName);
         }
 
-        [Fact]
+        [Fact(Skip = "Known etag issue tracked internally")]
         public async Task UpdateDatasetAsync_Conflict()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);

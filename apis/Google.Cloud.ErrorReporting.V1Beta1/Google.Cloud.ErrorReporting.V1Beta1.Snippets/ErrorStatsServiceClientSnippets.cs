@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Cloud.ClientTesting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,7 @@ using static Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange.Types;
 
 namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
 {
+    [SnippetOutputCollector]
     [Collection(nameof(ErrorReportingFixture))]
     public class ErrorStatsServiceClientSnippets
     {

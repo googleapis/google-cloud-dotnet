@@ -3,6 +3,7 @@
   <PropertyGroup>
     <Version>1.0.0-alpha04</Version>
     <TargetFrameworks>netstandard1.5;net45</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.5</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <Features>IOperation</Features>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -11,7 +12,7 @@
     <Deterministic>true</Deterministic>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <Description>Recommended Google client library to access the Google Cloud Video Intelligence API.</Description>
+    <Description>Recommended Google client library to access the v1beta1 Google Cloud Video Intelligence API.</Description>
     <PackageTags>VideoIntelligence;Google;Cloud</PackageTags>
     <Copyright>Copyright 2017 Google Inc.</Copyright>
     <Authors>Google Inc.</Authors>
@@ -39,5 +40,4 @@
       <PackagePath>lib/net45</PackagePath>
     </Content>
   </ItemGroup>
-  <Import Project="..\..\..\StripDesktopOnNonWindows.xml" />
 </Project>

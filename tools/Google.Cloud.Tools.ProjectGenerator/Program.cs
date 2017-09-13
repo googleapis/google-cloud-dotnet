@@ -28,6 +28,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
     {
         private static readonly Regex AnyVersionPattern = new Regex(@"^[0-9]\d*\.\d+\.\d+(\.\d+)?(-.*)?$");
         private static readonly Regex StableVersionPattern = new Regex(@"^[1-9]\d*\.\d+\.\d+(\.\d+)?$");
+        private static readonly Regex AnyDesktopFramework = new Regex(@";net\d+");
 
         // Project references which don't just follow the pattern of ..\..\{package}\{package}\{package}.csproj
         private static readonly Dictionary<string, string> KnownProjectReferences = new Dictionary<string, string>
@@ -60,9 +61,10 @@ namespace Google.Cloud.Tools.ProjectGenerator
         // the packages in DefaultPackageVersions should be specified precisely in stable packages.
         private static readonly Dictionary<string, string> CommonTestDependencies = new Dictionary<string, string>
         {
-            { "Microsoft.NET.Test.Sdk", "15.0.0" },
-            { "xunit", "2.3.0-beta1-build3642" },
-            { "xunit.runner.visualstudio", "2.3.0-beta1-build1309" },
+            { "Google.Cloud.ClientTesting", ProjectVersionValue }, // Needed for all snippets and some other tests - easiest to just default
+            { "Microsoft.NET.Test.Sdk", "15.3.0" },
+            { "xunit", "2.3.0-beta5-build3769" },
+            { "xunit.runner.visualstudio", "2.3.0-beta5-build3769" },
             { "Moq", "4.7.99" }
         };
 
@@ -89,7 +91,6 @@ namespace Google.Cloud.Tools.ProjectGenerator
         };
 
         private const string AnalyzersPath = @"..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll";
-        private const string StripDesktopOnNonWindows = @"..\..\..\StripDesktopOnNonWindows.xml";
 
         private const string TargetFrameworkCore = "netcoreapp1.0";
         private const string TargetFrameworkClassic = "net452";
@@ -292,6 +293,7 @@ TODO: Add snippet references here.
                 // Build-related properties
                 new XElement("Version", api.Version), // TODO: Version, or VersionPrefix/VersionSuffix?
                 new XElement("TargetFrameworks", targetFrameworks),
+                new XElement("TargetFrameworks", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), AnyDesktopFramework.Replace(targetFrameworks, "")),
                 new XElement("LangVersion", "latest"),
                 new XElement("Features", "IOperation"),
                 new XElement("GenerateDocumentationFile", true),
@@ -351,6 +353,7 @@ TODO: Add snippet references here.
             var propertyGroup =
                 new XElement("PropertyGroup",
                     new XElement("TargetFrameworks", GetTestTargetFrameworks(api)),
+                    new XElement("TargetFrameworks", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), AnyDesktopFramework.Replace(GetTestTargetFrameworks(api), "")),
                     new XElement("LangVersion", "latest"),
                     new XElement("Features", "IOperation"),
                     new XElement("IsPackable", false),
@@ -359,9 +362,12 @@ TODO: Add snippet references here.
                     new XElement("PublicSign", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), true),
                     new XElement("TreatWarningsAsErrors", true),
                     // 1701, 1702 and 1705 are disabled by default.
-                    // 4014 is required as snippets for streaming samples call Task.Run and don't await the result.
-                    // See https://github.com/googleapis/toolkit/issues/1271 - when that's fixed, we can remove this.
-                    new XElement("NoWarn", "1701;1702;1705;4014")
+                    // xUnit2004 prevents Assert.Equal(true, value) etc, preferring Assert.True and Assert.False, but
+                    //   Assert.Equal is clearer (IMO) for comparing values rather than conditions.
+                    // xUnit2013 prevents simple checks for the number of items in a collection
+                    // AD0001 is the error for an analyzer throwing an exception. We can remove this when
+                    // the fix for https://github.com/xunit/xunit/issues/1409 is in NuGet.
+                    new XElement("NoWarn", "1701;1702;1705;xUnit2004;xUnit2013;AD0001")
                 );
             string project = Path.GetFileName(directory);
             var dependenciesElement = CreateDependenciesElement(project, dependencies, api.IsReleaseVersion, testProject: true, apiNames: apiNames);
@@ -422,15 +428,11 @@ TODO: Add snippet references here.
             {
                 doc = XElement.Load(file);
                 doc.Elements("Import").Where(x => (string)x.Attribute("Project") == @"..\..\StripDesktopOnNonWindows.xml").Remove();
+                doc.Elements("Import").Where(x => (string)x.Attribute("Project") == @"..\..\..\StripDesktopOnNonWindows.xml").Remove();
                 doc.Elements("PropertyGroup").First().ReplaceWith(propertyGroup);
                 doc.Elements("ItemGroup").First().ReplaceWith(dependenciesItemGroup);
                 doc.Elements("ItemGroup").Where(x => (string)x.Attribute("Label") == DotnetPackInstructionsLabel).Remove();
                 doc.Elements("ItemGroup").First().AddAfterSelf(packingElement);
-
-                if (!doc.Elements("Import").Any(x => (string)x.Attribute("Project") == StripDesktopOnNonWindows))
-                {
-                    doc.Add(new XElement("Import", new XAttribute("Project", StripDesktopOnNonWindows)));
-                }
             }
             // Otherwise, create a new one
             else
@@ -439,9 +441,7 @@ TODO: Add snippet references here.
                     new XAttribute("Sdk", "Microsoft.NET.Sdk"),
                     propertyGroup,
                     dependenciesItemGroup,
-                    packingElement,
-                    new XElement("Import", new XAttribute("Project", StripDesktopOnNonWindows))
-                );
+                    packingElement);
             }
 
             // Don't use File.CreateText as that omits the byte order mark.
@@ -457,20 +457,7 @@ TODO: Add snippet references here.
                 Console.WriteLine($"{(beforeHash == null ? "Created" : "Modified")} project file {Path.GetFileName(file)}");
             }
         }
-
-        private static string GenerateProjectReference(string key)
-        {
-            // There are a few special cases which don't fit in, then the common case
-            // where it follows the normal pattern, then being flexible for anything
-            // that doesn't fit...
-            switch (key)
-            {
-                case "Google.Cloud.ClientTesting": return @"..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj";
-                case var _ when !key.Contains(".csproj"): return $@"..\..\{key}\{key}\{key}.csproj";
-                default: return key;
-            }
-        }
-
+        
         private static XElement CreateDependenciesElement(string project, IDictionary<string, string> dependencies, bool stableRelease, bool testProject, HashSet<string> apiNames) =>
             new XElement("ItemGroup",
                 // Use the GAX version for all otherwise-unversioned GAX dependencies

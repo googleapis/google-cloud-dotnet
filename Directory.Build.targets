@@ -1,0 +1,9 @@
+<Project>
+  <!-- See https://github.com/Microsoft/msbuild/issues/1786 for details -->
+  <Target Name="WorkaroundAppConfigPathTooLong"
+          BeforeTargets="GenerateBindingRedirects">
+    <PropertyGroup>
+      <_GenerateBindingRedirectsIntermediateAppConfig>$(IntermediateOutputPath)$(TargetFileName).config</_GenerateBindingRedirectsIntermediateAppConfig>
+    </PropertyGroup>
+  </Target>
+</Project>

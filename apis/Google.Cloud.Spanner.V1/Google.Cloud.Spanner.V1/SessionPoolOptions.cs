@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Diagnostics;
 
 namespace Google.Cloud.Spanner.V1
 {
@@ -21,6 +22,16 @@ namespace Google.Cloud.Spanner.V1
     /// </summary>
     public sealed class SessionPoolOptions
     {
+        /// <summary>
+        /// Constructs a new <see cref="SessionPoolOptions"/>.
+        /// </summary>
+        public SessionPoolOptions()
+        {
+            var retry = SpannerSettings.GetDefault().CommitSettings.Timing.Retry;
+            // ReSharper disable once PossibleInvalidOperationException
+            Timeout = (int)(retry?.TotalExpiration.Timeout).Value.TotalSeconds;
+        }
+
         /// <summary>
         /// Maximum number of active sessions that can be in use by the application at any one time.
         /// </summary>
@@ -56,7 +67,7 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// The total time in seconds allowed for a network call to the Cloud Spanner server, including retries.
         /// </summary>
-        public int Timeout { get; set; } = 60;
+        public int Timeout { get; set; }
 
         /// <summary>
         /// The maximum number of session create operations allowed to occur simultaneously.

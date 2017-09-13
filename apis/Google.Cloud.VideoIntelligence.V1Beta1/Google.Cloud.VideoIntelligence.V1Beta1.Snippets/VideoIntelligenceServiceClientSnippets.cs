@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,12 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using System;
 using System.Linq;
 using Xunit;
 
 namespace Google.Cloud.VideoIntelligence.V1Beta1.Snippets
 {
+    [SnippetOutputCollector]
     public class VideoIntelligenceServiceClientSnippets
     {
         [Fact]
@@ -46,7 +48,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta1.Snippets
             }
             // End sample
 
-            Assert.True(result.LabelAnnotations.Any(lab => lab.Description == "Dinosaur"));
+            Assert.Contains(result.LabelAnnotations, lab => lab.Description == "Dinosaur");
         }
     }
 }

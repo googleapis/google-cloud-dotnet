@@ -20,7 +20,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 {
     public class SpannerParameterTests
     {
-        private static IEnumerable<object[]> GetDbTypeConversions()
+        public static IEnumerable<object[]> GetDbTypeConversions()
         {
             yield return new object[] { SpannerDbType.Bytes, DbType.Binary };
             yield return new object[] { SpannerDbType.Bool, DbType.Boolean };

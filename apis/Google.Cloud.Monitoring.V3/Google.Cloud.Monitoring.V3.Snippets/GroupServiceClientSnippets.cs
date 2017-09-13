@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,12 +13,14 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Cloud.ClientTesting;
 using System;
 using System.Linq;
 using Xunit;
 
 namespace Google.Cloud.Monitoring.V3
 {
+    [SnippetOutputCollector]
     [Collection(nameof(MonitoringFixture))]
     public class GroupServiceClientSnippets
     {

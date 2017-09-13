@@ -16,7 +16,7 @@
 // ReSharper disable EmptyNamespace
 // ReSharper disable MemberCanBePrivate.Global
 
-#if NET45 || NET451
+#if !NETSTANDARD1_5
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,7 +31,7 @@ using Google.Api.Gax;
 
 namespace Google.Cloud.Spanner.Data
 {
-#if NET45 || NET451
+#if !NETSTANDARD1_5
 
     /// <summary>
     /// Represents a set of data commands and a database connection that are used to fill the DataSet
