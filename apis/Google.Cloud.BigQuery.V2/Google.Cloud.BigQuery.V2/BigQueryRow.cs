@@ -35,10 +35,13 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public TableSchema Schema { get; }
 
-        internal BigQueryRow(TableRow rawRow, TableSchema schema)
+        private readonly IDictionary<string, int> _fieldNameIndexMap;
+
+        internal BigQueryRow(TableRow rawRow, TableSchema schema, IDictionary<string, int> fieldNameIndexMap)
         {
             Schema = schema;
             RawRow = rawRow;
+            _fieldNameIndexMap = fieldNameIndexMap;
         }
 
         private static readonly Func<string, string> StringConverter = v => v;
@@ -62,7 +65,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Retrieves a cell value by field name.
         /// </summary>
-        public object this[string name] => this[Schema.GetFieldIndex(name)];
+        public object this[string name] => this[_fieldNameIndexMap[name]];
 
         /// <summary>
         /// Retrieves a cell value by index.

@@ -30,15 +30,17 @@ namespace Google.Cloud.BigQuery.V2
         {
             private readonly BigQueryClient _client;
             private readonly TableSchema _schema;
+            private readonly Dictionary<string, int> _fieldNameToIndexMap;
 
             internal TableRowPageManager(BigQueryClient client, TableSchema schema)
             {
                 _client = client;
                 _schema = schema;
+                _fieldNameToIndexMap = schema.IndexFieldNames();                
             }
 
             public string GetNextPageToken(TableDataList response) => response.PageToken;
-            public IEnumerable<BigQueryRow> GetResources(TableDataList response) => response.Rows?.Select(row => new BigQueryRow(row, _schema));
+            public IEnumerable<BigQueryRow> GetResources(TableDataList response) => response.Rows?.Select(row => new BigQueryRow(row, _schema, _fieldNameToIndexMap));
             public void SetPageSize(TabledataResource.ListRequest request, int pageSize) => request.MaxResults = pageSize;
             public void SetPageToken(TabledataResource.ListRequest request, string pageToken)
             {
