@@ -15,30 +15,30 @@
 using System.Collections.Generic;
 using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
+using System;
 
 namespace Google.Cloud.BigQuery.V2
 {
     /// <summary>
     /// Extension methods over table schemas.
     /// </summary>
-    public static class TableSchemaExtensions
+    internal static class TableSchemaExtensions
     {
-        /// <summary>
-        /// Retrieves the index of a field given its name.
-        /// </summary>
-        public static int GetFieldIndex(this TableSchema schema, string fieldName)
+        internal static Dictionary<string, int> IndexFieldNames(this TableSchema schema)
         {
-            GaxPreconditions.CheckNotNull(schema, nameof(schema));
-            GaxPreconditions.CheckNotNull(fieldName, nameof(fieldName));
-
-            for (int i = 0; i < schema.Fields.Count; i++)
+            // Could use LINQ, but there's no overload for ToDictionary that gives us the index,
+            // using Select to get it feels annoying.
+            // While Fields is unlikely to be null in realistic use cases, it does no harm to handle it.
+            var fields = schema.Fields ?? new TableFieldSchema[0];
+            var ret = new Dictionary<string, int>(fields.Count, StringComparer.Ordinal);
+            for (int i = 0; i < fields.Count; i++)
             {
-                if (schema.Fields[i].Name == fieldName)
-                {
-                    return i;
-                }
+                // This will throw on duplicate field names. This should never happen in real life,
+                // and if it does, it's better to have an exception than silently start returning
+                // unexpected data.
+                ret.Add(fields[i].Name, i);
             }
-            throw new KeyNotFoundException($"No such field: '{fieldName}'");
+            return ret;
         }
     }
 }

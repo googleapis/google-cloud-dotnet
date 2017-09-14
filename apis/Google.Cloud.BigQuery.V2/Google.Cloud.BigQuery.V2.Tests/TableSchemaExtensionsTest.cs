@@ -21,7 +21,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
     public class TableSchemaExtensionsTest
     {
         [Fact]
-        public void GetFieldIndex()
+        public void IndexFieldNames()
         {
             var schema = new TableSchema
             {
@@ -31,8 +31,15 @@ namespace Google.Cloud.BigQuery.V2.Tests
                     new TableFieldSchema { Name = "bar" }
                 }
             };
-            Assert.Equal(1, schema.GetFieldIndex("bar"));
-            Assert.Throws<KeyNotFoundException>(() => schema.GetFieldIndex("qux"));
+            var expected = new Dictionary<string, int> { { "foo", 0 }, { "bar", 1 } };
+            Assert.Equal(expected, schema.IndexFieldNames());
+        }
+
+        [Fact]
+        public void IndexFieldNames_EmptySchema()
+        {
+            var schema = new TableSchema();
+            Assert.Empty(schema.IndexFieldNames());
         }
     }
 }
