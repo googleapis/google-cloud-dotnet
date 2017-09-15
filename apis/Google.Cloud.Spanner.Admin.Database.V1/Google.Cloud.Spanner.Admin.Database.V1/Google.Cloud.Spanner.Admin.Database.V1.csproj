@@ -25,8 +25,8 @@
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.0-beta4" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc" Version="2.1.0-beta02" />
-    <ProjectReference Include="..\..\Google.Cloud.Iam.V1\Google.Cloud.Iam.V1\Google.Cloud.Iam.V1.csproj" />
-    <ProjectReference Include="..\..\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj" />
+    <PackageReference Include="Google.Cloud.Iam.V1" Version="1.0.0-beta12" />
+    <PackageReference Include="Google.LongRunning" Version="1.0.0-beta11" />
     <PackageReference Include="Grpc.Core" Version="1.4.0" PrivateAssets="None" />
     <PackageReference Include="SourceLink.Create.CommandLine" Version="2.1.2" PrivateAssets="All" />
     <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
