@@ -37,6 +37,23 @@
   },
 
   {
+    "id": "Google.Cloud.Bigtable.Admin.V2",
+    "productName": "Google Cloud Bigtable Administration",
+    "productUrl": "https://cloud.google.com/bigtable/",
+    "version": "0.2.0",
+    "type": "grpc",
+    "description": "Recommended Google client library to access the Google Cloud Bigtable Instance and Table Admin APIs.",
+    "tags": [ "Bigtable" ],
+    "dependencies": {
+      "Google.LongRunning": "1.0.0-beta11",
+      "Google.Cloud.Iam.V1": "1.0.0-beta12"
+    },
+    "testDependencies": {
+      "Google.Api.Gax.Grpc.Testing": "default"
+    }
+  },
+
+  {
     "id": "Google.Cloud.Bigtable.V2",
     "productName": "Google Bigtable",
     "productUrl": "https://cloud.google.com/bigtable/",
