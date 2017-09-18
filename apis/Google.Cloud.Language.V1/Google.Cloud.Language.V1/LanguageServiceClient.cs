@@ -50,6 +50,7 @@ namespace Google.Cloud.Language.V1
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
             AnalyzeSentimentSettings = existing.AnalyzeSentimentSettings;
             AnalyzeEntitiesSettings = existing.AnalyzeEntitiesSettings;
+            AnalyzeEntitySentimentSettings = existing.AnalyzeEntitySentimentSettings;
             AnalyzeSyntaxSettings = existing.AnalyzeSyntaxSettings;
             AnnotateTextSettings = existing.AnnotateTextSettings;
             OnCopy(existing);
@@ -174,6 +175,36 @@ namespace Google.Cloud.Language.V1
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public CallSettings AnalyzeEntitiesSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LanguageServiceClient.AnalyzeEntitySentiment</c> and <c>LanguageServiceClient.AnalyzeEntitySentimentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>LanguageServiceClient.AnalyzeEntitySentiment</c> and
+        /// <c>LanguageServiceClient.AnalyzeEntitySentimentAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings AnalyzeEntitySentimentSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
@@ -562,6 +593,124 @@ namespace Google.Cloud.Language.V1
         }
 
         /// <summary>
+        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
+        /// sentiment associated with each entity and its mentions.
+        /// </summary>
+        /// <param name="document">
+        /// Input document.
+        /// </param>
+        /// <param name="encodingType">
+        /// The encoding type used by the API to calculate offsets.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AnalyzeEntitySentimentResponse> AnalyzeEntitySentimentAsync(
+            Document document,
+            EncodingType? encodingType,
+            CallSettings callSettings = null) => AnalyzeEntitySentimentAsync(
+                new AnalyzeEntitySentimentRequest
+                {
+                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
+                    EncodingType = encodingType ?? EncodingType.None, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
+        /// sentiment associated with each entity and its mentions.
+        /// </summary>
+        /// <param name="document">
+        /// Input document.
+        /// </param>
+        /// <param name="encodingType">
+        /// The encoding type used by the API to calculate offsets.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AnalyzeEntitySentimentResponse> AnalyzeEntitySentimentAsync(
+            Document document,
+            EncodingType? encodingType,
+            CancellationToken cancellationToken) => AnalyzeEntitySentimentAsync(
+                document,
+                encodingType,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
+        /// sentiment associated with each entity and its mentions.
+        /// </summary>
+        /// <param name="document">
+        /// Input document.
+        /// </param>
+        /// <param name="encodingType">
+        /// The encoding type used by the API to calculate offsets.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual AnalyzeEntitySentimentResponse AnalyzeEntitySentiment(
+            Document document,
+            EncodingType? encodingType,
+            CallSettings callSettings = null) => AnalyzeEntitySentiment(
+                new AnalyzeEntitySentimentRequest
+                {
+                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
+                    EncodingType = encodingType ?? EncodingType.None, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
+        /// sentiment associated with each entity and its mentions.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AnalyzeEntitySentimentResponse> AnalyzeEntitySentimentAsync(
+            AnalyzeEntitySentimentRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
+        /// sentiment associated with each entity and its mentions.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual AnalyzeEntitySentimentResponse AnalyzeEntitySentiment(
+            AnalyzeEntitySentimentRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// Analyzes the syntax of the text and provides sentence boundaries and
         /// tokenization along with part of speech tags, dependency trees, and other
         /// properties.
@@ -826,6 +975,7 @@ namespace Google.Cloud.Language.V1
     {
         private readonly ApiCall<AnalyzeSentimentRequest, AnalyzeSentimentResponse> _callAnalyzeSentiment;
         private readonly ApiCall<AnalyzeEntitiesRequest, AnalyzeEntitiesResponse> _callAnalyzeEntities;
+        private readonly ApiCall<AnalyzeEntitySentimentRequest, AnalyzeEntitySentimentResponse> _callAnalyzeEntitySentiment;
         private readonly ApiCall<AnalyzeSyntaxRequest, AnalyzeSyntaxResponse> _callAnalyzeSyntax;
         private readonly ApiCall<AnnotateTextRequest, AnnotateTextResponse> _callAnnotateText;
 
@@ -843,6 +993,8 @@ namespace Google.Cloud.Language.V1
                 GrpcClient.AnalyzeSentimentAsync, GrpcClient.AnalyzeSentiment, effectiveSettings.AnalyzeSentimentSettings);
             _callAnalyzeEntities = clientHelper.BuildApiCall<AnalyzeEntitiesRequest, AnalyzeEntitiesResponse>(
                 GrpcClient.AnalyzeEntitiesAsync, GrpcClient.AnalyzeEntities, effectiveSettings.AnalyzeEntitiesSettings);
+            _callAnalyzeEntitySentiment = clientHelper.BuildApiCall<AnalyzeEntitySentimentRequest, AnalyzeEntitySentimentResponse>(
+                GrpcClient.AnalyzeEntitySentimentAsync, GrpcClient.AnalyzeEntitySentiment, effectiveSettings.AnalyzeEntitySentimentSettings);
             _callAnalyzeSyntax = clientHelper.BuildApiCall<AnalyzeSyntaxRequest, AnalyzeSyntaxResponse>(
                 GrpcClient.AnalyzeSyntaxAsync, GrpcClient.AnalyzeSyntax, effectiveSettings.AnalyzeSyntaxSettings);
             _callAnnotateText = clientHelper.BuildApiCall<AnnotateTextRequest, AnnotateTextResponse>(
@@ -860,6 +1012,7 @@ namespace Google.Cloud.Language.V1
         // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
         partial void Modify_AnalyzeSentimentRequest(ref AnalyzeSentimentRequest request, ref CallSettings settings);
         partial void Modify_AnalyzeEntitiesRequest(ref AnalyzeEntitiesRequest request, ref CallSettings settings);
+        partial void Modify_AnalyzeEntitySentimentRequest(ref AnalyzeEntitySentimentRequest request, ref CallSettings settings);
         partial void Modify_AnalyzeSyntaxRequest(ref AnalyzeSyntaxRequest request, ref CallSettings settings);
         partial void Modify_AnnotateTextRequest(ref AnnotateTextRequest request, ref CallSettings settings);
 
@@ -945,6 +1098,48 @@ namespace Google.Cloud.Language.V1
         {
             Modify_AnalyzeEntitiesRequest(ref request, ref callSettings);
             return _callAnalyzeEntities.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
+        /// sentiment associated with each entity and its mentions.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<AnalyzeEntitySentimentResponse> AnalyzeEntitySentimentAsync(
+            AnalyzeEntitySentimentRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_AnalyzeEntitySentimentRequest(ref request, ref callSettings);
+            return _callAnalyzeEntitySentiment.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
+        /// sentiment associated with each entity and its mentions.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override AnalyzeEntitySentimentResponse AnalyzeEntitySentiment(
+            AnalyzeEntitySentimentRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_AnalyzeEntitySentimentRequest(ref request, ref callSettings);
+            return _callAnalyzeEntitySentiment.Sync(request, callSettings);
         }
 
         /// <summary>

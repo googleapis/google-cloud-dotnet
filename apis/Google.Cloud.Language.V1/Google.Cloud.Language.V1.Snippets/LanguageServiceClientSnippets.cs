@@ -110,5 +110,21 @@ namespace Google.Cloud.Language.V1.Snippets
             Assert.Equal(3, response.Entities.Count);
             Assert.Equal("Richard of York", response.Entities[0].Name);
         }
+
+        [Fact]
+        public void AnalyzeEntitySentiment()
+        {
+            // Sample: AnalyzeEntitySentiment
+            // Additional: AnalyzeEntitySentiment(Document,CallSettings)
+            LanguageServiceClient client = LanguageServiceClient.Create();
+            Document document = Document.FromPlainText("Jennifer is clever and witty, but Robert is rude.");
+            AnalyzeEntitySentimentResponse response = client.AnalyzeEntitySentiment(document);
+            foreach (Entity entity in response.Entities)
+            {
+                Console.WriteLine($"{entity.Name} ({(int)(entity.Salience * 100)}%)");
+                Console.WriteLine($"  Sentiment score: {entity.Sentiment.Score}; magnitude: {entity.Sentiment.Magnitude}");
+            }
+            // End sample
+        }
     }
 }

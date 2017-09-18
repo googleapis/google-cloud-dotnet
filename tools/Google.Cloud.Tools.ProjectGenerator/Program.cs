@@ -45,8 +45,8 @@ namespace Google.Cloud.Tools.ProjectGenerator
         private const string ProjectVersionValue = "project";
         private const string DefaultVersionValue = "default";
         private const string GrpcPackage = "Grpc.Core";
-        private const string DefaultGaxVersion = "2.1.0-beta02";
-        private const string GrpcVersion = "1.4.0";
+        private const string DefaultGaxVersion = "2.1.0";
+        private const string GrpcVersion = "1.6.1";
         private static readonly Dictionary<string, string> DefaultPackageVersions = new Dictionary<string, string>
         {
             { "Google.Api.Gax", DefaultGaxVersion },
@@ -313,6 +313,10 @@ TODO: Add snippet references here.
                 new XElement("RepositoryType", "git"),
                 new XElement("RepositoryUrl", "https://github.com/GoogleCloudPlatform/google-cloud-dotnet")
             );
+            if (api.Type == "grpc")
+            {
+                propertyGroup.Add(new XElement("CodeAnalysisRuleSet", "..\\..\\..\\grpc.ruleset"));
+            }
             var packingElement = new XElement("ItemGroup",
                 new XAttribute("Label", DotnetPackInstructionsLabel),
                 targetFrameworks.Split(';').Select(tfm => new XElement("Content",

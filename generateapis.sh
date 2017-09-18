@@ -15,7 +15,7 @@ set -e
 
 # TODO: Use toolversions.sh
 # This script needs to work on Linux machines without nuget, unlike other scripts...
-GRPC_VERSION=1.4.0
+GRPC_VERSION=1.6.1
 PROTOBUF_VERSION=3.3.0
 PROTOC=packages/Grpc.Tools.$GRPC_VERSION/tools/linux_x64/protoc
 GRPC_PLUGIN=packages/Grpc.Tools.$GRPC_VERSION/tools/linux_x64/grpc_csharp_plugin
@@ -144,13 +144,13 @@ $PROTOC \
   googleapis/google/iam/v1/*.proto
 
 # Now the per-API codegen  
+generate_api Google.Cloud.Bigtable.Admin.V2 google/bigtable/admin/v2 bigtableadmin.yaml
 generate_api Google.Cloud.Bigtable.V2 google/bigtable/v2 bigtable.yaml
 generate_api Google.Cloud.Datastore.V1 google/datastore/v1 datastore.yaml
 generate_api Google.Cloud.Debugger.V2 google/devtools/clouddebugger/v2 clouddebugger.yaml
 generate_api Google.Cloud.Dlp.V2Beta1 google/privacy/dlp/v2beta1 dlp.yaml
 generate_api Google.Cloud.ErrorReporting.V1Beta1 google/devtools/clouderrorreporting/v1beta1 errorreporting.yaml
-# Config is currently broken for Language v1
-# generate_api Google.Cloud.Language.V1 google/cloud/language/v1 language_v1.yaml
+generate_api Google.Cloud.Language.V1 google/cloud/language/v1 language_v1.yaml
 generate_api Google.Cloud.Language.V1.Experimental google/cloud/language/v1beta2 language_v1beta2.yaml
 # generate_api Google.Cloud.Logging.V2 google/logging/v2 logging.yaml google/logging/type
 generate_api Google.Cloud.Monitoring.V3 google/monitoring/v3 monitoring.yaml

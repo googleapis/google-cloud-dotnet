@@ -22,9 +22,6 @@ using System.Threading.Tasks;
 
 namespace Google.LongRunning
 {
-    // TODO: Update the class documentation with alternatives for handling multiple types when
-    // https://github.com/google/protobuf/issues/3294 is resolved.
-
     /// <summary>
     /// A long-running operation with an associated client, and which knows the expected response type.
     /// </summary>
@@ -47,7 +44,8 @@ namespace Google.LongRunning
     ///   </item>
     ///   <item>
     ///     <description>To handle multiple types, use the <see cref="RpcMessage"/> property and its <see cref="Operation.Response"/> and <see cref="Operation.Metadata"/>
-    ///     properties, of type <see cref="Any"/>. You can then use <see cref="Any.TypeUrl"/> to determine the type of the value to unpack.</description>
+    ///     properties, of type <see cref="Any"/>. You can then use <see cref="Any.TypeUrl"/> to determine the type of the value to unpack, or
+    ///     <see cref="Any.TryUnpack{T}(out T)"/> with each type you support.</description>
     ///   </item>
     /// </list>
     /// </para>
@@ -410,31 +408,21 @@ namespace Google.LongRunning
         public static Task<Operation<TResponse, TMetadata>> PollOnceFromNameAsync(string name, OperationsClient client, CancellationToken cancellationToken) =>
             PollOnceFromNameAsync(name, client, CallSettings.FromCancellationToken(cancellationToken));
 
-        // TODO: This is mostly copied from Google.Protobuf... it would be nice if that would expose similar functionality cleanly.
-        // See https://github.com/google/protobuf/issues/3294
         private static T Unpack<T>(Any any, bool throwOnWrongType) where T : class, IMessage<T>, new()
         {
             if (any == null)
             {
                 return null;
             }
-            T target = new T();
-            string anyTypeName = GetAnyTypeName(any.TypeUrl);
-            if (GetAnyTypeName(any.TypeUrl) != target.Descriptor.FullName)
+            if (!any.TryUnpack<T>(out var result) && throwOnWrongType)
             {
-                return throwOnWrongType 
-                    ? throw new InvalidOperationException(
-                        $"Expected type {target.Descriptor.FullName}; received type is {anyTypeName}")
-                    : (T) null;
+                // Much simpler to return the complete type URL than extract the type name from it. (And
+                // maybe the scheme is useful too in some cases...)
+                throw new InvalidOperationException(
+                        $"Expected type {new T().Descriptor.FullName}; received type URL {any.TypeUrl}");
             }
-            target.MergeFrom(any.Value);
-            return target;
-        }
-
-        private static string GetAnyTypeName(string typeUrl)
-        {
-            int lastSlash = typeUrl.LastIndexOf('/');
-            return lastSlash == -1 ? "" : typeUrl.Substring(lastSlash + 1);
+            // Correctly null if TryUnpack returns false.
+            return result;
         }
     }
 }
