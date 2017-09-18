@@ -28,7 +28,7 @@
     "type": "rest",
     "description": "Recommended Google client library to access the BigQuery API. It wraps the Google.Apis.Bigquery.v2 client library, making common operations simpler in client code. BigQuery is a data platform for customers to create, manage, share and query data.",
     "dependencies": {
-      "Google.Apis.Bigquery.v2": "1.28.0.932"
+      "Google.Apis.Bigquery.v2": "1.29.1.983"
     },
     "testDependencies": {
       "Google.Cloud.Storage.V1": "project"
@@ -291,7 +291,7 @@
     "description": "Google Compute Engine Metadata v1 client library",
     "tags": [ "Metadata" ],
     "dependencies": {
-      "Google.Apis.Compute.v1": "1.28.0.923"
+      "Google.Apis.Compute.v1": "1.29.1.978"
     }
   },
 
@@ -401,7 +401,7 @@
     "type": "rest",
     "description": "Recommended Google client library to access the Google Cloud Storage API. It wraps the Google.Apis.Storage.v1 client library, making common operations simpler in client code. Google Cloud Storage stores and retrieves potentially large, immutable data objects.",
     "dependencies": {
-      "Google.Apis.Storage.v1": "1.28.0.888"
+      "Google.Apis.Storage.v1": "1.29.1.988"
     },
     "tags": [ "Storage" ]
   },
@@ -428,7 +428,7 @@
     "type": "rest",
     "description": "Recommended Google client library to access the Translation API. It wraps the Google.Apis.Translate.v2 client library, making common operations simpler in client code. The Translate API translates text from one language to another.",
     "dependencies": {
-      "Google.Apis.Translate.v2": "1.28.0.875"
+      "Google.Apis.Translate.v2": "1.29.1.875"
     },
     "tags": [ "Translate", "Translation" ]
   },
