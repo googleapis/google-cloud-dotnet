@@ -144,6 +144,63 @@ namespace Google.Cloud.Language.V1.Snippets
             // End snippet
         }
 
+        public async Task AnalyzeEntitySentimentAsync()
+        {
+            // Snippet: AnalyzeEntitySentimentAsync(Document,EncodingType?,CallSettings)
+            // Additional: AnalyzeEntitySentimentAsync(Document,EncodingType?,CancellationToken)
+            // Create client
+            LanguageServiceClient languageServiceClient = await LanguageServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Document document = new Document();
+            EncodingType encodingType = EncodingType.None;
+            // Make the request
+            AnalyzeEntitySentimentResponse response = await languageServiceClient.AnalyzeEntitySentimentAsync(document, encodingType);
+            // End snippet
+        }
+
+        public void AnalyzeEntitySentiment()
+        {
+            // Snippet: AnalyzeEntitySentiment(Document,EncodingType?,CallSettings)
+            // Create client
+            LanguageServiceClient languageServiceClient = LanguageServiceClient.Create();
+            // Initialize request argument(s)
+            Document document = new Document();
+            EncodingType encodingType = EncodingType.None;
+            // Make the request
+            AnalyzeEntitySentimentResponse response = languageServiceClient.AnalyzeEntitySentiment(document, encodingType);
+            // End snippet
+        }
+
+        public async Task AnalyzeEntitySentimentAsync_RequestObject()
+        {
+            // Snippet: AnalyzeEntitySentimentAsync(AnalyzeEntitySentimentRequest,CallSettings)
+            // Create client
+            LanguageServiceClient languageServiceClient = await LanguageServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AnalyzeEntitySentimentRequest request = new AnalyzeEntitySentimentRequest
+            {
+                Document = new Document(),
+            };
+            // Make the request
+            AnalyzeEntitySentimentResponse response = await languageServiceClient.AnalyzeEntitySentimentAsync(request);
+            // End snippet
+        }
+
+        public void AnalyzeEntitySentiment_RequestObject()
+        {
+            // Snippet: AnalyzeEntitySentiment(AnalyzeEntitySentimentRequest,CallSettings)
+            // Create client
+            LanguageServiceClient languageServiceClient = LanguageServiceClient.Create();
+            // Initialize request argument(s)
+            AnalyzeEntitySentimentRequest request = new AnalyzeEntitySentimentRequest
+            {
+                Document = new Document(),
+            };
+            // Make the request
+            AnalyzeEntitySentimentResponse response = languageServiceClient.AnalyzeEntitySentiment(request);
+            // End snippet
+        }
+
         public async Task AnalyzeSyntaxAsync()
         {
             // Snippet: AnalyzeSyntaxAsync(Document,EncodingType?,CallSettings)
