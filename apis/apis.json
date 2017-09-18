@@ -458,6 +458,9 @@
     "type": "grpc",
     "description": "gRPC services for the Google Long Running Operations API. This library is typically used as a dependency for other API client libraries.",
     "tags": [ "LongRunning" ],
+    "dependencies": {
+      "Google.Protobuf": "3.4.1"
+    },
     "testDependencies": {
       "Google.Api.Gax.Testing": "default"
     }
