@@ -259,7 +259,7 @@ namespace Google.Apis.Foo
                 {
                     Id = PublicDependencyForbiddenAnalyzer.DiagnosticId,
                     Message = $"The type '{typeName}' directly or indirectly depends on the forbidden namespace '{namespaceName}'",
-                    Severity = DiagnosticSeverity.Warning,
+                    Severity = DiagnosticSeverity.Hidden,
                     Locations = new[] { new DiagnosticResultLocation("Test0.cs", line, column) }
                 };
 
