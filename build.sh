@@ -37,12 +37,12 @@ done
 
 if [ ${#apis[@]} -eq 0 ]
 then
-  apis="${tools} $(echo apis/Google.* | sed 's/apis\///g')"
+  apis=(${tools} $(echo apis/Google.* | sed 's/apis\///g'))
 fi
 
 # First build, working out the test projects as we go.
 > AllTests.txt
-for api in $apis
+for api in ${apis[*]}
 do
   echo "$(date +%T) Building $api"
   [[ -d "$api" ]] && apidir=$api || apidir=apis/$api
