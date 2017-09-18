@@ -86,6 +86,8 @@ namespace Google.Cloud.Tools.TagReleases
             }
 
             await MakeReleasesAsync(client, newReleases, commit);
+            Console.WriteLine();
+            Console.WriteLine($"Release tags created. Next step: run ./buildrelease.sh ${commit}");
             return 0;
         }
 
