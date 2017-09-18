@@ -190,5 +190,59 @@ namespace Google.Cloud.Language.V1
             AnnotateTextAsync(document, features, EncodingType.Utf16, callSettings);
 
         // TODO: An AnalyzeSyntax method that just calls AnnotateText with the ExtractSyntax feature?
+
+        /// <summary>
+        /// Analyzes the entities in the given document and analyzes the sentiment associated with them,
+        /// specifying an <see cref="EncodingType"/> of UTF-16 for offsets.
+        /// </summary>
+        /// <remarks>
+        /// This method simply calls <see cref="AnalyzeEntitySentiment(Document, EncodingType?, CallSettings)"/>,
+        /// passing an <see cref="EncodingType"/> of UTF-16. This is the encoding used internally by
+        /// .NET strings, so the offsets returned by the analysis will be suitable for use in calls
+        /// such as <see cref="string.Substring(int, int)"/>.
+        /// </remarks>
+        /// <param name="document">The document to analyze.</param>
+        /// <param name="callSettings">The call settings to apply to the RPC, if any.</param>
+        /// <returns>The result of the entity and sentiment analysis.</returns>
+        public virtual AnalyzeEntitySentimentResponse AnalyzeEntitySentiment(
+            Document document,
+            CallSettings callSettings = null) =>
+            AnalyzeEntitySentiment(document, EncodingType.Utf16, callSettings);
+
+        /// <summary>
+        /// Analyzes the entities in the given document asynchronously and analyzes the sentiment associated with them,
+        /// specifying an <see cref="EncodingType"/> of UTF-16 for offsets.
+        /// </summary>
+        /// <remarks>
+        /// This method simply calls <see cref="AnalyzeEntitySentimentAsync(Document, EncodingType?, CancellationToken)"/>,
+        /// passing an <see cref="EncodingType"/> of UTF-16. This is the encoding used internally by
+        /// .NET strings, so the offsets returned by the analysis will be suitable for use in calls
+        /// such as <see cref="string.Substring(int, int)"/>.
+        /// </remarks>
+        /// <param name="document">The document to analyze.</param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A task representing the asynchronous operation. The result of the task is the entity and sentiment analysis response.</returns>
+        public virtual Task<AnalyzeEntitySentimentResponse> AnalyzeEntitySentimentAsync(
+            Document document,
+            CancellationToken cancellationToken) =>
+            AnalyzeEntitySentimentAsync(document, EncodingType.Utf16, cancellationToken);
+
+        /// <summary>
+        /// Analyzes the entities in the given document asynchronously and analyzes the sentiment associated with them,
+        /// specifying an <see cref="EncodingType"/> of UTF-16 for offsets.
+        /// </summary>
+        /// <remarks>
+        /// This method simply calls <see cref="AnalyzeEntitySentimentAsync(Document, EncodingType?, CallSettings)"/>,
+        /// passing an <see cref="EncodingType"/> of UTF-16. This is the encoding used internally by
+        /// .NET strings, so the offsets returned by the analysis will be suitable for use in calls
+        /// such as <see cref="string.Substring(int, int)"/>.
+        /// </remarks>
+        /// <param name="document">The document to analyze.</param>
+        /// <param name="callSettings">The call settings to apply to the RPC, if any.</param>
+        /// <returns>A task representing the asynchronous operation. The result of the task is the entity and sentiment analysis response.</returns>
+        public virtual Task<AnalyzeEntitySentimentResponse> AnalyzeEntitySentimentAsync(
+            Document document,
+            CallSettings callSettings = null) =>
+            AnalyzeEntitySentimentAsync(document, EncodingType.Utf16, callSettings);
     }
 }
