@@ -4,8 +4,8 @@ set -e
 source ../toolversions.sh
 install_docfx
 
-declare -r PROTOBUF_BRANCH=3.3.x
-declare -r GRPC_BRANCH=v1.4.x
+declare -r PROTOBUF_BRANCH=3.4.x
+declare -r GRPC_BRANCH=v1.6.x
 
 # Blow away any previous files and clone the repo
 rm -rf dependencies
@@ -21,11 +21,6 @@ git clone https://github.com/google/protobuf dependencies/protobuf --quiet --dep
 git clone https://github.com/grpc/grpc dependencies/grpc --quiet --depth=1 -b $GRPC_BRANCH
 git clone https://github.com/google/google-api-dotnet-client dependencies/google-api-dotnet-client --quiet --depth=1 -b master
 
-# Minor fixups...
-
-# Remove // comments in project.json; dotnet cli is fine with it, but docfx isn't.
-sed -i -r 's/\s+\/\/.*//g' dependencies/protobuf/csharp/src/Google.Protobuf/project.json
-
 # Copy docfx files
 cp dependencies-docfx/docfx-gax-dotnet.json dependencies/gax-dotnet/docfx.json
 cp dependencies-docfx/docfx-protobuf.json dependencies/protobuf/docfx.json
@@ -34,24 +29,16 @@ cp dependencies-docfx/docfx-google-api-dotnet-client.json dependencies/google-ap
 
 # Restore packages and build metadata
 (cd dependencies/gax-dotnet; 
- dotnet restore Gax.sln;
  $DOCFX metadata)
 
 (cd dependencies/protobuf;
- echo '{"sdk": {"version": "1.0.0-preview2-003131"}}' > global.json;
- dotnet restore csharp/src;
  $DOCFX metadata)
 
 (cd dependencies/grpc; 
- dotnet restore src/csharp/Grpc.sln;
  $DOCFX metadata)
 
 (cd dependencies/google-api-dotnet-client;
  rm NuGet.config;
- dotnet restore Src/Support/GoogleApisClient.sln;
- dotnet new sln --name Generated;
- dotnet sln Generated.sln add Src/Generated/*/*.csproj;
- dotnet restore Generated.sln;
  $DOCFX metadata)
 
 # Copy the metadata into a single api directory, one subdirectory per package

@@ -1,7 +1,7 @@
 {
   "metadata": [
     {
-      "src": [{ "files": ["csharp/src/Google.Protobuf/project.json"] }],
+      "src": [{ "files": ["csharp/src/Google.Protobuf/Google.Protobuf.csproj"] }],
       "properties": { "TargetFramework": "net45" },
       "dest": "api/Google.Protobuf",
     }
