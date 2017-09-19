@@ -45,7 +45,7 @@
     "description": "Recommended Google client library to access the Google Cloud Bigtable Instance and Table Admin APIs.",
     "tags": [ "Bigtable" ],
     "dependencies": {
-      "Google.LongRunning": "1.0.0-beta11",
+      "Google.LongRunning": "1.0.0",
       "Google.Cloud.Iam.V1": "1.0.0-beta12"
     },
     "testDependencies": {
@@ -190,7 +190,7 @@
     "description": "Recommended Google client library to access the Google Data Loss Prevention API, provides methods for detection of privacy-sensitive fragments in text, images, and Google Cloud Platform storage repositories.",
     "tags": [ "DLP", "data loss prevention", "privacy", "pii" ],
     "dependencies": {
-      "Google.LongRunning": "project"
+      "Google.LongRunning": "1.0.0"
     }
   },
 
@@ -232,13 +232,13 @@
     "description": "Experimental library for the Google Cloud Natural Language API, containing features which may still change before final release.",
     "tags": [ "Language", "Experimental" ],
     "dependencies": {
-      "Google.LongRunning": "project"
+      "Google.LongRunning": "1.0.0"
     }
   },
 
   {
     "id": "Google.Cloud.Logging.Log4Net",
-    "version": "2.1.0",
+    "version": "2.2.0-alpha00",
     "type": "other",
     "targetFrameworks": "netstandard1.5;net45",
     "testTargetFrameworks": "netcoreapp1.0;net452",
@@ -246,9 +246,10 @@
     "tags": [ "Log4Net", "Logging", "Stackdriver" ],
     "dependencies": {
       "log4net": "2.0.8",
+      "Google.Api.Gax.Grpc": "2.1.0",
       "Google.Cloud.Logging.V2": "2.0.0",
       "Google.Cloud.DevTools.Common": "1.0.0",
-      "Grpc.Core": "1.4.0"
+      "Grpc.Core": "1.6.1"
     },
     "testDependencies": {
       "Google.Api.Gax.Testing": "2.0.0"
@@ -331,7 +332,7 @@
     "tags": [ "Spanner" ],
     "dependencies": {
       "Google.Cloud.Iam.V1": "1.0.0-beta12",
-      "Google.LongRunning": "1.0.0-beta11"
+      "Google.LongRunning": "1.0.0"
     }
   },
 
@@ -345,7 +346,7 @@
     "tags": [ "Spanner" ],
     "dependencies": {
       "Google.Cloud.Iam.V1": "1.0.0-beta12",
-      "Google.LongRunning": "1.0.0-beta11"
+      "Google.LongRunning": "1.0.0"
     }
   },
 
@@ -389,7 +390,7 @@
     "description": "Recommended Google client library to access the Google Cloud Speech API, which performs speech recognition.",
     "tags": [ "Speech" ],
     "dependencies": {
-      "Google.LongRunning": "project"
+      "Google.LongRunning": "1.0.0"
     },
   },
 
@@ -442,7 +443,7 @@
     "description": "Recommended Google client library to access the v1beta1 Google Cloud Video Intelligence API.",
     "tags": [ "VideoIntelligence" ],
     "dependencies": {
-      "Google.LongRunning": "project"
+      "Google.LongRunning": "1.0.0"
     },
   },
 
@@ -455,7 +456,7 @@
     "description": "Recommended Google client library to access the v1beta2 Google Cloud Video Intelligence API.",
     "tags": [ "VideoIntelligence" ],
     "dependencies": {
-      "Google.LongRunning": "project"
+      "Google.LongRunning": "1.0.0"
     },
   },
 
@@ -471,15 +472,17 @@
 
   {
     "id": "Google.LongRunning",
-    "version": "1.0.0-beta11",
+    "version": "1.0.0",
     "type": "grpc",
     "description": "gRPC services for the Google Long Running Operations API. This library is typically used as a dependency for other API client libraries.",
     "tags": [ "LongRunning" ],
     "dependencies": {
-      "Google.Protobuf": "3.4.1"
+      "Google.Api.Gax.Grpc": "2.1.0",
+      "Google.Protobuf": "3.4.1",
+      "Grpc.Core": "1.6.1"
     },
     "testDependencies": {
-      "Google.Api.Gax.Testing": "default"
+      "Google.Api.Gax.Testing": "2.1.0"
     }
   }
 ]
