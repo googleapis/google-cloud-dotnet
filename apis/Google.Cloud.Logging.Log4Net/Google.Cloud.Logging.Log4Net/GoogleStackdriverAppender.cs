@@ -225,11 +225,7 @@ namespace Google.Cloud.Logging.Log4Net
                 return null;
             }
 
-            GoogleCredential credential;
-            using (FileStream credStream = File.OpenRead(CredentialFile))
-            {
-                credential = GoogleCredential.FromStream(credStream);
-            }
+            GoogleCredential credential = GoogleCredential.FromFile(CredentialFile);
             
             if (credential.IsCreateScopedRequired)
             {
