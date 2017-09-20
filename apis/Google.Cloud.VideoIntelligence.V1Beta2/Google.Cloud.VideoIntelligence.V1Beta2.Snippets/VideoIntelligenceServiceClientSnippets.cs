@@ -48,7 +48,7 @@ namespace Google.Cloud.VideoIntelligence.V1Beta2.Snippets
             }
             // End sample
 
-            Assert.Contains(result.ShotLabelAnnotations, lab => lab.Entity.Description == "Dinosaur");
+            Assert.Contains(result.ShotLabelAnnotations, lab => lab.Entity.Description == "dinosaur");
         }
     }
 }
