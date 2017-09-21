@@ -41,7 +41,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.5'">
-    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="1.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="1.0.2" />
     <PackageReference Include="System.Diagnostics.StackTrace" Version="4.3.0" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
