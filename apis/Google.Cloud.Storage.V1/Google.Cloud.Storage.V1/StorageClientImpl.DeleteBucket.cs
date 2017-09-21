@@ -29,7 +29,7 @@ namespace Google.Cloud.Storage.V1
         public override Task DeleteBucketAsync(
             string bucket,
             DeleteBucketOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken)
+            CancellationToken cancellationToken = default
         ) => CreateDeleteBucketRequest(bucket, options).ExecuteAsync(cancellationToken);
 
         /// <inheritdoc />
@@ -40,7 +40,7 @@ namespace Google.Cloud.Storage.V1
         public override Task DeleteBucketAsync(
             Bucket bucket,
             DeleteBucketOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken)
+            CancellationToken cancellationToken = default
         ) => CreateDeleteBucketRequest(bucket, options).ExecuteAsync(cancellationToken);
 
         private BucketsResource.DeleteRequest CreateDeleteBucketRequest(Bucket bucket, DeleteBucketOptions options)

@@ -60,8 +60,8 @@ namespace Google.Cloud.Diagnostics.Common
         internal BufferOptions(BufferType bufferType, int? bufferSizeBytes = null, TimeSpan? bufferWaitTime = null)
         {
             BufferType = bufferType;
-            BufferSizeBytes = bufferSizeBytes ?? default(int);
-            BufferWaitTime = bufferWaitTime ?? default(TimeSpan);
+            BufferSizeBytes = bufferSizeBytes ?? default;
+            BufferWaitTime = bufferWaitTime ?? default;
         }
 
         /// <summary>

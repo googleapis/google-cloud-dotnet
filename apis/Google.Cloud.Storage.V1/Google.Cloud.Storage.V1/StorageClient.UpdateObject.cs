@@ -67,7 +67,7 @@ namespace Google.Cloud.Storage.V1
         public virtual Task<Object> UpdateObjectAsync(
             Object obj,
             UpdateObjectOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken))
+            CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }

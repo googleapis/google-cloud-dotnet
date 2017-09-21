@@ -37,7 +37,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task<string> RemoveDatasetLabelAsync(DatasetReference datasetReference, string labelName, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<string> RemoveDatasetLabelAsync(DatasetReference datasetReference, string labelName, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(DatasetReference));
             GaxPreconditions.CheckNotNull(labelName, nameof(labelName));
@@ -58,7 +58,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task<string> SetDatasetLabelAsync(DatasetReference datasetReference, string labelName, string labelValue, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<string> SetDatasetLabelAsync(DatasetReference datasetReference, string labelName, string labelValue, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(DatasetReference));
             GaxPreconditions.CheckNotNull(labelName, nameof(labelName));
@@ -113,7 +113,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task<IDictionary<string, string>> ModifyDatasetLabelsAsync(DatasetReference datasetReference, IDictionary<string, string> labels, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<IDictionary<string, string>> ModifyDatasetLabelsAsync(DatasetReference datasetReference, IDictionary<string, string> labels, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             GaxPreconditions.CheckNotNull(labels, nameof(labels));
@@ -189,7 +189,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task<IDictionary<string, string>> ClearDatasetLabelsAsync(DatasetReference datasetReference, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<IDictionary<string, string>> ClearDatasetLabelsAsync(DatasetReference datasetReference, ModifyLabelsOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
 

@@ -54,7 +54,7 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <inheritdoc />
-        public Task ReceiveAsync(IEnumerable<TraceProto> traces, CancellationToken cancellationToken = default(CancellationToken))
+        public Task ReceiveAsync(IEnumerable<TraceProto> traces, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(traces, nameof(traces));
 

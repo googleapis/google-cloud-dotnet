@@ -128,7 +128,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task<BigQueryDataset> GetDatasetAsync(DatasetReference datasetReference, GetDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<BigQueryDataset> GetDatasetAsync(DatasetReference datasetReference, GetDatasetOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             var request = Service.Datasets.Get(datasetReference.ProjectId, datasetReference.DatasetId);
@@ -149,7 +149,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task<BigQueryDataset> CreateDatasetAsync(DatasetReference datasetReference, CreateDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<BigQueryDataset> CreateDatasetAsync(DatasetReference datasetReference, CreateDatasetOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             var dataset = new Dataset { DatasetReference = datasetReference };
@@ -160,7 +160,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task<BigQueryDataset> GetOrCreateDatasetAsync(DatasetReference datasetReference, GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<BigQueryDataset> GetOrCreateDatasetAsync(DatasetReference datasetReference, GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             try
@@ -174,7 +174,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task DeleteDatasetAsync(DatasetReference datasetReference, DeleteDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task DeleteDatasetAsync(DatasetReference datasetReference, DeleteDatasetOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             var request = Service.Datasets.Delete(datasetReference.ProjectId, datasetReference.DatasetId);
@@ -184,7 +184,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task<BigQueryDataset> UpdateDatasetAsync(DatasetReference datasetReference, Dataset resource, UpdateDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<BigQueryDataset> UpdateDatasetAsync(DatasetReference datasetReference, Dataset resource, UpdateDatasetOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             GaxPreconditions.CheckNotNull(resource, nameof(resource));
@@ -195,7 +195,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task<BigQueryDataset> PatchDatasetAsync(DatasetReference datasetReference, Dataset resource, PatchDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<BigQueryDataset> PatchDatasetAsync(DatasetReference datasetReference, Dataset resource, PatchDatasetOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             GaxPreconditions.CheckNotNull(resource, nameof(resource));

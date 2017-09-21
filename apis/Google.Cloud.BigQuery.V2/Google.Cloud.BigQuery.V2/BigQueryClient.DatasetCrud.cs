@@ -62,7 +62,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the requested dataset.</returns>
-        public virtual Task<BigQueryDataset> GetDatasetAsync(string datasetId, GetDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryDataset> GetDatasetAsync(string datasetId, GetDatasetOptions options = null, CancellationToken cancellationToken = default) =>
             GetDatasetAsync(GetDatasetReference(datasetId), options, cancellationToken);
         
         /// <summary>
@@ -75,7 +75,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the requested dataset.</returns>
-        public virtual Task<BigQueryDataset> GetDatasetAsync(string projectId, string datasetId, GetDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryDataset> GetDatasetAsync(string projectId, string datasetId, GetDatasetOptions options = null, CancellationToken cancellationToken = default) =>
             GetDatasetAsync(GetDatasetReference(projectId, datasetId), options, cancellationToken);
         
         /// <summary>
@@ -86,7 +86,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the requested dataset.</returns>
-        public virtual Task<BigQueryDataset> GetDatasetAsync(DatasetReference datasetReference, GetDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryDataset> GetDatasetAsync(DatasetReference datasetReference, GetDatasetOptions options = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
         #endregion
 
@@ -192,7 +192,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the created dataset.</returns>
-        public virtual Task<BigQueryDataset> CreateDatasetAsync(string datasetId, CreateDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryDataset> CreateDatasetAsync(string datasetId, CreateDatasetOptions options = null, CancellationToken cancellationToken = default) =>
             CreateDatasetAsync(GetDatasetReference(datasetId), options, cancellationToken);
         
         /// <summary>
@@ -205,7 +205,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the created dataset.</returns>
-        public virtual Task<BigQueryDataset> CreateDatasetAsync(string projectId, string datasetId, CreateDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryDataset> CreateDatasetAsync(string projectId, string datasetId, CreateDatasetOptions options = null, CancellationToken cancellationToken = default) =>
             CreateDatasetAsync(GetDatasetReference(projectId, datasetId), options, cancellationToken);
         
         /// <summary>
@@ -216,7 +216,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the created dataset.</returns>
-        public virtual Task<BigQueryDataset> CreateDatasetAsync(DatasetReference datasetReference, CreateDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryDataset> CreateDatasetAsync(DatasetReference datasetReference, CreateDatasetOptions options = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
         #endregion
 
@@ -264,7 +264,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the existing or new dataset.</returns>
-        public virtual Task<BigQueryDataset> GetOrCreateDatasetAsync(string datasetId, GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryDataset> GetOrCreateDatasetAsync(string datasetId, GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = default) =>
             GetOrCreateDatasetAsync(GetDatasetReference(datasetId), getOptions, createOptions, cancellationToken);
         
         /// <summary>
@@ -278,7 +278,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the existing or new dataset.</returns>
-        public virtual Task<BigQueryDataset> GetOrCreateDatasetAsync(string projectId, string datasetId, GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryDataset> GetOrCreateDatasetAsync(string projectId, string datasetId, GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = default) =>
             GetOrCreateDatasetAsync(GetDatasetReference(projectId, datasetId), getOptions, createOptions, cancellationToken);
         
         /// <summary>
@@ -290,7 +290,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the existing or new dataset.</returns>
-        public virtual Task<BigQueryDataset> GetOrCreateDatasetAsync(DatasetReference datasetReference, GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryDataset> GetOrCreateDatasetAsync(DatasetReference datasetReference, GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
         #endregion
 
@@ -330,7 +330,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task DeleteDatasetAsync(string datasetId, DeleteDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task DeleteDatasetAsync(string datasetId, DeleteDatasetOptions options = null, CancellationToken cancellationToken = default) =>
             DeleteDatasetAsync(GetDatasetReference(datasetId), options, cancellationToken);
         
         /// <summary>
@@ -342,7 +342,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task DeleteDatasetAsync(string projectId, string datasetId, DeleteDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task DeleteDatasetAsync(string projectId, string datasetId, DeleteDatasetOptions options = null, CancellationToken cancellationToken = default) =>
             DeleteDatasetAsync(GetDatasetReference(projectId, datasetId), options, cancellationToken);
         
         /// <summary>
@@ -352,7 +352,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task DeleteDatasetAsync(DatasetReference datasetReference, DeleteDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task DeleteDatasetAsync(DatasetReference datasetReference, DeleteDatasetOptions options = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
         #endregion
 
@@ -412,7 +412,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the updated dataset.</returns>
-        public virtual Task<BigQueryDataset> UpdateDatasetAsync(string datasetId, Dataset resource, UpdateDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryDataset> UpdateDatasetAsync(string datasetId, Dataset resource, UpdateDatasetOptions options = null, CancellationToken cancellationToken = default) =>
             UpdateDatasetAsync(GetDatasetReference(datasetId), resource, options, cancellationToken);
         
         /// <summary>
@@ -429,7 +429,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the updated dataset.</returns>
-        public virtual Task<BigQueryDataset> UpdateDatasetAsync(string projectId, string datasetId, Dataset resource, UpdateDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryDataset> UpdateDatasetAsync(string projectId, string datasetId, Dataset resource, UpdateDatasetOptions options = null, CancellationToken cancellationToken = default) =>
             UpdateDatasetAsync(GetDatasetReference(projectId, datasetId), resource, options, cancellationToken);
         
         /// <summary>
@@ -444,7 +444,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the updated dataset.</returns>
-        public virtual Task<BigQueryDataset> UpdateDatasetAsync(DatasetReference datasetReference, Dataset resource, UpdateDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryDataset> UpdateDatasetAsync(DatasetReference datasetReference, Dataset resource, UpdateDatasetOptions options = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
         #endregion
 
@@ -504,7 +504,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the updated dataset.</returns>
-        public virtual Task<BigQueryDataset> PatchDatasetAsync(string datasetId, Dataset resource, PatchDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryDataset> PatchDatasetAsync(string datasetId, Dataset resource, PatchDatasetOptions options = null, CancellationToken cancellationToken = default) =>
             PatchDatasetAsync(GetDatasetReference(datasetId), resource, options, cancellationToken);
         
         /// <summary>
@@ -521,7 +521,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the updated dataset.</returns>
-        public virtual Task<BigQueryDataset> PatchDatasetAsync(string projectId, string datasetId, Dataset resource, PatchDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryDataset> PatchDatasetAsync(string projectId, string datasetId, Dataset resource, PatchDatasetOptions options = null, CancellationToken cancellationToken = default) =>
             PatchDatasetAsync(GetDatasetReference(projectId, datasetId), resource, options, cancellationToken);
         
         /// <summary>
@@ -536,7 +536,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the updated dataset.</returns>
-        public virtual Task<BigQueryDataset> PatchDatasetAsync(DatasetReference datasetReference, Dataset resource, PatchDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryDataset> PatchDatasetAsync(DatasetReference datasetReference, Dataset resource, PatchDatasetOptions options = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
         #endregion
     }

@@ -36,6 +36,6 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="items">The items to receive. Cannot be null.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        Task ReceiveAsync(IEnumerable<T> items, CancellationToken cancellationToken = default(CancellationToken));
+        Task ReceiveAsync(IEnumerable<T> items, CancellationToken cancellationToken = default);
     }
 }

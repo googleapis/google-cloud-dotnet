@@ -100,7 +100,7 @@ namespace Google.Cloud.Spanner.V1
         private async Task EvictImmediatelyAsync(Session session, CancellationToken cancellationToken)
         {
             Logger.Debug(() => "Evicting a session from the pool.");
-            SessionPoolEntry entry = default(SessionPoolEntry);
+            SessionPoolEntry entry = default;
             try
             {
                 lock (_sessionMruStack)
@@ -168,7 +168,7 @@ namespace Google.Cloud.Spanner.V1
                         return true;
                     }
                 }
-                entry = default(SessionPoolEntry);
+                entry = default;
                 return false;
             }
             finally
@@ -244,7 +244,7 @@ namespace Google.Cloud.Spanner.V1
         {
             try
             {
-                SessionPoolEntry sessionEntry = default(SessionPoolEntry);
+                SessionPoolEntry sessionEntry = default;
                 lock (_sessionMruStack)
                 {
                     if (_sessionMruStack.Count > 0)

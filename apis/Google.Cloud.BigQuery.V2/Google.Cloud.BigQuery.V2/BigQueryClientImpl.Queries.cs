@@ -118,7 +118,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task<BigQueryJob> CreateQueryJobAsync(string sql, QueryOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<BigQueryJob> CreateQueryJobAsync(string sql, QueryOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(sql, nameof(sql));
             var query = new JobConfigurationQuery { Query = sql, UseLegacySql = false };
@@ -127,7 +127,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task<BigQueryJob> CreateQueryJobAsync(BigQueryCommand command, QueryOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<BigQueryJob> CreateQueryJobAsync(BigQueryCommand command, QueryOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(command, nameof(command));
             var query = new JobConfigurationQuery { UseLegacySql = false };
@@ -137,7 +137,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task<BigQueryResults> GetQueryResultsAsync(JobReference jobReference, GetQueryResultsOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<BigQueryResults> GetQueryResultsAsync(JobReference jobReference, GetQueryResultsOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
             var job = await GetJobAsync(jobReference, cancellationToken: cancellationToken).ConfigureAwait(false);

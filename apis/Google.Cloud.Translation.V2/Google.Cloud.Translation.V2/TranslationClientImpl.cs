@@ -131,7 +131,7 @@ namespace Google.Cloud.Translation.V2
 
         /// <inheritdoc />
         public override async Task<IList<TranslationResult>> TranslateTextAsync(IEnumerable<string> textItems, string targetLanguage, string sourceLanguage = null,
-            TranslationModel? model = null, CancellationToken cancellationToken = default(CancellationToken))
+            TranslationModel? model = null, CancellationToken cancellationToken = default)
         {
             var items = ConvertToListAndCheckNoNullElements(textItems, nameof(textItems));
             GaxPreconditions.CheckNotNull(targetLanguage, nameof(targetLanguage));
@@ -143,7 +143,7 @@ namespace Google.Cloud.Translation.V2
 
         /// <inheritdoc />
         public override async Task<IList<TranslationResult>> TranslateHtmlAsync(IEnumerable<string> htmlItems, string targetLanguage, string sourceLanguage = null,
-            TranslationModel? model = null, CancellationToken cancellationToken = default(CancellationToken))
+            TranslationModel? model = null, CancellationToken cancellationToken = default)
         {
             var items = ConvertToListAndCheckNoNullElements(htmlItems, nameof(htmlItems));
             GaxPreconditions.CheckNotNull(targetLanguage, nameof(targetLanguage));
@@ -154,7 +154,7 @@ namespace Google.Cloud.Translation.V2
         }
 
         /// <inheritdoc />
-        public override async Task<IList<Detection>> DetectLanguagesAsync(IEnumerable<string> textItems, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<IList<Detection>> DetectLanguagesAsync(IEnumerable<string> textItems, CancellationToken cancellationToken = default)
         {
             var items = ConvertToListAndCheckNoNullElements(textItems, nameof(textItems));
             var request = Service.Detections.List(new Repeatable<string>(items));
@@ -164,7 +164,7 @@ namespace Google.Cloud.Translation.V2
         }
 
         /// <inheritdoc />
-        public override async Task<IList<Language>> ListLanguagesAsync(string target = null, TranslationModel? model = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<IList<Language>> ListLanguagesAsync(string target = null, TranslationModel? model = null, CancellationToken cancellationToken = default)
         {
             var request = Service.Languages.List();
             request.ModifyRequest += _versionHeaderAction;

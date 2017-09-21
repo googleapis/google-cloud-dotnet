@@ -45,7 +45,7 @@ namespace Google.Cloud.Storage.V1
         public virtual Task<Bucket> GetBucketAsync(
             string bucket,
             GetBucketOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken))
+            CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }

@@ -108,7 +108,7 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <inheritdoc />
         public override Task<BigQueryJob> PollJobUntilCompletedAsync(JobReference jobReference, GetJobOptions options = null,
-            PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken))
+            PollSettings pollSettings = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
             return Polling.PollRepeatedlyAsync(ignoredDeadline => GetJobAsync(jobReference, options, cancellationToken),
@@ -118,7 +118,7 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <inheritdoc />
         public override async Task<BigQueryJob> GetJobAsync(JobReference jobReference, GetJobOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken))
+            CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
 
@@ -131,7 +131,7 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <inheritdoc />
         public override async Task<BigQueryJob> CancelJobAsync(JobReference jobReference, CancelJobOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken))
+            CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
             var request = Service.Jobs.Cancel(jobReference.ProjectId, jobReference.JobId);
@@ -149,7 +149,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task<BigQueryJob> CreateExtractJobAsync(TableReference tableReference, IEnumerable<string> destinationUris, CreateExtractJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<BigQueryJob> CreateExtractJobAsync(TableReference tableReference, IEnumerable<string> destinationUris, CreateExtractJobOptions options = null, CancellationToken cancellationToken = default)
         {
             var job = await CreateExtractJobRequest(tableReference, destinationUris, options).ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return new BigQueryJob(this, job);
@@ -175,7 +175,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task<BigQueryJob> CreateCopyJobAsync(IEnumerable<TableReference> sources, TableReference destination, CreateCopyJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<BigQueryJob> CreateCopyJobAsync(IEnumerable<TableReference> sources, TableReference destination, CreateCopyJobOptions options = null, CancellationToken cancellationToken = default)
         {
             var job = await CreateCopyJobRequest(sources, destination, options).ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return new BigQueryJob(this, job);
@@ -201,7 +201,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task<BigQueryJob> CreateLoadJobAsync(IEnumerable<string> sourceUris, TableReference destination, TableSchema schema, CreateLoadJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<BigQueryJob> CreateLoadJobAsync(IEnumerable<string> sourceUris, TableReference destination, TableSchema schema, CreateLoadJobOptions options = null, CancellationToken cancellationToken = default)
         {
             var job = await CreateLoadJobRequest(sourceUris, destination, schema, options).ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return new BigQueryJob(this, job);

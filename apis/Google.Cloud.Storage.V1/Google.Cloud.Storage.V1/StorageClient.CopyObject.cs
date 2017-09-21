@@ -61,7 +61,7 @@ namespace Google.Cloud.Storage.V1
             string destinationBucket = null,
             string destinationObjectName = null,
             CopyObjectOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken))
+            CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }        

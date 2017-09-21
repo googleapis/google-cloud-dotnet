@@ -1069,7 +1069,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var stream = new MemoryStream();
             var rows = new[] { new BigQueryInsertRow(), new BigQueryInsertRow() };
             VerifyEquivalentAsync(
-                client => client.InsertRowsAsync(MatchesWhenSerialized(reference), rows, null, default(CancellationToken)),
+                client => client.InsertRowsAsync(MatchesWhenSerialized(reference), rows, null, default),
                 client => client.InsertRowsAsync(datasetId, tableId, rows[0], rows[1]),
                 client => client.InsertRowsAsync(ProjectId, datasetId, tableId, rows[0], rows[1]),
                 client => new BigQueryTable(client, GetTable(reference)).InsertRowsAsync(rows[0], rows[1]));

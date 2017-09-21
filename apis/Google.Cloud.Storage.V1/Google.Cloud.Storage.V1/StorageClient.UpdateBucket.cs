@@ -61,7 +61,7 @@ namespace Google.Cloud.Storage.V1
         public virtual Task<Bucket> UpdateBucketAsync(
             Bucket bucket,
             UpdateBucketOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken))
+            CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }

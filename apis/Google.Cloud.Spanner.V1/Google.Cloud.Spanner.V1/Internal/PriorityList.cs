@@ -166,7 +166,7 @@ namespace Google.Cloud.Spanner.V1.Internal
                         return true;
                     }
                 }
-                result = default(T);
+                result = default;
                 return false;
             }
         }

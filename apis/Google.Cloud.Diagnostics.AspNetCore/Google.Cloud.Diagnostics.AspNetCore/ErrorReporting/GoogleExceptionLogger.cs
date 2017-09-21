@@ -55,7 +55,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
         /// <inheritdoc />
         public Task LogAsync(Exception exception, HttpContext context = null,
-            CancellationToken cancellationToken = default(CancellationToken))
+            CancellationToken cancellationToken = default)
         {
             context = context ?? _accesor.HttpContext;
             var contextWrapper = new HttpContextWrapper(context);

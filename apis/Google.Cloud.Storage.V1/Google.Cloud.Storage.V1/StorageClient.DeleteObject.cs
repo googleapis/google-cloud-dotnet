@@ -82,7 +82,7 @@ namespace Google.Cloud.Storage.V1
             string bucket,
             string objectName,
             DeleteObjectOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken))
+            CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
@@ -146,7 +146,7 @@ namespace Google.Cloud.Storage.V1
         /// defaults will be used.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task DeleteObjectAsync(Object obj, DeleteObjectOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public virtual Task DeleteObjectAsync(Object obj, DeleteObjectOptions options = null, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }

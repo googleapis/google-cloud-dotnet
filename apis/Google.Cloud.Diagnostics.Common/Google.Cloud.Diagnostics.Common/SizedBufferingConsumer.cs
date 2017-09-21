@@ -85,7 +85,7 @@ namespace Google.Cloud.Diagnostics.Common
 
         /// <inheritdoc />
         protected override async Task ReceiveAsyncWithSemaphoreHeldAsync(
-            IEnumerable<T> items, CancellationToken cancellationToken = default(CancellationToken))
+            IEnumerable<T> items, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(items, nameof(items));
             foreach (T item in items)
@@ -113,7 +113,7 @@ namespace Google.Cloud.Diagnostics.Common
 
         /// <inheritdoc />
         protected override Task FlushAsyncWithSemaphoreHeldAsync(
-            CancellationToken cancellationToken = default(CancellationToken))
+            CancellationToken cancellationToken = default)
         {
             if (_items.Count == 0)
             {

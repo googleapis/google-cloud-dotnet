@@ -32,7 +32,7 @@ namespace Google.Cloud.Storage.V1
         public override Task<Object> PatchObjectAsync(
             Object obj,
             PatchObjectOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken))
+            CancellationToken cancellationToken = default)
             => CreatePatchObjectRequest(obj, options).ExecuteAsync(cancellationToken);
 
         private ObjectsResource.PatchRequest CreatePatchObjectRequest(Object obj, PatchObjectOptions options)

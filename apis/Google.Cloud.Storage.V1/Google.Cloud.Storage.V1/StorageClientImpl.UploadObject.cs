@@ -78,7 +78,7 @@ namespace Google.Cloud.Storage.V1
             string contentType,
             Stream source,
             UploadObjectOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken),
+            CancellationToken cancellationToken = default,
             IProgress<IUploadProgress> progress = null)
         {
             ValidateBucketName(bucket);
@@ -113,7 +113,7 @@ namespace Google.Cloud.Storage.V1
             Object destination,
             Stream source,
             UploadObjectOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken),
+            CancellationToken cancellationToken = default,
             IProgress<IUploadProgress> progress = null)
         {
             var mediaUpload = CreateObjectUploader(destination, source, options);

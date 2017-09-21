@@ -445,7 +445,7 @@ namespace Google.Cloud.Logging.Log4Net
         /// <param name="cancellationToken">The token to monitor for cancellation requests.
         /// The default value is <see cref="CancellationToken.None"/>.</param>
         /// <returns>A task representing whether the flush completed within the timeout.</returns>
-        public Task<bool> FlushAsync(TimeSpan timeout, CancellationToken cancellationToken = default(CancellationToken))
+        public Task<bool> FlushAsync(TimeSpan timeout, CancellationToken cancellationToken = default)
         {
             if (!_isActivated)
             {
@@ -466,7 +466,7 @@ namespace Google.Cloud.Logging.Log4Net
         /// <param name="cancellationToken">The token to monitor for cancellation requests.
         /// The default value is <see cref="CancellationToken.None"/>.</param>
         /// <returns>Whether the flush completed within the timeout.</returns>
-        public bool Flush(TimeSpan timeout, CancellationToken cancellationToken = default(CancellationToken))
+        public bool Flush(TimeSpan timeout, CancellationToken cancellationToken = default)
         {
             if (!_isActivated)
             {

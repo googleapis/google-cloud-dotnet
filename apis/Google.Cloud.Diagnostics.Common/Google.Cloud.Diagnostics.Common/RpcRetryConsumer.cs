@@ -96,7 +96,7 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <inheritdoc />
-        public Task ReceiveAsync(IEnumerable<T> items, CancellationToken cancellationToken = default(CancellationToken))
+        public Task ReceiveAsync(IEnumerable<T> items, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(items, nameof(items));
             try

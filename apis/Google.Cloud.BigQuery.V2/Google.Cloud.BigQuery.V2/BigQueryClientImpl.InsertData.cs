@@ -150,7 +150,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task<BigQueryJob> UploadCsvAsync(TableReference tableReference, TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<BigQueryJob> UploadCsvAsync(TableReference tableReference, TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             GaxPreconditions.CheckNotNull(input, nameof(input));
@@ -168,7 +168,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task<BigQueryJob> UploadAvroAsync(TableReference tableReference, TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<BigQueryJob> UploadAvroAsync(TableReference tableReference, TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             GaxPreconditions.CheckNotNull(input, nameof(input));
@@ -187,12 +187,12 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <inheritdoc />
         public override Task<BigQueryJob> UploadJsonAsync(TableReference tableReference, TableSchema schema, IEnumerable<string> rows,
-            UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+            UploadJsonOptions options = null, CancellationToken cancellationToken = default)
             => UploadJsonAsync(tableReference, schema, CreateJsonStream(rows), options, cancellationToken);
 
         /// <inheritdoc />
         public override async Task<BigQueryJob> UploadJsonAsync(TableReference tableReference, TableSchema schema, Stream input,
-            UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+            UploadJsonOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             GaxPreconditions.CheckNotNull(input, nameof(input));
@@ -231,7 +231,7 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <inheritdoc />
         public override async Task InsertRowsAsync(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows,
-            InsertOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+            InsertOptions options = null, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             GaxPreconditions.CheckNotNull(rows, nameof(rows));

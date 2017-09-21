@@ -33,7 +33,7 @@ namespace Google.Cloud.Storage.V1
             string bucket,
             string objectName,
             DeleteObjectOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken))
+            CancellationToken cancellationToken = default)
         {
             return CreateDeleteObjectRequest(bucket, objectName, options).ExecuteAsync(cancellationToken);
         }
@@ -45,7 +45,7 @@ namespace Google.Cloud.Storage.V1
         }
 
         /// <inheritdoc />
-        public override Task DeleteObjectAsync(Object obj, DeleteObjectOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override Task DeleteObjectAsync(Object obj, DeleteObjectOptions options = null, CancellationToken cancellationToken = default)
         {
             return CreateDeleteObjectRequest(obj, options).ExecuteAsync(cancellationToken);
         }

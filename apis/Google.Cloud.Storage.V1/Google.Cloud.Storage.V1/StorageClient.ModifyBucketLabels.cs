@@ -107,7 +107,7 @@ namespace Google.Cloud.Storage.V1
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>The previous value of the label, or null if the label did not previously exist.</returns>
-        public virtual async Task<string> SetBucketLabelAsync(string bucket, string labelName, string labelValue, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public virtual async Task<string> SetBucketLabelAsync(string bucket, string labelName, string labelValue, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = default)
         {
             StorageClientImpl.ValidateBucketName(bucket);
             GaxPreconditions.CheckNotNull(labelName, nameof(labelName));
@@ -130,7 +130,7 @@ namespace Google.Cloud.Storage.V1
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>The previous value of the label, or null if the label did not previously exist.</returns>
-        public virtual async Task<string> RemoveBucketLabelAsync(string bucket, string labelName, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public virtual async Task<string> RemoveBucketLabelAsync(string bucket, string labelName, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = default)
         {
             StorageClientImpl.ValidateBucketName(bucket);
             GaxPreconditions.CheckNotNull(labelName, nameof(labelName));
@@ -158,7 +158,7 @@ namespace Google.Cloud.Storage.V1
         public virtual Task<IDictionary<string, string>> ModifyBucketLabelsAsync(
             string bucket, IDictionary<string, string> labels,
             ModifyBucketLabelsOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken)) =>
+            CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
 
         /// <summary>
@@ -168,7 +168,7 @@ namespace Google.Cloud.Storage.V1
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A dictionary with the labels on the bucket before they were cleared.</returns>
-        public virtual Task<IDictionary<string, string>> ClearBucketLabelsAsync(string bucket, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<IDictionary<string, string>> ClearBucketLabelsAsync(string bucket, ModifyBucketLabelsOptions options = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
     }
 }

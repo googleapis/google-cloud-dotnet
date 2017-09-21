@@ -35,7 +35,7 @@ namespace Google.Cloud.Storage.V1
             string bucket,
             string objectName,
             GetObjectOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken))
+            CancellationToken cancellationToken = default)
         {
             ValidateBucketName(bucket);
             GaxPreconditions.CheckNotNull(objectName, nameof(objectName));

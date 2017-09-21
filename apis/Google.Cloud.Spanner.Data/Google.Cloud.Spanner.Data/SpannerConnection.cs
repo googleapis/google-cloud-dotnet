@@ -167,7 +167,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="cancellationToken">An optional token for canceling the call. May be null.</param>
         /// <returns>a new <see cref="SpannerTransaction" /></returns>
         public Task<SpannerTransaction> BeginReadOnlyTransactionAsync(
-            CancellationToken cancellationToken = default(CancellationToken)) => BeginReadOnlyTransactionAsync(
+            CancellationToken cancellationToken = default) => BeginReadOnlyTransactionAsync(
             TimestampBound.Strong, cancellationToken);
 
         /// <summary>
@@ -183,7 +183,7 @@ namespace Google.Cloud.Spanner.Data
         /// <returns></returns>
         public Task<SpannerTransaction> BeginReadOnlyTransactionAsync(
             TimestampBound targetReadTimestamp,
-            CancellationToken cancellationToken = default(CancellationToken))
+            CancellationToken cancellationToken = default)
         {
             if (targetReadTimestamp.Mode == TimestampBoundMode.MinReadTimestamp
                 || targetReadTimestamp.Mode == TimestampBoundMode.MaxStaleness)
@@ -241,7 +241,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
         /// <returns>A new <see cref="SpannerTransaction" /></returns>
         public Task<SpannerTransaction> BeginTransactionAsync(
-            CancellationToken cancellationToken = default(CancellationToken)) => BeginTransactionImplAsync(
+            CancellationToken cancellationToken = default) => BeginTransactionImplAsync(
             new TransactionOptions
             {
                 ReadWrite = new TransactionOptions.Types.ReadWrite()
@@ -837,7 +837,7 @@ namespace Google.Cloud.Spanner.Data
         /// read operation. Must not be null.
         /// </param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
-        public Task OpenAsReadOnlyAsync(TimestampBound timestampBound = null, CancellationToken cancellationToken = default(CancellationToken))
+        public Task OpenAsReadOnlyAsync(TimestampBound timestampBound = null, CancellationToken cancellationToken = default)
         {
             if (Transaction.Current == null)
             {

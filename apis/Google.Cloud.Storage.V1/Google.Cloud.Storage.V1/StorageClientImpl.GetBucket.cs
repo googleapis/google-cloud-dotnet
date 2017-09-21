@@ -27,7 +27,7 @@ namespace Google.Cloud.Storage.V1
 
         /// <inheritdoc />
         public override Task<Bucket> GetBucketAsync(string bucket, GetBucketOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken)) =>
+            CancellationToken cancellationToken = default) =>
             CreateGetBucketRequest(bucket, options).ExecuteAsync();
 
         private BucketsResource.GetRequest CreateGetBucketRequest(string bucket, GetBucketOptions options)

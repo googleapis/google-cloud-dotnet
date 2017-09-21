@@ -195,7 +195,7 @@ namespace Google.Cloud.Translation.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>The translation of <paramref name="text"/>.</returns>
         public virtual async Task<TranslationResult> TranslateTextAsync(string text, string targetLanguage, string sourceLanguage = null,
-            string model = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            string model = null, CancellationToken cancellationToken = default) =>
             (await TranslateTextAsync(
                 new[] { GaxPreconditions.CheckNotNull(text, nameof(text)) },
                 targetLanguage,
@@ -224,7 +224,7 @@ namespace Google.Cloud.Translation.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>The translation of <paramref name="html"/>.</returns>
         public virtual async Task<TranslationResult> TranslateHtmlAsync(string html, string targetLanguage, string sourceLanguage = null,
-            string model = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            string model = null, CancellationToken cancellationToken = default) =>
             (await TranslateHtmlAsync(
                 new[] { GaxPreconditions.CheckNotNull(html, nameof(html)) },
                 targetLanguage,
@@ -244,7 +244,7 @@ namespace Google.Cloud.Translation.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A list of translations. This will be the same size as <paramref name="textItems"/>, in the same order.</returns>
         public virtual Task<IList<TranslationResult>> TranslateTextAsync(IEnumerable<string> textItems, string targetLanguage, string sourceLanguage = null,
-            string model = null, CancellationToken cancellationToken = default(CancellationToken))
+            string model = null, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
@@ -265,7 +265,7 @@ namespace Google.Cloud.Translation.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A list of translations. This will be the same size as <paramref name="htmlItems"/>, in the same order.</returns>
         public virtual Task<IList<TranslationResult>> TranslateHtmlAsync(IEnumerable<string> htmlItems, string targetLanguage, string sourceLanguage = null,
-            string model = null, CancellationToken cancellationToken = default(CancellationToken))
+            string model = null, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
@@ -277,7 +277,7 @@ namespace Google.Cloud.Translation.V2
         /// <param name="text">The text to detect the language of. Must not be null.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>The most likely detected language.</returns>
-        public virtual async Task<Detection> DetectLanguageAsync(string text, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual async Task<Detection> DetectLanguageAsync(string text, CancellationToken cancellationToken = default) =>
             (await DetectLanguagesAsync(new[] { GaxPreconditions.CheckNotNull(text, nameof(text)) }, cancellationToken)
             .ConfigureAwait(false))[0];
 
@@ -287,7 +287,7 @@ namespace Google.Cloud.Translation.V2
         /// <param name="textItems">The text items to detect the language of. Must not be null or contain null elements.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A list of detected languages. This will be the same size as <paramref name="textItems"/>, in the same order.</returns>
-        public virtual Task<IList<Detection>> DetectLanguagesAsync(IEnumerable<string> textItems, CancellationToken cancellationToken = default(CancellationToken))
+        public virtual Task<IList<Detection>> DetectLanguagesAsync(IEnumerable<string> textItems, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
@@ -301,7 +301,7 @@ namespace Google.Cloud.Translation.V2
         /// used. If the empty string is specified, no model is requested, allowing the server to choose.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A list of supported languages.</returns>
-        public virtual Task<IList<Language>> ListLanguagesAsync(string target = null, string model = null, CancellationToken cancellationToken = default(CancellationToken))
+        public virtual Task<IList<Language>> ListLanguagesAsync(string target = null, string model = null, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }

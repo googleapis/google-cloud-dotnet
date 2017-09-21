@@ -42,7 +42,7 @@ namespace Google.Cloud.Storage.V1
             string objectName,
             Stream destination,
             DownloadObjectOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken),
+            CancellationToken cancellationToken = default,
             IProgress<IDownloadProgress> progress = null)
         {
             var baseUri = GetBaseUri(bucket, objectName);
@@ -65,7 +65,7 @@ namespace Google.Cloud.Storage.V1
             Object source,
             Stream destination,
             DownloadObjectOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken),
+            CancellationToken cancellationToken = default,
             IProgress<IDownloadProgress> progress = null)
         {
             var baseUri = GetBaseUri(source);

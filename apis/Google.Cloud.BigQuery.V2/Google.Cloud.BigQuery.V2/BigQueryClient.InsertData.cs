@@ -107,7 +107,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// a data upload job.</returns>
-        public virtual Task<BigQueryJob> UploadCsvAsync(string datasetId, string tableId, TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryJob> UploadCsvAsync(string datasetId, string tableId, TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default) =>
             UploadCsvAsync(GetTableReference(datasetId, tableId), schema, input, options, cancellationToken);
         
         /// <summary>
@@ -131,7 +131,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// a data upload job.</returns>
-        public virtual Task<BigQueryJob> UploadCsvAsync(string projectId, string datasetId, string tableId, TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryJob> UploadCsvAsync(string projectId, string datasetId, string tableId, TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default) =>
             UploadCsvAsync(GetTableReference(projectId, datasetId, tableId), schema, input, options, cancellationToken);
         
         /// <summary>
@@ -152,7 +152,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// a data upload job.</returns>
-        public virtual Task<BigQueryJob> UploadCsvAsync(TableReference tableReference, TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryJob> UploadCsvAsync(TableReference tableReference, TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
         #endregion
 
@@ -239,7 +239,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// a data upload job.</returns>
-        public virtual Task<BigQueryJob> UploadJsonAsync(string datasetId, string tableId, TableSchema schema, Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryJob> UploadJsonAsync(string datasetId, string tableId, TableSchema schema, Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = default) =>
             UploadJsonAsync(GetTableReference(datasetId, tableId), schema, input, options, cancellationToken);
         
         /// <summary>
@@ -263,7 +263,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// a data upload job.</returns>
-        public virtual Task<BigQueryJob> UploadJsonAsync(string projectId, string datasetId, string tableId, TableSchema schema, Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryJob> UploadJsonAsync(string projectId, string datasetId, string tableId, TableSchema schema, Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = default) =>
             UploadJsonAsync(GetTableReference(projectId, datasetId, tableId), schema, input, options, cancellationToken);
         
         /// <summary>
@@ -284,7 +284,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// a data upload job.</returns>
-        public virtual Task<BigQueryJob> UploadJsonAsync(TableReference tableReference, TableSchema schema, Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryJob> UploadJsonAsync(TableReference tableReference, TableSchema schema, Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
         #endregion
 
@@ -391,7 +391,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// a data upload job.</returns>
-        public virtual Task<BigQueryJob> UploadJsonAsync(string datasetId, string tableId, TableSchema schema, IEnumerable<string> rows, UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryJob> UploadJsonAsync(string datasetId, string tableId, TableSchema schema, IEnumerable<string> rows, UploadJsonOptions options = null, CancellationToken cancellationToken = default) =>
             UploadJsonAsync(GetTableReference(datasetId, tableId), schema, rows, options, cancellationToken);
         
         /// <summary>
@@ -420,7 +420,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// a data upload job.</returns>
-        public virtual Task<BigQueryJob> UploadJsonAsync(string projectId, string datasetId, string tableId, TableSchema schema, IEnumerable<string> rows, UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryJob> UploadJsonAsync(string projectId, string datasetId, string tableId, TableSchema schema, IEnumerable<string> rows, UploadJsonOptions options = null, CancellationToken cancellationToken = default) =>
             UploadJsonAsync(GetTableReference(projectId, datasetId, tableId), schema, rows, options, cancellationToken);
         
         /// <summary>
@@ -446,7 +446,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// a data upload job.</returns>
-        public virtual Task<BigQueryJob> UploadJsonAsync(TableReference tableReference, TableSchema schema, IEnumerable<string> rows, UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryJob> UploadJsonAsync(TableReference tableReference, TableSchema schema, IEnumerable<string> rows, UploadJsonOptions options = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
         #endregion
 
@@ -501,7 +501,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// a data upload job.</returns>
-        public virtual Task<BigQueryJob> UploadAvroAsync(string datasetId, string tableId, TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryJob> UploadAvroAsync(string datasetId, string tableId, TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default) =>
             UploadAvroAsync(GetTableReference(datasetId, tableId), schema, input, options, cancellationToken);
         
         /// <summary>
@@ -517,7 +517,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// a data upload job.</returns>
-        public virtual Task<BigQueryJob> UploadAvroAsync(string projectId, string datasetId, string tableId, TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryJob> UploadAvroAsync(string projectId, string datasetId, string tableId, TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default) =>
             UploadAvroAsync(GetTableReference(projectId, datasetId, tableId), schema, input, options, cancellationToken);
         
         /// <summary>
@@ -530,7 +530,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// a data upload job.</returns>
-        public virtual Task<BigQueryJob> UploadAvroAsync(TableReference tableReference, TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryJob> UploadAvroAsync(TableReference tableReference, TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
         #endregion
 
@@ -579,7 +579,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task InsertRowAsync(string projectId, string datasetId, string tableId, BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task InsertRowAsync(string projectId, string datasetId, string tableId, BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default) =>
             InsertRowAsync(GetTableReference(projectId, datasetId, tableId), row, options, cancellationToken);
 
         /// <summary>
@@ -592,7 +592,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task InsertRowAsync(string datasetId, string tableId, BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task InsertRowAsync(string datasetId, string tableId, BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default) =>
             InsertRowAsync(GetTableReference(datasetId, tableId), row, options, cancellationToken);
 
         /// <summary>
@@ -604,7 +604,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task InsertRowAsync(TableReference tableReference, BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task InsertRowAsync(TableReference tableReference, BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default) =>
             InsertRowsAsync(tableReference, new[] { GaxPreconditions.CheckNotNull(row, nameof(row)) }, options, cancellationToken);
         #endregion
 
@@ -740,7 +740,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task InsertRowsAsync(string datasetId, string tableId, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task InsertRowsAsync(string datasetId, string tableId, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null, CancellationToken cancellationToken = default) =>
             InsertRowsAsync(GetTableReference(datasetId, tableId), rows, options, cancellationToken);
         
         /// <summary>
@@ -754,7 +754,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task InsertRowsAsync(string projectId, string datasetId, string tableId, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task InsertRowsAsync(string projectId, string datasetId, string tableId, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null, CancellationToken cancellationToken = default) =>
             InsertRowsAsync(GetTableReference(projectId, datasetId, tableId), rows, options, cancellationToken);
         
         /// <summary>
@@ -765,7 +765,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task InsertRowsAsync(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task InsertRowsAsync(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
         #endregion
 

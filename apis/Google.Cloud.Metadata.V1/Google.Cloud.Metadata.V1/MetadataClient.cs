@@ -67,7 +67,7 @@ namespace Google.Cloud.Metadata.V1
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <exception cref="TokenResponseException">A status code other than success was returned from the server.</exception>
         /// <returns>The token response.</returns>
-        public virtual Task<TokenResponse> GetAccessTokenAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public virtual Task<TokenResponse> GetAccessTokenAsync(CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
@@ -109,7 +109,7 @@ namespace Google.Cloud.Metadata.V1
         /// <exception cref="ArgumentException">The key is not in the proper format.</exception>
         /// <returns>A task representing the asynchronous operation.</returns>
         /// <seealso cref="Instance.Metadata"/>
-        public virtual Task<string> GetCustomInstanceMetadataAsync(string key, CancellationToken cancellationToken = default(CancellationToken))
+        public virtual Task<string> GetCustomInstanceMetadataAsync(string key, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
@@ -151,7 +151,7 @@ namespace Google.Cloud.Metadata.V1
         /// <exception cref="ArgumentException">The key is not in the proper format.</exception>
         /// <returns>A task representing the asynchronous operation.</returns>
         /// <seealso cref="Project.CommonInstanceMetadata"/>
-        public virtual Task<string> GetCustomProjectMetadataAsync(string key, CancellationToken cancellationToken = default(CancellationToken))
+        public virtual Task<string> GetCustomProjectMetadataAsync(string key, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
@@ -180,7 +180,7 @@ namespace Google.Cloud.Metadata.V1
         /// </remarks>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task containing the <see cref="Instance"/> representing the metadata.</returns>
-        public virtual Task<Instance> GetInstanceMetadataAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public virtual Task<Instance> GetInstanceMetadataAsync(CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
@@ -213,7 +213,7 @@ namespace Google.Cloud.Metadata.V1
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task containing the current maintenance status.</returns>
         /// <seealso cref="Scheduling.OnHostMaintenance"/>
-        public virtual Task<MaintenanceStatus> GetMaintenanceStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public virtual Task<MaintenanceStatus> GetMaintenanceStatusAsync(CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
@@ -260,7 +260,7 @@ namespace Google.Cloud.Metadata.V1
         /// </exception>
         /// <returns>A task containing the <see cref="MetadataResult"/> with the current value(s) for an endpoint or a JSON object with the contents of the directory.</returns>
         /// <seealso cref="WaitForChangeAsync"/>
-        public virtual Task<MetadataResult> GetMetadataAsync(string key, CancellationToken cancellationToken = default(CancellationToken))
+        public virtual Task<MetadataResult> GetMetadataAsync(string key, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
@@ -289,7 +289,7 @@ namespace Google.Cloud.Metadata.V1
         /// </remarks>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task containing the <see cref="Project"/> representing the metadata.</returns>
-        public virtual Task<Project> GetProjectMetadataAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public virtual Task<Project> GetProjectMetadataAsync(CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
@@ -316,7 +316,7 @@ namespace Google.Cloud.Metadata.V1
         /// </remarks>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task containing true if the normal metadata server or an emulator is available; false otherwise.</returns>
-        public virtual Task<bool> IsServerAvailableAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public virtual Task<bool> IsServerAvailableAsync(CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
@@ -418,7 +418,7 @@ namespace Google.Cloud.Metadata.V1
         /// <seealso cref="InstanceMetadataChanged"/>
         /// <seealso cref="ProjectMetadataChanged"/>
         /// <seealso cref="GetMetadata"/>
-        public virtual MetadataResult WaitForChange(string key, string lastETag = null, TimeSpan timeout = default(TimeSpan))
+        public virtual MetadataResult WaitForChange(string key, string lastETag = null, TimeSpan timeout = default)
         {
             throw new NotImplementedException();
         }
@@ -466,7 +466,7 @@ namespace Google.Cloud.Metadata.V1
         /// <seealso cref="ProjectMetadataChanged"/>
         /// <seealso cref="GetMetadataAsync"/>
         public virtual Task<MetadataResult> WaitForChangeAsync(
-            string key, string lastETag = null, TimeSpan timeout = default(TimeSpan), CancellationToken cancellationToken = default(CancellationToken))
+            string key, string lastETag = null, TimeSpan timeout = default, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }

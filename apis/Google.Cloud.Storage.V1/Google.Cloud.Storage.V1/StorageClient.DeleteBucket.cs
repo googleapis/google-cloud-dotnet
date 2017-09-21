@@ -44,7 +44,7 @@ namespace Google.Cloud.Storage.V1
         public virtual Task DeleteBucketAsync(
             string bucket,
             DeleteBucketOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken))
+            CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
@@ -71,7 +71,7 @@ namespace Google.Cloud.Storage.V1
         public virtual Task DeleteBucketAsync(
             Bucket bucket,
             DeleteBucketOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken))
+            CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }

@@ -65,7 +65,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the requested table.</returns>
-        public virtual Task<BigQueryTable> GetTableAsync(string datasetId, string tableId, GetTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryTable> GetTableAsync(string datasetId, string tableId, GetTableOptions options = null, CancellationToken cancellationToken = default) =>
             GetTableAsync(GetTableReference(datasetId, tableId), options, cancellationToken);
         
         /// <summary>
@@ -79,7 +79,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the requested table.</returns>
-        public virtual Task<BigQueryTable> GetTableAsync(string projectId, string datasetId, string tableId, GetTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryTable> GetTableAsync(string projectId, string datasetId, string tableId, GetTableOptions options = null, CancellationToken cancellationToken = default) =>
             GetTableAsync(GetTableReference(projectId, datasetId, tableId), options, cancellationToken);
         
         /// <summary>
@@ -90,7 +90,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the requested table.</returns>
-        public virtual Task<BigQueryTable> GetTableAsync(TableReference tableReference, GetTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryTable> GetTableAsync(TableReference tableReference, GetTableOptions options = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
         #endregion
 
@@ -243,7 +243,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the newly created table.</returns>
-        public virtual Task<BigQueryTable> CreateTableAsync(string datasetId, string tableId, TableSchema schema, CreateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryTable> CreateTableAsync(string datasetId, string tableId, TableSchema schema, CreateTableOptions options = null, CancellationToken cancellationToken = default) =>
             CreateTableAsync(GetTableReference(datasetId, tableId), schema, options, cancellationToken);
         
         /// <summary>
@@ -258,7 +258,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the newly created table.</returns>
-        public virtual Task<BigQueryTable> CreateTableAsync(string projectId, string datasetId, string tableId, TableSchema schema, CreateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryTable> CreateTableAsync(string projectId, string datasetId, string tableId, TableSchema schema, CreateTableOptions options = null, CancellationToken cancellationToken = default) =>
             CreateTableAsync(GetTableReference(projectId, datasetId, tableId), schema, options, cancellationToken);
         
         /// <summary>
@@ -270,7 +270,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the newly created table.</returns>
-        public virtual Task<BigQueryTable> CreateTableAsync(TableReference tableReference, TableSchema schema, CreateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryTable> CreateTableAsync(TableReference tableReference, TableSchema schema, CreateTableOptions options = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
         #endregion
 
@@ -325,7 +325,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the existing or new table.</returns>
-        public virtual Task<BigQueryTable> GetOrCreateTableAsync(string datasetId, string tableId, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryTable> GetOrCreateTableAsync(string datasetId, string tableId, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default) =>
             GetOrCreateTableAsync(GetTableReference(datasetId, tableId), schema, getOptions, createOptions, cancellationToken);
         
         /// <summary>
@@ -341,7 +341,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the existing or new table.</returns>
-        public virtual Task<BigQueryTable> GetOrCreateTableAsync(string projectId, string datasetId, string tableId, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryTable> GetOrCreateTableAsync(string projectId, string datasetId, string tableId, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default) =>
             GetOrCreateTableAsync(GetTableReference(projectId, datasetId, tableId), schema, getOptions, createOptions, cancellationToken);
         
         /// <summary>
@@ -354,7 +354,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the existing or new table.</returns>
-        public virtual Task<BigQueryTable> GetOrCreateTableAsync(TableReference tableReference, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryTable> GetOrCreateTableAsync(TableReference tableReference, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
         #endregion
 
@@ -397,7 +397,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task DeleteTableAsync(string datasetId, string tableId, DeleteTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task DeleteTableAsync(string datasetId, string tableId, DeleteTableOptions options = null, CancellationToken cancellationToken = default) =>
             DeleteTableAsync(GetTableReference(datasetId, tableId), options, cancellationToken);
         
         /// <summary>
@@ -410,7 +410,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task DeleteTableAsync(string projectId, string datasetId, string tableId, DeleteTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task DeleteTableAsync(string projectId, string datasetId, string tableId, DeleteTableOptions options = null, CancellationToken cancellationToken = default) =>
             DeleteTableAsync(GetTableReference(projectId, datasetId, tableId), options, cancellationToken);
         
         /// <summary>
@@ -420,7 +420,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task DeleteTableAsync(TableReference tableReference, DeleteTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task DeleteTableAsync(TableReference tableReference, DeleteTableOptions options = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
         #endregion
 
@@ -483,7 +483,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the updated table.</returns>
-        public virtual Task<BigQueryTable> UpdateTableAsync(string datasetId, string tableId, Table resource, UpdateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryTable> UpdateTableAsync(string datasetId, string tableId, Table resource, UpdateTableOptions options = null, CancellationToken cancellationToken = default) =>
             UpdateTableAsync(GetTableReference(datasetId, tableId), resource, options, cancellationToken);
         
         /// <summary>
@@ -501,7 +501,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the updated table.</returns>
-        public virtual Task<BigQueryTable> UpdateTableAsync(string projectId, string datasetId, string tableId, Table resource, UpdateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryTable> UpdateTableAsync(string projectId, string datasetId, string tableId, Table resource, UpdateTableOptions options = null, CancellationToken cancellationToken = default) =>
             UpdateTableAsync(GetTableReference(projectId, datasetId, tableId), resource, options, cancellationToken);
         
         /// <summary>
@@ -516,7 +516,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the updated table.</returns>
-        public virtual Task<BigQueryTable> UpdateTableAsync(TableReference tableReference, Table resource, UpdateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryTable> UpdateTableAsync(TableReference tableReference, Table resource, UpdateTableOptions options = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
         #endregion
 
@@ -579,7 +579,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the updated table.</returns>
-        public virtual Task<BigQueryTable> PatchTableAsync(string datasetId, string tableId, Table resource, PatchTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryTable> PatchTableAsync(string datasetId, string tableId, Table resource, PatchTableOptions options = null, CancellationToken cancellationToken = default) =>
             PatchTableAsync(GetTableReference(datasetId, tableId), resource, options, cancellationToken);
         
         /// <summary>
@@ -597,7 +597,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the updated table.</returns>
-        public virtual Task<BigQueryTable> PatchTableAsync(string projectId, string datasetId, string tableId, Table resource, PatchTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryTable> PatchTableAsync(string projectId, string datasetId, string tableId, Table resource, PatchTableOptions options = null, CancellationToken cancellationToken = default) =>
             PatchTableAsync(GetTableReference(projectId, datasetId, tableId), resource, options, cancellationToken);
         
         /// <summary>
@@ -612,7 +612,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the updated table.</returns>
-        public virtual Task<BigQueryTable> PatchTableAsync(TableReference tableReference, Table resource, PatchTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public virtual Task<BigQueryTable> PatchTableAsync(TableReference tableReference, Table resource, PatchTableOptions options = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
         #endregion
     }
