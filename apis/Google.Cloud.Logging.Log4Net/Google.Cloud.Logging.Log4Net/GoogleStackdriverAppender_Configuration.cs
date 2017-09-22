@@ -231,6 +231,17 @@ namespace Google.Cloud.Logging.Log4Net
             set => _maxMemoryCount = ThrowIfActivated(value, nameof(MaxMemoryCount));
         }
 
+        private string _credentialFile;
+        /// <summary>
+        /// The file path of a service account JSON file to use for authenitication.
+        /// Not necessary if running on GCE or GAE or if the GOOGLE_APPLICATION_CREDENTIALS environment variable has been set.
+        /// </summary>
+        public string CredentialFile
+        {
+            get => _credentialFile;
+            set => _credentialFile = ThrowIfActivated(value, nameof(CredentialFile));
+        }
+
         /// <summary>
         /// Specify custom labels for all log entries.
         /// </summary>

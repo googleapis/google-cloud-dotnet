@@ -15,6 +15,7 @@
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Apis.Auth.OAuth2;
 using Google.Cloud.DevTools.Source.V1;
 using Google.Cloud.Logging.Type;
 using Google.Cloud.Logging.V2;
@@ -23,6 +24,7 @@ using log4net.Appender;
 using log4net.Core;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security;
 using System.Threading;
@@ -67,6 +69,11 @@ namespace Google.Cloud.Logging.Log4Net
         internal const string s_logsLostWarningMessage = "Logs lost due to insufficient process-local storage: {0} -> {1}";
         internal const string s_lostDateTimeFmt = "yyyy-MM-dd' 'HH:mm:ss'Z'";
         internal const string s_mismatchedProjectIdMessage = "Detected project ID does not match configured project ID; using detected project ID.";
+
+        internal static readonly string[] s_oAuthScopes = new string[]
+        {
+            "https://www.googleapis.com/auth/logging.write"
+        };
 
         /// <summary>
         /// Construct a Google Stackdriver appender.
@@ -134,7 +141,7 @@ namespace Google.Cloud.Logging.Log4Net
             base.ActivateOptions();
 
             // Initialise services if not already initialised for testing
-            _client = _client ?? LoggingServiceV2Client.Create();
+            _client = _client ?? BuildLoggingServiceClient();
             _scheduler = _scheduler ?? SystemScheduler.Instance;
             _clock = _clock ?? SystemClock.Instance;
             _platform = _platform ?? Platform.Instance();
@@ -192,6 +199,40 @@ namespace Google.Cloud.Logging.Log4Net
                 _logQ, logsLostWarningEntry, MaxUploadBatchSize,
                 serverErrorBackoffSettings);
             _isActivated = true;
+        }
+
+        private LoggingServiceV2Client BuildLoggingServiceClient()
+        {
+            GoogleCredential credential = GetCredentialFromFile();
+            if(credential == null)
+            {
+                return LoggingServiceV2Client.Create();
+            }
+
+            Grpc.Core.Channel channel = new Grpc.Core.Channel(
+                LoggingServiceV2Client.DefaultEndpoint.Host, 
+                LoggingServiceV2Client.DefaultEndpoint.Port, 
+                credential.ToChannelCredential()
+            );
+
+            return LoggingServiceV2Client.Create(channel);
+        }
+
+        private GoogleCredential GetCredentialFromFile()
+        {
+            if(string.IsNullOrWhiteSpace(CredentialFile))
+            {
+                return null;
+            }
+
+            GoogleCredential credential = GoogleCredential.FromFile(CredentialFile);
+            
+            if (credential.IsCreateScopedRequired)
+            {
+                credential = credential.CreateScoped(s_oAuthScopes);
+            }
+
+            return credential;
         }
 
         private void ActivateLogIdAndResource()
