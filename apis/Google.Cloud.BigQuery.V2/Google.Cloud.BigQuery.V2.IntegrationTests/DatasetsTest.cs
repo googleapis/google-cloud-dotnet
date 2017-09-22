@@ -117,7 +117,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(fetched.Resource.ETag, updated.Resource.ETag);
         }
 
-        [Fact(Skip = "Known etag issue tracked internally")]
+        [Fact]
         public void UpdateDataset_Conflict()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
@@ -227,7 +227,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(fetched.Resource.ETag, updated.Resource.ETag);
         }
 
-        [Fact(Skip = "Known etag issue tracked internally")]
+        [Fact]
         public async Task UpdateDatasetAsync_Conflict()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
