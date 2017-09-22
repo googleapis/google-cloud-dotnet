@@ -19,35 +19,36 @@ GA:
 - [Google.Cloud.Datastore.V1](Google.Cloud.Datastore.V1/index.html)
 - [Google.Cloud.Diagnostics.AspNet](Google.Cloud.Diagnostics.AspNet/index.html)
 - [Google.Cloud.Diagnostics.AspNetCore](Google.Cloud.Diagnostics.AspNetCore/index.html)
+- [Google.Cloud.Language.V1](Google.Cloud.Language.V1/index.html)
+  - Additionally, [a separate package containing experimental features](Google.Cloud.Language.V1.Experimental/index.html) is available
 - [Google.Cloud.Logging.V2](Google.Cloud.Logging.V2/index.html)
   - Additionally, a [separate Log4Net integration package is available](Google.Cloud.Logging.Log4Net/index.html)
+- [Google.Cloud.Monitoring.V3](Google.Cloud.Monitoring.V3/index.html)
+- [Google.Cloud.Speech.V1](Google.Cloud.Speech.V1/index.html)
 - [Google.Cloud.Storage.V1](Google.Cloud.Storage.V1/index.html)
+- [Google.Cloud.Vision.V1](Google.Cloud.Vision.V1/index.html)
 - [Google.Cloud.Trace.V1](Google.Cloud.Trace.V1/index.html)
 - [Google.Cloud.Translation.V2](Google.Cloud.Translation.V2/index.html)
 
 Late beta:
 
 - [Google.Cloud.BigQuery.V2](Google.Cloud.BigQuery.V2/index.html)
-- [Google.Cloud.Language.V1](Google.Cloud.Language.V1/index.html)
-  - Additionally, [a separate package containing experimental features](Google.Cloud.Language.V1.Experimental/index.html) is available
-- [Google.Cloud.Speech.V1](Google.Cloud.Speech.V1/index.html)
-- [Google.Cloud.Vision.V1](Google.Cloud.Vision.V1/index.html)
 
 Beta:
 
 - [Google.Cloud.ErrorReporting.V1Beta1](Google.Cloud.ErrorReporting.V1Beta1/index.html)
-- [Google.Cloud.Monitoring.V3](Google.Cloud.Monitoring.V3/index.html)
 - [Google.Cloud.PubSub.V1](Google.Cloud.PubSub.V1/index.html)
 - Google Cloud Spanner:
   - [Google.Cloud.Spanner.Data](Google.Cloud.Spanner.Data/index.html): ADO.NET provider for Google Cloud Spanner (recommended)
   - [Google.Cloud.Spanner.V1](Google.Cloud.Spanner.V1/index.html): Low-level access to Spanner API
   - [Google.Cloud.Spanner.Admin.Database.V1](Google.Cloud.Spanner.Admin.Database.V1/index.html): Database administration API
   - [Google.Cloud.Spanner.Admin.Instance.V1](Google.Cloud.Spanner.Admin.Instance.V1/index.html): Instance administration API
+- [Google.Cloud.VideoIntelligence.V1Beta1](Google.Cloud.VideoIntelligence.V1Beta1/index.html)
+- [Google.Cloud.VideoIntelligence.V1Beta2](Google.Cloud.VideoIntelligence.V1Beta2/index.html)
 
 
 Alpha:
 
-- [Google.Cloud.Metadata.V1](Google.Cloud.Metadata.V1/index.html)
-- [Google.Cloud.VideoIntelligence.V1Beta1](Google.Cloud.VideoIntelligence.V1Beta1/index.html)
-- [Google.Cloud.Dlp.V2Beta1](Google.Cloud.Dlp.V2Beta1/index.html)
 - [Google.Cloud.Debugger.V2](Google.Cloud.Debugger.V2/index.html)
+- [Google.Cloud.Dlp.V2Beta1](Google.Cloud.Dlp.V2Beta1/index.html)
+- [Google.Cloud.Metadata.V1](Google.Cloud.Metadata.V1/index.html)
